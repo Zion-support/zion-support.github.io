@@ -1,3 +1,4 @@
+<<<<<<< HEAD:scripts/enhanced-master-automation-orchestrator.cjs
 
 
 
@@ -6,6 +7,18 @@
 
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-master-automation-orchestrator.cjs
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-master-automation-orchestrator.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/enhanced-master-automation-orchestrator.cjs
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -42,19 +55,29 @@
 }
 
 // Run the enhanced orchestrator
+<<<<<<< HEAD:scripts/enhanced-master-automation-orchestrator.cjs
 main();#!/usr/bin/env node;
 
 
 main();#!/usr/bin/env node;
 
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-master-automation-orchestrator.cjs
+main();#!/usr/bin/env node;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/enhanced-master-automation-orchestrator.cjs
 main();
 #!/usr/bin/env node;
+<<<<<<< HEAD:scripts/enhanced-master-automation-orchestrator.cjs
 main();#!/usr/bin/env node;
 
 
 
 
 
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-master-automation-orchestrator.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/enhanced-master-automation-orchestrator.cjs
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')

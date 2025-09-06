@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -104,6 +105,15 @@ const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-me
 
 
 
+=======
+<<<<<<< HEAD
+// TypeScript file
+export const placeholder = 'placeholder';
+};
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function cn(...inputs: ClassValue[]) {;
   return twMerge(clsx(inputs));,
 }
@@ -129,6 +139,7 @@ export function formatDate(date: Date | string | number): string {
   }).format(amount);
 }
 }
+<<<<<<< HEAD
 
 export function cn(...inputs: ClassValue[]) {;
 
@@ -208,3 +219,10 @@ origin/main
 
 }
 
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

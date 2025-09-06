@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from './button';
 interface EmptyStateProps {;
 import { Package, RefreshCw } from 'lucide-react''
@@ -40,6 +41,35 @@ function EmptyState() {
 export function EmptyState(): any ({;
   text = 'No items available',;
         <p className="text-gray-400 mb-6 max-w-md">"
+=======
+import { Package, RefreshCw } from 'lucide-react';
+import { Button } from './button',;
+interface EmptyStateProps {;
+  text?: string,;
+  description?: string,;
+  onRetry?: () => void,;
+  showRetry?: boolean,;
+  icon?: React.ReactNode;
+}
+
+export function EmptyState({ 
+  text = "No items available",
+  description,
+  onRetry,
+  showRetry = false,
+  icon
+}: EmptyStateProps) {
+  return (
+    <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
+      <div className="mb-4 text-gray-400">
+        {icon || <Package className="h-16 w-16" />}
+      </div>
+      <h3 className="text-xl font-semibold text-white mb-2">
+        {text}
+      </h3>
+      {description && (
+        <p className="text-gray-400 mb-6 max-w-md">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 export function EmptyState({;
   text = "No items available",;
@@ -47,16 +77,25 @@ export function EmptyState({;
   onRetry;
   showRetry = false;
   icon;
+<<<<<<< HEAD
 }:,  EmptyStateProps) {;
   return (;
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">;
       <div className="mb-4 text-gray-400">;
         {icon || <Package className="h-16 w-16" />}"
+=======
+}: EmptyStateProps) {;
+  return (;
+    <div className="flex flex-col items-center justify-center py-16 px-4 text-center">;
+      <div className="mb-4 text-gray-400">;
+        {icon || <Package className="h-16 w-16" />}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       </div>;
       <h3 className="text-xl font-semibold text-white mb-2">;
         {text}
       </h3>;
       {description && (;
+<<<<<<< HEAD
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>;
   showRetry = false,;
   icon,;
@@ -81,20 +120,33 @@ export function EmptyState({;
           variant='outline''
           className='flex items-center gap-2'>;
           <RefreshCw className='h-4 w-4' />        <p className="text-gray-400 mb-6 max-w-md">;
+=======
+        <p className="text-gray-400 mb-6 max-w-md">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {description}
         </p>;
       )}
       {showRetry && onRetry && (;
+<<<<<<< HEAD
           onClick={onRetry}
           variant="outline""
           className="flex items-center gap-2""
         >
           <RefreshCw className="h-4 w-4" />"
+=======
+        <Button;
+          onClick={onRetry}
+          variant="outline"
+          className="flex items-center gap-2"
+        >
+          <RefreshCw className="h-4 w-4" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Try Again
         </Button>
       )}
     </div>;
   );
+<<<<<<< HEAD
 }
         <p className='text - gray - 400 mb - 6 max - w-md'>{description}</p>;
   show_retry = false,
@@ -135,3 +187,6 @@ export function EmptyState({;
     </div>);
 }
 }}}}}})))
+=======
+} ;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

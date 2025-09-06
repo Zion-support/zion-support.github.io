@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function DocsPage() {
 	return (
 		<Layout>
@@ -60,6 +61,8 @@ import Layout from '../components/layout/Layout'
 
 export default function DocsPage() {
 	return (
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 		<Layout>
 			<Head>
 				<title>Documentation | Zion Tech Group</title>
@@ -78,7 +81,10 @@ export default function DocsPage() {
   }
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -99,6 +105,7 @@ const Page = () => {
 };
 
 export default Page;
+<<<<<<< HEAD
 
 
 
@@ -170,3 +177,5 @@ export default function DocsPage() {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

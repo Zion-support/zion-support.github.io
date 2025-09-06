@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next / head';
 import ErrorBoundary from '../components / ErrorBoundary';
@@ -447,3 +448,5 @@ export default function Blockchain(req, res) {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

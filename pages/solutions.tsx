@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -1091,10 +1092,13 @@ export default function SolutionsPage() {
               <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
                 Comprehensive technology solutions designed to meet your business needs and drive growth.
               </p>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Solutions Grid */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4">
@@ -1608,11 +1612,14 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
 
 
                 </a>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 
     </UltraAdvancedFuturisticBackground>
   )
@@ -1660,3 +1667,5 @@ export default Solutions,
     </Layout>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

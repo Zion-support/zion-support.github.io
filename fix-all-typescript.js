@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,6 +6,31 @@
 
 
 
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item = > { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item ! = = 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() = = = '' || !content.includes('export') && !content.includes('import')) { fs.writeFileSync(fullPath,' } catch (error) { } } })} fixTypeScriptFiles(__dirname), ;
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+function fixTypeScriptFiles(dir) {; if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item ! = = 'node_modules') {; fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {; try {; const content = fs.readFileSync(fullPath, 'utf8'); if (content.trim() = = = '' || !content.includes('export') && !content.includes('import')) {; console.log(`Fixing "file": ${fullPath}`); fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}} catch (error) {; console.log(`Error processing ${fullPath}: ${error.message}`)}}})};
+;
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ;
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+function fixTypeScriptFiles(dir) {;
+  if (!fs.existsSync(dir)) return;
+  const items = fs.readdirSync(dir);
+  items.forEach(item => {;
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
+      fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {;
+      try {;
+        const content = fs.readFileSync(fullPath, 'utf8');
+        if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {;
+          console.log(`Fixing "file": ${fullPath}`);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
 
         // console.log(`Error processing ${fullPath}: ${error.message}`)};
@@ -89,12 +115,19 @@ function fixTypeScriptFiles(dir) {,;
           console.log(`Fixing "file":${fullPath}`),;
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
       } catch (error) {,;
+<<<<<<< HEAD
 ;
         console.log(`Error processing ${fullPath} ${error.message}`)};  if (!fs.existsSync(dir)) return;
 
 
 
 
+=======
+        console.log(`Error processing ${fullPath}: ${error.message}`)}
+}
+  })};
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname); 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -319,6 +352,7 @@ console.log('✅ All TypeScript files fixed!');
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
+<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -555,3 +589,7 @@ origin/automation-improvements-final
   })};
 
 
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

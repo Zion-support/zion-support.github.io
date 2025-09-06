@@ -1,4 +1,9 @@
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-2026-q4-new-services.ts
 <<<<<<< HEAD:corrupted_backup/real-2026-q4-new-services.ts
+=======
+<<<<<<< HEAD:data_backup/real-2026-q4-new-services.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-2026-q4-new-services.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:data_backup/real-2026-q4-new-services.ts
@@ -10,8 +15,12 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/real-2026-q4-new-services.ts
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-2026-q4-new-services.ts
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/data_backup/real-2026-q4-new-services.ts
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/real-2026-q4-new-services.ts
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-2026-q4-new-services.ts
 export interface Real2026Q4NewService {
   "id": string;
   name: string;
@@ -31,7 +40,12 @@ export const "real2026Q4NewServices": Real2026Q4NewService[] = [{
 ];
 export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
 export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-2026-q4-new-services.ts
 <<<<<<< HEAD:corrupted_backup/real-2026-q4-new-services.ts
+=======
+<<<<<<< HEAD:data_backup/real-2026-q4-new-services.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-2026-q4-new-services.ts
 <<<<<<< HEAD:data_backup/real-2026-q4-new-services.ts
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -48,8 +62,12 @@ export interface Real2026Q4NewService { id: string; name: string; tagline: strin
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 =======
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-2026-q4-new-services.ts
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/data_backup/real-2026-q4-new-services.ts
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/real-2026-q4-new-services.ts
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-2026-q4-new-services.ts
 export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
 export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/real-2026-q4-new-services.ts

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 static async testUserInteraction (
     element: HTMLElement,
     action: 'click' | 'type' | 'hover') {
@@ -21,12 +22,20 @@ export class TestingSystem {
 
 
 
+=======
+export class TestingSystem {;
+  static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {;
+    switch (action) {;
+      case 'click':;
+        element.click();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         break;
       case 'type': // Handle typing;
         break;
       case 'hover': // Handle hover;
         break;
     }
+<<<<<<< HEAD
 
 
 
@@ -58,3 +67,7 @@ export class TestingSystem {
 
 
 
+=======
+  }
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

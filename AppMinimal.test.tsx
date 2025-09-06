@@ -20,12 +20,18 @@ describe('AppMinimal', () => {
     render(<AppMinimal />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+<<<<<<< HEAD
+});
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
   it('displays correct content', () => {
     render(<AppMinimal />);
@@ -62,6 +68,7 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 });
 });
 </AppMinimal>'
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import AppMinimal from './AppMinimal'
@@ -76,3 +83,7 @@ describe('AppMinimal'
 
 
 
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

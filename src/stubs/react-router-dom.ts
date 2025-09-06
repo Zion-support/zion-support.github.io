@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react''
 export const BrowserRouter = ({ children }: { children: any }) => children
 export const Routes = ({ children }: { children: any }) => children
@@ -5,10 +6,18 @@ export const Route = ({ element }: { element: any }) => element
 export const Link = (props:,  any) => {,
   return React && React.createElement('a', props);
 };
+=======
+import React from 'react';
+export const BrowserRouter = ({ children }: { children: any }) => children;
+export const Routes = ({ children }: { children: any }) => children;
+export const Route = ({ element }: { element: any }) => element;
+export const Link = (props: any) => { return React.createElement('a', props) };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export const NavLink = Link;
 export const Navigate = ({ to }: { to: string }) => null;
 export const MemoryRouter = BrowserRouter;
 export const Outlet = () => null;
+<<<<<<< HEAD
 export const useNavigate = () => (url:,  string) => {};
 export const useLocation = () => ({ pathname: '/' });
 export const useParams = () => ({});,
@@ -56,6 +65,13 @@ export const useSearchParams = () =>: any [new URLSearchParams (), () => {}] as 
   use_params,
   useSearchParams,
 }
+=======
+export const useNavigate = () => (url: string) => {};
+export const useLocation = () => ({ pathname: '/' });
+export const useParams = () => ({ });
+export const useSearchParams = () => [new URLSearchParams(), () => {}] as any;
+export default {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   BrowserRouter;
   Routes;
   Route;
@@ -64,7 +80,14 @@ export const useSearchParams = () =>: any [new URLSearchParams (), () => {}] as 
   Navigate;
   MemoryRouter;
   Outlet;
+<<<<<<< HEAD
   use_navigate;
   use_location;
   use_params;
   useSearchParams}
+=======
+  useNavigate;
+  useLocation;
+  useParams;
+  useSearchParams};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

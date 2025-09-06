@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -223,6 +224,9 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 module.exports = HealthMonitor;
 ursor/add-new-services-and-deploy-updates-0462
 origin/automation-improvements-final
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }};
 ; async checkSystemResources() {; try {; this.log('💻 Checking system resources...');
 ; const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
@@ -2582,7 +2586,157 @@ healthMonitor.run().catch(error => {,;
       } else {,;
         this.log('\n✨ All systems are healthy!');
       }
+<<<<<<< HEAD
 
+=======
+;
+    } catch (error) {,;
+      this.log(`❌ Error running health: monitor: ${error.message}`),;
+      process.exit(1);
+    }
+  }
+},;
+,;
+// Run the health monitor,;
+const healthMonitor = new HealthMonitor(),;
+healthMonitor.run().catch(error => {,;
+  process.exit(1);
+}),;
+=======
+    
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+    try {}
+      fs.appendFileSync(this.logFile, logMessage);,
+    } catch (error) {}
+      _console.error('Failed to write to log file:', error.message);',
+    }
+  }
+  error(message) {}
+    this.log(message, 'ERROR');',
+    try {}
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);,
+    } catch (err) {}
+      _console.error('Failed to write to error file:', err.message);',
+    }
+  }
+  async getSystemHealth() {}
+    this.log('Checking system health...');',
+    try {}
+      const health = {}
+        timestamp: new Date().toISOString(),
+        system: await this.getSystemInfo(),
+        processes: await this.getProcessInfo(),
+        resources: await this.getResourceUsage(),
+        alerts: [];,
+;      };,
+      // Check for alerts;
+      if (health.resources.memoryUsage > this.alertThreshold) {}
+        health.alerts.push({}),
+          type: 'memory,',
+          level: 'warning,',
+          message: `Memory usage is ${health.resources.memoryUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)`,
+        });,
+      }
+      if (health.resources.cpuUsage > this.alertThreshold) {}
+        health.alerts.push({}),
+          type: 'cpu,',
+          level: 'warning,',
+          message: `CPU usage is ${health.resources.cpuUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)`,
+        });,
+      }
+      if (health.resources.diskUsage > this.alertThreshold) {}
+        health.alerts.push({}),
+          type: 'disk,',
+          level: 'warning,',
+          message: `Disk usage is ${health.resources.diskUsage.toFixed(1)}% (threshold: ${this.alertThreshold}%)`,
+        });,
+      }
+      // Log alerts;
+      for (const alert of health.alerts) {}
+        if (alert.level === 'warning') {',
+;          this.log(alert.message, 'WARNING');',
+        } else {}
+          this.error(alert.message);,
+        }
+      }
+      return health;
+    } catch (error) {}
+      this.error(`System health check failed: ${error.message}`);,
+      return { success: false, error: error.message };,
+    }
+  }
+  async getSystemInfo() {}
+    try {}
+      const uptime = os.uptime();,
+      const loadAvg = os.loadavg();,
+      return {}
+        platform: os.platform(),
+        arch: os.arch(),
+        release: os.release(),
+        uptime: uptime,
+        uptimeFormatted: this.formatUptime(uptime),
+        loadAverage: {
+          '1min': loadAvg[0],',
+          '5min': loadAvg[1],',
+          '15min': loadAvg[2]',
+        },
+        hostname: os.hostname(),
+        nodeVersion: process.version,
+        totalMemory: os.totalmem(),
+        freeMemory: os.freemem(),
+        cpus: os.cpus().length,
+      };,
+    } catch (error) {}
+      this.error(`Failed to get system info: ${error.message}`);,
+      return null;,
+    }
+  }
+  async getProcessInfo() {}
+    try {}
+      const processes = [];,
+      // Get PM2 processes;
+      try {}
+        const pm2List = execSync('pm2 list --json', { encoding: 'utf8' });',
+        const pm2Processes = JSON.parse(pm2List);,
+        for (const proc of, pm2Processes) {}
+          processes.push({}),
+            name: proc.name,
+            pid: proc.pid,
+            status: proc.pm2_env?.status,
+            memory: proc.monit?.memory,
+            cpu: proc.monit?.cpu,
+            uptime: proc.pm2_env?.pm_uptime,
+            restarts: proc.pm2_env?.restart_time,
+          });,
+        }
+      } catch (error) {}
+        this.log(`Failed to get PM2 processes: ${error.message}`, 'WARNING');',
+      }
+      // Get system processes (top 10 by memory, usage),
+      try {}
+        const psOutput = execSync('ps aux --sort=-%mem | head -11', { encoding: 'utf8' });',
+        const lines = psOutput.split('\n').slice(1); // Skip header';,
+        for (const line of, lines) {}
+          if (line.trim()) {}
+            const parts = line.trim().split(/\s+/);,
+            if (parts.length >= 11) {}
+              processes.push({}),
+                name: parts[10],
+                pid: parseInt(parts[1]),
+                memory: parseFloat(parts[3]),
+                cpu: parseFloat(parts[2]),
+                command: parts.slice(10).join(' '),
+              });,
+            }
+          }
+        }
+      } catch (error) {}
+        this.log(`Failed to get system processes: ${error.message}`, 'WARNING');',
+      }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       return processes;
     } catch (error) {}
       this.error(`Failed to get process info: ${error.message}`);,
@@ -2751,6 +2905,7 @@ if (require.main === module) {}
   });
 }
 
+<<<<<<< HEAD
 healthMonitor.run().catch(error = > {process.exit(1)});
 
 healthMonitor.run().catch(error = > {process.exit(1)});
@@ -2975,3 +3130,8 @@ healthMonitor.run().catch(error => {,;
 
 
 
+=======
+module.exports = HealthMonitor;
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

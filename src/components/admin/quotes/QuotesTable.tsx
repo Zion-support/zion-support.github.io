@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({,
   quotes
@@ -5,6 +6,40 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({,
   isLoading
   updateStatus
   toggleArchive
+=======
+
+import React from "react",
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
+import { 
+  Table,
+  TableBody, 
+  TableCell, 
+  TableHead, 
+  TableHeader, 
+  TableRow 
+} from "@/components/ui/table",
+import { Button } from "@/components/ui/button",
+import { 
+  DropdownMenu,
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+import { formatDate } from "@/utils/dateUtils",
+interface QuotesTableProps {
+  quotes: QuoteRequest[],
+  isArchived?: boolean,
+  isLoading: boolean,
+  updateStatus: (id: string, status: QuoteStatus) => void,
+  toggleArchive: (id: string, isArchived: boolean) => void,
+  deleteQuote: (id: string) => void,
+  onViewDetails: (quote: QuoteRequest) => void
+}
+
+export const QuotesTable: React.FC<QuotesTableProps> = ({
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   quotes,
   isArchived = false,
   isLoading,
@@ -12,6 +47,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({,
   toggleArchive,
   deleteQuote,
   onViewDetails
+<<<<<<< HEAD
 },) => {
   return (
     <div className="overflow-x-auto">"
@@ -25,25 +61,52 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({,
             <TableHead className="text-zion-slate-light">Date</TableHead>"
             <TableHead className="text-zion-slate-light">Status</TableHead>"
             <TableHead className="text-zion-slate-light">Actions</TableHead>"
+=======
+}) => {
+  return (
+    <div className="overflow-x-auto">
+      <Table>
+        <TableHeader>
+          <TableRow className="border-zion-blue-light hover:bg-zion-blue">
+            <TableHead className="text-zion-slate-light">Talent</TableHead>
+            <TableHead className="text-zion-slate-light">Requester</TableHead>
+            <TableHead className="text-zion-slate-light">Project</TableHead>
+            <TableHead className="text-zion-slate-light">Budget</TableHead>
+            <TableHead className="text-zion-slate-light">Date</TableHead>
+            <TableHead className="text-zion-slate-light">Status</TableHead>
+            <TableHead className="text-zion-slate-light">Actions</TableHead>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </TableRow>
         </TableHeader>
         <TableBody>
           {isLoading ? (
             <TableRow>
+<<<<<<< HEAD
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">"
+=======
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 Loading quote requests...
               </TableCell>
             </TableRow>
           ) : quotes.length === 0 ? (
             <TableRow>
+<<<<<<< HEAD
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">"
                 {isArchived
                   ? "No archived quote requests found.""
                   : "No quote requests found."}"
+=======
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
+                {isArchived 
+                  ? "No archived quote requests found." 
+                  : "No quote requests found."}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </TableCell>
             </TableRow>
           ) : (
             quotes.map(quote => (
+<<<<<<< HEAD
               <TableRow
                 key={quote.id}
                 className="border-zion-blue-light hover:bg-zion-blue""
@@ -175,17 +238,82 @@ import {formatDate} from "@/utils/dateUtils";
                           className="text-red-500""
                           onClick={() => {
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {'
+=======
+              <TableRow 
+                key={quote.id}
+                className="border-zion-blue-light hover:bg-zion-blue"
+              >
+                <TableCell className="text-white">
+                  {quote.talent_name || 'Unknown Talent'}
+                </TableCell>
+                <TableCell className="text-white">
+                  {quote.requester_name}
+                </TableCell>
+                <TableCell className="text-white">
+                  <div className="font-medium">{quote.project_name}</div>
+                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">
+                    {quote.project_summary}
+                  </div>
+                </TableCell>
+                <TableCell className="text-white">
+                  {quote.budget_display || 
+                  (quote.budget_min && quote.budget_max 
+                   ? `$${quote.budget_min} - $${quote.budget_max}` 
+                   : quote.budget_min 
+                     ? `$${quote.budget_min}` 
+                     : 'Not specified')}
+                </TableCell>
+                <TableCell className="text-white">
+                  {formatDate(quote.created_at)}
+                </TableCell>
+                <TableCell>
+                  <QuoteStatusBadge status={quote.status} />
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <Button 
+                      variant="ghost" 
+                      size="icon" 
+                      onClick={() => onViewDetails(quote)}
+                    >
+                      <Eye className="h-4 w-4" />
+                      <span className="sr-only">View Details</span>
+                    </Button>
+                    
+                    {isArchived ? (
+                      <>
+                        <Button 
+                          variant="ghost" 
+                          size="icon"
+                          onClick={() => toggleArchive(quote.id, false)}
+                        >
+                          <Archive className="h-4 w-4" />
+                          <span className="sr-only">Unarchive</span>
+                        </Button>
+                        <Button 
+                          variant="ghost" 
+                          size="icon"
+                          className="text-red-500"
+                          onClick={() => {
+                            if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                               deleteQuote(quote.id)
                             }
                           }}
                         >
+<<<<<<< HEAD
                           <Trash2 className="h-4 w-4" />"
                           <span className="sr-only">Delete</span>"
+=======
+                          <Trash2 className="h-4 w-4" />
+                          <span className="sr-only">Delete</span>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         </Button>
                       </>
                     ) : (
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
+<<<<<<< HEAD
                           <Button variant="ghost" size="icon" aria-label="More actions">"
                             <MoreHorizontal className="h-4 w-4" />"
                             <span className="sr-only">Actions</span>"
@@ -218,6 +346,42 @@ import {formatDate} from "@/utils/dateUtils";
                             className="text-red-500""
                           >
                             <Trash2 className="h-4 w-4 mr-2" />"
+=======
+                          <Button variant="ghost" size="icon" aria-label="More actions">
+                            <MoreHorizontal className="h-4 w-4" />
+                            <span className="sr-only">Actions</span>
+                          </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="end">
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>
+                            Mark as New
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'in_review')}>
+                            Mark as In Review
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'responded')}>
+                            Mark as Responded
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'accepted')}>
+                            Mark as Accepted
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'closed')}>
+                            Mark as Closed
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>
+                            <Archive className="h-4 w-4 mr-2" />
+                            Archive
+                          </DropdownMenuItem>
+                          <DropdownMenuItem 
+                            onClick={() => {
+                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+                                deleteQuote(quote.id)
+                              }
+                            }}
+                            className="text-red-500"
+                          >
+                            <Trash2 className="h-4 w-4 mr-2" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                             Delete
                           </DropdownMenuItem>
                         </DropdownMenuContent>
@@ -244,6 +408,7 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 import { formatDate } from "@/utils/dateUtils",;
 interface QuotesTableProps {;
   quotes: QuoteRequest[],;
+<<<<<<< HEAD
   isArchived?: boolean;
   isLoading: boolean,;
   updateStatus: (id: string, status: QuoteStatus,) => void,;
@@ -261,6 +426,26 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;,
   onViewDetails;
 },) => {;
   return (
+=======
+  isArchived?: boolean,;
+  isLoading: boolean,;
+  updateStatus: (id: string, status: QuoteStatus) => void,;
+  toggleArchive: (id: string, isArchived: boolean) => void,;
+  deleteQuote: (id: string) => void,;
+  onViewDetails: (quote: QuoteRequest) => void;
+}
+;
+export const QuotesTable: React.FC<QuotesTableProps> = ({;
+  quotes,;
+  isArchived = false,;
+  isLoading,;
+  updateStatus,;
+  toggleArchive,;
+  deleteQuote;
+  onViewDetails;
+}) => {;
+  return (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <div className="overflow-x-auto">;
       <Table>;
         <TableHeader>;
@@ -281,6 +466,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;,
                 Loading quote requests...;
               </TableCell>;
             </TableRow>;
+<<<<<<< HEAD
           ) : quotes && quotes.length === 0 ? (;
             <TableRow>;
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
@@ -326,20 +512,76 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;,
                       variant="ghost" "
                       size="icon" "
                       onClick = {() => onViewDetails(quote),}
+=======
+          ) : quotes.length === 0 ? (;
+            <TableRow>;
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
+                {isArchived;
+                  ? "No archived quote requests found.";
+                  : "No quote requests found."}
+              </TableCell>;
+            </TableRow>;
+          ) : (;
+            quotes.map(quote => (;
+              <TableRow;
+                key={quote.id}
+                className="border-zion-blue-light hover:bg-zion-blue";
+              >;
+                <TableCell className="text-white">;
+                  {quote.talent_name || 'Unknown Talent'}
+                </TableCell>;
+                <TableCell className="text-white">;
+                  {quote.requester_name}
+                </TableCell>;
+                <TableCell className="text-white">;
+                  <div className="font-medium">{quote.project_name}</div>;
+                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">;
+                    {quote.project_summary}
+                  </div>;
+                </TableCell>;
+                <TableCell className="text-white">;
+                  {quote.budget_display ||;
+                  (quote.budget_min && quote.budget_max;
+                   ? `$${quote.budget_min} - $${quote.budget_max}`;
+                   : quote.budget_min;
+                     ? `$${quote.budget_min}`;
+                     : 'Not specified')}
+                </TableCell>;
+                <TableCell className="text-white">;
+                  {formatDate(quote.created_at)}
+                </TableCell>;
+                <TableCell>;
+                  <QuoteStatusBadge status={quote.status} />;
+                </TableCell>;
+                <TableCell>;
+                  <div className="flex items-center gap-2">;
+                    <Button;
+                      variant="ghost";
+                      size="icon";
+                      onClick={() => onViewDetails(quote)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     >;
                       <Eye className="h-4 w-4" />;
                       <span className="sr-only">View Details</span>;
                     </Button>;
                     {isArchived ? (;
                       <>;
+<<<<<<< HEAD
                         <Button
                           variant="ghost" "
                           size="icon""
                           onClick = {(,) => toggleArchive(quote && quote.id, false),}
+=======
+                        <Button;
+                          variant="ghost";
+                          size="icon";
+                          onClick={() => toggleArchive(quote.id, false)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
+<<<<<<< HEAD
                         <Button
                           variant="ghost" "
                           size="icon""
@@ -348,6 +590,16 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;,
                             if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
                               deleteQuote(quote && quote.id);
                             ,}
+=======
+                        <Button;
+                          variant="ghost";
+                          size="icon";
+                          className="text-red-500";
+                          onClick={() => {;
+                            if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
+                              deleteQuote(quote.id);
+                            }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                           }}
                         >;
                           <Trash2 className="h-4 w-4" />;
@@ -363,6 +615,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;,
                           </Button>;
                         </DropdownMenuTrigger>;
                         <DropdownMenuContent align="end">;
+<<<<<<< HEAD
                           <DropdownMenuItem onClick={(,) => updateStatus(quote && quote.id, 'new')}>;
                             Mark as New;
                           </DropdownMenuItem>;
@@ -387,6 +640,33 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;,
                               if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
                                 deleteQuote(quote && quote.id);
                               };                            }}
+=======
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>;
+                            Mark as New;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'in_review')}>;
+                            Mark as In Review;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'responded')}>;
+                            Mark as Responded;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'accepted')}>;
+                            Mark as Accepted;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem onClick={() => updateStatus(quote.id, 'closed')}>;
+                            Mark as Closed;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>;
+                            <Archive className="h-4 w-4 mr-2" />;
+                            Archive;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem;
+                            onClick={() => {;
+                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
+                                deleteQuote(quote.id);
+                              }
+                            }}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                             className="text-red-500";
                           >;
                             <Trash2 className="h-4 w-4 mr-2" />;
@@ -400,13 +680,17 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;,
               </TableRow>;
             ));
           )}
+<<<<<<< HEAD
   );
 };
 '";
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </TableBody>;
       </Table>;
     </div>;
   );
+<<<<<<< HEAD
 };
 '""
                   </div>;
@@ -511,3 +795,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;,
 }
 '";
 }}}}))
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

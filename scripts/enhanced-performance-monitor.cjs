@@ -1,3 +1,16 @@
+<<<<<<< HEAD:scripts/enhanced-performance-monitor.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-performance-monitor.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
@@ -40,8 +53,18 @@
 }
 
 // Run the enhanced performance monitor
+<<<<<<< HEAD:scripts/enhanced-performance-monitor.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
+main();#!/usr/bin/env node;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
 main();
 #!/usr/bin/env node;
+<<<<<<< HEAD:scripts/enhanced-performance-monitor.cjs
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/enhanced-performance-monitor.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

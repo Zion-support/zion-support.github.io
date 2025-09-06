@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -23,6 +24,10 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+}}},;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react';
 
 interface Jest.configProps {
@@ -59,6 +64,7 @@ export default function Jest.config({ }: Jest.configProps) {
 }
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }}}
 }}};
@@ -70,3 +76,6 @@ export default function Jest.config({ }: Jest.configProps) {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

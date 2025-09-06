@@ -1,4 +1,17 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD:scripts/robust-merge-conflict-resolver.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-merge-conflict-resolver.cjs
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/robust-merge-conflict-resolver.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/robust-merge-conflict-resolver.cjs
       { "encoding": "utf8" }
     );
     return result;
@@ -83,6 +96,21 @@ if (require.main === module) {;
   main()}
 ;
 module.exports = { resolveMergeConflict, findConflictedFiles }))
+<<<<<<< HEAD:scripts/robust-merge-conflict-resolver.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/robust-merge-conflict-resolver.cjs
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/robust-merge-conflict-resolver.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/robust-merge-conflict-resolver.cjs
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")

@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+<<<<<<< HEAD
 
 export default function sitemap(): MetadataRoute.Sitemap {;
   const baseUrl = 'https: //ziontechgroup.com';
@@ -75,6 +76,11 @@ export default function sitemap (): MetadataRoute.Sitemap {
     change_frequency: 'weekly';
 export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https: //ziontechgroup.com';
   const routes = [;
+=======
+export default function sitemap(): MetadataRoute.Sitemap {;
+  const baseUrl = 'https: //ziontechgroup.com';
+  const routes = [;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     '';
     '/about/services/ai-services/quantum-services/cybersecurity/enterprise-it/research-development/space-tech';
     '/case-studies/news/events/webinars/white-papers/docs/contact/privacy';
@@ -90,6 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
     '/ai-consciousness-simulator/ai-content-creation-revolution/ai-content-creation/ai-content-factory/ai-content-generation-automation-2033/ai-content-generation-pro-2029/ai-content-generator/ai-content-marketing-automation';
     '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant';
     '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub';
+<<<<<<< HEAD
 export default function sitemap(): MetadataRoute.Sitemap {;
   const baseUrl = 'https: //ziontechgroup.com';
   const routes = [;
@@ -108,6 +115,8 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     '/ai-consciousness-simulator/ai-content-creation-revolution/ai-content-creation/ai-content-factory/ai-content-generation-automation-2033/ai-content-generation-pro-2029/ai-content-generator/ai-content-marketing-automation',;
     '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant',;
     '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub',;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
   const quantumServices = [;
     '/quantum-neural-network-platform/quantum-cloud-infrastructure/quantum-financial-trading/quantum-network-optimization/quantum-private-network-solutions/quantum-private-network-solutions-2026'];
@@ -123,6 +132,7 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     ...complianceServices];
   return allRoutes.map((route) => ({;
     url: `${baseUrl}${route}`;
+<<<<<<< HEAD
     ...routes,;
     ...aiServices,;
     ...quantumServices,;
@@ -130,6 +140,8 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     ...complianceServices];
   return allRoutes.map((route) => ({;
     url: `${baseUrl}${route}`,;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     lastModified: new Date();
     changeFrequency: 'weekly';
     priority: route === '' ? 1 : 0.8}));

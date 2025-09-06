@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -89,6 +90,8 @@ class ErrorBoundary extends Component<Props, State> {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>
         </div>
       );
@@ -265,4 +268,7 @@ if ( {) {
   }
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

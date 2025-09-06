@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
       }
       if (liveRegion && liveRegion.parentNode) {;
@@ -340,3 +341,5 @@ export default AccessibilityEnhancer;
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

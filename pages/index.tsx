@@ -1,12 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import Head from 'next/head';
-import Link from 'next/link';
 
 export default function Home() {
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>Zion Tech Group - Advanced IT Solutions & AI Services</title>
         <meta name="description" content="Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for businesses worldwide." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -110,3 +113,24 @@ export default function Home() {
     </>
   );
 }
+=======
+        <title>Zion Tech Group - Technology Solutions</title>
+        <meta name="description" content="Leading technology solutions provider" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              Welcome to Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Leading technology solutions provider delivering innovative services
+              to transform your business.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

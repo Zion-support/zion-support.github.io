@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
@@ -293,3 +294,5 @@ export default Layout;
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

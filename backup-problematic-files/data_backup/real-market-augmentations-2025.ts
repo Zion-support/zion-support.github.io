@@ -1,4 +1,9 @@
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-market-augmentations-2025.ts
 <<<<<<< HEAD:corrupted_backup/real-market-augmentations-2025.ts
+=======
+<<<<<<< HEAD:data_backup/real-market-augmentations-2025.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-market-augmentations-2025.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:data_backup/real-market-augmentations-2025.ts
@@ -10,8 +15,12 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/real-market-augmentations-2025.ts
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-market-augmentations-2025.ts
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/data_backup/real-market-augmentations-2025.ts
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/real-market-augmentations-2025.ts
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-market-augmentations-2025.ts
 export interface RealMarketAugmentation2025 {
   "id": string;
   name: string;
@@ -41,7 +50,12 @@ export const "realMarketAugmentations2025": RealMarketAugmentation2025[] = [{
 ]];
 export interface RealMarketAugmentation2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [ { id: 'market-augmentation-1',name: 'Market Augmentation Service 1',tagline: 'Enhance your market presence',price: '$299',features: ['Market analysis','Strategy development','Implementation support'] } export interface RealMarketAugmentation2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [ { id: 'market-augmentation-1',name: 'Market Augmentation Service 1',tagline: 'Enhance your market presence',price: '$299',features: ['Market analysis','Strategy development','Implementation support'] } ]];
 export interface RealMarketAugmentation2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [ { id: 'market-augmentation-1',name: 'Market Augmentation Service 1',tagline: 'Enhance your market presence',price: '$299',features: ['Market analysis','Strategy development','Implementation support'] } export interface RealMarketAugmentation2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [ { id: 'market-augmentation-1',name: 'Market Augmentation Service 1',tagline: 'Enhance your market presence',price: '$299',features: ['Market analysis','Strategy development','Implementation support'] } ]];
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-market-augmentations-2025.ts
 <<<<<<< HEAD:corrupted_backup/real-market-augmentations-2025.ts
+=======
+<<<<<<< HEAD:data_backup/real-market-augmentations-2025.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-market-augmentations-2025.ts
 <<<<<<< HEAD:data_backup/real-market-augmentations-2025.ts
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -58,8 +72,12 @@ export interface RealMarketAugmentation2025 { id: string; name: string; tagline:
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 =======
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-market-augmentations-2025.ts
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/data_backup/real-market-augmentations-2025.ts
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/real-market-augmentations-2025.ts
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-market-augmentations-2025.ts
 export interface RealMarketAugmentation2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [ { id: 'market-augmentation-1',name: 'Market Augmentation Service 1',tagline: 'Enhance your market presence',price: '$299',features: ['Market analysis','Strategy development','Implementation support'] } export interface RealMarketAugmentation2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [ { id: 'market-augmentation-1',name: 'Market Augmentation Service 1',tagline: 'Enhance your market presence',price: '$299',features: ['Market analysis','Strategy development','Implementation support'] } ]];
 export interface RealMarketAugmentation2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [ { id: 'market-augmentation-1',name: 'Market Augmentation Service 1',tagline: 'Enhance your market presence',price: '$299',features: ['Market analysis','Strategy development','Implementation support'] } export interface RealMarketAugmentation2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [ { id: 'market-augmentation-1',name: 'Market Augmentation Service 1',tagline: 'Enhance your market presence',price: '$299',features: ['Market analysis','Strategy development','Implementation support'] } ]];
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/real-market-augmentations-2025.ts

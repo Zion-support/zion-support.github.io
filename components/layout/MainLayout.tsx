@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 }
@@ -48,19 +49,17 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react';
-import Head from 'next/head';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from './Header';
+import Footer from './Footer';
 
 interface MainLayoutProps {
-  title: string;
-  description: string;
   children: React.ReactNode;
-  keywords?: string;
-  canonical?: string;
 }
 
+<<<<<<< HEAD
 export default function MainLayout({ 
   title, 
   description, 
@@ -211,15 +210,27 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
         <main className="flex-1">
           {children}
         </main>
+=======
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+  return (
+    <>
+      <Header />
+      <div className="min-h-screen">
+        {children}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <Footer />
       </div>
     </>
   );
 };
 
+<<<<<<< HEAD
 export default MainLayout;
 
 
 
 
 
+=======
+export default MainLayout;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

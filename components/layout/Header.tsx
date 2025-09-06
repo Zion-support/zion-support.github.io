@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -643,3 +644,5 @@ export default Header;
 
 export default Header;
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

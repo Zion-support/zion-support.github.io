@@ -411,6 +411,7 @@ if (require.main === module) {
     });
 }
 
+<<<<<<< HEAD:automation/accessibility-checker.cjs
 
 
 
@@ -419,6 +420,13 @@ if (require.main === module) {
 
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/automation/accessibility-checker.cjs
+module.exports = AccessibilityChecker;
+=======
+<<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/automation/accessibility-checker.cjs
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
@@ -453,6 +461,7 @@ console.log('♿ Accessibility Checker Starting...\n')
     "status"
 
 module.exports = AccessibilityChecker;
+<<<<<<< HEAD:automation/accessibility-checker.cjs
 
 
 
@@ -490,3 +499,8 @@ module.exports = AccessibilityChecker;
 
 module.exports = AccessibilityChecker;
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/accessibility-checker.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/automation/accessibility-checker.cjs

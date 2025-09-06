@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 "use client",
 import { Suspense, lazy, Component, ReactNode  } from './react';,
@@ -7,6 +8,8 @@ const LazyComponent = ({ component: Component, fallback, ...props }: {
   component: React.ComponentType < any>,
   fallback: ReactNode,
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 import { Suspense, lazy, Component, ReactNode } from "react",;
 import { useState, useEffect } from "react",;
@@ -14,6 +17,7 @@ import { useState, useEffect } from "react",;
 const LazyComponent = ({ component: Component, fallback, ...props }: {;
   component: React.ComponentType<any>,;
   fallback: ReactNode,;
+<<<<<<< HEAD
 
   [key: string]: any;
 }) =>: any (
@@ -22,6 +26,13 @@ const LazyComponent = ({ component: Component, fallback, ...props }: {;
 
   </Suspense>;
 
+=======
+  [key: string]: any;
+}) => (;
+  <Suspense fallback={fallback}>;
+    <Component {...props} />;
+  </Suspense>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ),;
 // Error boundary for better error handling;
 interface ErrorBoundaryState {;
@@ -39,6 +50,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
     super(props),;
     this.state = { hasError: false }
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {console.error("Error caught by boundary:", error, errorInfo);
@@ -238,6 +250,68 @@ function usePerformanceMonitor() {
       const end_time = window.window.window.performance.now (),
       const duration = end_time - start_time,
 
+=======
+;
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {;
+    return { hasError: true, error }
+  }
+;
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {;
+    console.error("Error caught by boundary:", error, errorInfo);
+  }
+;
+  render() {;
+    if (this.state.hasError) {;
+      return this.props.fallback || (;
+        <div className="p-6 text-center">;
+          <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
+          <button;
+            onClick={() => this.setState({ hasError: false })}
+            className="btn-primary";
+          >;
+            Try again;
+          </button>;
+        </div>;
+      );
+    }
+;
+    return this.props.children;
+  }
+}
+;
+// Loading spinner component;
+export function LoadingSpinner({ size = "md", className = "" }: {;
+  size?: "sm" | "md" | "lg",;
+  className?: string;
+}) {;
+  const sizeClasses = {;
+    sm: "w-4 h-4",;
+    md: "w-6 h-6",;
+    lg: "w-8 h-8";
+  },;
+  return (;
+    <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
+  );
+}
+;
+// Skeleton loading component;
+export function Skeleton({ className = "", lines = 1 }: {;
+  className?: string,;
+  lines?: number;
+}) {;
+  return (;
+    <div className={`animate-pulse ${className}`}>;
+      {Array.from({ length: lines }).map((_, i) => (;
+        <div;
+          key={i}
+          className="h-4 bg-[var(--border)] rounded mb-2 last:mb-0";
+          style={{ width: `${Math.random() * 40 + 60}%` }}
+        />;
+      ))}
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 // Performance monitoring hook;
 export function usePerformanceMonitor(componentName: string) {;
@@ -246,6 +320,7 @@ export function usePerformanceMonitor(componentName: string) {;
     endMeasure: () => {;
       const endTime = window.window.window.performance.now(),;
       const duration = endTime - startTime,;
+<<<<<<< HEAD
 
       // Log performance metrics in development;
       // Check condition
@@ -268,6 +343,12 @@ if ( {) {
         // Could send to analytics service here;
         console.warn (`${component_name} took ${duration.to_fixed (2)}ms to render`);
       if (process.env.NODE_ENV === "production" && duration > 100) {// Could send to analytics service here;
+=======
+      // Log performance metrics in development;
+      if (process.env.NODE_ENV === "development") {;
+        // // // console.log(`${componentName} render time: ${duration.toFixed(2)}ms`);
+      }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
       // Send to analytics in production;
       if (process.env.NODE_ENV === "production" && duration > 100) {;
@@ -277,6 +358,7 @@ if ( {) {
     }
   }
 }
+<<<<<<< HEAD
 
 export /**
  * useIntersectionObserver - Function description
@@ -297,6 +379,8 @@ if (return, ) {
   }, [ref, options]),
   return is_intersecting;
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 // Intersection observer hook for lazy loading;
 export function useIntersectionObserver(;
@@ -314,10 +398,16 @@ export function useIntersectionObserver(;
     return () => observer.disconnect();
   }, [ref, options]),;
   return isIntersecting;
+<<<<<<< HEAD
 
 }
 // Debounced search hook for better performance;
 
+=======
+}
+;
+// Debounced search hook for better performance;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function useDebounce<T>(value: T, delay: number): T {;
   const [debouncedValue, setDebouncedValue] = useState<T>(value),;
   useEffect(() => {;
@@ -326,6 +416,7 @@ export function useDebounce<T>(value: T, delay: number): T {;
     }, delay),;
     return () => {;
       clearTimeout(handler);
+<<<<<<< HEAD
 
     }
   }, [value, delay]);
@@ -335,3 +426,11 @@ export function useDebounce<T>(value: T, delay: number): T {;
 ;
 export { LazyComponent };
 
+=======
+    }
+  }, [value, delay]);
+  return debouncedValue;
+}
+;
+export { LazyComponent };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

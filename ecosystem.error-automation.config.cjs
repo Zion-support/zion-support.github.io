@@ -1,3 +1,13 @@
+<<<<<<< HEAD:ecosystem.error-automation.config.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/ecosystem.error-automation.config.cjs
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
@@ -52,6 +62,13 @@ module.exports = {
         "ERROR_THRESHOLD": '10'
       },
 
+<<<<<<< HEAD:ecosystem.error-automation.config.cjs
+=======
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:ecosystem.error-automation.config.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/ecosystem.error-automation.config.cjs
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {

@@ -1,4 +1,9 @@
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-2026-additions.ts
 <<<<<<< HEAD:corrupted_backup/real-2026-additions.ts
+=======
+<<<<<<< HEAD:data_backup/real-2026-additions.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-2026-additions.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:data_backup/real-2026-additions.ts
@@ -10,8 +15,12 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/real-2026-additions.ts
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-2026-additions.ts
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/data_backup/real-2026-additions.ts
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/real-2026-additions.ts
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-2026-additions.ts
 export interface Real2026Addition {
   "id": string;
   name: string;
@@ -27,7 +36,12 @@ export const "real2026Additions": Real2026Addition[] = [{
 ];
 export interface Real2026Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Additions: Real2026Addition[] = [ { id: '2026-addition-1',name: '2026 Addition Service 1',tagline: '2026 innovation service',price: '$699',features: ['2026 features','Latest technology','Future-ready'],},];
 export interface Real2026Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Additions: Real2026Addition[] = [ { id: '2026-addition-1',name: '2026 Addition Service 1',tagline: '2026 innovation service',price: '$699',features: ['2026 features','Latest technology','Future-ready'],},];
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-2026-additions.ts
 <<<<<<< HEAD:corrupted_backup/real-2026-additions.ts
+=======
+<<<<<<< HEAD:data_backup/real-2026-additions.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-2026-additions.ts
 <<<<<<< HEAD:data_backup/real-2026-additions.ts
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -44,8 +58,12 @@ export interface Real2026Addition { id: string; name: string; tagline: string; p
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 =======
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-2026-additions.ts
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/data_backup/real-2026-additions.ts
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/real-2026-additions.ts
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-2026-additions.ts
 export interface Real2026Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Additions: Real2026Addition[] = [ { id: '2026-addition-1',name: '2026 Addition Service 1',tagline: '2026 innovation service',price: '$699',features: ['2026 features','Latest technology','Future-ready'],},];
 export interface Real2026Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Additions: Real2026Addition[] = [ { id: '2026-addition-1',name: '2026 Addition Service 1',tagline: '2026 innovation service',price: '$699',features: ['2026 features','Latest technology','Future-ready'],},];
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/real-2026-additions.ts

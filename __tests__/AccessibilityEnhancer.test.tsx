@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -20,6 +21,14 @@ fireEvent.keyDown(element, { "key"
 
 
 
+=======
+<<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import { describe, it, expect, vi } from 'vitest';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 describe('AccessibilityEnhancer', () => {
@@ -33,6 +42,10 @@ describe('AccessibilityEnhancer', () => {
     expect(screen.getByText('Test Content')).toBeInTheDocument();
   });
 
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:__tests__/AccessibilityEnhancer.test.tsx
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   it('applies accessibility props correctly', () => {
     render(
       <AccessibilityEnhancer
@@ -47,6 +60,11 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('aria-label', 'Test Button');
     expect(element).toHaveAttribute('tabindex', '0');
   });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
   it('handles keyboard events correctly', () => {
     const handleClick = vi.fn();
@@ -62,6 +80,10 @@ describe('AccessibilityEnhancer', () => {
     expect(handleClick).toHaveBeenCalledTimes(2);
   });
 
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:__tests__/AccessibilityEnhancer.test.tsx
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   it('applies focus styles when focusable', () => {
     render(
       <AccessibilityEnhancer
@@ -80,6 +102,13 @@ describe('AccessibilityEnhancer', () => {
     );
   });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
+});
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   it('disables focus when not focusable', () => {
     render(
       <AccessibilityEnhancer role="button" tabIndex={-1}>
@@ -90,6 +119,7 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('tabindex', '-1');
   });
 });
+<<<<<<< HEAD
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
@@ -109,3 +139,10 @@ describe('AccessibilityEnhancer'
 
 
 
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+});
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:__tests__/AccessibilityEnhancer.test.tsx
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -27,6 +27,7 @@ test.describe('Performance Tests', () => {
         }
       });
     });
+<<<<<<< HEAD
 
 
     
@@ -35,6 +36,12 @@ test.describe('Performance Tests', () => {
 
 
 
+=======
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     // Check performance score
     if (lighthouse.lhr && lighthouse.lhr.categories) {
       const performanceScore = lighthouse.lhr.categories.performance.score * 100;
@@ -80,6 +87,10 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
 
     expect(consoleMessages.length).toBe(0);
   });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   
   test('memory usage check', async ({ page }) => {
     await page.goto('/');
@@ -99,6 +110,7 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
     }
   });
 });
+<<<<<<< HEAD
 
 
 
@@ -140,3 +152,9 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
 
 });
 
+=======
+=======
+});
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

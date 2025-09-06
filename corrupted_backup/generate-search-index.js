@@ -1,4 +1,29 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:scripts/generate-search-index.js
+#!/usr/bin/env node;
+/**;
+ * Generate Search Index;
+ * Creates a search index for the website content;
+ */;
+const fs = require('fs'),;
+const path = require('path'),;
+const PAGES_DIR = path.join(__dirname, '..pages'),;
+const OUTPUT_DIR = path.join(__dirname, '..publicsearch'),;
+// Content types to index;
+const CONTENT_TYPES = {;
+  'pages': {;
+    path: PAGES_DIR,;
+    extensions: ['.tsx.ts.jsx.js'],;
+    exclude: ['_app_documentapi'];
+  },;
+  'blog': {;
+    path: path.join(PAGES_DIR, 'blog'),;
+    extensions: ['.tsx.ts.jsx.js'],;
+    exclude: [];
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/generate-search-index.js
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -52,6 +77,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 main(),"}),"})
 ,"}),"})
       filelist.push(full)}
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/generate-search-index.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }
   return filelist}
 function main() {;
@@ -76,6 +105,15 @@ function main() {;
         index.push({ "file": rel, title })} catch {}
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:scripts/generate-search-index.js
+
+  // Write search index
+  const indexPath = path.join(OUTPUT_DIR, 'index.json'),
+  fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const outDir = path.join(repoRoot, ';public');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { "recursive": true });
   const outPath = path.join(outDir, 'search-index.json');
@@ -105,6 +143,10 @@ main();
 #!/usr/bin/env node /** * Generate Search Index * Creates a search index for the website content */function extractTextFromJSX (content) {
   //Simple text extraction from JSX/TSX content return content .replace (/export.*?function.*? {
   /g, '') //Remove function declarations .replace (/[ {
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/generate-search-index.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   
 }() ]/g, ' ') //Remove brackets 
 }const entry = {
@@ -124,6 +166,13 @@ lastModified: stats.mtime.toISOString ()
 };
 }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:scripts/generate-search-index.js
+;
+module.exports = { generateSearchIndex },;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 }) 
 });
@@ -135,3 +184,7 @@ lastModified: stats.mtime.toISOString ()
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/generate-search-index.js
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/generate-search-index.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

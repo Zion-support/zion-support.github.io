@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import Layout from '../components/layout/Layout';
@@ -2483,3 +2484,5 @@ Ready to Transform Your Business?;
 };
 
 export default Page;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

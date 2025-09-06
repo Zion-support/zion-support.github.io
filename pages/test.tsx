@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 import Head from 'next/head';
@@ -17,6 +18,12 @@ origin/automation-improvements-final
         <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
       </div>
 
+=======
+import Head from 'next/head';
+
+export default function TestPage() {
+  return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <>
       <Head>
         <title>Test Page | Zion Tech Group</title>
@@ -81,6 +88,7 @@ origin/main
         <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
       </div>
     </>
+<<<<<<< HEAD
   )
 
     <>;
@@ -229,3 +237,7 @@ origin/main
 }
 
 
+=======
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default {
   apps: [
     {
@@ -355,6 +356,11 @@ module.exports = {
 
 ;
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD;
+=======;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 module.exports = {;
   apps: [;
     {;
@@ -438,6 +444,7 @@ module.exports = {;
     }
   ];
 },;
+<<<<<<< HEAD
 
     }
   ]
@@ -456,6 +463,13 @@ module.exports = {;
 
 
 
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export default {
 
 
@@ -930,7 +944,11 @@ PORT: 3000;
     time: true
   }]
 };
+<<<<<<< HEAD
 ;
 
 };
 
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

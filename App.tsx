@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { JSX } from 'react';
+
+import React, { JSX } from 'react';
+export default function App(): JSX.Element {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { JSX } from 'react';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
@@ -53,10 +66,17 @@ export default function App() {
 
 
 export default function App(): JSX.Element {
+<<<<<<< HEAD
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (
     <main>
 
     </main>
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />
       <Header />
@@ -128,3 +148,11 @@ export default function App(): JSX.Element {
     </div>
   );
 }
+=======
+<<<<<<< HEAD
+  )}
+=======
+  );
+}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

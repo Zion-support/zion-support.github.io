@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from "react""
 import * as MenubarPrimitive from "@radix-ui/react-menubar""
 import { Check, ChevronRight, Circle } from 'lucide-react''
@@ -8,12 +9,36 @@ const MenubarSub = MenubarPrimitive.Sub
 const MenubarRadioGroup = MenubarPrimitive.RadioGroup
 const Menubar = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Root>
+=======
+import * as React from "react"
+import * as MenubarPrimitive from "@radix-ui/react-menubar"
+import { Check, ChevronRight, Circle } from 'lucide-react'
+
+import { cn } from "@/lib/utils"
+
+const MenubarMenu = MenubarPrimitive.Menu
+
+const MenubarGroup = MenubarPrimitive.Group
+
+const MenubarPortal = MenubarPrimitive.Portal
+
+const MenubarSub = MenubarPrimitive.Sub
+
+const MenubarRadioGroup = MenubarPrimitive.RadioGroup
+
+const Menubar = React.forwardRef<
+  React.ElementRef<typeof MenubarPrimitive.Root>,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Root>
 >(({ className, ...props }, ref) => (
   <MenubarPrimitive.Root
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "flex h-10 items-center space-x-1 rounded-md border bg-background p-1",",
+=======
+      "flex h-10 items-center space-x-1 rounded-md border bg-background p-1",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
@@ -27,7 +52,11 @@ const MenubarTrigger = React.forwardRef<;
   <MenubarPrimitive.Trigger;
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",",
+=======
+      "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
@@ -35,6 +64,7 @@ const MenubarTrigger = React.forwardRef<;
 ));
 MenubarTrigger.displayName = MenubarPrimitive.Trigger.displayName;
 const MenubarSubTrigger = React.forwardRef<;
+<<<<<<< HEAD
 import * as React from &quot;react & quot;
 import * as MenubarPrimitive from &quot;@radix - ui / react - menubar & quot;
 import { Check, ChevronRight, Circle } from 'lucide-react';
@@ -72,6 +102,8 @@ MenubarTrigger.display_name = MenubarPrimitive.Trigger.display_name;
 const MenubarSubTrigger = React.forward_ref<;
   React.ElementRef < typeof MenubarPrimitive.SubTrigger>,
   React.ComponentPropsWithoutRef < typeof MenubarPrimitive.SubTrigger> & {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   React.ElementRef<typeof MenubarPrimitive.SubTrigger>,;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {;
     inset?: boolean;
@@ -80,31 +112,51 @@ const MenubarSubTrigger = React.forward_ref<;
   <MenubarPrimitive.SubTrigger;
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground","
       inset && "pl-8",",
+=======
+      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+      inset && "pl-8",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
   >;
     {children}
+<<<<<<< HEAD
     <ChevronRight className="ml-auto h-4 w-4" />"
   </MenubarPrimitive.SubTrigger>
 ))
 MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName
 const MenubarSubContent = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.SubContent>
+=======
+    <ChevronRight className="ml-auto h-4 w-4" />
+  </MenubarPrimitive.SubTrigger>
+))
+MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName
+
+const MenubarSubContent = React.forwardRef<
+  React.ElementRef<typeof MenubarPrimitive.SubContent>,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubContent>
 >(({ className, ...props }, ref) => (
   <MenubarPrimitive.SubContent
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",",
+=======
+      "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
   />
 ))
 MenubarSubContent.displayName = MenubarPrimitive.SubContent.displayName
+<<<<<<< HEAD
 const MenubarContent = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Content>
@@ -113,6 +165,15 @@ const MenubarContent = React.forwardRef<
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },"
     { className, align = &quot;start&quot; alignOffset = -4, sideOffset = 8, ...props },
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },",
+=======
+
+const MenubarContent = React.forwardRef<
+  React.ElementRef<typeof MenubarPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Content>
+>(
+  (
+    { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     ref
   ) => (
     <MenubarPrimitive.Portal>
@@ -122,7 +183,11 @@ const MenubarContent = React.forwardRef<
         alignOffset={alignOffset}
         sideOffset={sideOffset}
         className={cn(
+<<<<<<< HEAD
           "z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",",
+=======
+          "z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           className
         )}
         {...props}
@@ -132,6 +197,7 @@ const MenubarContent = React.forwardRef<
 );
 MenubarContent.displayName = MenubarPrimitive.Content.displayName;
 const MenubarItem = React.forwardRef<;
+<<<<<<< HEAD
 className={cn (,
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
       inset && &quot;pl - 8&quot;,
@@ -177,6 +243,8 @@ MenubarContent.display_name = MenubarPrimitive.Content.display_name;
 const MenubarItem = React.forward_ref<;
   React.ElementRef < typeof MenubarPrimitive.Item>,
   React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Item> & {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   React.ElementRef<typeof MenubarPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {;
     inset?: boolean;
@@ -185,8 +253,13 @@ const MenubarItem = React.forward_ref<;
   <MenubarPrimitive.Item;
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50","
       inset && "pl-8",",
+=======
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      inset && "pl-8",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
@@ -200,6 +273,7 @@ const MenubarCheckboxItem = React.forwardRef<;
   <MenubarPrimitive.CheckboxItem;
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",",
       className
     )}
@@ -228,12 +302,31 @@ className={cn (
       </MenubarPrimitive.ItemIndicator>
     </span>
     {children}
+=======
+      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      className
+    )}
+    checked={checked}
+    {...props}
+  >
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+      <MenubarPrimitive.ItemIndicator>
+        <Check className="h-4 w-4" />
+      </MenubarPrimitive.ItemIndicator>
+    </span>
+    {children}
+  </MenubarPrimitive.CheckboxItem>;
+));
+MenubarCheckboxItem.displayName = MenubarPrimitive.CheckboxItem.displayName;
+const MenubarRadioItem = React.forwardRef<;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   React.ElementRef<typeof MenubarPrimitive.RadioItem>,;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <MenubarPrimitive.RadioItem;
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",",
       className
     )}
@@ -261,6 +354,23 @@ MenubarRadioItem.display_name = MenubarPrimitive.RadioItem.display_name;
 const MenubarLabel = React.forward_ref<;
   React.ElementRef < typeof MenubarPrimitive.Label>,
   React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Label> & {
+=======
+      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      className
+    )}
+    {...props}
+  >
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+      <MenubarPrimitive.ItemIndicator>
+        <Circle className="h-2 w-2 fill-current" />
+      </MenubarPrimitive.ItemIndicator>
+    </span>
+    {children}
+  </MenubarPrimitive.RadioItem>;
+));
+MenubarRadioItem.displayName = MenubarPrimitive.RadioItem.displayName;
+const MenubarLabel = React.forwardRef<;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   React.ElementRef<typeof MenubarPrimitive.Label>,;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {;
     inset?: boolean;
@@ -269,8 +379,13 @@ const MenubarLabel = React.forward_ref<;
   <MenubarPrimitive.Label;
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "px-2 py-1.5 text-sm font-semibold","
       inset && "pl-8",",
+=======
+      "px-2 py-1.5 text-sm font-semibold",
+      inset && "pl-8",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
@@ -281,6 +396,7 @@ const MenubarSeparator = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.Separator>,;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
 className={cn (
       &quot;px - 2 py - 1.5 text - sm font - semibold & quot;,
       inset && &quot;pl - 8&quot;,
@@ -310,13 +426,38 @@ const MenubarShortcut = ({
       className={cn (
         &quot;ml - auto text - xs tracking - widest text - muted - foreground & quot;,
         class_name)}
+=======
+  <MenubarPrimitive.Separator;
+    ref={ref}
+    className={cn("-mx-1 my-1 h-px bg-muted", className)}
+    {...props}
+  />
+))
+MenubarSeparator.displayName = MenubarPrimitive.Separator.displayName
+
+const MenubarShortcut = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLSpanElement>) => {
+  return (
+    <span
+      className={cn(
+        "ml-auto text-xs tracking-widest text-muted-foreground",
+        className
+      )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {...props}
     />;
   );
 }
+<<<<<<< HEAD
 MenubarShortcut.displayname = &quot;MenubarShortcut & quot;
 ;
 MenubarShortcut.displayname = "MenubarShortcut""
+=======
+MenubarShortcut.displayname = "MenubarShortcut"
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export {
   Menubar,
   MenubarMenu,
@@ -332,4 +473,10 @@ export {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarGroup,
+<<<<<<< HEAD
 }}}
+=======
+  MenubarSub,
+  MenubarShortcut}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

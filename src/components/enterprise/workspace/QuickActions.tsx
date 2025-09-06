@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -61,6 +62,46 @@ import { Calendar } from 'lucide-react';
                 </div>;
                 <span className='mt - 1 text - xs text - muted - foreground'>;
                   {action.description}
+=======
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { FileText, Plus, Search, Calendar } from 'lucide-react'
+
+export function QuickActions() {
+  const actions = [
+    {
+      id: "post-job",
+      label: "Post New Job",
+      icon: <FileText className="h-5 w-5 mr-2" />,
+      description: "Create a new job posting",
+      color: "bg-blue-100 dark:bg-blue-900/20"
+    },
+    {
+      id: "add-member",
+      label: "Add Team Member",
+      icon: <Plus className="h-5 w-5 mr-2" />,
+      description: "Invite someone to your team",
+      color: "bg-green-100 dark:bg-green-900/20"
+    },
+    {
+      id: "find-talent",
+      label: "Find Talent",
+      icon: <Search className="h-5 w-5 mr-2" />,
+      description: "Search the talent pool",
+      color: "bg-purple-100 dark:bg-purple-900/20"
+    },
+    {
+      id: "schedule",
+      label: "Schedule Interview",
+      icon: <Calendar className="h-5 w-5 mr-2" />,
+      description: "Set up candidate interviews",
+      color: "bg-amber-100 dark:bg-amber-900/20"
+    }
+  ],
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (
     <Card>
       <CardHeader>
@@ -68,6 +109,7 @@ import { Calendar } from 'lucide-react';
         <CardDescription>Fast access to common tasks</CardDescription>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">"
           {actions.map(action => (
             <Button
@@ -82,6 +124,21 @@ import { Calendar } from 'lucide-react';
                 </div>
             <Button
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>"
+=======
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {actions.map(action => (
+            <Button 
+              key={action.id}
+              variant="outline" 
+              className={`h-auto justify-start p-4 ${action.color}`}
+            >
+              <div className="flex flex-col items-start text-left">
+                <div className="flex items-center">
+                  {action.icon}
+                  <span>{action.label}</span>
+                </div>
+                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>
             </Button>
 import React from "react",;
@@ -89,7 +146,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button",;
 import { FileText, Plus, Search, Calendar } from 'lucide-react';
 export function QuickActions() {;
+<<<<<<< HEAD
   const actions = [;,
+=======
+  const actions = [;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       id: "post-job",;
       label: "Post New Job",;
@@ -115,7 +176,11 @@ export function QuickActions() {;
       id: "schedule",;
       label: "Schedule Interview",;
       icon: <Calendar className="h-5 w-5 mr-2" />,;
+<<<<<<< HEAD
       description: "Set up candidate interviews";",
+=======
+      description: "Set up candidate interviews";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       color: "bg-amber-100 dark:bg-amber-900/20";
     }
   ];
@@ -130,6 +195,7 @@ export function QuickActions() {;
           {actions.map(action => (;
             <Button;
               key={action.id}
+<<<<<<< HEAD
               variant="outline""
               className={`h-auto justify-start p-4 ${action.color}`}`
             >
@@ -167,12 +233,26 @@ export function QuickActions() {;
                 </span>              </div>
               </div>
             </Button>
+=======
+              variant="outline";
+              className={`h-auto justify-start p-4 ${action.color}`}
+            >;
+              <div className="flex flex-col items-start text-left">;
+                <div className="flex items-center">;
+                  {action.icon}
+                  <span>{action.label}</span>;
+                </div>;
+                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>;
+              </div>;
+            </Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           ))}
         </div>;
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
   );
 }
                 </span>              </div>;
@@ -196,3 +276,6 @@ export function QuickActions() {;
     </Card>);
 }
 ;)))))))))
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

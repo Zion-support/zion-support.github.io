@@ -7,6 +7,7 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD:scripts/fix-syntax-errors.cjs
 
 
 
@@ -15,6 +16,18 @@ const path = require('path')
 
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-errors.cjs
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-syntax-errors.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/fix-syntax-errors.cjs
   }
 
   log(message) {
@@ -63,7 +76,25 @@ const path = require('path')
     content = content.replace(/([^;}])\n/g, '$1;\n');
     
     // Fix merge conflict markers
+<<<<<<< HEAD:scripts/fix-syntax-errors.cjs
     content = content.replace(/[\s\S]*?[\s\S]*?    
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-errors.cjs
+    content = content.replace(/[\s\S]*?[\s\S]*?    
+=======
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+    
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-syntax-errors.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/fix-syntax-errors.cjs
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     
@@ -146,6 +177,16 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxErrorFixer;
+<<<<<<< HEAD:scripts/fix-syntax-errors.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/fix-syntax-errors.cjs
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/fix-syntax-errors.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/fix-syntax-errors.cjs
   log(message, level = 'INFO')
     this.log(' Starting syntax error fixing...')
       this.log('Running ESLint auto-fix...')

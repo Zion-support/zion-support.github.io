@@ -56,6 +56,7 @@ export default function UseWallet({ }: UseWalletProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 
 }
 
@@ -66,21 +67,29 @@ export default function UseWallet({ }: UseWalletProps) {
 }
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
-}
-ursor/add-new-services-and-deploy-updates-0462
-
-}
-
-
-
-}
-
-}
-
 }
 ursor/add-new-services-and-deploy-updates-0462
 
+}
+
+
+
+}
+<<<<<<< HEAD
+
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+}
+
+}
+ursor/add-new-services-and-deploy-updates-0462
+
 
 
 }
@@ -101,6 +110,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 }
+<<<<<<< HEAD
 
 
 
@@ -114,3 +124,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

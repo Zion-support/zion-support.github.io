@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react',;
 import Head from 'next/head',;
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react',;
 import Button from '../components/ui/Button',;
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react',;
+<<<<<<< HEAD
 ;
 export default function MicroSaasPage() {;
   const [selectedCategory, setSelectedCategory] = useState('All'),;
@@ -3517,6 +3521,10 @@ export default function MicroSaasPage() {;
   const [selectedCategory, setSelectedCategory] = useState('All');
 
 
+=======
+export default function MicroSaasPage() {;
+  const [selectedCategory, setSelectedCategory] = useState('All'),;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const microSaasServices = [;
     {;
       name: 'AI Content Generator Pro',;
@@ -3524,6 +3532,7 @@ export default function MicroSaasPage() {;
       price: '$49',;
       period: '/month',;
       description: 'Create high-quality, SEO-optimized content at scale with our advanced AI writing assistant.',;
+<<<<<<< HEAD
 
     features: [        'SEO-optimized content generationMulti-language support (15+ languages)Brand voice customizationContent templates library (100+ templates)Plagiarism-free writing guaranteeAdvanced content analyticsTeam collaboration toolsAPI access for integrations';
       ];
@@ -3544,10 +3553,16 @@ features: [        'SEO-optimized content generationMulti-language support (15+ 
     features: [        'SEO-optimized content generationMulti-language support (15+ languages)Brand voice customizationContent templates library (100+ templates)Plagiarism-free writing guaranteeAdvanced content analyticsTeam collaboration toolsAPI access for integrations';
       ];
 
+=======
+      features: [;
+        'SEO-optimized content generationMulti-language support (15+ languages)Brand voice customizationContent templates library (100+ templates)Plagiarism-free writing guaranteeAdvanced content analyticsTeam collaboration toolsAPI access for integrations';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: true,;
       icon: '📝',;
       color: 'from-pink-500 to-rose-600',;
       textColor: 'text-pink-400',;
+<<<<<<< HEAD
 
 
 
@@ -3561,12 +3576,15 @@ features: [        'SEO-optimized content generationMulti-language support (15+ 
     marketSize: '$15 && 15.8B content marketing industry',      growthRate: '16 && 16.1% CAGR expected through 2030';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://contentgen.ziontechgroup.com',;
       marketPosition: 'Competitive with Jasper ($39-99), Copy.ai ($36-186), and Writesonic ($12.67-100)',;
       targetAudience: 'Content marketers, agencies, e-commerce businesses, and content creators',;
       marketSize: '$15.8B content marketing industry',;
       growthRate: '16.1% CAGR expected through 2030';
     },;
+<<<<<<< HEAD
 
 
 
@@ -3574,6 +3592,8 @@ features: [        'SEO-optimized content generationMulti-language support (15+ 
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'Design System Builder',;
       tagline: 'Automated design system management',;
@@ -3582,6 +3602,7 @@ features: [        'SEO-optimized content generationMulti-language support (15+ 
       description: 'Build and maintain consistent design systems with automated component generation and team collaboration.',;
       features: [;
         'Component library managementDesign token automationStyle guide generationDesign-to-code workflowTeam collaboration toolsVersion control & historyDesign system analyticsIntegration with Figma, Sketch, Adobe XD';
+<<<<<<< HEAD
 
       ];
       ];
@@ -3594,10 +3615,14 @@ features: [        'SEO-optimized content generationMulti-language support (15+ 
       ];
       ];
 
+=======
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '🎨',;
       color: 'from-violet-500 to-purple-600',;
       textColor: 'text-violet-400',;
+<<<<<<< HEAD
 
 
 
@@ -3611,12 +3636,15 @@ features: [        'SEO-optimized content generationMulti-language support (15+ 
     marketSize: '$8 && 8.2B design tools market',      growthRate: '12 && 12.3% CAGR expected through 2030';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://design.ziontechgroup.com',;
       marketPosition: 'Competitive with Zeroheight ($0-200), Frontify ($0-200), and InVision DSM ($0-100)',;
       targetAudience: 'Design teams, product managers, and design system architects',;
       marketSize: '$8.2B design tools market',;
       growthRate: '12.3% CAGR expected through 2030';
     },;
+<<<<<<< HEAD
 
 
 
@@ -3624,6 +3652,8 @@ features: [        'SEO-optimized content generationMulti-language support (15+ 
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'App Performance Monitor',;
       tagline: 'Real-time performance monitoring',;
@@ -3637,6 +3667,7 @@ features: [        'SEO-optimized content generationMulti-language support (15+ 
       icon: '📱',;
       color: 'from-amber-500 to-orange-600',;
       textColor: 'text-amber-400',;
+<<<<<<< HEAD
 
 
 
@@ -3651,6 +3682,8 @@ features: [        'SEO-optimized content generationMulti-language support (15+ 
       category: 'Development & DevOps';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://monitor.ziontechgroup.com',;
       marketPosition: 'Competitive with Sentry ($26-80), LogRocket ($99-199), and New Relic ($0-99)',;
       targetAudience: 'Developers, DevOps teams, and product managers',;
@@ -3658,6 +3691,7 @@ features: [        'SEO-optimized content generationMulti-language support (15+ 
       setupTime: '10 minutes',;
       category: 'Development & DevOps';
     },;
+<<<<<<< HEAD
 
 
 
@@ -3665,12 +3699,15 @@ features: [        'SEO-optimized content generationMulti-language support (15+ 
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Knowledge Base',;
       tagline: 'Organize company knowledge',;
       price: '$39',;
       period: '/month',;
       description: 'AI-powered knowledge base that helps businesses organize, search, and share company knowledge.',;
+<<<<<<< HEAD
 
     features: [        'Intelligent organizationAdvanced searchKnowledge graphsCollaboration toolsIntegration capabilitiesAnalytics & reportingMobile app accessAPI access';
       ];
@@ -3691,10 +3728,16 @@ features: [        'Intelligent organizationAdvanced searchKnowledge graphsColla
     features: [        'Intelligent organizationAdvanced searchKnowledge graphsCollaboration toolsIntegration capabilitiesAnalytics & reportingMobile app accessAPI access';
       ];
 
+=======
+      features: [;
+        'Intelligent organizationAdvanced searchKnowledge graphsCollaboration toolsIntegration capabilitiesAnalytics & reportingMobile app accessAPI access';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📚',;
       color: 'from-purple-500 to-indigo-600',;
       textColor: 'text-purple-400',;
+<<<<<<< HEAD
 
 
 
@@ -3709,6 +3752,8 @@ features: [        'Intelligent organizationAdvanced searchKnowledge graphsColla
       category: 'Productivity & Collaboration';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-knowledge-base',;
       marketPosition: 'Competitive with Notion ($0-20), Confluence ($0-7), and GitBook ($0-99)',;
       targetAudience: 'Businesses of all sizes, knowledge workers, and documentation teams',;
@@ -3716,6 +3761,7 @@ features: [        'Intelligent organizationAdvanced searchKnowledge graphsColla
       setupTime: '20 minutes',;
       category: 'Productivity & Collaboration';
     },;
+<<<<<<< HEAD
 
 
 
@@ -3723,12 +3769,15 @@ features: [        'Intelligent organizationAdvanced searchKnowledge graphsColla
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Email Marketing Pro',;
       tagline: 'Advanced email automation',;
       price: '$79',;
       period: '/month',;
       description: 'Professional email marketing platform with AI-powered personalization, automation, and advanced analytics.',;
+<<<<<<< HEAD
 
     features: [        'AI-powered personalizationAdvanced automation workflowsBehavioral targetingA/B testing automationPredictive analyticsAdvanced segmentationRevenue attributionIntegration with major platforms';
       ];
@@ -3749,10 +3798,16 @@ features: [        'AI-powered personalizationAdvanced automation workflowsBehav
     features: [        'AI-powered personalizationAdvanced automation workflowsBehavioral targetingA/B testing automationPredictive analyticsAdvanced segmentationRevenue attributionIntegration with major platforms';
       ];
 
+=======
+      features: [;
+        'AI-powered personalizationAdvanced automation workflowsBehavioral targetingA/B testing automationPredictive analyticsAdvanced segmentationRevenue attributionIntegration with major platforms';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: true,;
       icon: '📧',;
       color: 'from-indigo-500 to-purple-600',;
       textColor: 'text-indigo-400',;
+<<<<<<< HEAD
 
 
 
@@ -3767,6 +3822,8 @@ features: [        'AI-powered personalizationAdvanced automation workflowsBehav
       category: 'Marketing & Automation';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-email-marketing-pro',;
       marketPosition: 'Competitive with Klaviyo ($20-2000), ActiveCampaign ($9-49), and ConvertKit ($9-29)',;
       targetAudience: 'E-commerce businesses, marketers, and growth teams',;
@@ -3774,6 +3831,7 @@ features: [        'AI-powered personalizationAdvanced automation workflowsBehav
       setupTime: '15 minutes',;
       category: 'Marketing & Automation';
     },;
+<<<<<<< HEAD
 
 
 
@@ -3781,12 +3839,15 @@ features: [        'AI-powered personalizationAdvanced automation workflowsBehav
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI SEO Suite',;
       tagline: 'Comprehensive SEO optimization',;
       price: '$89',;
       period: '/month',;
       description: 'All-in-one SEO platform with AI-powered keyword research, content optimization, and technical SEO tools.',;
+<<<<<<< HEAD
 
     features: [        'AI keyword researchContent optimizationTechnical SEO auditRanking trackingCompetitor analysisLocal SEO toolsSchema markup generatorPerformance reporting';
       ];
@@ -3807,10 +3868,16 @@ features: [        'AI keyword researchContent optimizationTechnical SEO auditRa
     features: [        'AI keyword researchContent optimizationTechnical SEO auditRanking trackingCompetitor analysisLocal SEO toolsSchema markup generatorPerformance reporting';
       ];
 
+=======
+      features: [;
+        'AI keyword researchContent optimizationTechnical SEO auditRanking trackingCompetitor analysisLocal SEO toolsSchema markup generatorPerformance reporting';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: true,;
       icon: '🔍',;
       color: 'from-green-500 to-emerald-600',;
       textColor: 'text-green-400',;
+<<<<<<< HEAD
 
 
 
@@ -3825,6 +3892,8 @@ features: [        'AI keyword researchContent optimizationTechnical SEO auditRa
       category: 'Marketing & SEO';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-seo-suite',;
       marketPosition: 'Competitive with Ahrefs ($99-999), SEMrush ($119-449), and Moz ($99-599)',;
       targetAudience: 'SEO professionals, digital marketers, and website owners',;
@@ -3832,6 +3901,7 @@ features: [        'AI keyword researchContent optimizationTechnical SEO auditRa
       setupTime: '20 minutes',;
       category: 'Marketing & SEO';
     },;
+<<<<<<< HEAD
 
 
 
@@ -3839,12 +3909,15 @@ features: [        'AI keyword researchContent optimizationTechnical SEO auditRa
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Social Media Manager',;
       tagline: 'Intelligent social media automation',;
       price: '$59',;
       period: '/month',;
       description: 'AI-powered social media management with content creation, scheduling, and performance optimization.',;
+<<<<<<< HEAD
 
     features: [        'AI content generationSmart schedulingPerformance analyticsHashtag optimizationCompetitor monitoringMulti-platform managementContent calendarTeam collaboration';
       ];
@@ -3865,10 +3938,16 @@ features: [        'AI content generationSmart schedulingPerformance analyticsHa
     features: [        'AI content generationSmart schedulingPerformance analyticsHashtag optimizationCompetitor monitoringMulti-platform managementContent calendarTeam collaboration';
       ];
 
+=======
+      features: [;
+        'AI content generationSmart schedulingPerformance analyticsHashtag optimizationCompetitor monitoringMulti-platform managementContent calendarTeam collaboration';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📱',;
       color: 'from-pink-500 to-rose-600',;
       textColor: 'text-pink-400',;
+<<<<<<< HEAD
 
 
 
@@ -3883,6 +3962,8 @@ features: [        'AI content generationSmart schedulingPerformance analyticsHa
       category: 'Marketing & Social Media';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-social-media-manager',;
       marketPosition: 'Competitive with Buffer ($6-99), Hootsuite ($29-599), and Later ($18-40)',;
       targetAudience: 'Social media managers, small businesses, and influencers',;
@@ -3890,6 +3971,7 @@ features: [        'AI content generationSmart schedulingPerformance analyticsHa
       setupTime: '10 minutes',;
       category: 'Marketing & Social Media';
     },;
+<<<<<<< HEAD
 
 
 
@@ -3897,6 +3979,8 @@ features: [        'AI content generationSmart schedulingPerformance analyticsHa
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI E-commerce Analytics',;
       tagline: 'Data-driven e-commerce insights',;
@@ -3910,6 +3994,7 @@ features: [        'AI content generationSmart schedulingPerformance analyticsHa
       icon: '🛒',;
       color: 'from-orange-500 to-red-600',;
       textColor: 'text-orange-400',;
+<<<<<<< HEAD
 
 
 
@@ -3924,6 +4009,8 @@ features: [        'AI content generationSmart schedulingPerformance analyticsHa
       category: 'Analytics & E-commerce';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-ecommerce-analytics',;
       marketPosition: 'Competitive with Google Analytics 4 (Free), Mixpanel ($25-1000), and Amplitude ($0-995)',;
       targetAudience: 'E-commerce businesses, online retailers, and digital marketers',;
@@ -3931,6 +4018,7 @@ features: [        'AI content generationSmart schedulingPerformance analyticsHa
       setupTime: '25 minutes',;
       category: 'Analytics & E-commerce';
     },;
+<<<<<<< HEAD
 
 
 
@@ -3938,12 +4026,15 @@ features: [        'AI content generationSmart schedulingPerformance analyticsHa
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Customer Support Bot',;
       tagline: '24/7 intelligent support',;
       price: '$49',;
       period: '/month',;
       description: 'AI-powered customer support chatbot that handles inquiries, tickets, and escalations automatically.',;
+<<<<<<< HEAD
 
     features: [        'Natural language processingMulti-language supportTicket automationKnowledge base integrationEscalation managementPerformance analyticsCustom brandingIntegration with help desks';
       ];
@@ -3964,10 +4055,16 @@ features: [        'Natural language processingMulti-language supportTicket auto
     features: [        'Natural language processingMulti-language supportTicket automationKnowledge base integrationEscalation managementPerformance analyticsCustom brandingIntegration with help desks';
       ];
 
+=======
+      features: [;
+        'Natural language processingMulti-language supportTicket automationKnowledge base integrationEscalation managementPerformance analyticsCustom brandingIntegration with help desks';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '🤖',;
       color: 'from-blue-500 to-indigo-600',;
       textColor: 'text-blue-400',;
+<<<<<<< HEAD
 
 
 
@@ -3982,6 +4079,8 @@ features: [        'Natural language processingMulti-language supportTicket auto
       category: 'Customer Experience';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-customer-support-bot',;
       marketPosition: 'Competitive with Intercom ($39-499), Drift ($0-2500), and ManyChat ($0-15)',;
       targetAudience: 'Customer support teams, SaaS companies, and e-commerce businesses',;
@@ -3989,6 +4088,7 @@ features: [        'Natural language processingMulti-language supportTicket auto
       setupTime: '20 minutes',;
       category: 'Customer Experience';
     },;
+<<<<<<< HEAD
 
 
 
@@ -3996,12 +4096,15 @@ features: [        'Natural language processingMulti-language supportTicket auto
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Project Management',;
       tagline: 'Intelligent project coordination',;
       price: '$79',;
       period: '/month',;
       description: 'AI-powered project management platform with smart task allocation, progress tracking, and resource optimization.',;
+<<<<<<< HEAD
 
     features: [        'AI task prioritizationResource optimizationProgress trackingRisk assessmentTeam collaborationTime trackingReporting & analyticsIntegration with popular tools';
       ];
@@ -4022,10 +4125,16 @@ features: [        'AI task prioritizationResource optimizationProgress tracking
     features: [        'AI task prioritizationResource optimizationProgress trackingRisk assessmentTeam collaborationTime trackingReporting & analyticsIntegration with popular tools';
       ];
 
+=======
+      features: [;
+        'AI task prioritizationResource optimizationProgress trackingRisk assessmentTeam collaborationTime trackingReporting & analyticsIntegration with popular tools';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📋',;
       color: 'from-purple-500 to-indigo-600',;
       textColor: 'text-purple-400',;
+<<<<<<< HEAD
 
 
 
@@ -4040,6 +4149,8 @@ features: [        'AI task prioritizationResource optimizationProgress tracking
       category: 'Productivity & Collaboration';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-project-management',;
       marketPosition: 'Competitive with Asana ($10.99-24.99), Monday.com ($8-16), and ClickUp ($5-12)',;
       targetAudience: 'Project managers, development teams, and creative agencies',;
@@ -4047,6 +4158,7 @@ features: [        'AI task prioritizationResource optimizationProgress tracking
       setupTime: '25 minutes',;
       category: 'Productivity & Collaboration';
     },;
+<<<<<<< HEAD
 
 
 
@@ -4054,12 +4166,15 @@ features: [        'AI task prioritizationResource optimizationProgress tracking
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Financial Planning',;
       tagline: 'Smart financial management',;
       price: '$89',;
       period: '/month',;
       description: 'AI-powered financial planning platform for businesses with budgeting, forecasting, and financial analysis.',;
+<<<<<<< HEAD
 
     features: [        'AI-powered budgetingFinancial forecastingCash flow analysisExpense trackingFinancial reportingTax planningInvestment analysisIntegration with accounting software';
       ];
@@ -4080,10 +4195,16 @@ features: [        'AI-powered budgetingFinancial forecastingCash flow analysisE
     features: [        'AI-powered budgetingFinancial forecastingCash flow analysisExpense trackingFinancial reportingTax planningInvestment analysisIntegration with accounting software';
       ];
 
+=======
+      features: [;
+        'AI-powered budgetingFinancial forecastingCash flow analysisExpense trackingFinancial reportingTax planningInvestment analysisIntegration with accounting software';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '💰',;
       color: 'from-green-500 to-emerald-600',;
       textColor: 'text-green-400',;
+<<<<<<< HEAD
 
 
 
@@ -4098,6 +4219,8 @@ features: [        'AI-powered budgetingFinancial forecastingCash flow analysisE
       category: 'Finance & Planning';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-financial-planning',;
       marketPosition: 'Competitive with Mint (Free), YNAB ($8.25-14.99), and Personal Capital (Free)',;
       targetAudience: 'Small businesses, financial advisors, and individuals',;
@@ -4105,6 +4228,7 @@ features: [        'AI-powered budgetingFinancial forecastingCash flow analysisE
       setupTime: '30 minutes',;
       category: 'Finance & Planning';
     },;
+<<<<<<< HEAD
 
 
 
@@ -4112,12 +4236,15 @@ features: [        'AI-powered budgetingFinancial forecastingCash flow analysisE
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Content Calendar',;
       tagline: 'Strategic content planning',;
       price: '$39',;
       period: '/month',;
       description: 'AI-powered content calendar with content ideation, scheduling, and performance optimization.',;
+<<<<<<< HEAD
 
     features: [        'AI content ideationSmart schedulingPerformance trackingContent templatesTeam collaborationMulti-platform publishingAnalytics & insightsIntegration with CMS platforms';
       ];
@@ -4138,10 +4265,16 @@ features: [        'AI content ideationSmart schedulingPerformance trackingConte
     features: [        'AI content ideationSmart schedulingPerformance trackingContent templatesTeam collaborationMulti-platform publishingAnalytics & insightsIntegration with CMS platforms';
       ];
 
+=======
+      features: [;
+        'AI content ideationSmart schedulingPerformance trackingContent templatesTeam collaborationMulti-platform publishingAnalytics & insightsIntegration with CMS platforms';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📅',;
       color: 'from-teal-500 to-cyan-600',;
       textColor: 'text-teal-400',;
+<<<<<<< HEAD
 
 
 
@@ -4156,6 +4289,8 @@ features: [        'AI content ideationSmart schedulingPerformance trackingConte
       category: 'Content & Marketing';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-content-calendar',;
       marketPosition: 'Competitive with CoSchedule ($29-99), Buffer ($6-99), and Hootsuite ($29-599)',;
       targetAudience: 'Content marketers, social media managers, and marketing teams',;
@@ -4163,6 +4298,7 @@ features: [        'AI content ideationSmart schedulingPerformance trackingConte
       setupTime: '15 minutes',;
       category: 'Content & Marketing';
     },;
+<<<<<<< HEAD
 
 
 
@@ -4170,12 +4306,15 @@ features: [        'AI content ideationSmart schedulingPerformance trackingConte
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Performance Monitoring',;
       tagline: 'Real-time system monitoring',;
       price: '$69',;
       period: '/month',;
       description: 'AI-powered performance monitoring for web applications, servers, and infrastructure.',;
+<<<<<<< HEAD
 
     features: [        'Real-time monitoringPerformance alertsRoot cause analysisCapacity planningCustom dashboardsAPI monitoringMobile app monitoringIntegration with DevOps tools';
       ];
@@ -4196,10 +4335,16 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
     features: [        'Real-time monitoringPerformance alertsRoot cause analysisCapacity planningCustom dashboardsAPI monitoringMobile app monitoringIntegration with DevOps tools';
       ];
 
+=======
+      features: [;
+        'Real-time monitoringPerformance alertsRoot cause analysisCapacity planningCustom dashboardsAPI monitoringMobile app monitoringIntegration with DevOps tools';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📊',;
       color: 'from-blue-500 to-indigo-600',;
       textColor: 'text-blue-400',;
+<<<<<<< HEAD
 
 
 
@@ -4214,6 +4359,8 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
       category: 'Development & DevOps';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-performance-monitoring',;
       marketPosition: 'Competitive with New Relic ($0-99), Datadog ($15-23), and AppDynamics ($0-60)',;
       targetAudience: 'DevOps teams, system administrators, and developers',;
@@ -4221,6 +4368,7 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
       setupTime: '20 minutes',;
       category: 'Development & DevOps';
     },;
+<<<<<<< HEAD
 
 
 
@@ -4228,6 +4376,8 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Data Visualization',;
       tagline: 'Beautiful data insights',;
@@ -4241,6 +4391,7 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
       icon: '📈',;
       color: 'from-purple-500 to-indigo-600',;
       textColor: 'text-purple-400',;
+<<<<<<< HEAD
 
 
 
@@ -4255,6 +4406,8 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
       category: 'Analytics & Data';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-data-visualization',;
       marketPosition: 'Competitive with Tableau ($70-70), Power BI ($9.99-20), and Looker ($500-5000)',;
       targetAudience: 'Data analysts, business intelligence teams, and executives',;
@@ -4262,6 +4415,7 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
       setupTime: '25 minutes',;
       category: 'Analytics & Data';
     },;
+<<<<<<< HEAD
 
 
 
@@ -4269,6 +4423,8 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Customer Onboarding',;
       tagline: 'Streamlined customer success',;
@@ -4282,6 +4438,7 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
       icon: '🚀',;
       color: 'from-emerald-500 to-teal-600',;
       textColor: 'text-emerald-400',;
+<<<<<<< HEAD
 
 
 
@@ -4296,6 +4453,8 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
       category: 'Customer Experience';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-customer-onboarding',;
       marketPosition: 'Competitive with Appcues ($249-2499), WalkMe ($0-10000), and Pendo ($0-2000)',;
       targetAudience: 'SaaS companies, product managers, and customer success teams',;
@@ -4303,6 +4462,7 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
       setupTime: '20 minutes',;
       category: 'Customer Experience';
     },;
+<<<<<<< HEAD
 
 
 
@@ -4310,6 +4470,8 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI A/B Testing Platform',;
       tagline: 'Data-driven optimization',;
@@ -4323,6 +4485,7 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
       icon: '🧪',;
       color: 'from-orange-500 to-red-600',;
       textColor: 'text-orange-400',;
+<<<<<<< HEAD
 
 
 
@@ -4337,6 +4500,8 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
       category: 'Analytics & Optimization';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-ab-testing-platform',;
       marketPosition: 'Competitive with Optimizely ($0-1000), VWO ($0-199), and Google Optimize (Free)',;
       targetAudience: 'Product managers, marketers, and UX researchers',;
@@ -4344,6 +4509,7 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
       setupTime: '15 minutes',;
       category: 'Analytics & Optimization';
     },;
+<<<<<<< HEAD
 
 
 
@@ -4351,12 +4517,15 @@ features: [        'Real-time monitoringPerformance alertsRoot cause analysisCap
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Customer Feedback Hub',;
       tagline: 'Centralized feedback management',;
       price: '$39',;
       period: '/month',;
       description: 'AI-powered customer feedback platform that collects, analyzes, and acts on customer insights.',;
+<<<<<<< HEAD
 
     features: [        'Multi-channel feedback collectionAI sentiment analysisFeedback categorizationAction item trackingIntegration with toolsReal-time dashboardsTeam collaborationExport capabilities';
       ];
@@ -4377,10 +4546,16 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
     features: [        'Multi-channel feedback collectionAI sentiment analysisFeedback categorizationAction item trackingIntegration with toolsReal-time dashboardsTeam collaborationExport capabilities';
       ];
 
+=======
+      features: [;
+        'Multi-channel feedback collectionAI sentiment analysisFeedback categorizationAction item trackingIntegration with toolsReal-time dashboardsTeam collaborationExport capabilities';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '💬',;
       color: 'from-pink-500 to-rose-600',;
       textColor: 'text-pink-400',;
+<<<<<<< HEAD
 
 
 
@@ -4395,6 +4570,8 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
       category: 'Customer Experience';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-customer-feedback-hub',;
       marketPosition: 'Competitive with UserVoice ($0-500), Productboard ($0-20000), and Canny ($0-400)',;
       targetAudience: 'Product managers, customer success teams, and UX researchers',;
@@ -4402,6 +4579,7 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
       setupTime: '20 minutes',;
       category: 'Customer Experience';
     },;
+<<<<<<< HEAD
 
 
 
@@ -4409,6 +4587,8 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Inventory Forecasting',;
       tagline: 'Predictive inventory management',;
@@ -4422,6 +4602,7 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
       icon: '📦',;
       color: 'from-blue-500 to-indigo-600',;
       textColor: 'text-blue-400',;
+<<<<<<< HEAD
 
 
 
@@ -4436,6 +4617,8 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
       category: 'Operations & Logistics';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-inventory-forecasting',;
       marketPosition: 'Competitive with TradeGecko ($0-100), Zoho Inventory ($0-239), and Fishbowl ($0-500)',;
       targetAudience: 'Retail businesses, e-commerce stores, and warehouse managers',;
@@ -4443,6 +4626,7 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
       setupTime: '30 minutes',;
       category: 'Operations & Logistics';
     },;
+<<<<<<< HEAD
 
 
 
@@ -4450,6 +4634,8 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Lead Generation',;
       tagline: 'Automated lead discovery',;
@@ -4463,6 +4649,7 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
       icon: '🎯',;
       color: 'from-emerald-500 to-teal-600',;
       textColor: 'text-emerald-400',;
+<<<<<<< HEAD
 
 
 
@@ -4477,6 +4664,8 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
       category: 'Sales & Marketing';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-lead-generation',;
       marketPosition: 'Competitive with Apollo ($0-1000), ZoomInfo ($0-10000), and Hunter ($0-499)',;
       targetAudience: 'Sales teams, B2B companies, and marketing agencies',;
@@ -4484,6 +4673,7 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
       setupTime: '25 minutes',;
       category: 'Sales & Marketing';
     },;
+<<<<<<< HEAD
 
 
 
@@ -4491,6 +4681,8 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Customer Churn Prediction',;
       tagline: 'Prevent customer churn',;
@@ -4504,6 +4696,7 @@ features: [        'Multi-channel feedback collectionAI sentiment analysisFeedba
       icon: '📉',;
       color: 'from-red-500 to-pink-600',;
       textColor: 'text-red-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-churn-prediction',;
       marketPosition: 'Competitive with Gainsight ($0-1000+), Totango ($0-1000+), and ChurnZero ($0-1000+)',;
@@ -4520,10 +4713,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-churn-prediction',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-churn-prediction',;
       marketPosition: 'Competitive with Gainsight ($0-1000+), Totango ($0-1000+), and ChurnZero ($0-1000+)',;
     targetAudience: 'Customer success teams, product managers, and subscription businesses'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-churn-prediction',;
       marketPosition: 'Competitive with Gainsight ($0-1000+), Totango ($0-1000+), and ChurnZero ($0-1000+)',;
       targetAudience: 'Customer success teams, product managers, and subscription businesses';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-churn-prediction',;
       marketPosition: 'Competitive with Gainsight ($0-1000+), Totango ($0-1000+), and ChurnZero ($0-1000+)',;
     targetAudience: 'Customer success teams, product managers, and subscription businesses'    };
@@ -4531,12 +4727,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-churn-prediction',;
       marketPosition: 'Competitive with Gainsight ($0-1000+), Totango ($0-1000+), and ChurnZero ($0-1000+)',;
     targetAudience: 'Customer success teams, product managers, and subscription businesses'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Inventory Management',;
       tagline: 'Intelligent inventory optimization',;
       price: '$79',;
       period: '/month',;
       description: 'AI-driven inventory management with demand forecasting, automated reordering, and optimization recommendations.',;
+<<<<<<< HEAD
 
     features: [        'AI demand forecastingAutomated reorder pointsInventory optimizationMulti-location managementSupplier performance trackingCost optimizationReal-time analyticsIntegration with e-commerce platforms';
       ];
@@ -4557,10 +4756,16 @@ features: [        'AI demand forecastingAutomated reorder pointsInventory optim
     features: [        'AI demand forecastingAutomated reorder pointsInventory optimizationMulti-location managementSupplier performance trackingCost optimizationReal-time analyticsIntegration with e-commerce platforms';
       ];
 
+=======
+      features: [;
+        'AI demand forecastingAutomated reorder pointsInventory optimizationMulti-location managementSupplier performance trackingCost optimizationReal-time analyticsIntegration with e-commerce platforms';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📦',;
       color: 'from-indigo-500 to-purple-600',;
       textColor: 'text-indigo-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-management',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
@@ -4577,10 +4782,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-management',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-management',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
     targetAudience: 'E-commerce businesses, retailers, and inventory managers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-inventory-management',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
       targetAudience: 'E-commerce businesses, retailers, and inventory managers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-management',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
     targetAudience: 'E-commerce businesses, retailers, and inventory managers'    };
@@ -4588,12 +4796,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-management',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
     targetAudience: 'E-commerce businesses, retailers, and inventory managers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Social Media Analytics',;
       tagline: 'Intelligent social media insights',;
       price: '$59',;
       period: '/month',;
       description: 'AI-powered social media analytics with sentiment analysis, trend prediction, and performance optimization.',;
+<<<<<<< HEAD
 
     features: [        'AI sentiment analysisTrend predictionContent performance analysisCompetitor benchmarkingOptimal posting timeHashtag optimizationROI trackingMulti-platform analytics';
       ];
@@ -4614,10 +4825,16 @@ features: [        'AI sentiment analysisTrend predictionContent performance ana
     features: [        'AI sentiment analysisTrend predictionContent performance analysisCompetitor benchmarkingOptimal posting timeHashtag optimizationROI trackingMulti-platform analytics';
       ];
 
+=======
+      features: [;
+        'AI sentiment analysisTrend predictionContent performance analysisCompetitor benchmarkingOptimal posting timeHashtag optimizationROI trackingMulti-platform analytics';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📊',;
       color: 'from-teal-500 to-cyan-600',;
       textColor: 'text-teal-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-social-media-analytics',;
       marketPosition: 'Competitive with Sprout Social ($99-249), Brandwatch ($0-1000+), and Mention ($29-99)',;
@@ -4634,10 +4851,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-social-media-analytics',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-social-media-analytics',;
       marketPosition: 'Competitive with Sprout Social ($99-249), Brandwatch ($0-1000+), and Mention ($29-99)',;
     targetAudience: 'Social media managers, digital marketers, and brand managers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-social-media-analytics',;
       marketPosition: 'Competitive with Sprout Social ($99-249), Brandwatch ($0-1000+), and Mention ($29-99)',;
       targetAudience: 'Social media managers, digital marketers, and brand managers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-social-media-analytics',;
       marketPosition: 'Competitive with Sprout Social ($99-249), Brandwatch ($0-1000+), and Mention ($29-99)',;
     targetAudience: 'Social media managers, digital marketers, and brand managers'    };
@@ -4645,12 +4865,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-social-media-analytics',;
       marketPosition: 'Competitive with Sprout Social ($99-249), Brandwatch ($0-1000+), and Mention ($29-99)',;
     targetAudience: 'Social media managers, digital marketers, and brand managers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Customer Support Analytics',;
       tagline: 'Intelligent support optimization',;
       price: '$69',;
       period: '/month',;
       description: 'AI-powered customer support analytics with automated insights, performance tracking, and optimization recommendations.',;
+<<<<<<< HEAD
 
     features: [        'AI-powered insightsSupport performance analyticsCustomer satisfaction trackingResponse time optimizationSupport ticket analysisAgent performance metricsAutomated reportingIntegration with support tools';
       ];
@@ -4671,10 +4894,16 @@ features: [        'AI-powered insightsSupport performance analyticsCustomer sat
     features: [        'AI-powered insightsSupport performance analyticsCustomer satisfaction trackingResponse time optimizationSupport ticket analysisAgent performance metricsAutomated reportingIntegration with support tools';
       ];
 
+=======
+      features: [;
+        'AI-powered insightsSupport performance analyticsCustomer satisfaction trackingResponse time optimizationSupport ticket analysisAgent performance metricsAutomated reportingIntegration with support tools';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📞',;
       color: 'from-blue-500 to-indigo-600',;
       textColor: 'text-blue-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-support-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Help Scout ($20-65)',;
@@ -4691,10 +4920,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-support-analytics',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-support-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Help Scout ($20-65)',;
     targetAudience: 'Customer support managers, support teams, and customer experience professionals'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-support-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Help Scout ($20-65)',;
       targetAudience: 'Customer support managers, support teams, and customer experience professionals';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-support-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Help Scout ($20-65)',;
     targetAudience: 'Customer support managers, support teams, and customer experience professionals'    };
@@ -4702,12 +4934,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-support-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Help Scout ($20-65)',;
     targetAudience: 'Customer support managers, support teams, and customer experience professionals'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Website Performance Optimizer',;
       tagline: 'Intelligent website optimization',;
       price: '$89',;
       period: '/month',;
       description: 'AI-driven website performance optimization with automated testing, speed improvements, and SEO enhancements.',;
+<<<<<<< HEAD
 
     features: [        'AI performance analysisAutomated optimizationSpeed testing & monitoringSEO optimizationMobile optimizationCore Web Vitals trackingPerformance analyticsIntegration with analytics tools';
       ];
@@ -4728,10 +4963,16 @@ features: [        'AI performance analysisAutomated optimizationSpeed testing &
     features: [        'AI performance analysisAutomated optimizationSpeed testing & monitoringSEO optimizationMobile optimizationCore Web Vitals trackingPerformance analyticsIntegration with analytics tools';
       ];
 
+=======
+      features: [;
+        'AI performance analysisAutomated optimizationSpeed testing & monitoringSEO optimizationMobile optimizationCore Web Vitals trackingPerformance analyticsIntegration with analytics tools';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: true,;
       icon: '⚡',;
       color: 'from-yellow-500 to-orange-600',;
       textColor: 'text-yellow-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-website-optimizer',;
       marketPosition: 'Competitive with GTmetrix (Free-$15), PageSpeed Insights (Free), and WebPageTest (Free-$99)',;
@@ -4748,10 +4989,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-website-optimizer',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-website-optimizer',;
       marketPosition: 'Competitive with GTmetrix (Free-$15), PageSpeed Insights (Free), and WebPageTest (Free-$99)',;
     targetAudience: 'Web developers, digital marketers, and website owners'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-website-optimizer',;
       marketPosition: 'Competitive with GTmetrix (Free-$15), PageSpeed Insights (Free), and WebPageTest (Free-$99)',;
       targetAudience: 'Web developers, digital marketers, and website owners';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-website-optimizer',;
       marketPosition: 'Competitive with GTmetrix (Free-$15), PageSpeed Insights (Free), and WebPageTest (Free-$99)',;
     targetAudience: 'Web developers, digital marketers, and website owners'    };
@@ -4759,6 +5003,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-website-optimizer',;
       marketPosition: 'Competitive with GTmetrix (Free-$15), PageSpeed Insights (Free), and WebPageTest (Free-$99)',;
     targetAudience: 'Web developers, digital marketers, and website owners'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Customer Feedback Sentiment Analysis',;
       tagline: 'Intelligent feedback insights',;
@@ -4772,6 +5018,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-website-optimizer',;
       icon: '💭',;
       color: 'from-purple-500 to-violet-600',;
       textColor: 'text-purple-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-feedback-sentiment',;
       marketPosition: 'Competitive with MonkeyLearn ($299-999), Lexalytics ($0-1000+), and MeaningCloud ($0-1000+)',;
@@ -4788,10 +5035,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-feedback-sentiment',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-feedback-sentiment',;
       marketPosition: 'Competitive with MonkeyLearn ($299-999), Lexalytics ($0-1000+), and MeaningCloud ($0-1000+)',;
     targetAudience: 'Product managers, customer success teams, and UX researchers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-feedback-sentiment',;
       marketPosition: 'Competitive with MonkeyLearn ($299-999), Lexalytics ($0-1000+), and MeaningCloud ($0-1000+)',;
       targetAudience: 'Product managers, customer success teams, and UX researchers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-feedback-sentiment',;
       marketPosition: 'Competitive with MonkeyLearn ($299-999), Lexalytics ($0-1000+), and MeaningCloud ($0-1000+)',;
     targetAudience: 'Product managers, customer success teams, and UX researchers'    };
@@ -4799,12 +5049,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-feedback-sentiment',;
       marketPosition: 'Competitive with MonkeyLearn ($299-999), Lexalytics ($0-1000+), and MeaningCloud ($0-1000+)',;
     targetAudience: 'Product managers, customer success teams, and UX researchers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Email Marketing Automation',;
       tagline: 'Intelligent email campaigns',;
       price: '$79',;
       period: '/month',;
       description: 'AI-powered email marketing automation with intelligent segmentation, personalization, and optimization.',;
+<<<<<<< HEAD
 
     features: [        'AI-powered segmentationIntelligent personalizationAutomated workflowsA/B testing automationSend time optimizationPerformance analyticsTemplate optimizationIntegration with marketing tools';
       ];
@@ -4825,10 +5078,16 @@ features: [        'AI-powered segmentationIntelligent personalizationAutomated 
     features: [        'AI-powered segmentationIntelligent personalizationAutomated workflowsA/B testing automationSend time optimizationPerformance analyticsTemplate optimizationIntegration with marketing tools';
       ];
 
+=======
+      features: [;
+        'AI-powered segmentationIntelligent personalizationAutomated workflowsA/B testing automationSend time optimizationPerformance analyticsTemplate optimizationIntegration with marketing tools';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: true,;
       icon: '📧',;
       color: 'from-green-500 to-emerald-600',;
       textColor: 'text-green-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-email-automation',;
       marketPosition: 'Competitive with Mailchimp ($13-350), ConvertKit ($29-59), and ActiveCampaign ($29-259)',;
@@ -4845,10 +5104,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-email-automation',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-email-automation',;
       marketPosition: 'Competitive with Mailchimp ($13-350), ConvertKit ($29-59), and ActiveCampaign ($29-259)',;
     targetAudience: 'Email marketers, digital marketers, and e-commerce businesses'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-email-automation',;
       marketPosition: 'Competitive with Mailchimp ($13-350), ConvertKit ($29-59), and ActiveCampaign ($29-259)',;
       targetAudience: 'Email marketers, digital marketers, and e-commerce businesses';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-email-automation',;
       marketPosition: 'Competitive with Mailchimp ($13-350), ConvertKit ($29-59), and ActiveCampaign ($29-259)',;
     targetAudience: 'Email marketers, digital marketers, and e-commerce businesses'    };
@@ -4856,12 +5118,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-email-automation',;
       marketPosition: 'Competitive with Mailchimp ($13-350), ConvertKit ($29-59), and ActiveCampaign ($29-259)',;
     targetAudience: 'Email marketers, digital marketers, and e-commerce businesses'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Customer Journey Mapping',;
       tagline: 'Intelligent customer experience optimization',;
       price: '$99',;
       period: '/month',;
       description: 'AI-powered customer journey mapping with automated insights, optimization recommendations, and performance tracking.',;
+<<<<<<< HEAD
 
     features: [        'AI journey mappingTouchpoint analysisOptimization recommendationsPerformance trackingCustomer behavior insightsJourney analyticsIntegration with analytics toolsCustom reporting';
       ];
@@ -4882,10 +5147,16 @@ features: [        'AI journey mappingTouchpoint analysisOptimization recommenda
     features: [        'AI journey mappingTouchpoint analysisOptimization recommendationsPerformance trackingCustomer behavior insightsJourney analyticsIntegration with analytics toolsCustom reporting';
       ];
 
+=======
+      features: [;
+        'AI journey mappingTouchpoint analysisOptimization recommendationsPerformance trackingCustomer behavior insightsJourney analyticsIntegration with analytics toolsCustom reporting';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '🗺️',;
       color: 'from-teal-500 to-cyan-600',;
       textColor: 'text-teal-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-journey',;
       marketPosition: 'Competitive with UXPressia ($0-1000+), Smaply ($0-1000+), and Touchpoint Dashboard ($0-1000+)',;
@@ -4902,10 +5173,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-journey',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-journey',;
       marketPosition: 'Competitive with UXPressia ($0-1000+), Smaply ($0-1000+), and Touchpoint Dashboard ($0-1000+)',;
     targetAudience: 'Customer experience professionals, UX designers, and product managers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-customer-journey',;
       marketPosition: 'Competitive with UXPressia ($0-1000+), Smaply ($0-1000+), and Touchpoint Dashboard ($0-1000+)',;
       targetAudience: 'Customer experience professionals, UX designers, and product managers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-journey',;
       marketPosition: 'Competitive with UXPressia ($0-1000+), Smaply ($0-1000+), and Touchpoint Dashboard ($0-1000+)',;
     targetAudience: 'Customer experience professionals, UX designers, and product managers'    };
@@ -4913,12 +5187,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-journey',;
       marketPosition: 'Competitive with UXPressia ($0-1000+), Smaply ($0-1000+), and Touchpoint Dashboard ($0-1000+)',;
     targetAudience: 'Customer experience professionals, UX designers, and product managers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Competitive Intelligence',;
       tagline: 'Intelligent market monitoring',;
       price: '$89',;
       period: '/month',;
       description: 'AI-powered competitive intelligence with automated monitoring, analysis, and strategic insights.',;
+<<<<<<< HEAD
 
     features: [        'AI competitive monitoringMarket analysisStrategy insightsPerformance benchmarkingTrend identificationAutomated alertsCustom reportingIntegration with analytics tools';
       ];
@@ -4939,10 +5216,16 @@ features: [        'AI competitive monitoringMarket analysisStrategy insightsPer
     features: [        'AI competitive monitoringMarket analysisStrategy insightsPerformance benchmarkingTrend identificationAutomated alertsCustom reportingIntegration with analytics tools';
       ];
 
+=======
+      features: [;
+        'AI competitive monitoringMarket analysisStrategy insightsPerformance benchmarkingTrend identificationAutomated alertsCustom reportingIntegration with analytics tools';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '🔍',;
       color: 'from-blue-500 to-indigo-600',;
       textColor: 'text-blue-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-competitive-intelligence',;
       marketPosition: 'Competitive with Crayon ($0-1000+), Kompyte ($0-1000+), and Brandwatch ($0-1000+)',;
@@ -4959,10 +5242,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-competitive-intelligence',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-competitive-intelligence',;
       marketPosition: 'Competitive with Crayon ($0-1000+), Kompyte ($0-1000+), and Brandwatch ($0-1000+)',;
     targetAudience: 'Business strategists, marketing teams, and product managers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-competitive-intelligence',;
       marketPosition: 'Competitive with Crayon ($0-1000+), Kompyte ($0-1000+), and Brandwatch ($0-1000+)',;
       targetAudience: 'Business strategists, marketing teams, and product managers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-competitive-intelligence',;
       marketPosition: 'Competitive with Crayon ($0-1000+), Kompyte ($0-1000+), and Brandwatch ($0-1000+)',;
     targetAudience: 'Business strategists, marketing teams, and product managers'    };
@@ -4970,6 +5256,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-competitive-intelligence',;
       marketPosition: 'Competitive with Crayon ($0-1000+), Kompyte ($0-1000+), and Brandwatch ($0-1000+)',;
     targetAudience: 'Business strategists, marketing teams, and product managers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Customer Lifetime Value Optimization',;
       tagline: 'Maximize customer value',;
@@ -4983,6 +5271,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-competitive-intelligence',;
       icon: '💰',;
       color: 'from-green-500 to-emerald-600',;
       textColor: 'text-green-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-clv-optimization',;
       marketPosition: 'Competitive with Optimove ($0-1000+), Retention Science ($0-1000+), and Custora ($0-1000+)',;
@@ -4999,10 +5288,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-clv-optimization',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-clv-optimization',;
       marketPosition: 'Competitive with Optimove ($0-1000+), Retention Science ($0-1000+), and Custora ($0-1000+)',;
     targetAudience: 'Customer success managers, marketing teams, and business analysts'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-clv-optimization',;
       marketPosition: 'Competitive with Optimove ($0-1000+), Retention Science ($0-1000+), and Custora ($0-1000+)',;
       targetAudience: 'Customer success managers, marketing teams, and business analysts';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-clv-optimization',;
       marketPosition: 'Competitive with Optimove ($0-1000+), Retention Science ($0-1000+), and Custora ($0-1000+)',;
     targetAudience: 'Customer success managers, marketing teams, and business analysts'    };
@@ -5010,6 +5302,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-clv-optimization',;
       marketPosition: 'Competitive with Optimove ($0-1000+), Retention Science ($0-1000+), and Custora ($0-1000+)',;
     targetAudience: 'Customer success managers, marketing teams, and business analysts'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     // NEW REAL MICRO SAAS SERVICES;
     {;
       name: 'AI-Powered Contract Analysis',;
@@ -5017,6 +5311,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-clv-optimization',;
       price: '$129',;
       period: '/month',;
       description: 'AI-powered contract analysis with risk assessment, compliance checking, and automated legal document review.',;
+<<<<<<< HEAD
 
     features: [        'AI contract analysisRisk assessment & scoringCompliance checkingAutomated legal reviewContract template libraryVersion control & trackingIntegration with legal toolsCustom compliance rules';
       ];
@@ -5037,10 +5332,16 @@ features: [        'AI contract analysisRisk assessment & scoringCompliance chec
     features: [        'AI contract analysisRisk assessment & scoringCompliance checkingAutomated legal reviewContract template libraryVersion control & trackingIntegration with legal toolsCustom compliance rules';
       ];
 
+=======
+      features: [;
+        'AI contract analysisRisk assessment & scoringCompliance checkingAutomated legal reviewContract template libraryVersion control & trackingIntegration with legal toolsCustom compliance rules';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: true,;
       icon: '⚖️',;
       color: 'from-indigo-500 to-purple-600',;
       textColor: 'text-indigo-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-contract-analysis',;
       marketPosition: 'Competitive with Evisort ($0-1000+), ContractPodAi ($0-1000+), and DocuSign ($10-25)',;
@@ -5057,10 +5358,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-contract-analysis',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-contract-analysis',;
       marketPosition: 'Competitive with Evisort ($0-1000+), ContractPodAi ($0-1000+), and DocuSign ($10-25)',;
     targetAudience: 'Legal teams, contract managers, and compliance officers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-contract-analysis',;
       marketPosition: 'Competitive with Evisort ($0-1000+), ContractPodAi ($0-1000+), and DocuSign ($10-25)',;
       targetAudience: 'Legal teams, contract managers, and compliance officers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-contract-analysis',;
       marketPosition: 'Competitive with Evisort ($0-1000+), ContractPodAi ($0-1000+), and DocuSign ($10-25)',;
     targetAudience: 'Legal teams, contract managers, and compliance officers'    };
@@ -5068,12 +5372,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-contract-analysis',;
       marketPosition: 'Competitive with Evisort ($0-1000+), ContractPodAi ($0-1000+), and DocuSign ($10-25)',;
     targetAudience: 'Legal teams, contract managers, and compliance officers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Sales Forecasting',;
       tagline: 'Predictive sales intelligence',;
       price: '$149',;
       period: '/month',;
       description: 'AI-powered sales forecasting with predictive analytics, pipeline optimization, and revenue prediction.',;
+<<<<<<< HEAD
 
     features: [        'AI sales forecastingPipeline optimizationRevenue predictionSales trend analysisPerformance benchmarkingCustom forecasting modelsIntegration with CRM systemsReal-time analytics dashboard';
       ];
@@ -5094,10 +5401,16 @@ features: [        'AI sales forecastingPipeline optimizationRevenue predictionS
     features: [        'AI sales forecastingPipeline optimizationRevenue predictionSales trend analysisPerformance benchmarkingCustom forecasting modelsIntegration with CRM systemsReal-time analytics dashboard';
       ];
 
+=======
+      features: [;
+        'AI sales forecastingPipeline optimizationRevenue predictionSales trend analysisPerformance benchmarkingCustom forecasting modelsIntegration with CRM systemsReal-time analytics dashboard';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: true,;
       icon: '📈',;
       color: 'from-blue-500 to-indigo-600',;
       textColor: 'text-blue-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-forecasting',;
       marketPosition: 'Competitive with Clari ($0-1000+), Gong ($0-1000+), and Chorus ($0-1000+)',;
@@ -5114,10 +5427,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-forecasting',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-forecasting',;
       marketPosition: 'Competitive with Clari ($0-1000+), Gong ($0-1000+), and Chorus ($0-1000+)',;
     targetAudience: 'Sales managers, revenue operations, and business analysts'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-sales-forecasting',;
       marketPosition: 'Competitive with Clari ($0-1000+), Gong ($0-1000+), and Chorus ($0-1000+)',;
       targetAudience: 'Sales managers, revenue operations, and business analysts';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-forecasting',;
       marketPosition: 'Competitive with Clari ($0-1000+), Gong ($0-1000+), and Chorus ($0-1000+)',;
     targetAudience: 'Sales managers, revenue operations, and business analysts'    };
@@ -5125,12 +5441,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-forecasting',;
       marketPosition: 'Competitive with Clari ($0-1000+), Gong ($0-1000+), and Chorus ($0-1000+)',;
     targetAudience: 'Sales managers, revenue operations, and business analysts'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Customer Service Analytics',;
       tagline: 'Intelligent support optimization',;
       price: '$89',;
       period: '/month',;
       description: 'AI-powered customer service analytics with sentiment analysis, performance tracking, and optimization insights.',;
+<<<<<<< HEAD
 
     features: [        'AI sentiment analysisSupport performance trackingCustomer satisfaction metricsResponse time optimizationAgent performance analyticsAutomated insightsIntegration with support toolsCustom reporting dashboards';
       ];
@@ -5151,10 +5470,16 @@ features: [        'AI sentiment analysisSupport performance trackingCustomer sa
     features: [        'AI sentiment analysisSupport performance trackingCustomer satisfaction metricsResponse time optimizationAgent performance analyticsAutomated insightsIntegration with support toolsCustom reporting dashboards';
       ];
 
+=======
+      features: [;
+        'AI sentiment analysisSupport performance trackingCustomer satisfaction metricsResponse time optimizationAgent performance analyticsAutomated insightsIntegration with support toolsCustom reporting dashboards';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📊',;
       color: 'from-teal-500 to-cyan-600',;
       textColor: 'text-teal-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Help Scout ($20-65)',;
@@ -5171,10 +5496,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-analytics'
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Help Scout ($20-65)',;
     targetAudience: 'Customer service managers, support teams, and CX professionals'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-customer-service-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Help Scout ($20-65)',;
       targetAudience: 'Customer service managers, support teams, and CX professionals';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Help Scout ($20-65)',;
     targetAudience: 'Customer service managers, support teams, and CX professionals'    };
@@ -5182,12 +5510,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-analytics'
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Help Scout ($20-65)',;
     targetAudience: 'Customer service managers, support teams, and CX professionals'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Product Recommendation Engine',;
       tagline: 'Intelligent product suggestions',;
       price: '$119',;
       period: '/month',;
       description: 'AI-powered product recommendation engine with personalized suggestions, behavioral analysis, and conversion optimization.',;
+<<<<<<< HEAD
 
     features: [        'AI recommendation algorithmsPersonalized suggestionsBehavioral analysisConversion optimizationA/B testing automationReal-time recommendationsIntegration with e-commerce platformsPerformance analytics';
       ];
@@ -5208,10 +5539,16 @@ features: [        'AI recommendation algorithmsPersonalized suggestionsBehavior
     features: [        'AI recommendation algorithmsPersonalized suggestionsBehavioral analysisConversion optimizationA/B testing automationReal-time recommendationsIntegration with e-commerce platformsPerformance analytics';
       ];
 
+=======
+      features: [;
+        'AI recommendation algorithmsPersonalized suggestionsBehavioral analysisConversion optimizationA/B testing automationReal-time recommendationsIntegration with e-commerce platformsPerformance analytics';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: true,;
       icon: '🎯',;
       color: 'from-purple-500 to-violet-600',;
       textColor: 'text-purple-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-product-recommendations',;
       marketPosition: 'Competitive with Algolia ($1-1000+), Elasticsearch ($0-1000+), and Amazon Personalize ($0-1000+)',;
@@ -5228,10 +5565,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-product-recommendations',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-product-recommendations',;
       marketPosition: 'Competitive with Algolia ($1-1000+), Elasticsearch ($0-1000+), and Amazon Personalize ($0-1000+)',;
     targetAudience: 'E-commerce businesses, online retailers, and product managers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-product-recommendations',;
       marketPosition: 'Competitive with Algolia ($1-1000+), Elasticsearch ($0-1000+), and Amazon Personalize ($0-1000+)',;
       targetAudience: 'E-commerce businesses, online retailers, and product managers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-product-recommendations',;
       marketPosition: 'Competitive with Algolia ($1-1000+), Elasticsearch ($0-1000+), and Amazon Personalize ($0-1000+)',;
     targetAudience: 'E-commerce businesses, online retailers, and product managers'    };
@@ -5239,12 +5579,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-product-recommendations',;
       marketPosition: 'Competitive with Algolia ($1-1000+), Elasticsearch ($0-1000+), and Amazon Personalize ($0-1000+)',;
     targetAudience: 'E-commerce businesses, online retailers, and product managers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Fraud Detection',;
       tagline: 'Advanced security monitoring',;
       price: '$199',;
       period: '/month',;
       description: 'AI-powered fraud detection with real-time monitoring, risk assessment, and automated threat response.',;
+<<<<<<< HEAD
 
     features: [        'AI fraud detectionReal-time monitoringRisk assessmentAutomated threat responsePattern recognitionCompliance reportingIntegration with payment systemsCustom security rules';
       ];
@@ -5265,10 +5608,16 @@ features: [        'AI fraud detectionReal-time monitoringRisk assessmentAutomat
     features: [        'AI fraud detectionReal-time monitoringRisk assessmentAutomated threat responsePattern recognitionCompliance reportingIntegration with payment systemsCustom security rules';
       ];
 
+=======
+      features: [;
+        'AI fraud detectionReal-time monitoringRisk assessmentAutomated threat responsePattern recognitionCompliance reportingIntegration with payment systemsCustom security rules';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '🛡️',;
       color: 'from-red-500 to-pink-600',;
       textColor: 'text-red-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection',;
       marketPosition: 'Competitive with Sift ($0-1000+), Signifyd ($0-1000+), and Forter ($0-1000+)',;
@@ -5285,10 +5634,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection',;
       marketPosition: 'Competitive with Sift ($0-1000+), Signifyd ($0-1000+), and Forter ($0-1000+)',;
     targetAudience: 'Financial institutions, e-commerce businesses, and security teams'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-fraud-detection',;
       marketPosition: 'Competitive with Sift ($0-1000+), Signifyd ($0-1000+), and Forter ($0-1000+)',;
       targetAudience: 'Financial institutions, e-commerce businesses, and security teams';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection',;
       marketPosition: 'Competitive with Sift ($0-1000+), Signifyd ($0-1000+), and Forter ($0-1000+)',;
     targetAudience: 'Financial institutions, e-commerce businesses, and security teams'    };
@@ -5296,12 +5648,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection',;
       marketPosition: 'Competitive with Sift ($0-1000+), Signifyd ($0-1000+), and Forter ($0-1000+)',;
     targetAudience: 'Financial institutions, e-commerce businesses, and security teams'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Inventory Forecasting',;
       tagline: 'Predictive inventory management',;
       price: '$139',;
       period: '/month',;
       description: 'AI-powered inventory forecasting with demand prediction, optimization recommendations, and automated reordering.',;
+<<<<<<< HEAD
 
     features: [        'AI demand forecastingInventory optimizationAutomated reorderingSeasonal trend analysisSupplier performance trackingCost optimizationIntegration with ERP systemsReal-time analytics';
       ];
@@ -5322,10 +5677,16 @@ features: [        'AI demand forecastingInventory optimizationAutomated reorder
     features: [        'AI demand forecastingInventory optimizationAutomated reorderingSeasonal trend analysisSupplier performance trackingCost optimizationIntegration with ERP systemsReal-time analytics';
       ];
 
+=======
+      features: [;
+        'AI demand forecastingInventory optimizationAutomated reorderingSeasonal trend analysisSupplier performance trackingCost optimizationIntegration with ERP systemsReal-time analytics';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📦',;
       color: 'from-green-500 to-emerald-600',;
       textColor: 'text-green-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
@@ -5342,10 +5703,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
     targetAudience: 'Manufacturing companies, retailers, and supply chain managers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-inventory-forecasting',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
       targetAudience: 'Manufacturing companies, retailers, and supply chain managers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
     targetAudience: 'Manufacturing companies, retailers, and supply chain managers'    };
@@ -5353,12 +5717,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
     targetAudience: 'Manufacturing companies, retailers, and supply chain managers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Customer Onboarding',;
       tagline: 'Intelligent user activation',;
       price: '$79',;
       period: '/month',;
       description: 'AI-powered customer onboarding with personalized experiences, progress tracking, and activation optimization.',;
+<<<<<<< HEAD
 
     features: [        'AI onboarding personalizationProgress trackingActivation optimizationUser behavior analysisAutomated workflowsIntegration with CRM systemsPerformance analyticsCustom onboarding paths';
       ];
@@ -5379,10 +5746,16 @@ features: [        'AI onboarding personalizationProgress trackingActivation opt
     features: [        'AI onboarding personalizationProgress trackingActivation optimizationUser behavior analysisAutomated workflowsIntegration with CRM systemsPerformance analyticsCustom onboarding paths';
       ];
 
+=======
+      features: [;
+        'AI onboarding personalizationProgress trackingActivation optimizationUser behavior analysisAutomated workflowsIntegration with CRM systemsPerformance analyticsCustom onboarding paths';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '🚀',;
       color: 'from-orange-500 to-red-600',;
       textColor: 'text-orange-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-onboarding',;
       marketPosition: 'Competitive with Appcues ($0-1000+), Userflow ($0-1000+), and Pendo ($0-1000+)',;
@@ -5399,10 +5772,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-onboarding',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-onboarding',;
       marketPosition: 'Competitive with Appcues ($0-1000+), Userflow ($0-1000+), and Pendo ($0-1000+)',;
     targetAudience: 'Product managers, customer success teams, and growth marketers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-customer-onboarding',;
       marketPosition: 'Competitive with Appcues ($0-1000+), Userflow ($0-1000+), and Pendo ($0-1000+)',;
       targetAudience: 'Product managers, customer success teams, and growth marketers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-onboarding',;
       marketPosition: 'Competitive with Appcues ($0-1000+), Userflow ($0-1000+), and Pendo ($0-1000+)',;
     targetAudience: 'Product managers, customer success teams, and growth marketers'    };
@@ -5410,12 +5786,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-onboarding',;
       marketPosition: 'Competitive with Appcues ($0-1000+), Userflow ($0-1000+), and Pendo ($0-1000+)',;
     targetAudience: 'Product managers, customer success teams, and growth marketers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Email Deliverability',;
       tagline: 'Maximize inbox placement',;
       price: '$89',;
       period: '/month',;
       description: 'AI-powered email deliverability optimization with real-time monitoring, reputation management, and automated improvements.',;
+<<<<<<< HEAD
 
     features: [        'AI deliverability optimizationReal-time monitoringReputation managementSpam filter analysisAuthentication setupPerformance analyticsIntegration with email platformsAutomated improvements';
       ];
@@ -5436,10 +5815,16 @@ features: [        'AI deliverability optimizationReal-time monitoringReputation
     features: [        'AI deliverability optimizationReal-time monitoringReputation managementSpam filter analysisAuthentication setupPerformance analyticsIntegration with email platformsAutomated improvements';
       ];
 
+=======
+      features: [;
+        'AI deliverability optimizationReal-time monitoringReputation managementSpam filter analysisAuthentication setupPerformance analyticsIntegration with email platformsAutomated improvements';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: true,;
       icon: '📮',;
       color: 'from-blue-500 to-indigo-600',;
       textColor: 'text-blue-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-email-deliverability',;
       marketPosition: 'Competitive with Mailgun ($35-675), SendGrid ($14 && 14.95-449), and Amazon SES ($0 && 0.10 per 1000 emails)',;
@@ -5456,10 +5841,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-email-deliverability',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-email-deliverability',;
       marketPosition: 'Competitive with Mailgun ($35-675), SendGrid ($14 && 14.95-449), and Amazon SES ($0 && 0.10 per 1000 emails)',;
     targetAudience: 'Email marketers, marketing agencies, and businesses with large email lists'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-email-deliverability',;
       marketPosition: 'Competitive with Mailgun ($35-675), SendGrid ($14.95-449), and Amazon SES ($0.10 per 1000 emails)',;
       targetAudience: 'Email marketers, marketing agencies, and businesses with large email lists';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-email-deliverability',;
       marketPosition: 'Competitive with Mailgun ($35-675), SendGrid ($14 && 14.95-449), and Amazon SES ($0 && 0.10 per 1000 emails)',;
     targetAudience: 'Email marketers, marketing agencies, and businesses with large email lists'    };
@@ -5467,12 +5855,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-email-deliverability',;
       marketPosition: 'Competitive with Mailgun ($35-675), SendGrid ($14 && 14.95-449), and Amazon SES ($0 && 0.10 per 1000 emails)',;
     targetAudience: 'Email marketers, marketing agencies, and businesses with large email lists'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Social Media Management',;
       tagline: 'Intelligent social media automation',;
       price: '$99',;
       period: '/month',;
       description: 'AI-powered social media management with content optimization, scheduling automation, and performance analytics.',;
+<<<<<<< HEAD
 
     features: [        'AI content optimizationAutomated schedulingPerformance analyticsHashtag optimizationContent recommendationsMulti-platform managementIntegration with social platformsCustom automation rules';
       ];
@@ -5493,10 +5884,16 @@ features: [        'AI content optimizationAutomated schedulingPerformance analy
     features: [        'AI content optimizationAutomated schedulingPerformance analyticsHashtag optimizationContent recommendationsMulti-platform managementIntegration with social platformsCustom automation rules';
       ];
 
+=======
+      features: [;
+        'AI content optimizationAutomated schedulingPerformance analyticsHashtag optimizationContent recommendationsMulti-platform managementIntegration with social platformsCustom automation rules';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📱',;
       color: 'from-pink-500 to-rose-600',;
       textColor: 'text-pink-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-social-media-management',;
       marketPosition: 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40)',;
@@ -5513,10 +5910,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-social-media-management',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-social-media-management',;
       marketPosition: 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40)',;
     targetAudience: 'Social media managers, digital marketers, and brand managers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-social-media-management',;
       marketPosition: 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40)',;
       targetAudience: 'Social media managers, digital marketers, and brand managers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-social-media-management',;
       marketPosition: 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40)',;
     targetAudience: 'Social media managers, digital marketers, and brand managers'    };
@@ -5524,12 +5924,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-social-media-management',;
       marketPosition: 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40)',;
     targetAudience: 'Social media managers, digital marketers, and brand managers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI-Powered Customer Feedback Analysis',;
       tagline: 'Intelligent feedback insights',;
       price: '$69',;
       period: '/month',;
       description: 'AI-powered customer feedback analysis with sentiment analysis, trend identification, and actionable insights.',;
+<<<<<<< HEAD
 
     features: [        'AI sentiment analysisTrend identificationActionable insightsFeedback categorizationReal-time monitoringIntegration with feedback toolsCustom reportingAutomated alerts';
       ];
@@ -5550,10 +5953,16 @@ features: [        'AI sentiment analysisTrend identificationActionable insights
     features: [        'AI sentiment analysisTrend identificationActionable insightsFeedback categorizationReal-time monitoringIntegration with feedback toolsCustom reportingAutomated alerts';
       ];
 
+=======
+      features: [;
+        'AI sentiment analysisTrend identificationActionable insightsFeedback categorizationReal-time monitoringIntegration with feedback toolsCustom reportingAutomated alerts';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '💭',;
       color: 'from-purple-500 to-violet-600',;
       textColor: 'text-purple-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-feedback-analysis',;
       marketPosition: 'Competitive with MonkeyLearn ($299-999), Lexalytics ($0-1000+), and MeaningCloud ($0-1000+)',;
@@ -5570,10 +5979,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-feedback-analysis'
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-feedback-analysis',;
       marketPosition: 'Competitive with MonkeyLearn ($299-999), Lexalytics ($0-1000+), and MeaningCloud ($0-1000+)',;
     targetAudience: 'Product managers, customer success teams, and UX researchers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-customer-feedback-analysis',;
       marketPosition: 'Competitive with MonkeyLearn ($299-999), Lexalytics ($0-1000+), and MeaningCloud ($0-1000+)',;
       targetAudience: 'Product managers, customer success teams, and UX researchers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-feedback-analysis',;
       marketPosition: 'Competitive with MonkeyLearn ($299-999), Lexalytics ($0-1000+), and MeaningCloud ($0-1000+)',;
     targetAudience: 'Product managers, customer success teams, and UX researchers'    };
@@ -5581,6 +5993,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-feedback-analysis'
       marketPosition: 'Competitive with MonkeyLearn ($299-999), Lexalytics ($0-1000+), and MeaningCloud ($0-1000+)',;
     targetAudience: 'Product managers, customer success teams, and UX researchers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Email Signature Manager',;
       tagline: 'Professional email branding',;
@@ -5594,6 +6008,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-feedback-analysis'
       icon: '✍️',;
       color: 'from-indigo-500 to-purple-600',;
       textColor: 'text-indigo-400',;
+<<<<<<< HEAD
 
 
 
@@ -5608,6 +6023,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-feedback-analysis'
       category: 'Marketing & Sales';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://emailsignature.ziontechgroup.com',;
       marketPosition: 'Competitive with WiseStamp ($5-15), Newoldstamp ($5-15), and Exclaimer ($2-5)',;
       targetAudience: 'Sales teams, marketing teams, and professional services',;
@@ -5615,6 +6032,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-feedback-analysis'
       setupTime: '5 minutes',;
       category: 'Marketing & Sales';
     },;
+<<<<<<< HEAD
 
 
 
@@ -5622,12 +6040,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-feedback-analysis'
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Meeting Assistant',;
       tagline: 'Smart meeting productivity',;
       price: '$29',;
       period: '/month',;
       description: 'Transform meetings with AI-powered transcription, action item tracking, and intelligent summaries.',;
+<<<<<<< HEAD
 
     features: [        'Real-time transcriptionAction item extractionMeeting summariesCalendar integrationTeam collaborationSearchable archivesAnalytics dashboardIntegration with Zoom, Teams';
       ];
@@ -5648,10 +6069,16 @@ features: [        'Real-time transcriptionAction item extractionMeeting summari
     features: [        'Real-time transcriptionAction item extractionMeeting summariesCalendar integrationTeam collaborationSearchable archivesAnalytics dashboardIntegration with Zoom, Teams';
       ];
 
+=======
+      features: [;
+        'Real-time transcriptionAction item extractionMeeting summariesCalendar integrationTeam collaborationSearchable archivesAnalytics dashboardIntegration with Zoom, Teams';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '🎤',;
       color: 'from-teal-500 to-cyan-600',;
       textColor: 'text-teal-400',;
+<<<<<<< HEAD
 
 
 
@@ -5666,6 +6093,8 @@ features: [        'Real-time transcriptionAction item extractionMeeting summari
       category: 'Productivity & Collaboration';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://meetings.ziontechgroup.com',;
       marketPosition: 'Competitive with Otter.ai ($10-40), Rev ($0.25-1.50), and Fireflies ($10-19)',;
       targetAudience: 'Remote teams, consultants, and meeting-heavy professionals',;
@@ -5673,6 +6102,7 @@ features: [        'Real-time transcriptionAction item extractionMeeting summari
       setupTime: '10 minutes',;
       category: 'Productivity & Collaboration';
     },;
+<<<<<<< HEAD
 
 
 
@@ -5680,6 +6110,8 @@ features: [        'Real-time transcriptionAction item extractionMeeting summari
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Password Manager',;
       tagline: 'Secure password management',;
@@ -5693,6 +6125,7 @@ features: [        'Real-time transcriptionAction item extractionMeeting summari
       icon: '🔐',;
       color: 'from-green-500 to-emerald-600',;
       textColor: 'text-green-400',;
+<<<<<<< HEAD
 
 
 
@@ -5707,6 +6140,8 @@ features: [        'Real-time transcriptionAction item extractionMeeting summari
       category: 'Security & Compliance';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://passwords.ziontechgroup.com',;
       marketPosition: 'Competitive with 1Password ($7.99-19.99), LastPass ($3-4), and Dashlane ($3.33-5)',;
       targetAudience: 'Businesses, IT teams, and security-conscious organizations',;
@@ -5714,6 +6149,7 @@ features: [        'Real-time transcriptionAction item extractionMeeting summari
       setupTime: '10 minutes',;
       category: 'Security & Compliance';
     },;
+<<<<<<< HEAD
 
 
 
@@ -5721,6 +6157,8 @@ features: [        'Real-time transcriptionAction item extractionMeeting summari
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Time Tracking',;
       tagline: 'Intelligent time management',;
@@ -5734,6 +6172,7 @@ features: [        'Real-time transcriptionAction item extractionMeeting summari
       icon: '⏰',;
       color: 'from-orange-500 to-red-600',;
       textColor: 'text-orange-400',;
+<<<<<<< HEAD
 
 
 
@@ -5748,6 +6187,8 @@ features: [        'Real-time transcriptionAction item extractionMeeting summari
       category: 'Productivity & Collaboration';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://timetracking.ziontechgroup.com',;
       marketPosition: 'Competitive with Toggl ($10-20), RescueTime ($12-12), and Time Doctor ($7-20)',;
       targetAudience: 'Freelancers, consultants, and project-based teams',;
@@ -5755,6 +6196,7 @@ features: [        'Real-time transcriptionAction item extractionMeeting summari
       setupTime: '10 minutes',;
       category: 'Productivity & Collaboration';
     },;
+<<<<<<< HEAD
 
 
 
@@ -5762,12 +6204,15 @@ features: [        'Real-time transcriptionAction item extractionMeeting summari
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Form Builder',;
       tagline: 'Smart form creation',;
       price: '$35',;
       period: '/month',;
       description: 'Create intelligent forms with AI-powered validation, conditional logic, and advanced analytics.',;
+<<<<<<< HEAD
 
     features: [        'Drag-and-drop builderAI-powered validationConditional logicAdvanced analyticsMulti-language supportMobile optimizationIntegration capabilitiesCustom branding';
       ];
@@ -5788,10 +6233,16 @@ features: [        'Drag-and-drop builderAI-powered validationConditional logicA
     features: [        'Drag-and-drop builderAI-powered validationConditional logicAdvanced analyticsMulti-language supportMobile optimizationIntegration capabilitiesCustom branding';
       ];
 
+=======
+      features: [;
+        'Drag-and-drop builderAI-powered validationConditional logicAdvanced analyticsMulti-language supportMobile optimizationIntegration capabilitiesCustom branding';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📝',;
       color: 'from-purple-500 to-violet-600',;
       textColor: 'text-purple-400',;
+<<<<<<< HEAD
 
 
 
@@ -5806,6 +6257,8 @@ features: [        'Drag-and-drop builderAI-powered validationConditional logicA
       category: 'Marketing & Sales';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://forms.ziontechgroup.com',;
       marketPosition: 'Competitive with Typeform ($0-70), JotForm ($0-99), and Google Forms (Free)',;
       targetAudience: 'Businesses, marketers, and data collection teams',;
@@ -5813,6 +6266,7 @@ features: [        'Drag-and-drop builderAI-powered validationConditional logicA
       setupTime: '15 minutes',;
       category: 'Marketing & Sales';
     },;
+<<<<<<< HEAD
 
 
 
@@ -5820,12 +6274,15 @@ features: [        'Drag-and-drop builderAI-powered validationConditional logicA
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Calendar Optimization',;
       tagline: 'Smart scheduling assistant',;
       price: '$22',;
       period: '/month',;
       description: 'Optimize your calendar with AI-powered scheduling suggestions, conflict resolution, and productivity insights.',;
+<<<<<<< HEAD
 
     features: [        'Smart scheduling suggestionsConflict detectionProductivity analyticsTeam availability syncIntegration with calendarsMobile appCustom preferencesAnalytics dashboard';
       ];
@@ -5846,10 +6303,16 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
     features: [        'Smart scheduling suggestionsConflict detectionProductivity analyticsTeam availability syncIntegration with calendarsMobile appCustom preferencesAnalytics dashboard';
       ];
 
+=======
+      features: [;
+        'Smart scheduling suggestionsConflict detectionProductivity analyticsTeam availability syncIntegration with calendarsMobile appCustom preferencesAnalytics dashboard';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📅',;
       color: 'from-cyan-500 to-blue-600',;
       textColor: 'text-cyan-400',;
+<<<<<<< HEAD
 
 
 
@@ -5864,6 +6327,8 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
       category: 'Productivity & Collaboration';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://calendar.ziontechgroup.com',;
       marketPosition: 'Competitive with Calendly ($8-16), Acuity ($15-45), and ScheduleOnce ($25-50)',;
       targetAudience: 'Professionals, consultants, and busy executives',;
@@ -5871,6 +6336,7 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
       setupTime: '10 minutes',;
       category: 'Productivity & Collaboration';
     },;
+<<<<<<< HEAD
 
 
 
@@ -5878,6 +6344,8 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Social Media Analytics',;
       tagline: 'Comprehensive social insights',;
@@ -5891,6 +6359,7 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
       icon: '📱',;
       color: 'from-pink-500 to-rose-600',;
       textColor: 'text-pink-400',;
+<<<<<<< HEAD
 
 
 
@@ -5905,6 +6374,8 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
       category: 'Marketing & Sales';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://socialanalytics.ziontechgroup.com',;
       marketPosition: 'Competitive with Sprout Social ($99-249), Hootsuite ($29-599), and Buffer ($6-99)',;
       targetAudience: 'Social media managers, marketers, and brands',;
@@ -5912,6 +6383,7 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
       setupTime: '20 minutes',;
       category: 'Marketing & Sales';
     },;
+<<<<<<< HEAD
 
 
 
@@ -5919,6 +6391,8 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Website Builder',;
       tagline: 'Intelligent website creation',;
@@ -5932,6 +6406,7 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
       icon: '🌐',;
       color: 'from-emerald-500 to-teal-600',;
       textColor: 'text-emerald-400',;
+<<<<<<< HEAD
 
 
 
@@ -5946,6 +6421,8 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
       category: 'Web Development';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://websitebuilder.ziontechgroup.com',;
       marketPosition: 'Competitive with Wix ($16-45), Squarespace ($16-49), and Webflow ($14-39)',;
       targetAudience: 'Small businesses, entrepreneurs, and creative professionals',;
@@ -5953,6 +6430,7 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
       setupTime: '30 minutes',;
       category: 'Web Development';
     },;
+<<<<<<< HEAD
 
 
 
@@ -5960,6 +6438,8 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Customer Support Chatbot',;
       tagline: '24/7 intelligent support',;
@@ -5973,6 +6453,7 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
       icon: '🤖',;
       color: 'from-blue-500 to-indigo-600',;
       textColor: 'text-blue-400',;
+<<<<<<< HEAD
 
 
 
@@ -5987,6 +6468,8 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
       category: 'Customer Experience';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://chatbot.ziontechgroup.com',;
       marketPosition: 'Competitive with Intercom ($39-499), Drift ($0-2500), and ManyChat ($0-15)',;
       targetAudience: 'E-commerce businesses, SaaS companies, and customer support teams',;
@@ -5994,6 +6477,7 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
       setupTime: '25 minutes',;
       category: 'Customer Experience';
     },;
+<<<<<<< HEAD
 
 
 
@@ -6001,12 +6485,15 @@ features: [        'Smart scheduling suggestionsConflict detectionProductivity a
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Invoice Processing',;
       tagline: 'Automated invoice management',;
       price: '$55',;
       period: '/month',;
       description: 'Process invoices automatically with AI. Extract data, validate information, and streamline accounts payable.',;
+<<<<<<< HEAD
 
     features: [        'OCR invoice processingData extractionValidation automationApproval workflowsIntegration with accountingMobile app accessCustom reportingMulti-currency support';
       ];
@@ -6027,10 +6514,16 @@ features: [        'OCR invoice processingData extractionValidation automationAp
     features: [        'OCR invoice processingData extractionValidation automationApproval workflowsIntegration with accountingMobile app accessCustom reportingMulti-currency support';
       ];
 
+=======
+      features: [;
+        'OCR invoice processingData extractionValidation automationApproval workflowsIntegration with accountingMobile app accessCustom reportingMulti-currency support';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '🧾',;
       color: 'from-yellow-500 to-orange-600',;
       textColor: 'text-yellow-400',;
+<<<<<<< HEAD
 
 
 
@@ -6045,6 +6538,8 @@ features: [        'OCR invoice processingData extractionValidation automationAp
       category: 'Finance & Operations';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://invoiceprocessing.ziontechgroup.com',;
       marketPosition: 'Competitive with Bill.com ($39-69), AvidXchange ($0-500), and Tipalti ($0-500)',;
       targetAudience: 'Accounting teams, finance departments, and small businesses',;
@@ -6052,6 +6547,7 @@ features: [        'OCR invoice processingData extractionValidation automationAp
       setupTime: '20 minutes',;
       category: 'Finance & Operations';
     },;
+<<<<<<< HEAD
 
 
 
@@ -6059,6 +6555,8 @@ features: [        'OCR invoice processingData extractionValidation automationAp
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Project Risk Management',;
       tagline: 'Predict and prevent project risks',;
@@ -6072,6 +6570,7 @@ features: [        'OCR invoice processingData extractionValidation automationAp
       icon: '⚠️',;
       color: 'from-red-500 to-pink-600',;
       textColor: 'text-red-400',;
+<<<<<<< HEAD
 
 
 
@@ -6086,6 +6585,8 @@ features: [        'OCR invoice processingData extractionValidation automationAp
       category: 'Project Management';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://riskmanagement.ziontechgroup.com',;
       marketPosition: 'Competitive with Riskonnect ($0-500), LogicManager ($0-500), and Resolver ($0-500)',;
       targetAudience: 'Project managers, risk managers, and enterprise teams',;
@@ -6093,6 +6594,7 @@ features: [        'OCR invoice processingData extractionValidation automationAp
       setupTime: '30 minutes',;
       category: 'Project Management';
     },;
+<<<<<<< HEAD
 
 
 
@@ -6100,6 +6602,8 @@ features: [        'OCR invoice processingData extractionValidation automationAp
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Employee Onboarding',;
       tagline: 'Streamlined onboarding experience',;
@@ -6113,6 +6617,7 @@ features: [        'OCR invoice processingData extractionValidation automationAp
       icon: '👋',;
       color: 'from-green-500 to-emerald-600',;
       textColor: 'text-green-400',;
+<<<<<<< HEAD
 
 
 
@@ -6127,6 +6632,8 @@ features: [        'OCR invoice processingData extractionValidation automationAp
       category: 'HR & Operations';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://onboarding.ziontechgroup.com',;
       marketPosition: 'Competitive with BambooHR ($6.19-8.75), Workday ($45-100), and Zenefits ($8-27)',;
       targetAudience: 'HR teams, growing companies, and remote-first organizations',;
@@ -6134,6 +6641,7 @@ features: [        'OCR invoice processingData extractionValidation automationAp
       setupTime: '20 minutes',;
       category: 'HR & Operations';
     },;
+<<<<<<< HEAD
 
 
 
@@ -6141,6 +6649,8 @@ features: [        'OCR invoice processingData extractionValidation automationAp
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Customer Segmentation',;
       tagline: 'Intelligent customer targeting',;
@@ -6154,6 +6664,7 @@ features: [        'OCR invoice processingData extractionValidation automationAp
       icon: '🎯',;
       color: 'from-purple-500 to-indigo-600',;
       textColor: 'text-purple-400',;
+<<<<<<< HEAD
 
 
 
@@ -6168,6 +6679,8 @@ features: [        'OCR invoice processingData extractionValidation automationAp
       category: 'Marketing & Sales';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://customersegmentation.ziontechgroup.com',;
       marketPosition: 'Competitive with Segment ($0-120), Mixpanel ($25-1000), and Amplitude ($0-995)',;
       targetAudience: 'Marketing teams, e-commerce businesses, and customer success teams',;
@@ -6175,6 +6688,7 @@ features: [        'OCR invoice processingData extractionValidation automationAp
       setupTime: '25 minutes',;
       category: 'Marketing & Sales';
     },;
+<<<<<<< HEAD
 
 
 
@@ -6182,12 +6696,15 @@ features: [        'OCR invoice processingData extractionValidation automationAp
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Supply Chain Optimization',;
       tagline: 'Intelligent supply chain management',;
       price: '$129',;
       period: '/month',;
       description: 'Optimize your supply chain with AI. Reduce costs, improve efficiency, and enhance visibility.',;
+<<<<<<< HEAD
 
     features: [        'Demand forecastingInventory optimizationSupplier managementRoute optimizationReal-time trackingAnalytics dashboardIntegration with ERPsMobile app access';
       ];
@@ -6208,10 +6725,16 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
     features: [        'Demand forecastingInventory optimizationSupplier managementRoute optimizationReal-time trackingAnalytics dashboardIntegration with ERPsMobile app access';
       ];
 
+=======
+      features: [;
+        'Demand forecastingInventory optimizationSupplier managementRoute optimizationReal-time trackingAnalytics dashboardIntegration with ERPsMobile app access';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '🚚',;
       color: 'from-blue-500 to-cyan-600',;
       textColor: 'text-blue-400',;
+<<<<<<< HEAD
 
 
 
@@ -6226,6 +6749,8 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
       category: 'Operations & Logistics';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://supplychain.ziontechgroup.com',;
       marketPosition: 'Competitive with SAP ($0-500), Oracle ($0-500), and Manhattan Associates ($0-500)',;
       targetAudience: 'Manufacturers, retailers, and logistics companies',;
@@ -6233,6 +6758,7 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
       setupTime: '45 minutes',;
       category: 'Operations & Logistics';
     },;
+<<<<<<< HEAD
 
 
 
@@ -6240,6 +6766,8 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Compliance Monitoring',;
       tagline: 'Automated compliance management',;
@@ -6253,6 +6781,7 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
       icon: '✅',;
       color: 'from-emerald-500 to-teal-600',;
       textColor: 'text-emerald-400',;
+<<<<<<< HEAD
 
 
 
@@ -6267,6 +6796,8 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
       category: 'Legal & Compliance';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://compliance.ziontechgroup.com',;
       marketPosition: 'Competitive with LogicGate ($0-500), MetricStream ($0-500), and NAVEX ($0-500)',;
       targetAudience: 'Compliance officers, legal teams, and regulated industries',;
@@ -6274,6 +6805,7 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
       setupTime: '30 minutes',;
       category: 'Legal & Compliance';
     },;
+<<<<<<< HEAD
 
 
 
@@ -6281,6 +6813,8 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Performance Management',;
       tagline: 'Data-driven performance insights',;
@@ -6294,6 +6828,7 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
       icon: '📊',;
       color: 'from-orange-500 to-red-600',;
       textColor: 'text-orange-400',;
+<<<<<<< HEAD
 
 
 
@@ -6308,6 +6843,8 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
       category: 'HR & Operations';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://window.window.window.performance.ziontechgroup.com',;
       marketPosition: 'Competitive with 15Five ($4-14), Lattice ($4-11), and Culture Amp ($3-11)',;
       targetAudience: 'HR teams, managers, and performance-focused organizations',;
@@ -6315,6 +6852,7 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
       setupTime: '20 minutes',;
       category: 'HR & Operations';
     },;
+<<<<<<< HEAD
 
 
 
@@ -6322,6 +6860,8 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Customer Lifetime Value',;
       tagline: 'Maximize customer value',;
@@ -6335,6 +6875,7 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
       icon: '💰',;
       color: 'from-yellow-500 to-orange-600',;
       textColor: 'text-yellow-400',;
+<<<<<<< HEAD
 
 
 
@@ -6349,6 +6890,8 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
       category: 'Analytics & Data';
     };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://clv.ziontechgroup.com',;
       marketPosition: 'Competitive with Optimizely ($0-500), VWO ($0-500), and AB Tasty ($0-500)',;
       targetAudience: 'Marketing teams, e-commerce businesses, and subscription companies',;
@@ -6356,6 +6899,7 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
       setupTime: '25 minutes',;
       category: 'Analytics & Data';
     },;
+<<<<<<< HEAD
 
 
 
@@ -6363,6 +6907,8 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Workflow Automation',;
       tagline: 'Intelligent process automation',;
@@ -6376,6 +6922,7 @@ features: [        'Demand forecastingInventory optimizationSupplier managementR
       icon: '🎯',;
       color: 'from-teal-500 to-cyan-600',;
       textColor: 'text-teal-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-customer-segmentation',;
       marketPosition: 'Competitive with Segment ($0-1000+), Amplitude ($0-1000+), and Mixpanel ($0-1000+)',;
@@ -6392,10 +6939,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-customer-segmentati
       link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-customer-segmentation',;
       marketPosition: 'Competitive with Segment ($0-1000+), Amplitude ($0-1000+), and Mixpanel ($0-1000+)',;
     targetAudience: 'Marketing teams, data analysts, and customer experience professionals'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-powered-customer-segmentation',;
       marketPosition: 'Competitive with Segment ($0-1000+), Amplitude ($0-1000+), and Mixpanel ($0-1000+)',;
       targetAudience: 'Marketing teams, data analysts, and customer experience professionals';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-customer-segmentation',;
       marketPosition: 'Competitive with Segment ($0-1000+), Amplitude ($0-1000+), and Mixpanel ($0-1000+)',;
     targetAudience: 'Marketing teams, data analysts, and customer experience professionals'    };
@@ -6403,6 +6953,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-customer-segmentati
       marketPosition: 'Competitive with Segment ($0-1000+), Amplitude ($0-1000+), and Mixpanel ($0-1000+)',;
     targetAudience: 'Marketing teams, data analysts, and customer experience professionals'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     // New enhanced services;
     {;
       name: 'AI Landing Page Builder',;
@@ -6417,6 +6969,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-customer-segmentati
       icon: '🚀',;
       color: 'from-blue-500 to-indigo-600',;
       textColor: 'text-blue-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-landing-page-builder',;
       marketPosition: 'Competitive with Unbounce ($80-160), Leadpages ($37-199), and Instapage ($199-999)',;
@@ -6433,10 +6986,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-landing-page-builder',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-landing-page-builder',;
       marketPosition: 'Competitive with Unbounce ($80-160), Leadpages ($37-199), and Instapage ($199-999)',;
     targetAudience: 'Marketers, agencies, and e-commerce businesses'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-landing-page-builder',;
       marketPosition: 'Competitive with Unbounce ($80-160), Leadpages ($37-199), and Instapage ($199-999)',;
       targetAudience: 'Marketers, agencies, and e-commerce businesses';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-landing-page-builder',;
       marketPosition: 'Competitive with Unbounce ($80-160), Leadpages ($37-199), and Instapage ($199-999)',;
     targetAudience: 'Marketers, agencies, and e-commerce businesses'    };
@@ -6444,12 +7000,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-landing-page-builder',;
       marketPosition: 'Competitive with Unbounce ($80-160), Leadpages ($37-199), and Instapage ($199-999)',;
     targetAudience: 'Marketers, agencies, and e-commerce businesses'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Website Optimizer',;
       tagline: 'Boost your website performance',;
       price: '$49',;
       period: '/month',;
       description: 'AI-powered website optimization for speed, SEO, and conversion rate improvement.',;
+<<<<<<< HEAD
 
     features: [        'Performance optimizationSEO enhancementConversion rate optimizationMobile optimizationCore Web Vitals monitoringAutomated fixesPerformance reportingIntegration with analytics';
       ];
@@ -6470,10 +7029,16 @@ features: [        'Performance optimizationSEO enhancementConversion rate optim
     features: [        'Performance optimizationSEO enhancementConversion rate optimizationMobile optimizationCore Web Vitals monitoringAutomated fixesPerformance reportingIntegration with analytics';
       ];
 
+=======
+      features: [;
+        'Performance optimizationSEO enhancementConversion rate optimizationMobile optimizationCore Web Vitals monitoringAutomated fixesPerformance reportingIntegration with analytics';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '⚡',;
       color: 'from-yellow-500 to-orange-600',;
       textColor: 'text-yellow-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-website-optimizer',;
       marketPosition: 'Competitive with GTmetrix (Free-$15), PageSpeed Insights (Free), and WebPageTest (Free)',;
@@ -6490,10 +7055,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-website-optimizer',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-website-optimizer',;
       marketPosition: 'Competitive with GTmetrix (Free-$15), PageSpeed Insights (Free), and WebPageTest (Free)',;
     targetAudience: 'Web developers, digital marketers, and business owners'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-website-optimizer',;
       marketPosition: 'Competitive with GTmetrix (Free-$15), PageSpeed Insights (Free), and WebPageTest (Free)',;
       targetAudience: 'Web developers, digital marketers, and business owners';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-website-optimizer',;
       marketPosition: 'Competitive with GTmetrix (Free-$15), PageSpeed Insights (Free), and WebPageTest (Free)',;
     targetAudience: 'Web developers, digital marketers, and business owners'    };
@@ -6501,6 +7069,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-website-optimizer',;
       marketPosition: 'Competitive with GTmetrix (Free-$15), PageSpeed Insights (Free), and WebPageTest (Free)',;
     targetAudience: 'Web developers, digital marketers, and business owners'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Churn Prediction Pro',;
       tagline: 'Predict and prevent customer churn',;
@@ -6514,6 +7084,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-website-optimizer',;
       icon: '📉',;
       color: 'from-red-500 to-pink-600',;
       textColor: 'text-red-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-churn-prediction-pro',;
       marketPosition: 'Competitive with Gainsight ($0-500), ChurnZero ($0-500), and Totango ($0-500)',;
@@ -6530,10 +7101,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-churn-prediction-pro',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-churn-prediction-pro',;
       marketPosition: 'Competitive with Gainsight ($0-500), ChurnZero ($0-500), and Totango ($0-500)',;
     targetAudience: 'SaaS companies, subscription businesses, and customer success teams'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-churn-prediction-pro',;
       marketPosition: 'Competitive with Gainsight ($0-500), ChurnZero ($0-500), and Totango ($0-500)',;
       targetAudience: 'SaaS companies, subscription businesses, and customer success teams';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-churn-prediction-pro',;
       marketPosition: 'Competitive with Gainsight ($0-500), ChurnZero ($0-500), and Totango ($0-500)',;
     targetAudience: 'SaaS companies, subscription businesses, and customer success teams'    };
@@ -6541,6 +7115,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-churn-prediction-pro',;
       marketPosition: 'Competitive with Gainsight ($0-500), ChurnZero ($0-500), and Totango ($0-500)',;
     targetAudience: 'SaaS companies, subscription businesses, and customer success teams'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Email Deliverability Monitor',;
       tagline: 'Ensure your emails reach inboxes',;
@@ -6554,6 +7130,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-churn-prediction-pro',;
       icon: '📧',;
       color: 'from-green-500 to-emerald-600',;
       textColor: 'text-green-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-email-deliverability',;
       marketPosition: 'Competitive with 250ok ($0-500), GlockApps ($0-100), and Sender Score (Free)',;
@@ -6570,10 +7147,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-email-deliverability',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-email-deliverability',;
       marketPosition: 'Competitive with 250ok ($0-500), GlockApps ($0-100), and Sender Score (Free)',;
     targetAudience: 'Email marketers, sales teams, and marketing agencies'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-email-deliverability',;
       marketPosition: 'Competitive with 250ok ($0-500), GlockApps ($0-100), and Sender Score (Free)',;
       targetAudience: 'Email marketers, sales teams, and marketing agencies';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-email-deliverability',;
       marketPosition: 'Competitive with 250ok ($0-500), GlockApps ($0-100), and Sender Score (Free)',;
     targetAudience: 'Email marketers, sales teams, and marketing agencies'    };
@@ -6581,6 +7161,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-email-deliverability',;
       marketPosition: 'Competitive with 250ok ($0-500), GlockApps ($0-100), and Sender Score (Free)',;
     targetAudience: 'Email marketers, sales teams, and marketing agencies'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Customer Journey Mapper',;
       tagline: 'Map and optimize customer experiences',;
@@ -6594,6 +7176,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-email-deliverability',;
       icon: '🗺️',;
       color: 'from-purple-500 to-violet-600',;
       textColor: 'text-purple-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-journey',;
       marketPosition: 'Competitive with FullStory ($0-1000+), Hotjar ($0-99), and Crazy Egg ($24-99)',;
@@ -6610,10 +7193,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-journey',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-journey',;
       marketPosition: 'Competitive with FullStory ($0-1000+), Hotjar ($0-99), and Crazy Egg ($24-99)',;
     targetAudience: 'UX designers, product managers, and customer experience teams'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-customer-journey',;
       marketPosition: 'Competitive with FullStory ($0-1000+), Hotjar ($0-99), and Crazy Egg ($24-99)',;
       targetAudience: 'UX designers, product managers, and customer experience teams';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-journey',;
       marketPosition: 'Competitive with FullStory ($0-1000+), Hotjar ($0-99), and Crazy Egg ($24-99)',;
     targetAudience: 'UX designers, product managers, and customer experience teams'    };
@@ -6621,12 +7207,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-journey',;
       marketPosition: 'Competitive with FullStory ($0-1000+), Hotjar ($0-99), and Crazy Egg ($24-99)',;
     targetAudience: 'UX designers, product managers, and customer experience teams'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Contract Analysis Platform',;
       tagline: 'Intelligent contract review and analysis',;
       price: '$99',;
       period: '/month',;
       description: 'AI-powered contract analysis with risk assessment, compliance checking, and automated insights.',;
+<<<<<<< HEAD
 
     features: [        'AI contract reviewRisk assessmentCompliance checkingAutomated insightsContract templatesVersion controlIntegration with legal toolsCustom analysis rules';
       ];
@@ -6647,10 +7236,16 @@ features: [        'AI contract reviewRisk assessmentCompliance checkingAutomate
     features: [        'AI contract reviewRisk assessmentCompliance checkingAutomated insightsContract templatesVersion controlIntegration with legal toolsCustom analysis rules';
       ];
 
+=======
+      features: [;
+        'AI contract reviewRisk assessmentCompliance checkingAutomated insightsContract templatesVersion controlIntegration with legal toolsCustom analysis rules';
+      ],;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       popular: false,;
       icon: '📄',;
       color: 'from-indigo-500 to-purple-600',;
       textColor: 'text-indigo-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-contract-analysis',;
       marketPosition: 'Competitive with DocuSign ($10-25), ContractPodAi ($0-1000+), and Evisort ($0-1000+)',;
@@ -6667,10 +7262,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-contract-analysis',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-contract-analysis',;
       marketPosition: 'Competitive with DocuSign ($10-25), ContractPodAi ($0-1000+), and Evisort ($0-1000+)',;
     targetAudience: 'Legal professionals, contract managers, and compliance officers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-contract-analysis',;
       marketPosition: 'Competitive with DocuSign ($10-25), ContractPodAi ($0-1000+), and Evisort ($0-1000+)',;
       targetAudience: 'Legal professionals, contract managers, and compliance officers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-contract-analysis',;
       marketPosition: 'Competitive with DocuSign ($10-25), ContractPodAi ($0-1000+), and Evisort ($0-1000+)',;
     targetAudience: 'Legal professionals, contract managers, and compliance officers'    };
@@ -6678,6 +7276,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-contract-analysis',;
       marketPosition: 'Competitive with DocuSign ($10-25), ContractPodAi ($0-1000+), and Evisort ($0-1000+)',;
     targetAudience: 'Legal professionals, contract managers, and compliance officers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Sales Forecasting Engine',;
       tagline: 'Predict sales with AI accuracy',;
@@ -6691,6 +7291,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-contract-analysis',;
       icon: '📊',;
       color: 'from-blue-500 to-cyan-600',;
       textColor: 'text-blue-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-forecasting',;
       marketPosition: 'Competitive with Clari ($0-1000+), Gong ($0-1000+), and Chorus ($0-1000+)',;
@@ -6707,10 +7308,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-forecasting',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-forecasting',;
       marketPosition: 'Competitive with Clari ($0-1000+), Gong ($0-1000+), and Chorus ($0-1000+)',;
     targetAudience: 'Sales managers, revenue operations teams, and business analysts'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-sales-forecasting',;
       marketPosition: 'Competitive with Clari ($0-1000+), Gong ($0-1000+), and Chorus ($0-1000+)',;
       targetAudience: 'Sales managers, revenue operations teams, and business analysts';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-forecasting',;
       marketPosition: 'Competitive with Clari ($0-1000+), Gong ($0-1000+), and Chorus ($0-1000+)',;
     targetAudience: 'Sales managers, revenue operations teams, and business analysts'    };
@@ -6718,6 +7322,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-forecasting',;
       marketPosition: 'Competitive with Clari ($0-1000+), Gong ($0-1000+), and Chorus ($0-1000+)',;
     targetAudience: 'Sales managers, revenue operations teams, and business analysts'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Customer Service Analytics',;
       tagline: 'Optimize customer service performance',;
@@ -6731,6 +7337,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-forecasting',;
       icon: '🎧',;
       color: 'from-teal-500 to-cyan-600',;
       textColor: 'text-teal-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Intercom ($39-499)',;
@@ -6747,10 +7354,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-analytics'
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Intercom ($39-499)',;
     targetAudience: 'Customer service managers, support teams, and operations managers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-customer-service-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Intercom ($39-499)',;
       targetAudience: 'Customer service managers, support teams, and operations managers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-analytics',;
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Intercom ($39-499)',;
     targetAudience: 'Customer service managers, support teams, and operations managers'    };
@@ -6758,6 +7368,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-analytics'
       marketPosition: 'Competitive with Zendesk ($49-215), Freshdesk ($15-79), and Intercom ($39-499)',;
     targetAudience: 'Customer service managers, support teams, and operations managers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Product Recommendation Engine',;
       tagline: 'Boost sales with intelligent recommendations',;
@@ -6771,6 +7383,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-analytics'
       icon: '🎯',;
       color: 'from-orange-500 to-red-600',;
       textColor: 'text-orange-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-product-recommendations',;
       marketPosition: 'Competitive with Algolia ($1-1000+), Elasticsearch ($0-1000+), and Amazon Personalize ($0-1000+)',;
@@ -6787,10 +7400,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-product-recommendations',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-product-recommendations',;
       marketPosition: 'Competitive with Algolia ($1-1000+), Elasticsearch ($0-1000+), and Amazon Personalize ($0-1000+)',;
     targetAudience: 'E-commerce businesses, content platforms, and digital marketers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-product-recommendations',;
       marketPosition: 'Competitive with Algolia ($1-1000+), Elasticsearch ($0-1000+), and Amazon Personalize ($0-1000+)',;
       targetAudience: 'E-commerce businesses, content platforms, and digital marketers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-product-recommendations',;
       marketPosition: 'Competitive with Algolia ($1-1000+), Elasticsearch ($0-1000+), and Amazon Personalize ($0-1000+)',;
     targetAudience: 'E-commerce businesses, content platforms, and digital marketers'    };
@@ -6798,6 +7414,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-product-recommendations',;
       marketPosition: 'Competitive with Algolia ($1-1000+), Elasticsearch ($0-1000+), and Amazon Personalize ($0-1000+)',;
     targetAudience: 'E-commerce businesses, content platforms, and digital marketers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Fraud Detection System',;
       tagline: 'Protect your business from fraud',;
@@ -6811,6 +7429,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-product-recommendations',;
       icon: '🛡️',;
       color: 'from-red-500 to-pink-600',;
       textColor: 'text-red-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection',;
       marketPosition: 'Competitive with Sift ($0-1000+), Signifyd ($0-1000+), and Riskified ($0-1000+)',;
@@ -6827,10 +7446,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection',;
       marketPosition: 'Competitive with Sift ($0-1000+), Signifyd ($0-1000+), and Riskified ($0-1000+)',;
     targetAudience: 'E-commerce businesses, financial institutions, and online platforms'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-fraud-detection',;
       marketPosition: 'Competitive with Sift ($0-1000+), Signifyd ($0-1000+), and Riskified ($0-1000+)',;
       targetAudience: 'E-commerce businesses, financial institutions, and online platforms';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection',;
       marketPosition: 'Competitive with Sift ($0-1000+), Signifyd ($0-1000+), and Riskified ($0-1000+)',;
     targetAudience: 'E-commerce businesses, financial institutions, and online platforms'    };
@@ -6838,6 +7460,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection',;
       marketPosition: 'Competitive with Sift ($0-1000+), Signifyd ($0-1000+), and Riskified ($0-1000+)',;
     targetAudience: 'E-commerce businesses, financial institutions, and online platforms'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Inventory Forecasting',;
       tagline: 'Optimize inventory with AI predictions',;
@@ -6851,6 +7475,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection',;
       icon: '📦',;
       color: 'from-green-500 to-emerald-600',;
       textColor: 'text-green-400',;
+<<<<<<< HEAD
 
       link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
@@ -6867,10 +7492,13 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
     targetAudience: 'Retail businesses, manufacturers, and supply chain managers'    };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-inventory-forecasting',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
       targetAudience: 'Retail businesses, manufacturers, and supply chain managers';
     },;
+<<<<<<< HEAD
       link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
     targetAudience: 'Retail businesses, manufacturers, and supply chain managers'    };
@@ -6878,6 +7506,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       marketPosition: 'Competitive with TradeGecko ($0-1000+), Zoho Inventory ($0-1000+), and Fishbowl ($0-1000+)',;
     targetAudience: 'Retail businesses, manufacturers, and supply chain managers'    };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       name: 'AI Social Media Automation',;
       tagline: 'Automate your social media presence',;
@@ -6891,6 +7521,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       icon: '📱',;
       color: 'from-blue-500 to-indigo-600',;
       textColor: 'text-blue-400',;
+<<<<<<< HEAD
 
 
 
@@ -6904,11 +7535,14 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
   ];
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       link: 'https://ziontechgroup.com/ai-social-media-automation',;
       marketPosition: 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40)',;
       targetAudience: 'Social media managers, marketers, and content creators';
     }
   ],;
+<<<<<<< HEAD
 
 
 
@@ -6916,11 +7550,14 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const industryTrends = [;
     {;
       trend: 'AI Integration',;
       description: 'Every service includes AI-powered features for enhanced automation and intelligence.',;
       impact: 'High';
+<<<<<<< HEAD
 
     };
     };
@@ -6933,10 +7570,14 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
     };
     };
 
+=======
+    },;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       trend: 'API-First Design',;
       description: 'All services provide robust APIs for seamless integration with existing workflows.',;
       impact: 'High';
+<<<<<<< HEAD
 
     };
     };
@@ -6949,10 +7590,14 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
     };
     };
 
+=======
+    },;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       trend: 'Mobile Optimization',;
       description: 'Responsive design and mobile apps for all services ensure accessibility anywhere.',;
       impact: 'Medium';
+<<<<<<< HEAD
 
     };
     };
@@ -6965,11 +7610,15 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
     };
     };
 
+=======
+    },;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     {;
       trend: 'Security Focus',;
       description: 'Enterprise-grade security and compliance built into every service.',;
       impact: 'High';
     }
+<<<<<<< HEAD
 
 
 
@@ -7038,6 +7687,8 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       </Head>;
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   ],
 
   const categories = [...new Set(microSaasServices.map(service => service.category))],
@@ -7049,6 +7700,7 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       icon: "🎯"
     },
     {
+<<<<<<< HEAD
       icon: '💰'
       title: 'Transparent Pricing'
       description: 'No hidden fees, no enterprise sales calls. Simple monthly pricing that scales with your business needs and growth.'
@@ -7148,6 +7800,32 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
       description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
     }
   ];
+=======
+      icon: '💰',
+      title: 'Transparent Pricing',
+      description: 'No hidden fees, no enterprise sales calls. Simple monthly pricing that scales with your business needs and growth.'
+    },
+    {
+      icon: '🔒',
+      title: 'Enterprise Security',
+      description: 'Bank-level security, SOC 2 compliance, and 99.9% uptime guarantee for all services. Built for production use.'
+    },
+    {
+      icon: '🎯',
+      title: 'Focused Solutions',
+      description: 'Each service solves a specific business problem without the complexity of enterprise platforms. Do one thing exceptionally well.'
+    },
+    {
+      icon: '📱',
+      title: 'Mobile First',
+      description: 'All services are optimized for mobile devices, ensuring your team can work efficiently from anywhere, anytime.'
+    },
+    {
+      icon: '🔄',
+      title: 'Seamless Integration',
+      description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
+    }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   ],
 
   return (
@@ -7159,10 +7837,18 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
         <meta property="og:description" content="Specialized business solutions with competitive pricing and free trials." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.08),transparent_50%)]" />
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
             <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" />
@@ -7172,9 +7858,16 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
             Micro SaaS Services
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
+<<<<<<< HEAD
             Real solutions with comprehensive market research, competitive analysis, and proven business models.
             Each service is designed to solve specific business problems with AI-powered automation.
           </p>
+=======
+            Real solutions with comprehensive market research, competitive analysis, and proven business models. 
+            Each service is designed to solve specific business problems with AI-powered automation.
+          </p>
+          
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-400 mb-2">85+</div>
@@ -7193,11 +7886,16 @@ link: 'https://ziontechgroup && ziontechgroup.com/ai-inventory-forecasting',;
               <div className="text-sm text-gray-400">Support</div>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+          
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
             Specialized Tools for
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400"> Every Business Need</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-5xl mx-auto leading-relaxed mb-12">
+<<<<<<< HEAD
 
 
 
@@ -8635,6 +9333,8 @@ function MicroSaasPage() {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             85+ specialized micro SaaS solutions covering AI-powered content creation, video generation, design systems, performance monitoring, 
             SEO automation, chatbots, business intelligence, email marketing, social media management, 
             customer feedback, billing, project management, API infrastructure, e-commerce analytics, legal document generation, 
@@ -8647,6 +9347,7 @@ function MicroSaasPage() {
             metaverse development, Web3 DeFi analytics, IoT edge computing, autonomous vehicle platforms, climate prediction, biotechnology,
             financial trading, education personalization, enterprise network automation, data center management, API governance, DevOps automation,
             identity management, and enterprise analytics. Focused, affordable solutions that deliver specific value 
+<<<<<<< HEAD
 
 
 
@@ -8662,6 +9363,11 @@ function MicroSaasPage() {
 
             without the complexity of enterprise platforms. Start with a free trial and scale as you grow.
           </p>
+=======
+            without the complexity of enterprise platforms. Start with a free trial and scale as you grow.
+          </p>
+          
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {/* Domain Information */}
                           <div className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700 mb-12 max-w-4xl mx-auto">
                 <div className="flex items-center justify-center mb-4">
@@ -8678,6 +9384,7 @@ function MicroSaasPage() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
 
 
@@ -8721,10 +9428,15 @@ function MicroSaasPage() {
 
 
 
+=======
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <Button
                 href="#services"
                 variant="secondary"
                 size="lg"
+<<<<<<< HEAD
 
 
 
@@ -8737,11 +9449,14 @@ function MicroSaasPage() {
                 <ArrowRight className="w-5 h-5 ml-2" />;
               </Button>;
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl"
               >
                 Explore Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
+<<<<<<< HEAD
 
 
 
@@ -8749,10 +9464,13 @@ function MicroSaasPage() {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <Button
                 href="/pricing"
                 variant="outline"
                 size="lg"
+<<<<<<< HEAD
 
 
 
@@ -8965,6 +9683,8 @@ function MicroSaasPage() {
               and add more as your business grows.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-6 justify-center">;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white"
               >
                 View All 85+ Services
@@ -8973,6 +9693,10 @@ function MicroSaasPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         {/* Services Section */}
         <section id="services" className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -8984,6 +9708,10 @@ function MicroSaasPage() {
                 Each service is designed to solve specific business problems with enterprise-grade quality and competitive pricing.
               </p>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasServices.map((service, index) => (
                 <div key={index} className="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/10">
@@ -8995,13 +9723,26 @@ function MicroSaasPage() {
                       </span>
                     )}
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                   <p className="text-gray-400 text-sm mb-4">{service.tagline}</p>
+=======
+                  
+                  <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{service.tagline}</p>
+                  
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <div className="mb-4">
                     <span className="text-3xl font-bold text-white">{service.price}</span>
                     <span className="text-gray-400">{service.period}</span>
                   </div>
+<<<<<<< HEAD
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+=======
+                  
+                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                  
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -9013,6 +9754,10 @@ function MicroSaasPage() {
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
+=======
+                  
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <div className="mb-6 p-4 bg-gray-700/50 rounded-lg">
                     <div className="text-sm text-gray-300 mb-2">
                       <strong>Market Position:</strong> {service.marketPosition}
@@ -9024,6 +9769,10 @@ function MicroSaasPage() {
                       <strong>Setup Time:</strong> {service.setupTime}
                     </div>
                   </div>
+<<<<<<< HEAD
+=======
+                  
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <div className="flex flex-col gap-3">
                     <a
                       href={service.link}
@@ -9045,9 +9794,15 @@ function MicroSaasPage() {
                   </div>
                 </div>
               ))}
+<<<<<<< HEAD
             </div>
           </div>
         </section>
+=======
+            </div>;
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
@@ -9056,6 +9811,7 @@ function MicroSaasPage() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
               Choose from our portfolio of 85+ specialized solutions. All services include comprehensive documentation
               dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution
 
@@ -9068,10 +9824,19 @@ function MicroSaasPage() {
 
 
 
+=======
+              Choose from our portfolio of 85+ specialized solutions. All services include comprehensive documentation, 
+              dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution 
+              and add more as your business grows.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <Button
                 href="/contact"
                 variant="secondary"
                 size="lg"
+<<<<<<< HEAD
 
 
 
@@ -9084,11 +9849,14 @@ function MicroSaasPage() {
                 <ArrowRight className="w-5 h-5 ml-2" />;
               </Button>;
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl"
               >
                 Contact Sales
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
+<<<<<<< HEAD
 
 
 
@@ -9096,10 +9864,13 @@ function MicroSaasPage() {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <Button
                 href="/pricing"
                 variant="outline"
                 size="lg"
+<<<<<<< HEAD
 
 
                 className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl">;
@@ -9700,12 +10471,18 @@ function MicroSaasPage() {
           </p>;
           <div className="flex flex-col sm:flex-row gap-6 justify-center">;
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
               >
                 View All Pricing
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {marketTrends.map((trend, index) => (
               <Card
@@ -9729,9 +10506,15 @@ function MicroSaasPage() {
                 </div>
               </Card>
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
+=======
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* Competitive Advantages */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -9743,6 +10526,10 @@ function MicroSaasPage() {
               What sets us apart from traditional SaaS providers and market leaders.
             </p>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {competitiveAdvantages.map((advantage, index) => (
               <Card
@@ -9758,12 +10545,21 @@ function MicroSaasPage() {
                       <span className="text-sm">{example}</span>
                     </div>
                   ))}
+<<<<<<< HEAD
                 </div>
               </Card>
             ))}
           </div>
         </div>
       </section>
+=======
+                </div>;
+              </Card>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* Detailed Services */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -9775,6 +10571,10 @@ function MicroSaasPage() {
               Detailed analysis of each micro SaaS service with market data, pricing, and use cases.
             </p>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <div className="space-y-16">
             {detailedServices.map((service, index) => (
               <div key={index} className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700">
@@ -9789,6 +10589,10 @@ function MicroSaasPage() {
                     <p className="text-gray-400 leading-relaxed">{service.longDescription}</p>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {/* Features */}
                   <div>
@@ -9803,8 +10607,13 @@ function MicroSaasPage() {
                           <span className="text-sm">{feature}</span>
                         </li>
                       ))}
+<<<<<<< HEAD
                     </ul>
                   </div>
+=======
+                    </ul>;
+                  </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   {/* Pricing */}
                   <div>
                     <h4 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -9823,6 +10632,7 @@ function MicroSaasPage() {
                               <li key={featureIndex} className="text-xs text-gray-400 flex items-center">
                                 <Check className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                                 {feature}
+<<<<<<< HEAD
                               </li>
                             ))}
                           </ul>
@@ -9831,6 +10641,16 @@ function MicroSaasPage() {
                     </div>
                   </div>
                 </div>
+=======
+                              </li>;
+                            ))}
+                          </ul>;
+                        </div>;
+                      ))}
+                    </div>;
+                  </div>;
+                </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 {/* Market Data */}
                 <div className="mt-8 bg-blue-900/20 border border-blue-500/20 rounded-lg p-6">
                   <h4 className="text-xl font-bold text-blue-400 mb-4 flex items-center">
@@ -9856,6 +10676,10 @@ function MicroSaasPage() {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 {/* Use Cases */}
                 <div className="mt-8">
                   <h4 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -9866,10 +10690,17 @@ function MicroSaasPage() {
                     {service.useCases.map((useCase, useCaseIndex) => (
                       <span key={useCaseIndex} className="px-4 py-2 bg-gray-700 rounded-full text-sm text-gray-300">
                         {useCase}
+<<<<<<< HEAD
                       </span>
                     ))}
                   </div>
                 </div>
+=======
+                      </span>;
+                    ))}
+                  </div>;
+                </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 {/* CTA */}
                 <div className="mt-8 text-center">
                   <Button
@@ -9883,9 +10714,15 @@ function MicroSaasPage() {
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
+=======
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
@@ -9897,6 +10734,7 @@ function MicroSaasPage() {
             Start your 14-day free trial today. No credit card required. Experience the power of AI-powered micro SaaS services.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
+<<<<<<< HEAD
 
 
 
@@ -9904,10 +10742,13 @@ function MicroSaasPage() {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <Button
               href="/pricing"
               variant="secondary"
               size="lg"
+<<<<<<< HEAD
 
 
 
@@ -9920,11 +10761,14 @@ function MicroSaasPage() {
               <ArrowRight className="w-5 h-5 ml-2" />;
             </Button>;
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               className="bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"
             >
               View Pricing
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
+<<<<<<< HEAD
 
 
 
@@ -9932,10 +10776,13 @@ function MicroSaasPage() {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <Button
               href="/contact"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
 
 
 
@@ -10120,6 +10967,8 @@ function MicroSaasPage() {
                       <ArrowRight className="w-5 h-5 ml-2" />;
                     </Button>;
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
             >
               Contact Sales
@@ -10127,6 +10976,10 @@ function MicroSaasPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* Contact Information Section */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -10138,6 +10991,10 @@ function MicroSaasPage() {
               Ready to transform your business with our AI-powered micro SaaS solutions? Contact us today.
             </p>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Contact Details */}
             <div className="bg-gray-700/50 rounded-2xl p-8 border border-gray-600">
@@ -10152,6 +11009,10 @@ function MicroSaasPage() {
                 <p className="text-gray-400 text-sm mt-2">Available 24/7 for urgent support</p>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <div className="bg-gray-700/50 rounded-2xl p-8 border border-gray-600">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -10164,6 +11025,10 @@ function MicroSaasPage() {
                 <p className="text-gray-400 text-sm mt-2">Response within 2 hours</p>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <div className="bg-gray-700/50 rounded-2xl p-8 border border-gray-600">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -10179,6 +11044,10 @@ function MicroSaasPage() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {/* Additional Contact Information */}
           <div className="mt-16 bg-gray-700/30 rounded-2xl p-8 border border-gray-600">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -10207,11 +11076,19 @@ function MicroSaasPage() {
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+              
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <div>
                 <h3 className="text-2xl font-bold text-white mb-6">Get Started Today</h3>
                 <div className="space-y-4">
                   <p className="text-gray-300">
+<<<<<<< HEAD
                     Ready to transform your business? Start with a 14-day free trial of any service.
+=======
+                    Ready to transform your business? Start with a 14-day free trial of any service. 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     No credit card required, no commitment.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -10223,6 +11100,7 @@ function MicroSaasPage() {
                       Contact Sales
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
+<<<<<<< HEAD
 
 
 
@@ -10230,11 +11108,16 @@ function MicroSaasPage() {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     <Button
                       href="/pricing"
                       variant="outline"
                       size="lg"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                       className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white"
                     >
                       View Pricing
@@ -10247,6 +11130,7 @@ function MicroSaasPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
 
 
 
@@ -10575,3 +11459,9 @@ dedicated support, enterprise-grade reliability, and 14-day free trials. Start w
 }
 
 
+=======
+      {/* CTA Section */}
+    </>;
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

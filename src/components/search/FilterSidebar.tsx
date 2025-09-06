@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 import React from 'react';
 interface FilterSidebarProps {
@@ -103,20 +104,34 @@ function FilterSidebar() {
     </>;
   )};
 '"`;`
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react',;
 interface FilterSidebarProps {;
   className?: string,;
   children?: React.ReactNode;
 }
 ;
+<<<<<<< HEAD
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({;,
+=======
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   className,;
   children;
 }) => {;
   return (;
+<<<<<<< HEAD
     <div className={`filter-sidebar ${className || ''}`}>;`
+=======
+    <div className={`filter-sidebar ${className || ''}`}>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {children}
     </div>;
   );
 };
+<<<<<<< HEAD
 export default FilterSidebar;
+=======
+export default FilterSidebar;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

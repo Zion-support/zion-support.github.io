@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -53,6 +54,8 @@ function NewPost() {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react';
 export default function NewPost() {;
   return (;
@@ -62,6 +65,7 @@ export default function NewPost() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 
 
@@ -78,3 +82,6 @@ export default function NewPost() {;
 
 ;
 
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

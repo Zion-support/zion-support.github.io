@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -578,3 +579,5 @@ export default function CommunityPage() {
 ;
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

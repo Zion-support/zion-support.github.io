@@ -1,9 +1,17 @@
+<<<<<<< HEAD:next.config.optimized.js
 <<<<<<<< HEAD:corrupted_backup/next.config.optimized.js
 
 <<<<<<<< HEAD:next.config.optimized.js
 
 <:next.config.optimized.js
 
+=======
+<<<<<<< HEAD:backup-problematic-files/next.config.optimized.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/next.config.optimized.js
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
@@ -31,6 +39,7 @@ module.exports = withBundleAnalyzer({
 >>>>>>>> main:corrupted_backup/next.config.optimized.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD:next.config.optimized.js
 
 
 
@@ -68,11 +77,24 @@ const nextConfig = {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
+=======
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:next.config.optimized.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/next.config.optimized.js
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
+<<<<<<< HEAD:next.config.optimized.js
 
+=======
+<<<<<<< HEAD:backup-problematic-files/next.config.optimized.js
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:next.config.optimized.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/next.config.optimized.js
   eslint: { ignoreDuringBuilds: false },
   typescript: { ignoreBuildErrors: false },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
@@ -181,6 +203,7 @@ module.exports = withBundleAnalyzer({
   "compress": true,
   "poweredByHeader": false,
   "generateEtags": false,
+<<<<<<< HEAD:next.config.optimized.js
 
     domains: ['images.unsplash.com', 'via.placeholder.com'],
 
@@ -216,6 +239,17 @@ module.exports = withBundleAnalyzer({
 >  "images": {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
 
+=======
+<<<<<<< HEAD:backup-problematic-files/next.config.optimized.js
+  "images": {    domains: ['images.unsplash.com', 'via.placeholder.com'],
+=======
+  "images": {
+>>>>>>> main
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:next.config.optimized.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/next.config.optimized.js
     formats: ['image/webp', 'image/avif'],
   },
   experimental: {
@@ -253,6 +287,7 @@ module.exports = withBundleAnalyzer({
           },
           common: {
             name: 'common',
+<<<<<<< HEAD:next.config.optimized.js
 <<<<<<<< HEAD:corrupted_backup/next.config.optimized.js
 
 <<<<<<<< HEAD:next.config.optimized.js
@@ -266,10 +301,17 @@ module.exports = withBundleAnalyzer({
 <:next.config.optimized.js
 =
 >            minChunks: 2,
+=======
+<<<<<<< HEAD:backup-problematic-files/next.config.optimized.js
+=======
+<<<<<<< HEAD
+            minChunks: 2,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/next.config.optimized.js
             chunks: 'all',
             enforce: true,
           },
         },
+<<<<<<< HEAD:next.config.optimized.js
 
 
       }}
@@ -296,6 +338,12 @@ module.exports = withBundleAnalyzer({
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:next.config.optimized.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/next.config.optimized.js
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: 'true',swcMinify: 'true',compress: 'true',poweredByHeader: 'false',generateEtags: 'false',images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: '2',chunks: 'all',enforce: 'true',},},}} return config},});
 
       }}
@@ -309,12 +357,17 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.e
             "chunks": 'all',
             "enforce": true}}}}
     return config}});
+<<<<<<< HEAD:next.config.optimized.js
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/next.config.optimized.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/next.config.optimized.js
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
 <<<<<<<< HEAD:corrupted_backup/next.config.optimized.js
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
+<<<<<<< HEAD:next.config.optimized.js
 <<<<<<<< HEAD:next.config.optimized.js
 ========
 
@@ -329,6 +382,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.e
 =
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
 
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/next.config.optimized.js
       };
     }
     return config;
@@ -345,6 +405,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.e
 });
 >});
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
+<<<<<<< HEAD:next.config.optimized.js
 });
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
 });
@@ -360,3 +421,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.e
 
 
 
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:next.config.optimized.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/next.config.optimized.js

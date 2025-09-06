@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 @tailwind base;
 @tailwind components;
@@ -37,3 +38,12 @@
 @tailwind base; @tailwind components; @tailwind utilities;
 
 
+=======
+<<<<<<< HEAD
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+=======
+@tailwind base; @tailwind components; @tailwind utilities;
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

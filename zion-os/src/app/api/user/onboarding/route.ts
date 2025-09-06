@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
@@ -66,12 +67,24 @@ export async function POST(request: NextRequest) {;
     if (!session?.user?.email) {;
       return NextResponse.json(;
         { error: "Unauthorized" },;
+=======
+import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { prisma } from "@/lib/prisma";
+export async function POST(request: NextRequest) {;
+  try {;
+    const session = await getServerSession();
+    if (!session?.user?.email) {;
+      return NextResponse.json(;
+        { error: "Unauthorized" };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         { status: 401 }
       );
     }
 ;
     // Update user's onboarding status;
     const updatedUser = await prisma.user.update({;
+<<<<<<< HEAD
       where: { email: session.user.email },;
       data: { onboardingCompleted: true }}),;
     return NextResponse.json(;
@@ -84,12 +97,27 @@ export async function POST(request: NextRequest) {;
           role: updatedUser.role,;
           onboardingCompleted: updatedUser.onboardingCompleted}
       },;
+=======
+      where: { email: session.user.email };
+      data: { onboardingCompleted: true }});
+    return NextResponse.json(;
+      {;
+        message: "Onboarding completed successfully";
+        user: {;
+          id: updatedUser.id;
+          name: updatedUser.name;
+          email: updatedUser.email;
+          role: updatedUser.role;
+          onboardingCompleted: updatedUser.onboardingCompleted}
+      };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       { status: 200 }
     );
   } catch (error) {;
     console.error("Onboarding completion error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
+<<<<<<< HEAD
 
 
       { status: 500 }
@@ -132,3 +160,9 @@ export async function POST(request: NextRequest) { try {
   }
 }
 }
+=======
+      { status: 500 }
+    );
+  }
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

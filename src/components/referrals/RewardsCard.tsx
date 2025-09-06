@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface RewardsCardProps {,
   rewards: ReferralReward[];,
   is_loading: boolean;,
@@ -31,31 +32,60 @@ import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+=======
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralReward } from "@/types/referrals",
+import { formatDate } from "@/utils/referralUtils",
+import { BadgeDollarSign, Badge } from 'lucide-react'
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface RewardsCardProps {
   rewards: ReferralReward[],
   isLoading: boolean
 }
+<<<<<<< HEAD
     return (
           <CardTitle className="flex items-center gap-2">"
             <BadgeDollarSign className="h-5 w-5" />"
           <CardTitle className="flex items-center gap-2">"
             <BadgeDollarSign className="h-5 w-5" />"
+=======
+
+export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
+  if (isLoading) {
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <div className="flex items-center justify-center p-4">"
             <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />"
+=======
+          <div className="flex items-center justify-center p-4">
+            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>
         </CardContent>
       </Card>
     )
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   if (rewards.length === 0) {
     return (
       <Card>
         <CardHeader>
+<<<<<<< HEAD
           <CardTitle className="flex items-center gap-2">"
             <BadgeDollarSign className="h-5 w-5" />"
             Your Rewards
@@ -67,14 +97,24 @@ interface RewardsCardProps {
         <CardContent>
           <CardTitle className="flex items-center gap-2">"
             <BadgeDollarSign className="h-5 w-5" />"
+=======
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <div className="flex flex-col items-center justify-center p-4 text-center">"
             <p className="text-muted-foreground">No rewards yet</p>"
             <p className="text-sm text-muted-foreground mt-1">"
+=======
+          <div className="flex flex-col items-center justify-center p-4 text-center">
+            <p className="text-muted-foreground">No rewards yet</p>
+            <p className="text-sm text-muted-foreground mt-1">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               Refer users to earn rewards once they complete onboarding
             </p>
           </div>
@@ -82,16 +122,26 @@ interface RewardsCardProps {
       </Card>
     )
   }
+<<<<<<< HEAD
   return (
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">"
           <BadgeDollarSign className="h-5 w-5" />"
+=======
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <BadgeDollarSign className="h-5 w-5" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Your Rewards
         </CardTitle>
         <CardDescription>Rewards earned from successful referrals</CardDescription>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
 }
         <div className="space-y-4">"
           {rewards.map((reward, index) => (
@@ -99,20 +149,37 @@ interface RewardsCardProps {
               key={reward.id}
               className={`flex justify-between items-start ${`
                 index !== rewards.length - 1 ? "border-b pb-3" : """
+=======
+        <div className="space-y-4">
+          {rewards.map((reward, index) => (
+            <div 
+              key={reward.id}
+              className={`flex justify-between items-start ${
+                index !== rewards.length - 1 ? "border-b pb-3" : ""
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralReward } from "@/types/referrals",;
 import { formatDate } from "@/utils/referralUtils",;
 import { BadgeDollarSign, Badge } from 'lucide-react';
 interface RewardsCardProps {;
+<<<<<<< HEAD
   rewards: ReferralReward[];,
   isLoading: boolean;
 }
 ;
 export function RewardsCard({ rewards, isLoading }:,  RewardsCardProps) {;
+=======
+  rewards: ReferralReward[];
+  isLoading: boolean;
+}
+;
+export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   if (isLoading) {;
     return (;
       <Card>;
         <CardHeader>;
+<<<<<<< HEAD
           <CardTitle className='flex items-center gap-2'>;
             <BadgeDollarSign className='h-5 w-5' />;,
   rewards: ReferralReward[],
@@ -170,6 +237,21 @@ if ( {) {
         </CardHeader>;
         <CardContent>;
     )
+=======
+          <CardTitle className="flex items-center gap-2">;
+            <BadgeDollarSign className="h-5 w-5" />;
+            Your Rewards;
+          </CardTitle>;
+          <CardDescription>Rewards earned from successful referrals</CardDescription>;
+        </CardHeader>;
+        <CardContent>;
+          <div className="flex items-center justify-center p-4">;
+            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />;
+          </div>;
+        </CardContent>;
+      </Card>;
+    );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }
 ;
   if (rewards.length === 0) {;
@@ -191,6 +273,7 @@ if ( {) {
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
     );  }    );
   }
   return (
@@ -215,11 +298,22 @@ if ( {) {
       <CardHeader>;
         <CardTitle className='flex items - center gap - 2'>;
           <BadgeDollarSign className='h - 5 w - 5' />;
+=======
+    );
+  }
+;
+  return (;
+    <Card>;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <BadgeDollarSign className="h-5 w-5" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Your Rewards;
         </CardTitle>;
         <CardDescription>Rewards earned from successful referrals</CardDescription>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
               key={reward && reward.id}
         <div className="space-y-4">;
           {rewards && rewards.map((reward, index,) => (;
@@ -228,6 +322,16 @@ if ( {) {
               className={`flex justify-between items-start ${`
                 index !== rewards && rewards.length - 1 ? 'border-b pb-3' : '''
               }`}>;`
+=======
+        <div className="space-y-4">;
+          {rewards.map((reward, index) => (;
+            <div;
+              key={reward.id}
+              className={`flex justify-between items-start ${;
+                index !== rewards.length - 1 ? "border-b pb-3" : "";
+              }`}
+            >;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <div>;
                 <div className="flex items-center gap-2">;
                   {reward.reward_type === 'credit' ? (;
@@ -237,6 +341,7 @@ if ( {) {
                   )}
                   <p className="font-medium">;
                     {reward.reward_type === 'credit';
+<<<<<<< HEAD
                       ? `$${reward.amount?.toFixed(2)} Credit`;`
                       : 'Visibility Boost'}'
                   </p>;
@@ -282,12 +387,23 @@ if ( {) {
                   </p>
                 </div>
                 <p className="text-xs text-muted-foreground mt-1">"
+=======
+                      ? `$${reward.amount?.toFixed(2)} Credit`;
+                      : 'Visibility Boost'}
+                  </p>;
+                </div>;
+                <p className="text-xs text-muted-foreground mt-1">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   Earned on {formatDate(reward.created_at)}
                 </p>;
                 {reward.expires_at && (;
                   <p className="text-xs text-muted-foreground">;
                     Expires on {formatDate(reward.expires_at)}
+<<<<<<< HEAD
                   </p>
+=======
+                  </p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 )}
               </div>;
             </div>;
@@ -297,6 +413,7 @@ if ( {) {
     </Card>;
   );
 }
+<<<<<<< HEAD
         <div className='space - y-4'>          {rewards.map ((reward, index) => ('
             <div;
               key={reward.id}
@@ -337,3 +454,6 @@ if ( {) {
 }
 ;
 }}}}}})))))))
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

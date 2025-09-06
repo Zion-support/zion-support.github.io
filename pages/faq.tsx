@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -140,3 +141,5 @@ export default function FAQ() {
     </>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

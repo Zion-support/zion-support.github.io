@@ -1,8 +1,26 @@
+<<<<<<< HEAD
 import { Sparkles } from 'lucide-react''
+=======
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import {logErrorToProduction} from '@/utils/productionLogger',
+import { 
+  getTalentRateSuggestion,
+  PricingSuggestion,
+  TalentRateParams,
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService",
+import { PricingSuggestionBox } from "./PricingSuggestionBox",
+import { useAuth } from "@/hooks/useAuth",
+import { Sparkles } from 'lucide-react'
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
   location?: string,
+<<<<<<< HEAD
   onSuggestionApplied: (value: number,) => void,
   rateType: "hourly" | "fixed""
       // Track this suggestion application
@@ -24,11 +42,20 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { ;
+=======
+  onSuggestionApplied: (value: number) => void,
+  rateType: "hourly" | "fixed"
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+import {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   getTalentRateSuggestion,;
   PricingSuggestion,;
   TalentRateParams,;
   trackPricingSuggestion;
 } from "@/services/pricingSuggestionService",;
+<<<<<<< HEAD
 import { PricingSuggestionBox } from "./PricingSuggestionBox";
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from 'lucide-react';
@@ -59,12 +86,47 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;,
         yearsExperience,;
         location};
       const result = await getTalentRateSuggestion(params);
+=======
+import { PricingSuggestionBox } from "./PricingSuggestionBox",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Sparkles } from 'lucide-react';
+interface TalentRateRecommenderProps {;
+  skills: string[],;
+  yearsExperience: number,;
+  location?: string,;
+  onSuggestionApplied: (value: number) => void,;
+  rateType: "hourly" | "fixed";
+}
+;
+export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
+  skills,;
+  yearsExperience,;
+  location,;
+  onSuggestionApplied,;
+  rateType}) => {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
+  const { user } = useAuth(),;
+  const generateSuggestion = async () => {;
+    if (skills.length === 0 || yearsExperience <= 0) {;
+      return;
+    }
+;
+    setIsLoading(true),;
+    try {;
+      const params: TalentRateParams = {;
+        skills,;
+        yearsExperience,;
+        location},;
+      const result = await getTalentRateSuggestion(params),;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       setSuggestion(result);
     } catch (error) {;
       logErrorToProduction('Error generating rate suggestion:', { data: error });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
   };
   const handleApplySuggestion = () => {;
     if (suggestion) {;
@@ -125,6 +187,45 @@ if ( {) {
 };
 '"};
 };
+=======
+  },
+
+  const handleApplySuggestion = () => {
+    if (suggestion) {
+      // We'll use the middle of the range as the suggested rate
+      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),
+      onSuggestionApplied(suggestedRate),
+      
+      // Track this suggestion application
+      if (user && user.id) {
+        trackPricingSuggestion({
+          userId: user.id,
+          suggestionType: "talent",
+          suggestedMin: suggestion.minRate,
+          suggestedMax: suggestion.maxRate,
+          actualValue: suggestedRate,
+          accepted: true
+        })
+      }
+    }
+  },
+
+  return (
+    <div className="space-y-4">
+      <div>
+        {!suggestion && !isLoading ? (
+          <Button
+            type="button"
+            variant="outline"
+            onClick={generateSuggestion}
+            disabled={skills.length === 0 || yearsExperience <= 0}
+            className="w-full"
+          >
+            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
+          </Button>
+        ) : (
+          <PricingSuggestionBox
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -134,6 +235,7 @@ if ( {) {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 };
     <div className="space - y-4">;
       <div>;
@@ -172,3 +274,6 @@ return (<div className="space - y-4" > <div> {";
 }
 '"},"
 }
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

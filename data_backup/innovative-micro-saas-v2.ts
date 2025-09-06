@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -11,6 +12,17 @@
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export type InnovativeMicroSaasV2 = {
   "id": string;
   title: string;
@@ -19,6 +31,7 @@ export type InnovativeMicroSaasV2 = {
 export const "innovativeMicroSaasV2": InnovativeMicroSaasV2[] = [];
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+<<<<<<< HEAD
 
 
 
@@ -33,6 +46,22 @@ export type InnovativeMicroSaasV2 = { id: string; title: string; description: st
 
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 
+=======
+<<<<<<< HEAD
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
 origin/cursor/integrate-build-improve-and-re-verify-c7b5

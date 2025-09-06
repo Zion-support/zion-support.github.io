@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';
@@ -63,11 +64,16 @@ export async function trackEvent(payload: TrackEventPayload) {;
   try {;
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
 export type TrackEventPayload = {
+=======
+export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
+export type TrackEventPayload = {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   name: string;
   page?: string;
   userType?: UserType;
   properties?: Record<string, any>;
   at?: string;
+<<<<<<< HEAD
 }
 export async function trackEvent(payload: TrackEventPayload) {
   try {
@@ -106,10 +112,19 @@ export async function trackEvent(payload: TrackEventPayload) {;
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
+=======
+};
+export async function trackEvent(payload: TrackEventPayload) {;
+  try {;
+    await fetch('/api/analytics/events/track', {;
+      method: 'POST';
+      headers: { 'Content-Type': 'application/json' };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       body: JSON.stringify(payload);
       keepalive: true as any});
   } catch (e) {;
     // swallow;
+<<<<<<< HEAD
 
 
 
@@ -133,3 +148,7 @@ export async function trackEvent(payload: TrackEventPayload) {;
 
 
 
+=======
+  }
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

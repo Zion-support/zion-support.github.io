@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 totalSize: number;,
   gzippedSize: number;,
   chunkCount: number;,
@@ -133,6 +134,8 @@ if (return) {
       collectBundleInfo()
     }
   }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -163,11 +166,19 @@ export function BundleAnalyzer() {;
   if (!isAllowed) {;
     return null;
   }
+<<<<<<< HEAD
 ;,
   const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),;,
   const [chunks, setChunks] = useState<ChunkInfo[]>([]),;,
   const [isVisible, setIsVisible] = useState(false),;,
   const [isCollecting, setIsCollecting] = useState(false),;,
+=======
+;
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),;
+  const [chunks, setChunks] = useState<ChunkInfo[]>([]),;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [isCollecting, setIsCollecting] = useState(false),;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const [shouldShow, setShouldShow] = useState(false),;
   useEffect(() => {;
     // Only show in development or when explicitly enabled;
@@ -183,7 +194,11 @@ export function BundleAnalyzer() {;
     if (typeof window === 'undefined') return,;
     setIsCollecting(true),;
     try {;
+<<<<<<< HEAD
       // Get performance entries for script resources;,
+=======
+      // Get performance entries for script resources;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       const resourceEntries = window.window.window.performance.getEntriesByType('resource') as PerformanceResourceTiming[],;
       const scriptEntries = resourceEntries.filter(entry =>;
         entry.name.includes('/_next/static/') &&;
@@ -191,7 +206,11 @@ export function BundleAnalyzer() {;
       ),;
       // Calculate bundle information;
       let totalSize = 0,;
+<<<<<<< HEAD
       let totalLoadTime = 0,;,
+=======
+      let totalLoadTime = 0,;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       const chunkData: ChunkInfo[] = [],;
       scriptEntries.forEach(entry => {;
         const size = entry.transferSize || entry.encodedBodySize || 0,;
@@ -205,7 +224,11 @@ export function BundleAnalyzer() {;
           loadTime,;
           cached});
       }),;
+<<<<<<< HEAD
       // Estimate gzipped size (roughly 70% of,  original);
+=======
+      // Estimate gzipped size (roughly 70% of original);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       const gzippedSize = totalSize * 0.7,;
       const cacheHitRate = chunkData.filter(chunk => chunk.cached).length / chunkData.length,;
       setBundleInfo({;
@@ -221,6 +244,7 @@ export function BundleAnalyzer() {;
       setIsCollecting(false);
     }
   },;
+<<<<<<< HEAD
   const formatSize = (bytes:,  number): string => {;,
     if (bytes === 0) return '0 B',;
     const k = 1024,;,
@@ -229,6 +253,16 @@ export function BundleAnalyzer() {;
     return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];,
   },;
   const getSizeColor = (size:,  number) => {;,
+=======
+  const formatSize = (bytes: number): string => {;
+    if (bytes === 0) return '0 B',;
+    const k = 1024,;
+    const sizes = ['BKBMBGB'],;
+    const i = Math.floor(Math.log(bytes) / Math.log(k)),;
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+  },;
+  const getSizeColor = (size: number) => {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     if (size < 100000) return 'bg-green-500', // < 100KB;
     if (size < 500000) return 'bg-yellow-500', // < 500KB;
     return 'bg-red-500', // > 500KB;
@@ -244,6 +278,7 @@ export function BundleAnalyzer() {;
   if (!shouldShow) {;
     return null;
   }
+<<<<<<< HEAD
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">"
@@ -254,10 +289,24 @@ export function BundleAnalyzer() {;
           className="bg-background/80 backdrop-blur-sm""
         >
           <Package className="w-4 h-4 mr-2" />"
+=======
+
+  if (!isVisible) {
+    return (
+      <div className="fixed bottom-20 right-4 z-50">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={toggleAnalyzer}
+          className="bg-background/80 backdrop-blur-sm"
+        >
+          <Package className="w-4 h-4 mr-2" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           Bundle Analyzer
         </Button>
       </div>
     )
+<<<<<<< HEAD
           className='bg-background/80 backdrop-blur-sm'>;
           <Package className='w-4 h-4 mr-2' />;
           Bundle Analyzer;
@@ -289,22 +338,59 @@ export function BundleAnalyzer() {;
                 size="sm""
                 onClick={toggleAnalyzer}
                 className="h-6 w-6 p-0""
+=======
+  }
+
+  return (
+    <div className="fixed bottom-20 right-4 z-50 w-96">
+      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg">
+        <CardHeader className="pb-2">
+          <div className="flex items-center justify-between">
+            <CardTitle className="text-sm flex items-center">
+              <Package className="w-4 h-4 mr-2" />
+              Bundle Analyzer
+            </CardTitle>
+            <div className="flex gap-2">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={collectBundleInfo}
+                disabled={isCollecting}
+                className="h-6 w-6 p-0"
+              >
+                <Zap className="w-3 h-3" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleAnalyzer}
+                className="h-6 w-6 p-0"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               >
                 ✕
               </Button>
             </div>
           </div>
         </CardHeader>
+<<<<<<< HEAD
         <CardContent className="pt-0 space-y-3">"
           {bundleInfo ? (
             <>
               <div className="grid grid-cols-2 gap-2 text-xs">"
                 <div className="flex justify-between">"
+=======
+        <CardContent className="pt-0 space-y-3">
+          {bundleInfo ? (
+            <>
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="flex justify-between">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <span>Total Size:</span>
                   <Badge className={getSizeColor(bundleInfo.totalSize)}>
                     {formatSize(bundleInfo.totalSize)}
                   </Badge>
                 </div>
+<<<<<<< HEAD
                 <div className="flex justify-between">"
                   <span>Gzipped:</span>
                   <Badge variant="outline">"
@@ -318,10 +404,26 @@ export function BundleAnalyzer() {;
                 <div className="flex justify-between">"
                   <span>Avg Load:</span>
                   <Badge variant="outline">"
+=======
+                <div className="flex justify-between">
+                  <span>Gzipped:</span>
+                  <Badge variant="outline">
+                    {formatSize(bundleInfo.gzippedSize)}
+                  </Badge>
+                </div>
+                <div className="flex justify-between">
+                  <span>Chunks:</span>
+                  <Badge variant="outline">{bundleInfo.chunkCount}</Badge>
+                </div>
+                <div className="flex justify-between">
+                  <span>Avg Load:</span>
+                  <Badge variant="outline">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     {bundleInfo.loadTime.toFixed(0)}ms
                   </Badge>
                 </div>
               </div>
+<<<<<<< HEAD
               <div>
                 <div className="flex justify-between items-center text-xs mb-1">"
                   <span>Cache Hit Rate</span>
@@ -392,10 +494,34 @@ if ( {) {
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">"
+=======
+
+              <div>
+                <div className="flex justify-between items-center text-xs mb-1">
+                  <span>Cache Hit Rate</span>
+                  <span>{bundleInfo.cacheHitRate.toFixed(1)}%</span>
+                </div>
+                <Progress value={bundleInfo.cacheHitRate} className="h-2" />
+              </div>
+
+              <div>
+                <div className="text-xs font-medium mb-2">Largest Chunks:</div>
+                <div className="space-y-1">
+                  {chunks.map((chunk, index) => (
+                    <div key={chunk.name} className="flex justify-between items-center text-xs">
+                      <div className="flex items-center gap-2 flex-1 min-w-0">
+                        <span className="w-4 text-muted-foreground">{index + 1}.</span>
+                        <span className="truncate" title={chunk.name}>
+                          {chunk.name}
+                        </span>
+                        {chunk.cached && (
+                          <Badge variant="outline" className="text-xs px-1 py-0">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                             cached
                           </Badge>
                         )}
                       </div>
+<<<<<<< HEAD
                       <Badge className={getSizeColor(chunk.size)} variant="outline">"
                         {formatSize(chunk.size)}
                       </Badge>
@@ -414,10 +540,33 @@ if ( {) {
 }
 }
 }
+=======
+                      <Badge className={getSizeColor(chunk.size)} variant="outline">
+                        {formatSize(chunk.size)}
+                      </Badge>;
+                    </div>;
+                  ))}
+                </div>
+              </div>
+
+              {bundleInfo.totalSize > 1000000 && (
+                <div className="flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs">
+                  <AlertTriangle className="w-3 h-3 text-yellow-600" />
+                  <span>Bundle size is large. Consider code splitting.</span>
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="text-xs text-muted-foreground">
+              {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
+            </div>;
+          )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </CardContent>;
       </Card>;
     </div>;
   );
+<<<<<<< HEAD
 } ;
         <CardContent className='pt - 0 space - y-3'>;
           {bundle_info ? (
@@ -499,3 +648,6 @@ if ( {) {
       </Card>;
     </div>);
 }
+=======
+} ;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

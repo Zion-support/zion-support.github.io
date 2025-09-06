@@ -1,3 +1,16 @@
+<<<<<<< HEAD:scripts/simple-app-improvements-fixed.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements-fixed.cjs
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/simple-app-improvements-fixed.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/simple-app-improvements-fixed.cjs
     this.log(`Total improvements: ${this.improvements.length}`);
     this.log(`Total errors: ${this.errors.length}`);
     this.log(`Duration: ${duration}ms`);
@@ -22,8 +35,18 @@
 
 // Run the improvements
 const improvements = new SimpleAppImprovements();
+<<<<<<< HEAD:scripts/simple-app-improvements-fixed.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements-fixed.cjs
+improvements.runAllImprovements().catch(console.error);#!/usr/bin/env node;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/simple-app-improvements-fixed.cjs
 improvements.runAllImprovements().catch(console.error);
 #!/usr/bin/env node;
+<<<<<<< HEAD:scripts/simple-app-improvements-fixed.cjs
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/simple-app-improvements-fixed.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/simple-app-improvements-fixed.cjs
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

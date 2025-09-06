@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 onAddMilestone
 }: ProjectActionsProps) {
   onAddMilestone: () => void;,
@@ -30,13 +31,49 @@ export function ProjectActions(): any ({;
       {isUnderDispute && disputeId ? (
         <Button variant="outline" asChild>"
           <Link href={`/dashboard/disputes/${disputeId}`} />`
+=======
+
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import Link from 'next/link',;
+import { ShieldAlert } from 'lucide-react';
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
+interface ProjectActionsProps {;
+  projectId: string,;
+  isUnderDispute: boolean,;
+  disputeId?: string,;
+  isTalent: boolean,;
+  onAddMilestone: () => void;
+}
+
+export function ProjectActions({
+  projectId,
+  isUnderDispute,
+  disputeId,
+  isTalent,
+  onAddMilestone
+}: ProjectActionsProps) {
+  return (
+    <div className="flex gap-2">
+      {isUnderDispute && disputeId ? (
+        <Button variant="outline" asChild>
+          <Link href={`/dashboard/disputes/${disputeId}`}>
+            <ShieldAlert className="h-4 w-4 mr-2" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             View Active Dispute
           </Link>
         </Button>
       ) : (
+<<<<<<< HEAD
     </div>;
   );
 };
+=======
+        <RaiseDisputeButton 
+          projectId={projectId}
+          variant="outline"
+        />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       )}
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
@@ -46,6 +83,7 @@ export function ProjectActions(): any ({;
     </div>;
   );
 }
+<<<<<<< HEAD
 import React from 'react';
 import {Button} from '@/components / ui / button';
 import Link from 'next / link';
@@ -88,3 +126,6 @@ function ProjectActions() {
 }
 ;
 }
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,3 +1,16 @@
+<<<<<<< HEAD:scripts/comprehensive-code-quality-analyzer.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/comprehensive-code-quality-analyzer.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
     log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
     log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
     log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
@@ -38,8 +51,18 @@
     process.exit(1)}
 }
 
+<<<<<<< HEAD:scripts/comprehensive-code-quality-analyzer.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
+main();#!/usr/bin/env node;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
 main();
 #!/usr/bin/env node;
+<<<<<<< HEAD:scripts/comprehensive-code-quality-analyzer.cjs
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/comprehensive-code-quality-analyzer.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

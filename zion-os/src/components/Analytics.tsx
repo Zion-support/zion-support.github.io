@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -137,6 +138,26 @@ if ( {) {
 
 
       return () => {observer.disconnect();
+=======
+"use client",;
+import { useEffect } from "react",;
+interface FirstInputEntry extends PerformanceEntry {;
+  processingStart: number,;
+  processingEnd: number,;
+  target?: Element;
+}
+;
+export function Analytics() {;
+  useEffect(() => {;
+    // Performance monitoring;
+    if (typeof window !== "undefined") {;
+      // Core Web Vitals monitoring;
+      const observer = new PerformanceObserver((list) => {;
+        for (const entry of list.getEntries()) {;
+          if (entry.entryType === "largest-contentful-paint") {;
+            // // // console.log("LCP:", entry.startTime);
+          }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           if (entry.entryType === "first-input") {;
             const firstInputEntry = entry as FirstInputEntry,;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
@@ -163,6 +184,7 @@ if ( {) {
       return () => {;
         observer.disconnect();
         observer2.disconnect();
+<<<<<<< HEAD
 
 
 
@@ -170,6 +192,8 @@ if ( {) {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       }
     }
   }, []);

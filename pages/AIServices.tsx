@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -118,6 +119,8 @@ import {
   ArrowRight,
   CheckCircle,
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -138,13 +141,19 @@ import {
   Users,
   TrendingUp,
   Database,
+<<<<<<< HEAD
 
   Network,
   Target,
   Rocket
+=======
+  Shield,
+  Zap
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 } from 'lucide-react';
 const aiServices = [
   {
+<<<<<<< HEAD
 
     title: "Machine Learning Models",
     description: "Custom ML models tailored to your business needs with advanced algorithms and real-time processing",
@@ -231,6 +240,14 @@ title: 'Natural Language Processing',
     marketPrice: '$2,500 - $8,000/month',
     setupTime: '2-4 weeks',
     targetUsers: 'E-commerce, SaaS, Customer Service, Healthcare'
+=======
+    title: 'Natural Language Processing',
+    description: 'Advanced text analysis and language understanding capabilities.',
+    icon: Brain,
+    features: ['Text analysis', 'Sentiment analysis', 'Language translation', 'Content generation'],
+    price: '$1,500/month',
+    benefits: ['Better customer insights', 'Automated content', 'Multilingual support', 'Cost efficiency']
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   },
   {
     id: 7,
@@ -260,6 +277,7 @@ title: 'Natural Language Processing',
     name: 'AI Drug Discovery & Development',
     description: 'Accelerated pharmaceutical research using AI and machine learning',
     icon: Brain,
+<<<<<<< HEAD
     features: [
       'Molecular property prediction',
       'Drug-target interaction modeling',
@@ -332,6 +350,11 @@ title: 'Natural Language Processing',
 features: ['Predictive analytics', 'Custom algorithms', 'Data training', 'Model optimization'],
     price: '$3,000/month',
     benefits: ['Data-driven decisions', 'Predictive insights', 'Competitive advantage', 'Scalable intelligence']
+=======
+    features: ['Predictive analytics', 'Pattern recognition', 'Data insights', 'Custom algorithms'],
+    price: '$2,500/month',
+    benefits: ['Data-driven decisions', 'Process optimization', 'Competitive advantage', 'Scalable solutions']
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }
 }
   } catch (error) {
@@ -1387,6 +1410,7 @@ const stats = [
   { number: "48hrs", label: "Average Response Time" }
 ];
 
+<<<<<<< HEAD
 export default function AIServices() {
   
     >
@@ -1436,12 +1460,26 @@ export default function AIServicesPage() {
             className="text-center mb-16"
           >
             <h1 className="text-5xl font-bold text-white mb-6">
+=======
+export default function AIServicesPage() {
+  return (
+    <MainLayout>
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI services and solutions for your business" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-12">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               AI Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence solutions. 
-              From natural language processing to computer vision, we deliver AI that works.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Harness the power of artificial intelligence to transform your business
             </p>
+<<<<<<< HEAD
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -1457,50 +1495,51 @@ export default function AIServicesPage() {
                 <div className="text-gray-300">{stat.label}</div>
               </motion.div>
             ))}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {aiServices.map((service, index) => (
               <motion.div
-                key={index}
+                key={service.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-center mb-4">
-                  <service.icon className="h-8 w-8 text-blue-400 mr-3" />
-                  <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                  <service.icon className="h-8 w-8 text-blue-600 mr-3" />
+                  <h3 className="text-2xl font-semibold text-gray-800">{service.title}</h3>
                 </div>
-                
-                <p className="text-gray-300 mb-6">{service.description}</p>
+                <p className="text-gray-600 mb-6">{service.description}</p>
                 
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Features:</h4>
+                  <h4 className="font-semibold text-gray-800 mb-3">Features:</h4>
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
+                  <h4 className="font-semibold text-gray-800 mb-3">Benefits:</h4>
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <Star className="h-4 w-4 text-yellow-400 mr-2" />
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <Star className="h-4 w-4 text-yellow-500 mr-2" />
                         {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-                
-                <div className="flex items-center justify-between">
-                  <div className="text-2xl font-bold text-blue-400">{service.price}</div>
+
+                <div className="flex justify-between items-center">
+                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                   <Link
                     href="/contact"
                     className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
@@ -1513,19 +1552,18 @@ export default function AIServicesPage() {
             ))}
           </div>
 
+<<<<<<< HEAD
+=======
+          {/* Contact Information */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="bg-blue-600 rounded-xl p-8 text-center"
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gray-800 rounded-lg p-6 mt-8"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business with AI?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Contact us today to discuss your AI needs and get a custom solution.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+            <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+            <div className="space-y-3">
               <div className="flex items-center text-white">
                 <Phone className="h-5 w-5 mr-2" />
                 <span>+1 302 464 0950</span>

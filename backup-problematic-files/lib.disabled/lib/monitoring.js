@@ -191,7 +191,12 @@ export const trackUserAction = (action, category, label) => {
 };
 <<<<<<< HEAD
 export const trackError = (error,context = {}) => { console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','exception',{ description: 'error.message',fatal: 'false',...context })} }; export const trackPerformance = (metric,value) => { console.log(`Performance metric: ${metric} = ${value}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','timing_complete',{ name: 'metric',value: Math.round(value) })} }; export const trackUserAction = (action,category,label) => { console.log(`User action: ${action} in ${category}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',action,{ event_category: 'category',event_label: 'label' })} };
+<<<<<<< HEAD:backup-problematic-files/lib.disabled/lib/monitoring.js
 <<<<<<< HEAD:corrupted_backup/monitoring.js
+=======
+<<<<<<< HEAD:lib.disabled/lib/monitoring.js
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/monitoring.js
 <<<<<<< HEAD
 <<<<<<< HEAD:lib.disabled/lib/monitoring.js
 <<<<<<< HEAD
@@ -209,8 +214,12 @@ export const trackError = (error,context = {}) => { console.error('Error tracked
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/lib.disabled/lib/monitoring.js
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/lib.disabled/lib/monitoring.js
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/monitoring.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/monitoring.js
 export const trackError = (error,context = {}) => { console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','exception',{ description: error.message,fatal: false,...context })} }; export const trackPerformance = (metric,value) => { console.log(`Performance metric: ${metric} = ${value}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','timing_complete',{ name: metric,value: Math.round(value) })} }; export const trackUserAction = (action,category,label) => { console.log(`User action: ${action} in ${category}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',action,{ event_category: category,event_label: label })} };
 export const trackError = (error,context = {}) => { console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','exception',{ description: error.message,fatal: false,...context })} }; export const trackPerformance = (metric,value) => { console.log(`Performance metric: ${metric} = ${value}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','timing_complete',{ name: metric,value: Math.round(value) })} }; export const trackUserAction = (action,category,label) => { console.log(`User action: ${action} in ${category}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',action,{ event_category: category,event_label: label })} };
 export const trackError = (error,context = {}) => { console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','exception',{ description: error.message,fatal: false,...context })} }; export const trackPerformance = (metric,value) => { console.log(`Performance metric: ${metric} = ${value}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event','timing_complete',{ name: metric,value: Math.round(value) })} }; export const trackUserAction = (action,category,label) => { console.log(`User action: ${action} in ${category}`); if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',action,{ event_category: category,event_label: label })} };

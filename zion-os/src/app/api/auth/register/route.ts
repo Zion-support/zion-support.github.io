@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { NextRequest, NextResponse  } from './next / server';,
 import bcrypt from './bcryptjs';,
@@ -14,10 +15,13 @@ function POST() {
   try {
     const body = await request.json (),
     const { name, email, password } = register_schema.parse (body),
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/prisma";
 import { z } from "zod";
+<<<<<<< HEAD
 const registerSchema = z.object({name: z.string().min(2, "Name must be at least 2 characters");
   email: z.string().email("Invalid email address");
   password: z.string().min(8, "Password must be at least 8 characters")});
@@ -90,11 +94,28 @@ export async function POST(request: NextRequest) {;
     if (existingUser) {;
       return NextResponse.json(;
         { error: "User with this email already exists" },;
+=======
+const registerSchema = z.object({;
+  name: z.string().min(2, "Name must be at least 2 characters");
+  email: z.string().email("Invalid email address");
+  password: z.string().min(8, "Password must be at least 8 characters")});
+export async function POST(request: NextRequest) {;
+  try {;
+    const body = await request.json();
+    const { name, email, password } = registerSchema.parse(body);
+    // Check if user already exists;
+    const existingUser = await prisma.user.findUnique({;
+      where: { email }});
+    if (existingUser) {;
+      return NextResponse.json(;
+        { error: "User with this email already exists" };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         { status: 400 }
       );
     }
 ;
     // Hash password;
+<<<<<<< HEAD
     const hashedPassword = await bcrypt.hash(password, 12),;
     // Create user;
     const user = await prisma.user.create({;
@@ -111,12 +132,34 @@ export async function POST(request: NextRequest) {;
         message: "User created successfully",;
         user: userWithoutPassword;
       },;
+=======
+    const hashedPassword = await bcrypt.hash(password, 12);
+    // Create user;
+    const user = await prisma.user.create({;
+      data: {;
+        name;
+        email;
+        password: hashedPassword;
+        role: "user";
+        onboardingCompleted: false}});
+    // Remove password from response;
+    const { password: _, ...userWithoutPassword } = user;
+    return NextResponse.json(;
+      {;
+        message: "User created successfully";
+        user: userWithoutPassword;
+      };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       { status: 201 }
     );
   } catch (error) {;
     if (error instanceof z.ZodError) {;
       return NextResponse.json(;
+<<<<<<< HEAD
         { error: "Validation failed", details: error.errors },;
+=======
+        { error: "Validation failed", details: error.errors };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         { status: 400 }
       );
     }
@@ -124,8 +167,15 @@ export async function POST(request: NextRequest) {;
     console.error("Registration error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
+<<<<<<< HEAD
 
       { status: 500 }
     );
   }
 }
+=======
+      { status: 500 }
+    );
+  }
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

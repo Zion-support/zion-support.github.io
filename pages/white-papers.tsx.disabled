@@ -1,12 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 =======
 <<<<<<< HEAD:pages/white-papers.tsx
 import React from 'react';
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -16,6 +21,9 @@ import React from 'react';
 <<<<<<< HEAD
 >>>>>>> origin/main
 =======
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 <:pages/white-papers.tsx.backup
 =======
@@ -348,7 +356,31 @@ const whitePapers = [
     downloadCount: 980
   },
   {
+<<<<<<< HEAD
 title: 'Cybersecurity Best Practices 2024',
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages/white-papers.tsx
+    id: 3,
+    title: "Cybersecurity in the Digital Age: Protecting Your Assets",
+    author: "Emily Johnson",
+    date: "2024-01-05",
+    category: "Cybersecurity",
+    description: "Comprehensive guide to modern cybersecurity threats and how to protect your organization.",
+    downloadCount: 1500
+  },
+  {
+    id: 4,
+    title: "Data Analytics: Turning Information into Insights",
+    author: "David Kim",
+    date: "2023-12-20",
+    category: "Data Analytics",
+    description: "Discover how to leverage data analytics to drive business decisions and growth.",
+    downloadCount: 750
+  }
+];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -483,6 +515,7 @@ export default function WhitePapersPage() {
   return (
 =======
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-ac88
@@ -658,6 +691,9 @@ title="White Papers - Zion Tech Group"
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
     id: 3,
     title: "Cybersecurity in the Digital Age: Protecting Your Assets",
@@ -750,6 +786,10 @@ export default function WhitePapersPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+<<<<<<< HEAD
               </p>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
@@ -757,6 +797,7 @@ export default function WhitePapersPage() {
 =======
 <<<<<<< HEAD:pages/white-papers.tsx
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -785,16 +826,26 @@ export default function WhitePapersPage() {
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </p>
               
               <div className="mb-4">
@@ -1177,16 +1228,28 @@ export default function WhitePapersPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages/white-papers.tsx
@@ -1218,8 +1281,12 @@ export default function WhitePapersPage() {
                   View All Research
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -1251,10 +1318,18 @@ export default function WhitePapersPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 </Link>
               </div>
             </motion.div>
@@ -1324,6 +1399,7 @@ export default function WhitePapersPage() {
 
     </>
 
+<<<<<<< HEAD
 <=
 >
     </>
@@ -1419,9 +1495,14 @@ export default function WhitePapersPage() {
 
     </>
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
 =======
 =======
     </MainLayout>
@@ -1440,5 +1521,8 @@ export default function WhitePapersPage() {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   );
 }

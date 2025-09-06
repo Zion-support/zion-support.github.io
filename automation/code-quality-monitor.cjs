@@ -248,8 +248,20 @@ class CodeQualityMonitor {
   }
 }
 
+<<<<<<< HEAD:automation/code-quality-monitor.cjs
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
+async function checkCodeDuplication() {
+  
+  const duplications = [{  if (duplications.length > 0) {}
+=======
+<<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+async function checkCodeDuplication() {
+  
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
   const duplications = [{
 
 async function checkCodeComplexity() {}
@@ -327,6 +339,10 @@ async function checkCodeStyle() {
 
 
   if (duplications.length > 0) {}
+<<<<<<< HEAD:automation/code-quality-monitor.cjs
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications;
       .slice(0, 5);
@@ -430,6 +446,7 @@ async function checkDocumentationCoverage() {
 
 
   
+<<<<<<< HEAD:automation/code-quality-monitor.cjs
 
 
 
@@ -447,6 +464,22 @@ async function checkDocumentationCoverage() {
 
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
   };
 };
 async function checkTestCoverage() {}
@@ -550,10 +583,16 @@ async function runCodeQualityMonitor() {}
     process.exit(1);
   } else {
     
+<<<<<<< HEAD:automation/code-quality-monitor.cjs
 
 
 
 
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );
@@ -586,6 +625,7 @@ runCodeQualityMonitor();
   };
 };
 runCodeQualityMonitor();
+<<<<<<< HEAD:automation/code-quality-monitor.cjs
 runCodeQualityMonitor();
   };
 };
@@ -630,12 +670,21 @@ runCodeQualityMonitor();
 
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
     console.log("Metrics:", metrics);
   }
 });
+<<<<<<< HEAD:automation/code-quality-monitor.cjs
 
 
 
@@ -656,3 +705,10 @@ if (require.main === module) {
 
 module.exports = CodeQualityMonitor;
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality-monitor.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/code-quality-monitor.cjs

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 "use client",;
 export function StructuredData() {;
@@ -127,6 +128,8 @@ export function StructuredData() {const structuredData = {;
     }
   }
   return (
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 "use client",;
 export function StructuredData() {;
   const structuredData = {;
@@ -179,7 +182,15 @@ export function StructuredData() {;
   };
   return (;
     <script;
+<<<<<<< HEAD
       type="application / ld + json";
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}
     />);
 }
+=======
+      type="application/ld+json";
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />;
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

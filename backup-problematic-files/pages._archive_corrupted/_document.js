@@ -1,4 +1,9 @@
+<<<<<<< HEAD:backup-problematic-files/pages._archive_corrupted/_document.js
 <<<<<<< HEAD:corrupted_backup/_document.js
+=======
+<<<<<<< HEAD:pages._archive_corrupted/_document.js
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/_document.js
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/_document.js
@@ -13,8 +18,12 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/_document.js
+<<<<<<< HEAD:backup-problematic-files/pages._archive_corrupted/_document.js
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/pages._archive_corrupted/_document.js
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/_document.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/_document.js
 import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
   return (
@@ -70,7 +79,12 @@ export default function Document() {
   )}
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head> {} <link rel="preconnect" href="https: <link rel="preconnect" href="https: crossOrigin="" /> {} <link rel="dns-prefetch" href="https: {} <link href="https: rel="stylesheet" /> {} <link rel="icon" href="/favicon.ico" /> <link rel="apple-touch-icon" href="/icon-192.png" /> <link rel="manifest" href="/manifest.json" /> {} <meta name="theme-color" content="#0b1220" /> <meta name="msapplication-TileColor" content="#0b1220" /> {} <meta httpEquiv="X-Content-Type-Options" content="nosniff" /> <meta httpEquiv="X-Frame-Options" content="DENY" /> <meta httpEquiv="X-XSS-Protection" content="1 mode=block" /> {} <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" /> {} <script dangerouslySetInnerHTML={{ __html: ` if ('serviceWorker' in navigator) { window.addEventListener('load',function() { navigator.serviceWorker.register('/sw.js') }) } `,}} /> </Head> <body> <Main /> <NextScript /> </body> </Html> )}
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head> {} <link rel="preconnect" href="https: <link rel="preconnect" href="https: crossOrigin="" /> {} <link rel="dns-prefetch" href="https: {} <link href="https: rel="stylesheet" /> {} <link rel="icon" href="/favicon.ico" /> <link rel="apple-touch-icon" href="/icon-192.png" /> <link rel="manifest" href="/manifest.json" /> {} <meta name="theme-color" content="#0b1220" /> <meta name="msapplication-TileColor" content="#0b1220" /> {} <meta httpEquiv="X-Content-Type-Options" content="nosniff" /> <meta httpEquiv="X-Frame-Options" content="DENY" /> <meta httpEquiv="X-XSS-Protection" content="1 mode=block" /> {} <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" /> {} <script dangerouslySetInnerHTML={{ __html: ` if ('serviceWorker' in navigator) { window.addEventListener('load',function() { navigator.serviceWorker.register('/sw.js') }) } `,}} /> </Head> <body> <Main /> <NextScript /> </body> </Html> )}
+<<<<<<< HEAD:backup-problematic-files/pages._archive_corrupted/_document.js
 <<<<<<< HEAD:corrupted_backup/_document.js
+=======
+<<<<<<< HEAD:pages._archive_corrupted/_document.js
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/_document.js
 <<<<<<< HEAD:pages._archive_corrupted/_document.js
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -90,6 +104,10 @@ import { Html,Head,Main,NextScript } from 'next/document'; export default functi
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 =======
+<<<<<<< HEAD:backup-problematic-files/pages._archive_corrupted/_document.js
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/_document.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/_document.js
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head> {} <link rel="preconnect" href="https: <link rel="preconnect" href="https: crossOrigin="" /> {} <link rel="dns-prefetch" href="https: {} <link href="https: rel="stylesheet" /> {} <link rel="icon" href="/favicon.ico" /> <link rel="apple-touch-icon" href="/icon-192.png" /> <link rel="manifest" href="/manifest.json" /> {} <meta name="theme-color" content="#0b1220" /> <meta name="msapplication-TileColor" content="#0b1220" /> {} <meta httpEquiv="X-Content-Type-Options" content="nosniff" /> <meta httpEquiv="X-Frame-Options" content="DENY" /> <meta httpEquiv="X-XSS-Protection" content="1 mode=block" /> {} <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" /> {} <script dangerouslySetInnerHTML={{ __html: ` if ('serviceWorker' in navigator) { window.addEventListener('load',function() { navigator.serviceWorker.register('/sw.js') }) } `,}} /> </Head> <body> <Main /> <NextScript /> </body> </Html> )}
 =======
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head> {} <link rel="preconnect" href="https: <link rel="preconnect" href="https: crossOrigin="" /> {} <link rel="dns-prefetch" href="https: {} <link href="https: rel="stylesheet" /> {} <link rel="icon" href="/favicon.ico" /> <link rel="apple-touch-icon" href="/icon-192.png" /> <link rel="manifest" href="/manifest.json" /> {} <meta name="theme-color" content="#0b1220" /> <meta name="msapplication-TileColor" content="#0b1220" /> {} <meta httpEquiv="X-Content-Type-Options" content="nosniff" /> <meta httpEquiv="X-Frame-Options" content="DENY" /> <meta httpEquiv="X-XSS-Protection" content="1 mode=block" /> {} <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" /> {} <script dangerouslySetInnerHTML={{ __html: ` if ('serviceWorker' in navigator) { window.addEventListener('load',function() { navigator.serviceWorker.register('/sw.js') }) } `,}} /> </Head> <body> <Main /> <NextScript /> </body> </Html> )}

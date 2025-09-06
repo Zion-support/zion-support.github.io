@@ -1,3 +1,16 @@
+<<<<<<< HEAD:scripts/comprehensive-test-deploy.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-test-deploy.cjs
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/comprehensive-test-deploy.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/comprehensive-test-deploy.cjs
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
@@ -14,8 +27,18 @@
 
 // Run the comprehensive suite
 const suite = new ComprehensiveTestDeploy();
+<<<<<<< HEAD:scripts/comprehensive-test-deploy.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-test-deploy.cjs
+suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/comprehensive-test-deploy.cjs
 suite.runComprehensiveSuite().catch(console.error);
 #!/usr/bin/env node;
+<<<<<<< HEAD:scripts/comprehensive-test-deploy.cjs
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/comprehensive-test-deploy.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/comprehensive-test-deploy.cjs
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

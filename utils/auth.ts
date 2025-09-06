@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 
 // Authentication utilities
@@ -297,3 +298,17 @@ export function isModerator(session: AuthSession | null): boolean {
 
 }
 
+=======
+import type { NextApiRequest } from 'next';
+export function getRequestUserEmail(req: NextApiRequest): string | null {;
+  const emailHeader = req.headers['x-user-email'];
+  if (Array.isArray(emailHeader)) return emailHeader[0] || null;
+  return (emailHeader as string) || null;
+}
+;
+export function isAdminEmail(email: string | null | undefined): boolean {;
+  if (!email) return false;
+  const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean);
+  return admins.includes(email.toLowerCase());
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

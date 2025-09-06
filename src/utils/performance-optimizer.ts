@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const images = document && document.querySelectorAll('img');
   images && images.forEach(img => {
     if (!img && img.loading) {
@@ -94,3 +95,23 @@ link.rel = "preload";
 ((link.href =,  resource),
   (link.as = resource.endsWith(".css") ? "style" : "font"));
 }}})
+=======
+// Performance optimizer utilities
+export const optimizeImages = () => {
+  console.log('Optimizing images...');
+};
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+};
+
+export const optimizeBundleSize = () => {
+  // Dynamic imports for non-critical components
+  const loadComponent = componentName => {
+    return import(`./components/${componentName}`);
+  };
+
+  return { loadComponent };
+};
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

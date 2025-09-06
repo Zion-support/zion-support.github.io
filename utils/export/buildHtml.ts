@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -14,11 +15,15 @@ export function buildPrintableHtml(project: BookProject): string {;
 
 import type { BookProject } from '../book/bookTypes';
 export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
+=======
+import type { BookProject } from '../book/bookTypes';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
+<<<<<<< HEAD
 
 
 
@@ -56,6 +61,16 @@ export function buildPrintableHtml (project: BookProject): string {
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n'),;
 
+=======
+  const chapterHtml = chapters;
+    .map(;
+      (c) => `;
+      <section class="chapter">;
+        <h2>${escapeHtml(c.title)}</h2>;
+        <div class="content">${paragraphize(c.content)}</div>;
+      </section>;
+    `);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     .join('\n\n');
   const visualsHtml = [;
     ...visuals.timelineImages;
@@ -63,6 +78,7 @@ export function buildPrintableHtml (project: BookProject): string {
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
+<<<<<<< HEAD
 
 
 
@@ -198,6 +214,15 @@ function escapeHtml(s: string): string {;
 }
 
 
+=======
+  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+  return `<!doctype html>;
+<html>;
+<head>;
+<meta charset="utf-8" />;
+<title>${escapeHtml(meta.title)}</title>;
+<style>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   @page { margin: 1in }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
   .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh }
@@ -212,6 +237,7 @@ function escapeHtml(s: string): string {;
   .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap }
   .visual { break-inside: avoid, margin: 12px 0 }
   .visual img { max-width: 100%, height: auto }
+<<<<<<< HEAD
 
 
 
@@ -219,10 +245,13 @@ function escapeHtml(s: string): string {;
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 </style>;
 </head>;
 <body>;
   <section class="cover">;
+<<<<<<< HEAD
 
 
 
@@ -257,11 +286,29 @@ function escapeHtml(s: string): string {;
 
 
 function paragraphize(text: string): string {if (!text) return '';
+=======
+    <div>${escapeHtml(meta.publisher || '')}</div>;
+    <h1>${escapeHtml(meta.title)}</h1>;
+    <h3>${escapeHtml(meta.subtitle || '')}</h3>;
+    <div class="by">By ${escapeHtml(meta.author)}</div>;
+    ${barcode}
+  </section>;
+  ${quotesHtml}
+  ${chapterHtml}
+  ${visualsHtml}
+</body>;
+</html>`;
+}
+;
+function paragraphize(text: string): string {;
+  if (!text) return '';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return text;
     .split(/\n\n+/);
     .map((p) => `<p>${escapeHtml(p)}</p>`);
     .join('\n');
 }
+<<<<<<< HEAD
 function escapeHtml(s: string): string {return s;
 ;
 function escapeHtml(s: string): string {;
@@ -395,11 +442,17 @@ function paragraphize(text: string): string {;
 
 
 
+=======
+;
+function escapeHtml(s: string): string {;
+  return s;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
+<<<<<<< HEAD
 
 
 
@@ -454,3 +507,6 @@ function escape_html (string: string): string {
 
 }
 
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

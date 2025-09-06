@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react''
 import Link from 'next/link''
 import { MessageSquare } from 'lucide-react''
@@ -99,12 +100,39 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
       </div>
       <h2 className="text-xl font-medium mb-2">{title}</h2>"
       <p className="text-muted-foreground mb-6">{subtitle}</p>"
+=======
+import React from 'react',;
+import Link from 'next/link',;
+import { MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
+interface EmptyStateProps {;
+  title: string,;
+  subtitle: string,;
+  cta: string,;
+  href: string,;
+  hasSession: boolean;
+}
+
+const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
+  return (
+    <div className="text-center py-16">
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">
+        <MessageSquare className="h-10 w-10 text-zion-purple" />
+      </div>
+      <h2 className="text-xl font-medium mb-2">{title}</h2>
+      <p className="text-muted-foreground mb-6">{subtitle}</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
             {hasSession ? (
               <Button asChild>
+<<<<<<< HEAD
                 <Link href={href} />{cta}</Link>
+=======
+                <Link href={href}>{cta}</Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </Button>
             ) : (
               <Button disabled>{cta}</Button>
@@ -115,6 +143,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
       </TooltipProvider>;
     </div>;
   );
+<<<<<<< HEAD
 export default EmptyState;
 };
 export default EmptyState;
@@ -151,3 +180,7 @@ export default EmptyState;
 },;
 export default EmptyState;
 }}}}}))
+=======
+},;
+export default EmptyState;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

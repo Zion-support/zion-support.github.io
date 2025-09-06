@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next / head';
 import {
   RefreshCw,
@@ -175,13 +176,19 @@ export default function AutomationPage() {
     'Real - time monitoring',
     'Custom integration support',  ];
 ;
+=======
+import Head from 'next/head';
+
+const AutomationPage = () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (
 
     <>
       <Head>
-        <title>Automation Hub - Zion Tech Group</title>
-        <meta name="description" content="AI-powered workflow automation platform that streamlines your business processes and increases efficiency." />
+        <title>Automation Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced automation solutions for your business" />
       </Head>
+<<<<<<< HEAD
 
       <div className="min-h-screen bg-black">
         {/* Hero Section */  } catch (error) {
@@ -1385,3 +1392,16 @@ export default function AutomationPage() {
 }
 
 
+=======
+      <div className="min-h-screen bg-gray-100 py-12">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-center mb-8">Automation Services</h1>
+          <p className="text-center text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default AutomationPage;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

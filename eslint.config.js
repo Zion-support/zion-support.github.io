@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
 
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -6,10 +7,13 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import globals from 'globals';
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 export default [
   js.configs.recommended,
   {
+<<<<<<< HEAD
 
     ignores: [
       'node_modules/**',
@@ -98,6 +102,9 @@ ecmaVersion: 2020,
         afterAll: 'readonly',
       },
       parser: tsparser,
+=======
+    languageOptions: {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -106,6 +113,7 @@ ecmaVersion: 2020,
         },
       },
     },
+<<<<<<< HEAD
 "plugins": {
       react,
       'react-hooks': reactHooks
@@ -381,3 +389,61 @@ screen: 'readonly',
     },
   },
 ];
+=======
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+    },
+  },
+  {
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'coverage/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'fix-*.js',
+      'fix-*.cjs',
+      '*-fix*.js',
+      '*-fix*.cjs',
+      'advanced-*.cjs',
+      'aggressive-*.cjs',
+      'aggressive-*.js',
+      'corrupted_backup/**',
+      'corrupted-files-backup/**',
+      'apps.backup/**',
+      'deployments/**',
+      'pm2-backups/**',
+      'lib.broken/**',
+      'lib.disabled/**',
+      'src.broken/**',
+      'src.disabled/**',
+      'netlify/functions/**',
+      'scripts/**',
+      'middleware/**',
+      'ultimate-*.js',
+      'resolve-*.js',
+      'github-pr-processor.js',
+      'types/service-variants.js',
+      'backup-problematic-files/**',
+      'backup/**',
+      'clean-build/**',
+      'complete-merge-resolution.js',
+      'comprehensive-automation-runner.js',
+      'build-optimizer.js',
+      'public/sw-enhanced.js',
+      '__tests__/**',
+      'api/**',
+      'automation/**',
+      'deployment/**',
+      'next.config.*.js',
+      'resolve-*.cjs',
+      'app-optimizer.js',
+    ],
+  },
+];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

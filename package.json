@@ -2,9 +2,16 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
+<<<<<<< HEAD
 "dev": "vite",
     "build": "vite build",
+=======
+    "dev": "next dev",
+    "build": "next build",
+    "build:netlify": "node scripts/build-with-error-handling.js",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "start": "vite preview --port 4173",
@@ -277,7 +284,10 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
+<<<<<<< HEAD
     "@next/swc-linux-x64-gnu": "^15.5.2",
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -299,19 +309,17 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
+<<<<<<< HEAD
 "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
 
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.57.0",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/postcss": "^4.1.12",
-    "@tailwindcss/typography": "^0.5.16",
-    "@tanstack/react-query": "^5.85.5",
+    "@supabase/supabase-js": "^2.39.0",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "aws-sdk": "^2.1692.0",
@@ -319,6 +327,7 @@
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
+<<<<<<< HEAD
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.0.0",
     "critters": "^0.0.23",
@@ -333,6 +342,11 @@
     "express-rate-limit": "^8.1.0",
     "fastify": "^5.6.0",
     "framer-motion": "^10.18.0",
+=======
+    "cron-parser": "^5.3.0",
+    "events": "^3.3.0",
+    "framer-motion": "^12.23.12",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
@@ -340,11 +354,15 @@
     "import-fresh": "^3.3.1",
     "jszip": "^3.10.1",
     "lucide-react": "^0.536.0",
+<<<<<<< HEAD
     "mongodb": "^6.19.0",
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     "next": "^15.5.2",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
+<<<<<<< HEAD
     "postcss-preset-env": "^10.3.1",
     "prettier": "^3.0.3",
     "react": "^18.3.1",
@@ -448,3 +466,34 @@
   "author": "Zion Tech Group",
   "license": "MIT"
 }
+=======
+    "postcss": "^8.4.32",
+    "react": "^19.1.1",
+    "react-datepicker": "^8.4.0",
+    "react-dom": "^19.1.1",
+    "tailwindcss-animate": "^1.0.7",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "eslint": "^8",
+    "eslint-config-next": "15.5.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "husky": "^9.1.7",
+    "node": "^10.9.2",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

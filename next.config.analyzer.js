@@ -26,6 +26,7 @@ export const Next.config.analyzer = () => {
 
 
 };
+<<<<<<< HEAD
 
 ,;
 ;};
@@ -161,6 +162,15 @@ module.exports = {
     return config;
   },
 };
+=======
+<<<<<<< HEAD
+;
+;
+},;
+,;
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           "analyzerMode": 'static',
           "openAnalyzer": 'false',
           "reportFilename": isServer ? '../analyze/server.html' : './analyze/client.html'})
@@ -336,7 +346,12 @@ origin/main
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
     return config}}};
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+<<<<<<< HEAD
 },;
 ,;
 
 
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

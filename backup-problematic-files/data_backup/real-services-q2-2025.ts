@@ -1,4 +1,9 @@
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-services-q2-2025.ts
 <<<<<<< HEAD:corrupted_backup/real-services-q2-2025.ts
+=======
+<<<<<<< HEAD:data_backup/real-services-q2-2025.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-services-q2-2025.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:data_backup/real-services-q2-2025.ts
@@ -10,8 +15,12 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/real-services-q2-2025.ts
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-services-q2-2025.ts
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/data_backup/real-services-q2-2025.ts
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/real-services-q2-2025.ts
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-services-q2-2025.ts
 export interface RealServiceQ22025 {
   "id": string;
   name: string;
@@ -48,7 +57,12 @@ export const "realServicesQ22025": RealServiceQ22025[] = [{
 ];
 export interface RealServiceQ22025 { id: string; name: string; tagline: string; price: string; features: string[]; category?: string} export const realServicesQ22025: RealServiceQ22025[] = [ { id:,q2-service-1',name: 'Q2 Service 1,tagline:,Second quarter service offering',price: '$299,features: [,Core features','Standard performance','Basic integration'],category: 'Q2 Services },{ id:,q2-service-2',name: 'Q2 Service 2,tagline:,Advanced Q2 solutions',price: '$499,features: [,Advanced features','Enhanced performance','Full integration'],category: 'Q2 Services } ];
 export interface RealServiceQ22025 { id: string; name: string; tagline: string; price: string; features: string[]; category?: string} export const realServicesQ22025: RealServiceQ22025[] = [ { id:,q2-service-1',name: 'Q2 Service 1,tagline:,Second quarter service offering',price: '$299,features: [,Core features','Standard performance','Basic integration'],category: 'Q2 Services },{ id:,q2-service-2',name: 'Q2 Service 2,tagline:,Advanced Q2 solutions',price: '$499,features: [,Advanced features','Enhanced performance','Full integration'],category: 'Q2 Services } ];
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-services-q2-2025.ts
 <<<<<<< HEAD:corrupted_backup/real-services-q2-2025.ts
+=======
+<<<<<<< HEAD:data_backup/real-services-q2-2025.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-services-q2-2025.ts
 <<<<<<< HEAD:data_backup/real-services-q2-2025.ts
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -65,8 +79,12 @@ export interface RealServiceQ22025 { id: string; name: string; tagline: string; 
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 =======
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-services-q2-2025.ts
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/data_backup/real-services-q2-2025.ts
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/real-services-q2-2025.ts
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-services-q2-2025.ts
 export interface RealServiceQ22025 { id: string; name: string; tagline: string; price: string; features: string[]; category?: string} export const realServicesQ22025: RealServiceQ22025[] = [ { id:,q2-service-1',name: 'Q2 Service 1,tagline:,Second quarter service offering',price: '$299,features: [,Core features','Standard performance','Basic integration'],category: 'Q2 Services },{ id:,q2-service-2',name: 'Q2 Service 2,tagline:,Advanced Q2 solutions',price: '$499,features: [,Advanced features','Enhanced performance','Full integration'],category: 'Q2 Services } ];
 export interface RealServiceQ22025 { id: string; name: string; tagline: string; price: string; features: string[]; category?: string} export const realServicesQ22025: RealServiceQ22025[] = [ { id:,q2-service-1',name: 'Q2 Service 1,tagline:,Second quarter service offering',price: '$299,features: [,Core features','Standard performance','Basic integration'],category: 'Q2 Services },{ id:,q2-service-2',name: 'Q2 Service 2,tagline:,Advanced Q2 solutions',price: '$499,features: [,Advanced features','Enhanced performance','Full integration'],category: 'Q2 Services } ];
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/real-services-q2-2025.ts

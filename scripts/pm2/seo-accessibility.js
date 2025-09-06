@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 ;
@@ -61,6 +62,9 @@ class SEOAccessibility {,;
       }),;
     };
 ;#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 #!/usr/bin/env node;
 
 
@@ -148,6 +152,7 @@ class SEOAccessibility {,;
 ursor/fix-lint-push-and-merge-to-main-28da
       });
     },;
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-4094
 module.exports = SEOAccessibilityScanner;
 ursor/add-new-services-and-deploy-updates-0462
@@ -245,6 +250,9 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
 
 
 
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
@@ -722,6 +730,7 @@ if (require.main === module) {}
 }
 
 module.exports = SEOAccessibilityScanner;
+<<<<<<< HEAD
 
 ;
 #!/usr/bin/env node,;
@@ -976,3 +985,7 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
 
 
 
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 
 
@@ -21,6 +22,18 @@
 
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        fix: (content) => {
+=======
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
@@ -63,6 +76,7 @@ class IntelligentErrorFixer {
       },
       mergeConflicts: {
         pattern: /||        fix: (content) => {
+<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
           // Remove merge conflict markers
           return content
@@ -76,6 +90,14 @@ class IntelligentErrorFixer {
 
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
         fix: (content) => {
           // Remove merge conflict markers
           return content
@@ -537,6 +559,7 @@ scanDirectory(pagesDir);
           fs.unlinkSync(duplicate);
         }
       }
+<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 
 
@@ -586,6 +609,23 @@ scanDirectory(pagesDir);
 
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
 const fs = require('fs');
 const path = require('path');
 const {
@@ -629,6 +669,7 @@ const {
             return content.replace(match[0], match[0] + match[0].charAt(0));
           }},
         "mergeConflicts": {
+<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 
 
@@ -667,6 +708,28 @@ const {
 
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
+          "fix": content => {
+            // Remove merge conflict markers
+            return content
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          "fix": content => {
+            // Remove merge conflict markers
+            return content
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
           pattern: /||
           "fix": content => {
             // Remove merge conflict markers
@@ -690,6 +753,7 @@ const {
     }
     async runBuildCheck() {
       try {
+<<<<<<< HEAD:automation/intelligent-error-fixer.js
 
 <<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
 >
@@ -708,10 +772,20 @@ const {
 
 ========
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
         execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
         this.log('Successfully installed missing dependencies');
       } catch (error) {
         this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
+<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 
 
@@ -744,6 +818,18 @@ const {
 
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
         this.log('Running build check...');
         const result = execSync('yarn build', {
           "encoding": 'utf8',
@@ -769,6 +855,7 @@ const {
         this.log('Lint check found "issues": ' + error.message, 'WARN');
         return { "success": false, "output": error.stdout || error.message };
       }
+<<<<<<< HEAD:automation/intelligent-error-fixer.js
 
 <<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
 >
@@ -787,6 +874,15 @@ const {
 
 ========
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
     };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
@@ -865,6 +961,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 }
+<<<<<<< HEAD:automation/intelligent-error-fixer.js
 
 
 
@@ -902,6 +999,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
     }
     async runTypeCheck() {
       try {
@@ -1116,11 +1225,15 @@ if (require.main === module) {
 
 }
 module.exports = IntelligentErrorFixer;
+<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 
 
 
 
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
 module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 
@@ -1129,11 +1242,18 @@ module.exports = IntelligentErrorFixer;
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
+<<<<<<< HEAD:automation/intelligent-error-fixer.js
 
 
 
 
 ========
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
@@ -1152,6 +1272,7 @@ module.exports = IntelligentErrorFixer;
 
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
+<<<<<<< HEAD:automation/intelligent-error-fixer.js
 
 module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
@@ -1165,3 +1286,7 @@ module.exports = IntelligentErrorFixer;
 
 
 
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/intelligent-error-fixer.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/intelligent-error-fixer.js

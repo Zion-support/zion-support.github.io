@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -22,12 +23,18 @@ export type ProposalMeta = {;
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
+<<<<<<< HEAD
 export type ProposalMeta = {id: string;
 export type ProposalMeta = {
+=======
+export type ProposalMeta = {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -47,6 +54,7 @@ export type ProposalMeta = {
     ensRecordHash?: string;
     signature?: string;
   }
+<<<<<<< HEAD
 }
 export type ProposalPayload = {title: string;
   targetInstitution: string;
@@ -156,6 +164,29 @@ function ensureDirs() {;
 ;
 export function createProposal(payload: ProposalPayload): ProposalMeta {;
   ensureDirs(),;
+=======
+};
+export type ProposalPayload = {;
+  title: string;
+  targetInstitution: string;
+  type: string;
+  regionalScope: string;
+  budgetOrResolution: string;
+  supportingMultiverses: string[];
+  contentMarkdown: string;
+  language?: string;
+  metadata?: Record<string, any>;
+};
+const dataDir = path.join(process.cwd(), 'dataproposals');
+const publicDir = path.join(process.cwd(), 'publicproposals');
+function ensureDirs() {;
+  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+}
+;
+export function createProposal(payload: ProposalPayload): ProposalMeta {;
+  ensureDirs();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const id = uuidv4();
   const createdAt = new Date().toISOString();
   const updatedAt = createdAt;
@@ -168,6 +199,7 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {;
   const meta: ProposalMeta = {;
     id;
     createdAt;
+<<<<<<< HEAD
     updatedAt,;
     title: payload.title,;
     targetInstitution: payload.targetInstitution,;
@@ -202,6 +234,29 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
 
 
 
+=======
+    updatedAt;
+    title: payload.title;
+    targetInstitution: payload.targetInstitution;
+    type: payload.type;
+    regionalScope: payload.regionalScope;
+    budgetOrResolution: payload.budgetOrResolution;
+    supportingMultiverses: payload.supportingMultiverses || [];
+    languages: payload.language ? [payload.language] : ['en'];
+    status: 'Draft';
+    artifacts: {;
+      markdownPath: `/proposals/${id}/proposal.md`;
+      jsonPath: path.relative(process.cwd(), jsonPath)}};
+  fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8');
+  fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8');
+  const metaPath = path.join(proposalDir, 'meta.json');
+  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
+  return meta;
+}
+;
+export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {;
+  ensureDirs();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
   const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
@@ -209,6 +264,7 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
   return next;
 }
+<<<<<<< HEAD
 
 
 export function listProposals(): ProposalMeta[] {ensureDirs();
@@ -218,11 +274,19 @@ export function listProposals(): ProposalMeta[] {ensureDirs();
 
 
 
+=======
+;
+export function listProposals(): ProposalMeta[] {;
+  ensureDirs();
+  const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')));
+  const metas: ProposalMeta[] = entries.map((id) => {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     const metaPath = path.join(dataDir, id, 'meta.json');
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
+<<<<<<< HEAD
 
 
 export function getProposal(id: string): ProposalMeta | null {try {;
@@ -342,6 +406,13 @@ export function getProposal(id: string): ProposalMeta | null {;
   try {;
     const metaPath = path.join(dataDir, id, 'meta.json'),;
     if (!fs.existsSync(metaPath)) return null,;
+=======
+;
+export function getProposal(id: string): ProposalMeta | null {;
+  try {;
+    const metaPath = path.join(dataDir, id, 'meta.json');
+    if (!fs.existsSync(metaPath)) return null;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   } catch {;
     return null;
@@ -349,6 +420,7 @@ export function getProposal(id: string): ProposalMeta | null {;
 }
 ;
 export function savePdf(id: string, pdfBytes: Uint8Array): string {;
+<<<<<<< HEAD
   ensureDirs(),;
   const publicProposalDir = path.join(publicDir, id),;
   fs.mkdirSync(publicProposalDir, { recursive: true }),;
@@ -514,6 +586,8 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
     artifacts: { ...meta.artifacts, ...artifacts }}));
 
 export function savePdf(id: string, pdfBytes: Uint8Array): string {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   ensureDirs();
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
@@ -521,6 +595,7 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
 }
+<<<<<<< HEAD
 
 export function updateArtifacts(
   id: string,
@@ -658,3 +733,11 @@ export function update_artifacts (id: string, artifacts: Partial < ProposalMeta[
 }
 
 
+=======
+;
+export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
+  return updateProposalMeta(id, (meta) => ({;
+    ...meta;
+    artifacts: { ...meta.artifacts, ...artifacts }}));
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

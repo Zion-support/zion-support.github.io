@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -7,6 +8,20 @@
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 const \"About\": NextPage = () => {
 const \"About\": NextPage = () => {
 
@@ -38,6 +53,7 @@ import React from 'react';
 import Link from 'next/link';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
+<<<<<<< HEAD
 
 
 
@@ -55,6 +71,29 @@ import MainLayout from '../components/layout/MainLayout';
 
 
 
+=======
+import { Users, Target, Award, Globe, Shield, Zap } from 'lucide-react';
+const "About": NextPage = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const values = [{
       title: \'Innovation\',
       \"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',
@@ -84,9 +123,51 @@ import MainLayout from '../components/layout/MainLayout';
       \"title\": \'Results-Driven\',
       \"description\": \'We focus on delivering measurable outcomes that drive business growth.\',
       \"icon\": Target
+<<<<<<< HEAD
 
 
 
+=======
+    }
+  ];
+  const team = [{
+      \"name\": \'Sarah Johnson\',
+      \"role\": \'CEO & Founder\',
+      \"bio\": \'Visionary leader with 15+ years in technology consulting and digital transformation.\',
+      \"image\": \'/team/sarah.jpg\'
+    },
+    {
+      \"name\": \'Michael Chen\',
+      \"role\": \'CTO\',
+      \"bio\": \'Expert in cloud architecture and AI systems with deep technical expertise.\',
+      \"image\": \'/team/michael.jpg\'
+    },
+    {
+      \"name\": \'Emily Rodriguez\',
+      \"role\": \'Head of Design\',
+      \"bio\": \'Creative director specializing in user experience and digital product design.\',
+      \"image\": \'/team/emily.jpg\'
+    },
+    {
+      \"name\": \'David Kim\',
+      \"role\": \'Lead Developer\',
+      \"bio\": \'Full-stack developer with expertise in modern web technologies and frameworks.\',
+      \"image\": \'/team/david.jpg\'
+    }
+  ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
@@ -132,6 +213,7 @@ export default function AboutPage() {
               <div key={v.title} className="bg-white rounded-lg p-8 shadow text-center">
                 <h3 className="text-xl font-semibold mb-3">{v.title}</h3>
                 <p className="text-gray-600">{v.desc}</p>
+<<<<<<< HEAD
 
 
 
@@ -145,6 +227,27 @@ export default function AboutPage() {
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     <MainLayout
       title=\"About Us - Zion Tech Group\"
       description=\"Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\"
@@ -197,6 +300,7 @@ export default function AboutPage() {
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">
             {stats.map((stat) => (
+<<<<<<< HEAD
 
 
 
@@ -386,12 +490,27 @@ export default function AboutPage() {;
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <div key={stat.label} className=\"text-center\">
                 <div className=\"text-4xl font-bold text-blue-600 mb-2\">{stat.number}</div>
                 <div className=\"text-gray-600\">{stat.label}</div>
               <div key={stat.label} className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
                 <div className="text-gray-600">{stat.label}</div>
+<<<<<<< HEAD
 
 
 
@@ -412,11 +531,33 @@ export default function AboutPage() {;
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
 
 
@@ -427,6 +568,20 @@ export default function AboutPage() {;
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>
@@ -444,6 +599,7 @@ export default function AboutPage() {;
         </div>
       </section>
     </main>
+<<<<<<< HEAD
 
 
 
@@ -465,6 +621,27 @@ export default function AboutPage() {;
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {/* Values Section */}
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
@@ -474,8 +651,12 @@ export default function AboutPage() {;
               The principles that guide everything we do and shape our company culture
             </p>
           </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -498,9 +679,38 @@ export default function AboutPage() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
 
 
 
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+<<<<<<< HEAD
+=======
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             {values.map((value) => (
               <div key={value.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
@@ -600,6 +810,7 @@ export default function AboutPage() {;
               technology solutions
             </p>
           </div>
+<<<<<<< HEAD
 
 
 
@@ -622,6 +833,39 @@ export default function AboutPage() {;
 
 
 
+=======
+<<<<<<< HEAD
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+<<<<<<< HEAD
+=======
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             {team.map((member) => (
               <div key={member.name} className=\"bg-white rounded-lg shadow-lg overflow-hidden\">
                 <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\">
@@ -637,6 +881,7 @@ export default function AboutPage() {;
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
 
 <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -650,6 +895,108 @@ export default function AboutPage() {;
 
 
 
+=======
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Story Section */}
+      <section className=\"py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12 items-center\">
+            <div>
+              <h2 className=\"text-4xl font-bold text-gray-900 mb-6\">Our Story</h2>
+              <p className=\"text-lg text-gray-600 mb-6\">
+                Founded in 2019, Zion Tech Group began with a simple \"mission\": to make 
+                advanced technology accessible to businesses of all sizes. What started 
+                as a small team of passionate developers has grown into a comprehensive 
+                technology solutions provider.
+              </p>
+              <p className=\"text-lg text-gray-600 mb-6\">
+                Over the years, we\'ve helped hundreds of companies transform their 
+                digital presence, streamline operations, and achieve their business goals 
+                through innovative technology solutions.
+              </p>
+              <p className=\"text-lg text-gray-600\">
+                Today, we continue to push the boundaries of what\'s possible with 
+                technology, always keeping our clients\' success at the heart of 
+                everything we do.
+              </p>
+            </div>
+            <div className=\"bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg p-8\">
+              <h3 className=\"text-2xl font-bold text-gray-900 mb-4\">Why Choose Us?</h3>
+              <ul className=\"space-y-3\">
+                <li className=\"flex items-start\">
+                  <div className=\"bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5\">
+                    <span className=\"text-sm\">✓</span>
+                  </div>
+                  <span className=\"text-gray-700\">Proven track record of successful projects</span>
+                </li>
+                <li className=\"flex items-start\">
+                  <div className=\"bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5\">
+                    <span className=\"text-sm\">✓</span>
+                  </div>
+                  <span className=\"text-gray-700\">Expert team with deep technical knowledge</span>
+                </li>
+                <li className=\"flex items-start\">
+                  <div className=\"bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5\">
+                    <span className=\"text-sm\">✓</span>
+                  </div>
+                  <span className=\"text-gray-700\">Personalized approach to every project</span>
+                </li>
+                <li className=\"flex items-start\">
+                  <div className=\"bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5\">
+                    <span className=\"text-sm\">✓</span>
+                  </div>
+                  <span className=\"text-gray-700\">Ongoing support and maintenance</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </MainLayout>
+  );
+}
+    <>
+      <Helmet>
+        <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>
+        <meta name=\"description\" content=\"Learn about Zion Tech Group, a leading provider of AI, cybersecurity, cloud infrastructure, and emerging technology solutions. Discover our mission, values, and team.\" />
+        <meta name=\"keywords\" content=\"about zion tech group, technology company, AI solutions, cybersecurity, cloud services\" />
+        <link rel=\"canonical\" href=\""https\": //ziontechgroup.com/about\" />
+      </Helmet>
+<<<<<<< HEAD
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+<<<<<<< HEAD
+=======
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -781,6 +1128,7 @@ export default function AboutPage() {;
       </div>
     </>
   );
+<<<<<<< HEAD
 
 
 
@@ -789,6 +1137,21 @@ export default function AboutPage() {;
 
 
 
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 
 
@@ -893,6 +1256,7 @@ export default function AboutPage() {;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
 }
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>
@@ -1058,6 +1422,15 @@ className=\"inline-flex items-center px-8 py-3 border border-transparent text-ba
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 
 

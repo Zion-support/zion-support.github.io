@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:data_backup/real-2025-q2-additions.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:data_backup/real-2025-q2-additions.ts
 <<<<<<< HEAD
@@ -9,6 +14,10 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/real-2025-q2-additions.ts
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/real-2025-q2-additions.ts
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export interface Real2025Q2Addition {
   "id": string;
   name: string;
@@ -44,6 +53,11 @@ features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [{
 export interface Real2025Q2Addition { id: string; name: string; tagline: string; price: string; features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [ { id:,ai-meeting-notes',name: 'AI Meeting Notes & Action Items,tagline:,Never miss decisions and follow‑ups again',price: '$29/mo+,features[,Auto-transcription with speaker labels','Decision and action item extraction','Email and Slack follow‑ups','Workspace search' ] },{ id: 'uptime-sla-reporter,name:,Uptime & SLA Reporter',tagline: 'Proactive reliability with customer‑facing transparency,price: '$19/mo+',features[ 'Global checks and alerting','SLA calculations per customer','Incident timelines and labels','Hosted status pages' ] ]}}
 =======
 export interface Real2025Q2Addition { id: string; name: string; tagline: string; price: string; features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [ { id:,ai-meeting-notes',name: 'AI Meeting Notes & Action Items,tagline:,Never miss decisions and follow‑ups again',price: '$29/mo+,features[,Auto-transcription with speaker labels','Decision and action item extraction','Email and Slack follow‑ups','Workspace search' ] },{ id: 'uptime-sla-reporter,name:,Uptime & SLA Reporter',tagline: 'Proactive reliability with customer‑facing transparency,price: '$19/mo+',features[ 'Global checks and alerting','SLA calculations per customer','Incident timelines and labels','Hosted status pages' ] ]}}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:data_backup/real-2025-q2-additions.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 <<<<<<< HEAD:data_backup/real-2025-q2-additions.ts
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -60,6 +74,10 @@ export interface Real2025Q2Addition { id: string; name: string; tagline: string;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/real-2025-q2-additions.ts
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export interface Real2025Q2Addition { id: string; name: string; tagline: string; price: string; features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [ { id:,ai-meeting-notes',name: 'AI Meeting Notes & Action Items,tagline:,Never miss decisions and follow‑ups again',price: '$29/mo+,features[,Auto-transcription with speaker labels','Decision and action item extraction','Email and Slack follow‑ups','Workspace search' ] },{ id: 'uptime-sla-reporter,name:,Uptime & SLA Reporter',tagline: 'Proactive reliability with customer‑facing transparency,price: '$19/mo+',features[ 'Global checks and alerting','SLA calculations per customer','Incident timelines and labels','Hosted status pages' ] ]}}
 =======
 export interface Real2025Q2Addition { id: string; name: string; tagline: string; price: string; features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [ { id:,ai-meeting-notes',name: 'AI Meeting Notes & Action Items,tagline:,Never miss decisions and follow‑ups again',price: '$29/mo+,features[,Auto-transcription with speaker labels','Decision and action item extraction','Email and Slack follow‑ups','Workspace search' ] },{ id: 'uptime-sla-reporter,name:,Uptime & SLA Reporter',tagline: 'Proactive reliability with customer‑facing transparency,price: '$19/mo+',features[ 'Global checks and alerting','SLA calculations per customer','Incident timelines and labels','Hosted status pages' ] ]}}

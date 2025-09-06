@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react''
 import Image, { type ImageProps } from 'next/image''
 import { cn } from '@/lib/utils';
@@ -13,6 +14,8 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
   fallbackSrc?: string
   /** CSS class for the retry button */
   retryClassName?: string;  retryClassName?: string
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React, { useState } from 'react',;
 import Image, { type ImageProps } from 'next/image',;
 import { cn } from '@/lib/utils',;
@@ -24,6 +27,7 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   /** CSS class for the retry button */;
   retryClassName?: string;
 }
+<<<<<<< HEAD
   fallbackSrc?: string
   /** CSS class for the retry button */
   retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {'
@@ -36,10 +40,14 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {'
   /** CSS class for the retry button */
   retryClassName?: string;  retryClassName?: string
 }
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 /**
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Image, { type ImageProps } from 'next / image';
 import { cn } from '@/lib / utils';
@@ -156,6 +164,32 @@ export default ImageWithRetry;
   const fill = !('width' in,  props) && !('height' in,  props);
   return (
     <div className="relative inline-block">"
+=======
+  src,
+  alt = '',
+  fallbackSrc = '/images/image-placeholder.svg',
+  className,
+  retryClassName,
+  ...props
+}: ImageWithRetryProps) {
+  const [currentSrc, setCurrentSrc] = useState(src),
+  const [failed, setFailed] = useState(false),
+
+  const handleError = () => {
+    setFailed(true),
+    setCurrentSrc(fallbackSrc)
+  },
+
+  const handleRetry = () => {
+    setFailed(false),
+    setCurrentSrc(src)
+  },
+
+  const fill = !('width' in props) && !('height' in props),
+
+  return (
+    <div className="relative inline-block">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <Image
         {...props}
         src={currentSrc}
@@ -166,9 +200,15 @@ export default ImageWithRetry;
       />
       {failed && (
         <button
+<<<<<<< HEAD
           type="button""
           onClick={handleRetry}
           className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}'
+=======
+          type="button"
+          onClick={handleRetry}
+          className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         >;
           Retry;
         </button>;
@@ -177,6 +217,7 @@ export default ImageWithRetry;
   );
 }
 ;
+<<<<<<< HEAD
 export default ImageWithRetry;
   src,
   alt = '','
@@ -184,3 +225,6 @@ export default ImageWithRetry;
   className,
   retryClassName,
 }}}}}})
+=======
+export default ImageWithRetry;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

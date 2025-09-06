@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -12,6 +13,8 @@ interface SearchFilters {
   maxPrice: number,
   minRating: number,
   sort: string,
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -27,12 +30,20 @@ interface SearchFilters {;
 ;
 interface ActiveFiltersBarProps {;
   filters: SearchFilters,;
+<<<<<<< HEAD
   onFiltersChange: (filters:,  SearchFilters) => void,;
+=======
+  onFiltersChange: (filters: SearchFilters) => void,;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   onClearAll: () => void,;
   className?: string;
 }
 ;
+<<<<<<< HEAD
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;,
+=======
+export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   filters,;
   onFiltersChange,;
   onClearAll,;
@@ -41,7 +52,11 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;,
   const activeFilters: Array<{ key: string, label: string, value: string }> = [],;
   // Add type filters;
   filters.types.forEach(type => {;
+<<<<<<< HEAD
     const labels: Record<string string> = {;,
+=======
+    const labels: Record<string string> = {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       product: 'Products',;
       talent: 'Talent',;
       service: 'Services',;
@@ -49,8 +64,13 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;,
       doc: 'Documentation';
     },;
     activeFilters.push({;
+<<<<<<< HEAD
       key: `type-${type}`,;`
       label: 'Type',;,
+=======
+      key: `type-${type}`,;
+      label: 'Type',;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       value: labels[type] || type;
     });
   }),;
@@ -62,6 +82,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;,
       value: filters.category;
     });
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
@@ -141,10 +162,35 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;,
   // Add sort filter (only if not,  default);
   if (filters && filters.sort !== 'relevance') {;
     const sortLabels: Record<string, string> = {;
+=======
+;
+  // Add price filter;
+  if (filters.minPrice > 0 || filters.maxPrice < 10000) {;
+    activeFilters.push({;
+      key: 'price',;
+      label: 'Price',;
+      value: `$${filters.minPrice} - $${filters.maxPrice}`;
+    });
+  }
+;
+  // Add rating filter;
+  if (filters.minRating > 0) {;
+    activeFilters.push({;
+      key: 'rating',;
+      label: 'Rating',;
+      value: `${filters.minRating}+ stars`;
+    });
+  }
+;
+  // Add sort filter (only if not default);
+  if (filters.sort !== 'relevance') {;
+    const sortLabels: Record<string string> = {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       price_asc: 'Price: Low to High',;
       price_desc: 'Price: High to Low',;
       rating: 'Highest Rated';
     },;
+<<<<<<< HEAD
     activeFilters && activeFilters.push({;
       key: 'sort',;
       label: 'Sort',;,
@@ -155,6 +201,19 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;,
     if (filterKey && filterKey.startsWith('type-')) {;
       const typeToRemove = filterKey && filterKey.replace('type-', ''),;
       const newTypes = filters && filters.types.filter(t => t !==,  typeToRemove),;
+=======
+    activeFilters.push({;
+      key: 'sort',;
+      label: 'Sort',;
+      value: sortLabels[filters.sort] || filters.sort;
+    });
+  }
+;
+  const removeFilter = (filterKey: string) => {;
+    if (filterKey.startsWith('type-')) {;
+      const typeToRemove = filterKey.replace('type-', ''),;
+      const newTypes = filters.types.filter(t => t !== typeToRemove),;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       onFiltersChange({ ...filters, types: newTypes });
     } else if (filterKey === 'category') {;
       onFiltersChange({ ...filters, category: '' });
@@ -166,6 +225,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;,
       onFiltersChange({ ...filters, sort: 'relevance' });
     }
   },;
+<<<<<<< HEAD
   if (activeFilters && activeFilters.length === 0) {;
     return null;
   }
@@ -207,11 +267,48 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;,
         size="sm""
         onClick={onClearAll}
         className="text-xs h-6 px-2""
+=======
+  if (activeFilters.length === 0) {;
+    return null;
+  }
+
+  return (
+    <div className={`flex items-center gap-2 flex-wrap ${className}`}>
+      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
+      
+      {activeFilters.map(filter => (
+        <Badge 
+          key={filter.key} 
+          variant="secondary" 
+          className="flex items-center gap-1 pl-2 pr-1"
+        >
+          <span className="text-xs">
+            {filter.label}: {filter.value}
+          </span>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-4 w-4 p-0 hover:bg-transparent"
+            onClick={() => removeFilter(filter.key)}
+            aria-label={`Remove ${filter.label} filter`}
+          >
+            <X className="h-3 w-3" />
+          </Button>
+        </Badge>
+      ))}
+
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={onClearAll}
+        className="text-xs h-6 px-2"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       >
         Clear all
       </Button>
     </div>
   )
+<<<<<<< HEAD
 ;
 export default ActiveFiltersBar; import React from 'react';
 import { X } from 'lucide-react';
@@ -390,3 +487,8 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;,
       >
         Clear all
 }}}}
+=======
+},
+
+export default ActiveFiltersBar,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,4 +1,9 @@
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-2027-q2-additions.ts
 <<<<<<< HEAD:corrupted_backup/real-2027-q2-additions.ts
+=======
+<<<<<<< HEAD:data_backup/real-2027-q2-additions.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-2027-q2-additions.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:data_backup/real-2027-q2-additions.ts
@@ -10,8 +15,12 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/real-2027-q2-additions.ts
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-2027-q2-additions.ts
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/data_backup/real-2027-q2-additions.ts
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/real-2027-q2-additions.ts
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-2027-q2-additions.ts
 export interface Real2027Q2Addition {
   "id": string;
   name: string;
@@ -31,7 +40,12 @@ export const "real2027Q2Additions": Real2027Q2Addition[] = [{
 ];
 export interface Real2027Q2Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 features','Mid-year innovations','Advanced solutions',],},];
 export interface Real2027Q2Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 features','Mid-year innovations','Advanced solutions',],},];
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-2027-q2-additions.ts
 <<<<<<< HEAD:corrupted_backup/real-2027-q2-additions.ts
+=======
+<<<<<<< HEAD:data_backup/real-2027-q2-additions.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-2027-q2-additions.ts
 <<<<<<< HEAD:data_backup/real-2027-q2-additions.ts
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -48,8 +62,12 @@ export interface Real2027Q2Addition { id: string; name: string; tagline: string;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 =======
+<<<<<<< HEAD:backup-problematic-files/data_backup/real-2027-q2-additions.ts
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/data_backup/real-2027-q2-additions.ts
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/real-2027-q2-additions.ts
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/real-2027-q2-additions.ts
 export interface Real2027Q2Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 features','Mid-year innovations','Advanced solutions',],},];
 export interface Real2027Q2Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 features','Mid-year innovations','Advanced solutions',],},];
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/real-2027-q2-additions.ts

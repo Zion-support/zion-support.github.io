@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -1949,3 +1950,6 @@ key={category.id}
 }
 
 
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

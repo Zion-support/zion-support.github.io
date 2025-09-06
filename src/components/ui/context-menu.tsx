@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from "react""
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu""
 import { Check, ChevronRight, Circle } from 'lucide-react''
@@ -26,30 +27,73 @@ const ContextMenuSubTrigger = React.forward_ref<;
   React.ElementRef < typeof ContextMenuPrimitive.SubTrigger>,
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.SubTrigger> & {
     inset?: boolean;
+=======
+import * as React from "react"
+import * as ContextMenuPrimitive from "@radix-ui/react-context-menu"
+import { Check, ChevronRight, Circle } from 'lucide-react'
+
+import { cn } from "@/lib/utils"
+
+const ContextMenu = ContextMenuPrimitive.Root
+
+const ContextMenuTrigger = ContextMenuPrimitive.Trigger
+
+const ContextMenuGroup = ContextMenuPrimitive.Group
+
+const ContextMenuPortal = ContextMenuPrimitive.Portal
+
+const ContextMenuSub = ContextMenuPrimitive.Sub
+
+const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup
+
+const ContextMenuSubTrigger = React.forwardRef<
+  React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>,
+  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
+    inset?: boolean
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }
 >(({ className, inset, children, ...props }, ref) => (;
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground","
       inset && "pl-8",",
+=======
+      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+      inset && "pl-8",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
   >;
     {children}
+<<<<<<< HEAD
     <ChevronRight className="ml-auto h-4 w-4" />"
   </ContextMenuPrimitive.SubTrigger>
 ))
 ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName
 const ContextMenuSubContent = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubContent>
+=======
+    <ChevronRight className="ml-auto h-4 w-4" />
+  </ContextMenuPrimitive.SubTrigger>
+))
+ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName
+
+const ContextMenuSubContent = React.forwardRef<
+  React.ElementRef<typeof ContextMenuPrimitive.SubContent>,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubContent>
 >(({ className, ...props }, ref) => (
   <ContextMenuPrimitive.SubContent
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",",
+=======
+      "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
@@ -63,8 +107,13 @@ const ContextMenuContent = React.forwardRef<;
   <ContextMenuPrimitive.Portal>;
     <ContextMenuPrimitive.Content;
       ref={ref}
+<<<<<<< HEAD
       className={cn(,
         "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",",
+=======
+      className={cn(
+        "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         className
       )}
       {...props}
@@ -73,6 +122,7 @@ const ContextMenuContent = React.forwardRef<;
 ));
 ContextMenuContent.displayName = ContextMenuPrimitive.Content.displayName;
 const ContextMenuItem = React.forwardRef<;
+<<<<<<< HEAD
 className={cn (
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
       inset && &quot;pl - 8&quot;,
@@ -112,6 +162,8 @@ ContextMenuContent.display_name = ContextMenuPrimitive.Content.display_name;
 const ContextMenuItem = React.forward_ref<;
   React.ElementRef < typeof ContextMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Item> & {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   React.ElementRef<typeof ContextMenuPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
     inset?: boolean;
@@ -120,8 +172,13 @@ const ContextMenuItem = React.forward_ref<;
   <ContextMenuPrimitive.Item;
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50","
       inset && "pl-8",",
+=======
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      inset && "pl-8",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
@@ -135,6 +192,7 @@ const ContextMenuCheckboxItem = React.forwardRef<;
   <ContextMenuPrimitive.CheckboxItem;
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",",
       className
     )}
@@ -163,12 +221,32 @@ className={cn (
       </ContextMenuPrimitive.ItemIndicator>
     </span>
     {children}
+=======
+      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      className
+    )}
+    checked={checked}
+    {...props}
+  >
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+      <ContextMenuPrimitive.ItemIndicator>
+        <Check className="h-4 w-4" />
+      </ContextMenuPrimitive.ItemIndicator>
+    </span>
+    {children}
+  </ContextMenuPrimitive.CheckboxItem>;
+));
+ContextMenuCheckboxItem.displayName =;
+  ContextMenuPrimitive.CheckboxItem.displayName;
+const ContextMenuRadioItem = React.forwardRef<;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   React.ElementRef<typeof ContextMenuPrimitive.RadioItem>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <ContextMenuPrimitive.RadioItem;
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",",
       className
     )}
@@ -197,6 +275,23 @@ ContextMenuRadioItem.display_name = ContextMenuPrimitive.RadioItem.display_name;
 const ContextMenuLabel = React.forward_ref<;
   React.ElementRef < typeof ContextMenuPrimitive.Label>,
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Label> & {
+=======
+      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      className
+    )}
+    {...props}
+  >
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+      <ContextMenuPrimitive.ItemIndicator>
+        <Circle className="h-2 w-2 fill-current" />
+      </ContextMenuPrimitive.ItemIndicator>
+    </span>
+    {children}
+  </ContextMenuPrimitive.RadioItem>;
+));
+ContextMenuRadioItem.displayName = ContextMenuPrimitive.RadioItem.displayName;
+const ContextMenuLabel = React.forwardRef<;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   React.ElementRef<typeof ContextMenuPrimitive.Label>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
     inset?: boolean;
@@ -205,8 +300,13 @@ const ContextMenuLabel = React.forward_ref<;
   <ContextMenuPrimitive.Label;
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "px-2 py-1.5 text-sm font-semibold text-foreground","
       inset && "pl-8",",
+=======
+      "px-2 py-1.5 text-sm font-semibold text-foreground",
+      inset && "pl-8",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       className
     )}
     {...props}
@@ -217,6 +317,7 @@ const ContextMenuSeparator = React.forwardRef<;
   React.ElementRef<typeof ContextMenuPrimitive.Separator>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
 className={cn (
       &quot;px - 2 py - 1.5 text - sm font - semibold text - foreground & quot;,
       inset && &quot;pl - 8&quot;,
@@ -246,13 +347,38 @@ const ContextMenuShortcut = ({
       className={cn (
         &quot;ml - auto text - xs tracking - widest text - muted - foreground & quot;,
         class_name)}
+=======
+  <ContextMenuPrimitive.Separator;
+    ref={ref}
+    className={cn("-mx-1 my-1 h-px bg-border", className)}
+    {...props}
+  />
+))
+ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName
+
+const ContextMenuShortcut = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLSpanElement>) => {
+  return (
+    <span
+      className={cn(
+        "ml-auto text-xs tracking-widest text-muted-foreground",
+        className
+      )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       {...props}
     />;
   );
 }
+<<<<<<< HEAD
 ContextMenuShortcut.display_name = &quot;ContextMenuShortcut & quot;
 ;
 ContextMenuShortcut.displayName = "ContextMenuShortcut""
+=======
+ContextMenuShortcut.displayName = "ContextMenuShortcut"
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export {
   ContextMenu,
   ContextMenuTrigger,
@@ -267,4 +393,10 @@ export {
   ContextMenuPortal,
   ContextMenuSub,
   ContextMenuSubContent,
+<<<<<<< HEAD
 }}}
+=======
+  ContextMenuSubTrigger,
+  ContextMenuRadioGroup}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

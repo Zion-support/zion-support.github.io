@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages._archive_corrupted/services/price-intelligence-service.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/services/price-intelligence-service.tsx
 <<<<<<< HEAD
@@ -12,6 +17,10 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/price-intelligence-service.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/price-intelligence-service.tsx
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import Head from \'next/head.ts\'; import Link from \'next/link\'; export default function PriceIntelligence() { return ( <div className = \"relative min-h-screen overflow-hidden bg-slate-950 text-white\"> <Helmet> <title>Price Intelligence — Services — Zion</title> <meta name=\"description\" content=\"Monitor competitors and adapt pricing automatically.\" /> </Helmet> <div aria-hidden className=\"pointer-events-none absolute inset-0 -z-10\"> <div className=\"absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float\" /> <div className=\"absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow\" /> <div className=\"absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast\" /> <div className=\"absolute inset-0 beams opacity-[0.06]\" /> </div> <main className=\"relative z-10 mx-auto max-w-3xl px-6 py-16\"> <h1 className=\"text-4xl \"md\": tex t-5xl font-extrabold gradient-text\">Price Intelligence</h1> <p className=\"mt-4 text-white/80\">Track market changes and propose optimal pricing strategies.</p> <ul className=\"mt-6 space-y-2 text-white/80 list-disc pl-5\"> <li>Competitor monitoring</li> <li>Alerting and scenario planning</li> <li>Automated price update proposals</li> </ul> <div className=\"mt-8 flex gap-3\"> <Link href=\"/services\"><a className=\"rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: b g-white/10\">Back to Services</a>></div> <Link href=\"/contact\"><a className=\"rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: b g-white\">Get Started</a>></div> ></div> ></div> ></div> )}
 import React from 'react';
 interface PriceintelligenceserviceProps {
@@ -24,6 +33,11 @@ export default function Priceintelligenceservice({ }: PriceintelligenceservicePr
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages._archive_corrupted/services/price-intelligence-service.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 <<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/services/price-intelligence-service.tsx
 <<<<<<< HEAD
@@ -47,9 +61,22 @@ export default function Priceintelligenceservice({ }: PriceintelligenceservicePr
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/price-intelligence-service.tsx
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 =======
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/price-intelligence-service.tsx
+=======
+<<<<<<< HEAD:pages._archive_corrupted/services/price-intelligence-service.tsx
+=======
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/price-intelligence-service.tsx
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/price-intelligence-service.tsx
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
