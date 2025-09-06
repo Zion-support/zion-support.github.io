@@ -1,6 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = { 
   title: 'IT Services | Zion Tech Group',
@@ -8,6 +10,7 @@ export const metadata = {
   keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE'
 };
 
+<<<<<<< HEAD
 =======
 import React from "react";
 
@@ -152,6 +155,8 @@ function PricingTier({
 }
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 export default function ITServicesPage() {
   return (
     <div className="space-y-16">
@@ -184,6 +189,7 @@ export default function ITServicesPage() {
           </a>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -621,3 +627,8 @@ export default function ITServicesPage() {
     </div>
   );
 }
+=======
+    </div>
+  );
+}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c

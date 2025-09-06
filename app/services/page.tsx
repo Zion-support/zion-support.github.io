@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 
 export const metadata = {
 <<<<<<< HEAD
@@ -43,6 +46,7 @@ export default function ServicesOverviewPage() {
           </a>
         </div>
       </section>
+<<<<<<< HEAD
 =======
     <div className="animate-fade-in">
       <div className="text-center mb-16">
@@ -311,6 +315,8 @@ function CTA() {
         </a>
       </div>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
     </div>
   );
 }

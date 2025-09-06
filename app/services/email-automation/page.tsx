@@ -147,7 +147,7 @@ function Pricing() {
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Email Platform?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let's create a powerful email automation platform that drives engagement and revenue for your business.
+          Let&apos;s create a powerful email automation platform that drives engagement and revenue for your business.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

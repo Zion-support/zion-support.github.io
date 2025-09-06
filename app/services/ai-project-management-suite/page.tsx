@@ -323,6 +323,7 @@ export default function AIProjectManagementSuitePage() {
             </div>
 <<<<<<< HEAD
             <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Learning</h3>
+<<<<<<< HEAD
             <p className="text-gray-600">AI analyzes your team's work patterns and project history to optimize recommendations</p>
 =======
             <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -334,6 +335,9 @@ export default function AIProjectManagementSuitePage() {
               data.
             </p>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+            <p className="text-gray-600">AI analyzes your team&apos;s work patterns and project history to optimize recommendations</p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">

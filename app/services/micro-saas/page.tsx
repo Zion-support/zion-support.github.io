@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 
 <<<<<<< HEAD
+=======
+import React from 'react';
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
   keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
 };
+<<<<<<< HEAD
 
 =======
 export const metadata = {
@@ -128,6 +134,8 @@ function ServiceFeature({
     </Link>
   );
 }
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default function MicroSaaSPage() {

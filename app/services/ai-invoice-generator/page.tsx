@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Invoice Generator | Zion Tech Group',

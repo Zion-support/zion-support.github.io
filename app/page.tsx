@@ -265,6 +265,7 @@ export default function HomePage() {
   );
 }
 
+<<<<<<< HEAD
 function FeatureCard({
   title,
   description,
@@ -272,6 +273,9 @@ function FeatureCard({
   title: string;
   description: string;
 }) {
+=======
+function FeatureCard({ title, description }: { title: string; description: string }) {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
   return (
     <div className="text-center p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>

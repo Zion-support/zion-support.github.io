@@ -426,7 +426,7 @@ function ContactSection() {
         Ready to Build Your Mobile App?
       </h3>
       <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-        Let's discuss your mobile app idea and create a solution that engages
+        Let&apos;s discuss your mobile app idea and create a solution that engages
         users and drives business growth. Our team has developed 100+ successful
         mobile applications.
       </p>

@@ -230,8 +230,12 @@ export default function BlockchainSolutionsPage() {
           Ready to Build the Future with Blockchain?
         </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
+<<<<<<< HEAD
           Let's discuss how blockchain technology can transform your business
           and create new opportunities.
+=======
+          Let&apos;s discuss how blockchain technology can transform your business and create new opportunities.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

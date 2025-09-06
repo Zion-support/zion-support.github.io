@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 import React from 'react';
 import Link from 'next/link';
 
@@ -650,8 +653,12 @@ export default function AIServicesPage() {
           Ready to Transform Your Business with AI?
         </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
+<<<<<<< HEAD
           Let's discuss how AI can solve your specific business challenges and
           drive growth.
+=======
+          Let&apos;s discuss how AI can solve your specific business challenges and drive growth.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

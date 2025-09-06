@@ -68,6 +68,9 @@ export default [
       'test-*.js',
       '*.test.js',
       '*.spec.js',
+      '*.test.ts',
+      '*.test.tsx',
+      'App.test.ts',
       'aggressive-*.js',
       'batch-*.js',
       'clean-*.js',
@@ -106,10 +109,13 @@ export default [
         beforeAll: 'readonly',
         afterAll: 'readonly',
       },
+<<<<<<< HEAD
 =======
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
       parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 'latest',
@@ -122,10 +128,14 @@ export default [
     plugins: {
       '@typescript-eslint': typescript,
 <<<<<<< HEAD
+<<<<<<< HEAD
       'react': react,
 =======
       react,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      'react': react,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
       'react-hooks': reactHooks,
       '@next/next': nextPlugin,
     },
@@ -171,6 +181,7 @@ export default [
     rules: {
       'no-console': 'off',
     },
+<<<<<<< HEAD
 =======
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
@@ -180,5 +191,7 @@ export default [
       'react-hooks/exhaustive-deps': 'warn',
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
   },
 ];

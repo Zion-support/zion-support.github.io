@@ -227,7 +227,7 @@ function Pricing() {
           Free Blockchain Consultation
         </h3>
         <p style={{ color: '#a16207', marginBottom: 16 }}>
-          Get expert advice on your blockchain project. We'll analyze your
+          Get expert advice on your blockchain project. We&apos;ll analyze your
           requirements and provide a detailed roadmap with cost estimates and
           timeline.
         </p>
