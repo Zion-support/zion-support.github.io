@@ -1,154 +1,126 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ChevronUp } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  ChevronUp,
+} from 'lucide-react';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-900 text-gray-300">
+    <motion.footer
+      className="bg-slate-900 text-gray-300"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="container mx-auto px-4 py-12">
-=======
-import { Phone, Mail, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-export default function Footer() {
-  return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
->>>>>>> pr-12243
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 mb-4 max-w-md">
-              Leading technology solutions provider specializing in AI, cybersecurity, 
-              cloud infrastructure, and digital transformation services.
+            <p className="text-gray-400 mb-4 max-w-md">
+              Leading AI & Technology Solutions for a Smarter Future. We deliver cutting-edge
+              technology solutions that transform businesses and drive innovation.
             </p>
-<<<<<<< HEAD
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-gray-300">
-                <Phone size={16} />
-                <span>+1-302-464-0950</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-300">
-                <Mail size={16} />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-300">
-                <MapPin size={16} />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-            </div>
-          </div>
-
-=======
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">Facebook</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
+              <a
+                href="https://twitter.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">Twitter</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                </svg>
+              <a
+                href="https://linkedin.com/company/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">LinkedIn</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
+              <a
+                href="https://facebook.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://instagram.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://github.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="h-5 w-5" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="hover:text-white transition-colors">
-                  Home
+                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-white transition-colors">
+                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-white transition-colors">
+                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">
+                  Pricing
                 </Link>
               </li>
             </ul>
           </div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          {/* Services */}
+          {/* Newsletter */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-<<<<<<< HEAD
-              <li><Link to="/services/ai" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link to="/services/micro-saas" className="text-gray-300 hover:text-white transition-colors">Micro SaaS</Link></li>
-              <li><Link to="/services/it" className="text-gray-300 hover:text-white transition-colors">IT Services</Link></li>
-              <li><Link to="/services/consulting" className="text-gray-300 hover:text-white transition-colors">Consulting</Link></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
-              <li><Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">Privacy</Link></li>
-=======
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  AI Solutions
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Cybersecurity
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Cloud Infrastructure
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Consulting
-                </a>
-              </li>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-            </ul>
+            <h3 className="text-lg font-semibold text-white mb-4">Stay Updated</h3>
+            <div className="space-y-4">
+              <p className="text-gray-400 text-sm">
+                Subscribe to our newsletter for the latest updates and insights.
+              </p>
+              <div className="flex">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-r-lg transition-colors">
+                  Subscribe
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="border-t border-slate-700 mt-8 pt-8 flex justify-between items-center">
-=======
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
@@ -160,27 +132,16 @@ export default function Footer() {
                 behavior: 'smooth',
               });
             }}
-            className="flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer"
+            className="flex items-center space-x-1 text-gray-400 hover:text-white text-sm transition-colors cursor-pointer"
             aria-label="Back to top"
           >
             <ChevronUp className="h-4 w-4" aria-hidden="true" />
             <span>Back to Top</span>
           </button>
-=======
-        <div className="mt-8 pt-8 border-t border-slate-700">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="mt-4 md:mt-0">
-              <p className="text-gray-400 text-sm">
-                Built with ❤️ for the future of technology
-              </p>
-            </div>
-          </div>
->>>>>>> pr-12243
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
-}
+};
+
+export default Footer;
