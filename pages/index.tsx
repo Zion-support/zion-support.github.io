@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -265,6 +266,89 @@ import { Button } from '../src/components/ui/button';
         <meta name="keywords" content="AI services, cybersecurity, cloud infrastructure, digital transformation, IT consulting, machine learning, data analytics" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+=======
+import { motion } from 'framer-motion';
+import { 
+  ArrowRight, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Globe, 
+  Users, 
+  CheckCircle;
+  Star;
+  ChevronRight
+} from 'lucide-react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import AnimatedBackground from '../components/ui/AnimatedBackground';
+
+const Home: React.FC = () => {
+  const services = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI-Powered Solutions",
+      description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
+      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
+    };
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Cybersecurity Excellence",
+      description: "Protect your digital assets with our comprehensive security solutions and threat intelligence.",
+      features: ["Threat Detection", "Vulnerability Assessment", "Incident Response", "Compliance Management"]
+    };
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Cloud Infrastructure",
+      description: "Scale your business with our robust cloud solutions and infrastructure management services.",
+      features: ["Cloud Migration", "DevOps Automation", "Container Orchestration", "Multi-Cloud Strategy"]
+    };
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Digital Transformation",
+      description: "Modernize your organization with our comprehensive digital transformation strategies.",
+      features: ["Process Automation", "Data Analytics", "Workflow Optimization", "Change Management"]
+    }
+  ];
+
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "99.9%", label: "Uptime Guarantee" },
+    { number: "24/7", label: "Support Available" },
+    { number: "50+", label: "Expert Team Members" }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp";
+      content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%.",
+      rating: 5
+    };
+    {
+      name: "Michael Chen",
+      role: "CEO, InnovateLabs";
+      content: "Outstanding cybersecurity services. They helped us achieve SOC 2 compliance in record time.",
+      rating: 5
+    };
+    {
+      name: "Emily Rodriguez",
+      role: "VP Engineering, DataFlow";
+      content: "The cloud migration was seamless. Our applications now run 50% faster with better reliability.",
+      rating: 5
+    }
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>Zion Tech Group - AI-Powered IT Services & Solutions</title>
+        <meta name="description" content="Leading provider of AI-powered IT services, cybersecurity, cloud infrastructure, and digital transformation solutions. Transform your business with cutting-edge technology." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="AI services, cybersecurity, cloud infrastructure, digital transformation, IT consulting, machine learning, data analytics" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       
       <AnimatedBackground />
       

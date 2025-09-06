@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:postcss.config.cjs.disabled
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+<<<<<<< HEAD:postcss.config.cjs.disabled
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 module.exports = {
   plugins: {
     tailwindcss: {},
@@ -9,7 +13,10 @@ module.exports = {
   },
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 =======
 },
 module.exports = {
@@ -17,4 +24,7 @@ module.exports = {
     tailwindcss: {},
     autoprefixer: {}}},
 >>>>>>> pr-11992:postcss.config.js
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

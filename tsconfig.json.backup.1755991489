@@ -2,8 +2,11 @@
   "compilerOptions": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "target": "ES2024",
     "useDefineForClassFields": true,
     "lib": ["ES2024", "DOM", "DOM.Iterable", "WebWorker", "WebWorker.Iterable"],
@@ -31,6 +34,7 @@
     "esModuleInterop": true,
     "module": "esnext",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "esModuleInterop": true,
 =======
     "target": "ES2020",
@@ -45,6 +49,11 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "esModuleInterop": true,    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "isolatedModules": true,
     /* Linting */
     "strict": true,
@@ -69,6 +78,7 @@
     "node_modules",
     "zion.app/recovered-content/**"
 <<<<<<< HEAD
+<<<<<<< HEAD
   ]
 =======
     "strict": true,
@@ -83,3 +93,6 @@
 =======
   ]}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  ]}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

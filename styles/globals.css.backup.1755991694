@@ -35,13 +35,17 @@
   --neon-red: #ef4444;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   
   /* Gradient backgrounds */
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+<<<<<<< HEAD
 <<<<<<< HEAD
   --gradient-futuristic: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
 =======
@@ -56,6 +60,9 @@
 =======
   --gradient-futuristic: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  --gradient-futuristic: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 /* Base styles */
 @layer base {
@@ -242,8 +249,11 @@ h3 {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 @keyframes quantumHolographic {
   0%, 100% { 
     background-position: 0% 0%, 100% 100%, 0% 100%, 0% 0%;
@@ -266,6 +276,7 @@ h3 {
     linear-gradient(0deg, transparent 0%, rgba(147, 51, 234, 0.1) 50%, transparent 100%),
     radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
   background-size: 200px 200px, 200px 200px, 100% 100%;
+<<<<<<< HEAD
 <<<<<<< HEAD
   animation: neuralPulse 15s ease-in-out infinite;
 =======
@@ -308,6 +319,9 @@ body::after {
 =======
   animation: neuralPulse 15s ease-in-out infinite;}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  animation: neuralPulse 15s ease-in-out infinite;}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 @keyframes neuralPulse {
   0%, 100% { 
@@ -322,8 +336,11 @@ body::after {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 /* Cyberpunk Background */
 .cyberpunk-bg {
   background: 
@@ -499,6 +516,7 @@ body::after {
 .btn-futuristic {
   position: relative;
 <<<<<<< HEAD
+<<<<<<< HEAD
   overflow: hidden;
 =======
 .text-gradient-rainbow {
@@ -655,6 +673,9 @@ body::after {
 =======
   overflow: hidden;  transition: all 0.3s ease;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  overflow: hidden;  transition: all 0.3s ease;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 .quantum-button::before {
@@ -666,13 +687,17 @@ body::after {
   height: 100%;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   background: linear-gradient(
     90deg,
     transparent,
     rgba(255, 255, 255, 0.1),
     transparent
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 =======
@@ -682,6 +707,9 @@ body::after {
 =======
   );  transition: left 0.5s ease;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  );  transition: left 0.5s ease;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 .quantum-button:hover::before {
@@ -690,8 +718,11 @@ body::after {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 /* Enhanced Card Hover Effects */
 .card-hover-3d {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -787,6 +818,7 @@ body::after {
 .quantum-ripple:active::after {
   width: 300px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   height: 300px;
 =======
 .quantum-button:hover {
@@ -849,6 +881,9 @@ body::after {
 =======
   height: 300px;}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  height: 300px;}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 @keyframes holographicShift {
   0%, 100% { 
@@ -896,8 +931,11 @@ body::after {
 @media (max-width: 768px) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   .mobile-optimized {
     font-size: 0.9rem;
     padding: 0.75rem;
@@ -939,6 +977,7 @@ body::after {
   
   body {
     background: white !important;
+<<<<<<< HEAD
 <<<<<<< HEAD
     color: black !important;
 =======
@@ -987,4 +1026,7 @@ body::after {
 =======
     color: black !important;  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    color: black !important;  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }

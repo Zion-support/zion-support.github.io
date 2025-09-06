@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
@@ -10,6 +11,10 @@ export default function AIAutonomousResearchAssistant() {
 =======
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIAutonomousResearchAssistant() {
+=======
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIAutonomousResearchAssistant() {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
 			title="AI Autonomous Research Assistant"
@@ -31,5 +36,9 @@ export default function AIAutonomousResearchAssistant() {
 			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
 		/>
 	)
+<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

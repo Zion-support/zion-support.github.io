@@ -5,26 +5,37 @@ import { getAmlProvider } from '../../../utils/aml';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');
 =======
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const DATA_DIR = path.join(process.cwd(), 'datakyc');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
     return JSON.parse(raw);
+=======
+    return JSON.parse(raw)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   } catch {
-    return {};
+    return {}
   }
+}
 
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
+}
 
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -46,6 +57,10 @@ function save(db: Record<string, KycProfile>) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const { userId } = req.body as { userId?: string };
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
 
@@ -55,25 +70,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const validation = validateKycSubmission(profile);
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!validation.ok)
     return res
       .status(400)
       .json({ error: 'Missing data', missing: validation.missing });
+=======
+  if (!validation.ok) return res.status(400).json({ error: 'Missing data', missing: validation.missing });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   // Simple AML check
   const aml = getAmlProvider();
-  const amlResult =
-    profile.role === 'enterprise'
-      ? await aml.checkBusiness({
-          businessName: profile.businessName || '',
-          country: profile.country,
-        })
-      : await aml.checkPerson({
-          fullLegalName: profile.fullLegalName || '',
-          country: profile.country,
-          dob: profile.dateOfBirth,
-        });
+  const amlResult = profile.role === 'enterprise'
+    ? await aml.checkBusiness({ businessName: profile.businessName || '', country: profile.country })
+    : await aml.checkPerson({ fullLegalName: profile.fullLegalName || '', country: profile.country, dob: profile.dateOfBirth });
 
+<<<<<<< HEAD
   profile.amlStatus =
     amlResult.status === 'clear'
       ? 'clear'
@@ -91,10 +103,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   // Flags and risk scoring
   const flags = new Set<string>(profile.flags || []);
   if (amlResult.status !== 'clear') flags.add('aml_alert');
+<<<<<<< HEAD
 <<<<<<< HEAD
   const name = (
     profile.fullLegalName ||
@@ -103,21 +119,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   ).toLowerCase();
   if (name.includes('test') || name.includes('demo') || name.includes('fake'))
     flags.add('fraud_risk');
+=======
+  const name = (profile.fullLegalName || profile.businessName || '').toLowerCase();
+  if (name.includes('test') || name.includes('demo') || name.includes('fake')) flags.add('fraud_risk');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-  const ip = (
-    (req.headers['x-forwarded-for'] as string) ||
-    req.socket.remoteAddress ||
-    ''
-  )
-    .split(',')[0]
-    .trim();
+  const ip = ((req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || '').split()[0].trim();
   if (ip) {
     // naive duplicate IP heuristic: more than 2 submissions from same IP → flag
-    const sameIpCount = Object.values(db).filter(p =>
-      (p.auditTrail || []).some(
-        a => a.action === 'kyc_submitted' && (a.details as any)?.ip === ip
-      )
+    const sameIpCount = Object.values(db).filter((p) =>
+      (p.auditTrail || []).some((a) => a.action === 'kyc_submitted' && (a.details as any)?.ip === ip)
     ).length;
+<<<<<<< HEAD
     if (sameIpCount >= 2) flags.add('duplicate_ip');
 =======
   const name = (profile.fullLegalName || profile.businessName || '').toLowerCase();
@@ -131,6 +144,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ).length;
     if (sameIpCount >= 2) flags.add('duplicate_ip')
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    if (sameIpCount >= 2) flags.add('duplicate_ip')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   // Compute simple risk score
@@ -147,6 +163,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const now = new Date().toISOString();
   profile.lastUpdatedAt = now;
 <<<<<<< HEAD
+<<<<<<< HEAD
   profile.auditTrail.push({
     at: now,
     by: userId,
@@ -156,13 +173,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
   profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   db[userId] = profile;
   save(db);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.status(200).json({ ok: true, profile, aml: amlResult });
 =======
   res.status(200).json({ ok: true, profile, aml: amlResult })
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  res.status(200).json({ ok: true, profile, aml: amlResult })
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

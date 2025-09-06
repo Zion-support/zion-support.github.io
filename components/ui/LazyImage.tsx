@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  useEffect ( () => {
   const observer = new IntersectionObserver ( ([entry]) => {
   if (entry.isIntersecting) {
@@ -22,6 +23,20 @@ interface LazyImageProps {
   height?: number
 }
 
+=======
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+interface LazyImageProps {
+  src: string,
+  alt: string,
+  className?: string;
+  placeholder?: string;
+  threshold?: number;
+  width?: number;
+  height?: number
+}
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export const LazyImage: React.FC<LazyImageProps> = ({
   src;
   alt;
@@ -30,7 +45,10 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   threshold = 0.1;
   width;
   height
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -42,6 +60,7 @@ export const LazyImage: React.FC<LazyImageProps> = ({
         if (entry.isIntersecting) {
           setIsInView(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
           observer.disconnect();
         }
       },
@@ -50,18 +69,28 @@ export const LazyImage: React.FC<LazyImageProps> = ({
         }
       };
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          observer.disconnect()
+        }
+      };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       { threshold }
     );
 
     if (imgRef.current) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       observer.observe(imgRef.current);
+=======
+      observer.observe(imgRef.current)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
-    return () => observer.disconnect();
+    return () => observer.disconnect()
   }, [threshold]);
 
   const handleLoad = () => {
+<<<<<<< HEAD
     setIsLoaded(true);
 =======
       observer.observe(imgRef.current)
@@ -73,6 +102,9 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   const handleLoad = () => {
     setIsLoaded(true)
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    setIsLoaded(true)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
@@ -81,20 +113,28 @@ export const LazyImage: React.FC<LazyImageProps> = ({
       <img
         src={placeholder}
 <<<<<<< HEAD
+<<<<<<< HEAD
         alt=''
 =======
         alt=""
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        alt=""
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
       />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       {/* Actual Image */}
       {isInView && (
         <motion.img
@@ -106,16 +146,22 @@ export const LazyImage: React.FC<LazyImageProps> = ({
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className='w-full h-full object-cover'
           loading='lazy'
 =======
           className="w-full h-full object-cover"
           loading="lazy"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          className="w-full h-full object-cover"
+          loading="lazy"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           style={{ width, height }}
         />
       )}
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 };
@@ -127,3 +173,9 @@ export default LazyImage;
 
 export default LazyImage;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
+};
+
+export default LazyImage;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

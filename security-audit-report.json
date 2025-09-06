@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-09-06T00:32:21.706Z",
   "vulnerabilities": 11,
   "recommendations": [
@@ -26,11 +27,15 @@
 =======
 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "Run \"npm audit fix\" to resolve dependency vulnerabilities",
     "Review and remove any hardcoded secrets",
     "Update outdated dependencies",
     "Implement proper environment variable management",
     "Add security headers to Next.js configuration"
+<<<<<<< HEAD
 <<<<<<< HEAD
   ]
 }
@@ -38,3 +43,6 @@
 =======
 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

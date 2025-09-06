@@ -1,36 +1,35 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+// Simple file-based database utilities for development
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import fs from 'fs';
 import path from 'path';
 
-const DATA_ROOT = path.join(process.cwd(), 'data', 'marketplace');
-
-function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_ROOT)) {
-    fs.mkdirSync(DATA_ROOT, { recursive: true });
-  }
-
-function getFilePath(fileName: string): string {
-  ensureDataDir();
-  return path.join(DATA_ROOT, fileName);
-
-export function readJsonFile<T>(fileName: string, defaultValue: T): T {
+export function readJsonFile<T>(filePath: string): T | null {
   try {
-    const filePath = getFilePath(fileName);
-    if (!fs.existsSync(filePath)) {
-      return defaultValue;
-    }
-    const raw = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw) as T;
+    if (!fs.existsSync(filePath)) return null;
+    const content = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(content);
   } catch (error) {
-    return defaultValue;
+    console.error(`Error reading JSON file ${filePath}:`, error);
+    return null;
   }
+}
 
-export function writeJsonFile<T>(fileName: string, data: T): void {
-  const filePath = getFilePath(fileName);
-  const tmpPath = `${filePath}.tmp`;
-  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
-  fs.renameSync(tmpPath, filePath);
+export function writeJsonFile<T>(filePath: string, data: T): void {
+  try {
+    const dir = path.dirname(filePath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error(`Error writing JSON file ${filePath}:`, error);
+  }
+}
 
+<<<<<<< HEAD
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
@@ -102,3 +101,10 @@ const defaultConfig: DatabaseConfig = {
 // Singleton database instance
 export const db = new DatabaseManager(defaultConfig);
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export function ensureDir(dirPath: string): void {
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

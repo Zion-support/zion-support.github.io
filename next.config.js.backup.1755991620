@@ -2,8 +2,11 @@
 const nextConfig = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Enable React strict mode for better development experience
   reactStrictMode: true,
   
@@ -19,10 +22,13 @@ const nextConfig = {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Image optimization
   images: {
     formats: ['image/webp', 'image/avif'],
@@ -148,6 +154,7 @@ const nextConfig = {
   output: 'standalone',
   trailingSlash: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
   skipTrailingSlashRedirect: true,
 =======
 	reactStrictMode: true,
@@ -174,6 +181,9 @@ const nextConfig = {
 =======
   skipTrailingSlashRedirect: true,};
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  skipTrailingSlashRedirect: true,};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   // Enhanced compress
   compress: true,

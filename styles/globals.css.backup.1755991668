@@ -189,8 +189,11 @@ h3 {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 /* Enhanced futuristic effects */
 .neon-glow {
   text-shadow: 
@@ -502,6 +505,7 @@ a:hover {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .btn-futuristic::before {
 =======
 .particles-bg::before {
@@ -782,12 +786,16 @@ a:hover {
 =======
 .btn-futuristic::before {  content: '';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+.btn-futuristic::before {  content: '';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   transition: left 0.5s ease;
@@ -798,6 +806,9 @@ a:hover {
 =======
   transition: left 0.5s ease;}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  transition: left 0.5s ease;}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 .button:hover::before {
   left: 100%;
@@ -805,8 +816,11 @@ a:hover {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 .btn-futuristic:hover {
   transform: translateY(-2px);
   box-shadow: 
@@ -900,6 +914,7 @@ a:hover {
 @media (max-width: 768px) {
   .particles {
 <<<<<<< HEAD
+<<<<<<< HEAD
     display: none;
 =======
 .button:hover {
@@ -984,6 +999,9 @@ a:hover {
 =======
     display: none;  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    display: none;  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   
   .cyber-grid {
     background-size: 15px 15px;

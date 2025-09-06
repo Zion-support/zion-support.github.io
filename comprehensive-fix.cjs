@@ -270,6 +270,10 @@ class ComprehensiveFixer {
       } else if (entry.isFile() && (entry.name.endsWith('.tsx') || entry.name.endsWith('.ts') || entry.name.endsWith('.jsx') || entry.name.endsWith('.js'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
+=======
+          if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>') || content.includes('{_') || content.includes('_}') || content.includes('_ ') || content.includes('&quot;') || content.includes('&amp;') || content.includes('&lt;') || content.includes('&gt;')) {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             files.push(fullPath);
           }
         } catch (error) {

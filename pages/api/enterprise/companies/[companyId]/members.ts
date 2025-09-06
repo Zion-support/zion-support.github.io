@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '../../../../../utils/data/enterpriseStore';
 import type { EnterpriseRole } from '../../../../../utils/types/enterprise';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { companyId } = req.query;
@@ -13,20 +14,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!companyId || typeof companyId !== 'string') {
     return res.status(400).json({ error: 'companyId required' })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { companyId } = req.query;
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({ error: 'companyId required' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
   const company = store.getCompanyById(companyId);
   if (!company) return res.status(404).json({ error: 'company_not_found' });
 
   if (req.method === 'GET') {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(200).json(company.members);
 =======
     return res.status(200).json(company.members)
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return res.status(200).json(company.members)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (req.method === 'POST') {
     const { name, email, role } = req.body || {};
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!name || !email)
       return res.status(400).json({ error: 'name and email required' });
@@ -39,10 +51,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member)
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    if (!name || !email) return res.status(400).json({ error: 'name and email required' });
+    const r: EnterpriseRole = role || 'viewer';
+    const member = store.addMember(companyId, name, email, r);
+    return res.status(201).json(member)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (req.method === 'PATCH') {
     const { memberId, role } = req.body || {};
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!memberId || !role)
       return res.status(400).json({ error: 'memberId and role required' });
@@ -55,19 +74,27 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const ok = store.updateMemberRole(companyId, memberId, role);
     return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'member_not_found' })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    if (!memberId || !role) return res.status(400).json({ error: 'memberId and role required' });
+    const ok = store.updateMemberRole(companyId, memberId, role);
+    return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'member_not_found' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (req.method === 'DELETE') {
     const { memberId } = req.query;
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!memberId || typeof memberId !== 'string')
       return res.status(400).json({ error: 'memberId required' });
+=======
+    if (!memberId || typeof memberId !== 'string') return res.status(400).json({ error: 'memberId required' });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const ok = store.removeMember(companyId, memberId);
-    return res
-      .status(ok ? 200 : 404)
-      .json(ok ? { success: true } : { error: 'member_not_found' });
+    return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'member_not_found' })
   }
 
+<<<<<<< HEAD
   return res.status(405).json({ error: 'method_not_allowed' });
 =======
     if (!memberId || typeof memberId !== 'string') return res.status(400).json({ error: 'memberId required' });
@@ -78,3 +105,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(405).json({ error: 'method_not_allowed' })
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  return res.status(405).json({ error: 'method_not_allowed' })
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

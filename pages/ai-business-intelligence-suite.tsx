@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   CheckCircle,
   ArrowRight,
@@ -27,76 +28,70 @@ import {
   Eye,
   Lock,;
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, BarChart3;
   Brain, Database, TrendingUp as TrendingUpIcon, Users;
   Target, BarChart, PieChart, Activity, Eye, Lock
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function AIBusinessIntelligenceSuite() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
+<<<<<<< HEAD
     website: 'https://ziontechgroup.com',
+=======
+    website: 'https://ziontechgroup.com'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const features = [
-    'Real-time data analysis and visualization',
-    'AI-powered trend prediction and forecasting',
-    'Automated report generation and scheduling',
-    'Custom dashboard builder with drag-and-drop',
-    'Multi-source data integration (CRM, ERP, Analytics)',
-    'Natural language query interface',
-    'Predictive analytics and machine learning models',
-    'Mobile-responsive dashboards',
-    'Role-based access control and security',
-    'API access for custom integrations',
+    'Real-time data analysis and visualizationAI-powered trend prediction and forecastingAutomated report generation and schedulingCustom dashboard builder with drag-and-dropMulti-source data integration (CRM, ERP, Analytics)Natural language query interfacePredictive analytics and machine learning modelsMobile-responsive dashboards';
+    'Role-based access control and securityAPI access for custom integrations'
   ];
 
   const useCases = [
-    'Sales performance analysis',
-    'Customer behavior insights',
-    'Financial forecasting',
-    'Marketing ROI optimization',
-    'Operational efficiency tracking',
+    'Sales performance analysisCustomer behavior insightsFinancial forecastingMarketing ROI optimizationOperational efficiency tracking'
   ];
 
   const integrations = [
-    'Salesforce',
-    'HubSpot',
-    'Google Analytics',
-    'Shopify',
-    'QuickBooks',
-    'Slack',
-    'Microsoft Teams',
+    'SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams'
   ];
 
   const technology = [
-    'Python',
-    'TensorFlow',
-    'React',
-    'Node.js',
-    'PostgreSQL',
-    'Redis',
-    'AWS',
-    'Docker',
+    'PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'
   ];
 
-const AIBusinessIntelligenceSuite: React.FC = () => {
-  
+  return (
+    <UltraAdvancedFuturisticBackground 
+      intensity="high" 
+      colorScheme="quantum-fusion"
+      particleCount={500}
+      animationSpeed={2.0}
+      enableHolographic={true}
+      enableQuantumEffects={true}
     >
-      <div className='min-h-screen'>
+      <div className="min-h-screen">
         <Head>
+<<<<<<< HEAD
           <title>
             AI Business Intelligence Suite - Zion Tech Group | Transform Data
             into Insights
@@ -160,6 +155,8 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
     >
       <div className="min-h-screen">
         <Head>
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <title>AI Business Intelligence Suite - Zion Tech Group | Transform Data into Insights</title>
           <meta name="description" content="Transform data into actionable insights with our AI-powered business intelligence platform. Real-time analytics, predictive modeling, and automated reporting. Contact: +1 302 464 0950" />
           <meta name="keywords" content="AI business intelligence, data analytics, predictive analytics, business insights, data visualization, AI analytics, business intelligence platform" />
@@ -170,12 +167,16 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
           <meta property="og:url" content="https://ziontechgroup.com/ai-business-intelligence-suite" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/ai-business-intelligence-suite" />
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </Head>
 
         <UltraAdvancedNavigation />
 
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -183,34 +184,47 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center mb-16'
 =======
               className="text-center mb-16"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+              className="text-center mb-16"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               <motion.div
                 initial={{ scale: 0.8, rotate: -5 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='mb-8'
+=======
+                className="mb-8"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               >
-                <div className='inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden'>
-                  <div className='absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse'></div>
-                  <BarChart3 className='w-12 h-12 text-white relative z-10' />
-                  <div className='absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300'></div>
+                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+                  <BarChart3 className="w-12 h-12 text-white relative z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
 
-              <motion.h1
+              <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
+<<<<<<< HEAD
                 className='text-5xl md:text-7xl font-black bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent mb-6'
 =======
                 className="mb-8"
@@ -228,40 +242,42 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent mb-6"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                className="text-5xl md:text-7xl font-black bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent mb-6"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               >
                 AI Business Intelligence Suite
               </motion.h1>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               <motion.p
+=======
+              <motion.p 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className='text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium'
+                className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
               >
-                Transform data into actionable insights with{' '}
-                <span className='text-blue-400 font-bold'>
-                  AI-powered analytics
-                </span>
+                Transform data into actionable insights with <span className="text-blue-400 font-bold">AI-powered analytics</span>
               </motion.p>
 
-              <motion.p
+              <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className='text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed'
+                className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
               >
-                Advanced AI-powered business intelligence platform that
-                automatically analyzes your business data, identifies trends,
-                and provides actionable recommendations for growth and
-                optimization.
+                Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.
               </motion.p>
 
               {/* Pricing and CTA */}
-              <motion.div
+              <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
                 className='flex flex-col sm:flex-row gap-6 justify-center mb-16'
 =======
               <motion.p 
@@ -289,11 +305,15 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               >
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className='bg-gradient-to-r from-blue-500 to-indigo-600 p-1 rounded-2xl shadow-2xl'
                 >
@@ -315,6 +335,10 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
 =======
                   className="bg-gradient-to-r from-blue-500 to-indigo-600 p-1 rounded-2xl shadow-2xl"
                 >
+=======
+                  className="bg-gradient-to-r from-blue-500 to-indigo-600 p-1 rounded-2xl shadow-2xl"
+                >
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   <div className="bg-gray-900 rounded-2xl px-8 py-6">
                     <div className="text-center">
                       <div className="text-4xl font-bold text-white mb-2">$299</div>
@@ -324,7 +348,10 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                         href="/contact" 
                         variant="primary"
                         className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-6 rounded-xl"
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       >
                         Start Free Trial
                       </Button>
@@ -337,6 +364,7 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Button
                     href='/contact'
@@ -354,6 +382,15 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                     <span className="flex items-center">
                       <Phone className="mr-3 w-5 h-5" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                  <Button 
+                    href="/contact" 
+                    variant="secondary"
+                    className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
+                  >
+                    <span className="flex items-center">
+                      <Phone className="mr-3 w-5 h-5" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       Talk to Expert
                     </span>
                   </Button>
@@ -366,24 +403,21 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'
+=======
+                className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               >
-                <div className='text-center p-4'>
-                  <div className='text-3xl font-bold text-blue-400 mb-2'>
-                    400% ROI
-                  </div>
-                  <div className='text-gray-300'>
-                    Average customer sees 400% ROI within 6 months
-                  </div>
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">400% ROI</div>
+                  <div className="text-gray-300">Average customer sees 400% ROI within 6 months</div>
                 </div>
-                <div className='text-center p-4'>
-                  <div className='text-3xl font-bold text-green-400 mb-2'>
-                    2 Hours
-                  </div>
-                  <div className='text-gray-300'>
-                    Setup time from installation to first insights
-                  </div>
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-green-400 mb-2">2 Hours</div>
+                  <div className="text-gray-300">Setup time from installation to first insights</div>
                 </div>
+<<<<<<< HEAD
                 <div className='text-center p-4'>
                   <div className='text-3xl font-bold text-purple-400 mb-2'>
                     1800+
@@ -406,10 +440,16 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                   <div className="text-3xl font-bold text-purple-400 mb-2">1800+</div>
                   <div className="text-gray-300">Active customers worldwide</div>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">1800+</div>
+                  <div className="text-gray-300">Active customers worldwide</div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </motion.div>
             </motion.div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         {/* Features Section */}
@@ -422,25 +462,36 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-7xl mx-auto">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center mb-16'
+=======
+              className="text-center mb-16"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                <span className='bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
                   Powerful Features
                 </span>
               </h2>
-              <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'>
-                Everything you need to transform your business data into
-                actionable intelligence
+              <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+                Everything you need to transform your business data into actionable intelligence
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 =======
               className="text-center mb-16"
@@ -457,6 +508,9 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -466,12 +520,17 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02, y: -5 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className='group bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300'
+=======
+                  className="group bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
-                  <div className='flex items-center space-x-3 mb-4'>
-                    <div className='w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center'>
-                      <CheckCircle className='w-5 h-5 text-white' />
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+                      <CheckCircle className="w-5 h-5 text-white" />
                     </div>
+<<<<<<< HEAD
                     <h3 className='text-lg font-semibold text-white group-hover:text-blue-300 transition-colors'>
 =======
                   className="group bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300"
@@ -482,6 +541,9 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                    <h3 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {feature}
                     </h3>
                   </div>
@@ -489,6 +551,7 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         {/* Use Cases Section */}
@@ -501,25 +564,36 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center mb-16'
+=======
+              className="text-center mb-16"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                <span className='bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent'>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                   Use Cases
                 </span>
               </h2>
-              <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'>
-                Discover how our AI BI platform transforms different aspects of
-                your business
+              <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+                Discover how our AI BI platform transforms different aspects of your business
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 =======
               className="text-center mb-16"
@@ -536,6 +610,9 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
@@ -545,12 +622,17 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02, y: -5 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className='group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300'
+=======
+                  className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
-                  <div className='flex items-center space-x-3 mb-4'>
-                    <div className='w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center'>
-                      <Target className='w-5 h-5 text-white' />
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+                      <Target className="w-5 h-5 text-white" />
                     </div>
+<<<<<<< HEAD
                     <h3 className='text-lg font-semibold text-white group-hover:text-green-300 transition-colors'>
 =======
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
@@ -561,6 +643,9 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                    <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {useCase}
                     </h3>
                   </div>
@@ -568,6 +653,7 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>
 
@@ -583,6 +669,14 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        </section>
+
+        {/* Technology & Integrations */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {/* Technology Stack */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -590,6 +684,7 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <h3 className='text-3xl font-bold text-white mb-8'>
                   <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
@@ -605,6 +700,14 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                <h3 className="text-3xl font-bold text-white mb-8">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                    Technology Stack
+                  </span>
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {technology.map((tech, index) => (
                     <motion.div
                       key={index}
@@ -612,6 +715,7 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50'
                     >
@@ -623,6 +727,12 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                       <span className="text-gray-200">{tech}</span>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                      className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
+                    >
+                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                      <span className="text-gray-200">{tech}</span>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </motion.div>
                   ))}
                 </div>
@@ -635,6 +745,7 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <h3 className='text-3xl font-bold text-white mb-8'>
                   <span className='bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
@@ -650,6 +761,14 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                <h3 className="text-3xl font-bold text-white mb-8">
+                  <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                    Integrations
+                  </span>
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {integrations.map((integration, index) => (
                     <motion.div
                       key={index}
@@ -657,6 +776,7 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50'
                     >
@@ -668,6 +788,12 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                       <span className="text-gray-200">{integration}</span>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                      className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
+                    >
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <span className="text-gray-200">{integration}</span>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </motion.div>
                   ))}
                 </div>
@@ -678,17 +804,23 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
 
         {/* Market Position & ROI */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
 =======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mb-16'
             >
@@ -700,46 +832,53 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   Market Position & ROI
                 </span>
               </h2>
             </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
 =======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8'
+=======
+                className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               >
-                <h3 className='text-2xl font-bold text-white mb-6'>
-                  Competitive Advantage
-                </h3>
-                <p className='text-gray-300 mb-6'>
-                  Competitive with Tableau ($70-75/user/month), Power BI
-                  ($9.99/user/month), and Looker ($30/user/month). Our
-                  advantage: AI-powered insights, automated reporting, and
-                  predictive analytics.
+                <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
+                <p className="text-gray-300 mb-6">
+                  Competitive with Tableau ($70-75/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). 
+                  Our advantage: AI-powered insights, automated reporting, and predictive analytics.
                 </p>
-                <div className='space-y-4'>
-                  <div className='flex items-center space-x-3'>
-                    <CheckCircle className='w-5 h-5 text-yellow-400' />
-                    <span className='text-gray-200'>
-                      AI-powered trend prediction
-                    </span>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-yellow-400" />
+                    <span className="text-gray-200">AI-powered trend prediction</span>
                   </div>
-                  <div className='flex items-center space-x-3'>
-                    <CheckCircle className='w-5 h-5 text-yellow-400' />
-                    <span className='text-gray-200'>
-                      Automated report generation
-                    </span>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-yellow-400" />
+                    <span className="text-gray-200">Automated report generation</span>
                   </div>
+<<<<<<< HEAD
                   <div className='flex items-center space-x-3'>
                     <CheckCircle className='w-5 h-5 text-yellow-400' />
                     <span className='text-gray-200'>
@@ -766,6 +905,11 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                     <CheckCircle className="w-5 h-5 text-yellow-400" />
                     <span className="text-gray-200">Natural language queries</span>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-yellow-400" />
+                    <span className="text-gray-200">Natural language queries</span>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </div>
               </motion.div>
@@ -776,31 +920,27 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8'
+=======
+                className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               >
-                <h3 className='text-2xl font-bold text-white mb-6'>
-                  Return on Investment
-                </h3>
-                <div className='text-4xl font-bold text-green-400 mb-4'>
-                  400% ROI
-                </div>
-                <p className='text-gray-300 mb-6'>
-                  Average customer sees 400% ROI within 6 months through
-                  improved decision-making and operational efficiency.
+                <h3 className="text-2xl font-bold text-white mb-6">Return on Investment</h3>
+                <div className="text-4xl font-bold text-green-400 mb-4">400% ROI</div>
+                <p className="text-gray-300 mb-6">
+                  Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency.
                 </p>
-                <div className='space-y-4'>
-                  <div className='flex items-center space-x-3'>
-                    <TrendingUpIcon className='w-5 h-5 text-green-400' />
-                    <span className='text-gray-200'>
-                      Improved decision-making
-                    </span>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <TrendingUpIcon className="w-5 h-5 text-green-400" />
+                    <span className="text-gray-200">Improved decision-making</span>
                   </div>
-                  <div className='flex items-center space-x-3'>
-                    <TrendingUpIcon className='w-5 h-5 text-green-400' />
-                    <span className='text-gray-200'>
-                      Operational efficiency gains
-                    </span>
+                  <div className="flex items-center space-x-3">
+                    <TrendingUpIcon className="w-5 h-5 text-green-400" />
+                    <span className="text-gray-200">Operational efficiency gains</span>
                   </div>
+<<<<<<< HEAD
                   <div className='flex items-center space-x-3'>
                     <TrendingUpIcon className='w-5 h-5 text-green-400' />
                     <span className='text-gray-200'>
@@ -827,6 +967,11 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                     <TrendingUpIcon className="w-5 h-5 text-green-400" />
                     <span className="text-gray-200">Reduced manual reporting time</span>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                  <div className="flex items-center space-x-3">
+                    <TrendingUpIcon className="w-5 h-5 text-green-400" />
+                    <span className="text-gray-200">Reduced manual reporting time</span>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </div>
               </motion.div>
@@ -836,12 +981,17 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20'>
           <div className='max-w-4xl mx-auto text-center'>
 =======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-4xl mx-auto text-center">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -849,13 +999,17 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
               viewport={{ once: true }}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+=======
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Transform Your Business Intelligence?
               </h2>
-              <p className='text-gray-300 text-xl mb-8 leading-relaxed'>
-                Join 1800+ businesses that have already transformed their data
-                into actionable insights with our AI-powered platform.
+              <p className="text-gray-300 text-xl mb-8 leading-relaxed">
+                Join 1800+ businesses that have already transformed their data into actionable insights with our AI-powered platform.
               </p>
+<<<<<<< HEAD
 
               <div className='flex flex-col sm:flex-row gap-6 justify-center'>
 =======
@@ -868,20 +1022,32 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Button
                     href='/contact'
                     variant='primary'
                     className='text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25'
+=======
+                  <Button 
+                    href="/contact" 
+                    variant="primary"
+                    className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   >
-                    <span className='flex items-center'>
-                      <Rocket className='mr-3 w-5 h-5' />
+                    <span className="flex items-center">
+                      <Rocket className="mr-3 w-5 h-5" />
                       Start Free Trial
+<<<<<<< HEAD
                       <ArrowRight className='ml-3 w-5 h-5' />
 =======
                   <Button 
@@ -894,6 +1060,9 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                       Start Free Trial
                       <ArrowRight className="ml-3 w-5 h-5" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                      <ArrowRight className="ml-3 w-5 h-5" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </span>
                   </Button>
                 </motion.div>
@@ -903,6 +1072,7 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Button
                     href='/contact'
@@ -920,12 +1090,22 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                     <span className="flex items-center">
                       <Phone className="mr-3 w-5 h-5" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                  <Button 
+                    href="/contact" 
+                    variant="secondary"
+                    className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
+                  >
+                    <span className="flex items-center">
+                      <Phone className="mr-3 w-5 h-5" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       Talk to Expert
                     </span>
                   </Button>
                 </motion.div>
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='mt-8 text-gray-400'>
                 <p>
@@ -950,6 +1130,11 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-blue-400 hover:text-blue-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">{contactInfo.email}</a></p>
                 <p className="mt-2">{contactInfo.address}</p>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+              <div className="mt-8 text-gray-400">
+                <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-blue-400 hover:text-blue-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">{contactInfo.email}</a></p>
+                <p className="mt-2">{contactInfo.address}</p>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </motion.div>
           </div>
@@ -957,8 +1142,13 @@ const AIBusinessIntelligenceSuite: React.FC = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 =======
   )
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

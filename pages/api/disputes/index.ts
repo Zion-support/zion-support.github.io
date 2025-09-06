@@ -4,6 +4,7 @@ import { parseUserFromRequest } from '../../../utils/auth';
 import { DisputeCase, DisputeReason } from '../../../types/disputes';
 import { generateCaseId } from '../../../utils/fsdb';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
@@ -12,12 +13,16 @@ export default async function handler(
 =======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const user = parseUserFromRequest(req);
 
   if (req.method === 'GET') {
     const all = await readAllDisputes();
     let filtered = all;
     if (user.role !== 'admin') {
+<<<<<<< HEAD
 <<<<<<< HEAD
       filtered = all.filter(
         d => d.clientUserId === user.id || d.talentUserId === user.id
@@ -29,6 +34,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     return res.status(200).json({ disputes: filtered })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
+    }
+    return res.status(200).json({ disputes: filtered })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (req.method === 'POST') {
@@ -41,6 +51,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       talentUserId,
       reason,
       reasonDetails,
+<<<<<<< HEAD
 <<<<<<< HEAD
       description,
     } = req.body || {};
@@ -59,6 +70,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
       return res.status(400).json({ error: 'Missing required fields' })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      description
+    } = req.body || {};
+
+    if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
+      return res.status(400).json({ error: 'Missing required fields' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const id = generateCaseId();
@@ -77,13 +95,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       reasonDetails,
       description,
       attachments: [],
-      messages: [],
+      messages: []
     };
 
     await createDispute(dispute);
     return res.status(201).json({ dispute });
   }
 
+<<<<<<< HEAD
   res.setHeader('Allow', 'GET,POST');
   return res.status(405).end('Method Not Allowed');
 =======
@@ -105,3 +124,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(405).end('Method Not Allowed')
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  res.setHeader('AllowGET,POST');
+  return res.status(405).end('Method Not Allowed')
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

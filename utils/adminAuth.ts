@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Stub admin auth utility - placeholder for missing functionality
 export const requireAdminAuth = () => {
   // Placeholder implementation
@@ -125,3 +126,39 @@ export function getAdminUser(id: string): AdminUser | null {
   return adminUsers.find(u => u.id === id) || null;
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+import type { NextApiRequest } from 'next';
+
+export interface AdminUser {
+  id: string;
+  email: string;
+  role: 'admin' | 'moderator';
+}
+
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean; user?: AdminUser }> {
+  // In a real implementation, this would verify JWT tokens, check database permissions, etc.
+  // For now, we'll simulate admin access
+  const authHeader = req.headers.authorization;
+  
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return { allowed: false };
+  }
+
+  // Simulate token validation
+  const token = authHeader.substring(7);
+  
+  // For development purposes, accept any non-empty token
+  if (token && token.length > 0) {
+    return {
+      allowed: true,
+      user: {
+        id: 'admin-1',
+        email: 'admin@zion.os',
+        role: 'admin'
+      }
+    };
+  }
+
+  return { allowed: false };
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

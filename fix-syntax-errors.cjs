@@ -1,8 +1,93 @@
+<<<<<<< HEAD
 // Function to fix corrupted syntax in files
 function fixSyntaxErrors(filePath) {
+=======
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
+
+// Common syntax fixes
+const fixes = [
+  // Fix import statements - replace comma with semicolon
+  {
+    pattern: /import\s+.*?from\s+['"][^'"]+['"],\s*$/gm,
+    replacement: (match) => match.replace(/,$/, ';')
+  },
+  // Fix interface properties - replace comma with semicolon
+  {
+    pattern: /(\s+)(\w+)(\?)?:\s*([^,;]+),\s*$/gm,
+    replacement: '$1$2$3: $4;'
+  },
+  // Fix function parameters - replace comma with semicolon in destructuring
+  {
+    pattern: /(\s+)(\w+):\s*([^,;]+),\s*$/gm,
+    replacement: '$1$2: $3;'
+  },
+  // Fix statements ending with comma instead of semicolon
+  {
+    pattern: /([^;])\s*,\s*$/gm,
+    replacement: '$1;'
+  },
+  // Fix specific patterns
+  {
+    pattern: /setErrors\(newErrors\),\s*$/gm,
+    replacement: 'setErrors(newErrors);'
+  },
+  {
+    pattern: /return\s+Object\.keys\([^)]+\)\.length\s*===\s*0\s*$/gm,
+    replacement: (match) => match.replace(/,$/, ';')
+  },
+  {
+    pattern: /e\.preventDefault\(\),\s*$/gm,
+    replacement: 'e.preventDefault();'
+  },
+  {
+    pattern: /setIsSubmitting\(true\),\s*$/gm,
+    replacement: 'setIsSubmitting(true);'
+  },
+  {
+    pattern: /await\s+new\s+Promise\([^)]+\)\s*,\s*$/gm,
+    replacement: (match) => match.replace(/,$/, ';')
+  },
+  {
+    pattern: /setIsSubmitted\(true\),\s*$/gm,
+    replacement: 'setIsSubmitted(true);'
+  },
+  {
+    pattern: /showSuccess\([^)]+\)\s*,\s*$/gm,
+    replacement: (match) => match.replace(/,$/, ';')
+  },
+  {
+    pattern: /setFormData\(\{[^}]+\}\)\s*,\s*$/gm,
+    replacement: (match) => match.replace(/,$/, ';')
+  },
+  {
+    pattern: /setErrors\(\{\}\)\s*$/gm,
+    replacement: 'setErrors({});'
+  },
+  {
+    pattern: /console\.error\([^)]+\)\s*,\s*$/gm,
+    replacement: (match) => match.replace(/,$/, ';')
+  },
+  {
+    pattern: /showError\([^)]+\)\s*$/gm,
+    replacement: (match) => match.replace(/,$/, ';')
+  },
+  {
+    pattern: /setIsSubmitting\(false\)\s*$/gm,
+    replacement: 'setIsSubmitting(false);'
+  }
+];
+
+function fixFile(filePath) {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
+<<<<<<< HEAD
     // Fix common syntax issues
     content = content
       // Remove trailing commas before semicolons
@@ -137,11 +222,25 @@ function fixFile(filePath) {
   }
     }
     
+=======
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+    
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -149,6 +248,7 @@ function fixFile(filePath) {
   }
 }
 
+<<<<<<< HEAD
 // Function to recursively find and fix files
 function fixAllFiles(dir) {
   const files = fs.readdirSync(dir);
@@ -163,13 +263,36 @@ function fixAllFiles(dir) {
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
-      }
-    }
-  }
+=======
+function main() {
+  const patterns = [
+    'components/**/*.tsx',
+    'components/**/*.ts',
+    'pages/**/*.tsx',
+    'pages/**/*.ts',
+    'src/**/*.tsx',
+    'src/**/*.ts',
+    'hooks/**/*.ts',
+    'lib/**/*.ts',
+    'utils/**/*.ts'
+  ];
   
-  return fixedCount;
+  let totalFixed = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { cwd: process.cwd() });
+    files.forEach(file => {
+      if (fixFile(file)) {
+        totalFixed++;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      }
+    });
+  });
+  
+  console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
+<<<<<<< HEAD
 // Main execution
 console.log('Starting syntax error fixes...');
 const fixedCount = fixAllFiles('/workspace');
@@ -190,3 +313,10 @@ for (const file of files) {
 }
 
 console.log(`Fixed ${fixedCount} files`);
+=======
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixFile, fixes };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Users } from 'lucide-react';
@@ -54,6 +55,10 @@ export default function TeamPage() {
 =======
 import SEO from '../components/SEO';
 export default function TeamPage() {
+=======
+import SEO from '../components/SEO';
+export default function TeamPage() {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
@@ -64,4 +69,7 @@ export default function TeamPage() {
 		</>
 	)
 }
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

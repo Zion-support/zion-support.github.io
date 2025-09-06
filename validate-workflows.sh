@@ -5,10 +5,14 @@
 
 echo "🔍 Validating GitHub Actions Workflows..."
 <<<<<<< HEAD
+<<<<<<< HEAD
 echo "========================================"
 =======
 echo "====="
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+echo "====="
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 # Find all workflow files
 WORKFLOW_FILES=$(find .github/workflows -name "*.yml" -o -name "*.yaml" 2>/dev/null)
@@ -104,10 +108,14 @@ done
 
 echo ""
 <<<<<<< HEAD
+<<<<<<< HEAD
 echo "========================================"
 =======
 echo "====="
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+echo "====="
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 echo "📊 Validation Summary:"
 echo "Total files: $TOTAL_FILES"
 echo "Errors found: $ERROR_COUNT"

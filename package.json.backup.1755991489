@@ -4,8 +4,11 @@
   "private": true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "version": "0.0.0",
   "type": "module",
   "bin": {
@@ -709,6 +712,7 @@
     "@nomicfoundation/hardhat-verify": "^2.1.1",
     "@testing-library/jest-dom": "^6.6.4",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@testing-library/react": "12.1.5",
 =======
   "description": "Secure, modular smart contracts and deploy scripts for ZION$ multichain (zkSync, Starknet relay, L2s)",
@@ -742,6 +746,12 @@
     "@types/chai": "^4.3.20",
     "@types/mocha": "^10.0.10",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "@testing-library/react": "12.1.5",    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^10.0.10",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@types/node": "^24.2.0",
     "@types/node-cron": "^3.0.11",
     "@types/react": "^17.0.34",
@@ -788,6 +798,7 @@
   "devDependencies": {
     "rimraf": "^6.0.1"
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   },
@@ -816,3 +827,6 @@
 =======
   }}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  }}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

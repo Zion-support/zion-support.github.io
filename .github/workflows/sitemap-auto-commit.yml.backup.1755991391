@@ -9,6 +9,7 @@ permissions:
   contents: write
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   actions: read
 =======
   pull-requests: write
@@ -21,6 +22,9 @@ concurrency:
 =======
   actions: read
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  actions: read
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 jobs:
   main:
     name: Main Job

@@ -38,6 +38,7 @@
   --cyberpunk-glow: 0 0 25px rgba(236, 73, 153, 0.7);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   --quantum-pulse: 0 0 40px rgba(0, 255, 255, 0.3);
   --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
   --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);
@@ -60,6 +61,11 @@
   --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
   --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  --quantum-pulse: 0 0 40px rgba(0, 255, 255, 0.3);
+  --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
+  --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 /* Base styles */
 @layer base {
@@ -260,6 +266,7 @@ body::after {
   z-index: -1;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   animation: matrixMove 30s linear infinite;
 =======
   animation: particleFloat 20s linear infinite;
@@ -268,6 +275,9 @@ body::after {
 =======
   animation: matrixMove 30s linear infinite;}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  animation: matrixMove 30s linear infinite;}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 /* Enhanced Quantum Grid Background */
 .quantum-grid {
@@ -450,8 +460,11 @@ body::after {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   33% { transform: translateY(-20px) rotate(1deg); }
   66% { transform: translateY(20px) rotate(-1deg); }
 }
@@ -768,6 +781,7 @@ body::after {
   body::before,
   body::after {
 <<<<<<< HEAD
+<<<<<<< HEAD
     display: none;
 =======
   25% { transform: translateY(-20px) rotate(1deg); }
@@ -843,6 +857,9 @@ body::after {
 =======
     display: none;  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    display: none;  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 /* High Contrast Mode Support */
@@ -866,9 +883,12 @@ body::after {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 /* Enhanced Focus States */
 .futuristic-focus:focus {
@@ -1017,6 +1037,9 @@ body::after {
   100% { transform: translate(0); }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

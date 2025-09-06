@@ -1,16 +1,18 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function LinkedInRedirect() {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.location.replace(
-        'https://www.linkedin.com/company/zion-tech-group'
-      );
-    }
-  }, []);
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
+		}
+	}, []);
 
+<<<<<<< HEAD
   return (
     <>
       <Head>
@@ -43,6 +45,8 @@ export default function LinkedInRedirect() {
 		}
 	}, []);
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<Head>
@@ -58,5 +62,9 @@ export default function LinkedInRedirect() {
 			</div>
 		</>
 	)
+<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

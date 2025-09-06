@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   addMilestone,
   getProject,
@@ -13,6 +14,10 @@ import { Milestone } from '../../../../utils/types/milestones';
 import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
+import { Milestone } from '../../../../utils/types/milestones';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -22,6 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!project) {
     res.status(404).json({ error: 'Project not found' });
 <<<<<<< HEAD
+<<<<<<< HEAD
     return;
   }
   if (!assertParticipantOrAdmin(project, user)) {
@@ -34,48 +40,58 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(403).json({ error: 'Forbidden' });
     return
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return
+  }
+  if (!assertParticipantOrAdmin(project, user)) {
+    res.status(403).json({ error: 'Forbidden' });
+    return
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (req.method === 'GET') {
     res.status(200).json({ milestones: project.milestones });
 <<<<<<< HEAD
+<<<<<<< HEAD
     return;
 =======
     return
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (req.method === 'POST') {
     if (!isClient(project, user)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       res
         .status(403)
         .json({ error: 'Only client (or admin) can add milestones' });
       return;
+=======
+      res.status(403).json({ error: 'Only client (or admin) can add milestones' });
+      return
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     const body = req.body as Partial<Milestone>;
-    if (
-      !body ||
-      !body.title ||
-      !body.dueDate ||
-      typeof body.amountUsd !== 'number'
-    ) {
-      res
-        .status(400)
-        .json({ error: 'Missing required fields: title, dueDate, amountUsd' });
-      return;
+    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {
+      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' });
+      return
     }
     const created = addMilestone(project, {
       title: body.title,
       description: body.description,
       dueDate: body.dueDate,
       amountUsd: body.amountUsd,
-      attachments: body.attachments || [],
+      attachments: body.attachments || []
     });
     res.status(201).json({ milestone: created });
-    return;
+    return
   }
 
+<<<<<<< HEAD
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 =======
@@ -99,3 +115,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(405).end('Method Not Allowed')
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

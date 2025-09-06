@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { randomUUID } from 'crypto';
 import { tokenStore } from './storage';
 import { TokenTransaction, WalletSummary } from './types';
@@ -27,87 +28,105 @@ export function earnTokens(
     reason,
     metadata,
     createdAt: new Date().toISOString(),
+=======
+export interface TokenConfig {
+  id: string;
+  name: string;
+  symbol: string;
+  decimals: number;
+  totalSupply: number;
+  maxSupply?: number;
+  description: string;
+  iconUrl?: string;
+  website?: string;
+  whitepaper?: string;
+  socials?: {
+    twitter?: string;
+    discord?: string;
+    telegram?: string;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
-  tokenStore.addTransaction(tx);
-  return tx;
+  createdAt: string;
+  updatedAt: string;
+}
 
-export function burnTokens(
-  userId: string,
-  amount: number,
-  reason: string,
-  metadata?: Record<string, any>
-): TokenTransaction {
-  if (amount <= 0) throw new Error('Amount must be positive');
-  const wallet = tokenStore.getWallet(userId);
-  if (wallet.balance < amount) throw new Error('Insufficient balance');
-  const newBalance = wallet.balance - amount;
-  tokenStore.setWalletBalance(userId, newBalance);
-  const tx: TokenTransaction = {
-    id: randomUUID(),
-    userId,
-    type: 'burn',
-    amount,
-    reason,
-    metadata,
+export interface TokenIssue {
+  id: string;
+  tokenId: string;
+  recipient: string;
+  amount: number;
+  reason: string;
+  status: 'pending' | 'approved' | 'rejected' | 'completed';
+  createdAt: string;
+  processedAt?: string;
+  adminNotes?: string;
+}
+
+// In-memory storage for development
+const tokenConfigs: TokenConfig[] = [];
+const tokenIssues: TokenIssue[] = [];
+
+export async function createTokenConfig(config: Omit<TokenConfig, 'id' | 'createdAt' | 'updatedAt'>): Promise<TokenConfig> {
+  const tokenConfig: TokenConfig = {
+    ...config,
+    id: `token-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
     createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
   };
-  tokenStore.addTransaction(tx);
-  return tx;
+  
+  tokenConfigs.push(tokenConfig);
+  return tokenConfig;
+}
 
-export function issueTokens(
-  userId: string,
-  amount: number,
-  reason: string
-): TokenTransaction {
-  const tx = earnTokens(userId, amount, reason);
-  tx.type = 'issue';
-  return tx;
+export async function getTokenConfigs(): Promise<TokenConfig[]> {
+  return [...tokenConfigs];
+}
 
-export function revokeTokens(
-  userId: string,
-  amount: number,
-  reason: string
-): TokenTransaction {
-  const tx = burnTokens(userId, amount, reason);
-  tx.type = 'revoke';
-  return tx;
+export async function getTokenConfigById(id: string): Promise<TokenConfig | null> {
+  return tokenConfigs.find(config => config.id === id) || null;
+}
 
-export function handleAction(
-  userId: string,
-  action: string,
-  metadata?: Record<string, any>
-): TokenTransaction {
-  const { earnRules } = tokenStore.getConfig();
-  const amount = earnRules[action];
-  if (!amount) throw new Error('Unknown action');
-  return earnTokens(userId, amount, action, metadata);
+export async function updateTokenConfig(id: string, updates: Partial<TokenConfig>): Promise<TokenConfig | null> {
+  const configIndex = tokenConfigs.findIndex(config => config.id === id);
+  if (configIndex === -1) return null;
+  
+  tokenConfigs[configIndex] = {
+    ...tokenConfigs[configIndex],
+    ...updates,
+    updatedAt: new Date().toISOString()
+  };
+  
+  return tokenConfigs[configIndex];
+}
 
-export function burnForFeature(
-  userId: string,
-  feature: string,
-  metadata?: Record<string, any>
-): TokenTransaction {
-  const { burnRules } = tokenStore.getConfig();
-  const amount = burnRules[feature];
-  if (!amount) throw new Error('Unknown feature');
-  return burnTokens(userId, amount, feature, metadata);
+export async function deleteTokenConfig(id: string): Promise<boolean> {
+  const configIndex = tokenConfigs.findIndex(config => config.id === id);
+  if (configIndex === -1) return false;
+  
+  tokenConfigs.splice(configIndex, 1);
+  return true;
+}
 
-export function redeemToCredits(
-  userId: string,
-  amount: number
-): { tx: TokenTransaction; usd: number } {
-  const { usdPerToken } = tokenStore.getConfig();
-  const tx = burnTokens(userId, amount, 'redeem_credits');
-  tx.type = 'redeem';
-  const usd = parseFloat((amount * usdPerToken).toFixed(2));
-  return { tx, usd };
+export async function createTokenIssue(issue: Omit<TokenIssue, 'id' | 'createdAt'>): Promise<TokenIssue> {
+  const tokenIssue: TokenIssue = {
+    ...issue,
+    id: `issue-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+    createdAt: new Date().toISOString()
+  };
+  
+  tokenIssues.push(tokenIssue);
+  return tokenIssue;
+}
 
-export function getAllTransactions() {
-  return tokenStore.getTransactions();
+export async function getTokenIssues(): Promise<TokenIssue[]> {
+  return [...tokenIssues];
+}
 
-export function getConfig() {
-  return tokenStore.getConfig();
+export async function getTokenIssueById(id: string): Promise<TokenIssue | null> {
+  return tokenIssues.find(issue => issue.id === id) || null;
+}
 
+<<<<<<< HEAD
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>
 ): void {
@@ -212,3 +231,17 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   return [...tokenBalances];
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export async function updateTokenIssue(id: string, updates: Partial<TokenIssue>): Promise<TokenIssue | null> {
+  const issueIndex = tokenIssues.findIndex(issue => issue.id === id);
+  if (issueIndex === -1) return null;
+  
+  tokenIssues[issueIndex] = {
+    ...tokenIssues[issueIndex],
+    ...updates,
+    processedAt: updates.status === 'completed' ? new Date().toISOString() : tokenIssues[issueIndex].processedAt
+  };
+  
+  return tokenIssues[issueIndex];
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

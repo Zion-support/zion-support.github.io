@@ -1,6 +1,7 @@
 const path = require('path');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const os = require('os');
 =======
 
@@ -11,6 +12,9 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
 =======
 const os = require('os');
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const os = require('os');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const nextConfig = {
   // assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
   poweredByHeader: false,
@@ -18,13 +22,17 @@ const nextConfig = {
   reactStrictMode: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   bundlePagesRouterDependencies: true,
   
   // Disable TypeScript checking during build
   typescript: {
     ignoreBuildErrors: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
 =======
@@ -81,6 +89,9 @@ const nextConfig = {
 =======
   },  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  },  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   images: {
     domains: ["localhost"],

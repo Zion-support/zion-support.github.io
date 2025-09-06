@@ -12,7 +12,8 @@ export interface UserDetails {
   companyId?: string;
   bio?: string;
   createdAt?: string;
-  updatedAt?: string;
+  updatedAt?: string
+}
 
 export interface UserProfile {
   id?: string;
@@ -28,22 +29,16 @@ export interface UserProfile {
   headline?: string;
   role?: string;
   permissions?: string[];
-  companyId?: string;
+  companyId?: string
+}
 
 // Update AuthContextType definition to match implementation
 export interface AuthContextType {
   user: UserDetails | null;
   isLoading: boolean;
   isAuthenticated: boolean;
-  login: (
-    email: string,
-    password: string
-  ) => Promise<{ data?: any; error?: any }>;
-  signup: (
-    email: string,
-    password: string,
-    userData?: any
-  ) => Promise<{ error?: any }>;
+  login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
+  signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
   logout: () => Promise<void>;
   resetPassword: (email: string) => Promise<{ error?: any }>;
   updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>;
@@ -53,8 +48,5 @@ export interface AuthContextType {
   loginWithWeb3: () => Promise<void>;
   signIn?: (email: string, password: string) => Promise<{ error: any }>;
   signOut?: () => Promise<void>;
-  signUp?: (
-    email: string,
-    password: string,
-    userData?: Partial<UserDetails>
-  ) => Promise<{ error: any }>;
+  signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
+}

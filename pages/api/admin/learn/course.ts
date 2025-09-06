@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import fs from 'fs';
 import path from 'path';
-import { NextApiRequest, NextApiResponse } from 'next';
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
 =======
@@ -18,6 +23,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('AllowPOST');
     return res.status(405).end('Method Not Allowed')
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    res.setHeader('AllowPOST');
+    return res.status(405).end('Method Not Allowed')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   try {
@@ -28,16 +37,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const existingIndex = courses.findIndex((c: any) => c.id === body.id);
     if (existingIndex >= 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       courses[existingIndex] = { ...courses[existingIndex], ...body };
+=======
+      courses[existingIndex] = { ...courses[existingIndex], ...body }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     } else {
-      courses.push(body);
+      courses.push(body)
     }
 
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2));
-    res.status(200).json({ ok: true, course: body });
+    res.status(200).json({ ok: true, course: body })
   } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to save course' });
+    res.status(500).json({ error: e?.message ?? 'Failed to save course' })
   }
+<<<<<<< HEAD
 =======
       courses[existingIndex] = { ...courses[existingIndex], ...body }
     } else {
@@ -51,3 +65,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

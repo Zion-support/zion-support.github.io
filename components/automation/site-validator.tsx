@@ -1,7 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  
+=======
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Broken = { url: string, page: string, status: number },
+interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
+type Props = { report: Report | null },
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  try {
+    const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
+    const raw = fs.readFileSync(file, 'utf8');
+    const data = JSON.parse(raw);
+    return { props: { report: data }, revalidate: 21600 }
+  } catch {
+    return { props: { report: null }, revalidate: 21600 }
+  }
 };
+<<<<<<< HEAD
 =======
 import fs from 'fs';
 import path from 'path';
@@ -20,6 +39,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return { props: { report: null }, revalidate: 21600 }
   }
 };
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function SiteValidator({ report }: Props) {
   if (!report) return <div>No validation report yet.</div>;
@@ -56,5 +77,9 @@ export default function SiteValidator({ report }: Props) {
       )}
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

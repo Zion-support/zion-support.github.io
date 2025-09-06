@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-12T01:33:39.367Z",
 =======
   "generatedAt": "2025-08-12T01:33:57.191Z",
@@ -9,6 +10,9 @@
 =======
   "generatedAt": "2025-08-12T01:33:39.367Z",  "functions": [
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "generatedAt": "2025-08-12T01:33:39.367Z",  "functions": [
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "a11y-alt-text-runner",
     "ai-changelog-runner",
     "ai-trends-radar-runner",
@@ -20,6 +24,7 @@
     "autonomous-invention-orchestrator",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "autonomous-master-orchestrator",
 =======
     "autonomous-meta-orchestrator",
@@ -28,6 +33,9 @@
 =======
     "autonomous-master-orchestrator",    "broken-image-scanner",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "autonomous-master-orchestrator",    "broken-image-scanner",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "broken-image-scanner-runner",
     "canonical-auditor",
     "cloud-brain-orchestrator",

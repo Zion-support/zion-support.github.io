@@ -1,39 +1,33 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+// Development access utilities
+export interface DevAccessConfig {
+  enabled: boolean;
+  allowedIPs: string[];
+  allowedUsers: string[];
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-export type DevRole = 'admin' | 'maintainer' | 'contributor';
-
-export interface DevIdentity {
-  isAuthenticated: boolean;
-  roles: DevRole[];
-  userId?: string;
-
-export function getGitStatus(): { connected: boolean; branch?: string } {
-  try {
-    const gitDir = path.join(process.cwd(), '.git');
-    if (!fs.existsSync(gitDir)) return { connected: false };
-    const branch = execSync('git rev-parse --abbrev-ref HEAD', {
-      stdio: ['ignore', 'pipe', 'ignore'],
-    })
-      .toString()
-      .trim();
-    return { connected: true, branch };
-  } catch {
-    return { connected: false };
+export function checkDevAccess(
+  ip: string,
+  userAgent: string,
+  config: DevAccessConfig
+): boolean {
+  if (!config.enabled) {
+    return false;
   }
 
-export function getDevIdentity(req: NextApiRequest): DevIdentity {
-  // TODO: integrate real auth; for now, check a header and env var for dev
-  const token = req.headers['x-dev-token'] || req.headers['x-admin-token'];
-  const adminToken = process.env.ADMIN_TOKEN;
-  if (token && adminToken && token === adminToken) {
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+  // Check IP whitelist
+  if (config.allowedIPs.length > 0 && !config.allowedIPs.includes(ip)) {
+    return false;
   }
-  return { isAuthenticated: false, roles: [] };
 
+<<<<<<< HEAD
 export function requireRoles(
   req: NextApiRequest,
   res: NextApiResponse,
@@ -185,3 +179,23 @@ export function getClientIp(req: any): string {
          'unknown';
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  // Check user agent for development tools
+  const isDevTools = userAgent.includes('dev') || 
+                     userAgent.includes('test') || 
+                     userAgent.includes('localhost');
+
+  return isDevTools;
+}
+
+export function getClientIP(req: any): string {
+  return (
+    req.headers['x-forwarded-for'] ||
+    req.headers['x-real-ip'] ||
+    req.connection?.remoteAddress ||
+    req.socket?.remoteAddress ||
+    req.ip ||
+    'unknown'
+  );
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

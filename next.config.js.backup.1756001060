@@ -4,12 +4,16 @@ const path = require('path');
 const nextConfig = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
 =======
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,
@@ -62,11 +66,14 @@ const nextConfig = {
     cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     // Bundle analysis optimizations moved to root level
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     // Disable profiling for faster builds
     swcTraceProfiling: false,
   },

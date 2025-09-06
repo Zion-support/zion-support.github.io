@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  const canSubmit = useMemo ( () => {
   return (talentName.trim () .length > 0 && projectName.trim () .length > 0 && scopeSummary.trim () .length > 0 && !!startDate && !!endDate && (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0) setLoading (true);
 setError (null);
@@ -26,6 +27,8 @@ body: JSON.stringify (body)
 }</div> <div> </label> </div> </div> <div> </article> </div>) 
 }</div>) 
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -110,10 +113,15 @@ export default function ContractBuilderPage() {
       const res = await fetch('/api/ai-contract', {
         method: 'POST',
         headers: {
+<<<<<<< HEAD
       
           'Content-Type': 'application/json'
     },
     body: JSON.stringify(body)}),
+=======
+          'Content-Type': 'application/json'};
+        body: JSON.stringify(body)}),
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
         throw new Error(data?.error || `Request failed: ${res.status}`)
@@ -263,5 +271,9 @@ export default function ContractBuilderPage() {
       )}
     </div>
   )
+<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

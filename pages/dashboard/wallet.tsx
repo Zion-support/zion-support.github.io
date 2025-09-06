@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import dynamic from 'next/dynamic';
@@ -8,13 +9,20 @@ const WalletPanel = dynamic(
   { ssr: false }
 );
 
+=======
+import React from "react";
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+import dynamic from "next/dynamic";
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function WalletPage() {
   return (
-    <EnhancedLayout title='Your ZION$ Wallet'>
-      <div className='max-w-2xl mx-auto'>
+    <EnhancedLayout title="Your ZION$ Wallet">
+      <div className="max-w-2xl mx-auto">
         <WalletPanel />
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   );
 =======
 import React from "react";
@@ -31,3 +39,7 @@ export default function WalletPage() {
   )
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

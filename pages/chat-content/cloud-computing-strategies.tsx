@@ -1,14 +1,18 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const CloudComputingStrategies: NextPage = () => {
   return (
     <div>
       <Head>
         <title>CloudComputingStrategies - Zion Tech Solutions</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta name='description' content='CloudComputingStrategies page' />
       </Head>
@@ -18,11 +22,17 @@ const CloudComputingStrategies: NextPage = () => {
       </Head>
       
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <meta name="description" content="CloudComputingStrategies page" />
+      </Head>
+      
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <main>
         <h1>CloudComputingStrategies</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 };
@@ -34,3 +44,9 @@ export default CloudComputingStrategies;
 
 export default CloudComputingStrategies;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
+};
+
+export default CloudComputingStrategies;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

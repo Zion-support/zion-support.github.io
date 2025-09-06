@@ -1,56 +1,23 @@
 import { IntegrationProviderMeta } from './types';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export const PROVIDERS: IntegrationProviderMeta[] = [
-  {
-    id: 'salesforce',
-    name: 'Salesforce',
-    category: 'crm',
-    description: 'Enterprise CRM',
-  },
-  {
-    id: 'hubspot',
-    name: 'HubSpot',
-    category: 'crm',
-    description: 'Marketing & Sales CRM',
-  },
-  {
-    id: 'zoho',
-    name: 'Zoho CRM',
-    category: 'crm',
-    description: 'All-in-one CRM',
-  },
-  {
-    id: 'pipedrive',
-    name: 'PipeDrive',
-    category: 'crm',
-    description: 'Sales pipeline CRM',
-  },
-  {
-    id: 'greenhouse',
-    name: 'Greenhouse',
-    category: 'ats',
-    description: 'ATS & recruiting',
-  },
+  { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
+  { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
+  { id: 'zoho', name: 'Zoho CRM', category: 'crm', description: 'All-in-one CRM' },
+  { id: 'pipedrive', name: 'PipeDrive', category: 'crm', description: 'Sales pipeline CRM' },
+  { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
-  {
-    id: 'workable',
-    name: 'Workable',
-    category: 'ats',
-    description: 'Recruiting software',
-  },
-  {
-    id: 'bamboohr',
-    name: 'BambooHR',
-    category: 'ats',
-    description: 'HRIS & ATS',
-  },
+  { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
 
-export function getProviderById(
-  id: string
-): IntegrationProviderMeta | undefined {
+export function getProviderById(id: string): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
+<<<<<<< HEAD
 =======
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
@@ -67,3 +34,6 @@ export function getProviderById(id: string): IntegrationProviderMeta | undefined
   return PROVIDERS.find(p => p.id === id);
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

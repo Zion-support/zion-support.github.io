@@ -1,14 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { Octokit } from '@octokit/rest';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
 =======
@@ -22,6 +25,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   try {
@@ -43,6 +50,7 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
 `;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const issue = await octokit.issues.create({
       owner,
       repo,
@@ -53,6 +61,9 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
 =======
     const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     // trigger workflow dispatch
     try {
@@ -62,7 +73,7 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
 <<<<<<< HEAD
         workflow_id: 'autoheal.yml',
         ref: 'dev',
-        inputs: { issue_number: String(issue.data.number) },
+        inputs: { issue_number: String(issue.data.number) }
       } as any);
 =======
         workflow_id: 'autoheal.yml', ref: 'dev',
@@ -73,11 +84,16 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(200).json({ ok: true, issue: issue.data.number });
+=======
+    return res.status(200).json({ ok: true, issue: issue.data.number })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   } catch (e) {
     console.error(e);
-    return res.status(500).json({ error: 'Failed to process webhook' });
+    return res.status(500).json({ error: 'Failed to process webhook' })
   }
+<<<<<<< HEAD
 =======
     return res.status(200).json({ ok: true, issue: issue.data.number })
   } catch (e) {
@@ -86,3 +102,6 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

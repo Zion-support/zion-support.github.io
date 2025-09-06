@@ -4,6 +4,7 @@ import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
 
 interface ReportingData {
 <<<<<<< HEAD
+<<<<<<< HEAD
   byTenant: Record<
     string,
     {
@@ -21,6 +22,15 @@ interface ReportingData {
   }>
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  byTenant: Record<string, {
+    funnel: { stage: string, count: number }[];
+    timeToHireDays: number;
+    costPerHireUsd?: number;
+    updatedAt: string
+  }>
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} };
@@ -34,6 +44,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'GET') {
     const data = readJsonFile<ReportingData>(FILE, FALLBACK);
 <<<<<<< HEAD
+<<<<<<< HEAD
     const entry = data.byTenant[tenantId] || {
       funnel: [],
       timeToHireDays: 0,
@@ -44,10 +55,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const entry = data.byTenant[tenantId] || { funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() };
     return res.status(200).json(entry)
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    const entry = data.byTenant[tenantId] || { funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() };
+    return res.status(200).json(entry)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
+<<<<<<< HEAD
 <<<<<<< HEAD
     const updated = updateJsonFile<ReportingData>(
       FILE,
@@ -88,3 +104,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(405).json({ error: 'Method not allowed' });
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
+      const next = curr.byTenant || {};
+      next[tenantId] = {
+        funnel: funnel || next[tenantId]?.funnel || [];
+        timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays || 0);
+        costPerHireUsd: typeof costPerHireUsd === 'number' ? costPerHireUsd : next[tenantId]?.costPerHireUsd;
+        updatedAt: new Date().toISOString()};
+      return { byTenant: next }
+    }, FALLBACK);
+    return res.status(200).json(updated.byTenant[tenantId])
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -962,8 +962,11 @@ h3 {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   
   .text-gradient-cyan,
   .text-gradient-purple,
@@ -1017,6 +1020,7 @@ h3 {
   body::after {
     display: none;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -1398,3 +1402,6 @@ h3 {
 =======
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

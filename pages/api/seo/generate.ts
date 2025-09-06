@@ -1,14 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
 =======
@@ -19,6 +20,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
   const { prompt, region, service } = req.body || {};
   if (!prompt) return res.status(400).json({ error: 'Missing prompt' });
@@ -41,9 +46,9 @@ Tone: professional, modern, trustworthy`;
       messages: [
 <<<<<<< HEAD
         { role: 'system', content: system },
-        { role: 'user', content: user },
+        { role: 'user', content: user }
       ],
-      temperature: 0.7,
+      temperature: 0.7
     });
 =======
         { role: 'system', content: system };
@@ -60,6 +65,7 @@ Tone: professional, modern, trustworthy`;
       model: 'gpt-4o-mini',
       messages: [
 <<<<<<< HEAD
+<<<<<<< HEAD
         {
           role: 'system',
           content:
@@ -69,22 +75,23 @@ Tone: professional, modern, trustworthy`;
           role: 'user',
           content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}`,
         },
+=======
+        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
+        { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       ],
-      temperature: 0.5,
+      temperature: 0.5
     });
 
-    let faq: Array<{ q: string; a: string }> = [];
+    let faq: Array<{ q: string, a: string }> = [];
     try {
-      faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]');
+      faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]')
     } catch {
-      faq = [];
+      faq = []
     }
 
     const h1 = prompt;
-    const slug = String(prompt)
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
+    const slug = String(prompt).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
     return res.status(200).json({
       slug,
@@ -94,13 +101,14 @@ Tone: professional, modern, trustworthy`;
         bodyHtml: content,
         region: region || undefined,
         service: service || undefined,
-        faq,
-      },
+        faq
+      }
     });
   } catch (e) {
     console.error(e);
-    return res.status(500).json({ error: 'Failed to generate landing page' });
+    return res.status(500).json({ error: 'Failed to generate landing page' })
   }
+<<<<<<< HEAD
 =======
         { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' };
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }];
@@ -131,3 +139,6 @@ Tone: professional, modern, trustworthy`;
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

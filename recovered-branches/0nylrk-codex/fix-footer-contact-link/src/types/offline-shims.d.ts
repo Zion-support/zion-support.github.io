@@ -4,9 +4,7 @@ declare module 'react' {
   // Basic overloads for useRef to handle common cases
   export function useRef<T>(initialValue: T): { current: T };
   export function useRef<T>(initialValue: T | null): { current: T | null };
-  export function useRef<T = undefined>(
-    initialValue?: T
-  ): { current: T | undefined };
+  export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S);
@@ -45,12 +43,15 @@ declare module 'react' {
   export type Ref<T = any> = any;
   export type LegacyRef<T = any> = any;
   export type ElementRef<T = any> = any;
-  export type CSSProperties = Record<string, string | number | undefined>;
+  export type CSSProperties = Record<string, string | number | undefined>
+}
 
 declare module 'react-dom' {
-  export * from 'react-dom/index';
+  export * from 'react-dom/index'
+}
 
 declare module 'react/jsx-runtime' {
   export const jsx: any;
   export const jsxs: any;
-  export const Fragment: any;
+  export const Fragment: any
+}

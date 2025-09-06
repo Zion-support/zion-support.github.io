@@ -4,6 +4,7 @@ import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Job } from '../../utils/types';
 import { rateLimit } from '../../utils/rateLimit';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const FILE = 'jobs.json';
 
@@ -16,16 +17,25 @@ const FILE = 'jobs.json';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const FILE = 'jobs.json';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   if (!rateLimit(req, res)) return;
 
   if (req.method === 'GET') {
     const jobs = readJsonFile<Job[]>(FILE, []);
     res.status(200).json({ jobs });
 <<<<<<< HEAD
+<<<<<<< HEAD
     return;
 =======
     return
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (req.method === 'POST') {
@@ -38,11 +48,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       budgetMaxUsd,
       deliveryDeadlineIso,
 <<<<<<< HEAD
+<<<<<<< HEAD
       clientEmail,
+=======
+      clientEmail
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     } = req.body || {};
 
     if (!title || !description || !clientEmail) {
       res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
       return;
 =======
       clientEmail} = req.body || {};
@@ -51,6 +66,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.status(400).json({ error: 'Missing required fields' });
       return
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      return
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const nowIso = new Date().toISOString();
@@ -61,22 +79,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       title: String(title),
       description: String(description),
       category: String(category || ''),
-      requiredSkills: Array.isArray(requiredSkills)
-        ? requiredSkills.map(String)
-        : [],
+      requiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : [],
       budgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined,
       budgetMaxUsd: typeof budgetMaxUsd === 'number' ? budgetMaxUsd : undefined,
-      deliveryDeadlineIso: deliveryDeadlineIso
-        ? String(deliveryDeadlineIso)
-        : undefined,
+      deliveryDeadlineIso: deliveryDeadlineIso ? String(deliveryDeadlineIso) : undefined,
       clientEmail: String(clientEmail),
       status: 'New',
       createdAtIso: nowIso,
-      updatedAtIso: nowIso,
+      updatedAtIso: nowIso
     };
 
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
     if (!job.category) {
+<<<<<<< HEAD
       const skills = (job.requiredSkills || []).map(s => s.toLowerCase());
       if (
         skills.some(
@@ -106,11 +121,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
     if (!job.category) {
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       const skills = (job.requiredSkills || []).map((s) => s.toLowerCase());
       if (skills.some((s) => s.includes('openai') || s.includes('langchain') || s.includes('rag'))) job.category = 'LLM App';
       else if (skills.some((s) => s.includes('aws') || s.includes('kubernetes') || s.includes('terraform'))) job.category = 'Cloud';
       else job.category = 'General'
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const jobs = readJsonFile<Job[]>(FILE, []);
@@ -118,6 +138,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     writeJsonFile<Job[]>(FILE, jobs);
 
     res.status(201).json({ job });
+<<<<<<< HEAD
 <<<<<<< HEAD
     return;
   }
@@ -132,3 +153,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(405).end('Method Not Allowed')
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return
+  }
+
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

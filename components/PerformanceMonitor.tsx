@@ -22,6 +22,7 @@ interface PerformanceMonitorProps {
 // Extend the Window interface to include performance
 declare global {
   interface Window {
+<<<<<<< HEAD
 
     performance: Performance,
   }
@@ -44,6 +45,10 @@ declare global {
     loadEventStart: number, loadEventEnd: number,
     fetchStart: number,
   }
+=======
+    performance: Performance,
+  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 // Define Performance types if not available
@@ -72,6 +77,7 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
     // Only run on client side
+<<<<<<< HEAD
 
     if (typeof window === 'undefined' || typeof window.performance === 'undefined') return;
 
@@ -80,6 +86,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
       const paintEntries = window.performance.getEntriesByType('paint');
 
+=======
+    if (typeof window === 'undefined' || typeof window.performance === 'undefined') return,
+    const measurePerformance = () => {
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming, const paint = window.performance.getEntriesByType('paint');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       
       const performanceData = {
         // Navigation timing
@@ -87,6 +98,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
         totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
         // Paint timing
+<<<<<<< HEAD
 
         firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
         firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
@@ -101,6 +113,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
           total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
           limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
 
+=======
+        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        // Resource timing
+        resourceCount: window.performance.getEntriesByType('resource').length,
+        // Memory usage (if available)
+        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as unknown as { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
+          total: (window.performance as unknown as { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
+          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         } : null
       },
       if (onPerformanceData) {

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -13,6 +14,8 @@ const { execSync } = require('child_process')
   console.log(' Deployment report "generated")
   console.error(' Deployment automation "failed")
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -131,4 +134,7 @@ function deployApplication() {
 
 // Run deployment automation
 deployApplication();
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

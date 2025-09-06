@@ -3,8 +3,11 @@ Allow: /
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -27,6 +30,7 @@ Allow: /docs
 Allow: /community
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Crawl delay
 =======
 # Sitemaps
@@ -39,3 +43,6 @@ Crawl-delay: 1
 =======
 # Crawl delayCrawl-delay: 1
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+# Crawl delayCrawl-delay: 1
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

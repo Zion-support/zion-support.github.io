@@ -1,19 +1,25 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import fs from 'fs';
+import path from 'path';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import PDFDocument from 'pdfkit';
+const usersPath = path.join(process.cwd(), 'datalearnusers.json');
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
 
-const doc = new PDFDocument ({
-  size: 'A4', margin: 50 
-});
-// Zion certificate template (simple) doc.rect (0, 0, doc.page.width, doc.page.height) .fill ('#0f172a');
-doc.fill ('#ffffff');
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, 'utf-8'))
+}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
-    res.setHeader('Allow', 'GET');
-    return res.status(405).end('Method Not Allowed');
+    res.setHeader('AllowGET');
+    return res.status(405).end('Method Not Allowed')
   }
 
+<<<<<<< HEAD
   const { courseId, userId = 'demo-user' } = req.query as {
     courseId: string;
     userId?: string;
@@ -37,6 +43,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string };
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   try {
     const users = readJson(usersPath);
@@ -47,6 +56,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!user) return res.status(404).json({ error: 'User not found' });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader(
       'Content-Disposition',
@@ -56,6 +66,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Content-Typeapplication/pdf');
     res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`);
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    res.setHeader('Content-Typeapplication/pdf');
+    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
     // Pipe to response
@@ -67,12 +81,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.fill('#ffffff');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     doc
       .fontSize(28)
       .text('Zion AI Marketplace', { align: 'center', underline: false });
 =======
     doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     doc.moveDown(0.5);
     doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
     doc.moveDown(1.5);
@@ -86,24 +104,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.fontSize(20).text(course.title, { align: 'center' });
     doc.moveDown(0.5);
 <<<<<<< HEAD
+<<<<<<< HEAD
     doc
       .fontSize(12)
       .text(`Badge: ${course.certificationBadge}`, { align: 'center' });
 =======
     doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const date = new Date().toLocaleDateString();
     doc.moveDown(2);
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     doc.end();
+=======
+    doc.end()
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   } catch (e: any) {
-    res
-      .status(500)
-      .json({ error: e?.message ?? 'Failed to generate certificate' });
+    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
   }
+<<<<<<< HEAD
 =======
     doc.end()
   } catch (e: any) {
@@ -111,3 +136,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

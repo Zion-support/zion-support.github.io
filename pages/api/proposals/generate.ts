@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from 'openai';
 import { createProposal } from '../../../utils/data/proposals';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`;
 
@@ -17,6 +18,12 @@ const SYSTEM_PROMPT = `You are a policy and development proposal writer for glob
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`;
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   try {
     const {
@@ -27,6 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       supportingMultiverses = [],
       title = 'Zion DAO Proposal',
       promptAssist,
+<<<<<<< HEAD
 <<<<<<< HEAD
       language = 'en',
     } = req.body || {};
@@ -41,6 +49,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const userPrompt = promptAssist ||
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      language = 'en'
+    } = req.body || {};
+
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    const userPrompt = promptAssist ||
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
 
     const completion = await openai.chat.completions.create({
@@ -48,13 +63,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
 <<<<<<< HEAD
+<<<<<<< HEAD
         { role: 'user', content: userPrompt },
+=======
+        { role: 'user', content: userPrompt }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       ],
-      temperature: 0.3,
+      temperature: 0.3
     });
 
-    const contentMarkdown =
-      completion.choices?.[0]?.message?.content || '# Proposal Draft\n\nTBD';
+    const contentMarkdown = completion.choices?.[0]?.message?.content || '# Proposal Draft\n\nTBD';
 
     const meta = createProposal({
       title,
@@ -64,15 +82,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       budgetOrResolution,
       supportingMultiverses,
       contentMarkdown,
-      language,
+      language
     });
 
     return res.status(200).json({ meta, markdown: contentMarkdown });
   } catch (error: any) {
-    return res
-      .status(500)
-      .json({ error: error?.message || 'Failed to generate proposal' });
+    return res.status(500).json({ error: error?.message || 'Failed to generate proposal' });
   }
+<<<<<<< HEAD
 =======
         { role: 'user', content: userPrompt }
       ],
@@ -97,3 +114,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

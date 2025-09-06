@@ -1,4 +1,5 @@
-export type ProjectStatus =
+
+export type ProjectStatus = 
   | 'offer_sent'
   | 'offer_accepted'
   | 'changes_requested'
@@ -20,17 +21,18 @@ export interface Project {
   updated_at: string;
   job?: {
     title: string;
-    description: string;
+    description: string
   };
   talent_profile?: {
     full_name: string;
     professional_title?: string;
-    profile_picture_url?: string;
+    profile_picture_url?: string
   };
   client_profile?: {
     display_name: string;
-    avatar_url?: string;
-  };
+    avatar_url?: string
+  }
+}
 
 export interface ProjectNote {
   id: string;
@@ -40,5 +42,6 @@ export interface ProjectNote {
   created_at: string;
   created_by_profile?: {
     display_name: string;
-    avatar_url?: string;
-  };
+    avatar_url?: string
+  }
+}

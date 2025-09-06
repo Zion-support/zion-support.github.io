@@ -1,7 +1,11 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
+=======
+Sitemap: https://ziontechgroup.com/sitemap.xml
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -24,6 +24,7 @@ export const TALENT_PROFILES = [
     reviewsCount: 0,
     createdAt: new Date().toISOString(),
     originalLanguage: 'en',
+<<<<<<< HEAD
     translations: {},
   },
 ];
@@ -43,3 +44,8 @@ export const TALENT_PROFILES = [
   }
 ];
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    translations: {}
+  }
+];
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

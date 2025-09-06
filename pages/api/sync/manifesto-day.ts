@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   readState,
@@ -16,12 +17,23 @@ export default async function handler(
 ) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+import { signPayload } from "../../../utils/sync/signature";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import { nextVersionFor } from "../../../utils/sync/versioning";
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const state = readState();
   if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: 'Sync disabled for this instance' });
+    return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 
+<<<<<<< HEAD
   const { milestoneId, title, timestamp } = req.body as {
     milestoneId: string;
     title: string;
@@ -47,10 +59,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
+  if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const version = nextVersionFor(state, milestoneId);
   const event = {
     eventId: uuidv4(),
+<<<<<<< HEAD
 <<<<<<< HEAD
     type: 'leaderboard_entry' as const, // reuse as a generic announcement carrier with category
     payload: {
@@ -61,9 +78,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       period: undefined,
       rank: undefined,
     },
+=======
+    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
+    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     originInstanceId: state.config.instanceId,
     version,
-    timestamp: timestamp || Date.now(),
+    timestamp: timestamp || Date.now()
   };
 =======
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
@@ -79,19 +100,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (sig) headers['x-zion-signature'] = sig;
+=======
+  if (sig) headers["x-zion-signature"] = sig;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   await Promise.all(
     state.config.peers
-      .filter(p => !p.paused)
-      .map(async peer => {
-        const url = new URL('/api/sync/publish', peer.baseUrl).toString();
-        try {
-          await axios.post(url, body, { headers, timeout: 5000 });
-        } catch {}
+      .filter((p) => !p.paused)
+      .map(async (peer) => {
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+        try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {}
       })
   );
 
+<<<<<<< HEAD
   return res
     .status(200)
     .json({ status: 'created', version, eventId: event.eventId });
@@ -110,3 +134,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

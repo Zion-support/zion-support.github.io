@@ -1,41 +1,49 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   findProjectById,
   hasExistingReview,
   upsertReview,
   counterpartRole,;
 } from '../../../utils/dataStore';
+=======
+import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import type { Review } from '../../../types/reviews';
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
-    const { projectId, fromRole, fromId, rating, text, categories, anonymous } =
-      req.body as {
-        projectId: string;
-        fromRole: 'client' | 'talent';
-        fromId: string;
-        rating: number;
-        text: string;
-        categories?: Review['categories'];
-        anonymous?: boolean;
-      };
+    const {
+      projectId,
+      fromRole,
+      fromId,
+      rating,
+      text,
+      categories,
+      anonymous
+    } = req.body as {
+      projectId: string;
+      fromRole: 'client' | 'talent';
+      fromId: string;
+      rating: number;
+      text: string;
+      categories?: Review['categories'];
+      anonymous?: boolean
+    };
 
     if (!projectId || !fromRole || !fromId) {
-      return res.status(400).json({ error: 'Missing required fields' });
+      return res.status(400).json({ error: 'Missing required fields' })
     }
     if (!rating || rating < 1 || rating > 5) {
-      return res.status(400).json({ error: 'Rating must be between 1 and 5' });
+      return res.status(400).json({ error: 'Rating must be between 1 and 5' })
     }
     if (!text || String(text).trim().length === 0) {
+<<<<<<< HEAD
       return res.status(400).json({ error: 'Review text is required' });
 =======
 import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore';
@@ -69,10 +77,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!text || String(text).trim().length === 0) {
       return res.status(400).json({ error: 'Review text is required' })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      return res.status(400).json({ error: 'Review text is required' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const project = await findProjectById(projectId);
     if (!project) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return res.status(404).json({ error: 'Project not found' });
     }
@@ -86,11 +98,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (project.status !== 'Completed') {
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      return res.status(404).json({ error: 'Project not found' })
+    }
+    if (project.status !== 'Completed') {
+      return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const toRole = counterpartRole(fromRole);
     const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const expectedFromId =
       fromRole === 'client' ? project.clientId : project.talentSlug;
@@ -103,10 +122,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (expectedFromId !== fromId) {
       return res.status(403).json({ error: 'Invalid reviewer for this project' })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
+    if (expectedFromId !== fromId) {
+      return res.status(403).json({ error: 'Invalid reviewer for this project' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return res.status(409).json({
         error: 'You have already submitted a review for this project',
@@ -114,6 +139,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      return res.status(409).json({ error: 'You have already submitted a review for this project' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const now = new Date().toISOString();
@@ -133,19 +161,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       reported: false,
       reports: [],
       removed: false,
-      createdAt: now,
+      createdAt: now
     };
 
     await upsertReview(review);
 
-    return res
-      .status(201)
-      .json({ message: 'Review submitted', reviewId: review.id });
+    return res.status(201).json({ message: 'Review submitted', reviewId: review.id });
   } catch (error: any) {
-    return res
-      .status(500)
-      .json({ error: 'Internal server error', details: error?.message });
+    return res.status(500).json({ error: 'Internal server error', details: error?.message })
   }
+<<<<<<< HEAD
 =======
       id: uuidv4(), projectId,
       fromRole;
@@ -168,3 +193,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

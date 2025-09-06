@@ -51,10 +51,14 @@ resolve_conflicts() {
     
     # Check if file has merge conflicts
 <<<<<<< HEAD
+<<<<<<< HEAD
     if grep -q "<<<<<<< HEAD" "$file"; then
 =======
     if grep -q "" "$file"; then
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    if grep -q "" "$file"; then
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         echo "⚠️  Found conflicts in $file, resolving..."
         
         # Create backup
@@ -64,14 +68,19 @@ resolve_conflicts() {
         if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
             echo "📦 Critical file detected, keeping main version..."
 <<<<<<< HEAD
+<<<<<<< HEAD
             sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
             sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
+=======
+            sed -i '//,//d' "$file"
+            sed -i '/        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        else
+            sed -i '//,//d' "$file"
+            sed -i '/        else
             echo "📝 Regular file, attempting to merge both versions..."
+<<<<<<< HEAD
             sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
             sed -i '/>>>>>>> /d' "$file"
         fi
@@ -85,6 +94,10 @@ resolve_conflicts() {
             sed -i '//,//d' "$file"
             sed -i '/        fi
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+            sed -i '//,//d' "$file"
+            sed -i '/        fi
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         
         echo "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))

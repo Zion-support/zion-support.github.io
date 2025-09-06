@@ -1,15 +1,21 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-09-05T01:58:30.248Z",
   "results": [
+=======
+  "timestamp": "2025-09-06T04:51:19.307Z",
+  "tests": [
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
-      "name": "Unit Tests",
+      "name": "Build Test",
       "status": "failed",
-      "error": "Command failed: npm run test:unit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"test:unit\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-05T01_58_20_100Z-debug-0.log\n"
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./pages/api/admin/analytics/summary.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import fs from 'fs',\n  3 | import path from 'path',\n  4 | import { ensureAdminFromApi } from '../../../../utils/auth',\n\n./pages/api/admin/kyc-queue.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import type { KycProfile } from '../../../utils/kyc',\n  3 | import fs from 'fs',\n  4 | import path from 'path',\n\n./pages/api/admin/learn/course.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import fs from 'fs',\n  3 | import path from 'path',\n  4 | const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),\n\n./pages/api/admin/moderation/flags/[id].ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',\n  3 | import { getFlagById } from '../../../../../utils/moderationDb',\n  4 | export default async function handler(req: NextApiRequest, res: NextApiResponse) {\n\n./pages/api/admin/moderation/flags/[id]/action.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth',\n  3 | import { updateFlagStatus } from '../../../../../../utils/moderationDb',\n  4 | import type { ModerationStatus } from '../../../../../../types/moderation',\n\n\n> Build failed because of webpack errors\n"
     },
     {
-      "name": "Integration Tests",
+      "name": "Lint Test",
       "status": "failed",
+<<<<<<< HEAD
       "error": "Command failed: npm run test:integration\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"test:integration\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-05T01_58_20_199Z-debug-0.log\n"
     },
     {
@@ -39,12 +45,16 @@
       "status": "failed",
       "error": "Command failed: npm run lint:check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "error": "Command failed: npm run lint:check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "name": "Type Check",
       "status": "failed",
       "error": "spawnSync /bin/sh ENOBUFS"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   ],
   "summary": {
@@ -55,4 +65,7 @@
 =======
   ]
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  ]
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }

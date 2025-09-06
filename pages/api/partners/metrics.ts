@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
@@ -20,6 +21,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const code = (req.query.code as string)?.toLowerCase();
+  if (!code) return res.status(400).json({ error: 'Missing code' });
+
+  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   try {
     if (usingPlaceholder) {
@@ -31,6 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         total_job_creations: 5,
         conversion_rate: 7 / 12,
         payout_amount: 210,
+<<<<<<< HEAD
         currency: 'USD',
       });
 =======
@@ -39,10 +48,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         conversion_rate: 7 / 12, payout_amount: 210,
         currency: 'USD'})
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        currency: 'USD'
+      })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const supabase = getServerSupabase();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const events = [
       'visit',
@@ -61,16 +75,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     for (const ev of events) {
       const { count, error } = await supabase
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    const events = ['visitsignupprofile_completedjob_createdhire'] as const;
+    const counts: Record<string, number> = {};
+
+    for (const ev of events) {
+      const { count, error } = await supabase
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         .from('referral_events')
         .select('*', { count: 'exact', head: true })
         .eq('partner_code', code)
         .eq('event', ev);
       if (error) return res.status(500).json({ error: error.message });
 <<<<<<< HEAD
+<<<<<<< HEAD
       counts[ev] = count || 0;
 =======
       counts[ev] = count || 0
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      counts[ev] = count || 0
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const total_signups = counts['signup'] || 0;
@@ -79,11 +104,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const total_job_creations = counts['job_created'] || 0;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const payout_amount =
       total_profile_completions * 30 + total_job_creations * 50;
 =======
     const payout_amount = total_profile_completions * 30 + total_job_creations * 50;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    const payout_amount = total_profile_completions * 30 + total_job_creations * 50;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     return res.status(200).json({
       total_signups,
@@ -91,15 +120,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       total_profile_completions,
       total_job_creations,
 <<<<<<< HEAD
+<<<<<<< HEAD
       conversion_rate: total_signups
         ? total_profile_completions / total_signups
         : 0,
+=======
+      conversion_rate: total_signups ? total_profile_completions / total_signups : 0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       payout_amount,
-      currency: 'USD',
-    });
+      currency: 'USD'
+    })
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
+    return res.status(500).json({ error: e?.message })
   }
+<<<<<<< HEAD
 =======
       conversion_rate: total_signups ? total_profile_completions / total_signups : 0, payout_amount,
       currency: 'USD'})
@@ -108,3 +142,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

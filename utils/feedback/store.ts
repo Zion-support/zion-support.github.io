@@ -1,25 +1,36 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
 export type FeedbackRecord = {
+=======
+// Feedback store utilities
+export interface FeedbackRecord {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   id: string;
   createdAtIso: string;
-  user: { id?: string; role?: string; talentSlug?: string };
+  user?: {
+    id?: string;
+    role?: string;
+    talentSlug?: string;
+  };
   rating: number;
   comment?: string;
-  kind: 'general' | 'bug' | 'feature';
-  context?: { actionType?: string; metadata?: any };
-};
+  kind: 'bug' | 'feature' | 'general';
+  context?: string;
+}
 
-const DATA_DIR = path.join(process.cwd(), 'data', 'runtime');
-const DB_PATH = path.join(DATA_DIR, 'feedback.json');
+// In-memory storage for development
+const feedbackRecords: FeedbackRecord[] = [];
 
-function ensureDataFile(): void {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  if (!fs.existsSync(DB_PATH))
-    fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), 'utf-8');
+export class FeedbackStore {
+  async save(record: FeedbackRecord): Promise<FeedbackRecord> {
+    feedbackRecords.push(record);
+    return record;
+  }
 
+<<<<<<< HEAD
 export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   ensureDataFile();
   const raw = fs.readFileSync(DB_PATH, 'utf-8');
@@ -232,3 +243,53 @@ export function generateFeedbackId(): string {
   return `feedback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  async getAll(): Promise<FeedbackRecord[]> {
+    return [...feedbackRecords];
+  }
+
+  async getById(id: string): Promise<FeedbackRecord | null> {
+    return feedbackRecords.find(r => r.id === id) || null;
+  }
+
+  async getByKind(kind: string): Promise<FeedbackRecord[]> {
+    return feedbackRecords.filter(r => r.kind === kind);
+  }
+
+  async getByRating(minRating: number): Promise<FeedbackRecord[]> {
+    return feedbackRecords.filter(r => r.rating >= minRating);
+  }
+
+  async getStats(): Promise<{
+    total: number;
+    byKind: Record<string, number>;
+    byRating: Record<number, number>;
+    averageRating: number;
+  }> {
+    const total = feedbackRecords.length;
+    const byKind = feedbackRecords.reduce((acc, r) => {
+      acc[r.kind] = (acc[r.kind] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+    
+    const byRating = feedbackRecords.reduce((acc, r) => {
+      acc[r.rating] = (acc[r.rating] || 0) + 1;
+      return acc;
+    }, {} as Record<number, number>);
+    
+    const averageRating = total > 0 
+      ? feedbackRecords.reduce((sum, r) => sum + r.rating, 0) / total 
+      : 0;
+
+    return {
+      total,
+      byKind,
+      byRating,
+      averageRating
+    };
+  }
+}
+
+// Default instance
+export const feedbackStore = new FeedbackStore();
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

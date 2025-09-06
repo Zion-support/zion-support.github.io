@@ -207,6 +207,7 @@
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "cloud:auto:once": "node automation/cloud-autonomous-orchestrator.cjs",
     "cloud:auto": "node automation/cloud-autonomous-orchestrator.cjs"
 =======
@@ -221,6 +222,10 @@
     "cloud:auto:once": "node automation/cloud-autonomous-orchestrator.cjs",
     "cloud:auto": "node automation/cloud-autonomous-orchestrator.cjs"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "cloud:auto:once": "node automation/cloud-autonomous-orchestrator.cjs",
+    "cloud:auto": "node automation/cloud-autonomous-orchestrator.cjs"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -258,6 +263,7 @@
     "react": "^17.0.2",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "react-chartjs-2": "^3.3.0",
     "chart.js": "^3.9.1",
     "html-to-image": "^1.11.11",
@@ -270,6 +276,11 @@
     "chart.js": "^3.9.1",
     "html-to-image": "^1.11.11",    "react-datepicker": "^8.4.0",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "react-chartjs-2": "^3.3.0",
+    "chart.js": "^3.9.1",
+    "html-to-image": "^1.11.11",    "react-datepicker": "^8.4.0",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "react-dom": "^17.0.2",
     "uuid": "^11.1.0"
   },
@@ -289,9 +300,12 @@
   },
   "type": "module"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",

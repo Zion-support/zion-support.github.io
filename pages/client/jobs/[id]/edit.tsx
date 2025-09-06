@@ -3,11 +3,15 @@ import useSWR from 'swr';
 import { useEffect, useState } from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 
 =======
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const fetcher = (url: string) => fetch(url).then((r) => r.json()),
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function EditJobPage() {
   const router = useRouter();
   const { id } = router.query;
@@ -23,10 +27,14 @@ export default function EditJobPage() {
       setTitle(job.title || '');
       setDescription(job.description || '');
 <<<<<<< HEAD
+<<<<<<< HEAD
       setCategory(job.category || '');
 =======
       setCategory(job.category || '')
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      setCategory(job.category || '')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }, [job]);
 
@@ -35,6 +43,7 @@ export default function EditJobPage() {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
 <<<<<<< HEAD
+<<<<<<< HEAD
       body: JSON.stringify({ title, description, category }),
     });
     router.push('/client/dashboard');
@@ -42,48 +51,40 @@ export default function EditJobPage() {
       body: JSON.stringify({ title, description, category })});
     router.push('/client/dashboard')
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      body: JSON.stringify({ title, description, category })});
+    router.push('/client/dashboard')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (!job) return <div>Loading…</div>;
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className='max-w-2xl mx-auto space-y-4'>
       <h1 className='text-2xl font-semibold'>Edit Job</h1>
+=======
+    <div className="max-w-2xl mx-auto space-y-4">
+      <h1 className="text-2xl font-semibold">Edit Job</h1>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <div>
-        <label className='block text-sm font-medium'>Title</label>
-        <input
-          className='mt-1 w-full border rounded p-2'
-          value={title}
-          onChange={e => setTitle(e.target.value)}
-        />
+        <label className="block text-sm font-medium">Title</label>
+        <input className="mt-1 w-full border rounded p-2" value={title} onChange={(e) => setTitle(e.target.value)} />
       </div>
       <div>
-        <label className='block text-sm font-medium'>Description</label>
-        <textarea
-          className='mt-1 w-full border rounded p-2'
-          rows={6}
-          value={description}
-          onChange={e => setDescription(e.target.value)}
-        />
+        <label className="block text-sm font-medium">Description</label>
+        <textarea className="mt-1 w-full border rounded p-2" rows={6} value={description} onChange={(e) => setDescription(e.target.value)} />
       </div>
       <div>
-        <label className='block text-sm font-medium'>Category</label>
-        <input
-          className='mt-1 w-full border rounded p-2'
-          value={category}
-          onChange={e => setCategory(e.target.value)}
-        />
+        <label className="block text-sm font-medium">Category</label>
+        <input className="mt-1 w-full border rounded p-2" value={category} onChange={(e) => setCategory(e.target.value)} />
       </div>
-      <div className='pt-2'>
-        <button
-          className='px-4 py-2 rounded bg-black text-white'
-          onClick={save}
-        >
-          Save
-        </button>
+      <div className="pt-2">
+        <button className="px-4 py-2 rounded bg-black text-white" onClick={save}>Save</button>
       </div>
     </div>
+<<<<<<< HEAD
   );
 =======
     <div className="max-w-2xl mx-auto space-y-4">
@@ -107,3 +108,7 @@ export default function EditJobPage() {
   )
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

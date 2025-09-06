@@ -15,16 +15,20 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <h1>Pre-Build Health Check Report</h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p>Generated 8/19/2025, 5:38:03 PM</p>
 =======
 <p>Generated 8/19/2025, 5:47:07 PM</p>
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
 <div class="build-status build-success">✅ BUILD READY</div>
+=======
+<p>Generated 8/19/2025, 5:38:03 PM</p><div class="build-status build-success">✅ BUILD READY</div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 <div class="card">
 <h2>Summary</h2>
 <p><strong>Total Checks:</strong> 6</p>
-<<<<<<< HEAD
 <p><strong>Passed:</strong> 6</p>
+<<<<<<< HEAD
 <p><strong>Failed:</strong> 0</p>
 =======
 <p><strong>Passed:</strong> 5</p>
@@ -39,6 +43,9 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <p><strong>Passed:</strong> 6</p>
 <p><strong>Failed:</strong> 0</p><p><strong>Critical Failures:</strong> 0</p>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+<p><strong>Failed:</strong> 0</p><p><strong>Critical Failures:</strong> 0</p>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 </div>
 <div class="card">
 <h2>Check Results</h2>
@@ -57,6 +64,7 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <div style="margin:8px 0;padding:8px;border-radius:8px;background:rgba(255,255,255,.03)">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <strong>✅ Environment Variables</strong>
 <span class="status pass">PASS</span>
 =======
@@ -69,6 +77,10 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <strong>✅ Environment Variables</strong>
 <span class="status pass">PASS</span></div>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+<strong>✅ Environment Variables</strong>
+<span class="status pass">PASS</span></div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 <div style="margin:8px 0;padding:8px;border-radius:8px;background:rgba(255,255,255,.03)">
 <strong>✅ File Permissions</strong>
 <span class="status pass">PASS</span>
@@ -79,9 +91,12 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 </div>
 <div class="card">
 <h2>Recommendations</h2>
@@ -89,7 +104,10 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <li>Verify all required environment variables are set</li>
 </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 </div>

@@ -668,8 +668,11 @@
     "git:cron:status": "bash automation/git-sync-cron.sh status",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "homepage:update": "node automation/homepage-updater.cjs",
     "front:futurize": "node automation/front-futurizer.cjs",
     "front:futurize:cron": "node -e \"const cp=require('child_process'); setInterval(()=>cp.exec('node automation/front-futurizer.cjs',()=>{}), 1000*60*60*6)\"",
@@ -757,6 +760,7 @@
     "master:health": "node automation/master-automation-launcher.cjs health",
     "master:status": "node automation/master-automation-launcher.cjs status",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "master:report": "node automation/master-automation-launcher.cjs report"
 =======
     "sync-health:run": "node automation/sync-health-check.cjs --fix",
@@ -781,6 +785,9 @@
 =======
     "master:report": "node automation/master-automation-launcher.cjs report"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "master:report": "node automation/master-automation-launcher.cjs report"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           "postautomation": "npm run automation:git-sync",
       "lint:staged": "lint-staged",
       "performance:audit": "node automation/performance-audit.cjs",

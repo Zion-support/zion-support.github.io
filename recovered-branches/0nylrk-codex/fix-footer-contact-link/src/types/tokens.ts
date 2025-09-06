@@ -1,7 +1,9 @@
+
 export interface Wallet {
   user_id: string;
   balance: number;
-  updated_at: string;
+  updated_at: string
+}
 
 export type TransactionType = 'earn' | 'burn';
 
@@ -11,4 +13,5 @@ export interface TokenTransaction {
   amount: number;
   transaction_type: TransactionType;
   reason: string | null;
-  created_at: string;
+  created_at: string
+}

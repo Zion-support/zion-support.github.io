@@ -4,9 +4,12 @@ import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Conversation, Message } from '../../utils/types';
 import { rateLimit } from '../../utils/rateLimit';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const FILE = 'conversations.json';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -15,19 +18,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { conversationId, sender, text, attachments } = req.body || {};
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (
       !conversationId ||
       !sender ||
       (!text && (!attachments || attachments.length === 0))
     ) {
+=======
+    if (!conversationId || !sender || (!text && (!attachments || attachments.length === 0))) {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       res.status(400).json({ error: 'Invalid message' });
-      return;
+      return
     }
 
     const conversations = readJsonFile<Conversation[]>(FILE, []);
-    const idx = conversations.findIndex(c => c.id === String(conversationId));
+    const idx = conversations.findIndex((c) => c.id === String(conversationId));
     if (idx === -1) {
       res.status(404).json({ error: 'Conversation not found' });
+<<<<<<< HEAD
       return;
 =======
     if (!conversationId || !sender || (!text && (!attachments || attachments.length === 0))) {
@@ -41,6 +49,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(404).json({ error: 'Conversation not found' });
       return
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      return
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const now = new Date().toISOString();
@@ -52,7 +63,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       text: text ? String(text) : undefined,
       attachments: Array.isArray(attachments) ? attachments : undefined,
       createdAtIso: now,
-      readBy: [{ participantId: String(sender.id), readAtIso: now }],
+      readBy: [{ participantId: String(sender.id), readAtIso: now }]
     };
 =======
       id: uuidv4(), conversationId: String(conversationId),
@@ -70,25 +81,34 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(201).json({ message: msg });
 <<<<<<< HEAD
+<<<<<<< HEAD
     return;
 =======
     return
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (req.method === 'GET') {
     const { conversationId } = req.query;
     const conversations = readJsonFile<Conversation[]>(FILE, []);
 <<<<<<< HEAD
+<<<<<<< HEAD
     const conv = conversations.find(c => c.id === String(conversationId));
+=======
+    const conv = conversations.find((c) => c.id === String(conversationId));
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     if (!conv) {
       res.status(404).json({ error: 'Conversation not found' });
-      return;
+      return
     }
     res.status(200).json({ conversation: conv });
-    return;
+    return
   }
 
+<<<<<<< HEAD
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 =======
@@ -105,3 +125,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(405).end('Method Not Allowed')
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

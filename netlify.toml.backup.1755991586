@@ -12,9 +12,12 @@
   node_bundler = "esbuild"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -163,8 +166,11 @@
 [[redirects]]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   from = "/events"
   to = "/news"
   status = 301
@@ -205,6 +211,7 @@
   from = "/:splat"
   to = "/:splat/"
   status = 301
+<<<<<<< HEAD
 <<<<<<< HEAD
   force = true
 =======
@@ -280,3 +287,6 @@
 =======
   force = true
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  force = true
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

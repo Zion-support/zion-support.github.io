@@ -19,8 +19,11 @@
   "dependencies": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@hello-pangea/dnd": "^18.0.1",
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-accordion": "^1.1.2",
@@ -86,6 +89,7 @@
   },
   "optionalDependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@elastic/elasticsearch": "^8.12.0"
 =======
     "@google-analytics/data": "^5.2.0",
@@ -143,6 +147,9 @@
 =======
     "@elastic/elasticsearch": "^8.12.0"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "@elastic/elasticsearch": "^8.12.0"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "devDependencies": {
     "@babel/core": "^7.28.3",
     "@babel/plugin-transform-runtime": "^7.28.3",

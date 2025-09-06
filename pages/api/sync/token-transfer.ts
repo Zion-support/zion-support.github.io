@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   readState,
@@ -16,10 +17,20 @@ export default async function handler(
 ) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+import { signPayload } from "../../../utils/sync/signature";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import { nextVersionFor } from "../../../utils/sync/versioning";
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const state = readState();
   if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: 'Sync disabled for this instance' });
+    return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
@@ -28,9 +39,10 @@ export default async function handler(
     amount: number;
     fromSubnet: string;
     toSubnet: string;
-    timestamp?: number;
+    timestamp?: number
   };
 
+<<<<<<< HEAD
   if (
     !txId ||
     !token ||
@@ -66,25 +78,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
+    return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   const version = nextVersionFor(state, txId);
   const event = {
 <<<<<<< HEAD
     eventId: uuidv4(),
-    type: 'token_transfer' as const,
-    payload: {
-      id: txId,
-      txId,
-      token,
-      amount,
-      fromSubnet,
-      toSubnet,
-      timestamp: timestamp || Date.now(),
-    },
+    type: "token_transfer" as const,
+    payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() },
     originInstanceId: state.config.instanceId,
     version,
-    timestamp: Date.now(),
+    timestamp: Date.now()
   };
 =======
     eventId: uuidv4(), type: "token_transfer" as const,
@@ -102,14 +110,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (sig) headers['x-zion-signature'] = sig;
+=======
+  if (sig) headers["x-zion-signature"] = sig;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   await Promise.all(
     state.config.peers
-      .filter(p => !p.paused)
-      .map(async peer => {
-        const url = new URL('/api/sync/publish', peer.baseUrl).toString();
+      .filter((p) => !p.paused)
+      .map(async (peer) => {
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
         try {
+<<<<<<< HEAD
           await axios.post(url, body, { headers, timeout: 5000 });
 =======
   if (sig) headers["x-zion-signature"] = sig;
@@ -122,10 +135,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          await axios.post(url, body, { headers, timeout: 5000 })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         } catch {}
       })
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return res
     .status(200)
@@ -134,3 +151,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

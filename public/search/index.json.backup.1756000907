@@ -2,8 +2,11 @@
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/2025-advanced-services-showcase",
     "title": "",
     "h1": ""
@@ -68,6 +71,7 @@
     "title": "{service.name} - Zion Tech Group",
     "h1": "Service not found"
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
 =======
@@ -289,14 +293,20 @@
 =======
   {    "route": "/comprehensive-2025-services-showcase",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  {    "route": "/comprehensive-2025-services-showcase",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
     "h1": "2025 Innovative Services Showcase"
   },
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/comprehensive-pricing",
     "title": "Comprehensive Pricing | Zion Tech Group - Micro SaaS Services Pricing & Plans",
     "h1": ""
@@ -426,6 +436,7 @@
     "title": "",
     "h1": ""
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
 =======
@@ -3988,4 +3999,7 @@
 =======
   {  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  {  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ]

@@ -1,33 +1,34 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../utils/sync/storage';
 import { Peer } from '../../../utils/sync/types';
 import { v4 as uuidv4 } from 'uuid';
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState } from "../../../utils/sync/storage";
+import { Peer } from "../../../utils/sync/types";
+import { v4 as uuidv4 } from "uuid";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
   const peer = req.body as Partial<Peer>;
-  if (!peer.baseUrl) return res.status(400).json({ error: 'baseUrl required' });
+  if (!peer.baseUrl) return res.status(400).json({ error: "baseUrl required" });
 
   const id = peer.id || uuidv4();
-  const existing = state.config.peers.find(p => p.baseUrl === peer.baseUrl);
+  const existing = state.config.peers.find((p) => p.baseUrl === peer.baseUrl);
   if (existing) {
     existing.scope = peer.scope || existing.scope;
-    existing.paused =
-      typeof peer.paused === 'boolean' ? peer.paused : existing.paused;
+    existing.paused = typeof peer.paused === "boolean" ? peer.paused : existing.paused
   } else {
-    state.config.peers.push({
-      id,
-      baseUrl: peer.baseUrl,
-      scope: peer.scope || state.config.scope,
-      paused: false,
-    });
+    state.config.peers.push({ id, baseUrl: peer.baseUrl, scope: peer.scope || state.config.scope, paused: false })
   }
 
   writeState(state);
+<<<<<<< HEAD
   return res.status(200).json({ peers: state.config.peers });
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -54,3 +55,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json({ peers: state.config.peers })
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  return res.status(200).json({ peers: state.config.peers })
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

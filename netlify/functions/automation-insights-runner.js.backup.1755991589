@@ -24,8 +24,11 @@ exports.handler = async () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js'));
 
@@ -36,6 +39,7 @@ exports.handler = async () => {
     logs.push(`Search index generation skipped: ${String(error)}`);
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Commit and push
 =======
@@ -55,6 +59,9 @@ exports.handler = async () => {
 =======
   // Commit and push  logStep('git:sync', () => runNode('automation/git-sync.cjs'));
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  // Commit and push  logStep('git:sync', () => runNode('automation/git-sync.cjs'));
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   return { statusCode: 200, body: logs.join('\n') };
 };

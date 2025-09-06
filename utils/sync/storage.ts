@@ -1,66 +1,43 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { MultiverseState, InstanceConfig, SyncEvent } from './types';
+=======
+export interface SyncState {
+  config: {
+    instanceId: string;
+    peers: string[];
+    scope: string;
+    optIn: boolean;
+    paused: boolean;
+  };
+  lastSyncedAt: string;
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-const DATA_DIR = path.join(process.cwd(), 'data', 'multiverse');
-const STATE_PATH = path.join(DATA_DIR, 'state.json');
-
-function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-
-function defaultConfig(): InstanceConfig {
-  const instanceId = process.env.ZION_INSTANCE_ID || 'zion-local';
-  return {
-    instanceId,
-    optIn: false,
-    paused: false,
-    scope: 'full',
+const defaultState: SyncState = {
+  config: {
+    instanceId: 'default-instance',
     peers: [],
-    secretConfigured: Boolean(
-      process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0
-    ),
-  };
+    scope: 'global',
+    optIn: false,
+    paused: false
+  },
+  lastSyncedAt: new Date().toISOString()
+};
 
-function defaultState(): MultiverseState {
-  return {
-    config: defaultConfig(),
-    lastSyncedAt: 0,
-    seenEventIds: {},
-    latestVersionByEntityId: {},
-    proposalMerkleById: {},
-    events: [],
-  };
+let state: SyncState = { ...defaultState };
 
-export function readState(): MultiverseState {
-  ensureDataDir();
-  if (!fs.existsSync(STATE_PATH)) {
-    const initial = defaultState();
-    fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2));
-    return initial;
-  }
-  const raw = fs.readFileSync(STATE_PATH, 'utf8');
-  try {
-    const parsed = JSON.parse(raw) as MultiverseState;
-    // Backfill missing fields on upgrade
-    parsed.config.secretConfigured = Boolean(
-      process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0
-    );
-    parsed.seenEventIds = parsed.seenEventIds || {};
-    parsed.latestVersionByEntityId = parsed.latestVersionByEntityId || {};
-    parsed.proposalMerkleById = parsed.proposalMerkleById || {};
-    parsed.events = parsed.events || [];
-    return parsed;
-  } catch {
-    const initial = defaultState();
-    fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2));
-    return initial;
-  }
+export function readState(): SyncState {
+  return { ...state };
+}
 
-export function writeState(state: MultiverseState): void {
-  ensureDataDir();
-  fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2));
+export function updateState(updates: Partial<SyncState>): void {
+  state = { ...state, ...updates };
+}
 
+<<<<<<< HEAD
 export function upsertEvent(
   state: MultiverseState,
   event: SyncEvent
@@ -665,3 +642,8 @@ export function formatDuration(startTime: string, endTime?: string): string {
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export function resetState(): void {
+  state = { ...defaultState };
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

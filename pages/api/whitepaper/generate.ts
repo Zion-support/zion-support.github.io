@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const client = process.env.OPENAI_API_KEY
   ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
@@ -18,11 +19,18 @@ const client = process.env.OPENAI_API_KEY ? new OpenAI({ apiKey: process.env.OPE
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const client = process.env.OPENAI_API_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null;
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   // Simple admin gate: require header X-Admin: true for generation
   const isAdmin = req.headers['x-admin'] === 'true';
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const {
     tokenName,
@@ -38,6 +46,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
   const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {};
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const distLines = Array.isArray(distribution)
     ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n')
@@ -58,23 +69,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         input: [
 <<<<<<< HEAD
           { role: 'system', content: sysPrompt },
-          { role: 'user', content: userPrompt },
+          { role: 'user', content: userPrompt }
         ],
-        temperature: 0.3,
+        temperature: 0.3
       } as any);
       const content = (completion as any)?.output_text || '';
       markdown = content.trim();
     } else {
-      markdown = fallbackMarkdown({
-        tokenName,
-        tokenSupply,
-        useCases,
-        rewardsLogic,
-        distribution,
-        governance,
-        jurisdiction,
-        legalReview,
-      });
+      markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview });
     }
 
     res.status(200).json({ markdown });
@@ -82,13 +84,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('generation_error', e?.message || e);
     res.status(500).json({ error: 'Generation failed' });
   }
+}
 
 function fallbackMarkdown(input: any): string {
   const distLines = Array.isArray(input?.distribution)
-    ? input.distribution
-        .map((d: any) => `- ${d.label}: ${d.percent}%`)
-        .join('\n')
+    ? input.distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n')
     : '';
+<<<<<<< HEAD
   return `# ${input?.tokenName || 'Token'} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || 'Token'} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ''}.\n\n## Rewards System\n${input?.rewardsLogic || ''}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ''}.\n\n## Governance Model\n${input?.governance || ''}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || 'applicable'} regulations.`;
 =======
           { role: 'system', content: sysPrompt };
@@ -114,3 +116,7 @@ function fallbackMarkdown(input: any): string {
   return `# ${input?.tokenName || 'Token'} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || 'Token'} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ''}.\n\n## Rewards System\n${input?.rewardsLogic || ''}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ''}.\n\n## Governance Model\n${input?.governance || ''}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || 'applicable'} regulations.`
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  return `# ${input?.tokenName || 'Token'} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || 'Token'} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ''}.\n\n## Rewards System\n${input?.rewardsLogic || ''}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ''}.\n\n## Governance Model\n${input?.governance || ''}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || 'applicable'} regulations.`
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

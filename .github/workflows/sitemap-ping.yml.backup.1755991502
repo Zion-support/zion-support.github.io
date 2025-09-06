@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name: Sitemap Ping
 
 on:
@@ -16,6 +19,7 @@ jobs:
       - name: Ping Google & Bing
         run: |
           curl -s "https://www.google.com/ping?sitemap=https://ziontechgroup.com/sitemap.xml" || true
+<<<<<<< HEAD
 <<<<<<< HEAD
           curl -s "https://www.bing.com/ping?sitemap=https://ziontechgroup.com/sitemap.xml" || true
 =======
@@ -63,3 +67,6 @@ jobs:
 =======
           curl -s "https://www.bing.com/ping?sitemap=https://ziontechgroup.com/sitemap.xml" || true
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          curl -s "https://www.bing.com/ping?sitemap=https://ziontechgroup.com/sitemap.xml" || true
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

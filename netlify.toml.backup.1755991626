@@ -12,9 +12,12 @@
   node_bundler = "esbuild"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -54,8 +57,11 @@
 [[redirects]]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   from = "/rag-evaluation-lab"
   to = "/services/rag-evaluation-lab"
   status = 301
@@ -90,6 +96,7 @@
   to = "https://www.linkedin.com/company/zion-tech-group"
   status = 302
 <<<<<<< HEAD
+<<<<<<< HEAD
   force = true
 =======
   from = "/services/*"
@@ -100,3 +107,6 @@
 =======
   force = true
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  force = true
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 
 export function extractClientIp(req: NextApiRequest): string | null {
@@ -363,3 +364,15 @@ export const PRIVATE_IP_RANGES = [
   '169.254.0.0/16'
 ];
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export function getClientIp(req: any): string {
+  const forwarded = req.headers['x-forwarded-for'];
+  const remoteAddress = req.socket?.remoteAddress;
+  
+  if (forwarded) {
+    return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
+  }
+  
+  return remoteAddress || 'unknown';
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,32 +1,63 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+// Simple in-memory rate limiter
+interface RateLimitEntry {
+  count: number;
+  resetTime: number;
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-const WINDOW_MS = 5 * 60 * 1000; // 5 minutes
-const MAX_REQUESTS = 30; // per IP per endpoint per window
+const rateLimitStore = new Map<string, RateLimitEntry>();
 
-const store: Map<string, number[]> = new Map();
+export interface RateLimitConfig {
+  windowMs: number; // Time window in milliseconds
+  maxRequests: number; // Maximum requests per window
+}
 
-export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
-  const ip =
-    (req.headers['x-forwarded-for'] as string) ||
-    req.socket.remoteAddress ||
-    'unknown';
-  const key = `${ip}:${req.url}`;
+export function checkRateLimit(
+  identifier: string, 
+  config: RateLimitConfig
+): { allowed: boolean; remaining: number; resetTime: number } {
   const now = Date.now();
-  const windowStart = now - WINDOW_MS;
-
-  const timestamps = (store.get(key) || []).filter(t => t > windowStart);
-  timestamps.push(now);
-  store.set(key, timestamps);
-
-  if (timestamps.length > MAX_REQUESTS) {
-    res.setHeader('Retry-After', Math.ceil(WINDOW_MS / 1000).toString());
-    res
-      .status(429)
-      .json({ error: 'Rate limit exceeded. Please try again later.' });
-    return false;
+  const entry = rateLimitStore.get(identifier);
+  
+  if (!entry || now > entry.resetTime) {
+    // Create new entry or reset expired entry
+    const newEntry: RateLimitEntry = {
+      count: 1,
+      resetTime: now + config.windowMs
+    };
+    rateLimitStore.set(identifier, newEntry);
+    
+    return {
+      allowed: true,
+      remaining: config.maxRequests - 1,
+      resetTime: newEntry.resetTime
+    };
   }
+  
+  if (entry.count >= config.maxRequests) {
+    return {
+      allowed: false,
+      remaining: 0,
+      resetTime: entry.resetTime
+    };
+  }
+  
+  // Increment count
+  entry.count++;
+  rateLimitStore.set(identifier, entry);
+  
+  return {
+    allowed: true,
+    remaining: config.maxRequests - entry.count,
+    resetTime: entry.resetTime
+  };
+}
 
+<<<<<<< HEAD
   return true;
 =======
 // Rate limiting utilities
@@ -135,3 +166,15 @@ export function rateLimit(config: RateLimitConfig) {
   };
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export function getClientIP(req: any): string {
+  return (
+    req.headers['x-forwarded-for'] ||
+    req.headers['x-real-ip'] ||
+    req.connection?.remoteAddress ||
+    req.socket?.remoteAddress ||
+    req.ip ||
+    'unknown'
+  );
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

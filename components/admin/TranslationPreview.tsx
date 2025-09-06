@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { useAutoTranslate } from '../../hooks/useAutoTranslate';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const defaultTargets = ['en', 'pt', 'es', 'ar'];
 =======
 const defaultTargets = ['enptesar'];
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const defaultTargets = ['enptesar'];
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function TranslationPreview() {
   const [text, setText] = useState('');
@@ -14,14 +18,20 @@ export default function TranslationPreview() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className='space-y-4'>
       <h2 className='text-lg font-semibold'>Translation Preview</h2>
+=======
+    <div className="space-y-4">
+      <h2 className="text-lg font-semibold">Translation Preview</h2>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <textarea
-        className='w-full border rounded p-2 h-32'
-        placeholder='Enter text to translate...'
+        className="w-full border rounded p-2 h-32"
+        placeholder="Enter text to translate..."
         value={text}
-        onChange={e => setText(e.target.value)}
+        onChange={(e) => setText(e.target.value)}
       />
+<<<<<<< HEAD
       <div className='text-sm text-gray-500'>
         {loading ? 'Translating…' : error ? `Error: ${error}` : 'Ready'}
       </div>
@@ -39,13 +49,18 @@ export default function TranslationPreview() {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <div className="text-sm text-gray-500">{loading ? 'Translating…' : error ? `Error: ${error}` : 'Ready'}</div>
       <div className="grid md:grid-cols-2 gap-4">
         {targets.map((lng) => (
           <div key={lng} className="border rounded p-3">
             <div className="text-xs uppercase opacity-70 mb-2">{lng}</div>
             <div className="whitespace-pre-wrap text-sm min-h-[4rem]">
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {translations[lng] || (lng === 'en' ? text : '')}
             </div>
           </div>
@@ -54,6 +69,10 @@ export default function TranslationPreview() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

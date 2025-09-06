@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -50,10 +51,22 @@
       "type": "potential_hardcoded_secret",
       "severity": "high"
     }
+=======
+  "timestamp": "2025-09-06T04:56:16.606Z",
+  "vulnerabilities": [
+    {
+      "file": "/workspace/package.json",
+      "type": "potential_hardcoded_secret",
+      "severity": "high"
+    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ],
   "totalVulnerabilities": 1,
   "highSeverity": 1,
   "mediumSeverity": 0,
   "lowSeverity": 0
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }

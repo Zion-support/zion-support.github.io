@@ -1,78 +1,43 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+// File system database utilities
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import fs from 'fs';
 import path from 'path';
-import { promisify } from 'util';
-import crypto from 'crypto';
-import { DisputeCase } from '../types/disputes';
 
-const mkdir = promisify(fs.mkdir);
-const readFile = promisify(fs.readFile);
-const writeFile = promisify(fs.writeFile);
+export interface FsdbConfig {
+  baseDir: string;
+}
 
-const ROOT = path.join(process.cwd(), 'data');
-const DISPUTES_FILE = path.join(ROOT, 'disputes.json');
-const UPLOADS_ROOT = path.join(ROOT, 'uploads', 'disputes');
+export class Fsdb {
+  private baseDir: string;
 
-export function generateCaseId(): string {
-  const date = new Date();
-  const y = String(date.getFullYear());
-  const m = String(date.getMonth() + 1).padStart(2, '0');
-  const d = String(date.getDate()).padStart(2, '0');
-  const suffix = crypto.randomBytes(3).toString('hex').toUpperCase();
-  return `DSP-${y}${m}${d}-${suffix}`;
-
-async function ensureBaseFiles() {
-  try {
-    await mkdir(ROOT, { recursive: true });
-  } catch {}
-  try {
-    await mkdir(UPLOADS_ROOT, { recursive: true });
-  } catch {}
-  try {
-    await readFile(DISPUTES_FILE, 'utf8');
-  } catch {
-    await writeFile(
-      DISPUTES_FILE,
-      JSON.stringify({ disputes: [] }, null, 2),
-      'utf8'
-    );
+  constructor(config: FsdbConfig) {
+    this.baseDir = config.baseDir;
+    this.ensureDir(this.baseDir);
   }
 
-export async function readAllDisputes(): Promise<DisputeCase[]> {
-  await ensureBaseFiles();
-  const raw = await readFile(DISPUTES_FILE, 'utf8');
-  const data = JSON.parse(raw) as { disputes: DisputeCase[] };
-  return data.disputes || [];
-
-export async function writeAllDisputes(disputes: DisputeCase[]): Promise<void> {
-  await ensureBaseFiles();
-  const data = { disputes };
-  await writeFile(DISPUTES_FILE, JSON.stringify(data, null, 2), 'utf8');
-
-export async function getDisputeById(
-  id: string
-): Promise<DisputeCase | undefined> {
-  const all = await readAllDisputes();
-  return all.find(d => d.id === id);
-
-export async function upsertDispute(updated: DisputeCase): Promise<void> {
-  const all = await readAllDisputes();
-  const idx = all.findIndex(d => d.id === updated.id);
-  if (idx >= 0) {
-    all[idx] = updated;
-  } else {
-    all.push(updated);
+  private ensureDir(dir: string): void {
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
   }
-  await writeAllDisputes(all);
 
-export async function createDispute(dispute: DisputeCase): Promise<void> {
-  const all = await readAllDisputes();
-  all.push(dispute);
-  await writeAllDisputes(all);
+  private getFilePath(collection: string, id: string): string {
+    return path.join(this.baseDir, collection, `${id}.json`);
+  }
 
-export function getDisputeUploadDir(caseId: string): string {
-  return path.join(UPLOADS_ROOT, caseId);
+  async create<T>(collection: string, id: string, data: T): Promise<T> {
+    const filePath = this.getFilePath(collection, id);
+    const dir = path.dirname(filePath);
+    this.ensureDir(dir);
+    
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+    return data;
+  }
 
+<<<<<<< HEAD
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
@@ -280,3 +245,78 @@ export function generateId(): string {
   return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  async read<T>(collection: string, id: string): Promise<T | null> {
+    const filePath = this.getFilePath(collection, id);
+    
+    if (!fs.existsSync(filePath)) {
+      return null;
+    }
+
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(content);
+    } catch (error) {
+      console.error(`Error reading file ${filePath}:`, error);
+      return null;
+    }
+  }
+
+  async update<T>(collection: string, id: string, data: Partial<T>): Promise<T | null> {
+    const existing = await this.read<T>(collection, id);
+    if (!existing) {
+      return null;
+    }
+
+    const updated = { ...existing, ...data };
+    return this.create(collection, id, updated);
+  }
+
+  async delete(collection: string, id: string): Promise<boolean> {
+    const filePath = this.getFilePath(collection, id);
+    
+    if (!fs.existsSync(filePath)) {
+      return false;
+    }
+
+    try {
+      fs.unlinkSync(filePath);
+      return true;
+    } catch (error) {
+      console.error(`Error deleting file ${filePath}:`, error);
+      return false;
+    }
+  }
+
+  async list<T>(collection: string): Promise<T[]> {
+    const collectionDir = path.join(this.baseDir, collection);
+    
+    if (!fs.existsSync(collectionDir)) {
+      return [];
+    }
+
+    try {
+      const files = fs.readdirSync(collectionDir);
+      const items: T[] = [];
+
+      for (const file of files) {
+        if (file.endsWith('.json')) {
+          const id = path.basename(file, '.json');
+          const item = await this.read<T>(collection, id);
+          if (item) {
+            items.push(item);
+          }
+        }
+      }
+
+      return items;
+    } catch (error) {
+      console.error(`Error listing collection ${collection}:`, error);
+      return [];
+    }
+  }
+}
+
+// Default instance
+export const fsdb = new Fsdb({ baseDir: './data' });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -4,6 +4,7 @@
     "filesWithIssues": 1,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "totalIssues": 3,
     "totalWarnings": 1,
     "buildBreakingFiles": 1,
@@ -21,6 +22,12 @@
     "buildBreakingFiles": 1,
     "canBuild": false  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "totalIssues": 3,
+    "totalWarnings": 1,
+    "buildBreakingFiles": 1,
+    "canBuild": false  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "results": [
     {
       "file": "pages/_app.tsx",
@@ -39,6 +46,7 @@
   "buildBreakingFiles": [],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-21T03:41:49.504Z"
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4bf6
 =======
@@ -48,3 +56,6 @@
 =======
   "generatedAt": "2025-08-21T03:41:49.504Z"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "generatedAt": "2025-08-21T03:41:49.504Z"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

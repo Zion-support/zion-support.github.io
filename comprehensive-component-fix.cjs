@@ -62,10 +62,14 @@ function fixComponentSyntax(filePath) {
     return false;
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error(`Error processing ${filePath}:`, error.message);
 =======
     console.error(`Error processing ${filePath} `, error.message);
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    console.error(`Error processing ${filePath} `, error.message);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     return false;
   }
 }

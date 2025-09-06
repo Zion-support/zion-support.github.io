@@ -1,38 +1,80 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { TokenConfig, TokenTransaction, Wallet } from './types';
 import { DEFAULT_TOKEN_CONFIG } from './rules';
+=======
+export interface TokenBalance {
+  userId: string;
+  tokenId: string;
+  balance: number;
+  locked: number;
+  lastUpdated: string;
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const STORE_FILE = path.join(DATA_DIR, 'token_store.json');
+export interface TokenTransaction {
+  id: string;
+  from: string;
+  to: string;
+  tokenId: string;
+  amount: number;
+  type: 'transfer' | 'mint' | 'burn' | 'lock' | 'unlock';
+  status: 'pending' | 'completed' | 'failed';
+  blockHash?: string;
+  transactionHash?: string;
+  createdAt: string;
+  completedAt?: string;
+}
 
-export interface TokenStoreData {
-  wallets: Record<string, Wallet>;
-  transactions: TokenTransaction[];
-  config: TokenConfig;
+// In-memory storage for development
+const balances: TokenBalance[] = [];
+const transactions: TokenTransaction[] = [];
 
+export async function getBalance(userId: string, tokenId: string): Promise<TokenBalance | null> {
+  return balances.find(b => b.userId === userId && b.tokenId === tokenId) || null;
+}
 
-function readFromDisk(): TokenStoreData | null {
-  try {
-    ensureDataDir();
-    if (!fs.existsSync(STORE_FILE)) return null;
-    const raw = fs.readFileSync(STORE_FILE, 'utf8');
-    const parsed = JSON.parse(raw) as TokenStoreData;
-    return parsed;
-  } catch {
-    return null;
+export async function updateBalance(userId: string, tokenId: string, balance: number, locked: number = 0): Promise<TokenBalance> {
+  const existingIndex = balances.findIndex(b => b.userId === userId && b.tokenId === tokenId);
+  
+  const tokenBalance: TokenBalance = {
+    userId,
+    tokenId,
+    balance,
+    locked,
+    lastUpdated: new Date().toISOString()
+  };
+  
+  if (existingIndex >= 0) {
+    balances[existingIndex] = tokenBalance;
+  } else {
+    balances.push(tokenBalance);
   }
+  
+  return tokenBalance;
+}
 
-function writeToDisk(data: TokenStoreData): void {
-  try {
-    ensureDataDir();
-    fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2), 'utf8');
-  } catch {}
+export async function createTransaction(transaction: Omit<TokenTransaction, 'id' | 'createdAt'>): Promise<TokenTransaction> {
+  const tokenTransaction: TokenTransaction = {
+    ...transaction,
+    id: `tx-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+    createdAt: new Date().toISOString()
+  };
+  
+  transactions.push(tokenTransaction);
+  return tokenTransaction;
+}
 
-class InMemoryTokenStore {
-  private data: TokenStoreData;
+export async function getTransactions(userId: string, tokenId?: string): Promise<TokenTransaction[]> {
+  return transactions.filter(tx => 
+    (tx.from === userId || tx.to === userId) && 
+    (!tokenId || tx.tokenId === tokenId)
+  );
+}
 
+<<<<<<< HEAD
   constructor() {
     const fromDisk = readFromDisk();
     this.data = fromDisk ?? {
@@ -135,3 +177,18 @@ export class TokenStorageManager {
 // Singleton instance
 export const tokenStorage = new TokenStorageManager();
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export async function updateTransactionStatus(id: string, status: TokenTransaction['status'], transactionHash?: string): Promise<TokenTransaction | null> {
+  const txIndex = transactions.findIndex(tx => tx.id === id);
+  if (txIndex === -1) return null;
+  
+  transactions[txIndex] = {
+    ...transactions[txIndex],
+    status,
+    transactionHash,
+    completedAt: status === 'completed' ? new Date().toISOString() : transactions[txIndex].completedAt
+  };
+  
+  return transactions[txIndex];
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

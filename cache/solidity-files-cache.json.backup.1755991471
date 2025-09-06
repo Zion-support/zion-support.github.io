@@ -3,8 +3,11 @@
   "files": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "/workspace/contracts/ZionGovernor.sol": {
       "lastModificationDate": 1754702703638,
       "contentHash": "c24f231bae64c8a2917b543da0d052c6",
@@ -16,6 +19,7 @@
             "enabled": true,
             "runs": 200
           },
+<<<<<<< HEAD
 <<<<<<< HEAD
           "evmVersion": "paris",
 =======
@@ -36,6 +40,9 @@
 =======
           "evmVersion": "paris",          "outputSelection": {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          "evmVersion": "paris",          "outputSelection": {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             "*": {
               "*": [
                 "abi",
@@ -54,8 +61,11 @@
       "imports": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         "@openzeppelin/contracts/governance/Governor.sol",
         "@openzeppelin/contracts/governance/extensions/GovernorSettings.sol",
         "@openzeppelin/contracts/governance/extensions/GovernorCountingSimple.sol",
@@ -81,6 +91,7 @@
             "enabled": true,
             "runs": 200
           },
+<<<<<<< HEAD
 <<<<<<< HEAD
           "evmVersion": "paris",
 =======
@@ -110,6 +121,9 @@
 =======
           "evmVersion": "paris",          "outputSelection": {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          "evmVersion": "paris",          "outputSelection": {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             "*": {
               "*": [
                 "abi",
@@ -128,8 +142,11 @@
       "imports": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         "../token/ERC721/IERC721Receiver.sol",
         "../token/ERC1155/IERC1155Receiver.sol",
         "../utils/cryptography/ECDSA.sol",
@@ -355,6 +372,7 @@
             "runs": 200
           },
 <<<<<<< HEAD
+<<<<<<< HEAD
           "evmVersion": "paris",
 =======
         "./Constants.sol",
@@ -384,6 +402,9 @@
 =======
           "evmVersion": "paris",          "outputSelection": {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          "evmVersion": "paris",          "outputSelection": {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             "*": {
               "*": [
                 "abi",
@@ -403,8 +424,11 @@
       "versionPragmas": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         "^0.8.1"
       ],
       "artifacts": [
@@ -1055,6 +1079,7 @@
             "runs": 200
           },
 <<<<<<< HEAD
+<<<<<<< HEAD
           "evmVersion": "paris",
 =======
         ">=0.8.23 <0.9.0"
@@ -1078,6 +1103,9 @@
 =======
           "evmVersion": "paris",          "outputSelection": {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          "evmVersion": "paris",          "outputSelection": {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             "*": {
               "*": [
                 "abi",
@@ -1097,8 +1125,11 @@
       "versionPragmas": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         "^0.8.0"
       ],
       "artifacts": [
@@ -1156,6 +1187,7 @@
             "runs": 200
           },
 <<<<<<< HEAD
+<<<<<<< HEAD
           "evmVersion": "paris",
 =======
         ">=0.8.23 <0.9.0"
@@ -1181,6 +1213,9 @@
 =======
           "evmVersion": "paris",          "outputSelection": {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          "evmVersion": "paris",          "outputSelection": {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             "*": {
               "*": [
                 "abi",
@@ -1200,8 +1235,11 @@
       "versionPragmas": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         "^0.8.0"
       ],
       "artifacts": [
@@ -1339,6 +1377,7 @@
             "runs": 200
           },
 <<<<<<< HEAD
+<<<<<<< HEAD
           "evmVersion": "paris",
 =======
         "^0.8.21"
@@ -1365,6 +1404,9 @@
 =======
           "evmVersion": "paris",          "outputSelection": {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          "evmVersion": "paris",          "outputSelection": {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             "*": {
               "*": [
                 "abi",
@@ -1384,8 +1426,11 @@
       "versionPragmas": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         "^0.8.0"
       ],
       "artifacts": [
@@ -1814,6 +1859,7 @@
       ],
       "artifacts": [
 <<<<<<< HEAD
+<<<<<<< HEAD
         "ZionToken"
 =======
         "^0.8.21"
@@ -1826,6 +1872,9 @@
 =======
         "ZionToken"      ]
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        "ZionToken"      ]
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 }

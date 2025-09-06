@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -42,5 +45,9 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
   return { statusCode: 200, body: logs.join('\n') }
+<<<<<<< HEAD
 },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+},
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,20 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { parseUserFromRequest, ensureAdmin } from '../../../../../utils/auth';
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { getFlagById } from '../../../../../utils/moderationDb';
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req);
-  try {
-    ensureAdmin(user);
-  } catch (e: any) {
-    return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
-  }
+  try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
 
   const { id } = req.query;
+<<<<<<< HEAD
   if (typeof id !== 'string')
     return res.status(400).json({ error: 'Invalid id' });
 =======
@@ -28,10 +25,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id } = req.query;
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   if (req.method === 'GET') {
     const flag = await getFlagById(id);
     if (!flag) return res.status(404).json({ error: 'Not found' });
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res.status(200).json({ flag });
   }
@@ -46,3 +47,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(405).end('Method Not Allowed')
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return res.status(200).json({ flag })
+  }
+
+  res.setHeader('AllowGET');
+  return res.status(405).end('Method Not Allowed')
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

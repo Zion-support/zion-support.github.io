@@ -67,7 +67,11 @@ problematicFiles.forEach(file => {
   }
 });
 
+<<<<<<< HEAD
 console.log(`\n📊 Final Cleanup Summary: `),
+=======
+console.log(`\n📊 Final Cleanup Summary:`);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 console.log(`✅ Fixed: ${fixedCount} test files`);
 console.log(`🗑️ Removed: ${problematicFiles.length} problematic files`);
 console.log('🎉 Final test cleanup completed!');

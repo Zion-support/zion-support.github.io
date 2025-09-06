@@ -1,87 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type MediaBundle = 'general' | 'web3' | 'institutional';
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
+=======
+export interface MediaGenerationRequest {
+  type: string;
+  companyName: string;
+  date: string;
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-export type MediaAsset = {
-  path: string; // public-relative path for fetch
-  filename: string; // name inside zip
-  type: 'binary' | 'text';
-  content?: string; // used when type === 'text'
-};
+export interface MediaGenerationResponse {
+  ok: boolean;
+  text?: string;
+  error?: string;
+}
 
-export function getDefaultAssets(bundle: MediaBundle): MediaAsset[] {
-  const common: MediaAsset[] = [
-    {
-      path: '/brand/logos/zion-logo.svg',
-      filename: 'logos/zion-logo.svg',
-      type: 'binary',
-    },
-  ];
-
-  const social: MediaAsset[] = [
-    {
-      path: '',
-      filename: 'social/linkedin-banner.txt',
-      type: 'text',
-      content:
-        'LinkedIn banner: 1584x396. Use brand gradient background. Title: Zion. Tagline: Intelligence for Web3.',
-    },
-    {
-      path: '',
-      filename: 'social/twitter-banner.txt',
-      type: 'text',
-      content:
-        'Twitter/X banner: 1500x500. Use brand gradient background. Title: Zion. Tagline: Intelligence for Web3.',
-    },
-  ];
-
-  const generalLegal = buildLegalDocs('general');
-  const web3Legal = buildLegalDocs('web3');
-  const institutionalLegal = buildLegalDocs('institutional');
-
-  const legalByBundle: Record<MediaBundle, MediaAsset[]> = {
-    general: generalLegal,
-    web3: web3Legal,
-    institutional: institutionalLegal,
-  };
-
-  const brandGuidelines: MediaAsset = {
-    path: '',
-    filename: 'brand/brand-guidelines.md',
-    type: 'text',
-    content: buildBrandGuidelines(),
-  };
-  const colors: MediaAsset = {
-    path: '',
-    filename: 'brand/colors-typography.json',
-    type: 'text',
-    content: JSON.stringify(buildColorsAndTypography(), null, 2),
-  };
-
-  return [
-    ...common,
-    ...social,
-    brandGuidelines,
-    colors,
-    ...legalByBundle[bundle],
-  ];
-
-export function buildBrandGuidelines(): string {
-  return `# Zion Brand Guidelines\n\n## Logo\n- Primary: Zion logomark (svg)\n- Clear space: 24px around\n\n## Colors\n- Primary: Zion Blue #0A84FF\n- Secondary: Deep Space #0B1220\n- Accent: Neon Lime #C3F53C\n\n## Typography\n- Headings: Inter, 700\n- Body: Inter, 400\n\n## Voice\n- Confident, precise, forward-looking\n`;
-
-export function buildColorsAndTypography() {
+export async function generateMediaContent(request: MediaGenerationRequest): Promise<MediaGenerationResponse> {
+  // Mock implementation - in production, this would call OpenAI or other AI service
   return {
-    colors: {
-      primary: '#0A84FF',
-      secondary: '#0B1220',
-      accent: '#C3F53C',
-      neutral: '#9CA3AF',
-    },
-    typography: {
-      heading: { family: 'Inter', weight: 700 },
-      body: { family: 'Inter', weight: 400 },
-    },
+    ok: true,
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
   };
+<<<<<<< HEAD
 
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
@@ -596,3 +537,6 @@ export function generateCollectionId(): string {
   return `collection_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

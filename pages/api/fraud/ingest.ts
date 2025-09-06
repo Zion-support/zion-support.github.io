@@ -4,6 +4,7 @@ import { classifyWithGPT } from '../../../utils/fraud/gpt';
 import { getFraudStore, newEvent } from '../../../utils/fraud/store';
 import { extractClientIp } from '../../../utils/ip';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   AdminActionRecord,
   GptClassification,
@@ -11,22 +12,16 @@ import {
   MonitoredSource,
   StoredFraudRecord,;
 } from '../../../utils/fraud/types';
+=======
+import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { sendWarningEmail } from '../../../utils/email';
+const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'];
 
-const allowedSources: MonitoredSource[] = [
-  'signup',
-  'job_post',
-  'message',
-  'quote',
-  'review',
-];
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
     return;
 =======
 import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
@@ -38,6 +33,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(405).json({ error: 'Method not allowed' });
     return
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   try {
@@ -46,24 +44,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!allowedSources.includes(source)) {
       res.status(400).json({ error: 'Invalid source' });
 <<<<<<< HEAD
+<<<<<<< HEAD
       return;
 =======
       return
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      return
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const userId = typeof body.userId === 'string' ? body.userId : null;
     const content = typeof body.content === 'string' ? body.content : null;
+<<<<<<< HEAD
 <<<<<<< HEAD
     const metadata =
       body.metadata && typeof body.metadata === 'object' ? body.metadata : null;
 =======
     const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const ip = extractClientIp(req);
 
     const store = getFraudStore();
+<<<<<<< HEAD
 <<<<<<< HEAD
     const event = newEvent({
       source,
@@ -81,6 +88,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const heuristic = await evaluateHeuristics(event, { countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m) });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    const event = newEvent({ source, userId, content, metadata, ipAddress: ip });
+
+    const heuristic = await evaluateHeuristics(event, { countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m) });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     // Privacy opt-out check for content analysis
     let gpt: GptClassification | undefined = undefined;
@@ -88,17 +100,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const privacy = await store.getPrivacySettings(userId);
       if (!privacy.monitoringContentAnalysisOptOut) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         gpt = await classifyWithGPT(content, source);
+=======
+        gpt = await classifyWithGPT(content, source)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
     } else if (content && !userId) {
-      gpt = await classifyWithGPT(content, source);
+      gpt = await classifyWithGPT(content, source)
     }
 
-    let combinedLabel: GptClassificationLabel =
-      gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE');
+    let combinedLabel: GptClassificationLabel = gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE');
     if (heuristic.severity === 'high') combinedLabel = 'DANGEROUS';
     if (gpt?.label === 'DANGEROUS') combinedLabel = 'DANGEROUS';
 
+<<<<<<< HEAD
     const autoHide =
       process.env.FRAUD_AUTOHIDE === 'true' &&
       combinedLabel !== 'SAFE' &&
@@ -116,6 +132,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const autoHide = (process.env.FRAUD_AUTOHIDE === 'true') && (combinedLabel !== 'SAFE') && (source === 'message');
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    const autoHide = (process.env.FRAUD_AUTOHIDE === 'true') && (combinedLabel !== 'SAFE') && (source === 'message');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const stored: Omit<StoredFraudRecord, 'id'> = {
       ...event,
@@ -123,7 +142,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       gpt,
       autoHidden: !!autoHide,
 <<<<<<< HEAD
+<<<<<<< HEAD
       status: 'PENDING',
+=======
+      status: 'PENDING'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     };
 =======
       status: 'PENDING'};
@@ -138,7 +161,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
           toUserId: userId,
           subject: 'Marketplace warning: suspicious activity detected',
-          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`,
+          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`
         });
 =======
           toUserId: userId, subject: 'Marketplace warning: suspicious activity detected',
@@ -155,13 +178,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       heuristic,
       gpt,
       autoHidden: saved.autoHidden,
-      createdAt: saved.createdAt,
-    });
+      createdAt: saved.createdAt
+    })
   } catch (e: any) {
-    res
-      .status(500)
-      .json({ error: 'Internal error', details: e?.message || String(e) });
+    res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
   }
+<<<<<<< HEAD
 =======
       id: saved.id, flagged: combinedLabel !== 'SAFE',
       label: combinedLabel, heuristic,
@@ -173,3 +195,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

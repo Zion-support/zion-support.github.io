@@ -1,5 +1,5 @@
-import { format } from 'date-fns';
 
+import { format } from 'date-fns';
 /**
  * Formats a date for PDF display
  * @param date Date or string to format
@@ -8,6 +8,7 @@ import { format } from 'date-fns';
 export function formatDate(date: Date | string | undefined): string {
   if (!date) return '';
   if (typeof date === 'string') {
-    return format(new Date(date), 'MMM yyyy');
+    return format(new Date(date), 'MMM yyyy')
   }
-  return format(date, 'MMM yyyy');
+  return format(date, 'MMM yyyy')
+}

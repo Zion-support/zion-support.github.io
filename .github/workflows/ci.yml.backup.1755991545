@@ -22,6 +22,7 @@ jobs:
           node-version: '20'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       - run: npm ci
       - name: Pre-generate marketplace data
         run: node automation/marketplace-orchestrator.cjs once || true
@@ -71,3 +72,9 @@ jobs:
         run: node automation/marketplace-orchestrator.cjs once || true
       - run: npm run build
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      - run: npm ci
+      - name: Pre-generate marketplace data
+        run: node automation/marketplace-orchestrator.cjs once || true
+      - run: npm run build
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

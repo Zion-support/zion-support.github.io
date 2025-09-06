@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ ok: false, error: 'Method not allowed' });
+  if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method not allowed" });
   const { name, url } = req.body || {};
+<<<<<<< HEAD
   if (!name) return res.status(400).json({ ok: false, error: 'Missing name' });
   // Echo back URL; real impl would upload to storage (Supabase, S3, etc.)
   return res.status(201).json({ ok: true, file: { name, url: url || null } });
@@ -19,3 +23,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(201).json({ ok: true, file: { name, url: url || null } })
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  if (!name) return res.status(400).json({ ok: false, error: "Missing name" });
+  // Echo back URL, real impl would upload to storage (Supabase, S3, etc.)
+  return res.status(201).json({ ok: true, file: { name, url: url || null } })
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

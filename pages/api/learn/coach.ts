@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -14,6 +15,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('AllowPOST');
     return res.status(405).end('Method Not Allowed')
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST');
+    return res.status(405).end('Method Not Allowed')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   const { prompt } = req.body || {};
@@ -28,6 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         model: 'gpt-4o-mini',
         messages: [
 <<<<<<< HEAD
+<<<<<<< HEAD
           {
             role: 'system',
             content:
@@ -35,18 +43,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           },
           { role: 'user', content: String(prompt) },
         ],
+=======
+          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },
+          { role: 'user', content: String(prompt) }
+        ]
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       });
       const text = resp.choices?.[0]?.message?.content || 'No response';
-      return res.status(200).json({ text });
+      return res.status(200).json({ text })
     }
 
     // Fallback without API key
-    return res.status(200).json({
-      text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.',
-    });
+    return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message ?? 'Coach error' });
+    return res.status(500).json({ error: e?.message ?? 'Coach error' })
   }
+<<<<<<< HEAD
 =======
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },
           { role: 'user', content: String(prompt) }
@@ -63,3 +75,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

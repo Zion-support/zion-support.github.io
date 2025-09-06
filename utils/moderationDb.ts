@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -8,80 +9,45 @@ import {
   ModerationStatus,
   AiScores,;
 } from '../types/moderation';
+=======
+export interface Flag {
+  id: string;
+  type: 'spam' | 'inappropriate' | 'harassment' | 'other';
+  content: string;
+  reporterId: string;
+  targetId: string;
+  targetType: 'post' | 'comment' | 'user';
+  status: 'pending' | 'reviewed' | 'resolved' | 'dismissed';
+  createdAt: string;
+  updatedAt: string;
+  adminNotes?: string;
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-const mkdir = promisify(fs.mkdir);
-const readFile = promisify(fs.readFile);
-const writeFile = promisify(fs.writeFile);
+// In-memory storage for development
+const flags: Flag[] = [];
 
-const ROOT = path.join(process.cwd(), 'data');
-const MODERATION_FILE = path.join(ROOT, 'moderation.json');
+export async function getFlagById(id: string): Promise<Flag | null> {
+  return flags.find(flag => flag.id === id) || null;
+}
 
-async function ensureBaseFiles() {
-  await mkdir(ROOT, { recursive: true });
-  try {
-    await readFile(MODERATION_FILE, 'utf8');
-  } catch {
-    await writeFile(
-      MODERATION_FILE,
-      JSON.stringify({ flags: [] }, null, 2),
-      'utf8'
-    );
-  }
+export async function getAllFlags(): Promise<Flag[]> {
+  return [...flags];
+}
 
-export async function readAllFlags(): Promise<FlaggedContent[]> {
-  await ensureBaseFiles();
-  const raw = await readFile(MODERATION_FILE, 'utf8');
-  const data = JSON.parse(raw) as { flags: FlaggedContent[] };
-  return data.flags || [];
-
-export async function writeAllFlags(flags: FlaggedContent[]): Promise<void> {
-  await ensureBaseFiles();
-  await writeFile(MODERATION_FILE, JSON.stringify({ flags }, null, 2), 'utf8');
-
-export function generateFlagId(): string {
-  return `FLG-${crypto.randomBytes(4).toString('hex').toUpperCase()}`;
-
-export function generateAiScores(seed?: string): AiScores {
-  const buf = crypto
-    .createHash('sha256')
-    .update(seed || String(Date.now()))
-    .digest();
-  const v = (i: number) => Number((buf[i] / 255).toFixed(2));
-  return { toxicity: v(0), nsfw: v(1), scam: v(2) };
-
-export async function getFlagById(
-  id: string
-): Promise<FlaggedContent | undefined> {
-  const all = await readAllFlags();
-  return all.find(f => f.id === id);
-
-export async function upsertFlag(flag: FlaggedContent): Promise<void> {
-  const all = await readAllFlags();
-  const idx = all.findIndex(f => f.id === flag.id);
-  if (idx >= 0) all[idx] = flag;
-  else all.push(flag);
-  await writeAllFlags(all);
-
-export async function createFlag(
-  init: Omit<
-    FlaggedContent,
-    'id' | 'createdAt' | 'updatedAt' | 'aiScores' | 'status'
-  > & { status?: ModerationStatus; aiScores?: AiScores }
-): Promise<FlaggedContent> {
-  const now = new Date().toISOString();
-  const flag: FlaggedContent = {
-    id: generateFlagId(),
-    createdAt: now,
-    updatedAt: now,
-    status: init.status || 'pending',
-    aiScores: init.aiScores || generateAiScores(init.contentId + init.userId),
-    ...init,
+export async function createFlag(flagData: Omit<Flag, 'id' | 'createdAt' | 'updatedAt'>): Promise<Flag> {
+  const flag: Flag = {
+    ...flagData,
+    id: `flag-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
   };
-  const all = await readAllFlags();
-  all.push(flag);
-  await writeAllFlags(all);
+  
+  flags.push(flag);
   return flag;
+}
 
+<<<<<<< HEAD
 export async function updateFlagStatus(
   id: string,
   status: ModerationStatus,
@@ -130,12 +96,16 @@ export async function getFlag(id: string): Promise<ModerationFlag | null> {
 }
 
 export async function updateFlag(id: string, updates: Partial<ModerationFlag>): Promise<ModerationFlag | null> {
+=======
+export async function updateFlag(id: string, updates: Partial<Pick<Flag, 'status' | 'adminNotes'>>): Promise<Flag | null> {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const flagIndex = flags.findIndex(flag => flag.id === id);
   if (flagIndex === -1) return null;
   
   flags[flagIndex] = {
     ...flags[flagIndex],
     ...updates,
+<<<<<<< HEAD
     updatedAt: new Date(),
   };
   return flags[flagIndex];
@@ -159,3 +129,22 @@ export async function getActionsForFlag(flagId: string): Promise<ModerationActio
   return actions.filter(action => action.flagId === flagId);
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    updatedAt: new Date().toISOString()
+  };
+  
+  return flags[flagIndex];
+}
+
+export async function deleteFlag(id: string): Promise<boolean> {
+  const flagIndex = flags.findIndex(flag => flag.id === id);
+  if (flagIndex === -1) return false;
+  
+  flags.splice(flagIndex, 1);
+  return true;
+}
+
+export async function updateFlagStatus(id: string, status: string, adminNotes?: string): Promise<Flag | null> {
+  return updateFlag(id, { status: status as any, adminNotes });
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

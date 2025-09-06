@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  const filteredServices = allServices.filter (service => {
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const sortedServices = [...filteredServices].sort ( (a, b) => {
   switch (sortBy) {
@@ -35,19 +36,128 @@ case 'customers': return (<> <Head> <title>Revolutionary 2025 Services Showcase 
 }</div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30 
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Search, Filter, Star, Users, TrendingUp, 
+  DollarSign, Clock, CheckCircle, ArrowRight;
+  Brain, Rocket, Dna, Globe, Shield, Wifi, 
+  Package, Bot, Car, Building2, Monitor, Cpu, 
+  Zap, Atom, Database, Cloud, Lock, Code;
+  Phone, Mail, MapPin, ExternalLink, ChevronDown;
+  Award, Target, Zap as ZapIcon, Globe as GlobeIcon
+} from 'lucide-react';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-}whileInView= {
+// Import the new revolutionary services
+import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
+import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
+const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices];
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+const serviceCategories = [
   {
-  opacity: 1, y: 0 
-
-}transition= {
+    id: 'ai-consciousness',
+    title: '🧠 AI Consciousness & Emotional Intelligence',
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-500',
+    services: allServices.filter(s => s.category.includes('AI Consciousness') || s.category.includes('Healthcare AI')),
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+  };
   {
-  duration: 0.8 
-
-}viewport= {
+    id: 'quantum-emerging',
+    title: '⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computing, DNA computing, and beyond';
+    icon: Atom,
+    color: 'from-blue-500 to-cyan-500',
+    services: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('DNA Computing')),
+    gradient: 'from-blue-500/20 to-cyan-500/20'
+  };
   {
-  once: true 
+    id: 'space-tech',
+    title: '🚀 Space Technology & Satellite',
+    description: 'Space mission management and satellite operations',
+    icon: Rocket,
+    color: 'from-indigo-500 to-blue-500',
+    services: allServices.filter(s => s.category.includes('Space Technology')),
+    gradient: 'from-indigo-500/20 to-blue-500/20'
+  };
+  {
+    id: 'cybersecurity',
+    title: '🔒 Next-Generation Cybersecurity',
+    description: 'Quantum encryption and AI threat detection',
+    icon: Shield,
+    color: 'from-red-500 to-pink-500',
+    services: allServices.filter(s => s.category.includes('Cybersecurity')),
+    gradient: 'from-red-500/20 to-pink-500/20'
+  };
+  {
+    id: 'cloud-infrastructure',
+    title: '☁️ Quantum Cloud & Infrastructure',
+    description: 'Quantum-enhanced cloud computing and infrastructure',
+    icon: Cloud,
+    color: 'from-cyan-500 to-blue-500',
+    services: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('Infrastructure')),
+    gradient: 'from-cyan-500/20 to-blue-500/20'
+  };
+  {
+    id: 'fintech',
+    title: '🏦 Financial Technology Revolution',
+    description: 'AI-powered trading and quantum risk management',
+    icon: DollarSign,
+    color: 'from-green-500 to-emerald-500',
+    services: allServices.filter(s => s.category.includes('Financial Technology')),
+    gradient: 'from-green-500/20 to-emerald-500/20'
+  };
+  {
+    id: 'industrial-iot',
+    title: '🏭 Industrial IoT & Smart Manufacturing',
+    description: 'Zero downtime manufacturing and predictive maintenance',
+    icon: Building2,
+    color: 'from-gray-500 to-slate-500',
+    services: allServices.filter(s => s.category.includes('Industrial IoT')),
+    gradient: 'from-gray-500/20 to-slate-500/20'
+  };
+  {
+    id: 'edtech',
+    title: '🎓 Education Technology Revolution',
+    description: 'AI-powered personalized learning and 10x faster knowledge acquisition',
+    icon: Users,
+    color: 'from-blue-500 to-cyan-500',
+    services: allServices.filter(s => s.category.includes('Education Technology')),
+    gradient: 'from-blue-500/20 to-cyan-500/20'
+  };
+  {
+    id: 'sustainability',
+    title: '🌱 Sustainability & Green Technology',
+    description: 'AI-powered environmental solutions for carbon neutrality',
+    icon: Globe,
+    color: 'from-green-500 to-emerald-500',
+    services: allServices.filter(s => s.category.includes('Sustainability')),
+    gradient: 'from-green-500/20 to-emerald-500/20'
+  };
+  {
+    id: 'logistics',
+    title: '🚛 Logistics & Supply Chain',
+    description: '99.9% delivery accuracy and zero waste supply chain',
+    icon: Package,
+    color: 'from-orange-500 to-red-500',
+    services: allServices.filter(s => s.category.includes('Logistics')),
+    gradient: 'from-orange-500/20 to-red-500/20'
+  }
+];
 
+<<<<<<< HEAD
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of companies already leveraging our revolutionary services to achieve unprecedented growth and innovation. </p> Call Now → </Link> </div> Send Email → </Link> </div> Get Directions → </Link> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" > <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105" > Start Your Transformation </button> </Link> 
 =======
 import React, { useState } from 'react';
@@ -169,6 +279,8 @@ const serviceCategories = [
   }
 ];
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function Revolutionary2025ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -649,5 +761,9 @@ export default function Revolutionary2025ServicesShowcase() {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

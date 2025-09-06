@@ -555,6 +555,7 @@ code { @apply font-mono; }
   backdrop-filter: blur(20px);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: 16px;
   padding: 24px;
@@ -581,6 +582,12 @@ code { @apply font-mono; }
   padding: 24px;
   transition: all var(--animation-normal) ease;  position: relative;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all var(--animation-normal) ease;  position: relative;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   border: 2px solid transparent;
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #06b6d4);
   background-clip: padding-box;
@@ -591,8 +598,11 @@ code { @apply font-mono; }
   position: absolute;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   top: 0;
   left: 0;
   right: 0;
@@ -972,6 +982,7 @@ code { @apply font-mono; }
 
 .gradient-text {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
 =======
   top: -2px;
@@ -1157,14 +1168,20 @@ code { @apply font-mono; }
 =======
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));  -webkit-background-clip: text;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));  -webkit-background-clip: text;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 .gradient-border {
   border: 2px solid;
   border-image: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink)) 1;
@@ -1331,6 +1348,7 @@ code { @apply font-mono; }
     background-color: #111827;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 .gradient-text-purple {
@@ -1438,3 +1456,6 @@ code { @apply font-mono; }
 =======
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

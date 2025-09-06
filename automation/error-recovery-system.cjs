@@ -112,9 +112,15 @@ class ErrorRecoverySystem {
     this.log('📦 Reinstalling dependencies...');
     const installResult = await this.executeCommand('npm install');
     if (!installResult.success) {
+<<<<<<< HEAD
     this.log('❌ Failed to reinstall dependencies'),
     return false
   }
+=======
+      this.log('❌ Failed to reinstall dependencies');
+      return false;
+    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     
     // Try building again
     this.log('🔨 Attempting build...');
@@ -125,7 +131,12 @@ class ErrorRecoverySystem {
   async fixLintingErrors() {
     this.log('🔧 Fixing linting errors...');
     
+<<<<<<< HEAD
     const lintFixResult = await this.executeCommand('npm run lint: fix'), return lintFixResult.success,
+=======
+    const lintFixResult = await this.executeCommand('npm run lint:fix');
+    return lintFixResult.success;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async performRecovery() {
@@ -133,9 +144,15 @@ class ErrorRecoverySystem {
     
     const errorCheck = await this.checkForErrors();
     if (!errorCheck.hasErrors) {
+<<<<<<< HEAD
     this.log('✅ No errors to recover from'),
     return
   }
+=======
+      this.log('✅ No errors to recover from');
+      return;
+    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     
     if (errorCheck.processes) {
       await this.recoverProcesses(errorCheck.processes);

@@ -1,46 +1,43 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
+=======
+// Source map utilities for development
+export interface SourceMapInfo {
+  file: string;
+  line: number;
+  column: number;
+  name?: string;
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-export type SourceNodeType = 'folder' | 'file';
+export function parseSourceMap(sourceMap: string): any {
+  try {
+    return JSON.parse(sourceMap);
+  } catch (error) {
+    console.error('Failed to parse source map:', error);
+    return null;
+  }
+}
 
-export interface SourceNode {
-  name: string;
-  path: string; // repo-relative path starting with '/'
-  type: SourceNodeType;
-  children?: SourceNode[];
-  exists?: boolean;
+export function getOriginalPosition(
+  sourceMap: any,
+  line: number,
+  column: number
+): SourceMapInfo | null {
+  if (!sourceMap || !sourceMap.sources || !sourceMap.mappings) {
+    return null;
+  }
 
-export interface SourceMapStatus {
-  gitConnected: boolean;
-  gitBranch?: string;
-
-export interface SourceMapResponse {
-  nodes: SourceNode[];
-  status: SourceMapStatus;
-
-const ROOT = process.cwd();
-
-function withPath(base: string, segment: string): string {
-  if (base === '/') return `/${segment}`;
-  return `${base}/${segment}`;
-
-function folder(
-  name: string,
-  basePath: string,
-  children: string[] = []
-): SourceNode {
-  const fullPath = withPath(basePath, name);
+  // This is a simplified implementation
+  // In a real implementation, you'd parse the mappings field
   return {
-    name,
-    path: fullPath,
-    type: 'folder',
-    children: children.map(child => ({
-      name: child,
-      path: withPath(fullPath, child),
-      type: 'folder',
-    })),
+    file: sourceMap.sources[0] || 'unknown',
+    line: line,
+    column: column
   };
+<<<<<<< HEAD
 
 export function buildZionSourceMap(): SourceNode[] {
   const map: SourceNode[] = [
@@ -338,3 +335,6 @@ export function generateSourceMap(
   };
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -6,6 +6,7 @@ const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
 const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -19,12 +20,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   try {
     const { projectId, preferredName } = req.body || {};
 
     if (!projectId) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return res.status(400).json({ error: 'Missing projectId' });
     }
@@ -36,6 +44,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
       return res.status(500).json({ error: 'LiveKit env vars not configured' })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      return res.status(400).json({ error: 'Missing projectId' })
+    }
+    if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
+      return res.status(500).json({ error: 'LiveKit env vars not configured' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const date = new Date();
@@ -45,6 +59,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Attempt to create or ensure the room exists
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
       const roomService = new RoomServiceClient(
         LIVEKIT_HOST,
         LIVEKIT_API_KEY,
@@ -53,29 +68,35 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
       const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET);
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       const opts: CreateRoomOptions = {
         name: roomName,
         emptyTimeout: 60 * 10, // 10 minutes
         maxParticipants: 24,
 <<<<<<< HEAD
+<<<<<<< HEAD
         metadata: JSON.stringify({
           projectId,
           createdBy: preferredName || 'host',
         }),
+=======
+        metadata: JSON.stringify({ projectId, createdBy: preferredName || 'host' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       };
-      await roomService.createRoom(opts).catch(() => Promise.resolve());
+      await roomService.createRoom(opts).catch(() => Promise.resolve())
     } catch (e) {
       // In some deployments without server access, proceed with computed room name
-      console.warn(
-        'Room create skipped or failed, proceeding with roomName only'
-      );
+      console.warn('Room create skipped or failed, proceeding with roomName only')
     }
 
-    return res.status(200).json({ roomName });
+    return res.status(200).json({ roomName })
   } catch (err: any) {
     console.error('Room create error', err);
-    return res.status(500).json({ error: 'Failed to create room' });
+    return res.status(500).json({ error: 'Failed to create room' })
   }
+<<<<<<< HEAD
 =======
         metadata: JSON.stringify({ projectId, createdBy: preferredName || 'host' })};
       await roomService.createRoom(opts).catch(() => Promise.resolve())
@@ -91,3 +112,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

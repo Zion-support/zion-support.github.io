@@ -1,8 +1,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 added 258 packages, changed 1 package, and audited 1709 packages in 17s
 
 345 packages are looking for funding
@@ -20,6 +23,7 @@ Some issues need review, and may require choosing
 a different dependency.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Run `npm audit` for details.
 =======
 added 292 packages, and removed 10 packages in 8s
@@ -27,3 +31,6 @@ added 292 packages, and removed 10 packages in 8s
 =======
 Run `npm audit` for details.
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+Run `npm audit` for details.
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name: CodeQL
 
 on:
@@ -31,6 +34,7 @@ jobs:
       - uses: github/codeql-action/autobuild@v3
       - uses: github/codeql-action/analyze@v3
         with:
+<<<<<<< HEAD
 <<<<<<< HEAD
           category: '/language:javascript'
 =======
@@ -77,3 +81,6 @@ jobs:
 =======
           category: '/language:javascript'
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          category: '/language:javascript'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

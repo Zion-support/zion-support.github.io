@@ -3,9 +3,12 @@ import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 import AIAssistant from '../../components/ui/AIAssistant';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const NewProposal: NextPage = () => {
   const [jobBrief, setJobBrief] = useState('');
   const [resumeSummary, setResumeSummary] = useState('');
@@ -14,6 +17,7 @@ const NewProposal: NextPage = () => {
 
   const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const pitchPrompt = useMemo(
     () =>
@@ -25,6 +29,11 @@ const NewProposal: NextPage = () => {
     `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
   ), [jobBrief, relevantExperience, resumeSummary]);
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  const pitchPrompt = useMemo(() => (
+    `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
+  ), [jobBrief, relevantExperience, resumeSummary]);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   return (
     <div>
@@ -32,41 +41,28 @@ const NewProposal: NextPage = () => {
         <title>New Proposal - Zion AI Marketplace</title>
       </Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <h1 className='text-2xl font-semibold mb-4'>Create Proposal</h1>
+=======
+      <h1 className="text-2xl font-semibold mb-4">Create Proposal</h1>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-      <div className='grid gap-4'>
-        <label className='text-sm'>
-          Job Description / Brief
-          <textarea
-            value={jobBrief}
-            onChange={e => setJobBrief(e.target.value)}
-            rows={6}
-            className='mt-1 w-full rounded-md border p-3'
-          />
+      <div className="grid gap-4">
+        <label className="text-sm">Job Description / Brief
+          <textarea value={jobBrief} onChange={e => setJobBrief(e.target.value)} rows={6} className="mt-1 w-full rounded-md border p-3" />
         </label>
-        <label className='text-sm'>
-          Your Resume Summary
-          <textarea
-            value={resumeSummary}
-            onChange={e => setResumeSummary(e.target.value)}
-            rows={4}
-            className='mt-1 w-full rounded-md border p-3'
-          />
+        <label className="text-sm">Your Resume Summary
+          <textarea value={resumeSummary} onChange={e => setResumeSummary(e.target.value)} rows={4} className="mt-1 w-full rounded-md border p-3" />
         </label>
-        <label className='text-sm'>
-          Relevant Experience Highlights
-          <textarea
-            value={relevantExperience}
-            onChange={e => setRelevantExperience(e.target.value)}
-            rows={6}
-            className='mt-1 w-full rounded-md border p-3'
-          />
+        <label className="text-sm">Relevant Experience Highlights
+          <textarea value={relevantExperience} onChange={e => setRelevantExperience(e.target.value)} rows={6} className="mt-1 w-full rounded-md border p-3" />
         </label>
       </div>
 
-      <div className='mt-6 flex items-center justify-between'>
-        <h2 className='text-lg font-semibold'>Proposal / Cover Letter</h2>
+      <div className="mt-6 flex items-center justify-between">
+        <h2 className="text-lg font-semibold">Proposal / Cover Letter</h2>
         <AIAssistant
+<<<<<<< HEAD
           buttonLabel='Generate Pitch Based on Profile & Job'
           title='Generate Proposal'
 =======
@@ -90,11 +86,16 @@ const NewProposal: NextPage = () => {
           buttonLabel="Generate Pitch Based on Profile & Job"
           title="Generate Proposal"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          buttonLabel="Generate Pitch Based on Profile & Job"
+          title="Generate Proposal"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           defaultPrompt={pitchPrompt}
           onAccept={setCoverLetter}
           authorizationToken={operatorToken}
         />
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <textarea
         value={coverLetter}
@@ -102,10 +103,14 @@ const NewProposal: NextPage = () => {
         rows={14}
         className='mt-2 w-full rounded-md border p-3'
       />
+=======
+      <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     </div>
-  );
+  )
 };
 
+<<<<<<< HEAD
 export default NewProposal;
 =======
       <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
@@ -115,3 +120,6 @@ export default NewProposal;
 
 export default NewProposal;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default NewProposal;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

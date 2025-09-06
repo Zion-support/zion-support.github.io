@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:.github/workflows/homepage-updater.yml
 
 concurrency:
@@ -19,14 +20,23 @@ concurrency:
 concurrency:
   group: homepage-updater
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+:.github/workflows/homepage-updater.yml
+
+concurrency:
+  group: homepage-updater
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   pull-requests: write
   actions: read
 concurrency:
   group: "cursor-rules-auto-update-${{ github.ref }}"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2:.github/workflows/broken_workflows_backup_1755470975/cursor-rules-autoupdate.yml
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   cancel-in-progress: true
 
 jobs:

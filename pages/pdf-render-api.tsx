@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   FileText,
   Phone,
@@ -10,11 +11,13 @@ import {
   ArrowRight,
   Star,;
 } from 'lucide-react';
+=======
+import { FileText, Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import Layout from '../components/layout/Layout';
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
 export default function PdfRenderApiPage() {
+<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/pdf-render-api')
   );
@@ -25,6 +28,9 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function PdfRenderApiPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/pdf-render-api'));
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/pdf-render-api'));
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   if (!service) return null;
 
   return (
@@ -32,53 +38,39 @@ export default function PdfRenderApiPage() {
       <Head>
         <title>{service.name} - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta name='description' content={service.description} />
         <link rel='canonical' href='https://ziontechgroup.com/pdf-render-api' />
+=======
+        <meta name="description" content={service.description} />
+        <link rel="canonical" href="https://ziontechgroup.com/pdf-render-api" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
-      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-6xl mx-auto'>
-          <div className='text-center mb-10'>
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3 w-10 h-10'>
-              <FileText />
-              {service.name}
-            </h1>
-            <p className='mt-4 text-xl text-slate-300 max-w-3xl mx-auto'>
-              {service.tagline}
-            </p>
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3 w-10 h-10"><FileText />{service.name}</h1>
+            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>
-            <div className='lg:col-span-2 bg-black/30 rounded-2xl border border-emerald-500/30 p-6'>
-              <h2 className='text-2xl font-semibold mb-4'>Capabilities</h2>
-              <p className='text-slate-300 mb-6'>{service.description}</p>
-              <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
+              <p className="text-slate-300 mb-6">{service.description}</p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
-                  <li
-                    key={i}
-                    className='flex items-start space-x-3 text-slate-200 w-5 h-5 text-emerald-400 mt-0.5'
-                  >
-                    <Check />
-                    <span>{feat}</span>
-                  </li>
+                  <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-emerald-400 mt-0.5"><Check /><span>{feat}</span></li>
                 ))}
               </ul>
             </div>
-            <div className='bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit'>
-              <div className='flex items-end justify-between mb-3'>
+            <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
+              <div className="flex items-end justify-between mb-3">
                 <div>
-                  <div className='text-3xl font-bold text-white text-slate-400 text-base'>
-                    {service.price}
-                    <span>{service.period}</span>
-                  </div>
-                  <div className='text-slate-400'>
-                    {service.trialDays}-day free trial • Setup:{' '}
-                    {service.setupTime}
-                  </div>
+                  <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
                 </div>
-                <div className='flex items-center text-yellow-400 w-4 h-4 mr-1'>
-                  <Star />
-                  {service.rating.toFixed(1)}
-                </div>
+                <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
+<<<<<<< HEAD
               <a
                 href='/contact'
                 className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'
@@ -139,12 +131,17 @@ export default function PdfRenderApiPage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Start Generating<ArrowRight /></a>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400 hover:text-white"><Phone /><a href={`tel:${service.contactInfo.mobile.replace(/[^+\\d]/g, '')}`} >{service.contactInfo.mobile}</a></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400 hover:text-white"><Mail /><a href={`mailto:${service.contactInfo.email}`} >{service.contactInfo.email}</a></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs hover:text-white"><MapPin /><a href={`https://maps.google.com/?q=${encodeURIComponent(service.contactInfo.address)}`} target="_blank" rel="noopener noreferrer" >{service.contactInfo.address}</a></div>
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </div>
@@ -152,9 +149,15 @@ export default function PdfRenderApiPage() {
       </div>
     </Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 =======
   )
 }
 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
+}
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

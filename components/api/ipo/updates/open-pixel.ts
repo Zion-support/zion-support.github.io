@@ -9,13 +9,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const idx = updates.findIndex((x: any) => x.id === id);
     if (idx >= 0) {
       updates[idx].opens = (updates[idx].opens || 0) + 1;
-      writeJsonFile('updates.json', updates);
+      writeJsonFile('updates.json', updates)
     }
   }
   const pixel = Buffer.from(
-    'R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-    'base64'
+    'R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==base64'
   );
+<<<<<<< HEAD
   res.setHeader('Content-Type', 'image/gif');
   res.setHeader(
     'Cache-Control',
@@ -37,3 +37,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).send(pixel)
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  res.setHeader('Content-Typeimage/gif');
+  res.setHeader('Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate');
+  res.status(200).send(pixel)
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
 export type ProjectParticipantRole = 'client' | 'talent';
 
@@ -8,14 +9,21 @@ export type ProjectParticipants = {
 };
 
 export type Project = {
+=======
+export interface Milestone {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   id: string;
-  name: string;
-  participants: ProjectParticipants;
-  milestones: Milestone[];
+  title: string;
+  description?: string;
+  dueDate: string;
+  amountUsd: number;
+  status: 'pending' | 'completed' | 'cancelled';
+  attachments?: MilestoneAttachment[];
   createdAt: string;
   updatedAt: string;
-};
+}
 
+<<<<<<< HEAD
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
   return (
     value === 'Pending' ||
@@ -412,3 +420,30 @@ export function createMilestoneFile(
   };
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export interface MilestoneAttachment {
+  id: string;
+  name: string;
+  url: string;
+  type: string;
+  size: number;
+  uploadedAt: string;
+}
+
+export interface CreateMilestoneRequest {
+  title: string;
+  description?: string;
+  dueDate: string;
+  amountUsd: number;
+  attachments?: MilestoneAttachment[];
+}
+
+export interface UpdateMilestoneRequest {
+  title?: string;
+  description?: string;
+  dueDate?: string;
+  amountUsd?: number;
+  status?: 'pending' | 'completed' | 'cancelled';
+  attachments?: MilestoneAttachment[];
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

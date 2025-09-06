@@ -896,8 +896,11 @@ body::after {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 .quantum-loader::before {
   top: 0;
   left: 0;
@@ -914,6 +917,7 @@ body::after {
   bottom: 10px;
   border-bottom-color: rgba(147, 51, 234, 0.8);
   animation-duration: 2s;
+<<<<<<< HEAD
 <<<<<<< HEAD
   animation-direction: reverse;
 =======
@@ -1037,6 +1041,9 @@ body::after {
 =======
   animation-direction: reverse;}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  animation-direction: reverse;}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 @keyframes quantumSpin {
   0% { transform: rotate(0deg); }
@@ -1045,8 +1052,11 @@ body::after {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 /* Enhanced Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
@@ -1113,6 +1123,7 @@ body::after {
 @keyframes cyberMove {
   0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
   100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -1205,3 +1216,6 @@ body::after {
 =======
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

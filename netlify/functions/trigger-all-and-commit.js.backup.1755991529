@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -14,6 +17,7 @@ exports.handler = async function(event, context) {
     const reportPath = path.join(process.cwd(), 'trigger-all-and-commit-report.md');
     
     const reportContent = `# trigger-all-and-commit Report
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 exports.handler = async function() {
@@ -39,6 +43,8 @@ exports.handler = async function() {
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 Generated: ${timestamp}
 
 ## Status
@@ -63,6 +69,7 @@ Generated: ${timestamp}
     } catch (gitError) {
       console.log('Git error:', gitError.message);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     
@@ -154,6 +161,11 @@ Generated: ${timestamp}
     console.log('✅ trigger-all-and-commit completed successfully');
         return {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    
+    console.log('✅ trigger-all-and-commit completed successfully');
+        return {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       statusCode: 200,
       body: JSON.stringify({
         message: 'trigger-all-and-commit completed successfully',

@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   Cloud,
   Cpu,
@@ -15,80 +16,62 @@ import {
   Users,
   Clock,
   TrendingUp,;
+=======
+import { 
+  Cloud, Cpu, Database, Zap, Shield, Rocket, 
+  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
-
 export default function CloudServicesPage() {
   const services = [
     {
-      title: 'Cloud Migration & Strategy',
-      description:
-        'Seamless cloud migration with strategic planning and execution',
-      features: [
-        'Migration Planning',
-        'Cost Optimization',
-        'Performance Tuning',
-        'Security Implementation',
-      ],
-      price: 'From $10,000',
+      title: "Cloud Migration & Strategy",
+      description: "Seamless cloud migration with strategic planning and execution",
+      features: ["Migration Planning", "Cost Optimization", "Performance Tuning", "Security Implementation"];
+      price: "From $10,000";
       icon: Cloud,
-      color: 'from-emerald-500 to-teal-500',
-    },
+      color: "from-emerald-500 to-teal-500"
+    };
     {
-      title: 'DevOps & CI/CD',
-      description: 'Automated development and deployment pipelines',
-      features: [
-        'CI/CD Automation',
-        'Infrastructure as Code',
-        'Monitoring & Alerting',
-        'Performance Optimization',
-      ],
-      price: 'From $6,000',
+      title: "DevOps & CI/CD",
+      description: "Automated development and deployment pipelines",
+      features: ["CI/CD Automation", "Infrastructure as Code", "Monitoring & Alerting", "Performance Optimization"];
+      price: "From $6,000";
       icon: Zap,
-      color: 'from-blue-500 to-cyan-500',
-    },
+      color: "from-blue-500 to-cyan-500"
+    };
     {
-      title: 'Edge Computing Solutions',
-      description:
-        'Distributed computing for improved performance and reliability',
-      features: [
-        'Edge Deployment',
-        'Load Balancing',
-        'Global Distribution',
-        'Low Latency',
-      ],
-      price: 'From $8,000',
+      title: "Edge Computing Solutions",
+      description: "Distributed computing for improved performance and reliability",
+      features: ["Edge Deployment", "Load Balancing", "Global Distribution", "Low Latency"];
+      price: "From $8,000";
       icon: Cpu,
-      color: 'from-purple-500 to-pink-500',
-    },
+      color: "from-purple-500 to-pink-500"
+    };
     {
-      title: 'Cloud Security & Compliance',
-      description:
-        'Comprehensive security and compliance for cloud environments',
-      features: [
-        'Identity Management',
-        'Data Protection',
-        'Compliance Auditing',
-        'Threat Prevention',
-      ],
-      price: 'From $12,000',
+      title: "Cloud Security & Compliance",
+      description: "Comprehensive security and compliance for cloud environments",
+      features: ["Identity Management", "Data Protection", "Compliance Auditing", "Threat Prevention"];
+      price: "From $12,000";
       icon: Shield,
-      color: 'from-red-500 to-orange-500',
-    },
+      color: "from-red-500 to-orange-500"
+    }
   ];
 
   const stats = [
-    { number: '99.99%', label: 'Uptime Guarantee', icon: Cloud },
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock },
-    { number: '100+', label: 'Cloud Projects', icon: CheckCircle },
+    { number: "99.99%", label: "Uptime Guarantee", icon: Cloud },
+    { number: "50%", label: "Cost Reduction", icon: TrendingUp },
+    { number: "24/7", label: "Support Available", icon: Clock },
+    { number: "100+", label: "Cloud Projects", icon: CheckCircle }
   ];
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Cloud Infrastructure Services - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta
           name='description'
           content='Scalable cloud infrastructure solutions from Zion Tech Group. Cloud migration, DevOps, edge computing, and security services.'
@@ -156,16 +139,22 @@ export default function CloudServicesPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Cloud Infrastructure Services - Zion Tech Group</title>
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <meta name="description" content="Scalable cloud infrastructure solutions from Zion Tech Group. Cloud migration, DevOps, edge computing, and security services." />
         <meta property="og:title" content="Cloud Infrastructure Services - Zion Tech Group" />
         <meta property="og:description" content="Scalable cloud infrastructure solutions for modern businesses." />
         <link rel="canonical" href="https://ziontechgroup.com/services/cloud" />
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       <EnhancedNavigation />
 
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -173,16 +162,25 @@ export default function CloudServicesPage() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      <section className="relative pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className='mb-8'
+=======
+            className="mb-8"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           >
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent mb-6'>
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent mb-6">
               Cloud Infrastructure
             </h1>
+<<<<<<< HEAD
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Scalable cloud solutions that drive efficiency and accelerate
               digital transformation
@@ -195,6 +193,10 @@ export default function CloudServicesPage() {
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Scalable cloud solutions that drive efficiency and accelerate digital transformation
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Scalable cloud solutions that drive efficiency and accelerate digital transformation
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </p>
           </motion.div>
 
@@ -203,15 +205,19 @@ export default function CloudServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className='mb-12'
+=======
+            className="mb-12"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           >
-            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
-              From cloud migration to DevOps automation, we provide
-              comprehensive cloud infrastructure solutions that scale with your
-              business and optimize costs.
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              From cloud migration to DevOps automation, we provide comprehensive cloud infrastructure 
+              solutions that scale with your business and optimize costs.
             </p>
-            <button className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
+            <button className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
               Cloud Consultation
+<<<<<<< HEAD
               <ArrowRight className='w-5 h-5' />
 =======
             className="mb-12"
@@ -224,12 +230,16 @@ export default function CloudServicesPage() {
               Cloud Consultation
               <ArrowRight className="w-5 h-5" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+              <ArrowRight className="w-5 h-5" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </button>
           </motion.div>
         </div>
       </section>
 
       {/* Stats Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -239,6 +249,11 @@ export default function CloudServicesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -247,11 +262,16 @@ export default function CloudServicesPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='text-center'
+=======
+                className="text-center"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               >
-                <div className='w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4'>
-                  <stat.icon className='w-8 h-8 text-teal-400' />
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-teal-400" />
                 </div>
+<<<<<<< HEAD
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -265,6 +285,10 @@ export default function CloudServicesPage() {
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-white/70">{stat.label}</div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
             ))}
           </div>
@@ -273,29 +297,36 @@ export default function CloudServicesPage() {
 
       {/* Services Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
 =======
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className='text-center mb-16'
+=======
+            className="text-center mb-16"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           >
-            <h2 className='text-4xl font-bold text-white mb-6'>
-              Cloud Infrastructure Services
-            </h2>
-            <p className='text-xl text-white/70 max-w-3xl mx-auto'>
-              Comprehensive cloud solutions designed to modernize your
-              infrastructure and drive innovation
+            <h2 className="text-4xl font-bold text-white mb-6">Cloud Infrastructure Services</h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
 =======
             className="text-center mb-16"
@@ -308,6 +339,9 @@ export default function CloudServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -316,13 +350,16 @@ export default function CloudServicesPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-emerald-500/30 transition-all duration-300'
+=======
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-emerald-500/30 transition-all duration-300"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               >
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}
-                >
-                  <service.icon className='w-8 h-8 text-white' />
+                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {service.title}
                 </h3>
@@ -340,17 +377,23 @@ export default function CloudServicesPage() {
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-white/80">
                       <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {feature}
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className='flex items-center justify-between'>
                   <span className='text-2xl font-bold text-teal-400'>
@@ -362,6 +405,11 @@ export default function CloudServicesPage() {
                   <span className="text-2xl font-bold text-teal-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-teal-400">{service.price}</span>
+                  <button className="px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     Get Started
                   </button>
                 </div>
@@ -373,12 +421,17 @@ export default function CloudServicesPage() {
 
       {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
 =======
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -386,17 +439,21 @@ export default function CloudServicesPage() {
             viewport={{ once: true }}
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className='text-4xl font-bold text-white mb-6'>
+=======
+            <h2 className="text-4xl font-bold text-white mb-6">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Ready to Transform Your Infrastructure?
             </h2>
-            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
-              Let's discuss how our cloud infrastructure solutions can modernize
-              your business and drive digital transformation.
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <button className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Infrastructure Assessment
               </button>
+<<<<<<< HEAD
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
 =======
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -411,6 +468,9 @@ export default function CloudServicesPage() {
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 View Case Studies
               </button>
             </div>
@@ -420,6 +480,7 @@ export default function CloudServicesPage() {
 
       <EnhancedFooter />
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 
@@ -445,3 +506,7 @@ export default function CloudServicesPage() {
   )
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

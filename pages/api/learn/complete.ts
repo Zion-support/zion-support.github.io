@@ -2,12 +2,23 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const usersPath = path.join(process.cwd(), 'datalearnusers.json');
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
+
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, 'utf-8'))
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 function writeJson(p: string, data: any) {
-  fs.writeFileSync(p, JSON.stringify(data, null, 2));
+  fs.writeFileSync(p, JSON.stringify(data, null, 2))
+}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
 =======
@@ -27,6 +38,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('AllowPOST');
     return res.status(405).end('Method Not Allowed')
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    res.setHeader('AllowPOST');
+    return res.status(405).end('Method Not Allowed')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   const { userId = 'demo-user', courseId, enableBoost } = req.body || {};
@@ -38,6 +53,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const course = courses.find((c: any) => c.id === courseId);
     if (!course) return res.status(404).json({ error: 'Course not found' });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const user = users[userId] || {
       userId,
@@ -52,23 +68,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       user.certifications.push(courseId);
     if (!user.badges.includes(course.certificationBadge))
       user.badges.push(course.certificationBadge);
+=======
+    const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
+    if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
+    if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
 
     // Mark progress complete
-    user.progress[courseId] = {
-      completed: true,
-      percent: 100,
-      completedLessons: (course.lessons || []).map((l: any) => l.id),
-    };
+    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons || []).map((l: any) => l.id) };
 
     users[userId] = user;
     writeJson(usersPath, users);
-    return res.status(200).json({ ok: true, user });
+    return res.status(200).json({ ok: true, user })
   } catch (e: any) {
-    return res
-      .status(500)
-      .json({ error: e?.message ?? 'Failed to complete course' });
+    return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })
   }
+<<<<<<< HEAD
 =======
     const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
     if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
@@ -86,3 +102,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

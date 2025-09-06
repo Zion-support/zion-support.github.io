@@ -2,11 +2,14 @@ const nextConfig = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   assetPrefix,
   poweredByHeader: false,
   trailingSlash: false,
@@ -66,6 +69,7 @@ const nextConfig = {
     swcTraceProfiling: false,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
     // Removed esmExternals to prevent external module dynamic import issues
@@ -80,6 +84,9 @@ const nextConfig = {
 =======
       },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   images: {
     unoptimized: isNetlify, // Disable optimization on Netlify to prevent 404s
@@ -238,6 +245,7 @@ const nextConfig = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-project-with-netlify-9d19
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
@@ -375,11 +383,14 @@ const nextConfig = {
     'lodash',
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     'lodash-es',
     'lodash/isPlainObject',
     'lodash/cloneDeep',
     'lodash/clone',
     'lodash/toPath',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/build-project-with-netlify-9d19
@@ -476,6 +487,8 @@ const nextConfig = {
       }
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
       // Alias react-router-dom to a lightweight stub to avoid build errors
       config.resolve.alias = {
@@ -727,6 +740,7 @@ const nextConfig = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     // CRITICAL FIX: Ensure usedExports is disabled globally to avoid conflicts with cacheUnaffected
@@ -738,6 +752,8 @@ const nextConfig = {
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     // PHASE 2: Enhanced Bundle Splitting for Performance Optimization
     if (!isServer) {
       config.optimization = {
@@ -1053,13 +1069,16 @@ const nextConfig = {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   async rewrites() {
     return [
-<<<<<<< HEAD
       {
         source: '/docs/zion-protocol.pdf',
         destination: '/api/zion-whitepaper-pdf?edition=full',
+<<<<<<< HEAD
       },
 =======
       { source: '/main', destination: '/', permanent: true },
@@ -1130,6 +1149,9 @@ const nextConfig = {
         destination: '/api/zion-whitepaper-pdf?edition=full',
       },    ];
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      },    ];
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
   
   // Skip ESLint during build for faster deployment  
@@ -1141,9 +1163,12 @@ const nextConfig = {
   swcMinify: true,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 module.exports = withSentryConfig(baseConfig);

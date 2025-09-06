@@ -1,8 +1,11 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
@@ -676,6 +679,7 @@
     "auto:intel": "node automation/auto-market-intel.cjs",
     "auto:talent": "node automation/auto-talent-highlights.cjs",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "auto:all": "npm run auto:intel && npm run auto:talent"
 =======
   "name": "zion-ai-assistant",
@@ -691,6 +695,9 @@
 =======
     "auto:all": "npm run auto:intel && npm run auto:talent"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "auto:all": "npm run auto:intel && npm run auto:talent"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           "postautomation": "npm run automation:git-sync",
       "lint:staged": "lint-staged",
       "performance:audit": "node automation/performance-audit.cjs",
@@ -705,8 +712,11 @@
   "dependencies": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
@@ -787,6 +797,7 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
 <<<<<<< HEAD
+<<<<<<< HEAD
     ]
 =======
     "compression": "^1.7.4",
@@ -800,4 +811,7 @@
 =======
     ]  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    ]  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }

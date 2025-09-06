@@ -39,7 +39,11 @@ conflictFiles.forEach(file => {
   }
 });
 
+<<<<<<< HEAD
 console.log(`\n📊 Conflict Resolution Summary: `),
+=======
+console.log(`\n📊 Conflict Resolution Summary:`);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 console.log(`✅ Successfully resolved: ${resolvedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 console.log(`📁 Total files processed: ${conflictFiles.length}`);

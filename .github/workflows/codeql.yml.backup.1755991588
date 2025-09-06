@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 name: "CodeQL"
 =======
 name: CodeQL
@@ -8,6 +9,9 @@ name: CodeQL
 =======
 name: "CodeQL"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+name: "CodeQL"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 on:
   push:
     branches: ["main", "develop", "cursor/**"]
@@ -54,6 +58,7 @@ jobs:
         with:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           category: "/language:${{matrix.language}}"
  
 
@@ -64,3 +69,7 @@ jobs:
           category: "/language:${{matrix.language}}"
  
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          category: "/language:${{matrix.language}}"
+ 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,38 +1,42 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
+=======
+export interface User {
+  id: string;
+  email: string;
+  role: 'admin' | 'user';
+  name?: string;
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-export type CurrentUser = {
-  userId: string;
-  role: 'client' | 'talent' | 'admin';
-};
-
-export function getCurrentUser(req: NextApiRequest): CurrentUser | null {
-  const headerUser = req.headers['x-user-id'];
-  const headerRole = req.headers['x-user-role'] as string | undefined;
-
-  const cookie = req.cookies || {};
-  const cookieUser = cookie['x-user-id'];
-  const cookieRole = cookie['x-user-role'];
-
-  const userId = (headerUser as string) || cookieUser;
-  const role =
-    (headerRole as CurrentUser['role']) || (cookieRole as CurrentUser['role']);
-
-  if (!userId || !role) return null;
-  if (role !== 'client' && role !== 'talent' && role !== 'admin') return null;
-
-  return { userId, role };
-
-export function requireUser(
-  req: NextApiRequest,
-  res: NextApiResponse
-): CurrentUser | null {
-  const user = getCurrentUser(req);
-  if (!user) {
-    res.status(401).json({ error: 'Unauthorized' });
+export function getUserFromRequest(req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return null;
   }
+  
+  const token = authHeader.substring(7);
+  if (token && token.length > 0) {
+    return {
+      id: 'user-1',
+      email: 'user@example.com',
+      role: 'user',
+      name: 'Test User'
+    };
+  }
+  
+  return null;
+}
+
+export function requireAuth(req: any): User {
+  const user = getUserFromRequest(req);
+  if (!user) {
+    throw new Error('Authentication required');
+  }
   return user;
+<<<<<<< HEAD
 =======
 // API authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -317,3 +321,6 @@ export function verifySessionToken(token: string): AuthenticatedUser | null {
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -30,6 +30,7 @@ jobs:
         run: npm ci --no-audit --no-fund
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       - name: Run workflow
         run: echo "Workflow completed successfully"
 =======
@@ -48,3 +49,7 @@ jobs:
       - name: Run workflow
         run: echo "Workflow completed successfully"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      - name: Run workflow
+        run: echo "Workflow completed successfully"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
