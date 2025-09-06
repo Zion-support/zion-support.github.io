@@ -14,22 +14,26 @@ export const PerformanceMonitor: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-xl">
-        <div className="flex items-center gap-3 mb-3">
-          <Activity className="w-5 h-5 text-blue-400" />
-          <span className="text-sm font-medium text-white">Performance Monitor</span>
+    <div className="fixed bottom-4 right-4 w-80 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl z-50">
+      <div className="p-4 border-b border-gray-700">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-white flex items-center">
+            <Activity className="w-5 h-5 mr-2 text-cyan-400" />
+            Performance Monitor
+          </h3>
           <button
             onClick={() => setIsVisible(false)}
-            className="ml-auto text-white/60 hover:text-white"
+            className="text-gray-400 hover:text-white transition-colors"
           >
             ×
           </button>
         </div>
-        <div className="text-xs text-white/80">
-          <p>Development Mode</p>
-          <p>Performance monitoring active</p>
-        </div>
+      </div>
+
+      <div className="p-4">
+        <p className="text-gray-400 text-sm">
+          Performance monitoring is active. This component will be enhanced with detailed metrics in future updates.
+        </p>
       </div>
     </div>
   );

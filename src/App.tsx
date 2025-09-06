@@ -1,11 +1,10 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import { Header } from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
-
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'));
@@ -30,11 +29,12 @@ const App = () => {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-          <Header />
+        <div className="min-h-screen bg-gray-900 text-white">
+          <PerformanceMonitor />
+          <Header onMenuClick={() => setSidebarOpen(true)} />
           <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
           
-          <main className="pt-20">
+          <main className="pt-16">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -47,7 +47,6 @@ const App = () => {
           </main>
           
           <Footer />
-          <PerformanceMonitor />
         </div>
       </Router>
     </ErrorBoundary>

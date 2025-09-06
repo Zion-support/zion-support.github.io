@@ -26,18 +26,7 @@ describe('App', () => {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 });
-    const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toBeInTheDocument();
-  });
-});
-
-    render(<App />);
-    expect(
-      screen.getByRole("heading", { level: 1, name: "Zion Tech Group" }),
-    ).toBeInTheDocument();
-  });
-});
-
+=======
 import { render, screen } from '@testing-library/react'
 import App from '../src/App'
 describe('App'
@@ -45,5 +34,5 @@ describe('App'
     expect(screen.getByRole('main'
   it('has proper heading structure'
     const heading = screen.getByRole('heading', { level: '1'
-const heading = screen.getByRole('heading'
-
+    const heading = screen.getByRole('heading'
+>>>>>>> origin/automation-improvements-final

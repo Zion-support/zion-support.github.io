@@ -14,6 +14,7 @@
 
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const matchesTarget =
         r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
 =======
@@ -136,14 +137,14 @@ if (author_name = "Anonymous") {
           ...r,
 
       });
-    const totalReviews = publicReviews.length;
+    const totalReviews = publicReviews && publicReviews.length;
     const averageRating = totalReviews
 
 
         ) / 10
       : 0;
     const projects = await readProjects();
-    const totalCompletedProjects = projects.filter(
+    const totalCompletedProjects = projects && projects.filter(
       (p) =>
 
         p && p.status === "Completed" &&
@@ -185,6 +186,7 @@ if (author_name = "Anonymous") {
     }
 ;
     return res.status (200).json ({ summary, reviews: public_reviews });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (error: any) {
 
     return res;
