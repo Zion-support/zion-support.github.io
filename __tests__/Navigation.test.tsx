@@ -8,7 +8,7 @@ describe('Navigation', () => {
     render(<Navigation />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
-  
+
   test('displays correct content', () => {
     render(<Navigation />);
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();

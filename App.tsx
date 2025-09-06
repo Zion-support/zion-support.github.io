@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import Header from './src/components/Header';
@@ -10,7 +10,7 @@ import ContactPage from './src/pages/Contact';
 import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
 
-export default function App() {
+export default function App(): JSX.Element {
   return (
     <ErrorBoundary>
       <Router>
