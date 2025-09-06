@@ -14,7 +14,6 @@ if ( {) {
     const target = role === 'client' ? '/dashboard / client' : '/dashboard / talent';
     return NextResponse.redirect (new URL (target, request.url));
   }
-  return NextResponse.next ();
 }
 export const config = {
   matcher: ['/dashboard / dashboard/']}

@@ -8,6 +8,13 @@
 
 
 =======
+  getData: () => [],
+  setData: (data: any) => null,
+  updateData: (id: string, data: any) => null,
+  deleteData: (id: string) => null;
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 interface Project {
   id: string;
   title: string;
@@ -40,9 +47,8 @@ class DataStore {
 
   // Project methods
   findProjectById(id: string): Project | undefined {
-    return this && this.projects.find(project => project && project.id === id);
+    return this.projects.find(project => project.id === id);
   }
-}
 
 
 

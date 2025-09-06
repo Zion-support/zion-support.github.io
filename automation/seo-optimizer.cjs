@@ -14,16 +14,27 @@
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
  */
+<<<<<<< HEAD
+=======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const { execSync } = require('child_process');
 >>>>>>> origin/main
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 console.log('🔍 Starting SEO Optimizer...');
@@ -276,6 +287,16 @@ class SEOOptimizer {
 const optimizer = new SEOOptimizer();
 optimizer.optimizeSEO().catch(console.error);
 =======
+    "status"
+=======
+/**
+ * SEO Optimizer
+ * Automatically optimizes SEO for the application
+ */
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
 class SEOOptimizer {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'seo-optimizer.log');
@@ -402,6 +423,9 @@ if (require.main === module) {
   const optimizer = new SEOOptimizer();
   optimizer.start().catch(console.error);
 }
+<<<<<<< HEAD
+module.exports = SEOOptimizer;
+=======
 
 module.exports = SEOOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

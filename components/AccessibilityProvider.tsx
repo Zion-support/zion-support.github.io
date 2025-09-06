@@ -11,14 +11,12 @@ interface AccessibilityContextType {
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
-=======
 import React, { create_context, useContext, useState, ReactNode } from './react';
 ;
 interface AccessibilityContextType {
   high_contrast: boolean;
   large_text: boolean;
   reduced_motion: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   toggleHighContrast: () => void;
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
@@ -46,8 +44,16 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined;
 >(undefined);
+<<<<<<< HEAD
+export const useAccessibility = () => {;
+=======
+<<<<<<< HEAD
+export const useAccessibility = () => {
+=======
 
 export const useAccessibility = () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const context = useContext(AccessibilityContext);
   if (context === undefined) {;
     throw new Error(;
@@ -56,11 +62,10 @@ export const useAccessibility = () => {;
   }
   return context;
 };
-
 interface AccessibilityProviderProps {;
   children: React && React.ReactNode;
 }
-
+<<<<<<< HEAD
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
   children,;
 }) => {;

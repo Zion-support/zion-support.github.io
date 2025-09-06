@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -57,12 +53,8 @@ import { AnimatePresence } from 'framer-motion';
 import Link from 'next / link';
 import { AnimatePresence } from 'framer-motion';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface FooterLink {
-=======
-
 interface FooterLink {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   label: string;
   href: string;
   description?: string;
@@ -71,17 +63,13 @@ interface FooterLink {;
 ;
 
 interface FooterSection {
-=======
 interface FooterSection {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title: string;
   links: FooterLink[];} from 'lucide-react';
 
 
 import Link from 'next/link';
-=======
 import Link from 'next / link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { AnimatePresence } from 'framer-motion';
 
 
@@ -104,6 +92,7 @@ const footerSections: FooterSection[] = [
 
     title: 'Solutions'
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     links: [
       {
         label: 'Healthcare & Biotech'
@@ -138,7 +127,10 @@ const footerSections: FooterSection[] = [
   {
     title: 'Solutions'
     links: [
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' }
       { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' }
       { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' }
@@ -156,7 +148,6 @@ const footerSections: FooterSection[] = [
     ]
 
   };
-=======
   external?: boolean;
 }
 interface FooterSection {
@@ -312,9 +303,6 @@ const footer_sections: FooterSection[] = [;
       { label: 'Blog', href: '/blog', description: 'Industry insights' },
 
 
-const UltraAdvancedFuturisticFooter2025: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
   };
 
 
@@ -350,6 +338,26 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       items: [
 
 =======
+        { label: '2040 Services', href: '/innovative-2040-services-showcase' },
+      ],
+    },    {
+
+    {
+
+      title: 'Solutions',
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      items: [
+        { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
+        { label: 'Micro SAAS', href: '/micro-saas' },
+        { label: 'IT Services', href: '/it-services' },
+        { label: 'Innovation Lab', href: '/innovation-lab' },
+<<<<<<< HEAD
+        { label: 'Research & Development', href: '/research-development' }
+      ]
+    };
+    {
+      title: 'Company'
+      items: [
       {
         label: 'White Papers',
         href: '/white - papers',
@@ -489,7 +497,16 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     {
       title: 'Company',
       items: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+        { label: 'Research & Development', href: '/research-development' },
+      ],
+    },    {
+
+    {
+
+      title: 'Company',
+      items: [
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         { label: 'About Us', href: '/about' },
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
@@ -498,6 +515,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 =======
         { label: 'Press & Media', href: '/press' },
       ],
+<<<<<<< HEAD
     },    {        { label: 'Press & Media', href: '/press' }
       ];
     }
@@ -574,7 +592,6 @@ interface FooterSection {;
   title: string,;
   links: FooterLink[];
 }
-
 const footerSections: FooterSection[] = [;
   {;
     title: 'Services',;
@@ -764,7 +781,6 @@ const footerSections: FooterSection[] = [;
     ],;
   },;
 ];
-
 const socialLinks = [;
   {;
     icon: <Linkedin className='w-5 h-5' />,;
@@ -785,7 +801,6 @@ const socialLinks = [;
     external: true,;
   },;
 ];
-
 const quickLinks = [;
   { name: 'About Us', href: '/about', icon: <Users className='w-4 h-4' /> },;
   { name: 'Contact', href: '/contact', icon: <Phone className='w-4 h-4' /> },;
@@ -801,7 +816,6 @@ const quickLinks = [;
   },;
   { name: 'API Reference', href: '/api', icon: <Code className='w-4 h-4' /> },;
   { name: 'Status', href: '/status', icon: <TrendingUp className='w-4 h-4' /> },];
-
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
   const scrollToTop = () => {;
     window && window.scrollTo({ top: 0, behavior: 'smooth' });  };  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },;
@@ -810,7 +824,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },;
   { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },;
   { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
-
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
   const scrollToTop = () => {;
     window && window.scrollTo({ top: 0, behavior: 'smooth' });    window && window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -847,7 +860,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent"></div>;
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900"></div>;
       </div>;
-
       <div className="relative z-10">;
 
         {/* Main Footer Content */}
@@ -898,11 +910,18 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-blue-400" />}
                   <span>{section.title}</span>
                 </h4>
+                <ul className='space-y-3'>
+                  {section.items.map(item => (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        className='text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                      >                  <span>{section.title}</span>
+                </h4>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <ul className="space-y-3">
                   {section.items.map((item) => (
                     <li key={item.label}>
                       <Link
-=======
               <p className='text - gray - 300 mb - 6 leading - relaxed'>;
                 Pioneering the future with revolutionary AI consciousness,
                 quantum computing, and autonomous systems. Transforming;
@@ -1145,7 +1164,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Bottom Bar */}
         <motion&& motion.div
-=======
                       </Link>;
                     </li>))}
                 </ul>;
@@ -1247,7 +1265,22 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
               <div className='text-gray-400 text-sm'>;
                 © 2024 Zion Tech Group. All rights reserved. |;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        >
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+            <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
+              <div className='text-gray-400 text-sm'>
+                © 2024 Zion Tech Group. All rights reserved.
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Link
                   href='/privacy'
                   className='hover:text-white transition-colors duration-200 ml-2'>;
@@ -1286,7 +1319,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   Terms of Service
                 </Link>
               </div>
-              
               <div className="flex items-center space-x-4 text-gray-400 text-sm">
                 <span>Powered by</span>
                 <div className="flex items-center space-x-2">
@@ -1336,7 +1368,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className="flex items-center space-x-2">;
                   <Rocket className="w-4 h-4 text-pink-400" />;
                   <span>Space Technology</span>;
-=======
           className='border - t border - gray - 800 / 50 bg - gray - 900 / 50 backdrop - blur - xl';
         >;
           <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 6'>;
@@ -1372,14 +1403,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   <Rocket className='w - 4 h - 4 text - pink - 400' />                  <span > Space Technology</span>                <div className="flex items - center space - x-2">;
                   <Rocket className="w - 4 h - 4 text - pink - 400" />;
                   <span > Space Technology</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>;
               </div>;
             </div>;
           </div>;
 
 };
-
 export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button>;
     </footer>;
   );

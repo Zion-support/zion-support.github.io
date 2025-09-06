@@ -1,0 +1,21 @@
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React,{ useState } from \'react\'; import { Gift import { useAuth } from \'@/hooks/useAuth\'; export default function Page() {}; return null} ,{ \"purchase\": \'0\',\"post\": \'0\',\"referral\": \'0\' }); const handleLogout = async () => {}; await signOut()} else if(logout) {}; await logout()} }; return (<DropdownMenu> <TooltipProvider> <Tooltip> <DropdownMenuTrigger asChild> <TooltipTrigger asChild> <button type=\"button\" className=\"flex items-center gap-1 text-xs text-muted-foreground\">\"; <Gift className=\"h-4 w-4\"/> <span>{`${points} pts`}></div> ></div> ></div> ></div> <TooltipContent>\"; <p className=\"text-sm font-medium\">Point Breakdown</p>\"; <ul className=\"text-xs mt-1 space-y-0 && 0.5\"> <li>\"Purchases\": {breakdown && breakdown.purchase}></div> <li>\"Posts\": {breakdown && breakdown.post}></div> <li>\"Referrals\": {breakdown && breakdown.referral}></div> ></div> ></div> ></div> </TooltipProvider>\"; <DropdownMenuContent align=\"end\"> <DropdownMenuItem asChild>\"; <Link to=\"/profile\">Profile></div> ></div> <DropdownMenuItem asChild>\"; <Link to=\"/orders\">Orders></div> ></div> <DropdownMenuItem onSelect={handleLogout}>Logout></div> ></div> </DropdownMenu>)} \'"`}
+const React,{ useState } from "react"; import { Gift import { useAuth } from "@/hooks/useAuth"; export default function Page() { return; }; return null} ,{ purchase: "0",post: "0",referral: "0" }); const handleLogout = async () => {}; await signOut()} else if(logout) {}; await logout()} }; return (<DropdownMenu> <TooltipProvider> <Tooltip> <DropdownMenuTrigger asChild> <TooltipTrigger asChild> <button type="button" className="flex items-center gap-1 text-xs text-muted-foreground">"; <Gift className="h-4 w-4"/> <span>{`${points} pts`}></div> ></div> ></div> ></div> <TooltipContent>"; <p className="text-sm font-medium">Point Breakdown</p>"; <ul className="text-xs mt-1 space-y-0 && 0.5"> <li>Purchases: {breakdown && breakdown.purchase}></div> <li>Posts: {breakdown && breakdown.post}></div> <li>Referrals: {breakdown && breakdown.referral}></div> ></div> ></div> ></div> </TooltipProvider>"; <DropdownMenuContent align="end"> <DropdownMenuItem asChild>"; <Link to="/profile">Profile></div> ></div> <DropdownMenuItem asChild>"; <Link to="/orders">Orders></div> ></div> <DropdownMenuItem onSelect={handleLogout}>Logout></div> ></div> </DropdownMenu>)} ""`}""`"`
+import _React,{ useState } from 'react'; import { Gift import { useAuth } from '@/hooks/useAuth'; export default function Page() {}; return null} ,{ "purchase": '0',"post": '0',"referral": '0' }); const handleLogout = async () => {}; await signOut()} else if(logout) {}; await logout()} }; return (<DropdownMenu> <TooltipProvider> <Tooltip> <DropdownMenuTrigger asChild> <TooltipTrigger asChild> <button type="button" className="flex items-center gap-1 text-xs text-muted-foreground">"; <Gift className="h-4 w-4"/> <span>{`${points} pts`}></div> ></div> ></div> ></div> <TooltipContent>"; <p className="text-sm font-medium">Point Breakdown</p>"; <ul className="text-xs mt-1 space-y-0 && 0.5"> <li>"Purchases": {breakdown && breakdown.purchase}></div> <li>"Posts": {breakdown && breakdown.post}></div> <li>"Referrals": {breakdown && breakdown.referral}></div> ></div> ></div> ></div> </TooltipProvider>"; <DropdownMenuContent align="end"> <DropdownMenuItem asChild>"; <Link to="/profile">Profile></div> ></div> <DropdownMenuItem asChild>"; <Link to="/orders">Orders></div> ></div> <DropdownMenuItem onSelect={handleLogout}>Logout></div> ></div> </DropdownMenu>)} '"`}

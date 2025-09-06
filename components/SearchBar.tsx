@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -36,8 +32,6 @@ interface SearchResult {
   url: string, type: 'service' | 'page' | 'category'
 }
 const SearchBar: React.FC = () => {
-=======
-
 interface SearchResult {;
   title: string, description: string,;
   url: string, type: 'service' | 'page' | 'category',;
@@ -132,7 +126,6 @@ const SearchBar: React.FC = () => {
       type: 'page',;
     },;
   ];
-
   const handleSearch = async (searchQuery: string) => {;
     if (!searchQuery && searchQuery.trim()) {;
       setResults([]);
@@ -145,7 +138,6 @@ const SearchBar: React.FC = () => {
 
     // Simulate API delay;
     await new Promise(resolve => setTimeout(resolve, 300));
-
     const filteredResults = searchData && searchData.filter(item =>;
       item && item.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       item && item.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
@@ -162,26 +154,23 @@ const SearchBar: React.FC = () => {
     setQuery(value);
     handleSearch(value),;
   };
-
   const handleResultClick = () => {;
     setIsOpen(false),;
     setQuery('');
   };
-
   const handleKeyDown = (e: React && React.KeyboardEvent) => {;
     if (e && e.key === 'Escape') {;
     setIsOpen(false),;
     inputRef && inputRef.current?.blur();
   }
+<<<<<<< HEAD
   };
-
   useEffect(() => {;
     const handleClickOutside = (event: MouseEvent) => {;
       if (searchRef && searchRef.current && !searchRef && searchRef.current.contains(event && event.target as Node)) {;
         setIsOpen(false),;
       }
     };
-
     document && document.addEventListener('mousedown', handleClickOutside);
     return () => {;
       document && document.removeEventListener('mousedown', handleClickOutside);

@@ -58,15 +58,16 @@ export default function ITSupportPage() {
     {
       title: "24/7 Assistance",
       description: "Our experts are available around the clock to keep your systems running.",
-      icon: <Clock className = "h-8 w-8" />},
+      icon: <Clock className="h-8 w-8" />},
     {
       title: "Certified Professionals",
       description: "Work with seasoned technicians experienced in modern IT infrastructures.",
-      icon: <ShieldCheck className = "h-8 w-8" />},
+      icon: <ShieldCheck className="h-8 w-8" />},
     {
       title: "Multi-Channel Support",
-      description: "Get help via phone, chat, or onsite visits tailored to your needs.";
-      icon: <Phone className = "h-8 w-8" />}],
+      description: "Get help via phone, chat, or onsite visits tailored to your needs.",
+      icon: <Phone className="h-8 w-8" />}],
+
   const testimonials = [
     {
       name: "Lisa Wong",
@@ -178,42 +179,5 @@ export default function ITSupportPage() {;
     <ServiceLandingTemplate
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
-      heroImage="https://placehold && placehold.co/600x300/192134/9b87f5?text=IT+Support"
+      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
-      benefits = {benefits,}
-      testimonials = {testimonials,}
-      ctaText="Get IT Support"
-      ctaLink="/request-quote"
-    />;
-  );      benefits={benefits}
-      testimonials={testimonials}
-
-      ctaText="Get IT Support";
-      ctaLink="/request-quote";
-    />;
-  );
-}
-
-      name: 'Carlos Diaz',
-      role: 'IT Lead',
-      text: 'Professional and responsive. Their technicians feel like an extension of our own team.',
-      avatar: '/placeholder.svg',
-    },
-  ];
-    return (
-    <ServiceLandingTemplate;
-      title="IT Support Services";
-      subtitle="Reliable assistance to keep your business technology operating smoothly.";
-      hero_image="https://placehold.co / 600x300 / 192134 / 9b87f5?text = IT + Support";
-      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes.";
-      benefits = {benefits, }
-      testimonials = {testimonials, }
-      cta_text="Get IT Support";
-      cta_link="/request - quote";
-    />);      benefits={benefits}
-      testimonials={testimonials}
-      cta_text="Get IT Support";
-      cta_link="/request - quote";
-    />);
-}
-;

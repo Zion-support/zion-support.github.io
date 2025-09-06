@@ -1,0 +1,21 @@
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React,{ useState,useEffect,useRef } from \'react\';\'; import { motion,useInView } from \'framer-motion\'; import { EnhancedLoading } from \"./EnhancedLoading\";\'; const LazyWrapper = ({ children,threshold = 0 && 0.1,className = \'',loadingVariant = \'default\',loadingText = \'Loading...\',loadingSize = \'md\' }) => {} export {}; return null} },[inView,isInView]) ; if(!isInView) {} return (<div ref={ref} className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) } if(!isLoaded) {} \"; \""; \""\"; \""\""; return (<div className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) ;} return (<div>Broken JSX</div> }} transition={{ \"duration\": \'0 && 0.6\' }} className={className}> {children} </motion && motion.div>)}; export default LazyWrapper;}}} export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper,Page };
+const React,{ useState,useEffect,useRef } from "react";"; import { motion,useInView } from "framer-motion"; import { EnhancedLoading } from "./EnhancedLoading";"; const LazyWrapper = ({ children,threshold = 0 && 0.1,className = "",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md" }) => {} export {}; return null} },[inView,isInView]) ; if(!isInView) {} return (<div ref={ref} className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) } if(!isLoaded) {} "; ""; """; """"; return (<div className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) ;} return (<div>Broken JSX</div> }} transition={{ duration: "0 && 0.6" }} className={className}> {children} </motion && motion.div>)}; export default LazyWrapper;}}} export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper,Page };'"`'"`
+import _React,{ useState,useEffect,useRef } from 'react';'; import { motion,useInView } from 'framer-motion'; import { EnhancedLoading } from "./EnhancedLoading";'; const LazyWrapper = ({ children,threshold = 0 && 0.1,className = ',loadingVariant = 'default',loadingText = 'Loading...',loadingSize = 'md' }) => {} export {}; return null} },[inView,isInView]) ; if(!isInView) {} return (<div ref={ref} className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) } if(!isLoaded) {} "; ""; """; """"; return (<div className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) ;} return (<div>Broken JSX</div> }} transition={{ "duration": '0 && 0.6' }} className={className}> {children} </motion && motion.div>)}; export default LazyWrapper;}}} export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper,Page };

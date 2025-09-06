@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -416,6 +418,9 @@ const { execSync } = require('child_process')
       { "endpoint": '/api/contact', "status": 'tested', "response"}
       { "component": 'ContactForm', "status"}
       { "component": 'ErrorBoundary', "status"}
+<<<<<<< HEAD
+      { "component": 'PerformanceMonitor', "status"}
+=======
 <<<<<<< HEAD
       { "component": 'PerformanceMonitor', "status"}
 =======

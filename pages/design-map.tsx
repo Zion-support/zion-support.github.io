@@ -73,9 +73,8 @@ import { getZionDesignMap } from '../utils/design-map';
           <MapColumn title="DAO & Token UI" sections={designMap.products.dao} />
           <MapColumn title="Admin Console" sections={designMap.products.admin} />
           <MapColumn title="Mobile Layouts" sections={designMap.products.mobile} />
-        </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        </div>
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
           <h2 className="font-medium mb-3">Create New Screen</h2>
           <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">
@@ -130,7 +129,6 @@ import { getZionDesignMap } from '../utils/design-map';
  * MapColumn - Function description
  */
 function MapColumn() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
 
                 <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">

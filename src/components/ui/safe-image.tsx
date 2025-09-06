@@ -97,12 +97,10 @@ export function SafeImage({
       setHasError(true)
     }
   };
-
-
-  // If we have an error and no fallback, show a placeholder
-  if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
-    return (
-      <div 
+  // If we have an error and no fallback, show a placeholder;
+  if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {;
+    return (;
+      <div;
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
         role="img"
@@ -217,13 +215,13 @@ if ( {) {
   }
     />); return (
     <Image;
-      src = {current_src, }
-      alt = {alt, }
-      width = {width, }
-      height = {height, }
-      class_name = {class_name, }
-      on_error = {handle_error, }
-      priority = {priority, }
+      src={currentSrc}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      onError={handleError}
+      priority={priority}
       // Add unoptimized as fallback for problematic images;
       unoptimized = {has_error, }
     />);

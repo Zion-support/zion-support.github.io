@@ -20,7 +20,6 @@ import path from 'path';
 =======
   } = req.body as {
     user_id?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     role?: KycRole;
     fullLegalName?: string;
     business_name?: string;
@@ -66,8 +65,6 @@ import path from 'path';
   });
 
 }
-
-=======
     documents: [], status: 'in_progress',
     amlStatus: 'unknown', createdAt: now,
     lastUpdatedAt: now,
@@ -168,8 +165,7 @@ export default function handler(req, res) {
   profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
-
-  res.status(200).json({
+res.status(200).json({
     ok: true, profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role)})

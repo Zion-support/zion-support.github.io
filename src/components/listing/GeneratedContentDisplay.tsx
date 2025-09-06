@@ -7,27 +7,39 @@
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
 
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
 interface GeneratedContent {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   description: string,
   tags: string[],
   suggestedPrice: {
-      
     min: number,
     max: number
-  
-    },
-    keyPoints: string[]
+  },
+  keyPoints: string[]
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+interface GeneratedContent {;
+  description: string,;
+  tags: string[],;
+  suggestedPrice: {;
+    min: number,;
+    max: number;
+  },;
+  keyPoints: string[];
 }
-
-interface GeneratedContentDisplayProps {
-  content: GeneratedContent,
-  onApply: () => void
+;
+interface GeneratedContentDisplayProps {;
+  content: GeneratedContent;
+  onApply: () => void;
 }
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
@@ -65,12 +77,9 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 
 
         <div>
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
-            Suggested Price Range
-          </h3>
-          <p className='text-white'>
-            ${content.suggestedPrice.min.toFixed(2)} - $
-            {content.suggestedPrice.max.toFixed(2)}
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
+          <p className="text-white">
+            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
 
@@ -215,6 +224,14 @@ function GeneratedContentDisplay() {
         </Button>
       </CardFooter>
     </Card>
+  )
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml-2 h-4 w-4" />;
+        </Button>;
+      </CardFooter>;
+    </Card>;
   );
 }
 

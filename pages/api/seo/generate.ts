@@ -6,8 +6,6 @@
   }
   const { prompt, region, service } = req && req.body || {};
   if (!prompt) return res && res.status(400).json({ error: "Missing prompt" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import OpenAI from './openai';
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || "" });
@@ -44,6 +42,7 @@ Do not include <html>, <body>, or scripts.`;
         { role: "system", content: system }
         { role: "user", content: user }
       ]
+
       temperature: 0.7
     });
     const content = response.choices?.[0]?.message?.content |"";
@@ -87,7 +86,7 @@ Tone: professional, modern, trustworthy`;
       payload: {
         title,
         h1,
-        body_html: content,
+body_html: content,
         region: region || undefined,
         service: service || undefined,
 
@@ -97,6 +96,62 @@ Tone: professional, modern, trustworthy`;
 =======
     console.error (e);
     return res.status (500).json ({ error: "Failed to generate landing page" });
+
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const h1 = prompt;
+    const slug = String(prompt).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    return res.status(200).json({;
+      slug,;
+      payload: {;
+        title,;
+        h1,;
+        bodyHtml: content,;
+        region: region || undefined,;
+        service: service || undefined;
+        faq}});
+  } catch (error) {
+    console.error(e);
+    return res.status(500).json({ error: 'Failed to generate landing page' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+    return res.status(500).json({ error: "Failed to generate landing page" });
+
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

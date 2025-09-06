@@ -13,10 +13,10 @@ import {
 
 } from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const user = requireUser(req, res);
   if (!user) return;
-  const { projectId, milestoneId } = req && req.query as {
+  const { projectId, milestoneId } = req.query as {
     projectId: string;
     milestoneId: string;
   }
@@ -32,13 +32,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   if (req && req.method === "PATCH") {
     const body = req && req.body as any;
     if (body && body.status && !isMilestoneStatus(body && body.status)) {
       res && res.status(400).json({ error: "Invalid status" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return;
     }
     // Enforce status transition rules
@@ -51,7 +48,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
       }
     }
-    const updated = updateMilestone(project, milestoneId, body);
+<<<<<<< HEAD
+const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {
 
 

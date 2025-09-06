@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -33,26 +29,26 @@ import React, { useState } from 'react';
 
   const featuredServices = [;
     {;
-      id: 'ai-consciousness-evolution',;
-      title: 'AI Consciousness Evolution',;
-      category: 'ai',;
-      description:;
-        'Revolutionary AI consciousness platform with emotional intelligence',;
+      id: 'ai-consciousness-evolution';
+      title: 'AI Consciousness Evolution';
+      category: 'ai';
+      description: 'Revolutionary AI consciousness platform with emotional intelligence';
       status: 'beta',;
       price: '$1,999/month',;
       icon: Brain,;
-      color: 'from-purple-500 to-pink-500',;
-    },    {;
+      color: 'from-purple-500 to-pink-500';
+    },;
+    {;
       id: 'quantum-neural-networks',;
       title: 'Quantum Neural Networks',;
       category: 'quantum',;
-      description:;
-        'Quantum-powered AI with advanced consciousness capabilities',;
+      description: 'Quantum-powered AI with advanced consciousness capabilities',;
       status: 'beta',;
       price: '$1,299/month',;
       icon: Atom,;
-      color: 'from-blue-500 to-cyan-500',;
-    },    {;
+      color: 'from-blue-500 to-cyan-500';
+    },;
+    {;
       id: 'quantum-cybersecurity',;
       title: 'Quantum Cybersecurity',;
       category: 'cybersecurity',;
@@ -60,8 +56,9 @@ import React, { useState } from 'react';
       status: 'active',;
       price: '$799/month',;
       icon: Shield,;
-      color: 'from-red-500 to-orange-500',;
-    },    {;
+      color: 'from-red-500 to-orange-500';
+    },;
+    {;
       id: 'space-technology',;
       title: 'Space Technology Innovation',;
       category: 'space',;
@@ -69,31 +66,41 @@ import React, { useState } from 'react';
       status: 'beta',;
       price: '$2,499/month',;
       icon: Rocket,;
-      color: 'from-indigo-500 to-purple-500',;
-    },  ];
-
+      color: 'from-indigo-500 to-purple-500';
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
   // Filter categories based on search;
-  const filteredCategories = categories && categories.filter(category => {;
-    const matchesSearch =;
-      category && category.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      category && category.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-    const matchesFilter =;
-      selectedCategory === 'all' || category && category.id === selectedCategory;
-    return matchesSearch && matchesFilter;  });
-
+  const filteredCategories = categories.filter(category => {;
+    const matchesSearch = category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         category.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory;
+    return matchesSearch && matchesFilter;
+  });
   // Sort categories;
   const sortedCategories = [...filteredCategories].sort((a, b) => {;
     switch (sortBy) {;
       case 'popularity':;
-        return b && b.serviceCount - a && a.serviceCount;
+        return b.serviceCount - a.serviceCount,;
       case 'name':;
-        return a && a.name.localeCompare(b && b.name);
+        return a.name.localeCompare(b.name);
       case 'featured':;
-        return (b && b.featured ? 1 : 0) - (a && a.featured ? 1 : 0);
-      default:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        return 0;    }
-  });
+        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0),;
+      default: return 0;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 
         />;
@@ -150,6 +157,7 @@ import React, { useState } from 'react';
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 View All Services
 
               </button>
@@ -194,6 +202,7 @@ import React, { useState } from 'react';
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+<<<<<<< HEAD
               {/* Search */}
               <div className="flex-1 max-w-md">
                 <div className="relative">
@@ -207,6 +216,34 @@ import React, { useState } from 'react';
                     placeholder="Search categories..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
+=======
+              {/* Search */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div className="flex-1 max-w-md">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  <input
+                    type="text"
+                    placeholder="Search categories..."
+                    value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                   />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -238,6 +275,34 @@ import React, { useState } from 'react';
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
+=======
+<<<<<<< HEAD
+              {/* Sort Options */}
+              <div className='flex items-center gap-4'>
+=======
+              {/* Sort Options */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div className="flex items-center gap-4">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <select
+                  value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSortBy(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                 >
                   <option value="popularity">Sort by Popularity</option>
@@ -253,7 +318,6 @@ import React, { useState } from 'react';
 
                   onChange={e => setSortBy(e && e.target.value)}
                   className='px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all';
-=======
       price: '$2, 499 / month',
       icon: Rocket,
       color: 'from - indigo - 500 to - purple - 500',
@@ -375,6 +439,40 @@ import React, { useState } from 'react';
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+className="mb-12"
+=======
+<<<<<<< HEAD
+      {/* Featured Services */}
+      <section className='px-6 pb-16'>
+        <div className='max-w-7xl mx-auto'>          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className='mb-12'
+=======
+      {/* Featured Services */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="px-6 pb-16">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="mb-12"
 
 
@@ -388,7 +486,7 @@ import React, { useState } from 'react';
               Explore our most innovative and cutting-edge technology solutions
             </p>
           </motion.div>
-
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -402,7 +500,6 @@ import React, { useState } from 'react';
             <p className='text-white/60'>              Explore our most innovative and cutting-edge technology solutions;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
@@ -413,7 +510,6 @@ import React, { useState } from 'react';
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 mb-4 flex items-center justify-center`}>;
                     <service && service.icon className='w-8 h-8 text-white' />;
                   </div>;
-
                   <div className='flex items-center justify-between mb-3'>;
 
                     <span
@@ -444,6 +540,7 @@ import React, { useState } from 'react';
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 animate={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
                 className='group relative p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
               >;
                 <div className='absolute inset - 0 bg - gradient - to - br from - white / 0 via - cyan - 400 / 5 to - white / 0 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 rounded - 2xl' />;
@@ -485,14 +582,12 @@ import React, { useState } from 'react';
                       {service && service.category}
                     </span>;
                   </div>;
-
                   <h3 className='text-lg font-bold mb-2 text-white'>;
                     {service && service.title}
                   </h3>;
                   <p className='text-sm text-white/70 mb-4 leading-relaxed'>;
                     {service && service.description}
                   </p>;
-
                   <div className='mb-4'>;
                     <span className='text-xl font-bold text-cyan-400'>;
                       {service && service.price}
@@ -566,7 +661,6 @@ import React, { useState } from 'react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <h3 className="text-lg font-bold mb-2 text-white">{service.title}</h3>
                   <p className="text-sm text-white/70 mb-4 leading-relaxed">{service.description}</p>
-                  
                   <div className="mb-4">
                     <span className="text-xl font-bold text-cyan-400">{service.price}</span>
 
@@ -574,13 +668,27 @@ import React, { useState } from 'react';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
-                  
                   <a
                     href={`/services#${service.id}`}
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  </div>
+                  <a
+                    href={`/services#${service.id}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
                   >
                     Learn More
                     <ChevronRight className="w-4 h-4 ml-1" />
+<<<<<<< HEAD
                   </a>
                 </div>
               </motion.div>
@@ -596,8 +704,6 @@ import React, { useState } from 'react';
           </div>;
         </div>;
       </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Categories Grid */}
       <section className='px-6 pb-20'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
@@ -612,6 +718,50 @@ import React, { useState } from 'react';
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+className="mb-12"
+=======
+          </div>
+        </div>
+      </section>
+      {/* Categories Grid */}
+      <section className='px-6 pb-20'>
+        <div className='max-w-7xl mx-auto'>          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className='mb-12'
+=======
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Categories Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="mb-12"
 
           >
@@ -622,7 +772,7 @@ import React, { useState } from 'react';
               {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
-
+<<<<<<< HEAD
           <AnimatePresence mode="wait">
             {sortedCategories.length === 0 ? (
 
@@ -630,7 +780,6 @@ import React, { useState } from 'react';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <motion.div
-=======
             transition={{ duration: 0 && 0.6 }}
             className='mb-12'>;
             <h2 className='text-3xl font-bold text-white mb-4'>;
@@ -639,10 +788,8 @@ import React, { useState } from 'react';
             <p className='text-white/60'>              {sortedCategories && sortedCategories.length} categories available for exploration;
             </p>;
           </motion && motion.div>;
-
           <AnimatePresence mode='wait'>            {sortedCategories && sortedCategories.length === 0 ? (;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -749,7 +896,6 @@ import React, { useState } from 'react';
                         className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category && category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>;
                         <category && category.icon className='w-10 h-10 text-white' />;
                       </div>;
-
                       {/* Category Info */}
                       <h3 className='text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300'>;
                         {category && category.name}
@@ -757,7 +903,6 @@ import React, { useState } from 'react';
                       <p className='text-white/70 leading-relaxed mb-6'>;
                         {category && category.description}
                       </p>;
-
                       {/* Stats */}
                       <div className='flex items-center justify-between mb-6'>;
                         <div className='text-center'>;
@@ -786,6 +931,33 @@ import React, { useState } from 'react';
                   </motion && motion.div>;
 
 =======
+<<<<<<< HEAD
+          <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
+=======
+          <AnimatePresence mode="wait">
+            {sortedCategories.length === 0 ? (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <motion.div
+                initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                exit={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 className="text-center py-20"
               >
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
@@ -796,14 +968,27 @@ import React, { useState } from 'react';
                   Try adjusting your search terms
                 </p>
                 <button
+<<<<<<< HEAD
                   onClick={() => setSearchTerm('')}
+className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
+=======
+                  onClick={() => setSearchTerm('')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >
                   Clear Search
                 </button>
               </motion.div>
             ) : (
+<<<<<<< HEAD
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {sortedCategories.map((category, index) => (
                   <motion.div
 
@@ -811,6 +996,52 @@ import React, { useState } from 'react';
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
                       {/* Featured Badge */}
+=======
+                    className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
+                    onClick={() =>
+                      (window.location.href = `/category/${category.id}`)
+                    }
+=======
+                    key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"
+                    onClick={() => window.location.href = `/category/${category.id}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                    <div className="relative z-10">
+                      {/* Featured Badge */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       {category.featured && (
                         <div className="absolute top-4 right-4">
                           <span className="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
@@ -834,7 +1065,6 @@ import React, { useState } from 'react';
                       <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                         <category.icon className="w-10 h-10 text-white" />
                       </div>
-                      
                       {/* Category Info */}
                       <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300">
                         {category.name}
@@ -842,8 +1072,70 @@ import React, { useState } from 'react';
                       <p className="text-white/70 leading-relaxed mb-6">
                         {category.description}
                       </p>
-                      
                       {/* Stats */}
+=======
+<<<<<<< HEAD
+                      )}
+                      {/* Category Icon */}
+                      <div
+                        className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                      >
+                        <category.icon className='w-10 h-10 text-white' />
+                      </div>
+                      {/* Category Info */}
+                      <h3 className='text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300'>
+                        {category.name}
+                      </h3>
+                      <p className='text-white/70 leading-relaxed mb-6'>
+                        {category.description}
+                      </p>
+                      {/* Stats */}
+                      <div className='flex items-center justify-between mb-6'>
+                        <div className='text-center'>
+                          <div className='text-2xl font-bold text-cyan-400'>
+                            {category.serviceCount}
+                          </div>
+                          <div className='text-xs text-white/60'>Services</div>
+=======
+                      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+                      {/* Category Icon */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                        <category.icon className="w-10 h-10 text-white" />
+                      </div>
+                      {/* Category Info */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300">
+                        {category.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </h3>
+                      <p className="text-white/70 leading-relaxed mb-6">
+                        {category.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </p>;
+                      {/* Stats */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <div className="flex items-center justify-between mb-6">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>
@@ -902,8 +1194,6 @@ import React, { useState } from 'react';
           </AnimatePresence>;
         </div>;
       </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Technology Trends */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
@@ -946,7 +1236,6 @@ import React, { useState } from 'react';
               technology developments;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {[;
               {;
                 icon: Brain,;
@@ -1015,12 +1304,11 @@ import React, { useState } from 'react';
                     trend.trend === 'Critical' ? 'bg-red-500/20 text-red-300' :
                     trend.trend === 'Emerging' ? 'bg-yellow-500/20 text-yellow-300' :
                     trend.trend === 'Experimental' ? 'bg-purple-500/20 text-purple-300' :
-                    'bg-cyan-500/20 text-cyan-300'
+'bg-cyan-500/20 text-cyan-300'
                   }`}>
                     {trend.trend}
                   </span>
                 </div>
-                
                 <p className="text-white/70 leading-relaxed">{trend.description}</p>
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1042,8 +1330,6 @@ import React, { useState } from 'react';
           </div>;
         </div>;
       </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -1106,7 +1392,6 @@ import React, { useState } from 'react';
           </motion && motion.div>;
         </div>;
       </section>;
-
       <SmartFooter />;
     </div>;
   );
@@ -1120,8 +1405,6 @@ import React, { useState } from 'react';
 =======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   </span>;
                 </div>;
                 <p className='text - white / 70 leading - relaxed'>;
@@ -1156,6 +1439,38 @@ import React, { useState } from 'react';
               <a;
                 href='mailto:kleber@ziontechgroup.com';
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'              >;
+=======
+      <SmartFooter />
+    </div>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  )
+          >;
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
+              Ready to Explore?;
+            </h2>;
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
+              Dive deep into our technology categories and discover the perfect solutions for your business needs.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <a;
+                href="/services";
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
+              >;
+                View All Services;
+                <ArrowRight className="w-5 h-5 ml-2" />;
+              </a>;
+              <a;
+                href="mailto:kleber@ziontechgroup.com";
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
+              >;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Get Expert Guidance;
               </a>;
             </div>;

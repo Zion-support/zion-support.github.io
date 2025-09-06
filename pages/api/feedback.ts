@@ -35,7 +35,6 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
           projectId: FIREBASE_PROJECT_ID,
           clientEmail: FIREBASE_CLIENT_EMAIL,
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import {
@@ -79,7 +78,44 @@ if ( {) {
           private_key: (FIREBASE_PRIVATE_KEY || "").replace (/\\n / g, "\n"),
 
         }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4 } from "uuid";
+<<<<<<< HEAD
+=======
+import {
+  saveFeedbackFallback,
+  FeedbackRecord,;
+} from "../../utils/feedback/store";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import {
+  saveFeedbackFallback
+  FeedbackRecord
+} from "../../utils/feedback/store";
+function ok(res: NextApiResponse, data: any) {
+  return res.status(200).json({ ok: true, ...data });
+}
+function bad(res: NextApiResponse, msg: string, code = 400) {
+  return res.status(code).json({ ok: false, error: msg });
+}
+async function tryWriteToFirestore(doc: FeedbackRecord) {
+  const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
+    process.env as Record<string, string | undefined>;
+  if (!FIREBASE_PROJECT_ID |!FIREBASE_CLIENT_EMAIL |!FIREBASE_PRIVATE_KEY)
+    return false;
+  try {
+    const admin = require("firebase-admin");
+<<<<<<< HEAD
+    if (admin.apps.length === 0) {
+      admin.initializeApp({
+        credential: admin.credential.cert({
+          projectId: FIREBASE_PROJECT_ID
+          clientEmail: FIREBASE_CLIENT_EMAIL
+          privateKey: (FIREBASE_PRIVATE_KEY |"").replace(/\\n/g, "\n")
+        })
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       });
     }
 

@@ -1,7 +1,6 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";"
 import HomePage from "../pages/index";
-
-describe("HomePage", () => {
+describe("HomePage", () => {"
   it("renders the main heading", () => {
     render(<HomePage />);
     const heading = screen && screen.getByText(/The Future of/i);

@@ -3,13 +3,11 @@
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
-
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -19,7 +17,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string
 
   };
-
   if (!personId || !fromNation || !toNation || !role || !startDate) {
     return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
 
@@ -127,7 +124,6 @@ export default async function handler(req, res) {
       .map(async (peer) => {
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
 import { sign_payload  } from '../../../utils / sync / signature';,

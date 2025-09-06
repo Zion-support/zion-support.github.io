@@ -199,6 +199,14 @@ export function ApiReference() {;
         </div>;
 ;
         {/* Endpoint details */}
+=======
+                </li>;              ))}
+            </ul>;
+          </div>;
+        </div>;
+;
+        {/* Endpoint details */}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="md:col-span-4">;
           {activeEndpointData ? (;
             <div>;

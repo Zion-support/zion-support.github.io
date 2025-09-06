@@ -18,7 +18,6 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
   const [requests, setRequests] = useState(initialRequests)
   async function resolve(id: string) {
     await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })
-
     setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)))
 
 import { GetServerSideProps } from 'next',
@@ -57,6 +56,36 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { GetServerSideProps } from 'next';
+import { useState } from 'react';
+import { readJson } from '../../utils/fsDb';
+export const getServerSideProps: GetServerSideProps = async () => {;
+  const requests = readJson<any[]>('support/requests.json', []),;
+  return { props: { initialRequests: requests }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+},;
+export default function SupportRequests(req, res) {
+  try {
+  const [requests, setRequests] = useState(initialRequests);
+  async function resolve(id: string) {;
+    await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) });
+    setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)));
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 
 =======

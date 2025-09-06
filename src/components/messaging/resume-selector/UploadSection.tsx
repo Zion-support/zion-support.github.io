@@ -102,33 +102,27 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             type="file";
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer";
             accept=".pdf";
-            onChange = {onFileUpload,}
+            onChange={onFileUpload}
           />;
         </Button>;
       </div>;
-
       {customFile && (;
-        <div className='p-3 bg-zion-blue-dark/30 rounded-md'>;
-          <div className='flex items-center justify-between'>;
-            <div className='flex items-center'>;
-              <FileText className='h-4 w-4 mr-2 text-zion-cyan' />;
-              <span className='text-white'>{customFile && customFile.name}</span>;
-            </div>;
-            <span className='text-xs text-zion-slate'>;
-              {Math && Math.round(customFile && customFile.size / 1024)} KB;
-            </span>          </div>      {customFile && (;
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">;
           <div className="flex items-center justify-between">;
             <div className="flex items-center">;
               <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;
-              <span className="text-white">{customFile && customFile.name}</span>;
+              <span className="text-white">{customFile.name}</span>;
             </div>;
-            <span className="text-xs text-zion-slate">{Math && Math.round(customFile && customFile.size / 1024)} KB</span>;
+            <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>;
           </div>;
         </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
     </div>;
   );
+};
+}
+<<<<<<< HEAD
 }
 
   );

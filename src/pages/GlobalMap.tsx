@@ -130,31 +130,26 @@ interface FeedItem {;
   id: number,;
 
   text: string;
-
+}
+;
 export default function GlobalMapPage() {;
-  const [feed, setFeed] = useState<FeedItem[]>([]);
-
-  useEffect((,) => {;
-    const interval = setInterval((,) => {;
+  const [feed, setFeed] = useState<FeedItem[]>([]),;
+  useEffect(() => {;
+    const interval = setInterval(() => {;
       const messages = [;
-        'ZionGPT upgraded to v1 && v1.7 in Egypt',;
-        'Proposal #121 passed in Zion DevOps',;
-        'New franchise deployed: Zion Indonesia',;
-      ];
-      const id = Date && Date.now();
-      const text =;
-        messages[Math && Math.floor(Math && Math.random() * messages && messages.length)] ||;
-        'System update in progress';
-      setFeed(f => [{ id, text }, ...f].slice(0, 5));
-    }, 5000);
+        'ZionGPT upgraded to v1.7 in EgyptProposal #121 passed in Zion DevOpsNew franchise deployed: Zion Indonesia'],;
+      const id = Date.now(),;
+      const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress',;
+      setFeed((f) => [{ id, text }, ...f].slice(0, 5));
+    }, 5000),;
     return () => clearInterval(interval);
-  }, []);
-  const width = 800;
-  const height = 400;
-  function project(): any (lat: number, lng: number) {;
-    const x = ((lng + 180) / 360) * width;
-    const y = ((90 - lat) / 180) * height;
-    return { x, y };
+  }, []),;
+  const width = 800,;
+  const height = 400,;
+  function project(lat: number, lng: number) {;
+    const x = ((lng + 180) / 360) * width,;
+    const y = ((90 - lat) / 180) * height,;
+    return { x, y }
   }
 
 
@@ -180,6 +175,15 @@ export default function GlobalMapPage() {;
               return (
 
 
+      <main className="py-10 container mx-auto space-y-8">
+        <h1 className="text-3xl font-bold">Global Instances</h1>
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="relative" style={{ width, height }}>
+            <Globe className="w-full h-full text-secondary" />
+            {INSTANCES.map((i) => {
+              const { x, y } = project(i.lat, i.lng),
+              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
+              return (
                 <TooltipProvider key={i.id}>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -187,12 +191,12 @@ export default function GlobalMapPage() {;
                         className={`absolute ${color} rounded-full p-1`}
                         style={{ left: x, top: y }}
                       >
-                        <MapPin className='w-4 h-4 text-white' />
+                        <MapPin className="w-4 h-4 text-white" />
                       </div>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <div className='text-sm space-y-1'>
-                        <div className='font-semibold'>{i.name}</div>
+                      <div className="text-sm space-y-1">
+                        <div className="font-semibold">{i.name}</div>
                         <div>Talent: {i.talent}</div>
                         <div>Governance: {i.governance}</div>
                         <div>Passed Votes: {i.votesPassed}</div>

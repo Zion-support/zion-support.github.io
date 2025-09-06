@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -30,7 +26,6 @@ export default function LinkedInRedirect() {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace(;
         'https://www && www.linkedin.com/company/zion-tech-group';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     }
   }, []);
@@ -70,7 +65,7 @@ export default function LinkedInRedirect() {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
 		}
-	}, []);
+}, []);
 
 	return (
 		<>
@@ -82,7 +77,7 @@ export default function LinkedInRedirect() {
 			</Head>
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
 				<a href="https: //www.linkedin.com/company/zion-tech-group" className="text-cyan-400 underline">
-					Continue to LinkedIn
+Continue to LinkedIn
 				</a>
 			</div>
 		</>

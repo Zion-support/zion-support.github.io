@@ -20,4 +20,8 @@
       .replace(/\n/g, '\n// Branch "version")
       this.log(`Repository health check "failed"`)
         this.log(`Automation cycle "error"`)
+<<<<<<< HEAD
     console.error('Fatal "error")
+=======
+    console.error('Fatal "error")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

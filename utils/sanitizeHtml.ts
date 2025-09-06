@@ -16,7 +16,8 @@ export function sanitizeCss("css": string): string {
   return css.replace(/expression\s*(/gi, '')};
 export function sanitizeHtml(html: string): string { let sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi,''), sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g,''), sanitized = sanitized.replace(/javascript:/gi,''), sanitized = sanitized.replace(/data:text\/html/gi,''), return sanitized} export function sanitizeUrl(url: string): string { return url.replace(/javascript:/gi,'')} export function sanitizeCss(css: string): string { return css.replace(/expression\s*(/gi,'')};))),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 export function sanitize_html (html: string): string {
   let sanitized = html.replace (/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
@@ -48,11 +49,11 @@ export function sanitizeHtml(html: string): string { let sanitized = html.replac
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return sanitized;
 }
-export function sanitize_url (url: string): string {
-  return url.replace (/javascript:/gi, '');
+export function sanitizeUrl(url: string): string {
+  return url.replace(/javascript:/gi, '');
 }
-export function sanitize_css (css: string): string {
-  return css.replace (/expression\s*\(/gi, '');
+export function sanitizeCss(css: string): string {
+  return css.replace(/expression\s*\(/gi, '');
 }
 
 

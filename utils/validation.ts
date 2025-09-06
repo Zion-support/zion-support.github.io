@@ -20,8 +20,11 @@ export const validation = {
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
-// Validation utilities;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+// Validation utilities
 export const validation = {
   // Add validation utilities here;
 }

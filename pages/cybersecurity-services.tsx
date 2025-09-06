@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -44,7 +40,8 @@ const serviceHighlights = [
   {
 
     title: 'Zero Trust Security',
-    description: 'Never trust, always verify - Advanced zero trust implementation',
+    description:
+      'Never trust, always verify - Advanced zero trust implementation',
     icon: Shield,
     color: 'from-red-500 to-pink-600',
     features: ['Continuous verificationMicro-segmentationAdaptive controlsReal-time monitoring']
@@ -526,7 +523,6 @@ export default function CybersecurityServices() {
 
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                
                 <ul className="space-y-2">
 
 
@@ -556,8 +552,6 @@ export default function CybersecurityServices() {
           </div>;
         </div>;
       </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Detailed Services */}
       <section className='py-20 bg-black'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
@@ -599,7 +593,6 @@ export default function CybersecurityServices() {
               designed for modern enterprises;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedCybersecurityServices2025 && advancedCybersecurityServices2025.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
@@ -636,7 +629,7 @@ export default function CybersecurityServices() {
 
 
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
-                  
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-red-400">
                       {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
@@ -644,11 +637,18 @@ export default function CybersecurityServices() {
                     <div className="flex items-center space-x-1">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className={`w-4 h-4 ${i < service.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} />
+<<<<<<< HEAD
                       ))}
+=======
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <span className="text-gray-400 text-sm ml-2">({service.reviews})</span>
                     </div>
                   </div>
-                  
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="text-center p-3 bg-gray-800/50 rounded-lg">
                       <div className="text-red-400 font-bold">{service.customers}+</div>
@@ -659,16 +659,15 @@ export default function CybersecurityServices() {
                       <div className="text-gray-400 text-sm">Trial Days</div>
                     </div>
                   </div>
-                  
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <span key={featureIndex} className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm">
+<<<<<<< HEAD
                         {feature}
                       </span>
                     ))}
                   </div>
-                  
-                  <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                     <Link href={service.link} className="text-red-400 hover:text-red-300 font-medium flex items-center space-x-2 group">
 
 
@@ -698,8 +697,6 @@ export default function CybersecurityServices() {
           </div>;
         </div>;
       </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Benefits Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
@@ -742,7 +739,6 @@ export default function CybersecurityServices() {
               Advanced protection that keeps your business safe and compliant;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits && benefits.map((benefit, index) => (;
               <motion&& motion.div
                 key={benefit && benefit.title}
@@ -763,7 +759,6 @@ export default function CybersecurityServices() {
                   className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>;
                   <benefit && benefit.icon className={`w-full h-full ${benefit && benefit.color}`} />;
                 </div>;
-
                 <h3 className='text-xl font-bold text-white mb-4'>;
                   {benefit && benefit.title}
                 </h3>;
@@ -785,8 +780,6 @@ export default function CybersecurityServices() {
           </div>;
         </div>;
       </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>;
         <div className='container mx-auto px-4 text-center'>          <motion&& motion.div
@@ -853,6 +846,7 @@ export default function CybersecurityServices() {
               <div>
                 <div className="text-3xl font-bold text-red-400 mb-2">450%</div>
                 <div className="text-gray-300">ROI Improvement</div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
@@ -863,7 +857,6 @@ export default function CybersecurityServices() {
               Your Business?;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
-=======
                 </p>              </motion.div>))}
           </div>;
         </div>;
@@ -895,8 +888,6 @@ export default function CybersecurityServices() {
 =======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
               <Link href='/contact' className='group'>;
                 <button className='bg - gradient - to - r from - red - 500 to - pink - 600 hover:from - red - 600 hover:to - pink - 700 text - white px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center space - x-2'>;
@@ -928,10 +919,62 @@ export default function CybersecurityServices() {
               <div>;
                 <div className='text - 3xl font - bold text - red - 400 mb - 2'>450%</div>;
                 <div className='text - gray - 300'>ROI Improvement</div>              </div>;
+=======
+<<<<<<< HEAD
+);
+=======
+=======
+<<<<<<< HEAD
+    </Layout>;
+);
+
+}
+=======
+    </Layout>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+            className="max-w-4xl mx-auto";
+          >;
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
+              Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+              Don't wait for a breach to happen. Protect your business today with our advanced cybersecurity solutions;
+              and stay one step ahead of evolving threats.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
+              <Link href="/contact" className="group">;
+                <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">;
+                  <span>Start Your Security Journey</span>;
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+                </button>;
+              </Link>;
+              <Link href="/comprehensive-services-showcase-2025" className="group">;
+                <button className="border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2">;
+                  <span>View All Services</span>;
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+                </button>;
+              </Link>;
+            </div>;
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
+              <div>;
+                <div className="text-3xl font-bold text-red-400 mb-2">24/7</div>;
+                <div className="text-gray-300">Security Monitoring</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-red-400 mb-2">99.99%</div>;
+                <div className="text-gray-300">Threat Detection</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-red-400 mb-2">450%</div>;
+                <div className="text-gray-300">ROI Improvement</div>;
+              </div>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
     </Layout>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

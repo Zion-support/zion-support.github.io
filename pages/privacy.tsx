@@ -785,7 +785,6 @@ const PrivacyPage: React.FC = () => {
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
-                
                 <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
 
 
@@ -796,9 +795,7 @@ const PrivacyPage: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
-=======
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
->>>>>>> origin/automation-improvements-final
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -913,9 +910,7 @@ const PrivacyPage: React.FC = () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <p className="text-sm text-gray-600 mt-8">
-=======
                 <p className="text-sm text-gray-600 mt-8">
->>>>>>> origin/automation-improvements-final
                   Last updated: January 2024
                 </p>
               </div>
@@ -931,12 +926,25 @@ const PrivacyPage: React.FC = () => {
                   Information We Collect;
                 </h2>;
                 <p className="mb-6">;
-=======
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
+
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+Shield
+  Lock
+  Eye
+  Database
+  Mail
+  Phone
+  MapPin
+  Users
   Shield,
   Lock,
   Eye,
@@ -944,7 +952,7 @@ import {
   Mail,
   Phone,
   MapPin,
-  Users,
+Users,
 } from './lucide-react';
 import MainLayout from "../components / layout / MainLayout";
 ;
@@ -1074,7 +1082,6 @@ export default PrivacyPage;
 
   )
 };
-
 export default PrivacyPage;
 
  

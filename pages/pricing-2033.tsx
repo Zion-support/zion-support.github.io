@@ -28,10 +28,8 @@ export default function Pricing2033Page() {
 
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
   // Enhanced service categories with pricing
   const serviceCategories = [
-=======
 import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion } from 'framer-motion',
@@ -56,6 +54,7 @@ function Pricing2033Page() {
   const service_categories = [;
 
     {
+<<<<<<< HEAD
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
       services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager'],
@@ -464,7 +463,7 @@ export default function Pricing2033Page(req, res) {
       name: 'Space & Metaverse Tech',
       description: 'Space mining and metaverse development',
       services: ['Space Mining AutomationMetaverse AI DevelopmentAI Health AnalyticsHolographic Events'],
-      avg_price: '$14, 999 / month',
+avg_price: '$14, 999 / month',
       savings: 'Save 65 - 80% vs. competitors',
       icon: Rocket,
       color: 'from - teal - 500 to - emerald - 500';
@@ -482,7 +481,7 @@ export default function Pricing2033Page(req, res) {
       name: 'Research & Development',
       description: 'Breakthrough technologies and innovations',
       services: ['Neuromorphic ComputingPhotonic ComputingSwarm RoboticsBiotech Automation'],
-      avg_price: '$1, 099 / month',
+avg_price: '$1, 099 / month',
       savings: 'Save 55 - 75% vs. competitors',
       icon: Microscope,
       color: 'from - orange - 500 to - red - 500';
@@ -506,7 +505,7 @@ export default function Pricing2033Page(req, res) {
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billing_cycle === 'monthly' ? 299 : 239,
+price: billing_cycle === 'monthly' ? 299 : 239,
       period: billing_cycle === 'monthly' ? '/month' : '/month',
       savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
       features: [;
@@ -519,7 +518,7 @@ export default function Pricing2033Page(req, res) {
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billing_cycle === 'monthly' ? 999 : 799,
+price: billing_cycle === 'monthly' ? 999 : 799,
       period: billing_cycle === 'monthly' ? '/month' : '/month',
       savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
       features: [;
@@ -614,7 +613,6 @@ export default function Pricing2033Page(req, res) {
                 transition={{ duration: 0.6, delay: 0.2 }} className="text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed mb - 8">;
                 Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.;
               </motion.p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {/* Billing Toggle */}
               <motion.div;
                 initial={{ opacity: 0, coordinate_y: 20 }}
@@ -797,6 +795,7 @@ export default function Pricing2033Page(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
                       <category.icon className="w-6 h-6 text-white" />
@@ -816,7 +815,11 @@ export default function Pricing2033Page(req, res) {
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{service}</span>
                       </li>
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </ul>
                   <a
                     href="/services" className="inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium">
@@ -1022,7 +1025,11 @@ export default function Pricing2033Page(req, res) {
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{feature}</span>
                       </li>
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </ul>
 
 

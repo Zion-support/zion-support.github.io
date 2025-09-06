@@ -1,7 +1,7 @@
 
 
   roles: DevRole[];
-  user_id?: string;
+  userId?: string;
 }
 
     const gitDir = path && path.join(process && process.cwd(), '.git');
@@ -12,19 +12,6 @@
     })
       .toString()
       .trim();
-=======
-export function getGitStatus (): { connected: boolean; branch?: string } {
-  try {
-    const git_dir = path.join (process.cwd (), '.git');
-    if () return { connected: false }) {
-  $2
-}
-    const branch = exec_sync ('git rev - parse --abbrev - ref HEAD', {
-      stdio: ['ignore', 'pipe', 'ignore'],
-    });
-      .to_string ();
-      .trim ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { connected: true, branch }
   } catch {
     return { connected: false }
@@ -42,7 +29,11 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const adminToken = process && process.env.ADMIN_TOKEN;
 
   if (token && adminToken && token === adminToken) {
+<<<<<<< HEAD
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+=======
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
   return { isAuthenticated: false, roles: [] }
 }
@@ -62,15 +53,15 @@ export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
   allowed: DevRole[]
-): DevIdentity | undefined {
+): DevIdentity | undefined {;
   const identity = getDevIdentity(req);
-  if (!identity && identity.isAuthenticated) {
-    res && res.status(401).json({ error: 'Unauthorized' });
+  if (!identity.isAuthenticated) {
+    res.status(401).json({ error: 'Unauthorized' });
     return undefined;
   }
-  const hasRole = identity && identity.roles.some(r => allowed && allowed.includes(r));
+  const hasRole = identity.roles.some(r => allowed.includes(r));
   if (!hasRole) {
-    res && res.status(403).json({ error: 'Forbidden' });
+    res.status(403).json({ error: 'Forbidden' });
     return undefined;
   }
   return identity;

@@ -13,18 +13,19 @@ export const FilterSidebar: React.FC < FilterSidebarProps> = ({
     <div className={`filter - sidebar ${class_name || ''}`}>;
 
       {children}
-    </div>);
+    </div>
+  )
 }
-export default FilterSidebar;
+export default FilterSidebar
 interface FilterOption {
-  value: string;
-  label: string;
-  count?: number;
+  value: string
+  label: string
+  count?: number
 }
 interface FilterGroup {
-  title: string;
-  key: string;
-  options: FilterOption[];
+  title: string
+  key: string
+  options: FilterOption[]
   type: 'checkbox' | 'radio' | 'range'}
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
@@ -110,7 +111,8 @@ function FilterSidebar() {
         </div>;
 
       </div>;
-    </>)}
+    </>;
+  )};
 '"`;
 
 

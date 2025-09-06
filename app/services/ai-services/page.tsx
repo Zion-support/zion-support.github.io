@@ -15,4 +15,3 @@ function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap:
  * Plan - Function description
  */
 function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -186,6 +188,9 @@ console.log('==')
       console.log('\n⚠ Some branches failed to "merge")
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")
+<<<<<<< HEAD
+    console.error(' Comprehensive branch merger "failed")
+=======
 <<<<<<< HEAD
     console.error(' Comprehensive branch merger "failed")
 =======

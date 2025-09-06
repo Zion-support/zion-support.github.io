@@ -36,6 +36,26 @@ import {
 import React from 'react',
 import Layout from '../components / layout / Layout',
 import SEO from '../components / SEO',
+=======
+=======
+import React from 'react',;
+import Layout from '../components/layout/Layout',;
+import SEO from '../components/SEO',;
+import { motion } from 'framer-motion',;
+import { 
+  Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
+  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
+  Lightbulb, Search, Grid, List, TrendingUp, 
+  User, ShoppingCart, Bell, HelpCircle, FileText, 
+  Video, Headphones, Code, Database, Network, Server, 
+  Monitor, Smartphone, Camera, Gamepad2, Palette, 
+  Music, Film, BookOpenCheck, Building, MessageCircle, 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO',
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion } from 'framer-motion',
 import {
   Target, Brain, Rocket, Shield, Zap, Atom, Cpu,
@@ -61,9 +81,9 @@ const Solutions: NextPage = () => {
 
       id: 'healthcare',
       name: 'Healthcare Solutions',
-      description: 'AI-powered healthcare technology solutions',
+      description: 'AI - powered healthcare technology solutions',
       features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management'],
-      price: '$3,999',
+      price: '$3, 999',
       period: 'month',
       popular: true,
       icon: <Heart className="w-8 h-8" />
@@ -200,59 +220,90 @@ const Solutions: NextPage = () => {
 
       id: 'healthcare',
       name: 'Healthcare Solutions',
-      description: 'AI - powered healthcare technology solutions',
+      description: 'AI-powered healthcare technology solutions',
       features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management'],
-      price: '$3, 999',
+      price: '$3,999',
       period: 'month',
       popular: true,
-      icon: <Heart className="w - 8 h - 8" />;
+      icon: <Heart className="w-8 h-8" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       id: 'financial',
       name: 'Financial Solutions',
       description: 'Advanced financial technology and services',
       features: ['Risk ManagementFraud DetectionTrading SystemsCompliance Automation'],
-      price: '$2, 999',
+<<<<<<< HEAD
+price: '$2, 999',
       period: 'month',
       popular: false,
       icon: <TrendingUp className="w - 8 h - 8" />;
+=======
+      price: '$2,999',
+      period: 'month',
+      popular: false,
+      icon: <TrendingUp className="w-8 h-8" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       id: 'manufacturing',
       name: 'Manufacturing Solutions',
       description: 'Smart manufacturing and Industry 4.0',
       features: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationIoT Integration'],
-      price: '$2, 799',
+<<<<<<< HEAD
+price: '$2, 799',
       period: 'month',
       popular: false,
       icon: <Settings className="w - 8 h - 8" />;
+=======
+      price: '$2,799',
+      period: 'month',
+      popular: false,
+      icon: <Settings className="w-8 h-8" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       id: 'retail',
       name: 'Retail Solutions',
       description: 'Digital transformation for retail businesses',
-      features: ['E - commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions'],
+<<<<<<< HEAD
+features: ['E - commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions'],
       price: '$2, 499',
       period: 'month',
       popular: false,
       icon: <ShoppingCart className="w - 8 h - 8" />;
+=======
+      features: ['E-commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions'],
+      price: '$2,499',
+      period: 'month',
+      popular: false,
+      icon: <ShoppingCart className="w-8 h-8" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       id: 'government',
       name: 'Government Solutions',
       description: 'Technology solutions for public sector',
       features: ['Digital ServicesSecurity & ComplianceData ManagementCitizen Engagement'],
-      price: '$3, 499',
+<<<<<<< HEAD
+price: '$3, 499',
       period: 'month',
       popular: false,
       icon: <Building className="w - 8 h - 8" />;
+=======
+      price: '$3,499',
+      period: 'month',
+      popular: false,
+      icon: <Building className="w-8 h-8" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       id: 'education',
       name: 'Education Solutions',
       description: 'Innovative educational technology',
       features: ['Learning PlatformsStudent AnalyticsAdministrative SystemsVirtual Classrooms'],
-      price: '$1, 999',
+<<<<<<< HEAD
+price: '$1, 999',
       period: 'month',
       popular: false,
       icon: <BookOpenCheck className="w - 8 h - 8" />;
@@ -263,26 +314,66 @@ const Solutions: NextPage = () => {
       title: 'Industry Expertise',
       description: 'Deep domain knowledge across sectors',
       icon: <Briefcase className="w - 6 h - 6" />;
+=======
+      price: '$1,999',
+      period: 'month',
+      popular: false,
+      icon: <BookOpenCheck className="w-8 h-8" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ],
+  const solutionCapabilities = [
+    {
+      title: 'Industry Expertise',
+      description: 'Deep domain knowledge across sectors',
+      icon: <Briefcase className="w-6 h-6" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       title: 'Custom Development',
       description: 'Tailored solutions for unique needs',
-      icon: <Code className="w - 6 h - 6" />;
+<<<<<<< HEAD
+icon: <Code className="w - 6 h - 6" />;
+=======
+      icon: <Code className="w-6 h-6" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       title: 'Integration Services',
       description: 'Seamless system integration',
-      icon: <Network className="w - 6 h - 6" />;
+<<<<<<< HEAD
+icon: <Network className="w - 6 h - 6" />;
+=======
+      icon: <Network className="w-6 h-6" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       title: 'AI & Automation',
       description: 'Intelligent automation solutions',
-      icon: <Brain className="w - 6 h - 6" />;
+<<<<<<< HEAD
+icon: <Brain className="w - 6 h - 6" />;
+=======
+      icon: <Brain className="w-6 h-6" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       title: 'Cloud & Security',
       description: 'Secure cloud infrastructure',
-      icon: <Shield className="w - 6 h - 6" />;
+<<<<<<< HEAD
+icon: <Shield className="w - 6 h - 6" />;
     },
     {
       title: 'Analytics & Insights',
@@ -291,10 +382,36 @@ const Solutions: NextPage = () => {
     }
   ],
   const case_studies = [;
+=======
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      title: 'Analytics & Insights',
+      description: 'Data-driven decision making',
+      icon: <BarChart3 className="w-6 h-6" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ],
+  const caseStudies = [
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       title: "Healthcare Provider Digital Transformation",
       industry: "Healthcare",
       description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency.",
+<<<<<<< HEAD
       results: [;
         "30% reduction in administrative overhead",
         "Improved patient satisfaction scores",
@@ -312,11 +429,31 @@ const Solutions: NextPage = () => {
         "Enhanced mobile user experience";
       ],
       technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"];
+=======
+      results: [
+        "30% reduction in administrative overhead",
+        "Improved patient satisfaction scores",
+        "Enhanced data security and compliance"
+      ],
+      technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
+    },
+    {
+      title: "E-commerce Platform Modernization",
+      industry: "Retail",
+      description: "Redesigned and modernized an existing e-commerce platform, resulting in significant improvements in user experience and sales.",
+      results: [
+        "45% increase in conversion rates",
+        "60% improvement in page load times",
+        "Enhanced mobile user experience"
+      ],
+      technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       title: "Manufacturing IoT Integration",
       industry: "Manufacturing",
       description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency.",
+<<<<<<< HEAD
       results: [;
         "25% reduction in unplanned downtime",
         "15% improvement in production efficiency",
@@ -907,8 +1044,6 @@ const Solutions: NextPage = () => {
 
 
 export default Solutions;
-
-=======
             >;
               <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 to - red - 500 bg - clip - text text - transparent">;
                 Ready for Industry Transformation?;

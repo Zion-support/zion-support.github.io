@@ -2,10 +2,13 @@
 
 =======
 // Mock test for signup auto login
-describe('Signup Auto Login', () => {
+describe('Signup Auto Login', () => {'
   it('should render without crashing', () => {
     expect(true).toBe(true);
   });
+<<<<<<< HEAD
+});'
+=======
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

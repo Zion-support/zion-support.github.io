@@ -165,6 +165,8 @@ console.log(" Starting comprehensive lint error fixes...")
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           lines[i] = line.replace(/"[^"]*$/, '"")
 =======
 <<<<<<< HEAD

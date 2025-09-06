@@ -2,11 +2,11 @@ import {useState} from 'react'
 export const useLocalStorage = (key: string, initialValue: unknown) => {
 
   } catch {
-export const useLocalStorage = (key: string, initial_value: unknown) =>: any {
-      return initial_value;
+export const useLocalStorage = (key: string, initialValue: unknown) => {
+      return initialValue
     }
-  });
-  const set_value = (value: unknown, ) =>: any {
+  })
+  const setValue = (value: unknown,) => {
     try {
 
       const valueToStore = value instanceof Function ? value(storedValue) : value;

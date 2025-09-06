@@ -151,6 +151,12 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
 
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      for (const stage of pipelineStages) {;
+      console.log('🎯 Starting CI/CD Pipeline...');
+      console.log("🌍 "Environment": ${this.pipelineLog.environment}");"
+=======
       ");"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -286,6 +292,11 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
       // Execute each pipeline stage;
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      for (const stage of pipelineStages) {
+        await this.executeStage(stage)}
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -435,6 +446,10 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
 
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -501,6 +516,10 @@ pipeline.run().catch(error: => {
   }
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

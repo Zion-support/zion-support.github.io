@@ -31,6 +31,18 @@ export function MobileHeader({
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 
 
+  title,
+  showBack = false,
+  showNotifications = false,
+  showSettings = false,
+  className,
+  onNotificationsClick,
+  onSettingsClick}: MobileHeaderProps) {
+  const router = useRouter(),
+
+  return (
+    <header className={cn(
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -88,7 +100,7 @@ export function MobileHeader(): any ({;
               <span className="sr-only">Back</span>;
             </Button>;
           )}
-          <h1 className="text-lg font-medium leading-none truncate">;
+          <h1 className="text-lg font-medium leading-none truncate">
             {title}
 
           </h1>;
@@ -99,10 +111,11 @@ export function MobileHeader(): any ({;
               variant="ghost" 
 
               size="icon"
-              onClick = {onNotificationsClick,}>;
-              <Bell className="h-5 w-5" />;
-              <span className="sr-only">Notifications</span>;
-            </Button>;
+              onClick={onNotificationsClick}
+            >
+              <Bell className="h-5 w-5" />
+              <span className="sr-only">Notifications</span>
+            </Button>
           )}
 
           {showSettings && (;
@@ -168,6 +181,8 @@ export function MobileHeader({;
               <ChevronLeft className='h-5 w-5' />;
               <span className='sr-only'>Back</span>;
             </Button>;
+            <Button 
+              <span className='sr-only'>Settings</span>            </Button>            <Button 
             <Button 
               variant="ghost" 
               size="icon"

@@ -116,5 +116,8 @@ if ( {) {
   }
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
+  res.setHeader('AllowGET, POST'),
+  res.status(405).end('Method Not Allowed')
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

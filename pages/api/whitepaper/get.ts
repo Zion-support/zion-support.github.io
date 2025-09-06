@@ -12,6 +12,7 @@ export default function handler(req, res) {
   const entry = getShared(id);
   if (!entry) return res.status(404).json({ error: 'Not found' });
   res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt })
+<<<<<<< HEAD
 }
 
 

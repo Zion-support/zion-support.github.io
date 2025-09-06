@@ -258,6 +258,7 @@ h3 {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   background: 
     radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
@@ -380,12 +381,9 @@ h3 {
 <<<<<<< HEAD
 >>>>>>> main
 .futuristic-card {
-=======
-    linear-gradient(45deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
-  background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
-  animation: quantumHolographic 20s ease-in-out infinite;
-}
 
+<<<<<<< HEAD
+=======
 @keyframes quantumHolographic {
   0%, 100% { 
     background-position: 0% 0%, 100% 100%, 0% 100%, 0% 0%;
@@ -596,7 +594,7 @@ h3 {
 
 /* Enhanced Button States */
 .btn-futuristic {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2873
+
   position: relative;
 =======
 =======
@@ -886,7 +884,7 @@ h3 {
   25% { background-position: 100% 50%; }
   50% { background-position: 100% 100%; }
   75% { background-position: 0% 100%; }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2873
+
 }
 =======
 =======
@@ -1010,12 +1008,14 @@ h3 {
 <<<<<<< HEAD
 >>>>>>> main
 /* Reduced Motion */
-=======
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
 
+<<<<<<< HEAD
+@media (prefers-reduced-motion: reduce) {
+/* Reduced Motion */@media (prefers-reduced-motion: reduce) {
+
+@media (prefers-reduced-motion: reduce) {
+
+=======
 /* Enhanced Pulse Effects */
 .pulse-glow {
   animation: pulseGlow 2s ease-in-out infinite alternate;
@@ -1229,6 +1229,13 @@ h3 {
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+}
+
+}
+
 /* Enhanced Print Styles */
 @media print {
   .no-print {
@@ -1240,6 +1247,9 @@ h3 {
     color: black !important;
   }
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2873
 =======
 <<<<<<< HEAD

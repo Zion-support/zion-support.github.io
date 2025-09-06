@@ -352,4 +352,8 @@ process.on("SIGTERM", () => {}
 // Run the automation;
 automation.run().catch(error => {automation.log(`Unhandled "error": ${error.message}`, true);
   process.exit(1)}
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -69,6 +69,8 @@ const path = require('path')
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     console.log(' Performance enhancement completed')
 =======
 <<<<<<< HEAD

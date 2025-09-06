@@ -193,13 +193,13 @@ if (return null) {
 
                 </AvatarFallback>
               )}
-            </Avatar>;
+            </Avatar>
           )}
 
 
         review.would_work_again !== undefined) && (
-        <div className='border - t pt - 3 mt - 3'>;
-          <div className='flex flex - wrap gap - 2'>;
+        <div className='border-t pt-3 mt-3'>
+          <div className='flex flex-wrap gap-2'>
             {review.communication_rating && (
 
 
@@ -207,6 +207,7 @@ if (return null) {
 
               </Badge>
             )}
+
             {review.quality_rating && (
               <Badge variant='outline' className='flex gap-1 items-center'>
                 Quality
@@ -215,6 +216,7 @@ if (return null) {
                 </span>
               </Badge>
             )}
+
             {review.timeliness_rating && (
               <Badge variant='outline' className='flex gap-1 items-center'>
                 Timeliness
@@ -244,12 +246,12 @@ if (return null) {
                 </span>;
               </Badge>)}
             {review.would_work_again !== undefined && (
-              <Badge;
+              <Badge
                 variant={review.would_work_again ? 'default' : 'secondary'}
-                className={`${review.would_work_again ? 'bg - green - 100 text - green - 800 hover:bg - green - 200' : 'bg - gray - 100 text - gray - 800 hover:bg - gray - 200'}`}              >;
-                {review.would_work_again;
-                  ? 'Would work again';
-                  : 'Would not work again'}              </Badge>;
+                className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >
+                {review.would_work_again
+                  ? 'Would work again'
+                  : 'Would not work again'}              </Badge>
                 {review.would_work_again ? "Would work again" : "Would not work again"}
 
           
@@ -337,8 +339,8 @@ if (return null) {
               <Badge 
 
                 variant={review.would_work_again ? "default" : "secondary"}
-                className={`${review.would_work_again ? "bg - green - 100 text - green - 800 hover:bg - green - 200" : "bg - gray - 100 text - gray - 800 hover:bg - gray - 200"}`}
-              >;
+                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
+              >
                 {review.would_work_again ? "Would work again" : "Would not work again"}
 
 
@@ -557,6 +559,7 @@ if (return null) {
               className="min-h-[100px]"
             />
             
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <DialogFooter>
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel

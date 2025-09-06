@@ -190,7 +190,7 @@ export default function GlobalSearchBar() {;
               <li key={i}>;
                 <button
                   type="button"
-                  onClick={() => {;
+                  onClick={() => {
                     setQuery(s);
                     setOpen(false);
 

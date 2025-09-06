@@ -77,8 +77,8 @@ function PrimaryNav() {
   let unread_count = 0;
 
   try {
-    const messaging = use_messaging ();
-    unread_count = messaging.unread_count;
+    const messaging = useMessaging()
+    unreadCount = messaging.unreadCount
   } catch {
 
     // context not available
@@ -117,37 +117,34 @@ if ( {) {
           })) }
   }
 export function PrimaryNav() {;
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
-  const { user } = useAuth();
-  const isLoggedIn = !!user;
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const router = useRouter();
-  const [query, setQuery] = useState('');
-  const suggestions = generateSearchSuggestions();
-  let unreadCount = 0;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
+  const [loginOpen, setLoginOpen] = useState(false),;
+  const { user } = useAuth(),;
+  const isLoggedIn = !!user,;
+  const isMobile = useIsMobile(),;
+  const { t } = useTranslation(),;
+  const router = useRouter(),;
+  const [query, setQuery] = useState(''),;
+  const suggestions = generateSearchSuggestions(),;
+  let unreadCount = 0,;
   try {;
-    const messaging = useMessaging();
-    unreadCount = messaging && messaging.unreadCount;
+    const messaging = useMessaging(),;
+    unreadCount = messaging.unreadCount;
   } catch {;
     // context not available;
   }
-
-  const handleSubmit = (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    const trimmed = query && query.trim();    if (trimmed) {;
-      logDebug('PrimaryNav search submit:', { query: trimmed });
+;
+  const handleSubmit = (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    const trimmed = query.trim(),;
+    if (trimmed) {;
+      logDebug('PrimaryNav search submit:', { query: trimmed }),;
       router;
         .push(`/search?q=${encodeURIComponent(trimmed)}`);
         .then(() => setQuery(''));
-        .catch(err =>;
-          logErrorToProduction('Search navigation failed', err, {;
-            query: trimmed,;
-            component: 'PrimaryNav',;
-          });
-        );    }
-  };
+        .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }));
+    }
+  },
 
 
         data-testid='header'>;
@@ -156,7 +153,7 @@ export function PrimaryNav() {;
 
 
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className='hidden lg:block order-1 flex-shrink-0'>;
+          <div className='hidden lg:block order-1 flex-shrink-0'>
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
 
@@ -184,12 +181,9 @@ export function PrimaryNav() {;
           
 
           {/* Actions container with responsive layout */}
-          <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;
+          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
-            <form
-              onSubmit={handleSubmit}
-              className='flex-shrink-0'
-              style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>;
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
@@ -243,8 +237,8 @@ if ( {) {
                     router.push (`/blog/${sugg.slug}`);
 
                   } else {
-                    // Default: search results page with query parameter;
-                    router.push (`/search?q=${encodeURIComponent (sugg.text)}`);
+                    // Default: search results page with query parameter
+                    router.push(`/search?q=${encodeURIComponent(sugg.text)}`)
                   }
 
                 onSelectSuggestion={sugg => {;
@@ -259,23 +253,18 @@ if ( {) {
                   if (sugg.id) {;
 
                     // Product listings with IDs go to product detail page;
-                    router && router.push(`/marketplace/listing/${sugg && sugg.id}`);
-                  } else if (;
-                    sugg && sugg.type === 'doc' &&;
-                    sugg && sugg.slug &&;
-                    sugg && sugg.slug.startsWith('/');
-                  ) {;
+                    router.push(`/marketplace/listing/${sugg.id}`);
+                  } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
                     // Documentation suggestions navigate directly to their path;
-                    router && router.push(sugg && sugg.slug);
-                  } else if (sugg && sugg.type === 'blog' && sugg && sugg.slug) {;
+                    router.push(sugg.slug);
+                  } else if (sugg.type === 'blog' && sugg.slug) {;
                     // Blog posts navigate to blog detail page;
-                    router && router.push(`/blog/${sugg && sugg.slug}`);
+                    router.push(`/blog/${sugg.slug}`);
                   } else {;
                     // Default: search results page with query parameter;
-                    router && router.push(`/search?q=${encodeURIComponent(sugg && sugg.text)}`);
+                    router.push(`/search?q=${encodeURIComponent(sugg.text)}`);
                   }
-                  setQuery('');
-
+                  setQuery(''),;
                   // Track analytics event;
                   if (typeof window !== 'undefined' && window && window.gtag) {;
                     window && window.gtag('event', 'search_suggestion_click', {;
@@ -369,9 +358,10 @@ if ( {) {
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
                       suggestion_id: sugg.id || sugg.slug;
-})}
+                    });
+                  }
                 }}
-                search_suggestions = {suggestions, }
+                searchSuggestions={suggestions}
               />;
             </form>;
             {/* Compact actions group */}
@@ -432,11 +422,12 @@ if ( {) {
                     {t('auth && auth.login')}
                   </Link>;
                   <Link
-                    href='/signup'
-                    className='text-sm hover:text-primary whitespace-nowrap'>;
-                    {t('auth && auth.signup')}
-                  </Link>;
-                </>;
+                    href="/signup"
+                    className="text-sm hover:text-primary whitespace-nowrap"
+                  >
+                    {t('auth.signup')}
+                  </Link>
+                </>
               )}
               {isLoggedIn && <UserMenu />}
 
@@ -552,11 +543,11 @@ if ( {) {
             ) : (
               <Menu className="h-6 w-6" />
             )}
-          </button>;
-        </div>;
-      </header>;
-      {mobileMenuOpen && (;
-        <div className='lg:hidden fixed inset-0 z-60 pt-16'>;
+          </button>
+        </div>
+      </header>
+      {mobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 z-60 pt-16">
           <div
 
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -716,6 +707,7 @@ setLoginOpen (true)
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
+<<<<<<< HEAD
   unreadCount
 
   unreadCount 

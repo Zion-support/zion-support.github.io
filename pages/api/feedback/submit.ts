@@ -43,8 +43,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   return res && res.status(200).json({ ok: true });
 
 }
-
-=======
   if (req.method !== 'POST') return res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body || {};
   if (!responseId || !rating || !['updown'].includes(rating)) {

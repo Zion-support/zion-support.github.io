@@ -232,6 +232,7 @@ export function DisputeDetail() {;
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>;
                           <span>Under review</span>;
                         </li>;
+<<<<<<< HEAD
                       )}
                       ;
                       {dispute.resolved_at && (;
@@ -242,6 +243,18 @@ export function DisputeDetail() {;
                           <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                         </li>;
                       )}
+=======
+                      )}
+                      ;
+                      {dispute.resolved_at && (;
+                        <li className="flex gap-2 items-center">;
+                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">;
+                            {dispute.status !== "open" ? "3" :"2"}
+                          </Badge>;
+                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
+                        </li>;
+                      )}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </ul>;
                   </div>;
                 </CardContent>;

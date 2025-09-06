@@ -1,9 +1,10 @@
 function ReviewsModerationContent() {
-  const [active_tab, setActiveTab] = useState ('pending');
-  const [reviews, set_reviews] = useState ([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const fetch_reviews = async () => {
-    setIsLoading (true);
+  const [activeTab, setActiveTab] = useState("pending"),
+  const [reviews, setReviews] = useState([]),
+  const [isLoading, setIsLoading] = useState(true),
+  
+  const fetchReviews = async () => {
+    setIsLoading(true),
     try {
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;
@@ -72,11 +73,12 @@ function ReviewsModerationContent() {;
 
       setIsLoading(false)
     } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' });
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
       toast({
         title: "Error",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         description: "Failed to load reviews. Please try again later.",
-        variant: "destructive"});
+        variant: "destructive"}),
       setIsLoading(false)
     }
 
@@ -274,20 +276,13 @@ function ReviewsModerationContent() {;
 
                 />;
               </TabsContent>;
-
-              <TabsContent value='reported' className='mt-0'>;
-                <div className='text-center py-12 border rounded-lg'>;
-                  <AlertTriangle className='h-10 w-10 text-amber-500 mx-auto mb-2' />;
-                  <h3 className='text-lg font-medium mb-2'>Reported Reviews</h3>;
-                  <p className='text-muted-foreground'>;
-                    This section will show reviews that have been reported by;
-                    users.                  </p>              ;
               <TabsContent value="reported" className="mt-0">;
                 <div className="text-center py-12 border rounded-lg">;
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />;
                   <h3 className="text-lg font-medium mb-2">Reported Reviews</h3>;
                   <p className="text-muted-foreground">;
                     This section will show reviews that have been reported by users.;
+                  </p>;
                 </div>;
               </TabsContent>;
             </Tabs>;
@@ -297,9 +292,9 @@ function ReviewsModerationContent() {;
     </>;
   );
 }
-
+;
 export default function ReviewsModeration() {;
-  return (
+  return (;
     <ProtectedRoute>;
       <ReviewsModerationContent />;
     </ProtectedRoute>;

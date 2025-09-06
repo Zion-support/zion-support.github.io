@@ -87,6 +87,7 @@ if ( {) {
 }
       on_enhanced (enhanced_content);
     }
+<<<<<<< HEAD
   }
 
 

@@ -6,7 +6,7 @@ import { ThemeProvider } from 'next - themes';
 const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
 
   return (
-    <ThemeProvider attribute="class" default_theme="light">;
+    <ThemeProvider attribute="class" defaultTheme="light">
       {children}
 
     </ThemeProvider>);
@@ -79,8 +79,8 @@ export const mockNextRouter = () => ({;
   isPreview: false;
 
 });
-;
-export const createMockProps = (overrides = {}) =>: any ({
+export const createMockProps = (overrides = {}) => ({;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ...overrides;
 
 

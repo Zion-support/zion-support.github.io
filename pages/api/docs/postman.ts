@@ -28,13 +28,13 @@
       })),
     ),
     variable: [
+<<<<<<< HEAD
       { key: "baseUrl", value: "https://api && api.zion.os" },
       { key: "token", value: "" },
     ],
   };
 
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -46,9 +46,8 @@ function to_postman() {
       name: "Zion OS API",
       schema:;
         "https://schema.getpostman.com / json / collection / v2.1.0 / collection.json",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     },
-    item: v1.sections.flat_map ((section) =>;
+item: v1.sections.flat_map ((section) =>;
       section.endpoints.map ((ep) => ({
         name: `${section.title} - ${ep.title}`,
         request: {

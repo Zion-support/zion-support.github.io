@@ -14,12 +14,10 @@ if (isLoading) {
 
   if (error) {;
     return (
-      <Alert variant="destructive" className="mb-6">;
-        <AlertCircle className="h-4 w-4" />;
-        <AlertTitle>Error</AlertTitle>;
-        <AlertDescription>{error}</AlertDescription>;
-      </Alert>;
-    );
+      <div className="flex justify-center items-center h-64">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    )
   }
 
 
@@ -68,10 +66,10 @@ if (isLoading) {
 
 
   return (
-    <div className="space-y-6">;
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
-        <h1 className="text-2xl font-bold">Resume Builder</h1>;
-        <div className="flex gap-4 flex-wrap items-center">;
+    <div className="space-y-6">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <h1 className="text-2xl font-bold">Resume Builder</h1>
+        <div className="flex gap-4 flex-wrap items-center">
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
 
 
@@ -174,7 +172,7 @@ if ( {) {
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}
                 onPrevStep = {prevStep,}
-              />;
+              />
             )}
 
           </Tabs>;

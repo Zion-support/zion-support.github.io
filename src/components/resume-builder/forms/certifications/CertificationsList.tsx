@@ -76,8 +76,8 @@ interface CertificationsListProps {
                 >
 
                   View credential
-                </a>;
-              </p>;
+                </Link>
+              </p>
             )}
           </CardContent>;
         </Card>;

@@ -1,8 +1,6 @@
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     return res.status (201).json (created);
   }
   res.set_header ("Allow", "GET, POST");

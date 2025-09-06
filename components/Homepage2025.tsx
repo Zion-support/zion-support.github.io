@@ -4,25 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useState, useEffect, Suspense } from 'react';
-
 import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -72,13 +67,10 @@ import {;
   BarChart3,;
   Cloud,;
 } from 'lucide-react';
-
 interface Homepage2025Props {;
   showInternalNav?: boolean;
-
 const Homepage2025: React.FC<Homepage2025Props> = ({;
   showInternalNav = true,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
 
 =======
@@ -124,7 +116,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false);    }
   };
-
   const allServices = [      element && element.scrollIntoView({ behavior: 'smooth' }),;
 
       setActiveSection(sectionId);
@@ -132,7 +123,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     }
 
   };
-
   const allServices = [;
     ...innovativeRealMicroSaasServices2025,;
     ...innovativeAIServicesEnhanced2025,;
@@ -144,7 +134,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...specializedITSolutions2026,;
     ...emergingTechServices2026,;
   ];
-
   const featuredServices = allServices;
     .filter(service => service && service.popular);
 
@@ -156,7 +145,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
-=======
 import { innovativeRealMicroSaasServices2025 } from '../data / 2025 - innovative - real - micro - saas - services';
 import { innovativeAIServicesEnhanced2025 } from '../data / 2025 - innovative - ai - services - enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data / 2025 - innovative - it - services - enhanced';
@@ -343,11 +331,9 @@ if ( {) {
     { id: 'it', label: 'IT Solutions', icon: '💻' },;
     { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },;
     { id: 'contact', label: 'Contact', icon: '📞' },  ];
-
   const features = [;
     {    { id: 'contact', label: 'Contact', icon: '📞' }
   ];
-
   const features = [;
     {;
       title: 'AI-Powered Innovation',;
@@ -376,7 +362,6 @@ if ( {) {
       description: "Intelligent automation that streamlines operations and enhances productivity",;
       icon: Zap;
     }
-
   const itemVariants = {;
     initial: { opacity: 0, y: 20 },;
     animate: { opacity: 1, y: 0 },;
@@ -404,15 +389,12 @@ if ( {) {
                     ZionTech Group;
                   </span>;
                 </motion && motion.div>;
-=======
   };
 
 
                 {/* Desktop Navigation */}
                 <div className='hidden lg:flex space-x-8'>;
                   {navigationSections && navigationSections.map(section => (                    <button}
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">;
       {showInternalNav && (;
@@ -429,9 +411,6 @@ if ( {) {
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>;
                   <span className="text-white font-bold text-xl">ZionTech Group</span>;
                 </motion && motion.div>;
-=======
-                
-=======
     { id: 'contact', label: 'Contact', icon: '📞' },  ];
 ;
   const features = [;
@@ -548,7 +527,7 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Contact Info */}
-                <motion&& motion.div
+                <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
 
@@ -604,7 +583,7 @@ if ( {) {
 
 
                 )}
-              </AnimatePresence>;
+</AnimatePresence>;
             </div>;
           </nav>;
         </>;
@@ -748,6 +727,12 @@ if ( {) {
             </div>;
           </nav>;
         </>)}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section;
         id='hero';
@@ -761,6 +746,7 @@ if ( {) {
             <motion.div;
               animate={{ coordinate_y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
               className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'            >      <section id="hero" className="relative min - h-screen flex items - center justify - center px - 4 sm:px - 6 lg:px - 8 pt - 16">;
         <div className="text - center z - 10 max - w-6xl mx - auto">;
           <motion.div;
@@ -776,7 +762,6 @@ if ( {) {
             >;
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 animate={{ opacity: 1, scale: 1 }}
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -880,14 +865,12 @@ if ( {) {
                 <Star className="w-5 h-5" />;
                 <span>Innovation Leader 2025-2026</span>;
               </motion && motion.div>;
-
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
                 Zion Tech Group;
               </h1>;
               <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">;
                 Pioneering the future of technology with innovative solutions that drive business transformation;
               </p>;
-
               {/* Enhanced CTA Section */}
               <motion&& motion.div 
                 variants={itemVariants}
@@ -933,7 +916,7 @@ if ( {) {
           <motion&& motion.div
 
 =======
-
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
@@ -989,7 +972,6 @@ if ( {) {
               tools you need to stay ahead of the competition.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>;
             {features && features.map((feature, index) => (;
               <motion&& motion.div
@@ -1002,11 +984,9 @@ if ( {) {
               From AI-powered automation to quantum computing, we provide the tools you need to stay ahead of the competition.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
             {features && features.map((feature, index) => (;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
 =======
@@ -1037,8 +1017,6 @@ if ( {) {
         <div className="max-w-6xl mx-auto">;
           <motion&& motion.div
             className="text-center mb-16"
-=======
-
       {/* Enhanced Services Preview */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -1240,6 +1218,7 @@ if ( {) {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
           >;
             <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 4'>;
               Our Revolutionary 2026 Services;
@@ -1319,7 +1298,6 @@ if ( {) {
               { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
               { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" }
               { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" }
-=======
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
@@ -1330,7 +1308,6 @@ if ( {) {
               emerging technologies, we're building the future today;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {[;
               {;
@@ -1391,7 +1368,6 @@ if ( {) {
               From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {[;
               { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-500 to-pink-500", link: "/comprehensive-services-showcase-2026" },;
@@ -1399,7 +1375,6 @@ if ( {) {
               { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" },;
               { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" },;
               { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               { title: "Blockchain Intelligence", description: "Intelligent blockchain analytics and DeFi optimization", icon: Lock, gradient: "from-yellow-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
             ].map((service, index) => (;
               <motion&& motion.div
@@ -1449,6 +1424,7 @@ if ( {) {
               Ready to Transform Your Business?
 
             </h2>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.
             </p>
@@ -1488,7 +1464,6 @@ if ( {) {
               can help you achieve your goals.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>;
             <div className='text-center'>;
               <div className='w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>;
@@ -1523,7 +1498,6 @@ if ( {) {
                 Round-the-clock assistance;
               </p>            </div>;
           </div>;
-
           <motion&& motion.div
             className='text-center'            initial={{ opacity: 0, y: 20 }}              Ready to Transform Your Business?
             </h2>;
@@ -1531,7 +1505,6 @@ if ( {) {
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
             <div className="text-center">;
               <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">;
@@ -1555,7 +1528,6 @@ if ( {) {
               <p className="text-gray-300 text-sm">Round-the-clock assistance</p>;
             </div>;
           </div>;
-
           <motion&& motion.div
 
             className='text-center'            className="text-center"
@@ -1611,16 +1583,14 @@ if ( {) {
           </motion.div>
         </div>
       </section>
-=======
-                className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300">;
+<<<<<<< HEAD
+className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300">;
                 Call Us;
               </a>;
             </div>;
           </motion && motion.div>;
         </div>;
       </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Footer */}
 
 
@@ -1632,8 +1602,6 @@ if ( {) {
 
 
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2025;
 
 

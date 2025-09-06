@@ -4,6 +4,32 @@ import { ServiceVariant } from '../types / service - variants';
 export interface PracticalBusinessSolution2029 {
 
   {
+<<<<<<< HEAD
+    id: 'ai - business - intelligence - suite',
+    name: 'AI Business Intelligence Suite',
+    tagline:;
+      'Intelligent insights and predictive analytics for business growth',
+    price: '$2, 499',
+    period: '/month',
+    description:;
+      'Comprehensive AI - powered business intelligence platform that provides real - time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
+    features: [;
+      'Real - time data analytics',
+      'Predictive business modeling',
+      'Automated report generation',
+      'Custom dashboard creation',
+      'Data visualization tools',
+      'Business trend analysis',
+      'Performance benchmarking',
+      'ROI tracking automation',
+      'Market opportunity identification',
+      'Competitive intelligence',
+    ],
+    popular: true,
+    icon: '📊',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-business-intelligence-suite';
+    marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.',
+=======
 
     id: 'ai-business-intelligence-suite'
     name: 'AI Business Intelligence Suite'
@@ -29,9 +55,7 @@ export interface PracticalBusinessSolution2029 {
 
     reviews: 167
   }
-
   // Intelligent Customer Experience Platform
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -43,7 +67,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 167;
   }
   // Intelligent Customer Experience Platform;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'intelligent - customer - experience - platform';
     name: 'Intelligent Customer Experience Platform';
@@ -61,12 +84,10 @@ export interface PracticalBusinessSolution2029 {
     useCases: ['Customer personalization, Journey optimization, Customer retention, Revenue optimization, Customer insights'];
     roi: 'Average customer sees 450% ROI through improved customer satisfaction and increased revenue.'
     competitors: ['Adobe Experience Cloud, Salesforce Customer 360, HubSpot, Intercom, Zendesk'];
-
     marketSize: '$22B market';
     growthRate: '320% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     tagline: 'AI - powered customer journey optimization and personalization',
     price: '$1, 899';
     period: '/month',
@@ -95,7 +116,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '320% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -110,9 +130,7 @@ export interface PracticalBusinessSolution2029 {
 
     reviews: 134
   }
-
   // Smart Supply Chain Optimization
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -124,7 +142,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 134;
   }
   // Smart Supply Chain Optimization;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'smart - supply - chain - optimization';
     name: 'Smart Supply Chain Optimization';
@@ -142,12 +159,10 @@ export interface PracticalBusinessSolution2029 {
     useCases: ['Demand forecasting, Inventory management, Cost optimization, Risk management, Performance tracking'];
     roi: 'Average customer sees 500% ROI through cost reduction and efficiency improvements.'
     competitors: ['SAP Supply Chain, Oracle SCM, Manhattan Associates, Blue Yonder, Kinaxis'];
-
     marketSize: '$28B market';
     growthRate: '350% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     tagline: 'AI - powered supply chain intelligence and automation',
     price: '$3, 999';
     period: '/month',
@@ -176,7 +191,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '350% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -191,9 +205,7 @@ export interface PracticalBusinessSolution2029 {
 
     reviews: 98
   }
-
   // Intelligent HR Management System
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -205,7 +217,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 98;
   }
   // Intelligent HR Management System;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'intelligent - hr - management - system';
     name: 'Intelligent HR Management System';
@@ -223,12 +234,10 @@ export interface PracticalBusinessSolution2029 {
     useCases: ['Recruitment optimization, Employee engagement, Performance management, Training optimization, HR analytics'];
     roi: 'Average customer sees 400% ROI through improved employee retention and HR efficiency.'
     competitors: ['Workday, BambooHR, ADP, Gusto, Zenefits'];
-
     marketSize: '$15B market';
     growthRate: '300% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     tagline: 'AI - powered human resources optimization and talent management',
     price: '$1, 599';
     period: '/month',
@@ -257,7 +266,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '300% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -272,9 +280,7 @@ export interface PracticalBusinessSolution2029 {
 
     reviews: 189
   }
-
   // Smart Financial Management Platform
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -286,7 +292,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 189;
   }
   // Smart Financial Management Platform;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'smart - financial - management - platform';
     name: 'Smart Financial Management Platform';
@@ -304,12 +309,10 @@ export interface PracticalBusinessSolution2029 {
     useCases: ['Cash flow management, Financial planning, Risk management, Accounting automation, Tax optimization'];
     roi: 'Average customer sees 380% ROI through improved financial management and cost optimization.'
     competitors: ['QuickBooks, Xero, FreshBooks, Wave, Sage'];
-
     marketSize: '$20B market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     tagline: 'AI - powered financial planning and business optimization',
     price: '$2, 999';
     period: '/month',
@@ -338,7 +341,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '280% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -353,9 +355,7 @@ export interface PracticalBusinessSolution2029 {
 
     reviews: 156
   }
-
   // Intelligent Marketing Automation
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -367,7 +367,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 156;
   }
   // Intelligent Marketing Automation;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'intelligent - marketing - automation';
     name: 'Intelligent Marketing Automation';
@@ -385,12 +384,10 @@ export interface PracticalBusinessSolution2029 {
     useCases: ['Campaign optimization, Content personalization, Lead generation, Customer engagement, ROI optimization'];
     roi: 'Average customer sees 420% ROI through improved campaign performance and marketing efficiency.'
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'];
-
     marketSize: '$25B market';
     growthRate: '320% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     tagline: 'AI - powered marketing optimization and campaign automation',
     price: '$1, 299';
     period: '/month',
@@ -419,7 +416,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '320% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -434,9 +430,7 @@ export interface PracticalBusinessSolution2029 {
 
     reviews: 234
   }
-
   // Smart Project Management
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -448,13 +442,11 @@ export interface PracticalBusinessSolution2029 {
     reviews: 234;
   }
   // Smart Project Management;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'smart - project - management';
     name: 'Smart Project Management';
     tagline: 'AI - powered project optimization and team collaboration';
     price: '$899';
-
     period: '/month'
     description: 'Intelligent project management platform that uses AI to optimize workflows, predict project risks, automate task management, and improve team collaboration for successful project delivery.';
 
@@ -477,7 +469,6 @@ export interface PracticalBusinessSolution2029 {
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     features: [;
       'AI workflow optimization_project risk prediction_task automation_team collaboration tools_resource optimization_timeline prediction_quality assurance automation_progress tracking';
       'Communication optimization_performance analytics';
@@ -502,7 +493,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '280% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -517,9 +507,7 @@ export interface PracticalBusinessSolution2029 {
 
     reviews: 312
   }
-
   // Intelligent Sales Optimization
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -531,7 +519,6 @@ export interface PracticalBusinessSolution2029 {
     reviews: 312;
   }
   // Intelligent Sales Optimization;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'intelligent - sales - optimization';
     name: 'Intelligent Sales Optimization';
@@ -549,12 +536,10 @@ export interface PracticalBusinessSolution2029 {
     useCases: ['Lead scoring, Sales optimization, Revenue optimization, Pipeline management, Performance tracking'];
     roi: 'Average customer sees 450% ROI through improved sales performance and revenue optimization.'
     competitors: ['Salesforce, HubSpot Sales, Pipedrive, Zoho CRM, Freshsales'];
-
     marketSize: '$18B market';
     growthRate: '300% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
-=======
     tagline: 'AI - powered sales intelligence and revenue optimization',
     price: '$1, 799';
     period: '/month',
@@ -583,7 +568,6 @@ export interface PracticalBusinessSolution2029 {
     growth_rate: '300% annual growth';
     variant: 'ai - futuristic';
     contact_info: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -609,15 +593,16 @@ export const getPopularPracticalBusinessSolutions2029 = () => {
 };
 
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.category === category)
+  return practicalBusinessSolutions2029.filter(service => service.category === category);
 };
 
 
 
 
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
-  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
-    const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
+  return practicalBusinessSolutions2029.filter(service => {;
+    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return price >= minPrice && price <= maxPrice;
   });
 }
@@ -640,9 +625,19 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     reviews: 198;
   }
 ];
+<<<<<<< HEAD
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
+=======
+<<<<<<< HEAD
+export const getPopularPracticalBusinessSolutions2029 = () => {
+=======
+
+export const getPopularPracticalBusinessSolutions2029 = () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return practicalBusinessSolutions2029.filter(service => service.popular);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 ;
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>: any {
@@ -677,7 +672,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
   },
 
       'AI-powered personalization',
-=======
   // Intelligent Customer Experience Platform;
   {
     id: 'intelligent - customer - experience - platform',
@@ -818,7 +812,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
   },
 
       'AI-powered recruitment',
-=======
   // Intelligent HR Management System;
   {
     id: 'intelligent - hr - management - system',
@@ -1056,7 +1049,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-=======
     color: 'from - cyan - 500 via - blue - 500 to - indigo - 500',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / services / smart - project - management',
@@ -1165,7 +1157,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     rating: 4 && 4.9,
     reviews: 198,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 
 
@@ -1178,21 +1169,29 @@ export const getPopularPracticalBusinessSolutions2029 = () => {;
 =======
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular);
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string
 ) => {
+<<<<<<< HEAD
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(
     service => service && service.category === category
+=======
+  return practicalBusinessSolutions2029.filter(
+    service => service.category === category;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
 }
 export const getPracticalBusinessSolutions2029ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
+=======
+  return practicalBusinessSolutions2029.filter(service => {;
+    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return price >= minPrice && price <= maxPrice;
   });
 };export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
@@ -1200,7 +1199,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
 
   {;
     id: "ai-business-intelligence-suite",
-=======
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
@@ -1281,11 +1279,9 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -1293,7 +1289,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
   reviews: number
 
 }
-
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence
   {
@@ -1323,22 +1318,18 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     marketSize: '$18B market', growthRate: '280% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
     },
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     realImplementation: true,
     implementationDetails: "Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.",
     launchDate: "2024-07-01",
-=======
     real_implementation: true,
     implementation_details: "Production - ready AI business intelligence platform with predictive analytics, automated reporting, and real - time insights.",
     launch_date: "2024 - 07 - 01",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     customers: 95,
     rating: 4 && 4.8,
     reviews: 167;,
@@ -1707,7 +1698,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     launch_date: "2025 - 02 - 01",
     customers: 134,
     rating: 4 && 4.9,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 198;
 ]}}
 
@@ -1717,8 +1707,46 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-    return price >= min_price && price <= max_price;
-  });
+import { ServiceVariant } from '../types/service-variants',;
+export interface PracticalBusinessSolution2029 {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
 }
 ;
 

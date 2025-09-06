@@ -1,7 +1,6 @@
 
 
 import { useEffect, useState } from 'react';
-
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
@@ -78,9 +77,17 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <span className="text-gray-600">{log.insights?.theme}</span>
             </li>
-          ))}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </ul>
       </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div className="flex items-center gap-3">
         <a href="https: //github.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700">View Workflow</a>
         <a href="/api/automation/cloud-logs" className="inline-flex items-center px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700">Refresh Logs</a>

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -327,6 +329,9 @@ console.log('')
   "method"
 const filesToFix = [{ "path"}]
   { "path"}
+<<<<<<< HEAD
+  { "path"}
+=======
 <<<<<<< HEAD
   { "path"}
 =======

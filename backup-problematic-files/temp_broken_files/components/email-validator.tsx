@@ -204,8 +204,7 @@ if (email.length > 254) {
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <div className=&quot;mb-8&quot;>
             <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-sm font-medium mb-6&quot;>
-              <Mail className=&quot;w-4 h-4 mr-2&quot; />
-              Email Validation & Verification
+              <Mail className=&quot;w-4 h-4 mr-2&quot; />              Email Validation & Verification
             </div>
           </div>
           <h1 className=&quot;text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight&quot;>
@@ -224,8 +223,7 @@ if (email.length > 254) {
       <section className=&quot;py-20 bg-gray-900&quot;>
         <div className=&quot;max-w-6xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;text-center mb-16&quot;>
-            <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>
-              Validate Your Emails
+            <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>              Validate Your Emails
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
               Our advanced validation engine checks multiple factors to ensure email quality and deliverability.
@@ -236,28 +234,28 @@ if (email.length > 254) {
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;flex items-center justify-between mb-6&quot;>
                 <h3 className=&quot;text-2xl font-bold text-white flex items-center&quot;>
-                  <Mail className=&quot;w-6 h-6 mr-3 text-blue-400&quot; />
-                  Email Input
+                  <Mail className=&quot;w-6 h-6 mr-3 text-blue-400&quot; />                  Email Input
                 </h3>
                 <div className=&quot;flex items-center space-x-2&quot;>
                   <label className=&quot;text-sm text-gray-300&quot;>Bulk Mode</label>
-                  <input
-                    type=&quot;checkbox&quot;
+                  <input,
+type=&quot;checkbox&quot;
                     checked={bulkMode}
                     onChange={(e) => setBulkMode(e.target.checked)}
-                    className=&quot;w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2&quot;
-                  />
+                    className=&quot;w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2&quot;                  />
                 </div>
               </div>
               <div className=&quot;space-y-6&quot;>
-                {bulkMode ? (
-                  <div>
+                {bulkMode ? (                  <div>
                     <label className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>
                       Email Addresses (One per line)
                     </label>
-                    <textarea
-                      value={emails}
+                    <textarea,
+value={emails}
                       onChange={(e) => setEmails(e.target.value)}
+<<<<<<< HEAD:components/email-validator.tsx
+<<<<<<< HEAD
+=======
 
 import React, { useState } from 'react',
 import Head from 'next / head',
@@ -573,12 +571,11 @@ onClick={clearResults}
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;flex items-center justify-between mb-6&quot;>
                 <h3 className=&quot;text-2xl font-bold text-white flex items-center&quot;>
-                  <BarChart3 className=&quot;w-6 h-6 mr-3 text-indigo-400&quot; />
-                  Validation Results
+                  <BarChart3 className=&quot;w-6 h-6 mr-3 text-indigo-400&quot; />                  Validation Results
                 </h3>
                 {validationResults.length > 0 && (
-                  <Button
-                    onClick={copyResults}
+                  <Button,
+onClick={copyResults}
                     variant=&quot;outline&quot;
                     size=&quot;sm&quot;
                     className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
@@ -722,8 +719,7 @@ key={index}
                         </div>
                       )}
                       {result.hasTypo && (
-                        <div className=&quot;mt-2 p-2 bg-yellow-500/20 border border-yellow-500/30 rounded text-sm text-yellow-300&quot;>
-                          💡 Possible typo detected in domain
+                        <div className=&quot;mt-2 p-2 bg-yellow-500/20 border border-yellow-500/30 rounded text-sm text-yellow-300&quot;>                          💡 Possible typo detected in domain
                         </div>
                       )}
                     </div>;

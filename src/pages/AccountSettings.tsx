@@ -3,7 +3,7 @@ toast.success (
     } catch (error: any) {
       toast.error (error.message || 'Failed to connect wallet');
     }
-  }
+  },
 
   return (
 
@@ -26,9 +26,7 @@ toast.success (
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
-              <CardDescription>
-                Manage your personal information and privacy
-              </CardDescription>
+              <CardDescription>Manage your personal information and privacy</CardDescription>
             </CardHeader>
 
     <>;
@@ -66,9 +64,9 @@ toast.success (
                   <Input
                     id='didHandle'
                     value={didHandle}
-                    onChange={e => setDidHandle(e && e.target.value)}
-                    placeholder='ENS / Lens / Ceramic / Farcaster';
-                  />;
+                    onChange={e => setDidHandle(e.target.value)}
+                    placeholder='ENS / Lens / Ceramic / Farcaster'
+                  />
                   <Button
                     variant='outline'
                     onClick={handleConnectWallet}
@@ -107,7 +105,7 @@ toast.success (
                     Connect
                   </Button>
                 </div>
-                <p className='text-xs text-gray-500 mt-1'>
+                <p className="text-xs text-gray-500 mt-1">
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
@@ -136,7 +134,7 @@ toast.success (
 
                     Decentralized Backup
                   </Label>
-                  <p className='text-xs text-gray-500'>
+                  <p className="text-xs text-gray-500">
                     Backup your profile data to IPFS/Arweave
                   </p>
                 </div>
@@ -223,13 +221,11 @@ toast.success (
           <Card>
             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
-              <CardDescription>
-                Manage your Web3 connections and features
-              </CardDescription>
+              <CardDescription>Manage your Web3 connections and features</CardDescription>
             </CardHeader>
-            <CardContent className='space-y-6'>
-              <div className='space-y-2'>
-                <h3 className='font-medium'>Connected Wallet</h3>
+            <CardContent className="space-y-6">
+              <div className="space-y-2">
+                <h3 className="font-medium">Connected Wallet</h3>
                 {didHandle ? (
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
               </Button>;

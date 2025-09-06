@@ -1,6 +1,7 @@
 
 
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const dataPath = path.join(process.cwd(), 'datalearncourses.json')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {

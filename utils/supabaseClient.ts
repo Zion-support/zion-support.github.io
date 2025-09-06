@@ -1,7 +1,7 @@
 
 
       }
-      return browser_client;
+      return browserClient;
     }
 
 =======
@@ -49,6 +49,14 @@ export function getSupabaseClient(): ZionSupabase {;
     return create_client (SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {
     return undefined;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 

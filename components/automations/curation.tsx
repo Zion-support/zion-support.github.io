@@ -11,29 +11,23 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
-
 type Experiment = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title: string;
 hypothesis?: string;
 metric?: string;
@@ -52,7 +46,6 @@ function CurationPage() {
 
   return (type Experiment = {
   title: string
-=======
 import React from "react";
 import fs from "fs";
 import path from "path";
@@ -73,7 +66,6 @@ impact?: number ;
 type Props = {;
   updatedAt: string | null;
 items: Experiment[] };
-
 export default function CurationPage(): any ({ updatedAt, items }: Props) {;
   return (type Experiment = {;
   title: string,;
@@ -87,7 +79,6 @@ type Props = {;
   updatedAt: string | null,;
   items: Experiment[];
 };
-
 export default function CurationPage(): any ({ updatedAt, items }: Props) {;
 
   return (
@@ -178,7 +169,6 @@ function CurationPage() {
 
 =======
 };
-
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">
@@ -188,7 +178,6 @@ export default function CurationPage({ updatedAt, items }: Props) {
       ) : (
         <p className="mt-2 text-sm text-gray-600">No curated output yet. It will appear here automatically after the next run.</p>
       )}
-
       <div className="mt-6 space-y-4">
         {items.map((exp, idx) => (
           <div key={idx} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -204,6 +193,16 @@ export default function CurationPage({ updatedAt, items }: Props) {
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
+<<<<<<< HEAD
+=======
+  return (
+
+};
+
+export default function CurationPage({ updatedAt, items }: Props) {
+  return (
+
+=======
               </div>
             )}
           </div>
@@ -237,13 +236,14 @@ export default function CurationPage({ updatedAt, items }: Props) {
 
 
 export async function getStaticProps() {
-  try {
+  try {;
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
 
     const parsed = JSON.parse(raw);
     return {
       props: {
+<<<<<<< HEAD
         updatedAt: parsed.updatedAt || null,
         items: parsed.items || []},
 
@@ -338,7 +338,6 @@ export async function getStaticProps() {;
     return {;
       props: {;
         updatedAt: null,}
-
 export async function getStaticProps() {;
   try {;
     const filePath = path && path.join(process && process.cwd(), "data", "ai-curation", "growth-experiments && experiments.json");

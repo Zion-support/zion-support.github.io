@@ -79,15 +79,10 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
           </Button>;
         </div>;
 
-        {resume && resume.basic_info.summary && (;
-          <p className='text-xs text-zion-slate line-clamp-2 mb-2'>;
-            {resume && resume.basic_info.summary}
-          </p>;
-        )}
-
-        {resume && resume.skills && resume && resume.skills.length > 0 && (;
-          <div className='flex flex-wrap gap-1 mt-2'>;
-            {resume && resume.skills.slice(0, 5).map((skill, index) => (;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {resume.skills && resume.skills.length > 0 && (
+          <div className='flex flex-wrap gap-1 mt-2'>
+            {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge
                 key={index}
                 variant='outline'
@@ -137,8 +132,12 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 
 
       </CardContent>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Card>;
   );
+};
+}
+<<<<<<< HEAD
 }
 
   );

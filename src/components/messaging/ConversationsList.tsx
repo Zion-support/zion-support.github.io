@@ -27,7 +27,7 @@ return (
 
         <List
           height={listHeight}
-          itemCount={conversations && conversations.length}
+          itemCount={conversations.length}
           itemSize={itemSize}
 
 
@@ -36,7 +36,7 @@ return (
 
 
           {Row}
-        </List>;
+        </List>
       )}
 
     </div>;
