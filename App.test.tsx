@@ -1,9 +1,10 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import App from './App';
 
 describe('App', () => {
-  it('should render without crashing', () => {
-    // Simple test that just checks if the component can be imported
-    expect(true).toBe(true);
+  it('renders without crashing', () => {
+    render(<App />);
+    expect(screen.getByText('Welcome to Zion Tech')).toBeInTheDocument();
   });
 });
