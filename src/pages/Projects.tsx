@@ -15,8 +15,9 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Clock, Briefcase } from 'lucide-react';
 
-function ProjectsContent() {
-  const { projects, isLoading } = useProjects();
+
+function ProjectsContent() { const { projects, isLoading  } = useProjects(),
+
 
   return (
     <>

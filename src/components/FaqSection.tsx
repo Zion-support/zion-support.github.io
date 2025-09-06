@@ -51,6 +51,7 @@ const faqs = [
   },
 ];
 
+
 export function FaqSection() {
   return (
     <section className='py-20 bg-zion-blue' id='faq'>

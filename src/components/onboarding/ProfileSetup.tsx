@@ -1,5 +1,4 @@
 
-type ProfileFormValues = z.infer<typeof profileSchema>;
 
 import {
   Form;

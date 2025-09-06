@@ -5,7 +5,9 @@ import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
 =======
 import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
-import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
+
+import ErrorBoundary from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
+
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
@@ -43,6 +45,7 @@ const categories = [
     color: undefined, // Let CategoryCard use default color
   },
 ];
+
 
 export default function AllCategoriesPage() {
   return (

@@ -34,8 +34,10 @@ export function ClientOnboardingSteps() {
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;
 =======
       link: "/client-dashboard",
-      action: "Check Dashboard"}],
-  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
+
+      action: "Check Dashboard"}];
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
+
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -4,7 +4,9 @@ import Link from 'next/link';
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export function EnterpriseStickyNav() {
-  const [open, setOpen] = useState(false);
+
+  const [ open, setOpen ] = useState(false),
+
   return (
     <nav className='sticky top-16 z-40 bg-card border-b border-border'>
       <div className='container mx-auto px-4 md:px-6'>

@@ -27,7 +27,9 @@ interface ApplicationCardProps {
   application: JobApplication;
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
-  const [expanded, setExpanded] = useState(false);
+
+  const [ expanded, setExpanded ] = useState(false),
+
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
@@ -74,6 +76,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         return null;
     }
   };
+
 
   return (
     <Card className='overflow-hidden'>

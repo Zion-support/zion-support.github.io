@@ -65,7 +65,8 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     rejected: 5},
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-  const currentRank = statusRank[current];
+
+  const currentRank = statusRank[current],
   const statusRank_ = statusRank[status];
 
 =======
