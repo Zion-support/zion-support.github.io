@@ -68,7 +68,7 @@ export default function HomePage() {
           Zion Tech Group
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with our comprehensive suite of intelligent services.
+          Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with our comprehensive suite of 100+ intelligent services across 20+ industries.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
@@ -93,46 +93,46 @@ export default function HomePage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Services</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive solutions for modern businesses, from AI-powered tools to complete IT infrastructure.
+            Comprehensive solutions for modern businesses, from AI-powered tools to complete IT infrastructure. 100+ services across micro SaaS, AI, and IT domains.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ServiceCard
             title="Micro SaaS Solutions"
             href="/services/micro-saas"
-            description="End-to-end product development with billing, auth, analytics and growth optimization"
+            description="40+ specialized micro SaaS tools with AI-powered features, billing, and growth optimization"
             bullets={[
-              "Custom SaaS development",
+              "40+ micro SaaS tools",
+              "AI-powered features",
               "Payment integration",
-              "User authentication",
               "Analytics dashboard",
-              "API development"
+              "Revenue optimization"
             ]}
             icon="🚀"
           />
           <ServiceCard
             title="AI Services"
             href="/services/ai-services"
-            description="Cutting-edge AI solutions for automation, analytics, and intelligent decision making"
+            description="25+ AI service categories including LLM applications, computer vision, and enterprise AI platforms"
             bullets={[
-              "AI chatbots & assistants",
-              "Machine learning models",
-              "Natural language processing",
+              "25+ AI service categories",
+              "Custom LLM development",
               "Computer vision",
-              "Predictive analytics"
+              "RAG systems",
+              "Production-ready solutions"
             ]}
             icon="🤖"
           />
           <ServiceCard
             title="IT Services"
             href="/services/it-services"
-            description="Complete IT infrastructure, cloud migration, and digital transformation solutions"
+            description="30+ IT service categories including cloud migration, DevOps, security, and infrastructure management"
             bullets={[
+              "30+ IT service categories",
               "Cloud migration",
               "DevOps & CI/CD",
-              "Infrastructure management",
-              "Security solutions",
-              "24/7 support"
+              "Cybersecurity solutions",
+              "24/7 monitoring"
             ]}
             icon="💻"
           />
@@ -205,7 +205,7 @@ export default function HomePage() {
           </h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Let's discuss your project and create a custom solution that drives real business value. 
-            Our team has delivered 1000+ successful projects across various industries.
+            Our team has delivered 500+ successful projects across 20+ industries with 100+ specialized services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

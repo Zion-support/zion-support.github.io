@@ -51,36 +51,39 @@ export default function ServicesOverviewPage() {
           title="Micro SaaS Solutions"
           description="Complete micro SaaS development from MVP to scale with billing, analytics, and growth optimization"
           bullets={[
-            "15+ specialized micro SaaS tools",
+            "40+ specialized micro SaaS tools",
             "End-to-end development & deployment",
-            "Revenue optimization & scaling"
+            "Revenue optimization & scaling",
+            "AI-powered features included"
           ]}
           icon="🚀"
-          pricing="From $2,999/month"
+          pricing="From $599/month"
         />
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
           description="Advanced AI solutions including LLM applications, RAG systems, and enterprise AI platforms"
           bullets={[
-            "15+ AI service categories",
+            "25+ AI service categories",
             "Custom LLM development",
-            "Enterprise AI integration"
+            "Enterprise AI integration",
+            "Production-ready solutions"
           ]}
           icon="🤖"
-          pricing="From $5,000/project"
+          pricing="From $8,000/project"
         />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
           description="Comprehensive IT solutions including cloud migration, DevOps, security, and infrastructure management"
           bullets={[
-            "15+ IT service categories",
+            "30+ IT service categories",
             "Cloud migration & optimization",
-            "24/7 monitoring & support"
+            "24/7 monitoring & support",
+            "Enterprise-grade security"
           ]}
           icon="⚙️"
-          pricing="From $3,000/month"
+          pricing="From $2,000/month"
         />
         <ServiceCard
           href="/services/fintech"
@@ -89,7 +92,8 @@ export default function ServicesOverviewPage() {
           bullets={[
             "15+ FinTech service categories",
             "Bank-grade security & compliance",
-            "Real-time payment processing"
+            "Real-time payment processing",
+            "Regulatory compliance"
           ]}
           icon="💳"
           pricing="From $25,000/project"
@@ -101,7 +105,8 @@ export default function ServicesOverviewPage() {
           bullets={[
             "15+ HealthTech service categories",
             "HIPAA-compliant solutions",
-            "Medical AI & diagnostics"
+            "Medical AI & diagnostics",
+            "Patient data security"
           ]}
           icon="🏥"
           pricing="From $40,000/project"
@@ -113,7 +118,8 @@ export default function ServicesOverviewPage() {
           bullets={[
             "15+ EdTech service categories",
             "Personalized learning AI",
-            "Multi-platform compatibility"
+            "Multi-platform compatibility",
+            "Student progress tracking"
           ]}
           icon="🎓"
           pricing="From $30,000/project"
@@ -122,7 +128,7 @@ export default function ServicesOverviewPage() {
           href="/services/blockchain-solutions"
           title="Blockchain Solutions"
           description="DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security"
-          bullets={["Smart contracts", "DeFi protocols", "Web3 apps"]}
+          bullets={["Smart contracts", "DeFi protocols", "Web3 apps", "Security auditing"]}
           icon="⛓️"
           pricing="From $15,000/project"
         />
@@ -130,7 +136,7 @@ export default function ServicesOverviewPage() {
           href="/services/automation-solutions"
           title="Automation Solutions"
           description="RPA, workflow automation, and AI-powered automation for maximum efficiency"
-          bullets={["Process automation", "Workflow optimization", "AI automation"]}
+          bullets={["Process automation", "Workflow optimization", "AI automation", "ROI tracking"]}
           icon="⚡"
           pricing="From $2,500/month"
         />
@@ -138,7 +144,7 @@ export default function ServicesOverviewPage() {
           href="/services/data-analytics"
           title="Data Analytics"
           description="Business intelligence, predictive analytics, and data engineering for data-driven decisions"
-          bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
+          bullets={["BI dashboards", "Predictive analytics", "Data engineering", "Real-time insights"]}
           icon="📊"
           pricing="From $4,000/month"
         />
@@ -157,7 +163,7 @@ export default function ServicesOverviewPage() {
             <StatCard
               number="500+"
               label="Successful Projects"
-              description="Delivered across 15+ industries"
+              description="Delivered across 20+ industries"
             />
             <StatCard
               number="$2B+"
