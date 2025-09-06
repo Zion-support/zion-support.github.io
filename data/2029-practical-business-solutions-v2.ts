@@ -2086,3 +2086,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
 
 
 };
+import { ServiceVariant } from '../types/
+    link: any
+    const price = parseInt(service && service.price.replace(/[^0-9]/
+      website: any
+    const price = parseInt(service && service.price.replace(/[^0-9]/

@@ -1,6 +1,13 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-export default function Contact() {;
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
   return (
     <div>;
@@ -29,3 +36,5 @@ function Contact() {
       </main>;
     </div>);
 }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

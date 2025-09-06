@@ -51,6 +51,7 @@ async function checkAutomationStatus() {
       
       statusReport.pm2Processes = [];
     }
+
     // Check automation scripts
     console.log('📋 Checking automation scripts...');
     const automationScripts = [
@@ -72,6 +73,7 @@ async function checkAutomationStatus() {
       'automation/code-quality-monitor.cjs',
       'automation/performance-optimizer.cjs',
     ];
+
     for (const script of automationScripts) {
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
@@ -119,12 +121,14 @@ async function checkAutomationStatus() {
       statusReport.systemHealth.healthCheck = 'failed';
       console.log('❌ Health check failed');
     }
+
     // Determine overall status
     const availableScripts = statusReport.automationScripts.filter(s => s.exists).length;
     const totalScripts = statusReport.automationScripts.length;
     const runningProcesses = statusReport.pm2Processes.filter(
       proc => proc.pm2_env && proc.pm2_env.status === 'online'
     ).length;
+
     if (availableScripts === totalScripts && statusReport.systemHealth.healthCheck === 'passed') {
       statusReport.overallStatus = 'healthy';
     } else if (availableScripts >= totalScripts * 0.8) {
@@ -132,11 +136,13 @@ async function checkAutomationStatus() {
     } else {
       statusReport.overallStatus = 'critical';
     }
+
     console.log(`\n📊 Status Summary:`);
     console.log(`   Scripts Available: ${availableScripts}/${totalScripts}`);
     console.log(`   PM2 Processes: ${runningProcesses}`);
     console.log(`   Health Check: ${statusReport.systemHealth.healthCheck}`);
     console.log(`   Overall Status: ${statusReport.overallStatus.toUpperCase()}`);
+
     // Save report
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
@@ -182,12 +188,15 @@ async function checkAutomationStatus() {
     } catch (error) {
       console.log('⚠️  Could not save report file');
     }
+
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
     statusReport.overallStatus = 'error';
   }
+
   return statusReport;
 }
+
 if (require.main === module) {
   checkAutomationStatus().then(report => {
     process.exit(report.overallStatus === 'healthy' ? 0 : 1);

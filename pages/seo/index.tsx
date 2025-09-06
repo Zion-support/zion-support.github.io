@@ -68,3 +68,5 @@ export default function SEOIndex() {
 
 }
 
+import React from 'react'
+import React from 'react'

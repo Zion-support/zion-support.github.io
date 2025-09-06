@@ -141,3 +141,5 @@ function FeatureCard({ title, description }: { title: string; description: strin
   );
 }
 }
+import Link from 'next/
+function HomePage() { return ( <div className="animate - fade - in"> {} <section className="text - center py - 12 md:py - 20"> <h1 className="text - 4xl md:text - 6xl font - bold text - gray - 900 mb - 6 leading - tight"> Build and scale with{' '} <span className="text - blue - 600">AI</span>, {' '} <span className="text - green - 600">Micro SaaS

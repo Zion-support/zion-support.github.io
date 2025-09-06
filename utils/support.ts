@@ -51,3 +51,9 @@ export const logSupportEventToOperator = (event: any) => {
   return null;
 
 }
+ Support utilities;
+export const support = {
+  //
+  //
+  //
+  //

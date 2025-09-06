@@ -1,67 +1,13 @@
 
-
-  const router = useRouter();
-  const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
-  const { user, loading } = useCurrentUser();
-  const [message, setMessage] = React.useState('');
-  const [linkUrl, setLinkUrl] = React.useState('');
-  const [file, setFile] = React.useState<File | null>(null);
-  const [sending, setSending] = React.useState(false);
-
-
-import {useRouter} from 'next/router';
-import {useCurrentUser} from '../../hooks/useCurrentUser';
-export default function ComposePage() {;
-  const router = useRouter();
-  const {;
-    type,;
-    recipientId,;
-    recipientName,;
-    jobId,;
-    jobTitle,;
-    talentId,;
-    talentName,;
-  } = router && router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
-  const [message, setMessage] = React && React.useState('');
-  const [linkUrl, setLinkUrl] = React && React.useState('');
-  const [file, setFile] = React && React.useState<File | null>(null);
-  const [sending, setSending] = React && React.useState(false);
-  React && React.useEffect(() => {;
-    if (!loading && !user) router && router.replace('/auth');  }, [loading, user, router]);
-  if (!user) return null;
-  const headerTitle =;
-    type === 'invite';
-      ? `Invite ${recipientName || talentName || 'Talent'}`;
-      : type === 'apply';
-        ? `Apply to ${jobTitle || 'Job'}`;
-        : 'New Message';
-  const context =;
-    type === 'invite';
-      ? { type: 'invite', jobId, jobTitle, talentId, talentName }
-      : type === 'apply';
-        ? { type: 'application', jobId, jobTitle }
-
-
-  React.useEffect(() => {;
-    if (!loading && !user) router.replace('/auth');
-  }, [loading, user, router]),;
-  if (!user) return null,;
-  const headerTitle = type === 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` : type === 'apply' ? `Apply to ${jobTitle || 'Job'}` : 'New Message';
-  const context = type === 'invite';
-    ? { type: 'invite', jobId, jobTitle, talentId, talentName   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-}
-    : type === 'apply';
-    ? { type: 'application', jobId, jobTitle   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
-}
-    : { type: 'general' },;
-  const onSend = async () => {;
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
 
     setSending(true);
@@ -509,3 +455,17 @@ if ( {) {
 
 
 
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import { useRouter  } from 'next/
+import { useCurrentUser } from '../../hooks/
+    if (!loading && !user) router.replace('/
+import {useRouter} from 'next/
+import {useCurrentUser} from '../../hooks/
+    if (!loading && !user) router && router.replace('/
+      const mime = file.type |'application/
+    const res = await fetch('/api/messages/
+      headers: { 'Content-Type': any
+      const mime = file && file.type || 'application/
+    const res = await fetch('/api/messages/
+      headers: { 'Content-Type': any

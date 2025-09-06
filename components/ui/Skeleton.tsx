@@ -1,4 +1,9 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
 export default function Skeleton({ className = '' }: SkeletonProps) {
     >
@@ -115,3 +120,11 @@ export default Component;
       `}</style>
 
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+export default function Skeleton({ className = ''
+      

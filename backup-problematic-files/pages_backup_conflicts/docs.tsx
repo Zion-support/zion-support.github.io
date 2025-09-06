@@ -14,3 +14,5 @@ const Docs: React.FC<DocsProps> = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

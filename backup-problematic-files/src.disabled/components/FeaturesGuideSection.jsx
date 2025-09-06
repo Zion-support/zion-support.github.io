@@ -28,3 +28,5 @@ const FeaturesGuideSection = ({ className }) => {
 };
 
 export default FeaturesGuideSection;
+import React from 'react'
+    

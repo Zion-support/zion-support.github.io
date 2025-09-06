@@ -134,3 +134,5 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
     </Card>);
 }
 ;
+import React from "react"
+import { Card, CardContent } from "@/components/ui/

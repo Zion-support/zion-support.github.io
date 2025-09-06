@@ -28,3 +28,5 @@ const ProfileHero = ({ className }) => {
 };
 
 export default ProfileHero;
+import React from 'react'
+    

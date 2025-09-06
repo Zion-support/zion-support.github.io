@@ -971,3 +971,8 @@ export default function RetailSolutions() {;
 };
 
 export default Retail;
+import Layout from '../../components/
+import Layout from '../../components/
+import Layout from '../../components/
+import Head from 'next/
+import Link from 'next/

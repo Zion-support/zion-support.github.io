@@ -1,14 +1,5 @@
-import React from 'react';
-
-interface CardProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export default function Card({ children, className = '' }: CardProps) {
-  return (
-    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
-      {children}
-    </div>
-  );
-}
+import React from 'react'
+  className = ''
+  const baseClasses = 'rounded-xl p-6 transition-all duration-300'
+  const hoverClasses = hover ? 'transform hover: any
+  const glassClasses = glass ? 'bg-white/10 backdrop-blur-sm border border-white/

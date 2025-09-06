@@ -1,7 +1,3 @@
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { getSessionFromReq, isInternalAgentRequest } from '@/utils/
+import { getSessionFromReq, isInternalAgentRequest } from '@/utils /

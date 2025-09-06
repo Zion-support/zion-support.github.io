@@ -38,15 +38,14 @@ const serviceCategories = [
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' }
       { name: 'AI Quantum Hybrid Computing', href: '/ai-quantum-hybrid-computing' }
     ]
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  {
-    title: 'Cutting-Edge IT'
-    services: [
-      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' }
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' }
-      { name: '5G Private Networks', href: '/5g-private-network-solutions' }
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' }
-    ]
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
   {
     title: 'Innovative SaaS'
@@ -498,3 +497,6 @@ export default EnhancedFooter;
 
 export default EnhancedFooter;
 
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

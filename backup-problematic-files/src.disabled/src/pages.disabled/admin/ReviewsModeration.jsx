@@ -28,3 +28,5 @@ const ReviewsModeration = ({ className }) => {
 };
 
 export default ReviewsModeration;
+import React from 'react'
+    

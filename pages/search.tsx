@@ -1,16 +1,14 @@
 
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -1990,3 +1988,9 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 }
 );
 }
+    console.error('Error caught by boundary: any
+import React, { useState } from 'react'
+import Head from 'next/
+import Link from 'next/
+import Layout from './components/
+    url: any

@@ -64,3 +64,5 @@ export default function PerformanceMonitor() {
 
 import React from 'react';
 ;
+import React, { useEffect, useState } from 'react'
+import { Activity } from 'lucide-react'

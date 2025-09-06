@@ -28,3 +28,5 @@ const ForgotPassword = ({ className }) => {
 };
 
 export default ForgotPassword;
+import React from 'react'
+    

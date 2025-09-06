@@ -218,3 +218,6 @@ export default function TermsPage() {;
       </section>;
     </div>);
 }
+export default function TermsPage() {return (;
+    
+                <strong > Disclaimer of Warranties: any

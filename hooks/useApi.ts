@@ -16,7 +16,11 @@
 }
 }
 }
+      setLoading(false)};
 
+  return { data, loading, error, execute };
+
+  return { data, loading, error, execute }
 
 
 
@@ -228,3 +232,7 @@ function UseApi() {
 
 }
 }
+import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+          error: any
+const { useState,useEffect,useCallback } from "react"; interface UseApiOptions<T = unknown> { immediate?: boolean; onSuccess?: (data: T) => void; onError?: (error: Error) => void} export const useApi = <T = unknown>( apiFunction: (.args: unknown[]) => Promise<T>,options: UseApiOptions<T> = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<Error | null>(null); const execute = useCallback(async (.args: unknown[]) => { try { setLoading(true); setError(null); const result = await apiFunction(.args); setData(result); options.onSuccess?.(result); return result} catch (err) { const error = err instanceof Error ? err : new Error(String(err); setError(error); options.onError?.(error); throw error} finally { setLoading(false)},[apiFunction,options]); useEffect() => { if (options.immediate) { execute()},[execute,options.immediate]); return { data,loading,error,execute }; export default useApi;''

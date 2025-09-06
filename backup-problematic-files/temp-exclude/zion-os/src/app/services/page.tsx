@@ -1,0 +1,2 @@
+import Link from 'next/
+<section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600"> <div className="container mx-auto px-6 text-center"> <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?

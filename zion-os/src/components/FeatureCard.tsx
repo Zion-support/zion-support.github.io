@@ -162,3 +162,6 @@ export function FeatureCard({;
       </div>;
     </div>);
 }
+use client"
+import Link from "next/
+    blue: any

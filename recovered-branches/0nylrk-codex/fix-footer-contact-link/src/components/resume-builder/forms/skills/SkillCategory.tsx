@@ -61,3 +61,5 @@ export const SkillCategory = ({
     </div>);
 }
 ;
+import { SkillCategoryProps  } from './
+import { SkillItem  } from './

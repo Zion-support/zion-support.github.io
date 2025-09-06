@@ -1,0 +1,7 @@
+export interface Real2027Q2Addition {
+  "id"
+export const "real2027Q2Additions"
+    "name"
+    "tagline"
+    "price"
+    "features"

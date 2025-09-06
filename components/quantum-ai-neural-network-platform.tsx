@@ -4,26 +4,15 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-import { motion } from 'framer-motion';
-
-
-const QuantumAINeuralNetworkPlatform: React.FC = () => {
-  const features = [
+    console.error('Error caught by boundary: any
+import { motion } from 'framer-motion'
+ from 'lucide-react'
     'Quantum-enhanced neural network architecture'
     'Superposition-based learning algorithms'
     'Quantum entanglement optimization'
@@ -34,8 +23,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
     'Quantum coherence preservation'
     'Quantum measurement optimization'
     'Cross-platform quantum synchronization'
-  ];
-  const benefits = [
     'Exponential computational power'
     'Quantum advantage in AI training'
     'Enhanced pattern recognition'
@@ -884,3 +871,8 @@ export default QuantumAINeuralNetworkPlatform;
 };
 
 
+    starter: any
+    professional: '$1,999/
+    starter: any
+    professional: '$1,999/
+        

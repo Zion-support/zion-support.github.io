@@ -1,65 +1,12 @@
 
-import {
-
-  Calendar,
-  Clock,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Video,
-  MessageSquare,
-  Building,;
-
-
-} from "lucide-react";
-const timeSlots = [
-  { time: "9:00 AM", available: true, type: "Video Call" }
-  { time: "9:30 AM", available: true, type: "Phone Call" }
-  { time: "10:00 AM", available: false, type: "Video Call" }
-  { time: "10:30 AM", available: true, type: "In-Person" }
-  { time: "11:00 AM", available: true, type: "Video Call" }
-  { time: "11:30 AM", available: true, type: "Phone Call" }
-  { time: "1:00 PM", available: true, type: "Video Call" }
-  { time: "1:30 PM", available: false, type: "In-Person" }
-  { time: "2:00 PM", available: true, type: "Video Call" }
-  { time: "2:30 PM", available: true, type: "Phone Call" }
-  { time: "3:00 PM", available: true, type: "In-Person" }
-  { time: "3:30 PM", available: true, type: "Video Call" }
-  { time: "4:00 PM", available: false, type: "Phone Call" }
-  { time: "4:30 PM", available: true, type: "Video Call" }
-  { time: "5:00 PM", available: true, type: "Phone Call" }
-];
-const consultationTypes = [
-  {
-    title: "Free Discovery Call"
-    duration: "30 minutes"
-    description:
-      "Discuss your project requirements and explore how we can help"
-    price: "Free"
-    icon: MessageSquare
-    features: [
-      "Project assessment"
-      "Solution recommendations"
-      "Timeline discussion"
-      "Budget estimation"
-    ]
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  {
-    title: "Technical Consultation"
-    duration: "60 minutes"
-    description:
-      "Deep dive into technical requirements and architecture planning"
-    price: "$200"
-    icon: Building
-    features: [
-      "Technical architecture review"
-      "Technology stack recommendations"
-      "Implementation planning"
-      "Risk assessment"
-    ]
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
   {
     title: "Strategy Session"
@@ -948,3 +895,6 @@ function CalendarPage() {
       </section>;
     </div>);
 }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

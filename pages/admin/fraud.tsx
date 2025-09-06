@@ -1,22 +1,7 @@
-
-
-
-
-interface FraudItem {
-
-
-export default function FraudAdminPage() {
-  const [items, setItems] = useState<FraudItem[]>([])
-  const [adminToken, setAdminToken] = useState<string>('')
-  const [loading, setLoading] = useState<boolean>(false)
-  const [error, setError] = useState<string | null>(null)
-  useEffect(() => {
-
-    const saved = localStorage.getItem('admin-token') || '';
-    setAdminToken(saved)
-  }, []);
-
-
+import React, { useEffect, useMemo, useState } from 'react'
+  const [adminToken, setAdminToken] = useState<string>(''
+    const saved = localStorage.getItem('admin-token') || ''
+  const [adminToken, setAdminToken] = useState<string>(''
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)
   }, [])
@@ -366,3 +351,8 @@ export default function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+      const res = await fetch('/api/fraud/admin/
+      const res = await fetch('/api/fraud/admin/
+      const res = await fetch ('/api / fraud / admin /
+    const res = await fetch('/api/fraud/admin/
+        'Content-Type': any

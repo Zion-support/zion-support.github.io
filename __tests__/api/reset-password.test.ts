@@ -1,5 +1,3 @@
-
-
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import handler from '@/pages/api/auth/reset'
@@ -48,3 +46,5 @@ describe('/api/auth/reset token validation', () => {
 });
 
       "body": { token: 'invalid', "newPassword"
+import handler from '@/pages/api/auth/
+describe('/api/auth/

@@ -659,3 +659,7 @@ const Blueprint20250818124039: React.FC = () => {
 };
 
 export default Blueprint20250818124039;
+import React from 'react'
+import Head from 'next/
+import Link from 'next/
+      case 'excellent': any

@@ -3148,3 +3148,5 @@ className="p-6"
 }
     </UltraFuturisticBackground>);
 }
+import React, { useState } from 'react'
+    console.error('Error caught by boundary: any

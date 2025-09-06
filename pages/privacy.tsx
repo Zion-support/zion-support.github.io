@@ -1116,3 +1116,6 @@ export default PrivacyPage;
   );
 },;
 export default PrivacyPage;
+import Head from 'next/
+import Link from 'next/
+import MainLayout from '../components/layout/

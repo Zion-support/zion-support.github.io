@@ -174,3 +174,32 @@ export const useTheme = () => {;
   return context;
 };
 
+use client"
+import { createContext, useContext, useEffect, useState } from "react"
+type Theme = "dark" | "light" | "system"
+const initialState: ThemeProviderState = {theme: any
+  defaultTheme = "system"
+  storageKey = "zion-ui-theme"
+    if (typeof window != "undefined"
+    root.classList.remove("light", "dark"
+    if (theme = = "system"
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)"
+        ? "dark"
+        : any
+      if (typeof window != "undefined"
+    throw new Error ("use_theme must be used within a ThemeProvider"
+    throw new Error("useTheme must be used within a ThemeProvider"
+use client"
+import { createContext, useContext, useEffect, useState } from "react"
+type Theme = "dark" | "light" | "system"
+  theme: any
+  defaultTheme = "system"
+  storageKey = "zion-ui-theme"
+    if (typeof window != "undefined"
+    root.classList.remove("light", "dark"
+    if (theme = = "system"
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)"
+        ? "dark"
+        : any
+      if (typeof window != "undefined"
+    throw new Error("useTheme must be used within a ThemeProvider"

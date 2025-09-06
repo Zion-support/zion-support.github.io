@@ -41,6 +41,7 @@ async function checkCodeDuplication() {
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
+
 class CodeQualityMonitor {
   constructor() {
     this.metrics = {
@@ -52,20 +53,24 @@ class CodeQualityMonitor {
     };
     this.logFile = path.join(__dirname, "logs", "code-quality.log");
   }
+
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
+
   async analyzeCodeQuality() {
     try {
       this.log("Starting code quality analysis...");
+      
       this.metrics.complexity = this.calculateComplexity();
       this.metrics.maintainability = this.calculateMaintainability();
       this.metrics.testCoverage = this.calculateTestCoverage();
       this.metrics.performance = this.calculatePerformance();
       this.metrics.lastUpdated = new Date().toISOString();
+      
       this.saveMetrics();
       this.log("Code quality analysis completed successfully");
       return this.metrics;
@@ -74,6 +79,7 @@ class CodeQualityMonitor {
       return null;
     }
   }
+
   calculateComplexity() {
     try {
       const files = this.getTypeScriptFiles();
@@ -88,6 +94,7 @@ class CodeQualityMonitor {
       return Math.floor(Math.random() * 10) + 1;
     }
   }
+
   calculateMaintainability() {
     try {
       const files = this.getTypeScriptFiles();
@@ -96,28 +103,34 @@ class CodeQualityMonitor {
         const stats = fs.statSync(file);
         return acc + stats.size;
       }, 0) / totalFiles;
+      
       // Lower file size = higher maintainability
       return Math.max(50, 100 - Math.floor(avgFileSize / 1000));
     } catch (error) {
       return Math.floor(Math.random() * 100) + 50;
     }
   }
+
   calculateTestCoverage() {
     // Placeholder for test coverage calculation
     return Math.floor(Math.random() * 100);
   }
+
   calculatePerformance() {
     // Placeholder for performance calculation
     return Math.floor(Math.random() * 100) + 70;
   }
+
   getTypeScriptFiles() {
     const projectRoot = path.resolve(__dirname, "..");
     const files = [];
+    
     const walkDir = (dir) => {
       const items = fs.readdirSync(dir);
       items.forEach(item => {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
+        
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
           walkDir(fullPath);
         } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {
@@ -125,9 +138,11 @@ class CodeQualityMonitor {
         }
       });
     };
+    
     walkDir(projectRoot);
     return files;
   }
+
   saveMetrics() {
     const metricsFile = path.join(__dirname, "logs", "code-quality-metrics.json");
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
@@ -344,6 +359,10 @@ async function runCodeQualityMonitor() {}
     process.exit(0);
   }
 }
+runCodeQualityMonitor();
+  };
+};
+runCodeQualityMonitor();
 runCodeQualityMonitor();
   };
 };

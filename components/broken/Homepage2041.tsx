@@ -944,3 +944,19 @@ export default Homepage2041;
 }</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>) 
 };
 
+import React, { useState } from 'react'
+import Layout from './layout/
+import Link from 'next/
+import Link from 'next/
+import UltraFuturisticServiceCard2026 from './ui/
+import { innovative2041MicroSaasServices  } from '../data/
+import { innovative2041ITServices  } from '../data/
+import { innovative2041AIServices } from '../data/
+    { number: any
+    { number: any
+    { number: any
+                  className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/
+              className='bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/
+              className='bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/
+                  className='bg - gradient - to - br from - gray - 900 / 50 to - black / 50 border border - cyan - 500 /
+              className='bg - gradient - to - r from - black / 50 to - gray - 900 / 50 border border - cyan - 500 /

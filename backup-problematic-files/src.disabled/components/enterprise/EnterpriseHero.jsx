@@ -28,3 +28,5 @@ const EnterpriseHero = ({ className }) => {
 };
 
 export default EnterpriseHero;
+import React from 'react'
+    

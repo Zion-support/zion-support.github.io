@@ -30,3 +30,5 @@ const Contact = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

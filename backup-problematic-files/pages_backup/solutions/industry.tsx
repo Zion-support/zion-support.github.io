@@ -36,3 +36,7 @@ const Industry: React.FC<IndustryProps> = ({ className }) => {
 };
 
 export default Industry;
+import { motion } from 'framer-motion'
+import Link from 'next/
+import Layout from '../../components/
+import Link from 'next/

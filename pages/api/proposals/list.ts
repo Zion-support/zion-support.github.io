@@ -101,3 +101,5 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
+import type { NextApiRequest, NextApiResponse } from "next"
+import { listProposals } from "../../../utils/data/

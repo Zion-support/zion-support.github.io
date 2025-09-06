@@ -315,3 +315,6 @@ export default function CloudServicesPage() {
 };
 
 export default Cloud;
+import { motion } from 'framer-motion'
+import Layout from '../../components/
+import Layout from '../../components/

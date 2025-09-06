@@ -1,36 +1,8 @@
 
-
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
 
   real_implementation: boolean;
@@ -1048,3 +1020,16 @@ export default specializedEnterpriseServices;
 
 
 export default specializedEnterpriseServices;
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+  website: any
+    technology: ['AI /
+    period: any
+    technology: ['AI /
+    period: any

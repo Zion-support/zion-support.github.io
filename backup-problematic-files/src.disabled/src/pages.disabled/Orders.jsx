@@ -28,3 +28,5 @@ const Orders = ({ className }) => {
 };
 
 export default Orders;
+import React from 'react'
+    

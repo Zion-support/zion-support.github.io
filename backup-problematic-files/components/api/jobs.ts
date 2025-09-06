@@ -1,0 +1,16 @@
+import type { NextApiRequest, NextApiResponse } from "next"
+import fs from "fs-extra"
+import path from "path"
+const JOBS_FILE = path.join(process.cwd(), "data", "jobs", "jobs.json"
+  if (req.method != "GET"
+    res.setHeader("Allow", "GET"
+    return res.status(405).json({ error: any
+    return res.status(500).json({ error: any
+import type { NextApiRequest, NextApiResponse } from "next"
+import fs from "fs-extra"
+import path from "path"
+const JOBS_FILE = path.join(process.cwd(), "data", "jobs", "jobs.json"
+  if (req.method != "GET"
+    res.setHeader("Allow", "GET"
+    return res.status(405).json({ error: any
+    return res.status(500).json({ error: any

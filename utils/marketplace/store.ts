@@ -6,11 +6,12 @@ export interface Project {
 
 // Marketplace data store utilitiesexport interface Project {;
 
+ Marketplace data store utilitiesexport interface Project {
   id: string;
   title: string;
   summary: string;
-  clientId: string;
-  talentSlug?: string;
+  client_id: string;
+  talent_slug?: string;
   startDateIso: string;
   endDateIso?: string;
   status: 'DRAFT' | 'ACTIVE' | 'COMPLETED' | 'CANCELLED' | 'PAUSED';
@@ -764,3 +765,8 @@ export async function deleteMessage(id: string): Promise<boolean> {
 export function generate_id (prefix: string = 'item'): string {
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
+  status: any
+  additional_data?: Partial < Project>): any
+  additional_data?: Partial < Offer>): any
+  additional_data?: Partial < Application>): any
+  additional_data?: Partial < Message>): any

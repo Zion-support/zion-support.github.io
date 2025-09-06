@@ -102,3 +102,6 @@ return res.status (200).json ({ entries: entries.slice (-200), by_module, by_typ
 
   const byModule: Record<string, number> = {};
 
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { readLogs } from '@/utils/
+import { read_logs } from '@/utils /

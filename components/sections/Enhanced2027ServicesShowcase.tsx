@@ -1497,3 +1497,29 @@ export default Enhanced2027ServicesShowcase;
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
 };
 
+import React, { useState } from 'react'
+import Link from 'next/
+import { cuttingEdge2027Innovations } from '../../data/
+import { practicalMicroSaas2027 } from '../../data/
+import { emergingTech2027Services } from '../../data/
+import { cuttingEdge2027Innovations  } from '../../data/
+import { practicalMicroSaas2027  } from '../../data/
+import { emergingTech2027Services } from '../../data/
+import { cuttingEdge2027Innovations } from '../../data/
+import { practicalMicroSaas2027 } from '../../data/
+import { emergingTech2027Services } from '../../data/
+import { cuttingEdge2027Innovations } from '../../data/
+import { practicalMicroSaas2027 } from '../../data/
+import { emergingTech2027Services } from '../../data/
+import { cuttingEdge2027Innovations } from '../../data/
+import { practicalMicroSaas2027 } from '../../data/
+import { emergingTech2027Services } from '../../data/
+            parseFloat(a && a.price.replace(/[^0-9.]/
+            parseFloat(b && b.price.replace(/[^0-9.]/
+            parseFloat(a && a.roi.replace(/[^0-9.]/
+            parseFloat(b && b.roi.replace(/[^0-9.]/
+          return 0;      }          return parseFloat(a && a.price.replace(/[^0-9.]/g, '') - parseFloat(b && b.price.replace(/[^0-9.]/
+          return parseFloat(a && a.roi.replace(/[^0-9.]/g, '') - parseFloat(b && b.roi.replace(/[^0-9.]/
+                          className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/
+<motion.div > Ready to Transform Your Business? 
+<motion.div > Ready to Transform Your Business? 

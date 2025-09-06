@@ -1,10 +1,2 @@
 
-
->>>>>>> origin/automation-improvements-final
-=======
-}}}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-}}};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+ursor/automate-test-fix-improve-and-merge-code-48f3; const createJestConfig = nextJest({ \"dir\": \'./}) const customJestConfig = { \"setupFilesAfterEnv\": \'[\',<rootDir>/jest.setup.js\'],\"testEnvironment\": \'jsdom,\"moduleNameMapper\": {,^@/(.*)$\': \'<rootDir>/$1},\"collectCoverageFrom\": \'[\',components*.{js,jsx,ts,tsx},pages*.{js,jsx,ts,tsx},utils*.{js,jsx,ts,tsx},!**node_modules/

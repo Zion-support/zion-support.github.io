@@ -28,3 +28,5 @@ const AppTestimonials = ({ className }) => {
 };
 
 export default AppTestimonials;
+import React from 'react'
+    

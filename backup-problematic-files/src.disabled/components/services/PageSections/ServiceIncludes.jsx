@@ -28,3 +28,5 @@ const ServiceIncludes = ({ className }) => {
 };
 
 export default ServiceIncludes;
+import React from 'react'
+    

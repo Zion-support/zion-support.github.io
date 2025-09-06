@@ -1,8 +1,8 @@
+export interface ResumeBasicInfo {
+  id?: string;
+  title: string;
 
-  headline?: string,
-  summary?: string;
-
-}
+  headline?: any
 export interface WorkExperience {
   id?: string;
   company_name: string;
@@ -12,10 +12,7 @@ export interface WorkExperience {
   is_current: boolean;
   description?: string;
 
-  company_logo_url?: string,
-  location?: string;
-
-}
+  company_logo_url?: any
 export interface Education {
   id?: string;
   institution: string;
@@ -26,19 +23,13 @@ export interface Education {
   is_current: boolean;
   description?: string;
 
-  institution_logo_url?: string,
-  location?: string;
-
-}
+  institution_logo_url?: any
 export interface Skill {
   id?: string;
   name: string;
   proficiency?: number;
 
-  category?: string,
-  years_experience?: number;
-
-}
+  category?: any
 export interface Certification {
   id?: string;
   name: string;
@@ -46,10 +37,7 @@ export interface Certification {
   issue_date?: Date | string;
   expiration_date?: Date | string;
 
-  credential_id?: string,
-  credential_url?: string;
-
-}
+  credential_id?: any
 export interface PortfolioProject {
   id?: string;
   title: string;
@@ -58,10 +46,7 @@ export interface PortfolioProject {
   image_url?: string;
   github_url?: string;
 
-  demo_url?: string,
-  pdf_url?: string;
-
-}
+  demo_url?: any
 export interface Resume {
   id?: string;
   user_id?: string;
@@ -71,13 +56,6 @@ export interface Resume {
   skills: Skill[];
   certifications: Certification[];
 
-  portfolio_projects?: PortfolioProject[],
-  is_active: boolean;
+  portfolio_projects?: PortfolioProject[]
 
-}
-=======
-
-
-export interface ResumeBasicInfo {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  is_active: any

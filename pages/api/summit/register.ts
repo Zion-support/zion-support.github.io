@@ -175,3 +175,5 @@ if ( {) {
     return res.status(500).json({ error: e?.message || "Unknown error" });
   }
 }
+import type { NextApiRequest, NextApiResponse } from "next"
+import { supabase } from "../../../utils/supabase/

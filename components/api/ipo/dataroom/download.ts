@@ -198,3 +198,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
 
+import type { NextApiRequest, NextApiResponse } from "next"
+import fs from "fs"
+import path from "path"
+import mime from "mime-types"
+import { appendAuditLog, resolveDataPath } from "../../../../utils/api/
+import { requireSuperadminApi } from "../../../../utils/api/
+    (mime.lookup(fullPath) as string) |"application/
+    (mime.lookup (full_path) as string) || "application /

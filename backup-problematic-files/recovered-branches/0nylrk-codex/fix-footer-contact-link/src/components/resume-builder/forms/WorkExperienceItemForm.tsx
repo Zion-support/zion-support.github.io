@@ -214,7 +214,6 @@ export function WorkExperienceItemForm({;
                             ) :(;
                               <span>Select date</span>;
                             )}
-=======
                           <Button;
                             variant={"outline"}
                             className={cn(;
@@ -227,7 +226,6 @@ export function WorkExperienceItemForm({;
                             ) :(;
                               <span>Select date</span>;
                             )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                           </Button>;
                         </FormControl>;
@@ -349,3 +347,4 @@ setIsEnhancementDialogOpen (false);
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) 
 }
+import { useState } from 'react'

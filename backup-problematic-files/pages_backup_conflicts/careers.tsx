@@ -14,3 +14,5 @@ const Careers: React.FC<CareersProps> = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

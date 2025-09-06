@@ -30,3 +30,5 @@ const Testimonials = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

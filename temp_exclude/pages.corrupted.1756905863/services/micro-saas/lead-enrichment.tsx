@@ -1,2 +1,15 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+     \'"Firmographics\": \'size\',industry,location,funding stage\', \'"Technographics\": \'CMS\',analytics,ads,cloud stack\', \'
+  } ; function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string, price: string, bullets: string[], links: { website: string, contact: string }) {; return ( <main style={ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }> 

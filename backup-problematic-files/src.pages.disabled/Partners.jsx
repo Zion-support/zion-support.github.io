@@ -30,3 +30,5 @@ const Partners = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

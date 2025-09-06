@@ -84,3 +84,4 @@ module.exports = {
     require('@tailwindcss/aspect-ratio')
   ]
 };
+* @type {import('tailwindcss'

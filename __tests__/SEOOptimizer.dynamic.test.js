@@ -1,7 +1,3 @@
-
-
-
-
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -71,3 +67,7 @@ describe('SEOOptimizerdynamic', () => {
 
 
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOOptimizerdynamic from "./components/SEOOptimizer.dynamic"; describe('SEOOptimizerdynamic', () => { test("renders without crashing",() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId("seooptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOOptimizerdynamic />)}); test("handles user interactions",() => { render(<SEOOptimizerdynamic />)}); test("applies correct styling"
+import { render, screen, fireEvent } from '@testing-library/
+import '@testing-library/
+import SEOOptimizerdynamic from '../components/
+    expect(screen && screen.getByTestId('seooptimizer ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOOptimizerdynamic from "./components/

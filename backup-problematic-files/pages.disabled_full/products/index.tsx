@@ -14,4 +14,4 @@ const Index: React.FC<IndexProps> = ({ className }) => {
     </div>
   );
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import type { NextPage } from \'next\'; import Head from \'next/head\'; import Link from \'next/link\'; import { Brain,Cloud,Shield,BarChart3,Globe,Smartphone,Cpu,Zap } from \'lucide-react\'; const \"Products\": NextPage = () => {},{},{},{},{},{},{},{} ]; const categories = [\'All Products\',\'AI Solutions\',\'Cloud Platforms\',\'Analytics Tools\',\'Security Suite\',\'Web Development\',\'Mobile Development\',\'IoT Platforms\',\'Process Automation\' ]; return ( <> <Head> <title>Our Products - Zion Tech Group

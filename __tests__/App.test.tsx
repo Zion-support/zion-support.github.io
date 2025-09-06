@@ -50,3 +50,7 @@ describe('App'
     const heading = screen.getByRole('heading', { level: '1'
 const heading = screen.getByRole('heading'
 
+import React from 'react'
+import { render, screen } from '@testing - library /
+import '@testing - library /
+import App from '../src /

@@ -28,3 +28,5 @@ const OpenAppRedirect = ({ className }) => {
 };
 
 export default OpenAppRedirect;
+import React from 'react'
+    

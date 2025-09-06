@@ -147,3 +147,6 @@ const error_handling = { handle_error: (error, context = "") => { console.error 
 ;
 
 
+ Error handling system for Zion Tech Group;
+const error_handling = {
+  //

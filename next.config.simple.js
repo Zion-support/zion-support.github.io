@@ -60,3 +60,5 @@ const next_config = {
 };
 
 
+* @type {import('next'
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'

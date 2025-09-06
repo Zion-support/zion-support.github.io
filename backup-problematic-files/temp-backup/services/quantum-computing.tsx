@@ -49,3 +49,4 @@ const Quantum-computing: React.FC<Quantum-computingProps> = ({ className }) => {
 }
 }
 }
+import Link from \'next/link\'; import Head from \'next/

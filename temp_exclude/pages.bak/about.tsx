@@ -1,19 +1,17 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-import React from 'react';
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
-interface AboutProps {
-  // Add props here as needed
-}
-
-export default function About({ }: AboutProps) {
-  return (
-    <div>
-      <h1>About</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-}
-
-
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import type { NextPage } from \'next\'; import Head from \'next/head\'; import Navigation from \'../components/Navigation\'; import Footer from \'../components/Footer\'; const \"About\": NextPage = () => { return ( <> <Head> <title>About Us - Zion Tech Group
+import type { NextPage } from \'next\'; import Head from \'next/head\'; import Navigation from \'../components/Navigation\'; import Footer from \'../components/Footer\'; const \"About\": NextPage = () => { return ( <> <Head> <title>About Us - Zion Tech Group
+import type { NextPage } from \'next\'; import Head from \'next/head\'; import Navigation from \'../components/Navigation\'; import Footer from \'../components/Footer\'; const \"About\": NextPage = () => { return ( <> <Head> <title>About Us - Zion Tech Group
+import type { NextPage } from \'next\'; import Head from \'next/head\'; import Navigation from \'../components/Navigation\'; import Footer from \'../components/Footer\'; const \"About\": NextPage = () => { return ( <> <Head> <title>About Us - Zion Tech Group

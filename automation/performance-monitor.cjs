@@ -31,9 +31,11 @@ class PerformanceMonitor {}
   };
   setupLogging() {}
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -46,6 +48,7 @@ class PerformanceMonitor {
     this.logFile = path.join(__dirname, 'logs', 'performance-monitor.log');
     this.ensureLogDirectory();
   }
+
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
@@ -145,24 +148,32 @@ class PerformanceMonitor {
     console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
   }
+
   async monitorPerformance() {
     this.log('⚡ Starting performance monitoring...');
+
     try {
       // Monitor build time
       const buildTime = await this.measureBuildTime();
       this.metrics.buildTime = buildTime;
+
       // Monitor bundle size
       const bundleSize = await this.measureBundleSize();
       this.metrics.bundleSize = bundleSize;
+
       // Monitor memory usage
       const memoryUsage = process.memoryUsage();
       this.metrics.memoryUsage = memoryUsage.heapUsed / 1024 / 1024; // MB
+
       // Monitor CPU usage
       const cpuUsage = process.cpuUsage();
       this.metrics.cpuUsage = cpuUsage.user / 1000000; // seconds
+
       this.metrics.lastUpdated = new Date().toISOString();
+
       await this.saveMetrics();
       await this.generatePerformanceReport();
+
       this.log('Performance monitoring completed');
       return this.metrics;
     } catch (error) {
@@ -313,12 +324,15 @@ class PerformanceMonitor {
       if (!fs.existsSync(buildDir)) {
         return 0;
       }
+
       const getDirSize = dir => {
         let size = 0;
         const files = fs.readdirSync(dir);
+
         files.forEach(file => {
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
+
           if (stat.isDirectory()) {
             size += getDirSize(filePath);
           } else {
@@ -344,6 +358,7 @@ class PerformanceMonitor {
     fs.mkdirSync(path.dirname(metricsFile), { recursive: true });
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
+
   async generatePerformanceReport() {
     const report = {
       lastCheck: this.lastCheck,

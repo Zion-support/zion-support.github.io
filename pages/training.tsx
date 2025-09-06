@@ -450,3 +450,5 @@ function Training() {
 export default Training;
 }export default Training;
 ;
+import React from 'react'
+import Layout from '../components/

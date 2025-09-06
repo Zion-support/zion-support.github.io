@@ -3,12 +3,8 @@
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -131,13 +127,8 @@ const benefits = [;
     icon: Activity;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ];
 const benefits = [
   {
@@ -214,9 +205,6 @@ export default function ManufacturingPage() {
         </section>;
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ];
 
 export default function ManufacturingPage() {;
@@ -272,9 +260,6 @@ export default function ManufacturingPage() {;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
@@ -294,11 +279,9 @@ export default function ManufacturingPage() {;
               ))}
 
 
-=======
             </div>,
           </div>;
         </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
@@ -326,9 +309,6 @@ export default function ManufacturingPage() {;
                 <motion.div}),
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -357,11 +337,9 @@ export default function ManufacturingPage() {;
               ))}
 
 
-=======
             </div>,
           </div>;
         </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
@@ -397,13 +375,8 @@ export default function ManufacturingPage() {;
     </Layout>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?
@@ -426,3 +399,15 @@ export default function ManufacturingPage() {;
       </div>
     </Layout>
   );
+import { motion } from 'framer-motion'
+import Link from 'next/
+import Layout from '../../components/
+import Link from 'next/
+import Link from 'next/
+import Link from 'next/
+import Link from 'next/
+import Layout from '../../components/
+import Link from 'next/
+import Layout from '../../components/
+import Layout from '../../components/
+import Layout from '../../components/

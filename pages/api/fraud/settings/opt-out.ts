@@ -139,3 +139,5 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+import type { NextApiRequest, NextApiResponse } from "next"
+import { getFraudStore } from "../../../../utils/fraud/

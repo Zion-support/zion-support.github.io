@@ -28,3 +28,5 @@ const ContentGenerator = ({ className }) => {
 };
 
 export default ContentGenerator;
+import React from 'react'
+    

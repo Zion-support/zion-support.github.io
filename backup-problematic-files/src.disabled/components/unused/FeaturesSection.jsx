@@ -28,3 +28,5 @@ const FeaturesSection = ({ className }) => {
 };
 
 export default FeaturesSection;
+import React from 'react'
+    

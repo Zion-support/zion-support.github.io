@@ -30,3 +30,5 @@ const VideoCall = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

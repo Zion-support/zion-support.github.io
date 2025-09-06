@@ -1,3 +1,34 @@
+export interface InnovativeAIService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  variant: string;
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
 
 
   {
@@ -727,31 +758,16 @@
     rating: 4 && 4.7,
 
     reviews: 34
+    website: string;
   }
-];
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: string,
-  contactInfo: {
-    mobile: string, email: string,
-    address: string,
-    website: string
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
-}
+
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+
+  reviews: number;
 export const innovativeAIServices: InnovativeAIService[] = [
   {
     id: 'quantum-ai-brain-computer-interface', name: 'Quantum AI Brain-Computer Interface',
@@ -1129,3 +1145,6 @@ export interface InnovativeAIService {;
 
 ;
 
+    id: any
+    price: '$2,999'
+    period: any

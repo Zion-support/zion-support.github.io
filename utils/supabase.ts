@@ -1,4 +1,4 @@
-// Supabase utilities;
+ Supabase utilities;
 export const supabase = {
   // Add supabase functionality here;
   auth: {
@@ -71,3 +71,4 @@ export const supabase = createSupabaseClient(supabaseConfig);
   });
 };
 
+  //

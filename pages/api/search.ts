@@ -88,3 +88,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     res.status(500).json({ ok: false, error: e?.message || "Search failed" });
   }
 }
+import type { NextApiRequest, NextApiResponse } from "next"
+import type { AccessLevel } from "../../utils/search/
+import { parseQueryToFilters } from "../../utils/search/
+import { searchAll, suggestDidYouMean } from "../../utils/search/

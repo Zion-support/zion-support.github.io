@@ -52,3 +52,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status (200).json ({ episodes: simplified });
 
 }
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
+  'data'
+  'podcast'
+  'episodes.json'
+    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8'
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8') as any[];const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'
+    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8'
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8'
+    inviteeName: any
+const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'
+  if (!fs.existsSync(EPISODES_PATH) fs.writeFileSync(EPISODES_PATH, '[]utf8'
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8'
+    inviteeName: any

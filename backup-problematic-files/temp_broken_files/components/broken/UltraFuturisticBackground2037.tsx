@@ -989,3 +989,42 @@ ref={canvasRef}
 
 export default UltraFuturisticBackground2037,
 
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+interface UltraFuturisticBackground2037Props {intensity?: any
+export default function UltraFuturisticBackground2037({intensity = 'medium'
+  theme = 'quantum-neon'
+    if (typeof window = = 'undefined'
+    const ctx = canvas.getContext('2d'
+        case 'neon'
+            primary: ['#ff0080#00ffff#ffff00#ff00ff'
+            secondary: ['#8000ff#00ff80#ff8000#0080ff'
+            accent: ['#ff4080#40ffff#ffff40#ff40ff'
+            glow: ['#ff0066#00ffff#ffff00#ff00ff'
+        case 'holographic'
+          return {primary: ['#ff6b6b#4ecdc4#45b7d1#96ceb4'
+            secondary: ['#feca57#ff9ff3#54a0ff#5f27cd'
+            accent: ['#ff9ff3#54a0ff#5f27cd#ff6b6b'
+            glow: ['#ff5252#26d0ce#42a5f5#66bb6a'
+        case 'cyberpunk'
+          return {primary: ['#ff0055#00ffff#ffff00#ff00ff'
+            secondary: ['#8000ff#00ff80#ff8000#0080ff'
+            accent: ['#ff4080#40ffff#ffff40#ff40ff'
+            glow: ['#ff0033#00ffff#ffff00#ff00ff'
+        case 'quantum'
+          return {primary: ['#8b5cf6#06b6d4#ec4899#10b981'
+            secondary: ['#f59e0b#ef4444#8b5cf6#06b6d4'
+            accent: ['#ec4899#10b981#f59e0b#ef4444'
+            glow: ['#7c3aed#0891b2#db2777#059669'
+          return {primary: ['#8b5cf6#06b6d4#ec4899#10b981'
+            secondary: ['#ff0080#00ffff#ffff00#ff00ff'
+            accent: ['#f59e0b#ef4444#8000ff#00ff80'
+            glow: ['#7c3aed#0891b2#ff0066#00ffff'
+      type: any
+        const particleType = Math.random() 
+    const handleResize = () => {if (typeof window != 'undefined'
+    if (typeof window != 'undefined') {window.addEventListener('resize'
+    return () => {if (typeof window != 'undefined'
+        window.removeEventListener('resize'
+          background: any
+          filter: theme = = 'neon' ? 'brightness(1.2) contrast(1.1)' : any

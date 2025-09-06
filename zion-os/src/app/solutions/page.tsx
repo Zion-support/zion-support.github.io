@@ -320,3 +320,5 @@ export default function SolutionsPage() {;
       </section>;
     </div>);
 }
+export default function SolutionsPage() {return (;
+    

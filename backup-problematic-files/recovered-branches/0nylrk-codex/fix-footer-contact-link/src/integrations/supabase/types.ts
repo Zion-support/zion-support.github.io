@@ -1,0 +1,281 @@
+export type Json =;
+  | string;
+  | number;
+  | boolean;
+  | null;
+  | { [key:string]:Json | undefined }
+  | Json[];
+
+export type Database = {;
+  public:{;
+    Tables:{;
+      ai_chats:{;
+        Row:{;
+          created_at:string;
+          id:string;
+          message:string;
+          response:string;
+          user_id:string;
+        }
+        Insert:{;
+          created_at?:string;
+          id?:string;
+          message:string;
+          response:string;
+          user_id:string;
+        }
+        Update:{;
+          created_at?:string;
+          id?:string;
+          message?:string;
+          response?:string;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+          scopes:Database["public"]["Enums"]["api_key_scope"
+          scopes?:Database["public"]["Enums"]["api_key_scope"
+          scopes?:Database["public"]["Enums"]["api_key_scope"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["api_key_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["resume_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["creator_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["resume_id"
+            referencedRelation: any
+            referencedColumns:["id"
+          severity:Database["public"]["Enums"]["fraud_severity"
+          severity?:Database["public"]["Enums"]["fraud_severity"
+          severity?:Database["public"]["Enums"]["fraud_severity"
+            foreignKeyName: any
+            columns:["reviewed_by"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["job_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["resume_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["talent_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["client_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["milestone_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["partner_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["partner_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["tenant_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["created_by"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["project_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["project_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["client_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["job_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["talent_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+          status:Database["public"]["Enums"]["quote_request_status"
+          status?:Database["public"]["Enums"]["quote_request_status"
+          status?:Database["public"]["Enums"]["quote_request_status"
+            foreignKeyName: any
+            columns:["requester_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["talent_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["partner_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["referral_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+          status:Database["public"]["Enums"]["referral_status"
+          status?:Database["public"]["Enums"]["referral_status"
+          status?:Database["public"]["Enums"]["referral_status"
+            foreignKeyName: any
+            columns:["partner_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["referral_code"
+            referencedRelation: any
+            referencedColumns:["code"
+            foreignKeyName: any
+            columns:["referred_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["referrer_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["resume_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["reporter_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["review_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["project_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["reviewee_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["reviewer_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["tenant_id"
+            referencedRelation: any
+            referencedColumns:["id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["user_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["account_manager_id"
+            referencedRelation: any
+            referencedColumns:["user_id"
+            foreignKeyName: any
+            columns:["resume_id"
+            referencedRelation: any
+            referencedColumns:["id"
+        | "jobs: any
+type DefaultSchema = Database[Extract

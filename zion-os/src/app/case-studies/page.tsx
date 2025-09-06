@@ -348,3 +348,5 @@ export default function CaseStudiesPage() {;
       </section>;
     </div>);
 }
+export default function CaseStudiesPage() {return (;
+    

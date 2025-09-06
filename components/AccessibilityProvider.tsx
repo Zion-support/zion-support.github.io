@@ -30,13 +30,11 @@ export const useAccessibility = () => {;
     throw new Error(
       "useAccessibility must be used within an AccessibilityProvider"
     );
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  return context;
-}
-interface AccessibilityProviderProps {
-  children: React.ReactNode;
-}
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 
 
 const AccessibilityContext = createContext<;
@@ -150,3 +148,9 @@ export default AccessibilityProvider;
 
 export default AccessibilityProvider;
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

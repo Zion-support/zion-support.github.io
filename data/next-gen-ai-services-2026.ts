@@ -1,7 +1,5 @@
-
-import { ServiceVariant } from '../types/service-variants';
-export interface NextGenAIService2026 {
-
+ export interface NextGenAIService2026 {  id: string;
+  id: string;
   name: string;
   tagline: string;
   price: string;
@@ -11,27 +9,33 @@ export interface NextGenAIService2026 {
   popular: boolean;
   icon: string;
   color: string;
-  textColor: string;
+  text_color: string;
   link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
   category: string;
-  realService: boolean;
+  real_service: boolean;
   technology: string[];
   integrations: string[];
-  useCases: string[];
+  use_cases: string[];
   roi: string;
   competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  market_size: string;
+  growth_rate: string;
   variant: ServiceVariant;
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
 
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
+    website: string;
+  }
 
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
   customers: number;
   rating: number;
 
@@ -74,12 +78,10 @@ export interface NextGenAIService2026 {
   contactInfo: {
 
     mobile: string,
+  reviews: number;    mobile: string,
     email: string,
     address: string,
-
-
-
-    website: string
+    website: any
   }
   realImplementation: boolean
   implementationDetails: string
@@ -87,6 +89,7 @@ export interface NextGenAIService2026 {
   customers: number
   rating: number
   reviews: number
+  realImplementation: any
     website: string;
   },
   real_implementation: boolean,
@@ -95,7 +98,6 @@ export interface NextGenAIService2026 {
   customers: number,
   rating: number,
   reviews: number;
-}
 
 
 export const nextGenAIServices2026: NextGenAIService2026[] = [
@@ -788,3 +790,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.7,
 
 
+const contact = {
+  mobile: any
+    reviews: 89,  },    implementationDetails: any
+    reviews: 89,  },    implementationDetails: any
+    reviews: 89,  },    implementation_details: any

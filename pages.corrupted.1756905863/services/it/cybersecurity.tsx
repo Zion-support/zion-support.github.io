@@ -26,3 +26,4 @@ export default function Cybersecurity({ }: CybersecurityProps) {
 
 
 
+export default function ManagedCybersecurity() {; return (; 

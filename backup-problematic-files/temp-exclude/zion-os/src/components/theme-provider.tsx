@@ -1,0 +1,20 @@
+use client"
+import { createContext, useContext, useEffect, useState } from "react"
+type Theme = "dark" | "light" | "system"
+  theme: any
+  defaultTheme = "system"
+  storageKey = "zion-ui-theme"
+    if (typeof window != "undefined"
+    root.classList.remove("light", "dark"
+    if (theme = = "system"
+      const systemTheme = window.matchMedia("(prefers-color-scheme:dark)"
+        ? "dark"
+        : any
+      if (typeof window != "undefined"
+    throw new Error("useTheme must be used within a ThemeProvider"
+use client"
+type Theme = "dark" | "light" | "system"
+if (theme = = "system"
+  const systemTheme = window.matchMedia (" (prefers-color-scheme: dark) ") .matches ? "dark" : any
+  if (typeof window != "undefined"
+if (context = = undefined) throw new Error ("useTheme must be used within a ThemeProvider"

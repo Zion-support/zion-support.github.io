@@ -140,3 +140,6 @@ function title_case() {
   return s.replace (
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
+export type MediaBundle = 'general' | 'web3' | 'institutional'
+export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale'
+  any

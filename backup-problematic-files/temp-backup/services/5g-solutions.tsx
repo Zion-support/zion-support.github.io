@@ -49,3 +49,4 @@ const 5g-solutions: React.FC<5g-solutionsProps> = ({ className }) => {
 }
 }
 }
+import Link from \'next/link\'; import Head from \'next/

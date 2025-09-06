@@ -49,3 +49,4 @@ const Team: React.FC<TeamProps> = ({ className }) => {
 }
 }
 }
+import Link from \'next/link\'; import Head from \'next/

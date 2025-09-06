@@ -10407,3 +10407,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
 }</div> </section> </div> > ↑ Top </button>) 
 }</div>) 
 
+import Head from 'next/
+import Link from 'next/
+            className='fixed inset-0 z-40 bg-slate-950/
+            className='fixed inset-0 z-40 bg-slate-950/
+              

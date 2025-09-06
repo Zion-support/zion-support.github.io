@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -1312,3 +1314,76 @@ if ( {) {
 
   );
 
+    console.error('Error caught by boundary: any
+import React, { useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion'
+  type: any
+    const ctx = canvas.getContext('2d'
+    window.addEventListener('resize'
+    window.addEventListener('mousemove'
+        energy: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'
+        data: ['#0080ff', '#8000ff', '#ff0080', '#80ff00'
+        quantum: ['#ff8000', '#8000ff', '#00ffff', '#ff0080'
+        neon: ['#ff0066', '#00ffff', '#ffff00', '#ff00ff'
+        const type = ['energy', 'data', 'quantum', 'neon'
+        ] as keyof typeof colors;        particles.push({        energy: ['#00ffff#ff00ff#ffff00#00ff00'
+        data: ['#0080ff#8000ff#ff0080#80ff00'
+        quantum: ['#ff8000#8000ff#00ffff#ff0080'
+        neon: ['#ff0066#00ffff#ffff00#ff00ff'
+        const type = ['energydataquantumneon'
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff00'
+        '#ff8000'
+      const fieldColors = ['#00ffff#ff00ff#ffff00#00ff00#ff8000'
+            .padStart(2, '0'
+            .padStart(2, '0'
+        gradient.addColorStop(1, 'transparent'
+        gradient.addColorStop(0, `${field.color}${Math.floor(field.intensity * pulseIntensity) * 255).toString(16).padStart(2, '0'
+        gradient.addColorStop(0.5, `${field.color}${Math.floor(field.intensity * pulseIntensity * 0.5) * 255).toString(16).padStart(2, '0'
+        gradient.addColorStop(1, 'transparent'
+    const ctx = canvas.get_context ('2d'
+    window.addEventListener ('resize'
+    window.addEventListener ('mousemove'
+        energy: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'
+        data: ['#0080ff', '#8000ff', '#ff0080', '#80ff00'
+        quantum: ['#ff8000', '#8000ff', '#00ffff', '#ff0080'
+        neon: ['#ff0066', '#00ffff', '#ffff00', '#ff00ff'
+        const type = ['energy', 'data', 'quantum', 'neon'
+        ] as keyof typeof colors;        particles.push ({        energy: ['#00ffff#ff00ff#ffff00#00ff00'
+        data: ['#0080ff#8000ff#ff0080#80ff00'
+        quantum: ['#ff8000#8000ff#00ffff#ff0080'
+        neon: ['#ff0066#00ffff#ffff00#ff00ff'
+        const type = ['energydataquantumneon'
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff00'
+        '#ff8000'
+      const field_colors = ['#00ffff#ff00ff#ffff00#00ff00#ff8000'
+            .pad_start (2, '0'
+            .pad_start (2, '0'
+        gradient.addColorStop (1, 'transparent'
+        gradient.addColorStop (0, `${field.color}${Math.floor (field.intensity * pulse_intensity) * 255).to_string (16).pad_start (2, '0'
+        gradient.addColorStop (0.5, `${field.color}${Math.floor (field.intensity * pulse_intensity * 0.5) * 255).to_string (16).pad_start (2, '0'
+        gradient.addColorStop (1, 'transparent'
+          case 'energy'
+            ctx.globalCompositeOperation = 'screen'
+          case 'energy'
+            ctx && ctx.globalCompositeOperation = 'screen'
+          case 'data'
+            ctx && ctx.globalCompositeOperation = 'multiply'
+          case 'quantum'
+            ctx && ctx.globalCompositeOperation = 'overlay'
+          case 'neon'
+            ctx && ctx.globalCompositeOperation = 'lighter'
+            .padStart(2, '0'
+        ctx.fillStyle = particle.color + Math.floor(currentOpacity * 255).toString(16).padStart(2, '0'
+                .pad_start (2, '0'
+            ctx.strokeStyle = particle.color + Math.floor(opacity * 255).toString(16).padStart(2, '0'
+            ctx.stroke_style = particle.color + Math.floor (opacity * 255).to_string (16).pad_start (2, '0'
+      ctx.strokeStyle = 'rgba(255, 0, 255, 0.1)'
+      window.removeEventListener('resize'
+      window.removeEventListener('mousemove'
+    

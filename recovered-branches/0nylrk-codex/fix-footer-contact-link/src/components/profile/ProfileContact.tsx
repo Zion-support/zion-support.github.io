@@ -300,3 +300,4 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
   )
   )
 
+import React from 'react'

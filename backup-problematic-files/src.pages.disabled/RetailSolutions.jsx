@@ -30,3 +30,5 @@ const RetailSolutions = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

@@ -58,3 +58,5 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
     />
   );
 };
+import React from "react"
+import { SeverityIndicator } from "@/components/ui/

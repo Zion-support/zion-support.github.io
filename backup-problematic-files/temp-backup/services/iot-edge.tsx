@@ -49,3 +49,4 @@ const Iot-edge: React.FC<Iot-edgeProps> = ({ className }) => {
 }
 }
 }
+import Link from \'next/link\'; import Head from \'next/

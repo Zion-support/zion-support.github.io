@@ -1,5 +1,4 @@
 
-;
   };
 }),;
 ;};
@@ -37,3 +36,8 @@ export default defineConfig({,
     include: ["react, "react-dom", framer-motion", "lucide-react"]
   };
 }),
+
+
+
+import { defineConfig } from "
+import react from "@vitejs/

@@ -95,3 +95,7 @@ console.log('🔧 Starting automated conflict resolution...');
 const resolvedCount = resolveAllConflicts('/workspace');
 console.log(`\n✅ Resolved conflicts in ${resolvedCount} files`);
 console.log('🎉 Conflict resolution complete!');
+/usr/bin/env node/usr/bin/env node/usr/bin/
+/usr/bin/env node/usr/bin/env node/usr/bin/
+/usr/bin/env node/usr/bin/env node/usr/bin/
+/usr/bin/env node/usr/bin/env node/usr/bin/

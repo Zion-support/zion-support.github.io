@@ -1,12 +1,8 @@
 
 
 import React from 'react';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
@@ -148,9 +144,6 @@ export default function DigitalTransformationPage() {;
       <div className="min-h-screen bg-gray-50">";
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   ];
 
 
@@ -176,13 +169,8 @@ export default function DigitalTransformationPage() {;
         </section>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -235,11 +223,8 @@ export default function DigitalTransformationPage() {;
                     className="bg-gray-50 rounded-lg p-6 text-center"
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Services Section */}
 
                 
@@ -259,10 +244,8 @@ export default function DigitalTransformationPage() {;
                     viewport={{ once: true }}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 :pages/solutions/digital-transformation.tsx
                   >
                     <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold">
@@ -282,9 +265,6 @@ export default function DigitalTransformationPage() {;
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   >,
                     <div className="text-purple-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
@@ -308,10 +288,8 @@ export default function DigitalTransformationPage() {;
               })}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>,
           </div>;
         </section>;
@@ -570,3 +548,14 @@ export default function DigitalTransformationPage() {;
       </div>;
     </Layout>;
   );
+import { motion } from 'framer-motion'
+import Layout from '../../components/
+import Head from 'next/
+import Link from 'next/
+import MainLayout from '../../components/layout/
+    features: ['Team training', 'Documentation', 'Change management', '24/
+import Layout from '../../components/
+import Head from 'next/
+import Link from 'next/
+import MainLayout from '../../components/layout/
+    features: ['Team training', 'Documentation', 'Change management', '24/

@@ -79,3 +79,6 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
     </Badge>);
 }
 ;
+import { Badge } from "@/components/ui/
+import { Button } from "@/components/ui/
+import { SkillItemProps } from "./

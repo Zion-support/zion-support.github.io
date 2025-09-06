@@ -1,0 +1,12 @@
+
+import React from "react"
+import { UseFormReturn } from "react-hook-form"
+import { AppMetadataValues } from "./
+import { Input } from "@/components/ui/
+import { Textarea } from "@/components/ui/
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/
+import { Badge } from "@/components/ui/
+    
+> <div> <FormLabel htmlFor="keywords" >Keywords</FormLabel> <Input className="mb-2" /> <div className="flex flex-wrap gap-2 mt-2"><X className="h-3 w-3" /> </button> </Badge>) ";"}
+> </div> </Form> </CardContent> 

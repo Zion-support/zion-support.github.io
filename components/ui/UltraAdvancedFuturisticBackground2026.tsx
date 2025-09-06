@@ -726,26 +726,72 @@ Math.random() * canvas.width;
       gradient.addColorStop(1, currentBgColors[2]);
       const bgColors = {
         'neural-network': [
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+  intensity?: any
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+  intensity?: any
+  intensity = 'high'
+  colorScheme = 'neural-network'
+  intensity = 'high'
+  colorScheme = 'neural-network'
+  intensity = 'high'
+  colorScheme = 'neural-network'
+    const ctx = canvas.getContext('2d'
+    const ctx = canvas && canvas.getContext('2d'
+    window.addEventListener('resize'
+    | 'neural - network'
+    | 'quantum - field'
+    | 'cyberpunk'
+    | 'holographic'
+    | 'multidimensional'
+  intensity?: any
+  intensity = 'high'
+  color_scheme = 'neural - network'
+  intensity = 'high'
+  color_scheme = 'neural - network'
+    const ctx = canvas.get_context ('2d'
+    window.addEventListener ('resize'
+        'neural-network': ['#00ffff', '#0080ff', '#8000ff', '#ff0080'
+        'quantum-field': ['#00ff80', '#80ff00', '#ff8000', '#ff0080'
+        cyberpunk: ['#ff0066', '#00ffff', '#ffff00', '#ff6600'
+        holographic: ['#ff00ff', '#00ffff', '#ffff00', '#ff8000'
+        multidimensional: ['#8000ff', '#00ff80', '#ff8000', '#0080ff'
+      const schemeColors = colors[colorScheme] |colors['neural-network'
+        'neural-network': ['rgba(0, 0, 20, 0.8)rgba(0, 20, 40, 0.6)rgba(20, 0, 40, 0.4)'
+        'quantum-field': ['rgba(0, 20, 0, 0.8)rgba(20, 40, 0, 0.6)rgba(40, 0, 20, 0.4)'
+        'cyberpunk': ['rgba(40, 0, 20, 0.8)rgba(20, 0, 40, 0.6)rgba(0, 20, 40, 0.4)'
+        'holographic': ['rgba(40, 0, 40, 0.8)rgba(0, 40, 40, 0.6)rgba(40, 40, 0, 0.4)'
+        'multidimensional': ['rgba(20, 0, 40, 0.8)rgba(0, 40, 20, 0.6)rgba(40, 20, 0, 0.4)'
+      const currentBgColors = bgColors[colorScheme] |bgColors['neural-network'
+        'neural-network'
           'rgba(0, 0, 20, 0.8)'
           'rgba(0, 20, 40, 0.6)'
           'rgba(20, 0, 40, 0.4)'
-        ]
-        'quantum-field': [
+        'quantum-field'
           'rgba(0, 20, 0, 0.8)'
           'rgba(20, 40, 0, 0.6)'
           'rgba(40, 0, 20, 0.4)'
-        ]
-        cyberpunk: [
           'rgba(40, 0, 20, 0.8)'
           'rgba(20, 0, 40, 0.6)'
           'rgba(0, 20, 40, 0.4)'
-        ]
-        holographic: [
           'rgba(40, 0, 40, 0.8)'
           'rgba(0, 40, 40, 0.6)'
           'rgba(40, 40, 0, 0.4)'
-        ]
-        multidimensional: [
           'rgba(20, 0, 40, 0.8)'
           'rgba(0, 40, 20, 0.6)'
           'rgba(40, 20, 0, 0.4)'
@@ -1524,3 +1570,39 @@ export default UltraAdvancedFuturisticBackground2026;
               duration: 10,
               repeat: Infinity,
 
+        bgColors[colorScheme] |bgColors['neural-network'
+      if (intensity = = 'extreme' |intensity = = 'high'
+        'neural - network': ['#00ffff', '#0080ff', '#8000ff', '#ff0080'
+        'quantum - field': ['#00ff80', '#80ff00', '#ff8000', '#ff0080'
+        cyberpunk: ['#ff0066', '#00ffff', '#ffff00', '#ff6600'
+        holographic: ['#ff00ff', '#00ffff', '#ffff00', '#ff8000'
+        multidimensional: ['#8000ff', '#00ff80', '#ff8000', '#0080ff'
+      const scheme_colors = colors[color_scheme] || colors['neural - network'
+        'neural - network': ['rgba (0, 0, 20, 0.8)rgba (0, 20, 40, 0.6)rgba (20, 0, 40, 0.4)'
+        'quantum - field': ['rgba (0, 20, 0, 0.8)rgba (20, 40, 0, 0.6)rgba (40, 0, 20, 0.4)'
+        'cyberpunk': ['rgba (40, 0, 20, 0.8)rgba (20, 0, 40, 0.6)rgba (0, 20, 40, 0.4)'
+        'holographic': ['rgba (40, 0, 40, 0.8)rgba (0, 40, 40, 0.6)rgba (40, 40, 0, 0.4)'
+        'multidimensional': ['rgba (20, 0, 40, 0.8)rgba (0, 40, 20, 0.6)rgba (40, 20, 0, 0.4)'
+      const currentBgColors = bg_colors[color_scheme] || bg_colors['neural - network'
+        'neural - network'
+          'rgba (0, 0, 20, 0.8)'
+          'rgba (0, 20, 40, 0.6)'
+          'rgba (20, 0, 40, 0.4)'
+        'quantum - field'
+          'rgba (0, 20, 0, 0.8)'
+          'rgba (20, 40, 0, 0.6)'
+          'rgba (40, 0, 20, 0.4)'
+          'rgba (40, 0, 20, 0.8)'
+          'rgba (20, 0, 40, 0.6)'
+          'rgba (0, 20, 40, 0.4)'
+          'rgba (40, 0, 40, 0.8)'
+          'rgba (0, 40, 40, 0.6)'
+          'rgba (40, 40, 0, 0.4)'
+          'rgba (20, 0, 40, 0.8)'
+          'rgba (0, 40, 20, 0.6)'
+          'rgba (40, 20, 0, 0.4)'
+        bg_colors[color_scheme] || bg_colors['neural - network'
+      window.removeEventListener('resize'
+      window && window.removeEventListener('resize'
+        className='absolute inset-0 w-full h-full'
+        

@@ -134,3 +134,6 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     changeFrequency: 'weekly';
     priority: route === '' ? 1 : 0.8}));
 }
+import { MetadataRoute } from 'next'
+export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https: any
+  const base_url = 'https: any

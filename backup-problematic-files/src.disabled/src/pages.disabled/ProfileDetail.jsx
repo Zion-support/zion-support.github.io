@@ -28,3 +28,5 @@ const ProfileDetail = ({ className }) => {
 };
 
 export default ProfileDetail;
+import React from 'react'
+    

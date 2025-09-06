@@ -687,3 +687,7 @@ export default function CloudPlatformPage() {
 }
 
 
+import React from 'react'
+import Head from 'next/
+    '24/
+              

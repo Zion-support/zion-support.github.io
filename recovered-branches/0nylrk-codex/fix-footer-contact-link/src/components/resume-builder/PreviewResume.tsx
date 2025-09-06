@@ -110,3 +110,5 @@ function PreviewResume() {
   );
 }
 
+import { Resume } from "@/types/
+ from "./

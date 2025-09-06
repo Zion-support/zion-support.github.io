@@ -30,3 +30,5 @@ const HelpCenter = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

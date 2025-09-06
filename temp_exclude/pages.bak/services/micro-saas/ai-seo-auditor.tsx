@@ -1,19 +1,14 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-import React from 'react';
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
-interface AiseoauditorProps {
-  // Add props here as needed
-}
-
-export default function Aiseoauditor({ }: AiseoauditorProps) {
-  return (
-    <div>
-      <h1>Aiseoauditor</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-}
-
-
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+export default function AISEOAuditor() { return ( 

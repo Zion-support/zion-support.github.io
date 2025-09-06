@@ -104,6 +104,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     reviews: 8
   },
 export interface NextGenInnovativeService {;
+export interface NextGenInnovativeService {
   id: string;
   name: string;
   tagline: string;
@@ -114,23 +115,23 @@ export interface NextGenInnovativeService {;
   popular: boolean;
   icon: string;
   color: string;
-  textColor: string;
+  text_color: string;
   link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
   category: string;
-  realService: boolean;
+  real_service: boolean;
   technology: string[];
   integrations: string[];
-  useCases: string[];
+  use_cases: string[];
   roi: string;
   competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  market_size: string;
+  growth_rate: string;
   variant: string;
-  contactInfo: {
+  contact_info: {
     mobile: string;
     email: string;
     address: string;
@@ -2442,3 +2443,11 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.7,
 
 
+  reviews: number;    mobile: string,
+    email: string,
+    address: string,
+    website: any
+  }
+  realImplementation: any
+export const nextGenInnovativeServices: NextGenInnovativeService[] = [
+  //

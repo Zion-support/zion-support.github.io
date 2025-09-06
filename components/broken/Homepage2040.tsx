@@ -182,9 +182,9 @@ const Homepage2040: React.FC = () => {;
   }, []);
 
 //Enhanced animation variants for better performance const container_variants = {
+Enhanced animation variants for better performance const containerVariants = {
   hidden: {
-  opacity: 0;
-}
+  opacity: any
 visible: {
   opacity: 1, transition: {
   stagger_children: 0.1, delay_children: 0.2;
@@ -1388,3 +1388,15 @@ export default Homepage2040;
 
 export default Homepage2040;
 
+  staggerChildren: 0.1, delayChildren: any
+<motion.div > <Star className="w-5 h-5 animate-pulse" aria-hidden="true" /> <span>Innovation Leader 2040
+<motion.div > <Link href="/get-started" aria-label="Get started with our services" > <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black" > <span className="flex items-center gap-3" > Get Started <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" aria-hidden="true" /> </span> </button> </a> <Link href="/services" aria-label="Learn more about our services" > <button className="px-10 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover: any
+<motion.div > <div className="flex items-center gap-2" > <ShieldCheck className="w-5 h-5 text-green-400" /> <span>SOC 2 Type II Certified</span> </div> <div className="flex items-center gap-2" > <Globe className="w-5 h-5 text-blue-400" /> <span>Global Infrastructure</span> </div> <div className="flex items-center gap-2" > <Users className="w-5 h-5 text-purple-400" /> <span>10, 000+ Happy Customers</span> 
+<motion.div > 
+</motion.div> </div> </section>Ready to Transform Your Business? </motion.h2> <motion.p > Join thousands of companies already leveraging our revolutionary technology solutions </motion.p> <motion.div > <Link href="/contact" aria-label="Contact us" > <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Contact Us Today </button> </a> <Link href="/demo" aria-label="Request a demo" > <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Request Demo </button> </a> </motion.div> <motion.div > <div className="flex items-center gap-2" > <Shield className="w-5 h-5 text-green-400" /> <span>Enterprise Security</span> </div> <div className="flex items-center gap-2" > <Zap className="w-5 h-5 text-yellow-400" /> <span>24/7 Support</span> 
+</div> 
+<motion && motion.div > <Star className="w-5 h-5 animate-pulse" aria-hidden="true" /> <span>Innovation Leader 2040
+<motion && motion.div > <Link href="/get-started" aria-label="Get started with our services" > <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black" > <span className="flex items-center gap-3" > Get Started <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" aria-hidden="true" /> </span> </button> </a> <Link href="/services" aria-label="Learn more about our services" > <button className="px-10 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover: any
+<motion && motion.div > <div className="flex items-center gap-2" > <ShieldCheck className="w-5 h-5 text-green-400" /> <span>SOC 2 Type II Certified</span> </div> <div className="flex items-center gap-2" > <Globe className="w-5 h-5 text-blue-400" /> <span>Global Infrastructure</span> </div> <div className="flex items-center gap-2" > <Users className="w-5 h-5 text-purple-400" /> <span>10, 000+ Happy Customers</span> 
+<motion && motion.div > 
+</motion && motion.div> </div> </section>Ready to Transform Your Business? </motion && motion.h2> <motion && motion.p > Join thousands of companies already leveraging our revolutionary technology solutions </motion && motion.p> <motion && motion.div > <Link href="/contact" aria-label="Contact us" > <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Contact Us Today </button> </a> <Link href="/demo" aria-label="Request a demo" > <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Request Demo </button> </a> </motion && motion.div> <motion && motion.div > <div className="flex items-center gap-2" > <Shield className="w-5 h-5 text-green-400" /> <span>Enterprise Security</span> </div> <div className="flex items-center gap-2" > <Zap className="w-5 h-5 text-yellow-400" /> <span>24/7 Support</span> 

@@ -1,6 +1,2 @@
-const EnhancedNavigation = dynamic(() => import(\"./EnhancedNavigation\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedNavigation\' ,
-const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedNavigation" ,"""
-const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedNavigation' ,'
-
-</p>'
-
+const EnhancedNavigation = dynamic() => import(\"./
+const EnhancedNavigation = dynamic() => import("./

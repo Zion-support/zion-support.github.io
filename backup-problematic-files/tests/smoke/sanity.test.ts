@@ -9,3 +9,5 @@ describe('sanity', () => {
 '
 describe('sanity', () => { it("runs a basic assertion"
 '"
+describe('sanity'
+  it('runs a basic assertion'

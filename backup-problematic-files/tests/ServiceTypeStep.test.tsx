@@ -21,3 +21,5 @@ const ServiceTypeStep.test: React.FC<ServiceTypeStep.testProps> = ({ className }
 }
 }
 }
+import React from 'react'
+    

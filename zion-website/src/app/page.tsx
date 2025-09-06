@@ -83,6 +83,7 @@ export default function HomePage() {
 } from '@heroicons / react / 24 / outline';
 ;
 const features = [;
+import {
   LightBulbIcon
   CpuChipIcon
   GlobeAltIcon
@@ -507,3 +508,5 @@ function HomePage() {
   )
 }
 ;
+ from '@heroicons/react/24/
+    href: any

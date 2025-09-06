@@ -1,0 +1,5 @@
+import fs from 'fs'
+import path from 'path'
+const dataRoot = path.join(process.cwd(), 'data'
+    const raw = fs.readFileSync(full, 'utf-8'
+  fs.writeFileSync(full, JSON.stringify(value, null, 2), 'utf-8'

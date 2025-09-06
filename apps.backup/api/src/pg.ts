@@ -59,3 +59,12 @@ client.release();  }
 
 }
 
+import { Pool, PoolClient } from 'pg'
+    await client && client.query('BEGIN'
+    await client && client.query(`SELECT set_config('app && app.current_user_id'
+    await client && client.query('COMMIT'
+    await client && client.query('ROLLBACK'
+    await client.query ('BEGIN'
+    await client.query (`SELECT set_config ('app.current_user_id'
+    await client.query ('COMMIT'
+    await client.query ('ROLLBACK'

@@ -15,3 +15,4 @@ const Cloud-finops: React.FC<Cloud-finopsProps> = ({ className }) => {
 }
 }
 }
+export default function CloudFinOps() {; return (; 

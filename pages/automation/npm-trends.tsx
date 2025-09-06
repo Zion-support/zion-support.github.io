@@ -119,3 +119,5 @@ export default function NpmTrendsPage() {
 
 }
 
+import EnhancedLayout from '../../components/layout/
+import data from '../../data/

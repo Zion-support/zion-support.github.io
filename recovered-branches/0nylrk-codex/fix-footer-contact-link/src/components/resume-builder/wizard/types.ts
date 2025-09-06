@@ -107,3 +107,4 @@ export interface EmptyResumeProps {
 }
 ;
 
+import { Resume } from "@/types/

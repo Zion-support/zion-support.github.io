@@ -365,3 +365,12 @@ function PartnerDashboard() {
 }
     </div>);
 }
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+ from "@/components/ui/
+import { Button } from "@/components/ui/

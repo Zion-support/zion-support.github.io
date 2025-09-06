@@ -62,3 +62,5 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) =>: an
 export default ResumeProgress;
 
 
+import { Progress } from "@/components/ui/
+import { ResumeProgressProps } from "./

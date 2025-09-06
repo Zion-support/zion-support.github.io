@@ -28,3 +28,5 @@ const ListingDetail = ({ className }) => {
 };
 
 export default ListingDetail;
+import React from 'react'
+    

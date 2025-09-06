@@ -28,3 +28,5 @@ const TrustedBySection = ({ className }) => {
 };
 
 export default TrustedBySection;
+import React from 'react'
+    

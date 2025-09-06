@@ -54,3 +54,4 @@ const Status: React.FC<StatusProps> = ({ className }) => {
 }
 }
 }
+import Link from \'next/link\'; import Head from \'next/

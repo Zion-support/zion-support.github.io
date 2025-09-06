@@ -306,3 +306,5 @@ export default function AccessibilityPage() {;
       </section>;
     </div>);
 }
+export default function AccessibilityPage() {return (;
+    

@@ -792,3 +792,11 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     reviews: 52;
   }
 ];
+import { ServiceVariant } from '../types/
+    period: any
+      'Machine Learning, Alternative Data, Credit Scoring, Risk Analytics, AI/
+      website: any
+      'Machine Learning, Predictive Analytics, Risk Modeling, Insurance Technology, AI/
+      website: any
+      'RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/
+      website: any

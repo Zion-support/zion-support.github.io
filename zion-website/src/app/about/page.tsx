@@ -17,6 +17,7 @@ const values = [
   RocketLaunchIcon;
 } from '@heroicons / react / 24 / outline';
 const values = [;
+import {
   UserGroupIcon
   LightBulbIcon
   GlobeAltIcon
@@ -570,3 +571,5 @@ export default function AboutPage() {
 };
 
 export default Page;
+ from '@heroicons/react/24/
+    image: any

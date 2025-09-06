@@ -28,3 +28,5 @@ const UpdatePassword = ({ className }) => {
 };
 
 export default UpdatePassword;
+import React from 'react'
+    

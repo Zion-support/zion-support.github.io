@@ -49,3 +49,4 @@ const Helpdesk: React.FC<HelpdeskProps> = ({ className }) => {
 }
 }
 }
+import Head from \'next/head\'; import Link from \'next/

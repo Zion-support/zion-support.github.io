@@ -1,6 +1,3 @@
-const TestimonialsSection = dynamic(() => import(\"./TestimonialsSection\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default TestimonialsSection\' ,
-const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{"; loading: () => <p>Loading.</p,>,}) export: "default TestimonialsSection" ,"""
-const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; loading: () => <p>Loading...</p,>,}) export: 'default TestimonialsSection' ,'
-
-</p>'
-
+const TestimonialsSection = dynamic() => import(\"./
+const TestimonialsSection = dynamic() => import("./TestimonialsSection"),{"; loading: () => <p>Loading.
+const TestimonialsSection = dynamic() => import("./

@@ -1,7 +1,18 @@
+export interface Revolutionary2027AiService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  real_implementation: boolean;
+  contact_info: {
+    mobile: string;
+    email: string;
 
-
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    address: string;
   }
 ];
   id: string, name: string,
@@ -77,3 +88,6 @@ export const revolutionary2027AIServices: Revolutionary2027AiService[] = [
     }
   }
 ];
+export const revolutionary2027AIServices: Revolutionary2027AiService[] = [
+  {
+    id: any

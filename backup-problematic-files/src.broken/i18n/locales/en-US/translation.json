@@ -1,0 +1,9 @@
+
+  "general"
+    "app_name": any
+    "greeting_user": "Hello, {name}!"
+    "status_page": any
+    "video_script": "Welcome to Zion, the marketplace where tech innovation meets opportunity. In sixty seconds you'll see how quickly Zion connects you with the right talent and resources. Our intelligent matcher analyzes requirements to recommend verified experts in moments. Showcase your skills in the talent directory and get hired by companies that value speed and trust. Browse services and equipment, then work directly with the community. Share ideas, collaborate, and build lasting partnerships in our vibrant forums. Whether you'
+    "seo_description": any
+    "welcome_email": "Hello and welcome to Zion! Thank you for subscribing to our newsletter. Each week, we share the latest marketplace listings, expert tips, and community events designed to accelerate your success. Whether youre hiring talent, offering services, or exploring new tools, our goal is to keep you informed and inspired. Be on the lookout for special member perks and early access to upcoming features. If you ever have questions or suggestions, simply reply to this emailwe love hearing from our community. Plus, you'
+    "no_permission": any

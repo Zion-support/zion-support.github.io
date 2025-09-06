@@ -28,3 +28,5 @@ const StatisticsSection = ({ className }) => {
 };
 
 export default StatisticsSection;
+import React from 'react'
+    

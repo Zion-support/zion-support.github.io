@@ -28,3 +28,5 @@ const TalentSkeleton = ({ className }) => {
 };
 
 export default TalentSkeleton;
+import React from 'react'
+    

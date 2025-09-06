@@ -1,0 +1,23 @@
+const fs = require('fs'
+const path = require('path'
+console.log(' Debugging Next.js project structure...'
+ Check if we'
+console.log(' Current directory: any
+console.log(' Package.json exists:', fs.existsSync('package.json'
+console.log(' Next.config.js exists:', fs.existsSync('next.config.js'
+console.log(' Pages directory exists:', fs.existsSync('pages'
+console.log(' Components directory exists:', fs.existsSync('components'
+if (fs.existsSync('package.json'
+  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'
+  console.log(' Next.js version:', packageJson.dependencies?.next || 'Not found'
+  console.log(' React version:', packageJson.dependencies?.react || 'Not found'
+if (fs.existsSync('pages'
+  const pages = fs.readdirSync('pages'
+  console.log(' Pages found: any
+  console.log(' Main pages:', pages.filter(p => p.includes('index') || p.includes('_app'
+console.log(' Checking for problematic files...'
+const allFiles = getAllFiles('.', ['.tsx', '.ts', '.jsx', '.js'
+    const content = fs.readFileSync(file, 'utf8'
+    //
+    //
+  //

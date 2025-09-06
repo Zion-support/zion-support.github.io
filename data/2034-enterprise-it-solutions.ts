@@ -3,11 +3,13 @@ export type EnterpriseITSolution = {
 
 
 
+
+export type EnterpriseITSolution = {
   id: string;
   name: string;
   tagline?: string;
   description: string;
-  category:
+  category:;
     | 'Enterprise Security'
     | 'DevOps & Automation'
     | 'Data & Analytics'
@@ -956,3 +958,4 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		realService: true;
 	}
 ];
+    | 'Cybersecurity'

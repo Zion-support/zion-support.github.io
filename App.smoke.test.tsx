@@ -22,3 +22,6 @@ describe('App Smoke Tests', () => {;
     expect(container.firstChild).toBeTruthy();
   });
 });
+import React from "react"
+import { render } from "@testing-library/
+import App from "./

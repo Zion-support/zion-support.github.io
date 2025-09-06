@@ -1541,3 +1541,6 @@ export default function FrontLanding(req, res) {
 }
 
 
+import Head from 'next/
+import Link from 'next/
+        

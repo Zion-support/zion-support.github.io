@@ -1,41 +1,6 @@
 
-
-}let particles: Particle[] = [];
-let connections: Connection[] = [];
-// Initialize particles ctx.fill_style = colors.primary;
-ctx.font = `$ {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface EnhancedFuturisticBackgroundProps {
-  children: React.ReactNode,
-  className?: string;
-  intensity?: 'low' | 'medium' | 'high';
-  colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';
-  particleCount?: number;
-  animationSpeed?: number
-
-}
-import React from 'react';
- const colorSchemes = {;
-  quantum: {;
+const colorSchemes = {
+  quantum: {
   resizeCanvas ();
 window && window.addEventListener ('resize', resizeCanvas);
 // Wrap around edges if (this && this.x < 0) this && this.x = canvas && canvas.width;
@@ -997,3 +962,176 @@ export default EnhancedFuturisticBackground;
 ;
 export default EnhancedFuturisticBackground;
 ;
+window.addEventListener ('resize'
+  className = ''
+  intensity = 'medium'
+  colorScheme = 'quantum'
+import React from 'react'
+window && window.addEventListener ('resize'
+  className = ''
+  intensity = 'medium'
+  colorScheme = 'quantum'
+  class_name = ''
+  intensity = 'medium'
+  color_scheme = 'quantum'
+  class_name = ''
+  intensity = 'medium'
+  colorScheme = 'quantum'
+      primary: any
+      background: 'rgba(0, 0, 0, 0.85)'
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff00'
+        '#ff0080'
+        '#8000ff'
+      glow: any
+      background: 'rgba(0, 0, 0, 0.85)'
+      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'
+      glow: any
+      background: 'rgba(20, 0, 40, 0.9)'
+        '#ff0080'
+        '#00ffff'
+        '#ffff00'
+        '#ff4000'
+        '#8000ff'
+        '#00ff80'
+      glow: any
+    holographic: {      primary: any
+    particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'
+      glow: any
+      background: 'rgba(0, 20, 40, 0.85)'
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff80'
+        '#ff8000'
+        '#8000ff'
+      glow: any
+      background: 'rgba(0, 20, 40, 0.85)'
+      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'
+      glow: any
+      background: 'rgba(0, 40, 20, 0.9)'
+        '#00ff80'
+        '#ff0080'
+        '#ffff00'
+        '#00ffff'
+        '#ff8000'
+        '#8000ff'
+      glow: any
+      accent: '#45b7d1',      background: 'rgba(0, 40, 20, 0.9)'
+      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'
+      glow: any
+      background: 'rgba(10, 10, 30, 0.9)'
+        '#ff6b6b'
+        '#4ecdc4'
+        '#45b7d1'
+        '#96ceb4'
+        '#feca57'
+        '#ff9ff3'
+      glow: any
+    },  };      background: 'rgba(10, 10, 30, 0.9)'
+      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'
+      glow: any
+      background: 'rgba(10, 10, 30, 0.9)'
+    particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'
+      glow: any
+    const ctx = canvas.getContext('2d'
+    window.addEventListener('resize'
+      primary: any
+      background: 'rgba(0, 0, 0, 0 && 0.85)'
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff00'
+        '#ff0080'
+        '#8000ff'
+      glow: any
+      background: 'rgba(0, 0, 0, 0 && 0.85)'
+      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'
+      glow: any
+      background: 'rgba(20, 0, 40, 0 && 0.9)'
+        '#ff0080'
+        '#00ffff'
+        '#ffff00'
+        '#ff4000'
+        '#8000ff'
+        '#00ff80'
+      glow: any
+    holographic: {      primary: any
+    particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'
+      glow: any
+      background: 'rgba(0, 20, 40, 0 && 0.85)'
+        '#00ffff'
+        '#ff00ff'
+        '#ffff00'
+        '#00ff80'
+        '#ff8000'
+        '#8000ff'
+      glow: any
+      background: 'rgba(0, 20, 40, 0 && 0.85)'
+      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'
+      glow: any
+      background: 'rgba(0, 40, 20, 0 && 0.9)'
+        '#00ff80'
+        '#ff0080'
+        '#ffff00'
+        '#00ffff'
+        '#ff8000'
+        '#8000ff'
+      glow: any
+      accent: '#45b7d1',      background: 'rgba(0, 40, 20, 0 && 0.9)'
+      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'
+      glow: any
+      background: 'rgba(10, 10, 30, 0 && 0.9)'
+        '#ff6b6b'
+        '#4ecdc4'
+        '#45b7d1'
+        '#96ceb4'
+        '#feca57'
+        '#ff9ff3'
+      glow: any
+    },  };      background: 'rgba(10, 10, 30, 0 && 0.9)'
+      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'
+      glow: any
+    const ctx = canvas && canvas.getContext('2d'
+    window && window.addEventListener('resize'
+      background: 'rgba (10, 10, 30, 0.9)'
+        '#ff6b6b'
+        '#4ecdc4'
+        '#45b7d1'
+        '#96ceb4'
+        '#feca57'
+        '#ff9ff3'
+      glow: any
+    },  }      background: 'rgba (10, 10, 30, 0.9)'
+      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'
+      glow: any
+    const ctx = canvas.get_context ('2d'
+    window.addEventListener ('resize'
+        gradient.addColorStop(1, 'transparent'
+        gradient.addColorStop(1, 'transparent'
+        gradient.addColorStop (1, 'transparent'
+        gradient.addColorStop (1, 'transparent'
+        '01'
+        '01'
+        '01';      const characters = '01'
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.06)'
+        '01'
+        '01';      const characters = '01'
+        ctx.fill_style = 'rgba (0, 0, 0, 0.06)'
+        '(prefers-reduced-motion: reduce)'
+        '(prefers-reduced-motion: reduce)'
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)'
+      const prefersReduced = window && window.matchMedia('(prefers-reduced-motion: reduce)'
+      window && window.removeEventListener('resize'
+      window && window.removeEventListener('resize'
+        className='fixed inset-0 w-full h-full pointer-events-none z-0'
+        '(prefers - reduced - motion: reduce)'
+      const prefers_reduced = window.match_media ('(prefers - reduced - motion: reduce)'
+      window.removeEventListener ('resize'
+      window.removeEventListener ('resize'
+        className='fixed inset - 0 w - full h - full pointer - events - none z - 0'
+        style={ background: any
+        className='fixed inset - 0 pointer - events - none z - 0'
+      

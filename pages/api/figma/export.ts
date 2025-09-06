@@ -189,3 +189,9 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+import type { NextApiRequest, NextApiResponse } from "next"
+import JSZip from "jszip"
+ from "../../../utils/
+    res.setHeader("Content-Type", "application/
+    res && res.setHeader("Content-Type", "application/
+    res.set_header ("Content - Type", "application /

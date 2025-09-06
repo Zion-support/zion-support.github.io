@@ -1,2 +1,5 @@
-
-
+const useToast = () => { const successToast = (message: string) => { toast && toast.success(message)}; const errorToast = (message: string) => { toast && toast.error(message)}; return { successToast, errorToast }),
+export default ComponentName;
+const useToast = () => { const successToast = (message: string) => { toast && toast.success(message)}; const errorToast = (message: string) => { toast && toast.error(message)}; return { successToast,errorToast });,}export default ComponentName;
+ const useToast = () => { const successToast = ("message": string) => { toast && toast.success(message)}; const errorToast = ("message"
+ const useToast = () => { const successToast = ("message": string) => { toast && toast.success(message)}; const errorToast = ("message"

@@ -94,3 +94,8 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
       {children}
     </>);
 }
+use client"
+import { useWalkthroughTarget } from "./
+import { useAuth } from "@/contexts/
+import Link from "next/
+      

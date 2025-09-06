@@ -126,3 +126,5 @@ function DepRadarPage() {
   } catch {}
   return { props: { outdated, generatedAt } }
 }
+ : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest
+ : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest

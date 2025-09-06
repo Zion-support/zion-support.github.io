@@ -513,3 +513,8 @@ export const SitemapPage: React.FC = () => {
     </AppLayout>;
   );
 };
+import React from "react"
+import { completeSitemap, dynamicPaths } from "@/config/
+import { SEO } from "./
+import { AppLayout } from "@/layout/
+        canonical="https: any

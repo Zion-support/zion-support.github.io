@@ -30,3 +30,5 @@ const PostJob = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

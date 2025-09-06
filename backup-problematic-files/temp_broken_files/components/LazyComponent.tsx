@@ -50,3 +50,4 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 export default LazyComponent,
 
 
+import React, { Suspense, lazy } from 'react'

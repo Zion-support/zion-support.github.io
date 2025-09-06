@@ -106,3 +106,6 @@ function FuturisticHero() {
 }
 
 
+import Link from 'next /
+import AnimatedBackground from './
+          

@@ -1,2 +1,17 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import React from \'react\'; import Head from \'next/head\'; import ServiceLanding from \'../components/sections/ServiceLanding\'; export default function AIPoweredCybersecurityPage() { return ( <> <Head> <title>AI-Powered Cybersecurity | Zion Tech Group</title> <meta name=\"description\" content=\"Intelligent threat detection,triage,and response with AI-driven detections,enrichment,and automated playbooks across cloud and endpoint.\" /> <link rel=\"canonical\" href=\""https\": any
+import _React from 'react'; import Head from 'next/head'; import ServiceLanding from '../components/sections/ServiceLanding'; export default function AIPoweredCybersecurityPage() { return ( <> <Head> <title>AI-Powered Cybersecurity | Zion Tech Group</title> <meta name="description" content="Intelligent threat detection,triage,and response with AI-driven detections,enrichment,and automated playbooks across cloud and endpoint." /> <link rel="canonical" href=""https": any
+import _React from 'react'; import Head from 'next/head'; import ServiceLanding from '../components/sections/ServiceLanding'; export default function AIPoweredCybersecurityPage() { return ( <> <Head> <title>AI-Powered Cybersecurity | Zion Tech Group</title> <meta name="description" content="Intelligent threat detection,triage,and response with AI-driven detections,enrichment,and automated playbooks across cloud and endpoint." /> <link rel="canonical" href=""https": any
+import _React from 'react'; import Head from 'next/head'; import ServiceLanding from '../components/sections/ServiceLanding'; export default function AIPoweredCybersecurityPage() { return ( <> <Head> <title>AI-Powered Cybersecurity | Zion Tech Group</title> <meta name="description" content="Intelligent threat detection,triage,and response with AI-driven detections,enrichment,and automated playbooks across cloud and endpoint." /> <link rel="canonical" href=""https": any

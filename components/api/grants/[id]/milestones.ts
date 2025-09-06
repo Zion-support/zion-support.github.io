@@ -246,3 +246,8 @@ if ( {) {
   res.status(405).end('Method Not Allowed')
 
 }
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
+ from '../../../../types/
+  return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/

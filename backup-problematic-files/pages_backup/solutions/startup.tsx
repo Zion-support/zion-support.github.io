@@ -36,3 +36,7 @@ const Startup: React.FC<StartupProps> = ({ className }) => {
 };
 
 export default Startup;
+import { motion } from 'framer-motion'
+import Link from 'next/
+import Layout from '../../components/
+import Link from 'next/

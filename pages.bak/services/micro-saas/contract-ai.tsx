@@ -37,3 +37,4 @@ export default function Contractai({ }: ContractaiProps) {
 
 
 
+export default function ContractAI() {; return (; 

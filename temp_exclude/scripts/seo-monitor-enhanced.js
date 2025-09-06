@@ -1,2 +1,2 @@
-
-
+const seoChecks = { metaTags: () => {  return true},sitemap: () => {  return true},robots: () => {  return true}; Object && Object.entries(seoChecks).forEach([name,check]) => { try { const result = check(); } catch (error) { }); 
+console && console.log(' Enhanced SEO Monitor Starting...'

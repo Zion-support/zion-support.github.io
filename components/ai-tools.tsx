@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -1206,3 +1208,6 @@ href="/contact"
 
             <Button
 
+    console.error('Error caught by boundary: any
+      ],      pricing: any
+      ],      pricing: any

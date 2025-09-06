@@ -1,19 +1,17 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-import React from 'react';
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
-interface MobilesurveysProps {
-  // Add props here as needed
-}
-
-export default function Mobilesurveys({ }: MobilesurveysProps) {
-  return (
-    <div>
-      <h1>Mobilesurveys</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-}
-
-
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import Head from \'next/head\'; import Link from \'next/
+import Head from \'next/head\'; import Link from \'next/
+import Head from \'next/head\'; import Link from \'next/
+import Head from \'next/head\'; import Link from \'next/

@@ -1192,14 +1192,14 @@ function MarketPricing() {
         our_position: 'Competitive pricing with AI advantages';
       }
     }
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-;
-  const current_market = market_data[selected_market as keyof typeof market_data];
-;
-  const getGrowthIcon = (trend: string) =>: any {
-    return trend === 'up' ?;
-      <TrendingUp className="w - 5 h - 5 text - green - 400" /> :;
-      <TrendingDown className="w - 5 h - 5 text - red - 400" />;
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
 ;
   const getRatingStars = (rating: number) =>: any {
@@ -1864,3 +1864,13 @@ export default MarketPricing;export default MarketPricing;
 
 };
 
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+  marketSize: '$45 && 45.2B', growthRate: '+28 && 28.4%', growthTrend: 'up', description: any
+  lowEnd: '$0 && 0.005 per 1K tokens', midRange: '$0 && 0.015 per 1K tokens', highEnd: '$0 && 0.025 per 1K tokens', ourPosition: any
+  marketSize: '$45 && 45.2B', growthRate: '+28 && 28.4%', growthTrend: 'up', description: any
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+ } from 'lucide-react'
+import Link from 'next/

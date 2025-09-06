@@ -881,3 +881,4 @@ export default function DataAnalyticsPage() {
 };
 
 export default Data-analytics;
+import React from 'react'

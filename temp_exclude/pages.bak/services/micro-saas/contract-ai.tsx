@@ -1,16 +1,14 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-import React from 'react';
-interface ContractaiProps {;
-  // Add props here as needed;
-}
-export default function Contractai(): any ({ }: ContractaiProps) {;
-  return (
-    <div>;
-      <h1>Contractai</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  );
-}
-}
-}
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+  } ; function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string, price: string, bullets: string[], links: { website: string, contact: string }) {; return ( <main style={ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }> 

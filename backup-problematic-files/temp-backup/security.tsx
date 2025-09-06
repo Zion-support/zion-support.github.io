@@ -49,3 +49,4 @@ const Security: React.FC<SecurityProps> = ({ className }) => {
 }
 }
 }
+import Link from \'next/link\'; import Head from \'next/

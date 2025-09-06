@@ -218,3 +218,5 @@ export default function AboutPage() {;
       </section>;
     </div>);
 }
+export default function AboutPage() {return (;
+    

@@ -633,3 +633,7 @@ export default function CloudNativeAutomation(req, res) {
 ;
 
 
+import Head from 'next/
+import Link from 'next/
+                href='/
+                  

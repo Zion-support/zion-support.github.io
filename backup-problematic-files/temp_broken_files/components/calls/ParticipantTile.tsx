@@ -1,0 +1,11 @@
+import React, { useEffect, useRef } from 'react'
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client'
+      if (track.kind = = 'video'
+      if (track.kind = = 'audio'
+      if (track.kind = = 'video'
+      if (track.kind = = 'audio'
+    participant.on('trackSubscribed'
+    participant.on('trackUnsubscribed'
+      participant.off('trackSubscribed'
+      participant.off('trackUnsubscribed'
+        {displayName || (participant as any).name || (isLocal ? 'You' : any

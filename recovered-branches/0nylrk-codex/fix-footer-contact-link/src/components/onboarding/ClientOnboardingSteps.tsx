@@ -106,3 +106,7 @@ function ClientOnboardingSteps() {
 ;
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
+import React from "react"
+import { useOnboardingStatus } from "@/hooks/
+import { OnboardingTracker, OnboardingStep } from "./
+      link: any

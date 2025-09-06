@@ -28,3 +28,5 @@ const Ai-chat-assistant = ({ className }) => {
 };
 
 export default Ai-chat-assistant;
+import React from 'react'
+    

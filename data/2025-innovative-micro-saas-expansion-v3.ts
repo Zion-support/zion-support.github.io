@@ -1828,3 +1828,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     reviews: 28;
   }
 ];
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+  website: any

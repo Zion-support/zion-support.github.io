@@ -3,12 +3,8 @@
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -135,13 +131,8 @@ const benefits = [;
     icon: Heart;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ];
 const benefits = [
   {
@@ -173,11 +164,9 @@ const caseStudies = [;
   {}
 
 
-=======
     title: 'AI Diagnostic System Implementation,',;
     description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.,',;
     results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/healthcare.tsx
 ];
 const caseStudies = [
   {
@@ -247,9 +236,6 @@ export default function HealthcarePage() {
         </section>;
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ];
 
 export default function HealthcarePage() {;
@@ -348,13 +334,8 @@ export default function HealthcarePage() {;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
@@ -374,15 +355,11 @@ export default function HealthcarePage() {;
               ))}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             </div>,
           </div>;
         </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
@@ -432,15 +409,11 @@ export default function HealthcarePage() {;
               ))}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             </div>,
           </div>;
         </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
@@ -491,13 +464,8 @@ export default function HealthcarePage() {;
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />";
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>
@@ -514,15 +482,11 @@ export default function HealthcarePage() {;
               ))}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             </div>,
           </div>;
         </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
@@ -556,13 +520,8 @@ export default function HealthcarePage() {;
     </Layout>;
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Healthcare?
@@ -585,3 +544,15 @@ export default function HealthcarePage() {;
       </div>
     </Layout>
   );
+import { motion } from 'framer-motion'
+import Link from 'next/
+import Layout from '../../components/
+import Link from 'next/
+import Link from 'next/
+import Link from 'next/
+import Link from 'next/
+import Layout from '../../components/
+import Link from 'next/
+import Layout from '../../components/
+import Layout from '../../components/
+import Layout from '../../components/

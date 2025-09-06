@@ -371,3 +371,6 @@ function ContactSection() {
     </section>
   );
 }
+export const metadata = { title: any
+function MicroSaaSPage() { return ( <section> <h1 style={font_size: 26, font_weight: 800}>Micro SaaS Development</h1> <p style={margin_top: 8, color: '#374151'}>We design, build, launch and operate revenue - generating micro SaaS products end - to - end.
+function Plan() { return ( <div style={border: '1px solid #e5e7eb', border_radius: 12, padding: 16}> <h4 style={font_weight: 700}>{name}</h4> <div style={color: '#111827', font_weight: 800, margin_top: 4}>{price}

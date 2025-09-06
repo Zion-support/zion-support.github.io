@@ -159,3 +159,4 @@ export function SkillsSection(): any ({ skills }: SkillsSectionProps) {;
       </div>;
     </div>);
 }
+import { Skill } from '@/types/

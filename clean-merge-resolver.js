@@ -282,3 +282,6 @@ if (|| content.includes (') {
     console.log('🔍 Scanning for merge conflicts in files...'),;
     const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md.css']),;
 
+/usr/bin/
+  } catch (error) {//
+    //

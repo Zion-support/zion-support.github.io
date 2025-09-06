@@ -254,9 +254,14 @@ h3 {
 <<<<<<< HEAD
 >>>>>>> main
 body::after {
-
-<<<<<<< HEAD
 =======
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+  animation: float 20s ease-in-out infinite;
+}
+
 /* Enhanced cyber grid */
 .cyber-grid {
   background-image: 
@@ -278,20 +283,20 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   content: '';
   position: fixed;
   top: 0;
 body::after {  content: '';
   position: fixed;
   top: 0;
-
-  content: '';
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+body::after {  content: '';
   position: fixed;
   top: 0;
-<<<<<<< HEAD
-
-=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======

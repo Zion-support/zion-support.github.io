@@ -30,3 +30,5 @@ const PricingGuidePage = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

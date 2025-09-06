@@ -48,3 +48,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
 }
 ;
 
+import { GetServerSideProps } from 'next'
+      any

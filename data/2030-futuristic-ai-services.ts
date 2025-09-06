@@ -569,3 +569,5 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     reviews: 4;
   }
 ];
+import { ServiceVariant } from '../types/
+    link: any

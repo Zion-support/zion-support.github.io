@@ -71,3 +71,7 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
       <span className="sr - only">Loading...</span>;
     </div>);
 }
+use client"
+interface LoadingSpinnerProps {size?: any
+export function LoadingSpinner({ size = "medium", className = ""
+    small: any

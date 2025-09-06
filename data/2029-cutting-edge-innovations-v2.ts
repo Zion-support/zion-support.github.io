@@ -1051,3 +1051,4 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [;
     reviews: 6;
   }
 ];
+import { ServiceVariant } from '../types/

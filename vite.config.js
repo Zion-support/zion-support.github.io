@@ -33,3 +33,5 @@ export default defineConfig({
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
 });
+import { defineConfig } from "vite"
+import react from "@vitejs/

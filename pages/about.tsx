@@ -96,24 +96,15 @@ import SmartFooter from '../components/SmartFooter';
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-}
-  ];
 
-
-export default function AboutPage() {
-  const stats = [
-    { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
-    { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
-
-
-    { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
-}
-  ],
 
 
     { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500'   } catch (error) {
@@ -683,3 +674,5 @@ function About() {
       </div>;
     </Layout>);
 }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

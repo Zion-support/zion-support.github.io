@@ -232,3 +232,5 @@ export default function AIAutomationPage() {;
       </div>;
     </div>);
 }
+use client"
+    

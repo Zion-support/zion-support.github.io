@@ -30,3 +30,5 @@ const QuantumComputing = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

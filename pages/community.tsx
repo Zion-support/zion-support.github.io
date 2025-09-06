@@ -1,5 +1,13 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
@@ -248,3 +256,5 @@ export default function CommunityPage() {
 ;
 
 
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

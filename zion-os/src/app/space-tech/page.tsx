@@ -523,3 +523,4 @@ export default function SpaceTechPage() {;
       </section>;
     </div>);
 }
+import Link from "next/

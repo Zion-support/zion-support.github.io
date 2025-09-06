@@ -93,3 +93,7 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
     res.status(500).json({ error: error.message || 'Internal server error' });
   }
 }
+import type { NextApiRequest, NextApiResponse } from "next"
+import fs from "fs"
+import path from "path"
+  const dir = path.resolve(process.cwd(), "data/

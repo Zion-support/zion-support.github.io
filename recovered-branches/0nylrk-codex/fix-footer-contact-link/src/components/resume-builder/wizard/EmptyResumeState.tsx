@@ -86,3 +86,6 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any {
 export default EmptyResumeState;
 
 
+import { Card, CardContent } from "@/components/ui/
+import { Button } from "@/components/ui/
+import { EmptyResumeProps } from "./

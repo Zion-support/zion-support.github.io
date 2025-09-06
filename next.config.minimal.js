@@ -29,3 +29,5 @@ module.exports = next_config;
   distDir: '.next',
 };
 
+* @type {import('next'
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'

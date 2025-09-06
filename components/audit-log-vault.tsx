@@ -99,3 +99,9 @@ export default function AuditLogVaultPage() {;
 }
 
 
+ return (<UltraAdvancedFuturisticBackground> <Head> <title>Audit Log Vault | Zion Tech Group</title> 
+</ul> </Card> <Card className="p-6 bg-black/40 border border-gray-700/50" > <div className="text-sm text-gray-400 mb-1" >Pricing</div> <div className="text-3xl font-bold text-white" >$89<span className="text-base text-gray-400" >/month</span></div> <div className="text-sm text-gray-400 mt-2" >Trial: 14 days  Setup: 30 minutes</div> <div className="mt-6 flex gap-3" > <Link href="/contact" className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white" >Contact Sales</Button> 
+ return (<UltraAdvancedFuturisticBackground> <Head> <title>Audit Log Vault | Zion Tech Group</title> 
+</ul> </Card> <Card className="p-6 bg-black/40 border border-gray-700/50" > <div className="text-sm text-gray-400 mb-1" >Pricing</div> <div className="text-3xl font-bold text-white" >$89<span className="text-base text-gray-400" >/month</span></div> <div className="text-sm text-gray-400 mt-2" >Trial: 14 days  Setup: 30 minutes</div> <div className="mt-6 flex gap-3" > <Link href="/contact" className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white" >Contact Sales</Button> 
+                <div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" />
+                <div className="flex items - center gap - 2 text - cyan - 400"><Phone className="w - 4 h - 4" />

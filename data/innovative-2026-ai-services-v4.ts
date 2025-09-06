@@ -614,3 +614,5 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     reviews: 167;
   }
 ];
+import { ServiceVariant } from '../types/
+    period: any

@@ -89,44 +89,14 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
   return (
 
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  return current;
-}
 
-
-
-  return (
-    <div className='flex gap-2 items-center flex-wrap'>;
-      {BADGES && BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">;
-      {BADGES && BADGES.map((b) => (;
-        <span
-          key={b && b.id}
-          className={`px-3 py-1 rounded-full text-xs border ${
-            balance>= b && b.threshold;
-              ? 'bg-yellow-100 border-yellow-300 text-yellow-800';
-              : 'bg-gray-100 border-gray-200 text-gray-500'              ? "bg-yellow-100 border-yellow-300 text-yellow-800";
-              : "bg-gray-100 border-gray-200 text-gray-500";
-          }`}
-          title={`Requires ${b && b.threshold} ZION$`}
-        >;
-          {b && b.label}
-        </span>;
-      ))}
-      {active && (;
-        <span className='ml-2 text-xs text-green-600'>;
-          Current: {active && active.label}
-        </span>;
-      )}
-
-    </div>;
-  );        <span className="ml-2 text-xs text-green-600">Current: {active && active.label}</span>;
-
-      )}
-    </div>;
-  );
-}
-              ? "bg-yellow-100 border-yellow-300 text-yellow-800"
-              : "bg-gray-100 border-gray-200 text-gray-500"
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
   return current;
 }
@@ -175,3 +145,10 @@ export default function Badges({ balance }: { balance: number }) {
         <span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}
 
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+  { id: 'starter', label: any
+  { id: 'rising', label: any
+  { id: 'pro', label: any
+  { id: 'elite', label: any

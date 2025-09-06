@@ -30,3 +30,5 @@ const EducationSolutions = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

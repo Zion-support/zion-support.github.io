@@ -998,3 +998,6 @@ if ( {) {
     </div>);      <div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer - events - none" style={{ z_index: 5 }} />;
     </div>);
 }
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+ Particle system const particles: any

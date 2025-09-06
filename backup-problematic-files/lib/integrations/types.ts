@@ -1,0 +1,11 @@
+export type IntegrationCategory = 'crm' | 'ats'
+  | 'salesforce'
+  | 'hubspot'
+  | 'zoho'
+  | 'pipedrive'
+  | 'greenhouse'
+  | 'lever'
+  | 'workable'
+  | 'bamboohr'
+export type SyncStatus = 'connected' | 'warning' | 'disconnected'
+  pushNotesMode?: any

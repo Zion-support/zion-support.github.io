@@ -1,0 +1,1 @@
+import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service

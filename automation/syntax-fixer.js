@@ -593,3 +593,4 @@ export default SyntaxFixer;
 
 
 
+)}; async fixImportIssues() {const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false; // Fix import statements; content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); if (content ! = fs.readFileSync(file, "utf8") {; modified = true}; if (modified) {fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed import issues in ${file}`)} catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN")})}; async fixExportIssues() {const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false; // Fix export statements; content = content.replace(/export\s+([^]+),\s*$/

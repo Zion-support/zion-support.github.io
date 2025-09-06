@@ -1,14 +1,7 @@
 
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs - extra';
-import path from 'path';
-
-
-
-
-const CERTS_FILE = path.join(
-  process.cwd()
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs - extra'
+import path from 'path'
   'data'
   'certifications'
   'certifications.json'
@@ -135,3 +128,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   }
 
 }
+  if (req.method != 'GET'
+    res.setHeader('Allow', 'GET'
+    return res.status(405).json({ error: any

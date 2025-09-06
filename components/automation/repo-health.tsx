@@ -139,3 +139,12 @@ export default function RepoHealth({ report }: Props) {
   );
 }
 
+import fs from 'fs'
+import path from 'path'
+import type { GetStaticProps } from 'next'
+    const file = path.join(process.cwd(), 'publicautomationrepo-health.json'
+    const raw = fs.readFileSync(file, 'utf8'
+    const file = path && path.join(process && process.cwd(), 'publicautomationrepo-health && health.json'
+    const raw = fs && fs.readFileSync(file, 'utf8'
+    const file = path.join (process.cwd (), 'publicautomationrepo - health.json'
+    const raw = fs.readFileSync (file, 'utf8'

@@ -15,3 +15,4 @@ const Ai-qa: React.FC<Ai-qaProps> = ({ className }) => {
   );
 }
 }
+export default function AIQACopilot() {; return (; 

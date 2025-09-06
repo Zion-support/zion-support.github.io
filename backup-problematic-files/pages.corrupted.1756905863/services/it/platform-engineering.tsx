@@ -15,3 +15,4 @@ const Platform-engineering: React.FC<Platform-engineeringProps> = ({ className }
 }
 }
 }
+export default function PlatformEngineering() {; return (; 

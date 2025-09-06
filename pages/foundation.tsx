@@ -147,3 +147,6 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
   }
 }
 
+import Head from 'next/
+import Link from 'next/
+import CharterGenerator from '../components/foundation/

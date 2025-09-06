@@ -71,3 +71,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+import type { NextApiRequest, NextApiResponse } from 'next'
+  if (req.method = = 'POST'
+    if (typeof q = = 'string'
+import type { NextApiRequest, NextApiResponse } from 'next'
+  if (req.method = = 'GET'

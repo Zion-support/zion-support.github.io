@@ -15,3 +15,4 @@ const Smart-churn: React.FC<Smart-churnProps> = ({ className }) => {
 }
 }
 }
+export default function SmartChurn() {; return (; 

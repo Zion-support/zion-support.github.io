@@ -380,53 +380,15 @@ const navigation_items = [;
         description: "Technical documentation"
       }
     ]
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  {
 
-    title: "Company",
-    href: "/about",
-    icon: Building,
-    submenu: [;
-
-      {
-        title: "About Us"
-        href: "/about"
-        icon: Building
-        description: "Our story and mission"
-      }
-      {
-        title: "Team"
-        href: "/team"
-        icon: Users
-        description: "Meet our experts"
-      }
-      {
-        title: "Careers"
-        href: "/careers"
-        icon: Users
-        description: "Join our team"
-      }
-      {
-        title: "Partners"
-        href: "/partners"
-        icon: Globe
-        description: "Our partnerships"
-      }
-      {
-        title: "News"
-        href: "/news"
-        icon: FileText
-        description: "Company updates"
-      }
-      {
-        title: "Press"
-        href: "/press"
-        icon: FileText
-        description: "Press releases and media"
-      }
-    ]
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
-];
 
 const navigationItems = [;
   {;
@@ -1025,3 +987,5 @@ function Navigation() {
       </div>;
     </nav>);
 }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

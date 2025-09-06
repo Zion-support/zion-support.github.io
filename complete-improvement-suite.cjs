@@ -5,6 +5,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const { exec, execSync } = require('child_process');
 const { promisify } = require('util');
+
 const execAsync = promisify(exec);
 class CompleteImprovementSuite {
   constructor() {
@@ -461,6 +462,11 @@ class CompleteImprovementSuite {
       JSON.stringify(finalReport, null, 2)
     );
     this.log('🎉 Complete Improvement Suite Finished');
+    this.log("📊 Summary: ");
+    this.log(`📊 Summary:`);
+    this.log("📊 "Summary": ");
+    this.log(`📊 Summary:`);
+    this.log("📊 "Summary": ");
     this.log("📊 Summary: ");
     this.log(
       `   - Merge conflicts resolved: ${finalReport.summary.totalMergeConflictsResolved}`

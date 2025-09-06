@@ -1138,3 +1138,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
   }
 ];
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+  website: any
+      'SIEM systems, EDR solutions, Firewalls, IDS/
+      '24/
+    period: any

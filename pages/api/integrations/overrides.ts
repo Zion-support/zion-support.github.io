@@ -102,3 +102,5 @@ if (state.overrides[idx] = entry) {
   }
 
 
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { readState, writeState } from '[^']*'

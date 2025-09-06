@@ -183,3 +183,6 @@ export function StructuredData() {;
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}
     />);
 }
+use client"
+    "@context": any
+      type="application /

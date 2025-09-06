@@ -858,3 +858,10 @@ export default function GuidesPage() {
       </div>;
     </Layout>);
 }
+import React from "react"
+import Head from "next/
+import Link from "next/
+import Layout from "./components/
+    image: any
+                  href="/
+                  href="/

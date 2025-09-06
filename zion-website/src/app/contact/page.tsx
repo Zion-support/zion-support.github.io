@@ -12,6 +12,7 @@ const contactMethods = [
   ChatBubbleLeftRightIcon;
 } from '@heroicons / react / 24 / outline';
 const contact_methods = [;
+import {
   EnvelopeIcon
   PhoneIcon
   MapPinIcon
@@ -566,3 +567,4 @@ export default function ContactPage() {
 };
 
 export default Page;
+ from '@heroicons/react/24/

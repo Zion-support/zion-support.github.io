@@ -1,30 +1,9 @@
 
-  const testTypes = [
-    {
-      name: 'Functional Testing',
-      description: 'Verify that your API endpoints work correctly and return expected responses.',
-      tests: ['Request/response validationStatus code verificationData format checkingError handling']
-};
-    {
-      name: 'Performance Testing',
-      description: 'Ensure your APIs can handle expected load and perform under pressure.',
-      tests: ['Load testingStress testingResponse time analysisThroughput measurement']
-};
-    {
-      name: 'Security Testing',
-      description: 'Identify security vulnerabilities and ensure proper authentication and authorization.',
-      tests: ['Authentication testingAuthorization checksInput validationSQL injection testing']
-};
-    {
-      name: 'Integration Testing',
-      description: 'Test how your APIs integrate with other systems and services.',
-      tests: ['End-to-end workflowsThird-party integrationsData flow validationError propagation']
-    }
-    
-    return this.props.children;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-}
-import React, { useState } from 'react';
 
 
 import Head from 'next / head';
@@ -1407,3 +1386,38 @@ href="/contact"
 );
   );
 }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import React, { useState } from 'react'
+import Head from 'next/
+import Card from '../components/ui/
+import Button from '../components/ui/
+import Head from 'next /
+import Card from '../components / ui /
+import Button from '../components / ui /
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui /
+        '24/
+        'Request/
+      period: any
+    },    {        '100 API tests/
+      period: any
+    },    {        '500 API tests/
+      period: any
+    if (!apiEndpoint.trim() return;        'Unlimited API testsCustom test scenariosCustom alerting rules24/
+        '24/
+        '100 API tests/
+        '24 /
+        'Request /
+      period: any
+    },    {        '100 API tests /
+      period: any
+    },    {        '100 API tests/
+      period: any
+    },    {        '500 API tests/
+      period: any
+    if (!apiEndpoint && apiEndpoint.trim() return;        'Unlimited API testsCustom test scenariosCustom alerting rules24/
+          

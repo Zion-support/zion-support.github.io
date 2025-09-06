@@ -107,3 +107,12 @@ export default function Document() {
 
 }
 
+import Document, {
+  Html
+  Head
+  Main
+  NextScript
+  DocumentContext;
+ from 'next/
+ from 'next/
+        

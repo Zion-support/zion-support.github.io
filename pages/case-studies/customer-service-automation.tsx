@@ -897,3 +897,7 @@ export default function CaseStudyPage(req, res) {
 
 
 
+import React from 'react'
+import React from 'react'
+import Head from 'next/
+import Link from 'next/

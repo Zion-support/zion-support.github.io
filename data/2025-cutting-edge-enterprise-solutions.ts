@@ -496,3 +496,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     contactInfo: contact;
   }
 ];
+import { UnifiedService } from '../types/
+  website: any
+    technology: ['AI /

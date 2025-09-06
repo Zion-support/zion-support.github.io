@@ -188,15 +188,18 @@ class MasterAutomation {}
 
   async runBuildProcess() {
     this.log('🚀 Starting build process...');
+
     const steps = [
       { command: 'npm install', description: 'Installing dependencies' },
       { command: 'npm run build', description: 'Building application' },
       { command: 'npm run test:smoke', description: 'Running smoke tests' },
     ];
+
     const results = [];
     for (const step of steps) {
       const result = await this.runCommand(step.command, step.description);
       results.push({ ...step, result });
+
       if (!result.success) {
         this.log(`❌ Build process failed at: ${step.description}`, 'error');
         return { success: false, results };
@@ -319,10 +322,12 @@ class MasterAutomation {}
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
+
     const checks = [
       { command: 'npm run lint', description: 'Linting check' },
       { command: 'npm run type-check', description: 'TypeScript type check' },
     ];
+
     const results = [];
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
@@ -411,10 +416,13 @@ class MasterAutomation {}
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
+
     if (report.quality.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
+
     if (report.automation.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
+
     // Save report
     const reportFile = path.join(
       this.logsDir,

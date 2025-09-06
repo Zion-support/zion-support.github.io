@@ -28,3 +28,5 @@ const MoreProductsPage = ({ className }) => {
 };
 
 export default MoreProductsPage;
+import React from 'react'
+    

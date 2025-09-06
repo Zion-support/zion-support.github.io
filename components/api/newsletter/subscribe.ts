@@ -111,3 +111,30 @@ function handler() {
   res.status (200).json ({ ok: true });
 
 }
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
+const DATA_DIR = path.resolve(process.cwd(), 'data', 'newsletter');const FILE_PATH = path.resolve(DATA_DIR, 'subscribers.json'
+    fs.writeFileSync(FILE_PATH, JSON.stringify([], null, 2), 'utf8');const DATA_DIR = path.resolve(process.cwd(), 'datanewsletter'
+const FILE_PATH = path.resolve(DATA_DIR, 'subscribers.json'
+    fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8');const DATA_DIR = path && path.resolve(process && process.cwd(), 'datanewsletter'
+const FILE_PATH = path && path.resolve(DATA_DIR, 'subscribers && subscribers.json'
+    fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8');  if (!fs && fs.existsSync(FILE_PATH) fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8'
+  if (req.method != 'POST'
+  if (!email |typeof email != 'string'
+    return res.status(400).json({ error: any
+  const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'
+  fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8'
+  res.status(200).json({ ok: true });  if (!email |typeof email != 'string') return res.status(400).json({ error: any
+  const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'
+  fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8'
+const DATA_DIR = path.resolve (process.cwd (), 'data', 'newsletter');const FILE_PATH = path.resolve (DATA_DIR, 'subscribers.json'
+    fs.writeFileSync (FILE_PATH, JSON.stringify ([], null, 2), 'utf8');const DATA_DIR = path.resolve (process.cwd (), 'datanewsletter'
+const FILE_PATH = path.resolve (DATA_DIR, 'subscribers.json'
+    fs.writeFileSync (FILE_PATH, JSON.stringify ([], null, 2), 'utf8');  if () fs.writeFileSync (FILE_PATH, JSON.stringify ([], null, 2), 'utf8'
+    return res.status (400).json ({ error: any
+  const list: string[] = JSON.parse (fs.readFileSync (FILE_PATH, 'utf8'
+  fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8'
+  res.status (200).json ({ ok: true });  if (return res.status (400).json ({ error: any
+  const list: string[] = JSON.parse (fs.readFileSync (FILE_PATH, 'utf8'
+  fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8'

@@ -15,3 +15,4 @@ const Contract-ai: React.FC<Contract-aiProps> = ({ className }) => {
 }
 }
 }
+export default function ContractAI() {; return (; 

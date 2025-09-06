@@ -167,3 +167,6 @@ const accessibility_enhancements = { addAriaLabels: () => { const buttons = docu
 }
 
 
+ Accessibility enhancements for Zion Tech Group;
+const accessibility_enhancements = {
+  //

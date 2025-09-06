@@ -9,3 +9,4 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 export default Resolve-conflicts;
+/usr/bin/env node/usr/bin/env node/usr/bin/

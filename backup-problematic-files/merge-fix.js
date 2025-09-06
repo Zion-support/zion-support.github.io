@@ -196,3 +196,5 @@ const fs = require('fs'); const path = require('path'); console.log('🔧 Starti
 }
 }
 }
+const fs = require('fs'); const path = require('path');  function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const originalContent = content; content = content.replace(/
+const fs = require('fs'); const path = require('path');  function fixMergeConflicts(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'); const originalContent = content; content = content && content.replace(/

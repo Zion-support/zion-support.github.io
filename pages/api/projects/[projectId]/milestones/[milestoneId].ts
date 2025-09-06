@@ -75,3 +75,7 @@ const updated = updateMilestone(project, milestoneId, body);
   }
 }
 
+import type { NextApiRequest, NextApiResponse } from "next"
+import { requireUser } from "../../../../../utils/api/
+ from "../../../../../utils/api/
+import { isMilestoneStatus } from "../../../../../utils/types/

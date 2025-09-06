@@ -49,3 +49,4 @@ const Blockchain: React.FC<BlockchainProps> = ({ className }) => {
 }
 }
 }
+import Link from \'next/link\'; import Head from \'next/

@@ -62,3 +62,4 @@ build_optimizer.start ().catch (console.error);
 
 buildOptimizer.start().catch(console.error);
 
+const dependencies = lockFile.dependencies |{}; //

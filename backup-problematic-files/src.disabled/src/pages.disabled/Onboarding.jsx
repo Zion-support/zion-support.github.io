@@ -28,3 +28,5 @@ const Onboarding = ({ className }) => {
 };
 
 export default Onboarding;
+import React from 'react'
+    

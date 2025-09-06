@@ -342,3 +342,5 @@ export default function QuantumNeuralNetworkPlatformPage() {;
       </div>;
     </div>);
 }
+import Link from "next/
+                

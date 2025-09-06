@@ -226,3 +226,5 @@ export default function CookiesPage() {;
       </section>;
     </div>);
 }
+export default function CookiesPage() {return (;
+    

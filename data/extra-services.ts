@@ -1,5 +1,4 @@
-
-
+export interface ExtraService {
   id: string;
   name: string;
   tagline: string;
@@ -12,12 +11,6 @@
   contact_info: {
     mobile: string;
     email: string;
-
-
-    address: string;
-  };
-
-
 
     address: string;
   }
@@ -194,3 +187,4 @@ export const extraServices: ExtraService[] = [
     }
   }
 ];
+    id: any

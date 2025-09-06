@@ -1,15 +1,13 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-  onChange: (next: { category: string, level: string, isFree: string }) => void
-}
-        onChange={e => onChange({ category: e && e.target.value, level, isFree })}
-      >;
-        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {;
-  category: string,;
-  level: string,;
-  isFree: string,;
-  onChange: (next: { category: string, level: string, isFree: string }) => void;
-};
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
 
 
@@ -137,3 +135,5 @@ function FilterBar() {
 
 
 
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

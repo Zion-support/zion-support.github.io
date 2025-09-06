@@ -1,0 +1,7 @@
+export interface Added2026Q2Service {
+  "id"
+export const "added2026Q2Services"
+    "name"
+    "tagline"
+    "price"
+    "features"

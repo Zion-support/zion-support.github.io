@@ -49,3 +49,4 @@ const Digital-transformation: React.FC<Digital-transformationProps> = ({ classNa
 }
 }
 }
+import Link from \'next/link\'; import Head from \'next/

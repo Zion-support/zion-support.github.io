@@ -93,3 +93,5 @@ export default function AgenticNewsPage() {
 
 }
 
+import EnhancedLayout from '../../components/layout/
+import data from '../../data/

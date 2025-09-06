@@ -28,3 +28,5 @@ const CommunityPage = ({ className }) => {
 };
 
 export default CommunityPage;
+import React from 'react'
+    

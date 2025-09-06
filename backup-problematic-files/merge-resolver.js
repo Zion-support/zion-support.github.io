@@ -291,3 +291,35 @@ const fs = require('fs'); const path = require('path'); console.log('🔧 Starti
 }
 }
 }
+const fs = require('fs'); const path = require('path');  function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const originalContent = content; # Resolved merge conflict - kept HEAD version if (content != originalContent) { fs.writeFileSync(filePath,content,'utf8'); ,filePath)}`); return true} return false} catch (error) {  return false} function getAllFiles(dir,extensions) { let files = []; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item != 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions)} else if (extensions.some(ext => item.endsWith(ext)) { files.push(fullPath)} } catch (error) { } return files} async function main() {  const files = getAllFiles(process.cwd(),['.tsx','.ts','.jsx','.js','.json','.md']); let fixedCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,'utf8'
+const fs = require('fs'); const path = require('path');  function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const originalContent = content; # Resolved merge conflict - kept HEAD version if (content != originalContent) { fs.writeFileSync(filePath,content,'utf8'); ,filePath)}`); return true} return false} catch (error) {  return false} function getAllFiles(dir,extensions) { let files = []; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item != 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions)} else if (extensions.some(ext => item.endsWith(ext)) { files.push(fullPath)} } catch (error) { } return files} async function main() {  const files = getAllFiles(process.cwd(),['.tsx','.ts','.jsx','.js','.json','.md']); let fixedCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,'utf8'
+const fs = require('fs'); const path = require('path');  function fixMergeConflicts(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'); const originalContent = content; # Resolved merge conflict - kept HEAD version if (content != originalContent) { fs && fs.writeFileSync(filePath,content,'utf8'); ,filePath)}`); return true} return false} catch (error) {  return false} function getAllFiles(dir,extensions) { let files = []; try { const items = fs && fs.readdirSync(dir); for (const item of items) { const fullPath = path && path.join(dir,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory() && !item && item.startsWith('.') && item != 'node_modules') { files = files && files.concat(getAllFiles(fullPath,extensions)} else if (extensions && extensions.some(ext => item && item.endsWith(ext)) { files && files.push(fullPath)} } catch (error) { } return files} async function main() {  const files = getAllFiles(process && process.cwd(),['.tsx','.ts','.jsx','.js','.json','.md']); let fixedCount = 0; for (const file of files) { try { const content = fs && fs.readFileSync(file,'utf8'
+const fs = require('fs'); const path = require('path');  function fixMergeConflicts(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'); const originalContent = content; # Resolved merge conflict - kept HEAD version if (content != originalContent) { fs && fs.writeFileSync(filePath,content,'utf8'); ,filePath)}`); return true} return false} catch (error) {  return false} function getAllFiles(dir,extensions) { let files = []; try { const items = fs && fs.readdirSync(dir); for (const item of items) { const fullPath = path && path.join(dir,item); const stat = fs && fs.statSync(fullPath); if (stat && stat.isDirectory() && !item && item.startsWith('.') && item != 'node_modules') { files = files && files.concat(getAllFiles(fullPath,extensions)} else if (extensions && extensions.some(ext => item && item.endsWith(ext)) { files && files.push(fullPath)} } catch (error) { } return files} async function main() {  const files = getAllFiles(process && process.cwd(),['.tsx','.ts','.jsx','.js','.json','.md']); let fixedCount = 0; for (const file of files) { try { const content = fs && fs.readFileSync(file,'utf8'
+const fs = require('fs'
+const path = require('path'
+console && console.log(' Starting Merge Conflict Resolution'
+    let content = fs && fs.readFileSync(filePath, 'utf8'
+      fs && fs.writeFileSync(filePath, content, 'utf8'
+const fs = require ('fs'); const path = require ('path'
+function fixMergeConflicts() { try { let content = fs.readFileSync (file_path, 'utf8'); const original_content = content; # Resolved merge conflict - kept HEAD version if ( { fs.writeFileSync (file_path, content, 'utf8'
+function getAllFiles() { let files = []; try { const items = fs.readdir_sync (dir); for (const item of items) { const full_path = path.join (dir, item); const stat = fs.stat_sync (full_path); if (&& !item.starts_with ('.') && item != 'node_modules'
+function main() {  const files = getAllFiles (process.cwd (), ['.tsx', '.ts', '.jsx', '.js', '.json', '.md'
+ let fixed_count = 0; for (const file of files) { try { const content = fs.readFileSync (file, 'utf8'
+const fs = require ('fs'); const path = require ('path'
+function fixMergeConflicts() { try { let content = fs.readFileSync (file_path, 'utf8'); const original_content = content; # Resolved merge conflict - kept HEAD version if ( { fs.writeFileSync (file_path, content, 'utf8'
+function getAllFiles() { let files = []; try { const items = fs.readdir_sync (dir); for (const item of items) { const full_path = path.join (dir, item); const stat = fs.stat_sync (full_path); if (&& !item.starts_with ('.') && item != 'node_modules'
+function main() {  const files = getAllFiles (process.cwd (), ['.tsx', '.ts', '.jsx', '.js', '.json', '.md'
+ let fixed_count = 0; for (const file of files) { try { const content = fs.readFileSync (file, 'utf8'
+const fs = require ('fs'
+const path = require ('path'
+console.log (' Starting Merge Conflict Resolution'
+    let content = fs.readFileSync (file_path, 'utf8'
+      fs.writeFileSync (file_path, content, 'utf8'
+const fs = require('fs'); const path = require('path');  function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const originalContent = content; # Resolved merge conflict - kept HEAD version if (content != originalContent) { fs.writeFileSync(filePath,content,'utf8'); ,filePath)}`); return true} return false} catch (error) {  return false} function getAllFiles(dir,extensions) { let files = []; try { const items = fs.readdirSync(dir);  else if (extensions.some(ext => item.endsWith(ext)) { files.push(fullPath)} } catch (error) { } return files} async function main() {  const files = getAllFiles(process.cwd(),['.tsx','.ts','.jsx','.js','.json','.md'
+if (stat && stat.isDirectory () && !item && item.startsWith ('.') && item != 'node modules'
+  //
+  //
+    //
+      //
+  //
+  //

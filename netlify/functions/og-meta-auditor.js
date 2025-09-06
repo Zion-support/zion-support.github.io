@@ -48,3 +48,12 @@ exports.handler = async function() { const { execSync } = require('child_process
 exports.handler = async function() { const { execSync } = require('child_process'); try { execSync('node automation/og-meta-auditor.cjs',{ stdio: 'inherit' }); execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(seo): update OG meta audit report [ci skip]" || true) && (git push origin main || true)',{ stdio: 'inherit',shell: true })} catch (error) { console.error('Error:',error)} };
 
 
+ netlify/functions/
+    execSync('node automation/
+const { execSync } = require('child_process')'; try: { execSync('node automation/
+    execSync('node automation/
+exports.handler = async function() { const { execSync } = require('child_process'); try { execSync('node automation/
+exports.handler = async function() { const { execSync } = require('child_process'); try { execSync('node automation/
+exports.handler = async function() { const { execSync } = require('child_process'); try { execSync('node automation/
+exports.handler = async function() { const { execSync } = require('child_process'); try { execSync('node automation/
+exports.handler = async function() { const { execSync } = require('child_process'); try { execSync('node automation/

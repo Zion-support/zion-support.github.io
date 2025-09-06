@@ -1,7 +1,3 @@
-
-
-
-
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -71,3 +67,7 @@ describe('ServicesSectiondynamic', () => {
 
 
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ServicesSectiondynamic from "./components/ServicesSection.dynamic"; describe('ServicesSectiondynamic', () => { test("renders without crashing",() => { render(<ServicesSectiondynamic />); expect(screen.getByTestId("servicessection.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ServicesSectiondynamic />)}); test("handles user interactions",() => { render(<ServicesSectiondynamic />)}); test("applies correct styling"
+import { render, screen, fireEvent } from '@testing-library/
+import '@testing-library/
+import ServicesSectiondynamic from '../components/
+    expect(screen && screen.getByTestId('servicessection ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ServicesSectiondynamic from "./components/

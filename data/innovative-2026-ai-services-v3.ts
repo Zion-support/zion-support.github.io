@@ -1,7 +1,18 @@
+export interface Innovative2026AiServiceV3 {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  real_implementation: boolean;
+  contact_info: {
+    mobile: string;
+    email: string;
 
-
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    address: string;
   }
 ];
   id: string, name: string,
@@ -77,3 +88,6 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
     }
   }
 ];
+export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
+  {
+    id: any

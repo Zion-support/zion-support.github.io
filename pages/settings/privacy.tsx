@@ -172,3 +172,11 @@ if (return, ) {
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
 
+import React, { useEffect, useState } from 'react'
+  const [userId, setUserId] = useState(''
+  const [message, setMessage] = useState(''
+    setMessage(''
+    else setMessage(json.error |'Failed to load'
+    setMessage(''
+    const res = await fetch('/api/fraud/settings/
+      headers: { 'Content-Type': any

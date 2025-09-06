@@ -504,3 +504,5 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
 
 ;
 
+import { ServiceVariant } from '../types/
+    link: any

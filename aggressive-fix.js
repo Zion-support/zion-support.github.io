@@ -238,3 +238,5 @@ const fixed_count = process_directory (path.join (__dirname, "src"));
 console.log (`Fixed ${fixed_count} files`);
 
 
+/usr/bin/
+import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidReactComponent(filePath) { const fileName = path.basename(filePath,path.extname(filePath); const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1) .join('') .replace(/[^a-zA-Z0-9]/

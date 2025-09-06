@@ -30,3 +30,5 @@ const SOC2ComplianceAutomation = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

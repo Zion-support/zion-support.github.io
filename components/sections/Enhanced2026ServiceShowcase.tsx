@@ -1091,3 +1091,13 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
       </div>;
     </section>);
 }
+import React from 'react'
+import { motion } from 'framer-motion'
+ from 'lucide-react'
+import { innovative2026AIServices } from '../../data/
+import { innovative2026ITInfrastructureServices } from '../../data/
+import { innovative2026MicroSaasServices } from '../../data/
+import { innovative2026AIServices } from '../../data/
+import { innovative2026ITInfrastructureServices } from '../../data/
+import { innovative2026MicroSaasServices } from '../../data/
+        

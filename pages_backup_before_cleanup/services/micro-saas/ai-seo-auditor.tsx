@@ -25,3 +25,4 @@ export default function Aiseoauditor({ }: AiseoauditorProps) {
 
 
 
+export default function AISEOAuditor() {; return (; 

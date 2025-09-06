@@ -15,3 +15,4 @@ const Ai-seo-auditor: React.FC<Ai-seo-auditorProps> = ({ className }) => {
 }
 }
 }
+export default function AISEOAuditor() {; return (; 

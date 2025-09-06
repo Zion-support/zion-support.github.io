@@ -28,3 +28,5 @@ const ProfileProjects = ({ className }) => {
 };
 
 export default ProfileProjects;
+import React from 'react'
+    

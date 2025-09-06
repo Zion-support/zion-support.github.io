@@ -28,3 +28,5 @@ const ScrollToTop = ({ className }) => {
 };
 
 export default ScrollToTop;
+import React from 'react'
+    

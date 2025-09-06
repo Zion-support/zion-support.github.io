@@ -1896,3 +1896,22 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     reviews: 45;
   }
 ];
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+      period: any
+    technology: ['AI/
+      website: any
+    technology: ['AI/
+      website: any
+    technology: ['AI/
+      website: any
+    technology: ['AI/
+      website: any
+    technology: ['AI/
+      website: any
+    technology: ['AI/
+      website: any
+    technology: ['AI/
+      website: any
+    technology: ['AI/
+      website: any

@@ -17,8 +17,6 @@ const benefits = [
 export default function CybersecurityServices() {
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 export default function CybersecurityPage() {;
 const benefits = [;
   'Protection against cyber threats and attacks',;
@@ -29,10 +27,7 @@ const benefits = [;
   'Peace of mind with 24/7 monitoring';
 ];
 export default function CybersecurityServices() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cybersecurity.tsx
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -61,17 +56,16 @@ export default function CybersecurityServices() {;
     icon: ArrowRight,
     title: 'Security Training',
     description: 'Employee security awareness and training programs'
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-];
-const benefits = [
-  'Protection against cyber threats and attacks',
-  'Compliance with industry regulations',
-  'Reduced risk of data breaches',
-  'Enhanced customer trust and confidence',
-  'Lower insurance costs and liability',
-  'Peace of mind with 24/7 monitoring'
-];
-export default function CybersecurityServices() {
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
 export default function CybersecurityPage() {
 
@@ -116,10 +110,8 @@ export default function CybersecurityPage() {
                   animate={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,7 +131,6 @@ export default function CybersecurityPage() {
                     <feature.icon className="w-6 h-6 text-red-600" />
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -154,7 +145,6 @@ export default function CybersecurityPage() {
         </section>
 
 
-=======
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -260,3 +250,5 @@ export default function CybersecurityPage() {
   ),;
 }
 
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

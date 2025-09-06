@@ -29,3 +29,9 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe('AppMinimal', () => { it('renders without crashing', () => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<AppMinimal />)}); it("handles user interactions"
 
 });
+import { render, screen } from '@testing-library/
+import AppMinimal from './
+import { render, screen } from '@testing-library/
+import AppMinimal from './
+import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import AppMinimal from \'./AppMinimal\'; describe(\'AppMinimal\',() => { it(\'renders without crashing\',() => { render(<AppMinimal />); expect(screen.getByRole(\'main\').toBeInTheDocument()}); it(\'displays correct content\',() => { render(
+const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe("AppMinimal",() => { it("renders without crashing",() => { render(<AppMinimal />); expect(screen.getByRole("main").toBeInTheDocument()}); it("displays correct content",() => { render(<AppMinimal />)}); it("handles user interactions",() => { render(

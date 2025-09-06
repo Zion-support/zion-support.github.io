@@ -1,41 +1,9 @@
 
-
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: {
-    mobile: string;
-    email: string;
-
-    address: string,
-    website: string;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
 
   customers: number;
   rating: number;
@@ -142,31 +110,9 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'AI content generationSEO optimization_multi - language support_brand customization_performance analytics';
     ],
     market_advantage: 'Advanced AI models with enterprise - grade features and integrations';
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
-;
-  // Cybersecurity Services;
-  {
-    id: 'zero - trust - security - platform';
-    name: 'Zero Trust Security Platform',
-    tagline: 'Never trust, always verify security architecture';
-    price: '$1, 299';
-    period: '/month',
-    description: 'Comprehensive zero - trust security platform that implements continuous verification and least - privilege access across all users, devices, and applications.';
-    features: [;
-      'Identity verification and management_device trust scoring_application access control_network segmentation_continuous monitoring_threat detection and response_compliance reportingAPI security';
-      'Data encryption_security analytics dashboard';
-    ];
-    popular: true;
-    icon: '🔐';
-    color: 'from - red - 600 to - pink - 600';
-    text_color: 'text - red - 400';
-    link: 'https://ziontechgroup.com / zero - trust - security';
-    market_position: 'Advanced zero - trust security platform for modern enterprises',
-    target_audience: 'Enterprise security teams, Government agencies, Financial institutions';
-    trial_days: 30;
-    setup_time: '2 - 3 weeks';
-    category: 'Cybersecurity';
-    real_service: true,
 
     technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js'];
     realService: true,
@@ -1205,3 +1151,13 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
   }
 ];
 export default comprehensiveInnovativeServices;
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+  website: any
+    useCases: ['CI/
+    period: any
+    use_cases: ['CI /
+      'Intelligent CI/
+    period: any

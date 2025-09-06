@@ -1,4 +1,5 @@
 // Core Types
+ Core Types
 export interface ContactInfo {
   phone: string;
   email: string;
@@ -601,3 +602,5 @@ export interface Environment {
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
 }
+  description: string;
+  category: any

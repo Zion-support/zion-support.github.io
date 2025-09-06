@@ -1414,3 +1414,12 @@ visible: {
 }> <h2 className="text - 3xl md:text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a > Get Started Today </Link> <a;
 
 
+import React, { useState } from 'react'
+import SEO from '../components/
+import Layout from '../components/layout/
+import { real2036InnovativeServices } from '../data/
+import { real2036SpecializedServices } from '../data/
+  website: any
+import { real2036InnovativeServices } from '../data/
+import { real2036SpecializedServices } from '../data/
+  website: any

@@ -142,3 +142,5 @@ function ProfileExperience() {
       </div>;
     </div>);
 }
+import { ProfileExperience as ProfileExperienceType } from "@/types/
+              

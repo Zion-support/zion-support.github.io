@@ -272,3 +272,4 @@ if ( { this.store[ke, y ] = { count: 1, reset_time: now + this.config.window_ms 
 }
 }
 }
+import { NextApiRequest, NextApiResponse } from 'next'

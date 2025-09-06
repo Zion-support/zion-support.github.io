@@ -1,8 +1,7 @@
+export interface BlogAuthor {
+  name: string;
 
-  title: string,
-  avatar_url: string;
-
-}
+  title: any
 export interface BlogPost {
   id: string;
   title: string;
@@ -14,34 +13,20 @@ export interface BlogPost {
   read_time: string;
   category: string;
   tags: string[];
+  featuredImage: string;
+  isFeatured?: boolean;
+  isPublished?: boolean;
 
-  featured_image: string;
-  is_featured?: boolean;
-  is_published?: boolean;
-  created_by?: string,
-  updated_at?: string;
-}
-// Type for generated blog content;
-
+  createdBy?: any
 export interface GeneratedBlogContent {
   title: string;
   meta_description: string;
   body: string;
   tags: string[];
 
-  tweet_summary?: string,
-  image_prompt?: string;
-}
-// Type for generated newsletter content;
+  tweetSummary?: any
 export interface GeneratedNewsletterContent {
   subject: string;
-  preview_text: string;
-  body: string,
-  cta: string;
+  previewText: string;
 
-}
-=======
-
-export interface BlogAuthor {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  body: any

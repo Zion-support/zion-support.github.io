@@ -49,3 +49,4 @@ const Onsite-support: React.FC<Onsite-supportProps> = ({ className }) => {
 }
 }
 }
+import Link from \'next/link\'; import Head from \'next/

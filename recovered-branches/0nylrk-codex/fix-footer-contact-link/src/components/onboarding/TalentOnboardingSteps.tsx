@@ -161,3 +161,8 @@ function TalentOnboardingSteps() {
 ;
   return <OnboardingTracker steps={steps} />;
 }
+import React from "react"
+import { useAuth } from "@/hooks/
+import { useOnboardingStatus } from "@/hooks/
+import { OnboardingTracker, OnboardingStep } from "./
+      link: any

@@ -217,3 +217,6 @@ export default function PrivacyPage() {;
       </section>;
     </div>);
 }
+export default function PrivacyPage() {return (;
+    
+                  <strong > Email: any

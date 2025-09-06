@@ -1,12 +1,6 @@
-import React from 'react';
+      }
 
-const ContentGenerator = () => {
-  return (
-    <div>
-      <h1>ContentGenerator</h1>
-      <p>This page is under construction.</p>
-    </div>
-  );
-};
-
-export default ContentGenerator;
+import React, { useState, useEffect } from 'react'
+                        contentType = = 'blog'
+                        contentType = = 'serviceDescription'
+                        contentType = = 'faq'

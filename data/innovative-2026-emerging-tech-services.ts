@@ -1039,3 +1039,6 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
 
 
 };
+import { ServiceVariant } from '../types/
+import { ServiceVariant } from '../types /
+      period: any

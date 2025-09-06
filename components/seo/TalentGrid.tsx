@@ -255,3 +255,7 @@ export default function TalentGrid(_{_region, _service}: Props) {_const _items =
 
 }
 
+import React from "react"
+import { TALENT_PROFILES } from "../../data/
+import type { TalentProfile } from "../../data/
+import type { TalentProfile } from "../../data /

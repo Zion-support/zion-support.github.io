@@ -14,4 +14,5 @@ const Index: React.FC<IndexProps> = ({ className }) => {
     </div>
   );
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export default function Home() { return ( 
+module.exports = default function Home() { return ( <main style={ minHeight: "100vh",display: "flex",alignItems: "center",justifyContent: "center",fontFamily: "system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial"}> <div> <h1>Zion Tech Group</h1> <p>Site under maintenance. Core build is healthy.</p> </div> 

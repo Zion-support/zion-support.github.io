@@ -1,0 +1,2 @@
+
+import { ResumeBasicInfo } from '@/types/

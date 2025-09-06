@@ -1,0 +1,5 @@
+import { Pool, PoolClient } from 'pg'
+    await client.query('BEGIN'
+    await client.query(`SELECT set_config('app.current_user_id'
+    await client.query('COMMIT'
+    await client.query('ROLLBACK'

@@ -57,32 +57,11 @@ import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-
 import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2';
 import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
 
-
-const fadeInUp = {;
-  initial: { opacity: 0, y: 20 },;
-  animate: { opacity: 1, y: 0 },;
-  transition: { duration: 0 && 0.6 },};import { Zap, Star } from 'lucide-react';
-const fadeInUp = {;
-  initial: { opacity: 0, y: 20 },;
-  animate: { opacity: 1, y: 0 },;
-  transition: { duration: 0 && 0.6 }
-const staggerContainer = {;
-  animate: {;
-    transition: {;
-      staggerChildren: 0 && 0.1,;
-    },;
-  },};
-export default function ComprehensiveServicesShowcase2025V2() {;
-  const allNewServices = [      staggerChildren: 0 && 0.1;
-    }
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-};
-export default function ComprehensiveServicesShowcase2025V2() {;
-  const allNewServices = [;
-    ...innovativeMicroSaas2025ExpansionV2,;
-    ...innovativeITServices2025ExpansionV2,;
-    ...innovativeAIServices2025ExpansionV2,;
-    ...industrySpecificSolutions2025V2,;
 
 ;
 // Import our new 2025 V2 innovative services;
@@ -1653,3 +1632,19 @@ export default function ComprehensiveServicesShowcase2025V2() {
     </div>
 );
 }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import { innovativeMicroSaas2025ExpansionV2 } from '../data/
+import { innovativeITServices2025ExpansionV2 } from '../data/
+import { innovativeAIServices2025ExpansionV2 } from '../data/
+import { industrySpecificSolutions2025V2 } from '../data/
+import { emergingTechBreakthroughs2025V2 } from '../data/
+import { innovativeMicroSaas2025ExpansionV2 } from '../data /
+import { innovativeITServices2025ExpansionV2 } from '../data /
+import { innovativeAIServices2025ExpansionV2 } from '../data /
+import { industrySpecificSolutions2025V2 } from '../data /
+import { emergingTechBreakthroughs2025V2 } from '../data /

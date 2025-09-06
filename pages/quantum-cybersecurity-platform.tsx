@@ -104,3 +104,7 @@ export default function QuantumCybersecurityPlatform() {
   }
 }
 
+import React from 'react'
+import React from 'react'
+import Head from 'next/
+import Button from '../components/ui/

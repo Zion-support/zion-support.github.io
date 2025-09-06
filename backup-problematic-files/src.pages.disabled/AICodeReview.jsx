@@ -30,3 +30,5 @@ const AICodeReview = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

@@ -167,3 +167,7 @@ const seed_company: CompanyRecord = {
     const company = companiesById[company_id];
     return company ? company.invoices : [];
   }}
+import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/
+  logoUrl: any
+import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types /
+  logo_url: any

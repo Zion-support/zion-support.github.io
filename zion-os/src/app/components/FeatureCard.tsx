@@ -1,15 +1,10 @@
-
-
-interface FeatureCardProps {;
-  icon: string,;
-  title: string,;
-  description: string,;
-  features: string[],;
-  gradient: string,;
-
-
+interface FeatureCardProps {icon: string;
+  title: string;
+  description: string;
+  features: string[];
+  gradient: string;
   className?: string;
-}
+
 export default function FeatureCard({
   icon
   title
@@ -70,3 +65,4 @@ function FeatureCard() {
       </ul>;
     </div>);
 }
+  className = ''

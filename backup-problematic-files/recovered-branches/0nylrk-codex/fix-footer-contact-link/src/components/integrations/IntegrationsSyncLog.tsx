@@ -64,7 +64,6 @@ export function IntegrationsSyncLog() {;
         return <Badge className="bg-amber-500">Warning</Badge>,;
       default:;
         return <Badge variant="outline">Unknown</Badge>;
-<<<<<<< HEAD
     }
   },;
   ;
@@ -116,3 +115,7 @@ return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead>
 }</TableCell> </TableRow>) ) 
 }</TableBody> </Table> </div> </Card>) 
 }
+import React from "react"
+import { Card } from "@/components/ui/
+  TableRow} from "@/components/ui/
+import { Badge } from "@/components/ui/

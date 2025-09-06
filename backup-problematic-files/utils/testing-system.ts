@@ -1,0 +1,1 @@
+export class TestingSystem {_static async testUserInteraction(element: HTMLElement, _action: any

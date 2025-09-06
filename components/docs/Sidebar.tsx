@@ -1,5 +1,13 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
   spec: ApiDocsSpec;
 
@@ -297,3 +305,7 @@ function Sidebar() {
     </aside>
   );
 
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import { ApiDocsSpec, Visibility } from '../../data/api-docs/
+import {ApiDocsSpec, Visibility} from '../../data/api-docs/

@@ -1,4 +1,4 @@
-// Security.spec utility
+ Security.spec utility
 export const Security.spec = () => {
   // Implementation here
   return null;
@@ -20,3 +20,7 @@ const { test,expect } from "@playwright/test"; test.describe('Security Tests', (
 }
 }
 }
+  //
+  //
+      <h1>Security.spec
+      <p>This component is currently under development.

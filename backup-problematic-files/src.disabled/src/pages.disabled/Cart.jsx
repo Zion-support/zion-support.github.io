@@ -28,3 +28,5 @@ const Cart = ({ className }) => {
 };
 
 export default Cart;
+import React from 'react'
+    

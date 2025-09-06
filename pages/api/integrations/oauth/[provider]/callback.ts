@@ -19,3 +19,4 @@ function handler() {
 }
 
 
+import type { NextApiRequest, NextApiResponse } from 'next'

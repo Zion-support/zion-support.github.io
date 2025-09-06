@@ -466,3 +466,5 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     reviews: 120;
   }
 ];
+import { ServiceVariant } from '../types/
+    period: any

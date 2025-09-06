@@ -174,3 +174,10 @@ export default function IdentitySettingsPage(req, res) {
 
 }
 
+import React, { useEffect, useState } from 'react'
+import Head from 'next/
+import type { KycProfile } from '../../../utils/
+import { ProfileBadges } from '../../../components/ui/
+import Head from 'next /
+import type { KycProfile } from '../../../utils /
+import { ProfileBadges } from '../../../components / ui /

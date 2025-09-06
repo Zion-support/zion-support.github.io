@@ -68,8 +68,6 @@ class PerformanceOptimizer {
         });
       }
 #!/usr/bin/env node
-
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -135,9 +133,11 @@ function log(message, type = 'INFO') {
   const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
   console.log(`${icons[type] || ''} ${message}`);
 }
+
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
+
 function findFiles(dir, exts) {
   if (!fs.existsSync(dir)) return [];
   const results = [];
@@ -159,6 +159,7 @@ function optimizeImages(publicDir, report) {
     report.actions.push('No images found to optimize');
     return;
   }
+
   let sharp;
   try {
     sharp = require('sharp');
@@ -166,12 +167,15 @@ function optimizeImages(publicDir, report) {
     report.actions.push('sharp not installed; skipping image optimization');
     return;
   }
+
   const optimized = [];
   for (const img of images) {
     const stat = fs.statSync(img);
     if (stat.size < 150 * 1024) continue; // skip small files
+    
     const ext = path.extname(img).toLowerCase();
     const outPath = img.replace(new RegExp(`${ext}$`), '.webp');
+    
     try {
       sharp(img).webp({ quality: 80 }).toFile(outPath);
       optimized.push({ from: img, to: outPath });
@@ -179,24 +183,31 @@ function optimizeImages(publicDir, report) {
       report.errors.push(`Failed optimizing ${img}: ${e.message}`);
     }
   }
+
   if (optimized.length > 0) {
     report.optimizedImages = optimized;
   }
   report.actions.push(`Optimized ${optimized.length} images to WebP`);
 }
+
 function ensureNextConfigFlags(rootDir, report) {
   const candidates = ['next.config.js', 'deployment/next.config.js'];
+  
   for (const rel of candidates) {
     const file = path.join(rootDir, rel);
     if (!fs.existsSync(file)) continue;
+
     const original = fs.readFileSync(file, 'utf8');
+    
     if (original.includes('optimizeCss: true')) {
       report.actions.push(`${rel}: optimizeCss already enabled`);
       continue;
     }
+
     // Attempt minimal enhancement by appending experimental.optimizeCss
     try {
       let updated = original;
+      
       if (original.includes('experimental:')) {
         updated = original.replace(
           /experimental:\s*\{/,
@@ -347,21 +358,26 @@ if (require.main === module) {}
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+
 console.log('⚡ Starting Performance Optimizer...');
+
 class PerformanceOptimizer {
   constructor() {
     this.reportsDir = path.join(process.cwd(), 'automation-reports');
     this.ensureReportsDir();
   }
+
   ensureReportsDir() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
+
   log(message) {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
   }
+
   async optimizePerformance() {
     const optimizations = [
       { name: 'Bundle Analysis', command: 'npm run analyze', description: 'Analyzing bundle size' },
@@ -370,14 +386,21 @@ class PerformanceOptimizer {
       { name: 'Lighthouse Audit', command: 'npm run perf:lighthouse', description: 'Running Lighthouse audit' },
       { name: 'Performance Monitor', command: 'npm run perf:monitor', description: 'Monitoring performance' }
     ];
+
     const results = [];
     let successfulOptimizations = 0;
+
+    for (const optimization of optimizations) {
+      try {
+        this.log(`🔧 Running ${optimization.name}...`);
+        this.log(`📝 ${optimization.description}`);
       if (buildResult.success) {
         // Analyze bundle size
         const buildDir = path.join(this.projectRoot, '.next');
         if (fs.existsSync(buildDir)) {
           const stats = fs.statSync(buildDir);
           const sizeInMB = stats.size / (1024 * 1024);
+          
           this.results.bundleAnalysis = {
             success: true,
             size: sizeInMB,
@@ -395,8 +418,10 @@ class PerformanceOptimizer {
       };
     }
   }
+
   async optimizeImages() {
     this.log('\n🖼️ OPTIMIZING IMAGES');
+    
     try {
       // Check if images directory exists
       const imagesDir = path.join(this.projectRoot, 'public', 'images');
@@ -647,7 +672,6 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
     } finally {
       this.generateReport();
     }
-  }
 
     const report = {
       timestamp: new Date().toISOString(),
@@ -657,8 +681,10 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
       results,
       performanceScore: Math.round((successfulOptimizations / optimizations.length) * 100)
     };
+
     const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
     this.log(`📊 Performance optimization completed! Report saved to: ${reportPath}`);
     this.log(`📈 Performance Score: ${report.performanceScore}% (${successfulOptimizations}/${optimizations.length} optimizations successful)`);
     
@@ -688,7 +714,37 @@ if (require.main === module) {
     const optimizer = new PerformanceOptimizer(),
     optimizer.run().catch(console.error)
   }
+
 module.exports = PerformanceOptimizer;
+console.log('⚡ Zion Tech Group - Performance Optimizer');
+console.log('');
+const performanceReport = {
+    timestamp: new Date().toISOString(),
+    optimizations: [],
+    recommendations: [],
+    metrics: {}
+};
+function analyzeBundleSize() {
+    console.log('\n📦 Analyzing bundle size...');
+    try {
+        if (fs.existsSync('.next')) {
+            const stats = execSync('du -sh .next', { encoding: 'utf8' });
+            const size = stats.trim().split('\t')[0];
+            performanceReport.metrics.bundleSize = size;
+            console.log(`✅ Bundle size: ${size}`);
+            if (size.includes('M') && parseInt(size) > 50) {
+                performanceReport.recommendations.push({
+                    type: 'bundle_size',
+                    message: 'Bundle size is large, consider code splitting',
+                    priority: 'high'
+                });
+            }
+        } else {
+            console.log('⚠️  No build found, run npm run build first');
+        }
+    } catch (error) {
+        console.log(`❌ Error analyzing bundle: ${error.message}`);
+
       if (updated !== original) {
         fs.writeFileSync(file, updated);
         report.modifiedFiles.push(file);
@@ -710,17 +766,22 @@ function main() {
     modifiedFiles: [],
     errors: []
   };
+
   log('Starting Performance Optimizer.');
   ensureDir(path.join(root, 'automation-reports'));
+
   // Image optimization in public/
   optimizeImages(path.join(root, 'public'), report);
+
   // Ensure Next.js config flags
   ensureNextConfigFlags(root, report);
+
   const outFile = path.join(
     root,
     `performance-optimizer-report-${timestamp}.json`
   );
   fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
+
   log(`Performance optimization complete. Report: ${path.basename(outFile)}`, 'SUCCESS');
 }
 

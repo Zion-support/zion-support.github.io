@@ -25,3 +25,4 @@ export default function Smartchurn({ }: SmartchurnProps) {
 
 
 
+export default function SmartChurn() {; return (; 

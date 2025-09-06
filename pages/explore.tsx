@@ -1387,3 +1387,22 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 
 
 
+import React, { useState } from 'react'
+import Head from 'next/
+import SmartHeader from '../components/
+import SmartFooter from '../components/
+import SmartHeader from '../components/
+import SmartFooter from '../components/
+      price: '$1,999/
+      price: '$1,299/
+      price: any
+      price: '$2,499/
+      price: '$1,999/
+      price: '$1,299/
+      price: any
+      price: '$2,499/
+      price: '$1,999/
+      price: '$1,299/
+      price: any
+      price: '$2,499/
+        

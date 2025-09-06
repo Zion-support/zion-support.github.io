@@ -1,5 +1,1 @@
-
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedNavigation from "./components/EnhancedNavigation" describe("EnhancedNavigation",() => {" test("renders without crashing",() => {" render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation").toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedNavigation / / />) }) test("handles user interactions",() => {" render(<EnhancedNavigation / / />) }) test("applies correct styling",() => {" render(

@@ -44,3 +44,4 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
 }
 ;
 
+import { ResumeBasicInfo } from '@/types/

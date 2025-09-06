@@ -49,3 +49,4 @@ const Digital-twin: React.FC<Digital-twinProps> = ({ className }) => {
 }
 }
 }
+import Link from \'next/link\'; import Head from \'next/

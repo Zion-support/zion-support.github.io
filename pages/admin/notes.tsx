@@ -198,3 +198,7 @@ export default function AdminNotesConsole(req, res) {
 }
 
 
+import { useEffect, useState } from 'react'
+        const res = await fetch('/api/admin/
+        const res = await fetch('/api/admin/
+        const res = await fetch ('/api / admin /

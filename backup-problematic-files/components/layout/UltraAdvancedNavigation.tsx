@@ -1,0 +1,43 @@
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+ from 'lucide-react'
+import Link from 'next/
+      href: any
+          price: '$2,999/
+          href: any
+          price: '$4,999/
+          href: any
+          price: '$3,999/
+          href: any
+          price: '$2,499/
+          href: any
+          price: '$5,999/
+          href: any
+          price: '$15,999/
+          href: any
+          price: '$8,999/
+          href: any
+          price: '$12,999/
+          href: any
+          price: '$19,999/
+          href: any
+          price: '$4,999/
+          href: any
+          price: '$25,999/
+          href: any
+          price: '$35,999/
+          href: any
+          price: '$8,999/
+          href: any
+          price: '$5,999/
+          href: any
+          price: '$6,999/
+          href: any
+          price: '$12,999/
+          href: any
+          price: '$4,999/
+          href: any
+          price: '$15,999/
+          href: any
+          price: '$7,999/
+      href: any

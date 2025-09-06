@@ -30,3 +30,5 @@ const FiveGSolutions = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

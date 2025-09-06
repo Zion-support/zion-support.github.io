@@ -86,3 +86,7 @@ function handler() {
 }
 
 
+import type { NextApiRequest, NextApiResponse } from "next"
+import type { KycProfile } from "../../../utils/
+import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/
+import type { KycProfile } from "../../../utils /

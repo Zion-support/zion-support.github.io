@@ -1,0 +1,4 @@
+event.respondWith(handleOtherRequest(request)});
+ Check if request is for a static asset;
+function": isStaticAsset(url) {_; return CACHEPATTERNS.some(pattern = > pattern.test(url)}; cache.put(request, networkResponse.clone()}; "return": networkResponse} catch (error) {_; '; "return": new Response('Asset not available'
+async": function handleOtherRequest(request) {_; try {; // Try network first; const networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache successful responses; const cache = await caches.open(DYNAMICCACHE); cache.put(request, networkResponse.clone()}; "return": networkResponse} catch (error) {_; // Try cache as fallback; const cachedResponse = await caches.match(request); "if": (cachedResponse) {; return cachedResponse}; //

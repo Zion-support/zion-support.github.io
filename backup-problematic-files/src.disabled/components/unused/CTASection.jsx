@@ -28,3 +28,5 @@ const CTASection = ({ className }) => {
 };
 
 export default CTASection;
+import React from 'react'
+    

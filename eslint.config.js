@@ -69,10 +69,17 @@ export default [
       "pages-backup/",
       "tests.disabled/",
       "components.disabled/",
-      "zion-os.disabled/",
+      "os.disabled/",
       "zion_academy/",
       "temp_backup/",
       "temp_broken_files/",
+      "temp_exclude/",
+      "temp_components/",
+      "temp_scripts/",
+      "src_backup_temp/",
+      "src.pages.disabled/",
+      "src.broken/",
+      "src.disabled/",
       "test_build/",
       "temp_exclude/",
       "zion-os/",
@@ -81,13 +88,16 @@ export default [
       "types/",
       "utils/",
       "ultimate-*.cjs",
+      "ultimate-*.cjs",
+      "comprehensive-cleanup.cjs",
+      "cleanup-merge-conflicts.cjs",
       "*.test.js",
       "*.test.ts",
       "*.test.tsx",
       "*.spec.js",
       "*.spec.ts",
-      "*.spec.tsx",
-    ],
+      "*.spec.tsx"
+    ]
   },
   js.configs.recommended,
   {
@@ -118,9 +128,25 @@ export default [
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
+    files: ["**/*.{js,jsx}"],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: "module",
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        React: "readonly",
+        jest: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        beforeAll: "readonly",
+        afterAll: "readonly"
+      },
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
@@ -131,8 +157,8 @@ export default [
       "react-hooks": reactHooks
     },
     rules: {
-      ...react && react.configs.recommended && recommended.rules,
-      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
       "no-unused-vars": "warn",
       "no-console": "warn",
       "prefer-const": "error",
@@ -147,10 +173,8 @@ export default [
       ecmaVersion: 2021,
       sourceType: "module",
       globals: {
-
-        ...globals && globals.browser,
-        ...globals && globals.node,
-
+        ...globals.browser,
+        ...globals.node,
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -244,6 +268,8 @@ export default [
       "react/react-in-jsx-scope": "off"
 
       "react/react-in-jsx-scope": "off"
+      "react/react-in-jsx-scope": "off",
+      "react/no-unescaped-entities": "off"
     },
     settings: {
       react: {
@@ -327,5 +353,11 @@ export default [
 
   }
 ];
+  }
+];
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+      "no-undef": "error"
+    }
   }
 ];

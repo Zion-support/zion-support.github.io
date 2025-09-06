@@ -119,3 +119,5 @@ export default function ArxivResearchPage() {
 
 }
 
+import EnhancedLayout from '../../components/layout/
+import data from '../../data/

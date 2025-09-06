@@ -1,11 +1,13 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-  return (
-    <div className='container mx-auto px-4 py-20 text-center'>
-      <h1 className='text-3xl font-semibold'>404 - Page Not Found</h1>
-      <p className='mt-2 text-gray-600 dark:text-gray-300'>
-        Sorry, we couldn’t find that page.
-      </p>
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
     </div>
 
@@ -58,3 +60,5 @@ function NotFoundPage() {
 export default 404;
 
 
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

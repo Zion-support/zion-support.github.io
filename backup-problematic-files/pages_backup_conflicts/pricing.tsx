@@ -14,3 +14,5 @@ const Pricing: React.FC<PricingProps> = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

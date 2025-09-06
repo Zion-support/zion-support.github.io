@@ -28,3 +28,5 @@ const TestimonialsSection = ({ className }) => {
 };
 
 export default TestimonialsSection;
+import React from 'react'
+    

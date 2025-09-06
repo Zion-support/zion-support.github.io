@@ -30,3 +30,5 @@ const IoTEdge = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

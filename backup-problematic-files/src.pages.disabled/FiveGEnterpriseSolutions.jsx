@@ -30,3 +30,5 @@ const FiveGEnterpriseSolutions = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

@@ -34,3 +34,4 @@ it('safeFetch throws when fetch rejects', async () => {;
   await expect(safeFetch('https: //example.com')).rejects.toThrow('Failed to connect to Supabase');
 });
 ;
+import { checkOnline, safeFetch  } from '@/integrations/supabase/

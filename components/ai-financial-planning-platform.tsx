@@ -974,3 +974,6 @@ className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
 );
   );
 }
+import React from 'react'
+import Head from 'next/
+      

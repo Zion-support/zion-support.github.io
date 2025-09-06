@@ -298,3 +298,8 @@ async function tryWriteToFirestore(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+import type { NextApiRequest, NextApiResponse } from "next"
+import { v4 as uuidv4 } from "uuid"
+ from "../../utils/feedback/
+ from "../../utils/feedback/
+          privateKey: (FIREBASE_PRIVATE_KEY |"").replace(/\\n/

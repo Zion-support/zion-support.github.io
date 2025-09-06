@@ -49,3 +49,4 @@ const Mobile-surveys: React.FC<Mobile-surveysProps> = ({ className }) => {
 }
 }
 }
+import Head from \'next/head\'; import Link from \'next/

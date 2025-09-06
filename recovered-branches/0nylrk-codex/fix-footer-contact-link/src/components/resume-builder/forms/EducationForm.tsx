@@ -32,3 +32,7 @@ export function EducationForm(props: EducationFormProps) {
   return <EducationFormComponent {...props} />;
 }
 ;
+import { EducationForm as EducationFormComponent  } from './
+import { EducationFormProps } from './education/
+import {EducationForm, as, EducationFormComponent} from './
+import {EducationFormProps} from './education/

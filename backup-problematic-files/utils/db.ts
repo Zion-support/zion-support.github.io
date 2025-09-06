@@ -1,0 +1,5 @@
+import fs from 'fs'
+import path from 'path'
+const DATA_ROOT = path.join(process.cwd(), 'datamarketplace'
+    const raw = fs.readFileSync(filePath, 'utf-8'
+  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8'

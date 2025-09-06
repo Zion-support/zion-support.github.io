@@ -166,3 +166,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       .json({ error: error?.message || "Failed to generate proposal" });
   }
 }
+import type { NextApiRequest, NextApiResponse } from "next"
+import { OpenAI } from "openai"
+import { createProposal } from "../../../utils/data/

@@ -496,3 +496,4 @@ export default function ContactPage() {
       </section>;
     </div>);
 }
+import Link from 'next /

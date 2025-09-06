@@ -1,4 +1,4 @@
-// Basic.spec utility
+ Basic.spec utility
 export const Basic.spec = () => {
   // Implementation here
   return null;
@@ -20,3 +20,7 @@ const { test,expect } from "@playwright/test"; test.describe('Zion Tech Group We
 }
 }
 }
+  //
+  //
+      <h1>Basic.spec
+      <p>This component is currently under development.

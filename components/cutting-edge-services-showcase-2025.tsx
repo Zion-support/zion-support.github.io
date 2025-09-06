@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -1303,3 +1305,12 @@ visible: {
   duration: 0.5 
 
 
+    console.error('Error caught by boundary: any
+import React, { useState } from 'react'
+import Head from 'next /
+import Layout from '../components/layout/
+import { cuttingEdgeAIServices2025 } from '../data/
+import { cuttingEdgeQuantumServices2025 } from '../data/
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/
+import { cuttingEdgeMicroSaasServices2025 } from '../data/
+  website: any

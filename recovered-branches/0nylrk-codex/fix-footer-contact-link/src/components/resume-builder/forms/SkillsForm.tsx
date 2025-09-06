@@ -32,3 +32,7 @@ export function SkillsForm(props: SkillsFormProps) {
   return <SkillsFormComponent {...props} />;
 }
 ;
+import { SkillsForm as SkillsFormComponent  } from './
+import { SkillsFormProps } from './skills/
+import {SkillsForm, as, SkillsFormComponent} from './
+import {SkillsFormProps} from './skills/

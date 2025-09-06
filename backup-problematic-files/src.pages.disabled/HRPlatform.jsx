@@ -30,3 +30,5 @@ const HRPlatform = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

@@ -30,3 +30,5 @@ const AIAutonomousVentureCapitalist = ({ className }) => {
 }
 }
 }
+import React from 'react'
+    

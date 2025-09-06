@@ -488,3 +488,14 @@ const Page: React.FC<PageProps> = ({ className }) => {
 };
 
 export default Page;
+  UserGroupIcon
+  LightBulbIcon
+  CogIcon
+  ShieldCheckIcon
+  ChartBarIcon
+  RocketLaunchIcon
+  AcademicCapIcon
+  GlobeAltIcon
+ from '@heroicons/react/24/
+      '24/
+    description: any

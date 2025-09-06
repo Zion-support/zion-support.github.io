@@ -1,0 +1,4 @@
+import Image from "next/
+  return (<section className="py-12 bg-zion-blue-dark text-white" id="speakers" > <div className="container mx-auto px-4" > <h2 className="text-3xl font-bold mb-8 text-center" >Speakers</h2> <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center" > speakers.map (sp) => (<div key= {;"  sp.name ";"}className="text-center space-y-2" > <Image <a href= {;"  sp.twitter ";"}aria-label="Twitter" target="blank" rel="noopener noreferrer" className="flex items-center" > 
+  sp.linkedin && (<a href= {;"  sp.linkedin ";"}aria-label="LinkedIn" target="blank" rel="noopener noreferrer" className="flex items-center" > 
+</div> </div> 

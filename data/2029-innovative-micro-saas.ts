@@ -1,6 +1,5 @@
-
-export interface InnovativeMicroSaas2029 {
-
+export interface InnovativeMicroSaas2029 {  id: string;
+  id: string;
   name: string;
   tagline: string;
   price: string;
@@ -8,8 +7,8 @@ export interface InnovativeMicroSaas2029 {
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
-  contactInfo: {
+  real_implementation: boolean;
+  contact_info: {
     mobile: string;
     email: string;
 
@@ -168,3 +167,4 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
     }
   }
 ];
+    id: any

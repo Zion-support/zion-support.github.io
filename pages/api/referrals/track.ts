@@ -192,3 +192,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
+import type { NextApiRequest, NextApiResponse } from "next"
+import { getServerSupabase } from "../../../utils/supabase/

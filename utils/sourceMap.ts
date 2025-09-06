@@ -1,9 +1,4 @@
-
-
-}
-export interface DeployTemplateResult {
-
-// Mock source map utility
+ Mock source map utility
 export function getSourceMapWithExistence() {
   return {
     nodes: []
@@ -158,3 +153,6 @@ export function ensure_directory (dir_path: string): void {
 ;
 
 
+import fs from 'fs'
+import path from 'path'
+  type: any

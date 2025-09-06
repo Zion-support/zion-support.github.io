@@ -228,3 +228,30 @@ export default LazySection;      case 'down':;
 export default LazySection;
 ;
 
+const getInitialPosition = () => {
+  switch (direction) {
+  case 'up'
+  className = ''
+  direction = 'up'
+      case 'up'
+        return { opacity: 0, y: 50 };      case 'down'
+      case 'left'
+      case 'right'
+      case 'up'
+      case 'down'
+      case 'left'
+      case 'right'
+    console.error('Error caught by boundary: any
+  className = ''
+  direction = 'up'
+      case 'up'
+        return { opacity: 0, y: 50 };      case 'down'
+      case 'left'
+      case 'right'
+      case 'up'
+      case 'down'
+      case 'left'
+      case 'right'
+export default LazySection;      case 'down'
+      case 'left'
+      case 'right'

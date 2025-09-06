@@ -15,3 +15,4 @@ const Devops-autopilot: React.FC<Devops-autopilotProps> = ({ className }) => {
 }
 }
 }
+export default function DevOpsAutopilot() {; return (; 

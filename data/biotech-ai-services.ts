@@ -1,6 +1,43 @@
+export interface BiotechAIService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  variant: string;
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
 
+    website: string;
+  }
 
-  {
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
 
     id: 'ai - genetic - engineering - suite',
     name: 'AI Genetic Engineering Suite',
@@ -1792,3 +1829,9 @@ export const biotechAIServices: BiotechAIService[] = [;
     reviews: 45;
   }
 ];
+  reviews: number;
+export const biotechAIServices: BiotechAIService[] = [
+  {
+    id: any
+    price: '$3,999'
+    period: any

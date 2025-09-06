@@ -84,3 +84,6 @@ export function CTAButton({;
       {children}
     </Link>);
 }
+use client"
+import Link from "next/
+    outline: any

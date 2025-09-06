@@ -1252,3 +1252,10 @@ function InnovativeBusinessSolutions() {
 }> <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI - powered solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link > <Mail className="mr - 2 w - 5 h - 5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>);
 
 
+import React from 'react'
+import Head from 'next/
+import Head from 'next/
+import Link from 'next/
+import Layout from '../components/layout/
+import { innovativeBusinessSolutions2025 } from '../data/
+  website: any

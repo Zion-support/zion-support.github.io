@@ -183,7 +183,6 @@ body: JSON.stringify (request)
   request.topic 
 }implementation ## Conclusion 
 }
-<<<<<<< HEAD
 ;
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {;
@@ -258,3 +257,5 @@ body: JSON.stringify (request)
 }
 }
 }// Pricing tiers for the AI Content Generator 
+  type: any
+  constructor(apiKey:string, baseUrl:string = 'https: any

@@ -28,3 +28,5 @@ const LoginContent = ({ className }) => {
 };
 
 export default LoginContent;
+import React from 'react'
+    

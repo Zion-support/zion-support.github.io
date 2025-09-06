@@ -1,4 +1,9 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
@@ -181,3 +186,9 @@ export default AnimatedBackground;
 ;
 
 
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

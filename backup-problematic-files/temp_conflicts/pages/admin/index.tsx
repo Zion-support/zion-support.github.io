@@ -1,0 +1,1 @@
+import AdminTable from '../../components/admin/

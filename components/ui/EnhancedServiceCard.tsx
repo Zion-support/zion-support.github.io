@@ -4,28 +4,10 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-;
-const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
-  service,
-}) => {
-  const card_variants = {
-    hidden: { opacity: 0, coordinate_y: 20, scale: 0.95 },
-    visible: {      opacity: 1,    visible: {
-      opacity: 1,
-      coordinate_y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'ease_out' as const,
-      },
-    },    hover: {        ease: "ease_out" as const;
-      }
-    }
-    
-    return this.props.children;
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
-}
-import React from 'react';
 
 import { motion } from 'framer-motion';
 
@@ -837,3 +819,9 @@ export default EnhancedServiceCard;
 };
 
 
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any
+import { motion } from 'framer-motion'
+ from 'lucide-react'
+ from 'lucide-react'
+        ease: any

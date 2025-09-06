@@ -703,3 +703,7 @@ const BlueprintsIndexPage: React.FC = () => {
 };
 
 export default BlueprintsIndexPage;
+import React from 'react'
+import Head from 'next/
+import Link from 'next/
+          description: any

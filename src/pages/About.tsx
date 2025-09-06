@@ -1,12 +1,15 @@
 import React from 'react';
 
-const About = () => {
-  return (
-    <div>
-      <h1>About</h1>
-      <p>This page is under construction.</p>
-    </div>
-  );
-};
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
 
 export default About;
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: any

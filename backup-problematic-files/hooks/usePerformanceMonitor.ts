@@ -1,0 +1,6 @@
+import { useState, useEffect } from 'react'
+    if (typeof window = = 'undefined' || !('performance'
+        'navigation'
+    if (document.readyState = = 'complete'
+      window.addEventListener('load'
+      window.removeEventListener('load'

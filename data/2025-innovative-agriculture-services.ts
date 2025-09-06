@@ -768,3 +768,12 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     reviews: 89;
   }
 ];
+import { ServiceVariant } from '../types/
+  website: any
+    technology: ['AI/
+    period: any
+    technology: ['AI/
+    period: any
+    technology: ['AI/
+    link: any
+    technology: ['AI /

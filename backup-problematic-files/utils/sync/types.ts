@@ -1,0 +1,6 @@
+export type SyncScope = "full" | "dao" | "marketplace"
+  | "proposal"
+  | "token_transfer"
+  | "talent_mobility"
+  | "dao_endorsement"
+  | "leaderboard_entry"

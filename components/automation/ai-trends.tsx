@@ -191,3 +191,6 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
   )
 
 }
+</div> 
+</div> 
+</div> 

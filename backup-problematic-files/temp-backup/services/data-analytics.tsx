@@ -49,3 +49,4 @@ const Data-analytics: React.FC<Data-analyticsProps> = ({ className }) => {
 }
 }
 }
+import Link from \'next/link\'; import Head from \'next/

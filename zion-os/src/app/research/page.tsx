@@ -340,3 +340,5 @@ export default function ResearchPage() {;
       </section>;
     </div>);
 }
+export default function ResearchPage() {return (;
+    

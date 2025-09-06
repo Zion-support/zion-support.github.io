@@ -80,3 +80,5 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
     </TabsList>);
 }
 ;
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/
+import { StepProps } from "./

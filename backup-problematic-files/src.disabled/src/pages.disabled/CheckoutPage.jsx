@@ -28,3 +28,5 @@ const CheckoutPage = ({ className }) => {
 };
 
 export default CheckoutPage;
+import React from 'react'
+    

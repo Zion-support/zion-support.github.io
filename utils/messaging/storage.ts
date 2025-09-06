@@ -1,18 +1,20 @@
-
-  conversation_id: string;  sender_id: string;
-  recipient_id: string;
-
+ Messaging storage utilities;
+export interface Message {
+  id: string;
+  conversationId: string;
+  senderId: string;
+  recipientId: string;
   body: string;
-  linkUrl?: string;
+  link_url?: string;
   attachmentBase64?: string;
-  attachmentName?: string;
+  attachment_name?: string;
   context?: string;
   sentAtIso: string;
   readAtIso?: string;
-  isRead: boolean;
-  isEdited: boolean;
+  is_read: boolean;
+  is_edited: boolean;
   editedAtIso?: string;
-  isDeleted: boolean;
+  is_deleted: boolean;
   deletedAtIso?: string;
   replyToId?: string;
   reactions: Array<{
@@ -29,12 +31,16 @@ export interface Conversation {
 
 export interface Conversation {;
 
+  reactions: any
+  }>;
+
+export interface Conversation {
   id: string;
   participants: string[];
   lastMessageAtIso: string;
   lastMessageId?: string;
-  isArchived: boolean;
-  isMuted: boolean;
+  is_archived: boolean;
+  is_muted: boolean;
   createdAtIso: string;
   updatedAtIso: string;
   metadata?: {
@@ -1029,3 +1035,7 @@ export function formatMessageTime(isoString: string): string {;
   }
 
 
+    type?: any
+  async createMessage(message: any
+  additional_data?: Partial < Message>): any
+  additional_data?: Partial < Conversation>): any

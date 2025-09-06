@@ -49,3 +49,4 @@ const Infrastructure: React.FC<InfrastructureProps> = ({ className }) => {
 }
 }
 }
+import Link from \'next/link\'; import Head from \'next/
