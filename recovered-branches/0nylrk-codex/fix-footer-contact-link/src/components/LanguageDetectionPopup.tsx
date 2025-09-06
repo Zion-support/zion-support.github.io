@@ -8,7 +8,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-AlertDialogTitle,
+  AlertDialogTitle,
 } from "../components/ui/alert-dialog";
 import {
   useLanguage,
@@ -79,5 +79,5 @@ export function LanguageDetectionPopup() {
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-);
+  );
 }

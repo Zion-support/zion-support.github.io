@@ -3,13 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
   images: {
     domains: ["localhost", "ziontechgroup.com"],
   },
-  output: 'standalone',
+  output: "standalone",
   trailingSlash: false,
-  distDir: '.next',
+  distDir: ".next",
 };
 
 module.exports = nextConfig;

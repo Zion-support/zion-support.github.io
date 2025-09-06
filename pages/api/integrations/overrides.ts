@@ -27,5 +27,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       override: updated.overrides.find((o) => o.jobId === jobId),
     });
   }
-return res.status(405).json({ error: "Method not allowed" });
+  return res.status(405).json({ error: "Method not allowed" });
 }
