@@ -22,21 +22,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     let markdown: string;
     if (client) {
       const completion = await client.responses.create({
-        model: 'gpt-4.1-mini';
+        model: 'gpt-4.1-mini',
         input: [
-          { role: 'system', content: sysPrompt };
-          { role: 'user', content: userPrompt }];
-        temperature: 0.3} as any);
+          { role: 'system', content: sysPrompt },
+          { role: 'user', content: userPrompt }
+        ],
+        temperature: 0.3
+      } as any);
       const content = (completion as any)?.output_text || '';
-      markdown = content.trim()
+      markdown = content.trim();
     } else {
-      markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview })
+      markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview });
     }
 
-    res.status(200).json({ markdown })
+    res.status(200).json({ markdown });
   } catch (e: any) {
     console.error('generation_error', e?.message || e);
-    res.status(500).json({ error: 'Generation failed' })
+    res.status(500).json({ error: 'Generation failed' });
   }
 }
 

@@ -30,8 +30,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .slice(0, 10);
 
   return res.status(200).json({
-    treasuryTotals: totalsByToken;
-    topContributors;
-    totalVoteCount: globalVotes;
-    lastSyncedAt: state.lastSyncedAt})
+    treasuryTotals: totalsByToken,
+    topContributors,
+    totalVoteCount: globalVotes,
+    lastSyncedAt: state.lastSyncedAt
+  });
 }

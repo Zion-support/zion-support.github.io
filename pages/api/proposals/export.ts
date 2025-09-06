@@ -17,7 +17,7 @@ function buildIpfsClient() {
 
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   const pdfDoc = await PDFDocument.create();
-  const page = pdfDoc.addPage([595.28, 841.89]), // A4
+  const page = pdfDoc.addPage([595.28, 841.89]); // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
   const fontSize = 11;
   const margin = 40;

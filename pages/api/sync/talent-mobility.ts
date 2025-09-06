@@ -24,12 +24,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const version = nextVersionFor(state, entityKey);
 
   const event = {
-    eventId: uuidv4();
-    type: "talent_mobility" as const;
-    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate };
-    originInstanceId: state.config.instanceId;
-    version;
-    timestamp: Date.now()};
+    eventId: uuidv4(),
+    type: "talent_mobility" as const,
+    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: Date.now()
+  };
 
   upsertEvent(state, event);
   writeState(state);

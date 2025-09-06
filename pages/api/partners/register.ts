@@ -32,13 +32,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (existing) return res.status(409).json({ error: 'Code already taken' });
 
     const { error } = await supabase.from('partners').insert({
-      code;
-      name;
-      niche: niche || null;
-      socials: socials || null;
-      payout_method: payout_method || null;
-      status: 'pending';
-      commission_rate: 0.15});
+      code,
+      name,
+      niche: niche || null,
+      socials: socials || null,
+      payout_method: payout_method || null,
+      status: 'pending',
+      commission_rate: 0.15
+    });
 
     if (error) return res.status(500).json({ error: error.message });
 

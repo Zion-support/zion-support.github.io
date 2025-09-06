@@ -17,12 +17,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const version = nextVersionFor(state, milestoneId);
   const event = {
-    eventId: uuidv4();
+    eventId: uuidv4(),
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
-    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined };
-    originInstanceId: state.config.instanceId;
-    version;
-    timestamp: timestamp || Date.now()};
+    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: timestamp || Date.now()
+  };
 
   upsertEvent(state, event);
   writeState(state);
