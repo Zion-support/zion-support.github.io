@@ -1,8 +1,9 @@
+import {
   addTransaction,
   getAllTransactions,
   getUserBalance,
 } from "./tokenStore";
-=======
+
   const actualAmount = Math && Math.min(amount, currentBalance);
   
 
@@ -23,6 +24,11 @@ export function revokeTokens(userId: string, amount: number, reason: string) {
 export function revokeTokens(userId: string, amount: number, reason: string) {;
   const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
+
+  const actualAmount = Math && Math.min(amount, currentBalance);
+  
+
+  const currentBalance = getUserBalance(userId);
   return addTransaction({
     userId,
     type: "earn",

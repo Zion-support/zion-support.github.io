@@ -13,50 +13,43 @@ import {
   RocketLaunchIcon
 } from '@heroicons/react/24/outline';
 
-const features = [
-  {
-    name: 'AI Solutions',
-    description: 'Custom AI models, automation, and intelligent systems that transform your business operations.',
-    icon: LightBulbIcon,
-    color: 'blue',
-  },
-  {
-    name: 'Micro SaaS',
-    description: 'Scalable, secure micro SaaS products that solve specific business challenges.',
-    icon: CpuChipIcon,
-    color: 'purple',
-  },
-  {
-    name: 'IT Services',
-    description: 'Cloud migration, DevOps, SRE, and infrastructure management for enterprise scale.',
-    icon: GlobeAltIcon,
-    color: 'green',
-  },
-  {
-    name: 'Security First',
-    description: 'Advanced cybersecurity and data protection for enterprise-grade applications.',
-    icon: ShieldCheckIcon,
-    color: 'red',
-  },
-  {
-    name: 'Analytics & Insights',
-    description: 'Real-time data analysis and predictive modeling for informed decision making.',
-    icon: ChartBarIcon,
-    color: 'indigo',
-  },
-  {
-    name: 'Team Collaboration',
-    description: 'Seamless integration tools for distributed teams and remote work environments.',
-    icon: UserGroupIcon,
-    color: 'orange',
-  },
-];
+interface CardProps {
+  title: string;
+  href: string;
+  description: string;
+  bullets?: string[];
+  icon?: string;
+}
 
 const stats = [
   { label: 'Companies Served', value: '500+' },
   { label: 'Projects Completed', value: '1,200+' },
   { label: 'Years of Experience', value: '10+' },
   { label: 'Countries', value: '25+' },
+];
+
+const features = [
+  {
+    name: 'AI Solutions',
+    description: 'Transform your business with cutting-edge artificial intelligence solutions including machine learning, NLP, and computer vision.',
+    href: '/services/ai-services',
+    icon: CpuChipIcon,
+    color: 'blue',
+  },
+  {
+    name: 'Micro SaaS Development',
+    description: 'Build and launch your next micro SaaS product with our full-stack development expertise and rapid deployment capabilities.',
+    href: '/services/micro-saas',
+    icon: RocketLaunchIcon,
+    color: 'green',
+  },
+  {
+    name: 'Enterprise IT',
+    description: 'Comprehensive IT services including cloud infrastructure, cybersecurity, and digital transformation solutions.',
+    href: '/services/it-services',
+    icon: ShieldCheckIcon,
+    color: 'purple',
+  },
 ];
 
 const testimonials = [
@@ -151,7 +144,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.slice(0, 3).map((feature) => (
+            {features.map((feature) => (
               <div key={feature.name} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                 <div className={`inline-flex p-3 rounded-xl bg-${feature.color}-100 mb-6`}>
                   <feature.icon className={`h-8 w-8 text-${feature.color}-600`} />
@@ -159,7 +152,7 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.name}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
                 <Link
-                  href="/services"
+                  href={feature.href}
                   className={`inline-flex items-center text-${feature.color}-600 font-semibold hover:text-${feature.color}-700 transition-colors`}
                 >
                   Learn More
@@ -248,30 +241,21 @@ export default function HomePage() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-700 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <div className="py-20 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Join hundreds of companies already using our AI-powered solutions to drive innovation and growth.
             Let's build something amazing together.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              Start Your Project
-              <ArrowRightIcon className="inline-block h-5 w-5 ml-2" />
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200"
-            >
-              View Our Services
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today
+          </Link>
         </div>
       </div>
     </div>

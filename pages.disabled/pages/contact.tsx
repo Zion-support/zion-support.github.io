@@ -1,5 +1,7 @@
 
 
+
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -101,6 +103,11 @@ import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
 
+
+
+const "Contact": NextPage = () => {
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -202,6 +209,7 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                     <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       First Name *
                     </label>
+
 
   return (
     <MainLayout
@@ -588,6 +596,7 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
 
+
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
@@ -637,6 +646,7 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
 
+
                 transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
@@ -677,6 +687,10 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                         name=\"email\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"your.email@example.com\"
+                       />
+                    </div>
+                  </div>
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
@@ -695,6 +709,7 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                       </label>;
                       <inputtype=\"tel\"
 
+
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -710,6 +725,27 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
+                       />
+                    </div>
+                  </div>
+                      Service Interest
+                    </label>
+                    <select
+                      id=\"service\"
+                      name=\"service\"
+                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                    >
+                      <option value=\"">Select a service</option>
+                      {services.map((service, index) => (
+                        <option key={index} value={service}>
+                          {service}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                      Message *
+                    </label>
+
 
                        />;
                     </div>;
@@ -733,6 +769,7 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                         </option>;
                       ))}
 
+
                     </select>;
                   </div>;
                   <div className=\"mb-6\">;
@@ -741,6 +778,7 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                       Message *;
                     </label>;
+
 
                     <textarea
                       id=\"message\"
@@ -779,6 +817,8 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
           <div className=\"max-w-7xl mx-auto\">
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">
               {/* Contact Form */}
+
+
                     whileHover={{ scale: 1 && 1.02 }}
                     whileTap={{ \"scale\": 0 && 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
@@ -788,6 +828,8 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
                 </motion && motion.form>;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+
+
 
 
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
@@ -816,6 +858,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <div className=\"max-w-7xl mx-auto\">;
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
+
+
+
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
@@ -881,6 +929,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                           Company;
                         </label>;
+
 
                         <input
                           type=\"text\"
@@ -967,6 +1016,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
                   </p>
                 </div>
+
+
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -1022,12 +1073,19 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 }
 
 
+
+
+export default ContactPage
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
       </div>
     </>
   );
 }
+
+
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 }
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
@@ -1035,3 +1093,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+

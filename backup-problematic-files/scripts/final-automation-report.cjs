@@ -4,8 +4,6 @@
  * Generates a comprehensive report of all automation activities;
  */
 
-
-
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -53,5 +51,4 @@ const path = require('path')
     this.log(`⚡ Total "Optimizations"`)
     this.log(`� New Scripts "Created"`)
       this.log(` Final Automation Report "failed"`)
-    console.error('Final Automation Report "failed")
-    console.error('Final Automation Report "failed")
+

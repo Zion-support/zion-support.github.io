@@ -25,6 +25,7 @@ import React from 'react';
 interface CustomerExperienceProps {
   // Add props here as needed
 
+
 }
 
 export default function CustomerExperience({ }: CustomerExperienceProps) {
@@ -35,7 +36,10 @@ export default function CustomerExperience({ }: CustomerExperienceProps) {
     </div>
   );
 
+
+
 }
+
 :src.pages.disabled/CustomerExperience.jsx
 }
 }
@@ -43,3 +47,16 @@ export default function CustomerExperience({ }: CustomerExperienceProps) {
 }
 }
 :temp_exclude/src.pages.disabled/CustomerExperience.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/CustomerExperience.jsx
+}
+}
+}
+}
+}

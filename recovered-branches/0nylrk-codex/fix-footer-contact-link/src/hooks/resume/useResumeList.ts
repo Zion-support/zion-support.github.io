@@ -1,9 +1,18 @@
 
+
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
-export function useResumeList() {  const { user } = useAuth();
+export function useResumeList() {
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Resume} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+export function useResumeList() {;
+
+
+  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -20,11 +29,87 @@ export function useResumeList() {  const { user } = useAuth();
       const { data: resumeData, error: resumeError } = await supabase
         .from('talent_resumes')
         .select('*')
+        .eq('user_id', user && user.id)
+        .order('is_active', { ascending: false })
+        .order('created_at', { ascending: false });
+      if (resumeError) throw resumeError;
+
+      
+      if (!resumeData || resumeData && resumeData.length === 0) {
+
         setResumes([]);
         return []
       }
-      // Transform data to match Resume type  }
-}      }));
+      // Transform data to match Resume type
+      const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
+        id: resume && resume.id;
+        user_id: resume && resume.user_id;
+    // Check condition
+if ( {) {
+  $2
+}
+        basic_info: {
+
+          id: resume && resume.id;
+          title: resume && resume.title;
+          headline: resume && resume.headline,
+          summary: resume && resume.summary
+        };
+        work_experience: [];
+        education: [];
+        skills: [];
+        certifications: [],
+
+        is_active: resume.is_active;
+      }));
+;
+      set_resumes (transformed_resumes);
+      return transformed_resumes;
+    } catch (e: any) {
+      console.error ('Error fetching resumes:', e);
+      set_error (e.message);
+      return [];
+
+    } finally {
+      setIsLoading (false);
+    }
+  }
+
+;
+  // Fetch resumes when the component mounts;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      fetch_resumes ();
+    }
+  }, [user]);
+;
+
+  return {
+    is_loading;
+    error;
+    resumes;
+
+
+  }
+}
+      const transformedResumes: Resume[] = resumeData.map(resume => ({
+        id: resume.id;
+        user_id: resume.user_id;
+        basic_info: {
+          id: resume.id;
+          title: resume.title;
+          headline: resume.headline
+          summary: resume.summary
+        }
+        work_experience: [];
+        education: [];
+        skills: [];
+        certifications: []
+        is_active: resume.is_active
+      }));
       setResumes(transformedResumes);
       return transformedResumes
     } catch (e: any) {

@@ -1,4 +1,8 @@
+
+
             // Simple conflict resolution - take the incoming change
+            const resolved = content.replace(/\n<<<<<<<[\s\S]*?
+
             fs.writeFileSync(file, resolved);
             execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
             this.log(`✅ Auto-resolved conflicts in: ${file}`);
@@ -111,8 +115,11 @@ if (require.main === module) {
   const automator = new GitWorkflowAutomator();
   automator.run();
 }
+
 module.exports = GitWorkflowAutomator;
+
 '
+
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"
@@ -179,5 +186,4 @@ execSync(`"git": add ${file}`, { "cwd": this.projectRoo,t, "stdio"`})
             "stdio"
           this.log(' "Merge")
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
-  git commit -m '"fix"
   git commit -m '"fix"

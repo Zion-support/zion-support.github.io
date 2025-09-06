@@ -4,6 +4,8 @@ import React from 'react';
 interface ContentcreationProps {
   // Add props here as needed
 
+
+
 export default function Contentcreation({ }: ContentcreationProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -45,7 +47,8 @@ export default function Contentcreation(): any ({ }: ContentcreationProps) {;
       <h1>Contentcreation</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );import React from 'react';
+  );
+import React from 'react';
 import React from 'react';
 import * as React from 'react';
 
@@ -59,5 +62,6 @@ export default function Contentcreation({ }: ContentcreationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}}
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+}
+}
+}

@@ -1,13 +1,22 @@
-  on_close: () => void;
-}
-
-import {Button} from '@/components/ui/button';
-import {useNavigate} from 'react-router-dom';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 interface NotificationFooterProps {
   onClose: () => void;
 }
-export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
-  const navigate = useNavigate(),
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({
+  onClose,
+}) => {
+  const navigate = useNavigate();
+
+  const handleViewAll = () => {
+    onClose();
+    navigate("/notifications");
+  };
+
+  return (
+    <div className="p-3 text-center border-t border-zion-blue-light">;
   
   const handleViewAll = () => {
     onClose(),
@@ -21,16 +30,20 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 
   const handleViewAll = () => {
     onClose();
-    navigate("/notifications")
-};
+    navigate("/notifications");
+  };
 
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">
+      <Button
         variant="link"
         size="sm"
         className="text-zion-slate-light text-xs"
 
         onClick={handleViewAll}>;
+  );
+  );
+};
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
   on_close,
 }) => {
@@ -42,11 +55,11 @@ export const NotificationFooter: React.FC < NotificationFooterProps> = ({
   }
 ;
   return (
-    <div className="p - 3 text - center border - t border - zion - blue-light">;
+    <div className="p - 3 text - center border - t border - zion - blue - light">;
       <Button;
         variant="link";
         size="sm";
-        className="text - zion - slate - light text-xs";
+        className="text - zion - slate - light text - xs";
         on_click={handleViewAll}
       >;
         View all notifications;
@@ -54,3 +67,48 @@ export const NotificationFooter: React.FC < NotificationFooterProps> = ({
     </div>);
 }
 ;
+
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import { useNavigate } from 'react-router-dom',;
+;
+interface NotificationFooterProps {;
+  onClose:() => void;
+}
+;
+export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }) => {;
+  const navigate = useNavigate(),;
+  ;
+  const handleViewAll = () => {;
+    onClose(),;
+    navigate('/notifications'),;
+  },;
+  ;
+  return (;
+    <div className="p-3 text-center border-t border-zion-blue-light">;
+      <Button;
+        variant="link";
+        size="sm";
+        className="text-zion-slate-light text-xs";
+        onClick={handleViewAll}
+      >;
+        View all notifications;
+      </Button>;
+    </div>;
+  ),;
+},; return (<div className="p-3 text-center border-t border-zion-blue-light" > <Button > View all notifications </Button> </div>) 
+};
+        onClick={handleViewAll}
+>
+        View all notifications
+      </Button>
+    </div>
+
+  );
+}
+
+  );
+
+};
+
+};
