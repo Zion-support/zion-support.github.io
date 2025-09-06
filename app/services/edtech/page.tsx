@@ -1,6 +1,7 @@
-export const metadata = { 
-  title: 'EdTech Solutions | Zion Tech Group',
-  description: 'Complete educational technology solutions including LMS systems, virtual classrooms, AI-powered learning, and personalized education platforms.'
+export const metadata = {
+  title: "EdTech Solutions | Zion Tech Group",
+  description:
+    "Complete educational technology solutions including LMS systems, virtual classrooms, AI-powered learning, and personalized education platforms.",
 };
 
 export default function EdTechPage() {
@@ -8,10 +9,13 @@ export default function EdTechPage() {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">EdTech Solutions</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            EdTech Solutions
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Complete educational technology solutions including LMS systems, virtual classrooms, 
-            AI-powered learning, and personalized education platforms.
+            Complete educational technology solutions including LMS systems,
+            virtual classrooms, AI-powered learning, and personalized education
+            platforms.
           </p>
         </div>
 
@@ -27,7 +31,7 @@ export default function EdTechPage() {
               "Grade tracking",
               "Content delivery",
               "Assessment tools",
-              "Progress analytics"
+              "Progress analytics",
             ]}
             pricing="$40,000 - $200,000"
             marketSize="$18B"
@@ -42,7 +46,7 @@ export default function EdTechPage() {
               "Screen sharing",
               "Breakout rooms",
               "Recording capabilities",
-              "Mobile access"
+              "Mobile access",
             ]}
             pricing="$35,000 - $175,000"
             marketSize="$12B"
@@ -57,7 +61,7 @@ export default function EdTechPage() {
               "Learning analytics",
               "Intelligent tutoring",
               "Performance prediction",
-              "Custom recommendations"
+              "Custom recommendations",
             ]}
             pricing="$60,000 - $300,000"
             marketSize="$8B"
@@ -72,7 +76,7 @@ export default function EdTechPage() {
               "Academic planning",
               "Financial aid",
               "Parent portals",
-              "Reporting tools"
+              "Reporting tools",
             ]}
             pricing="$50,000 - $250,000"
             marketSize="$6B"
@@ -87,7 +91,7 @@ export default function EdTechPage() {
               "Plagiarism detection",
               "Performance analytics",
               "Certification management",
-              "Proctoring tools"
+              "Proctoring tools",
             ]}
             pricing="$30,000 - $150,000"
             marketSize="$4B"
@@ -102,7 +106,7 @@ export default function EdTechPage() {
               "Version control",
               "Collaboration tools",
               "Publishing workflows",
-              "Accessibility features"
+              "Accessibility features",
             ]}
             pricing="$25,000 - $125,000"
             marketSize="$3B"
@@ -120,7 +124,7 @@ export default function EdTechPage() {
               "Badges & rewards",
               "Progress tracking",
               "Social learning",
-              "Competition features"
+              "Competition features",
             ]}
             pricing="$35,000 - $175,000"
             icon="🎮"
@@ -134,7 +138,7 @@ export default function EdTechPage() {
               "Conversation practice",
               "Progress tracking",
               "Cultural content",
-              "Mobile apps"
+              "Mobile apps",
             ]}
             pricing="$45,000 - $225,000"
             icon="🌍"
@@ -148,7 +152,7 @@ export default function EdTechPage() {
               "Math tools",
               "Science simulations",
               "Project portfolios",
-              "Mentor matching"
+              "Mentor matching",
             ]}
             pricing="$55,000 - $275,000"
             icon="🔬"
@@ -162,7 +166,7 @@ export default function EdTechPage() {
               "Custom learning paths",
               "Progress monitoring",
               "Parent communication",
-              "IEP management"
+              "IEP management",
             ]}
             pricing="$40,000 - $200,000"
             icon="♿"
@@ -176,7 +180,7 @@ export default function EdTechPage() {
               "Certification programs",
               "Progress tracking",
               "Compliance training",
-              "Analytics dashboard"
+              "Analytics dashboard",
             ]}
             pricing="$30,000 - $150,000"
             icon="💼"
@@ -190,7 +194,7 @@ export default function EdTechPage() {
               "Predictive modeling",
               "Custom dashboards",
               "Reporting tools",
-              "Data visualization"
+              "Data visualization",
             ]}
             pricing="$35,000 - $175,000"
             icon="📊"
@@ -205,23 +209,39 @@ export default function EdTechPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-3xl mb-2">🧠</div>
-              <h4 className="font-semibold text-gray-900 mb-2">AI & Machine Learning</h4>
-              <p className="text-gray-600 text-sm">Personalized learning experiences powered by AI</p>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                AI & Machine Learning
+              </h4>
+              <p className="text-gray-600 text-sm">
+                Personalized learning experiences powered by AI
+              </p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">🥽</div>
-              <h4 className="font-semibold text-gray-900 mb-2">VR & AR Learning</h4>
-              <p className="text-gray-600 text-sm">Immersive virtual and augmented reality education</p>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                VR & AR Learning
+              </h4>
+              <p className="text-gray-600 text-sm">
+                Immersive virtual and augmented reality education
+              </p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">📱</div>
-              <h4 className="font-semibold text-gray-900 mb-2">Mobile Learning</h4>
-              <p className="text-gray-600 text-sm">Cross-platform mobile learning applications</p>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                Mobile Learning
+              </h4>
+              <p className="text-gray-600 text-sm">
+                Cross-platform mobile learning applications
+              </p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">🔗</div>
-              <h4 className="font-semibold text-gray-900 mb-2">Integration APIs</h4>
-              <p className="text-gray-600 text-sm">Seamless integration with existing systems</p>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                Integration APIs
+              </h4>
+              <p className="text-gray-600 text-sm">
+                Seamless integration with existing systems
+              </p>
             </div>
           </div>
         </div>
@@ -232,8 +252,9 @@ export default function EdTechPage() {
             Ready to Transform Education?
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Our EdTech experts will help you build innovative educational solutions that enhance 
-            learning outcomes and engage students like never before.
+            Our EdTech experts will help you build innovative educational
+            solutions that enhance learning outcomes and engage students like
+            never before.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -261,7 +282,7 @@ function EdTechCategory({
   description,
   services,
   pricing,
-  marketSize
+  marketSize,
 }: {
   title: string;
   icon: string;
@@ -297,7 +318,7 @@ function EdTechService({
   description,
   features,
   pricing,
-  icon
+  icon,
 }: {
   title: string;
   description: string;

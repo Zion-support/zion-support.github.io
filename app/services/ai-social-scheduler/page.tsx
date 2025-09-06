@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 
 export const metadata = {
-  title: 'AI Social Media Scheduler | Zion Tech Group',
-  description: 'Intelligent social media scheduling with AI-powered content generation, optimal timing, and performance analytics. Grow your social presence 5x faster.',
+  title: "AI Social Media Scheduler | Zion Tech Group",
+  description:
+    "Intelligent social media scheduling with AI-powered content generation, optimal timing, and performance analytics. Grow your social presence 5x faster.",
 };
 
 export default function AISocialSchedulerPage() {
@@ -14,8 +15,9 @@ export default function AISocialSchedulerPage() {
           AI Social Media Scheduler
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your social media strategy with AI-powered content generation, optimal posting times, 
-          and intelligent analytics. Schedule, optimize, and grow your social presence automatically.
+          Transform your social media strategy with AI-powered content
+          generation, optimal posting times, and intelligent analytics.
+          Schedule, optimize, and grow your social presence automatically.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -35,7 +37,9 @@ export default function AISocialSchedulerPage() {
 
       {/* Features Section */}
       <section className="py-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Revolutionary Social Media Features</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          Revolutionary Social Media Features
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
             icon="🤖"
@@ -45,7 +49,7 @@ export default function AISocialSchedulerPage() {
               "Brand voice customization",
               "Trending hashtag suggestions",
               "Multi-platform optimization",
-              "Content calendar planning"
+              "Content calendar planning",
             ]}
           />
           <FeatureCard
@@ -56,7 +60,7 @@ export default function AISocialSchedulerPage() {
               "Audience behavior analysis",
               "Optimal posting time detection",
               "Timezone optimization",
-              "Engagement prediction"
+              "Engagement prediction",
             ]}
           />
           <FeatureCard
@@ -67,7 +71,7 @@ export default function AISocialSchedulerPage() {
               "Real-time performance tracking",
               "Engagement rate analysis",
               "ROI measurement",
-              "Competitor benchmarking"
+              "Competitor benchmarking",
             ]}
           />
           <FeatureCard
@@ -78,7 +82,7 @@ export default function AISocialSchedulerPage() {
               "AI image generation",
               "Video content creation",
               "Brand template library",
-              "Auto-resizing for platforms"
+              "Auto-resizing for platforms",
             ]}
           />
           <FeatureCard
@@ -89,7 +93,7 @@ export default function AISocialSchedulerPage() {
               "Facebook, Instagram, Twitter, LinkedIn",
               "TikTok and YouTube support",
               "Bulk posting capabilities",
-              "Platform-specific optimization"
+              "Platform-specific optimization",
             ]}
           />
           <FeatureCard
@@ -100,7 +104,7 @@ export default function AISocialSchedulerPage() {
               "Auto-reply to comments",
               "Sentiment analysis",
               "Crisis management alerts",
-              "Customer service integration"
+              "Customer service integration",
             ]}
           />
         </div>
@@ -108,7 +112,9 @@ export default function AISocialSchedulerPage() {
 
       {/* Pricing Section */}
       <section className="py-16 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Flexible Pricing Plans</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          Flexible Pricing Plans
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <PricingCard
             name="Starter"
@@ -120,7 +126,7 @@ export default function AISocialSchedulerPage() {
               "100 posts per month",
               "Basic AI content generation",
               "Standard analytics",
-              "Email support"
+              "Email support",
             ]}
             popular={false}
           />
@@ -135,7 +141,7 @@ export default function AISocialSchedulerPage() {
               "Advanced AI features",
               "Detailed analytics & reporting",
               "Priority support",
-              "Team collaboration"
+              "Team collaboration",
             ]}
             popular={true}
           />
@@ -150,7 +156,7 @@ export default function AISocialSchedulerPage() {
               "Custom AI training",
               "White-label solution",
               "24/7 dedicated support",
-              "API access"
+              "API access",
             ]}
             popular={false}
           />
@@ -159,7 +165,9 @@ export default function AISocialSchedulerPage() {
 
       {/* Success Stories */}
       <section className="py-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Success Stories</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          Success Stories
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <TestimonialCard
             name="Sarah Johnson"
@@ -187,10 +195,14 @@ export default function AISocialSchedulerPage() {
 
       {/* Benefits Section */}
       <section className="py-16 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Our AI Scheduler?</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          Why Choose Our AI Scheduler?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Proven Results</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+              Proven Results
+            </h3>
             <div className="space-y-4">
               <StatItem number="500%" label="Average Engagement Increase" />
               <StatItem number="75%" label="Time Saved on Content Creation" />
@@ -199,7 +211,9 @@ export default function AISocialSchedulerPage() {
             </div>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Enterprise Features</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+              Enterprise Features
+            </h3>
             <ul className="space-y-3">
               <li className="flex items-center">
                 <span className="text-green-500 mr-3">✓</span>
@@ -228,9 +242,12 @@ export default function AISocialSchedulerPage() {
 
       {/* CTA Section */}
       <section className="py-16 bg-purple-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Social Media?</h2>
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Transform Your Social Media?
+        </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Join 10,000+ businesses that have revolutionized their social media strategy with our AI scheduler.
+          Join 10,000+ businesses that have revolutionized their social media
+          strategy with our AI scheduler.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -254,7 +271,17 @@ export default function AISocialSchedulerPage() {
   );
 }
 
-function FeatureCard({ icon, title, description, features }: { icon: string; title: string; description: string; features: string[] }) {
+function FeatureCard({
+  icon,
+  title,
+  description,
+  features,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+  features: string[];
+}) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
       <div className="text-4xl mb-4">{icon}</div>
@@ -272,19 +299,30 @@ function FeatureCard({ icon, title, description, features }: { icon: string; tit
   );
 }
 
-function PricingCard({ name, price, period, description, features, popular }: { 
-  name: string; 
-  price: string; 
-  period: string; 
-  description: string; 
-  features: string[]; 
-  popular: boolean; 
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
 }) {
   return (
-    <div className={`bg-white p-8 rounded-lg shadow-md border-2 ${popular ? 'border-purple-500' : 'border-gray-200'} relative`}>
+    <div
+      className={`bg-white p-8 rounded-lg shadow-md border-2 ${popular ? "border-purple-500" : "border-gray-200"} relative`}
+    >
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+          <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </span>
         </div>
       )}
       <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
@@ -301,23 +339,31 @@ function PricingCard({ name, price, period, description, features, popular }: {
           </li>
         ))}
       </ul>
-      <button className={`w-full mt-6 py-3 rounded-lg font-semibold transition-colors ${
-        popular 
-          ? 'bg-purple-600 text-white hover:bg-purple-700' 
-          : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-      }`}>
+      <button
+        className={`w-full mt-6 py-3 rounded-lg font-semibold transition-colors ${
+          popular
+            ? "bg-purple-600 text-white hover:bg-purple-700"
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+        }`}
+      >
         Start Free Trial
       </button>
     </div>
   );
 }
 
-function TestimonialCard({ name, role, company, content, avatar }: { 
-  name: string; 
-  role: string; 
-  company: string; 
-  content: string; 
-  avatar: string; 
+function TestimonialCard({
+  name,
+  role,
+  company,
+  content,
+  avatar,
+}: {
+  name: string;
+  role: string;
+  company: string;
+  content: string;
+  avatar: string;
 }) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
@@ -325,7 +371,9 @@ function TestimonialCard({ name, role, company, content, avatar }: {
         <div className="text-3xl mr-3">{avatar}</div>
         <div>
           <h4 className="font-semibold text-gray-900">{name}</h4>
-          <p className="text-sm text-gray-600">{role} at {company}</p>
+          <p className="text-sm text-gray-600">
+            {role} at {company}
+          </p>
         </div>
       </div>
       <p className="text-gray-600 italic">"{content}"</p>

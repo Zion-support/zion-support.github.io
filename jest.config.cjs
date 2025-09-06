@@ -1,11 +1,8 @@
-module.exports = {
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-const nextJest = require('next/jest')
+const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
   dir: './',
-})
+});
 
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -43,35 +40,5 @@ const customJestConfig = {
   collectCoverage: false,
   testTimeout: 10000,
 };
-  collectCoverageFrom: [
-    'components/**/*.{js,jsx,ts,tsx}',
-    'pages/**/*.{js,jsx,ts,tsx}',
-    'utils/**/*.{js,jsx,ts,tsx}',
-    '!**/node_modules/**',
-  ],
-  testPathIgnorePatterns: [
-    '<rootDir>/.next/',
-    '<rootDir>/node_modules/',
-    '<rootDir>/out/',
-    '<rootDir>/__tests__.disabled/',
-    '<rootDir>/tests.disabled/',
-    '<rootDir>/src_backup/',
-    '<rootDir>/test.disabled/',
-    '<rootDir>/plugins.disabled/',
-    '<rootDir>/supabase.disabled/',
-    '<rootDir>/dao/',
-    '<rootDir>/pages.disabled/',
-  ],
-}
 
-module.exports = createJestConfig(customJestConfig)
-  coverageReporters: ['text', 'lcov'],
-  coverageThreshold: {
-    global: {
-      branches: 60,
-      functions: 60,
-      lines: 60,
-      statements: 60
-    }
-  }
-};
+module.exports = createJestConfig(customJestConfig);

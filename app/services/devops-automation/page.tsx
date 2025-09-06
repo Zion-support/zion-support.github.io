@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "DevOps Automation | Zion Tech Group",
-  description: "Streamline your development workflow with comprehensive DevOps automation solutions. CI/CD, infrastructure as code, and monitoring.",
+  description:
+    "Streamline your development workflow with comprehensive DevOps automation solutions. CI/CD, infrastructure as code, and monitoring.",
 };
 
 export default function DevOpsAutomationPage() {
@@ -13,14 +14,17 @@ export default function DevOpsAutomationPage() {
           DevOps Automation
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Streamline your development workflow with comprehensive DevOps automation solutions. 
-          Accelerate deployments, improve reliability, and reduce manual overhead.
+          Streamline your development workflow with comprehensive DevOps
+          automation solutions. Accelerate deployments, improve reliability, and
+          reduce manual overhead.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Our DevOps Services</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Our DevOps Services
+          </h2>
           <div className="space-y-4">
             <FeatureItem
               icon="🔄"
@@ -68,7 +72,7 @@ export default function DevOpsAutomationPage() {
                 "Basic monitoring configuration",
                 "Docker containerization",
                 "Documentation and training",
-                "30-day support"
+                "30-day support",
               ]}
               popular={false}
             />
@@ -83,7 +87,7 @@ export default function DevOpsAutomationPage() {
                 "Kubernetes deployment",
                 "Advanced monitoring setup",
                 "Security integration",
-                "90-day support"
+                "90-day support",
               ]}
               popular={true}
             />
@@ -98,7 +102,7 @@ export default function DevOpsAutomationPage() {
                 "Advanced security automation",
                 "Performance optimization",
                 "Team training and mentoring",
-                "6-month support"
+                "6-month support",
               ]}
               popular={false}
             />
@@ -107,7 +111,9 @@ export default function DevOpsAutomationPage() {
       </div>
 
       <div className="bg-gray-50 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Our DevOps Process</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          Our DevOps Process
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <StepCard
             step="1"
@@ -134,31 +140,45 @@ export default function DevOpsAutomationPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Technologies We Use</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">
+            Technologies We Use
+          </h3>
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>
-              <span className="text-gray-600">CI/CD: Jenkins, GitLab CI, GitHub Actions, Azure DevOps</span>
+              <span className="text-gray-600">
+                CI/CD: Jenkins, GitLab CI, GitHub Actions, Azure DevOps
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>
-              <span className="text-gray-600">Infrastructure: Terraform, Ansible, CloudFormation</span>
+              <span className="text-gray-600">
+                Infrastructure: Terraform, Ansible, CloudFormation
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>
-              <span className="text-gray-600">Containers: Docker, Kubernetes, Helm</span>
+              <span className="text-gray-600">
+                Containers: Docker, Kubernetes, Helm
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>
-              <span className="text-gray-600">Monitoring: Prometheus, Grafana, ELK Stack</span>
+              <span className="text-gray-600">
+                Monitoring: Prometheus, Grafana, ELK Stack
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>
-              <span className="text-gray-600">Cloud: AWS, Azure, GCP, DigitalOcean</span>
+              <span className="text-gray-600">
+                Cloud: AWS, Azure, GCP, DigitalOcean
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>
-              <span className="text-gray-600">Security: SonarQube, Snyk, OWASP ZAP</span>
+              <span className="text-gray-600">
+                Security: SonarQube, Snyk, OWASP ZAP
+              </span>
             </li>
           </ul>
         </div>
@@ -168,40 +188,58 @@ export default function DevOpsAutomationPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Reduce deployment time by 80%</span>
+              <span className="text-gray-600">
+                Reduce deployment time by 80%
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Eliminate manual deployment errors</span>
+              <span className="text-gray-600">
+                Eliminate manual deployment errors
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Improve system reliability and uptime</span>
+              <span className="text-gray-600">
+                Improve system reliability and uptime
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Enable faster feature delivery</span>
+              <span className="text-gray-600">
+                Enable faster feature delivery
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Reduce operational costs by 40%</span>
+              <span className="text-gray-600">
+                Reduce operational costs by 40%
+              </span>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="bg-green-50 border border-green-200 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">DevOps Success Metrics</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          DevOps Success Metrics
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center">
             <div className="text-4xl mb-4">🚀</div>
-            <h3 className="font-semibold text-gray-900 mb-2">Deployment Frequency</h3>
-            <p className="text-gray-600">Deploy 10x more frequently with confidence</p>
+            <h3 className="font-semibold text-gray-900 mb-2">
+              Deployment Frequency
+            </h3>
+            <p className="text-gray-600">
+              Deploy 10x more frequently with confidence
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="font-semibold text-gray-900 mb-2">Lead Time</h3>
-            <p className="text-gray-600">Reduce lead time from weeks to hours</p>
+            <p className="text-gray-600">
+              Reduce lead time from weeks to hours
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">🛡️</div>
@@ -212,9 +250,12 @@ export default function DevOpsAutomationPage() {
       </div>
 
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Ready to Transform Your Development Workflow?</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          Ready to Transform Your Development Workflow?
+        </h2>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Let us help you implement DevOps best practices and automation to accelerate your development process.
+          Let us help you implement DevOps best practices and automation to
+          accelerate your development process.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -238,7 +279,15 @@ export default function DevOpsAutomationPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
       <div className="text-2xl">{icon}</div>
@@ -250,7 +299,14 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
   );
 }
 
-function PricingCard({ plan, price, period, description, features, popular }: {
+function PricingCard({
+  plan,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   plan: string;
   price: string;
   period: string;
@@ -259,7 +315,9 @@ function PricingCard({ plan, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200"}`}
+    >
       {popular && (
         <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
@@ -283,7 +341,15 @@ function PricingCard({ plan, price, period, description, features, popular }: {
   );
 }
 
-function StepCard({ step, title, description }: { step: string; title: string; description: string }) {
+function StepCard({
+  step,
+  title,
+  description,
+}: {
+  step: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center">
       <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">

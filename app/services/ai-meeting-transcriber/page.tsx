@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "AI Meeting Transcriber | Zion Tech Group",
-  description: "Transform your meetings into actionable insights with AI-powered transcription, summarization, and analysis.",
+  description:
+    "Transform your meetings into actionable insights with AI-powered transcription, summarization, and analysis.",
 };
 
 export default function AIMeetingTranscriberPage() {
@@ -13,14 +14,17 @@ export default function AIMeetingTranscriberPage() {
           AI Meeting Transcriber
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your meetings into actionable insights with AI-powered transcription, 
-          summarization, and intelligent analysis. Never miss important details again.
+          Transform your meetings into actionable insights with AI-powered
+          transcription, summarization, and intelligent analysis. Never miss
+          important details again.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Key Features
+          </h2>
           <div className="space-y-4">
             <FeatureItem
               icon="🎤"
@@ -68,7 +72,7 @@ export default function AIMeetingTranscriberPage() {
                 "Basic summarization",
                 "Speaker identification",
                 "Email support",
-                "Standard integrations"
+                "Standard integrations",
               ]}
               popular={false}
             />
@@ -83,7 +87,7 @@ export default function AIMeetingTranscriberPage() {
                 "Action item extraction",
                 "Search & analytics",
                 "Priority support",
-                "All integrations"
+                "All integrations",
               ]}
               popular={true}
             />
@@ -98,7 +102,7 @@ export default function AIMeetingTranscriberPage() {
                 "Advanced analytics",
                 "Dedicated support",
                 "Custom integrations",
-                "On-premise deployment"
+                "On-premise deployment",
               ]}
               popular={false}
             />
@@ -107,7 +111,9 @@ export default function AIMeetingTranscriberPage() {
       </div>
 
       <div className="bg-gray-50 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">How It Works</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          How It Works
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <StepCard
             step="1"
@@ -133,19 +139,27 @@ export default function AIMeetingTranscriberPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>
-              <span className="text-gray-600">Client meetings and consultations</span>
+              <span className="text-gray-600">
+                Client meetings and consultations
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>
-              <span className="text-gray-600">Team standups and retrospectives</span>
+              <span className="text-gray-600">
+                Team standups and retrospectives
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>
-              <span className="text-gray-600">Board meetings and presentations</span>
+              <span className="text-gray-600">
+                Board meetings and presentations
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>
-              <span className="text-gray-600">Training sessions and workshops</span>
+              <span className="text-gray-600">
+                Training sessions and workshops
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>
@@ -159,19 +173,27 @@ export default function AIMeetingTranscriberPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Save 2-3 hours per week on note-taking</span>
+              <span className="text-gray-600">
+                Save 2-3 hours per week on note-taking
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Never miss important details or decisions</span>
+              <span className="text-gray-600">
+                Never miss important details or decisions
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Improve meeting follow-through by 40%</span>
+              <span className="text-gray-600">
+                Improve meeting follow-through by 40%
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Create searchable knowledge base</span>
+              <span className="text-gray-600">
+                Create searchable knowledge base
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
@@ -182,9 +204,12 @@ export default function AIMeetingTranscriberPage() {
       </div>
 
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Ready to Transform Your Meetings?</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          Ready to Transform Your Meetings?
+        </h2>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join thousands of professionals who use our AI meeting transcriber to maximize productivity and never miss important details.
+          Join thousands of professionals who use our AI meeting transcriber to
+          maximize productivity and never miss important details.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -208,7 +233,15 @@ export default function AIMeetingTranscriberPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
       <div className="text-2xl">{icon}</div>
@@ -220,7 +253,14 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
   );
 }
 
-function PricingCard({ plan, price, period, description, features, popular }: {
+function PricingCard({
+  plan,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   plan: string;
   price: string;
   period: string;
@@ -229,7 +269,9 @@ function PricingCard({ plan, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200"}`}
+    >
       {popular && (
         <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
@@ -253,7 +295,15 @@ function PricingCard({ plan, price, period, description, features, popular }: {
   );
 }
 
-function StepCard({ step, title, description }: { step: string; title: string; description: string }) {
+function StepCard({
+  step,
+  title,
+  description,
+}: {
+  step: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center">
       <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">

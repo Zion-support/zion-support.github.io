@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 
 export const metadata = {
-  title: 'AI Code Assistant | Zion Tech Group',
-  description: 'Intelligent code generation, debugging, and optimization powered by advanced AI. Boost developer productivity by 300% with our AI-powered coding assistant.',
+  title: "AI Code Assistant | Zion Tech Group",
+  description:
+    "Intelligent code generation, debugging, and optimization powered by advanced AI. Boost developer productivity by 300% with our AI-powered coding assistant.",
 };
 
 export default function AICodeAssistantPage() {
@@ -14,8 +15,9 @@ export default function AICodeAssistantPage() {
           AI Code Assistant
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your coding experience with our intelligent AI assistant. Generate code, debug issues, 
-          optimize performance, and learn best practices with 24/7 AI-powered support.
+          Transform your coding experience with our intelligent AI assistant.
+          Generate code, debug issues, optimize performance, and learn best
+          practices with 24/7 AI-powered support.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -35,7 +37,9 @@ export default function AICodeAssistantPage() {
 
       {/* Features Section */}
       <section className="py-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Powerful AI Features</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          Powerful AI Features
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
             icon="🤖"
@@ -45,7 +49,7 @@ export default function AICodeAssistantPage() {
               "Multi-language support (Python, JavaScript, Java, C++, Go, Rust)",
               "Context-aware code completion",
               "Function and class generation",
-              "API integration code"
+              "API integration code",
             ]}
           />
           <FeatureCard
@@ -56,7 +60,7 @@ export default function AICodeAssistantPage() {
               "Real-time error detection",
               "Performance bottleneck identification",
               "Memory leak detection",
-              "Security vulnerability scanning"
+              "Security vulnerability scanning",
             ]}
           />
           <FeatureCard
@@ -67,7 +71,7 @@ export default function AICodeAssistantPage() {
               "Performance optimization suggestions",
               "Code refactoring recommendations",
               "Best practice enforcement",
-              "Documentation generation"
+              "Documentation generation",
             ]}
           />
           <FeatureCard
@@ -78,7 +82,7 @@ export default function AICodeAssistantPage() {
               "Interactive coding tutorials",
               "Technology-specific guidance",
               "Code explanation and comments",
-              "Learning path recommendations"
+              "Learning path recommendations",
             ]}
           />
           <FeatureCard
@@ -89,7 +93,7 @@ export default function AICodeAssistantPage() {
               "VS Code extension",
               "IntelliJ IDEA plugin",
               "Vim/Neovim support",
-              "Command-line interface"
+              "Command-line interface",
             ]}
           />
           <FeatureCard
@@ -100,7 +104,7 @@ export default function AICodeAssistantPage() {
               "Security vulnerability scanning",
               "Compliance checking (SOC2, GDPR, HIPAA)",
               "Code quality metrics",
-              "Automated testing suggestions"
+              "Automated testing suggestions",
             ]}
           />
         </div>
@@ -108,7 +112,9 @@ export default function AICodeAssistantPage() {
 
       {/* Pricing Section */}
       <section className="py-16 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Simple, Transparent Pricing</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          Simple, Transparent Pricing
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <PricingCard
             name="Starter"
@@ -120,7 +126,7 @@ export default function AICodeAssistantPage() {
               "5 programming languages",
               "Basic debugging assistance",
               "Email support",
-              "VS Code integration"
+              "VS Code integration",
             ]}
             popular={false}
           />
@@ -135,7 +141,7 @@ export default function AICodeAssistantPage() {
               "Advanced debugging & optimization",
               "Priority support",
               "All IDE integrations",
-              "Team collaboration features"
+              "Team collaboration features",
             ]}
             popular={true}
           />
@@ -150,7 +156,7 @@ export default function AICodeAssistantPage() {
               "On-premise deployment",
               "24/7 dedicated support",
               "Custom integrations",
-              "Security & compliance tools"
+              "Security & compliance tools",
             ]}
             popular={false}
           />
@@ -159,19 +165,28 @@ export default function AICodeAssistantPage() {
 
       {/* Benefits Section */}
       <section className="py-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Our AI Code Assistant?</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          Why Choose Our AI Code Assistant?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Proven Results</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+              Proven Results
+            </h3>
             <div className="space-y-4">
-              <StatItem number="300%" label="Increase in Developer Productivity" />
+              <StatItem
+                number="300%"
+                label="Increase in Developer Productivity"
+              />
               <StatItem number="50%" label="Reduction in Bug Reports" />
               <StatItem number="40%" label="Faster Time to Market" />
               <StatItem number="95%" label="Developer Satisfaction Rate" />
             </div>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Enterprise Features</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+              Enterprise Features
+            </h3>
             <ul className="space-y-3">
               <li className="flex items-center">
                 <span className="text-green-500 mr-3">✓</span>
@@ -200,9 +215,12 @@ export default function AICodeAssistantPage() {
 
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Supercharge Your Development?</h2>
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Supercharge Your Development?
+        </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Join thousands of developers who have already transformed their coding experience with our AI assistant.
+          Join thousands of developers who have already transformed their coding
+          experience with our AI assistant.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -226,7 +244,17 @@ export default function AICodeAssistantPage() {
   );
 }
 
-function FeatureCard({ icon, title, description, features }: { icon: string; title: string; description: string; features: string[] }) {
+function FeatureCard({
+  icon,
+  title,
+  description,
+  features,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+  features: string[];
+}) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
       <div className="text-4xl mb-4">{icon}</div>
@@ -244,19 +272,30 @@ function FeatureCard({ icon, title, description, features }: { icon: string; tit
   );
 }
 
-function PricingCard({ name, price, period, description, features, popular }: { 
-  name: string; 
-  price: string; 
-  period: string; 
-  description: string; 
-  features: string[]; 
-  popular: boolean; 
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
 }) {
   return (
-    <div className={`bg-white p-8 rounded-lg shadow-md border-2 ${popular ? 'border-blue-500' : 'border-gray-200'} relative`}>
+    <div
+      className={`bg-white p-8 rounded-lg shadow-md border-2 ${popular ? "border-blue-500" : "border-gray-200"} relative`}
+    >
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </span>
         </div>
       )}
       <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
@@ -273,11 +312,13 @@ function PricingCard({ name, price, period, description, features, popular }: {
           </li>
         ))}
       </ul>
-      <button className={`w-full mt-6 py-3 rounded-lg font-semibold transition-colors ${
-        popular 
-          ? 'bg-blue-600 text-white hover:bg-blue-700' 
-          : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-      }`}>
+      <button
+        className={`w-full mt-6 py-3 rounded-lg font-semibold transition-colors ${
+          popular
+            ? "bg-blue-600 text-white hover:bg-blue-700"
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+        }`}
+      >
         Get Started
       </button>
     </div>

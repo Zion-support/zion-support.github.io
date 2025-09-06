@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "AI Code Reviewer | Zion Tech Group",
-  description: "Automated code review and quality analysis powered by AI. Improve code quality, catch bugs early, and maintain coding standards.",
+  description:
+    "Automated code review and quality analysis powered by AI. Improve code quality, catch bugs early, and maintain coding standards.",
 };
 
 export default function AICodeReviewerPage() {
@@ -13,14 +14,17 @@ export default function AICodeReviewerPage() {
           AI Code Reviewer
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Automated code review and quality analysis powered by advanced AI. 
-          Improve code quality, catch bugs early, and maintain consistent coding standards across your team.
+          Automated code review and quality analysis powered by advanced AI.
+          Improve code quality, catch bugs early, and maintain consistent coding
+          standards across your team.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Key Features
+          </h2>
           <div className="space-y-4">
             <FeatureItem
               icon="🔍"
@@ -68,7 +72,7 @@ export default function AICodeReviewerPage() {
                 "Basic code analysis",
                 "Standard bug detection",
                 "Email support",
-                "GitHub/GitLab integration"
+                "GitHub/GitLab integration",
               ]}
               popular={false}
             />
@@ -83,7 +87,7 @@ export default function AICodeReviewerPage() {
                 "Custom rules engine",
                 "Priority support",
                 "All integrations",
-                "Team analytics dashboard"
+                "Team analytics dashboard",
               ]}
               popular={true}
             />
@@ -98,7 +102,7 @@ export default function AICodeReviewerPage() {
                 "Custom AI model training",
                 "Dedicated support",
                 "On-premise deployment",
-                "Custom integrations"
+                "Custom integrations",
               ]}
               popular={false}
             />
@@ -107,7 +111,9 @@ export default function AICodeReviewerPage() {
       </div>
 
       <div className="bg-gray-50 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">How It Works</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          How It Works
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <StepCard
             step="1"
@@ -128,9 +134,12 @@ export default function AICodeReviewerPage() {
       </div>
 
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Ready to Improve Your Code Quality?</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          Ready to Improve Your Code Quality?
+        </h2>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join thousands of developers who trust our AI-powered code review platform to maintain high-quality codebases.
+          Join thousands of developers who trust our AI-powered code review
+          platform to maintain high-quality codebases.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -154,7 +163,15 @@ export default function AICodeReviewerPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
       <div className="text-2xl">{icon}</div>
@@ -166,7 +183,14 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
   );
 }
 
-function PricingCard({ plan, price, period, description, features, popular }: {
+function PricingCard({
+  plan,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   plan: string;
   price: string;
   period: string;
@@ -175,7 +199,9 @@ function PricingCard({ plan, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200"}`}
+    >
       {popular && (
         <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
@@ -199,7 +225,15 @@ function PricingCard({ plan, price, period, description, features, popular }: {
   );
 }
 
-function StepCard({ step, title, description }: { step: string; title: string; description: string }) {
+function StepCard({
+  step,
+  title,
+  description,
+}: {
+  step: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center">
       <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">

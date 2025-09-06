@@ -1,6 +1,7 @@
-export const metadata = { 
-  title: 'HealthTech Solutions | Zion Tech Group',
-  description: 'Complete healthcare technology solutions including EHR systems, telemedicine platforms, medical AI, and HIPAA-compliant healthcare applications.'
+export const metadata = {
+  title: "HealthTech Solutions | Zion Tech Group",
+  description:
+    "Complete healthcare technology solutions including EHR systems, telemedicine platforms, medical AI, and HIPAA-compliant healthcare applications.",
 };
 
 export default function HealthTechPage() {
@@ -8,10 +9,13 @@ export default function HealthTechPage() {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">HealthTech Solutions</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            HealthTech Solutions
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Complete healthcare technology solutions including EHR systems, telemedicine platforms, 
-            medical AI, and HIPAA-compliant healthcare applications.
+            Complete healthcare technology solutions including EHR systems,
+            telemedicine platforms, medical AI, and HIPAA-compliant healthcare
+            applications.
           </p>
         </div>
 
@@ -27,7 +31,7 @@ export default function HealthTechPage() {
               "Interoperability standards",
               "Data migration",
               "Custom workflows",
-              "Integration APIs"
+              "Integration APIs",
             ]}
             pricing="$75,000 - $400,000"
             marketSize="$28B"
@@ -42,7 +46,7 @@ export default function HealthTechPage() {
               "Appointment scheduling",
               "Prescription management",
               "Patient portals",
-              "Mobile applications"
+              "Mobile applications",
             ]}
             pricing="$50,000 - $250,000"
             marketSize="$185B"
@@ -57,7 +61,7 @@ export default function HealthTechPage() {
               "Clinical decision support",
               "Predictive analytics",
               "Drug discovery",
-              "Treatment recommendations"
+              "Treatment recommendations",
             ]}
             pricing="$100,000 - $500,000"
             marketSize="$45B"
@@ -72,7 +76,7 @@ export default function HealthTechPage() {
               "Cost optimization",
               "Quality metrics",
               "Predictive modeling",
-              "Real-time dashboards"
+              "Real-time dashboards",
             ]}
             pricing="$60,000 - $300,000"
             marketSize="$12B"
@@ -87,7 +91,7 @@ export default function HealthTechPage() {
               "Wearable integration",
               "Health education",
               "Appointment management",
-              "Communication tools"
+              "Communication tools",
             ]}
             pricing="$40,000 - $200,000"
             marketSize="$8B"
@@ -102,7 +106,7 @@ export default function HealthTechPage() {
               "Real-time monitoring",
               "Alert systems",
               "Integration APIs",
-              "Compliance management"
+              "Compliance management",
             ]}
             pricing="$80,000 - $400,000"
             marketSize="$15B"
@@ -120,7 +124,7 @@ export default function HealthTechPage() {
               "Insurance verification",
               "Patient counseling",
               "Drug interaction checks",
-              "Compliance reporting"
+              "Compliance reporting",
             ]}
             pricing="$45,000 - $225,000"
             icon="💊"
@@ -134,7 +138,7 @@ export default function HealthTechPage() {
               "Lead generation",
               "Appointment reminders",
               "Patient surveys",
-              "Analytics dashboard"
+              "Analytics dashboard",
             ]}
             pricing="$35,000 - $175,000"
             icon="📈"
@@ -148,7 +152,7 @@ export default function HealthTechPage() {
               "Meditation apps",
               "Crisis intervention",
               "Peer support",
-              "Progress monitoring"
+              "Progress monitoring",
             ]}
             pricing="$55,000 - $275,000"
             icon="🧘"
@@ -162,7 +166,7 @@ export default function HealthTechPage() {
               "Data collection",
               "Compliance tracking",
               "Reporting tools",
-              "Integration APIs"
+              "Integration APIs",
             ]}
             pricing="$90,000 - $450,000"
             icon="🔬"
@@ -176,7 +180,7 @@ export default function HealthTechPage() {
               "Payment processing",
               "Denial management",
               "Financial reporting",
-              "Compliance tracking"
+              "Compliance tracking",
             ]}
             pricing="$65,000 - $325,000"
             icon="💰"
@@ -190,7 +194,7 @@ export default function HealthTechPage() {
               "Real-time monitoring",
               "Alert systems",
               "Data visualization",
-              "Integration APIs"
+              "Integration APIs",
             ]}
             pricing="$45,000 - $225,000"
             icon="⌚"
@@ -205,18 +209,30 @@ export default function HealthTechPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="text-3xl mb-2">🔒</div>
-              <h4 className="font-semibold text-gray-900 mb-2">Data Encryption</h4>
-              <p className="text-gray-600 text-sm">End-to-end encryption for all patient data</p>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                Data Encryption
+              </h4>
+              <p className="text-gray-600 text-sm">
+                End-to-end encryption for all patient data
+              </p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">🛡️</div>
-              <h4 className="font-semibold text-gray-900 mb-2">Access Controls</h4>
-              <p className="text-gray-600 text-sm">Role-based access and audit trails</p>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                Access Controls
+              </h4>
+              <p className="text-gray-600 text-sm">
+                Role-based access and audit trails
+              </p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">✅</div>
-              <h4 className="font-semibold text-gray-900 mb-2">HIPAA Certified</h4>
-              <p className="text-gray-600 text-sm">Full compliance with healthcare regulations</p>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                HIPAA Certified
+              </h4>
+              <p className="text-gray-600 text-sm">
+                Full compliance with healthcare regulations
+              </p>
             </div>
           </div>
         </div>
@@ -227,8 +243,9 @@ export default function HealthTechPage() {
             Ready to Transform Healthcare?
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Our HealthTech experts will help you build secure, HIPAA-compliant healthcare solutions 
-            that improve patient outcomes and streamline operations.
+            Our HealthTech experts will help you build secure, HIPAA-compliant
+            healthcare solutions that improve patient outcomes and streamline
+            operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -256,7 +273,7 @@ function HealthTechCategory({
   description,
   services,
   pricing,
-  marketSize
+  marketSize,
 }: {
   title: string;
   icon: string;
@@ -292,7 +309,7 @@ function HealthTechService({
   description,
   features,
   pricing,
-  icon
+  icon,
 }: {
   title: string;
   description: string;

@@ -1,10 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-export const metadata = { 
-  title: 'AI Project Management Suite | Zion Tech Group',
-  description: 'Intelligent project management with AI-powered task automation, resource optimization, risk prediction, and smart scheduling for enhanced team productivity.',
-  keywords: 'AI project management, task automation, resource optimization, risk prediction, team productivity, project planning AI'
+export const metadata = {
+  title: "AI Project Management Suite | Zion Tech Group",
+  description:
+    "Intelligent project management with AI-powered task automation, resource optimization, risk prediction, and smart scheduling for enhanced team productivity.",
+  keywords:
+    "AI project management, task automation, resource optimization, risk prediction, team productivity, project planning AI",
 };
 
 interface FeatureProps {
@@ -33,9 +35,19 @@ interface PricingTierProps {
   cta: string;
 }
 
-function PricingTier({ name, price, period, description, features, popular = false, cta }: PricingTierProps) {
+function PricingTier({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular = false,
+  cta,
+}: PricingTierProps) {
   return (
-    <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
+    <div
+      className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
+    >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -54,8 +66,16 @@ function PricingTier({ name, price, period, description, features, popular = fal
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-            <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            <svg
+              className="w-5 h-5 text-green-500 mr-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
             </svg>
             <span className="text-gray-700">{feature}</span>
           </li>
@@ -65,8 +85,8 @@ function PricingTier({ name, price, period, description, features, popular = fal
         href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Suite Quote - {name}"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? 'bg-blue-600 text-white hover:bg-blue-700'
-            : 'bg-gray-900 text-white hover:bg-gray-800'
+            ? "bg-blue-600 text-white hover:bg-blue-700"
+            : "bg-gray-900 text-white hover:bg-gray-800"
         }`}
       >
         {cta}
@@ -84,7 +104,9 @@ export default function AIProjectManagementSuitePage() {
           AI Project Management Suite
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your project management with AI-powered automation, intelligent resource allocation, and predictive analytics. Boost team productivity and project success rates.
+          Transform your project management with AI-powered automation,
+          intelligent resource allocation, and predictive analytics. Boost team
+          productivity and project success rates.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -105,9 +127,12 @@ export default function AIProjectManagementSuitePage() {
       {/* Key Features */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">AI-Powered Project Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            AI-Powered Project Features
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive AI solutions to optimize your project management and team collaboration.
+            Comprehensive AI solutions to optimize your project management and
+            team collaboration.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -147,9 +172,12 @@ export default function AIProjectManagementSuitePage() {
       {/* Integration Options */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Seamless Integrations
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Connect with your existing tools and platforms for a unified project management experience.
+            Connect with your existing tools and platforms for a unified project
+            management experience.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -159,13 +187,22 @@ export default function AIProjectManagementSuitePage() {
             { name: "Trello", icon: "📌", description: "Kanban boards" },
             { name: "Monday.com", icon: "📅", description: "Work management" },
             { name: "Slack", icon: "💬", description: "Team communication" },
-            { name: "Microsoft Teams", icon: "👥", description: "Collaboration" },
+            {
+              name: "Microsoft Teams",
+              icon: "👥",
+              description: "Collaboration",
+            },
             { name: "GitHub", icon: "🐙", description: "Code management" },
-            { name: "Figma", icon: "🎨", description: "Design collaboration" }
+            { name: "Figma", icon: "🎨", description: "Design collaboration" },
           ].map((integration, index) => (
-            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+            <div
+              key={index}
+              className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200"
+            >
               <div className="text-3xl mb-3">{integration.icon}</div>
-              <h3 className="font-semibold text-gray-900 mb-1">{integration.name}</h3>
+              <h3 className="font-semibold text-gray-900 mb-1">
+                {integration.name}
+              </h3>
               <p className="text-xs text-gray-600">{integration.description}</p>
             </div>
           ))}
@@ -175,7 +212,9 @@ export default function AIProjectManagementSuitePage() {
       {/* How It Works */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            How It Works
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Simple 4-step process to implement AI-powered project management.
           </p>
@@ -185,29 +224,49 @@ export default function AIProjectManagementSuitePage() {
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
               1
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Setup & Integration</h3>
-            <p className="text-gray-600">Connect your existing tools and configure AI settings for your team</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              Setup & Integration
+            </h3>
+            <p className="text-gray-600">
+              Connect your existing tools and configure AI settings for your
+              team
+            </p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
               2
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Learning</h3>
-            <p className="text-gray-600">AI analyzes your team's work patterns and project history to optimize recommendations</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              AI Learning
+            </h3>
+            <p className="text-gray-600">
+              AI analyzes your team's work patterns and project history to
+              optimize recommendations
+            </p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
               3
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Automation & Optimization</h3>
-            <p className="text-gray-600">AI automatically manages tasks, schedules, and resources for maximum efficiency</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              Automation & Optimization
+            </h3>
+            <p className="text-gray-600">
+              AI automatically manages tasks, schedules, and resources for
+              maximum efficiency
+            </p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
               4
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Monitor & Improve</h3>
-            <p className="text-gray-600">Track performance and let AI continuously optimize your project management processes</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              Monitor & Improve
+            </h3>
+            <p className="text-gray-600">
+              Track performance and let AI continuously optimize your project
+              management processes
+            </p>
           </div>
         </div>
       </section>
@@ -215,9 +274,12 @@ export default function AIProjectManagementSuitePage() {
       {/* Pricing */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Pricing Plans
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your team size and project management needs.
+            Choose the plan that fits your team size and project management
+            needs.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -232,7 +294,7 @@ export default function AIProjectManagementSuitePage() {
               "Project templates",
               "Basic analytics",
               "Email support",
-              "5 active projects"
+              "5 active projects",
             ]}
             cta="Start Free Trial"
           />
@@ -249,7 +311,7 @@ export default function AIProjectManagementSuitePage() {
               "Advanced analytics",
               "Priority support",
               "Unlimited projects",
-              "API access"
+              "API access",
             ]}
             popular={true}
             cta="Start Free Trial"
@@ -267,7 +329,7 @@ export default function AIProjectManagementSuitePage() {
               "Dedicated account manager",
               "24/7 phone support",
               "Custom integrations",
-              "Advanced reporting"
+              "Advanced reporting",
             ]}
             cta="Contact Sales"
           />
@@ -277,9 +339,12 @@ export default function AIProjectManagementSuitePage() {
       {/* Benefits */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our AI Project Management?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Why Choose Our AI Project Management?
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Proven results and cutting-edge AI technology to transform your project management.
+            Proven results and cutting-edge AI technology to transform your
+            project management.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -287,38 +352,58 @@ export default function AIProjectManagementSuitePage() {
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">📈</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">40% Productivity Boost</h3>
-            <p className="text-gray-600">Average increase in team productivity with AI optimization</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              40% Productivity Boost
+            </h3>
+            <p className="text-gray-600">
+              Average increase in team productivity with AI optimization
+            </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">⏰</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">50% Time Savings</h3>
-            <p className="text-gray-600">Reduce time spent on project management tasks and focus on execution</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              50% Time Savings
+            </h3>
+            <p className="text-gray-600">
+              Reduce time spent on project management tasks and focus on
+              execution
+            </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🎯</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">95% On-Time Delivery</h3>
-            <p className="text-gray-600">AI scheduling and risk prediction improve project success rates</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              95% On-Time Delivery
+            </h3>
+            <p className="text-gray-600">
+              AI scheduling and risk prediction improve project success rates
+            </p>
           </div>
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">💰</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">30% Cost Reduction</h3>
-            <p className="text-gray-600">Optimized resource allocation reduces project costs and waste</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              30% Cost Reduction
+            </h3>
+            <p className="text-gray-600">
+              Optimized resource allocation reduces project costs and waste
+            </p>
           </div>
         </div>
       </section>
 
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Project Management?</h2>
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Transform Your Project Management?
+        </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Start your free trial today and see how AI can revolutionize your project management processes.
+          Start your free trial today and see how AI can revolutionize your
+          project management processes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
