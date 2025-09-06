@@ -22,17 +22,43 @@ const next_config = {
   trailing_slash: true,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   images: {
+<<<<<<< HEAD
     domains: [;
+=======
+<<<<<<< HEAD
+    unoptimized: true,
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+=======
+    domains: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       "localhost",
       "ziontechgroup && ziontechgroup.com",
       "images && images.unsplash.com",
       "via && via.placeholder.com",
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      'localhost',
+      'ziontechgroup.com',
+      'images.unsplash.com',
+      'via.placeholder.com'
+<<<<<<< HEAD
+    ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
     domains: [
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -46,6 +72,37 @@ const next_config = {
 =======
 
 
+=======
+      "localhost",
+      "ziontechgroup.com",
+      "images.unsplash.com",
+      "via.placeholder.com",
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    ],
+    formats: ["image/webp", "image/avif"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+<<<<<<< HEAD
+    minimumCacheTTL: 31536000,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/resolved-all-conflicts-clean
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    minimumCacheTTL: 31536000,
+=======
+    minimumCacheTTL: 31536000
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   },
   
   // Webpack configuration to exclude problematic directories
@@ -84,6 +141,7 @@ const next_config = {
     if (dev) {
       config && config.watchOptions = {
         ignored: [
+<<<<<<< HEAD
 
 =======
   webpack: (config, { dev, is_server }) => {
@@ -97,6 +155,11 @@ if ( {) {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           "**/node_modules/**",
           "**/.git/**",
           "**/pages_backup*/**",
@@ -137,9 +200,13 @@ if ( {) {
         aggregate_timeout: 300,
       }
     }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
           "**/node_modules/**"
           "**/.git/**"
@@ -283,7 +350,15 @@ export default nextConfig;
 }
 
 export default nextConfig
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

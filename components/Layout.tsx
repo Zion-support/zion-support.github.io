@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -23,6 +24,15 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
@@ -163,6 +173,7 @@ import React, { ReactNode } from "react";
         {/* JSON-LD */}
         <script
           type="application/ld+json"
+<<<<<<< HEAD
           dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
         />;
       </Head>;
@@ -174,6 +185,20 @@ import React, { ReactNode } from "react";
   );
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import React, { ReactNode } from "react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 interface LayoutProps {
   children: ReactNode,
@@ -194,6 +219,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 }
 export default Layout;
 =======
+<<<<<<< HEAD
         {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
         <meta property="og:title" content={og_title || title} />;
@@ -222,6 +248,20 @@ export default Layout;
       <main>{children}</main>;
       <Footer />;
     </div>);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { ReactNode } from "react";
+interface LayoutProps {
+  children: ReactNode;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
   } catch (error) {
@@ -246,9 +286,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

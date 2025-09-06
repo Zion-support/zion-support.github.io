@@ -1,8 +1,16 @@
 
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
@@ -19,8 +27,13 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function WebhooksManager() {
 
   const {;
@@ -32,6 +45,7 @@ export function WebhooksManager() {
     toggleWebhook;
     deleteWebhook;
     testWebhook;
+<<<<<<< HEAD
 
 
 
@@ -57,6 +71,9 @@ export function WebhooksManager() {
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
@@ -235,7 +252,80 @@ export function WebhooksManager() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
+<<<<<<< HEAD
 
+=======
+                  <Input
+                    id="webhook-secret"
+                    type="password"
+                    value={webhookSecret}
+                    onChange={(e) => setWebhookSecret(e.target.value)}
+                    placeholder="••••••••••••••••"
+                    className="bg-zinc-800 border-zinc-700"
+                  />
+                  <p className="text-xs text-zinc-500">
+                    Used to verify webhook payload signatures. Keep it secret and secure.
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <Label>Event Types</Label>
+                  <div className="grid gap-2 pt-2">
+                    {eventOptions.map((event) => (
+                      <div key={event.value} className="flex items-center space-x-2">
+<<<<<<< HEAD
+                        <Checkbox
+                          id={event.value}
+=======
+                        <Checkbox 
+                          id={event.value} 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",;
+import { format } from "date-fns",;
+import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
+import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
+import { Input } from "@/components/ui/input",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import { Label } from "@/components/ui/label",;
+import { Badge } from "@/components/ui/badge",;
+import { Switch } from "@/components/ui/switch",;
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
+import { ScrollArea } from "@/components/ui/scroll-area",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+export function WebhooksManager() {;
+  const {;
+    webhooks,;
+    loading,;
+    testResult,;
+    fetchWebhooks,;
+    createWebhook,;
+    toggleWebhook,;
+    deleteWebhook,;
+    testWebhook,;
+    clearTestResult;
+  } = useWebhooks(),;
+  const [showCreateDialog, setShowCreateDialog] = useState(false),;
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),;
+  const [showTestDialog, setShowTestDialog] = useState<string | null>(null),;
+  const [showTestResult, setShowTestResult] = useState(false),;
+  // Create webhook form state;
+  const [webhookName, setWebhookName] = useState(""),;
+  const [webhookUrl, setWebhookUrl] = useState(""),;
+  const [webhookSecret, setWebhookSecret] = useState(""),;
+  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),;
+  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),;
+  // Load webhooks on mount;
+  useEffect(() => {;
+    fetchWebhooks();
+  }, []),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const handleCreateWebhook = async () => {;
     if (webhookName && webhookName.trim() === "" || webhookUrl && webhookUrl.trim() === "" || selectedEvents && selectedEvents.length === 0) return;
 
@@ -381,6 +471,7 @@ export function WebhooksManager() {
                 <div className="space-y-2">;
                   <Label>Event Types</Label>;
                   <div className="grid gap-2 pt-2">;
+<<<<<<< HEAD
                     {eventOptions && eventOptions.map((event) => (;
                       <div key={event && event.value} className="flex items-center space-x-2">;
                         <Checkbox
@@ -394,6 +485,17 @@ export function WebhooksManager() {
                         <Checkbox 
                           id={event.value} 
 
+=======
+                    {eventOptions.map((event) => (;
+                      <div key={event.value} className="flex items-center space-x-2">;
+                        <Checkbox;
+                          id={event.value} ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
@@ -616,10 +718,18 @@ function WebhooksManager() {
             </DialogContent>;
           </Dialog>;
         </div>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Webhooks List */}
         <div className="space - y-4">;
           {loading ? (
@@ -649,6 +759,7 @@ function WebhooksManager() {
                       />;
                       <span className="ml - 2 text - sm">;
                         {webhook.is_active ? "Active" : "Inactive"}
+<<<<<<< HEAD
 
                   </div>;
                 </div>;
@@ -709,6 +820,68 @@ function WebhooksManager() {
                     <DropdownMenu>;
                       <DropdownMenuTrigger asChild>;
 =======
+                      </span>
+                    </div>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button variant="ghost" size="icon">
+                          <MoreVertical size={16} />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
+                        <DropdownMenuItem
+                          onClick={() => setShowTestDialog(webhook.id)}
+                          className="cursor-pointer"
+                        >
+                          <PlayCircle size={14} className="mr-2" /> Test
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          onClick={() => setShowDeleteConfirm(webhook.id)}
+                          className="cursor-pointer text-red-500"
+                        >
+                          <X size={14} className="mr-2" /> Delete
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </div>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {webhook.event_types.map((event) => (
+                    <Badge
+                      key={event}
+                      variant="secondary"
+                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
+                    >
+                      {event}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
+                  <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
+                  {webhook.last_triggered_at && (
+                    <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>
+                  )}
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </CardContent>
+      <CardFooter className="justify-between border-t border-zinc-800 py-4">
+        <div className="text-xs text-zinc-500">
+          Webhooks will be sent with HTTPS POST requests to your endpoint.
+        </div>
+        <Button variant="outline" size="sm" onClick={fetchWebhooks}>
+          <RefreshCw size={14} className="mr-1" /> Refresh
+        </Button>
+      </CardFooter>
+<<<<<<< HEAD
+      {/* Test Webhook Dialog */}
+<<<<<<< HEAD
+      <Dialog
+        open={showTestDialog !== null}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
                       </span>;
                     </div>;
                     <DropdownMenu>;
@@ -759,8 +932,12 @@ function WebhooksManager() {
 
       <Dialog 
         open={showTestDialog !== null} 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         onOpenChange={(open) => {
           if (!open) {
 =======
@@ -787,11 +964,19 @@ function WebhooksManager() {
             if (showTestResult) {;
               setShowTestResult(false);
               clearTestResult();
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             }
           }
         }}
@@ -978,9 +1163,17 @@ if ( {) {
                 </Button>;
               </DialogFooter>;
             </>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           )}
         </DialogContent>
       </Dialog>

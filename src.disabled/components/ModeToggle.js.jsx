@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -7,6 +8,17 @@
 "export\": function ModeToggle () { return () <button className=\'p - 2 rounded - lg bg - zion - slate / 10 hover: bg: - zion - slate / 20 transition - colors\'> <svg\' className=\'w - 5 h - 5 text - zion - slate - light\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\' > <path\' strokeLinecap=\'round\' strokeLinejoin=\'round\' strokeWidth={2}\' d=\'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354 - 5.646z\' /> </svg> </button>) } \''\';\'"\";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ModeToggle.js.jsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD:src.disabled/components/ModeToggle.js.jsx
+<<<<<<< HEAD
+"export\": function ModeToggle () { return () <button className=\'p - 2 rounded - lg bg - zion - slate / 10 hover: bg: - zion - slate / 20 transition - colors\'> <svg\' className=\'w - 5 h - 5 text - zion - slate - light\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\' > <path\' strokeLinecap=\'round\' strokeLinejoin=\'round\' strokeWidth={2}\' d=\'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354 - 5.646z\' /> </svg> </button>) } \''\';\'"\";
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+"export\": function ModeToggle () { return () <button className=\'p - 2 rounded - lg bg - zion - slate / 10 hover: bg: - zion - slate / 20 transition - colors\'> <svg\' className=\'w - 5 h - 5 text - zion - slate - light\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\' > <path\' strokeLinecap=\'round\' strokeLinejoin=\'round\' strokeWidth={2}\' d=\'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354 - 5.646z\' /> </svg> </button>) } \''\';\'"\";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ModeToggle.js.jsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export: function ModeToggle () { return () <button className="p - 2 rounded - lg bg - zion - slate / 10 hover: bg: - zion - slate / 20 transition - colors"> <svg" className="w - 5 h - 5 text - zion - slate - light" fill="none" stroke="currentColor" viewBox="0 0 24 24" > <path" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354 - 5.646z" /> </svg> </button>) } """;""";"""
 =======
 =======

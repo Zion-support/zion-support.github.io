@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { useRouter } from 'next/router', // Changed from react-router-dom
+import { useFormik  } from 'formik';
+import * as Yup from 'yup',
+import axios from 'axios',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import Link from 'next/link';
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
@@ -20,6 +30,7 @@ import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
 import { AuthButtons } from '@/components/AuthButtons'
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
@@ -31,6 +42,38 @@ import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 export default function Signup() {;
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
+
+import { toast } from '@/hooks/use-toast'
+import { AuthLayout } from '@/layout'
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+const SignupSchema = Yup.object({
+  name: Yup.string().required('Name is required')
+  email: Yup.string().email('Invalid email').required('Email is required')
+  password: Yup.string()
+    .min(8, 'Password must be at least 8 characters')
+    .matches(/[A-Z]/, 'Password must include an uppercase letter')
+    .matches(/[a-z]/, 'Password must include a lowercase letter')
+    .matches(/[0-9]/, 'Password must include a number')
+    .required('Password is required')
+  confirm: Yup.string()
+    .oneOf([Yup.ref('password')], 'Passwords must match')
+    .required('Confirm password is required')
+  terms: Yup.boolean().oneOf(
+    [true]
+    'You must accept the terms and conditions'
+<<<<<<< HEAD
+  )
+})
+export default function Signup() {
+=======
+  ),
+});
+export default function Signup() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -105,11 +148,24 @@ if ( {) {
         setHealthCheckError ('Authentication service is experiencing issues');
       }
     } catch (err: any) {
+<<<<<<< HEAD
 
 
       if (true) {}
 
 
+=======
+      logErrorToProduction('Auth service health check failed', { data: err })
+      setAuthServiceAvailable(false)
+      // Set a more specific error message based on the error type
+<<<<<<< HEAD
+      if (
+        err.code === 'NETWORK_ERROR' |
+        err.message?.includes('Network Error')
+=======
+      if (true) {}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -245,6 +301,7 @@ if ( {) {
                 url: err.config.url
                 method: err.config.method
               }
+<<<<<<< HEAD
 
 
         const errorMsg = null;
@@ -252,6 +309,21 @@ if ( {) {
           err.response?.data?.message ||
 
 
+=======
+            : 'No config'
+        })
+        const status = err.response?.status
+        // Try both 'error' and 'message' fields for compatibility
+<<<<<<< HEAD
+        const errorMsg =
+          err.response?.data?.error |
+          err.response?.data?.message |
+=======
+        const errorMsg = null;
+          err.response?.data?.error ||
+          err.response?.data?.message ||
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -603,6 +675,16 @@ export default function Signup() {;
   };
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  // Show loading state only during initial health check
+  if (healthCheckLoading) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return (
       <AuthLayout>;
         <div className='flex min-h-screen items-center justify-center p-4'>;
@@ -1156,8 +1238,16 @@ export default function Signup() {;
               >
                 Go to Login
               </Button>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <Button
                 type="button"
                 variant="outline"
@@ -1168,9 +1258,63 @@ export default function Signup() {;
               >
                 Check Verification Status
               </Button>
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+            ) : (
+              <div className='space-y-2'>
+                <Button
+                  type='button'
+                  variant='outline'
+                  className='w-full'
+                  onClick={() => router.push('/login')}
+                >
+                  Go to Login
+                </Button>
+                <Button
+                  type='button'
+                  variant='outline'
+                  className='w-full'
+                  onClick={() =>
+                    router.push(
+                      `/verify-status?email=${encodeURIComponent(formik.values.email)}`
+                    )
+                  }
+                >
+                  Check Verification Status
+                </Button>
+                <Button
+                  type='button'
+                  variant='ghost'
+                  className='w-full text-sm'
+                  onClick={() => {
+                    setEmailVerificationRequired(false)
+                    setSuccessMessage('')
+                  }}
+                >
+                  Try Different Email
+                </Button>
+              </div>
+            )}
+            {/* Additional help text when service issues are detected */}
+            {healthCheckError && (
+              <div className='text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded'>
+                <p>⚠️ We detected some authentication service issues.</p>
+                <p>
+                  If signup fails, please try again in a few minutes or contact
+                  support.
+                </p>
+              </div>
+            )}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <Button
                 type="button"
                 variant="ghost"
@@ -1192,10 +1336,18 @@ export default function Signup() {;
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </form>
           {!emailVerificationRequired && (
             <div className='mt-6'>
@@ -1327,8 +1479,62 @@ import { Checkbox  } from '@/components / ui / checkbox';
 import { Alert, AlertDescription  } from '@/components / ui / alert';
 import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
 import {
+<<<<<<< HEAD
 
 
+=======
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage,
+} from "@/components/ui/form"
+// Form validation schema
+const signupSchema = z
+  .object({
+    displayName: z.string().min(2, "Name must be at least 2 characters")
+    email: z.string().email("Please enter a valid email")
+    password: z.string()
+      .min(8, "Password must be at least 8 characters")
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+      .regex(/[0-9]/, "Password must contain at least one number")
+    confirmPassword: z.string()
+    termsAccepted: z.boolean().refine(val => val === true, {
+      message: "You must accept the terms and conditions",
+}),
+})
+  .refine(data => data.password === data.confirmPassword, {
+    message: "Passwords do not match"
+    path: ["confirmPassword"],
+})
+type SignupFormValues = z.infer<typeof signupSchema>
+export default function Signup() {
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth()
+  const navigate = useNavigate()
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  // Track confirm password locally to prevent it from clearing on blur
+  const [confirmPasswordValue, setConfirmPasswordValue] = useState("")
+  const passwordValue = form.watch("password")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  // Initialize react-hook-form
+  const form = useForm({
+    resolver: zodResolver(signupSchema)
+    defaultValues: {
+<<<<<<< HEAD
+      displayName: "
+      email: "
+      password: "
+      confirmPassword: "
+      termsAccepted: false,
+}
+}) as UseFormReturn<SignupFormValues>
+  // Form submission handler
+  const onSubmit = async (data: SignupFormValues) => {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       displayName: ",
       email: ",
       password: ",
@@ -1338,8 +1544,12 @@ import {
 }) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -1369,6 +1579,7 @@ import {
         const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
           console.error("Error setting session:", sessionError)
+<<<<<<< HEAD
 
   Form,
   FormControl,
@@ -1437,12 +1648,22 @@ if (return) {
 if ( {) {
   $2
 =======
+<<<<<<< HEAD
+          form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
+          toast.error(sessionError.message |"Failed to set session. Please try logging in.")
+          return
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
           toast.error(sessionError.message || "Failed to set session. Please try logging in.")
           return;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');
@@ -1648,6 +1869,7 @@ export default function Signup() {;
         // Potentially navigate to login or show a more specific error;
         return;
 }
+<<<<<<< HEAD
 
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
       if (data && data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {;
@@ -1660,6 +1882,10 @@ export default function Signup() {;
 } catch (err) {;
           console && console.error('Mailchimp subscription failed', err);
           // Non-critical error, don't block user flow;
+=======
+<<<<<<< HEAD
+}}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
       }
       // Toast and navigation are handled above if session is present;
@@ -1735,7 +1961,11 @@ const Signup = () => {;
 
 }};
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         </div>;
       </div>;
@@ -1743,7 +1973,15 @@ const Signup = () => {;
   );
 }
 ;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

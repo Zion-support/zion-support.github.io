@@ -1,9 +1,20 @@
 
+<<<<<<< HEAD
 
 
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
+import { Briefcase } from "lucide-react";
+=======
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
+import { Briefcase } from "lucide-react",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
 import {Briefcase} from "lucide-react";
@@ -12,7 +23,10 @@ import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
@@ -71,13 +85,26 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
               <p className="text-zion-slate">{exp.description}</p>;
             </div>;
           </div>;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        ))}
+      </div>
+    </div>
+  );
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         ))}
       </div>
     </div>
   )
 
 }
+<<<<<<< HEAD
 
 export function ProfileExperience(): any ({ experience }: ProfileExperienceProps) {;
   return (
@@ -142,3 +169,7 @@ function ProfileExperience() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

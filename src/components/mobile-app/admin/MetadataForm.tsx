@@ -1,8 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
 
 interface MetadataFormProps {;
   form: UseFormReturn<AppMetadataValues>;
+=======
+=======
+<<<<<<< HEAD
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 
@@ -234,6 +250,21 @@ if ( {) {
                   </FormControl>;
                 </FormItem>;
               )}
+<<<<<<< HEAD
+=======
+            />
+          </div>
+        </Form>
+      </CardContent>
+    </Card>
+  )
+<<<<<<< HEAD
+}
+=======
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
                     {long_description.length}/{maxDescriptionLength} characters;
@@ -286,6 +317,7 @@ if ( {) {
       </CardContent>;
 
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -299,3 +331,10 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

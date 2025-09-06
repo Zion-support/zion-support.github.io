@@ -1,8 +1,32 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
+import {Award, Share, Star, TrendingUp} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
+import { ReferralStats as ReferralStatsType } from "@/types/referrals";
+import { Award, Share, Star, TrendingUp } from "lucide-react";
+=======
+import { ReferralStats as ReferralStatsType } from "@/types/referrals",
+import { Award, Share, Star, TrendingUp } from "lucide-react",
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
@@ -144,16 +168,29 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                 <div className="text-2xl font-bold">{card && card.value}</div>;
                 <p className="text-xs text-muted-foreground">{card && card.description}</p>;
               </>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             )}
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
 
     </div>;
+=======
+    </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 }
 
@@ -171,5 +208,9 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
   )
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

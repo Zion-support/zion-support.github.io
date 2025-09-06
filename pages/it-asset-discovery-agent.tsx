@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Card from '../components/ui/Card';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 class ErrorBoundary extends React.Component {
@@ -63,6 +77,7 @@ import React from 'react';
                   className='text-cyan-300 underline'
                   href='https://aws && aws.amazon.com/config/pricing/'
                   target='_blank'
+<<<<<<< HEAD
                   rel='noopener noreferrer'>;
 =======
 import Head from 'next / head';
@@ -119,6 +134,50 @@ function ITAssetDiscoveryAgentPage() {
                 </a>;
               </li>;
               <li>;
+=======
+                  rel='noopener noreferrer'
+                >
+                  AWS Config
+                </a>
+              </li>
+              <li>
+                <a
+                  className='text-cyan-300 underline'
+                  href='https://azure.microsoft.com/pricing/details/monitor/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Azure Monitor
+                </a>
+              </li>
+              <li>
+                <a
+                  className='text-cyan-300 underline'
+                  href='https://cloud.google.com/asset-inventory/pricing'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  GCP Asset Inventory
+                </a>
+              </li>
+            </ul>
+          </Card>
+        </div>
+        <div className='mt-8'>
+          <a
+            href='/contact'
+            className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+          >
+            Contact Sales
+          </a>
+        </div>
+      </div>
+    </UltraFuturisticBackground>;
+  );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
                 <a;
                   className='text - cyan - 300 underline';
@@ -148,6 +207,7 @@ function ITAssetDiscoveryAgentPage() {
 
             className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
 =======
+<<<<<<< HEAD
         <div className='mt - 8'>;
           <a;
             href='/contact';
@@ -161,6 +221,13 @@ function ITAssetDiscoveryAgentPage() {
 
 
 =======
+=======
+import React from 'react',
+import Head from 'next/head',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Card from '../components/ui/Card',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function ITAssetDiscoveryAgentPage() {
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
@@ -195,6 +262,7 @@ export default function ITAssetDiscoveryAgentPage() {
 			</div>
 		</UltraFuturisticBackground>
 	)
+<<<<<<< HEAD
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -207,3 +275,10 @@ export default function ITAssetDiscoveryAgentPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

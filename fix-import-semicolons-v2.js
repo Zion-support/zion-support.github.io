@@ -10,10 +10,16 @@ files && files.forEach((file) => {
     let content = fs && fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
+<<<<<<< HEAD
 
     content = content ;/g,
       (match) => {
         return match && match.replace(",;", ";");
+=======
+<<<<<<< HEAD
+    content = content.replace(
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 #!/usr / bin / env node;
 import fs from './fs';
@@ -63,17 +69,31 @@ if (.ends_with (") {
 
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       (match) => {
         return match.replace(";", ";");
       }
     );
     // Fix import statements missing semicolons
     content = content.replace(
+<<<<<<< HEAD
 
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {;
 
+=======
+<<<<<<< HEAD
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
+      (match) => {
+=======
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+      (match) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

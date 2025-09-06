@@ -43,8 +43,44 @@ function updateIconImportsInFile(filePath) {
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
       // // // console.log(`✅ Updated imports in ${filePath}`),
       return true
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+/**;
+ * Helper script to update icon imports across the codebase;
+ *;
+ * Usage: * 1. Run: node scripts/update-icon-imports.js;
+ * 2. This will find and replace lucide-react icon imports with imports from our custom icons package;
+ */;
+const fs = require('fs'),;
+const path = require('path'),;
+const glob = require('glob'),;
+// Helper to replace imports in a file;
+function updateIconImportsInFile(filePath) {;
+  try {;
+    const content = fs.readFileSync(filePath, 'utf8'),;
+    // Replace direct lucide imports with our custom icons;
+    const updatedContent = content.replace(;
+      /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g,;
+      'import {$1} from "@/components/icons"';
+    ),;
+    // Only write if changes were made;
+    if (content !== updatedContent) {;
+      fs.writeFileSync(filePath, updatedContent, 'utf8'),;
+      // // // console.log(`✅ Updated imports in ${filePath}`),;
+      return true;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     return false
   } catch (err) {
@@ -72,10 +108,15 @@ files && files.forEach(file => {
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`)
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
 
+<<<<<<< HEAD
 
 console && console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console && console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
  * updateIconImportsInFile - Function description
  */
@@ -120,7 +161,11 @@ console.log (`\nℹ️ Make sure to run 'npm install glob' if needed to support 
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
@@ -134,7 +179,15 @@ files.forEach(file => {;
 }),;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),;
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

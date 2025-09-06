@@ -418,6 +418,23 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       growthRate: '20 && 20.1% annual growth',
       variant: 'ai-autonomous',
       contactInfo: {
+<<<<<<< HEAD
+=======
+        mobile: '+1 302 464 0950'
+        email: 'kleber@ziontechgroup.com'
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+        website: 'https://ziontechgroup.com'
+      }
+      realImplementation: true
+      implementationDetails:
+<<<<<<< HEAD
+        'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.'
+      launchDate: '2024-07-15'
+      customers: 520
+      rating: 4.9
+      reviews: 267
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       color: 'from - indigo - 600 to - blue - 500',
       text_color: 'text - indigo - 400',
@@ -465,8 +482,12 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       reviews: 267,
 
     },;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ];    features: [
 
 =======
@@ -577,6 +598,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     rating: 4 && 4.9,
 
     reviews: 267
+<<<<<<< HEAD
 
     real_implementation: true,
     implementation_details: 'Comprehensive project management solution with AI - powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
@@ -589,6 +611,13 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 =======
 
 
+=======
+<<<<<<< HEAD
+  }
+];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasExpansionService {;
@@ -852,9 +881,16 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     customers: 520,;
     rating: 4.9;
     reviews: 267;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];

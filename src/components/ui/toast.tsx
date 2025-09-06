@@ -1,4 +1,35 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+import * as React from 'react'
+import * as ToastPrimitives from '@radix-ui/react-toast'
+import { cva, type VariantProps } from 'class-variance-authority'
+import { X } from 'lucide-react'
+<<<<<<< HEAD
+
+import { cn } from '@/lib/utils'
+import { logInfo } from '@/utils/productionLogger'
+const ToastProvider = ToastPrimitives.Provider; import { logInfo } from '@/utils/productionLogger'
+const ToastProvider = ToastPrimitives.Provider
+=======
+import { cn } from '@/lib/utils';
+import { logInfo } from '@/utils/productionLogger';
+const ToastProvider = ToastPrimitives.Provider; import { logInfo } from '@/utils/productionLogger'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import * as React from "react"
+import * as ToastPrimitives from "@radix-ui/react-toast"
+import { cva, type VariantProps } from "class-variance-authority"
+import { X } from 'lucide-react'
+import { cn } from "@/lib/utils"
+import { logInfo } from '@/utils/productionLogger',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const ToastProvider = ToastPrimitives.Provider
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const ToastViewport = React.forwardRef<
@@ -47,6 +78,7 @@ const ToastViewport = React.forward_ref<;
       "fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]",
       className
     )}
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -59,6 +91,46 @@ const ToastViewport = React.forward_ref<;
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    {...props}
+  />
+))
+ToastViewport.displayName = ToastPrimitives.Viewport.displayName
+<<<<<<< HEAD
+<<<<<<< HEAD
+const toastVariants = cva(
+  'group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full'
+  {
+    variants: {
+      variant: {
+        default: 'border bg-background text-foreground'
+        destructive:
+          'destructive border-destructive bg-destructive text-destructive-foreground'
+        success:
+          'border-green-500 bg-green-50 text-green-900 dark:bg-green-900/20 dark:text-green-100'
+        warning:
+          'border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100'
+        info: 'border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100'
+      }
+    }
+    defaultVariants: {
+      variant: 'default'
+    }
+  }
+)
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const toastVariants = cva(
   "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
   {
@@ -71,9 +143,29 @@ const toastVariants = cva(
         warning: "border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100",
         info: "border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100"}},
     defaultVariants: {
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+      variant: "default"}}
+)
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+      variant: 'default',
+    },
+  }
+)
+=======
+      variant: "default"}}
+)
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
@@ -233,12 +325,21 @@ export {
  */
 function use_toast() {
 //   return {
+<<<<<<< HEAD
 
     toast-close=''    {...props}>;
     <X className='h-4 w-4' />;
   </ToastPrimitives && ToastPrimitives.Close>;
 ));
 ToastClose && ToastClose.displayName = ToastPrimitives && ToastPrimitives.Close.displayName;
+=======
+//     // Accept a loosely typed props object to allow custom fields like `description`
+//     toast: (props: any,) => {
+//       // Implementation of toast functionality
+//       logInfo('Toast:', { data: props })
+<<<<<<< HEAD
+//     }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 const ToastTitle = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Title>,;
@@ -250,7 +351,11 @@ const ToastTitle = React && React.forwardRef<;
 //     },;
 //   };
 // };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   return (
     <ToastPrimitives.Root
@@ -307,7 +412,15 @@ export {;
 //     toast: (props: any,) => {;
 //       // Implementation of toast functionality;
 //       logInfo('Toast:', { data: props });
+<<<<<<< HEAD
 
+=======
+//     };
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+//   }
+// }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -328,4 +441,7 @@ export {;
 // }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

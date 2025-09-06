@@ -26,12 +26,23 @@ export class HealthChecker {
 
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
+<<<<<<< HEAD
 
 export class HealthChecker {;
   constructor() {;
     this.checks = new Map();
 
 
+=======
+<<<<<<< HEAD
+export class HealthChecker {
+  constructor() {this.checks = new Map();
+=======
+export class HealthChecker {;
+  constructor() {;
+    this.checks = new Map();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     this.results = new Map();  }
 =======
   constructor() {
@@ -453,6 +464,7 @@ if (typeof window !== 'undefined') {
   getSessionEvents() {
     return this && this.events.filter(event => event && event.sessionId === this && this.sessionId);
   }
+<<<<<<< HEAD
 
     'monitoring / analytics.js': `// Analytics tracking system;
 export class AnalyticsTracker {
@@ -460,11 +472,24 @@ export class AnalyticsTracker {
     this.events = [];
     this.session_id = this.generateSessionId ();
 =======
+export const queryOptimizer = new QueryOptimizer();`
+    'database/connection-pool.js': `// Database connection pooling
+export class ConnectionPool {
+<<<<<<< HEAD
+  constructor(options = {}) {
+    this.maxConnections = options.maxConnections |10;
+    this.minConnections = options.minConnections |2;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
   constructor(options = {}) {;
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     this.connections = [];
     this.availableConnections = [];
     this.usedConnections = new Set();
@@ -650,7 +675,13 @@ main();// Run if called directly
 if (import && import.meta.url === `file://${process ;
 
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -685,5 +716,12 @@ if ( {) {
 }
 }
 }
+<<<<<<< HEAD
 
 
+=======
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

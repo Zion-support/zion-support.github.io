@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 ;
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
@@ -16,8 +22,13 @@ export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 =======
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export type IntegrationStatus = "connected" | "warning" | "disconnected",
 
@@ -38,11 +49,40 @@ export interface Integration {
   type: IntegrationType;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export interface SyncLog {;
+  id: string;
+  integration: string;
+  event: string;
+  status: "success" | "error" | "warning";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export interface SyncLog {
+<<<<<<< HEAD
+  id: string;
+  integration: string;
+  event: string;
+  status: "success" | "error" | "warning";
+  timestamp: string
+=======
+  id: string,
+  integration: string,
+  event: string,
+  status: "success" | "error" | "warning",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  timestamp: string,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   details: string
 }
 export type CrmIntegrationEvents =
@@ -50,7 +90,44 @@ export type CrmIntegrationEvents =
   | "deal_created"
   | "deal_updated"
 
+<<<<<<< HEAD
   timestamp: string,
+=======
+export type AtsIntegrationEvents = 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  | "applicant_created"
+  | "candidate_status_changed"
+  | "interview_scheduled"
+<<<<<<< HEAD
+=======
+  | "resume_uploaded"
+<<<<<<< HEAD
+<<<<<<< HEAD
+  | "job_posted";
+
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  | "job_posted",
+export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",;
+export type IntegrationStatus = "connected" | "warning" | "disconnected",;
+export interface Integration {;
+  id: string,;
+  name: string,;
+  description: string,;
+  logoUrl: string,;
+  status: IntegrationStatus,;
+  lastSync?: string,;
+  type: IntegrationType;
+}
+;
+export interface SyncLog {;
+  id: string,;
+  integration: string,;
+  event: string,;
+  status: "success" | "error" | "warning",;
+  timestamp: string,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   details: string;
 }
 export type CrmIntegrationEvents =;

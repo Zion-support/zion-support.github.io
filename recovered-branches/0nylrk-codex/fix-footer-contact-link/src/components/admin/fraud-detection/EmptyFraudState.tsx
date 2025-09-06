@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import React from './react';
 import { Button  } from '@/components / ui / button';
@@ -7,6 +18,19 @@ interface EmptyFraudStateProps {
 =======
 
 
+<<<<<<< HEAD
+=======
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters
+  onResetFilters
+=======
+import { Button } from "@/components/ui/button",
+import { ShieldAlert } from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface EmptyFraudStateProps {
   hasFilters: boolean,
   onResetFilters: () => void
@@ -27,10 +51,27 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           : "You don't have any fraud flags yet"}
       </p>
       {hasFilters && (
+<<<<<<< HEAD
 
     </div>;
 );
 
+=======
+<<<<<<< HEAD
+        <Button variant="outline" onClick={onResetFilters}>
+          Clear Filters
+        </Button>
+      )}
+<<<<<<< HEAD
+    </div>
+  );
+}
+
+=======
+    </div>;
+);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 import React from "react",;
@@ -62,6 +103,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
           ? "Try adjusting your filters";
           : "You don't have any fraud flags yet"}
       </p>;
+<<<<<<< HEAD
       {has_filters && (
         <Button variant="outline" on_click={onResetFilters}>;
           Clear Filters;
@@ -70,6 +112,14 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
 }
 ;
 
+=======
+      {hasFilters && (;
+        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
+      )}
+    </div>;
+  );
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 

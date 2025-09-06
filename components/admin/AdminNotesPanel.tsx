@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export type AdminNotesPanelProps = {;
@@ -10,6 +11,17 @@ type Note = {;
 =======
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
+
+export type AdminNotesPanelProps = {
+=======
+export type AdminNotesPanelProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  targetType: string; // e.g., 'user' | 'listing'
+  targetId: string; // unique identifier for the target
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
 type Note = {
@@ -18,6 +30,7 @@ type Note = {
   target_type: string;
   target_id: string;
   text: string;
+<<<<<<< HEAD
 
 export type AdminNotesPanelProps = {
   targetType: string, // e.g., 'user' | 'listing'
@@ -27,12 +40,27 @@ export type AdminNotesPanelProps = {
 
 =======
 
+=======
+  authorId: string;
+  createdAt: number;
+}
+export default function AdminNotesPanel({
+<<<<<<< HEAD
+  targetType
+  targetId
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 type Note = {
   id: string
   targetType: string
@@ -40,18 +68,28 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
+<<<<<<< HEAD
 
 };
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+<<<<<<< HEAD
+}
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -146,6 +184,7 @@ if ( {) {
       }
       setText('');
       await fetchNotes();
+<<<<<<< HEAD
 
 =======
         method: 'POST',
@@ -154,12 +193,35 @@ if ( {) {
       if (!res.ok) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+    } finally {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      setAdding(false);    }      if (!res.ok) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         alert('Failed to add note');
         return;
       }
       setText('');
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+      await fetchNotes()
+    } finally {
+      setAdding(false)
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      setAdding(false);    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
 
@@ -258,9 +320,18 @@ if ( {) {
             ))}
           </ul>;
         )}
+<<<<<<< HEAD
 
       </div>;
     </div>;
+=======
+      </div>
+    </div>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 =======
 
@@ -268,12 +339,16 @@ if ( {) {
 
 }
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   useEffect (() => {
@@ -401,3 +476,7 @@ if ( {) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

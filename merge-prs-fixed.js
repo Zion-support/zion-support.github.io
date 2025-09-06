@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #!/usr / bin / env node;
 const { exec_sync } = require ('child_process'),
@@ -10,6 +11,19 @@ try {
 } catch (error) {
     console.error ('❌ Not in a git repository'),
     process.exit (1);
+=======
+#!/usr/bin/env node;
+<<<<<<< HEAD
+const { execSync } = require('child_process');
+const fs = require('fs');
+<<<<<<< HEAD
+console.log('🚀 Starting merge process for all open PRs...');
+try {// Check if we're in a git repository;
+    execSync('git rev-parse --git-dir', { stdio: 'pipe' });
+    console.log('✅ Git repository detected');
+} catch (error) {console.error('❌ Not in a git repository');
+    process.exit(1);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 try {
     // Ensure clean working directory;
@@ -51,10 +65,22 @@ try {
                         exec_sync (`git checkout --theirs "${file}"`);
 
 =======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 
 =======
 
+=======
+=======
+<<<<<<< HEAD
+const { execSync } = require('child_process'),;
+const fs = require('fs'),;
+=======
+const { execSync } = require('child_process');
+const fs = require('fs');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 console.log('🚀 Starting merge process for all open PRs...'),;
 try {;
     // Check if we're in a git repository;
@@ -91,8 +117,20 @@ try {;
             console.log('Found merge conflicts in:', conflictFiles.trim()),;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             // Resolve conflicts by accepting our version;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+            const files = conflictFiles.trim().split('\n');
+=======
+<<<<<<< HEAD
+            const files = conflictFiles.trim().split('\n'),;
+=======
+            const files = conflictFiles.trim().split('\n');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             for (const file of files) {;
                 if (file.trim()) {;
 
@@ -150,7 +188,19 @@ try {;
     const branches = execSync('git branch -r', { encoding: 'utf8' }),;
     const branchList = branches.split('\n');
         .map(branch => branch.trim());
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+=======
+<<<<<<< HEAD
+        .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
+=======
+        .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     console.log(`Found ${branchList.length} branches to merge: `),;
     branchList.forEach(branch => console.log(`  - ${branch}`)),;
     // Merge each branch;

@@ -1,5 +1,52 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+=======
+
+export default InstallPrompt; import React, { useEffect, useState } from 'react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
+
+import { Button } from '@/components/ui/button'
+import { safeSessionStorage } from '@/utils/safeStorage'
+const SHOWN_KEY = 'pwaInstallShown'
+const DISMISS_KEY = 'pwaInstallDismissUntil'
+const DISMISS_MS = 24 * 60 * 60 * 1000, // 24 hours
+// Define BeforeInstallPromptEvent interface
+interface BeforeInstallPromptEvent extends Event {
+  readonly platforms: string[]
+  readonly userChoice: Promise<{
+    outcome: 'accepted' | 'dismissed'
+    platform: string
+  }>
+  prompt(): Promise<void>
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react',;
+import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.;
+import { Button } from '@/components/ui/button',;
+import { safeSessionStorage } from '@/utils/safeStorage',;
+const SHOWN_KEY = 'pwaInstallShown',;
+const DISMISS_KEY = 'pwaInstallDismissUntil',;
+const DISMISS_MS = 24 * 60 * 60 * 1000, // 24 hours;
+// Define BeforeInstallPromptEvent interface;
+interface BeforeInstallPromptEvent extends Event {;
+  readonly platforms: string[],;
+  readonly userChoice: Promise<{;
+    outcome: 'accepted' | 'dismissed',;
+    platform: string;
+  }>,;
+  prompt(): Promise<void>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
@@ -18,12 +65,22 @@ export const InstallPrompt: React.FC = () => {
     const isDismissed = dismissUntil && Date.now() < Number(dismissUntil)
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
+<<<<<<< HEAD
 
 
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
 
 
+=======
+<<<<<<< HEAD
+    if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
+      return
+=======
+    if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
+      return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     const handler = (e: BeforeInstallPromptEvent,) => {
       e.preventDefault()
@@ -348,4 +405,18 @@ export default InstallPrompt,
     </>
   )
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+},
+
+export default InstallPrompt,
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

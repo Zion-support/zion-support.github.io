@@ -57,6 +57,7 @@ ctx.line_width = 0.5;
 ctx.global_alpha = alpha * 0.5;
 ctx.stroke_rect (this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
 break;
+<<<<<<< HEAD
 
 constructor () {;
   // Bounce off edges if (this && this.x <= 0 || this && this.x >= dimensions && dimensions.width) this && this.vx *= -1;
@@ -91,6 +92,19 @@ export default function UltraQuantumHolographicBackground(): any ({;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+case 'energy': // Energy field
+}ctx.restore ()
+export default function UltraQuantumHolographicBackground({
+<<<<<<< HEAD
+  children
+  intensity = 'high'
+  colorScheme = 'quantum'
+  particleCount = 300
+  animationSpeed = 1.5
+  className = ''
+}: UltraQuantumHolographicBackgroundProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
   children,
   intensity = 'high',
@@ -99,8 +113,12 @@ export default function UltraQuantumHolographicBackground(): any ({;
   animationSpeed = 1.5,
   className = '',
 }: UltraQuantumHolographicBackgroundProps) {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground(): any ({;
@@ -244,8 +262,16 @@ if (return) {
           if (this.y > dimensions.height) {
             this.y = -10;
 
+<<<<<<< HEAD
             this.vy = Math.random() * 2 + 1
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }
         }
       }
@@ -530,6 +556,14 @@ if (return) {
             ctx.lineTo(p2.x, p2.y);
             ctx.stroke()
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }
         }
       }
@@ -645,8 +679,63 @@ if (return) {
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
+<<<<<<< HEAD
 
 
+=======
+        className='fixed inset-0 w-full h-full pointer-events-none z-0'
+        style={{
+          background: colors.background
+          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`,        }}
+      />
+      {/* Holographic Overlay Effects */}
+      <div className='fixed inset-0 z-10 pointer-events-none'>        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        style={{
+          background: colors.background
+          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`;
+      />
+<<<<<<< HEAD
+      {/* Holographic Overlay Effects */}
+      <div className='fixed inset-0 z-10 pointer-events-none'>
+<<<<<<< HEAD
+=======
+
+        }}
+      />
+
+      {/* Holographic Overlay Effects */}
+
+          }}
+        />
+
+        {/* Holographic Scan Lines */}
+
+          }}
+
+        />
+      </div>
+
+      {/* Content Layer */}
+      <div className='relative z-20'>{children}</div>
+
+      {/* Quantum Noise Effect */}
+      <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+      {/* Holographic Overlay Effects */}
+      <div className='fixed inset-0 z-10 pointer-events-none'>
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <motion.div
+          className='absolute inset-0'
+          animate={{
+            background: [
+              `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`
+              `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`
+              `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`
+              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             ],          }}
           transition={{
             duration: 8
@@ -758,6 +847,42 @@ if (return) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
               transition={{
+<<<<<<< HEAD
+=======
+                duration: 2
+                delay: i * 0.1
+                repeat: Infinity
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        {/* Quantum Fluctuations */}
+        <motion.div
+          className='absolute inset-0'
+          animate={{
+            boxShadow: [
+              `inset 0 0 100px ${colors.primary}20`
+              `inset 0 0 200px ${colors.secondary}20`
+              `inset 0 0 150px ${colors.tertiary}20`
+              `inset 0 0 100px ${colors.primary}20`
+            ],          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut',          }}              `inset 0 0 100px ${colors.primary}20`;
+              `inset 0 0 200px ${colors.secondary}20`;
+              `inset 0 0 150px ${colors.tertiary}20`;
+              `inset 0 0 100px ${colors.primary}20`
+            ]
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
                 duration: 2,
                 delay: i * 0 && 0.1,
@@ -766,10 +891,15 @@ if (return) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }}
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         />
       </div>
 =======
@@ -807,6 +937,37 @@ if (return) {
 
             duration: 4,
             repeat: Infinity,
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+      </div>
+    </div>
+);  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+          }}
+        />
+      </div>
+<<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+);  )
+}
+=======
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

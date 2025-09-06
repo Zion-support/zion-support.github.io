@@ -8,15 +8,23 @@ export type AdminActionType =;
   | 'investigate';
   | 'dismiss';
   | 'escalate';
+<<<<<<< HEAD
 ;
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface AdminAction {
 =======
 
 
 export interface AdminAction {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   case_id: string;
   type: AdminActionType;
@@ -29,6 +37,10 @@ export interface AdminAction {;
   status: 'pending' | 'executed' | 'failed',
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface FraudDetectionResult {
   is_fraud: boolean;
 =======
@@ -36,24 +48,39 @@ export interface FraudDetectionResult {
 
 
 export interface FraudDetectionResult {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   isFraud: boolean;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   confidence: number;
   reasons: string[];
+<<<<<<< HEAD
 
   suggested_actions: AdminActionType[],
   metadata: Record < string, any>;
 
 }
+=======
+  suggestedActions: AdminActionType[]
+  metadata: Record<string, any>;
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface FraudDetectionConfig {
 =======
 }
 
 
 export interface FraudDetectionConfig {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   enabled: boolean;
   rules: {
     suspicious_activity: {
@@ -77,14 +104,23 @@ export interface FraudDetectionConfig {;
   auto_actions: {
     enabled: boolean;
     actions: AdminActionType[];
+<<<<<<< HEAD
     confidence_threshold: number,
+=======
+<<<<<<< HEAD
+    confidenceThreshold: number
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 
 =======
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     confidenceThreshold: number,
   };
@@ -92,5 +128,9 @@ export interface FraudDetectionConfig {;
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

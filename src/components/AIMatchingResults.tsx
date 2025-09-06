@@ -1,5 +1,38 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import { useState } from 'react'
+import { MatchResultItem } from '@/lib/ai-matchmaking'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+<<<<<<< HEAD
+import Skeleton from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+=======
+import Skeleton from '@/components/ui/skeleton'
+import { cn } from '@/lib/utils'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from "react",
+import { MatchResultItem } from "@/lib/ai-matchmaking",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+import Skeleton from "@/components/ui/skeleton",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
@@ -14,6 +47,7 @@ interface AIMatchingResultsProps {
 
   serviceType?: string
 }
+<<<<<<< HEAD
 
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
@@ -42,6 +76,23 @@ export /**
 function AIMatchingResults() {
   const [active_tab, setActiveTab] = useState ('all');
   // Group matches by category;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+export function AIMatchingResults({
+
+  matches
+  onSelectMatch
+  isLoading = false
+  projectDescription = ''
+  serviceType: _serviceType = ''
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState('all')
+  // Group matches by category
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
@@ -357,6 +408,7 @@ if ( {) {
                                       ? '/hour';
 
                                       : ''}
+<<<<<<< HEAD
                                   </div>;
                                 </div>;
                               )}
@@ -368,6 +420,15 @@ if ( {) {
 
 
 
+=======
+=======
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                                   </div>
                                 </div>
                               )}
@@ -421,27 +482,59 @@ if ( {) {
                         </div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                  </Card>;
+                );
+              });
+            ) : (;
+              <div className="text-center py-8 text-zion-slate-light">;
+                No {tab} matches found.;
+              </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             )}
           </TabsContent>;
         ))}
+<<<<<<< HEAD
 
 
 };
 ;
 
 
+=======
+<<<<<<< HEAD
+      </Tabs>
+    </div>
+  )
+<<<<<<< HEAD
+=======
+};
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 =======
       </Tabs>;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -461,4 +554,7 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

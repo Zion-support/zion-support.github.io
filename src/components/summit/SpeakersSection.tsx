@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Image from "next/image";
+=======
+import Image from 'next/image'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Twitter, Linkedin } from 'lucide-react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface Speaker {
   name: string;
   title: string;
@@ -9,13 +19,22 @@ interface Speaker {
   linkedin?: string;
 }
 interface Speaker {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   name: string,
   title: string,
   avatar: string,
   twitter?: string
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
@@ -25,9 +44,16 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   linkedin?: string
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -128,6 +154,7 @@ interface Speaker {
     title: 'Founder & CEO',
     avatar: 'https://placehold.co / 100x100',
     twitter: '#',
+<<<<<<< HEAD
 
 
 
@@ -135,6 +162,23 @@ interface Speaker {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    linkedin: '#',
+  },
+]
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    linkedin: '#'}],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function SpeakersSection() {
   return (
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
@@ -193,9 +237,17 @@ export function SpeakersSection() {;
           {speakers.map((sp) => (;
             <div key={sp.name} className="text-center space-y-2">;
               <Image;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 src={sp.avatar}
                 alt={sp.name}
                 width={96}
@@ -209,6 +261,7 @@ export function SpeakersSection() {;
               <p className="font-semibold">{sp.name}</p>
               <p className="text-sm opacity-80">{sp.title}</p>
               <div className="flex justify-center gap-3 text-zion-cyan">
+<<<<<<< HEAD
 =======
                 className='rounded - full mx - auto';
                 loading='lazy';
@@ -223,6 +276,16 @@ export function SpeakersSection() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                {sp.twitter && (
+                  <a
+                    href={sp.twitter}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -242,9 +305,17 @@ export function SpeakersSection() {;
                   <a;
                     href={sp.linkedin}
                     aria-label="LinkedIn"
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
@@ -254,9 +325,17 @@ export function SpeakersSection() {;
 
 
                   </Link>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 )}
               </div>;
             </div>;
@@ -270,10 +349,16 @@ export function SpeakersSection() {;
     </section>;
   );
 }
+<<<<<<< HEAD
 
   );
 }
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                     aria - label='Twitter';
                     target='_blank';
@@ -316,4 +401,7 @@ export function SpeakersSection() {;
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

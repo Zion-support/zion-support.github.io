@@ -1,8 +1,39 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {CountryServiceCard} from "@/components/services/CountryServiceCard";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { Search } from "lucide-react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+<<<<<<< HEAD
+import { CountryServiceCard } from "@/components/services/CountryServiceCard";
+import { CountryPricing } from "@/data/onsiteServicePricing";
+=======
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",
+import { CountryPricing } from "@/data/onsiteServicePricing",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface CountryTabsProps {
 
   popularCountries: string[]
@@ -41,6 +72,7 @@ interface CountryTabsProps {
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
             .map(country => (
+<<<<<<< HEAD
 
 import {useState} from "react";
 import {Search} from "lucide-react";
@@ -49,6 +81,28 @@ import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {CountryServiceCard} from "@/components/services/CountryServiceCard";
 import {CountryPricing} from "@/data/onsiteServicePricing";
+=======
+<<<<<<< HEAD
+              <CountryServiceCard
+                key={country.country}
+                country={country}
+=======
+              <CountryServiceCard 
+                key={country.country} 
+                country={country} 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
+import { CountryPricing } from "@/data/onsiteServicePricing",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface CountryTabsProps {;
   popularCountries: string[],;
   filteredCountries: CountryPricing[],;
@@ -87,6 +141,7 @@ export function CountryTabs(): any ({ ;
           {filteredCountries;
             .filter(country => popularCountries && popularCountries.includes(country && country.country));
             .map(country => (;
+<<<<<<< HEAD
               <CountryServiceCard
                 key={country && country.country} 
                 country={country} 
@@ -98,6 +153,16 @@ export function CountryTabs(): any ({ ;
                 country={country} 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              <CountryServiceCard;
+                key={country.country} ;
+                country={country} ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;

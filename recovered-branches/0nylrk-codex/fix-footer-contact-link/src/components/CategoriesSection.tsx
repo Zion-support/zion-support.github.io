@@ -1,8 +1,18 @@
 
+<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
 import { Link } from './react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users } from './lucide-react';
 const categories = [;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+const categories = [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
     title: "Services",
     description: "On - demand IT support, consulting, development, and more";
@@ -21,16 +31,34 @@ const categories = [;
   {
     title: "Equipment"
     description: "Rent or buy specialized hardware, servers, and devices";
+<<<<<<< HEAD
 
 
+=======
+    icon: <HardDrive className="w-10 h-10" />
+    link: "/equipment"
+    color: "from-amber-500 to-orange-600"}
+=======
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const categories = [
   {
     title: "Services",
@@ -60,8 +88,34 @@ const categories = [
     color: "from-emerald-500 to-green-600"}]
 const specialServices = [
   {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+    title: "IT Onsite Services"
+    link: "/it-onsite-services"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+];
+
+interface CategoriesSectionProps {
+  showTitle?: boolean
+<<<<<<< HEAD
+}
+=======
+    title: "IT Onsite Services",
+    link: "/it-onsite-services"
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { GradientHeading } from "./GradientHeading",;
+import { Link } from "react-router-dom",;
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const categories = [;
   {;
     title: "Services",;
@@ -98,10 +152,17 @@ const specialServices = [;
 
 interface CategoriesSectionProps {;
   showTitle?: boolean;
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 
@@ -213,10 +274,33 @@ function CategoriesSection() {
                 {service && service.title}
               </Link>;
             ))}
+<<<<<<< HEAD
+=======
+          </div>
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/categories"
+            className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors"
+          >
+            View All Categories →
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
           </div>;
@@ -243,10 +327,19 @@ function CategoriesSection() {
 
     </section>);
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

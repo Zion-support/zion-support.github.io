@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 
 // Marketplace data store utilities
 
 export interface Project {
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Marketplace data store utilitiesexport interface Project {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 // Marketplace data store utilitiesexport interface Project {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   title: string;
   summary: string;
@@ -44,16 +54,25 @@ export interface Project {
   }
   createdAt: string;
   updatedAt: string
+<<<<<<< HEAD
 
 }
+=======
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface Offer {
 =======
 }
 
 
 export interface Offer {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   createdAtIso: string;
   client_id: string;
@@ -75,6 +94,7 @@ export interface Offer {;
   agreementUrl?: string;
   status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
   expiresAt?: string;
+<<<<<<< HEAD
 
   notes?: string
 
@@ -88,6 +108,11 @@ export interface Offer {;
   notes?: string,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+  notes?: string
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface Application {
 =======
   notes?: string
@@ -95,13 +120,18 @@ export interface Application {
 
 
 export interface Application {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   project_id: string;
   talent_slug: string;
   appliedAtIso: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
+<<<<<<< HEAD
 
   notes?: string
 
@@ -113,6 +143,15 @@ export interface Application {;
   notes?: string,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+  coverLetter?: string;
+  proposedRate?: number;
+  proposedTimeline?: string;
+  portfolioItems?: string[];
+  notes?: string
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface Message {
 =======
   notes?: string
@@ -120,8 +159,12 @@ export interface Message {
 
 
 export interface Message {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   conversation_id: string;
   sender_id: string;
@@ -133,6 +176,7 @@ export interface Message {;
   context?: string;
   sentAtIso: string;
   readAtIso?: string;
+<<<<<<< HEAD
 
   isRead: boolean
 
@@ -140,6 +184,11 @@ export interface Message {;
   is_read: boolean,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+  isRead: boolean
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface Conversation {
 =======
   isRead: boolean
@@ -147,8 +196,12 @@ export interface Conversation {
 
 
 export interface Conversation {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -756,10 +809,19 @@ export async function updateProject(id: string, updates: Partial<Project>): Prom
 =======
   return marketplaceStore.getProject(id)
 }
+<<<<<<< HEAD
 
 
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
 
+=======
+<<<<<<< HEAD
+export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
+=======
+
+export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return marketplaceStore.updateProject(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -792,10 +854,19 @@ export async function updateOffer(id: string, updates: Partial<Offer>): Promise<
 =======
   return marketplaceStore.getOffer(id)
 }
+<<<<<<< HEAD
 
 
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
 
+=======
+<<<<<<< HEAD
+export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
+=======
+
+export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return marketplaceStore.updateOffer(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -828,10 +899,19 @@ export async function updateApplication(id: string, updates: Partial<Application
 =======
   return marketplaceStore.getApplication(id)
 }
+<<<<<<< HEAD
 
 
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
 
+=======
+<<<<<<< HEAD
+export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
+=======
+
+export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return marketplaceStore.updateApplication(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -864,10 +944,19 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 =======
   return marketplaceStore.getMessage(id)
 }
+<<<<<<< HEAD
 
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
 
+=======
+<<<<<<< HEAD
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+=======
+
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return marketplaceStore.updateMessage(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -880,9 +969,110 @@ export async function deleteMessage(id: string): Promise<boolean> {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 // Utility functions
+<<<<<<< HEAD
+=======
+export function createProjectData(
+  title: string
+  summary: string
+  clientId: string
+  additionalData?: Partial<Project>
+): Omit<Project, 'id' | 'createdAt' | 'updatedAt'> {
+  return {
+<<<<<<< HEAD
+    title
+    summary
+    clientId
+    startDateIso: new Date().toISOString()
+    status: 'DRAFT'
+    timeline: []
+    documents: []
+    ...additionalData
+  }
+=======
+    title,
+    summary,
+    clientId,
+    startDateIso: new Date().toISOString(),
+    status: 'DRAFT',
+    timeline: [],
+    documents: [],
+    ...additionalData;
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export function createOfferData(
+  clientId: string
+  talentSlug: string
+  scopeSummary: string
+  paymentTerms: Offer['paymentTerms']
+  additionalData?: Partial<Offer>
+): Omit<Offer, 'id' | 'createdAtIso'> {
+  return {
+<<<<<<< HEAD
+    clientId
+    talentSlug
+    startDateIso: new Date().toISOString()
+    scopeSummary
+    paymentTerms
+    status: 'SENT'
+    ...additionalData
+  }
+=======
+    clientId,
+    talentSlug,
+    startDateIso: new Date().toISOString(),
+    scopeSummary,
+    paymentTerms,
+    status: 'SENT',
+    ...additionalData;
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export function createApplicationData(
+  projectId: string
+  talentSlug: string
+  additionalData?: Partial<Application>
+): Omit<Application, 'id' | 'appliedAtIso'> {
+  return {
+<<<<<<< HEAD
+    projectId
+    talentSlug
+    status: 'PENDING'
+    ...additionalData
+  }
+=======
+    projectId,
+    talentSlug,
+    status: 'PENDING',
+    ...additionalData;
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export function createMessageData(
+  conversationId: string
+  senderId: string
+  recipientId: string
+  body: string
+  additionalData?: Partial<Message>
+): Omit<Message, 'id' | 'sentAtIso'> {
+  return {
+<<<<<<< HEAD
+    conversationId
+    senderId
+    recipientId
+    body
+    isRead: false
+    ...additionalData
+  }
+}
+export function generateId(prefix: string = 'item'): string {
+  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 =======
+<<<<<<< HEAD
   // Search methods;
   async search_projects (query: string): Promise < Project[]> {
     const lowercase_query = query.toLowerCase ();
@@ -1036,3 +1226,21 @@ export function generate_id (prefix: string = 'item'): string {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+    conversationId,
+    senderId,
+    recipientId,
+    body,
+    isRead: false,
+    ...additionalData;
+  };
+}
+
+export function generateId(prefix: string = 'item'): string {;
+  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

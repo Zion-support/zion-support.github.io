@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 interface ReferralStatsProps {
@@ -57,6 +61,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
       title: 'Total Referrals',;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals";
+<<<<<<< HEAD
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
@@ -92,6 +97,81 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
     },;
   ];
 
+=======
+=======
+<<<<<<< HEAD
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { ReferralStats as ReferralStatsType } from '@/types/referrals'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Award, Share, Star, TrendingUp } from 'lucide-react'
+=======
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralStats as ReferralStatsType } from "@/types/referrals",
+import { Award, Share, Star, TrendingUp } from 'lucide-react'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+interface ReferralStatsProps {
+  stats: ReferralStatsType
+  isLoading: boolean
+export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
+  const statCards = [
+    {
+<<<<<<< HEAD
+      title: 'Total Referrals'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { ReferralStats as ReferralStatsType } from "@/types/referrals"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import { Star } from 'lucide-react'
+<<<<<<< HEAD
+=======
+=======
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralStats as ReferralStatsType } from "@/types/referrals",
+import { Award, Share, Star, TrendingUp } from 'lucide-react'
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface ReferralStatsProps {
+
+  stats: ReferralStatsType
+  isLoading: boolean
+}
+export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
+  const statCards = [
+    {
+<<<<<<< HEAD
+      title: 'Total Referrals'
+      icon: <Share className='h-5 w-5 text-muted-foreground' />
+      description: "People you've invited"
+    }
+=======
+<<<<<<< HEAD
+      title: 'Total Referrals',
+      icon: <Share className='h-5 w-5 text-muted-foreground' />,
+      description: "People you've invited",
+    },
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    {
+      title: 'Completed'
+      value: stats.completedReferrals
+      icon: <Star className='h-5 w-5 text-muted-foreground' />
+      description: 'Signed up & completed onboarding'
+    }
+    {
+      title: 'Pending'
+      value: stats.pendingReferrals
+      icon: <TrendingUp className='h-5 w-5 text-muted-foreground' />
+      description: 'Not yet completed onboarding'
+    }
+    {
+      title: 'Total Rewards'
+      value: stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` : '-'
+      icon: <Award className='h-5 w-5 text-muted-foreground' />
+      description: 'Credits earned from referrals'
+    }
+  ]
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   return (
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>;
@@ -129,6 +209,15 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
         </Card>;
       ))}
 
+<<<<<<< HEAD
+=======
+  return (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       {statCards.map((card, i) => (
         <Card key={i}>
@@ -141,13 +230,22 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 
 
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             ) : (
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
                 <p className="text-xs text-muted-foreground">{card.description}</p>
+<<<<<<< HEAD
 
       title: 'Total Referrals',
       icon: <Share className='h - 5 w - 5 text - muted - foreground' />,
@@ -186,11 +284,28 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
       {stat_cards.map ((card, i) => (
 =======
 
+=======
+<<<<<<< HEAD
+            )}
+          </CardContent>
+        </Card>
+      ))};
+    </div>;
+  );
+};
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 }
 }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
               </>
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -249,7 +364,15 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
 }
 
 ;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

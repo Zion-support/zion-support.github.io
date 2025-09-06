@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -116,9 +121,17 @@ serve(async (req) => {;
     data.forEach((event) => {;
       const date = new Date(event.created_at).toISOString().split("T")[0],;
       if (!eventsByDate[date]) {;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         eventsByDate[date] = { date }
       }
       if (!eventsByDate[date][event.event_type]) {
@@ -249,8 +262,37 @@ if ( {) {
         ...corsHeaders,
         "Content-Type": "application/json"},
       status: 500})
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+      eventsByDate[date][event.event_type]++;
+    }),;
+    // Convert to array for easier consumption by frontend;
+    const result = Object.values(eventsByDate).sort((a, b) => a.date.localeCompare(b.date)),;
+    return new Response(JSON.stringify(result), {;
+      headers: {;
+        ...corsHeaders,;
+        "Content-Type": "application/json"},;
+      status: 200});
+  } catch (error) {;
+    console.error("Error:", error.message),;
+    return new Response(JSON.stringify({ error: error.message }), {;
+      headers: {;
+        ...corsHeaders,;
+        "Content-Type": "application/json"},;
+      status: 500});
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 });
 ;

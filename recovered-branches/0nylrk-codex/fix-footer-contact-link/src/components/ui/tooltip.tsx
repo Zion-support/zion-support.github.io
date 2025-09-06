@@ -1,13 +1,30 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import * as React from 'react';
+import * as TooltipPrimitive from '@radix-ui/react-tooltip';
+<<<<<<< HEAD
+import {cn} from '@/lib/utils';
+const TooltipProvider = TooltipPrimitive.Provider;
+const Tooltip = TooltipPrimitive.Root;
+const TooltipTrigger = TooltipPrimitive.Trigger;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import * as React from "react"
 import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 =======
 =======
 import * as React from "react"
 import * as TooltipPrimitive from "@radix-ui/react-tooltip"
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import { cn } from "@/lib/utils"
 
@@ -55,15 +72,25 @@ const TooltipContent = React && React.forwardRef<;
     {...props}
   />;
 ));
+<<<<<<< HEAD
 
 TooltipContent && TooltipContent.displayName = TooltipPrimitive && TooltipPrimitive.Content.displayName;
+=======
+TooltipContent.displayName = TooltipPrimitive.Content.displayName;
+<<<<<<< HEAD
+<<<<<<< HEAD
+export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 ;
 
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -94,4 +121,9 @@ TooltipContent.display_name = TooltipPrimitive.Content.display_name;
 ;
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -192,6 +192,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 .App {
@@ -665,6 +670,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
   button {
     border: 2px solid #000;
   }
+<<<<<<< HEAD
 }
 
 /* Print Accessibility */
@@ -675,6 +681,11 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
     height: auto;
     overflow: visible;
     clip: auto;
+=======
+  
+  .main-content {
+    flex-direction: column;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   
   a[href^="http"]::after {
@@ -881,4 +892,8 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
   .card-hover-effect:hover {
     transform: none;
   }
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }

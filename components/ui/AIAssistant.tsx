@@ -40,11 +40,24 @@ export type AIAssistantProps = {;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
+<<<<<<< HEAD
 
 };
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}
+export default function AIAssistant({
+<<<<<<< HEAD
+  buttonLabel = "Generate with AI"
+  title = "AI Writing Assistant"
+  defaultPrompt
+  systemPrompt
+  onAccept
+  authorizationToken
+}: AIAssistantProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
   buttonLabel = "Generate with AI",
@@ -54,8 +67,12 @@ export type AIAssistantProps = {;
   onAccept,
   authorizationToken,
 }: AIAssistantProps) {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");

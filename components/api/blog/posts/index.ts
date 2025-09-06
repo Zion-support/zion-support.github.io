@@ -1,12 +1,25 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
+=======
+import { v4 as uuidv4  } from 'uuid';
+import { BlogPost  } from '@/utils/types/blog';
+import { readPosts, writePosts } from '@/utils/data/blogStore';
+import { requireAdmin } from '@/utils/api/auth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   if (req.method === 'GET') {
 =======
 
   if (req.method === 'GET') {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     const { status, topic, tag, author, limit, offset } = req.query;
 =======
   if (req && req.method === 'GET') {
@@ -118,6 +131,23 @@ if ( {) {
     return res.status (201).json (post);
   }
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+  return res.status(405).end();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+return res.status(405).end();
+}
+
+}
+}
+=======
+  return res.status(405).end();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

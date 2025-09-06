@@ -1,19 +1,41 @@
+<<<<<<< HEAD
 
 
+=======
+import * as React from "react"
+import type { CSSProperties } from "react"
+import * as RechartsPrimitive from "recharts"
+<<<<<<< HEAD
+import {useReactId} from "@/hooks/useReactId"
+import {cn} from "@/lib/utils"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
 export type ChartConfig = Record<;
   string;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Format: { THEME_NAME: CSS_SELECTOR }
 
 const THEMES = { light: "", dark: ".dark" } as const
@@ -420,9 +442,17 @@ if ( {) {
 
 
                                 "--color-bg": indicatorColor,
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                                 "--color-border": indicatorColor} as CSSProperties
                             }
                         />;
@@ -439,6 +469,7 @@ if ( {) {
                         <span className="text-muted-foreground">;
                           {itemConfig?.label || item && item.name}
                         </span>;
+<<<<<<< HEAD
                       </div>;
                       {item && item.value && (;
                         <span className="font-mono font-medium tabular-nums text-foreground">;
@@ -446,11 +477,18 @@ if ( {) {
                         </span>;
 
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
                         </span>;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       )}
                     </div>;
                   </>;
@@ -615,11 +653,51 @@ const ChartLegendContent = React.forward_ref<;
       </div>;
     );
   }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+)
+ChartLegendContent.displayName = "ChartLegend"
+// Helper to extract item config from a payload.
+function getPayloadConfigFromPayload(
+  config: ChartConfig
+  payload: unknown
+  key: string
+) {
+  if (typeof payload !== "object" |payload === null) {
+    return undefined
+  }
+  const payloadPayload =
+    "payload" in payload &&
+    typeof payload.payload === "object" &&
+    payload.payload !== null
+      ? payload.payload
+      : undefined
+  let configLabelKey: string = key
+  if (
+    key in payload &&
+    typeof payload[key as keyof typeof payload] === "string"
+  ) {
+    configLabelKey = payload[key as keyof typeof payload] as string
+  } else if (
+    payloadPayload &&
+    key in payloadPayload &&
+    typeof payloadPayload[key as keyof typeof payloadPayload] === "string"
+  ) {
+    configLabelKey = payloadPayload[
+      key as keyof typeof payloadPayload
+    ] as string
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]
@@ -700,6 +778,7 @@ if ( {) {
     : config[key as keyof typeof config];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+<<<<<<< HEAD
 
 );
 ChartLegendContent && ChartLegendContent.displayName = "ChartLegend";
@@ -737,6 +816,16 @@ function getPayloadConfigFromPayload(): any (;
       key as keyof typeof payloadPayload;
     ] as string;
   }
+=======
+<<<<<<< HEAD
+export {
+  ChartContainer;
+  ChartTooltip;
+  ChartTooltipContent;
+  ChartLegend;
+  ChartLegendContent;
+  ChartStyle}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
@@ -745,7 +834,11 @@ export {;
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
 
@@ -759,10 +852,17 @@ export {;
   ChartContainer,;
   ChartTooltip,;
   ChartTooltipContent,;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ChartLegend;
   ChartLegendContent;
 

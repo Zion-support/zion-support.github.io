@@ -1,21 +1,43 @@
 
+<<<<<<< HEAD
 import {WorkExperience} from '@/types / resume';
 import {format} from 'date - fns';
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { WorkExperience  } from '@/types/resume';
+import { format } from 'date-fns';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
 import {WorkExperience} from '@/types/resume';
 import {format} from 'date-fns';
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface WorkExperienceSectionProps {
   work_experience: WorkExperience[];
 }
+<<<<<<< HEAD
 
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
 
 
+=======
+export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
+  // Sort work experience by date (newest first)
+<<<<<<< HEAD
+
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {
+=======
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -26,9 +48,20 @@ interface WorkExperienceSectionProps {
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+    }
+    return format(date, 'MMM yyyy')
+  }
+  if (sortedWorkExperience.length === 0) return null;
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
@@ -49,9 +82,16 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     return format(date, 'MMM yyyy')
   },

@@ -5,6 +5,7 @@
 import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
+<<<<<<< HEAD
 =======
 
 =======
@@ -50,6 +51,30 @@ function ensureDataDir (): void {
   }
 }
 export function readState(): IntegrationsState {
+=======
+const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
+const STATE_FILE = path.join(DATA_DIR, "state.json");
+function ensureDataDir(): void {
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  }
+  if (!fs.existsSync(STATE_FILE)) {
+    const initial: IntegrationsState = {
+      connections: []
+      logs: []
+      overrides: []
+      events: []
+    }
+    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
+  }
+}
+<<<<<<< HEAD
+export function readState(): IntegrationsState {
+=======
+
+export function readState(): IntegrationsState {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ensureDataDir();
   try {
     const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
@@ -89,11 +114,21 @@ export function read_state (): IntegrationsState {
 }
 
 export function writeState(
+<<<<<<< HEAD
 
   mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {;
 
 
+=======
+<<<<<<< HEAD
+  mutator: (state: IntegrationsState) => void
+): IntegrationsState {
+=======
+  mutator: (state: IntegrationsState) => void,
+): IntegrationsState {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ensureDataDir();
   const current = readState();
 

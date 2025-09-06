@@ -3,6 +3,7 @@
 
 
 import {
+<<<<<<< HEAD
 
 import {;
   Bell,;
@@ -20,6 +21,34 @@ import {;
   Search,
   Settings,
 
+=======
+<<<<<<< HEAD
+
+  Bell
+  FileText
+  Home
+  Mail
+  Search
+  Settings
+  Users
+} from "lucide-react";
+import {
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenu
+  SidebarMenuItem
+  SidebarMenuButton
+  SidebarGroupLabel
+  SidebarGroupContent
+=======
+  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Users,;
 } from "lucide-react";
 import {;
@@ -31,9 +60,13 @@ import {;
   SidebarMenuButton,;
   SidebarGroupLabel,;
   SidebarGroupContent,;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "@/components/ui/sidebar";
 
 export function AppSidebar() {;
@@ -41,9 +74,17 @@ export function AppSidebar() {;
 
 
         
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -70,9 +111,17 @@ export function AppSidebar() {;
 
 
         
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -97,7 +146,33 @@ export function AppSidebar() {;
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+    </Sidebar>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
+import {;
+  Sidebar,;
+  SidebarContent,;
+  SidebarGroup,;
+  SidebarMenu,;
+  SidebarMenuItem,;
+  SidebarMenuButton,;
+  SidebarGroupLabel,;
+  SidebarGroupContent} from "@/components/ui/sidebar";
+export function AppSidebar() {;
+  return (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;

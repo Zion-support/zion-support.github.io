@@ -1,6 +1,57 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState, useEffect } from 'react'
+import { Globe } from 'lucide-react'
+<<<<<<< HEAD
+=======
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+  CountryPricing,
+  onsiteServicePricing,
+} from '@/data/onsiteServicePricing'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+import {
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'
+  CountryPricing
+  onsiteServicePricing
+} from '@/data/onsiteServicePricing'
+interface CountrySelectorProps {
+  onCountryChange: (country: CountryPricing | null) => void
+  selectedCountry: CountryPricing | null
+export function CountrySelector({
+  onCountryChange
+  selectedCountry
+}: CountrySelectorProps) {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+interface CountrySelectorProps {
+  onCountryChange: (country: CountryPricing | null) => void
+  selectedCountry: CountryPricing | null
+export function CountrySelector({;
+  onCountryChange,;
+  selectedCountry;
+}: CountrySelectorProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null,) => void
 
@@ -8,10 +59,18 @@
 }
   // Set top/popular countries
   useEffect(() => {
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     const popular = [
       'United States'
       'United Kingdom'
@@ -30,14 +89,23 @@
     const top = onsiteServicePricing.filter(item => 
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     setTopCountries(top)
   }, [])
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
+<<<<<<< HEAD
 
 
 import { useState, useEffect } from 'react';
@@ -93,6 +161,26 @@ export function CountrySelector(): any ({;
     onCountryChange(country);
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+    const country =
+      onsiteServicePricing.find(item => item.country === countryName) |null
+=======
+    const country = null;
+      onsiteServicePricing.find(item => item.country === countryName) || null
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    onCountryChange(country)
+<<<<<<< HEAD
+  }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 
       </h3>;
@@ -179,10 +267,18 @@ export function CountrySelector(): any ({;
             {onsiteServicePricing
               .sort((a, b) => a.country.localeCompare(b.country))
               .map((item) => (
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
@@ -211,6 +307,7 @@ function CountrySelector() {
   onCountryChange: (country: CountryPricing | null, ) => void,
   selected_country: CountryPricing | null;
 }
+<<<<<<< HEAD
   // Set top / popular countries;
   useEffect (() => {
     const popular = [;
@@ -289,9 +386,16 @@ function CountrySelector() {
 }
 
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           </div>;
         </SelectContent>;
@@ -300,7 +404,15 @@ function CountrySelector() {
   );
 }
 ;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -12,6 +18,98 @@ import {HireRequestModal} from "@/components/profile/hire-request";
 import {useAuthStatus} from "@/hooks/talent";
 import {UserProfile} from "@/types/auth";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",
+import { Star } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { ExternalLink } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
+import { HireRequestModal } from "@/components/profile/hire-request",
+import { useAuthStatus } from "@/hooks/talent",
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { UserProfile } from "@/types/auth";
+import { useNavigate } from "react-router-dom";
+interface TalentCardFooterProps {
+
+  profile: TalentProfile
+  onViewProfile: (id: string) => void
+
+  onRequestHire?: (profile: TalentProfile) => void
+}
+export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
+=======
+import { UserProfile } from "@/types/auth",
+import { useNavigate } from "react-router-dom",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+interface TalentCardFooterProps {
+  profile: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire?: (profile: TalentProfile) => void
+<<<<<<< HEAD
+}
+
+export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+
+  const navigate = useNavigate();
+  // Create a compatible UserProfile from UserDetails
+  const userProfile: UserProfile = {
+    id: userDetails?.id
+    displayName: userDetails?.name |''
+    email: userDetails?.email |''
+    userType: ''
+    profileComplete: false
+    createdAt: new Date().toISOString()
+    updatedAt: new Date().toISOString()
+  }
+  // Handle request to hire
+  const handleRequestHire = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    if (onRequestHire) {
+      onRequestHire(profile)
+    } else {
+      // Open hire modal directly if no handler provided
+      setIsHireModalOpen(true)
+    }
+  }
+  // Handle view profile
+  const handleViewProfile = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    // Navigate to the talent profile page
+    navigate(`/talent/${profile.id |''}`);
+    // Also call the onViewProfile callback if provided
+    if (onViewProfile) {
+      onViewProfile(profile.id |'')
+    }
+<<<<<<< HEAD
+  }
+=======
+import { UserProfile } from "@/types/auth",
+import { useNavigate } from "react-router-dom",
+interface TalentCardFooterProps {
+  profile: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire?: (profile: TalentProfile) => void
+=======
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",;
+import { Star } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { ExternalLink } from "lucide-react",;
+import { TalentProfile } from "@/types/talent",;
+import { HireRequestModal } from "@/components/profile/hire-request",;
+import { useAuthStatus } from "@/hooks/talent",;
+import { UserProfile } from "@/types/auth",;
+import { useNavigate } from "react-router-dom",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface TalentCardFooterProps {;
   profile: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -107,9 +205,18 @@ if ( {) {
       onViewProfile(profile && profile.id || '');
 
     }
+<<<<<<< HEAD
   }
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   return (
     <>;
@@ -139,6 +246,7 @@ if ( {) {
           >
             Hire
           </Button>
+<<<<<<< HEAD
 
 
           <Button 
@@ -146,6 +254,17 @@ if ( {) {
             size="sm" 
 
 
+=======
+<<<<<<< HEAD
+          <Button
+            variant="outline"
+            size="sm"
+=======
+          <Button 
+            variant="outline" 
+            size="sm" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             onClick={handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
@@ -182,9 +301,17 @@ if ( {) {
 =======
 
       
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Hire Request Modal */}
       <HireRequestModal
         talent={profile}

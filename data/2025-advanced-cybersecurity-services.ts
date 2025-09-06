@@ -311,6 +311,83 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       growthRate: '22% annual growth',
       variant: 'devsecops-enterprise',
       contactInfo: {
+<<<<<<< HEAD
+=======
+        mobile: '+1 302 464 0950'
+        email: 'kleber@ziontechgroup.com'
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+        website: 'https://ziontechgroup.com'
+      }
+      realImplementation: true
+      implementationDetails:
+        'Comprehensive DevSecOps platform with automated security testing, vulnerability scanning, and compliance automation.'
+      launchDate: '2024-11-05'
+      customers: 56
+      rating: 4.8
+      reviews: 28
+    }
+    // IoT Security Platform
+    {
+      id: 'iot-security-platform'
+      name: 'IoT Security Platform'
+      tagline: 'Secure your IoT ecosystem with comprehensive protection'
+      price: '$199'
+      period: '/month'
+      description:
+        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.'
+      features: [
+        'IoT device authentication and management'
+        'Network traffic monitoring and analysis'
+        'Threat detection and response'
+        'Device vulnerability assessment'
+        'Secure firmware updates'
+        'Data encryption and protection'
+        'Compliance monitoring and reporting'
+        'Real-time security alerts'
+        'Integration with IoT platforms'
+        'Mobile security management'
+      ]
+      popular: true
+      icon: '📱'
+      color: 'from-purple-600 to-violet-600'
+      textColor: 'text-purple-400'
+      link: 'https://ziontechgroup.com/iot-security-platform'
+      marketPosition:
+        'Competes with Armis ($25/month), Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.'
+      targetAudience:
+        'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies'
+      trialDays: 14
+      setupTime: '1-2 weeks'
+      category: 'IoT Security & Protection'
+      realService: true
+      technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z-Wave']
+      integrations: [
+        'AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'
+      ]
+      useCases: [
+        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'
+      ]
+      roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.'
+      competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos']
+      marketSize: '$14.2B IoT security market'
+      growthRate: '30% annual growth'
+      variant: 'iot-security-enterprise'
+      contactInfo: {
+        mobile: '+1 302 464 0950'
+        email: 'kleber@ziontechgroup.com'
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+        website: 'https://ziontechgroup.com'
+      }
+      realImplementation: true
+      implementationDetails:
+<<<<<<< HEAD
+        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'
+      launchDate: '2024-09-25'
+      customers: 43
+      rating: 4.7
+      reviews: 21
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       color: 'from - green - 600 to - emerald - 600',
       text_color: 'text - green - 400',
@@ -427,8 +504,12 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       reviews: 21,
 
     },;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ];    features: [
 
 =======
@@ -584,12 +665,20 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 43;
     rating: 4 && 4.7;
     reviews: 21
+<<<<<<< HEAD
 
 
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+  }
+];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       website: 'https://ziontechgroup.com';
     }
@@ -599,11 +688,18 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 43;
     rating: 4.7;
     reviews: 21;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 ];
 ;

@@ -1,8 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 
+=======
+import type {
+<<<<<<< HEAD
+  GrantApplication
+  StatusUpdatePayload;
+=======
+  GrantApplication,;
+  StatusUpdatePayload,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -125,4 +138,18 @@ const payload = req.body as StatusUpdatePayload;
   write_grant (existing);
   res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+<<<<<<< HEAD
+=======
+  res.status(200).json({ record: existing });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+=======
+  res.status(200).json({ record: existing });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,7 +1,23 @@
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+setIsMobile (isMobileDevice);
+=======
+ setIsMobile (isMobileDevice);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+setIsMobile (isMobileDevice);
+=======
+ setIsMobile (isMobileDevice);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 setIsTablet (isTabletDevice);
 
 //Apply mobile - specific optimizations // Check condition
@@ -314,6 +330,7 @@ children
 }</style> </>)
 }
 
+<<<<<<< HEAD
 //Set up event listeners window && window.addEventListener ('orientationchange', handleOrientationChange);
 window && window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window && window.matchMedia (' (orientation: portrait) ');
@@ -348,12 +365,16 @@ export default MobileOptimizer;
 
 export default MobileOptimizer;
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 export default MobileOptimizer;
 export default MobileOptimizer;
 
 
 
 =======
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -370,6 +391,14 @@ interface MobileOptimizerProps {
   enableTouchGestures?: boolean;
   enableMobileLayout?: boolean;
   enablePerformanceMode?: boolean
+=======
+}
+}
+}
+}
+}
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 interface TouchGesture {
@@ -964,6 +993,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 export default MobileOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 images.for_each (img => {
   // Check condition
 if (img.loading = 'lazy') {
@@ -1027,3 +1057,7 @@ export default MobileOptimizer;
 export default MobileOptimizer;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,6 +6,77 @@
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+
+import { FileText, ShieldCheck } from 'lucide-react'
+interface ContractTypeCardsProps {
+  onStandardClick: () => void
+  onSmartClick: () => void
+export function ContractTypeCards({
+  onStandardClick
+  onSmartClick
+}: ContractTypeCardsProps) {
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { FileText, ShieldCheck } from 'lucide-react'
+
+interface ContractTypeCardsProps {
+  onStandardClick: () => void,
+  onSmartClick: () => void
+}
+
+export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div className="grid md:grid-cols-2 gap-6 mb-10">
+      <Card>
+        <CardHeader>
+<<<<<<< HEAD
+          <CardTitle className='flex items-center gap-2'>
+            <FileText className='h-5 w-5' />            Standard Contracts
+          <CardTitle className="flex items-center gap-2">
+            <FileText className="h-5 w-5" />
+interface ContractTypeCardsProps {
+
+  onStandardClick: () => void
+
+  onSmartClick: () => void
+}
+export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
+  return (
+    <div className="grid md:grid-cols-2 gap-6 mb-10">
+      <Card>
+        <CardHeader>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <CardTitle className="flex items-center gap-2">
             <FileText className="h-5 w-5" />
             Standard Contracts
@@ -36,10 +108,18 @@
       </Card>
       
       <Card>
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
@@ -76,6 +156,7 @@
           </Button>
         </CardFooter>
       </Card>
+<<<<<<< HEAD
     </div>
 
 
@@ -91,6 +172,14 @@ import {;
 =======
 
 
+=======
+<<<<<<< HEAD
+    </div>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
@@ -264,6 +353,14 @@ function ContractTypeCards() {
 =======
 
 ;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

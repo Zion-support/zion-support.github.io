@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -23,6 +24,18 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+=======
+<<<<<<< HEAD
+import React from 'react',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import SEO from '../components/SEO';
+import Link from 'next/link';
+export default function RAGEvaluationLabPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   return (
     <>;
@@ -131,8 +144,20 @@ function RAGEvaluationLabPage() {
     </>;
   );
 
+<<<<<<< HEAD
 
 =======
+=======
+<<<<<<< HEAD
+=======
+=======
+}
+=======
+import React from 'react',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import SEO from '../components/SEO',
+import Link from 'next/link',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
@@ -173,6 +198,7 @@ export default function RAGEvaluationLabPage() {
 		</>
 	)
 }
+<<<<<<< HEAD
 
 =======
                 title: 'Golden Datasets',
@@ -232,3 +258,39 @@ export default function RAGEvaluationLabPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+						].map((f) => (;
+							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">;
+								<h3 className="text-lg font-semibold text-white">{f.title}</h3>;
+								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>;
+							</div>;
+						))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+					</div>;
+  const useCases = [;
+    'Enterprise Knowledge ManagementCustomer Support SystemsResearch & DevelopmentContent Generation PlatformsEducational ApplicationsLegal & Compliance Systems';
+  ];
+					<div className="mt-12 flex flex-wrap items-center gap-4">;
+						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>;
+						<a href="mailto: kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>;
+						<span className="text-gray-400">Call: +1 302 464 0950</span>;
+					</div>;
+				</div>;
+			</section>;
+		</>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

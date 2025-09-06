@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button';
+import {
+<<<<<<< HEAD
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
   Card,
@@ -7,8 +19,12 @@
   CardDescription,
   CardHeader,;
   CardTitle;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
@@ -22,8 +38,13 @@ import { PartnerResources } from '@/components/partners/PartnerResources';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 import { Button } from "@/components/ui/button",
@@ -41,9 +62,14 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
 import { useAuth } from "@/hooks/useAuth",
 import { useRouter } from 'next/router',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export default function Partners() {;
   logInfo('PartnersPage rendering');
@@ -75,6 +101,7 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
   const router = useRouter(),;
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true),;
 
+<<<<<<< HEAD
   useEffect((,) => {;
     async function checkHealth() {;
       try {;
@@ -82,6 +109,51 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
         setAuthServiceAvailable(res && res.ok);
         logErrorToProduction('Partner login auth health check failed', {;
           data: err,;
+=======
+export default function Partners() {
+
+  logInfo('PartnersPage rendering'),
+  const [activeTab, setActiveTab] = useState("overview"),
+  const { t } = useTranslation(),
+  const { user, isAuthenticated } = useAuth(),
+  const router = useRouter(),
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  useEffect((,) => {
+    async function checkHealth() {;
+      try {;
+        const res = await fetch('/api/auth/health');
+        setAuthServiceAvailable(res.ok);
+        logErrorToProduction('Partner login auth health check failed', {
+          data: err,
+        });
+        setAuthServiceAvailable(false);
+      }
+    }
+    checkHealth();  }, []);    checkHealth()
+  }, []);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  useEffect(() => {
+    async function checkHealth() {
+      try {
+        const res = await fetch('/api/auth/health'),
+        setAuthServiceAvailable(res.ok)
+      } catch (err) {
+        logErrorToProduction('Partner login auth health check failed', { data: err }),
+        setAuthServiceAvailable(false)
+      }
+    }
+    checkHealth()
+  }, []),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 } from '@/components / ui / card';
@@ -171,9 +243,17 @@ function check_health() {
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="bg-zion-blue-dark border-zion-blue-light">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <CardHeader>
               <CardTitle className="text-white">{t('partner.influencers.title')}</CardTitle>
               <CardDescription>{t('partner.influencers.desc')}</CardDescription>
@@ -196,11 +276,51 @@ function check_health() {
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />
                 <div>
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+                  <p className='font-medium text-white'>
+                    {t('partner.influencers.points.resources')}
+                  </p>
+                  <p className='text-sm text-zion-slate-light'>
+                    {t('partner.influencers.points.resources_desc')}
+                  </p>                </div>        </div>
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <Card className="bg-zion-blue-dark border-zion-blue-light">
+            <CardHeader>
+              <CardTitle className="text-white">{t('partner.influencers.title')}</CardTitle>
+              <CardDescription>{t('partner.influencers.desc')}</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />
+                <div>
+                  <p className="font-medium text-white">{t('partner.influencers.points.audience')}</p>
+                  <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.audience_desc')}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />
+                <div>
+                  <p className="font-medium text-white">{t('partner.influencers.points.insights')}</p>
+                  <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.insights_desc')}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />
+                <div>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <p className="font-medium text-white">{t('partner.influencers.points.resources')}</p>
                   <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.resources_desc')}</p>
 
@@ -212,6 +332,7 @@ function check_health() {
 
 
           <Card className="bg-zion-blue-dark border-zion-blue-light">
+<<<<<<< HEAD
 =======
 
 
@@ -219,6 +340,13 @@ function check_health() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <CardHeader>
               <CardTitle className="text-white">{t('partner.organizations.title')}</CardTitle>
               <CardDescription>{t('partner.organizations.desc')}</CardDescription>
@@ -241,11 +369,48 @@ function check_health() {
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
                 <div>
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+                  <p className='font-medium text-white'>
+                    {t('partner.organizations.points.tracking')}
+                  </p>
+                  <p className='text-sm text-zion-slate-light'>
+                    {t('partner.organizations.points.tracking_desc')}
+                  </p>                </div>            <CardHeader>
+              <CardTitle className="text-white">{t('partner.organizations.title')}</CardTitle>
+              <CardDescription>{t('partner.organizations.desc')}</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
+                <div>
+                  <p className="font-medium text-white">{t('partner.organizations.points.ecosystem')}</p>
+                  <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.ecosystem_desc')}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
+                <div>
+                  <p className="font-medium text-white">{t('partner.organizations.points.co_brand')}</p>
+                  <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.co_brand_desc')}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
+                <div>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <p className="font-medium text-white">{t('partner.organizations.points.tracking')}</p>
                   <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.tracking_desc')}</p>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -266,10 +431,18 @@ function check_health() {
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-zion-cyan" />
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.join_title')}</CardTitle>
               </CardHeader>
@@ -285,10 +458,18 @@ function check_health() {
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <FileText className="h-6 w-6 text-zion-cyan" />
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.share_title')}</CardTitle>
               </CardHeader>
@@ -304,17 +485,33 @@ function check_health() {
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <PieChart className="h-6 w-6 text-zion-cyan" />
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.earn_title')}</CardTitle>
               </CardHeader>
 
               <CardContent className="text-center text-sm text-zion-slate-light">
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <p>{t('partner.steps.earn_desc')}</p>
               </CardContent>
             </Card>
@@ -329,6 +526,7 @@ function check_health() {
 
 
         <div className="flex justify-center gap-4">
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Button
@@ -341,6 +539,59 @@ function check_health() {
           <Button
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <Button
+            size="lg"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            asChild
+          >
+            <Link href="/signup?type=partner&source=partner-program">{t('partner.apply')}</Link>
+          </Button>
+          <Button
+<<<<<<< HEAD
+            size='lg'
+            variant='outline'
+            className='text-zion-cyan border-zion-cyan'            disabled={!authServiceAvailable}          <Button
+            size="lg"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            asChild
+          >
+            <Link href="/signup?type=partner&source=partner-program">{t('partner.apply')}</Link>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="text-zion-cyan border-zion-cyan"
+            disabled={!authServiceAvailable}
+            onClick={() => router.push('/login')}
+            disabled = {!authServiceAvailable,}
+            onClick = {() => router.push('/login'),}
+          >
+            {t('partner.login')}
+          </Button>
+          {!authServiceAvailable && (
+            <p className='text-red-500 text-sm mt-2'>
+              {t('partner.login_unavailable')}
+            </p>          )}            <p className="text-red-500 text-sm mt-2">{t('partner.login_unavailable')}</p>
+          )}
+        </div>
+      </div>
+<<<<<<< HEAD
+    );
+  }
+  // Authenticated user view - Partner Dashboard
+  logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
+
+  return (
+    <div className='container max-w-7xl py-10'>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             size="lg"
             variant="outline"
@@ -676,11 +927,18 @@ if ( {) {
           )}
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     );
   }
 
@@ -690,6 +948,7 @@ if ( {) {
   logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
 
   return (
+<<<<<<< HEAD
     <div className='container max-w-7xl py-10'>;
       <h1>DEBUG: Partners Page - Authenticated View</h1>;
       <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>;
@@ -709,6 +968,43 @@ if ( {) {
   logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
   return (
 
+=======
+<<<<<<< HEAD
+    <div className="container max-w-7xl py-10">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+    <div className='container max-w-7xl py-10'>
+=======
+    <div className="container max-w-7xl py-10">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <h1>DEBUG: Partners Page - Authenticated View</h1>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-white">{t('partner.dashboard_title')}</h1>
+          <p className="text-zion-slate-light">{t('partner.dashboard_desc')}</p>
+        </div>
+<<<<<<< HEAD
+        <div className='flex gap-2'>
+          <Button
+            variant='outline'
+            className='flex items-center gap-2'
+            onClick={() => window.print()}
+          >
+            <FileDown className='h-4 w-4' />            {t('partner.export_csv')}      <h1>DEBUG: Partners Page - Authenticated View</h1>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-white">{t('partner.dashboard_title')}</h1>
+          <p className="text-zion-slate-light">{t('partner.dashboard_desc')}</p>
+        </div>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <div className="flex gap-2">
           <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>
             <FileDown className="h-4 w-4" />
@@ -740,6 +1036,7 @@ if ( {) {
         <TabsContent value="referrals" className="space-y-4">
           <PartnerReferralLinks />
         </TabsContent>
+<<<<<<< HEAD
 
         <TabsContent value='earnings' className='space-y-4'>          <Card>
 =======
@@ -747,6 +1044,14 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <TabsContent value="earnings" className="space-y-4">
 
 
@@ -785,24 +1090,42 @@ if ( {) {
           <PartnerLeaderboard />
         </TabsContent>
         
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <TabsContent value="resources" className="space-y-4">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <PartnerResources />
         </TabsContent>
       </Tabs>
     </div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   async function checkHealth () {try {}checkHealth () ;
 =======
 
   async function checkHealth () {;
   try {}checkHealth () ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }, []);
 //If not authenticated, display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {t ('partner.login') ;
 =======
@@ -1033,15 +1356,30 @@ function check_health() {
 }</CardDescription> </CardHeader> <CardContent> </CardContent> </Card> </TabsContent> <TabsContent value="leaderboard" className="space - y-4" > <PartnerLeaderboard /> </TabsContent> <TabsContent value="resources" className="space - y-4" > <PartnerResources /> </TabsContent> </Tabs> </div>) ;
 }'"}
 }
+<<<<<<< HEAD
 
 
 ;
 
 =======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
   )
 }
 ;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

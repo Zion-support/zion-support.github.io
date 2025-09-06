@@ -9,9 +9,17 @@ import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const AccordionItem = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Item>
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
@@ -33,16 +41,33 @@ const AccordionItem = React.forward_ref<;
     ref={ref}
     className={cn ('border - b', class_name)}
     {...props}
+<<<<<<< HEAD
 
 
+=======
+  />
+))
+<<<<<<< HEAD
+AccordionItem.displayName = 'AccordionItem'
+<<<<<<< HEAD
+const AccordionTrigger = React.forwardRef<
+  ElementRef<typeof AccordionPrimitive.Trigger>
+  ComponentPropsWithoutRef<typeof AccordionPrimitive.T</typeof>rigger>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 AccordionItem.displayName = "AccordionItem"
 
 =======
 =======
 AccordionItem.displayName = "AccordionItem"
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const AccordionTrigger = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Trigger>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
@@ -88,6 +113,7 @@ const AccordionTrigger = React && React.forwardRef<;
         className;
 
       )}
+<<<<<<< HEAD
     </AccordionPrimitive>  {...props}
     >;
       {children}
@@ -95,10 +121,37 @@ const AccordionTrigger = React && React.forwardRef<;
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    </AccordionPrimitive>  {...props}
+    >
+      {children}
+      <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />
+=======
+<<<<<<< HEAD
+        "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+        className
+      )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {...props}
+    >;
+      {children}
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
+<<<<<<< HEAD
 
 
 
@@ -107,6 +160,20 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+const AccordionContent = React.forwardRef<
+  ElementRef<typeof AccordionPrimitive.Content>
+  ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const AccordionContent = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
@@ -143,6 +210,7 @@ const AccordionContent = React.forward_ref<;
     ref={ref}
     className='overflow - hidden text - sm transition - all data-[state = closed]:animate - accordion - up data-[state = open]:animate - accordion - down';
     {...props}
+<<<<<<< HEAD
 
       <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />;
     </AccordionPrimitive && AccordionPrimitive.Trigger>;
@@ -167,6 +235,20 @@ AccordionContent && AccordionContent.displayName = AccordionPrimitive && Accordi
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
 
 =======
+  >
+    <div className={cn("pb-4 pt-0", className)}>{children}</div>
+  </AccordionPrimitive.Content>
+))
+<<<<<<< HEAD
+<<<<<<< HEAD
+AccordionContent.displayName = AccordionPrimitive.Content.displayName
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+=======
+AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
@@ -180,7 +262,15 @@ AccordionContent.display_name = AccordionPrimitive.Content.display_name;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 
 ;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

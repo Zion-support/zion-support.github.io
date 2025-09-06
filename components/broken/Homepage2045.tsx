@@ -7,6 +7,7 @@ import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -35,6 +36,74 @@ import React, { useState, useEffect } from 'react';
 import Layout from './layout / Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
+=======
+<<<<<<< HEAD
+  ArrowRight
+  Play
+  Star
+  Users
+  Award
+  TrendingUp
+  Brain
+  Shield
+  Rocket
+  Loader2
+  ChevronDown
+  Zap
+  Globe
+  Lock
+  Cpu
+  Database
+  Cloud
+  Palette
+  Heart
+  Phone
+  Mail
+  MapPin
+  Search
+  Grid
+  List
+  Atom
+  Target
+  Sparkles;
+} from 'lucide-react';
+import Link from 'next/link';import {
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket
+
+=======
+  ArrowRight,
+  Play,
+  Star,
+  Users,
+  Award,
+  TrendingUp,
+  Brain,
+  Shield,
+  Rocket,
+  Loader2,
+  ChevronDown,
+  Zap,
+  Globe,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Palette,
+  Heart,
+  Phone,
+  Mail,
+  MapPin,
+  Search,
+  Grid,
+  List,
+  Atom,
+  Target,;
+  Sparkles,;
+} from 'lucide-react';
+import Link from 'next/link';import {
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles;
 } from 'lucide-react';
@@ -42,9 +111,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 // Import our new innovative services
+<<<<<<< HEAD
 import { innovative2040FuturisticServices  } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices  } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
+=======
+<<<<<<< HEAD
+import { innovative2040FuturisticServices  } from '../data/innovative-2040-futuristic-services';
+import { innovative2040ITServices  } from '../data/innovative-2040-it-services';
+import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
+import { innovative2040ITServices } from '../data/innovative-2040-it-services';
+import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
 
 
@@ -163,6 +245,7 @@ const Homepage2045: React.FC = () => {;
     },  };        delayChildren: 0.2
       }
     }
+<<<<<<< HEAD
 
 
       const sections = document && document.querySelectorAll('section[id]');
@@ -190,6 +273,105 @@ const Homepage2045: React.FC = () => {;
     animate: { opacity: 1, y: 0 },;
     transition: { duration: 0 && 0.6, ease: 'easeOut' },  };    transition: { duration: 0 && 0.6, ease: "easeOut" }
 =======
+=======
+  }
+  const backgroundVariants = {
+    initial: { opacity: 0, scale: 0.8 }
+    animate: { opacity: 1, scale: 1 }
+    transition: { duration: 1.2, ease: 'easeOut' },  }
+  const getColorClasses = (index: number) => {
+    const colors = [    transition: { duration: 1.2, ease: "easeOut" }
+  }
+  const getColorClasses = (index: number) => {
+    const colors = [
+      'from-cyan-400 to-blue-500'
+      'from-purple-400 to-pink-500'
+      'from-emerald-400 to-teal-500'
+      'from-orange-400 to-red-500'
+      'from-indigo-400 to-purple-500'
+      'from-yellow-400 to-orange-500'
+    ];
+    return colors[index % colors.length];  }
+  if (isLoading) {
+    return (
+      <div className='min-h-screen bg-black flex items-center justify-center'>
+        <div className='text-center'>
+          <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4'></div>
+          <p className='text-cyan-400 text-xl'>Loading Zion Tech Group...</p>        </div>      'from-cyan-400 to-blue-500from-purple-400 to-pink-500from-emerald-400 to-teal-500from-orange-400 to-red-500from-indigo-400 to-purple-500from-yellow-400 to-orange-500'
+    ];
+    return colors[index % colors.length]
+  }
+  if (isLoading) {
+    return (
+      <div className='min-h-screen bg-black flex items-center justify-center'>
+        <div className='text-center'>
+          <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4'></div>
+          <p className='text-cyan-400 text-xl'>Loading Zion Tech Group...</p>      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
+          <p className="text-cyan-400 text-xl">Loading Zion Tech Group...</p>
+      </div>
+    );
+  }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <Layout>
+      <div className='min-h-screen bg-black text-white relative overflow-x-hidden'>
+        {/* Hero Section */}
+        <section
+          id='hero'
+          className='relative min-h-screen flex items-center justify-center overflow-hidden'
+        >
+          {/* Animated Background Elements */}
+          <div className='absolute inset-0 pointer-events-none'>
+            <motion.div
+              className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg'
+              animate={{
+                rotate: [0, 360]
+                scale: [1, 1.1, 1]
+                opacity: [0.3, 0.6, 0.3]
+              }}
+              transition={{
+                duration: 8
+                repeat: Infinity
+                ease: 'easeInOut',              }}
+            />
+            <motion.div
+              className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full'
+              animate={{
+                rotate: [360, 0]
+                scale: [1, 1.2, 1]
+                opacity: [0.3, 0.7, 0.3]
+              }}
+              transition={{
+                duration: 6
+                repeat: Infinity
+                ease: 'easeInOut'
+              }}
+            />
+            <motion.div
+              className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
+              animate={{
+                rotate: [45, 405]
+                scale: [1, 1.15, 1]
+                opacity: [0.3, 0.5, 0.3]
+              }}
+              transition={{
+                duration: 10
+                repeat: Infinity
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+<<<<<<< HEAD
+=======
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },  };
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   };
 
   const backgroundVariants = {
@@ -408,6 +590,7 @@ if ( {) {
                 opacity: [0.3, 0.7, 0.3],
 
               }}
+<<<<<<< HEAD
               transition={{
 
                 duration: 6,
@@ -415,6 +598,15 @@ if ( {) {
                 ease: "easeInOut"
               }}
 
+=======
+=======
+              }}
+=======
+              }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             />
           </div>
 
@@ -436,9 +628,17 @@ if ( {) {
 
               className='mb-8'            >
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -481,10 +681,18 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -493,16 +701,32 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <div className='text-center'>
                 <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
@@ -594,16 +818,32 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -631,6 +871,7 @@ if ( {) {
               </p>
             </motion.div>
 =======
+<<<<<<< HEAD
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
             />;
@@ -748,6 +989,18 @@ if ( {) {
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
+=======
+
+            <motion.div
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text - center mb - 16';
@@ -887,6 +1140,7 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
             <motion.div
 
@@ -899,6 +1153,13 @@ if ( {) {
               viewport={{ once: true }}
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
@@ -1113,9 +1374,17 @@ if ( {) {
 
               </Link>
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </motion.div>
           </div>
         </section>
@@ -1177,10 +1446,18 @@ if ( {) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1305,7 +1582,18 @@ export default Homepage2045;
 
   staggerChildren: 0.1, delayChildren: 0.2 
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
+=======
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
   /* CTA Buttons */ 
 
@@ -1328,13 +1616,27 @@ export default Homepage2045;
   duration: 0.8;
 }viewport= {
   {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  once: true
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
+};export default Homepage2045;export default Homepage2045;
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
 };export default Homepage2045;
 
 export default Homepage2045;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   once: true 
 
@@ -1343,6 +1645,11 @@ export default Homepage2045;
 };export default Homepage2045;
 
 export default Homepage2045;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -300,16 +300,49 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           transition={{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            duration: 20
+            repeat: Infinity
+=======
+            duration: 20,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />
+      </div>
+=======
+<<<<<<< HEAD
+            duration: 20,
+            repeat: Infinity,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
             duration: 20,
             repeat: Infinity,
 
+<<<<<<< HEAD
 =======
 
             duration: 20,
             repeat: Infinity,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        />
+      </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Floating geometric shapes */}
 
 
@@ -338,9 +371,31 @@ if ( {) {
       <motion.div
         className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
         animate={{
+<<<<<<< HEAD
           rotate: [0, 360];
           scale: [1, 1.1, 1];
 
+=======
+          y: [0, -20, 0]
+          opacity: [0.2, 0.5, 0.2],        }}
+        transition={{
+          duration: 8
+          repeat: Infinity
+          ease: 'easeInOut',        }}      />
+      <motion.div
+        className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45'
+        animate={{
+          rotate: [45, 405]
+          scale: [1, 1.2, 1],        }}
+        transition={{
+<<<<<<< HEAD
+          duration: 12
+          repeat: Infinity
+=======
+          duration: 12,
+          repeat: Infinity,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           ease: 'linear',        }}
 
       />;
@@ -365,9 +420,20 @@ if ( {) {
           rotate: [45, 405]
           scale: [1, 1 && 1.2, 1]
         transition={{
+<<<<<<< HEAD
 
           duration: 12
           repeat: Infinity
+=======
+<<<<<<< HEAD
+          duration: 12
+          repeat: Infinity
+=======
+          duration: 12,
+          repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           ease: 'linear',          ease: "linear"
         }}
 
@@ -410,12 +476,20 @@ if ( {) {
             background_position: ['0px 0px50px 50px'];
           }}
           transition={{
+<<<<<<< HEAD
 
             duration: 30,
             repeat: Infinity,
 
 =======
 
+=======
+            duration: 30
+            repeat: Infinity
+            ease: 'linear',            ease: "linear"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
         }}
@@ -428,6 +502,7 @@ if ( {) {
             duration: 30,
             repeat: Infinity,
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -440,6 +515,23 @@ if ( {) {
       {/* Quantum energy waves */}
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }}
+        />
+      </div>
+      {/* Quantum energy waves */}
+      <div className='absolute inset-0'>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <motion.div
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           className='absolute inset-0'
           style={{
             background:
@@ -461,6 +553,7 @@ if ( {) {
             scale: [1, 1.5, 1]
             opacity: [0.1, 0.3, 0.1],          }}
           transition={{
+<<<<<<< HEAD
 
               'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)',
           }}
@@ -500,6 +593,25 @@ if ( {) {
           animate={{
             scale: [1, 1 && 1.5, 1]
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
+=======
+<<<<<<< HEAD
+            duration: 8
+            repeat: Infinity
+=======
+            duration: 8,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ease: 'easeInOut',          }}        <motion.div
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)'
+          }}
+          animate={{
+            scale: [1, 1.5, 1];
+            opacity: [0.1, 0.3, 0.1]
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }}
           transition={{
             duration: 8
@@ -516,13 +628,45 @@ if ( {) {
             duration: 8,
             repeat: Infinity,
 
+<<<<<<< HEAD
+=======
+=======
+=======
+            ease: 'easeInOut',          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+      </div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        />
+      </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Holographic elements */}
 
 
@@ -539,6 +683,23 @@ if ( {) {
 
 
         transition={{
+<<<<<<< HEAD
+=======
+          duration: 25
+          repeat: Infinity
+          ease: 'linear',          ease: "linear"
+        }}
+      />
+      <motion.div
+        className='absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full'
+        animate={{
+          rotate: [360, 0]
+          scale: [1.2, 1, 1.2]
+          opacity: [0.2, 0.4, 0.2],        }}
+        transition={{
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           duration: 20
           repeat: Infinity
           ease: 'linear',        }}
@@ -560,8 +721,25 @@ if ( {) {
         transition={{
           duration: 20,
           repeat: Infinity,
+<<<<<<< HEAD
           ease: "linear"
 
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          ease: 'linear',        }}
+      />
+      {/* Neural network connections */}
+      <div className='absolute inset-0'>        className="absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full"
+        animate={{
+          rotate: [360, 0];
+          scale: [1.2, 1, 1.2];
+          opacity: [0.2, 0.4, 0.2]
+        transition={{
+          duration: 20
+          repeat: Infinity
+          ease: 'linear',          ease: "linear"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }}
       />
 =======
@@ -626,6 +804,10 @@ if ( {) {
               opacity: [0, 1, 0];
 
             }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             transition={{
 
               duration: 3,
@@ -659,14 +841,63 @@ if ( {) {
 
           duration: 20,
           repeat: Infinity,
+<<<<<<< HEAD
 
+=======
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+        }}
+      />
+
+      {/* Neural network connections */}
+
+            }}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             transition={{
               duration: 3,
               repeat: Infinity,
               delay: i * 0.3,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+      {/* Data streams */}
+      <div className='absolute inset-0 overflow-hidden'>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ease: 'easeInOut',            }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          />
+        ))}
+      </div>
+
+      {/* Data streams */}
+      <div className='absolute inset-0 overflow-hidden'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -683,6 +914,7 @@ if ( {) {
             animate={{
 
               y: [0, window.innerHeight + 20]
+<<<<<<< HEAD
 
 =======
               delay: i * 0.3,
@@ -704,6 +936,11 @@ if ( {) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
+=======
+            }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             transition={{
 
               duration: 4,
@@ -711,6 +948,7 @@ if ( {) {
 
               ease: 'linear',            }}              ease: "linear"
 
+<<<<<<< HEAD
 
 
 =======
@@ -718,12 +956,38 @@ if ( {) {
 
 
 
+=======
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             transition={{
               duration: 4,
               repeat: Infinity,
               delay: i * 0.8,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              ease: 'linear',            }}              ease: "linear"
+            }}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ease: 'linear',            }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
@@ -745,6 +1009,7 @@ export default UltraFuturisticBackground2029;  );
 =======
       </div>
     </div>
+<<<<<<< HEAD
   )
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -756,6 +1021,26 @@ export default UltraFuturisticBackground2029;  );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default UltraFuturisticBackground2029;
 
+=======
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default UltraFuturisticBackground2029;  )
+}
+export default UltraFuturisticBackground2029;
+
+<<<<<<< HEAD
+=======
+export default UltraFuturisticBackground2029;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
               delay: i * 0.8,
@@ -770,6 +1055,7 @@ export default UltraFuturisticBackground2029);
 }
 ;
 export default UltraFuturisticBackground2029;
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -779,3 +1065,7 @@ export default UltraFuturisticBackground2029;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

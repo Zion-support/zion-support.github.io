@@ -44,10 +44,22 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
+<<<<<<< HEAD
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 
 
+=======
+<<<<<<< HEAD
+      });export default defineConfig({
+  e2e: {
+<<<<<<< HEAD
+    baseUrl: 'http://localhost:3000', // Standard Next.js port
+
+=======
+    baseUrl: 'http://localhost:3000', // Standard Next.js port;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     supportFile: 'cypress/support/e2e.ts';
 =======
     baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
@@ -129,6 +141,10 @@ export default defineConfig({;
     toConsole: true
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
     base_url: 'http://localhost:3000', // Standard Next.js port;
@@ -159,8 +175,12 @@ export default defineConfig({;
         return launchOptions;
 =======
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       });
     }
     env: {
@@ -203,8 +223,16 @@ export default defineConfig({;
     to_console: true;
   }
 });
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

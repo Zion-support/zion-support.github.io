@@ -16,6 +16,7 @@ const navigation = [
   { name: 'Contact', href: '/contact' }]
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+<<<<<<< HEAD
 
 'use client';
 import { useState } from 'react';
@@ -36,6 +37,11 @@ function Navigation() {
 
 =======
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
   return (;
     <header className=&quot;fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10&quot;>
@@ -44,7 +50,11 @@ function Navigation() {
           <a href=&quot;/&quot; className=&quot;-m-1.5 p-1.5&quot;>
             <span className=&quot;sr-only&quot;>Zion Tech Group</span>
             <div className=&quot;text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200&quot;>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {

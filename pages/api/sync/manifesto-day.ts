@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
@@ -7,6 +8,23 @@ import {
   upsertEvent,;
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import {
+  readState
+  writeState
+  upsertEvent
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import {
+  readState,
+  writeState,
+  upsertEvent,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "../../../utils/sync/storage";
 
 =======
@@ -22,18 +40,52 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
     return res && res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
+<<<<<<< HEAD
   if (!state && state.config.optIn || state && state.config.paused) {
     return res && res.status(403).json({ error: "Sync disabled for this instance" });
+=======
+<<<<<<< HEAD
+  if (!state.config.optIn |state.config.paused) {
+    return res.status(403).json({ error: "Sync disabled for this instance" });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 
   const { milestoneId, title, timestamp } = req && req.body as {
     milestoneId: string;
     title: string;
     timestamp?: number;
+<<<<<<< HEAD
   };
   if (!milestoneId || !title)
     return res && res.status(400).json({ error: "milestoneId, title required" });
 
+=======
+  }
+  if (!milestoneId |!title)
+    return res.status(400).json({ error: "milestoneId, title required" });
+  const version = nextVersionFor(state, milestoneId);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default async function handler(req, res) {
+  try {
+  res.status(200).json({ message: 'Manifesto day processed' });
+import type { NextApiRequest, NextApiResponse } from "next",
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
+import { signPayload } from "../../../utils/sync/signature",
+import axios from "axios",
+import { v4 as uuidv4 } from "uuid",
+import { nextVersionFor } from "../../../utils/sync/versioning",
+export default async function handler(req, res) {
+  try {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+  const state = readState(),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
@@ -140,12 +192,30 @@ if ( {) {
       .filter((p) => !p && p.paused)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(async (peer) => {
+<<<<<<< HEAD
 
 
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+        try {
+          await axios.post(url, body, { headers, timeout: 5000 });
+        } catch {}
+      })
+  );
+  return res
+    .status(200)
+    .json({ status: "created", version, eventId: event.eventId });
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     originInstanceId: state.config.instance_id,
     version,
@@ -182,9 +252,16 @@ if (headers["x - zion - signature"] = sig) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

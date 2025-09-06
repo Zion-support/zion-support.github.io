@@ -1,6 +1,37 @@
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {JobMatch} from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
+import { JobMatch } from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+=======
+import { JobMatch } from "@/types/jobs",
+export function useJobSuggestions(talentId?: string) {
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
@@ -142,6 +173,7 @@ if (throw error) {
     } catch (error) {
       console && console.error("Error updating job match status:", error);
       toast({
+<<<<<<< HEAD
 
   const newMatches = jobMatches && jobMatches.filter(match => match && match.status === 'new');
   const viewedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'viewed');
@@ -149,6 +181,23 @@ if (throw error) {
   const declinedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'declined');
 
 
+=======
+<<<<<<< HEAD
+        title: "Error";
+        description: "Failed to update job status"
+        variant: "destructive"})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+  }
+  // Filter matches by status
+  const newMatches = jobMatches.filter(match => match.status === 'new');
+  const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
+  const appliedMatches = jobMatches.filter(match => match.status === 'applied');
+  const declinedMatches = jobMatches.filter(match => match.status === 'declined');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return {
     jobMatches;
     isLoading;
@@ -162,6 +211,7 @@ if (throw error) {
     }
   }
 =======
+<<<<<<< HEAD
 ;
     fetchSuggestedJobs ();
   }, [talent_id]);
@@ -171,6 +221,45 @@ if (throw error) {
       const updates = {
         status,
         ...(status === 'viewed' ? { viewed_at: new Date ().toISOString () } : {});
+=======
+<<<<<<< HEAD
+        title: "Error",
+        description: "Failed to update job status",
+        variant: "destructive"})
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { JobMatch } from "@/types/jobs",;
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  useEffect(() => {;
+    const fetchSuggestedJobs = async () => {;
+      if (!talentId) return,;
+      try {;
+        setIsLoading(true),;
+        // Get job matches with job details;
+        const { data, error } = await supabase;
+          .from("job_talent_matches");
+          .select(`;
+            *,;
+            job:job_id (*);
+          `);
+          .eq("talent_id", talentId);
+          .order("created_at", { ascending: false }),;
+        if (error) throw error,;
+        setJobMatches(data || []);
+      } catch (error) {;
+        console.error("Error fetching job matches:", error),;
+        toast({;
+          title: "Error",;
+          description: "Failed to load job suggestions",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
 ;
       const { error } = await supabase;
@@ -217,6 +306,7 @@ if ( {) {
   }
 ;
   // Filter matches by status;
+<<<<<<< HEAD
   const new_matches = job_matches.filter (match => match.status === 'new');
   const viewed_matches = job_matches.filter (match => match.status === 'viewed');
   const applied_matches = job_matches.filter (match => match.status === 'applied');
@@ -235,6 +325,26 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  const newMatches = jobMatches.filter(match => match.status === 'new'),;
+  const viewedMatches = jobMatches.filter(match => match.status === 'viewed'),;
+  const appliedMatches = jobMatches.filter(match => match.status === 'applied'),;
+  const declinedMatches = jobMatches.filter(match => match.status === 'declined'),;
+  return {;
+    jobMatches,;
+    isLoading,;
+    updateJobMatchStatus,;
+    categorizedMatches: {;
+      newMatches,;
+      viewedMatches;
+      appliedMatches;
+      declinedMatches;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

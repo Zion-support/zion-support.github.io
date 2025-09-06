@@ -1,16 +1,64 @@
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }function getAllServices () : Service[] {
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+ 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+ 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}function getAllServices () : Service[] {
+  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
+}return {
+  paths: Array.from (slugs) .map ( (slug) => ({
+  params: {
+  slug
+}) );
+fallback: false
+}export default function ServiceDetailPage ({
+  service
+}: {
+  service: Service
+}) {
+  return (<Layout> <Head> <title> {
+<<<<<<< HEAD
+  service.name
+}| Zion Tech Group</title>
+}
+null;
+<<<<<<< HEAD
+2)
+}/> </Head> </li>) )
+}</ul> </div>) )
+}</ul> </div> <div>) )
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 2) 
 =======
   service.name 
 }| Zion Tech Group</title> ;
 };
 null;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+2)
+=======
+2) 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }/> </Head> </li>) ) 
 }</ul> </div>) ) 
@@ -39,15 +87,29 @@ null;
   /* Market Position & ROI */
 }<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {
   service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  service.marketPosition
+}</p>
+}{
+  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
+  service.roi
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   service.marketPosition 
 }</p>
 }{
   service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
   service.roi 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }</p>
 }{
   service.competitors?.length ? () : null
@@ -144,6 +206,19 @@ export default ServiceDetail
 };
 export default ServiceDetail 
 export default ServiceDetail
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+};
+;
+=======
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

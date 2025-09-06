@@ -1,5 +1,39 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import { useState, useEffect } from 'react'
+import { GradientHeading } from '@/components/GradientHeading'
+import { ListingScoreCard } from '@/components/ListingScoreCard'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import {
+  Select
+  SelectTrigger
+  SelectContent
+  SelectItem
+} from '@/components/ui/select'
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
+<<<<<<< HEAD
+import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
+import { safeStorage } from "@/utils/safeStorage";
+=======
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
+import { safeStorage } from '@/utils/safeStorage'
+=======
+import { useState, useEffect } from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { ListingScoreCard } from "@/components/ListingScoreCard",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
+import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
+import { safeStorage } from "@/utils/safeStorage",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Example listing type
 interface Listing {
 =======
@@ -49,6 +83,20 @@ interface Listing {
   image?: string;
   tags?: string[];
   author?: string;
+<<<<<<< HEAD
+=======
+  authorImage?: string;
+  aiScore?: number;
+  rating?: number;
+  reviewCount?: number;
+  price?: number | null;
+  createdAt: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface CategoryListingPageProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   author_image?: string;
   ai_score?: number;
@@ -96,6 +144,7 @@ function CategoryListingPage() {
       mounted = false;
       clear_timeout (timeout);
     }
+<<<<<<< HEAD
 
   }, [search_query, selected_sort, selected_filter]);
   // Process listings based on filters and search;
@@ -128,11 +177,127 @@ if (return matches_search) {
       switch (selected_sort) {
         case 'newest':;
 
+=======
+  }, [searchQuery, selectedSort, selectedFilter])
+  // Process listings based on filters and search
+  const processedListings = initialListings
+    .filter(listing => {
+      // Apply search filter
+<<<<<<< HEAD
+      const matchesSearch =
+        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+=======
+      const matchesSearch = null;
+        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        (listing.tags &&
+          listing.tags.some(tag =>
+            tag.toLowerCase().includes(searchQuery.toLowerCase())
+          ))
+      // Apply category filters
+      if (selectedFilter === 'all') return matchesSearch
+<<<<<<< HEAD
+      if (selectedFilter === 'high-rating')
+        return matchesSearch && (listing.rating |0) >= 4
+      if (selectedFilter === 'best-match')
+        return matchesSearch && (listing.aiScore |0) >= 85
+=======
+      if (true) {}
+        return matchesSearch && (listing.rating || 0) >= 4
+      if (true) {}
+        return matchesSearch && (listing.aiScore || 0) >= 85
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      return matchesSearch
+    })
+    .sort((a, b,) => {
+      // Apply sorting
+      switch (selectedSort) {
+        case 'newest':
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           return (
             new Date (b.created_at).get_time () - new Date (a.created_at).get_time ());
         case 'oldest':;
           return (
+<<<<<<< HEAD
 
+=======
+            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+          )
+        case 'rating-high':
+          return (b.rating |0) - (a.rating |0)
+        case 'ai-match':
+          return (b.aiScore |0) - (a.aiScore |0)
+        case 'a-z':
+          return a.title.localeCompare(b.title)
+        case 'z-a':
+          return b.title.localeCompare(a.title)
+        default:
+          return 0
+      }
+    })
+  return (
+    <>
+      <div className='min-h-screen bg-zion-blue py-12 px-4'>
+        <div className='container mx-auto'>
+          <div className='text-center mb-12'>
+            <GradientHeading>{title}</GradientHeading>
+            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
+=======
+<<<<<<< HEAD
+import { useState, useEffect } from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { ListingScoreCard } from "@/components/ListingScoreCard",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
+import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
+import { safeStorage } from "@/utils/safeStorage",
+// Example listing type
+interface Listing {
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  subcategory?: string,
+  image?: string,
+  tags?: string[],
+  author?: string,
+  authorImage?: string,
+  aiScore?: number,
+  rating?: number,
+  reviewCount?: number,
+  price?: number | null,
+  createdAt: string
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { ListingScoreCard } from "@/components/ListingScoreCard",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
+import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",;
+import { safeStorage } from "@/utils/safeStorage",;
+// Example listing type;
+interface Listing {;
+  id: string,;
+  title: string,;
+  description: string,;
+  category: string,;
+  subcategory?: string,;
+  image?: string,;
+  tags?: string[],;
+  author?: string,;
+  authorImage?: string,;
+  aiScore?: number,;
+  rating?: number,;
+  reviewCount?: number,;
+  price?: number | null,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   createdAt: string;
 
 interface CategoryListingPageProps {;
@@ -254,10 +419,23 @@ export function CategoryListingPage(): any ({;
     });
   return (
     <>;
+<<<<<<< HEAD
 
 
 
 
+=======
+      <div className="min-h-screen bg-zion-blue py-12 px-4">;
+        <div className="container mx-auto">;
+          <div className="text-center mb-12">;
+            <GradientHeading>{title}</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {description}
 
             </p>;
@@ -372,10 +550,18 @@ export function CategoryListingPage(): any ({;
                       value={option && option.value}
                       className='text-white'>                      {option && option.label}
                     </SelectItem>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   ))}
 
 =======
@@ -416,8 +602,16 @@ export function CategoryListingPage(): any ({;
 
           <div className="mb-6">
             <p className="text-zion-slate-light">
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               Showing {processedListings.length} results
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {searchQuery && ` for "${searchQuery}"`}
@@ -447,10 +641,18 @@ export function CategoryListingPage(): any ({;
                     rating = {listing && listing.rating,}
                     reviewCount = {listing && listing.reviewCount,}
                   />;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 ))}
               </div>;
             ) : (;
@@ -462,9 +664,22 @@ export function CategoryListingPage(): any ({;
                   Try adjusting your filters or search query;
                 </p>;
                 <Button
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+                  variant='outline'
+                  onClick={() => {
+                    setSearchQuery('')
+                    setSelectedFilter(filterOptions[0]?.value |'all') }}
+                  className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                   variant="outline"
                   onClick={() => {
@@ -472,10 +687,18 @@ export function CategoryListingPage(): any ({;
                     setSelectedFilter(filterOptions[0]?.value || 'all')
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 >
                   Clear all filters
                 </Button>
@@ -505,8 +728,14 @@ export function CategoryListingPage(): any ({;
       </div>;
     </>;
   );
+<<<<<<< HEAD
 
 
+=======
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -654,4 +883,7 @@ case 'z - a': return (<> <div className="min - h-screen bg - zion - blue py - 12
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

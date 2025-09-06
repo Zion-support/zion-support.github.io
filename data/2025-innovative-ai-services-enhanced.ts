@@ -274,6 +274,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
     
     },
     realImplementation: true, implementationDetails: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.',
@@ -281,8 +282,44 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     rating: 4.8,
     reviews: 89;
 =======
+=======
+    }
+    realImplementation: true
+    implementationDetails:
+<<<<<<< HEAD
+      'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.'
+    launchDate: '2024-03-25'
+    customers: 156
+    rating: 4.8
+    reviews: 89
+  }
+=======
+      'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.',
+    launchDate: '2024-03-25',
+    customers: 156,
+    rating: 4.8,
+    reviews: 89,
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+    rating: 4.8
+
+    reviews: 89
+<<<<<<< HEAD
+  }
+];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIService2025 {;
@@ -546,10 +583,17 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     customers: 156,;
     rating: 4.8;
     reviews: 89;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 ];
 

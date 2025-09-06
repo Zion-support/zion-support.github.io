@@ -3,8 +3,22 @@
 =======
 
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export interface TreeNode {;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export interface TreeNode {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   name: string;
   path: string;
 
@@ -55,6 +69,7 @@ import React, { useState } from "react";
 
 
 export interface TreeNode {
+<<<<<<< HEAD
 
 
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
@@ -68,12 +83,23 @@ export interface TreeNode {;
   type: "folder" | "file",;
 
 =======
+<<<<<<< HEAD
+  name: string
+  path: string
+  type: "folder" | "file"
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
   name: string,
   path: string,
   type: "folder" | "file",;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -150,7 +176,15 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
               on_deploy={on_deploy}
             />          ))}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           ))}
         </div>
       )}
@@ -164,11 +198,27 @@ export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
       {nodes && nodes.map((n) => (;
       ))}
     </div>;
+<<<<<<< HEAD
+=======
+  );  )
+}
+export function Tree({ nodes, onDeploy }: TreeProps) {
+  return (
+    <div className="w-full">
+      {nodes.map((n) => (
+      ))}
+<<<<<<< HEAD
+    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
     </div>;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 
 =======
@@ -236,12 +286,27 @@ export default Tree;
 }depth= {
   0
 }onDeploy= {
+<<<<<<< HEAD
 
   onDeploy 
 }/>) ) ;
 }</div>) ;
 
 export default Tree;
+=======
+<<<<<<< HEAD
+  onDeploy
+}/>) )
+}</div>)
+=======
+  onDeploy 
+}/>) ) 
+}</div>) ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}export default Tree;}
+export default Tree;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
     <div className="w-full">
@@ -257,6 +322,7 @@ export default Tree;
       ))}
     </div>
   );
+<<<<<<< HEAD
 
 
 
@@ -290,3 +356,12 @@ function Tree() {
 export default Tree;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

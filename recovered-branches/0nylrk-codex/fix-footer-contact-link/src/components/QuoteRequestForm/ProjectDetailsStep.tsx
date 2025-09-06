@@ -1,8 +1,33 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {QuoteFormData} from "@/types/quotes";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Textarea} from "@/components/ui/textarea";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { QuoteFormData } from "@/types/quotes",
+import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+=======
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -14,11 +39,21 @@ export function ProjectDetailsStep({
   return (
     <div className="space-y-6">
       <div>
+<<<<<<< HEAD
 
 
         <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
 
 
+=======
+<<<<<<< HEAD
+        <h3 className="text-xl font-semibold text-white mb-4">
+          Tell us about your project
+        </h3>
+=======
+        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <div className="space-y-4">
           <div>
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -52,11 +87,21 @@ export function ProjectDetailsStep({
         </div>
       </div>
       <div>
+<<<<<<< HEAD
 
 
         <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
 
 
+=======
+<<<<<<< HEAD
+        <h3 className="text-xl font-semibold text-white mb-4">
+          Contact Information
+        </h3>
+=======
+        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -65,9 +110,25 @@ export function ProjectDetailsStep({
             <Input
               id="name"
               placeholder="Your name"
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              value={formData.contactInfo.name}
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+                    ...formData.contactInfo
+                    name: e.target.value
+                  }
+                })
+              }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { QuoteFormData } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
@@ -114,9 +175,16 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input;
               id="name";
               placeholder="Your name";
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               value={formData.contactInfo.name}
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, name: e.target.value } ;
@@ -258,6 +326,7 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
               value={formData && formData.contactInfo.email}
               onChange={(e) => updateFormData({ ;
@@ -276,6 +345,18 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
               onChange={(e) => updateFormData({ ;
                 contactInfo: { ...formData && formData.contactInfo, phone: e && e.target.value } ;
               })}
+=======
+<<<<<<< HEAD
+  );
+}
+=======
+  )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 =======
 import { QuoteFormData  } from '@/types / quotes';
@@ -328,6 +409,7 @@ function ProjectDetailsStep() {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
       <div>;
         <h3 className="text - xl font - semibold text - white mb - 4">;
           Contact Information;
@@ -422,3 +504,16 @@ function ProjectDetailsStep() {
   )
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </div>;
+  );
+<<<<<<< HEAD
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

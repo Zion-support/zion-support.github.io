@@ -179,6 +179,7 @@ export default function PodcastIndexPage() {
       </ul>;
     </div>;
   );
+<<<<<<< HEAD
 
 }
 
@@ -186,6 +187,13 @@ export default function PodcastIndexPage() {
   // Check condition
 if (return <div > Loading episodes…</div>) {
   $2
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
   return (
     <div className='space - y-6'>;
@@ -277,7 +285,13 @@ if (return <div > Loading episodes…</div>) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,6 +1,21 @@
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { FilePlus, Loader2  } from 'lucide-react';
+import { ProjectCard  } from './ProjectCard';
+import { ProjectForm  } from './ProjectForm';
+import { PortfolioProject  } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
+export function PortfolioBuilder() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -10,8 +25,12 @@ import {ProjectForm} from './ProjectForm';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
   const [showAddProject, setShowAddProject] = useState(false);
 
@@ -34,10 +53,18 @@ export function PortfolioBuilder() {;
     if (success) {
       fetchProjects();
     }
+<<<<<<< HEAD
 
 
   };
 
+=======
+<<<<<<< HEAD
+  }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -68,9 +95,16 @@ export function PortfolioBuilder() {;
       fetchProjects();
     }
   },
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -104,6 +138,7 @@ export function PortfolioBuilder() {;
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
+<<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
@@ -175,6 +210,12 @@ export function PortfolioBuilder() {;
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>;
 
+=======
+<<<<<<< HEAD
+              {editingProject ? "Edit Project" : "Add New Project"}
+            </h2>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <ProjectForm
               project={editingProject || undefined}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -185,7 +226,19 @@ export function PortfolioBuilder() {;
 
 
 =======
+<<<<<<< HEAD
 
+=======
+              {editingProject ? 'Edit Project' : 'Add New Project'}
+            </h2>;
+            <ProjectForm;
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {;
+                setShowAddProject(false);
+                setEditingProject(null);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             <ProjectForm 
               project={editingProject || undefined}
@@ -196,7 +249,10 @@ export function PortfolioBuilder() {;
                 setEditingProject(null);
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               }}
             />;
           </CardContent>;

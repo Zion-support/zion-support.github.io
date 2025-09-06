@@ -1,8 +1,37 @@
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
+import {Input} from "@/components/ui/input";
+import {Card} from "@/components/ui/card";
+import {Search} from "lucide-react";
+import {ListingScoreCard} from "@/components/ListingScoreCard";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
+import { Input } from "@/components/ui/input",
+import { Card } from "@/components/ui/card",
+<<<<<<< HEAD
+import { Search } from "lucide-react";
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+=======
+import { Search } from "lucide-react",
+import { ListingScoreCard } from "@/components/ListingScoreCard",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -10,11 +39,71 @@ interface ServiceTypeStepProps {
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
 
+<<<<<<< HEAD
 
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  {
+    id: "service-1"
+    title: "AI Development"
+    category: "Services"
+    image:
+      "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format"
+  }
+  {
+    id: "service-2"
+    title: "Cloud Migration"
+    category: "Services"
+    image:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format"
+  }
+  {
+    id: "talent-1"
+    title: "AI Engineer"
+    category: "Talents"
+    image:
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format"
+  }
+  {
+    id: "talent-2"
+    title: "Data Scientist"
+    category: "Talents"
+    image:
+      "https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format"
+  }
+  {
+    id: "equipment-1"
+    title: "Workstation"
+    category: "Equipment"
+    image:
+      "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format"
+  }
+  {
+    id: "equipment-2"
+    title: "Server Rack"
+    category: "Equipment"
+    image:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format"
+  }
+];
+export function ServiceTypeStep({
+  formData
+  updateFormData
+}: ServiceTypeStepProps) {
+  const [searchQuery, setSearchQuery] = useState("");
+  const handleTypeSelect = (type: ServiceType) => {
+    updateFormData({ serviceType: type });
+  }
+=======
+export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
+  const [searchQuery, setSearchQuery] = useState("");
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
@@ -145,11 +234,26 @@ if (return false) {
                 ? "bg - zion - purple / 20 border - zion - purple";
                 : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
             }`}
+<<<<<<< HEAD
 
 
           <Card 
 
 
+=======
+            onClick={() => handleTypeSelect("service")}
+          >
+            <h4 className="font-medium text-white">Services</h4>
+            <p className="text-sm text-zion-slate-light">
+              AI solutions, consulting, development
+            </p>
+          </Card>
+<<<<<<< HEAD
+          <Card
+=======
+          <Card 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -162,11 +266,19 @@ if (return false) {
               AI specialists, developers, consultants
             </p>
           </Card>
+<<<<<<< HEAD
 
 
           <Card 
 
 
+=======
+<<<<<<< HEAD
+          <Card
+=======
+          <Card 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -183,6 +295,7 @@ if (return false) {
       </div>
       {formData.serviceType && (
         <div className="space-y-4">
+<<<<<<< HEAD
 
 import {useState} from "react";
 import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
@@ -191,9 +304,19 @@ import {Card} from "@/components/ui/card";
 import {Search} from "lucide-react";
 import {ListingScoreCard} from "@/components/ListingScoreCard";
 =======
+<<<<<<< HEAD
+          <h3 className="text-xl font-semibold text-white">
+            Select a specific {formData.serviceType}
+          </h3>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
@@ -297,8 +420,16 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
 
             <Input;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               placeholder={`Search ${formData.serviceType}...`}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               value={searchQuery}

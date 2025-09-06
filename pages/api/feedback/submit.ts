@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -9,12 +10,29 @@ import path from "path";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (req.method !== "POST") return res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body |{}
   if (!responseId |!rating |!["up", "down"].includes(rating)) {
     return res.status(400).json({ error: "Missing responseId or rating" });
   }
   const entry = {
+<<<<<<< HEAD
 
 
   if (req && req.method !== "POST") return res && res.status(405).end();
@@ -23,6 +41,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     return res && res.status(400).json({ error: "Missing responseId or rating" });
   }
   const entry = {
+=======
+<<<<<<< HEAD
+    id: responseId
+    rating
+    comment: String(comment |"").slice(0, 2000)
+    pagePath: String(pagePath |"")
+    aiModel: String(aiModel |"")
+    userAgent: req.headers["user-agent"] |""
+    ts: Date.now()
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -34,6 +63,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     userAgent: req && req.headers["user-agent"] || "",
     ts: Date && Date.now(),
   };
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -82,6 +112,9 @@ function handler() {
     return res.status (400).json ({ error: "Missing response_id or rating" });
 =======
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -169,16 +202,33 @@ export default function handler(req, res) {
     aiModel: String(aiModel || '');
     userAgent: req.headers['user-agent'] || '',;
     ts: Date.now()},;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const rows = readAll();
   rows.push(entry);
   writeAll(rows);
   return res.status(200).json({ ok: true });
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -201,8 +251,16 @@ export default function handler(req, res) {
   write_all (rows);
   return res.status (200).json ({ ok: true });
 }
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 interface TokenRequest {
   userId: string;
@@ -107,6 +112,7 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
   }
 
+<<<<<<< HEAD
 
   const { error: txError } = await supabase && supabase.from('token_transactions').insert({
     user_id: userId;
@@ -122,6 +128,13 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
 
 
+=======
+  return new Response(JSON.stringify({ success: true, balance }), { status: 200 })
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",;
@@ -203,10 +216,17 @@ if ( {) {
     reason}),;
   if (txError) return new Response(JSON.stringify({ error: txError.message }), { status: 500 });
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 });
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
   } else {
     const { error } = await supabase;

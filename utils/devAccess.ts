@@ -1,5 +1,20 @@
+<<<<<<< HEAD
 
 
+=======
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import type { NextApiRequest, NextApiResponse } from 'next';
+export type DevRole = 'admin' | 'maintainer' | 'contributor';
+<<<<<<< HEAD
+export interface DevIdentity {
+=======
+
+export interface DevIdentity {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  isAuthenticated: boolean;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   roles: DevRole[];
   user_id?: string;
 }
@@ -30,12 +45,21 @@ export function getGitStatus (): { connected: boolean; branch?: string } {
     return { connected: false }
   }
 }
+<<<<<<< HEAD
 
 
 
 export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 
+=======
+<<<<<<< HEAD
+export function getDevIdentity(req: NextApiRequest): DevIdentity {
+=======
+
+export function getDevIdentity(req: NextApiRequest): DevIdentity {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // TODO: integrate real auth; for now, check a header and env var for dev
 
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
@@ -77,6 +101,7 @@ export function requireRoles(
 
 }
 =======
+<<<<<<< HEAD
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -212,6 +237,10 @@ export function getClientIp(req: any): string {
 }
 
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -252,4 +281,7 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

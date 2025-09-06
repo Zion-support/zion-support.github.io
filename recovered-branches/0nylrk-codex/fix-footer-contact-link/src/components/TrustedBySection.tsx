@@ -1,9 +1,20 @@
 
+<<<<<<< HEAD
 
 
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { GradientHeading } from "./GradientHeading";
+import { useState } from "react";
+=======
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
@@ -12,7 +23,10 @@ import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Real company logos for trusted partners - with more reliable image URLs
 
 const trustedCompanies = [
@@ -229,9 +243,29 @@ export function TrustedBySection() {
                   {company.name}
                 </div>
               ) : (
+<<<<<<< HEAD
 
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
+=======
+<<<<<<< HEAD
+                <img
+                  src={company.logo}
+                  alt={company.alt}
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+=======
+                <img 
+                  src={company.logo} 
+                  alt={company.alt} 
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { GradientHeading } from "./GradientHeading",;
+import { useState } from "react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Real company logos for trusted partners - with more reliable image URLs;
 const trustedCompanies = [;
   {;
@@ -366,6 +400,7 @@ export function TrustedBySection() {;
                   {company && company.name}
                 </div>;
               ) : (;
+<<<<<<< HEAD
                 <img
                   src={company && company.logo} 
                   alt={company && company.alt} 
@@ -380,6 +415,17 @@ export function TrustedBySection() {;
                   alt={company.alt} 
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
 
+=======
+                <img;
+                  src={company.logo} ;
+                  alt={company.alt} ;
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   onError={() => handleImageError(company.name)}
                 />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

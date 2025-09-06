@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Testing system utilities
+export const testingSystem = {
+  // Add testing utilities here
+<<<<<<< HEAD
+};
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 =======
@@ -97,8 +115,24 @@ export const testingSystem = {
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
+<<<<<<< HEAD
 // Testing system utilities;
 export const testing_system = {
   // Add testing utilities here;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}};
+},;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+// Testing system utilities
+export const testingSystem = {
+  // Add testing utilities here;
+};
+=======
+}};
+},;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

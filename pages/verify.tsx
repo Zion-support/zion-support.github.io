@@ -179,6 +179,7 @@ if (return 0) {
     const res = await fetch('/api/kyc/upload', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
       body: JSON && JSON.stringify({ userId, kind, filename }),;
     });
     const data = await res && res.json();
@@ -196,6 +197,52 @@ if (return 0) {
     }
     setBusy(false);  }
   const labels = getBadgeLabels(profile |undefined);
+=======
+      body: JSON.stringify({ userId })}),;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    const data = await res.json();
+    if (data.ok) {;
+      setProfile(data.profile);
+      setMessage('Submitted. AML check performed.');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    } else {
+      setMessage(data.error |'Submit failed');
+    }
+    setBusy(false);  }
+  const labels = getBadgeLabels(profile |undefined);
+=======
+    } else {;
+      setMessage(data.error || 'Submit failed');
+=======
+    } else {;
+      setMessage(data.error || 'Submit failed');
+<<<<<<< HEAD
+    }
+    setBusy(false);  }
+
+  const labels = getBadgeLabels(profile || undefined);
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    setBusy(false);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const labels = getBadgeLabels(profile || undefined),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <>;
       <Head>;
@@ -235,6 +282,7 @@ if (return 0) {
               value={role}
               onChange={e => setRole(e && e.target.value as KycRole)}
 =======
+<<<<<<< HEAD
       set_message (data.error || 'Upload failed');
     }
     set_busy (false);  }
@@ -304,6 +352,16 @@ if ( {) {
 
           )}
 
+=======
+      <main className="max-w-3xl mx-auto px-4 py-8">
+        <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>
+        <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {labels.length > 0 && (
           <div className="mb-4">
             <VerifiedBadge labels={labels} />
@@ -365,10 +423,18 @@ if ( {) {
               </div>
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
@@ -503,9 +569,39 @@ if ( {) {
                         </div>
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+                    );                  })}
+                </div>
+              </section>
+            )}
+<<<<<<< HEAD
+            <div>
+              <button
+                disabled={
+                  busy |
+                  profile.status === 'submitted' |
+                  profile.status === 'approved'
+                }
+                onClick={submit}
+                className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'
+              >
+                Submit for review
+              </button>
+            </div>
+            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
+        )}
+      </main>
+    </>
+);
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                     )
 ;
@@ -735,6 +831,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
             <div>
@@ -742,6 +839,25 @@ if ( {) {
             </div>
 
 
+=======
+<<<<<<< HEAD
+            <div>
+              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
+            </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+            <div>
+              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
+            </div>
+<<<<<<< HEAD
+            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
+        )}
+      </main>
+    </>
+);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {message && <div className="text-sm text-blue-700">{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -761,7 +877,15 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

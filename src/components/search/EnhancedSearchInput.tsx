@@ -1,8 +1,24 @@
+<<<<<<< HEAD
 
 
           
 import { logInfo, logWarn } from '@/utils/productionLogger'
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import { logInfo, logWarn } from '@/utils/productionLogger'
+interface EnhancedSearchInputProps {
+  value: string
+  onChange: (value: string,) => void
+
+=======
+          
+import { logInfo, logWarn } from '@/utils/productionLogger'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
@@ -17,9 +33,16 @@ import { debounce } from "lodash",
 import { logInfo, logWarn } from '@/utils/productionLogger',
 
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -29,9 +52,29 @@ interface EnhancedSearchInputProps {
    * components to perform actions such as navigation.
 
    */
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void
+  placeholder?: string;  /**
+
+=======
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
@@ -45,8 +88,26 @@ export function EnhancedSearchInput({
   placeholder = "Search..."
   searchSuggestions
 }: EnhancedSearchInputProps) {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
+import { Search, X  } from 'lucide-react'
+import { Input } from '@/components/ui/input'
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions'
+import { SearchSuggestion } from '@/types/search'
+export function EnhancedSearchInput({
+  value
+  onChange
+  onSelectSuggestion
+  placeholder = "Search..."
+<<<<<<< HEAD
+  searchSuggestions
+}: EnhancedSearchInputProps) {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   searchSuggestions;
 }: EnhancedSearchInputProps) {;
 
@@ -63,18 +124,109 @@ export function EnhancedSearchInput({
   placeholder = "Search...",
   searchSuggestions
 }: EnhancedSearchInputProps) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [isFocused, setIsFocused] = useState(false)
+  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([])
+  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1)
+  const inputRef = useRef<HTMLInputElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null)
+  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false)
+  const { t } = useTranslation()
+  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([])
+  const [loading, setLoading] = useState(false)
+  const debounced = useDebounce(value, 200)
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;
+import { Search, X  } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
+import { SearchSuggestion } from '@/types/search';
+export function EnhancedSearchInput({;
+  value,
+  onChange,
+  onSelectSuggestion,
+  placeholder = "Search...",
+  searchSuggestions
+}: EnhancedSearchInputProps) {
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [isFocused, setIsFocused] = useState(false),
+  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
+  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1),
+  const inputRef = useRef<HTMLInputElement>(null),
+  const containerRef = useRef<HTMLDivElement>(null),
+  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null),
+  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false),
+  const { t } = useTranslation(),
+  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]),
+  const [loading, setLoading] = useState(false),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const debouncedFetchSuggestions = useMemo(
     (,) =>
       debounce(async (query: string,) => {
         if (!query.trim()) {
+<<<<<<< HEAD
 
 ;
 import { log_info, log_warn } from '@/utils / production_logger';
 interface EnhancedSearchInputProps {
   value: string,
   on_change: (value: string, ) => void,
+=======
+<<<<<<< HEAD
+          setApiSuggestions([])
+          return
+<<<<<<< HEAD
+=======
+          setApiSuggestions([]),
+<<<<<<< HEAD
+          return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        }
+        setLoading(true)
+        try {
+          const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {
+            signal: AbortSignal.timeout(5000) // 5 second timeout
+          })
+          if (response.ok) {
+            const data = await response.json()
+            if (Array.isArray(data)) {
+              setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions
+=======
+<<<<<<< HEAD
+=======
+          return
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, useEffect, useRef, useMemo } from "react",;
+import { useTranslation } from "react-i18next",;
+import { Search, X } from 'lucide-react';
+import { Input } from "@/components/ui/input",;
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",;
+import { SearchSuggestion } from "@/types/search",;
+import { useDebounce } from "@/hooks/useDebounce",;
+import { useRouter } from "next/router",;
+import { slugify } from "@/lib/slugify",;
+import { debounce } from "lodash",;
+import { logInfo, logWarn } from '@/utils/productionLogger',;
+interface EnhancedSearchInputProps {;
+  value: string,;
+  onChange: (value: string) => void,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   /**;
   * Optional callback when a suggestion is selected. This allows parent;
   * components to perform actions such as navigation.;
@@ -119,6 +271,7 @@ function EnhancedSearchInput() {
           setApiSuggestions ([]),
           return;
         }
+<<<<<<< HEAD
         set_loading (true);
 
         try {
@@ -139,6 +292,23 @@ if ( {) {
           setApiSuggestions([]),
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+        setLoading(true),;
+        try {;
+          const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {;
+            signal: AbortSignal.timeout(5000) // 5 second timeout;
+          }),;
+          if (response.ok) {;
+            const data = await response.json(),;
+            if (Array.isArray(data)) {;
+              setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             }
           } else {
 
@@ -241,13 +411,22 @@ if ( {) {
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text),
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     if (onSelectSuggestion) {
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
       onSelectSuggestion(suggestionObj)
 =======
+<<<<<<< HEAD
         setHighlightedIndex (-1);
       });
       .catch (() => setFilteredSuggestions ([]));
@@ -264,6 +443,28 @@ function handleClickOutside() {
 }
         setIsFocused (false),
         // setHighlightedIndex (-1), // Already handled in on_blur generally;
+=======
+      logWarn('onSelectSuggestion callback not provided'),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      if (suggestionObj.id) {
+        router.push(`/marketplace/listing/${suggestionObj.id}`)
+      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
+        router.push(suggestionObj.slug)
+      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
+        router.push(`/blog/${suggestionObj.slug}`)
+      } else {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        router.push(`/search/${suggestionObj.slug |slugify(suggestionObj.text)}`)
+=======
+        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
     }
     document.addEventListener ("mousedown", handleClickOutside);
@@ -687,8 +888,45 @@ if ( {) {
     }
   }
 =======
+<<<<<<< HEAD
 
     switch(e && e.key) {;
+=======
+<<<<<<< HEAD
+        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+    document.addEventListener("mousedown", handleClickOutside),;
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []),;
+  const router = useRouter(),;
+  const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {;
+    logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),;
+    onChange(suggestionObj.text),;
+    if (onSelectSuggestion) {;
+      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),;
+      onSelectSuggestion(suggestionObj);
+    } else {;
+      // Provide a sensible default navigation if the parent did not supply a handler;
+      logWarn('onSelectSuggestion callback not provided'),;
+      if (suggestionObj.id) {;
+        router.push(`/marketplace/listing/${suggestionObj.id}`);
+      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {;
+        router.push(suggestionObj.slug);
+      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {;
+        router.push(`/blog/${suggestionObj.slug}`);
+      } else {;
+        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`);
+      }
+    }
+    setIsFocused(false),;
+    inputRef.current?.blur(),;
+    setHighlightedIndex(-1);
+  },;
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+    switch (e.key) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       case 'ArrowDown':;
         e && e.preventDefault();
         setHighlightedIndex(prev => (prev + 1) % filteredSuggestions && filteredSuggestions.length);
@@ -738,15 +976,23 @@ if ( {) {
         setEnterHandledPostFocus(false);
         break;
     }
+<<<<<<< HEAD
   };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  },
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       // Provide a sensible default navigation if the parent did not supply a handler
 
       logWarn('onSelectSuggestion callback not provided'),
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
       if (suggestionObj.id) {
         router.push(`/marketplace/listing/${suggestionObj.id}`)
       } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
@@ -758,6 +1004,8 @@ if ( {) {
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 
       aria-expanded = {isFocused && filteredSuggestions && filteredSuggestions.length> 0,}
@@ -774,9 +1022,17 @@ if ( {) {
 
 
           ref={inputRef}
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           type="text"
           id="enhanced-search-input"
           name="search"
@@ -839,8 +1095,16 @@ if ( {) {
 
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -873,9 +1137,17 @@ if ( {) {
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
 
@@ -964,7 +1236,11 @@ break ;
     </div>;
   );
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -973,6 +1249,7 @@ break ;
             const related_target = e.related_target as HTMLElement;            if () {) {
   $2
 }
+<<<<<<< HEAD
               setIsFocused (false);
               setHighlightedIndex (-1);
             , }
@@ -1076,3 +1353,14 @@ break;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+=======
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -3,6 +3,25 @@ import React from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Brain
+  Network
+  Cloud
+  Shield
+  Zap
+  Target
+  Users
+  BarChart3
+  ArrowRight
+  CheckCircle
+  Star
+  Award
+  Clock
+  Globe
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Brain,
   Network,
   Cloud,
@@ -16,11 +35,19 @@ import {
   Star,
   Award,
   Clock,
+<<<<<<< HEAD
   Globe,
 } from './lucide-react';
 import Layout from "../components / Layout";
 ;
 const service_categories = [;
+=======
+  Globe,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from "lucide-react";
+import Layout from "../components/Layout";
+const serviceCategories = [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
     title: "AI Services",
     description:;
@@ -225,6 +252,25 @@ const benefits = [;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 export default function ServicesOverviewPage() {
+<<<<<<< HEAD
+=======
+  return (
+    <Layout
+      title="Services Overview - Zion Tech Group"
+      description="Comprehensive overview of our technology services and solutions designed to transform your business."
+      keywords="services, technology solutions, AI, IT, micro SAAS, security, automation, analytics"
+    >
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 class ErrorBoundary extends React.Component {
@@ -363,7 +409,10 @@ const serviceCategories = [;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -550,6 +599,24 @@ function ServicesOverviewPage() {
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
+=======
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+                  <div
+                    className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}
+                  >
+                    <category.icon className="w-16 h-16 text-white" />
+                  </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
                   <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-16 h-16 text-white" />
@@ -564,11 +631,15 @@ function ServicesOverviewPage() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
+<<<<<<< HEAD
 
 
 =======
@@ -577,6 +648,19 @@ function ServicesOverviewPage() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -609,6 +693,16 @@ function ServicesOverviewPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+<<<<<<< HEAD
+=======
+                            {service}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
@@ -673,7 +767,10 @@ function ServicesOverviewPage() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     <Link
                       href={category && category.link}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;

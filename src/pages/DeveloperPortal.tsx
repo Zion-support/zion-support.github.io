@@ -1,9 +1,53 @@
+<<<<<<< HEAD
 
 
   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
   // Define the tabs
   const tabs: TabDefinition[] = [
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import {
+  BookOpen
+  Code
+  Key
+  List
+  LucideIcon
+  Terminal
+  Webhook
+} from 'lucide-react'
+import { ProtectedRoute } from '@/components/ProtectedRoute'
+import { ApiKeysManager } from '@/components/developers/ApiKeysManager'
+import { WebhooksManager } from '@/components/developers/WebhooksManager'
+import { ApiDocumentation } from '@/components/developers/ApiDocumentation'
+import { ApiLogs } from '@/components/developers/ApiLogs'
+
+interface TabDefinition {
+  id: string;
+  label: string;
+  icon: LucideIcon
+export function DeveloperPortal() {
+<<<<<<< HEAD
+  const { user } = useAuth();
+=======
+  const { user } = useAuth()
+  const [activeTab, setActiveTab] = useState<string>('documentation')
+  // Define the tabs
+  const tabs: TabDefinition[] = [
+    { id: 'documentation', label: 'Documentation', icon: BookOpen },
+    { id: 'api-keys', label: 'API Keys', icon: Key },
+    { id: 'webhooks', label: 'Webhooks', icon: Webhook },
+    { id: 'logs', label: 'Logs', icon: List },
+  ]
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
     { id: "documentation", label: "Documentation", icon: BookOpen },
@@ -53,6 +97,14 @@ export function DeveloperPortal() { const { user  } = useAuth(),
     { id: "api-keys", label: "API Keys", icon: Key },
     { id: "webhooks", label: "Webhooks", icon: Webhook },
     { id: "logs", label: "Logs", icon: List }],
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
       <div className="mb-8">
@@ -213,6 +265,7 @@ export function DeveloperPortal() {;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Tab content */}
+<<<<<<< HEAD
 
         </div>;
       </div>;
@@ -250,13 +303,22 @@ export function DeveloperPortal() {;
       <div>;
 =======
       <div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+      <div>
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
+<<<<<<< HEAD
 
 
 
@@ -265,11 +327,23 @@ export function DeveloperPortal() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      </div>
+    </div>
+  )
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
+<<<<<<< HEAD
 
       </div>;
     </div>;
@@ -278,12 +352,24 @@ export default function ProtectedDeveloperPortal() {
 
 =======
   )
+<<<<<<< HEAD
+}
+}
+  )
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  )
 
 };
 };
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
 
@@ -295,6 +381,7 @@ export default function ProtectedDeveloperPortal() {;
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 }
   )
 }
@@ -302,6 +389,11 @@ export default function ProtectedDeveloperPortal() {;
   );
 }
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         </div>;
       </div>;
@@ -332,4 +424,7 @@ function ProtectedDeveloperPortal() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

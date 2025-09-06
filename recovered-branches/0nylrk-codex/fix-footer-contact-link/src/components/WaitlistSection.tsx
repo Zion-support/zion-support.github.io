@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -15,8 +21,27 @@ export function WaitlistSection() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+<<<<<<< HEAD
+import { useToast } from "@/hooks/use-toast";
+import { Checkbox } from "@/components/ui/checkbox";
+=======
+import { useToast } from "@/hooks/use-toast",
+import { Checkbox } from "@/components/ui/checkbox",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -221,6 +246,7 @@ if ( {) {
               />;
               <Label
                 htmlFor="terms"
+<<<<<<< HEAD
 
 
             <Button 
@@ -228,6 +254,22 @@ if ( {) {
               disabled={isSubmitting} 
 
 
+=======
+                className="text-sm text-zion-slate font-normal"
+              >
+                I agree to receive updates about Zion and understand I can unsubscribe anytime.
+              </Label>
+            </div>
+<<<<<<< HEAD
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+=======
+            <Button 
+              type="submit" 
+              disabled={isSubmitting} 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -237,6 +279,7 @@ if ( {) {
       </div>
     </section>
   )
+<<<<<<< HEAD
 
                 className="text-sm text-zion-slate font-normal">;
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.;
@@ -252,6 +295,13 @@ if ( {) {
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
   return (
@@ -326,11 +376,20 @@ if ( {) {
           </form>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </section>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

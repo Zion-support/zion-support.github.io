@@ -11,7 +11,24 @@ interface ActionButtonsProps {
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ActionButtonsProps {
   flagId: string,
   status: string,
@@ -107,10 +124,28 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
         <Button
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
 
     </div>;
 );
 
+=======
+<<<<<<< HEAD
+          onClick={() => onAction(flagId, "ignore")}
+        >
+          Ignore
+        </Button>
+      )}
+<<<<<<< HEAD
+    </div>
+  );
+}
+
+=======
+    </div>;
+);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -172,6 +207,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       )}
     </div>;
   );
+<<<<<<< HEAD
 
   on_action: (
     flag_id: string,
@@ -232,6 +268,9 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 }
 ;
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 

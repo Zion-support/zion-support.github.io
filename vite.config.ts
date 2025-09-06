@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -6,6 +7,9 @@ import { defineConfig } from 'vite';
 =======
 import { define_config } from 'vite';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
 ;
@@ -14,6 +18,7 @@ export default define_config ({
   plugins: [react ()],
   resolve: {
     alias: {
+<<<<<<< HEAD
       '@': path.resolve (__dirname, './src'),
       '@components': path.resolve (__dirname, './src / components'),
       '@pages': path.resolve (__dirname, './src / pages'),
@@ -76,6 +81,18 @@ export default defineConfig({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      '@': path.resolve(__dirname, './src'),
+      '@components': path.resolve(__dirname, './src/components'),
+      '@pages': path.resolve(__dirname, './src/pages'),
+      '@utils': path.resolve(__dirname, './src/utils'),
+      '@hooks': path.resolve(__dirname, './src/hooks'),
+      '@types': path.resolve(__dirname, './src/types'),
+      '@styles': path.resolve(__dirname, './src/styles'),
+      '@assets': path.resolve(__dirname, './src/assets'),
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   build: {
@@ -85,13 +102,17 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           'react-vendor': ['react', 'react-dom'],
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
+<<<<<<< HEAD
 
           'react-vendor': ['react', 'react-dom']
         }
@@ -142,6 +163,16 @@ export default defineConfig({
         }
       }
 
+=======
+        assetFileNames: (assetInfo) => {
+          if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
+          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
+          return 'assets/[name]-[hash].[ext]';
+        },
+      },
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     terserOptions: {
       compress: {
         drop_console: true,
@@ -400,8 +431,15 @@ export default defineConfig({
         return { js: `__ASSET__${filename}__` };
       } else {
         return { relative: true };
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      }
+    },
+  },
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

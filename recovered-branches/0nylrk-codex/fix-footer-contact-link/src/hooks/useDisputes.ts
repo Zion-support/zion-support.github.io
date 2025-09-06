@@ -1,8 +1,49 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Dispute, DisputeMessage, DisputeAttachment, DisputeStatus} from "@/types/disputes";
+import {toast} from "sonner";
+export function useDisputes() {;
+  const { user } = useAuth();
+  const [disputes, setDisputes] = useState<Dispute[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes";
+import { toast } from "sonner";
+export function useDisputes() {
+  const { user } = useAuth();
+  const [disputes, setDisputes] = useState<Dispute[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+=======
+import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes",
+import { toast } from "sonner",
+export function useDisputes() {
+  const { user } = useAuth(),
+  const [disputes, setDisputes] = useState<Dispute[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
@@ -290,13 +331,26 @@ if (throw error) {
       console && console.error("Error updating dispute status:", err);
       toast && toast.error("Failed to update dispute status");
       return false
+<<<<<<< HEAD
 
       console.error ("Error fetching dispute:", err);
       toast.error ("Failed to fetch dispute details");
 =======
+<<<<<<< HEAD
+    }
+  }
+  const resolveDispute = async (
+<<<<<<< HEAD
+    disputeId: string
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
     disputeId: string, 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -452,10 +506,18 @@ if (throw error) {
   },;
   const resolveDispute = async (;
     disputeId: string,;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     resolution: { summary: string, resolution_type: string }
   ): Promise < boolean> => {
     try {
@@ -698,6 +760,7 @@ if ( {) {
     create_dispute;
     updateDisputeStatus;
 
+<<<<<<< HEAD
     resolve_dispute;
     getDisputeMessages,
     addDisputeMessage;
@@ -705,6 +768,14 @@ if ( {) {
 =======
 
 
+=======
+    addDisputeMessage
+<<<<<<< HEAD
+  }
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   ): Promise<boolean> => {;
     try {;
@@ -799,9 +870,16 @@ if ( {) {
     resolveDispute;
     getDisputeMessages;
     addDisputeMessage;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }

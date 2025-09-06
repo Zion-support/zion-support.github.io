@@ -1,13 +1,23 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
+=======
+import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     role,
@@ -16,6 +26,49 @@ import path from 'path';
     businessRegistrationNumber,
 
 
+=======
+const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'KYC started' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
+import type { KycProfile, KycRole } from '../../../utils/kyc';
+import fs from 'fs';
+import path from 'path';
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
+const FILE = path.join(DATA_DIR, 'profiles.json');
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+function load(): Record<string, KycProfile> {
+  try {
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw);
+<<<<<<< HEAD
+  } catch {
+    return {}
+  }
+function save(db: Record<string, KycProfile>) {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+  const {    userId
+    role
+    fullLegalName
+    businessName
+    businessRegistrationNumber
+  } = req.body as {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     userId?: string;
 =======
   } = req.body as {
@@ -177,9 +230,20 @@ export default function handler(req, res) {
 }
 
   }
+<<<<<<< HEAD
   if (
     return res.status (400).json ({ error: 'Missing user_id or role' })) {
   $2
+=======
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   } catch (error) {
     console.error("Error:", error);
@@ -188,6 +252,7 @@ export default function handler(req, res) {
 
 
 }
+<<<<<<< HEAD
   const db = load ();
   const now = new Date ().toISOString ();
   const existing = db[user_id];
@@ -230,3 +295,6 @@ optional_documents: getOptionalDocuments (role),
   });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -40,11 +40,26 @@ interface ApiState < T> {
   error: string | null;
 }
 
+<<<<<<< HEAD
 export function use_api < T>(url: string, options?: RequestInit) {
   const [state, set_state] = useState < ApiState < T>>({
     data: null,
     loading: true,
     error: null,
+=======
+export function useApi<T>(url: string, options?: RequestInit) {
+  const [state, setState] = useState<ApiState<T>>({
+<<<<<<< HEAD
+    data: null
+    loading: true
+    error: null
+=======
+    data: null,
+    loading: true,
+    error: null,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
@@ -182,8 +197,32 @@ export default function UseApi({ }: UseApiProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+=======
+interface ApiState<T> {
+  data: T | null, loading: boolean,
+  error: string | null,
+>>>>>>> origin/automation-improvements-final
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 }
 
@@ -233,6 +272,12 @@ export function useApi<T>(
 }
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   }, [api_function, options]);
   useEffect (() => {
@@ -257,4 +302,9 @@ function UseApi() {
       <p > This component is currently under development.</p>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

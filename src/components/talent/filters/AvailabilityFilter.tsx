@@ -1,6 +1,24 @@
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import { ChevronDown, ChevronUp } from 'lucide-react'
+import { Checkbox } from "@/components/ui/checkbox",
+import { AvailabilityFilterProps } from "@/types/filters",
+const AVAILABILITY_OPTIONS = [
+  { id: "full_time", label: "Full-time" },
+  { id: "part_time", label: "Part-time" },
+  { id: "project", label: "Project-based" }
+],
+
+export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
@@ -9,8 +27,16 @@
 
         className="flex w-full items-center justify-between text-white font-medium"
       >
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <span>Availability</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -45,9 +71,17 @@ function AvailabilityFilter() {
 =======
 
       
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {AVAILABILITY_OPTIONS.map (option => (
@@ -116,6 +150,22 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div key={option.id} className="flex items-center">
+import { Checkbox } from "@/components/ui/checkbox"
+import { AvailabilityFilterProps } from "@/types/filters"
+const AVAILABILITY_OPTIONS = [
+<<<<<<< HEAD
+  { id: "full_time", label: "Full-time" }
+  { id: "part_time", label: "Part-time" }
+=======
+  { id: "full_time", label: "Full-time" },
+  { id: "part_time", label: "Part-time" },
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
@@ -208,8 +258,15 @@ import { AvailabilityFilterProps } from "@/types/filters",;
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   { id: "project", label: "Project-based" }
 ]
@@ -239,13 +296,46 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`availability-${option.id}`}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+                className='ml-2 text-sm text-zion-slate-light cursor-pointer'
+              >                {option.label}                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+               htmlFor="input-
+                {option.label}
+              ">
+              </label>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+  toggleSection
+}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)
+}</button> {
+  AVAILABILITY OPTIONS.map (option => (<div key= {
+  option.id "
+}className="flex items-center" > <Checkbox > {
+<<<<<<< HEAD
+  option.label
+}</label> </div>) )
+}</div>)
+}</div>)
+}"}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   option.label 
 }</label> </div>) ) 
 }</div>) ;
 }</div>) ;
 }"};
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
@@ -259,7 +349,15 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
   );
 }
 ;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

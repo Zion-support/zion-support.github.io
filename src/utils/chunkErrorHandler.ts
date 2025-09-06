@@ -1,5 +1,22 @@
 
 
+<<<<<<< HEAD
+=======
+interface ChunkErrorStats {
+  errorCount: number;
+  lastErrorTime: number;
+  userAgent: string;
+  url: string
+class ChunkErrorHandler {
+<<<<<<< HEAD
+
+  private errorStats: Map<string, ChunkErrorStats> = new Map()
+  private readonly MAX_RETRIES = 3
+=======
+  private errorStats: Map<string, ChunkErrorStats> = new Map();
+  private readonly MAX_RETRIES = 3;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
@@ -206,9 +223,14 @@ if ( {) {
   }
   private hardRefresh(): void {
     // Force a hard refresh bypassing all caches
+<<<<<<< HEAD
 
     window && window.location.href = window && window.location.href + '?_t=' + Date && Date.now();
 
+=======
+    window.location.href = window.location.href + '?_t=' + Date.now()
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
@@ -230,6 +252,7 @@ if ( {) {
           border: none
           padding: 0.75rem 1.5rem
           border-radius: 0.5rem
+<<<<<<< HEAD
 =======
     const errorDiv = document && document.createElement('div');
     errorDiv && errorDiv.style.cssText = `
@@ -238,6 +261,12 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          font-size: 1rem
+          cursor: pointer
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       });
       logErrorToProduction ('Caches cleared successfully', undefined, {
@@ -259,10 +288,17 @@ if ( {) {
     // Force a hard refresh bypassing all caches;
 
     window.location.href = window.location.href + '?_t=' + Date.now();
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   private showFatalErrorMessage (): void {
     // Create a user - friendly error message;
@@ -277,8 +313,51 @@ if ( {) {
 
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const errorDiv = document.createElement('div')
+    errorDiv.style.cssText = `
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 0.8)
+      color: white
+      display: flex
+      align-items: center
+      justify-content: center
+      z-index: 999999
+      font-family: system-ui, -apple-system, sans-serif
+    `
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const errorDiv = document.createElement('div'),
+    errorDiv.style.cssText = `
+      position: fixed,
+      top: 0,
+      left: 0,
+      width: 100%,
+      height: 100%,
+      background: rgba(0, 0, 0, 0.8),
+      color: white,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      z-index: 999999,
+      font-family: system-ui, -apple-system, sans-serif,
+    `,
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
@@ -287,9 +366,59 @@ if ( {) {
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          background: #0070f3
+          color: white
+          border: none
+          padding: 0.75rem 1.5rem
+          border-radius: 0.5rem
+          font-size: 1rem
+          cursor: pointer
+          margin-right: 1rem;        ">
+          Try Again
+        </button>
+        <button onclick="window.location.href='/'" style="
+          background: #666
+          color: white
+          border: none
+          padding: 0.75rem 1.5rem
+          border-radius: 0.5rem
+          font-size: 1rem
+          cursor: pointer
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          background: #0070f3,
+          color: white,
+          border: none,
+          padding: 0.75rem 1.5rem,
+          border-radius: 0.5rem,
+          font-size: 1rem,
+          cursor: pointer,
+          margin-right: 1rem,
+        ">
+          Try Again
+        </button>
+        <button onclick="window.location.href='/'" style="
+          background: #666,
+          color: white,
+          border: none,
+          padding: 0.75rem 1.5rem,
+          border-radius: 0.5rem,
+          font-size: 1rem,
+          cursor: pointer,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         ">
           Go Home
         </button>
@@ -395,15 +524,30 @@ if ( {) {
         userAgent: navigator.userAgent,;
         url: window.location.href;
       });
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return this.errorStats.get(sessionKey)!
   }
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
 
@@ -442,6 +586,7 @@ export default chunkErrorHandler
         ">
           Try Again
         </button>
+<<<<<<< HEAD
 
 
 =======
@@ -534,11 +679,22 @@ export default chunkErrorHandler;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+<<<<<<< HEAD
+        <button onclick="window.location.href='/'" style="
+export default chunkErrorHandler
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
 }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
   // Public method to manually trigger recovery;
@@ -566,7 +722,15 @@ export default chunkErrorHandler;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
 export default chunkErrorHandler;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

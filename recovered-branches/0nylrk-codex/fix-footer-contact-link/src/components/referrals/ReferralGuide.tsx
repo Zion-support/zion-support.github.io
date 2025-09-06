@@ -1,9 +1,19 @@
 
+<<<<<<< HEAD
 
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 =======
@@ -11,7 +21,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function ReferralGuide() {
 
   const steps = [
@@ -27,11 +40,25 @@ function ReferralGuide() {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
     {
+<<<<<<< HEAD
 
 
       title: "They sign up",;
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      title: "They sign up"
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"}
+    {
+      title: "They complete onboarding"
+      description: "Once they complete their profile setup, your referral is confirmed"}
+=======
+      title: "They sign up",;
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"},
@@ -66,8 +93,21 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
                 <p className="text-sm text-muted-foreground">{step.description}</p>
               </div>
             </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  )
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 
@@ -98,11 +138,18 @@ export function ReferralGuide() {;
           {steps && steps.map((step, index) => (;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 =======
         </div>;

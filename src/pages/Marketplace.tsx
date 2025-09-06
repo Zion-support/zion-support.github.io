@@ -1,11 +1,22 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import { useApiErrorHandling  } from '@/hooks/useApiErrorHandling';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import ProductCard from '@/components/ProductCard';
 
 =======
@@ -20,6 +31,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { AuthModal } from '@/components / auth / AuthModal';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ArrowUp
   Filter
   SortAsc
@@ -36,8 +51,12 @@ import {
   Sparkles,
   TrendingUp,;
   Star;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from 'lucide-react';
 
 import {;
@@ -104,9 +123,17 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         <div className="text-center">
           <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice)}</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </div>
         <div className="text-center">
           <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
@@ -121,8 +148,183 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
           <div className="text-sm text-muted-foreground">Categories</div>
         </div>
       </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+    </CardContent>
+  </Card>
+<<<<<<< HEAD
+);
+=======
+<<<<<<< HEAD
+    </CardContent>;
+  </Card>;
+);
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Filter and sort controls
+const FilterControls: React.FC<{
+  sortBy: string;
+  setSortBy: (sort: string) => void;
+  filterCategory: string;
+  setFilterCategory: (category: string) => void;
+  categories: string[];
+  priceRange: [number, number];
+  setPriceRange: (range: [number, number]) => void;
+  minAiScore: number;
+  setMinAiScore: (score: number) => void;
+  minRating: number;
+  setMinRating: (rating: number) => void;
+  filterAvailability: string;
+  setFilterAvailability: (value: string) => void;
+  availabilityOptions: string[];
+  filterLocation: string;
+  setFilterLocation: (value: string) => void;
+  locations: string[];
+  showRecommended: boolean;
+  setShowRecommended: (show: boolean) => void;
+  loading: boolean;}> = ({
+<<<<<<< HEAD
+  sortBy
+  setSortBy
+  filterCategory
+  setFilterCategory
+  categories
+  priceRange
+  setPriceRange
+  minAiScore
+  setMinAiScore
+  minRating
+  setMinRating
+  filterAvailability
+  setFilterAvailability
+  availabilityOptions
+  filterLocation
+  setFilterLocation
+  locations
+  showRecommended
+  setShowRecommended
+  loading
+}) => (
+  <div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>
+    {loading && (
+      <Spinner className='absolute right-4 top-4 h-4 w-4 text-primary' />
+    )}
+    <div className='flex items-center gap-2'>
+      <Filter className='h-4 w-4 text-muted-foreground' />
+      <select
+        value={filterCategory}
+        onChange={e => setFilterCategory(e.target.value)}
+        className='bg-background border border-border px-3 py-2 rounded'      >
+        <option value=''>All Categories</option>
+        {categories.map(category => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
+      </select>
+    </div>
+    <div className='flex items-center gap-2'>
+      <SortAsc className='h-4 w-4 text-muted-foreground' />
+      <select
+        value={sortBy}
+        onChange={e => setSortBy(e.target.value)}
+        className='bg-background border border-border px-3 py-2 rounded'      >
+        <option value='newest'>Newest First</option>
+        <option value='price-low'>Price: Low to High</option>
+        <option value='price-high'>Price: High to Low</option>
+        <option value='rating'>Highest Rated</option>
+        <option value='popular'>Most Popular</option>
+        <option value='ai-score'>AI Score</option>
+      </select>
+    </div>
+    <div className='flex items-center gap-2'>
+      <span className='text-sm'>$</span>
+      <input
+        type='number'
+        value={priceRange[0]}
+        min={MIN_PRICE}
+        max={priceRange[1]}
+        onChange={e => setPriceRange([Number(e.target.value), priceRange[1]])}
+        className='w-20 bg-background border border-border px-2 py-1 rounded'
+      />
+      <span>-</span>
+      <input
+        type='number'
+        value={priceRange[1]}
+        min={priceRange[0]}
+        max={MAX_PRICE}
+        onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
+        className='w-20 bg-background border border-border px-2 py-1 rounded'      />
+    </div>
+    <div className='flex items-center gap-2'>
+      <span className='text-sm'>AI ≥</span>
+      <input
+        type='number'
+        value={minAiScore}
+        min={0}
+        max={100}
+        onChange={e => setMinAiScore(Number(e.target.value))}
+        className='w-16 bg-background border border-border px-2 py-1 rounded'      />
+    </div>
+    <div className='flex items-center gap-2'>
+      <span className='text-sm'>Rating ≥</span>
+      <select
+        value={minRating}
+        onChange={e => setMinRating(Number(e.target.value))}
+        className='bg-background border border-border px-2 py-1 rounded'      >
+        <option value={0}>Any</option>
+        <option value={5}>5</option>
+        <option value={4}>4</option>
+        <option value={3}>3</option>
+        <option value={2}>2</option>
+        <option value={1}>1</option>
+      </select>
+    </div>
+    <div className='flex items-center gap-2'>
+      <select
+        value={filterAvailability}
+        onChange={e => setFilterAvailability(e.target.value)}
+        className='bg-background border border-border px-3 py-2 rounded'      >
+        <option value=''>Any Availability</option>
+=======
+=======
+=======
+    </CardContent>
+  </Card>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+),
+
+// Filter and sort controls
+const FilterControls: React.FC<{
+  sortBy: string,
+  setSortBy: (sort: string) => void,
+  filterCategory: string,
+  setFilterCategory: (category: string) => void,
+  categories: string[],
+  priceRange: [number, number],
+  setPriceRange: (range: [number, number]) => void,
+  minAiScore: number,
+  setMinAiScore: (score: number) => void,
+  minRating: number,
+  setMinRating: (rating: number) => void,
+  filterAvailability: string,
+  setFilterAvailability: (value: string) => void,
+  availabilityOptions: string[],
+  filterLocation: string,
+  setFilterLocation: (value: string) => void,
+  locations: string[],
+  showRecommended: boolean,
+  setShowRecommended: (show: boolean) => void,
+  loading: boolean
+}> = ({
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   sortBy,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   setSortBy,
@@ -143,6 +345,7 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   locations,
   show_recommended,
   setShowRecommended,
+<<<<<<< HEAD
 
   loading: boolean;}> = ({;
   sortBy,;
@@ -170,6 +373,16 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     {loading && (;
       <Spinner className='absolute right-4 top-4 h-4 w-4 text-primary' />;
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  loading,
+}) => (
+  <div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>
+    {loading && (
+      <Spinner className='absolute right-4 top-4 h-4 w-4 text-primary' />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     )}
     <div className='flex items-center gap-2'>;
       <Filter className='h-4 w-4 text-muted-foreground' />;
@@ -181,7 +394,93 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         {categories && categories.map(category => (;
           <option key={category} value={category}>;
             {category}
+<<<<<<< HEAD
           </option>;
+=======
+          </option>
+        ))}
+      </select>
+    </div>
+    <div className='flex items-center gap-2'>
+      <SortAsc className='h-4 w-4 text-muted-foreground' />
+      <select
+        value={sortBy}
+        onChange={e => setSortBy(e.target.value)}
+        className='bg-background border border-border px-3 py-2 rounded'      >
+        <option value='newest'>Newest First</option>
+        <option value='price-low'>Price: Low to High</option>
+        <option value='price-high'>Price: High to Low</option>
+        <option value='rating'>Highest Rated</option>
+        <option value='popular'>Most Popular</option>
+        <option value='ai-score'>AI Score</option>
+      </select>
+    </div>
+    <div className='flex items-center gap-2'>
+      <span className='text-sm'>$</span>
+      <input
+        type='number'
+        value={priceRange[0]}
+        min={MIN_PRICE}
+        max={priceRange[1]}
+        onChange={e => setPriceRange([Number(e.target.value), priceRange[1]])}
+        className='w-20 bg-background border border-border px-2 py-1 rounded'
+      />
+      <span>-</span>
+      <input
+        type='number'
+        value={priceRange[1]}
+        min={priceRange[0]}
+        max={MAX_PRICE}
+        onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
+        className='w-20 bg-background border border-border px-2 py-1 rounded'      />
+    </div>
+    <div className='flex items-center gap-2'>
+      <span className='text-sm'>AI ≥</span>
+      <input
+        type='number'
+        value={minAiScore}
+        min={0}
+        max={100}
+        onChange={e => setMinAiScore(Number(e.target.value))}
+        className='w-16 bg-background border border-border px-2 py-1 rounded'      />
+    </div>
+    <div className='flex items-center gap-2'>
+      <span className='text-sm'>Rating ≥</span>
+      <select
+        value={minRating}
+        onChange={e => setMinRating(Number(e.target.value))}
+        className='bg-background border border-border px-2 py-1 rounded'      >
+        <option value={0}>Any</option>
+        <option value={5}>5</option>
+        <option value={4}>4</option>
+        <option value={3}>3</option>
+        <option value={2}>2</option>
+        <option value={1}>1</option>
+      </select>
+    </div>
+    <div className='flex items-center gap-2'>
+      <select
+        value={filterAvailability}
+        onChange={e => setFilterAvailability(e.target.value)}
+        className='bg-background border border-border px-3 py-2 rounded'      >
+        <option value=''>Any Availability</option>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  loading
+}) => (
+  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
+    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
+    <div className="flex items-center gap-2">
+      <Filter className="h-4 w-4 text-muted-foreground" />
+      <select
+        value={filterCategory}
+        onChange={(e) => setFilterCategory(e.target.value)}
+        className="bg-background border border-border px-3 py-2 rounded"
+      >
+        <option value="">All Categories</option>
+        {categories.map(category => (
+          <option key={category} value={category}>{category}</option>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         ))}
 
       </select>;
@@ -316,9 +615,24 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         <option value={1}>1</option>;
       </select>;
     </div>;
+<<<<<<< HEAD
 
 
 
+=======
+    <div className="flex items-center gap-2">;
+      <select;
+        value={filterAvailability}
+        onChange={(e) => setFilterAvailability(e.target.value)}
+        className="bg-background border border-border px-3 py-2 rounded"
+      >
+        <option value="">Any Availability</option>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>{opt}</option>
         ))}
@@ -336,8 +650,16 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">All Locations</option>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -370,6 +692,7 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       className='flex items-center gap-2'    >;
       <Sparkles className='h-4 w-4' />;
       {showRecommended ? 'All Products' : 'Recommended'}
+<<<<<<< HEAD
     </Button>;
   </div>;
 );
@@ -378,6 +701,14 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 
 
 =======
+<<<<<<< HEAD
+    </Button>
+  </div>
+);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
       variant={showRecommended ? "default" : "outline"}
       size="sm"
       onClick={() => setShowRecommended(!showRecommended)}
@@ -385,9 +716,16 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     >
       <Sparkles className="h-4 w-4" />
       {showRecommended ? "All Products" : "Recommended"}
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     </Button>
   </div>
 ),
@@ -443,11 +781,20 @@ export default function Marketplace() {
     // Check if user has permission to add products (simplified to admin check)
     if (user && user.userType !== 'admin') {
       toast({
+<<<<<<< HEAD
 
 
         title: 'Admin Access Required',
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title: 'Admin Access Required'
+=======
+        title: 'Admin Access Required',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         description:
           'Only administrators can add products to the marketplace. Please contact an administrator.'
         variant: 'destructive'
@@ -1236,9 +1583,16 @@ export default function Marketplace() {;
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1387,9 +1741,17 @@ export default function Marketplace() {;
           {t('marketplace.hero_title')}
         </h1>;
         <p className="text-muted-foreground text-lg">;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {t('marketplace.hero_subtitle')}
         </p>
       </motion.div>
@@ -1449,9 +1811,17 @@ export default function Marketplace() {;
           loading={isFetching}
         />;
       </motion.div>;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Product Grid */}
       <motion&& motion.div
         className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
@@ -1466,8 +1836,16 @@ export default function Marketplace() {;
             <motion.div
               key={product.id}
               ref={index === products.length - 1 ? lastElementRef : null}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -1475,12 +1853,63 @@ export default function Marketplace() {;
               whileHover={{ scale: 1.02 }}
 
               className="relative group"
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <ProductCard
                 product={{
+<<<<<<< HEAD
+=======
+                  id: product.id
+                  name: product.title
+                  title: product.title
+                  description: product.description |''
+                  price: product.price |0
+                  currency: product.currency
+                  category: product.category
+                  tags: product.tags
+                  images: product.images
+                  rating: product.rating |0
+                  reviewCount: product.reviewCount |0
+                  created_at: product.createdAt
+                  updated_at: product.createdAt, // Use createdAt for both
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  stock: product.stock
+                  in_stock: (product.stock |0) > 0
+=======
+                  stock: product.stock,
+<<<<<<< HEAD
+                  in_stock: (product.stock || 0) > 0,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                }}
+                onBuy = {async () => {
+                  if (!isAuthenticated) {
+                    setIsAuthModalOpen(true);
+                    return; // Stop further execution
+                  }                  try {
+                    await router.push(`/checkout/${product.id}`);
+<<<<<<< HEAD
+                  } catch (error) {
+                    logErrorToProduction('Failed to navigate to checkout:', {
+                      data: error
+                    });
+                    toast({
+                      title: 'Navigation Error'
+                      description:
+                        'Could not navigate to checkout. Please try again.'
+                      variant: 'destructive'
+                    });
+                    // Re-throw to allow ProductCard's catch to also run if needed
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
                   id: product && product.id,
                   name: product && product.title,
@@ -1786,7 +2215,26 @@ if ( {) {
 =======
 
                   stock: product.stock,
+<<<<<<< HEAD
 
+=======
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  in_stock: (product.stock || 0) > 0
+                }}
+                onBuy={async () => {;
+                  if (!isAuthenticated) {;
+                    setIsAuthModalOpen(true),;
+                    return, // Stop further execution;
+                  }
+                  try {
+                    await router.push(`/checkout/${product.id}`)
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', { data: error }),
                     toast({
@@ -1795,6 +2243,7 @@ if ( {) {
                       variant: "destructive"}),
                     // Re-throw to allow ProductCard's catch to also run if needed,
                     // though ProductCard will reset its state in .finally() regardless.
+<<<<<<< HEAD
 
 
                   AI {product.aiScore}
@@ -1804,25 +2253,95 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    throw error;
+                  }
+                }}
+                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
+              />
+
+              {/* AI Score Badge */}
+              {product.aiScore && product.aiScore > 90 && (
+                <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
+                  <Sparkles className='h-3 w-3 mr-1' />
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    throw error
+                  try {;
+                    await router.push(`/checkout/${product.id}`);
+                  } catch (error) {;
+                    logErrorToProduction('Failed to navigate to checkout:', { data: error }),;
+                    toast({;
+                      title: "Navigation Error",;
+                      description: "Could not navigate to checkout. Please try again.",;
+                      variant: "destructive"});
+                    // Re-throw to allow ProductCard's catch to also run if needed;
+                    // though ProductCard will reset its state in .finally() regardless.;
+                    throw error;
+                  }
+                }}
+                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth;
+              />;
+              {/* AI Score Badge */}
+              {product.aiScore && product.aiScore > 90 && (;
+                <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black">;
+                  <Sparkles className="h-3 w-3 mr-1" />;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  AI {product.aiScore}
+                </Badge>
+              )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Featured Badge */}
               {product && product.featured && (;
                 <Badge className='absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10'>;
                   <Star className='h-3 w-3 mr-1' />;
                   Featured;
                 </Badge>;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               )}
             </motion && motion.div>;
           ))}
+<<<<<<< HEAD
 
 
       {(isFetching || loading) && (
 
 
+=======
+        </AnimatePresence>
+      </motion.div>
+      {/* Loading More Indicator */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {(isFetching |loading) && (
+=======
+      {(isFetching || loading) && (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <motion.div
 =======
         </AnimatePresence>;
@@ -1849,10 +2368,18 @@ if ( {) {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">;
             {Array.from({ length: 4 }).map((_, i) => (;
               <SkeletonCard key={`loading-${i}`} />;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             ))}
           </div>;
         </motion && motion.div>;
@@ -1875,8 +2402,16 @@ if ( {) {
           </div>;
 
         </motion.div>;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       )}
       {/* Scroll to Top Button */}
 
@@ -1885,6 +2420,7 @@ if ( {) {
         {showScrollTop && (;
           <motion&& motion.button
             onClick={scrollToTop}
+<<<<<<< HEAD
 
                     logErrorToProduction ('Failed to navigate to checkout:', {
                       data: error,
@@ -1948,6 +2484,15 @@ if ( {) {
           <motion.button;
             on_click={scrollToTop}
             className='fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50'            initial={{ opacity: 0, scale: 0 }}
+=======
+            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
+            initial={{ opacity: 0, scale: 0 }}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             while_hover={{ scale: 1.1 }}
@@ -2505,6 +3050,7 @@ const Marketplace = () =>: any {
                 Contact Us;
               </Link>;
             </div>;
+<<<<<<< HEAD
 
 =======
 
@@ -2524,6 +3070,13 @@ const Marketplace = () =>: any {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
 
+=======
+    </>;
+  );
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
 }
 }
@@ -2541,7 +3094,11 @@ const Marketplace = () =>: any {
 }
 }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           >;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
@@ -2552,7 +3109,15 @@ const Marketplace = () =>: any {
   );
 }
 ;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

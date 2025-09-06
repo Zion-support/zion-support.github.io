@@ -1,5 +1,28 @@
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+import {
+<<<<<<< HEAD
+
+  Bell
+  FileText
+  Home
+  Mail
+  Search
+  Settings
+  Users
+=======
+  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,;
+  Users;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from 'lucide-react'; import {
 
 } from "@/components/ui/sidebar";
@@ -39,6 +62,7 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
 
 
 import {;
@@ -137,13 +161,26 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </Sidebar>;
   );
+=======
+<<<<<<< HEAD
+    </Sidebar>
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+<<<<<<< HEAD
+=======
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    </Sidebar>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
   Sidebar,
   SidebarContent,
   SidebarGroup,
@@ -223,3 +260,8 @@ function AppSidebar() {
     </Sidebar>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

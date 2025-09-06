@@ -1,5 +1,157 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect } from "react";
+import { useRouter  } from 'next/router';
+import { GradientHeading } from "@/components/GradientHeading",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input";
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
+import { toast } from "@/hooks/use-toast";
+import { captureException } from "@/utils/sentry";
+interface PriceRange {
+=======
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { GradientHeading } from '@/components/GradientHeading'
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input'; import { useRouter } from 'next/router'
+import { GradientHeading } from "@/components/GradientHeading"
+import { ProductListingCard } from "@/components/ProductListingCard"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+import { GradientHeading } from "@/components/GradientHeading",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import {
+  Select,
+  SelectValue,
+  SelectTrigger,
+  SelectContent,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  SelectItem,
+} from '@/components/ui/select'
+import { Checkbox } from '@/components/ui/checkbox'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+import { Slider } from '@/components/ui/slider'
+import { ProductListing, ListingView } from '@/types/listings'
+import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
+import { toast } from '@/hooks/use-toast'
+import { captureException } from '@/utils/sentry'
+interface PriceRange {
+  min: number
+max: number 
+}interface DynamicListingPageProps {
+  title: string
+description: string
+categorySlug: string
+listings: ProductListing[]
+categoryFilters: {
+  label: string, value: string 
+}[]
+initialPrice?: PriceRange
+}const toggleCategory = (category: string) => {
+  setSelectedCategories (prev => prev.includes (category) ? prev.filter (c => c !== category) : [...prev, category] min: 0
+max: 10000 
+})
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  SelectItem} from "@/components/ui/select",
+import { Checkbox } from "@/components/ui/checkbox",
+import Skeleton from "react-loading-skeleton",
+import "react-loading-skeleton/dist/skeleton.css",
+import { Slider } from "@/components/ui/slider",
+import { ProductListing, ListingView } from "@/types/listings",
+import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
+import { toast } from "@/hooks/use-toast",
+import { captureException } from "@/utils/sentry",
+interface PriceRange {
+  min: number,
+  max: number
+import { useState, useEffect } from "react",;
+import { useRouter } from 'next/router',;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { ProductListingCard } from "@/components/ProductListingCard",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+import {;
+  Select,;
+  SelectValue,;
+  SelectTrigger,;
+  SelectContent,;
+  SelectItem} from "@/components/ui/select",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import Skeleton from "react-loading-skeleton",;
+import "react-loading-skeleton/dist/skeleton.css",;
+import { Slider } from "@/components/ui/slider",;
+import { ProductListing, ListingView } from "@/types/listings",;
+import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';
+import { toast } from "@/hooks/use-toast",;
+import { captureException } from "@/utils/sentry",;
+interface PriceRange {;
+  min: number,;
+  max: number;
+}
+;
+interface DynamicListingPageProps {;
+  title: string,;
+  description: string,;
+  categorySlug: string,;
+  listings: ProductListing[],;
+  categoryFilters: { label: string, value: string }[],;
+  initialPrice?: PriceRange,;
+  /**;
+   * Base path for listing detail pages. Defaults to `/marketplace/listing`.;
+   */;
+  detailBasePath?: string;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+  min: number
+max: number
+}interface DynamicListingPageProps {
+  title: string
+description: string
+categorySlug: string
+listings: ProductListing[]
+categoryFilters: {
+  label: string, value: string
+}[]
+initialPrice?: PriceRange
+}const toggleCategory = (category: string) => {
+  setSelectedCategories (prev => prev.includes (category) ? prev.filter (c => c !== category) : [...prev, category] min: 0
+max: 10000
+})
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function DynamicListingPage({
 
   title,
@@ -8,8 +160,33 @@ export function DynamicListingPage({
   listings: allListings,
   categoryFilters,
   initialPrice = { min: 0, max: 10000 },
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  detailBasePath = '/marketplace/listing',
+}: DynamicListingPageProps) {
+  const router = useRouter()
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([])
+  const toggleCategory = (category: string) => {    setSelectedCategories(prev =>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
+  const router = useRouter(),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]),
+  const toggleCategory = (category: string) => {
+    setSelectedCategories(prev =>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       prev.includes(category)
         ? prev.filter(c => c !== category)
         : [...prev, category]
@@ -20,19 +197,82 @@ export function DynamicListingPage({
   const clearCategories = () => setSelectedCategories([]),
   const [view, setView] = useState<ListingView>("grid"),
   const isGrid = view === "grid",
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
     <List className='h-4 w-4' />
   ) : (
+<<<<<<< HEAD
 
 
     if (min == null || max == null || isNaN(min) || isNaN(max)) return;
 
 
     setCurrentPriceFilter([min, max])
+=======
+<<<<<<< HEAD
+    <LayoutGrid className='h-4 w-4' />
+  )
+  const [isLoading, setIsLoading] = useState(false)
+  const [priceRange, setPriceRange] = useState<PriceRange>({
+    min: 0
+    max: 10000
+  })
+  const [selectedRating, setSelectedRating] = useState<number | null>(null)
+  const [selectedBrand, setSelectedBrand] = useState('all')
+  const [specQuery, setSpecQuery] = useState('')
+  const [selectedAvailability, setSelectedAvailability] = useState('all')
+  const [sortOption, setSortOption] = useState('newest')
+  const brandOptions = Array.from(
+    new Set(allListings.map(l => l.brand).filter(Boolean))
+  )
+  const availabilityOptions = Array.from(
+    new Set(allListings.map(l => l.availability).filter(Boolean))
+  )
+  useEffect(() => {
+    const listingsWithPrice = allListings.filter(l => l.price !== null)
+    if (listingsWithPrice.length > 0) {
+      const max = Math.max(...listingsWithPrice.map(l => l.price |0))
+      setPriceRange({ min: 0, max })
+      setCurrentPriceFilter([0, max]) }
+  }, [allListings])
+  const [currentPriceFilter, setCurrentPriceFilter] = useState<
+    [number, number]
+  >([0, initialPrice.max])
+  const handleSliderChange = (values: number[]) => {
+    const [min, max] = values.map(Number)
+<<<<<<< HEAD
+    if (min == null |max == null |isNaN(min) |isNaN(max)) return
+=======
+    if (min == null || max == null || isNaN(min) || isNaN(max)) return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    setCurrentPriceFilter([min, max])
+  }
+  let filteredListings: ProductListing[] = []
+  try {
+<<<<<<< HEAD
+    filteredListings = allListings.filter(listing => {      const matchesSearch =
+        !searchQuery |
+        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+        (listing.tags &&
+          listing.tags.some((tag: string) =>
+            tag.toLowerCase().includes(searchQuery.toLowerCase())
+          ))
+      const matchesBrand =
+        selectedBrand === 'all' |
+        (listing.brand && listing.brand === selectedBrand)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState, useEffect } from 'react';
 import { use_router } from 'next / router';
@@ -135,7 +375,11 @@ if ( {) {
 
 
     filteredListings = allListings.filter(listing => {      const matchesSearch = null;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     <LayoutGrid className="h-4 w-4" />
   ),
@@ -178,14 +422,56 @@ if ( {) {
   try {
     filteredListings = allListings.filter((listing) => {
       const matchesSearch =
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         !searchQuery ||
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (listing.tags &&
           listing.tags.some((tag: string) =>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            tag.toLowerCase().includes(searchQuery.toLowerCase())
+          ))
+      const matchesBrand = null;
+        selectedBrand === 'all' ||
+        (listing.brand && listing.brand === selectedBrand)
+      const matchesSpecs = null;
+        !specQuery ||
+        (listing.specifications &&
+          listing.specifications.some(s =>
+            s.toLowerCase().includes(specQuery.toLowerCase())
+          )) ||
+        (listing.tags &&
+          listing.tags.some(tag =>
+            tag.toLowerCase().includes(specQuery.toLowerCase())
+          ))
+      const matchesAvailability = null;
+        selectedAvailability === 'all' ||
+        (listing.availability && listing.availability === selectedAvailability)
+      const matchesCategory = null;
+        selectedCategories.length === 0 ||
+        selectedCategories.includes(listing.category)
+      const matchesPrice = null;
+        listing.price === null ||
+        (listing.price >= currentPriceFilter[0] &&
+          listing.price <= currentPriceFilter[1])
+      const matchesRating = null;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            tag.toLowerCase().includes(searchQuery.toLowerCase()))),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
       const matchesSpecs =
@@ -213,12 +499,26 @@ if ( {) {
 
           listing.price <= currentPriceFilter[1]),
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      const matchesRating =
+        selectedRating === null |
+        (listing.rating !== undefined && listing.rating >= selectedRating)
+=======
+      const matchesRating =
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         selectedRating === null ||
         (listing.rating !== undefined && listing.rating >= selectedRating),
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       return (
         matchesSearch &&
         matchesCategory &&
@@ -287,15 +587,28 @@ if ( {) {
     capture_exception (error);
     logErrorToProduction ('Listing filter error:', { data: error });
   }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  const handleRequestQuote = (listingId: string) => {
+    setIsLoading(true)
+    const listing = allListings.find(item => item.id === listingId)
+    setTimeout(() => {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const handleRequestQuote = (listingId: string) => {;
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
     setTimeout(() => {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       setIsLoading(false);      if (listing) {
         toast({
           title: 'Quote Requested'
@@ -531,12 +844,17 @@ export function DynamicListingPage(): any ({;
           description: `Your quote request for ${listing && listing.title} has been sent.`,;
         });
 
+<<<<<<< HEAD
 
         router.push ('/request - quote');
 
       }
     }, 500);
   }
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -545,12 +863,59 @@ export function DynamicListingPage(): any ({;
         const quoteData = {
           serviceType: categorySlug
           specificItem: {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            id: listing.id
+            title: listing.title
+            category: listing.category
+            image: listing.images?.[0]
+          }
+        }
+        if (typeof window !== 'undefined') {
+          sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
+        }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             id: listing.id,
             title: listing.title,
             category: listing.category,
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        router.push('/request-quote')
+      }
+    }, 500)
+  }
+=======
+<<<<<<< HEAD
+            id: listing.id,
+            title: listing.title,
+            category: listing.category,
+            image: listing.images?.[0]}},
+        
+        if (typeof window !== 'undefined') {
+          sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
+        }
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        router.push("/request-quote")
+      }
+    }, 500)
+  },
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 
 
@@ -564,9 +929,17 @@ export function DynamicListingPage(): any ({;
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   Categories
                 </label>
                 <div className='space-y-2'>
@@ -581,8 +954,16 @@ export function DynamicListingPage(): any ({;
 
                         className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
                       />
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       <label
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
@@ -650,8 +1031,16 @@ export function DynamicListingPage(): any ({;
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer";
                       >;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         {filter.label}
                       </label>
                     </div>
@@ -690,9 +1079,17 @@ export function DynamicListingPage(): any ({;
                         <SelectItem key={b || 'unknown-brand'} value={b || ''} className="text-white">
                           {b || 'N/A'}
                         </SelectItem>;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       ))}
                     </SelectContent>;
                   </Select>;
@@ -709,9 +1106,25 @@ export function DynamicListingPage(): any ({;
                 </label>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Input
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search specifications..."
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+                  type='text'
+                  placeholder='Search specifications...'
+=======
+                  type="text"
+                  placeholder="Search specifications..."
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   value={specQuery}
                   onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
                     setSpecQuery(e && e.target.value);
@@ -720,9 +1133,17 @@ export function DynamicListingPage(): any ({;
 
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
               {availabilityOptions.length > 0 && (
                 <div className='mb-6'>
@@ -752,7 +1173,14 @@ export function DynamicListingPage(): any ({;
                     onValueChange={(value: string) =>;
                       setSelectedAvailability(value);
                     }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
@@ -767,9 +1195,17 @@ export function DynamicListingPage(): any ({;
                         <SelectItem key={a || 'unknown-availability'} value={a || ''} className="text-white">
                           {a || 'N/A'}
                         </SelectItem>;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       ))}
                     </SelectContent>;
                   </Select>;
@@ -797,8 +1233,16 @@ export function DynamicListingPage(): any ({;
 
 
                     aria-label="Price range"
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     defaultValue={[0, priceRange.max]}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     min={0}
@@ -811,9 +1255,17 @@ export function DynamicListingPage(): any ({;
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
@@ -877,7 +1329,14 @@ export function DynamicListingPage(): any ({;
                         setSelectedRating(rating)
                       }}
                       aria-pressed={selectedRating === rating}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className={`{
                         selectedRating === rating
@@ -895,9 +1354,17 @@ export function DynamicListingPage(): any ({;
                               key={i}
                               className="h-3 w-3 fill-zion-cyan text-zion-cyan"
                             />
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                           ))}
                           <span className='ml-1'>& Up</span>;
                         </div>;
@@ -914,9 +1381,17 @@ export function DynamicListingPage(): any ({;
                   setSelectedBrand("all"),
                   setSpecQuery(""),
                   setSelectedAvailability("all")
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 }}
               >
                 Clear All
@@ -1160,9 +1635,17 @@ export function DynamicListingPage(): any ({;
                 </div>
 
                 <div className="flex items-center gap-2 ml-auto">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <Select value={sortOption} onValueChange={setSortOption}>
                     <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>
                       <SelectValue placeholder='Sort' />
@@ -1253,9 +1736,17 @@ export function DynamicListingPage(): any ({;
                     title={isGrid ? "List view" : "Grid view"}
                     className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
                   >
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     {ToggleViewIcon}
                     <span className='sr-only'>;
                       {isGrid ? 'List view' : 'Grid view'}
@@ -1264,9 +1755,17 @@ export function DynamicListingPage(): any ({;
 
             <div className="mb-6">
               <p className="text-zion-slate-light">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 Showing {filteredListings.length} results
                 {selectedCategories.length > 0 &&
                   ` in ${selectedCategories.join(', ')}`}
@@ -1330,8 +1829,16 @@ export function DynamicListingPage(): any ({;
                   view === "grid"
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                     : "flex flex-col gap-6"
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 }
               >
                 {[1, 2, 3, 4].map(i => (
@@ -1349,7 +1856,14 @@ export function DynamicListingPage(): any ({;
                       <div className="flex justify-between items-center pt-4">
                         <Skeleton height={24} width="25%" />
                         <Skeleton height={32} width="25%" />
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </div>
@@ -1375,9 +1889,17 @@ export function DynamicListingPage(): any ({;
                     onRequestQuote={handleRequestQuote}
                     detailBasePath={detailBasePath}
                   />;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 ))}
               </div>;
             ) : (;
@@ -1389,9 +1911,27 @@ export function DynamicListingPage(): any ({;
                   Try adjusting your filters or search query;
                 </p>;
                 <Button
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+                  variant='outline'
+                  onClick={() => {
+                    setSearchQuery('')
+                    clearCategories()
+                    setCurrentPriceFilter([0, priceRange.max])
+                    setSelectedRating(null)
+                    setSelectedBrand('all')
+                    setSpecQuery('')
+                    setSelectedAvailability('all') }}
+                  className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                   variant="outline"
                   onClick={() => {
@@ -1404,10 +1944,18 @@ export function DynamicListingPage(): any ({;
                     setSelectedAvailability("all")
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 >
                   Clear All
                 </Button>
@@ -1636,9 +2184,16 @@ setSelectedRating (null)
 }</div> </div> </div> </div>)
 }'"  )
 }
+<<<<<<< HEAD
 =======
 
 
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 ;
@@ -1656,7 +2211,15 @@ setSelectedRating (null);
 }
 
 ;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

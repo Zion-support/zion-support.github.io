@@ -296,10 +296,27 @@ function broadcast() {
         <h2 className='font-semibold'>Broadcast Manifesto</h2>;
         <button
           className='px-3 py-2 bg-indigo-600 text-white rounded'
+<<<<<<< HEAD
           onClick={broadcast}>;
           Broadcast;
         </button>;
       </section>;
+=======
+          onClick={broadcast}
+        >
+          Broadcast
+        </button>
+      </section>
+      {status && <p className='text-sm text-gray-700'>{status}</p>}
+    </div>
+);
+}
+<<<<<<< HEAD
+=======
+    setStatus('Broadcasting manifesto...');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>;
@@ -308,6 +325,7 @@ function broadcast() {
 
 
 =======
+<<<<<<< HEAD
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';
           on_click={cast_vote}
@@ -349,3 +367,8 @@ function broadcast() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    setStatus('Broadcasting manifesto...');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

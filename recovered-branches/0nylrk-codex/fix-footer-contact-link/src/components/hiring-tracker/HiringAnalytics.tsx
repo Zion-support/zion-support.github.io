@@ -1,18 +1,109 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from './react';
 import { useJobApplications } from '@/hooks / useJobApplications';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
 
+=======
+<<<<<<< HEAD
+import { useState, useEffect } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+<<<<<<< HEAD
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface HiringAnalyticsProps {
   job_id?: string;
 }
+<<<<<<< HEAD
 
+=======
+export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
 
+<<<<<<< HEAD
+=======
+export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const { applications, isLoading } = useJobApplications(jobId);
+  const [analyticsData, setAnalyticsData] = useState<{
+
+    statusDistribution: any[]
+    timeToHire: number
+    conversionRate: number
+    funnelData: any[]
+  }>({
+    statusDistribution: []
+    timeToHire: 0
+    conversionRate: 0
+    funnelData: []})
+  useEffect(() => {
+    if (applications && applications.length > 0) {
+      // Calculate status distribution
+      const statusCounts: Record<string, number> = {}
+      applications.forEach(app => {
+        statusCounts[app.status] = (statusCounts[app.status] |0) + 1
+      });
+      const statusDistribution = Object.entries(statusCounts).map(([status, count]) => ({
+        status;
+        count}));
+      // Calculate time to hire (in days)
+      const hiredApplications = applications.filter(app => app.status === 'hired');
+      let avgTimeToHire = 0;
+      if (hiredApplications.length > 0) {
+        const totalDays = hiredApplications.reduce((sum, app) => {
+          const hireDate = new Date(app.updated_at);
+          const applyDate = new Date(app.created_at);
+          const daysDiff = (hireDate.getTime() - applyDate.getTime()) / (1000 * 3600 * 24);
+          return sum + daysDiff
+        }, 0);
+        avgTimeToHire = Math.round(totalDays / hiredApplications.length)
+      }
+      // Calculate conversion rate
+      const conversionRate = hiredApplications.length > 0
+        ? Math.round((hiredApplications.length / applications.length) * 100)
+        : 0;
+      // Funnel data
+      const funnelData = [
+        { name: 'Applied', value: applications.length }
+        { name: 'Shortlisted', value: applications.filter(app => app.status === 'shortlisted').length }
+        { name: 'Interview', value: applications.filter(app => app.status === 'interview').length }
+        { name: 'Hired', value: applications.filter(app => app.status === 'hired').length }]
+      setAnalyticsData({
+        statusDistribution;
+        timeToHire: avgTimeToHire
+        conversionRate;
+        funnelData})
+    }
+  }, [applications]);
+  if (isLoading) {
+    return <div>Loading analytics data...</div>
+<<<<<<< HEAD
+  }
+  if (!applications |applications.length === 0) {
+=======
+=======
+=======
+import { useState, useEffect } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',
+
+interface HiringAnalyticsProps {
+  jobId?: string
+import { useState, useEffect } from "react",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface HiringAnalyticsProps {;
   jobId?: string;
 }
@@ -81,6 +172,7 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
 
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
+<<<<<<< HEAD
   }
 
   if (!applications || applications.length === 0) {;
@@ -104,6 +196,12 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
 =======
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   
   if (!applications || applications.length === 0) {

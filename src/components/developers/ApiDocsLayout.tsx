@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const currentPath = router.pathname
+export default ApiDocsLayout
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { Search } from 'lucide-react'import Link from 'next/link'
+import { Search } from 'lucide-react'
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
+import { cn } from "@/lib/utils"
+import {
+ getDocsSearchPath
+ docsSearchSuggestions
+} from "@/data/docsSearchData"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { cn } from "@/lib/utils";
+import {
+ getDocsSearchPath;
+ docsSearchSuggestions
+} from "@/data/docsSearchData";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -57,32 +84,86 @@ import {
 
 } from "@/data/docsSearchData",
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
 }
+<<<<<<< HEAD
 
 =======
 
+=======
+export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const router = useRouter()
   const currentPath = router.pathname
   const [searchValue, setSearchValue] = useState("")
   const navigationItems = [
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   const router = useRouter(),
   const currentPath = router.pathname,
   const [searchValue, setSearchValue] = useState(""),
 
+<<<<<<< HEAD
 
 
 =======
   const navigationItems = [
 
+=======
+<<<<<<< HEAD
+  const router = useRouter()
+  const currentPath = router.pathname
+  const [searchValue, setSearchValue] = useState("")
+  const navigationItems = [
+<<<<<<< HEAD
+   { title: "Getting Started", path: "/developers/docs/getting-started" }
+    { title: "API Reference", path: "/developers/docs/reference" }
+    { title: "Webhooks", path: "/developers/docs/webhooks" }
+    { title: "Sample Code", path: "/docs/sample-code" }
+    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }]
+  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
+    const path = getDocsSearchPath(suggestion.text);    if (path) {
+      router.push(path)
+      setSearchValue("")
+    }
+  }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const path = getDocsSearchPath(searchValue);    if (path) {
+      router.push(path)
+      setSearchValue("")
+    }
+  }
+  return (
+    <div className="flex min-h-screen bg-zinc-950">
+     {/* Sidebar */}
+     <div className="hidden md: block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
+=======
+=======
+  const navigationItems = [
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
@@ -143,9 +224,17 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
     <div className="flex min-h-screen bg-zinc-950">;
      {/* Sidebar */}
      <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <Link href="/developers/docs" className="flex items-center mb-8">
        <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">
         <span className="text-white font-bold">Z</span>
@@ -175,9 +264,17 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
          onChange={setSearchValue}
          onSelectSuggestion={handleSelectSuggestion}
          searchSuggestions={docsSearchSuggestions}
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
          placeholder="Search documentation"
 
         />;
@@ -207,7 +304,14 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
            : "text-zinc-400 hover:text-white hover:bg-zinc-900"
          )}
         >;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
          {item.title}
         </Link>
@@ -236,11 +340,16 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
 }</nav> </div> {
   /* Main content */ "
 }<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   children
 }</div> </div>)
 }export default ApiDocsLayout
 "export default ApiDocsLayout
 
+<<<<<<< HEAD
 
 };
 /* Sidebar */ ";
@@ -256,6 +365,8 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
 }export default ApiDocsLayout;
 "export default ApiDocsLayout;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 export /**
  * ApiDocsLayout - Function description
@@ -352,7 +463,11 @@ if ( {) {
 }</div> </div>) 
 }export default ApiDocsLayout;
 "export default ApiDocsLayout;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
      </div>;
     </div>;
@@ -360,7 +475,15 @@ if ( {) {
 }
 ;
 export default ApiDocsLayout;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

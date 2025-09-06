@@ -1,10 +1,68 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface MetaverseDigitalRealityService2026 {
+=======
+export interface MetaverseDigitalRealityService2026 {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {
+    mobile: string;
+    email: string;
+
+    address: string;
+<<<<<<< HEAD
+  }
+export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] =
+  [
+    {
+      id: '2026-metaverse-digital-reality'
+      name: '2026 Metaverse Digital Reality Platform'
+      tagline: 'Immersive digital reality experiences'
+      price: '$399/month'
+      description:
+        'Advanced metaverse platform creating immersive digital reality experiences for 2026 and beyond.'
+      features: [
+        'Immersive experiences'
+        'Digital reality'
+        'Metaverse platform'
+        'Advanced graphics'
+        'Social interactions'
+      ]
+      link: '/services/2026-metaverse-digital-reality'
+      category: 'Metaverse Digital Reality 2026'
+      realImplementation: true
+      contactInfo: {
+        mobile: '+1 302 464 0950'
+        email: 'kleber@ziontechgroup.com'
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    }
+  ];    features: [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
       "Immersive experiences";
       "Digital reality";
       "Metaverse platform";
+<<<<<<< HEAD
       "Advanced graphics";
       "Social interactions";
+=======
+      "Advanced graphics",
+      "Social interactions"
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     ];
     link: "/services / 2026 - metaverse - digital - reality", category: "Metaverse Digital Reality 2026",
     real_implementation: true,
@@ -14,16 +72,99 @@
 =======
 
 export interface MetaverseDigitalRealityService2026 {;
+<<<<<<< HEAD
 
+=======
+=======
+  };
+
+export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] =
+  [
+    {
+      id: '2026-metaverse-digital-reality',
+      name: '2026 Metaverse Digital Reality Platform',
+      tagline: 'Immersive digital reality experiences',
+      price: '$399/month',
+      description:
+        'Advanced metaverse platform creating immersive digital reality experiences for 2026 and beyond.',
+      features: [
+        'Immersive experiences',
+        'Digital reality',
+        'Metaverse platform',
+        'Advanced graphics',
+        'Social interactions',
+      ],
+      link: '/services/2026-metaverse-digital-reality',
+      category: 'Metaverse Digital Reality 2026',
+      realImplementation: true,
+      contactInfo: {
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+      },
+    },;
+  ];    features: [
+      "Immersive experiences";
+      "Digital reality";
+      "Metaverse platform";
+      "Advanced graphics";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+  }
+}
+
+export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] = [
+  {
+    id: "2026-metaverse-digital-reality",
+    name: "2026 Metaverse Digital Reality Platform",
+    tagline: "Immersive digital reality experiences",
+    price: "$399/month",
+    description: "Advanced metaverse platform creating immersive digital reality experiences for 2026 and beyond.",
+    features: [
+      "Immersive experiences",
+      "Digital reality",
+      "Metaverse platform",
+      "Advanced graphics",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       "Social interactions"
     ],
     link: "/services/2026-metaverse-digital-reality",
     category: "Metaverse Digital Reality 2026",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+=======
+<<<<<<< HEAD
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
 

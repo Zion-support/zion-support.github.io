@@ -32,6 +32,7 @@
   customers?: number;
   rating?: number;
   reviews?: number;
+<<<<<<< HEAD
 ;
 
 const contact = {
@@ -414,6 +415,17 @@ const contact = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 export const real2025Q4Additions = [;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+const contact = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+export const realQ4Services2025: RealQ4Service[] = [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
 
 =======
@@ -505,7 +517,11 @@ export const real2025Q4Additions = [;
     reviews: 28,
   },
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 }
 

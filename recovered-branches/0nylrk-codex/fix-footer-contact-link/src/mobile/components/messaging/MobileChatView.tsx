@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -18,6 +24,7 @@ interface Message {;
   isMe: boolean,;
 
 =======
+<<<<<<< HEAD
 import React, { useState } from './react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
@@ -28,6 +35,18 @@ import { use_navigate } from './react-router-dom';
 import { toast } from './sonner';
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface Message {
   id: string,
   content: string,
@@ -40,14 +59,91 @@ interface MobileChatViewProps {
     id: string
     name: string
     avatar?: string;
+<<<<<<< HEAD
 
+=======
+    status?: string
+  }
+  messages: Message[]
+  onBack: () => void
+=======
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface Message {
+  id: string,
+  content: string,
+  timestamp: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   isMe: boolean,
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
 
+=======
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState("");
+  const navigate = useNavigate();
+  
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage);
+      setNewMessage("")
+    }
+  };
+  
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(),
+      handleSend()
+    }
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useNavigate } from "react-router-dom",;
+import { toast } from "sonner",;
+interface Message {;
+  id: string,;
+  content: string,;
+  timestamp: string,;
+  isMe: boolean,;
+  sender?: string,;
+  avatar?: string,;
+  status?: 'sent' | 'delivered' | 'read';
+}
+;
+interface MobileChatViewProps {;
+  contact: {;
+    id: string,;
+    name: string,;
+    avatar?: string,;
+    status?: string;
+  },;
+  messages: Message[],;
+  onBack: () => void,;
+  onSendMessage: (content: string) => void;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   onSendMessage: (content: string) => void
 }
@@ -104,7 +200,14 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend();
     }
   },
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -192,6 +295,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               <p>{message.content}</p>
               <div className={cn(
 
+<<<<<<< HEAD
     status?: string;
   }
   messages: Message[],
@@ -228,6 +332,23 @@ if ( {) {
   const startVideoCall = () =>: any {
     const room_id = `mobile-${contact.id}`;
     toast.success ("Starting video call", {
+=======
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>
+=======
+                "text-xs mt-1 flex justify-end",
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  },;
+  const startVideoCall = () => {;
+    const roomId = `mobile-${contact.id}`,;
+    toast.success("Starting video call", {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       description: `Connecting with ${contact.name}...`;
     });
 ;
@@ -383,6 +504,7 @@ if ( {) {
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
                   : "bg-muted rounded-tl-none"
               )}>;
+<<<<<<< HEAD
               <p>{message && message.content}</p>;
               <divclassName={cn(
                 "text-xs mt-1 flex justify-end"
@@ -400,6 +522,13 @@ if ( {) {
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {message.timestamp}
                 {message.isMe && message.status && (
                   <span className="ml-1">

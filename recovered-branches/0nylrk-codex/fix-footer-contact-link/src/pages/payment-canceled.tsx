@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import {Button} from '@/components/ui/button';
@@ -7,6 +8,25 @@ import {XCircle} from 'lucide-react';
 export default function PaymentCanceled() {;
   const navigate = useNavigate();
 
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import { Button  } from '@/components/ui/button';
+import { useNavigate  } from 'react-router-dom';
+import { XCircle } from 'lucide-react';
+export default function PaymentCanceled() {
+
+  const navigate = useNavigate();
+
+=======
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {XCircle} from 'lucide-react';
+export default function PaymentCanceled() {;
+  const navigate = useNavigate();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from 'react',
 import { Button } from '@/components/ui/button',
@@ -35,11 +55,19 @@ export default function PaymentCanceled() {
           >
             Try Again
           </Button>
+<<<<<<< HEAD
 
 
           <Button 
 
 
+=======
+<<<<<<< HEAD
+          <Button
+=======
+          <Button 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             variant="outline"
             onClick={() => navigate('/dashboard')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -50,6 +78,7 @@ export default function PaymentCanceled() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
@@ -57,6 +86,13 @@ import {XCircle} from 'lucide-react';
 =======
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -129,11 +165,20 @@ function PaymentCanceled() {
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </div>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

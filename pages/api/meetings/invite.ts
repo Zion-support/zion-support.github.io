@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 
@@ -17,6 +25,25 @@ export default async function handler(
     return res && res.status(405).json({ error: "Method not allowed" });
   }
   try {
+<<<<<<< HEAD
+=======
+    const { projectId, roomName, inviterName } = req.body |{}
+    if (!projectId |!roomName)
+      return res.status(400).json({ error: "Missing required fields" });
+    if (!url |!key)
+      return res.status(500).json({ error: "Supabase not configured" });
+    const supabase = createClient(url, key);
+    await supabase.channel(`project_${projectId}_calls`).send({
+      type: "broadcast"
+      event: "call_invite"
+      payload: { projectId, roomName, inviterName }
+    });
+    return res.status(200).json({ ok: true });
+  } catch (e) {
+    console.error(e);
+    return res.status(500).json({ ok: false, error: "Failed to send invite" });
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
@@ -25,8 +52,12 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -61,10 +92,25 @@ if ( {) {
     return res.status (405).json ({ error: "Method not allowed" });
   }
   try {
+<<<<<<< HEAD
     const { project_id, room_name, inviter_name } = req.body || {}
     if (
       return res.status (400).json ({ error: "Missing required fields" })) {
   $2
+=======
+    const { projectId, roomName, inviterName } = req.body || {};
+    if (!projectId || !roomName) return res.status(400).json({ error: 'Missing projectId or roomName' });
+    if (!url || !key) return res.status(500).json({ error: 'Supabase configuration missing' });
+    const supabase = createClient(url, key);
+    await supabase.channel(`project_${projectId}_calls`).send({ type: 'broadcast', event: 'call_invite', payload: { projectId, roomName, inviterName } });
+    return res.status(200).json({ ok: true });
+  } catch (e) {
+    console.error(e);
+    return res.status(200).json({ ok: true, skipped: true });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
     if (
       return res.status (500).json ({ error: "Supabase not configured" })) {
@@ -84,11 +130,18 @@ if ( {) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 ;
     return res.status (200).json ({ ok: true });
   } catch (e) {
     console.error (e);
     return res.status (500).json ({ ok: false, error: "Failed to send invite" });
+=======
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 
@@ -106,5 +159,9 @@ if ( {) {
 
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

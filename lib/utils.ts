@@ -1,9 +1,21 @@
+<<<<<<< HEAD
 
+=======
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+<<<<<<< HEAD
+export function cn(...inputs: ClassValue[]) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
 export function cn(...inputs: ClassValue[]) {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return twMerge(clsx(inputs));}
 =======
 
@@ -57,6 +69,7 @@ export function format_currency (amount: number, currency = "USD"): string {
     style: "currency", currency,
   }).format (amount);
 }
+<<<<<<< HEAD
 }
 ;
 },
@@ -64,6 +77,26 @@ export function format_currency (amount: number, currency = "USD"): string {
 =======
 
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+
+};
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+}
+
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -75,4 +108,7 @@ export function format_currency (amount: number, currency = "USD"): string {
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

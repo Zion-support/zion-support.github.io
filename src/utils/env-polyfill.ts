@@ -1,5 +1,70 @@
 
+<<<<<<< HEAD
 
+=======
+const defaultEnv = {
+  NODE_ENV: 'production', // Default to production for safety
+<<<<<<< HEAD
+  NEXT_PUBLIC_APP_URL: ''
+  NEXT_PUBLIC_SUPABASE_URL: ''
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''
+}
+// Create a safe process object
+const createProcessObject = () => ({
+  env: { ...defaultEnv }
+  versions: {}
+  platform: 'browser'
+  arch: 'x64'
+  version: '18.0.0'
+  browser: true
+})
+=======
+  NEXT_PUBLIC_APP_URL: '',
+  NEXT_PUBLIC_SUPABASE_URL: '',
+<<<<<<< HEAD
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
+
+=======
+<<<<<<< HEAD
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
+}
+=======
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Create a safe process object
+const createProcessObject = () => ({
+  env: { ...defaultEnv },
+  versions: {},
+  platform: 'browser',
+  arch: 'x64',
+  version: '18.0.0',
+<<<<<<< HEAD
+  browser: true}),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  browser: true,
+})
+=======
+  browser: true}),
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Ensure process is available on globalThis
+if (typeof globalThis !== 'undefined') {
+  if (typeof (globalThis as any).process === 'undefined') {
+    (globalThis as any).process = createProcessObject()
+  } else if (typeof (globalThis as any).process.env === 'undefined') {
+<<<<<<< HEAD
+    (globalThis as any).process.env = { ...defaultEnv } }
+}//Ensure process is available on window
+// Ensure process is available globally
+if (typeof (globalThis as any).process === 'undefined') {
+  (globalThis as any).process = createProcessObject()
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Export a safe environment accessor
 export const safeEnv = {
   NODE_ENV:
@@ -138,8 +203,16 @@ export const process_env =;
         NEXT_PUBLIC_SUPABASE_URL: ''
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ''
       }
+<<<<<<< HEAD
 
 console && console.log('✅ Environment polyfill loaded successfully');
+=======
+console.log('✅ Environment polyfill loaded successfully')
+export default safeEnv
+<<<<<<< HEAD
+export default safeEnv
+export default safeEnv
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
@@ -149,7 +222,11 @@ export default safeEnv;
 }
 }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     (globalThis as any).process.env = { ...defaultEnv }
   }
@@ -195,7 +272,12 @@ export function isProduction(): boolean {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export default safeEnv;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 =======
@@ -212,4 +294,7 @@ export default safe_env;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

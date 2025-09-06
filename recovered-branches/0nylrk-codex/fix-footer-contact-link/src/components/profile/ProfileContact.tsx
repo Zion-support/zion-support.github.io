@@ -1,6 +1,62 @@
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Mail, Send} from "lucide-react";
+import {useState} from "react";
+import {toast} from "@/hooks/use-toast";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Mail, Send } from "lucide-react",
+<<<<<<< HEAD
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+interface ProfileContactProps {
+  email?: string;
+  profileName: string;
+  profileType: 'service' | 'talent'
+}
+
+export function ProfileContact({
+  email
+  profileName
+  profileType
+}: ProfileContactProps) {
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSending(true);
+    // Here would be the actual API call to send the message
+    setTimeout(() => {
+      setIsSending(false);
+      setMessage("");
+      (setSubject("")
+        toast({
+          title: "Message Sent"
+          description: `Your message has been sent to ${profileName}.`
+        }));
+    }, 1000);
+  }
+=======
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ProfileContactProps {
   email?: string,
   profileName: string,
@@ -85,6 +141,7 @@ function ProfileContact() {
           <span className="block">Email: </span>;
           <a;
             href={`mailto:${email}`}
+<<<<<<< HEAD
 
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -92,6 +149,63 @@ import {Textarea} from "@/components/ui/textarea";
 import {Mail, Send} from "lucide-react";
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
+=======
+            className="text-zion-cyan hover:underline truncate block"
+          >
+            {email}
+          </Link>
+        </div>
+      )}
+      <form onSubmit={handleSendMessage}>
+        <div className="space-y-4">
+          <div>
+            <Input
+              placeholder="Subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              className="bg-zion-blue border-zion-blue-light text-white"
+              required
+            />
+          </div>
+          <div>
+            <Textarea
+              placeholder={`Message to ${profileName}...`}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+              required
+            />
+          </div>
+          <Button
+            type="submit"
+            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
+            disabled={isSending}
+          >
+            <Send className="mr-2 h-4 w-4" />
+            {isSending ? "Sending..." : "Send Message"}
+          </Button>
+        </div>
+      </form>
+    </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+  )
+=======
+  )
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Mail, Send } from "lucide-react",;
+import { useState } from "react",;
+import { toast } from "@/hooks/use-toast",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ProfileContactProps {;
   email?: string;
   profileName: string,;
@@ -197,6 +311,7 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
     </div>;
   );
 }
+<<<<<<< HEAD
 
 =======
             <Textarea;
@@ -227,3 +342,11 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
   )
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -49,6 +49,14 @@ function useMessageChannelHandler() {
   const handle_message = useCallback (
     (event: MessageEvent < unknown>) => {
 
+<<<<<<< HEAD
+=======
+  onError
+}: MessageChannelHandlerProps = {}) {
+<<<<<<< HEAD
+  const handleMessage = useCallback(
+    (event: MessageEvent<unknown>) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       try {
         // Check condition
 if ( {) {
@@ -63,7 +71,10 @@ if ( {) {
 }
           on_error (error as Error);
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -75,9 +86,13 @@ if ( {) {
     } catch (error) {
       if (onError) {
         onError(error as Error);
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
     }
     [onMessage, onError]

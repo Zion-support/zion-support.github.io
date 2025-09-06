@@ -1,5 +1,23 @@
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+const user = [ `Operator Prompt: $ {
+  operatorPrompt
+}`;
+context ? `Context: $ {
+  JSON.stringify (context)
+}` : undefined] .filter (Boolean) .join ('\n');
+const completion = await client.chat.completions.create ({
+  model: 'gpt-4o-mini', messages: [ {
+<<<<<<< HEAD
+  role: 'system', content: system
+}
+export type AnalyzeResponse = {
+  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operatorPrompt: string
@@ -12,11 +30,14 @@ export type AnalyzeResponse = {
 
 
 =======
+<<<<<<< HEAD
   JSON.stringify (context)
 }` : undefined] .filter (Boolean) .join ('\n');
 const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   role: 'system', content: system 
 };
 
@@ -32,8 +53,12 @@ export type AnalyzeResponse = {
   analysis: string;
 };
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<AnalyzeResponse | { error: string }>
@@ -124,6 +149,7 @@ export default async function handler(
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 
 
 =======
@@ -150,3 +176,15 @@ export default async function handler(
 }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+}
+=======
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

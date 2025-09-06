@@ -7,6 +7,7 @@ import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -35,6 +36,35 @@ import React from 'react';
 import Layout from '../components / layout / Layout';
 import { motion } from 'framer-motion';
 
+=======
+<<<<<<< HEAD
+  Code
+  Database
+  Shield
+  Zap
+  Globe
+  Cpu
+  BookOpen
+  CheckCircle
+  ArrowRight
+  BarChart3
+  Lock
+  Brain;
+=======
+  Code,
+  Database,
+  Shield,
+  Zap,
+  Globe,
+  Cpu,
+  BookOpen,
+  CheckCircle,
+  ArrowRight,
+  BarChart3,
+  Lock,;
+  Brain,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from 'lucide-react';
 
 export default function APIDocumentation() {;

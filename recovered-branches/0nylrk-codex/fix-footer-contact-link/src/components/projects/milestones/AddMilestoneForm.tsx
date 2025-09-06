@@ -31,17 +31,26 @@ interface AddMilestoneFormProps {;
   projectEndDate?: string;
   projectType?: string;
 }
+<<<<<<< HEAD
 
 
 export function AddMilestoneForm(): any ({;
 
 =======
+<<<<<<< HEAD
+export function AddMilestoneForm({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 
 export function AddMilestoneForm({;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   onSubmit;
   isSubmitting;
   onCancel;
@@ -52,8 +61,15 @@ export function AddMilestoneForm({;
 =======
       });
       return
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -128,11 +144,18 @@ export function AddMilestoneForm({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
 
 

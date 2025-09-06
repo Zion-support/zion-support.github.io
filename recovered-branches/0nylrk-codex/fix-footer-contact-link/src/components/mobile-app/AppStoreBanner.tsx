@@ -1,4 +1,22 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react";
+import {X} from "lucide-react";
+import {useIsMobile} from "@/hooks/use-mobile";
+export const AppStoreBanner: React.FC = () => {;
+  const [isVisible, setIsVisible] = useState(false);
+  const isMobile = useIsMobile();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, useEffect } from "react",
+<<<<<<< HEAD
+import { X } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -50,9 +68,24 @@
       </div>
     </div>
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import {X} from "lucide-react";
 import {useIsMobile} from "@/hooks/use-mobile";
+=======
+=======
+  )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+},
+import React, { useState, useEffect } from "react",;
+import { X } from "lucide-react",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export const AppStoreBanner: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
@@ -100,6 +133,7 @@ export const AppStoreBanner: React.FC = () => {;
   );
 };
 
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from './react';
 import { X  } from './lucide-react';
@@ -163,3 +197,11 @@ if (return null) {
   )
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default AppStoreBanner;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,12 +1,45 @@
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React, { useEffect, useState } from "react";
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+export default function AdminTokens() {
+  const [transactions, setTransactions] = useState<any[]>([])
+  const [userId, setUserId] = useState("")
+  const [amount, setAmount] = useState(100)
+  const [reason, setReason] = useState("admin_action")
+  const [config, setConfig] = useState<any>(null)
+=======
+import React, { useEffect, useState } from "react",
+import EnhancedLayout from "../../components/layout/EnhancedLayout",
+=======
+import React, { useEffect, useState } from "react",;
+import EnhancedLayout from "../../components/layout/EnhancedLayout",;
+=======
+import React, { useEffect, useState } from "react",
+import EnhancedLayout from "../../components/layout/EnhancedLayout",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function AdminTokens() {
+  const [transactions, setTransactions] = useState<any[]>([]),
+  const [userId, setUserId] = useState(""),
+  const [amount, setAmount] = useState(100),
+  const [reason, setReason] = useState("admin_action"),
+  const [config, setConfig] = useState<any>(null),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   async function load() {
     const [txRes, cfgRes] = await Promise.all([
       fetch("/api/admin/tokens").then((r) => r.json())
       fetch("/api/admin/tokens/config").then((r) => r.json())])
     setTransactions(txRes.transactions |[])
 
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useEffect, useState } from "react";
@@ -29,12 +62,32 @@ export default function AdminTokens() {
 
 
 =======
+    setConfig(cfgRes)
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+  useEffect(() => {
+    load()
+  }, [])
+  async function issue() {
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
   useEffect(() => {
@@ -71,6 +124,7 @@ export default function AdminTokens() {
 
   async function saveConfig() {
     const res = await fetch("/api/admin/tokens/config", {
+<<<<<<< HEAD
 
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -79,6 +133,38 @@ export default function AdminTokens() {
     setConfig(data)
 
 
+=======
+<<<<<<< HEAD
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
+      body: JSON.stringify(config)})
+    const data = await res.json()
+
+    setConfig(data)
+<<<<<<< HEAD
+  }
+=======
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(config)}),
+    const data = await res.json(),
+    setConfig(data)
+<<<<<<< HEAD
+  }
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <EnhancedLayout title="Admin: ZION$">
       <div className="max-w-4xl mx-auto space-y-6">
@@ -131,6 +217,37 @@ export default function AdminTokens() {
                 </div>
 
 =======
+<<<<<<< HEAD
+=======
+                <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            ))}
+            {transactions.length === 0 && <div className="text-gray-500">No transactions.</div>}
+          </div>
+        </div>
+      </div>
+    </EnhancedLayout>
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+  async function saveConfig() {;
+    const res = await fetch("/api/admin/tokens/config", {;
+      method: "POST",;
+      headers: { "Content-Type": "application/json" },;
+      body: JSON.stringify(config)});
+    const data = await res.json();
+    setConfig(data);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 =======
@@ -240,11 +357,22 @@ function save_config() {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </EnhancedLayout>);
+=======
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+<<<<<<< HEAD
 
                 <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
 
@@ -252,3 +380,8 @@ function save_config() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

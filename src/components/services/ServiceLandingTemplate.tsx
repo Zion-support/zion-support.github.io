@@ -1,14 +1,50 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import React from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
+=======
+<<<<<<< HEAD
+import React from 'react'
+=======
+import React from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import Image from "next/image",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export interface Testimonial {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   name: string;
   role?: string;
   text: string;
   avatar?: string
 }
+<<<<<<< HEAD
 
 
 interface ServiceLandingTemplateProps {;
 
+=======
+interface ServiceLandingTemplateProps {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   title: string;
   subtitle: string;
   heroImage?: string;
@@ -49,6 +85,7 @@ interface ServiceLandingTemplateProps {
   description: string;
   benefits: Benefit[];
   features?: string[];
+<<<<<<< HEAD
   stats?: Array<{ label: string; value: string }>;
   cta_text: string;
   cta_link: string;
@@ -63,6 +100,44 @@ export interface Benefit {
   icon?: React.ReactNode
 
 
+=======
+  stats?: Array<{ label: string; value: string }>
+  ctaText: string
+  ctaLink: string
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import Image from "next/image",;
+export interface Benefit {;
+  title: string,;
+  description: string,;
+  icon?: React.ReactNode;
+}
+;
+export interface Testimonial {;
+  name: string,;
+  role?: string,;
+  text: string,;
+  avatar?: string;
+}
+;
+interface ServiceLandingTemplateProps {;
+  title: string,;
+  subtitle: string,;
+  heroImage?: string,;
+  description: string,;
+  benefits: Benefit[],;
+  testimonials: Testimonial[],;
+  ctaText: string,;
+  ctaLink: string;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
@@ -91,8 +166,22 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 =======
   testimonials,
   ctaText,
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  ctaLink}) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  ctaLink,
+}) => {
+=======
+  ctaLink}) => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -121,10 +210,18 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       <section className="py-12 px-4">
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {description}
 
     <div className="min - h-screen bg - white">;
@@ -269,6 +366,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
             href={ctaLink}
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
             {ctaText}
+<<<<<<< HEAD
 
           </a>;
         </div>;
@@ -277,6 +375,21 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   );
 
 =======
+=======
+          </a>
+        </div>
+      </section>
+    </div>
+  )
+<<<<<<< HEAD
+}
+
+=======
+};
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
       <section className="py-16 bg-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -353,6 +466,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       </section>
     </div>
   )
+<<<<<<< HEAD
 
                   </div>;
                   <div className="text - gray - 600">{stat.label}</div>;
@@ -382,7 +496,15 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+},
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

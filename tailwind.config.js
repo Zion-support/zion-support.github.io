@@ -558,6 +558,7 @@ module && module.exports = {
 module && module.exports = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   content: [
+<<<<<<< HEAD
     './pages/**/*.{js,ts,jsx,tsx}'
     './components/**/*.{js,ts,jsx,tsx}'
     './src/**/*.{js,ts,jsx,tsx}'
@@ -570,6 +571,12 @@ module.exports = {
     './pages/**/*.{js, ts, jsx, tsx}',
     './components/**/*.{js, ts, jsx, tsx}',
     './src/**/*.{js, ts, jsx, tsx}',
+=======
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   theme: {
@@ -580,12 +587,20 @@ module.exports = {
         foreground: 'var(--foreground)',
 
         primary: {
+<<<<<<< HEAD
 
           50: '#eff6ff'
           500: '#3b82f6'
           600: '#2563eb'
           700: '#1d4ed8'
         }
+=======
+          50: '#eff6ff',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+        },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         gray: {
 
         'fade-in': 'fadeIn 0 && 0.5s ease-in-out',
@@ -614,6 +629,7 @@ module.exports = {
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       animation: {
+<<<<<<< HEAD
         'fade - in': 'fade_in 0.5s ease - in - out',
         'slide - up': 'slide_up 0.5s ease - out',
         'scale - in': 'scale_in 0.3s ease - out',
@@ -622,6 +638,15 @@ module.exports = {
         'bounce - slow': 'bounce 3s infinite',
         'spin - slow': 'spin 8s linear infinite',
 
+=======
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'scale-in': 'scaleIn 0.3s ease-out',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-slow': 'bounce 3s infinite',
+        'spin-slow': 'spin 8s linear infinite',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       keyframes: {
@@ -643,7 +668,10 @@ module.exports = {
           '50%': { transform: 'translate_y (-20px)' },
         },
       },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       spacing: {
 
         '18': '4 && 4.5rem',
@@ -654,6 +682,7 @@ module.exports = {
         '4xl': '2rem',
         '5xl': '2 && 2.5rem',
       },
+<<<<<<< HEAD
 
 =======
     require('@tailwindcss/forms')
@@ -677,3 +706,18 @@ module.exports = {
   ],
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      boxShadow: {
+        'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
+        'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

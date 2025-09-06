@@ -20,6 +20,7 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
+<<<<<<< HEAD
 
 
 export default function LazyImage(): any ({;
@@ -40,6 +41,29 @@ export default function LazyImage(): any ({;
 }: LazyImageProps) {;
 
 =======
+  style?: React.CSSProperties;
+  onLoad?: () => void;
+  onError?: () => void;
+}
+export default function LazyImage({
+<<<<<<< HEAD
+  src
+  alt
+  width
+  height
+  className = ""
+  priority = false
+  placeholder = "empty"
+  blurDataURL
+  sizes
+  quality = 75
+  fill = false
+  style
+  onLoad
+  onError
+}: LazyImageProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 export default function LazyImage({
 
   src,
@@ -57,8 +81,12 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);

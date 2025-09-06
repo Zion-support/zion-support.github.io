@@ -1,5 +1,32 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { SEO } from '@/components/SEO'
+import { GradientHeading } from '@/components/GradientHeading'
+import { Button } from '@/components/ui/button'
+import { Leaf, Server, Cloud } from 'lucide-react'
+import Link from 'next/link'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button";
+import { Leaf, Server, Cloud } from 'lucide-react'
+<<<<<<< HEAD
+import Link from "next/link";
+=======
+import Link from "next/link",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function GreenIT() {
 
   const greenITSolutions = [
@@ -68,8 +95,32 @@ export default function GreenIT() {;
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
       icon: Cloud},
     {
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: 'Renewable Energy Integration',
+      description:
+        'Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.',
+      icon: Leaf,
+    },
+  ]
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      title: "Renewable Energy Integration",
+      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
+      icon: Leaf}
+  ],
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <>;
       <SEO
@@ -82,9 +133,17 @@ export default function GreenIT() {;
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <div>
                   <h2 className='text-3xl font-bold text-white mb-6'>
                     Sustainable IT for a Better Future
@@ -262,8 +321,41 @@ export default function GreenIT() {;
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
+<<<<<<< HEAD
 
 
+=======
+        canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>Green IT Solutions</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Sustainable technology solutions that reduce environmental impact without compromising performance
+            </p>
+          </div>
+          <div className="mb-16">
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
+                  <p className="text-zion-slate-light text-lg mb-6">
+                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers.
+                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure
+                    while maintaining performance and reliability.
+                  </p>
+                  <p className="text-zion-slate-light text-lg mb-6">
+                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions
+                    for reducing your carbon footprint.
+                  </p>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <div className="mt-8">
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       Explore Green IT Solutions
@@ -343,13 +435,21 @@ export default function GreenIT() {;
                 </div>;
 
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <img
                     src='https://images && images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80'
                     alt='Green IT sustainability'
@@ -366,6 +466,7 @@ export default function GreenIT() {;
     { id: 'data', name: 'Data Centers', count: 2 }
   ]
   const greenSolutions: unknown = [{}
+<<<<<<< HEAD
 
                     </h3>;
                     <p className='text - zion - slate - light text - center'>;
@@ -826,6 +927,287 @@ export default function GreenIT (...args: unknown[]): unknown {
         'Enhance stakeholder communication',
         'Track progress toward goals';
 =======
+      id: 'energy - monitoring'
+      name: 'Smart Energy Monitoring'
+      category: 'energy'
+      icon: Activity
+      description: 'Real - time energy consumption tracking and optimization'
+      features: []
+        'Real - time energy consumption monitoring'
+        'AI - powered optimization recommendations'
+        'Automated power management'
+        'Energy usage analytics and reporting'
+        'Integration with smart building systems'
+        'Mobile app for remote monitoring'
+      ]
+      benefits: ['Reduce energy costs by 15 - 25%'
+        'Identify energy waste patterns'
+        'Optimize equipment performance'
+        'Meet sustainability goals'
+        'Comply with energy regulations'
+      ]
+      savings: '15 - 25% energy reduction'
+      implementation: '2 - 4 weeks'
+      pricing: 'Starting from $5,000'
+}
+    {}
+      id: 'virtualization'
+      name: 'Server Virtualization'
+      category: 'hardware'
+      icon: Server
+      description: 'Consolidate physical servers to reduce power consumption'
+      features: ['Server consolidation and virtualization'
+        'Dynamic resource allocation'
+        'Automated power management'
+        'High availability and disaster recovery'
+        'Performance monitoring and optimization'
+        'Green computing best practices'
+      ]
+      benefits: ['Reduce server power consumption by 60 - 80%'
+        'Lower cooling requirements'
+        'Decrease hardware maintenance costs'
+        'Improve resource utilization'
+        'Reduce carbon footprint'
+      ]
+      savings: '60 - 80% power reduction'
+      implementation: '4 - 8 weeks'
+      pricing: 'Starting from $15,000'
+}
+    {}
+      id: 'cloud - optimization'
+      name: 'Cloud Infrastructure Optimization'
+      category: 'software'
+      icon: Cloud
+      description: 'Optimize cloud resources for maximum efficiency'
+      features: ['Cloud resource optimization'
+        'Auto - scaling and load balancing'
+        'Cost optimization algorithms'
+        'Green cloud provider selection'
+        'Carbon footprint tracking'
+        'Sustainable cloud practices'
+      ]
+      benefits: ['Reduce cloud costs by 20 - 40%'
+        'Lower carbon emissions'
+        'Improve application performance'
+        'Better resource utilization'
+        'Scalable and flexible infrastructure'
+      ]
+      savings: '20 - 40% cost reduction'
+      implementation: '3 - 6 weeks'
+      pricing: 'Starting from $8,000'
+}
+    {}
+      id: 'data - center - efficiency'
+      name: 'Data Center Efficiency'
+      category: 'data'
+      icon: Database
+      description: 'Optimize data center operations for sustainability'
+      features: ['Cooling system optimization'
+        'Power distribution efficiency'
+        'Heat recovery systems'
+        'Renewable energy integration'
+        'Energy - efficient equipment'
+        'Environmental monitoring'
+      ]
+      benefits: ['Reduce data center energy by 30 - 50%'
+        'Lower operational costs'
+        'Improve equipment lifespan'
+        'Meet sustainability certifications'
+        'Reduce carbon footprint'
+      ]
+      savings: '30 - 50% energy reduction'
+      implementation: '8 - 16 weeks'
+      pricing: 'Starting from $25,000'
+}
+    {}
+      id: 'smart - lighting'
+      name: 'Smart Lighting Systems'
+      category: 'energy'
+      icon: Lightbulb
+      description: 'Intelligent lighting control for energy savings'
+      features: ['Motion - sensing controls'
+        'Daylight harvesting'
+        'Scheduling and automation'
+        'Energy usage analytics'
+        'Mobile app control'
+        'Integration with building systems'
+      ]
+      benefits: ['Reduce lighting energy by 40 - 60%'
+        'Improve occupant comfort'
+        'Extend bulb lifespan'
+        'Reduce maintenance costs'
+        'Smart building integration'
+      ]
+      savings: '40 - 60% energy reduction'
+      implementation: '2 - 3 weeks'
+      pricing: 'Starting from $3,000'
+}
+    {}
+      id: 'green - software'
+      name: 'Sustainable Software Development'
+      category: 'software'
+      icon: Code
+      description: 'Eco - friendly software development practices'
+      features: ['Energy - efficient algorithms'
+        'Code optimization techniques'
+        'Green coding standards'
+        'Performance monitoring'
+        'Resource usage optimization'
+        'Sustainable development practices'
+      ]
+      benefits: ['Reduce software energy consumption'
+        'Improve application performance'
+        'Lower operational costs'
+        'Better user experience'
+        'Environmental responsibility'
+      ]
+      savings: '20 - 35% energy reduction'
+      implementation: 'Ongoing'
+      pricing: 'Starting from $10,000'
+}
+    {}
+      id: 'renewable - energy'
+      name: 'Renewable Energy Integration'
+      category: 'energy'
+      icon: Sun
+      description: 'Integrate solar, wind, and other renewable sources'
+      features: ['Solar panel installation'
+        'Wind turbine integration'
+        'Energy storage systems'
+        'Grid connection management'
+        'Energy production monitoring'
+        'Maintenance and optimization'
+      ]
+      benefits: ['Generate clean, renewable energy'
+        'Reduce electricity costs'
+        'Lower carbon footprint'
+        'Energy independence'
+        'Government incentives and tax credits'
+      ]
+      savings: '40 - 80% energy costs'
+      implementation: '12 - 24 weeks'
+      pricing: 'Starting from $50,000'
+}
+    {}
+      id: 'green - hardware'
+      name: 'Energy - Efficient Hardware'
+      category: 'hardware'
+      icon: Cpu
+      description: 'Select and deploy energy - efficient computing equipment'
+      features: ['Energy Star certified equipment'
+        'Low-power processors'
+        'Efficient cooling systems'
+        'Power management features'
+        'Energy monitoring capabilities'
+        'Sustainable disposal programs'
+      ]
+      benefits: ['Reduce hardware energy consumption'
+        'Lower operational costs'
+        'Extend equipment lifespan'
+        'Meet environmental standards'
+        'Improve corporate sustainability'
+      ]
+      savings: '25 - 40% power reduction'
+      implementation: '1 - 2 weeks'
+      pricing: 'Starting from $2,000'
+}
+    {}
+      id: 'waste - reduction'
+      name: 'Electronic Waste Reduction'
+      category: 'hardware'
+      icon: Recycle
+      description: 'Comprehensive e - waste management and recycling'
+      features: ['E - waste assessment and audit'
+        'Secure data destruction'
+        'Equipment refurbishment'
+        'Recycling partnerships'
+        'Donation programs'
+        'Sustainability reporting'
+      ]
+      benefits: ['Reduce environmental impact'
+        'Comply with regulations'
+        'Improve corporate image'
+        'Potential tax benefits'
+        'Support circular economy'
+      ]
+      savings: 'Varies by program'
+      implementation: '2 - 4 weeks'
+      pricing: 'Starting from $1,000'
+}
+    {}
+      id: 'carbon - tracking'
+      name: 'Carbon Footprint Tracking'
+      category: 'software'
+      icon: BarChart3
+      description: 'Monitor and reduce carbon emissions'
+      features: ['Carbon emission calculation'
+        'Real - time monitoring'
+        'Reduction tracking'
+        'Sustainability reporting'
+        'Goal setting and tracking'
+        'Stakeholder communication'
+      ]
+      benefits: ['Track environmental impact'
+        'Set and achieve sustainability goals'
+        'Improve corporate reporting'
+        'Meet compliance requirements'
+        'Enhance brand reputation'
+      ]
+      savings: 'Measurable impact'
+      implementation: '4 - 6 weeks'
+      pricing: 'Starting from $6,000'
+}
+    {}
+      id: 'green - networking'
+      name: 'Energy - Efficient Networking'
+      category: 'data'
+      icon: Network
+      description: 'Optimize network infrastructure for energy efficiency'
+      features: ['Network equipment optimization'
+        'Traffic management'
+        'Power over Ethernet'
+        'Energy - efficient protocols'
+        'Network monitoring'
+        'Performance optimization'
+      ]
+      benefits: ['Reduce network energy consumption'
+        'Improve network performance'
+        'Lower operational costs'
+        'Better reliability'
+        'Environmental responsibility'
+      ]
+      savings: '20 - 35% energy reduction'
+      implementation: '3 - 5 weeks'
+      pricing: 'Starting from $12,000'
+}
+    {}
+      id: 'sustainability - reporting'
+      name: 'Sustainability Reporting Platform'
+      category: 'software'
+      icon: FileText
+      description: 'Comprehensive sustainability reporting and analytics'
+      features: ['Environmental data collection'
+        'Sustainability metrics tracking'
+        'Automated reporting'
+        'Stakeholder dashboards'
+        'Compliance monitoring'
+        'Goal tracking and alerts'
+      ]
+      benefits: ['Streamline sustainability reporting'
+        'Improve data accuracy'
+        'Meet compliance requirements'
+        'Enhance stakeholder communication'
+        'Track progress toward goals'
+<<<<<<< HEAD
+      ]
+      savings: 'Time and resource savings'
+      implementation: '6 - 8 weeks'
+      pricing: 'Starting from $8,000'
+}
+  ]
+export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
       ],
@@ -837,7 +1219,11 @@ export default function GreenIT (...args: unknown[]): unknown {
   ];
 
 export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')}
   return()
@@ -1446,11 +1832,19 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {greenITSolutions.map((solution, index) => (
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
                     <div className="flex justify-center mb-4">
@@ -1461,6 +1855,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                   </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 ))}
+<<<<<<< HEAD
               </div>;
             </div>;
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution && solution.title}</h3>;
@@ -1478,6 +1873,60 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              </div>
+            </div>
+<<<<<<< HEAD
+            <div className='mb-16'>
+              <h2 className='text-2xl font-bold text-white mb-6'>
+                Why Choose Green IT?
+              </h2>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6'>
+                  <h3 className='text-white font-medium text-xl mb-4'>
+                    Environmental Benefits
+                  </h3>
+                  <ul className='text-zion-slate-light space-y-2'>
+                    <li>
+                      • Reduced carbon footprint and greenhouse gas emissions
+                    </li>
+                    <li>• Lower energy consumption and resource utilization</li>
+                    <li>
+                      • Decreased electronic waste through better lifecycle
+                      management
+                    </li>
+                    <li>• Support for renewable energy initiatives</li>
+                  </ul>
+                </div>
+                <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6'>
+                  <h3 className='text-white font-medium text-xl mb-4'>
+                    Business Benefits
+                  </h3>
+                  <ul className='text-zion-slate-light space-y-2'>
+                    <li>• Significant cost savings on energy and cooling</li>
+                    <li>
+                      • Enhanced brand reputation and stakeholder relations
+                    </li>
+                    <li>
+                      • Compliance with emerging environmental regulations
+                    </li>                    <li>• Improved operational efficiency and performance</li>                    <li>• Lower energy consumption and resource utilization</li>
+=======
+            
+            <div className="mb-16">
+              <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>
+              
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
+                  <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>
+                  <ul className="text-zion-slate-light space-y-2">
+                    <li>• Reduced carbon footprint and greenhouse gas emissions</li>
+                    <li>• Lower energy consumption and resource utilization</li>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     <li>• Decreased electronic waste through better lifecycle management</li>
                     <li>• Support for renewable energy initiatives</li>
                   </ul>
@@ -1485,9 +1934,17 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 
 
                 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
                   <ul className="text-zion-slate-light space-y-2">
@@ -1515,12 +1972,20 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               <Link href="/contact">Contact Our Team</Link>
 
             </Button>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             </Button>
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </div>
         </div>
       </main>
@@ -1774,13 +2239,70 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                   </div>;
                 </div>;
               </motion.div>) ) }
+<<<<<<< HEAD
 
+=======
+          </div>
+        </div>
+      </section>
+"
+      {/* Call to Action */}""
+      <section className="py-20">""
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}">""
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Go Green?"
+            </h2>""
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Start your sustainability journey today. Our Green IT experts will
+              assess your current infrastructure and provide a customized plan
+              to reduce costs and environmental impact.
+            </p>"
+""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+                Schedule Green IT Assessment
+              </button>"
+              <a""
+                href="mailto:greenit@ziontechgroup.com""
+                className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200">
+                Contact Green IT Team
+              </a>
+            </div>"
+""
+            <div className="mt-8 text-center">""
+              <p className="text-gray-400 text-sm">
+                Get a free sustainability assessment and customized Green IT
+                roadmap
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  )
+}
+export { GreenIT }
+export { GreenIT }
+export { GreenIT }
+export { GreenIT }
+<<<<<<< HEAD
+export { GreenIT, GreenIT }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   )
 
 export { GreenIT, GreenIT };
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -1997,7 +2519,15 @@ export { GreenIT, GreenIT }
 =======
 }
 ;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,7 +1,47 @@
 
 
 =======
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {
+<<<<<<< HEAD
+  authenticateRequest
+  listApiKeys
+  saveApiKeys;
+=======
+  authenticateRequest,
+  listApiKeys,;
+  saveApiKeys,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '../../../utils/api/partnerAuth';
+import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {;
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+  const auth = await authenticateRequest(req);
+  if (!auth) {
+    return res.status(401).json({ error: 'Unauthorized' });  }
+  const { apiKey } = auth;
+  const keys = await listApiKeys();
+  // Deactivate old key
+  const existing = keys.find(k => k.id === apiKey.id);  if (existing) existing.active = false;
+  // Create new key
+  const now = new Date().toISOString();
+  const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -30,6 +70,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   authenticate_request,
@@ -45,6 +86,14 @@ function handler() {
   // Check condition
 if ( {) {
   $2
+=======
+<<<<<<< HEAD
+=======
+  const newKey = {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method Not Allowed' });
@@ -54,6 +103,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     return res.status (401).json ({ error: 'Unauthorized' });  }
   const { api_key } = auth;
   const keys = await listApiKeys ();
@@ -115,3 +165,9 @@ if (existing.active = false) {
   return res.status (201).json ({ api_key: new_key.key });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+  const newKey = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

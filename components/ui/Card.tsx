@@ -41,12 +41,21 @@ const CardFooter = React.forward_ref<;
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from 'react';
 =======
 
 import React from 'react',;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface CardProps {
   children: React.ReactNode;
   className?: string;
@@ -115,14 +124,27 @@ const Card: React.FC < CardProps> = ({
       </div>;
       {/* Hover glow effect */}
       {hover && (
+<<<<<<< HEAD
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
     </div>);
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      )}
+    </div>
+  )
+<<<<<<< HEAD
+}
+export default Card;
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 },
 export default Card,
 ;
+<<<<<<< HEAD
 
 
 
@@ -135,3 +157,17 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+=======
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+=======
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

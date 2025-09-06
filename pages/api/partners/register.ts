@@ -1,5 +1,49 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { getServerSupabase } from '[^']*';
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+function sanitizeCode(input: string): string {
+  return input
+    .toLowerCase()
+    .replace(/[^a-z0-9-]/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+export default async function handler(
+<<<<<<< HEAD
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+=======
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (req.method !== "POST") return res.status($1).json({ $2 });
+  const { name, niche, socials, payout_method, desired_code } = req.body |{}
+  if (!name |!desired_code) return res.status($1).json({ $2 });
+  const code = sanitizeCode(desired_code);
+  if (!code) return res.status($1).json({ $2 });
+  const usingPlaceholder =
+    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
+      "placeholder-key";
+  try {
+    if (usingPlaceholder) {
+      return res
+        .status(200)
+        .json({ ok: true, code, status: "pending", mock: true });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     const supabase = getServerSupabase();
     const { data: existing, error: existingErr } = await supabase
@@ -13,6 +57,7 @@
     if (existing) return res && res.status($1).json({ $2 });
     const { error } = await supabase && supabase.from("partners").insert({
 =======
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 function sanitize_code (input: string): string {
@@ -21,6 +66,22 @@ function sanitize_code (input: string): string {
     .replace (/[^a - z0 - 9-]/g, "-");
     .replace (/-+/g, "-");
     .replace (/^-|-$/g, "");
+=======
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default async function handler(req, res) {
+  try {
+  if (req.method === 'POST') {
+    res.status(201).json({ message: 'Partner registered' });
+  } else {
+    res.status(405).end('Method Not Allowed');
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { getServerSupabase } from '../../../utils/supabase/server';
+function sanitizeCode(input: string): string {
+  return input.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 export default async /**
  * handler - Function description
@@ -81,9 +142,14 @@ if ( {) {
     return res.status(500).json({ error: e?.message })
 
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
     if (return res.status (500).json ({ error: "Database error" })) {
   $2
 =======
@@ -92,6 +158,8 @@ if ( {) {
   }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
     return res.status (200).json ({ ok: true, code, status: "pending" });
   } catch (e: any) {
@@ -113,5 +181,9 @@ if ( {) {
 
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react',
+import Head from 'next/head',
+<<<<<<< HEAD
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon;
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
+ } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 class ErrorBoundary extends React.Component {
@@ -24,9 +51,29 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+=======
+=======
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -81,9 +128,21 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management'),
     icon: Database,
     color: 'from-cyan-500 to-blue-600',
+<<<<<<< HEAD
     features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
   }
 ];
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    features: [
+      'Pipeline Management',
+      'Quality Assurance',
+      'Governance Automation',
+    ],
+  },];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 const heroFeatures = [
   {
@@ -214,9 +273,156 @@ const service_categories = [;
     role: 'Security Manager, SecureNet Corp.',
     company: 'SecureNet Corp.',
 
+<<<<<<< HEAD
     color: 'from-cyan-500 to-blue-600',
 
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,;
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,;
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,;
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,;
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
+} from 'lucide-react',;
+import Layout from '../components/layout/Layout';
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+const heroStats = [;
+  { label: 'AI Services Delivered', value: '200+', icon: <Brain className="w-5 h-5" /> },;
+  { label: 'Happy AI Clients', value: '500+', icon: <Users className="w-5 h-5" /> },;
+  { label: 'AI Success Rate', value: '99.8%', icon: <Award className="w-5 h-5" /> },;
+  { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],;
+const serviceCategories = [;
+  {;
+    title: 'AI Development Tools';
+    description: 'Advanced AI-powered development and testing automation';
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Development Tools');
+    icon: Code;
+    color: 'from-emerald-500 to-teal-600';
+    features: ['Code Review AutomationAI TestingDevOps Intelligence'];
+  },;
+  {;
+    title: 'AI Testing & Quality Assurance',;
+    description: 'Intelligent testing automation with AI-driven insights',;
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Testing & Quality Assurance');
+    icon: TestTube,;
+    color: 'from-purple-500 to-indigo-600',;
+    features: ['Test GenerationPerformance TestingQuality Assurance'];
+  },;
+  {;
+    title: 'AI DevOps & Infrastructure',;
+    description: 'Self-managing infrastructure with AI optimization',;
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI DevOps & Infrastructure');
+    icon: Server,;
+    color: 'from-blue-500 to-indigo-600',;
+    features: ['Infrastructure ManagementDeployment OptimizationPerformance Monitoring'];
+  },;
+  {;
+    title: 'AI Cybersecurity',;
+    description: 'Proactive threat detection and response with AI',;
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Cybersecurity');
+    icon: SecurityIcon,;
+    color: 'from-red-500 to-pink-600',;
+    features: ['Threat DetectionIncident ResponseSecurity Automation'];
+  },;
+  {;
+    title: 'AI Data Management',;
+    description: 'Intelligent data infrastructure with AI automation',;
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management');
+    icon: Database,;
+    color: 'from-cyan-500 to-blue-600',;
+    features: ['Pipeline ManagementQuality AssuranceGovernance Automation'];
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],;
+const heroFeatures = [;
+  {;
+    title: 'AI-Powered Automation';
+    description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.',;
+    icon: Brain,;
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600';
+  },;
+  {;
+    title: 'Intelligent Optimization',;
+    description: 'AI-driven optimization that continuously improves performance, security, and efficiency.',;
+    icon: Sparkles,;
+    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600';
+  },;
+  {;
+    title: 'Autonomous Operations',;
+    description: 'Self-managing systems that operate independently with minimal human intervention.',;
+    icon: Settings,;
+    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600';
+  },;
+  {;
+    title: 'Predictive Analytics',;
+    description: 'AI-powered insights that predict issues before they occur and optimize window.window.window.performance.',;
+    icon: BarChart3,;
+    gradient: 'bg-gradient-to-r from-orange-500 to-red-600';
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],;
+const testimonials = [;
+  {;
+    name: 'Dr. Michael Chen';
+    role: 'CTO, TechFlow Solutions',;
+    company: 'TechFlow Solutions',;
+    content: 'Zion Tech Group\'s AI automation platform has revolutionized our development process. We\'ve reduced testing time by 90% and improved code quality significantly.',;
+    rating: 5,;
+    avatar: '👨‍💻';
+  },;
+  {;
+    name: 'Sarah Rodriguez',;
+    role: 'DevOps Director, CloudScale Inc.',;
+    company: 'CloudScale Inc.',;
+    content: 'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',;
+    rating: 5,;
+    avatar: '👩‍💼';
+  },;
+  {;
+    name: 'David Kim',;
+    role: 'Security Manager, SecureNet Corp.',;
+    company: 'SecureNet Corp.',;
+    content: 'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',;
+    rating: 5,;
+    avatar: '👨‍🔒';
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function AdvancedAIAutomationServices() {
 
   return (
@@ -268,9 +474,17 @@ export default function AdvancedAIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Advanced AI Automation Services
@@ -343,8 +557,40 @@ function AdvancedAIAutomationServices() {
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
 
 
+=======
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30'
+=======
+                  key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 >
                   {stat.icon}
                   <span className="text-cyan-400 font-semibold">{stat.value}</span>
@@ -401,6 +647,14 @@ function AdvancedAIAutomationServices() {
             </h2>
 
             className="text-center mb-16"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our AI Automation Services?
@@ -412,6 +666,7 @@ function AdvancedAIAutomationServices() {
               Our AI automation services provide unprecedented efficiency, accuracy, and cost savings across all aspects of technology operations
             </p>
           </motion.div>
+<<<<<<< HEAD
 
 
             className='text-center mb-16'>;
@@ -430,20 +685,85 @@ function AdvancedAIAutomationServices() {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
+              <motion.div
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                className='relative group'
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {heroFeatures.map((feature, index) => (
+              <motion.div
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="relative group"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              >
+                <div className={`${feature.gradient} p-1 rounded-xl`}>
+                  <div className="bg-gray-900 rounded-xl p-6 h-full">
+                    <div className="text-center">
+                      <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
+                        <feature.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                      <p className="text-gray-300">{feature.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+<<<<<<< HEAD
+            ))}
+          </div>
+        </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Services Section */}
 
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -451,6 +771,34 @@ function AdvancedAIAutomationServices() {
             viewport={{ once: true }}
 
 
+=======
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               AI Automation Service Categories
@@ -575,9 +923,17 @@ function AdvancedAIAutomationServices() {
   }
 }
                 className="relative"
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -617,9 +973,17 @@ function AdvancedAIAutomationServices() {
   }
 }
                       className="relative group"
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -657,9 +1021,17 @@ function AdvancedAIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -710,6 +1082,7 @@ function AdvancedAIAutomationServices() {
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -717,6 +1090,34 @@ function AdvancedAIAutomationServices() {
             viewport={{ once: true }}
 
 
+=======
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -750,8 +1151,47 @@ function AdvancedAIAutomationServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 
 
+=======
+                className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20'
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -769,6 +1209,7 @@ function AdvancedAIAutomationServices() {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
       {/* CTA Section */}
@@ -794,6 +1235,41 @@ function AdvancedAIAutomationServices() {
               <Link
 
 
+=======
+      {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Operations with AI Automation?
@@ -822,9 +1298,17 @@ function AdvancedAIAutomationServices() {
   }
 }
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300"
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -838,6 +1322,18 @@ function AdvancedAIAutomationServices() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </Layout>
+<<<<<<< HEAD
+);
+=======
+=======
+<<<<<<< HEAD
+    </Layout>;
+);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
                 href={`mailto:${contactInfo && contactInfo.email}`}
@@ -857,8 +1353,14 @@ function AdvancedAIAutomationServices() {
 
 
 =======
+<<<<<<< HEAD
+=======
+    </Layout>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   )
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
                       className='relative group';
@@ -1016,3 +1518,10 @@ function AdvancedAIAutomationServices() {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

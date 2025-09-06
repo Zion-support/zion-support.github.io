@@ -10,8 +10,37 @@ import { TALENT_PROFILES } from '../data/talent';
 
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
+<<<<<<< HEAD
 
 
+=======
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(storageKey);
+<<<<<<< HEAD
+      if (raw) setFavorites(JSON.parse(raw));    } catch {}
+  }, []);
+  const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug))
+  return { favorites, remove }
+}
+<<<<<<< HEAD
+export default function FavoritesPage() {
+=======
+
+export default function FavoritesPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const { favorites, remove } = useFavorites();
+  const profiles = useMemo(
+    () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
+    [favorites]
+  );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   return (
     <div>
@@ -167,6 +196,7 @@ function FavoritesPage() {
           </ol>
         </nav>
       </div>
+<<<<<<< HEAD
 
 
     </div>;
@@ -213,5 +243,12 @@ function FavoritesPage() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

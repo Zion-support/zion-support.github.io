@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations / supabase / client';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { supabase } from "@/integrations/supabase/client";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface PricingSuggestionAnalytics {
   total_suggestions: number;
   acceptance_rate: number;
@@ -24,8 +31,13 @@ import {supabase} from "@/integrations/supabase/client";
 =======
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -131,8 +143,16 @@ export function usePricingSuggestionAnalytics(days = 30) {
         // Process data and setAnalytics({...})
       } catch (error) {
 
+<<<<<<< HEAD
 };
 
+=======
+  return analytics
+<<<<<<< HEAD
+=======
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
@@ -236,9 +256,19 @@ if (throw error) {
   }, [days]);
 ;
   return analytics;
+<<<<<<< HEAD
 
 
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

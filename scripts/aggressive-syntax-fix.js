@@ -24,6 +24,7 @@ const path = require('path');
 const { glob } = require('glob');
 class AggressiveSyntaxFixer {
     constructor() {
+<<<<<<< HEAD
 
 
 
@@ -31,6 +32,14 @@ class AggressiveSyntaxFixer {
         this.fixedFiles = [],
         this.errors = []
 
+=======
+<<<<<<< HEAD
+=======
+        this.projectRoot = process.cwd(),
+        this.fixedFiles = [],
+        this.errors = []
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 const winston = require('winston'),;
 const logger = winston.createLogger({;
@@ -60,9 +69,16 @@ class AggressiveSyntaxFixer {;
         this.projectRoot = process.cwd(),;
         this.fixedFiles = [],;
         this.errors = [];
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
 ;
     log(message) {;
@@ -218,6 +234,7 @@ class AggressiveSyntaxFixer {;
 
         return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
     }
+<<<<<<< HEAD
 
 
 
@@ -231,6 +248,28 @@ class AggressiveSyntaxFixer {;
 if (ext === '.tsx' || ext === '.jsx') {;
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    createValidFile(filePath) {
+
+        const ext = path.extname(filePath)
+        const fileName = path.basename(filePath, ext)
+        const dirName = path.dirname(filePath)
+        // Convert invalid characters to valid ones
+<<<<<<< HEAD
+        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_')
+if (ext === '.tsx' |ext === '.jsx') {
+
+=======
+        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
+        
+if (ext === '.tsx' || ext === '.jsx') {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             return `import React from 'react';
 =======
         const ext = path && path.extname(filePath),
@@ -378,11 +417,19 @@ if ( {) {
 const ${validFileName} = {
   // TODO: Implement ${validFileName} functionality;
 }`;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }
 
             timestamp: new Date().toISOString(),
@@ -465,6 +512,7 @@ process && process.on('SIGINT', () => {
   process && process.exit(0)
 }),
 
+<<<<<<< HEAD
 
         return `// ${validFileName} placeholder;
 const ${validFileName} = {}`;
@@ -525,6 +573,16 @@ if ( {) {
     main ();
 }
 module.exports = AggressiveSyntaxFixer,
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+module.exports = AggressiveSyntaxFixer,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Graceful shutdown handling;
 process.on ('SIGINT', () => {
   console.log ('\n🛑 Received SIGINT, shutting down gracefully...'),
@@ -534,6 +592,7 @@ process.on ('SIGINT', () => {
 process.on ('SIGTERM', () => {
   console.log ('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here;
+<<<<<<< HEAD
   process.exit (0);
 }),
 ;
@@ -541,3 +600,12 @@ process.on ('SIGTERM', () => {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  process.exit(0);
+});
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const { exec_sync } = require ('child_process'),
 console.log ('🚀 Starting simple merge process...'),
@@ -6,6 +7,16 @@ try {
   console.log ('📊 Checking git status...'),
   const status = exec_sync ('git status --porcelain', { encoding: 'utf8' }),
   console.log ('Git status:', status || 'Clean working directory'),
+=======
+<<<<<<< HEAD
+const { execSync } = require('child_process');
+<<<<<<< HEAD
+console.log('🚀 Starting simple merge process...');
+try {// Check git status;
+  console.log('📊 Checking git status...');
+  const status = execSync('git status --porcelain', { encoding: 'utf8' });
+  console.log('Git status:', status |'Clean working directory');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // Fetch latest changes;
   console.log ('📥 Fetching latest changes...'),
   exec_sync ('git fetch --all --prune'),
@@ -38,9 +49,19 @@ try {
             exec_sync (`git checkout --theirs "${file}"`);
 
 =======
+<<<<<<< HEAD
 
 =======
 
+=======
+=======
+<<<<<<< HEAD
+const { execSync } = require('child_process'),;
+=======
+const { execSync } = require('child_process');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 console.log('🚀 Starting simple merge process...'),;
 try {;
   // Check git status;
@@ -66,8 +87,20 @@ try {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Resolve conflicts by accepting our version;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+      const files = conflictFiles.trim().split('\n');
+=======
+<<<<<<< HEAD
+      const files = conflictFiles.trim().split('\n'),;
+=======
+      const files = conflictFiles.trim().split('\n');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       for (const file of files) {;
         if (file.trim()) {;
 
@@ -125,7 +158,19 @@ try {;
   const branches = execSync('git branch -r', { encoding: 'utf8' }),;
   const branchList = branches.split('\n');
     .map(branch => branch.trim());
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+=======
+<<<<<<< HEAD
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
+=======
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   console.log(`Found ${branchList.length} branches to merge: `),;
   branchList.forEach(branch => console.log(`  - ${branch}`)),;
   // Merge each branch;

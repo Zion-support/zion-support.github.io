@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -8,8 +12,15 @@ import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD
 
 import { log_info, logErrorToProduction } from '@/utils / production_logger';
+=======
+=======
+<<<<<<< HEAD
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ExportPanelProps {
   platform: AppPlatform,
   metadata: AppMetadataValues;
@@ -98,6 +109,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
   },;
 
   return (
+<<<<<<< HEAD
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle className="text-lg">Export & Analytics</CardTitle>;
@@ -193,3 +205,63 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    <Card className="bg-zion-blue border-zion-purple/30">
+      <CardHeader>
+        <CardTitle className="text-lg">Export & Analytics</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          <div>
+            <h4 className="font-medium mb-2">Export Metadata</h4>
+            <p className="text-sm text-gray-400 mb-3">
+              Export your app metadata for submission to app stores
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <Button variant="outline" onClick={(,) => handleExport('json')} className="flex-1">
+                <Download className="mr-2 h-4 w-4" />
+                JSON
+              </Button>
+              <Button variant="outline" onClick={() => handleExport('csv')} className="flex-1">
+                <Download className="mr-2 h-4 w-4" />
+                CSV
+              </Button>
+            </div>
+          </div>
+          <div className="border-t border-zion-purple/20 pt-4">
+            <h4 className="font-medium mb-2">Installation Analytics</h4>
+            <p className="text-sm text-gray-400 mb-3">
+              Track how many users click "Install" from web
+            </p>
+            <Button onClick={trackAnalytics} className="w-full">
+              Enable Analytics
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+<<<<<<< HEAD
+  )
+}
+=======
+=======
+  );
+};
+=======
+
+import React from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Download } from 'lucide-react'
+import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { toast } from "sonner",
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

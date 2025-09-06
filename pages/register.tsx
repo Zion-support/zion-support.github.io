@@ -1,6 +1,20 @@
+<<<<<<< HEAD
 
 
 export default function RegisterPage() {;
+=======
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
+import Layout from "../components/Layout";
+<<<<<<< HEAD
+export default function RegisterPage() {
+=======
+
+export default function RegisterPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({;

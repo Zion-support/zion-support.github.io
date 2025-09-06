@@ -1,6 +1,22 @@
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+=======
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+=======
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
@@ -124,6 +140,7 @@ else score += 25 ;
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -153,12 +170,18 @@ export default PerformanceMonitor;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
   return new Promise ( (resolve) => {
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
   //Wait for page to be fully loaded // Check condition
 if ( {) {
   $2
@@ -301,3 +324,8 @@ if (return 'Needs Improvement') {
 export default PerformanceMonitor;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

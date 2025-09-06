@@ -6,6 +6,7 @@ interface TalentCardAvailabilityProps {
   availability_type: string;
 }
 
+<<<<<<< HEAD
 import {Clock} from "lucide-react";
 interface TalentCardAvailabilityProps {;
   availabilityType: string;
@@ -13,10 +14,42 @@ interface TalentCardAvailabilityProps {;
 
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
 =======
+  const getAvailabilityColor = (status: string) => {
+    switch (status) {
+      case 'full-time':;
+        return 'bg-green-500/20 text-green-400';
+      case 'part-time':
+        return 'bg-yellow-500/20 text-yellow-400';
+      case 'project-based':
+        return 'bg-blue-500/20 text-blue-400'
+      default:
+        return 'bg-gray-500/20 text-gray-400'
+    }
+  }
+  // Format availability label
+  const getAvailabilityLabel = (status: string) => {
+    switch (status) {
+      case 'full-time':
+        return 'Full-time';
+      case 'part-time':
+        return 'Part-time';
+      case 'project-based':
+        return 'Project'
+      default:
+        return status
+    }
+<<<<<<< HEAD
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from "react",
 import { Clock } from "lucide-react",
@@ -64,10 +97,18 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     }
 
   },
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   return (
 

@@ -17,16 +17,51 @@ import {
 
 import { Button } from "@/components/ui/button";
 import {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
+=======
+  CardTitle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from "@/components/ui/card";
+<<<<<<< HEAD
+=======
+import { FileText, ShieldCheck } from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 interface ContractTypeCardsProps {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { FileText, ShieldCheck } from "lucide-react";
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface ContractTypeCardsProps {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   onStandardClick: () => void;
   onSmartClick: () => void
 }
@@ -79,9 +114,17 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -107,6 +150,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
+<<<<<<< HEAD
 
 
 export function ContractTypeCards(): any ({;
@@ -117,6 +161,23 @@ export function ContractTypeCards(): any ({;
 =======
 
 
+=======
+<<<<<<< HEAD
+          <Button
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
+            onClick={onSmartClick}
+          >
+            Create Smart Contract
+          </Button>
+        </CardFooter>
+      </Card>
+<<<<<<< HEAD
+    </div>
+  );
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
@@ -211,8 +272,16 @@ function ContractTypeCards() {
     </div>);
 
 }
+<<<<<<< HEAD
 =======
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

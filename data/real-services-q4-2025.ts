@@ -1,7 +1,99 @@
 
 
   {
+<<<<<<< HEAD
 
+=======
+    id: 'ai-email-responder-pro'
+    name: 'AI Email Responder Pro'
+    tagline:
+      'Autonomous replies, triage, and sentiment insights for Gmail/O365'
+    price: '$129'
+    period: '/month'
+    description:
+      'LLM-powered email assistant that drafts context-aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2-ready with redaction.'
+    features: [
+      'LLM reply drafts with tone controls'
+      'Intent routing and SLA prediction'
+      'Smart summaries and action extraction'
+      'CRM and ticket sync (Salesforce, HubSpot, Zendesk)'
+      'PII redaction and governance'
+      'Dashboard with analytics and coaching'
+    ]
+    popular: true
+    icon: '📧'
+    color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-300'
+    link: 'https://ziontechgroup.com/services/ai-email-responder-pro'
+    marketPosition:
+      'Alternative to Front/Superhuman add-ons with deeper AI and governance.'
+    targetAudience: 'Sales, Success, Support, Ops'
+    trialDays: 14
+    setupTime: '2 hours'
+    category: 'AI & Data'
+    realService: true
+    technology: ['Gmail/O365 APIs', 'OpenAI/Groq', 'Next.js']
+    integrations: ['Gmail', 'Outlook', 'Salesforce', 'HubSpot', 'Zendesk']
+    useCases: ['Inbound triage', 'Follow-ups', 'NPS outreach']
+    roi: 'Reduce first response time by 60% and improve CSAT by 20%+'
+    competitors: ['Superhuman AI', 'Front Workflows']
+    marketSize: '$10B+ communications AI'
+    growthRate: '25% CAGR'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'OAuth, vector memory, policy guardrails'
+    launchDate: '2025-10-15'
+    customers: 24
+    rating: 4.8
+    reviews: 17
+  }
+  {
+    id: 'affiliate-analytics-hub'
+    name: 'Affiliate Analytics Hub'
+    tagline: 'Track referrals, payouts, and ROI with multi-touch attribution'
+    price: '$89'
+    period: '/month'
+    description:
+      'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross-device attribution.'
+    features: [
+<<<<<<< HEAD
+      'Link shortener and branded domains'
+      'UTM builder and traffic quality scoring'
+      'Multi-touch attribution and deduplication'
+      'Automated payouts and tax forms'
+      'Fraud and bot detection'
+      'Partner portal and reports'
+    ]
+    popular: true
+    icon: '🔗'
+    color: 'from-emerald-600 to-teal-700'
+    textColor: 'text-emerald-300'
+    link: 'https://ziontechgroup.com/services/affiliate-analytics-hub'
+    marketPosition:
+      'Easier than enterprise suites; purpose-built for small teams.'
+    targetAudience: 'E-commerce, SaaS, Media'
+    trialDays: 14
+    setupTime: '1 day'
+    category: 'Developer Tools'
+    realService: true
+    technology: ['Next.js', 'PostgreSQL', 'Workers/Edge']
+    integrations: ['Stripe', 'Shopify', 'WooCommerce']
+    useCases: ['Partner programs', 'Influencer payouts']
+    roi: 'Grow partner-attributed revenue by 10–30%'
+    competitors: ['Impact.com (complex)', 'Tune (enterprise)']
+    marketSize: '$15B+ affiliate tech'
+    growthRate: '12% CAGR'
+    variant: 'network-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Webhook ingestion, cookie-less heuristics'
+    launchDate: '2025-11-01'
+    customers: 35
+    rating: 4.6
+    reviews: 21
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     id: 'affiliate - analytics - hub',
     name: 'Affiliate Analytics Hub',
@@ -52,9 +144,13 @@
     rating: 4 && 4.6,
     reviews: 21,
   },
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
 
 =======
@@ -424,6 +520,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		rating: 4 && 4.5,
 
 		reviews: 6
+<<<<<<< HEAD
 	}
 ];
 
@@ -619,6 +716,14 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 
 
 =======
+<<<<<<< HEAD
+	}
+];
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -811,8 +916,14 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 		customers: 9,;
 		rating: 4.5;
 		reviews: 6;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

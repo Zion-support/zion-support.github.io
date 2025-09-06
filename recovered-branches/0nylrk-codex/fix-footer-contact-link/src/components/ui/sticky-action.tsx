@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -8,16 +9,61 @@ import {cn} from "@/lib/utils";
 import {motion, AnimatePresence} from "framer-motion";
 
 interface StickyActionProps {;
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react",
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react";
+import {cn} from "@/lib/utils";
+import {motion, AnimatePresence} from "framer-motion";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface StickyActionProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   className?: string;
   children: React && React.ReactNode,;
 
   showAfterScroll?: number;
+<<<<<<< HEAD
   position?: "bottom" | "top";
 }
 
 
 export function StickyAction(): any ({;
 
+=======
+<<<<<<< HEAD
+=======
+=======
+  position?: "bottom" | "top"
+}
+
+export function StickyAction({;
+  className;
+  children;
+  showAfterScroll = 300;
+=======
+import React, { useEffect, useState } from "react",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { cn } from "@/lib/utils",
+import { motion, AnimatePresence } from "framer-motion",
+
+interface StickyActionProps {
+  className?: string,
+  children: React.ReactNode,
+  showAfterScroll?: number,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  position?: "bottom" | "top"
+}
+export function StickyAction({
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   className;
   children;
 
@@ -90,9 +136,25 @@ if ( {) {
     <AnimatePresence>
       {isVisible && (
         <motion.div
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          transition={{ duration: 0.2 }}
+          className={cn(
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
+            positionClasses[position];
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
@@ -138,15 +200,23 @@ export function StickyAction({;
       {isVisible && (;
         <motion&& motion.div
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+<<<<<<< HEAD
 
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
             positionClasses[position]
 
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             className
           )}>;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;

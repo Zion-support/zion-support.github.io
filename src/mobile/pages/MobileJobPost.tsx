@@ -1,8 +1,57 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+import React, { useState } from "react"
+import {MobileHeader} from "@/mobile/components/common/MobileHeader"
+import {BottomNavigation} from "@/mobile/components/common/BottomNavigation"
+import {Button} from "@/components/ui/button"
+import {Input} from "@/components/ui/input"
+import {Textarea} from "@/components/ui/textarea"
+import {Label} from "@/components/ui/label"
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select"
+import {Zap, ChevronLeft, ChevronRight} from 'lucide-react'
+import {Badge} from "@/components/ui/badge"
+import {Card, CardContent} from "@/components/ui/card"
+type JobPostStep = "details" | "requirements" | "budget" | "preview"
+export function MobileJobPost() {
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details")
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React, { useState } from "react"
+import {MobileHeader} from "@/mobile/components/common/MobileHeader"
+import {BottomNavigation} from "@/mobile/components/common/BottomNavigation"
+import {Button} from "@/components/ui/button"
+import {Input} from "@/components/ui/input"
+import {Textarea} from "@/components/ui/textarea"
+import {Label} from "@/components/ui/label"
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select"
+import {Zap, ChevronLeft, ChevronRight} from 'lucide-react'
+import {Badge} from "@/components/ui/badge"
+import {Card, CardContent} from "@/components/ui/card"
+type JobPostStep = "details" | "requirements" | "budget" | "preview"
+export function MobileJobPost() {
+<<<<<<< HEAD
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details")
+=======
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const goToNextStep = () => {
     if (currentStep === "details") {
       setCurrentStep("requirements")
@@ -137,7 +186,14 @@ export function MobileJobPost() {;
 
   },
   
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
@@ -164,16 +220,32 @@ export function MobileJobPost() {;
     }
   },
   
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <main className="flex-1 py-4 pb-24 px-4">
         <div className="mb-6 flex justify-between">
           <div className="flex space-x-1">
@@ -185,16 +257,38 @@ export function MobileJobPost() {;
 
 
           
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Button variant="outline" className="flex gap-1">
             <Zap className="h-4 w-4" /> AI Assist
           </Button>
         </div>
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {renderStepContent()}
+        <div className="flex gap-2 mt-6">
+          {currentStep !== "details" && (
+            <Button
+              variant="outline"
+              className="flex-1 gap-1"
+              onClick = {goToPrevStep,}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         
 
@@ -256,9 +350,17 @@ export function MobileJobPost() {;
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <BottomNavigation />
     </div>
   )
@@ -270,9 +372,17 @@ function DetailsStep() {
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="space-y-2">
         <Label htmlFor="title">Job Title</Label>
         <Input id="title" placeholder="e.g. Senior React Developer" />
@@ -280,9 +390,17 @@ function DetailsStep() {
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="space-y-2">
         <Label htmlFor="company">Company Name</Label>
         <Input id="company" placeholder="Your company name" />
@@ -290,9 +408,17 @@ function DetailsStep() {
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="space-y-2">
         <Label htmlFor="location">Location</Label>
         <Select defaultValue="remote">
@@ -309,9 +435,17 @@ function DetailsStep() {
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="space-y-2">
         <Label htmlFor="jobType">Job Type</Label>
         <Select>
@@ -326,6 +460,48 @@ function DetailsStep() {
           </SelectContent>
         </Select>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div className="space-y-2">
+        <Label htmlFor="description">Job Description</Label>
+        <Textarea
+          id="description"
+          placeholder="Describe the job role and responsibilities"
+=======
+=======
+      
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      <div className="space-y-2">
+        <Label htmlFor="description">Job Description</Label>
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          rows = {5,}
+        />
+      </div>
+    </div>
+  )
+}
+<<<<<<< HEAD
+function RequirementsStep() {
+  const [skills, setSkills] = useState<string[]>([
+    "React", "TypeScript", "Node.js"
+  ])
+  const [newSkill, setNewSkill] = useState("")
+  const addSkill = () => {
+    if (newSkill && !skills.includes(newSkill)) {
+      setSkills([...skills, newSkill])
+      setNewSkill("")
+    }
+  }
+  const removeSkill = (skill: string,) => {
+    setSkills(skills.filter(s => s !== skill))
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
     <div className="min - h-screen flex flex - col">;
 =======
@@ -347,7 +523,11 @@ function DetailsStep() {
           placeholder="Describe the job role and responsibilities" 
 =======
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from "react",;
 import { MobileHeader } from "@/mobile/components/common/MobileHeader",;
 import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",;
@@ -492,17 +672,69 @@ function DetailsStep() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
     "React", "TypeScript", "Node.js"
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ])
+  const [newSkill, setNewSkill] = useState("")
+  const addSkill = () => {
+    if (newSkill && !skills.includes(newSkill)) {
+      setSkills([...skills, newSkill])
+      setNewSkill("")
+    }
+  }
+  const removeSkill = (skill: string,) => {
+    setSkills(skills.filter(s => s !== skill))
+  }
+  return (
+    <div className="space-y-4">
+      <h2 className="text-lg font-medium">Job Requirements</h2>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ]),
+  const [newSkill, setNewSkill] = useState(""),
+  
+  const addSkill = () => {
+    if (newSkill && !skills.includes(newSkill)) {
+      setSkills([...skills, newSkill]),
+      setNewSkill("")
+    }
+  },
+  
+  const removeSkill = (skill: string) => {
+    setSkills(skills.filter(s => s !== skill))
+  },
+  
+  return (
+    <div className="space-y-4">
+      <h2 className="text-lg font-medium">Job Requirements</h2>
+      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="space-y-2">
         <Label htmlFor="experience">Experience Level</Label>
         <Select>
@@ -520,9 +752,17 @@ function RequirementsStep() {
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="space-y-2">
         <Label htmlFor="education">Education</Label>
         <Select>
@@ -539,6 +779,7 @@ function RequirementsStep() {
           </SelectContent>
         </Select>
       </div>
+<<<<<<< HEAD
 
           </Button>;
         </div>;
@@ -605,6 +846,58 @@ function DetailsStep() {;
   );
 }
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div className="space-y-2">
+        <Label>Required Skills</Label>
+        <div className="flex flex-wrap gap-2 mb-3">
+          {skills.map((skill,) => (
+            <Badge
+              key = {skill,}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      <div className="space-y-2">
+        <Label>Required Skills</Label>
+        <div className="flex flex-wrap gap-2 mb-3">
+          {skills.map((skill) => (
+            <Badge 
+              key={skill} 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              variant="secondary"
+              className="flex items-center gap-1 px-3 py-1"
+            >
+              {skill}
+<<<<<<< HEAD
+              <button
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                onClick = {(,) => removeSkill(skill),}
+              >
+                ×
+              </button>
+            </Badge>
+<<<<<<< HEAD
+          ))}
+        </div>
+        <div className="flex gap-2">
+          <Input
+            value = {newSkill,}
+            onChange = {(e,) => setNewSkill(e.target.value),}
+=======
+              <button 
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
     "React", "TypeScript", "Node && Node.js";
@@ -664,9 +957,69 @@ function RequirementsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
+<<<<<<< HEAD
 
 
 
+=======
+      <div className="space-y-2">;
+        <Label>Required Skills</Label>;
+        <div className="flex flex-wrap gap-2 mb-3">;
+          {skills.map((skill) => (;
+            <Badge;
+              key={skill} ;
+              variant="secondary";
+              className="flex items-center gap-1 px-3 py-1";
+            >;
+              {skill}
+              <button;
+                className="ml-1 rounded-full hover:bg-background/20 p-1";
+                onClick={() => removeSkill(skill)}
+              >;
+                ×;
+              </button>;
+            </Badge>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          ))}
+        </div>
+        <div className="flex gap-2">
+          <Input 
+            value={newSkill}
+            onChange={(e) => setNewSkill(e.target.value)}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+            placeholder="Add a skill"
+            onKeyDown={(e) => e.key === 'Enter' && addSkill()}
+          />
+          <Button onClick={addSkill}>Add</Button>
+        </div>
+      </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div className="space-y-2">
+        <Label htmlFor="requirements">Specific Requirements</Label>
+        <Textarea
+          id="requirements"
+          placeholder="List any specific requirements or qualifications"
+          rows = {4,}
+        />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="responsibilities">Key Responsibilities</Label>
+        <Textarea
+          id="responsibilities"
+          placeholder="List the key responsibilities for this role"
+          rows = {4,}
+        />
+      </div>
+    </div>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       
 
@@ -707,8 +1060,30 @@ function RequirementsStep() {;
         <Textarea 
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          rows = {4,}
+        />
+      </div>
+    </div>
+  )
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          rows={4}
+        />;
+      </div>;
+    </div>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -720,9 +1095,17 @@ function BudgetStep() {
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="space-y-2">
         <Label htmlFor="paymentType">Payment Type</Label>
         <Select>
@@ -739,9 +1122,17 @@ function BudgetStep() {
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="space-y-2">
         <Label>Salary Range</Label>
         <div className="flex gap-4 items-center">
@@ -763,9 +1154,17 @@ function BudgetStep() {
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="space-y-2">
         <Label htmlFor="deadline">Application Deadline</Label>
         <Input type="date" id="deadline" />
@@ -773,9 +1172,17 @@ function BudgetStep() {
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="space-y-2">
         <Label htmlFor="startDate">Expected Start Date</Label>
         <Input type="date" id="startDate" />
@@ -783,9 +1190,17 @@ function BudgetStep() {
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className="space-y-2">
         <Label htmlFor="duration">Project Duration</Label>
         <Select>
@@ -802,9 +1217,27 @@ function BudgetStep() {
           </SelectContent>
         </Select>
       </div>
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div className="space-y-2">
+        <Label htmlFor="additionalInfo">Additional Budget Information</Label>
+        <Textarea
+          id="additionalInfo"
+          placeholder="Any additional information about budget or payment"
+          rows = {3,}
+        />
+      </div>
+    </div>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       
 
@@ -813,8 +1246,30 @@ function BudgetStep() {
         <Textarea 
           id="additionalInfo" 
           placeholder="Any additional information about budget or payment" 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          rows = {3,}
+        />
+      </div>
+    </div>
+  )
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          rows={3}
+        />;
+      </div>;
+    </div>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -826,9 +1281,17 @@ function PreviewStep() {
 
 
       
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <Card>
         <CardContent className="p-4">
           <h3 className="font-bold text-lg">Senior React Developer</h3>
@@ -836,9 +1299,17 @@ function PreviewStep() {
 
 
           
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div className="flex gap-2 my-3">
             <Badge variant="outline">React</Badge>
             <Badge variant="outline">TypeScript</Badge>
@@ -847,9 +1318,17 @@ function PreviewStep() {
 
 
           
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div className="space-y-1 text-sm mt-4">
             <p className="font-medium">Salary Range:</p>
             <p>$80,000 - $120,000 USD / year</p>
@@ -857,9 +1336,17 @@ function PreviewStep() {
 
 
           
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Experience Level:</p>
             <p>Senior</p>
@@ -867,9 +1354,17 @@ function PreviewStep() {
 
 
           
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Application Deadline:</p>
             <p>December 15, 2023</p>
@@ -877,14 +1372,23 @@ function PreviewStep() {
 
 
           
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div className="mt-4 pt-3 border-t border-border">
             <h4 className="font-medium mb-2">Description</h4>
             <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>
           </div>
         </CardContent>
+<<<<<<< HEAD
 
         </div>;
         <div className="flex gap-2">;
@@ -1250,3 +1754,58 @@ min - h-screen flex flex - col"> <MobileHeader </div> <Button variant=" outline"
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+      </Card>
+<<<<<<< HEAD
+      <Button variant="outline" className="w-full">Edit Job Post</Button>
+    </div>
+  )
+=======
+<<<<<<< HEAD
+      </Card>;
+      <Button variant="outline" className="w-full">Edit Job Post</Button>;
+    </div>;
+  );
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};"
+min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"className=" flex gap-1"> <Zap className=" h-4 w-4"/> AI Assist </Button> </div> {
+  renderStepContent () "
+}<Button variant=" outline"className=" flex-1 gap-1"onClick={
+  goToPrevStep "
+}> <ChevronLeft className=" h-4 w-4"/> Back </Button>)
+}<Button </Button> </div> </main> <BottomNavigation /> </div>) "
+}<div className=" space-y-2"> <Label htmlFor=" title">Job Title</Label> <Input id=" title"placeholder=" e.g. Senior React Developer"/> </div> <div className=" space-y-2"> <Label htmlFor=" company">Company Name</Label> <Input id=" company"placeholder=" Your company name"/> </div> <div className=" space-y-2"> <Label htmlFor=" location">Location</Label> <Select defaultValue=" remote"> <SelectTrigger> <SelectValue placeholder=" Select location type"/> </SelectTrigger> <SelectContent> <SelectItem value=" remote">Remote</SelectItem> <SelectItem value=" onsite">On-site</SelectItem> <SelectItem value=" hybrid">Hybrid</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" jobType">Job Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select job type"/> </SelectTrigger> <SelectContent> <SelectItem value=" fulltime">Full-time</SelectItem> <SelectItem value=" parttime">Part-time</SelectItem> <SelectItem value=" contract">Contract</SelectItem> <SelectItem value=" freelance">Freelance</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" description">Job Description</Label> <Textarea id=" description"placeholder=" Describe the job role and responsibilities"rows= {
+  5
+}/> </div> </div>)
+}const addSkill = () => {
+  if (newSkill && !skills.includes (newSkill) ) {"
+  <div className=" space-y-2"> <Label htmlFor=" experience">Experience Level</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select experience level"/> </SelectTrigger> <SelectContent> <SelectItem value=" entry">Entry Level</SelectItem> <SelectItem value=" mid">Mid Level</SelectItem> <SelectItem value=" senior">Senior</SelectItem> <SelectItem value=" expert">Expert</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" education">Education</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select required education"/> </SelectTrigger> <SelectContent> <SelectItem value=" high school">High School</SelectItem> <SelectItem value=" associate">Associate Degree</SelectItem> <SelectItem value=" bachelor">Bachelor's Degree</SelectItem> <SelectItem value=" master">Master's Degree</SelectItem> <SelectItem value=" phd">PhD</SelectItem> <SelectItem value=" none">No Specific Requirement</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label>Required Skills</Label> key= {
+  skill "
+}variant=" secondary"className=" flex items-center gap-1 px-3 py-1"> {
+  skill
+}<button > × </button> </Badge>) ) "
+}</div> <div className=" flex gap-2"> <Input /> <Button onClick={
+  addSkill "
+}>Add</Button> </div> </div> <div className=" space-y-2"> <Label htmlFor=" requirements">Specific Requirements</Label> <Textarea /> </div> <div className=" space-y-2"> <Label htmlFor=" responsibilities">Key Responsibilities</Label> <Textarea /> </div> </div>) "
+}<div className=" space-y-2"> <Label htmlFor=" paymentType">Payment Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select payment type"/> </SelectTrigger> <SelectContent> <SelectItem value=" hourly">Hourly Rate</SelectItem> <SelectItem value=" fixed">Fixed Price</SelectItem> <SelectItem value=" salary">Salary</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label>Salary Range</Label> <div className=" flex gap-4 items-center"> <Input placeholder=" Min"type=" number"className=" w-full"/> <span>to</span> <Input placeholder=" Max"type=" number"className=" w-full"/> <Select defaultValue=" usd"> <SelectTrigger className=" w-24"> <SelectValue placeholder=" Currency"/> </SelectTrigger> <SelectContent> <SelectItem value=" usd">USD</SelectItem> <SelectItem value=" eur">EUR</SelectItem> <SelectItem value=" gbp">GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=" space-y-2"> <Label htmlFor=" deadline">Application Deadline</Label> <Input type=" date"id=" deadline"/> </div> <div className=" space-y-2"> <Label htmlFor=" startDate">Expected Start Date</Label> <Input type=" date"id=" startDate"/> </div> <div className=" space-y-2"> <Label htmlFor=" duration">Project Duration</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select project duration"/> </SelectTrigger> <SelectContent> <SelectItem value=" ltw">Less than a week</SelectItem> <SelectItem value=" ltm">Less than a month</SelectItem> <SelectItem value=" 1-3m">1-3 months</SelectItem> <SelectItem value=" 3-6m">3-6 months</SelectItem> <SelectItem value=" 6m+">6+ months</SelectItem> <SelectItem value=" ongoing">Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" additionalInfo">Additional Budget Information</Label> <Textarea id=" additionalInfo"placeholder=" Any additional information about budget or payment"rows= {
+  3
+}/> </div> </div>) '"
+}<Card> <CardContent className=" p-4"> <h3 className=" font-bold text-lg">Senior React Developer</h3> <p className=" text-muted-foreground">TechCorp Inc. • Remote • Full-time</p> <div className=" flex gap-2 my-3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space-y-1 text-sm mt-3"> <p className=" font-medium">Experience Level:</p> <p>Senior</p> </div> </div> <div className=" mt-4 pt-3 border-t border-border"> <h4 className=" font-medium mb-2">Description</h4> <p className=" text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w-full" >Edit Job Post</Button> </div> '"}
+=======
+<<<<<<< HEAD
+=======
+      </Card>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      
+      <Button variant="outline" className="w-full">Edit Job Post</Button>
+    </div>
+  )
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

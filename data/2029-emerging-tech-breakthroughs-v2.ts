@@ -527,7 +527,24 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       growthRate: '900% annual growth'
       variant: 'ai-futuristic'
       contactInfo: {
+<<<<<<< HEAD
 
+=======
+        mobile: '+1 302 464 0950'
+        email: 'kleber@ziontechgroup.com'
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+        website: 'https://ziontechgroup.com'
+      }
+      realImplementation: true
+      implementationDetails:
+<<<<<<< HEAD
+        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
+      launchDate: '2025-06-01'
+      customers: 3
+      rating: 5.0
+      reviews: 2
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       color: 'from - pink - 600 via - purple - 600 to - indigo - 600',
       text_color: 'text - pink - 400',
@@ -573,8 +590,12 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       reviews: 2,
 
     },;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ];    features: [
 
 =======
@@ -684,6 +705,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 5 && 5.0,
 
     reviews: 2
+<<<<<<< HEAD
 
     real_implementation: true,
     implementation_details: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
@@ -696,6 +718,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
 =======
 
 
+=======
+<<<<<<< HEAD
+  }
+];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
@@ -1003,9 +1032,16 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     customers: 3,;
     rating: 5.0;
     reviews: 2;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];

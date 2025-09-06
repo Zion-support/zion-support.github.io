@@ -1,5 +1,26 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { getShared } from './share',;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query,
+  if (!id || Array.isArray(id)) return res.status(400).json({ error: 'Missing id' }),
+  const entry = getShared(id),
+  if (!entry) return res.status(404).json({ error: 'Not found' }),
+  res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt });
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getShared } from './share';
@@ -10,8 +31,27 @@ export default function handler(req, res) {
   const { id } = req.query;
   if (!id || Array.isArray(id)) return res.status(400).json({ error: 'Missing id' });
   const entry = getShared(id);
+<<<<<<< HEAD
   if (!entry) return res.status(404).json({ error: 'Not found' });
   res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt })
+=======
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 
@@ -42,4 +82,7 @@ function handler() {
   }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

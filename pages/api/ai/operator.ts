@@ -1,13 +1,67 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import OpenAI from 'openai',;
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 =======
 
 
+<<<<<<< HEAD
   if (!limited) {
     bucket.timestamps.push(now);
   }
 
 
+=======
+function isRateLimited(ip: string): boolean {
+  const now = Date.now(),
+  const bucket = ipToRequests[ip] || { timestamps: [] },
+  // Drop old timestamps
+  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS),
+  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+<<<<<<< HEAD
+=======
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// In-memory simple rate limiter (per IP);
+const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
+const RATE_LIMIT_MAX_REQUESTS = 15;
+const ipToRequests: Record<string, { timestamps: number[] }> = {};
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const bucket = ipToRequests[ip] || { timestamps: [] };
+  // Drop old timestamps;
+  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS);
+  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (!limited) {
+    bucket.timestamps.push(now);
+  }
+<<<<<<< HEAD
+  ipToRequests[ip] = bucket;
+  return limited;
+=======
+<<<<<<< HEAD
+  ipToRequests[ip] = bucket,
+  return limited
+=======
+  ipToRequests[ip] = bucket;
+  return limited;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -67,6 +121,7 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     const text = completion.choices?.[0]?.message?.content ?? ''
     return res.status(200).json({ text })
   } catch (err: any) {
+<<<<<<< HEAD
 
 }
 
@@ -149,11 +204,23 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    console.error('Operator error', err)
+    return res.status(500).json({ error: 'Internal Server Error' })
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
   };
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
@@ -205,8 +272,17 @@ export default async function handler(req, res) {
   
 }
   
+<<<<<<< HEAD
 
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

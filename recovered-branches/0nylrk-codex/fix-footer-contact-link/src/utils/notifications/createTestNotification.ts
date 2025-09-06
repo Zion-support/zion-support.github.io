@@ -1,9 +1,20 @@
 
+<<<<<<< HEAD
 
 import {NotificationType} from './types';
 import {createNotification} from './createNotification';
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { NotificationType  } from './types';
+import { createNotification } from './createNotification';
+=======
+import {NotificationType} from './types';
+import {createNotification} from './createNotification';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 /**
  * Demo function to create test notifications for the current user
  */
@@ -53,9 +64,18 @@ function createTestNotification() {
     'system': { url: '/dashboard', text: 'Learn More' }
   }
 
+<<<<<<< HEAD
 =======
 
 
+=======
+    actionText: actions[randomType].text
+  })
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { NotificationType } from './types',;
 import { createNotification } from './createNotification',;
@@ -88,9 +108,16 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface ModerationFlag {
+=======
+export interface ModerationFlag {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   contentId: string;
   contentType: string;
@@ -9,6 +18,7 @@
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+<<<<<<< HEAD
 =======
 export interface ModerationFlag {
   id: string;
@@ -20,6 +30,20 @@ export interface ModerationFlag {
   created_at: string;
   admin_notes?: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}
+<<<<<<< HEAD
+
+// Mock data storage - replace with actual database
+let flags: ModerationFlag[] = [];
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find(flag => flag.id === id) |null;
+
+}
+export async function readAllFlags(): Promise<ModerationFlag[]> {
+  // Mock implementation - replace with actual database logic
+  return [];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 ;
@@ -43,6 +67,7 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 }
 
 =======
+<<<<<<< HEAD
 // Moderation database utilities
 export interface ModerationFlag {
   id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
@@ -53,6 +78,10 @@ export interface ModerationFlag {
   notes?: string;
 }
 =======
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 

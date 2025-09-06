@@ -24,11 +24,31 @@ export default function TranslationPreview() {
             <div className=&quot;text-xs uppercase opacity-70 mb-2&quot;>{lng}</div>
             <div className=&quot;whitespace-pre-wrap text-sm min-h-[4rem]&quot;>
               {translations[lng] || (lng === 'en' ? text : '')}            </div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  )}
+=======
+<<<<<<< HEAD:components/admin/TranslationPreview.tsx
+  );
+};
+=======
+  )}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

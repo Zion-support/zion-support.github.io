@@ -34,6 +34,10 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Search
   HelpCircle
   BookOpen
@@ -63,8 +67,12 @@ import {
   ExternalLink,
   ChevronDown,
   Cloud,;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "lucide-react";
 const helpArticles = [
   {
@@ -237,9 +245,17 @@ const help_categories = [;
     color: "blue"
     articles: helpArticles
   }
+<<<<<<< HEAD
 
 ];
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+];
+<<<<<<< HEAD
+export default function HelpPage() {
+  const [searchTerm, setSearchTerm] = useState("");
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -247,6 +263,7 @@ const help_categories = [;
     articles: helpArticles
   }
 ];
+<<<<<<< HEAD
 
 import {;
   Search,;
@@ -332,6 +349,14 @@ const helpCategories = [;
 ];
 
 export default function HelpPage() {;
+=======
+<<<<<<< HEAD
+export default function HelpPage() {
+=======
+
+export default function HelpPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
 

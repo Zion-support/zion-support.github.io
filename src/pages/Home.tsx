@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import React, { lazy, Suspense } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
+import { usePerformance } from '../hooks/usePerformance';
+const Home: React.FC = () => {
+  usePerformance();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import React from 'react';
 
@@ -109,6 +119,10 @@ const Home: React.FC = () => {
             Start Your Journey Today
           </Link>
         </div>
+<<<<<<< HEAD
+=======
+      </motion.div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       </div>
     </div>
   );

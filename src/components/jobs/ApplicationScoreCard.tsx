@@ -1,6 +1,81 @@
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState } from "react"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { supabase } from "@/integrations/supabase/client"
+import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'import { toast } from "sonner"
+import { JobApplication } from "@/types/jobs"
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { supabase } from "@/integrations/supabase/client",
+import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'
+<<<<<<< HEAD
+import { toast } from "sonner";
+import { JobApplication } from "@/types/jobs";
+interface ApplicationScoreCardProps {
+=======
+import { toast } from "sonner",
+import { JobApplication } from "@/types/jobs",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface ApplicationScoreCardProps {
+  application: JobApplication,
+  onScoreUpdated?: (updatedApplication: JobApplication) => void
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  application: JobApplication
+  onScoreUpdated?: (updatedApplication: JobApplication,) => void
+
+}
+export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const [isScoring, setIsScoring] = useState(false);
+=======
+  const [isScoring, setIsScoring] = useState(false)
+  // Determine if application has been scored
+  const hasScore = typeof application.match_score === 'number'
+      let attempts = 0
+      const maxAttempts = 10
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  const [isScoring, setIsScoring] = useState(false),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  // Determine if application has been scored
+  const hasScore = typeof application.match_score === 'number',
+  
+  // Format the date when the application was scored
+  const scoredDate = application.scored_at 
+    ? new Date(application.scored_at).toLocaleDateString() 
+    : null,
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const hasScore = typeof application.match_score === 'number'
+      let attempts = 0
+      const maxAttempts = 10
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
@@ -47,9 +122,17 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
   // Trigger the scoring process
@@ -81,6 +164,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .eq("id", application.id)
           .single()
         if (error) {
+<<<<<<< HEAD
 
 interface ApplicationScoreCardProps {;
   application: JobApplication,;
@@ -171,6 +255,33 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
 
+=======
+<<<<<<< HEAD
+          setIsScoring(false)
+          toast.error("Failed to check scoring status")
+          return
+=======
+          setIsScoring(false),
+          toast.error("Failed to check scoring status"),
+          return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        }
+        if (data.scored_at) {
+<<<<<<< HEAD
+          setIsScoring(false)
+          toast.success("Resume scoring completed")
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication)
+=======
+          setIsScoring(false),
+          toast.success("Resume scoring completed"),
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),
+<<<<<<< HEAD
+          return;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }
 
         
@@ -179,7 +290,64 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
         } else {
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        }
+      },
+      
+      setTimeout(checkScore, 3000)
+      
+    } catch (error: any) {
+      setIsScoring(false),
+      toast.error(`Failed to score resume: ${error.message}`)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      ),;
+      if (error) throw error,;
+      toast.success("Resume scoring has been initiated"),;
+      // Poll for results every 3 seconds for up to 30 seconds;
+      let attempts = 0,;
+      const maxAttempts = 10,;
+      const checkScore = async () => {;
+        attempts++,;
+        const { data, error } = await supabase;
+          .from("job_applications");
+          .select("*");
+          .eq("id", application.id);
+          .single(),;
+        if (error) {;
+          setIsScoring(false),;
+          toast.error("Failed to check scoring status"),;
+          return;
+        }
+;
+        if (data.scored_at) {;
+          setIsScoring(false),;
+          toast.success("Resume scoring completed"),;
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),;
+          return;
+        }
+;
+        if (attempts < maxAttempts) {;
+          setTimeout(checkScore, 3000);
+        } else {;
+          setIsScoring(false),;
+          toast.info("Scoring is taking longer than expected. Check back later.");
+        }
+      },;
+      setTimeout(checkScore, 3000);
+    } catch (error: any) {;
+      setIsScoring(false);
+      toast.error(`Failed to score resume: ${error.message}`);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   },
 
@@ -270,14 +438,27 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+                      </div>
+<<<<<<< HEAD
+                    )}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       </div>;
 =======
 =======
                       </div>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     )}
                     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -458,14 +639,29 @@ if ( {) {
                         {application.match_breakdown.certifications_match.matching && (
                           <p > Matching certs: {application.match_breakdown.certifications_match.matching.join (", ")}</p>)}
                         {application.match_breakdown.certifications_match.missing && (
+<<<<<<< HEAD
 
 
+=======
+                          <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
+                        )}
+<<<<<<< HEAD
+                      </div>
+<<<<<<< HEAD
+                    )}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       </div>;
 =======
 =======
                       </div>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     )}
                     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -475,6 +671,7 @@ if ( {) {
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
+<<<<<<< HEAD
 =======
                       </div>;
                     )}
@@ -517,6 +714,21 @@ if ( {) {
               Analyze how well this resume matches your job requirements.;
             </p>;
 
+=======
+                    )}
+                  </div>
+                </details>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="text-center py-4">
+            <p className="text-muted-foreground mb-4">
+              Analyze how well this resume matches your job requirements.
+            </p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <Button
               onClick = {handleScore,}
               disabled = {isScoring,}
@@ -533,7 +745,11 @@ if ( {) {
             <Button 
               onClick={handleScore} 
               disabled={isScoring}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             <Button 
 
@@ -555,12 +771,30 @@ if ( {) {
             </Button>;
           </div>;
         )}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+      </CardContent>
+    </Card>;
+  );
+<<<<<<< HEAD
+};
+=======
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 
+=======
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                           <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}
                       </div>)}
@@ -600,4 +834,7 @@ if ( {) {
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

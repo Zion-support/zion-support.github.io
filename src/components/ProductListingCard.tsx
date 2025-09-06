@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -36,6 +37,42 @@ import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
+import { useRouter  } from 'next/router';
+=======
+import React, { useState } from 'react',
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
+import { useRouter } from 'next/router',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { ProductListing } from "@/types/listings",
+import { DollarSign } from 'lucide-react'
+<<<<<<< HEAD
+
+import { RatingStars } from '@/components/RatingStars'
+=======
+import React, { useState } from 'react'
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
+import { useRouter } from 'next/router'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { ProductListing } from '@/types/listings'
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from '@/components/RatingStars';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
+import type { AppDispatch } from '@/store'
+import { addItem } from '@/store/cartSlice'
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
+import Image from 'next/image'; // Import next/image
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import React, { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
@@ -57,8 +94,11 @@ interface ProductListingCardProps {
   onRequestQuote?: (id: string) => void;
   detailBasePath?: string;
 =======
+<<<<<<< HEAD
 import Image from 'next/image'; // Import next/image
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
 import React, { useState } from 'react',
@@ -68,7 +108,11 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -84,6 +128,13 @@ interface ProductListingCardProps {
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -93,6 +144,7 @@ const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
+<<<<<<< HEAD
 
   const handleViewListing = () =>: any {
     // Debug logging for development;
@@ -105,6 +157,81 @@ if ( {) {
       });
       log_debug ('[ProductCard] Listing ID:', { id: listing.id });
       log_debug ('[ProductCard] Listing Title:', { title: listing.title });
+=======
+<<<<<<< HEAD
+  detailBasePath = '/marketplace/listing'
+}: ProductListingCardProps) => {
+  const isGrid = view === 'grid',
+  const router = useRouter(),
+  const [loading, setLoading] = useState(false),
+  const [imageSrc, setImageSrc] = useState(
+    listing.images && listing.images.length > 0 && listing.images[0]
+    ? listing.images[0] 
+    : '/placeholder.svg'
+  ),
+  const [imageError, setImageError] = useState(false),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const stockStatus =
+    listing.stock === undefined
+      ? 'In stock'
+      : listing.stock <= 0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  detailBasePath = '/marketplace/listing',
+}: ProductListingCardProps) => {
+  const isGrid = view === 'grid'
+  const router = useRouter()
+  const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(
+    listing.images && listing.images.length > 0 && listing.images[0]
+      ? listing.images[0]
+      : '/placeholder.svg'
+  )
+  const [imageError, setImageError] = useState(false)
+  const stockStatus = null;
+    listing.stock === undefined
+      ? 'In stock'
+      : listing.stock <= 0
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        ? 'Out of stock'
+        : listing.stock <= 5
+          ? 'Low stock'
+          : 'In stock'
+<<<<<<< HEAD
+=======
+      ? 'Out of stock'
+      : listing.stock <= 5
+      ? 'Low stock'
+      : 'In stock',
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const stockVariant =
+    listing.stock === undefined
+      ? 'success'
+      : listing.stock <= 0
+<<<<<<< HEAD
+=======
+  const stockVariant = null;
+    listing.stock === undefined
+      ? 'success'
+      : listing.stock <= 0
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        ? 'destructive'
+        : listing.stock <= 5
+          ? 'warning'
+          : 'success'
+  const { formatPrice } = useCurrency()
+  const getPrice = () => {
+    if (listing.price === null) return 'Custom pricing'
+    return formatPrice(listing.price)
+  }
+  const handleImageError = () => {
+    if (!imageError) {
+      // Prevent infinite loops if placeholder also fails
+      setImageSrc('/placeholder.svg')
+      setImageError(true)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     // Validate listing ID exists before navigation;
     // Check condition
@@ -157,7 +284,82 @@ if ( {) {
   }
   const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
       onKeyDown={e => {
+<<<<<<< HEAD
 
+=======
+        if (e.key === 'Enter' |e.key === ' ') {
+          e.preventDefault()
+          handleViewListing()
+        }      }}
+    >
+      {/* Image */}
+      <div
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
+=======
+<<<<<<< HEAD
+=======
+  detailBasePath = '/marketplace/listing'
+}: ProductListingCardProps) => {
+  const isGrid = view === 'grid',
+  const router = useRouter(),
+  const [loading, setLoading] = useState(false),
+  const [imageSrc, setImageSrc] = useState(
+    listing.images && listing.images.length > 0 && listing.images[0]
+    ? listing.images[0] 
+    : '/placeholder.svg'
+  ),
+  const [imageError, setImageError] = useState(false),
+
+  const stockStatus =
+    listing.stock === undefined
+      ? 'In stock'
+      : listing.stock <= 0
+      ? 'Out of stock'
+      : listing.stock <= 5
+      ? 'Low stock'
+      : 'In stock',
+
+  const stockVariant =
+    listing.stock === undefined
+      ? 'success'
+      : listing.stock <= 0
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      ? 'destructive'
+      : listing.stock <= 5
+      ? 'warning'
+      : 'success',
+    
+  const { formatPrice } = useCurrency(),
+
+  const getPrice = () => {
+    if (listing.price === null) return "Custom pricing",
+    return formatPrice(listing.price)
+  },
+
+  const handleImageError = () => {
+    if (!imageError) { // Prevent infinite loops if placeholder also fails
+      setImageSrc('/placeholder.svg'),
+      setImageError(true)
+import React, { useState } from 'react',;
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
+import { useRouter } from 'next/router',;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { ProductListing } from "@/types/listings",;
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from "@/components/RatingStars",;
+import { FavoriteButton } from "@/components/FavoriteButton",;
+import { useDispatch } from 'react-redux',;
+import type { AppDispatch } from '@/store',;
+import { addItem } from '@/store/cartSlice',;
+import { toast } from '@/hooks/use-toast',;
+import { useCurrency } from '@/hooks/useCurrency',;
+import Image from 'next/image', // Import next/image;
+interface ProductListingCardProps {;
+  listing: ProductListing,;
+  view?: 'grid' | 'list',;
+  onRequestQuote?: (id: string) => void,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   detailBasePath?: string;
 const ProductListingCardComponent = ({;
   listing,;
@@ -277,21 +479,50 @@ const ProductListingCardComponent = ({;
         }      }}
     >;
       {/* Image */}
+<<<<<<< HEAD
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      <div;
+        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
+<<<<<<< HEAD
 
         onKeyDown={e => {;
           if (e && e.key === 'Enter' || e && e.key === ' ') {;
             e && e.preventDefault();
             handleViewListing();
           }  return ();
+=======
+<<<<<<< HEAD
+        onKeyDown={e => {
+<<<<<<< HEAD
+          if (e.key === 'Enter' |e.key === ' ') {
+            e.preventDefault()
+            handleViewListing()
+=======
+=======
+        onKeyDown={(e) => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            handleViewListing()
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }  return ()
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     <div
       data-testid= "equipment-link"'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
@@ -370,14 +601,38 @@ if ( {) {
 
 
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         onKeyDown={(e) => {
 
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
+<<<<<<< HEAD
 
 
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }
+        }}
+      >;
+        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
+          <Image;
+            src={imageSrc}
+            alt={listing.title}
+            fill={true}
+            style={{ objectFit: 'cover' }}
+            onError={handleImageError}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             priority={false} // Assuming these are not LCP images
             sizes={
               isGrid
@@ -397,9 +652,17 @@ if ( {) {
               variant={stockVariant as any}
               className="absolute top-2 left-2"
             >
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {stockStatus}
             </Badge>;
           )}
@@ -422,8 +685,16 @@ if ( {) {
 =======
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {listing.category}
             </Badge>
             {listing.rating && (
@@ -512,7 +783,14 @@ if ( {) {
           <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {listing.uspHeadline}
               </p>
@@ -533,9 +811,17 @@ if ( {) {
                   key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   {tag}
                 </span>;
               ))}
@@ -597,8 +883,16 @@ if ( {) {
 
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
@@ -621,7 +915,14 @@ if ( {) {
                 addToCart()
               }}
               disabled={loading}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               {loading ? (
@@ -648,9 +949,17 @@ if ( {) {
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 router.push('/checkout')
               }}
               disabled = {loading,}
@@ -837,6 +1146,7 @@ if ( {) {
 }) );';
 router.push ('/checkout');
 }disabled= {
+<<<<<<< HEAD
   loading;
 }> Buy Now </Button> {";
   onRequestQuote && (<Button size="sm" variant="outline" on_click={
@@ -850,12 +1160,46 @@ export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
                 Request Quote;
               </Button>) }
+=======
+  loading
+}> Buy Now </Button> {"
+  onRequestQuote && (<Button size="sm" variant="outline" onClick={
+  handleRequestQuote "
+}className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>)
+}</div> </div> </div> </div>)
+}
+'"
+export const ProductListingCard = React.memo(ProductListingCardComponent)
+ProductListingCard.displayName = 'ProductListingCard'
+                Request Quote
+              </Button>) }
+          </div>
+        </div>;
+      </div>;
+    </div>;) }
+export default React.memo(ProductListingCard)
+export default ProductListingCard
+export default ProductListingCard
+export default ProductListingCard
+export default ProductListingCard
+export default ProductListingCard
+export default ProductListingCard
+export default ProductListingCard
+'"`
+<<<<<<< HEAD
+export const ProductListingCard = React.memo(ProductListingCardComponent)
+ProductListingCard.displayName = 'ProductListingCard'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             
             {onRequestQuote && (
@@ -951,7 +1295,15 @@ ProductListingCard.display_name = 'ProductListingCard';
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

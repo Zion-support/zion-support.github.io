@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -254,13 +255,59 @@ export default function AILegalContractAnalyzerPage() {
 
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import Head from 'next/head';
+
+import {
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Star
+  Scale;
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Star,;
+  Scale,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+=======
+export default function AILegalContractAnalyzerPage() {
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/ai-legal-contract-analyzer');
+  );  if (!service) return null;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
   if (!service) return null,
@@ -306,6 +353,7 @@ export default function AILegalContractAnalyzerPage() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
 
 
@@ -313,17 +361,51 @@ export default function AILegalContractAnalyzerPage() {
 
 =======
 
+=======
+<<<<<<< HEAD
+        <div className="bg-amber-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Streamline Legal Work</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Accelerate your legal work with AI-powered contract analysis and document review tools.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/contact" className="bg-amber-600 text-white px-6 py-3 rounded-lg hover: bg-amber-700">
+              Get Started
+            </a>
+            <a href="/about" className="border border-amber-600 text-amber-600 px-6 py-3 rounded-lg hover:bg-amber-50">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </main>
+    </Layout>
+);
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       </div>
     </Layout>
   )
 }
+<<<<<<< HEAD
 
     </Layout>);
 ;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -5,7 +5,20 @@ import React from 'react';
 import Link from 'next/link';
 
 import {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  Brain
+  Mail
+  Phone
+  MapPin
+  Globe
+  Github
+  Linkedin
+  Twitter;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Brain,
   Mail,
   Phone,
@@ -14,8 +27,12 @@ import {
   Github,
   Linkedin,;
   Twitter,;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 =======
 import React from 'react';
@@ -103,6 +120,7 @@ const EnhancedFooter: React.FC = () => {;
       ];
     }
   ];
+<<<<<<< HEAD
 
   const socialLinks = [;
     { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
@@ -123,6 +141,36 @@ const EnhancedFooter: React.FC = () => {;
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  const socialLinks = [
+<<<<<<< HEAD
+<<<<<<< HEAD
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+=======
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    {
+      name: 'LinkedIn'
+      href: 'https://linkedin.com/company/ziontechgroup'
+      icon: Linkedin
+    }
+    {
+<<<<<<< HEAD
+      name: 'Twitter'
+      href: 'https://twitter.com/ziontechgroup'
+      icon: Twitter
+    }
+=======
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: Twitter,
+    },
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <footer className='bg-slate-950 border-t border-white/10'>;
       <div className='max-w-7xl mx-auto px-6 py-16'>;
@@ -330,10 +378,18 @@ const EnhancedFooter: React.FC = () => {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
@@ -357,12 +413,21 @@ const EnhancedFooter: React.FC = () => {
 
 };export default EnhancedFooter;  );
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               ))}
             </div>
           </div>
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
 
                     </Link>;
                   </li>))}
@@ -411,6 +476,17 @@ const EnhancedFooter: React.FC = () => {
 }export default EnhancedFooter);
 }
 ;
+=======
+  );
+};export default EnhancedFooter;  )
+<<<<<<< HEAD
+}
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default EnhancedFooter;
 import React from './react';
   FileText,
@@ -797,12 +873,20 @@ company updates.;
         className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50
         aria-label="Scroll to top">";
         <ArrowUp className="w-5 h-5"  />;
+<<<<<<< HEAD
+=======
+      </button>
+    </footer>
+  )}"'
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
       </button>,;
     </footer>,;
   )}"';
 
 =======
+<<<<<<< HEAD
         <div className="border - t border - gray - 800 pt - 8">";
           <div className="flex flex - col md: flex - row justify - between items - center">";
             <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">,
@@ -830,6 +914,10 @@ company updates.;
   )}"';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+export default EnhancedFooter;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
   );
 };export default EnhancedFooter;  )
 
@@ -837,4 +925,7 @@ company updates.;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -22,11 +22,18 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from \'react\' export default OpenAppRedirect\';
+<<<<<<< HEAD
 
 
 
 import _React from 'react' export default OpenAppRedirect';
 
+=======
+<<<<<<< HEAD:src.pages.disabled/OpenAppRedirect.jsx
+<<<<<<< HEAD
+import _React from 'react' export default OpenAppRedirect';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 import _React from 'react' export default OpenAppRedirect';

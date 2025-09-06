@@ -7,10 +7,19 @@ import {useRouter} from 'next/router';
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
+<<<<<<< HEAD
 
 export default function GrantDetailPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+export default function GrantDetailPage() {
+
+=======
+export default function GrantDetailPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
@@ -25,9 +34,31 @@ export default function GrantDetailPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!id) return;
     setLoading(true);
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    fetch(`/api/grants/${id}`)
+      .then(r => r.json())
+      .then(d => setItem(d.record))
+      .finally(() => setLoading(false));  }, [id]);
+  const addUpdate = async () => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+=======
+    if (!id || !updateContent.trim()) return;
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+=======
+    if (!id || !updateContent.trim()) return;
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;
@@ -282,14 +313,21 @@ if (
         </aside>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 
 
+=======
+);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     </EnhancedLayout>
   );
 
 
 }
 =======
+<<<<<<< HEAD
               {(!item && item.milestones || item && item.milestones.length === 0) && (;
                 <div className='text-sm text-gray-600'>;
                   Milestones will appear here.;
@@ -473,3 +511,12 @@ if (
     </EnhancedLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}
+=======
+    </EnhancedLayout>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

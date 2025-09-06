@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
+=======
+<<<<<<< HEAD
+const fs = require('fs');
+<<<<<<< HEAD
+console.log('🔧 Fixing site loading issues...');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Fix Next.js configuration;
 const next_config = `/** @type {import ('next').NextConfig} */;
 const next_config = {
@@ -10,15 +17,37 @@ const next_config = {
   page_extensions: ['tsxtsjsxjs'],
   images: {
 =======
+<<<<<<< HEAD
 
 =======
 
+=======
+=======
+<<<<<<< HEAD
+const fs = require('fs'),;
+=======
+const fs = require('fs');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 console.log('🔧 Fixing site loading issues...'),;
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  reactStrictMode: true;
+=======
+<<<<<<< HEAD
+  reactStrictMode: true,;
+=======
+  reactStrictMode: true;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   eslint: { ignoreDuringBuilds: true },;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
@@ -37,8 +66,20 @@ console.log ('✅ Next.js configuration fixed'),
 
 const emptyFiles = [;
   'components/BundleAnalyzer.jscomponents/PerformanceMonitor.jscomponents/SEO.js';
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+];
+=======
+<<<<<<< HEAD
+],;
+=======
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 emptyFiles.forEach(file => {;
   if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
     fs.unlinkSync(file),;

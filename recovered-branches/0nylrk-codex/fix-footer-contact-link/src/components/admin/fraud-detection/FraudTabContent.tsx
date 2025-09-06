@@ -1,16 +1,42 @@
 
+<<<<<<< HEAD
 import React from './react';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
 
 =======
+<<<<<<< HEAD
+import React from "react";
+<<<<<<< HEAD
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface FraudTabContentProps {
+  tabValue: string
+}
+export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
+  switch(tabValue) {
+    case 'pending':
+      return (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -79,11 +105,21 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       )
     default:
       return null
+<<<<<<< HEAD
 
 
 =======
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
@@ -127,11 +163,18 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 
     default:;
       return null;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 

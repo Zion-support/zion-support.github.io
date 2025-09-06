@@ -1,7 +1,34 @@
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+import React from 'react';
+import { Milestone  } from '@/hooks/useMilestones';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { CreditCard } from 'lucide-react';
+interface PaymentSummaryProps {
+  milestones: Milestone[];
+  paymentTerms: string | null
+<<<<<<< HEAD
+}
+
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
+  milestones
+  paymentTerms
+}) => {
+  const totalPayment = milestones
+    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
+    .toFixed(2);
+  const paidAmount = milestones
+    .filter((m) => m.status === "paid")
+    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
+    .toFixed(2);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
@@ -10,9 +37,16 @@ import { CreditCard } from 'lucide-react',;
 interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
@@ -53,6 +87,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
           </div>
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
+<<<<<<< HEAD
 
 import {Milestone} from '@/hooks/useMilestones';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
@@ -60,6 +95,23 @@ import {CreditCard} from 'lucide-react';
 interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <p className="font-medium">${paidAmount}</p>
+=======
+            <p className="font-medium">
+              ${paidAmount}
+<<<<<<< HEAD
+            </p>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+<<<<<<< HEAD
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {;
@@ -102,18 +154,32 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;
             <p className="font-medium">;
               ${paidAmount}
+<<<<<<< HEAD
+=======
+=======
+  )
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </p>;
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 =======
 
             <p className="font-medium">
               ${paidAmount}
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

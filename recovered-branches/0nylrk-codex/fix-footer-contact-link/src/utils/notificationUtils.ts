@@ -1,17 +1,32 @@
 
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 
 =======
 import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 /**
@@ -103,13 +118,22 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data,;
       await supabase.functions.invoke('send-notification-email', {;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+<<<<<<< HEAD
 
       success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
@@ -117,6 +141,16 @@ export async function createNotification({;
       adminNotification
 =======
 
+=======
+<<<<<<< HEAD
+  } catch (error) {
+    console.error('Error creating notification:', error);
+<<<<<<< HEAD
+    return { success: false, error }
+  }
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   } catch (error) {;
     console.error('Error creating notification:', error),;
 =======
@@ -135,8 +169,180 @@ export async function createNotification({;
  */
 
 export async function createHireRequestNotifications({
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+  talentId;
+  adminId;
+  requesterName;
+  requesterEmail
+  projectType;
+  projectSummary;
+  hireRequestId
+}: {
+  talentId: string;
+  adminId?: string;
+  requesterName: string;
+  requesterEmail: string;
+  projectType?: string;
+  projectSummary?: string
+  hireRequestId: string
+}) {
+  const projectInfo = projectType
+    ? `${projectType} project`
+    : "project";
+  const summaryText = projectSummary
+    ? `: "${projectSummary}"`
+    : "";
+  // Create notification for talent
+  const talentNotification = await createNotification({
+    userId: talentId
+    title: `New Hire Request from ${requesterName}`;
+    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`;
+    type: 'hire_request';
+    relatedId: hireRequestId;
+    sendEmail: true;
+    actionUrl: '/dashboard'
+    actionText: 'View Request'
+  });
+  // Create notification for admin if admin ID is provided
+  if (adminId) {
+    const adminNotification = await createNotification({
+      userId: adminId;
+      title: `New Hire Request for Talent`
+      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`;
+      type: 'hire_request';
+      relatedId: hireRequestId;
+      sendEmail: true;
+      actionUrl: '/admin/hire-requests'
+      actionText: 'Review Request'
+    });
+    return {
+      success: talentNotification.success && adminNotification.success;
+      talentNotification
+      adminNotification
+=======
+  talentId,
+  adminId,
+  requesterName,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  requesterEmail, 
+  projectType,
+  projectSummary,
+  hireRequestId
+}: {
+  talentId: string,
+  adminId?: string,
+  requesterName: string,
+  requesterEmail: string,
+  projectType?: string,
+  projectSummary?: string,
+  hireRequestId: string
+}) {
+  const projectInfo = projectType 
+    ? `${projectType} project` 
+    : "project",
+  
+  const summaryText = projectSummary 
+    ? `: "${projectSummary}"` 
+    : "",
+  
+  // Create notification for talent
+  const talentNotification = await createNotification({
+    userId: talentId,
+    title: `New Hire Request from ${requesterName}`,
+    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,
+    type: 'hire_request',
+    relatedId: hireRequestId,
+    sendEmail: true,
+    actionUrl: '/dashboard',
+    actionText: 'View Request'
+  }),
+  
+  // Create notification for admin if admin ID is provided
+  if (adminId) {
+    const adminNotification = await createNotification({
+      userId: adminId,
+      title: `New Hire Request for Talent`,
+      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,
+      type: 'hire_request',
+      relatedId: hireRequestId,
+      sendEmail: true,
+      actionUrl: '/admin/hire-requests',
+      actionText: 'Review Request'
+    }),
+    
+    return {
+      success: talentNotification.success && adminNotification.success,
+      talentNotification,
+      adminNotification
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+/**;
+ * Creates a hire request notification for admin and talent;
+ */;
+export async function createHireRequestNotifications({;
+  talentId,;
+  adminId,;
+  requesterName,;
+  requesterEmail,;
+  projectType,;
+  projectSummary,;
+  hireRequestId;
+}: {;
+  talentId: string,;
+  adminId?: string,;
+  requesterName: string,;
+  requesterEmail: string,;
+  projectType?: string,;
+  projectSummary?: string,;
+  hireRequestId: string;
+}) {;
+  const projectInfo = projectType;
+    ? `${projectType} project`;
+    : "project",;
+  const summaryText = projectSummary;
+    ? `: "${projectSummary}"`;
+    : "",;
+  // Create notification for talent;
+  const talentNotification = await createNotification({;
+    userId: talentId,;
+    title: `New Hire Request from ${requesterName}`,;
+    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,;
+    type: 'hire_request',;
+    relatedId: hireRequestId,;
+    sendEmail: true,;
+    actionUrl: '/dashboard',;
+    actionText: 'View Request';
+  }),;
+  // Create notification for admin if admin ID is provided;
+  if (adminId) {;
+    const adminNotification = await createNotification({;
+      userId: adminId,;
+      title: `New Hire Request for Talent`,;
+      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,;
+      type: 'hire_request',;
+      relatedId: hireRequestId,;
+      sendEmail: true,;
+      actionUrl: '/admin/hire-requests',;
+      actionText: 'Review Request';
+    }),;
+    return {;
+      success: talentNotification.success && adminNotification.success,;
+      talentNotification,;
+      adminNotification;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
   return {
@@ -146,11 +352,19 @@ export async function createHireRequestNotifications({
     talentNotification
   }
 }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 /**
  * Creates an onboarding notification for a user
  */
@@ -396,9 +610,18 @@ function createTestNotification() {
     'system': { url: '/dashboard', text: 'Learn More' }
   }
 
+<<<<<<< HEAD
 
 
 
+=======
+    actionText: actions[randomType].text
+  })
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
   return create_notification ({
@@ -471,9 +694,16 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

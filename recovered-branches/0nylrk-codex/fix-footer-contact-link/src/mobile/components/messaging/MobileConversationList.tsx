@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -10,9 +16,26 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 interface Conversation {;
   id: string,;
   name: string,;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { Card } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Search } from "lucide-react",
+<<<<<<< HEAD
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+interface Conversation {
+
+  id: string
+  name: string
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   avatar?: string;
   lastMessage: string,;
   timestamp: string,;
@@ -26,7 +49,17 @@ interface MobileConversationListProps {;
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
 }
+<<<<<<< HEAD
 
+=======
+=======
+import { Input } from "@/components/ui/input",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface Conversation {
   id: string,
   name: string,
@@ -35,18 +68,60 @@ interface Conversation {
   timestamp: string,
   unreadCount: number,
   isTyping?: boolean
+<<<<<<< HEAD
 
 
 
 export function MobileConversationList({
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export function MobileConversationList(): any ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   conversations;
   activeConversation;
+<<<<<<< HEAD
   onSelectConversation;
 }: MobileConversationListProps) {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",;
+import { Card } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { cn } from "@/lib/utils",;
+interface Conversation {;
+  id: string,;
+  name: string,;
+  avatar?: string,;
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
+}
+;
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+  activeConversation?: string,;
+  onSelectConversation: (id: string) => void;
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export function MobileConversationList({
+  conversations,
+  activeConversation,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  onSelectConversation
+}: MobileConversationListProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 
     <div className="space-y-4">;
@@ -100,11 +175,19 @@ export function MobileConversationList(): any ({;
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
+<<<<<<< HEAD
 
 
                     {conversation.isTyping 
 
 
+=======
+<<<<<<< HEAD
+                    {conversation.isTyping
+=======
+                    {conversation.isTyping 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>

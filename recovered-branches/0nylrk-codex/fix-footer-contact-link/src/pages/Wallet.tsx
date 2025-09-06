@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useWallet  } from '@/hooks/useWallet';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { BadgeDollarSign } from 'lucide-react';
+export default function WalletPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -8,9 +18,13 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/compo
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {BadgeDollarSign} from 'lucide-react';
 export default function WalletPage() {;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { wallet, transactions, loading } = useWallet();
   return (
     <div className="container max-w-4xl py-10">;

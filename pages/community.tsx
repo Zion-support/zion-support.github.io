@@ -34,6 +34,7 @@
               or email{' '}
               <a
                 className='text-purple-400'
+<<<<<<< HEAD
                 href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
                 kleber@ziontechgroup && ziontechgroup.com;
 =======
@@ -148,6 +149,69 @@ function CommunityPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+                href='mailto: kleber@ziontechgroup.com'
+              >
+                kleber@ziontechgroup.com
+              </a>
+              .
+            </p>
+          </div>
+          <div className='p-6 rounded-2xl bg-white/5 border border-white/10'>
+            <h2 className='text-white text-xl font-semibold mb-2'>Follow Us</h2>
+            <ul className='text-slate-300 space-y-1'>
+              <li>
+                <a
+                  className='text-cyan-400'
+                  href='https://linkedin.com/company/ziontechgroup'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  className='text-cyan-400'
+                  href='https://github.com/Zion-Holdings'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  className='text-cyan-400'
+                  href='https://instagram.com/ziontechgroup'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  className='text-cyan-400'
+                  href='https://youtube.com/@ziontechgroup'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  YouTube
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>;
+  );
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -182,11 +246,19 @@ export default function CommunityPage() {
 
     </div>);
 ;
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

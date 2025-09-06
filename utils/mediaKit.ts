@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   };
@@ -11,6 +12,50 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
+=======
+<<<<<<< HEAD
+export type MediaBundle = 'general' | 'web3' | 'institutional';
+export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
+export interface MediaGenerationResponse {;
+  ok: boolean;
+  text?: string;
+  error?: string
+}
+export async function generateMediaContent(request: MediaGenerationRequest): Promise<MediaGenerationResponse> {
+  // Mock implementation - in production, this would call OpenAI or other AI service
+  return {
+<<<<<<< HEAD
+    ok: true
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
+  }
+=======
+    ok: true,
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
+  const base: MediaAsset[] = [
+    {
+      path: ''
+      filename: 'legal/terms-of-use.md'
+      type: 'text'
+      content: `# Terms of Use\n\nBy using Zion products, you agree to these terms. Replace with counsel-approved language.`
+    }
+    {
+      path: ''
+      filename: 'legal/privacy-policy.md'
+      type: 'text'
+      content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
+    }
+    {
+<<<<<<< HEAD
+      path: ''
+      filename: 'legal/jurisdictional-disclosures.md'
+      type: 'text'
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 export async function generateMediaContent (request: MediaGenerationRequest): Promise < MediaGenerationResponse> {
   // Mock implementation - in production, this would call OpenAI or other AI service;
@@ -35,7 +80,11 @@ export function buildLegalDocs (kind: MediaBundle): MediaAsset[] {
 
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
     },;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ];
   const web3Extras: MediaAsset[] = [
 
@@ -69,7 +118,13 @@ export function buildLegalDocs (kind: MediaBundle): MediaAsset[] {
 
 
 export function buildPressRelease(
+<<<<<<< HEAD
   type: PressReleaseType
+=======
+<<<<<<< HEAD
+  type: PressReleaseType
+  params: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
   // Check condition
@@ -88,7 +143,11 @@ export function buildPressRelease(
 
   type: PressReleaseType,
   params: {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     companyName: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string;
@@ -127,11 +186,24 @@ export function buildTimeline(startDate: Date) {
     }
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ];
+<<<<<<< HEAD
+=======
+function titleCase(s: string) {
+  return s.replace(
+    /\w\S*/g
+    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+  );}
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 function titleCase(s: string) {
 
 =======
+<<<<<<< HEAD
   return s && s.replace(
     /\w\S*/g,
     w => w && w.charAt(0).toUpperCase() + w && w.slice(1).toLowerCase()
@@ -620,3 +692,7 @@ function title_case() {
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

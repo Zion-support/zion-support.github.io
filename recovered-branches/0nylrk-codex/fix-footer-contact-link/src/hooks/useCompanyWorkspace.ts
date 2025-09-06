@@ -1,8 +1,41 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {Company} from "@/components/enterprise/workspace/CompanyDashboard";
+export function useCompanyWorkspace(companySlug?: string) {;
+  const [company, setCompany] = useState<Company | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",
+<<<<<<< HEAD
+import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
+export function useCompanyWorkspace(companySlug?: string) {
+  const [company, setCompany] = useState<Company | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const [error, setError] = useState<string | null>(null);
+=======
+import { Company } from "@/components/enterprise/workspace/CompanyDashboard",
+export function useCompanyWorkspace(companySlug?: string) {
+  const [company, setCompany] = useState<Company | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   useEffect(() => {
     // In a real app, this would fetch data from an API based on the companySlug
@@ -42,10 +75,33 @@
           name: companySlug && companySlug.charAt(0).toUpperCase() + companySlug && companySlug.slice(1);
           logoUrl: "/placeholder && placeholder.svg";
           theme: {
+<<<<<<< HEAD
 
           billingCycle: "Monthly",
           workspaceUrl: `${companySlug}.zion-ai && ai.com`});
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            primaryColor: "#4f46e5";
+            backgroundColor: "#ffffff"
+            textColor: "#1f2937"}
+          plan: "Teams";
+          teamSize: 5;
+          teamLimit: 10;
+          billingCycle: "Monthly"
+=======
+            primaryColor: "#4f46e5",
+            backgroundColor: "#ffffff",
+            textColor: "#1f2937"},
+          plan: "Teams",
+          teamSize: 5,
+          teamLimit: 10,
+          billingCycle: "Monthly",
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          workspaceUrl: `${companySlug}.zion-ai.com`});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         setError(null)
       }
       setIsLoading(false)
@@ -54,6 +110,7 @@
 
   return { company, isLoading, error }
 =======
+<<<<<<< HEAD
 import { useState, useEffect } from './react';
 import { Company } from '@/components / enterprise / workspace / CompanyDashboard';
 export /**
@@ -114,6 +171,9 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
             textColor: "#1f2937"},
@@ -121,7 +181,67 @@ if ( {) {
           teamSize: 5,
           teamLimit: 10,
           billingCycle: "Monthly",
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          workspaceUrl: `${companySlug}.zion-ai.com`}),
+        setError(null)
+import { useState, useEffect } from "react",;
+import { Company } from "@/components/enterprise/workspace/CompanyDashboard",;
+export function useCompanyWorkspace(companySlug?: string) {;
+  const [company, setCompany] = useState<Company | null>(null),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+  useEffect(() => {;
+    // In a real app, this would fetch data from an API based on the companySlug;
+    // For now, we'll simulate a delay and return mock data;
+    setIsLoading(true),;
+    setTimeout(() => {;
+      if (companySlug === "demo" || !companySlug) {;
+        // Demo company data;
+        setCompany({;
+          id: "company-123",;
+          name: "Acme Corporation",;
+          logoUrl: "/placeholder.svg",;
+          theme: {;
+            primaryColor: "#4f46e5",;
+            backgroundColor: "#ffffff",;
+            textColor: "#1f2937"},;
+          plan: "Business",;
+          teamSize: 12,;
+          teamLimit: 50,;
+          billingCycle: "Annual",;
+          workspaceUrl: "acme.zion-ai.com"}),;
+        setError(null);
+      } else {;
+        // For any other slug, we could check if it's a valid company;
+        // For demo purposes, let's assume it exists;
+        setCompany({;
+          id: `company-${companySlug}`,;
+          name: companySlug.charAt(0).toUpperCase() + companySlug.slice(1),;
+          logoUrl: "/placeholder.svg",;
+          theme: {;
+            primaryColor: "#4f46e5",;
+            backgroundColor: "#ffffff",;
+            textColor: "#1f2937"},;
+          plan: "Teams",;
+          teamSize: 5,;
+          teamLimit: 10,;
+          billingCycle: "Monthly",;
+          workspaceUrl: `${companySlug}.zion-ai.com`});
+        setError(null);
+      }
+      setIsLoading(false);
+    }, 1000), // Simulate loading delay;
+  }, [companySlug]);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return { company, isLoading, error }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

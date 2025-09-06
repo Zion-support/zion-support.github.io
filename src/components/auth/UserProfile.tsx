@@ -176,7 +176,16 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     );
   }
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (loading) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return (
       <Card className='w-full max-w-sm'>;
         <CardHeader>;
@@ -196,8 +205,42 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
+<<<<<<< HEAD
 
 
+=======
+    <Card className="w-full max-w-sm">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <User className="h-5 w-5" />
+          User Profile
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium">Email:</span>
+            <span className="text-sm">{user.email}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium">Status:</span>
+            <Badge variant={user.email_confirmed_at ? "default" : "secondary"}>
+              {user.email_confirmed_at ? "Verified" : "Unverified"}
+            </Badge>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium">Joined:</span>
+            <span className="text-sm">
+              {new Date(user.created_at).toLocaleDateString()}
+            </span>
+          </div>
+        </div>
+<<<<<<< HEAD
+        <Button onClick={handleSignOut} variant='outline' className='w-full'>
+          <LogOut className='h-4 w-4 mr-2' />
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           Sign Out
         </Button>;
       </CardContent>;
@@ -205,7 +248,11 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
   );
 }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
@@ -216,6 +263,7 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
         </Button>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
     <Card className='w-full max-w-sm'>;
       <CardHeader>;
@@ -253,9 +301,15 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
   );
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
   )
 } 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -313,3 +367,11 @@ if ( {) {
       </CardContent>;
     </Card>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  )
+} 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

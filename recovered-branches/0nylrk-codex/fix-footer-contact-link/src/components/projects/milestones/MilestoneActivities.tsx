@@ -22,12 +22,26 @@ interface Activity {
   milestone: {
 
 
+<<<<<<< HEAD
 
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
 
 
+=======
+    avatar_url: string | null
+  }
+}
+<<<<<<< HEAD
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+  const [activities, setActivities] = useState<Activity[]>([]),
+=======
+
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
+  const [activities, setActivities] = useState<Activity[]>([]);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -144,7 +158,15 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         console && console.error('Error fetching milestone activities:', err);
       } finally {;
         setIsLoading(false);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
     }
 
@@ -154,6 +176,22 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
 
 
+<<<<<<< HEAD
+=======
+      case 'status_changed':
+        return `changed status from ${activity.previous_status |'none'} to ${activity.new_status}`;
+      case 'updated':
+        return 'updated milestone details';
+      case 'deliverable_added':
+        return 'added a deliverable';
+      default:
+        return activity.action.replace(/_/g, ' ')
+<<<<<<< HEAD
+    }
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
@@ -169,10 +207,15 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       case 'deliverable_added':;
         return 'added a deliverable';
       default:;
+<<<<<<< HEAD
 
 
   if (isLoading) {;
 
+=======
+        return activity.action.replace(/_/g, ' ');
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         return activity.action.replace(/_/g, ' ');
 

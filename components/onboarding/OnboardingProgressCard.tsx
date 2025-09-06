@@ -33,6 +33,7 @@ export type OnboardingStep = {;
   id: string;
   label: string;
   completed: boolean;
+<<<<<<< HEAD
 
 
 };
@@ -40,28 +41,79 @@ export type OnboardingStep = {;
 export type OnboardingProgressCardProps = {;
 
 
+=======
+  ctaLabel?: string;
+  ctaHref?: string;
+<<<<<<< HEAD
+}
+export type OnboardingProgressCardProps = {
+=======
+};
+
+export type OnboardingProgressCardProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   title: string;
   steps: OnboardingStep[];
   highlightColorClass?: string;}
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
+  ctaHref?: string
+}
+export type OnboardingProgressCardProps = {
+  title: string
+  steps: OnboardingStep[]
+  highlightColorClass?: string
+}
+=======
+<<<<<<< HEAD
+  return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
+  ctaHref?: string
+};
+=======
+  return Math.round((completedCount / steps.length) * 100);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+export default function OnboardingProgressCard({
+<<<<<<< HEAD
+  title
+  steps
+  highlightColorClass = 'from-neon-green to-neon-blue'
+}: OnboardingProgressCardProps) {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   title,
   steps,
   highlightColorClass = 'from-neon-green to-neon-blue',
 }: OnboardingProgressCardProps) {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
   const firstIncomplete = steps.find(
@@ -210,6 +262,7 @@ function OnboardingProgressCard() {
           <PartyPopper size={18} />
           <span className="text-sm">All steps completed — great job!</span>
         </div>
+<<<<<<< HEAD
 =======
         />;
       </div>;
@@ -234,6 +287,23 @@ function OnboardingProgressCard() {
             <div className="flex items-center gap-2">
               {step.completed ? (
                 <CheckCircle2 className="text-green-600 dark:text-green-400" size={18} />
+=======
+      ) : null}
+<<<<<<< HEAD
+      {/* Checklist */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <ul className='mt-4 space-y-2'>
+        {steps.map(step => (
+          <li key={step.id} className='flex items-center justify-between'>
+            <div className='flex items-center gap-2'>
+                <CheckCircle2
+                  className='text-green-600 dark:text-green-400'
+                  size={18}
+                />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               ) : (
                 <Circle className="text-gray-400" size={18} />
               )}
@@ -244,8 +314,18 @@ function OnboardingProgressCard() {
                 <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
 =======
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+      {/* Checklist */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   {step.ctaLabel}
                 </a>
               </Link>
@@ -260,17 +340,32 @@ function OnboardingProgressCard() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Primary CTA for next step */}
 
 
       ) : null}
     </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 
 }
@@ -280,6 +375,7 @@ function OnboardingProgressCard() {
 
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
         />;
@@ -328,3 +424,7 @@ function OnboardingProgressCard() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

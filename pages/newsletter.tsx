@@ -55,6 +55,7 @@ import {
   Star,
   TrendingUp,
   Award,
+<<<<<<< HEAD
 
 import {;
   ArrowRight,;
@@ -73,6 +74,14 @@ import {;
   Award,;
   Clock,;
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Clock,
+=======
+  Clock,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "lucide-react";
 =======
   Clock
@@ -239,12 +248,23 @@ export default function NewsletterPage() {
   }
 ];
 
+<<<<<<< HEAD
 
 
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
 
 
+=======
+<<<<<<< HEAD
+export default function NewsletterPage() {
+  const [email, setEmail] = useState('');
+>>>>>>> origin/automation-improvements-final
+=======
+export default function NewsletterPage() {;
+  const [email, setEmail] = useState("");
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
@@ -355,6 +375,26 @@ export default function NewsletterPage() {;
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl font-bold mb-6">
+                Stay Ahead with Our Newsletter
+              </h1>
+              <p className="text-xl mb-8 text-blue-100">
+<<<<<<< HEAD
+                Get exclusive insights, industry trends, and early access to new
+                features delivered directly to your inbox.
+              </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                Get exclusive insights, industry trends, and early access to new
+                features delivered directly to your inbox.
+              </p>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
@@ -368,7 +408,10 @@ export default function NewsletterPage() {;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -883,6 +926,26 @@ function NewsletterPage() {
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold mb-6">
+                Ready to Join Our Community?
+              </h2>
+              <p className="text-xl mb-8 text-green-100">
+<<<<<<< HEAD
+                Subscribe now and start receiving valuable insights delivered to
+                your inbox every week.
+              </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                Subscribe now and start receiving valuable insights delivered to
+                your inbox every week.
+              </p>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
@@ -896,7 +959,10 @@ function NewsletterPage() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">

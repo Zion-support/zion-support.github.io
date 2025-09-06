@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Logo  } from '@/components/header/Logo';
@@ -36,8 +43,12 @@ import { slugify } from '@/lib/slugify'
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation'
 import { MobileMenu } from '@/components/header/MobileMenu'
 import { MobileBottomNav } from '@/components/header/MobileBottomNav'
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Menu, X } from 'lucide-react'
 import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
@@ -86,13 +97,25 @@ function PrimaryNav() {
   } catch {
 
     // context not available
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   };
 ;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -170,6 +193,11 @@ export function PrimaryNav() {;
             />          </div>;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -191,9 +219,17 @@ export function PrimaryNav() {;
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
           
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Actions container with responsive layout */}
           <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;
             {/* Search form with clamped width */}
@@ -395,8 +431,16 @@ if ( {) {
               <CartDrawer />
             </div>
             
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
@@ -437,9 +481,17 @@ if ( {) {
                       setLoginOpen(true);
                     }}
                   >;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     {t('auth.login')}
                   </Link>
 =======
@@ -469,8 +521,16 @@ if ( {) {
           {/* Tablet view (md to lg) - simplified controls */}
 
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <ModeToggle />
             <LanguageSelector />
             {!isLoggedIn && (
@@ -495,9 +555,17 @@ if ( {) {
                   setLoginOpen(true);
                 }}
               >;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {t('auth.login')}
               </Link>
             )}
@@ -570,8 +638,16 @@ if ( {) {
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
           >
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
@@ -742,12 +818,20 @@ setLoginOpen (true)
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   unreadCount
 =======
 
   unreadCount 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }/>
 }<LoginModal isOpen= {
   loginOpen
@@ -764,6 +848,7 @@ setLoginOpen (true)
               exit = {
   { opacity: 0
   height: 0
+<<<<<<< HEAD
 =======
           <button;
             className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0';
@@ -774,6 +859,82 @@ setLoginOpen (true)
               <X className='h - 6 w - 6' />) : (
               <Menu className='h - 6 w - 6' />)}
           </button>;
+=======
+}}
+              transition={{ duration: 0.3 }}"
+              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">"
+              <div className="px-4 py-6 space-y-4">
+                {services.map((category, index) => (
+                  <div key={index}>"
+                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">
+                      {category.category}
+                    </h3>"
+                    <div className="space-y-2 ml-4">
+                      {category.items.map((service: unknown, serviceIndex: unknown
+                        <Link
+                          key={serviceIndex}
+                          to={service.path}"
+                          className="block text-gray-300 hover:text-white transition-colors duration-200"
+                          onClick={( setIsOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                <div className="pt-4 border-t border-white/10 space-y-2">
+                  <Link                    to="/solutions"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={: unknown setIsOpen(false)}
+                  >
+                    Solutions
+                  </Link>
+                  <Link                    to="/about"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={: unknown setIsOpen(false)}
+                  >
+                    About
+                  </Link>
+                  <Link                    to="/blog"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={: unknown setIsOpen(false)}
+                  >
+                    Blog
+                  </Link>
+                  <Link                    to="/contact"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={: unknown setIsOpen(false)}
+                  >
+                    Contact
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+    </header>
+  )}
+'"`
+}
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu
+              unreadCount={unreadCount}
+              onClose={() => setMobileMenuOpen(false)}
+              openLoginModal={(returnToPath) => setLoginOpen(true)}
+            />;
+          </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </div>;
       </header>;
       {mobileMenuOpen && (
@@ -793,6 +954,7 @@ setLoginOpen (true)
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
 }
+<<<<<<< HEAD
 return (<> <header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > <div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" > <Logo />;
 }set_query ('');
 //Track analytics event;
@@ -918,3 +1080,11 @@ setLoginOpen (true);
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -7,7 +7,21 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 
 import {Button} from '../components/ui/Button';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
+export default function IncidentAutomationSuitePage() {
+
+=======
+<<<<<<< HEAD:pages-disabled/biotech-ai.tsx
+export default function IncidentAutomationSuitePage() {;
+=======
+export default function IncidentAutomationSuitePage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
   if (!service) return null;
 
@@ -55,8 +69,19 @@ import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-se
     </UltraFuturisticBackground>
   )
 
+<<<<<<< HEAD
 =======
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> main:pages-disabled/biotech-ai.tsx
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
+=======
+<<<<<<< HEAD:pages-disabled/biotech-ai.tsx
+;
+=======
+>>>>>>> main:pages-disabled/biotech-ai.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

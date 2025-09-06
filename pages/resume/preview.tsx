@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   }, [selectedVersionId, initialData, versions]);
@@ -13,6 +14,54 @@
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+> <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) )
+}</select> </>)
+=======
+> <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
+}</select> </>) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}</div> </div> <PdfExportButton targetRef= {
+  targetRef
+}fileName= {
+  `resume-$ {
+  activeData.name.replace (/\s+/g, '-') .toLowerCase ()
+}.pdf`
+}/> </div> </div>)
+}if (!user) {
+  return {
+  redirect: {
+}//Placeholder: fetch resume data for the logged-in user and versions if any const initialData: ResumeData = {
+  name: 'Your Name', contact: {
+  email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com'
+}
+export default function ResumePreviewPage({
+<<<<<<< HEAD
+  initialData
+  versions = []
+}: ResumePreviewPageProps) {
+=======
+  initialData,
+  versions = [],
+}: ResumePreviewPageProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [selectedVersionId, setSelectedVersionId] = useState<string>(
+    versions[0]?.id |'current'
+  );  const targetRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
+  const activeData = useMemo(() => {
+    if (selectedVersionId === 'current') return initialData;
+    const found = versions.find(v => v.id === selectedVersionId);
+    return found?.data |initialData;
+  }, [selectedVersionId, initialData, versions]);
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             onChange={e => setTheme(e && e.target.value as 'light' | 'dark')}
             className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black';
@@ -49,7 +98,17 @@ export type ResumePreviewPageProps = {
 };
 
 export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
+<<<<<<< HEAD
 
+=======
+  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
+  const [selectedVersionId, setSelectedVersionId] = useState<string>(versions[0]?.id || 'current'),
+  const targetRef = useRef<HTMLDivElement>(null),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
@@ -72,10 +131,18 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
             <option value="light">Light</option>
             <option value="dark">Dark</option>
           </select>
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {versions.length > 0 && (
             <>
               <label className="text-sm ml-4">Version</label>
@@ -86,11 +153,29 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
               >
                 <option value="current">Current</option>
                 {versions.map(v => (
+<<<<<<< HEAD
 
 
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 
       <div className="mx-auto">
+=======
+<<<<<<< HEAD
+                  <option value={v.id} key={v.id}>
+                    {v.label}
+                  </option>                ))}
+              </select>
+            </>
+          )}
+<<<<<<< HEAD
+        </div>
+      </div>
+      <PdfExportButton
+        targetRef={targetRef}
+        fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
+      />
+      <div className='mx-auto'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
@@ -155,7 +240,11 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   }
 }
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </div>
       </div>
       <PdfExportButton
@@ -166,8 +255,13 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
@@ -267,7 +361,11 @@ return { props: { initialData, versions } };
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   )
   } catch (error) {
     console.error("Error:", error);
@@ -349,7 +447,13 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 return { props: { initialData, versions } }
 }
+<<<<<<< HEAD
 
+=======
+};
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.']}];
     education: [
@@ -521,4 +625,7 @@ return { props: { initial_data, versions } }
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

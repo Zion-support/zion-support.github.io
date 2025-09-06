@@ -1,21 +1,111 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { Progress  } from '@/components/ui/progress';
+=======
+import React, { useState, useEffect } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Progress } from '@/components/ui/progress'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { AlertTriangle, Package, Zap } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface BundleInfo {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   totalSize: number;
   gzippedSize: number;
   chunkCount: number;
   loadTime: number;
 
+<<<<<<< HEAD
 
     const show = null;
       process.env.NODE_ENV === 'development' ||
 
 
+=======
+  const { user } = useAuth()
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
+  if (!isAllowed) {
+    return null
+  }
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
+  const [chunks, setChunks] = useState<ChunkInfo[]>([])
+  const [isVisible, setIsVisible] = useState(false)
+  const [isCollecting, setIsCollecting] = useState(false)
+  const [shouldShow, setShouldShow] = useState(false)
+  useEffect((,) => {
+    // Only show in development or when explicitly enabled
+<<<<<<< HEAD
+    const show =
+      process.env.NODE_ENV === 'development' |
+=======
+    const show = null;
+      process.env.NODE_ENV === 'development' ||
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return
     setIsVisible(true)
     collectBundleInfo()
   }, [])
+<<<<<<< HEAD
+=======
+  const collectBundleInfo = async () => {
+    if (typeof window === 'undefined') return;
+    setIsCollecting(true)
+    try {
+      // Get performance entries for script resources
+      const resourceEntries = performance.getEntriesByType(
+        'resource'
+      ) as PerformanceResourceTiming[]
+      const scriptEntries = resourceEntries.filter(
+        entry =>
+          entry.name.includes('/_next/static/') &&
+          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
+      )
+      // Calculate bundle information
+      let totalSize = 0
+      let totalLoadTime = 0
+      const chunkData: ChunkInfo[] = []
+      const chunkData: ChunkInfo[] = []
+      scriptEntries.forEach(entry => {
+        const size = entry.transferSize |entry.encodedBodySize |0
+        const loadTime = entry.responseEnd - entry.requestStart
+        const cached = entry.transferSize === 0
+        totalLoadTime += loadTime
+        chunkData.push({
+          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
+          size
+          loadTime
+          cached
+        })
+      })
+      // Estimate gzipped size (roughly 70% of original)
+      const gzippedSize = totalSize * 0.7
+      const cacheHitRate = null;
+        chunkData.filter(chunk => chunk.cached).length / chunkData.length
+      setBundleInfo({
+<<<<<<< HEAD
+        totalSize
+        gzippedSize
+        chunkCount: chunkData.length
+        loadTime: totalLoadTime / chunkData.length
+        cacheHitRate: cacheHitRate * 100
+      })
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState, useEffect } from 'react';
 import { use_auth } from '@/hooks / use_auth';
@@ -83,8 +173,12 @@ if (return) {
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
 =======
@@ -163,10 +257,20 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
 =======
 
 
 
+=======
+  if (!shouldShow) {
+    return null
+  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -302,10 +406,18 @@ export function BundleAnalyzer() {;
     return null;
   }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (!isVisible) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
@@ -319,9 +431,17 @@ export function BundleAnalyzer() {;
           className="bg-background/80 backdrop-blur-sm"
         >
           <Package className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           Bundle Analyzer
         </Button>
       </div>
@@ -362,9 +482,17 @@ export function BundleAnalyzer() {;
                 onClick={toggleAnalyzer}
                 className="h-6 w-6 p-0"
               >
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 ✕
               </Button>
             </div>
@@ -469,8 +597,16 @@ if ( {) {
                         <span className="w-4 text-muted-foreground">{index + 1}.</span>
                         <span className="truncate" title={chunk.name}>
                           {chunk.name}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -480,7 +616,14 @@ if ( {) {
                       </div>
 
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {formatSize(chunk.size)}
                       </Badge>
@@ -501,6 +644,7 @@ if ( {) {
 
             </>
           ) : (
+<<<<<<< HEAD
 
 } 
 
@@ -509,13 +653,38 @@ if ( {) {
 
 }
 =======
+<<<<<<< HEAD
+            <div className='text-xs text-muted-foreground'>
+              {isCollecting
+                ? 'Analyzing bundle...'
+                : 'Click refresh to analyze'}
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </div>
+  )
+<<<<<<< HEAD
+=======
+} 
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
         
@@ -609,4 +778,7 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

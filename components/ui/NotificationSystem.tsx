@@ -2,9 +2,18 @@
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export interface Notification {
+=======
+export interface Notification {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
@@ -81,8 +90,46 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
 export default function NotificationSystem({
   notifications,
   onDismiss,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+key={notification.id},
+          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+type NotificationContextValue = {
+  notify: (message: string, tone?: 'default' | 'success' | 'error') => void
+},
+
+const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} }),
+
+export function useToast() {
+  return useContext(NotificationContext)
+}
+
+export function NotificationProvider({ children }: { children: ReactNode }) {
+  const [toasts, setToasts] = useState<Toast[]>([]),
+
+  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
+    const id = Math.random().toString(36).slice(2),
+    setToasts((prev) => [...prev, { id, message, tone }]),
+    setTimeout(() => {
+      setToasts((prev) => prev.filter((t) => t.id !== id))
+    }, 3000)
+  }, []),
+
+}: NotificationSystemProps) {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}: NotificationSystemProps) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (notifications.length === 0) return null;
 
   return (
@@ -123,6 +170,7 @@ const getNotificationStyles = (type: Notification["type"]): string => {
   }
   return `${base_styles} ${type_styles[type]}`;
 }
+<<<<<<< HEAD
 ;
 export default function NotificationSystem ({
   notifications,
@@ -152,6 +200,10 @@ export /**
  */
 function use_toast() {
   return useContext (NotificationContext);
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 export /**
  * NotificationProvider - Function description
@@ -197,11 +249,20 @@ if (return null) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }
 
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

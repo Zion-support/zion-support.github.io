@@ -6,6 +6,7 @@ export interface DeployTemplateResult {
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
+<<<<<<< HEAD
     nodes: []
     edges: []
   }
@@ -13,6 +14,21 @@ export function getSourceMapWithExistence() {
 }
 export function getGitStatus() {
   return {
+=======
+<<<<<<< HEAD
+    nodes: []
+    edges: []
+  }
+=======
+    nodes: [],
+    edges: [];
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export function getGitStatus() {
+  return {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     connected: false
     branch: 'main'
   }
@@ -72,6 +88,7 @@ export function getSourceMapWithExistence(): SourceNode[] {
 }
 export interface DeployTemplateResult {
 =======
+<<<<<<< HEAD
 
     nodes: [],
     edges: [];
@@ -81,6 +98,8 @@ export interface DeployTemplateResult {
 export function getGitStatus() {
   return {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     connected: false,
     branch: 'main';
   };
@@ -92,8 +111,12 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 }
 
 export interface DeployTemplateResult {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   createdPaths: string[];
   skippedPaths: string[];
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
@@ -135,8 +158,14 @@ export function deployBasicTemplateForPath(
   return { createdPaths, skippedPaths }
 =======
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return { createdPaths, skippedPaths };
 
 }
@@ -198,5 +227,10 @@ export function deployBasicTemplateForPath (
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

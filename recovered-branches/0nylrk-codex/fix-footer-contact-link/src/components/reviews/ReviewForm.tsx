@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {useForm} from "react-hook-form";
@@ -11,6 +17,7 @@ import {Review} from "@/types/reviews";
 interface ReviewFormValues {;
 
 =======
+<<<<<<< HEAD
 import { useState } from './react';
 import { Star } from './lucide-react';
 import { use_form } from './react - hook - form';
@@ -35,6 +42,46 @@ interface ReviewFormValues {
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { Star } from "lucide-react",
+import { useForm } from "react-hook-form",
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+=======
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  FormMessage} from "@/components/ui/form",
+import {
+  RadioGroup;
+  RadioGroupItem} from "@/components/ui/radio-group",
+<<<<<<< HEAD
+import { Switch } from "@/components/ui/switch";
+import { Review } from "@/types/reviews";
+=======
+import { Switch } from "@/components/ui/switch",
+import { Review } from "@/types/reviews",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -55,6 +102,11 @@ interface ReviewFormProps {;
   defaultValues?: Review;
   isSubmitting: boolean;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 export function ReviewForm(): any ({;
@@ -64,8 +116,12 @@ export function ReviewForm(): any ({;
   revieweeName;
   onSubmit;
   defaultValues;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from "react",;
 import { Star } from "lucide-react",;
@@ -143,8 +199,34 @@ export function ReviewForm({
       timeliness_rating: undefined,;
       would_work_again: undefined,;
       is_anonymous: false}
+<<<<<<< HEAD
   });
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  });
+  const handleSubmit = async (values: ReviewFormValues) => {
+    const formattedData = {
+      ...values
+      project_id: projectId
+      reviewee_id: revieweeId}
+    const success = await onSubmit(formattedData);
+    if (success) {
+      form.reset()
+    }
+  }
+  const watchRating = form.watch("rating");
+<<<<<<< HEAD
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+=======
+=======
+  }),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const handleSubmit = async (values: ReviewFormValues) => {;
     const formattedData = {;
       ...values,;
@@ -163,8 +245,15 @@ export function ReviewForm({
 
 
   return (
+<<<<<<< HEAD
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
+=======
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Main Rating */}
         <FormField
           control={form && form.control}
@@ -204,6 +293,7 @@ export function ReviewForm({
               </div>;
             </FormItem>;
           )}
+<<<<<<< HEAD
 
         />;
 
@@ -212,6 +302,49 @@ export function ReviewForm({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        />
+<<<<<<< HEAD
+=======
+      rating: 0,
+      review_text: "",
+      communication_rating: undefined,
+      quality_rating: undefined,
+      timeliness_rating: undefined,
+      would_work_again: undefined,
+      is_anonymous: false}
+  }),;
+  const handleSubmit = async (values: ReviewFormValues) => {;
+    const formattedData = {;
+      ...values,;
+      project_id: projectId,;
+      reviewee_id: revieweeId},;
+    const success = await onSubmit(formattedData),;
+    if (success) {;
+      form.reset();
+    }
+  },
+  
+  const watchRating = form.watch("rating"),
+  
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+=======
+        
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  },;
+  const watchRating = form.watch("rating"),;
+  return (;
+    <Form {...form}>;
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Review Text */}
         <FormField
           control={form && form.control}
@@ -350,9 +483,17 @@ if ( {) {
 =======
 
             
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Communication */}
             <FormField
               control={form && form.control}

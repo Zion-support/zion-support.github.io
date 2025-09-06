@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
   }
   const handleViewOffer = (project_id: string, ) =>: any {
@@ -7,6 +8,48 @@
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useEffect, useState } from "react"
+import { useRouter } from 'next/router'
+import { Bell, Calendar, X } from 'lucide-react'import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { useProjects } from "@/hooks/useProjects"
+import { Project } from "@/types/projects"
+export function ProjectOfferBanner() {
+  const router = useRouter()
+  const { projects, isLoading } = useProjects()
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([])
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set())
+  useEffect((,) => {
+    if (projects && !isLoading) {
+      const offers = projects.filter(p => p.status === 'offer_sent')
+      setPendingOffers(offers);
+    };
+  }, [projects, isLoading]);
+  const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
+    e.stopPropagation();    setDismissed(prev => {
+      const updated = new Set(prev)
+      updated.add(projectId)
+      return updated
+    })
+  }
+  const handleViewOffer = (projectId: string,) => {
+    router.push(`/project/${projectId}`)
+  }
+  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
+
+    return null
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
@@ -56,9 +99,16 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -92,9 +142,17 @@ export function ProjectOfferBanner() {;
 
 
               
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <div className="flex items-center gap-2">
                 <Button size="sm" className="whitespace-nowrap">
                   View Offer
@@ -281,6 +339,14 @@ if () ) {) {
   );
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

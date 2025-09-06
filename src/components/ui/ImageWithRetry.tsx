@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 
 =======
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react',
+import Image, { type ImageProps } from 'next/image';
+import { cn } from '@/lib/utils';
+interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
+  src: string;
+  alt?: string;
+  /** Source to use if the main src fails */
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from 'react'
 import Image, { type ImageProps } from 'next/image'
 import { cn } from '@/lib/utils';
@@ -12,6 +25,7 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
   retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
 
   src: string,
+<<<<<<< HEAD
   alt?: string;
   /** Source to use if the main src fails */
   fallbackSrc?: string;
@@ -19,6 +33,16 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
 
   retryClassName?: string;  retryClassName?: string
 
+=======
+interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
+  src: string,
+  alt?: string
+  /** Source to use if the main src fails */
+  fallbackSrc?: string
+  /** CSS class for the retry button */
+  retryClassName?: string;  retryClassName?: string
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState } from 'react',;
 import Image, { type ImageProps } from 'next/image',;
@@ -30,10 +54,17 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   fallbackSrc?: string,;
   /** CSS class for the retry button */;
   retryClassName?: string;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
@@ -54,6 +85,7 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import Image, { type ImageProps } from 'next / image';
@@ -155,6 +187,30 @@ export function ImageWithRetry(): any ({;
     setFailed(true);
     setCurrentSrc(fallbackSrc);  };
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  src
+  alt = ''
+  fallbackSrc = '/images/image-placeholder.svg'
+  className
+  retryClassName
+=======
+  src,
+  alt = '',
+  fallbackSrc = '/images/image-placeholder.svg',
+  className,
+  retryClassName,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}: ImageWithRetryProps) {
+  const [currentSrc, setCurrentSrc] = useState(src)
+  const [failed, setFailed] = useState(false)
+  const handleError = () => {
+    setFailed(true)
+    setCurrentSrc(fallbackSrc) }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const handleRetry = () => {;
     setFailed(false);
     setCurrentSrc(src);  };    setCurrentSrc(fallbackSrc);
@@ -187,6 +243,7 @@ export function ImageWithRetry(): any ({;
 
       )}
     </div>
+<<<<<<< HEAD
   );
 
 }
@@ -194,6 +251,11 @@ export function ImageWithRetry(): any ({;
 
 export default ImageWithRetry;
 
+=======
+  )
+<<<<<<< HEAD
+export default ImageWithRetry
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
   const fill = !('width' in props) && !('height' in props);
@@ -232,5 +294,61 @@ export default ImageWithRetry;
   fallbackSrc = '/images/image-placeholder.svg',
   className,
   retryClassName,
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+export default ImageWithRetry;
+;
+}
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ...props
+}: ImageWithRetryProps) {
+  const [currentSrc, setCurrentSrc] = useState(src),
+  const [failed, setFailed] = useState(false),
+
+  const handleError = () => {
+    setFailed(true),
+    setCurrentSrc(fallbackSrc)
+  },
+
+  const handleRetry = () => {
+    setFailed(false),
+    setCurrentSrc(src)
+  },
+
+  const fill = !('width' in props) && !('height' in props),
+
+  return (
+    <div className="relative inline-block">
+      <Image
+        {...props}
+        src={currentSrc}
+        alt={alt}
+        onError={handleError}
+        className={cn(className)}
+        fill={fill}
+      />
+      {failed && (
+        <button
+          type="button"
+          onClick={handleRetry}
+          className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
+        >;
+          Retry;
+        </button>;
+      )}
+    </div>;
+  );
+}
+;
+export default ImageWithRetry;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

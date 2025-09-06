@@ -3,10 +3,15 @@
 }
 return result;
 }catch (error) {
+<<<<<<< HEAD
 
   console && console.error ('Fallback execution error:', error);
 
 
+=======
+  console.error ('Fallback execution error:', error);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   statusCode: 500;
 body: JSON && JSON.stringify ({
   error: 'Fallback execution failed';
@@ -16,8 +21,13 @@ body: JSON && JSON.stringify ({
 =======
 =======
 #!/usr/bin/env node
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 // Netlify Function Fallback: auto-healer
 // This is a local fallback when the main function is unavailable
@@ -40,8 +50,25 @@ exports.handler = async (_event, _context) => {
 message: error && error.message 
 }) 
 
+<<<<<<< HEAD
 };exports && exports.handler = async (_event, _context) => {
     console && console.log('auto-healer fallback executed locally'),
+=======
+        console.error('Fallback execution error:', error)
+        return {
+            statusCode: 500
+            body: JSON.stringify({
+                error: 'Fallback execution failed'
+
+                message: error.message
+            })
+<<<<<<< HEAD
+        }
+    }
+<<<<<<< HEAD
+
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 #!/usr/bin/env node
@@ -56,6 +83,7 @@ exports.handler = async (_event, _context) => {
     
 =======
 ;
+<<<<<<< HEAD
   status_code: 500;
 body: JSON.stringify ({
   error: 'Fallback execution failed';
@@ -104,6 +132,9 @@ message: error.message;
 ;
 
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 #!/usr/bin/env node;
 // Netlify Function Fallback: auto-healer;
 // This is a local fallback when the main function is unavailable;
@@ -131,7 +162,15 @@ exports.handler = async (_event, _context) => {;
         }
     }
 },;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

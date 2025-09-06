@@ -1,10 +1,21 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react";
+import Link from "next/link";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import EnhancedButton from "./EnhancedButton";
 export type EmptyStateProps = {
   title: string;
   description?: string;
   icon?: React.ReactNode;
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -55,13 +66,37 @@ export default function EmptyState(): any ({;
 };
 
 =======
+<<<<<<< HEAD
+  primaryAction?: { label: string; href: string }
+  secondaryAction?: { label: string; href: string }
+}
+export default function EmptyState({
+  title
+  description
+  icon
+  primaryAction
+  secondaryAction
+}: EmptyStateProps) {
+=======
+  primaryAction?: { label: string; href: string };
+  secondaryAction?: { label: string; href: string };
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import React from 'react';
 
 interface EmptyStateProps {
   className?: string;
 }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
@@ -74,11 +109,22 @@ const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
       {description && (;
         <p className='text-sm opacity-80 max-w-prose'>{description}</p>;
       )}
+<<<<<<< HEAD
 
 import React from 'react';
 import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
 export type EmptyStateProps = {
+=======
+      {(primaryAction |secondaryAction) && (
+        <div className='flex gap-2 mt-2'>
+          {primaryAction && (
+            <Link href={primaryAction.href}>
+              <a>
+                <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>              </a>export type EmptyStateProps = {
+<<<<<<< HEAD
+  title: string
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   primary_action?: { label: string; href: string }
   secondary_action?: { label: string; href: string }
@@ -106,8 +152,12 @@ function EmptyState() {
 =======
 
   title: string,;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   description?: string;
   icon?: React.ReactNode;
 
@@ -195,6 +245,23 @@ function EmptyState() {
 
     </div>
   );
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+};
+
+export default EmptyState;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+};
+
+export default EmptyState;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

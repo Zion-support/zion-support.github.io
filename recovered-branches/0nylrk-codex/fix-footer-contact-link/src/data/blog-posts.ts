@@ -1,5 +1,16 @@
 
+<<<<<<< HEAD
 
+=======
+import { BlogPost } from "@/types/blog";
+=======
+import { BlogPost } from '@/types/blog';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+// Sample blog data - in a real app this would come from an API or CMS
+export const BLOG_POSTS: BlogPost[] = [
+  {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
     id: 'ai-trends-2025'
     title: '10 Emerging AI Trends to Watch in 2025'
@@ -17,13 +28,22 @@ export const BLOG_POSTS: BlogPost[] = [
     title: '10 Emerging AI Trends to Watch in 2025',
     slug: 'ai-trends-2025',
     excerpt:;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       'From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.',    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>    id: "ai-trends-2025";
     title: "10 Emerging AI Trends to Watch in 2025";
     slug: "ai-trends-2025"
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 
 
@@ -38,7 +58,39 @@ export const BLOG_POSTS: BlogPost[] = [
     is_featured: true,
 
   },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+<<<<<<< HEAD
+    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+<h2>1. Multimodal AI Systems</h2>
+<p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
+<h2>2. Neuromorphic Computing</h2>
+<p>Taking inspiration from the human brain's neural structure, neuromorphic computing represents a fundamental shift in how AI processes information. These systems consume significantly less power while delivering enhanced performance for complex tasks.</p>
+<h2>3. Federated Learning at Scale</h2>
+<p>Privacy concerns continue to drive adoption of federated learning approaches, where models are trained across multiple devices without exchanging raw data. In 2025, we're seeing enterprise-scale deployments that maintain privacy while delivering powerful insights.</p>
+<h2>4. Quantum AI</h2>
+<p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p>
+<h2>5. AI for Climate Solutions</h2>
+
+<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`
+      name: 'Dr. Alicia Zhang'
+      title: 'AI Research Director'
+      avatarUrl:
+        'https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200'
+    }
+    publishedDate: 'Apr 15, 2025'
+    readTime: '5 min read'
+    category: 'Trends'
+    tags: ['AI', 'Technology Trends', 'Machine Learning', 'Future Tech']
+    featuredImage:
+      'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=630'
+    isFeatured: true
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
 
     id: 'optimize - ai - listings',
@@ -110,8 +162,16 @@ export const BLOG_POSTS: BlogPost[] = [
     id: "green-it",
     title: "Green IT: Reducing Your Data Center's Carbon Footprint",
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -209,6 +269,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 
     id: 'ai - compute - optimization',
     title: 'AI Compute Optimization: Balancing Performance and Cost',
@@ -221,10 +282,44 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.";
 
 
+=======
+    id: "ai-compute-optimization",
+    title: "AI Compute Optimization: Balancing Performance and Cost",
+    slug: "ai-compute-optimization",
+    excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    content: `<p>As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>
+<h2>Right-sizing Compute Resources</h2>
+<p>Many organizations overprovision computing resources for AI workloads. Implementing proper benchmarking and profiling helps identify true requirements and eliminate waste. Consider different compute profiles for development, training, and inference stages.</p>
+<h2>Model Compression Techniques</h2>
+<p>Recent advances in quantization, pruning, and knowledge distillation allow teams to reduce model size without significant performance loss. These compressed models require less compute for inference and can often run on less expensive hardware.</p>
+<h2>Strategic Cloud vs. On-Premise Decisions</h2>
+<p>While cloud platforms offer flexibility, organizations with consistent AI workloads often benefit from hybrid approaches. Analyze workload patterns to determine which components should remain in the cloud and which warrant dedicated hardware investments.</p>
+<h2>Training Efficiency Optimization</h2>
+<p>Implementing techniques like mixed precision training, gradient accumulation, and efficient hyperparameter optimization can significantly reduce training time and costs. Modern frameworks provide many of these optimizations with minimal configuration.</p>
+<h2>Inference Serving Architecture</h2>
+<p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`
+    author: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      name: 'Michael Wong'
+      title: 'ML Infrastructure Architect'
+=======
+      name: 'Michael Wong',
+      title: 'ML Infrastructure Architect',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      avatarUrl:
+        'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',    author: {
+      name: "Michael Wong";
+      title: "ML Infrastructure Architect"
+      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     publishedDate: "Mar 15, 2025";
     readTime: "6 min read";
     category: "Infrastructure"
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
+<<<<<<< HEAD
     featuredImage: "https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
 =======
     content: `<p > As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>;
@@ -281,6 +376,31 @@ export const BLOG_POSTS: BlogPost[] = [
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+=======
+    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
+  }
+];
+}];
+    }
+    publishedDate: 'Mar 15, 2025'
+    readTime: '6 min read'
+    category: 'Infrastructure'
+    tags: [
+      'AI Infrastructure'
+      'Cost Optimization'
+      'Machine Learning'
+      'Computing'
+    ]
+    featuredImage:
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630'
+  }
+];
+}];
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       name: "Michael Wong",
       title: "ML Infrastructure Architect",
@@ -458,7 +578,15 @@ export const BLOG_POSTS: BlogPost[] = [;
     featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630";
   }
 ];
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

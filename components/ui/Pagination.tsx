@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
+<<<<<<< HEAD
 
 
   page: number;
@@ -44,6 +45,36 @@ function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / pag
   total: number,
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export type PaginationProps = {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+export type PaginationProps = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  page: number;
+  pageSize: number;
+  total: number;
+  onChange: (nextPage: number) => void;
+}
+export default function Pagination({
+<<<<<<< HEAD
+  page
+  pageSize
+  total
+  onChange
+}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
+  page: number
+  pageSize: number
+  total: number
+  onChange: (nextPage: number) => void
+}
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   page,
   pageSize,
   total,
@@ -56,8 +87,12 @@ function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / pag
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
@@ -399,8 +434,13 @@ export default Pagination;
 }
 =======
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
@@ -414,4 +454,7 @@ export default Pagination;
   );
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

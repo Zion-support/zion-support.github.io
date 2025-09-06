@@ -1,12 +1,32 @@
 
+<<<<<<< HEAD
 
+=======
+import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
+import { Header } from '@/components/Header';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import {
+<<<<<<< HEAD
+  Calendar
+  Clock
+  DollarSign
+  Tag
+  Users
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Calendar,
   Clock,
   DollarSign,
   Tag,;
   Users;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Briefcase;
 =======
 import {;
@@ -61,6 +81,7 @@ interface Job {
   skills?: string[];
   created_at: string;
   category: string;
+<<<<<<< HEAD
 
 export default function JobDetails() {;
   const router = useRouter(); // Init router;
@@ -86,6 +107,10 @@ function JobDetails() {
   }
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   deadline?: string;
 
 export default function JobDetails() {;
@@ -98,7 +123,11 @@ export default function JobDetails() {;
     error: any;
   };
   const { user, isAuthenticated } = useAuth();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams, useNavigate;
@@ -127,8 +156,15 @@ interface Job {;
   category: string,;
   deadline?: string;
 }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   deadline?: string;
 export default function JobDetails() {
@@ -173,8 +209,16 @@ export default function JobDetails() {
           <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
           <Button onClick={() => router.push('/careers')}>View All Jobs</Button>
         </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       </>
     )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -257,9 +301,29 @@ export default function JobDetails() {
     setIsApplyModalOpen(false)
   },
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+
+  const isOwnJob = user?.id === job.client_id,
+=======
+<<<<<<< HEAD
+  const handleApplySuccess = async (appliedJobId: string) => {
+    toast.success('Application submitted successfully!');
+    setIsApplyModalOpen(false);
+  };
+  const isOwnJob = user?.id === job.client_id;
+=======
+
+  const isOwnJob = user?.id === job.client_id,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <>
       <SEO 
@@ -281,9 +345,17 @@ export default function JobDetails() {
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <Card>
               <CardHeader>
                 <div className='flex justify-between items-start'>
@@ -424,17 +496,33 @@ export default function JobDetails() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <Badge key={i} variant='secondary'>                        {skill}
                       </Badge>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     ))}
 
 
           
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div>
             <Card>
               <CardContent className='pt-6 space-y-4'>
@@ -492,10 +580,17 @@ export default function JobDetails() {;
                     Apply Now;
                   </Button>;
                 )}
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                 
                 <div className="flex items-start">
@@ -526,10 +621,18 @@ export default function JobDetails() {;
                   </Button>;
                 )}
                 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {isOwnJob && (
                   <div className='text-center p-2 bg-muted rounded-md mt-4'>
                     <p className='text-sm text-muted-foreground'>
@@ -713,14 +816,23 @@ if ( {) {
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Job application modal */}
       {job && (;
         <ApplyToJobModal
           job={{
+<<<<<<< HEAD
 
             id: job && job.id,
             title: job && job.title,
@@ -729,6 +841,25 @@ if ( {) {
             budget: formatBudget(job && job.budget),
             client_id: job && job.client_id,
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            id: job.id
+            title: job.title
+            description: job.description
+            company_name: job.company_name ?? 'Company'
+            budget: formatBudget(job.budget)
+            client_id: job.client_id
+=======
+            id: job.id,
+            title: job.title,
+            description: job.description,
+            company_name: job.company_name ?? "Company",
+            budget: formatBudget(job.budget),
+<<<<<<< HEAD
+            client_id: job.client_id,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }}
 
           isOpen={isApplyModalOpen}
@@ -817,8 +948,12 @@ const isOwnJob = user?.id === job.client id;
 
 =======
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
             id: job.id,
@@ -826,5 +961,26 @@ const isOwnJob = user?.id === job.client id;
             description: job.description,
             company_name: job.company_name ?? "Company",
             budget: formatBudget(job.budget),
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            client_id: job.client_id}}
+          isOpen={isApplyModalOpen}
+          onClose={() => setIsApplyModalOpen(false)}
+        />;
+      )}
+    </>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

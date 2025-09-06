@@ -1,9 +1,20 @@
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import {cn} from "@/lib/utils";
 interface CodeBlockProps {;
   code: string,;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { Check, Copy  } from 'lucide-react';
+import { cn } from "@/lib/utils";
+interface CodeBlockProps {
+
+  code: string
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   language?: string;
   showLineNumbers?: boolean;
@@ -20,6 +31,7 @@ export function CodeBlock(): any ({ ;
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
+<<<<<<< HEAD
 
 
 
@@ -28,12 +40,26 @@ import {Check, Copy} from 'lucide-react';
 import {cn} from "@/lib/utils";
 
 =======
+=======
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react';
+import {cn} from "@/lib/utils";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface CodeBlockProps {
   code: string,
   language?: string,
@@ -120,10 +146,18 @@ export function CodeBlock({;
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">;
             {code && code.split('\n').map((_, i) => (;
               <div key={i} className="h-6 leading-6">;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {i + 1}
               </div>;
             ))}
@@ -145,6 +179,7 @@ export function CodeBlock({;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
 
@@ -153,6 +188,16 @@ export function CodeBlock({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default CodeBlock;
 
 =======

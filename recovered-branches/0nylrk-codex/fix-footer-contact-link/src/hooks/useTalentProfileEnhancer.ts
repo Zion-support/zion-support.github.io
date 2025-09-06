@@ -1,15 +1,26 @@
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface TalentProfileData {
 =======
 
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   name: string;
   title: string;
   bio: string;
@@ -18,19 +29,47 @@ export interface TalentProfileData {;
   location?: string;
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface CategorizedSkills {
 =======
 }
 
 
 export interface CategorizedSkills {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   programming: string[];
   devops: string[];
   platforms: string[];
 
 
+<<<<<<< HEAD
+=======
+  other: string[]
+}
+<<<<<<< HEAD
+export interface EnhancedProfile {
+
+  summary: string
+
+  categorizedSkills: CategorizedSkills
+}
+export function useTalentProfileEnhancer() {
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  const [error, setError] = useState<string | null>(null);
+  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
+    setIsGenerating(true);
+    setError(null)
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export interface EnhancedProfile {
   summary: string,
@@ -45,17 +84,28 @@ export function useTalentProfileEnhancer() {;
     setIsGenerating(true);
     setError(null),
     
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     try {
       // Call the Supabase Edge Function
       const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
         body: { talentData: profileData }
       });
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       if (error) {
         throw new Error(error.message)
 =======
@@ -95,10 +145,18 @@ export function useTalentProfileEnhancer() {;
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
       return data as EnhancedProfile
     } catch (err: any) {
@@ -109,12 +167,22 @@ export function useTalentProfileEnhancer() {;
     } finally {
       setIsGenerating(false)
     }
+<<<<<<< HEAD
 
 
   };
   
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+  };
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return {
     enhanceProfile;
     isGenerating;
@@ -163,10 +231,18 @@ if ( {) {
     enhance_profile;
     is_generating;
     error;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }

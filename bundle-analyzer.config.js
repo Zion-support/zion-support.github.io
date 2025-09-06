@@ -8,6 +8,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) => {if ( {;
       config.plugins.push() {;
      {;
+<<<<<<< HEAD
 
 module && module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config && config.plugins.push() {; {; config && config.plugins.push(}; new BundleAnalyzerPlugin({; "analyzerMode": 'static'; openAnalyzer: false,
     reportFilename: 'bundle-analysis && analysis.htm,l'}); )}; return config}};
@@ -19,6 +20,19 @@ module && module.exports = {;
       config && config.plugins.push() {;
      {;
       config && config.plugins.push(};
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      config.plugins.push(}
+        new BundleAnalyzerPlugin({"analyzerMode": 'static';
+          openAnalyzer: false
+          reportFilename: 'bundle-analysis.htm,l'});
+      )}
+    return config}
+}
+=======
+      config.plugins.push(};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         new BundleAnalyzerPlugin({;
           "analyzerMode": 'static';
           openAnalyzer: false,
@@ -26,6 +40,11 @@ module && module.exports = {;
       )};
     return config};
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 /* eslint-env node */
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
@@ -69,13 +88,22 @@ module && module.exports = {
 =======
 
 };
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }
 }
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
 const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer');
 module.exports = {
@@ -93,7 +121,15 @@ if ( {) {
     return config}
 
 },;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

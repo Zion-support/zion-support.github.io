@@ -1,11 +1,19 @@
 
+<<<<<<< HEAD
 import React from './react';
 import { getBadgeMeta, BadgeKey } from './badge_config';
 
+=======
+<<<<<<< HEAD
+import React from "react";
+<<<<<<< HEAD
+import { getBadgeMeta, BadgeKey } from "./badgeConfig";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface BadgeEarnedProps {
 
   badge: BadgeKey
 
+<<<<<<< HEAD
 =======
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 
@@ -41,11 +49,25 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 
 =======
+  size?: number;
+  showName?: boolean;
+  showDesc?: boolean;
+=======
+import {getBadgeMeta, BadgeKey} from "./badgeConfig";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface BadgeEarnedProps {
   badge: BadgeKey,
@@ -55,7 +77,23 @@ interface BadgeEarnedProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   earnedDate?: string
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
+  badge;
+  size = 44;
+  showName = true;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
+<<<<<<< HEAD
+  badge;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -118,8 +156,16 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       </div>;
       {showName && (;
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {meta.name}
         </span>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -132,6 +178,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       {showDesc && (;
         <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
       )}
+<<<<<<< HEAD
 
 
 
@@ -145,6 +192,23 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+    </div>
+  )
+<<<<<<< HEAD
+}
+
+=======
+    </div>;
+  );
+=======
+=======
+    </div>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

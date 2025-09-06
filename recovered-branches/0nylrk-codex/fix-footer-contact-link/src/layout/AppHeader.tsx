@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useMessaging  } from '@/context/MessagingContext';
+import { MainNavigation  } from './MainNavigation';
+import { Logo  } from '@/components/header/Logo';
+import { ModeToggle  } from '@/components/ModeToggle';
+import { Menu, X  } from 'lucide-react';
+import { MobileMenu  } from '@/components/header/MobileMenu';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+export function AppHeader() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 =======
@@ -11,9 +26,17 @@ import {MainNavigation} from './MainNavigation';
 import {Logo} from '@/components / header / Logo';
 import {ModeToggle} from '@/components / ModeToggle';
 import {Menu, X} from 'lucide-react';
+<<<<<<< HEAD
 
 
 
+=======
+import {MobileMenu} from '@/components/header/MobileMenu';
+import {useIsMobile} from '@/hooks/use-mobile';
+import {MobileBottomNav} from '@/components/header/MobileBottomNav';
+export function AppHeader() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
@@ -39,8 +62,15 @@ function AppHeader() {
 =======
   } catch (error) {
     console.warn('Messaging context not available')
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -61,10 +91,17 @@ export function AppHeader() {;
     unreadCount = count;
   } catch (error) {;
     console.warn('Messaging context not available');
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   return (
 

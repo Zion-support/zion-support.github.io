@@ -1,12 +1,36 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Check} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+<<<<<<< HEAD
+import { Card, CardContent } from "@/components/ui/card";
+import { Check } from "lucide-react";
+=======
+import { Card, CardContent } from "@/components/ui/card",
+import { Check } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function FeatureHighlights() {
 
   const highlightsData = [
     {
+<<<<<<< HEAD
 
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
@@ -15,6 +39,13 @@ export function FeatureHighlights() {;
   const highlightsData = [;
     {;
       title: "For Talent Seekers",;
+=======
+<<<<<<< HEAD
+      title: "For Talent Seekers"
+=======
+      title: "For Talent Seekers",
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       features: [;
 
         "AI-powered talent matching based on your specific project requirements";
@@ -31,6 +62,7 @@ export function FeatureHighlights() {;
       features: [;
 
 =======
+<<<<<<< HEAD
 import React from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Check } from './lucide-react';
@@ -43,6 +75,12 @@ function FeatureHighlights() {
       title: "For Talent Seekers",
       features: [;
         "AI - powered talent matching based on your specific project requirements";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      features: [
+<<<<<<< HEAD
+        "AI-powered talent matching based on your specific project requirements";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
@@ -190,10 +228,18 @@ export function FeatureHighlights() {;
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0 && 0.5 flex-shrink-0" />;
                       <span className="text-zion-slate-light">{feature}</span>;
                     </li>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   ))}
                 </ul>;
               </CardContent>;

@@ -1,4 +1,28 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import {CodeBlock} from "@/components/developers/CodeBlock";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+export function ApiReference() {;
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+<<<<<<< HEAD
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+export function ApiReference() {
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+=======
+import { CodeBlock } from "@/components/developers/CodeBlock",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -233,7 +257,91 @@ function ApiReference() {
         "201": {
           description: "Job created successfully"
           example: `{
+<<<<<<< HEAD
 
+=======
+  "id": "job-456",
+  "title": "UX Designer",
+  "description": "Looking for a UX designer with 3+ years experience...",
+  "category": "design",
+  "budget": {
+<<<<<<< HEAD
+    "min": 3000;
+    "max": 5000
+    "currency": "USD"
+  }
+  "status": "open";
+  "created_at": "2023-05-15T10:12:00Z"
+}`
+        }
+=======
+    "min": 3000,
+    "max": 5000,
+    "currency": "USD"
+  },
+  "status": "open",
+  "created_at": "2023-05-15T10:12:00Z"
+}`
+        },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        "400": {
+          description: "Bad request"
+          example: `{
+  "error": "validation_error",
+  "message": "Invalid input",
+  "details": [
+    {
+<<<<<<< HEAD
+      "field": "title"
+      "error": "Title is required"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+  ]
+}`
+        }
+<<<<<<< HEAD
+      }
+=======
+      "field": "title",
+      "error": "Title is required"
+=======
+      };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",;
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+import { CodeBlock } from "@/components/developers/CodeBlock",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+export function ApiReference() {;
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),;
+  // Sample endpoint data;
+  const endpoints = [;
+    {;
+      id: "get-jobs",;
+      method: "GET",;
+      path: "/api/jobs",;
+      description: "Retrieve a list of job postings with optional filtering",;
+      parameters: [;
+        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },;
+        { name: "category", type: "string", description: "Filter by job category" },;
+        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },;
+        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],;
+      responses: {;
+        "200": {;
+          description: "A list of jobs",;
+          example: `{;
+  "jobs": [;
+    {;
+      "id": "job-123",;
+      "title": "Senior React Developer",;
+      "description": "We're looking for an experienced React developer...",;
+      "category": "development",;
+      "budget": {;
+        "min": 5000,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         "max": 10000,;
         "currency": "USD";
       };
@@ -335,6 +443,7 @@ function ApiReference() {
   ];
 }`;
         }
+<<<<<<< HEAD
 
   "id": "job-456",
   "title": "UX Designer",
@@ -361,6 +470,14 @@ function ApiReference() {
 
 
 
+=======
+      },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -708,11 +825,19 @@ function ApiReference() {
                             'bg-red-950 text-red-500'
                           }`}>;
                             {status}
+<<<<<<< HEAD
 
                           </span>;
                           <span className="text-white">{response && response.description}</span>;
                         </div>;
 
+=======
+                          </span>
+                          <span className="text-white">{response.description}</span>
+                        </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         <CodeBlock
                           code={response && response.example} 
 
@@ -720,7 +845,11 @@ function ApiReference() {
 
                         
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         <CodeBlock 
                           code={response.example} 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -843,6 +972,17 @@ export default ApiReference;
       </div>;
     </ApiDocsLayout>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default ApiReference;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

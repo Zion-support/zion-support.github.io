@@ -1,5 +1,21 @@
 
+<<<<<<< HEAD
 
+=======
+import React, { useState } from "react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { HelpCategoryList } from "./HelpCategoryList",
+import { HelpArticleList } from "./HelpArticleList",
+import { HelpArticleView } from "./HelpArticleView",
+import { HELP_CATEGORIES } from "./help-content",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Search } from 'lucide-react'
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
@@ -8,6 +24,7 @@ export default function HelpCenter() {
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId)
     setSelectedArticle(null)
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import { Input } from '@/components / ui / input';
@@ -29,10 +46,37 @@ function HelpCenter() {
     setSelectedCategory (category_id);
     setSelectedArticle (null);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  }
+  const handleArticleSelect = (articleId: string) => {
+    setSelectedArticle(articleId)
+  }
+export default function HelpCenter() {
+
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState("")
+  const handleCategorySelect = (categoryId: string,) => {
+    setSelectedCategory(categoryId)
+    setSelectedArticle(null)
+<<<<<<< HEAD
+  }
+  const handleArticleSelect = (articleId: string,) => {
+    setSelectedArticle(articleId)
+  }
+  const handleBackToCategories = () => {
+    setSelectedCategory(null)
+    setSelectedArticle(null)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   const handleArticleSelect = (article_id: string) =>: any {
     setSelectedArticle (article_id);
   }
+<<<<<<< HEAD
 
 export default /**
  * HelpCenter - Function description
@@ -44,10 +88,18 @@ function HelpCenter() {
   const handleCategorySelect = (category_id: string, ) =>: any {
     setSelectedCategory (category_id),
     setSelectedArticle (null);
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   },
   const handleArticleSelect = (article_id: string, ) =>: any {
     setSelectedArticle (article_id);
   },
+<<<<<<< HEAD
   const handleBackToCategories = () =>: any {
     setSelectedCategory (null);
     setSelectedArticle (null);
@@ -61,6 +113,14 @@ function HelpCenter() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 
 
@@ -223,17 +283,33 @@ export default function HelpCenter() {;
               {!selectedCategory && !selectedArticle && (;
                 <HelpCategoryList;
                   categories={HELP_CATEGORIES} ;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}                />;
               )}
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {selectedCategory && !selectedArticle && (
                 <>
 =======
@@ -276,17 +352,50 @@ export default function HelpCenter() {;
                     onClick={handleBackToArticles}
                     className="mb-4"
                   >
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     ← Back to Articles
                   </Button>
                   <HelpArticleView articleId={selectedArticle} />
                 </>
               )}
             </TabsContent>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+            <TabsContent value='faq'>
+              <div className='bg-zion-blue-light/20 rounded-lg p-6'>
+                <h2 className='text-xl font-semibold mb-4'>
+                  Frequently Asked Questions
+                </h2>
+                <div className='space-y-6'>
+<<<<<<< HEAD
+                  <div>
+                    <h3 className='font-medium text-zion-cyan mb-2'>
+                      How does the AI matching work?
+                    </h3>
+                    <p className='text-zion-slate-light'>
+                      Our AI matching algorithm analyzes your requirements and
+                      preferences to match you with the most compatible talent
+                      or services. The process takes into account skills
+                      experience, availability, and past performance to ensure
+                      optimal results.
+                    </p>
+                  </div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             
             <TabsContent value="faq">
@@ -310,9 +419,17 @@ export default function HelpCenter() {;
 
 
                   
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <div>
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       What are the payment terms?
@@ -327,8 +444,16 @@ export default function HelpCenter() {;
 
 
                   
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3>
                     <p className="text-zion-slate-light">
@@ -337,7 +462,14 @@ export default function HelpCenter() {;
                   </div>
 
                   
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>
@@ -477,8 +609,16 @@ export default function HelpCenter() {;
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                           <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         </svg>
                       </div>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
@@ -507,9 +647,17 @@ export default function HelpCenter() {;
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         </svg>
                       </div>
                       <span className='text-zion-slate-light'>
@@ -532,9 +680,17 @@ export default function HelpCenter() {;
                   </p>
                   
                   <form className="space-y-4">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     <div>
                       <Input placeholder='Your email' />
                     </div>
@@ -551,9 +707,17 @@ export default function HelpCenter() {;
 
                     
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       Submit Feedback
                     </Button>
                   </form>
@@ -562,9 +726,86 @@ export default function HelpCenter() {;
             </TabsContent>
           </Tabs>
         </div>
+<<<<<<< HEAD
 
                           fill='currentColor'>;
                           <path d='M2 3a1 1 0 011-1h2 && 1h2.153a1 1 0 01 && 01.986.836l && 836l.74 4 && 4.435a1 1 0 01-.54 1 && 1.06l-1 && 1.548.773a11 && 773a11.037 11 && 11.037 0 006 && 006.105 6 && 6.105l.774-1 && 1.548a1 1 0 011 && 011.059-.54l4 && 54l4.435.74a1 1 0 01 && 01.836.986V17a1 1 0 01-1 1h-2C7 && 2C7.82 18 2 12 && 12.18 2 5V3z' />;
+=======
+<<<<<<< HEAD
+      </div>;
+    </>;
+  );
+};
+}
+=======
+      </div>
+    </>
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+              {selectedArticle && (;
+                <>;
+                  <Button;
+                    variant="ghost";
+                    onClick={handleBackToArticles}
+                    className="mb-4";
+                  >;
+                    ← Back to Articles;
+                  </Button>;
+                  <HelpArticleView articleId={selectedArticle} />;
+                </>;
+              )}
+            </TabsContent>;
+            <TabsContent value="faq">;
+              <div className="bg-zion-blue-light/20 rounded-lg p-6">;
+                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>;
+                <div className="space-y-6">;
+                  <div>;
+                    <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3>;
+                    <p className="text-zion-slate-light">;
+                      Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.;
+                    </p>;
+                  </div>;
+                  <div>;
+                    <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>;
+                    <p className="text-zion-slate-light">;
+                      To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.;
+                    </p>;
+                  </div>;
+                  <div>;
+                    <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3>;
+                    <p className="text-zion-slate-light">;
+                      Zion offers flexible payment options including milestone-based payments, hourly rates, or fixed project fees. Funds are held in escrow until deliverables are approved, ensuring security for both clients and talent.;
+                    </p>;
+                  </div>;
+                  <div>;
+                    <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>;
+                    <p className="text-zion-slate-light">;
+                      You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup.com, or by scheduling a call with our team through the Contact tab.;
+                    </p>;
+                  </div>;
+                </div>;
+              </div>;
+            </TabsContent>;
+            <TabsContent value="contact">;
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">;
+                <div className="bg-zion-blue-light/20 rounded-lg p-6">;
+                  <h2 className="text-xl font-semibold mb-4">Contact Support</h2>;
+                  <p className="text-zion-slate-light mb-4">;
+                    Our support team is available 24/7 to assist you with any questions or issues.;
+                  </p>;
+                  <div className="space-y-4">;
+                    <div className="flex items-center">;
+                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">;
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">;
+                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />;
+                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         </svg>;
                       </div>;
                       <span className='text-zion-slate-light'>;
@@ -655,6 +896,7 @@ export default function HelpCenter() {;
           </Tabs>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
 =======
@@ -672,3 +914,14 @@ export default function HelpCenter() {;
   )
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,14 +1,23 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
   const imgRef = useRef<HTMLDivElement>(null);
 =======
+<<<<<<< HEAD
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
 
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -23,11 +32,19 @@
   const imgRef = useRef<HTMLDivElement>(null)
   // Intersection Observer for lazy loading
   useEffect(() => {
+<<<<<<< HEAD
 
 
     if (!lazy || priority || isInView) return;
 
 
+=======
+<<<<<<< HEAD
+    if (!lazy |priority |isInView) return
+=======
+    if (!lazy || priority || isInView) return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry && entry.isIntersecting) {
@@ -86,13 +103,102 @@ if (||) {
         if (entry && entry.isIntersecting) {;
           setIsInView(true),;
           observer.disconnect();
+<<<<<<< HEAD
 
 
 
         }
       }
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        }
+      }
+<<<<<<< HEAD
+      {
+        rootMargin: '50px', // Start loading 50px before the image enters viewport
+      }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    )
+    if (imgRef.current) {
+      observer.observe(imgRef.current)
+    }
+    return () => observer.disconnect()
+  }, [lazy, priority, isInView])
+  // Generate WebP-compatible src
+  const getOptimizedSrc = (originalSrc: string,) => {
+    // If it's already optimized or external, return as-is
+    if (
+      originalSrc.startsWith('http') |
+      originalSrc.includes('/_next/image')
+    ) {
+      return originalSrc
+    }
+    // For internal images, Next.js will handle optimization
+    return originalSrc
+  }
+  const handleLoad = () => {
+    setIsLoading(false)
+    onLoad?.()
+  }
+  const handleError = () => {
+    setHasError(true)
+    setIsLoading(false)
+    onError?.()
+  }
+  // Generate blur placeholder
+  const generateBlurDataURL = () => {
+    if (blurDataURL) return blurDataURL
+<<<<<<< HEAD
+    // Generate a simple gray blur placeholder
+    return `data:image/svg+xml;base64,${Buffer.from(
+      `<svg width="${width |400}" height="${height |300}" xmlns="http://www.w3.org/2000/svg">
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    ),;
+    if (imgRef.current) {;
+      observer.observe(imgRef.current);
+    }
+;
+    return () => observer.disconnect();
+  }, [lazy, priority, isInView]),;
+  // Generate WebP-compatible src;
+  const getOptimizedSrc = (originalSrc: string) => {;
+    // If it's already optimized or external, return as-is;
+    if (originalSrc.startsWith('http') || originalSrc.includes('/_next/image')) {;
+      return originalSrc;
+    }
+    
+    // For internal images, Next.js will handle optimization
+    return originalSrc
+  },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+  const handleError = () => {
+    setHasError(true),
+    setIsLoading(false),
+    onError?.()
+  },
+
+  // Generate blur placeholder
+  const generateBlurDataURL = () => {
+    if (blurDataURL) return blurDataURL,
+    
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
@@ -194,9 +300,17 @@ if (||) {
       {isInView && !hasError && (;
 
         <Image;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           src={getOptimizedSrc(src)}
 =======
   // Generate blur placeholder;
@@ -229,21 +343,40 @@ if (return blurDataURL) {
           blurDataURL={
             placeholder === 'blur' ? generateBlurDataURL () : undefined;
           }
+<<<<<<< HEAD
 
+=======
+          onLoad={handleLoad}
+          onError={handleError}
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           className={cn(            'transition-opacity duration-300'
 
 =======
 
           className={cn(            'transition-opacity duration-300',
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             isLoading ? 'opacity-0' : 'opacity-100'
           )}
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {...props}
         />;
       )}
@@ -252,9 +385,17 @@ if (return blurDataURL) {
 
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       )}
       {/* Error fallback */}
       {hasError && (;
@@ -299,7 +440,14 @@ if (return blurDataURL) {
                 />
               </svg>
               <span className="text-xs">Image not available</span>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -375,6 +523,7 @@ export function getImageDimensions(
     img.src = src
   })
 }
+<<<<<<< HEAD
 
 
 =======
@@ -382,6 +531,12 @@ export function getImageDimensions(
       {!isInView && lazy && !priority && (
 
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
       )}
@@ -494,6 +649,7 @@ export function preload_image (src: string): Promise < void> {
     img.onerror = reject;
     img.src = src;
   });
+<<<<<<< HEAD
 // Utility to get image dimensions;
 export function getImageDimensions (
   src: string): Promise<{ width: number; height: number }> {
@@ -513,7 +669,15 @@ export function getImageDimensions (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+} ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

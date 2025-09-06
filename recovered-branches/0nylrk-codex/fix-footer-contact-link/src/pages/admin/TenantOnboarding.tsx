@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -38,6 +39,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -57,6 +63,7 @@ export default function TenantOnboarding() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
   const [formData, setFormData] = useState({;
     brand_name: "",;
     subdomain: "",;
@@ -67,6 +74,54 @@ export default function TenantOnboarding() {;
     industry: "",;
     custom_domain: "",;
     is_co_branded: true;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "sonner",
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client";
+import { Switch } from "@/components/ui/switch";
+export default function TenantOnboarding() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("company");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+import { supabase } from "@/integrations/supabase/client",
+import { Switch } from "@/components/ui/switch",
+export default function TenantOnboarding() {
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("company"),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [formData, setFormData] = useState({
+
+    brand_name: ""
+    subdomain: ""
+    logo_url: ""
+    primary_color: "#9b87f5"
+    theme_preset: "light"
+    company_size: ""
+    industry: ""
+    custom_domain: ""
+    is_co_branded: true
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   });
 
   // Check if user has admin role;
@@ -625,11 +680,43 @@ if (throw error) {
                         name="custom_domain"
                         value={formData && formData.custom_domain}
                         onChange={handleInputChange}
+<<<<<<< HEAD
 
                         placeholder="hire && hire.yourcompany.com"
 =======
 
 
+=======
+                        placeholder="hire.yourcompany.com"
+                      />
+                      <p className="text-xs text-muted-foreground">
+                        If you want to use your own domain, enter it here. You'll need to configure DNS records.
+                      </p>
+                    </div>
+                  </TabsContent>
+                </Tabs>
+                <div className="flex justify-end space-x-2">
+                  <Button type="button" variant="outline" onClick={() => window.history.back()}>
+                    Cancel
+                  </Button>
+                  <Button type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? "Creating..." : "Create Tenant"}
+                  </Button>
+                </div>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -896,11 +983,20 @@ export default function TenantOnboarding() {;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

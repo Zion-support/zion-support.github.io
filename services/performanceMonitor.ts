@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface PerformanceMetrics {
+=======
+export interface PerformanceMetrics {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  url: string;
+  timestamp: Date;
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+  totalBlockingTime: number;
+  speedIndex: number;
+  performanceScore: number;
+  accessibilityScore: number;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   speed_index: number;
   performance_score: number;
@@ -6,7 +28,16 @@
   seo_score: number;
 
 }
+<<<<<<< HEAD
 export interface PerformanceAlert {
+=======
+<<<<<<< HEAD
+export interface PerformanceAlert {
+=======
+
+export interface PerformanceAlert {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   url: string;
   type: 'critical' | 'warning' | 'info';
@@ -19,7 +50,16 @@ export interface PerformanceAlert {
   resolved: boolean;
 
 }
+<<<<<<< HEAD
 export interface MonitoringConfig {
+=======
+<<<<<<< HEAD
+export interface MonitoringConfig {
+=======
+
+export interface MonitoringConfig {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   urls: string[];
   frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
   thresholds: {
@@ -30,15 +70,124 @@ export interface MonitoringConfig {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+<<<<<<< HEAD
+=======
+    cumulativeLayoutShift: number
+  }
+  notifications: {
+    email: boolean;
+
+    slack: boolean
+
+    webhook: boolean
+  }
+}
+<<<<<<< HEAD
+export class PerformanceMonitorService {
+=======
+
+export class PerformanceMonitorService {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  private apiKey: string;
+
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
+<<<<<<< HEAD
 
 
 export interface PerformanceMetrics {;
 
 
+=======
+      const response = await fetch(`${this.baseUrl}/performance/monitor`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`;
+          'Content-Type': 'application/json'}
+        body: JSON.stringify({ url })});
+      if (!response.ok) {
+        throw new Error(`Performance monitoring failed: ${response.statusText}`)
+=======
+<<<<<<< HEAD
+export interface PerformanceMetrics {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  url: string,;
+  timestamp: Date,;
+  loadTime: number,;
+  firstContentfulPaint: number,;
+  largestContentfulPaint: number,;
+  cumulativeLayoutShift: number,;
+  firstInputDelay: number,;
+  timeToInteractive: number,;
+  totalBlockingTime: number,;
+  speedIndex: number,;
+  performanceScore: number,;
+  accessibilityScore: number,;
+  bestPracticesScore: number,;
+  seoScore: number;
+}
+;
+export interface PerformanceAlert {;
+  id: string,;
+  url: string,;
+  type: 'critical' | 'warning' | 'info',;
+  message: string,;
+  metric: string,;
+  threshold: number,;
+  currentValue: number,;
+  timestamp: Date,;
+  resolved: boolean;
+}
+;
+export interface MonitoringConfig {;
+  urls: string[],;
+  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily',;
+  thresholds: {;
+    loadTime: number,;
+    firstContentfulPaint: number,;
+    largestContentfulPaint: number,;
+    cumulativeLayoutShift: number;
+  },;
+  notifications: {;
+    email: boolean,;
+    slack: boolean,;
+    webhook: boolean;
+  }
+}
+;
+export class PerformanceMonitorService {;
+  private apiKey: string,;
+  private baseUrl: string,;
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
+    this.apiKey = apiKey,;
+    this.baseUrl = baseUrl;
+  }
+;
+  async monitorWebsite(url: string): Promise<PerformanceMetrics> {;
+    try {;
+      // In a real implementation, this would use Lighthouse, WebPageTest, or similar;
+      const response = await fetch(`${this.baseUrl}/performance/monitor`, {;
+        method: 'POST',;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`,;
+          'Content-Type': 'application/json'},;
+        body: JSON.stringify({ url })}),;
+      if (!response.ok) {;
+        throw new Error(`Performance monitoring failed: ${response.statusText}`);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
       return await response.json()
 =======
@@ -60,11 +209,19 @@ export interface PerformanceMetrics {;
       return this && this.generateMockMetrics(url)
     }
   }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
@@ -79,10 +236,18 @@ export interface PerformanceMetrics {;
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
       return await response.json()
 =======
@@ -99,11 +264,19 @@ export interface PerformanceMetrics {;
       return this && this.generateMockHistoricalData(url, days)
     }
   }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
     try {
 
@@ -156,10 +329,18 @@ export interface PerformanceMetrics {;
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
       return await response.json()
 =======
@@ -176,11 +357,19 @@ export interface PerformanceMetrics {;
       return this && this.generateMockAlerts(url)
     }
   }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
       averageLoadTime: number;
@@ -345,6 +534,7 @@ export interface PerformanceMetrics {;
         bestPracticesScore: Math.floor(Math.random() * 20) + 80,;
         seoScore: Math.floor(Math.random() * 20) + 80;
       });
+<<<<<<< HEAD
 
 
 
@@ -355,6 +545,21 @@ export interface PerformanceMetrics {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+    return data
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
 =======
@@ -561,10 +766,20 @@ if ( {) {
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
+<<<<<<< HEAD
 
 
     return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
 
+=======
+        currentValue: 85;
+        timestamp: new Date()
+        resolved: true
+      }
+<<<<<<< HEAD
+    ];
+    return url ? alerts.filter(a => a.url === url) : alerts
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 // Pricing tiers for the Performance Monitor
@@ -607,8 +822,12 @@ export const PERFORMANCE_MONITOR_PRICING = {
     period: '/month';
 
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
@@ -650,11 +869,18 @@ export const PERFORMANCE_MONITOR_PRICING = {;
     features: [;
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee';
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     ];
   }
 

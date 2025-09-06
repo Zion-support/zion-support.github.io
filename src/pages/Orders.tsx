@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -7,6 +8,18 @@ import Link from 'next / link'; // Changed from react-router-dom;
 import { use_auth } from '@/hooks / use_auth';
 import { useGetOrdersQuery } from '@/hooks / use_orders';
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
+import Link from 'next/link'; // Changed from react-router-dom
+import { useAuth } from '@/hooks/useAuth';
+import { useGetOrdersQuery } from '@/hooks/useOrders';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {
 
   Table
@@ -15,11 +28,30 @@ import {
   TableHead
   TableHeader
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 =======
 
+=======
+=======
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import Link from 'next/link', // Changed from react-router-dom
+import { useAuth } from '@/hooks/useAuth',
+import { useGetOrdersQuery } from '@/hooks/useOrders',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import {
+  Table,
+  TableBody,
+  TableCell,
+<<<<<<< HEAD
+  TableHead,;
+  TableHeader;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export default function OrdersPage() {;
 
@@ -61,6 +93,10 @@ export default function OrdersPage() {;
     }
   }
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth',
@@ -70,8 +106,31 @@ import {
   Table,
   TableBody,
   TableCell,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  TableHead,
+  TableHeader,
+  TableRow} from '@/components/ui/table',
+import { Badge } from '@/components/ui/badge',
+import Skeleton from '@/components/ui/skeleton',
+import { EmptyState } from '@/components/ui/empty-state',
+export default function OrdersPage() {
+  const { user } = useAuth(),
+  const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+  const getStatusBadge = (status: string) => {
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     switch (status) {
       case 'in_escrow':
         return (
@@ -145,9 +204,17 @@ import {
           icon={<FileText className="h-10 w-10" />}
           title="No Orders"
           description="You haven't purchased anything yet."
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         />
       ) : (
         <Table>
@@ -166,9 +233,17 @@ import {
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <TableCell>{formatDate(order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
@@ -211,10 +286,24 @@ import {
               </TableRow>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ))}
+<<<<<<< HEAD
 
 
 ;
 
+=======
+<<<<<<< HEAD
+          </TableBody>
+        </Table>
+      )}
+    </div>
+  );
+}
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
           </TableBody>;
@@ -223,7 +312,13 @@ import {
     </div>;
   );
 }
+<<<<<<< HEAD
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 =======
@@ -340,4 +435,7 @@ function OrdersPage() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

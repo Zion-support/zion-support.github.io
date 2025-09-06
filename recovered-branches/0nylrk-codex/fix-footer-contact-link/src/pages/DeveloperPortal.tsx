@@ -1,5 +1,24 @@
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {useState} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {ApiKeysManager} from "@/components/developers/ApiKeysManager";
+import {WebhooksManager} from "@/components/developers/WebhooksManager";
+import {ApiDocumentation} from "@/components/developers/ApiDocumentation";
+import {ApiLogs} from "@/components/developers/ApiLogs";
+=======
+import {useState} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -12,9 +31,16 @@ import {
   Terminal, 
   Webhook 
 } from "lucide-react",
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
@@ -29,6 +55,11 @@ interface TabDefinition {
 
   icon: LucideIcon
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 interface TabDefinition {;
   id: string,;
@@ -37,6 +68,18 @@ interface TabDefinition {;
 }
 
 export function DeveloperPortal() {;
+<<<<<<< HEAD
+=======
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function DeveloperPortal() {
+<<<<<<< HEAD
+  const { user } = useAuth();
+
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const { user } = useAuth();
 =======
@@ -186,8 +229,16 @@ export function DeveloperPortal() {;
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <Icon size={16} className="mr-2" />
                 {tab.label}
               </button>
@@ -209,8 +260,20 @@ export function DeveloperPortal() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+export default function ProtectedDeveloperPortal() {
+  return (
+    <ProtectedRoute>
+      <DeveloperPortal />
+    </ProtectedRoute>
+  )
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 ;
@@ -224,6 +287,7 @@ export default function ProtectedDeveloperPortal() {;
 }
 
 ;
+<<<<<<< HEAD
 
 
 =======
@@ -261,3 +325,9 @@ function ProtectedDeveloperPortal() {
     </ProtectedRoute>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

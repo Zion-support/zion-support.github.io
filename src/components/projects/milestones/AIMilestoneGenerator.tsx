@@ -1,5 +1,29 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import {
+  Accordion
+  AccordionContent
+  AccordionItem
+  AccordionTrigger
+} from '@/components/ui/accordion'
+import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
+import { format, parseISO } from 'date-fns'
+  MilestoneInput
+  GeneratedMilestone
+  useMilestoneGenerator
+} from '@/hooks/useMilestoneGenerator'
+import { Badge } from '@/components/ui/badge'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 interface AIMilestoneGeneratorProps {;
   scope: string;
@@ -8,6 +32,7 @@ interface AIMilestoneGeneratorProps {;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
 
+<<<<<<< HEAD
 
 
 
@@ -15,6 +40,32 @@ interface AIMilestoneGeneratorProps {;
       return;
 
 
+=======
+  scope
+  startDate
+  endDate
+  projectType
+  onAddMilestones
+  onAddMilestone
+}: AIMilestoneGeneratorProps) {
+  const {
+    generateMilestones
+    generatedMilestones
+    isGenerating
+    clearGeneratedMilestones
+  } = useMilestoneGenerator()
+  const [selectedMilestones, setSelectedMilestones] = useState<
+    Record<string, boolean>
+  >({})
+  const handleGenerateMilestones = async () => {
+<<<<<<< HEAD
+    if (!scope |!startDate |!projectType) {
+      return
+=======
+    if (!scope || !startDate || !projectType) {
+      return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     const input: MilestoneInput = {
       scope
@@ -108,9 +159,16 @@ if ( {) {
     }
   }
 =======
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -199,10 +257,18 @@ export function AIMilestoneGenerator(): any ({;
 
   },
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className='space-y-4'>;
       <div className='flex items-center justify-between'>;
@@ -211,19 +277,38 @@ export function AIMilestoneGenerator(): any ({;
           AI Milestone Generator;
         </h3>;
         <Button
+<<<<<<< HEAD
 
 
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
 =======
+<<<<<<< HEAD
+          variant='outline'
+          onClick={handleGenerateMilestones}
+<<<<<<< HEAD
+          disabled={isGenerating |!scope |!startDate |!projectType}        >
+=======
+          disabled={isGenerating || !scope || !startDate || !projectType}        >
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {isGenerating ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
@@ -392,17 +477,40 @@ export function AIMilestoneGenerator(): any ({;
                           <span className="font-medium">{milestone.title}</span>
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+                      variant='ghost'
+                      size='sm'
+                      onClick={e => {
+                        e.stopPropagation()
+                        handleAddSingleMilestone(milestone) }}
+                      className='mr-2'
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -410,10 +518,18 @@ export function AIMilestoneGenerator(): any ({;
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     >
                       <Plus className='h-4 w-4' />
                     </Button>
@@ -463,6 +579,7 @@ export function AIMilestoneGenerator(): any ({;
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
 
     </div>;
   );
@@ -503,3 +620,22 @@ export function AIMilestoneGenerator(): any ({;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </div>
+  )
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    </div>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

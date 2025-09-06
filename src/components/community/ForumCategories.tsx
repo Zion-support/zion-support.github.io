@@ -1,5 +1,74 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const categories: ForumCategoryInfo[] = [
+  {
+    id: "getting-hired",
+    name: "Getting Hired",
+    description: "Tips, strategies, and questions about getting hired on the platform."
+    adminOnly: false,
+    icon: "Briefcase"
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import Link from "next/link",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { ForumCategoryInfo } from "@/types/community";
+const categories: ForumCategoryInfo[] = [
+=======
+import { ForumCategoryInfo } from "@/types/community",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  {
+
+    id: "getting-hired"
+    name: "Getting Hired"
+    description: "Tips, strategies, and questions about getting hired on the platform."
+    adminOnly: false
+    icon: "Briefcase"
+  }
+=======
+import { ForumCategoryInfo } from "@/types/community",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  {
+    id: "project-help"
+    name: "Project Help"
+    description: "Get help with your ongoing projects and collaboration."
+    adminOnly: false
+    icon: "MessageSquare"
+<<<<<<< HEAD
+  }
+  {
+    id: "ai-tools"
+    name: "AI Tools Discussion"
+    description: "Discuss AI tools, frameworks, and best practices."
+    adminOnly: false
+    icon: "Code"
+  }
+=======
+  },
+  {
+    id: "ai-tools",
+    name: "AI Tools Discussion",
+    description: "Discuss AI tools, frameworks, and best practices.",
+    adminOnly: false,
+    icon: "Code"
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
     id: "feedback"
     name: "Feedback & Feature Requests"
@@ -9,9 +78,17 @@
 
 
   },
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
     id: "announcements"
     name: "Announcements"
@@ -81,7 +158,14 @@ export const ForumCategories = () => {
       {visibleCategories.map((category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
@@ -97,11 +181,30 @@ export const ForumCategories = () => {
             </Card>
           </Link>
         )
+<<<<<<< HEAD
 
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
 export default ForumCategories;
 ;
 
+=======
+<<<<<<< HEAD
+      })}
+    </div>
+  )
+}
+export default ForumCategories
+"
+<<<<<<< HEAD
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+export default ForumCategories
+
+=======
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
+export default ForumCategories;
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import Link from "next/link",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
@@ -187,9 +290,14 @@ export const ForumCategories = () => {;
 };
 
 export default ForumCategories;
+<<<<<<< HEAD
 
 export default ForumCategories;
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -204,4 +312,7 @@ export default ForumCategories;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

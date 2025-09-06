@@ -1,5 +1,12 @@
 
+<<<<<<< HEAD
 // Use the shared icon wrapper;
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+// Use the shared icon wrapper
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
@@ -29,8 +36,13 @@ import React, { useState, useEffect } from 'react',
 =======
 =======
 import React, { useState, useEffect } from 'react',
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
@@ -129,6 +141,13 @@ export const NotificationCenter: React.FC = () => {;
       loadNotifications();
     }
   }, [open, fetchNotifications]),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -184,9 +203,17 @@ export const NotificationCenter: React.FC = () => {;
           {unreadCount > 0 && (;
 
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
           )}
@@ -195,6 +222,7 @@ export const NotificationCenter: React.FC = () => {;
       </PopoverTrigger>;
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
         <NotificationHeader
+<<<<<<< HEAD
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
         />;
@@ -205,6 +233,17 @@ export const NotificationCenter: React.FC = () => {;
         />;
 
 
+=======
+          unreadCount={unreadCount}
+          onMarkAllAsRead={handleMarkAllAsRead}
+        />
+<<<<<<< HEAD
+        <NotificationFilter
+          filter={filter as FilterType}
+          onFilterChange={handleFilterChange}
+        />
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <NotificationList
 =======
 // Use the shared icon wrapper;
@@ -296,7 +335,11 @@ if ( {) {
           filter={filter as FilterType} 
           onFilterChange={handleFilterChange} 
         />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <NotificationList 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -304,10 +347,26 @@ if ( {) {
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
+<<<<<<< HEAD
 
 
 
 
+=======
+          onDismiss={dismissNotification}
+          onRetry={fetchNotifications}
+<<<<<<< HEAD
+        />
+        <NotificationFooter onClose={() => setOpen(false)} />
+      </PopoverContent>
+    </Popover>
+  )
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         />;
 
@@ -315,11 +374,18 @@ if ( {) {
       </PopoverContent>;
     </Popover>;
   );
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

@@ -1,6 +1,22 @@
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+]
+=======
+ ] 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+] 
+=======
+ ] 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }];
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge
@@ -728,10 +744,18 @@ const supportLinks = [;
               )}
             </button>
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
@@ -913,10 +937,18 @@ const supportLinks = [;
               )}
             </div>
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -1128,6 +1160,7 @@ const supportLinks = [;
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
+<<<<<<< HEAD
                     className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30";
                   >;
                     <div className="text - 2xl font - bold text - white mb - 1">{stat.value}</div>;
@@ -1135,6 +1168,24 @@ const supportLinks = [;
                   </motion.div>))}
               </div>;
             </div>;
+=======
+                    className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30"
+                  >
+                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-xs text-gray-400">{stat.label}</div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Quick Links */}
             <div className="p - 6 border - b border - cyan - 500 / 30">;
               <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
@@ -1154,10 +1205,26 @@ const supportLinks = [;
                     </div>;
                     <span className="text - gray - 300 group - hover:text - white transition - colors duration - 200">;
                       {link.name}
+<<<<<<< HEAD
                     </span>;
                   </Link>))}
               </div>;
             </div>;
+=======
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Service Categories */}
             <div className="p - 6 border - b border - cyan - 500 / 30">;
               <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
@@ -1186,9 +1253,20 @@ const supportLinks = [;
                         }`} 
                       />
                     </button>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+                    
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     <AnimatePresence>
                       {expandedCategory === item.name && (
                         <motion.div
@@ -1340,6 +1418,7 @@ const supportLinks = [;
                               {child.badge && (
                                 <span className="px - 2 py - 1 text - xs bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - full">;
                                   {child.badge}
+<<<<<<< HEAD
                                 </span>)}
                             </Link>))}
                         </motion.div>)}
@@ -1347,6 +1426,27 @@ const supportLinks = [;
                   </div>))}
               </div>;
             </div>;
+=======
+                                </span>
+                              )}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </div>
+            </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Quick Links */}
             <div className="p - 6 border - b border - cyan - 500 / 30">;
               <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
