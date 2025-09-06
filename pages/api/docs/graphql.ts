@@ -17,8 +17,13 @@ function toSDL() {
   return typedefs.join("\n");
 }
 
+<<<<<<< HEAD
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
 res.setHeader("Content-Type", "text/plain");
+=======
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader("Content-Type", "text/plain");
+>>>>>>> main
   res.status(200).send(toSDL());
 }
 =======

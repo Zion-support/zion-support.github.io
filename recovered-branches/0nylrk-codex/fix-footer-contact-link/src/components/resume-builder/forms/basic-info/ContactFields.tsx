@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -10,8 +11,20 @@ import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+>>>>>>> main
 interface ContactFieldsProps {
-  control: Control<BasicInfoFormData>
+  control: Control<BasicInfoFormData>;
 }
 
 export function ContactFields({ control }: ContactFieldsProps) {
@@ -77,7 +90,10 @@ export function ContactFields({ control }: ContactFieldsProps) {;
           <FormItem>
             <FormLabel>LinkedIn</FormLabel>
             <FormControl>
-              <Input placeholder="https://linkedin.com/in/username" {...field} />
+              <Input
+                placeholder="https://linkedin.com/in/username"
+                {...field}
+              />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -98,6 +114,6 @@ export function ContactFields({ control }: ContactFieldsProps) {;
         )}
       />
     </div>
-  )
+  );
 }
 ;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
@@ -10,19 +11,32 @@ import { CountrySelector } from "./CountrySelector",
 import { PaymentSection } from "./PaymentSection",
 import { ServiceDetails } from "./ServiceDetails",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import {
+  onsiteServicePricing,
+  CountryPricing,
+} from "@/data/onsiteServicePricing";
+import { CountrySelector } from "./CountrySelector";
+import { PaymentSection } from "./PaymentSection";
+import { ServiceDetails } from "./ServiceDetails";
+>>>>>>> main
 interface CountryServiceSelectorProps {
-  onCountryChange?: (country: CountryPricing | null) => void,
-  selectedCountry?: CountryPricing | null
+  onCountryChange?: (country: CountryPricing | null) => void;
+  selectedCountry?: CountryPricing | null;
 }
 
-export function CountryServiceSelector({ onCountryChange, selectedCountry: initialCountry }: CountryServiceSelectorProps) {
+export function CountryServiceSelector({
+  onCountryChange,
+  selectedCountry: initialCountry,
+}: CountryServiceSelectorProps) {
   return (
     <div className="space-y-6">
       <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
-        <CountrySelector 
-          onCountryChange={onCountryChange || (() => {})} 
-          selectedCountry={initialCountry || null} 
+        <CountrySelector
+          onCountryChange={onCountryChange || (() => {})}
+          selectedCountry={initialCountry || null}
         />
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 =======
@@ -46,8 +60,14 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
+=======
+
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+      </div>
+
+>>>>>>> main
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>
-  )
+  );
 }
 ;

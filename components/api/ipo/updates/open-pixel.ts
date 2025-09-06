@@ -11,7 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
   }
   const pixel = Buffer.from(
-"R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
+    "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
     "base64",
   );
   res.setHeader("Content-Type", "image/gif");

@@ -9,7 +9,11 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+<<<<<<< HEAD
 AlertDialogTitle,;
+=======
+  AlertDialogTitle,
+>>>>>>> main
 } from "../components/ui/alert-dialog";
 import {
   useLanguage,
@@ -119,6 +123,7 @@ export function LanguageDetectionPopup() {;
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
+<<<<<<< HEAD
 );
 =======
             {t('general.no')}
@@ -134,4 +139,7 @@ export function LanguageDetectionPopup() {;
     </AlertDialog>;
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }

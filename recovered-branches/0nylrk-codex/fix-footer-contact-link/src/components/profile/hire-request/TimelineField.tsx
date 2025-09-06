@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -10,8 +11,26 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { UseFormReturn } from "react-hook-form";
+import { FormValues } from "./useHireRequestForm";
+>>>>>>> main
 interface TimelineFieldProps {
-  form: UseFormReturn<FormValues>
+  form: UseFormReturn<FormValues>;
 }
 
 export function TimelineField({ form }: TimelineFieldProps) {
@@ -23,7 +42,11 @@ export function TimelineField({ form }: TimelineFieldProps) {
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { value: "Ongoing", label: "Ongoing" };
+=======
+    { value: "Ongoing", label: "Ongoing" },
+>>>>>>> main
   ];
 =======
     { value: "Ongoing", label: "Ongoing" }
@@ -38,8 +61,8 @@ export function TimelineField({ form }: TimelineFieldProps) {
         <FormItem>
           <FormLabel className="text-white">Project Timeline</FormLabel>
           <FormControl>
-            <Select 
-              onValueChange={field.onChange} 
+            <Select
+              onValueChange={field.onChange}
               value={field.value}
               defaultValue={field.value}
             >
@@ -99,5 +122,5 @@ export function TimelineField({ form }: TimelineFieldProps) {;
         </FormItem>
       )}
     />
-  )
+  );
 }

@@ -41,8 +41,13 @@ export default function EnhancedButton({
         className,
       )}
       {...props}
+<<<<<<< HEAD
     />;
 );
+=======
+    />
+  );
+>>>>>>> main
 }
 <<<<<<< HEAD
 =======

@@ -40,7 +40,11 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 <<<<<<< HEAD
+<<<<<<< HEAD
 DropdownMenuTrigger,;
+=======
+  DropdownMenuTrigger,
+>>>>>>> main
 } from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 import { toast } from "@/hooks/use-toast";

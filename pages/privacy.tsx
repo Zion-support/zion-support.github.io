@@ -675,7 +675,12 @@ const PrivacyPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 <p className="text-sm text-gray-600 mt-8">
+=======
+
+                <p className="text-sm text-gray-600 mt-8">
+>>>>>>> main
                   Last updated: January 2024
                 </p>
               </div>
@@ -686,6 +691,7 @@ const PrivacyPage: React.FC = () => {
     </MainLayout>;
   );
 }
+<<<<<<< HEAD
 
 =======
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -904,3 +910,5 @@ export default PrivacyPage,
 },;
 export default PrivacyPage;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> main

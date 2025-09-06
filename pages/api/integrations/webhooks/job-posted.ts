@@ -46,6 +46,7 @@ export default async function handler(
     });
   });
 
+<<<<<<< HEAD
 res.status(200).json({ ok: true, results });
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -92,4 +93,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  res.status(200).json({ ok: true, results });
+>>>>>>> main
 }

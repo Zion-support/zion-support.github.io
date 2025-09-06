@@ -6,7 +6,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!companyId || typeof companyId !== "string") {
     return res.status(400).json({ error: "companyId required" });
   }
-const invoices = store.listInvoices(companyId);
+  const invoices = store.listInvoices(companyId);
   return res.status(200).json(invoices);
 }
 =======

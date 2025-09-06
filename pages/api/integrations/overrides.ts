@@ -28,6 +28,7 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
   if (req.method === 'GET') {
     const { jobId, disableCrmSync, disableAtsSync } = req.body as { jobId?: string, disableCrmSync?: boolean, disableAtsSync?: boolean },;
@@ -65,6 +66,9 @@ export default function handler(req, res) {
   }
 <<<<<<< HEAD
 return res.status(405).json({ error: "Method not allowed" });
+=======
+  return res.status(405).json({ error: "Method not allowed" });
+>>>>>>> main
 }
 =======
 }

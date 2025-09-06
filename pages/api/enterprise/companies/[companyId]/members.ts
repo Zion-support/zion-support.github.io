@@ -42,7 +42,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
       .json(ok ? { success: true } : { error: "member_not_found" });
   }
 
-return res.status(405).json({ error: "method_not_allowed" });
+  return res.status(405).json({ error: "method_not_allowed" });
 }
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';

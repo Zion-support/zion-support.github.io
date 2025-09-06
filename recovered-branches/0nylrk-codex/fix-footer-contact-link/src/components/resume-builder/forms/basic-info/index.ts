@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> main
 export * from "./BasicInfoForm";
 =======
 export * from "./BasicInfoForm",

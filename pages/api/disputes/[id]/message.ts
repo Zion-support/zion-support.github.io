@@ -44,7 +44,7 @@ export default async function handler(
     return res.status(201).json({ dispute });
   }
 
-res.setHeader("Allow", "POST");
+  res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
 =======

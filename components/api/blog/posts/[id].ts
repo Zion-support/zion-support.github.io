@@ -18,8 +18,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return res.status(405).end();
   export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
+  return res.status(405).end();
+  export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> main
     const { id } = req.query;
     if (typeof id !== "string")
       return res.status(400).json({ error: "Invalid id" });

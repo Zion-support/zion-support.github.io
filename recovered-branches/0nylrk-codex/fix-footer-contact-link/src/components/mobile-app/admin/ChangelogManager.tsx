@@ -232,6 +232,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 );
 =======
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
@@ -242,4 +243,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     </Card>;
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 };

@@ -22,7 +22,11 @@ export default function ReportProblemButton({
       </a>
     </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> main
 }
 export default function ReportProblemButton({
   projectId,

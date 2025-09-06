@@ -25,10 +25,14 @@ export default function CertificatePreview({
       </a>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">

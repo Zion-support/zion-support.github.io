@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
@@ -14,9 +15,25 @@ import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { UseFormReturn } from "react-hook-form";
+import { CertificationFormValues } from "./types";
+interface CertificationFormFieldsProps {
+  form: UseFormReturn<CertificationFormValues>;
+>>>>>>> main
 }
 
-export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
+export function CertificationFormFields({
+  form,
+}: CertificationFormFieldsProps) {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -27,7 +44,10 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
             <FormItem>
               <FormLabel>Certification Name</FormLabel>
               <FormControl>
-                <Input placeholder="AWS Certified Solutions Architect, PMP, etc." {...field} />
+                <Input
+                  placeholder="AWS Certified Solutions Architect, PMP, etc."
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -41,7 +61,10 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
             <FormItem>
               <FormLabel>Issuing Organization</FormLabel>
               <FormControl>
-                <Input placeholder="Amazon Web Services, PMI, etc." {...field} />
+                <Input
+                  placeholder="Amazon Web Services, PMI, etc."
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -56,11 +79,7 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
             <FormItem>
               <FormLabel>Issue Date</FormLabel>
               <FormControl>
-                <Input 
-                  type="date" 
-                  {...field}
-                  value={field.value || ''}
-                />
+                <Input type="date" {...field} value={field.value || ""} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -74,11 +93,7 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
             <FormItem>
               <FormLabel>Expiration Date (Optional)</FormLabel>
               <FormControl>
-                <Input 
-                  type="date" 
-                  {...field}
-                  value={field.value || ''}
-                />
+                <Input type="date" {...field} value={field.value || ""} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -107,7 +122,10 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
             <FormItem>
               <FormLabel>Credential URL (Optional)</FormLabel>
               <FormControl>
-                <Input placeholder="https://www.credential.com/verify/abc123" {...field} />
+                <Input
+                  placeholder="https://www.credential.com/verify/abc123"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -115,6 +133,6 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
         />
       </div>
     </>
-  )
+  );
 }
 ;

@@ -377,7 +377,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         )}
       </AnimatePresence>
     </nav>
-);
+  );
 };
 <<<<<<< HEAD
 export default EnhancedNavigation;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Input} from "@/components/ui/input";
@@ -8,6 +9,11 @@ import { Input } from "@/components/ui/input",
 import { SearchIcon } from "lucide-react",
 import { SearchFilterProps } from "@/types/filters",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { Input } from "@/components/ui/input";
+import { SearchIcon } from "lucide-react";
+import { SearchFilterProps } from "@/types/filters";
+>>>>>>> main
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
   return (
     <div className="mb-6">
@@ -22,6 +28,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         />
       </div>
     </div>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -44,5 +51,8 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
     </div>;
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
 ;

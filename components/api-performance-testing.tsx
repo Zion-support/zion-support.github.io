@@ -15,10 +15,14 @@ export default function ApiPerformanceTestingPage() {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 return (
 =======
   return (
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  return (
+>>>>>>> main
     <>
       <SEO
         title="API Performance Testing"

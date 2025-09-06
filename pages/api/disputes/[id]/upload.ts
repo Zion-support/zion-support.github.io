@@ -77,7 +77,7 @@ export default async function handler(
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import("fs");
   await new Promise<void>((resolve, reject) => {
-fs.mkdir(
+    fs.mkdir(
       require("path").dirname(filePath),
       { recursive: true },
       (err: any) => {

@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Slider} from "@/components/ui/slider";
 import {PriceFilterProps} from "@/types/filters";
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
+=======
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
+import { PriceFilterProps } from "@/types/filters";
+export function PriceFilter({
+  priceRange,
+  setPriceRange,
+  expanded,
+  toggleSection,
+  isMobileFilterOpen,
+}: PriceFilterProps) {
+>>>>>>> main
   const handleChange = (values: number[]) => {
     setPriceRange([values[0], values[1]]);
   };
@@ -30,12 +43,17 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
       {expanded && (
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>${priceRange[0]}/hr</span>
             <span>${priceRange[1]}/hr</span>
           </div>
+<<<<<<< HEAD
           <Slider 
 <<<<<<< HEAD
 =======
@@ -67,6 +85,9 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           </div>;
           <Slider;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+          <Slider
+>>>>>>> main
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}
@@ -77,5 +98,5 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
         </div>
       )}
     </div>
-  )
+  );
 }

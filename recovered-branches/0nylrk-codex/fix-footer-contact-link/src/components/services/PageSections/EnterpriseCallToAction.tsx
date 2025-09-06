@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Link} from "react-router-dom";
@@ -6,6 +7,10 @@ import {Button} from "@/components/ui/button";
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+>>>>>>> main
 export function EnterpriseCallToAction() {
   return (
     <div className="mt-12 text-center">
@@ -18,6 +23,7 @@ export function EnterpriseCallToAction() {
         Need volume pricing or custom SLAs? Contact our enterprise sales team.
       </p>
     </div>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -37,5 +43,8 @@ export function EnterpriseCallToAction() {;
     </div>;
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
 ;

@@ -77,6 +77,7 @@ class ComprehensiveAutomationRunner {
 
   async runAllAutomations() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 this.log('🎯 Starting Comprehensive Automation Runner');
     this.log('
 =======
@@ -200,3 +201,55 @@ const runner = new ComprehensiveAutomationRunner();
 runner.runAllAutomations().catch(console.error);
 >>>>>>> main
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+    this.log('🎯 Starting Comprehensive Automation Runner');
+    this.log('📋 Running all automation scripts...');
+
+    const scripts = [
+      { path: 'automation/master-orchestrator.cjs', name: 'Master Orchestrator' },
+      { path: 'automation/comprehensive-app-improvement-suite.cjs', name: 'Comprehensive App Improvement Suite' },
+      { path: 'automation/performance-optimizer.cjs', name: 'Performance Optimizer' },
+      { path: 'automation/security-scanner.cjs', name: 'Security Scanner' },
+      { path: 'automation/seo-optimizer.cjs', name: 'SEO Optimizer' },
+      { path: 'automation/health-check.cjs', name: 'Health Check' },
+    ];
+
+    for (const script of scripts) {
+      await this.runScript(script.path, script.name);
+    }
+
+    this.generateReport();
+  }
+
+  generateReport() {
+    const endTime = new Date();
+    const duration = endTime - this.startTime;
+    
+    const report = {
+      timestamp: endTime.toISOString(),
+      duration: `${Math.round(duration / 1000)}s`,
+      totalScripts: this.results.length,
+      successful: this.results.filter(r => r.success).length,
+      failed: this.results.filter(r => !r.success).length,
+      successRate: `${Math.round((this.results.filter(r => r.success).length / this.results.length) * 100)}%`,
+      results: this.results
+    };
+
+    const reportPath = path.join(this.projectRoot, 'automation-reports', 'comprehensive-automation-runner-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+    this.log(`\n📊 Comprehensive Automation Runner completed!`);
+    this.log(`📈 Success Rate: ${report.successRate}`);
+    this.log(`⏱️ Duration: ${report.duration}`);
+    this.log(`📄 Report saved to: ${reportPath}`);
+  }
+}
+
+// Run the automation runner
+if (require.main === module) {
+  const runner = new ComprehensiveAutomationRunner();
+  runner.runAllAutomations().catch(console.error);
+}
+
+module.exports = ComprehensiveAutomationRunner;
+>>>>>>> main

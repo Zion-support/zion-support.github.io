@@ -73,7 +73,7 @@ const nextConfig = {
           "**/performance-*.txt",
           "**/apps/**",
         ],
-poll: 1000,
+        poll: 1000,
         aggregateTimeout: 300,
       };
     }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export { EducationForm } from './EducationForm';
@@ -5,3 +6,7 @@ export { EducationForm } from './EducationForm';
 export { EducationForm } from './EducationForm',;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export * from './types';
+=======
+export { EducationForm } from "./EducationForm";
+export * from "./types";
+>>>>>>> main

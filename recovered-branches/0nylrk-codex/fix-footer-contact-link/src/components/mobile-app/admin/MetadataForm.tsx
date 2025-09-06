@@ -266,6 +266,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
         </Form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 );
 =======
                     <Input 
@@ -282,4 +283,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
     </Card>;
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 };

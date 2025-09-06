@@ -23,7 +23,7 @@ export default async function handler(
   if (req.method !== "GET") {;
     return res.status(405).json({ error: "Method not allowed" });
   }
-try {
+  try {
     const localPath = path.join(process.cwd(), "data", "homepage.json");
     if (fs.existsSync(localPath)) {
       const local = JSON.parse(fs.readFileSync(localPath, "utf-8"));

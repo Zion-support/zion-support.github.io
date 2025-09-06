@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Badge} from '@/components/ui/badge';
@@ -10,10 +11,16 @@ import { Button } from '@/components/ui/button',
 import { Trash2 } from 'lucide-react',
 import { SkillItemProps } from './types',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Trash2 } from "lucide-react";
+import { SkillItemProps } from "./types";
+>>>>>>> main
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
   return (
-    <Badge 
-      key={skill.id} 
+    <Badge
+      key={skill.id}
       variant="secondary"
       className="flex items-center gap-1 py-1.5 px-3"
     >
@@ -31,6 +38,9 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
       </Button>
     </Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
   );
 };
 =======

@@ -1,11 +1,10 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SEOEnhancer from '../components/SEOEnhancer.dynamic';
-
-describe('SEOEnhancer', () => {
-  test('renders without crashing', () => {
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import SEOEnhancer from "../components/SEOEnhancer.dynamic";
+describe("SEOEnhancer", () => {
+  test("renders without crashing", () => {
     render(<SEOEnhancer />);
-    expect(screen.getByTestId('seo-enhancer')).toBeInTheDocument();
+    expect(screen.getByTestId("seo-enhancer")).toBeInTheDocument();
   });
 });

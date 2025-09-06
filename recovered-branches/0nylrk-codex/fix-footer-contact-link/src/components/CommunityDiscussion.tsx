@@ -255,6 +255,7 @@ export const CommunityDiscussion: React.FC = () => {;
         homepage.
       </div>
     </div>
+<<<<<<< HEAD
 );
 =======
                 </AvatarFallback>;
@@ -277,4 +278,7 @@ export const CommunityDiscussion: React.FC = () => {;
     </div>;
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 };

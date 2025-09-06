@@ -9,7 +9,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!providerId || !getProviderById(providerId)) {
     return res.status(400).json({ error: "Invalid providerId" });
   }
-const now = Date.now();
+  const now = Date.now();
   const updated = writeState((state) => {
     const idx = state.connections.findIndex((c) => c.providerId === providerId);
     if (idx >= 0) state.connections.splice(idx, 1);

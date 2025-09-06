@@ -29,7 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ok: true,
     profile,
     requiredDocuments: getRequiredDocuments(profile.role),
-optionalDocuments: getOptionalDocuments(profile.role),
+    optionalDocuments: getOptionalDocuments(profile.role),
   });
 }
 =======

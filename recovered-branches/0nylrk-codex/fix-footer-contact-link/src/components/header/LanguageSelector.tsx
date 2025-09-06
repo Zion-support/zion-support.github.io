@@ -6,7 +6,11 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
 DropdownMenuTrigger,;
+=======
+  DropdownMenuTrigger,
+>>>>>>> main
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 <<<<<<< HEAD

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -20,6 +21,20 @@ import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {;
   form: UseFormReturn<FormValues>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { UseFormReturn } from "react-hook-form";
+import { FormValues } from "./useHireRequestForm";
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>;
+>>>>>>> main
 }
 
 export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
@@ -32,8 +47,8 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
           <FormItem>
             <FormLabel className="text-white">Your Name</FormLabel>
             <FormControl>
-              <Input 
-                placeholder="Enter your full name" 
+              <Input
+                placeholder="Enter your full name"
                 {...field}
                 className="bg-zion-blue-light/20 border-zion-blue-light text-white"
               />
@@ -42,7 +57,7 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
           </FormItem>
         )}
       />
-      
+
       <FormField
         control={form.control}
         name="requesterEmail"
@@ -50,8 +65,8 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
           <FormItem>
             <FormLabel className="text-white">Your Email</FormLabel>
             <FormControl>
-              <Input 
-                placeholder="Enter your email address" 
+              <Input
+                placeholder="Enter your email address"
                 type="email"
                 {...field}
                 className="bg-zion-blue-light/20 border-zion-blue-light text-white"
@@ -62,6 +77,6 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
         )}
       />
     </>
-  )
+  );
 }
 ;

@@ -17,6 +17,7 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
       severity={severity as "safe" | "suspicious" | "dangerous"}
       showIcon={true}
       showText={true}
+<<<<<<< HEAD
     />;
 );
 =======
@@ -37,4 +38,8 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
     />;
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+    />
+  );
+>>>>>>> main
 };

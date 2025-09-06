@@ -75,5 +75,5 @@ export default function TalentGrid({ region, service }: Props) {
         </div>
       ))}
     </div>
-);
+  );
 }

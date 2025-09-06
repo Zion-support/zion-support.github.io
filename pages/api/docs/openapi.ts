@@ -73,8 +73,13 @@ function toOpenApi() {
   };
 }
 
+<<<<<<< HEAD
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
 res.setHeader("Content-Type", "application/json");
+=======
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader("Content-Type", "application/json");
+>>>>>>> main
   res.status(200).json(toOpenApi());
 }
 =======

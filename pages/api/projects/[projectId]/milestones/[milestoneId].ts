@@ -262,7 +262,7 @@ export default function handler(req, res) {
   }
 <<<<<<< HEAD
 
-res.setHeader("AllowPATCH");
+  res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }
 =======

@@ -18,10 +18,14 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 <<<<<<< HEAD
+<<<<<<< HEAD
 DropdownMenuTrigger,;
 =======
   DropdownMenuTrigger,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  DropdownMenuTrigger,
+>>>>>>> main
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
