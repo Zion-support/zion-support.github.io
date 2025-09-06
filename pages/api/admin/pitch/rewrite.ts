@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 import OpenAI from 'openai',;
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { allowed } = await ensureAdminFromApi(req),
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
 
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' }),
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
   const { slide } = req.body || {},
   if (!slide) return res.status(400).json({ error: 'Missing slide' }),
