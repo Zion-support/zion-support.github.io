@@ -1,15 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import {useRouter} from 'next/router';
+import { useRouter  } from 'next/router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import equipment from '@/data/equipment.json';
+
 const EquipmentDetail: NextPage = () => {
-  const router = useRouter(),
-  const { slug } = router.query as { slug?: string };
+  const router = useRouter()
+  const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
   const item = items.find(e => e.slug === slug);  const item = items.find((e) => e.slug === slug);
-
   if (!item) {
     return (
       <EnhancedLayout>
@@ -29,7 +29,6 @@ const EquipmentDetail: NextPage = () => {
         </div>
       </EnhancedLayout>
     )
-
   return (
     <EnhancedLayout>
       <Head>
@@ -92,6 +91,6 @@ const EquipmentDetail: NextPage = () => {
       </div>
     </EnhancedLayout>
   )
-};
-
+}
 export default EquipmentDetail;
+

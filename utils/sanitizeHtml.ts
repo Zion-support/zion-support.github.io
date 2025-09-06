@@ -21,11 +21,9 @@ export function sanitizeHtml("html": string): string {
 <<<<<<< HEAD
   return sanitized;
 }
-
 export function sanitizeUrl(url: string): string {
   return url.replace(/javascript:/gi, '');
 }
-
 export function sanitizeCss(css: string): string {
   return css.replace(/expression\s*\(/gi, '');
 }

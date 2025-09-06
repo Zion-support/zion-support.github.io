@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head';
 
 interface ProviderMeta {
@@ -6,14 +6,12 @@ interface ProviderMeta {
   name: string;
   category: 'crm' | 'ats';
   description?: string;
-
 interface ConnectionMap {
-  [providerId: string]: any,
-
+  [providerId: string]: any
 function StatusIcon({
-  status,
+  status
 }: {
-  status: 'connected' | 'warning' | 'disconnected',
+  status: 'connected' | 'warning' | 'disconnected'
 }) {
   const label =
     status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
@@ -22,90 +20,82 @@ function StatusIcon({
       {label}
     </span>
   );
-
 interface ConnectionMap {
-  [key: string]: boolean,
-
+  [key: string]: boolean
 const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
   const [syncRules, setSyncRules] = useState<any>({
-    autoCreateContacts: true,
-    pushNotesMode: 'auto',
-    autoSyncApplicants: true,
-    autoUploadResumes: true,
+    autoCreateContacts: true
+    pushNotesMode: 'auto'
+    autoSyncApplicants: true
+    autoUploadResumes: true
   });
-
   async function refresh() {
     const [p, s] = await Promise.all([
-      fetch('/api/integrations/providers').then(r => r.json()),
-      fetch('/api/integrations/status').then(r => r.json()),
+      fetch('/api/integrations/providers').then(r => r.json())
+      fetch('/api/integrations/status').then(r => r.json())
     ]);
-    setProviders(p.providers || []);
-    setConnections(s.connections || {});
+    setProviders(p.providers |[]);
+    setConnections(s.connections |{});
   }
-
   useEffect(() => {
     refresh();
   }, []);
   async function connect(providerId: string) {
-    setLoading(true),
+    setLoading(true)
     try {
       // Open mock oauth popup
       window.open(
-        `/api/integrations/oauth/${providerId}/start`,
-        'oauth',
+        `/api/integrations/oauth/${providerId}/start`
+        'oauth'
         'width=500,height=700'
       );
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ providerId, syncRules }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ providerId, syncRules })
       });
       await refresh();
     } finally {
       setLoading(false);
     }  }
-
   async function disconnect(providerId: string) {
-    setLoading(true),
+    setLoading(true)
     try {
       await fetch('/api/integrations/disconnect', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ providerId }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ providerId })
       });
       await refresh();
     } finally {
       setLoading(false);
     }  }
-
   async function resync(providerId: string) {
-    setLoading(true),
+    setLoading(true)
     try {
       await fetch('/api/integrations/resync', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ providerId }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ providerId })
       });
       await refresh();
     } finally {
       setLoading(false);
     }
   }
-
   const grouped = useMemo(
     () => ({
-      crm: providers.filter(p => p.category === 'crm'),
-      ats: providers.filter(p => p.category === 'ats'),
-    }),
+      crm: providers.filter(p => p.category === 'crm')
+      ats: providers.filter(p => p.category === 'ats')
+    })
     [providers]
   );
-
   function Card({ p }: { p: ProviderMeta }) {
-    const conn = connections[p.id] || { status: 'disconnected' };
+    const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
     return (
       <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40'>
@@ -156,7 +146,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
         </div>
       </div>
     );  }
-
   function RulesModal() {
     if (!selected) return null;
     const provider = providers.find(p => p.id === selected)!;
@@ -174,8 +163,8 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
                     checked={!!syncRules.autoCreateContacts}
                     onChange={e =>
                       setSyncRules({
-                        ...syncRules,
-                        autoCreateContacts: e.target.checked,
+                        ...syncRules
+                        autoCreateContacts: e.target.checked
                       })
                     }
                   />{' '}
@@ -202,8 +191,8 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
                         checked={syncRules.pushNotesMode === 'manual'}
                         onChange={() =>
                           setSyncRules({
-                            ...syncRules,
-                            pushNotesMode: 'manual',
+                            ...syncRules
+                            pushNotesMode: 'manual'
                           })
                         }
                       />{' '}
@@ -219,8 +208,8 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
                     checked={!!syncRules.autoSyncApplicants}
                     onChange={e =>
                       setSyncRules({
-                        ...syncRules,
-                        autoSyncApplicants: e.target.checked,
+                        ...syncRules
+                        autoSyncApplicants: e.target.checked
                       })
                     }
                   />{' '}
@@ -232,8 +221,8 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
                     checked={!!syncRules.autoUploadResumes}
                     onChange={e =>
                       setSyncRules({
-                        ...syncRules,
-                        autoUploadResumes: e.target.checked,
+                        ...syncRules
+                        autoUploadResumes: e.target.checked
                       })
                     }
                   />{' '}
@@ -262,7 +251,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
         </div>
       </div>
     );  }
-
   return (
     <>
       <Head>
@@ -273,7 +261,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
         <p className='text-sm text-gray-600 mb-6'>
           Connect your CRM and ATS to sync contacts, applicants, and activity.
         </p>
-
         <section className='mb-8'>
           <h2 className='text-lg font-semibold mb-3'>CRM</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -282,7 +269,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
             ))}
           </div>
         </section>
-
         <section className='mb-10'>
           <h2 className='text-lg font-semibold mb-3'>ATS</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -291,7 +277,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
             ))}
           </div>
         </section>
-
         <section className='mb-10'>
           <h2 className='text-lg font-semibold mb-2'>Zapier</h2>
           <div className='text-sm text-gray-600'>Polling endpoints:</div>
@@ -307,7 +292,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
               </code>
             </li>          </ul>
         </section>
-
         <section>
           <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />
         </section>
@@ -320,18 +304,17 @@ function ManualOverrideForm() {
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
-
   async function save() {
     setMessage('');
     const res = await fetch('/api/integrations/overrides', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }),
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync })
     });
     if (res.ok) setMessage('Saved');
     else setMessage('Error');
-  }
 
+  }
   return (
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>
       <div className='grid grid-cols-1 gap-3'>

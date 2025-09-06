@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
@@ -13,6 +14,10 @@ import AboutPage from './src/pages/About';
 import ContactPage from './src/pages/Contact';
 import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
+=======
+import React, { JSX } from 'react';
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 
 <<<<<<< HEAD
 export default function App() {
@@ -25,23 +30,8 @@ export default function App(): JSX.Element {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
-          <Header />
-          <Sidebar />
-          <main className="flex-1 lg:ml-80">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </ErrorBoundary>
+    <main>
+      <h1>Hello App</h1>
+    </main>
   );
 }

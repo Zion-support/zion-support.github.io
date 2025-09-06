@@ -1,3 +1,4 @@
+
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -7,54 +8,52 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
 import Layout from '../components/Layout';
-
 const securityFeatures = [
   {
-    title: 'Data Encryption',
-    description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols',
-    icon: Lock,
+    title: 'Data Encryption'
+    description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols'
+    icon: Lock
     details: ['AES-256 encryption', 'TLS 1.3 for data in transit', 'End-to-end encryption', 'Key management']
-  },
+  }
   {
-    title: 'Access Controls',
-    description: 'Multi-factor authentication and role-based access controls ensure only authorized users can access your data',
-    icon: Users,
+    title: 'Access Controls'
+    description: 'Multi-factor authentication and role-based access controls ensure only authorized users can access your data'
+    icon: Users
     details: ['Multi-factor authentication', 'Role-based permissions', 'Single sign-on (SSO)', 'Session management']
-  },
+  }
   {
-    title: 'Security Monitoring',
-    description: '24/7 security monitoring and threat detection to protect against cyber attacks',
-    icon: Eye,
+    title: 'Security Monitoring'
+    description: '24/7 security monitoring and threat detection to protect against cyber attacks'
+    icon: Eye
     details: ['Real-time monitoring', 'Threat detection', 'Incident response', 'Security alerts']
-  },
+  }
   {
-    title: 'Compliance',
-    description: 'We maintain compliance with industry standards and regulations to protect your data',
-    icon: Shield,
+    title: 'Compliance'
+    description: 'We maintain compliance with industry standards and regulations to protect your data'
+    icon: Shield
     details: ['SOC 2 Type II', 'ISO 27001', 'GDPR compliance', 'HIPAA compliance']
-  },
+  }
   {
-    title: 'Data Backup',
-    description: 'Regular automated backups ensure your data is always protected and recoverable',
-    icon: Database,
+    title: 'Data Backup'
+    description: 'Regular automated backups ensure your data is always protected and recoverable'
+    icon: Database
     details: ['Automated backups', 'Multiple backup locations', 'Point-in-time recovery', 'Data retention policies']
-  },
+  }
   {
-    title: 'Incident Response',
-    description: 'Comprehensive incident response procedures to quickly address any security issues',
-    icon: AlertTriangle,
+    title: 'Incident Response'
+    description: 'Comprehensive incident response procedures to quickly address any security issues'
+    icon: AlertTriangle
     details: ['24/7 incident response', 'Security team on standby', 'Rapid containment', 'Post-incident analysis']
   }
 ];
-
 const securityStats = [
-  { number: '99.9%', label: 'Uptime Guarantee' },
-  { number: '24/7', label: 'Security Monitoring' },
-  { number: '0', label: 'Security Breaches' },
+  { number: '99.9%', label: 'Uptime Guarantee' }
+  { number: '24/7', label: 'Security Monitoring' }
+  { number: '0', label: 'Security Breaches' }
   { number: '100%', label: 'Data Encryption' }
 ];
-
 export default function SecurityPage() {
+
   return (
     <Layout
       title="Security - Zion Tech Group"
@@ -69,7 +68,6 @@ export default function SecurityPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-          
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -86,7 +84,6 @@ export default function SecurityPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Security Stats */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -110,7 +107,6 @@ export default function SecurityPage() {
             </div>
           </div>
         </section>
-
         {/* Security Features */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -127,7 +123,6 @@ export default function SecurityPage() {
                 We implement multiple layers of security to protect your data and ensure business continuity.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {securityFeatures.map((feature, index) => (
                 <motion.div
@@ -143,11 +138,9 @@ export default function SecurityPage() {
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
                   </div>
-                  
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     {feature.description}
                   </p>
-                  
                   <div className="space-y-2">
                     <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
                     <ul className="space-y-1">
@@ -164,7 +157,6 @@ export default function SecurityPage() {
             </div>
           </div>
         </section>
-
         {/* Compliance Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -181,7 +173,6 @@ export default function SecurityPage() {
                 We maintain compliance with industry standards and regulations to ensure your data is protected.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -190,7 +181,6 @@ export default function SecurityPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-2">SOC 2 Type II</h3>
                 <p className="text-gray-600 text-sm">Service Organization Control 2 Type II compliance</p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lock className="w-8 h-8 text-blue-600" />
@@ -198,7 +188,6 @@ export default function SecurityPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-2">ISO 27001</h3>
                 <p className="text-gray-600 text-sm">Information Security Management System</p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Eye className="w-8 h-8 text-purple-600" />
@@ -206,7 +195,6 @@ export default function SecurityPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-2">GDPR</h3>
                 <p className="text-gray-600 text-sm">General Data Protection Regulation compliance</p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Database className="w-8 h-8 text-orange-600" />
@@ -217,7 +205,6 @@ export default function SecurityPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -244,6 +231,7 @@ export default function SecurityPage() {
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
                   View Compliance Details
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 </Link>
@@ -806,10 +794,10 @@ export default function Security() {
                 </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
-              </div>
 =======
-                </Link>              </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+</Link>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+              </div>
             </motion.div>
           </div>
         </section>
@@ -831,8 +819,5 @@ export default function Security() {
   );
 }  )
 }
-<<<<<<< HEAD
-  )
+)
 }
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e

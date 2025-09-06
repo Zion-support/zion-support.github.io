@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from "react";
 import Head from "next/head";
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -11,6 +12,8 @@ import { useRouter } from "next/router";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 interface SEOProps {
   title?: string;
   description?: string;
@@ -20,11 +23,10 @@ interface SEOProps {
 >>>>>>> origin/automation-improvements-final
   keywords?: string;
 }
-
 const SEO: React.FC<SEOProps> = ({
-  title = "Zion Tech Group - Technology Solutions",
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting",
+  title = "Zion Tech Group - Technology Solutions"
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development."
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting"
 }) => {
   return (
     <Head>
@@ -34,6 +36,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -73,3 +76,7 @@ export default function SEO({
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+}
+export default SEO;
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

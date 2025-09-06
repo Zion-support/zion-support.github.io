@@ -1,6 +1,8 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
+
+import React from 'react';
+
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 export default function GitHubComplianceBotPage() {
   return (
     <Layout>
@@ -27,4 +29,3 @@ export default function GitHubComplianceBotPage() {
     </Layout>
   )
 }
-

@@ -1,22 +1,23 @@
 
-import React, { useEffect, useState } from "react";
-import {cn} from "@/lib/utils";
-import {motion, AnimatePresence} from "framer-motion";
+import React, { useEffect, useState } from "react",
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 interface StickyActionProps {
   className?: string;
-  children: React.ReactNode,
+
+  children: React.ReactNode
+
   showAfterScroll?: number;
   position?: "bottom" | "top"
 }
-
 export function StickyAction({
   className;
   children;
+
   showAfterScroll = 300;
   position = "bottom"
 }: StickyActionProps) {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
@@ -24,19 +25,16 @@ export function StickyAction({
       } else {
         setIsVisible(false)
       }
-    };
-
+    }
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [showAfterScroll]);
-
   const positionClasses = {
-    bottom: "bottom-4",
+    bottom: "bottom-4"
     top: "top-20"
-  };
-
+  }
   return (
     <AnimatePresence>
       {isVisible && (
@@ -48,6 +46,7 @@ export function StickyAction({
           className={cn(
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
             positionClasses[position];
+
             className
           )}
         >
@@ -59,4 +58,3 @@ export function StickyAction({
     </AnimatePresence>
   )
 }
-;

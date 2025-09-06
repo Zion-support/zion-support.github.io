@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredCybersecurityPage() {
+
   return (
     <>
       <Head>
@@ -23,21 +24,22 @@ export default function AIPoweredCybersecurityPage() {
         implementationWeeks='2-6 weeks'
         roiNote='Reduce alert fatigue by 80% and mean time to contain by 70%'
         features={[
-          'Anomaly detection and adversary behavior modeling',
-          'Automated playbooks and SOAR actions',
-          'Deception tokens and breach canaries',
-          'Zero-trust policy recommendations',
-          'Ransomware early detection and isolation',
-          'Compliance evidence and audit-ready reports',
+          'Anomaly detection and adversary behavior modeling'
+          'Automated playbooks and SOAR actions'
+          'Deception tokens and breach canaries'
+          'Zero-trust policy recommendations'
+          'Ransomware early detection and isolation'
+          'Compliance evidence and audit-ready reports'
         ]}
         industries={[
-          'Financial Services',
-          'Healthcare',
-          'SaaS',
-          'Public Sector',
-          'Critical Infrastructure',
+          'Financial Services'
+          'Healthcare'
+          'SaaS'
+          'Public Sector'
+          'Critical Infrastructure'
         ]}
         canonical='https: //ziontechgroup.com/ai-powered-cybersecurity'
       />
     </>
   );
+

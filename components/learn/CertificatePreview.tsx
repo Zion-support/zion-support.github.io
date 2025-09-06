@@ -1,13 +1,14 @@
-import React from "react";
 
+import React from "react";
 export default function CertificatePreview({
-  courseId,
-  userId = "demo-user",
+  courseId
+  userId = "demo-user"
 }: {
   courseId: string;
   userId?: string;
 }) {
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
+
   return (
     <div className="border rounded p-4">
       <div className="text-sm text-gray-600">Zion Certificate</div>
@@ -24,7 +25,7 @@ export default function CertificatePreview({
         Download PDF
       </a>
     </div>
-);
+  );
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">

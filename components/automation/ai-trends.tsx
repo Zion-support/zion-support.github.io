@@ -1,15 +1,15 @@
-</div> </div>) ) 
+
+</div> </div>) )
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
-  id: string,
-  date: string,
-  title: string,
-  highlights: string[],
-  summary: string,
+  id: string
+  date: string
+  title: string
+  highlights: string[]
+  summary: string
   tags: string[]
-};
-
+}
 export async function getServerSideProps() {
   const file = path.join(process.cwd(), 'dataai-trends.json');
   let items: Trend[] = [];  try {
@@ -17,9 +17,9 @@ export async function getServerSideProps() {
     items = JSON.parse(raw)
   } catch {}
   items.sort((a, b) => (a.date < b.date ? 1 : -1));
+
   return { props: { items } }
 }
-
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (
     <div className="space-y-6">

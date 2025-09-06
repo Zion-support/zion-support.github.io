@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
+
 
   return (
     <>
@@ -21,29 +22,29 @@ import Link from 'next/link';
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
               {
-                title: 'Grounding & Faithfulness',
-                desc: 'Measure factual consistency, citation quality, and hallucination rate.',
-              },
+                title: 'Grounding & Faithfulness'
+                desc: 'Measure factual consistency, citation quality, and hallucination rate.'
+              }
               {
-                title: 'Golden Datasets',
-                desc: 'Curate and run task-specific datasets for repeatable evaluation.',
-              },
+                title: 'Golden Datasets'
+                desc: 'Curate and run task-specific datasets for repeatable evaluation.'
+              }
               {
-                title: 'Scenario Evals',
-                desc: 'Synthetic and real-world tests across intents, domains, and edge cases.',
-              },
+                title: 'Scenario Evals'
+                desc: 'Synthetic and real-world tests across intents, domains, and edge cases.'
+              }
               {
-                title: 'CI/CD Quality Gates',
-                desc: 'Fail builds on regressions; compare models and versions.',
-              },
+                title: 'CI/CD Quality Gates'
+                desc: 'Fail builds on regressions; compare models and versions.'
+              }
               {
-                title: 'Offline & Canary',
-                desc: 'Pre-release offline runs and live traffic canaries with alerts.',
-              },
+                title: 'Offline & Canary'
+                desc: 'Pre-release offline runs and live traffic canaries with alerts.'
+              }
               {
-                title: 'Dashboards & Reports',
-                desc: 'Team dashboards, API access, and exportable reports.',
-              },
+                title: 'Dashboards & Reports'
+                desc: 'Team dashboards, API access, and exportable reports.'
+              }
             ].map(f => (
               <div
                 key={f.title}
@@ -54,7 +55,6 @@ import Link from 'next/link';
               </div>
             ))}
           </div>
-
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
             <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -121,7 +121,6 @@ import Link from 'next/link';
               .
             </p>
           </div>
-
           <div className='mt-12 flex flex-wrap items-center gap-4'>
             <Link
               href='/contact'

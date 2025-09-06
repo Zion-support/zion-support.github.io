@@ -1,19 +1,20 @@
-import React from "react";
-import Head from "next/head";
+import React from 'react';
+import Head from 'next/head';
 export default function SitemapPage() {
+
   const links = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
+    { name: "Home", href: "/" }
+    { name: "Services", href: "/services" }
     {
-      name: "All Services Showcase",
-      href: "/comprehensive-services-showcase-2025",
-    },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Market Pricing", href: "/market-pricing" },
-    { name: "Services Advertising", href: "/services-advertising" },
-    { name: "Resources", href: "/resources" },
-    { name: "Support", href: "/support" },
-    { name: "Contact", href: "/contact" },
+      name: "All Services Showcase"
+      href: "/comprehensive-services-showcase-2025"
+    }
+    { name: "Pricing", href: "/pricing" }
+    { name: "Market Pricing", href: "/market-pricing" }
+    { name: "Services Advertising", href: "/services-advertising" }
+    { name: "Resources", href: "/resources" }
+    { name: "Support", href: "/support" }
+    { name: "Contact", href: "/contact" }
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -45,18 +46,18 @@ export default function SitemapPage() {
     </div>
   );
   const links = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
+    { name: "Home", href: "/" }
+    { name: "Services", href: "/services" }
     {
-      name: "All Services Showcase",
-      href: "/comprehensive-services-showcase-2025",
-    },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Market Pricing", href: "/market-pricing" },
-    { name: "Services Advertising", href: "/services-advertising" },
-    { name: "Resources", href: "/resources" },
-    { name: "Support", href: "/support" },
-    { name: "Contact", href: "/contact" },
+      name: "All Services Showcase"
+      href: "/comprehensive-services-showcase-2025"
+    }
+    { name: "Pricing", href: "/pricing" }
+    { name: "Market Pricing", href: "/market-pricing" }
+    { name: "Services Advertising", href: "/services-advertising" }
+    { name: "Resources", href: "/resources" }
+    { name: "Support", href: "/support" }
+    { name: "Contact", href: "/contact" }
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -88,4 +89,4 @@ export default function SitemapPage() {
     </div>
   );
 }
-;
+

@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
+
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,
-  Cpu,;
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Star
+  Cpu;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
@@ -94,7 +94,6 @@ export default function AIIoTPlatformPage() {
             </div>
           </div>
         </div>
-
         <div className="bg-violet-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Connect Your World</h2>
           <p className="text-lg text-gray-700 mb-6">

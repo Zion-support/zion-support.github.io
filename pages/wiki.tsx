@@ -1,18 +1,18 @@
-import React, { useMemo, useState } from 'react',;
-import {
-  generateZionWiki,
-  buildMarkdownFromWiki,
-  buildWikitextFromWiki,
-  operatorPrompt,
-  slugify} from '../utils/data/zionContent',
+import React, { useMemo, useState } from 'react';
 
+import {
+  generateZionWiki
+  buildMarkdownFromWiki
+  buildWikitextFromWiki
+  operatorPrompt
+  slugify} from '../utils/data/zionContent'
 function CopyButton({ text, label }: { text: string, label: string }) {
-  const [copied, setCopied] = useState(false),
+  const [copied, setCopied] = useState(false)
   return (
     <button
       onClick={async () => {
-        await navigator.clipboard.writeText(text),
-        setCopied(true),
+        await navigator.clipboard.writeText(text)
+        setCopied(true)
         setTimeout(() => setCopied(false), 1500)
       }}
       className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
@@ -21,11 +21,10 @@ function CopyButton({ text, label }: { text: string, label: string }) {
     </button>
   )
 }
-
 export default function WikiPage() {
-  const wiki = useMemo(() => generateZionWiki(), []),
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
+  const wiki = useMemo(() => generateZionWiki(), [])
+  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
+  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
@@ -44,7 +43,6 @@ export default function WikiPage() {
           </li>
         </ul>
       </aside>
-
       <article className="prose dark:prose-invert max-w-none">
         <h1>{wiki.title}</h1>
         <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">
@@ -56,7 +54,6 @@ export default function WikiPage() {
           </div>
         </div>
         <p>{wiki.intro}</p>
-
         {wiki.sections.map((s) => (
           <section key={s.id} id={slugify(s.title)}>
             <h2>{s.title}</h2>
@@ -65,14 +62,12 @@ export default function WikiPage() {
             ))}
           </section>
         ))}
-
         <h2 id="references">References</h2>
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
           ))}
         </ol>
-
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
@@ -85,7 +80,6 @@ export default function WikiPage() {
 {md}
           </pre>
         </div>
-
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="font-semibold mb-2">Operator Prompt</div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
@@ -93,4 +87,4 @@ export default function WikiPage() {
       </article>
     </div>
   )
-};
+}

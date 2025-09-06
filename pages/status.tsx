@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Layout from '../components/Layout';
 >>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function Status() {
   return (
     <Layout

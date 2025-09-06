@@ -3,7 +3,7 @@
 module.exports = {
   env: {
     node: true,
-    es2021: true,
+    es2021: true
   },
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
@@ -329,7 +329,7 @@ module.exports = {
     "no-undef": "off",
     "react/no-unescaped-entities": "off",
     "@next/next/no-html-link-for-pages": "off",
-    "@next/next/no-img-element": "off",
+    "@next/next/no-img-element": "off"
   },
   ignorePatterns: [
     "node_modules/",
@@ -486,6 +486,7 @@ module.exports = {
     "build-verification.js",
     "check-syntax.js",
     "clean-conflicts.js",
+<<<<<<< HEAD
     "commit-and-push.js",
   ],
 };
@@ -495,3 +496,8 @@ module.exports = {
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+    "commit-and-push.js"
+  ]
+};
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

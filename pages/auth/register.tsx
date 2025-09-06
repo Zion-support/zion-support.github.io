@@ -1,20 +1,19 @@
-import React, { useEffect } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import SignupForm from '@/components/auth/SignupForm',;
-import { AuthButtons } from '@/components/AuthButtons',;
-import { fireEvent } from '@/lib/analytics',;
-import { logInfo } from '@/utils/productionLogger',;
-import { useRouter } from 'next/router',;
-const RegisterPage = () => {
-  const router = useRouter(),
 
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import SignupForm from '@/components/auth/SignupForm';
+import { AuthButtons } from '@/components/AuthButtons';
+import { fireEvent } from '@/lib/analytics';
+import { logInfo } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
+const RegisterPage = () => {
+  const router = useRouter()
   useEffect(() => {
     fireEvent('signup_page_view')
-  }, []),
-
+  }, [])
   const handleSuccess = ({ email, emailVerificationRequired }: {
-    email: string,
+    email: string
     emailVerificationRequired: boolean
   }) => {
     if (emailVerificationRequired) {
@@ -22,15 +21,13 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
-  },
-
+  }
   return (
     <>
       <Head>
         <title>Create Account - Zion Tech Marketplace</title>
         <meta name="description" content="Create your Zion Tech Marketplace account" />
       </Head>
-
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
@@ -41,7 +38,7 @@ const RegisterPage = () => {
               width={48}
               height={48}
               onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement,
+                const target = e.currentTarget as HTMLImageElement
                 target.style.display = 'none'
               }}
             />
@@ -58,9 +55,7 @@ const RegisterPage = () => {
               </Link>
             </p>
           </div>
-
           <SignupForm onSuccess={handleSuccess} />
-
           {/* Social signup options */}
           <div className="mt-6">
             <div className="relative">
@@ -73,7 +68,6 @@ const RegisterPage = () => {
             </div>
             <AuthButtons providers={["google", "github"]} />
           </div>
-
           <div className="text-center mt-4">
             <p className="text-xs text-gray-500">
               By creating an account, you agree to our{' '}
@@ -90,7 +84,6 @@ const RegisterPage = () => {
       </div>
     </>
   )
-},
+}
+export default RegisterPage;
 
-export default RegisterPage,
-;

@@ -1,25 +1,26 @@
 
-import React, { useState } from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {useAdminQuotes} from "@/hooks/useAdminQuotes";
-import {useAuth} from "@/hooks/useAuth";
-import {Card, CardContent} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Navigate} from "react-router-dom";
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAdminQuotes } from "@/hooks/useAdminQuotes";
+import { useAuth } from "@/hooks/useAuth";
+import { 
+  Card;
+  CardContent
+} from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Navigate } from "react-router-dom",
 import type { QuoteRequest } from "@/types/quotes";
+
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {ExportToCSV} from "@/components/quotes/ExportToCSV";
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
-
 export default function QuoteManager() {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
-  
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
-
   const {
     quotes;
     isLoading;
@@ -36,32 +37,27 @@ export default function QuoteManager() {
     toggleArchive;
     deleteQuote
   } = useAdminQuotes();
-
   // Count quotes by status
   const statusCounts = {
-    new: quotes.filter(q => q.status === 'new').length,
-    in_review: quotes.filter(q => q.status === 'in_review').length,
-    accepted: quotes.filter(q => q.status === 'accepted').length,
-    responded: quotes.filter(q => q.status === 'responded').length,
+    new: quotes.filter(q => q.status === 'new').length
+    in_review: quotes.filter(q => q.status === 'in_review').length
+    accepted: quotes.filter(q => q.status === 'accepted').length
+    responded: quotes.filter(q => q.status === 'responded').length
     closed: quotes.filter(q => q.status === 'closed').length
-  };
-
+  }
   const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote),
+    setSelectedQuote(quote)
     setShowDetails(true)
-  };
-
+  }
   const handleResetFilters = () => {
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
     setDateRange({ from: undefined, to: undefined })
-  };
-
+  }
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
   }
-
   return (
     <ProtectedRoute adminOnly>
       <div>
@@ -75,10 +71,8 @@ export default function QuoteManager() {
               </div>
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
-            
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />
-            
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -91,14 +85,12 @@ export default function QuoteManager() {
               setDateRange={setDateRange}
               onReset={handleResetFilters}
             />
-            
             {/* Tabs for Active/Archived */}
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
                 <TabsTrigger value="active">Active Quotes</TabsTrigger>
                 <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
               </TabsList>
-              
               <TabsContent value="active">
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
@@ -112,7 +104,6 @@ export default function QuoteManager() {
                   />
                 </Card>
               </TabsContent>
-              
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
@@ -129,20 +120,18 @@ export default function QuoteManager() {
             </Tabs>
           </div>
         </div>
-        
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false);
+
             setSelectedQuote(null)
           }}
         />
-        
         <Footer />
       </div>
     </ProtectedRoute>
   )
 }
-;

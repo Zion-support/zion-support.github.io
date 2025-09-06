@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { serve } from
@@ -101,3 +102,8 @@ import { serve } from https: import Stripe from';https: import { createClient} f
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+  return new Response('Not found', { "status": 404 })});
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

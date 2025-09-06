@@ -1,23 +1,29 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Rocket, 
-  BarChart3, 
-  Settings, 
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Building,
-  Globe,
+import {
+  Shield
+  Rocket
+  BarChart3
+  Settings
+  ArrowRight
+  CheckCircle
+  Users
+  Building
+  Globe
   Target
 } from 'lucide-react';
 import Layout from '../../components/Layout';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -25,80 +31,79 @@ import Layout from '../../components/Layout';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 const solutions = [
   {
-    title: "Enterprise Solutions",
-    description: "Comprehensive technology solutions for large organizations",
-    icon: Building,
-    href: "/solutions/enterprise",
+    title: "Enterprise Solutions"
+    description: "Comprehensive technology solutions for large organizations"
+    icon: Building
+    href: "/solutions/enterprise"
     features: [
-      "Scalable Infrastructure",
-      "Enterprise Security",
-      "Custom Integration",
+      "Scalable Infrastructure"
+      "Enterprise Security"
+      "Custom Integration"
       "24/7 Support"
-    ],
+    ]
     color: "from-blue-600 to-blue-800"
-  },
+  }
   {
-    title: "Startup Solutions",
-    description: "Rapid deployment solutions for growing startups",
-    icon: Rocket,
-    href: "/solutions/startup",
+    title: "Startup Solutions"
+    description: "Rapid deployment solutions for growing startups"
+    icon: Rocket
+    href: "/solutions/startup"
     features: [
-      "Quick Setup",
-      "Cost Effective",
-      "Scalable Growth",
+      "Quick Setup"
+      "Cost Effective"
+      "Scalable Growth"
       "Expert Guidance"
-    ],
+    ]
     color: "from-green-600 to-green-800"
-  },
+  }
   {
-    title: "Industry Solutions",
-    description: "Specialized solutions for specific industries",
-    icon: BarChart3,
-    href: "/solutions/industry",
+    title: "Industry Solutions"
+    description: "Specialized solutions for specific industries"
+    icon: BarChart3
+    href: "/solutions/industry"
     features: [
-      "Industry Expertise",
-      "Compliance Ready",
-      "Custom Workflows",
+      "Industry Expertise"
+      "Compliance Ready"
+      "Custom Workflows"
       "Best Practices"
-    ],
+    ]
     color: "from-purple-600 to-purple-800"
-  },
+  }
   {
-    title: "Custom Development",
-    description: "Tailored solutions built specifically for your needs",
-    icon: Settings,
-    href: "/solutions/custom",
+    title: "Custom Development"
+    description: "Tailored solutions built specifically for your needs"
+    icon: Settings
+    href: "/solutions/custom"
     features: [
-      "Bespoke Development",
-      "Unique Requirements",
-      "Full Ownership",
+      "Bespoke Development"
+      "Unique Requirements"
+      "Full Ownership"
       "Ongoing Support"
-    ],
+    ]
     color: "from-orange-600 to-orange-800"
   }
 ];
-
 const industries = [
-  { name: "Healthcare", icon: "🏥" },
-  { name: "Finance", icon: "🏦" },
-  { name: "Manufacturing", icon: "🏭" },
-  { name: "Retail", icon: "🛍️" },
-  { name: "Education", icon: "🎓" },
+  { name: "Healthcare", icon: "🏥" }
+  { name: "Finance", icon: "🏦" }
+  { name: "Manufacturing", icon: "🏭" }
+  { name: "Retail", icon: "🛍️" }
+  { name: "Education", icon: "🎓" }
   { name: "Government", icon: "🏛️" }
 ];
-
 const stats = [
-  { number: '500+', label: 'Projects Delivered' },
-  { number: '50+', label: 'Industries Served' },
-  { number: '99.9%', label: 'Client Satisfaction' },
+  { number: '500+', label: 'Projects Delivered' }
+  { number: '50+', label: 'Industries Served' }
+  { number: '99.9%', label: 'Client Satisfaction' }
   { number: '24/7', label: 'Support Available' }
 ];
-
 export default function SolutionsPage() {
   return (
-    <Layout 
+    <Layout
       title="Solutions - Zion Tech Group"
       description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development and specialized services."
       keywords="enterprise solutions, startup solutions, custom development, industry solutions, technology consulting"
@@ -110,7 +115,6 @@ export default function SolutionsPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -125,7 +129,7 @@ export default function SolutionsPage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                From startups to enterprises, we provide tailored technology solutions that drive growth, 
+                From startups to enterprises, we provide tailored technology solutions that drive growth
                 efficiency, and innovation across all industries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -139,7 +143,6 @@ export default function SolutionsPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Solutions Grid */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -157,7 +160,6 @@ export default function SolutionsPage() {
                 We offer comprehensive technology solutions tailored to different business needs and stages.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {solutions.map((solution, index) => {
                 const IconComponent = solution.icon;
@@ -174,15 +176,12 @@ export default function SolutionsPage() {
                     <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       {solution.title}
                     </h3>
-                    
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {solution.description}
                     </p>
-
                     <ul className="space-y-2 mb-6">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -191,7 +190,6 @@ export default function SolutionsPage() {
                         </li>
                       ))}
                     </ul>
-
                     <Link
                       href={solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
@@ -205,7 +203,6 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Industries Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -223,7 +220,6 @@ export default function SolutionsPage() {
                 Our solutions are designed to meet the unique challenges and requirements of various industries.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {industries.map((industry, index) => (
                 <motion.div
@@ -246,7 +242,6 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="container mx-auto px-4">
@@ -269,7 +264,6 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -299,12 +293,8 @@ export default function SolutionsPage() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
 }
   )
-=======
-}  )
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-};
-
+}
 export default SolutionsPage;
+

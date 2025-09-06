@@ -1,28 +1,28 @@
-import React from 'react';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,;
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import {
-  ChevronRight,
-  FileText,
-  Image,
-  Clock,
-  Zap,
-  BookOpen,;
-} from 'lucide-react';
-import Link from 'next/link';
 
-import React from "react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react';
+import React from 'react'
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardDescription
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+  ChevronRight
+  FileText
+  Image
+  Clock
+  Zap
+  BookOpen
+} from 'lucide-react'
+import Link from 'next/link'
+import React from "react"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
 import Link from "next/link";
 export function TalentDashboard() {
   return (
@@ -36,7 +36,6 @@ export function TalentDashboard() {
             </Button>
           </Link>
         </div>
-
         <div className='space-y-3'>
           <Card>
             <CardContent className='p-4'>
@@ -71,7 +70,6 @@ export function TalentDashboard() {
                 </Button>              </div>
             </CardContent>
           </Card>
-
           <Card>
             <CardContent className='p-4'>
               <div className='flex justify-between items-start'>
@@ -110,7 +108,6 @@ export function TalentDashboard() {
           </Card>
         </div>
       </section>
-
       <section>
         <h2 className='text-lg font-medium mb-4'>Application Tracker</h2>
         <Card>
@@ -165,7 +162,6 @@ export function TalentDashboard() {
           </CardContent>
         </Card>
       </section>
-
       <section>
         <h2 className='text-lg font-medium mb-4'>Quick Actions</h2>
         <div className='grid grid-cols-2 gap-4'>
@@ -234,14 +230,13 @@ export function TalentDashboard() {
           </Button>
         </div>
       </section>
-
       <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Learning Hub</h2>
           <Button variant='ghost' size='sm' className='h-8'>            View all
           </Button>
         </div>
-        <Card>      
+        <Card>
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>
@@ -274,5 +269,5 @@ export function TalentDashboard() {
         </Card>
       </section>
     </div>
-  );
+  )
 }

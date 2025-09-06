@@ -2,15 +2,16 @@
 import React from "react";
 import Link from "next/link";
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  ArrowRight,
+  Phone
+  Mail
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  ArrowRight
 } from "lucide-react";
+<<<<<<< HEAD
 =======
 import React from 'react;';
 import Link from 'next/link';
@@ -18,11 +19,13 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
   const footerLinks = {
     services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
       { name: "AI Services", href: "/ai-services" },
       { name: "IT Services", href: "/it-services" },
@@ -31,23 +34,33 @@ export default function Footer() {
       { name: "IoT Solutions", href: "/iot" },
       { name: "Cybersecurity", href: "/cybersecurity" },
     ],
+=======
+      { name: "AI Services", href: "/ai-services" }
+      { name: "IT Services", href: "/it-services" }
+      { name: "Micro SaaS", href: "/micro-saas" }
+      { name: "Blockchain", href: "/blockchain" }
+      { name: "IoT Solutions", href: "/iot" }
+      { name: "Cybersecurity", href: "/cybersecurity" }
+    ]
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     solutions: [
-      { name: "Enterprise Solutions", href: "/enterprise" },
-      { name: "Startup Solutions", href: "/startup" },
-      { name: "E-commerce", href: "/ecommerce" },
-      { name: "Healthcare", href: "/industries/healthcare" },
-      { name: "Finance", href: "/industries/finance" },
-      { name: "Education", href: "/industries/education" },
-    ],
+      { name: "Enterprise Solutions", href: "/enterprise" }
+      { name: "Startup Solutions", href: "/startup" }
+      { name: "E-commerce", href: "/ecommerce" }
+      { name: "Healthcare", href: "/industries/healthcare" }
+      { name: "Finance", href: "/industries/finance" }
+      { name: "Education", href: "/industries/education" }
+    ]
     company: [
-      { name: "About Us", href: "/about" },
-      { name: "Our Team", href: "/team" },
-      { name: "Careers", href: "/careers" },
-      { name: "Case Studies", href: "/case-studies" },
-      { name: "News", href: "/news" },
-      { name: "Contact", href: "/contact" },
-    ],
+      { name: "About Us", href: "/about" }
+      { name: "Our Team", href: "/team" }
+      { name: "Careers", href: "/careers" }
+      { name: "Case Studies", href: "/case-studies" }
+      { name: "News", href: "/news" }
+      { name: "Contact", href: "/contact" }
+    ]
     resources: [
+<<<<<<< HEAD
       { name: "Blog", href: "/blog" },
       { name: "Documentation", href: "/docs" },
       { name: "API Reference", href: "/api" },
@@ -90,6 +103,16 @@ export default function Footer() {
 >>>>>>> origin/automation-improvements-final
   };
 
+=======
+      { name: "Blog", href: "/blog" }
+      { name: "Documentation", href: "/docs" }
+      { name: "API Reference", href: "/api" }
+      { name: "Tutorials", href: "/tutorials" }
+      { name: "White Papers", href: "/white-papers" }
+      { name: "Support", href: "/support" }
+    ]
+  }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
@@ -102,6 +125,7 @@ export default function Footer() {
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
 <<<<<<< HEAD
+<<<<<<< HEAD
               Leading technology solutions provider specializing in AI,
               cybersecurity, cloud infrastructure, quantum computing,
               blockchain, IoT, and digital transformation services.
@@ -113,6 +137,12 @@ export default function Footer() {
             </p>
             
 >>>>>>> origin/automation-improvements-final
+=======
+              Leading technology solutions provider specializing in AI
+              cybersecurity, cloud infrastructure, quantum computing
+              blockchain, IoT, and digital transformation services.
+            </p>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
@@ -231,7 +261,6 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Services */}
           <div>
 <<<<<<< HEAD
@@ -258,6 +287,7 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 =======
 =======
             <h3 className="text-lg font-semibold mb-6>Services</h3>
@@ -285,6 +315,8 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
@@ -316,10 +348,13 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           {/* Company & Resources */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -350,11 +385,14 @@ const Footer: React.FC = () => {
               ))}
             </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
             
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
@@ -371,7 +409,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
@@ -395,7 +432,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
@@ -403,7 +439,6 @@ const Footer: React.FC = () => {
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-
             {/* Social Links */}
             <div className="flex space-x-4 mb-4 md:mb-0">
               <a
@@ -439,7 +474,6 @@ const Footer: React.FC = () => {
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
-
             {/* Legal Links */}
             <div className="flex space-x-6 text-sm">
 <<<<<<< HEAD
@@ -501,6 +535,7 @@ const Footer: React.FC = () => {
     </footer>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -511,3 +546,6 @@ const Footer: React.FC = () => {
 export default Footer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 export default function FacebookRedirect() {
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.location.replace('https: //facebook.com/ziontechgroup'),
+      window.location.replace('https: //facebook.com/ziontechgroup')
     }
   }, []);
   return (
@@ -27,3 +28,4 @@ export default function FacebookRedirect() {
       </div>
     </>
   );
+

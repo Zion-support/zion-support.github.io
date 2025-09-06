@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 <<<<<<< HEAD
@@ -15,21 +16,25 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 >>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Mail,
-  Phone,
-  MapPin,
-  Users,
+  Shield
+  Lock
+  Eye
+  Database
+  Mail
+  Phone
+  MapPin
+  Users
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from 'react';
@@ -199,6 +204,8 @@ const PrivacyPage: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function PrivacyPage() {
   return (
 <<<<<<< HEAD
@@ -237,7 +244,6 @@ export default function PrivacyPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Content Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
@@ -257,7 +263,6 @@ export default function PrivacyPage() {
                   when you create an account, use our services, or contact us
                   for support.
                 </p>
-
                 <h3 className="text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
@@ -277,8 +282,11 @@ export default function PrivacyPage() {
                   <li>Company information</li>
                   <li>Payment information</li>
                 </ul>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
@@ -292,8 +300,11 @@ export default function PrivacyPage() {
                   <li>Browser type and version</li>
                   <li>Operating system</li>
                 </ul>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
                 </h2>
@@ -301,6 +312,7 @@ export default function PrivacyPage() {
                   We use the information we collect to provide, maintain, and
                   improve our services.
                 </p>
+<<<<<<< HEAD
 
 =======
                 <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
@@ -309,6 +321,8 @@ export default function PrivacyPage() {
                 </p>
                 
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -317,8 +331,11 @@ export default function PrivacyPage() {
                   <li>Improve our services and develop new features</li>
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -333,19 +350,17 @@ export default function PrivacyPage() {
                   without your consent, except as described in this policy.
 >>>>>>> origin/automation-improvements-final
                 </p>
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
 <<<<<<< HEAD
                   We implement appropriate security measures to protect your
-                  personal information against unauthorized access, alteration,
+                  personal information against unauthorized access, alteration
                   disclosure, or destruction.
 =======
                   We implement appropriate security measures to protect your personal information against 
                   unauthorized access, alteration, disclosure, or destruction.
 >>>>>>> origin/automation-improvements-final
                 </p>
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
                 <p className="mb-6">
 <<<<<<< HEAD
@@ -357,19 +372,21 @@ export default function PrivacyPage() {
                   opt out of certain communications from us.
 >>>>>>> origin/automation-improvements-final
                 </p>
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
                 <p className="mb-6">
 <<<<<<< HEAD
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
+<<<<<<< HEAD
 
 =======
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -388,8 +405,11 @@ export default function PrivacyPage() {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 <p className="text-sm text-gray-600 mt-8">
 =======
                 <p className="text-sm text-gray-600 mt-8">
@@ -404,6 +424,7 @@ export default function PrivacyPage() {
     </MainLayout>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1093,3 +1114,6 @@ export default PrivacyPage;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

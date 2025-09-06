@@ -1,46 +1,43 @@
 import React, { useState } from 'react';
+
 type PersonaConfig = {
   voice: 'Visionary' | 'Grounded' | 'Technical';
   language: string;
   cloneStyleText?: string;
-};
-
+}
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
-    voice: 'Visionary',
-    language: 'English',
+    voice: 'Visionary'
+    language: 'English'
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState(
     'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
-  );};
-
+  );}
 export default function StudioHostPage() {
-  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' })
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
-
   const [generating, setGenerating] = useState(false);
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
-
   const handleGenerate = async () => {
     setGenerating(true);
     try {
       const res = await fetch('/api/podcast/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          persona,
-          invitee: { name: inviteeName, bio: inviteeBio },
-          topic,
-          operatorPrompt,
-        }),
+          persona
+          invitee: { name: inviteeName, bio: inviteeBio }
+          topic
+          operatorPrompt
+        })
       });
       const data = await res.json();
       setEpisode(data.episode);
@@ -56,16 +53,15 @@ export default function StudioHostPage() {
     } finally {
       setGenerating(false)
     }
-  };
-
+  }
   const handleSynthesize = async () => {
     if (!episode?.id) return;
     setSynthesizing(true);
     try {
       const res = await fetch('/api/podcast/synthesize', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ episodeId: episode.id, persona }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ episodeId: episode.id, persona })
       });
       const data = await res.json();
       setEpisode(data.episode);
@@ -81,8 +77,7 @@ export default function StudioHostPage() {
     } finally {
       setSynthesizing(false)
     }
-  };
-
+  }
   const handlePublishRss = async () => {
     if (!episode?.id) return;
     setPublishing(true);
@@ -95,8 +90,7 @@ export default function StudioHostPage() {
       alert('Failed to update RSS');
     } finally {
       setPublishing(false);    }
-  };
-
+  }
   return (
     <div className='space-y-8'>
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>      await res.json();
@@ -107,12 +101,11 @@ export default function StudioHostPage() {
     } finally {
       setPublishing(false)
     }
-  };
+  }
 
   return (
     <div className='space-y-8'>
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>
-
       <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>AI Persona</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -148,20 +141,18 @@ export default function StudioHostPage() {
               className='mt-1 w-full border rounded p-2'
               rows={3}
               placeholder='Paste representative writing or notes to clone tone'
-              value={persona.cloneStyleText || ''}
+              value={persona.cloneStyleText |''}
               onChange={e =>
                 setPersona({ ...persona, cloneStyleText: e.target.value })
               }
             />          </div>
         </div>
       </section>
-
       <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>Episode Generator</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>          </div>
         </div>
       </section>
-
       <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>Episode Generator</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -226,11 +217,10 @@ export default function StudioHostPage() {
           </div>
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>
-            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText |''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
           </div>
         </div>
       </section>
-
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
@@ -252,7 +242,6 @@ export default function StudioHostPage() {
           {generating ? 'Generating…' : 'Generate Episode'}
         </button>
       </section>
-
       {episode && (
         <section className='space-y-4'>
           <h2 className='text-xl font-semibold'>Episode Draft</h2>
@@ -372,4 +361,3 @@ export default function StudioHostPage() {
     </div>
   );
 }
-;

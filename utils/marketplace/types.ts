@@ -12,7 +12,6 @@ export interface Offer {
   changeRequestNote?: string;
   projectId?: string;
 }
-
 export interface PaymentTerms {
   type: 'hourly' | 'fixed' | 'milestone';
   amount?: number;
@@ -23,7 +22,6 @@ export interface PaymentTerms {
     dueDateIso: string;
   }>;
 }
-
 export interface Project {
   id: string;
   title: string;
@@ -36,14 +34,12 @@ export interface Project {
   documents: ProjectDocument[];
   notes: ProjectNote[];
 }
-
 export interface ProjectDocument {
   id: string;
   name: string;
   url?: string;
   uploadedAtIso: string;
 }
-
 export interface ProjectNote {
   id: string;
   authorId: string;

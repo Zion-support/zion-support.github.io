@@ -1,7 +1,7 @@
+
 import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
-
 return (
   <Layout>
     <Head>
@@ -28,13 +28,13 @@ return (
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="/contact" className="px-8 py-4">
               Discuss a Mission
+
             </a>
             <a href="/market-pricing" className="px-8 py-4">
               See Market Pricing
             </a>{" "}
           </div>
         </header>
-
         <section>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
             Capabilities
@@ -51,7 +51,6 @@ return (
             ))}
           </div>
         </section>
-
         <section className="text-center">
           <a
             href="/space-technology"
@@ -62,6 +61,6 @@ return (
           </a>
         </section>
       </div>
-</div>
+    </div>
   </Layout>
 );

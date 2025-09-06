@@ -1,19 +1,20 @@
 import React, { useState, useEffect, Suspense } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
-  innovativeRealMicroSaasServices2025 
+  innovativeRealMicroSaasServices2025
 } from '../data/2025-innovative-real-micro-saas-services';
-import { 
-  innovativeAIServicesEnhanced2025 
+import {
+  innovativeAIServicesEnhanced2025
 } from '../data/2025-innovative-ai-services-enhanced';
-import { 
-  innovativeITServicesEnhanced2025 
+import {
+  innovativeITServicesEnhanced2025
 } from '../data/2025-innovative-it-services-enhanced';
-import { 
-  emergingTechServicesEnhanced2025 
+import {
+  emergingTechServicesEnhanced2025
 } from '../data/2025-emerging-tech-services-enhanced';
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
@@ -23,37 +24,32 @@ import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackgrou
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
 import {
-  ArrowRight,
-  Star,
-  Brain,
-  Atom,
-  Shield,
-  Zap,
-  Users,
-  Globe,
-  TrendingUp,
-  Rocket,
-  Cpu,
-  Lock,
-  BarChart3,
-  Cloud,;
+  ArrowRight
+  Star
+  Brain
+  Atom
+  Shield
+  Zap
+  Users
+  Globe
+  TrendingUp
+  Rocket
+  Cpu
+  Lock
+  BarChart3
+  Cloud;
 } from 'lucide-react';
-
 interface Homepage2025Props {
   showInternalNav?: boolean;
-
 const Homepage2025: React.FC<Homepage2025Props> = ({
-  showInternalNav = true,
+  showInternalNav = true
 }) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
-
 interface Homepage2025Props { showInternalNav?: boolean }
-
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
   const [activeSection, setActiveSection] = useState('hero');
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -65,33 +61,29 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     }, 5000);
     return () => clearInterval(interval)
   }, []);
-
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId),
+    const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false);    }
-  };
-
-  const allServices = [      element.scrollIntoView({ behavior: 'smooth' }),
+  }
+  const allServices = [      element.scrollIntoView({ behavior: 'smooth' })
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false)
     }
-  };
-
+  }
   const allServices = [
-    ...innovativeRealMicroSaasServices2025,
-    ...innovativeAIServicesEnhanced2025,
-    ...innovativeITServicesEnhanced2025,
-    ...emergingTechServicesEnhanced2025,
-    ...advancedAIAutomationServices,
-    ...quantumCybersecurityServices,
-    ...innovativeMicroSaasServices2026,
-    ...specializedITSolutions2026,
-    ...emergingTechServices2026,
+    ...innovativeRealMicroSaasServices2025
+    ...innovativeAIServicesEnhanced2025
+    ...innovativeITServicesEnhanced2025
+    ...emergingTechServicesEnhanced2025
+    ...advancedAIAutomationServices
+    ...quantumCybersecurityServices
+    ...innovativeMicroSaasServices2026
+    ...specializedITSolutions2026
+    ...emergingTechServices2026
   ];
-
   const featuredServices = allServices
     .filter(service => service.popular)
     .slice(0, 12);
@@ -105,66 +97,60 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...specializedITSolutions2026;
     ...emergingTechServices2026
   ];
-
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
   const navigationSections = [
-    { id: 'hero', label: 'Home', icon: '🏠' },
-    { id: 'services', label: 'Micro SAAS', icon: '🚀' },
-    { id: 'ai', label: 'AI Services', icon: '🧠' },
-    { id: 'automation', label: 'AI Automation', icon: '⚡' },
-    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
-    { id: 'it', label: 'IT Solutions', icon: '💻' },
-    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
+    { id: 'hero', label: 'Home', icon: '🏠' }
+    { id: 'services', label: 'Micro SAAS', icon: '🚀' }
+    { id: 'ai', label: 'AI Services', icon: '🧠' }
+    { id: 'automation', label: 'AI Automation', icon: '⚡' }
+    { id: 'quantum', label: 'Quantum Security', icon: '🔐' }
+    { id: 'it', label: 'IT Solutions', icon: '💻' }
+    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' }
     { id: 'contact', label: 'Contact', icon: '📞' },  ];
-
   const features = [
     {    { id: 'contact', label: 'Contact', icon: '📞' }
   ];
-
   const features = [
     {
-      title: 'AI-Powered Innovation',
+      title: 'AI-Powered Innovation'
       description:
-        'Cutting-edge artificial intelligence solutions that transform business operations and drive growth',
-      icon: Brain,
-    },
+        'Cutting-edge artificial intelligence solutions that transform business operations and drive growth'
+      icon: Brain
+    }
     {
-      title: 'Quantum Computing',
+      title: 'Quantum Computing'
       description:
-        'Next-generation quantum solutions for complex problem-solving and advanced cryptography',
-      icon: Atom,
-    },
+        'Next-generation quantum solutions for complex problem-solving and advanced cryptography'
+      icon: Atom
+    }
     {
-      title: 'Cybersecurity Excellence',
+      title: 'Cybersecurity Excellence'
       description:
-        'Enterprise-grade security solutions with AI-powered threat detection and response',
-      icon: Shield,
-    },
+        'Enterprise-grade security solutions with AI-powered threat detection and response'
+      icon: Shield
+    }
     {
-      title: 'Process Automation',
+      title: 'Process Automation'
       description:
-        'Intelligent automation that streamlines operations and enhances productivity',
-      icon: Zap,
-    },  ];      title: "Process Automation",
-      description: "Intelligent automation that streamlines operations and enhances productivity",
+        'Intelligent automation that streamlines operations and enhances productivity'
+      icon: Zap
+    },  ];      title: "Process Automation"
+      description: "Intelligent automation that streamlines operations and enhances productivity"
       icon: Zap
     }
-
   const itemVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
+    initial: { opacity: 0, y: 20 }
+    animate: { opacity: 1, y: 0 }
     transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
-  };
-
+  }
   const staggerContainer = {
-    initial: {},
+    initial: {}
     animate: {
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
+        staggerChildren: 0.1
+      }
+    }
+  }
   return (
     <UltraFuturisticBackground2026 intensity='medium' theme='quantum'>
       {showInternalNav && (
@@ -183,11 +169,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     ZionTech Group
                   </span>
                 </motion.div>
-
                 {/* Desktop Navigation */}
                 <div className='hidden lg:flex space-x-8'>
-                  {navigationSections.map(section => (                    <button  };
-
+                  {navigationSections.map(section => (                    <button  }
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
       {showInternalNav && (
@@ -204,7 +188,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
                   <span className="text-white font-bold text-xl">ZionTech Group</span>
                 </motion.div>
-                
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex space-x-8">
                   {navigationSections.map((section) => (
@@ -222,7 +205,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     </button>
                   ))}
                 </div>
-
                 {/* Contact Info */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -252,7 +234,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     Contact Us
                   </a>
                 </motion.div>
-
                 {/* Mobile Menu Button */}
                 <button
                   className='lg:hidden text-white p-2'
@@ -276,7 +257,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </button>
               </div>
-
               {/* Mobile Navigation Menu */}
               <AnimatePresence>
                 {isMobileMenuOpen && (
@@ -330,7 +310,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </nav>
         </>
       )}
-
       {/* Hero Section */}
       <section
         id='hero'
@@ -366,7 +345,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <Star className='w-5 h-5' />
                 <span>Innovation Leader 2025-2026</span>
               </motion.div>
-
               <h1 className='text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 Zion Tech Group
               </h1>
@@ -374,7 +352,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Pioneering the future of technology with innovative solutions
                 that drive business transformation
               </p>
-
               {/* Enhanced CTA Section */}
               <motion.div
                 variants={itemVariants}
@@ -401,16 +378,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <Star className="w-5 h-5" />
                 <span>Innovation Leader 2025-2026</span>
               </motion.div>
-              
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
               </h1>
               <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
                 Pioneering the future of technology with innovative solutions that drive business transformation
               </p>
-              
               {/* Enhanced CTA Section */}
-              <motion.div 
+              <motion.div
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
               >
@@ -433,7 +408,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </button>
                 </Link>
               </motion.div>
-              
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -467,7 +441,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className='py-20 px-4 relative'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-20 px-4 relative">
@@ -487,7 +460,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               tools you need to stay ahead of the competition.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
             {features.map((feature, index) => (
               <motion.div
@@ -500,7 +472,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               From AI-powered automation to quantum computing, we provide the tools you need to stay ahead of the competition.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
@@ -534,7 +505,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </div>
         </div>
       </section>
-
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
@@ -555,54 +525,53 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               emerging technologies, we're building the future today
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {[
               {
-                title: 'AI Business Intelligence',
+                title: 'AI Business Intelligence'
                 description:
-                  'Transform data into actionable insights with AI-powered analytics',
-                icon: Brain,
-                gradient: 'from-purple-500 to-pink-500',
-                link: '/comprehensive-services-showcase-2026',
-              },
+                  'Transform data into actionable insights with AI-powered analytics'
+                icon: Brain
+                gradient: 'from-purple-500 to-pink-500'
+                link: '/comprehensive-services-showcase-2026'
+              }
               {
-                title: 'Cloud Infrastructure',
+                title: 'Cloud Infrastructure'
                 description:
-                  'Automate cloud infrastructure deployment and management',
-                icon: Cloud,
-                gradient: 'from-cyan-500 to-blue-500',
-                link: '/comprehensive-services-showcase-2026',
-              },
+                  'Automate cloud infrastructure deployment and management'
+                icon: Cloud
+                gradient: 'from-cyan-500 to-blue-500'
+                link: '/comprehensive-services-showcase-2026'
+              }
               {
-                title: 'Cybersecurity Intelligence',
-                description: 'Advanced threat detection and response with AI',
-                icon: Shield,
-                gradient: 'from-red-500 to-orange-500',
-                link: '/comprehensive-services-showcase-2026',
-              },
+                title: 'Cybersecurity Intelligence'
+                description: 'Advanced threat detection and response with AI'
+                icon: Shield
+                gradient: 'from-red-500 to-orange-500'
+                link: '/comprehensive-services-showcase-2026'
+              }
               {
-                title: 'Data Engineering',
-                description: 'Streamline data pipelines and analytics with AI',
-                icon: BarChart3,
-                gradient: 'from-emerald-500 to-teal-500',
-                link: '/comprehensive-services-showcase-2026',
-              },
+                title: 'Data Engineering'
+                description: 'Streamline data pipelines and analytics with AI'
+                icon: BarChart3
+                gradient: 'from-emerald-500 to-teal-500'
+                link: '/comprehensive-services-showcase-2026'
+              }
               {
-                title: 'Quantum Computing',
-                description: 'Access quantum computing power through the cloud',
-                icon: Atom,
-                gradient: 'from-indigo-500 to-purple-500',
-                link: '/comprehensive-services-showcase-2026',
-              },
+                title: 'Quantum Computing'
+                description: 'Access quantum computing power through the cloud'
+                icon: Atom
+                gradient: 'from-indigo-500 to-purple-500'
+                link: '/comprehensive-services-showcase-2026'
+              }
               {
-                title: 'Blockchain Intelligence',
+                title: 'Blockchain Intelligence'
                 description:
-                  'Intelligent blockchain analytics and DeFi optimization',
-                icon: Lock,
-                gradient: 'from-yellow-500 to-orange-500',
-                link: '/comprehensive-services-showcase-2026',
-              },
+                  'Intelligent blockchain analytics and DeFi optimization'
+                icon: Lock
+                gradient: 'from-yellow-500 to-orange-500'
+                link: '/comprehensive-services-showcase-2026'
+              }
             ].map((service, index) => (
               <motion.div
                 key={index}
@@ -616,14 +585,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-500 to-pink-500", link: "/comprehensive-services-showcase-2026" },
-              { title: "Cloud Infrastructure", description: "Automate cloud infrastructure deployment and management", icon: Cloud, gradient: "from-cyan-500 to-blue-500", link: "/comprehensive-services-showcase-2026" },
-              { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" },
-              { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" },
-              { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" },
+              { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-500 to-pink-500", link: "/comprehensive-services-showcase-2026" }
+              { title: "Cloud Infrastructure", description: "Automate cloud infrastructure deployment and management", icon: Cloud, gradient: "from-cyan-500 to-blue-500", link: "/comprehensive-services-showcase-2026" }
+              { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
+              { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" }
+              { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" }
               { title: "Blockchain Intelligence", description: "Intelligent blockchain analytics and DeFi optimization", icon: Lock, gradient: "from-yellow-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
             ].map((service, index) => (
               <motion.div
@@ -663,7 +631,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </motion.div>
             ))}
           </div>
-
           {/* Call to Action for Services Showcase */}
           <motion.div
             className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
@@ -686,7 +653,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section id='contact' className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
@@ -707,7 +673,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               can help you achieve your goals.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
             <div className='text-center'>
               <div className='w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -742,7 +707,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Round-the-clock assistance
               </p>            </div>
           </div>
-
           <motion.div
             className='text-center'            initial={{ opacity: 0, y: 20 }}              Ready to Transform Your Business?
             </h2>
@@ -750,7 +714,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -774,7 +737,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <p className="text-gray-300 text-sm">Round-the-clock assistance</p>
             </div>
           </div>
-
           <motion.div
             className='text-center'            className="text-center"
             initial={{ opacity: 0, y: 20 }}
@@ -808,7 +770,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className='py-12 px-4 border-t border-white/10'>
         <div className='max-w-6xl mx-auto text-center'>
@@ -837,8 +798,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               className='text-cyan-400 hover:text-cyan-300 transition-colors'
             >              Website            <p>© 2025-2026 ZionTech Group. All rights reserved.</p>
             <p className="mt-2">
-              Address: 364 E Main St STE 1008 Middletown DE 19709 | 
-              Phone: +1 302 464 0950 | 
+              Address: 364 E Main St STE 1008 Middletown DE 19709
+              Phone: +1 302 464 0950
               Email: kleber@ziontechgroup.com
             </p>
           </div>
@@ -857,9 +818,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </footer>
     </UltraFuturisticBackground2026>
   );
-};
-
+}
 export default Homepage2025;  )
-};
-
+}
 export default Homepage2025;
+

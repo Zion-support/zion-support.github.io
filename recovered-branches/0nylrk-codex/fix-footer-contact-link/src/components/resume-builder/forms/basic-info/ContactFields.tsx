@@ -1,12 +1,18 @@
 
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Control} from "react-hook-form";
-import {BasicInfoFormData} from "./schema";
-interface ContactFieldsProps {
-  control: Control<BasicInfoFormData>
-}
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+interface ContactFieldsProps {
+  control: Control<BasicInfoFormData>;
+}
 export function ContactFields({ control }: ContactFieldsProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -23,7 +29,6 @@ export function ContactFields({ control }: ContactFieldsProps) {
           </FormItem>
         )}
       />
-
       <FormField
         control={control}
         name="website"
@@ -37,7 +42,6 @@ export function ContactFields({ control }: ContactFieldsProps) {
           </FormItem>
         )}
       />
-
       <FormField
         control={control}
         name="linkedin"
@@ -45,13 +49,15 @@ export function ContactFields({ control }: ContactFieldsProps) {
           <FormItem>
             <FormLabel>LinkedIn</FormLabel>
             <FormControl>
-              <Input placeholder="https://linkedin.com/in/username" {...field} />
+              <Input
+                placeholder="https://linkedin.com/in/username"
+                {...field}
+              />
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
-
       <FormField
         control={control}
         name="github"
@@ -66,5 +72,5 @@ export function ContactFields({ control }: ContactFieldsProps) {
         )}
       />
     </div>
-  )
+  );
 }

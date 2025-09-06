@@ -1,30 +1,29 @@
 
-import {useEffect, useState} from "react";
-import {useNavigate, useSearchParams} from "react-router-dom";
-import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
-import {generateSearchSuggestions} from "@/data/marketplaceData";
-import {SearchSuggestion} from "@/types/search";
-import {useAISearch} from "@/hooks/useAISearch";
-import {AppLayout} from "@/layout/AppLayout";
+import { useEffect, useState } from "react",
+import { useNavigate, useSearchParams } from "react-router-dom",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { SearchSuggestion } from "@/types/search",
+import { useAISearch } from "@/hooks/useAISearch";
+import { AppLayout } from "@/layout/AppLayout";
 export default function SearchPage() {
   const [params] = useSearchParams();
+
   const navigate = useNavigate();
-  const initial = params.get("q") || "";
+  const initial = params.get("q") |"";
   const [query, setQuery] = useState(initial);
   const { results, loading, search } = useAISearch();
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions()
   useEffect(() => {
     if (initial) {
       search(initial)
     }
   }, [initial]);
-
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault()
     navigate(`/search?q=${encodeURIComponent(query)}`);
     search(query)
-  };
+  }
 
   return (
     <AppLayout>
@@ -37,7 +36,6 @@ export default function SearchPage() {
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
-
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results.length === 0 && (
           <p className="text-zion-slate-light">No results found.</p>
@@ -62,4 +60,3 @@ export default function SearchPage() {
     </AppLayout>
   )
 }
-;

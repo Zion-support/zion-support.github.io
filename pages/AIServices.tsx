@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
+<<<<<<< HEAD
 =======
 import React from 'react';
 <<<<<<< HEAD
 import Layout from '../components/Layout';
 >>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function AIServices() {
   return (
     <Layout
@@ -43,6 +46,7 @@ export default function AIServices() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -141,3 +145,6 @@ export default function AIServices() {
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

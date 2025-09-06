@@ -1,10 +1,10 @@
 import { Button } from '@/components/ui/button';
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
@@ -31,40 +31,39 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
+
 import { useState, useEffect } from "react";
-import { useTranslation } from 'react-i18next';
-import Link from 'next/link';
-import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm";
-import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks";
-import { PartnerDashboard } from "@/components/partners/PartnerDashboard";
-import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard";
-import { PartnerResources } from "@/components/partners/PartnerResources";
+import { useTranslation  } from 'react-i18next';
+import Link from 'next/link',
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
+import { PartnerResources } from "@/components/partners/PartnerResources",
 import { useAuth } from "@/hooks/useAuth";
-import { useRouter } from 'next/router';
+import { useRouter  } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 export default function Partners() {
 
-  logInfo('PartnersPage rendering'),
-  const [activeTab, setActiveTab] = useState("overview"),
-  const { t } = useTranslation(),
-  const { user, isAuthenticated } = useAuth(),
-  const router = useRouter(),
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
-
+  logInfo('PartnersPage rendering')
+  const [activeTab, setActiveTab] = useState("overview")
+  const { t } = useTranslation()
+  const { user, isAuthenticated } = useAuth()
+  const router = useRouter()
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true)
   useEffect((,) => {
     async function checkHealth() {
       try {
         const res = await fetch('/api/auth/health');
         setAuthServiceAvailable(res.ok);
         logErrorToProduction('Partner login auth health check failed', {
-          data: err,
+          data: err
         });
         setAuthServiceAvailable(false);
       }
     }
     checkHealth();  }, []);    checkHealth()
   }, []);
-
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
     logInfo('PartnersPage rendering Unauthenticated View');
@@ -78,7 +77,6 @@ export default function Partners() {
             {t('partner.subtitle')}
           </p>
         </div>
-
         <div className='grid md:grid-cols-2 gap-8 mb-12'>
           <Card className='bg-zion-blue-dark border-zion-blue-light'>
             <CardHeader>
@@ -119,7 +117,6 @@ export default function Partners() {
                   <p className='text-sm text-zion-slate-light'>
                     {t('partner.influencers.points.resources_desc')}
                   </p>                </div>        </div>
-
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="bg-zion-blue-dark border-zion-blue-light">
             <CardHeader>
@@ -150,7 +147,6 @@ export default function Partners() {
               </div>
             </CardContent>
           </Card>
-
           <Card className='bg-zion-blue-dark border-zion-blue-light'>
             <CardHeader>
               <CardTitle className='text-white'>
@@ -220,7 +216,6 @@ export default function Partners() {
             </CardContent>
           </Card>
         </div>
-
         <div className='text-center mb-12'>
           <h2 className='text-2xl font-bold text-white mb-4'>
             {t('partner.how_it_works')}
@@ -238,7 +233,6 @@ export default function Partners() {
               <CardContent className='text-center text-sm text-zion-slate-light'>                <p>{t('partner.steps.join_desc')}</p>
               </CardContent>
             </Card>
-
             <Card className='bg-zion-blue-dark border-zion-blue-light'>
               <CardHeader className='text-center pb-2'>
                 <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>
@@ -252,7 +246,6 @@ export default function Partners() {
                 <p>{t('partner.steps.share_desc')}</p>
               </CardContent>
             </Card>
-
             <Card className='bg-zion-blue-dark border-zion-blue-light'>
               <CardHeader className='text-center pb-2'>
                 <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>
@@ -268,7 +261,6 @@ export default function Partners() {
             </Card>
           </div>
         </div>
-
         <div className='flex justify-center gap-4'>
           <Button
             size='lg'
@@ -309,9 +301,9 @@ export default function Partners() {
       </div>
     );
   }
-
   // Authenticated user view - Partner Dashboard
   logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
+
   return (
     <div className='container max-w-7xl py-10'>
       <h1>DEBUG: Partners Page - Authenticated View</h1>
@@ -341,7 +333,6 @@ export default function Partners() {
           </Button>
         </div>
       </div>
-
       <Tabs
         value={activeTab}
         onValueChange={setActiveTab}
@@ -364,24 +355,19 @@ export default function Partners() {
             {t('partner.tabs.resources')}
           </TabsTrigger>
         </TabsList>        </TabsList>
-        
         <TabsContent value="overview" className="space-y-4">
           <PartnerDashboard />
         </TabsContent>
-        
         <TabsContent value="referrals" className="space-y-4">
           <PartnerReferralLinks />
         </TabsContent>
-
         <TabsContent value='overview' className='space-y-4'>
           <PartnerDashboard />
         </TabsContent>
-
         <TabsContent value='referrals' className='space-y-4'>
           <PartnerReferralLinks />
         </TabsContent>
-
-        <TabsContent value='earnings' className='space-y-4'>          <Card>        
+        <TabsContent value='earnings' className='space-y-4'>          <Card>
         <TabsContent value="earnings" className="space-y-4">
           <Card>
             <CardHeader>
@@ -398,30 +384,22 @@ export default function Partners() {
         </TabsContent>            </CardContent>
           </Card>
         </TabsContent>
-        
         <TabsContent value="leaderboard" className="space-y-4">
           <PartnerLeaderboard />
         </TabsContent>
-
         <TabsContent value='leaderboard' className='space-y-4'>
           <PartnerLeaderboard />
         </TabsContent>
-
-        <TabsContent value='resources' className='space-y-4'>          <PartnerResources />        
+        <TabsContent value='resources' className='space-y-4'>          <PartnerResources />
         <TabsContent value="resources" className="space-y-4">
           <PartnerResources />
         </TabsContent>
       </Tabs>
     </div>
   );
-  async function checkHealth () {;
-  try {;
-  ;
-
-}checkHealth () ;
+  async function checkHealth () {try {}checkHealth () ;
 }, []);
-//If not authenticated, display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {;
-  t ('partner.login') ;
+//If not authenticated, display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {t ('partner.login') ;
 }</Button>) ;
 }</div> </div>) ";
 }//Authenticated user view - Partner Dashboard return (<div className="container max-w-7xl py-10" > <h1>DEBUG: Partners Page - Authenticated View</h1> <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8" > <div> </Button> </div> </div> </TabsList> <TabsContent value="overview" className="space-y-4" > <PartnerDashboard /> </TabsContent> <TabsContent value="referrals" className="space-y-4" > <PartnerReferralLinks /> </TabsContent> <TabsContent value="earnings" className="space-y-4" > <Card> <CardHeader> <CardTitle> {';
@@ -431,4 +409,3 @@ export default function Partners() {
 }</CardDescription> </CardHeader> <CardContent> </CardContent> </Card> </TabsContent> <TabsContent value="leaderboard" className="space-y-4" > <PartnerLeaderboard /> </TabsContent> <TabsContent value="resources" className="space-y-4" > <PartnerResources /> </TabsContent> </Tabs> </div>) ;
 }'"}
 }
-;

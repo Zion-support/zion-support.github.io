@@ -1,16 +1,13 @@
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Trash2 } from 'lucide-react'
-import { SkillItemProps } from './types';
-export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Trash2 } from 'lucide-react';
-import { SkillItemProps } from './types';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { Trash2 } from 'lucide-react'
+
+import { SkillItemProps } from './types'
+export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
   return (
-    <Badge 
+    <Badge
       key = {skill.id,}
       variant="secondary"
       className="flex items-center gap-1 py-1.5 px-3"
@@ -30,17 +27,16 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
       </Button>
     </Badge>
   )
-};
+}
 "
-
-import {Badge} from '@/components/ui/badge';
-import {Button} from '@/components/ui/button';
+import {Badge} from '@/components/ui/badge'
+import {Button} from '@/components/ui/button'
 import {Trash2} from 'lucide-react'
-import {SkillItemProps} from './types';
+import {SkillItemProps} from './types'
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
   return (
-    <Badge 
-      key={skill.id} 
+    <Badge
+      key={skill.id}
       variant="secondary"
       className="flex items-center gap-1 py-1.5 px-3"
     >
@@ -59,6 +55,6 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
       </Button>
     </Badge>
   )
-};},
-;
-};
+} }
+}
+

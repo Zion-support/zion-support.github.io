@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+<<<<<<< HEAD
   Menu,
   X,
   ChevronDown,
@@ -38,6 +39,31 @@ import SearchModal from './SearchModal';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 
+=======
+  Menu
+  X
+  ChevronDown
+  ChevronRight
+  Phone
+  Mail
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Github
+  ArrowRight
+  Building
+  Users
+  ShoppingCart
+  Shield
+  Zap
+  Globe
+  BarChart3
+  Search
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -45,162 +71,156 @@ export default function Navigation() {
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
   const services = [
     {
-      name: "AI Services",
-      href: "/ai-services",
-      description: "Machine Learning, NLP, Computer Vision",
-      icon: BarChart3,
-    },
+      name: "AI Services"
+      href: "/ai-services"
+      description: "Machine Learning, NLP, Computer Vision"
+      icon: BarChart3
+    }
     {
-      name: "IT Services",
-      href: "/it-services",
-      description: "Cloud, DevOps, Cybersecurity",
-      icon: Shield,
-    },
+      name: "IT Services"
+      href: "/it-services"
+      description: "Cloud, DevOps, Cybersecurity"
+      icon: Shield
+    }
     {
-      name: "Micro SaaS",
-      href: "/micro-saas",
-      description: "Custom SaaS Solutions",
-      icon: Zap,
-    },
+      name: "Micro SaaS"
+      href: "/micro-saas"
+      description: "Custom SaaS Solutions"
+      icon: Zap
+    }
     {
-      name: "Blockchain",
-      href: "/blockchain",
-      description: "Smart Contracts, DeFi, NFTs",
-      icon: Building,
-    },
+      name: "Blockchain"
+      href: "/blockchain"
+      description: "Smart Contracts, DeFi, NFTs"
+      icon: Building
+    }
     {
-      name: "IoT Solutions",
-      href: "/iot",
-      description: "Connected Devices, Edge Computing",
-      icon: Globe,
-    },
+      name: "IoT Solutions"
+      href: "/iot"
+      description: "Connected Devices, Edge Computing"
+      icon: Globe
+    }
     {
-      name: "Cybersecurity",
-      href: "/cybersecurity",
-      description: "Security Audits, Compliance",
-      icon: Shield,
-    },
+      name: "Cybersecurity"
+      href: "/cybersecurity"
+      description: "Security Audits, Compliance"
+      icon: Shield
+    }
   ];
-
   const solutions = [
     {
-      name: "Enterprise Solutions",
-      href: "/enterprise",
-      description: "Large-scale business solutions",
-      icon: Building,
-    },
+      name: "Enterprise Solutions"
+      href: "/enterprise"
+      description: "Large-scale business solutions"
+      icon: Building
+    }
     {
-      name: "Startup Solutions",
-      href: "/startup",
-      description: "Scalable startup platforms",
-      icon: Zap,
-    },
+      name: "Startup Solutions"
+      href: "/startup"
+      description: "Scalable startup platforms"
+      icon: Zap
+    }
     {
-      name: "E-commerce",
-      href: "/ecommerce",
-      description: "Online store solutions",
-      icon: ShoppingCart,
-    },
+      name: "E-commerce"
+      href: "/ecommerce"
+      description: "Online store solutions"
+      icon: ShoppingCart
+    }
     {
-      name: "Healthcare",
-      href: "/industries/healthcare",
-      description: "Medical technology solutions",
-      icon: Users,
-    },
+      name: "Healthcare"
+      href: "/industries/healthcare"
+      description: "Medical technology solutions"
+      icon: Users
+    }
     {
-      name: "Finance",
-      href: "/industries/finance",
-      description: "Fintech and banking solutions",
-      icon: BarChart3,
-    },
+      name: "Finance"
+      href: "/industries/finance"
+      description: "Fintech and banking solutions"
+      icon: BarChart3
+    }
     {
-      name: "Education",
-      href: "/industries/education",
-      description: "EdTech platforms",
-      icon: Users,
-    },
+      name: "Education"
+      href: "/industries/education"
+      description: "EdTech platforms"
+      icon: Users
+    }
   ];
-
   const industries = [
     {
-      name: "Healthcare",
-      href: "/industries/healthcare",
-      description: "Medical technology solutions",
-    },
+      name: "Healthcare"
+      href: "/industries/healthcare"
+      description: "Medical technology solutions"
+    }
     {
-      name: "Finance",
-      href: "/industries/finance",
-      description: "Fintech and banking solutions",
-    },
+      name: "Finance"
+      href: "/industries/finance"
+      description: "Fintech and banking solutions"
+    }
     {
-      name: "Education",
-      href: "/industries/education",
-      description: "EdTech platforms",
-    },
+      name: "Education"
+      href: "/industries/education"
+      description: "EdTech platforms"
+    }
     {
-      name: "Government",
-      href: "/industries/government",
-      description: "Public sector solutions",
-    },
+      name: "Government"
+      href: "/industries/government"
+      description: "Public sector solutions"
+    }
     {
-      name: "Manufacturing",
-      href: "/industries/manufacturing",
-      description: "Industrial automation",
-    },
+      name: "Manufacturing"
+      href: "/industries/manufacturing"
+      description: "Industrial automation"
+    }
     {
-      name: "Retail",
-      href: "/industries/retail",
-      description: "E-commerce and retail tech",
-    },
+      name: "Retail"
+      href: "/industries/retail"
+      description: "E-commerce and retail tech"
+    }
     {
-      name: "Real Estate",
-      href: "/industries/real-estate",
-      description: "Property technology",
-    },
+      name: "Real Estate"
+      href: "/industries/real-estate"
+      description: "Property technology"
+    }
   ];
-
   const resources = [
-    { name: "Blog", href: "/blog", description: "Latest insights and updates" },
+    { name: "Blog", href: "/blog", description: "Latest insights and updates" }
     {
-      name: "Case Studies",
-      href: "/case-studies",
-      description: "Success stories and projects",
-    },
+      name: "Case Studies"
+      href: "/case-studies"
+      description: "Success stories and projects"
+    }
     {
-      name: "White Papers",
-      href: "/white-papers",
-      description: "In-depth research and analysis",
-    },
+      name: "White Papers"
+      href: "/white-papers"
+      description: "In-depth research and analysis"
+    }
     {
-      name: "Tutorials",
-      href: "/tutorials",
-      description: "Step-by-step guides",
-    },
+      name: "Tutorials"
+      href: "/tutorials"
+      description: "Step-by-step guides"
+    }
     {
-      name: "Training",
-      href: "/training",
-      description: "Professional development",
-    },
+      name: "Training"
+      href: "/training"
+      description: "Professional development"
+    }
     {
-      name: "Events",
-      href: "/events",
-      description: "Webinars and conferences",
-    },
-    { name: "News", href: "/news", description: "Industry news and updates" },
+      name: "Events"
+      href: "/events"
+      description: "Webinars and conferences"
+    }
+    { name: "News", href: "/news", description: "Industry news and updates" }
   ];
-
   const quickLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Our Team", href: "/team" },
-    { name: "Careers", href: "/careers" },
-    { name: "Contact", href: "/contact" },
-    { name: "Support", href: "/support" },
-    { name: "Status", href: "/status" },
+    { name: "About Us", href: "/about" }
+    { name: "Our Team", href: "/team" }
+    { name: "Careers", href: "/careers" }
+    { name: "Contact", href: "/contact" }
+    { name: "Support", href: "/support" }
+    { name: "Status", href: "/status" }
   ];
-
   return (
     <>
       {/* Top Bar */}
@@ -244,7 +264,6 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav className="bg-white shadow-lg sticky top-0 z-50">
         <div className="container mx-auto px-4">
@@ -263,7 +282,6 @@ export default function Navigation() {
                 </div>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               <Link
@@ -272,7 +290,6 @@ export default function Navigation() {
               >
                 Home
               </Link>
-
               {/* Services Dropdown */}
               <div className="relative group">
                 <button
@@ -328,7 +345,6 @@ export default function Navigation() {
                   )}
                 </AnimatePresence>
               </div>
-
               {/* Solutions Dropdown */}
               <div className="relative group">
                 <button
@@ -384,7 +400,6 @@ export default function Navigation() {
                   )}
                 </AnimatePresence>
               </div>
-
               {/* Industries Dropdown */}
               <div className="relative group">
                 <button
@@ -425,7 +440,6 @@ export default function Navigation() {
                   )}
                 </AnimatePresence>
               </div>
-
               {/* Resources Dropdown */}
               <div className="relative group">
                 <button
@@ -466,7 +480,6 @@ export default function Navigation() {
                   )}
                 </AnimatePresence>
               </div>
-
               <Link
                 href="/pricing"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -475,10 +488,13 @@ export default function Navigation() {
               </Link>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <button
@@ -511,7 +527,6 @@ export default function Navigation() {
                 Call Now
               </a>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2"
@@ -524,7 +539,6 @@ export default function Navigation() {
               )}
             </button>
           </div>
-
           {/* Mobile Menu */}
           <AnimatePresence>
             {isMenuOpen && (
@@ -542,7 +556,6 @@ export default function Navigation() {
                   >
                     Home
                   </Link>
-
                   {/* Mobile Services */}
                   <div className="px-4 py-2">
                     <div className="font-medium text-gray-900 mb-2">
@@ -561,7 +574,6 @@ export default function Navigation() {
                       ))}
                     </div>
                   </div>
-
                   {/* Mobile Solutions */}
                   <div className="px-4 py-2">
                     <div className="font-medium text-gray-900 mb-2">
@@ -580,7 +592,6 @@ export default function Navigation() {
                       ))}
                     </div>
                   </div>
-
                   {/* Mobile Industries */}
                   <div className="px-4 py-2">
                     <div className="font-medium text-gray-900 mb-2">
@@ -599,7 +610,6 @@ export default function Navigation() {
                       ))}
                     </div>
                   </div>
-
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">
                     <div className="font-medium text-gray-900 mb-2">
@@ -618,7 +628,6 @@ export default function Navigation() {
                       ))}
                     </div>
                   </div>
-
                   <Link
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
@@ -626,7 +635,6 @@ export default function Navigation() {
                   >
                     Pricing
                   </Link>
-
                   <div className="px-4 py-2 space-y-2">
                     <Link
                       href="/contact"
@@ -649,7 +657,6 @@ export default function Navigation() {
           </AnimatePresence>
         </div>
       </nav>
-
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}

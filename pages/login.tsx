@@ -12,6 +12,7 @@ import { motion } from 'framer-motion';
 import Layout from './components/Layout';
 >>>>>>> origin/automation-improvements-final
 import {
+<<<<<<< HEAD
   Mail,
   Lock,
   Eye,
@@ -194,19 +195,197 @@ import {
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
 
+=======
+  Mail
+  Lock
+  Eye
+  EyeOff
+  ArrowRight
+  CheckCircle
+  AlertCircle
+  User
+  Shield
+  Globe
+  Smartphone
+  Monitor
+  Server
+  Database
+  Cloud
+  Brain
+  Code
+  Settings
+  Wrench
+  Cog
+  Activity
+  PieChart
+  BarChart
+  TrendingUp
+  DollarSign
+  ShoppingCart
+  Home
+  Trash2
+  Camera
+  Heart
+  ClipboardList
+  TreePine
+  Droplets
+  Building
+  Rocket
+  Lightbulb
+  Target
+  MessageSquare
+  HelpCircle
+  Info
+  XCircle
+  Plus
+  Minus
+  ChevronUp
+  ChevronRight
+  ChevronLeft
+  ChevronDown
+  ArrowUp
+  ArrowDown
+  ArrowLeft
+  Pause
+  Stop
+  SkipForward
+  SkipBack
+  Volume2
+  VolumeX
+  Maximize
+  Minimize
+  RotateCcw
+  RotateCw
+  RefreshCw
+  Upload
+  Share
+  Copy
+  Edit
+  Trash
+  Save
+  Unlock
+  Bell
+  BellOff
+  Star as StarIcon
+  Heart as HeartIcon
+  ThumbsUp
+  ThumbsDown
+  MessageCircle
+  Send
+  Paperclip
+  Smile
+  Frown
+  Meh
+  Laugh
+  Angry
+  Sad
+  Surprised
+  Wink
+  Kiss
+  Tongue
+  Wink2
+  KissWinkHeart
+  KissClosedEyes
+  StuckOutTongue
+  StuckOutTongueWinkingEye
+  StuckOutTongueClosedEyes
+  Disappointed
+  Worried
+  Angry2
+  Rage
+  Cry
+  Scream
+  Confounded
+  Hugging
+  Smirk
+  NoMouth
+  NeutralFace
+  Expressionless
+  Unamused
+  RollingEyes
+  Thinking
+  LyingFace
+  HandOverMouth
+  ShushingFace
+  ExplodingHead
+  CowboyHatFace
+  DisguisedFace
+  Sunglasses
+  NerdFace
+  MonocleFace
+  Confused
+  WorriedFace
+  SlightlyFrowningFace
+  OpenMouth
+  Hushed
+  Astonished
+  Flushed
+  PleadingFace
+  FrowningFace
+  AnguishedFace
+  FearfulFace
+  ColdSweat
+  DisappointedRelieved
+  CryFace
+  LoudlyCryingFace
+  ScreamFace
+  StuckOutTongueFace
+  DroolingFace
+  UnamusedFace
+  SweatSmile
+  Sweat
+  WearyFace
+  TiredFace
+  SleepyFace
+  YawningFace
+  DizzyFace
+  ExplodingHeadFace
+  CowboyHatFace2
+  DisguisedFace2
+  SunglassesFace
+  NerdFace2
+  MonocleFace2
+  ConfusedFace
+  WorriedFace2
+  SlightlyFrowningFace2
+  OpenMouthFace
+  HushedFace
+  AstonishedFace
+  FlushedFace
+  PleadingFace2
+  FrowningFace2
+  AnguishedFace2
+  FearfulFace2
+  ColdSweatFace
+  DisappointedRelievedFace
+  CryFace2
+  LoudlyCryingFace2
+  ScreamFace2
+  StuckOutTongueFace2
+  DroolingFace2
+  UnamusedFace2
+  SweatSmileFace
+  SweatFace
+  WearyFace2
+  TiredFace2
+  SleepyFace2
+  YawningFace2
+  DizzyFace2
+} from "lucide-react";
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function LoginPage() {
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: ""
+    password: ""
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
   const [error, setError] = useState("");
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
+<<<<<<< HEAD
       ...prev,
       [name]: value,
 =======
@@ -218,19 +397,20 @@ export default function LoginPage() {
       ...prev,
       [name]: value
 >>>>>>> origin/automation-improvements-final
+=======
+      ...prev
+      [name]: value
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     }));
-  };
-
+  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 <<<<<<< HEAD
     setError("");
-
     try {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
-
       // For demo purposes, accept any email/password
       if (formData.email && formData.password) {
         // Redirect to dashboard or home page
@@ -260,8 +440,7 @@ export default function LoginPage() {
     } finally {
       setIsLoading(false);
     }
-  };
-
+  }
   return (
     <Layout>
       <Head>
@@ -275,7 +454,6 @@ export default function LoginPage() {
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
 >>>>>>> origin/automation-improvements-final
       </Head>
-
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div
@@ -304,7 +482,6 @@ export default function LoginPage() {
               </Link>
             </p>
           </motion.div>
-
           <motion.div
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
             initial={{ opacity: 0, y: 30 }}
@@ -323,7 +500,6 @@ export default function LoginPage() {
                   {error}
                 </motion.div>
               )}
-
               <div>
 <<<<<<< HEAD
                 <label
@@ -352,7 +528,6 @@ export default function LoginPage() {
                   />
                 </div>
               </div>
-
               <div>
 <<<<<<< HEAD
                 <label
@@ -392,7 +567,6 @@ export default function LoginPage() {
                   </button>
                 </div>
               </div>
-
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <input
@@ -412,7 +586,6 @@ export default function LoginPage() {
                     Remember me
                   </label>
                 </div>
-
                 <div className="text-sm">
                   <Link
                     href="/forgot-password"
@@ -422,7 +595,6 @@ export default function LoginPage() {
                   </Link>
                 </div>
               </div>
-
               <div>
                 <button
                   type="submit"
@@ -443,7 +615,6 @@ export default function LoginPage() {
                 </button>
               </div>
             </form>
-
             <div className="mt-6">
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
@@ -459,13 +630,11 @@ export default function LoginPage() {
 >>>>>>> origin/automation-improvements-final
                 </div>
               </div>
-
               <div className="mt-6 grid grid-cols-2 gap-3">
                 <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">
                   <Globe className="h-5 w-5" />
                   <span className="ml-2">Google</span>
                 </button>
-
                 <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">
                   <User className="h-5 w-5" />
                   <span className="ml-2">Microsoft</span>
@@ -473,7 +642,6 @@ export default function LoginPage() {
               </div>
             </div>
           </motion.div>
-
           <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 30 }}

@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
+
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,
-  Scale,;
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Star
+  Scale;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
@@ -95,7 +95,6 @@ export default function AILegalContractAnalyzerPage() {
             </div>
           </div>
         </div>
-
         <div className="bg-amber-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Streamline Legal Work</h2>
           <p className="text-lg text-gray-700 mb-6">

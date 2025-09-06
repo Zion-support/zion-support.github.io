@@ -1,13 +1,14 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
+
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Car,
-  Star,;
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Car
+  Star;
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -112,4 +113,3 @@ export default function AutonomousVehicleAIPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-;

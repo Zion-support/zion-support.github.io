@@ -1,12 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { ArrowLeft, Package, CreditCard, MapPin, Clock, CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import { useAuth } from '@/hooks/useAuth';
 
+import { useAuth } from '@/hooks/useAuth';
 interface OrderItem {
   id: string;
   name: string;
@@ -14,7 +8,6 @@ interface OrderItem {
   price: number;
   image?: string;
 }
-
 interface Order {
   id: string;
   orderId: string;
@@ -29,14 +22,13 @@ interface Order {
     state: string;
     zipCode: string;
     country: string;
-  };
+  }
   paymentMethod: {
     type: string;
     last4: string;
-  };
+  }
   trackingNumber?: string;
 }
-
 const getStatusColor = (status: string) => {
   switch (status) {
     case 'pending':
@@ -52,8 +44,7 @@ const getStatusColor = (status: string) => {
     default:
       return 'bg-gray-100 text-gray-800';
   }
-};
-
+}
 const getStatusIcon = (status: string) => {
   switch (status) {
     case 'delivered':
@@ -65,50 +56,47 @@ const getStatusIcon = (status: string) => {
     default:
       return <Clock className="h-4 w-4" />;
   }
-};
-
+}
 export default function OrderDetail() {
   const router = useRouter();
   const { user } = useAuth();
   const [order, setOrder] = useState<Order | null>(null);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     // Mock data - replace with actual API call
     const mockOrder: Order = {
-      id: router.query.id as string || '1',
-      orderId: 'ORD-2024-001',
-      date: '2024-01-15',
-      status: 'shipped',
-      total: 299.99,
+      id: router.query.id as string |'1'
+      orderId: 'ORD-2024-001'
+      date: '2024-01-15'
+      status: 'shipped'
+      total: 299.99
       items: [
         {
-          id: '1',
-          name: 'Premium Web Development Service',
-          quantity: 1,
-          price: 299.99,
+          id: '1'
+          name: 'Premium Web Development Service'
+          quantity: 1
+          price: 299.99
         }
-      ],
+      ]
       shippingAddress: {
-        name: 'John Doe',
-        street: '123 Main St',
-        city: 'New York',
-        state: 'NY',
-        zipCode: '10001',
+        name: 'John Doe'
+        street: '123 Main St'
+        city: 'New York'
+        state: 'NY'
+        zipCode: '10001'
         country: 'USA'
-      },
+      }
       paymentMethod: {
-        type: 'credit_card',
+        type: 'credit_card'
         last4: '4242'
-      },
+      }
       trackingNumber: 'TRK123456789'
-    };
-
+    }
     setOrder(mockOrder);
     setLoading(false);
   }, [router.query.id]);
-
   if (loading) {
+
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="animate-pulse">
@@ -122,7 +110,6 @@ export default function OrderDetail() {
       </div>
     );
   }
-
   if (!order) {
     return (
       <div className="container mx-auto px-4 py-8">
@@ -138,7 +125,6 @@ export default function OrderDetail() {
       </div>
     );
   }
-
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-6">
@@ -150,7 +136,6 @@ export default function OrderDetail() {
         </Link>
         <h1 className="text-3xl font-bold">Order Details</h1>
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Order Summary */}
         <div className="lg:col-span-2 space-y-6">
@@ -186,7 +171,6 @@ export default function OrderDetail() {
               </div>
             </CardContent>
           </Card>
-
           {/* Shipping Address */}
           <Card>
             <CardHeader>
@@ -206,7 +190,6 @@ export default function OrderDetail() {
               </div>
             </CardContent>
           </Card>
-
           {/* Payment Information */}
           <Card>
             <CardHeader>
@@ -225,7 +208,6 @@ export default function OrderDetail() {
             </CardContent>
           </Card>
         </div>
-
         {/* Order Status & Tracking */}
         <div className="space-y-6">
           <Card>
@@ -261,7 +243,6 @@ export default function OrderDetail() {
               </div>
             </CardContent>
           </Card>
-
           {order.trackingNumber && (
             <Card>
               <CardHeader>
@@ -282,41 +263,5 @@ export default function OrderDetail() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
-};
-`Order #$ {;
-  order.orderId ;
-}`;
-`Date: $ {;
-  new Date (order.date) .toLocaleDateString () ;
-}`;';
-'';';
-'Items:';
-...order.items.map ( (i) => `$ {;
-  i.name ;
-}x$ {;
-  i.quantity ;
-}- $$ {;
-  i.price.toFixed (2) ;
-}`);';
-'';
-`Total: $$ {;
-  order.total.toFixed (2) ;
-}`;';
-'';';
-'Shipping Address: ';
-order.shippingAddress.name;
-order.shippingAddress.street;
-await navigator.clipboard.writeText (summary);';
-toast.success ('Order summary copied to clipboard') ;
-};
-</li>) ) ;
-}</ul> </div> <div> </div> <Link href="/orders" className="text-zion-purple underline" > Back to orders </Link> </div>) ;
-}'"
-}
-}
-;
-=======
-}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
+

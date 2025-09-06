@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
 =======
@@ -187,6 +188,11 @@ export default function AboutPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 
+=======
+
+import React from "react";
+import Layout from "../components/Layout";
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function About() {
   return (
 <<<<<<< HEAD
@@ -205,7 +211,7 @@ export default function About() {
               About Zion Tech Group
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Leading technology solutions provider specializing in AI,
+              Leading technology solutions provider specializing in AI
               cybersecurity, and digital transformation.
 =======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">About Zion Tech Group</h1>
@@ -222,6 +228,7 @@ export default function About() {
     </Layout>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -520,3 +527,6 @@ export default function AboutPage() {
 export default AboutPage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

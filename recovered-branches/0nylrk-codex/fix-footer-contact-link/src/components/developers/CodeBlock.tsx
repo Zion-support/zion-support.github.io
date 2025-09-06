@@ -1,30 +1,30 @@
 
-import {useState} from 'react';
-import {Check, Copy} from 'lucide-react';
-import {cn} from "@/lib/utils";
+import { useState  } from 'react';
+import { Check, Copy  } from 'lucide-react';
+import { cn } from "@/lib/utils";
 interface CodeBlockProps {
-  code: string,
+
+  code: string
+
   language?: string;
   showLineNumbers?: boolean;
   className?: string
 }
-
-export function CodeBlock({ 
+export function CodeBlock({
   code;
+
   language = 'bash';
   showLineNumbers = false;
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
-
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => {
       setCopied(false)
     }, 2000)
-  };
-
+  }
   return (
     <div className={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto";
@@ -60,5 +60,5 @@ export function CodeBlock({
     </div>
   )
 }
-
 export default CodeBlock;
+

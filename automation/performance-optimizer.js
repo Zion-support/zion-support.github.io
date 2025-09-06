@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,6 +7,8 @@
 >>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 #!/usr/bin/env node;
   "fs");
   "path");
@@ -14,25 +17,25 @@ const { execSync } = // // require(;
 class $1 {
  constructor() { this.optimizations = []; this.logFile = path.join(__dirname, "logs", "performance-optimizer.log"); this.ensureLogDirectory(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`;` console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage); } async optimizePerformance() { try {" this.log("Starting performance optimization."); / Analyze bundle size const bundleAnalysis = this.analyzeBundleSize(); / Optimize images const imageOptimization = this.optimizeImages(); / Check for unused dependencies const dependencyAnalysis = this.analyzeDependencies(); / Generate optimization report const report = {" timestamp: new Date().toISOString()," bundleSize: bundleAnalysis," imageOptimization: imageOptimization," dependencies: dependencyAnalysis," recommendations: this.generateRecommendations() }; this.saveReport(report);" this.log("Performance optimization completed"); return report; } catch (error) {""` this.log(`Performance optimization failed: ${error.message}`, "ERROR"); return null; } } analyzeBundleSize() { try { / Placeholder for bundle analysis return { optimizeImages() { try { / Placeholder for image optimization"" return { optimized: 0, totalImages: 0, savings: "0KB" }; } catch (error) {" return { error: error.message }; } } analyzeDependencies() { return {" totalDependencies: dependencies.length + devDependencies.length," productionDependencies: dependencies.length," devDependencies: devDependencies.length," potentialUnused: this.findUnusedDependencies() }; } catch (error) {" return { error: error.message }; } } findUnusedDependencies() { / Placeholder for unused dependency detection" return ["example-unused-package"]; } generateRecommendations() {='"`'"`
   constructor() {}
-    this.optimizations = [];,
-    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');',
-    this.ensureLogDirectory();,
+    this.optimizations = [];
+    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');'
+    this.ensureLogDirectory();
   }
   ensureLogDirectory() {}
-    const logDir = path.dirname(this.logFile);,
+    const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { "recursive": true });",
+      fs.mkdirSync(logDir, { "recursive": true });"
     }
   }
   log(message, level = 'INFO') {'}
-    const timestamp = new Date().toISOString();,
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
-    _console.log(`[${level}] ${message}`);,
-    fs.appendFileSync(this.logFile, logMessage);,
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    _console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logMessage);
   }
   async optimizePerformance() {}
     try {}
-      this.log('Starting performance optimization...');',
+      this.log('Starting performance optimization...');'
       // Analyze bundle size;
       const bundleAnalysis = this.analyzeBundleSize();
       // Optimize images;
@@ -41,18 +44,17 @@ class $1 {
       const dependencyAnalysis = this.analyzeDependencies();
       // Generate optimization report;
       const report = {
-        "timestamp": new Date().toISOString(),",
-        "bundleSize": bundleAnalysis,",
-        "imageOptimization": imageOptimization,",
-        "dependencies": dependencyAnalysis,",
-        "recommendations": this.generateRecommendations()";,
-;      };,
+        "timestamp": new Date().toISOString(),"
+        "bundleSize": bundleAnalysis,"
+        "imageOptimization": imageOptimization,"
+        "dependencies": dependencyAnalysis,"
+        "recommendations": this.generateRecommendations()";      }
       this.saveReport(report);
       this.log('Performance optimization completed');';
       return report;
     } catch (error) {}
-      this.log(`Performance optimization "failed": ${error.message}`, 'ERROR');',
-      return null;,
+      this.log(`Performance optimization "failed": ${error.message}`, 'ERROR');'
+      return null;
     }
   }
 analyzeBundleSize() {
@@ -61,16 +63,13 @@ analyzeBundleSize() {
   // Placeholder for bundle analysis;
       return {
   totalSize: "2.1MB, gzippedSize:;
-  "650KB", ;
-;
+  "650KB";
   optimizeImages() {
   try {
   // Placeholder for image optimization;
       return {
   optimized: 0, totalImages: 0, savings:;
   "0KB";
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
   analyzeBundleSize() {}
     try {
       // Placeholder for bundle analysis}
@@ -78,32 +77,28 @@ analyzeBundleSize() {
   optimizeImages() {}
     try {
       // Placeholder for image optimization}
-      return { optimized: 0, "totalImages": 0, "savings": '0KB' };',
+      return { optimized: 0, "totalImages": 0, "savings": '0KB' };'
     } catch (error) {}
-      return { "error": error.message };",
+      return { "error": error.message };"
     }
   }
   analyzeDependencies() {}
       return {
-        "totalDependencies": dependencies.length + devDependencies.length,",
-        "productionDependencies": dependencies.length,",
-        "devDependencies": devDependencies.length,",
-        "potentialUnused": this.findUnusedDependencies()";,
-      };,
+        "totalDependencies": dependencies.length + devDependencies.length,"
+        "productionDependencies": dependencies.length,"
+        "devDependencies": devDependencies.length,"
+        "potentialUnused": this.findUnusedDependencies()";
+      }
     } catch (error) {}
-      return { "error": error.message };",
+      return { "error": error.message };"
     }
   }
   findUnusedDependencies() {
     // Placeholder for unused dependency detection}
-    return ['example-unused-package'];',
+    return ['example-unused-package'];'
   }
   generateRecommendations() {
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
-;#!/usr/bin/env node
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -135,12 +130,12 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
       const dependencyAnalysis = this.analyzeDependencies();
       // Generate optimization report
       const report = {
-        "timestamp": new Date().toISOString(),
-        "bundleSize": bundleAnalysis,
-        "imageOptimization": imageOptimization,
-        "dependencies": dependencyAnalysis,
+        "timestamp": new Date().toISOString()
+        "bundleSize": bundleAnalysis
+        "imageOptimization": imageOptimization
+        "dependencies": dependencyAnalysis
         "recommendations": this.generateRecommendations()
-      };
+      }
       this.saveReport(report);
       this.log('Performance optimization completed');
       return report;
@@ -154,47 +149,40 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
       // Placeholder for bundle analysis
       return {
   "totalSize": "2.1MB, "gzippedSize": ;
-<<<<<<< HEAD
-  "650KB"
-"totalSize": '2.1MB',
-=======
-  "650KB""totalSize": '2.1MB',
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-        "gzippedSize": '650KB',
+"650KB"
+"totalSize": '2.1MB'
+        "gzippedSize": '650KB'
         "recommendations": ['Consider code splitting', 'Remove unused dependencies']
-      };
+      }
     } catch (error) {
-      return { "error": error.message };
+      return { "error": error.message }
     }
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   optimizeImages() {
     try {
       // Placeholder for image optimization
-      return { optimized: 0, "totalImages": 0, "savings": '0KB' };
+      return { optimized: 0, "totalImages": 0, "savings": '0KB' }
     } catch (error) {
-      return { "error": error.message };
+      return { "error": error.message }
     }
   }
   analyzeDependencies() {
-<<<<<<< HEAD
-  try {
+try {
   const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url, "../package.json"), "utf8"));
-      const dependencies = Object.keys(packageJson.dependencies || { /* empty */ });
-      const devDependencies = Object.keys(packageJson.devDependencies || { /* empty */ });
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+      const dependencies = Object.keys(packageJson.dependencies |{ /* empty */ });
+      const devDependencies = Object.keys(packageJson.devDependencies |{ /* empty */ });
 try {
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
-      const dependencies = Object.keys(packageJson.dependencies || {});
-      const devDependencies = Object.keys(packageJson.devDependencies || {});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+      const dependencies = Object.keys(packageJson.dependencies |{});
+      const devDependencies = Object.keys(packageJson.devDependencies |{});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
-        "totalDependencies": dependencies.length + devDependencies.length,
-        "productionDependencies": dependencies.length,
-        "devDependencies": devDependencies.length,
+        "totalDependencies": dependencies.length + devDependencies.length
+        "productionDependencies": dependencies.length
+        "devDependencies": devDependencies.length
         "potentialUnused": this.findUnusedDependencies()
-      };
+      }
     } catch (error) {
-      return { "error": error.message };
+      return { "error": error.message }
     }
   }
   findUnusedDependencies() {
@@ -202,22 +190,18 @@ try {
     return ['example-unused-package'];
   }
   generateRecommendations() {
-<<<<<<< HEAD
-  return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components";
+return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components";
     // // // // // // // // console.log(;
   "Performance report:", report);
 }
-;,
 });
 }}}}}}}}}}}}}}}
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
     // // // // // // // // }
 })}}}}}}}}}}}}}}}
-return ['Implement code splitting for better performance',
-      'Optimize images using WebP format',
-      'Remove unused dependencies',
-      'Enable gzip compression',
+return ['Implement code splitting for better performance'
+      'Optimize images using WebP format'
+      'Remove unused dependencies'
+      'Enable gzip compression'
       'Use React.memo for expensive components'
     ];
   }
@@ -228,6 +212,7 @@ return ['Implement code splitting for better performance',
 }
 // CLI interface
 const optimizer = new PerformanceOptimizer();
+<<<<<<< HEAD
 <<<<<<< HEAD
 optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "fs"); const path = require(; "path"); const { execSync } = require(; "child_process"); class $1 { constructor() { this.optimizations = []; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); ; async optimizePerformance() { try { this.log(; "Starting performance optimization..."); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: 'bundleAnalysis',imageOptimization: 'imageOptimization',dependencies: 'dependencyAnalysis',recommendations: this.generateRecommendations()} ; this.saveReport(report);this.saveReport(report); this.log(; "Performance optimization completed"); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,,ERROR"); return null} } analyzeBundleSize() { analyzeBundleSize() { try { return { totalSize: "2.1MB,gzippedSize:; "650KB",; ; optimizeImages() { try { return { optimized: '0',totalImages: '0',savings:; "0KB"; ; analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies || { }); const devDependencies = Object.keys(packageJson.devDependencies || { }); ; return { totalDependencies: 'dependencies.length + devDependencies.length',productionDependencies: 'dependencies.length',devDependencies: 'devDependencies.length',potentialUnused: this.findUnusedDependencies(); ; findUnusedDependencies() { return [ "example-unused-package"]; ; generateRecommendations() { return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} ;,})}}}}}}}}}}}}}}}
 =======
@@ -275,3 +260,6 @@ if (import.meta.url = = = `file: //${process.argv[1]}`) {; const optimizer = new
 export default PerformanceOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "fs"); const path = require(; "path"); const { execSync } = require(; "child_process"); class $1 { constructor() { this.optimizations = []; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); async optimizePerformance() { try { this.log(; "Starting performance optimization..."); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: 'bundleAnalysis',imageOptimization: 'imageOptimization',dependencies: 'dependencyAnalysis',recommendations: this.generateRecommendations()} ; this.saveReport(report);this.saveReport(report); this.log(; "Performance optimization completed"); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,,ERROR"); return null} } analyzeBundleSize() { analyzeBundleSize() { try { return { totalSize: "2.1MB,gzippedSize:; "650KB"; optimizeImages() { try { return { optimized: '0',totalImages: '0',savings:; "0KB"; analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies |{ }); const devDependencies = Object.keys(packageJson.devDependencies |{ }); return { totalDependencies: 'dependencies.length + devDependencies.length',productionDependencies: 'dependencies.length',devDependencies: 'devDependencies.length',potentialUnused: this.findUnusedDependencies(); findUnusedDependencies() { return [ "example-unused-package"]; generateRecommendations() { return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} ;,})}}}}}}}}}}}}}}}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

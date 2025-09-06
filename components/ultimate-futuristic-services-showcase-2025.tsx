@@ -1,64 +1,66 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React, { useState } from 'react',
+import Head from 'next/head',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+
 import {
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  Heart,
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Zap,
-  Globe,
-  CheckCircle,
-  ArrowRight,
-  Search,
-  Filter,
-  ChevronDown,
-  ChevronUp,
-  Eye,
-  Play,
-  Sparkles,
-  Target,
-  Microscope,
-  Lock,
-  Cloud,
-  BarChart3,
-  Settings,
-  Cpu,
-  Database,
-  Network,
-  Server,
-  ShieldCheck,
-  GlobeIcon,
-  StarIcon,
-  TrendingUpIcon,
-  UsersIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  CpuIcon,
-  DollarSign,
-  Phone,
-  Mail,
-  MapPin,
-  Dna,
-  Target as TargetIcon,
-  Shield as ShieldIcon,
-  BookOpen,
-  Sparkles as SparklesIcon,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Play as PlayIcon,;
+  Star
+  TrendingUp
+  Users
+  Award
+  Clock
+  Heart
+  Brain
+  Atom
+  Shield
+  Rocket
+  Zap
+  Globe
+  CheckCircle
+  ArrowRight
+  Search
+  Filter
+  ChevronDown
+  ChevronUp
+  Eye
+  Play
+  Sparkles
+  Target
+  Microscope
+  Lock
+  Cloud
+  BarChart3
+  Settings
+  Cpu
+  Database
+  Network
+  Server
+  ShieldCheck
+  GlobeIcon
+  StarIcon
+  TrendingUpIcon
+  UsersIcon
+  CheckCircleIcon
+  ArrowRightIcon
+  CpuIcon
+  DollarSign
+  Phone
+  Mail
+  MapPin
+  Dna
+  Target as TargetIcon
+  Shield as ShieldIcon
+  BookOpen
+  Sparkles as SparklesIcon
+  Zap as ZapIcon
+  Brain as BrainIcon
+  Play as PlayIcon;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
-  Star, TrendingUp, Users, Award, Clock, Heart, 
-  Brain, Atom, Shield, Rocket, Zap, Globe, 
+  Star, TrendingUp, Users, Award, Clock, Heart
+  Brain, Atom, Shield, Rocket, Zap, Globe
+
   CheckCircle, ArrowRight, Search, Filter;
   ChevronDown, ChevronUp, Eye, Play, Sparkles;
   Target, Microscope, Lock, Cloud, BarChart3;
@@ -69,78 +71,72 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   Dna, Target as TargetIcon, Shield as ShieldIcon;
   BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
   Brain as BrainIcon, Play as PlayIcon
-} from 'lucide-react';
+ } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
+
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
 visible: {
   opacity: 1, transition: {
-  staggerChildren: 0.1 
-
-};
+  staggerChildren: 0.1
+}
 const itemVariants = {
   hidden: {
-  y: 20, opacity: 0 
-};
+  y: 20, opacity: 0
+}
 visible: {
   y: 0, opacity: 1, transition: {
-  duration: 0.5 
-
-
+  duration: 0.5
 ];
-
 const stats = [
   {
-    number: '15+',
-    label: 'Revolutionary Services',
-    icon: Star,
-    color: 'text-cyan-400',
-  },
+    number: '15+'
+    label: 'Revolutionary Services'
+    icon: Star
+    color: 'text-cyan-400'
+  }
   {
-    number: '1000%+',
-    label: 'Average ROI',
-    icon: TrendingUp,
-    color: 'text-purple-400',
-  },
+    number: '1000%+'
+    label: 'Average ROI'
+    icon: TrendingUp
+    color: 'text-purple-400'
+  }
   {
-    number: '99.9%',
-    label: 'Success Rate',
-    icon: Award,
-    color: 'text-green-400',
-  },
+    number: '99.9%'
+    label: 'Success Rate'
+    icon: Award
+    color: 'text-green-400'
+  }
   {
-    number: '24/7',
-    label: 'Expert Support',
-    icon: Clock,
-    color: 'text-pink-400',
-  },];  { number: '15+', label: 'Revolutionary Services', icon: Star, color: 'text-cyan-400' },
-  { number: '1000%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-400' },
-  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
+    number: '24/7'
+    label: 'Expert Support'
+    icon: Clock
+    color: 'text-pink-400'
+  },];  { number: '15+', label: 'Revolutionary Services', icon: Star, color: 'text-cyan-400' }
+  { number: '1000%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-400' }
+  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' }
   { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
-
 export default function UltimateFuturisticServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState('grid');
-
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
     const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory =
-      selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      selectedCategory === 'all' |service.category === selectedCategory;
+    return matchesSearch && matchesCategory;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
     return matchesSearch && matchesCategory
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
@@ -168,32 +164,29 @@ export default function UltimateFuturisticServicesShowcase2025() {
         return b.popular ? 1 : -1;      default: return b.popular ? 1 : -1
     }
   });
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
-        staggerChildren: 0.1,
-      },
+        staggerChildren: 0.1
+      }
     },  };        staggerChildren: 0.1
       }
     }
-  };
-
+  }
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
-        duration: 0.5,
-      },
+        duration: 0.5
+      }
     },  };        duration: 0.5
       }
     }
-  };
-
+  }
   return (
     <Layout>
       <Head>
@@ -226,7 +219,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
           href='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
@@ -239,7 +231,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
       </Head>
-
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
@@ -271,7 +262,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the future of technology with our revolutionary services that combine AI consciousness,
+              Experience the future of technology with our revolutionary services that combine AI consciousness
               quantum computing, space technology, and breakthrough innovations to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -300,7 +291,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -315,7 +305,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />
             </div>
-
             {/* Category Filter */}
             <div className='flex flex-wrap gap-3'>            {/* Search */}
             <div className="relative flex-1 max-w-md">
@@ -328,7 +317,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
-
             {/* Category Filter */}
             <div className='flex flex-wrap gap-3'>
               <select
@@ -349,7 +337,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                   </option>
                 ))}
               </select>
-
               {/* Sort Options */}
               <select
                 value={sortBy}
@@ -362,7 +349,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 <option value='rating'>Highest Rated</option>
                 <option value='customers'>Most Customers</option>
               </select>
-
               {/* View Mode Toggle */}
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>                <button
                   onClick={() => setViewMode('grid')}
@@ -374,7 +360,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 <option value="rating">Highest Rated</option>
                 <option value="customers">Most Customers</option>
               </select>
-
               {/* View Mode Toggle */}
               <div className="flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1">
                 <button
@@ -408,7 +393,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -432,7 +416,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 key={service.id}
                 variants={itemVariants}
                 className={`group relative ${
-                  viewMode === 'grid'                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'                  viewMode === 'grid' 
+                  viewMode === 'grid'                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'                  viewMode === 'grid'
                     ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'
                     : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300'
                 }`}
@@ -443,7 +427,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     Popular
                   </div>
                 )}
-
                 {/* Service Header */}
                 <div
                   className={`${viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center'}`}
@@ -457,7 +440,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                       {service.icon}
                     </div>
                   </div>
-
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>
                       {service.name}
@@ -465,7 +447,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     <p className='text-gray-300 text-sm mb-3'>
                       {service.tagline}
                     </p>
-
                     {/* Price */}
                     <div className='flex items-center justify-center space-x-2 mb-4'>
                       <span className='text-3xl font-bold text-white'>
@@ -474,13 +455,11 @@ export default function UltimateFuturisticServicesShowcase2025() {
                       <span className='text-gray-400'>{service.period}</span>                    </div>                      {service.icon}
                     </div>
                   </div>
-                  
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                       {service.name}
                     </h3>
                     <p className="text-gray-300 text-sm mb-3">{service.tagline}</p>
-                    
                     {/* Price */}
                     <div className="flex items-center justify-center space-x-2 mb-4">
                       <span className="text-3xl font-bold text-white">{service.price}</span>
@@ -488,12 +467,10 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     </div>
                   </div>
                 </div>
-
                 {/* Description */}
                 <p className='text-gray-300 mb-6 leading-relaxed'>
                   {service.description}
                 </p>
-
                 {/* Features */}
                 <div className='mb-6'>
                   <h4 className='text-white font-semibold mb-3 flex items-center'>
@@ -531,7 +508,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     )}
                   </div>
                 </div>
-
                 {/* Service Details */}
                 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                   <div className='text-gray-400'>
@@ -561,7 +537,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                       {service.customers}+
                     </span>                  </div>
                 </div>
-
                 {/* ROI and Market Info */}                  </div>
                   <div className="text-gray-400">
                     <span className="block">Trial</span>
@@ -579,7 +554,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     <span className="text-white font-medium">{service.customers}+</span>
                   </div>
                 </div>
-
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20'>
                   <div className='text-sm'>
@@ -600,7 +574,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                       <span className="font-semibold text-white">Market Size: </span> {service.marketSize}
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className='flex flex-col sm:flex-row gap-3'>
                   <Link
@@ -612,7 +585,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                   <button className='px-4 py-3 border border-white/20 text-white rounded-lg hover:border-purple-500/50 transition-colors'>
                     <Eye className='w-5 h-5' />                  </button>
                 </div>
-
                 {/* Contact Info */}
                 <div className='mt-6 pt-6 border-t border-white/10'>
                   <div className='text-center text-sm text-gray-400'>                  <Link
@@ -625,7 +597,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
                     <Eye className="w-5 h-5" />
                   </button>
                 </div>
-
                 {/* Contact Info */}
                 <div className='mt-6 pt-6 border-t border-white/10'>
                   <div className='text-center text-sm text-gray-400'>
@@ -658,7 +629,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
               </motion.div>
             ))}
           </motion.div>
-
           {/* No Results */}
           {sortedServices.length === 0 && (
             <div className='text-center py-16'>
@@ -677,6 +647,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300'              >              <button
                 onClick={() => {
                   setSearchTerm('');
+
                   setSelectedCategory('all')
                 }}
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
@@ -687,7 +658,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
           )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
@@ -717,7 +687,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors'              >              Ready to Experience the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Transform your business with our revolutionary futuristic services. 
+              Transform your business with our revolutionary futuristic services.
               Get in touch with our experts to discuss your specific needs and implementation strategy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

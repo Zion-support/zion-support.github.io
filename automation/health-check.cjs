@@ -4,10 +4,13 @@
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 const fs = require('fs');
 =======
 #!/usr/bin/env node
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 <<<<<<< HEAD
 
 =======
@@ -787,6 +790,7 @@ if (healthReport.status === 'unhealthy') {
 const healthChecker = new HealthChecker();
 healthChecker.runHealthCheck().catch(console.error);
 =======
+<<<<<<< HEAD
 // Run if called directly
 if (require.main === module) {
   const monitor = new HealthCheckMonitor();
@@ -800,3 +804,25 @@ module.exports = HealthCheckMonitor;
 module.exports = HealthChecker;
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> origin/automation-improvements-final
+=======
+const { execSync } = require('child_process');
+
+console.log('🏥 Running Health Check...');
+
+const checks = [
+  { name: 'Build Status', command: 'npm run build' },
+  { name: 'Test Status', command: 'npm run test:smoke' },
+  { name: 'Lint Status', command: 'npm run lint:check' },
+  { name: 'Type Check', command: 'npm run type-check' }
+];
+
+checks.forEach(check => {
+  try {
+    execSync(check.command, { stdio: 'pipe' });
+    console.log(`✅ ${check.name}: OK`);
+  } catch (error) {
+    console.log(`❌ ${check.name}: FAILED`);
+  }
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2197
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

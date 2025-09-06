@@ -2,6 +2,7 @@
 // Validation utilities
 export const validation = {
   // Add validation utilities here
+<<<<<<< HEAD
 };
 =======
 <<<<<<< HEAD
@@ -110,3 +111,6 @@ export const validators = { email: (email: string): boolean => { const emailRege
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

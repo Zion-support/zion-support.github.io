@@ -1,23 +1,23 @@
-import React from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function SearchFeature() {
+
   const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Advanced Search',
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'Advanced Search'
     description:
-      'Quickly locate products, services and talent using intelligent search filters.',
-    url: 'https://app.ziontechgroup.com/features/search',  };    "@context": "https://schema.org";
-    "@type": "WebPage";
-    "name": "Advanced Search",
-    "description": "Quickly locate products, services and talent using intelligent search filters.";
+      'Quickly locate products, services and talent using intelligent search filters.'
+    url: 'https://app.ziontechgroup.com/features/search',  };    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "Advanced Search"
+    "description": "Quickly locate products, services and talent using intelligent search filters."
     "url": "https://app.ziontechgroup.com/features/search"
-  };
+  }
 
   return (
     <>
@@ -125,6 +125,5 @@ export default function SearchFeature() {
         </div>
       </main>
     </>
-  );
+  )
 }
-;

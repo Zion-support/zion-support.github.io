@@ -1,15 +1,19 @@
+import React from 'react';
 import type { AppProps } from 'next/app';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-<<<<<<< HEAD
-  return <Component {...pageProps} />;
-import '../styles/globals.css';
 =======
-  return <Component {...pageProps} />;import '../styles/globals.css';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
+=======
+import '../src/styles/globals.css';
+export default function App({ Component, pageProps }: AppProps) {
+return <Component {...pageProps} />;
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
+import '../styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }

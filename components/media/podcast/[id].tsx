@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function EpisodePage() {
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
-  const [episode, setEpisode] = useState<any>(null);
 
+  const router = useRouter();
+  const { id } = router.query as { id?: string }
+  const [episode, setEpisode] = useState<any>(null);
   useEffect(() => {
     if (!id) return;
     (async () => {
@@ -14,7 +14,6 @@ export default function EpisodePage() {
     })();      setEpisode(data.episode)
     })()
   }, [id]);
-
   if (!episode) return <div>Loading…</div>;
 
   return (

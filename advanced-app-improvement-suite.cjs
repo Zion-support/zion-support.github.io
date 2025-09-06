@@ -41,6 +41,7 @@ class AdvancedAppImprovementSuite {
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n");
+
   }
 <<<<<<< HEAD
 
@@ -351,6 +352,7 @@ module.exports = AdvancedAppImprovementSuite;
     } catch (error) {
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
       throw error;    }
+
   }
 }
 

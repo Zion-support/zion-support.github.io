@@ -1,25 +1,23 @@
-import React, { useEffect, useState } from 'react',
-;
+import React, { useEffect, useState } from 'react';
 export default function InternationalProposals() {
-  const [items, setItems] = useState<any[]>([]),
-  const [loading, setLoading] = useState(true),
 
+  const [items, setItems] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     (async () => {
-      const res = await fetch('/api/proposals/list'),
-      const data = await res.json(),
-      setItems(data.proposals || []),
+      const res = await fetch('/api/proposals/list')
+      const data = await res.json()
+      setItems(data.proposals |[])
       setLoading(false)
     })()
-  }, []),
-
+  }, [])
   async function updateStatus(id: string, status: string) {
-    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
-    const res = await fetch('/api/proposals/list'),
-    const data = await res.json(),
-    setItems(data.proposals || [])
-  }
+    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) })
+    const res = await fetch('/api/proposals/list')
+    const data = await res.json()
+    setItems(data.proposals |[])
 
+  }
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">International Proposals</h1>
@@ -54,4 +52,4 @@ export default function InternationalProposals() {
       )}
     </div>
   )
-};
+}

@@ -1,22 +1,23 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+
 import {
-  Search,
-  Filter,
-  Star,
-  Users,
-  TrendingUp,
-  Brain,
-  Atom,
-  Cpu,
-  Shield,
-  Database,
-  Cloud,
-  ArrowRight,
-  CheckCircle,
-  Zap,
-  Sparkles,;} from 'lucide-react';
+  Search
+  Filter
+  Star
+  Users
+  TrendingUp
+  Brain
+  Atom
+  Cpu
+  Shield
+  Database
+  Cloud
+  ArrowRight
+  CheckCircle
+  Zap
+  Sparkles;} from 'lucide-react';
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
@@ -28,40 +29,35 @@ const Services2024Page: React.FC = () => {
     'name' | 'price' | 'rating' | 'customers'
   >('name');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
-
   // Combine all services
   const allServices = [
-    ...realMicroSaasServices2024,
-    ...innovativeITServices2024,
+    ...realMicroSaasServices2024
+    ...innovativeITServices2024
   ];
-
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices.filter(service => {
       const matchesSearch =
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
         service.features.some(feature =>
           feature.toLowerCase().includes(searchQuery.toLowerCase())
         );
-
       const matchesCategory =
-        selectedCategory === 'all' ||
-        (selectedCategory === 'ai' && service.variant.includes('ai')) ||
+        selectedCategory === 'all' |
+        (selectedCategory === 'ai' && service.variant.includes('ai')) |
         (selectedCategory === 'quantum' &&
-          service.variant.includes('security')) ||
-        (selectedCategory === 'it' && service.variant.includes('it')) ||
-        (selectedCategory === 'api' && service.variant.includes('api')) ||
-        (selectedCategory === 'cloud' && service.variant.includes('cloud')) ||
+          service.variant.includes('security')) |
+        (selectedCategory === 'it' && service.variant.includes('it')) |
+        (selectedCategory === 'api' && service.variant.includes('api')) |
+        (selectedCategory === 'cloud' && service.variant.includes('cloud')) |
         (selectedCategory === 'marketing' &&
-          service.variant.includes('marketing')) ||
+          service.variant.includes('marketing')) |
         (selectedCategory === 'project' &&
-          service.variant.includes('project')) ||
+          service.variant.includes('project')) |
         (selectedCategory === 'customer' &&
           service.variant.includes('customer'));
-
       return matchesSearch && matchesCategory;    });
-
     // Sort services
     filtered.sort((a, b) => {
       let aValue: any, bValue: any;
@@ -82,73 +78,69 @@ const Services2024Page: React.FC = () => {
           aValue = a.name.toLowerCase();
           bValue = b.name.toLowerCase();
       }
-
       if (sortOrder === 'asc') {
         return aValue > bValue ? 1 : -1;
       } else {
         return aValue < bValue ? 1 : -1;
       }
     });
-
     return filtered;
   }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]);
-
   const categories = [
     {
-      id: 'all',
-      name: 'All Services',
-      icon: Sparkles,
-      count: allServices.length,
-    },
+      id: 'all'
+      name: 'All Services'
+      icon: Sparkles
+      count: allServices.length
+    }
     {
-      id: 'ai',
-      name: 'AI & ML',
-      icon: Brain,
-      count: allServices.filter(s => s.variant.includes('ai')).length,
-    },
+      id: 'ai'
+      name: 'AI & ML'
+      icon: Brain
+      count: allServices.filter(s => s.variant.includes('ai')).length
+    }
     {
-      id: 'quantum',
-      name: 'Quantum & Security',
-      icon: Shield,
-      count: allServices.filter(s => s.variant.includes('security')).length,
-    },
+      id: 'quantum'
+      name: 'Quantum & Security'
+      icon: Shield
+      count: allServices.filter(s => s.variant.includes('security')).length
+    }
     {
-      id: 'it',
-      name: 'Enterprise IT',
-      icon: Cpu,
-      count: allServices.filter(s => s.variant.includes('it')).length,
-    },
+      id: 'it'
+      name: 'Enterprise IT'
+      icon: Cpu
+      count: allServices.filter(s => s.variant.includes('it')).length
+    }
     {
-      id: 'api',
-      name: 'API & Development',
-      icon: Database,
-      count: allServices.filter(s => s.variant.includes('api')).length,
-    },
+      id: 'api'
+      name: 'API & Development'
+      icon: Database
+      count: allServices.filter(s => s.variant.includes('api')).length
+    }
     {
-      id: 'cloud',
-      name: 'Cloud & DevOps',
-      icon: Cloud,
-      count: allServices.filter(s => s.variant.includes('cloud')).length,
-    },
+      id: 'cloud'
+      name: 'Cloud & DevOps'
+      icon: Cloud
+      count: allServices.filter(s => s.variant.includes('cloud')).length
+    }
     {
-      id: 'marketing',
-      name: 'Marketing & SEO',
-      icon: TrendingUp,
-      count: allServices.filter(s => s.variant.includes('marketing')).length,
-    },
+      id: 'marketing'
+      name: 'Marketing & SEO'
+      icon: TrendingUp
+      count: allServices.filter(s => s.variant.includes('marketing')).length
+    }
     {
-      id: 'project',
-      name: 'Project Management',
-      icon: Users,
-      count: allServices.filter(s => s.variant.includes('project')).length,
-    },
+      id: 'project'
+      name: 'Project Management'
+      icon: Users
+      count: allServices.filter(s => s.variant.includes('project')).length
+    }
     {
-      id: 'customer',
-      name: 'Customer Success',
-      icon: CheckCircle,
-      count: allServices.filter(s => s.variant.includes('customer')).length,
+      id: 'customer'
+      name: 'Customer Success'
+      icon: CheckCircle
+      count: allServices.filter(s => s.variant.includes('customer')).length
     },  ];
-
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain;
     if (variant.includes('security')) return Shield;
@@ -158,8 +150,7 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('marketing')) return TrendingUp;
     if (variant.includes('project')) return Users;
     if (variant.includes('customer')) return CheckCircle;
-    return Sparkles;  };
-
+    return Sparkles;  }
   const getVariantColor = (variant: string) => {
     if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
     if (variant.includes('security')) return 'from-red-500 to-pink-500';
@@ -169,8 +160,7 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
-    return 'from-gray-500 to-slate-500';  };
-
+    return 'from-gray-500 to-slate-500';  }
   return (
     <>
       <Head>
@@ -185,9 +175,7 @@ const Services2024Page: React.FC = () => {
         />
         <link rel='canonical' href='https://ziontechgroup.com/services-2024' />
       </Head>
-
       <UltraFuturisticBackground2034 intensity={0.8} theme='quantum' />
-
       <div className='relative z-10 min-h-screen'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -202,7 +190,6 @@ const Services2024Page: React.FC = () => {
                   2024 Revolutionary Services
                 </span>
               </div>
-
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
                   Future-Ready
@@ -210,13 +197,11 @@ const Services2024Page: React.FC = () => {
                 <br />
                 <span className='text-white'>Solutions</span>
               </h1>
-
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'>
                 Experience the next generation of AI, quantum security, and
                 enterprise IT solutions. Transform your business with our
                 revolutionary 2024 service portfolio.
               </p>
-
               {/* Stats */}
               <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-16'>
                 <div className='text-center'>
@@ -246,7 +231,6 @@ const Services2024Page: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filters */}
         <section className='px-4 sm:px-6 lg:px-8 mb-16'>
           <div className='max-w-7xl mx-auto'>
@@ -264,7 +248,6 @@ const Services2024Page: React.FC = () => {
                       className='w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'                    />
                   </div>
                 </div>
-
                 {/* Category Filter */}
                 <div>
                   <select
@@ -278,7 +261,6 @@ const Services2024Page: React.FC = () => {
                     ))}
                   </select>
                 </div>
-
                 {/* Sort */}
                 <div className='flex space-x-2'>
                   <select
@@ -303,7 +285,6 @@ const Services2024Page: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
@@ -331,9 +312,9 @@ const Services2024Page: React.FC = () => {
                       <div className='flex items-start justify-between mb-4'>
                         <div className='w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center'>
                           {React.createElement(
-                            getVariantIcon(service.variant),
+                            getVariantIcon(service.variant)
                             {
-                              className: `w-6 h-6 text-cyan-400`,
+                              className: `w-6 h-6 text-cyan-400`
                             }
                           )}
                         </div>
@@ -343,14 +324,12 @@ const Services2024Page: React.FC = () => {
                           </div>
                           <div className='text-sm text-gray-400'>per month</div>                        </div>
                       </div>
-
                       {/* Service Info */}
                       <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>
                         {service.name}
                       </h3>
                       <p className='text-gray-300 mb-4 leading-relaxed'>                        {service.tagline}
                       </p>
-
                       {/* Features */}
                       <div className='mb-6'>
                         <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider'>
@@ -376,7 +355,6 @@ const Services2024Page: React.FC = () => {
                           )}
                         </div>
                       </div>
-
                       {/* Stats */}
                       <div className='grid grid-cols-3 gap-4 mb-6'>
                         <div className='text-center'>
@@ -400,7 +378,6 @@ const Services2024Page: React.FC = () => {
                           </div>
                           <div className='text-xs text-gray-400'>Launched</div>                        </div>
                       </div>
-
                       {/* CTA */}
                       <div className='flex items-center justify-between'>
                         <Link
@@ -422,7 +399,6 @@ const Services2024Page: React.FC = () => {
             )}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
@@ -460,7 +436,7 @@ const Services2024Page: React.FC = () => {
         </section>
       </div>
     </>
-  ),
-};
-
+  )
+}
 export default Services2024Page;
+

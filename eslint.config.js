@@ -7,6 +7,7 @@ import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+<<<<<<< HEAD
 =======
 import js from '@eslint/js';
 <<<<<<< HEAD
@@ -19,6 +20,8 @@ import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 >>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default [
   {
     ignores: [
@@ -59,8 +62,8 @@ export default [
       "*.test.tsx",
       "*.spec.js",
       "*.spec.ts",
-      "*.spec.tsx",
-    ],
+      "*.spec.tsx"
+    ]
   },
   js.configs.recommended,
   {
@@ -80,17 +83,17 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
-        afterAll: "readonly",
+        afterAll: "readonly"
       },
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
       react,
-      "react-hooks": reactHooks,
+      "react-hooks": reactHooks
     },
     rules: {
       ...react.configs.recommended.rules,
@@ -100,8 +103,8 @@ export default [
       "prefer-const": "error",
       "no-var": "error",
       "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-    },
+      "react/react-in-jsx-scope": "off"
+    }
   },
   {
     files: ["**/*.{ts,tsx}"],
@@ -121,6 +124,7 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
+<<<<<<< HEAD
         afterAll: "readonly",
 =======
         React: 'readonly',
@@ -168,29 +172,35 @@ export default [
         beforeAll: 'readonly',
         afterAll: 'readonly'
 >>>>>>> origin/automation-improvements-final
+=======
+        afterAll: "readonly"
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       },
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
+
       "@typescript-eslint": tseslint,
       react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
-      "jsx-a11y": jsxA11y,
+      "jsx-a11y": jsxA11y
+
     },
     rules: {
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
+
       "react-refresh/only-export-components": [
         "warn",
-        { allowConstantExport: true },
+        { allowConstantExport: true }
       ],
 <<<<<<< HEAD
       "@typescript-eslint/no-unused-vars": "warn",
@@ -200,6 +210,7 @@ export default [
       "no-unused-vars": "off",
       "no-console": "warn",
       "react/prop-types": "off",
+<<<<<<< HEAD
       "react/react-in-jsx-scope": "off",
 =======
 =======
@@ -227,19 +238,23 @@ export default [
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
 >>>>>>> origin/automation-improvements-final
+=======
+      "react/react-in-jsx-scope": "off"
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     },
     settings: {
       react: {
-        version: "detect",
-      },
-    },
+        version: "detect"
+      }
+    }
   },
   {
     files: [
       "**/*.cjs",
       "**/scripts/**/*.js",
       "**/automation/**/*.js",
-      "**/pm2/**/*.js",
+      "**/pm2/**/*.js"
     ],
     languageOptions: {
       ecmaVersion: 2021,
@@ -254,17 +269,19 @@ export default [
         __dirname: "readonly",
         __filename: "readonly",
         Buffer: "readonly",
-        global: "readonly",
-      },
+        global: "readonly"
+      }
     },
     rules: {
 <<<<<<< HEAD
       "no-unused-vars": "warn",
       "no-console": "warn",
-      "no-undef": "error",
-    },
-  },
+
+      "no-undef": "error"
+    }
+  }
 ];
+<<<<<<< HEAD
 =======
       'no-unused-vars': 'warn',
       'no-console': 'warn',
@@ -306,3 +323,6 @@ export default [
   }
 ];
 >>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

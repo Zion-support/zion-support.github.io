@@ -1,23 +1,24 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 import {
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Database,
-  Cloud,
-  Lock,
-  Rocket,
-  Users,
-  DollarSign,
-  Target,
-  Award,
-  Phone,;
+  CheckCircle
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Globe
+  Brain
+  Database
+  Cloud
+  Lock
+  Rocket
+  Users
+  DollarSign
+  Target
+  Award
+  Phone;
 } from 'lucide-react';import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
 import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
 import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
@@ -29,87 +30,84 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
 const ComprehensiveServicesShowcase2025 = () => {
   const serviceCategories = [
     {
-      title: 'AI & Automation Services',
-      icon: Brain,
-      services: advancedAIAutomation2025,
-      gradient: 'from-purple-600 via-pink-600 to-blue-600',
+      title: 'AI & Automation Services'
+      icon: Brain
+      services: advancedAIAutomation2025
+      gradient: 'from-purple-600 via-pink-600 to-blue-600'
       description:
-        'Cutting-edge AI solutions that transform business operations',
+        'Cutting-edge AI solutions that transform business operations'
     },      description: 'Cutting-edge AI solutions that transform business operations'
-    };
+    }
     {
-      title: 'Cybersecurity & Security',
-      icon: Shield,
-      services: advancedCybersecurity2025,
-      gradient: 'from-red-600 via-orange-600 to-yellow-600',
-      description: 'Advanced security solutions for the digital age',
+      title: 'Cybersecurity & Security'
+      icon: Shield
+      services: advancedCybersecurity2025
+      gradient: 'from-red-600 via-orange-600 to-yellow-600'
+      description: 'Advanced security solutions for the digital age'
     },    {      description: 'Advanced security solutions for the digital age'
-    };
+    }
     {
-      title: 'Blockchain & Web3',
-      icon: Globe,
-      services: blockchainWeb32025,
-      gradient: 'from-green-600 via-teal-600 to-cyan-600',
-      description: 'Next-generation blockchain and decentralized solutions',
+      title: 'Blockchain & Web3'
+      icon: Globe
+      services: blockchainWeb32025
+      gradient: 'from-green-600 via-teal-600 to-cyan-600'
+      description: 'Next-generation blockchain and decentralized solutions'
     },    {      description: 'Next-generation blockchain and decentralized solutions'
-    };
+    }
     {
-      title: 'IoT & Edge Computing',
-      icon: Cloud,
-      services: iotEdgeComputing2025,
-      gradient: 'from-blue-600 via-indigo-600 to-purple-600',
-      description: 'Smart connected solutions for the Internet of Things',
+      title: 'IoT & Edge Computing'
+      icon: Cloud
+      services: iotEdgeComputing2025
+      gradient: 'from-blue-600 via-indigo-600 to-purple-600'
+      description: 'Smart connected solutions for the Internet of Things'
     },    {      description: 'Smart connected solutions for the Internet of Things'
-    };
+    }
     {
-      title: 'Healthcare & Biotechnology',
-      icon: Target,
-      services: healthcareBiotech2025,
-      gradient: 'from-pink-600 via-rose-600 to-red-600',
-      description: 'Innovative healthcare and biotech solutions',
+      title: 'Healthcare & Biotechnology'
+      icon: Target
+      services: healthcareBiotech2025
+      gradient: 'from-pink-600 via-rose-600 to-red-600'
+      description: 'Innovative healthcare and biotech solutions'
     },    {      description: 'Innovative healthcare and biotech solutions'
-    };
+    }
     {
-      title: 'Fintech & Financial',
-      icon: DollarSign,
-      services: fintechFinancial2025,
-      gradient: 'from-emerald-600 via-green-600 to-teal-600',
-      description: 'Revolutionary financial technology solutions',
+      title: 'Fintech & Financial'
+      icon: DollarSign
+      services: fintechFinancial2025
+      gradient: 'from-emerald-600 via-green-600 to-teal-600'
+      description: 'Revolutionary financial technology solutions'
     },    {      description: 'Revolutionary financial technology solutions'
-    };
+    }
     {
-      title: 'Education & E-Learning',
-      icon: Award,
-      services: educationElearning2025,
-      gradient: 'from-amber-600 via-yellow-600 to-orange-600',
-      description: 'Advanced learning and educational technology',
+      title: 'Education & E-Learning'
+      icon: Award
+      services: educationElearning2025
+      gradient: 'from-amber-600 via-yellow-600 to-orange-600'
+      description: 'Advanced learning and educational technology'
     },  ];      description: 'Advanced learning and educational technology'
     }
   ];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
-        staggerChildren: 0.1,
-      },
+        staggerChildren: 0.1
+      }
     },  };        staggerChildren: 0.1
       }
     }
-  };
-
+  }
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
+        duration: 0.5
+      }
+    }
+  }
   return (
     <section className='relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
       {/* Animated Background Elements */}
@@ -118,9 +116,7 @@ const ComprehensiveServicesShowcase2025 = () => {
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000'></div>
         <div className='absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000'></div>
       </div>
-
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
-
+      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Elements */}
@@ -129,7 +125,6 @@ const ComprehensiveServicesShowcase2025 = () => {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
         <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -152,7 +147,6 @@ const ComprehensiveServicesShowcase2025 = () => {
             Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.
           </p>
         </motion.div>
-
         {/* Service Categories */}
         <motion.div
           variants={containerVariants}
@@ -195,7 +189,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                   </p>
                 </div>
               </div>
-
               {/* Services Grid */}
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {category.services.map((service, serviceIndex) => (
@@ -221,7 +214,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                         {service.description}
                       </p>
                     </div>
-
                     {/* Features */}
                     <div className='mb-4'>
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>
@@ -255,7 +247,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                         )}
                       </ul>
                     </div>
-
                     {/* Pricing */}
                     <div className='mb-4'>
                       <div className='flex items-center justify-between'>
@@ -277,7 +268,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                       <div className="text-xs text-gray-500 mt-1">
                       </div>
                     </div>
-
                     {/* ROI */}
                     <div className='mb-4'>
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>
@@ -299,7 +289,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                         </div>
                       </div>
                     </div>
-
                     {/* Use Cases */}
                     <div className='mb-4'>
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>
@@ -317,7 +306,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                             </span>
                           ))}                      </div>
                     </div>
-
                     {/* CTA Button */}
                     <div className='mt-6'>                    <div className="mb-4">
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Perfect for:</h5>
@@ -331,7 +319,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                           </span>
                         ))}
                     </div>
-
                     {/* CTA Button */}
                     <div className='mt-6'>
                       <a
@@ -341,7 +328,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                         Learn More
                         <ArrowRight className='w-4 h-4 ml-2' />                      </a>
                     </div>
-
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  </motion.div>                      <a
                         href={service.link}
@@ -351,7 +337,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
                     </div>
-
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </motion.div>
@@ -360,7 +345,6 @@ const ComprehensiveServicesShowcase2025 = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -418,9 +402,8 @@ const ComprehensiveServicesShowcase2025 = () => {
       </div>
     </section>
   );
-};
-
+}
 export default ComprehensiveServicesShowcase2025;  )
-};
-
+}
 export default ComprehensiveServicesShowcase2025;
+

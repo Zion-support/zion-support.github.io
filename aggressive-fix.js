@@ -67,10 +67,8 @@ const fixedCount = processDirectory(path.join(__dirname, "src"));
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 function createValidReactComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName
@@ -78,9 +76,7 @@ function createValidReactComponent(filePath) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join("")
     .replace(/[^a-zA-Z0-9]/g, "");
-  
   return `import React from "react";
-
 export default function ${componentName}() {
   return (
     <div>
@@ -90,15 +86,18 @@ export default function ${componentName}() {
   );
 }`;
 }
-
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, "utf8");
 <<<<<<< HEAD
+<<<<<<< HEAD
     
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     // Check if it's a React component file
-    if (filePath.endsWith(".jsx") || filePath.endsWith(".tsx")) {
+    if (filePath.endsWith(".jsx") |filePath.endsWith(".tsx")) {
       // If file is empty or has syntax errors, create a valid component
+<<<<<<< HEAD
 =======
     // Basic "heuristic": if the file is very short or empty, rewrite it
     if (content.trim().length < 20) {
@@ -247,47 +246,42 @@ console.log(`Fixed ${fixedCount} files`);
 <<<<<<< HEAD
       if (content.trim() === "" || content.includes("") || content.includes("")) {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
         const newContent = createValidReactComponent(filePath);
         fs.writeFileSync(filePath, newContent);
         console.log(`Fixed: ${filePath}`);
         return 1;
       }
     }
-    
     return 0;
   } catch (error) {
     console.error(`Error fixing file ${filePath}:`, error.message);
     return 0;
   }
 }
-
 function processDirectory(dirPath) {
   try {
     if (!fs.existsSync(dirPath)) {
       return 0;
     }
-    
     const items = fs.readdirSync(dirPath);
     let fixedCount = 0;
-    
     for (const item of items) {
       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory()) {
         fixedCount += processDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith(".js") || item.endsWith(".jsx") || item.endsWith(".ts") || item.endsWith(".tsx"))) {
+      } else if (stat.isFile() && (item.endsWith(".js") |item.endsWith(".jsx") |item.endsWith(".ts") |item.endsWith(".tsx"))) {
         fixedCount += fixFile(fullPath);
       }
     }
-    
     return fixedCount;
   } catch (error) {
     console.error(`Error processing directory ${dirPath}:`, error.message);
     return 0;
   }
 }
-
 console.log("Starting aggressive fix...");
 const fixedCount = processDirectory(path.join(__dirname, "src"));
 console.log(`Fixed ${fixedCount} files`);

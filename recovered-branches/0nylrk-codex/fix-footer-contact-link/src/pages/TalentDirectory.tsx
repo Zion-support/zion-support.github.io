@@ -1,18 +1,18 @@
 
-import React, { useState } from "react";
-import {useNavigate} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-import {TalentGrid} from "@/components/talent/TalentGrid";
-import {FilterSidebar} from "@/components/talent/FilterSidebar";
-import {TalentResults} from "@/components/talent/TalentResults";
-import {useTalentDirectory} from "@/hooks/useTalentDirectory";
-import {SORT_OPTIONS} from "@/data/sortOptions";
-import {X} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {TalentProfile} from "@/types/talent";
+import React, { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { TalentGrid } from "@/components/talent/TalentGrid",
+import { FilterSidebar } from "@/components/talent/FilterSidebar",
+import { TalentResults } from "@/components/talent/TalentResults",
+import { useTalentDirectory } from "@/hooks/useTalentDirectory",
+import { SORT_OPTIONS } from "@/data/sortOptions",
+import { X } from "lucide-react",
+import { Button } from "@/components/ui/button";
+import { TalentProfile } from "@/types/talent";
 export default function TalentDirectory() {
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   // Use our custom hook to manage state
   const {
     filteredTalents;
@@ -43,17 +43,14 @@ export default function TalentDirectory() {
     clearFilters;
     toggleSection;
     handleToggleSave} = useTalentDirectory();
-  
   const handleRequestHire = (talent: TalentProfile) => {
-    setSelectedTalent(talent),
+    setSelectedTalent(talent)
     setIsHireModalOpen(true)
-  };
-  
+  }
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
     navigate(`/talent/${id}`)
-  };
-  
+  }
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -64,7 +61,6 @@ export default function TalentDirectory() {
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
             </p>
           </div>
-          
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Sidebar - Desktop */}
@@ -89,7 +85,6 @@ export default function TalentDirectory() {
                 clearFilters={clearFilters}
               />
             </div>
-            
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">
               <Button
@@ -100,7 +95,6 @@ export default function TalentDirectory() {
                 Filter & Sort
               </Button>
             </div>
-            
             {/* Results */}
             <TalentResults
               filteredTalents={filteredTalents}
@@ -121,9 +115,9 @@ export default function TalentDirectory() {
                 setPriceRange;
                 experienceRange;
                 setExperienceRange;
+
                 clearFilters}}
             />
-            
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (
               <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
@@ -169,4 +163,3 @@ export default function TalentDirectory() {
     </AppLayout>
   )
 }
-;

@@ -1,7 +1,7 @@
 
-import React from 'react';
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
+import React from 'react',
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 interface VideoCallRoomProps {
   room?: string;
   token?: string;
@@ -9,10 +9,9 @@ interface VideoCallRoomProps {
   onDisconnect?: () => void;
   className?: string
 }
-
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
   return (
-    <Card className={className || "w-full max-w-3xl mx-auto"}>
+    <Card className={className |"w-full max-w-3xl mx-auto"}>
       <CardHeader>
         <CardTitle>Video Call</CardTitle>
       </CardHeader>

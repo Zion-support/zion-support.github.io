@@ -1,21 +1,18 @@
-import {useRouter} from 'next/router';
+import { useRouter  } from 'next/router';
 import useSWR from 'swr';
-import {TALENT_PROFILES} from '../../../../data/talent';
+import { TALENT_PROFILES  } from '../../../../data/talent';
 import Link from 'next/link';
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
-
 export default function JobApplicantsPage() {
-  const router = useRouter(),
+  const router = useRouter()
   const { id } = router.query;
   const { data: appsData } = useSWR(
-    id ? `/api/applications?jobId=${id}` : null,
+    id ? `/api/applications?jobId=${id}` : null
     fetcher
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
-
   const job = jobData?.job;
-  const applications = (appsData?.applications as any[]) || [];
-
+  const applications = (appsData?.applications as any[]) |[];
   return (
     <div className='space-y-4'>
       <div className='flex items-center justify-between'>
@@ -31,11 +28,11 @@ export default function JobApplicantsPage() {
         )}
         {applications.map(a => {
           const talent = TALENT_PROFILES.find(t => t.slug === a.talentSlug);
-          
             >
               <div className='flex items-center justify-between'>
+
                 <div>
-                  <p className='font-medium'>{talent?.name || a.talentSlug}</p>
+                  <p className='font-medium'>{talent?.name |a.talentSlug}</p>
                   <p className='text-xs text-gray-500'>
                     Status: {a.status} • Applied:{' '}
                     {new Date(a.createdAtIso).toLocaleString()}

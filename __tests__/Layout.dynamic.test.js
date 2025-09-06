@@ -3,26 +3,18 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Layoutdynamic from '../components/Layout.dynamic';
-
 describe('Layoutdynamic', () => {
   test('renders without crashing', () => {
     render(<Layoutdynamic />);
     expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument();
   });
-  
   test('displays correct content', () => {
-    render(<Layoutdynamic />);
     // Test content display
-  });
-  
   test('handles user interactions', () => {
-    render(<Layoutdynamic />);
     // Test user interactions
-  });
-  
   test('applies correct styling', () => {
-    render(<Layoutdynamic />);
     // Test styling
+<<<<<<< HEAD
   });
 });
 =======
@@ -38,3 +30,6 @@ describe('Layoutdynamic'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Layoutdynamic from "./components/Layout.dynamic"; describe('Layoutdynamic', () => { test("renders without crashing",() => { render(<Layoutdynamic />); expect(screen.getByTestId("layout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Layoutdynamic />)}); test("handles user interactions",() => { render(<Layoutdynamic />)}); test("applies correct styling"
 >>>>>>> origin/automation-improvements-final
+=======
+});
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

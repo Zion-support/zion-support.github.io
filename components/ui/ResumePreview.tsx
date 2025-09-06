@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+
 export type ResumeData = {
   name: string;
   contact?: {
@@ -16,13 +17,13 @@ export type ResumeData = {
     start?: string;
     end?: string;
     location?: string;
-    bullets?: string[];  name: string,
-  contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string };
+    bullets?: string[];  name: string
+  contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string }
   summary?: string;
   skills?: string[];
   technologies?: string[];
   experience?: Array<{
-    title: string;    title: string,
+    title: string;    title: string
     company?: string;
     start?: string;
     end?: string;
@@ -42,53 +43,46 @@ export type ResumeData = {
     link?: string;
     technologies?: string[];
   }>;
-};
-
+}
 export type ResumePreviewProps = {
   data: ResumeData;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number;
-};
-
+}
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
-  children,
+  children
 }) => (
   <h2 className='text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1'>    {children}  }>;
   education?: Array<{
-    institution: string,
+    institution: string
     degree?: string;
     start?: string;
     end?: string
   }>;
   certifications?: string[];
   portfolio?: Array<{
-    title: string,
+    title: string
     description?: string;
     link?: string;
     technologies?: string[]
   }>
-};
-
+}
 export type ResumePreviewProps = {
-  data: ResumeData,
+  data: ResumeData
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number
-};
-
+}
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">
     {children}
   </h2>
 );
-
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
-    const portfolioItems = (data.portfolio || []).slice(
-      0,
+    const portfolioItems = (data.portfolio |[]).slice(
+      0
       Math.max(0, maxPortfolioItems)
     );
-
-    
       >
         <div className='p-8'>
           {/* Header */}
@@ -151,7 +145,6 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               )}
             </div>
           </header>
-
           {/* Summary */}
           {data.summary && (
             <section className='mb-5'>
@@ -163,9 +156,8 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data.summary}</p>
             </section>
           )}
-
           {/* Skills & Technologies */}
-          {(data.skills?.length || data.technologies?.length) && (
+          {(data.skills?.length |data.technologies?.length) && (
             <section className='mb-5'>
               <SectionTitle>Skills & Technologies</SectionTitle>
               <div className='mt-2 text-sm flex flex-wrap gap-2'>
@@ -198,7 +190,6 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               </div>
             </section>
           )}
-
           {/* Experience */}
           {data.experience?.length ? (
             <section className='mb-5'>
@@ -211,7 +202,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                         {role.title}
                         {role.company ? ` • ${role.company}` : ''}
                       </h3>
-                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (              <SectionTitle>Work Experience</SectionTitle>
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start |role.end) && (              <SectionTitle>Work Experience</SectionTitle>
               <div className="mt-2 space-y-3">
                 {data.experience.map((role, idx) => (
                   <div key={`exp-${idx}`}>
@@ -221,9 +212,9 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                         {role.company ? ` • ${role.company}` : ''}
                       </h3>
                       <div className="text-xs text-gray-600 dark:text-gray-300">
-                        {(role.start || role.end) && (
+                        {(role.start |role.end) && (
                           <span>
-                            {role.start || ''}
+                            {role.start |''}
                             {role.end ? ` – ${role.end}` : ''}
                           </span>
                         )}
@@ -242,7 +233,6 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               </div>
             </section>
           ) : null}
-
           {/* Education */}
           {data.education?.length ? (
             <section className='mb-5'>
@@ -254,14 +244,14 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                     </div>
                     <div className='text-gray-700 dark:text-gray-300'>
                       {[
-                        ed.degree,
+                        ed.degree
                         ed.start && ed.end
                           ? `${ed.start} – ${ed.end}`
-                          : ed.start || ed.end,
+                          : ed.start |ed.end
                       ]                        .filter(Boolean)                  <div key={`edu-${idx}`} className="text-sm">
                     <div className="font-medium text-gray-900 dark:text-white">{ed.institution}</div>
                     <div className="text-gray-700 dark:text-gray-300">
-                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
+                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start |ed.end]
                         .join(' • ')}
                     </div>
                   </div>
@@ -269,7 +259,6 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               </div>
             </section>
           ) : null}
-
           {/* Certifications */}
           {data.certifications?.length ? (
             <section className='mb-5'>
@@ -283,7 +272,6 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               </ul>
             </section>
           ) : null}
-
           {/* Portfolio */}
           {portfolioItems.length ? (
             <section className='mb-5'>
@@ -342,7 +330,6 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
     );
   }
 );
-
 ResumePreview.displayName = 'ResumePreview';
-
 export default ResumePreview;
+

@@ -1,17 +1,16 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
-;
+
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react';
 export default function EnterpriseITPage() {
   const features = [
-    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
-
+    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation']
   const solutions = [
-    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
-    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
-    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
-    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
+    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' }
+    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
+    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' }
+    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }]
 
   return (
     <Layout>
@@ -33,7 +32,6 @@ export default function EnterpriseITPage() {
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
             </div>
           </header>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Core Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -45,7 +43,6 @@ export default function EnterpriseITPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -61,4 +58,4 @@ export default function EnterpriseITPage() {
       </div>
     </Layout>
   )
-};
+}

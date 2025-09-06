@@ -1,13 +1,12 @@
 import { useState } from 'react';
 
-export type FeedbackContext = { actionType?: string; metadata?: any };
-
+export type FeedbackContext = { actionType?: string; metadata?: any }
 export default function FeedbackModal({
-  isOpen,
-  onClose,
-  defaultContext,
-  defaultKind = 'general',
-  userHeaders,
+  isOpen
+  onClose
+  defaultContext
+  defaultKind = 'general'
+  userHeaders
 }: {
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
@@ -19,8 +18,8 @@ export default function FeedbackModal({
   defaultContext;
   defaultKind = 'general';
   userHeaders}: {
-  isOpen: boolean,
-  onClose: (submitted: boolean) => void,
+  isOpen: boolean
+  onClose: (submitted: boolean) => void
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>
@@ -30,27 +29,25 @@ export default function FeedbackModal({
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
-
   if (!isOpen) return null;
-
   async function submit() {
     if (rating < 1) return onClose(false);
     setLoading(true);
     try {
       await fetch('/api/feedback', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json', ...(userHeaders |{}) }
         body: JSON.stringify({
-          rating,
-          comment,
-          kind,
-          context: defaultContext || {},
-        }),
+          rating
+          comment
+          kind
+          context: defaultContext |{}
+        })
       });
     setLoading(false);
     onClose(true);
-  }
 
+  }
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40'>
       <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4'>
@@ -66,7 +63,7 @@ export default function FeedbackModal({
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}
               className={
-                hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300'
+                hover >= n |rating >= n ? 'text-yellow-500' : 'text-gray-300'
               }
               aria-label={`${n} stars`}
             >
@@ -121,7 +118,7 @@ export default function FeedbackModal({
           </button>
           <button
             onClick={submit}
-            disabled={loading || rating < 1}
+            disabled={loading |rating < 1}
             className='px-3 py-2 rounded bg-gray-900 text-white'
           >
             {loading ? 'Submitting…' : 'Submit'}
@@ -147,7 +144,7 @@ export default function FeedbackModal({
         </div>
         <div className="flex justify-end gap-2">
           <button onClick={()=>onClose(false)} className="px-3 py-2 rounded border">Later</button>
-          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
+          <button onClick={submit} disabled={loading |rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
       </div>
     </div>

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import {motion} from 'framer-motion';
+import { motion  } from 'framer-motion';
 import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
 import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
-};
 
+}
 export default function Innovations2034Page() {
   return (
     <>
@@ -23,7 +23,6 @@ export default function Innovations2034Page() {
           rel='canonical'
           href='https://ziontechgroup.com/2034-innovations'
         />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -39,7 +38,6 @@ export default function Innovations2034Page() {
         />
         <meta property='og:type' content='website' />
         <meta property='og:site_name' content='Zion Tech Group' />
-
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -51,10 +49,8 @@ export default function Innovations2034Page() {
           content='Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms.'
         />
       </Head>
-
       <div className='min-h-screen bg-black'>
         <UltraFuturisticNavigation2032 />
-
         {/* Hero Section */}
         <section className='relative min-h-screen flex items-center justify-center overflow-hidden pt-20'>
           {/* Animated Background */}
@@ -62,7 +58,6 @@ export default function Innovations2034Page() {
             <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,255,255,0.15),transparent_50%)] animate-pulse'></div>
             <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(139,92,246,0.15),transparent_50%)] animate-pulse delay-1000'></div>
             <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(236,73,153,0.15),transparent_50%)] animate-pulse delay-2000'></div>
-
             {/* Floating Elements */}
             <div className='absolute inset-0'>
               {[...Array(15)].map((_, i) => (
@@ -70,24 +65,23 @@ export default function Innovations2034Page() {
                   key={i}
                   className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-60'
                   style={{
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
+                    left: `${Math.random() * 100}%`
+                    top: `${Math.random() * 100}%`
                   }}
                   animate={{
-                    y: [0, -100, 0],
-                    opacity: [0.6, 1, 0.6],
-                    scale: [1, 1.5, 1],
-                    rotate: [0, 360],
+                    y: [0, -100, 0]
+                    opacity: [0.6, 1, 0.6]
+                    scale: [1, 1.5, 1]
+                    rotate: [0, 360]
                   }}
                   transition={{
-                    duration: 4 + Math.random() * 3,
-                    repeat: Infinity,
-                    delay: Math.random() * 2,
+                    duration: 4 + Math.random() * 3
+                    repeat: Infinity
+                    delay: Math.random() * 2
                   }}                />
               ))}
             </div>
           </div>
-
           <div className='relative z-10 container mx-auto px-4 text-center'>            <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -104,7 +98,6 @@ export default function Innovations2034Page() {
                 <br />
                 <span className='text-6xl md:text-8xl'>Innovations</span>
               </motion.h1>
-
               <motion.p
                 className='text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -114,7 +107,6 @@ export default function Innovations2034Page() {
                 services, IT solutions, and AI platforms. From AI consciousness
                 to space mining automation, we're building tomorrow's technology
                 today.              </motion.p>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -128,7 +120,6 @@ export default function Innovations2034Page() {
                 >
                   Explore Innovations
                 </motion.button>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -138,7 +129,6 @@ export default function Innovations2034Page() {
               </motion.div>
             </motion.div>
           </div>
-
           {/* Scroll Indicator */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -158,7 +148,6 @@ export default function Innovations2034Page() {
             </motion.div>
           </motion.div>
         </section>
-
         {/* Innovation Categories Overview */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
           <div className='container mx-auto px-4'>            <motion.div
@@ -177,69 +166,68 @@ export default function Innovations2034Page() {
                 and accelerate human progress.
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              {[
                 {
-                  icon: '🧠',
-                  title: 'AI Consciousness',
+                  icon: '🧠'
+                  title: 'AI Consciousness'
                   description:
-                    'Revolutionary AI consciousness and emotional intelligence platforms',
-                  color: 'from-violet-500 to-purple-600',
-                  count: '5+ Services',
-                },
+                    'Revolutionary AI consciousness and emotional intelligence platforms'
+                  color: 'from-violet-500 to-purple-600'
+                  count: '5+ Services'
+                }
                 {
-                  icon: '⚛️',
-                  title: 'Quantum Tech',
+                  icon: '⚛️'
+                  title: 'Quantum Tech'
                   description:
-                    'Quantum computing, DNA computing, and quantum internet infrastructure',
-                  color: 'from-indigo-500 to-blue-600',
-                  count: '6+ Services',
-                },
+                    'Quantum computing, DNA computing, and quantum internet infrastructure'
+                  color: 'from-indigo-500 to-blue-600'
+                  count: '6+ Services'
+                }
                 {
-                  icon: '🌌',
-                  title: 'Space & Metaverse',
+                  icon: '🌌'
+                  title: 'Space & Metaverse'
                   description:
-                    'Space mining automation and metaverse development platforms',
-                  color: 'from-teal-500 to-emerald-600',
-                  count: '4+ Services',
-                },
+                    'Space mining automation and metaverse development platforms'
+                  color: 'from-teal-500 to-emerald-600'
+                  count: '4+ Services'
+                }
                 {
-                  icon: '🏙️',
-                  title: 'Enterprise IT',
+                  icon: '🏙️'
+                  title: 'Enterprise IT'
                   description:
-                    'Autonomous DevOps and zero-trust security solutions',
-                  color: 'from-blue-500 to-cyan-600',
-                  count: '5+ Services',
-                },
+                    'Autonomous DevOps and zero-trust security solutions'
+                  color: 'from-blue-500 to-cyan-600'
+                  count: '5+ Services'
+                }
                 {
-                  icon: '🧬',
-                  title: 'Biotech & Neural',
+                  icon: '🧬'
+                  title: 'Biotech & Neural'
                   description:
-                    'Synthetic biology automation and neural interface platforms',
-                  color: 'from-green-500 to-emerald-600',
-                  count: '3+ Services',
-                },
+                    'Synthetic biology automation and neural interface platforms'
+                  color: 'from-green-500 to-emerald-600'
+                  count: '3+ Services'
+                }
                 {
-                  icon: '🤖',
-                  title: 'Robotics & Automation',
+                  icon: '🤖'
+                  title: 'Robotics & Automation'
                   description:
-                    'Swarm robotics orchestration and autonomous systems',
-                  color: 'from-orange-500 to-red-600',
-                  count: '2+ Services',
-                },
+                    'Swarm robotics orchestration and autonomous systems'
+                  color: 'from-orange-500 to-red-600'
+                  count: '2+ Services'
+                }
                 {
-                  icon: '⚡',
-                  title: 'Energy & Materials',
+                  icon: '⚡'
+                  title: 'Energy & Materials'
                   description:
-                    'Fusion energy control and nanotechnology materials',
-                  color: 'from-yellow-500 to-orange-600',
-                  count: '3+ Services',
+                    'Fusion energy control and nanotechnology materials'
+                  color: 'from-yellow-500 to-orange-600'
+                  count: '3+ Services'
                 },                {
-                  icon: '🔄',
-                  title: 'Digital Twins',
-                  description: 'Digital twin simulation and edge AI computing',
-                  color: 'from-teal-500 to-cyan-600',
-                  count: '2+ Services',
+                  icon: '🔄'
+                  title: 'Digital Twins'
+                  description: 'Digital twin simulation and edge AI computing'
+                  color: 'from-teal-500 to-cyan-600'
+                  count: '2+ Services'
                 },              ].map((category, index) => (
                 <motion.div
                   key={category.title}
@@ -269,9 +257,7 @@ export default function Innovations2034Page() {
             </div>
           </div>
         </section>
-
         {/* Services Showcase */}
-
         {/* Why Choose Zion Tech Group */}
         <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
           <div className='container mx-auto px-4'>            <motion.div
@@ -289,50 +275,50 @@ export default function Innovations2034Page() {
                 building the future, one breakthrough innovation at a time.
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {[
                 {
-                  icon: '🚀',
-                  title: 'First-to-Market',
+                  icon: '🚀'
+                  title: 'First-to-Market'
                   description:
-                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",
-                  color: 'from-cyan-500 to-blue-600',
-                },
+                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage."
+                  color: 'from-cyan-500 to-blue-600'
+                }
                 {
-                  icon: '🧠',
-                  title: 'AI-First Approach',
+                  icon: '🧠'
+                  title: 'AI-First Approach'
                   description:
-                    'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.',
-                  color: 'from-purple-500 to-pink-600',
-                },
+                    'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.'
+                  color: 'from-purple-500 to-pink-600'
+                }
                 {
-                  icon: '⚡',
-                  title: 'Lightning Fast',
+                  icon: '⚡'
+                  title: 'Lightning Fast'
                   description:
-                    'Our platforms are designed for speed and performance, handling the most demanding workloads.',
-                  color: 'from-yellow-500 to-orange-600',
-                },
+                    'Our platforms are designed for speed and performance, handling the most demanding workloads.'
+                  color: 'from-yellow-500 to-orange-600'
+                }
                 {
-                  icon: '🛡️',
-                  title: 'Enterprise Security',
+                  icon: '🛡️'
+                  title: 'Enterprise Security'
                   description:
-                    'Military-grade security protocols ensure your data and operations are always protected.',
-                  color: 'from-green-500 to-emerald-600',
-                },
+                    'Military-grade security protocols ensure your data and operations are always protected.'
+                  color: 'from-green-500 to-emerald-600'
+                }
                 {
-                  icon: '🌍',
-                  title: 'Global Scale',
+                  icon: '🌍'
+                  title: 'Global Scale'
                   description:
-                    'Built to scale globally, our services work seamlessly across borders and time zones.',
-                  color: 'from-teal-500 to-cyan-600',
-                },
+                    'Built to scale globally, our services work seamlessly across borders and time zones.'
+                  color: 'from-teal-500 to-cyan-600'
+                }
                 {
-                  icon: '💎',
-                  title: 'Premium Support',
+                  icon: '💎'
+                  title: 'Premium Support'
                   description:
-                    '24/7 expert support from our team of technology pioneers and industry experts.',
-                  color: 'from-indigo-500 to-purple-600',
+                    '24/7 expert support from our team of technology pioneers and industry experts.'
+                  color: 'from-indigo-500 to-purple-600'
                 },              ].map((feature, index) => (
+
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 50 }}
@@ -356,7 +342,6 @@ export default function Innovations2034Page() {
             </div>
           </div>
         </section>
-
         {/* Contact CTA */}
         <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20'>
           <div className='container mx-auto px-4 text-center'>            <motion.div
@@ -374,7 +359,6 @@ export default function Innovations2034Page() {
                 already leveraging our 2034 innovations to transform their
                 industries and accelerate their growth.
               </p>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='flex items-center justify-center space-x-3 text-gray-300'>
                   <span className='text-cyan-400'>📱</span>
@@ -388,7 +372,6 @@ export default function Innovations2034Page() {
                   <span className='text-pink-400'>📍</span>                  <span>{contactInfo.address}</span>
                 </div>
               </div>
-
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -399,7 +382,6 @@ export default function Innovations2034Page() {
           </div>
         </section>
       </div>
-
       <UltraFuturisticFooter2034 />
     </>
 );

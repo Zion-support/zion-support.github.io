@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 
+"use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
+<<<<<<< HEAD
   Menu,
 =======
 <<<<<<< HEAD
@@ -40,6 +45,24 @@ import {
   Factory,
   Truck,
   CreditCard,
+=======
+  Menu
+  X
+  ChevronDown
+  Code
+  Smartphone
+  Cloud
+  Database
+  Shield
+  Zap
+  Building
+  ShoppingCart
+  Heart
+  GraduationCap
+  Factory
+  Truck
+  CreditCard
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 } from "lucide-react";
 
 export default function Header() {
@@ -48,116 +71,110 @@ export default function Header() {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
-    };
+    }
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const servicesDropdown = [
     {
-      title: "Web Development",
-      description: "Custom websites and web applications",
-      href: "/services/web-development",
-      icon: Code,
-    },
+      title: "Web Development"
+      description: "Custom websites and web applications"
+      href: "/services/web-development"
+      icon: Code
+    }
     {
-      title: "Mobile Development",
-      description: "iOS and Android applications",
-      href: "/services/mobile-development",
-      icon: Smartphone,
-    },
+      title: "Mobile Development"
+      description: "iOS and Android applications"
+      href: "/services/mobile-development"
+      icon: Smartphone
+    }
     {
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure",
-      href: "/services/cloud-solutions",
-      icon: Cloud,
-    },
+      title: "Cloud Solutions"
+      description: "Scalable cloud infrastructure"
+      href: "/services/cloud-solutions"
+      icon: Cloud
+    }
     {
-      title: "Database Management",
-      description: "Database design and optimization",
-      href: "/services/database-management",
-      icon: Database,
-    },
+      title: "Database Management"
+      description: "Database design and optimization"
+      href: "/services/database-management"
+      icon: Database
+    }
     {
-      title: "Security Services",
-      description: "Cybersecurity and data protection",
-      href: "/services/security",
-      icon: Shield,
-    },
+      title: "Security Services"
+      description: "Cybersecurity and data protection"
+      href: "/services/security"
+      icon: Shield
+    }
     {
-title: "Performance Optimization",
-      description: "Speed and efficiency improvements",
-      href: "/services/performance",
-      icon: Zap,
-    },
+      title: "Performance Optimization"
+      description: "Speed and efficiency improvements"
+      href: "/services/performance"
+      icon: Zap
+    }
   ];
-
   const solutionsDropdown = [
     {
-      title: "Enterprise Solutions",
-      description: "Comprehensive business technology solutions",
-      href: "/solutions/enterprise",
-      icon: Building,
-    },
+      title: "Enterprise Solutions"
+      description: "Comprehensive business technology solutions"
+      href: "/solutions/enterprise"
+      icon: Building
+    }
     {
-      title: "E-commerce Platforms",
-      description: "Online store development and management",
-      href: "/solutions/ecommerce",
-      icon: ShoppingCart,
-    },
+      title: "E-commerce Platforms"
+      description: "Online store development and management"
+      href: "/solutions/ecommerce"
+      icon: ShoppingCart
+    }
     {
-      title: "Healthcare Technology",
-      description: "Specialized healthcare IT solutions",
-      href: "/solutions/healthcare",
-      icon: Heart,
-    },
+      title: "Healthcare Technology"
+      description: "Specialized healthcare IT solutions"
+      href: "/solutions/healthcare"
+      icon: Heart
+    }
     {
-title: "Educational Platforms",
-      description: "Learning management systems",
-      href: "/solutions/education",
-      icon: GraduationCap,
-    },
+      title: "Educational Platforms"
+      description: "Learning management systems"
+      href: "/solutions/education"
+      icon: GraduationCap
+    }
   ];
-
   const industriesDropdown = [
-    { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },
-    { name: "Logistics", href: "/industries/logistics", icon: Truck },
-    { name: "Finance", href: "/industries/finance", icon: CreditCard },
-    { name: "Healthcare", href: "/industries/healthcare", icon: Heart },
-    { name: "Education", href: "/industries/education", icon: GraduationCap },
-    { name: "Retail", href: "/industries/retail", icon: ShoppingCart },
+    { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory }
+    { name: "Logistics", href: "/industries/logistics", icon: Truck }
+    { name: "Finance", href: "/industries/finance", icon: CreditCard }
+    { name: "Healthcare", href: "/industries/healthcare", icon: Heart }
+    { name: "Education", href: "/industries/education", icon: GraduationCap }
+    { name: "Retail", href: "/industries/retail", icon: ShoppingCart }
   ];
-
   const navigation = [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "/" }
     {
-      name: "Services",
-      href: "/services",
+      name: "Services"
+      href: "/services"
       submenu: [
-        { name: "AI Services", href: "/ai-services", icon: Brain },
-        { name: "IT Services", href: "/it-services", icon: Network },
-        { name: "Micro SAAS", href: "/micro-saas", icon: Cloud },
-      ],
-    },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Solutions", href: "/solutions" },
-    { name: "Industries", href: "/industries" },
-    { name: "Contact", href: "/contact" },
-  ];
+        { name: "AI Services", href: "/ai-services", icon: Brain }
+        { name: "IT Services", href: "/it-services", icon: Network }
+        { name: "Micro SAAS", href: "/micro-saas", icon: Cloud }
+      ]
+    }
+    { name: "About", href: "/about" }
+    { name: "Services", href: "/services" }
+    { name: "Solutions", href: "/solutions" }
+    { name: "Industries", href: "/industries" }
+    { name: "Contact", href: "/contact" }
 
+  ];
   const handleServiceClick = (href: string) => {
     closeMenu();
     window.location.href = href;
-  };
-
+  }
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
 <<<<<<< HEAD
@@ -206,7 +223,6 @@ title: "Educational Platforms",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
           </div>
-
           {/* Desktop Navigation */}
 <<<<<<< HEAD
           <nav className="hidden lg:flex space-x-8">
@@ -364,11 +380,14 @@ title: "Educational Platforms",
             ))}
 <<<<<<< HEAD
           </nav>
+<<<<<<< HEAD
 =======
           </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -379,6 +398,7 @@ title: "Educational Platforms",
             </Link>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         </div>
 <<<<<<< HEAD
@@ -387,6 +407,8 @@ title: "Educational Platforms",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -399,7 +421,6 @@ title: "Educational Platforms",
             )}
           </button>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (

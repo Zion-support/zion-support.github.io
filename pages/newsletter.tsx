@@ -4,6 +4,7 @@ import Head from "next/head";
 import Layout from "./components/Layout";
 import { motion } from "framer-motion";
 import {
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -33,29 +34,52 @@ import {
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
 
+=======
+  ArrowRight
+  Users
+  Calendar
+  FileText
+  Video
+  Globe
+  Shield
+  Zap
+  CheckCircle
+  Mail
+  Send
+  Star
+  TrendingUp
+  Award
+  Clock
+} from "lucide-react";
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 const benefits = [
   {
-    title: "Exclusive Content",
+    title: "Exclusive Content"
     description:
-      "Get access to exclusive white papers, case studies, and industry insights.",
-    icon: FileText,
-  },
+      "Get access to exclusive white papers, case studies, and industry insights."
+    icon: FileText
+  }
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Webinar Invitations",
+=======
+    title: "Webinar Invitations"
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     description:
-      "Receive invitations to our expert-led webinars and virtual events.",
-    icon: Video,
-  },
+      "Receive invitations to our expert-led webinars and virtual events."
+    icon: Video
+  }
   {
-    title: "Early Access",
+    title: "Early Access"
     description:
-      "Be the first to know about new features, products, and services.",
-    icon: Zap,
-  },
+      "Be the first to know about new features, products, and services."
+    icon: Zap
+  }
   {
-    title: "Industry Insights",
+    title: "Industry Insights"
     description:
+<<<<<<< HEAD
       "Stay updated with the latest trends and developments in technology.",
     icon: TrendingUp,
   },
@@ -75,33 +99,41 @@ const benefits = [
     icon: TrendingUp
   }
 >>>>>>> origin/automation-improvements-final
+=======
+      "Stay updated with the latest trends and developments in technology."
+    icon: TrendingUp
+  }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
-
 const testimonials = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     name: "Sarah Johnson",
     role: "CTO, TechCorp",
+=======
+    name: "Sarah Johnson"
+    role: "CTO, TechCorp"
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     content:
-      "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.",
-    rating: 5,
-  },
+      "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
+    rating: 5
+  }
   {
-    name: "Michael Chen",
-    role: "Product Manager, InnovateLab",
+    name: "Michael Chen"
+    role: "Product Manager, InnovateLab"
     content:
-      "I look forward to every newsletter. The content quality is exceptional and has helped me make better decisions.",
-    rating: 5,
-  },
+      "I look forward to every newsletter. The content quality is exceptional and has helped me make better decisions."
+    rating: 5
+  }
   {
-    name: "Emily Rodriguez",
-    role: "Developer, CodeCraft",
+    name: "Emily Rodriguez"
+    role: "Developer, CodeCraft"
     content:
-      "The technical deep-dives and case studies have been incredibly helpful for my projects.",
-    rating: 5,
-  },
+      "The technical deep-dives and case studies have been incredibly helpful for my projects."
+    rating: 5
+  }
 ];
-
 export default function NewsletterPage() {
   const [email, setEmail] = useState("");
 =======
@@ -129,10 +161,10 @@ export default function NewsletterPage() {
 >>>>>>> origin/automation-improvements-final
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     // Simulate API call
@@ -144,10 +176,13 @@ export default function NewsletterPage() {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
 >>>>>>> origin/automation-improvements-final
+=======
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     setIsSubscribed(true);
     setIsLoading(false);
-  };
-
+  }
   return (
     <Layout>
       <Head>
@@ -161,7 +196,6 @@ export default function NewsletterPage() {
         <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
 >>>>>>> origin/automation-improvements-final
       </Head>
-
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -180,12 +214,15 @@ export default function NewsletterPage() {
                 Get exclusive insights, industry trends, and early access to new
                 features delivered directly to your inbox.
               </p>
+<<<<<<< HEAD
 
 =======
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
               
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -230,7 +267,6 @@ export default function NewsletterPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -252,7 +288,6 @@ export default function NewsletterPage() {
 >>>>>>> origin/automation-improvements-final
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -280,7 +315,6 @@ export default function NewsletterPage() {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -336,7 +370,6 @@ export default function NewsletterPage() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -358,7 +391,6 @@ export default function NewsletterPage() {
 >>>>>>> origin/automation-improvements-final
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -396,7 +428,6 @@ export default function NewsletterPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
           <div className="container mx-auto px-4">
@@ -414,12 +445,15 @@ export default function NewsletterPage() {
                 Subscribe now and start receiving valuable insights delivered to
                 your inbox every week.
               </p>
+<<<<<<< HEAD
 
 =======
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
               
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -451,7 +485,6 @@ export default function NewsletterPage() {
                   </div>
                 </form>
               )}
-
               <div className="mt-8 text-green-100 text-sm">
                 <p>✓ No spam, ever</p>
                 <p>✓ Unsubscribe anytime</p>
@@ -464,7 +497,11 @@ export default function NewsletterPage() {
     </Layout>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

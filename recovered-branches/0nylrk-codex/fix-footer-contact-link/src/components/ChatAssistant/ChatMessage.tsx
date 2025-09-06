@@ -1,15 +1,16 @@
-import {cn} from "@/lib/utils";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 interface ChatMessageProps {
-  role: 'user' | 'assistant',
-  message: string,
+
+  role: 'user' | 'assistant'
+  message: string
+
   timestamp?: Date;
   key?: string | number
 }
-
 export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
+
   const isUser = role === 'user';
-  
   return (
     <div className={cn(
       "flex items-start gap-2";
@@ -29,11 +30,11 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
         )}
         {!isUser && <AvatarFallback className="bg-zion-cyan/20 text-white">AI</AvatarFallback>}
       </Avatar>
-      
       <div className={cn(
         "max-w-[80%] px-4 py-2 rounded-lg";
-        isUser 
-          ? "bg-zion-purple/20 text-white rounded-tr-none" 
+        isUser
+          ? "bg-zion-purple/20 text-white rounded-tr-none"
+
           : "bg-zion-cyan/10 text-white rounded-tl-none"
       )}>
         <div className="whitespace-pre-wrap">{message}</div>
@@ -45,4 +46,4 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
       </div>
     </div>
   )
-};
+}

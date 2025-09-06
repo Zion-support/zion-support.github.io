@@ -11,12 +11,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> origin/automation-improvements-final
     <lastmod>2025-09-05T22:16:45.298Z</lastmod>
+=======
+<lastmod>2025-09-05T22:16:45.298Z</lastmod>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -33,6 +37,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -59,4 +64,8 @@
     <priority>0.6</priority>
   </url>
 >>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 </urlset>

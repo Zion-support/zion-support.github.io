@@ -1,5 +1,7 @@
-};
+
+}
 </pre> </div>)
+
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">

@@ -1,13 +1,14 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
+
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Brain,
-  Star,;
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Brain
+  Star;
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -110,4 +111,3 @@ export default function QuantumAIBCIPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-;

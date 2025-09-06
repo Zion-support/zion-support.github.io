@@ -1,112 +1,102 @@
-'use client';
 
+'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,;
+  Mail
+  Phone
+  MapPin
+  Send
+  CheckCircle
+  AlertCircle;
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
+    message: ''
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'success' | 'error'
   >('idle');
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+      ...formData
+      [e.target.name]: e.target.value
     });  };  });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData;
       [e.target.name]: e.target.value
     })
-  };
-
+  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate API call
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
+        name: ''
+        email: ''
+        company: ''
+        phone: ''
+        service: ''
+        message: ''
       });
     } catch (error) {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);    }
-  };
-
+  }
   const services = [    } catch (error) {
       setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
-  };
-
+  }
   const services = [
-    'AI Development',
-    'Cloud Architecture',
-    'Digital Transformation',
-    'IoT Platforms',
-    'Blockchain Solutions',
-    'Data Analytics',
+    'AI Development'
+    'Cloud Architecture'
+    'Digital Transformation'
+    'IoT Platforms'
+    'Blockchain Solutions'
+    'Data Analytics'
     'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
   ];
-
   const contactInfo = [
     {
-      icon: Mail,
-      title: 'Email Us',
-      content: 'contact@ziontechgroup.com',
-      href: 'mailto:contact@ziontechgroup.com',
+      icon: Mail
+      title: 'Email Us'
+      content: 'contact@ziontechgroup.com'
+      href: 'mailto:contact@ziontechgroup.com'
     },    {
-      icon: Phone,
-      title: 'Call Us',
+      icon: Phone
+      title: 'Call Us'
       content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup.com'
-    };
+    }
     {
-      icon: Phone,
-      title: 'Call Us',
-      content: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      icon: Phone
+      title: 'Call Us'
+      content: '+1 (555) 123-4567'
+      href: 'tel:+15551234567'
     },    {
-      icon: MapPin,
-      title: 'Visit Us',
-      content: '123 Tech Street, Innovation City, IC 12345',
-      href: '#',
-    },
-
+      icon: MapPin
+      title: 'Visit Us'
+      content: '123 Tech Street, Innovation City, IC 12345'
+      href: '#'
+    }
   return (
     <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
       {/* Background Elements */}
@@ -114,7 +104,6 @@ const ContactForm: React.FC = () => {
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]' />
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]' />
       </div>
-
       <div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className="relative container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -130,14 +119,12 @@ const ContactForm: React.FC = () => {
               Conversation
             </span>
           </h2>
-
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
             Ready to transform your business? Get in touch with our team of
             experts to discuss how we can help you achieve your technology
             goals.
           </p>
         </motion.div>
-
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}        >
           <h2 className="text-4xl md: text-6xl font-bold text-white mb-6">
             Let&apos,s Start a
@@ -145,13 +132,11 @@ const ContactForm: React.FC = () => {
               Conversation
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your business? Get in touch with our team of experts to discuss 
+            Ready to transform your business? Get in touch with our team of experts to discuss
             how we can help you achieve your technology goals.
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {/* Contact Information */}
           <motion.div
@@ -170,14 +155,12 @@ const ContactForm: React.FC = () => {
                 technology and find the perfect solutions for your business
                 needs. Reach out to us today.              </p>
             </div>
-
             {/* Contact Details */}
             <div className='space-y-6'>              {contactInfo.map((info, index) => (              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Our team is here to help you navigate the complex world of technology and find 
+                Our team is here to help you navigate the complex world of technology and find
                 the perfect solutions for your business needs. Reach out to us today.
             </div>
-
             {/* Contact Details */}
             <div className='space-y-6'>            <div className="space-y-6">
               {contactInfo.map((info, index) => (
@@ -210,7 +193,6 @@ const ContactForm: React.FC = () => {
                 </motion.a>
               ))}
             </div>
-
             {/* Additional Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -257,7 +239,6 @@ const ContactForm: React.FC = () => {
               </ul>
             </motion.div>
           </motion.div>
-
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -315,7 +296,6 @@ const ContactForm: React.FC = () => {
                       className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
                       placeholder='Enter your full name'                    />
                   </div>
-
                   <div>
                     <label
                       htmlFor='email'
@@ -334,13 +314,11 @@ const ContactForm: React.FC = () => {
                       placeholder='Enter your email'                    />
                   </div>
                 </div>
-
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
                       placeholder="Enter your email"
                     />
                   </div>
                 </div>
-
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div>
                     <label
@@ -358,7 +336,6 @@ const ContactForm: React.FC = () => {
                       className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
                       placeholder='Enter company name'                    />
                   </div>
-
                   <div>
                     <label
                       htmlFor='phone'
@@ -378,7 +355,6 @@ const ContactForm: React.FC = () => {
                     />
                   </div>
                 </div>
-
                 <div>
                   <label
                     htmlFor='service'
@@ -416,7 +392,6 @@ const ContactForm: React.FC = () => {
                     ))}
                   </select>
                 </div>
-
                 <div>
                   <label
                     htmlFor='message'
@@ -447,7 +422,6 @@ const ContactForm: React.FC = () => {
                     placeholder="Tell us about your project or inquiry..."
                   />
                 </div>
-
                 {submitStatus === 'error' && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -460,7 +434,6 @@ const ContactForm: React.FC = () => {
                     <span>Something went wrong. Please try again.</span>
                   </motion.div>
                 )}
-
                 <button
                   type='submit'
                   disabled={isSubmitting}
@@ -494,9 +467,8 @@ const ContactForm: React.FC = () => {
       </div>
     </section>
   );
-};
-
+}
 export default ContactForm;  )
-};
-
+}
 export default ContactForm;
+

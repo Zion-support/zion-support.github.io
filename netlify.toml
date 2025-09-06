@@ -1,6 +1,5 @@
 [build]
-<<<<<<< HEAD
-  command = "npm run build"
+command = "npm run build"
   publish = ".next"
 
 [build.environment]
@@ -15,6 +14,7 @@
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -111,3 +111,5 @@
 >>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

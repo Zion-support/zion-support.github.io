@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 import React from 'react';
 import Layout from '../components/Layout';
-
 export default function Training() {
   return (
     <Layout
@@ -1441,18 +1444,18 @@ export default function TrainingPage() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
-  )
 =======
-}  )
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-};
-
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+  )
+}
 export default Training;
 };export default Training;
+<<<<<<< HEAD
 =======
 =======
 
@@ -1514,3 +1517,6 @@ export default Training;
 export default Training;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

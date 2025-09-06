@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
+
 import {
-  Brain,
-  Shield,
-  Rocket,
-  Cpu,
-  Database,
-  Atom,
-  Users,
-  CheckCircle,
-  TrendingUp,
-  Clock,
-  Star,
-  Filter,
-  ChevronDown,;
+  Brain
+  Shield
+  Rocket
+  Cpu
+  Database
+  Atom
+  Users
+  CheckCircle
+  TrendingUp
+  Clock
+  Star
+  Filter
+  ChevronDown;
 } from 'lucide-react';
 
 interface Service {
@@ -31,253 +32,246 @@ interface Service {
   growthRate: string;
   popular?: boolean;
   icon: React.ComponentType<any>;
-  color: string;} from 'lucide-react';
 
+  color: string;} from 'lucide-react';
 interface Service {
-  id: string,
-  name: string,
-  tagline: string,
-  category: string,
-  price: string,
-  period: string,
-  setupTime: string,
-  customers: string,
-  features: string[],
-  benefits: string[],
-  roi: string,
-  marketSize: string,
-  growthRate: string,
+  id: string
+  name: string
+  tagline: string
+  category: string
+  price: string
+  period: string
+  setupTime: string
+  customers: string
+  features: string[]
+  benefits: string[]
+  roi: string
+  marketSize: string
+  growthRate: string
   popular?: boolean;
-  icon: React.ComponentType<any>,
+  icon: React.ComponentType<any>
   color: string
 }
-
 const EnhancedServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
-
   const services: Service[] = [
     {
-      id: 'ai-bi',
-      name: 'AI Business Intelligence',
+      id: 'ai-bi'
+      name: 'AI Business Intelligence'
       tagline:
-        'Transform data into actionable insights with AI-powered analytics',      category: 'AI & Analytics',      tagline: 'Transform data into actionable insights with AI-powered analytics',
-      category: 'AI & Analytics',
-      price: '$499',
-      period: '/month',
-      setupTime: '2-3 weeks',
-      customers: '150+',
+        'Transform data into actionable insights with AI-powered analytics',      category: 'AI & Analytics',      tagline: 'Transform data into actionable insights with AI-powered analytics'
+      category: 'AI & Analytics'
+      price: '$499'
+      period: '/month'
+      setupTime: '2-3 weeks'
+      customers: '150+'
       features: [
-        'AI-powered dashboards',
-        'Predictive analytics',
-        'Real-time insights',
-        'Custom reporting',
-      ],
+        'AI-powered dashboards'
+        'Predictive analytics'
+        'Real-time insights'
+        'Custom reporting'
+      ]
       benefits: [
-        '30% faster decision making',
-        'Improved data accuracy',
-        'Cost reduction',
-      ],      roi: 'Average 3.2x ROI within 6 months',      features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting'],
-      benefits: ['30% faster decision makingImproved data accuracyCost reduction'],
-      roi: 'Average 3.2x ROI within 6 months',
-      marketSize: '$25B',
-      growthRate: '25% YoY',
-      popular: true,
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-    },
+        '30% faster decision making'
+        'Improved data accuracy'
+        'Cost reduction'
+      ],      roi: 'Average 3.2x ROI within 6 months',      features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting']
+      benefits: ['30% faster decision makingImproved data accuracyCost reduction']
+      roi: 'Average 3.2x ROI within 6 months'
+      marketSize: '$25B'
+      growthRate: '25% YoY'
+      popular: true
+      icon: Brain
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      id: 'quantum-cyber',
-      name: 'Quantum Cybersecurity',
+      id: 'quantum-cyber'
+      name: 'Quantum Cybersecurity'
       tagline:
         'Future-proof security with quantum-resistant encryption and AI threat detection',      category: 'Security',      color: 'from-purple-500 to-pink-500'
-    };
+    }
     {
-      id: 'quantum-cyber',
-      name: 'Quantum Cybersecurity',
-      tagline: 'Future-proof security with quantum-resistant encryption and AI threat detection',
-      price: '$799',
-      period: '/month',
-      setupTime: '4-6 weeks',
-      customers: '75+',
+      id: 'quantum-cyber'
+      name: 'Quantum Cybersecurity'
+      tagline: 'Future-proof security with quantum-resistant encryption and AI threat detection'
+      price: '$799'
+      period: '/month'
+      setupTime: '4-6 weeks'
+      customers: '75+'
       features: [
-        'Quantum-resistant encryption',
-        'AI threat detection',
-        'Zero-trust architecture',
-        '24/7 monitoring',
-      ],
+        'Quantum-resistant encryption'
+        'AI threat detection'
+        'Zero-trust architecture'
+        '24/7 monitoring'
+      ]
       benefits: [
-        '99.99% threat prevention',
-        'Compliance ready',
-        'Reduced security incidents',
-      ],      roi: 'Average 4.1x ROI within 8 months',      features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring'],
-      benefits: ['99.99% threat preventionCompliance readyReduced security incidents'],
-      roi: 'Average 4.1x ROI within 8 months',
-      marketSize: '$18B',
-      growthRate: '32% YoY',
-      popular: false,
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-    },
+        '99.99% threat prevention'
+        'Compliance ready'
+        'Reduced security incidents'
+      ],      roi: 'Average 4.1x ROI within 8 months',      features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring']
+      benefits: ['99.99% threat preventionCompliance readyReduced security incidents']
+      roi: 'Average 4.1x ROI within 8 months'
+      marketSize: '$18B'
+      growthRate: '32% YoY'
+      popular: false
+      icon: Shield
+      color: 'from-red-500 to-orange-500'
+    }
     {
-      id: 'edge-computing',
-      name: 'Edge Computing Orchestration',
+      id: 'edge-computing'
+      name: 'Edge Computing Orchestration'
       tagline:
         'Deploy and manage applications at the edge with intelligent orchestration',      category: 'Infrastructure',      color: 'from-red-500 to-orange-500'
-    };
+    }
     {
-      id: 'edge-computing',
-      name: 'Edge Computing Orchestration',
-      tagline: 'Deploy and manage applications at the edge with intelligent orchestration',
-      price: '$349',
-      period: '/month',
-      setupTime: '1-2 weeks',
-      customers: '200+',
+      id: 'edge-computing'
+      name: 'Edge Computing Orchestration'
+      tagline: 'Deploy and manage applications at the edge with intelligent orchestration'
+      price: '$349'
+      period: '/month'
+      setupTime: '1-2 weeks'
+      customers: '200+'
       features: [
-        'Edge node management',
-        'IoT device management',
-        'Real-time monitoring',
-        'Auto-scaling',
-      ],
+        'Edge node management'
+        'IoT device management'
+        'Real-time monitoring'
+        'Auto-scaling'
+      ]
       benefits: [
-        '50% latency reduction',
-        'Improved reliability',
-        'Cost optimization',
-      ],      roi: 'Average 2.8x ROI within 4 months',      features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling'],
-      benefits: ['50% latency reductionImproved reliabilityCost optimization'],
-      roi: 'Average 2.8x ROI within 4 months',
-      marketSize: '$12B',
-      growthRate: '28% YoY',
-      popular: false,
-      icon: Cpu,
-      color: 'from-emerald-500 to-teal-500',
-    },
-      id: 'space-tech',
-      name: 'Space Technology Innovation',
+        '50% latency reduction'
+        'Improved reliability'
+        'Cost optimization'
+      ],      roi: 'Average 2.8x ROI within 4 months',      features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling']
+      benefits: ['50% latency reductionImproved reliabilityCost optimization']
+      roi: 'Average 2.8x ROI within 4 months'
+      marketSize: '$12B'
+      growthRate: '28% YoY'
+      popular: false
+      icon: Cpu
+      color: 'from-emerald-500 to-teal-500'
+    }
+      id: 'space-tech'
+      name: 'Space Technology Innovation'
       tagline:
-        'Accelerate space exploration with cutting-edge technology solutions',
-      category: 'Space Tech',
-      price: '$2,499',
-      period: '/month',
-      setupTime: '8-12 weeks',
-      customers: '25+',
+        'Accelerate space exploration with cutting-edge technology solutions'
+      category: 'Space Tech'
+      price: '$2,499'
+      period: '/month'
+      setupTime: '8-12 weeks'
+      customers: '25+'
       features: [
-        'Satellite management',
-        'AI mission planning',
-        'Quantum communication',
-        'Space analytics',
-      ],
+        'Satellite management'
+        'AI mission planning'
+        'Quantum communication'
+        'Space analytics'
+      ]
       benefits: [
-        'Mission success rate 95%+',
-        'Reduced launch costs',
-        'Advanced capabilities',
-      ],      roi: 'Average 5.2x ROI within 12 months',      features: ['Satellite managementAI mission planningQuantum communicationSpace analytics'],
-      benefits: ['Mission success rate 95%+Reduced launch costsAdvanced capabilities'],
-      roi: 'Average 5.2x ROI within 12 months',
-      marketSize: '$8B',
-      growthRate: '45% YoY',
-      popular: true,
-      icon: Rocket,
-      color: 'from-violet-500 to-purple-500',
-    },
+        'Mission success rate 95%+'
+        'Reduced launch costs'
+        'Advanced capabilities'
+      ],      roi: 'Average 5.2x ROI within 12 months',      features: ['Satellite managementAI mission planningQuantum communicationSpace analytics']
+      benefits: ['Mission success rate 95%+Reduced launch costsAdvanced capabilities']
+      roi: 'Average 5.2x ROI within 12 months'
+      marketSize: '$8B'
+      growthRate: '45% YoY'
+      popular: true
+      icon: Rocket
+      color: 'from-violet-500 to-purple-500'
+    }
     {
-      id: 'neural-interface',
-      name: 'Neural Interface Development',
+      id: 'neural-interface'
+      name: 'Neural Interface Development'
       tagline:
         'Build the future of human-computer interaction with neural interfaces',      category: 'Emerging Tech',      color: 'from-violet-500 to-purple-500'
-    };
+    }
     {
-      id: 'neural-interface',
-      name: 'Neural Interface Development',
-      tagline: 'Build the future of human-computer interaction with neural interfaces',
-      price: '$899',
-      period: '/month',
-      setupTime: '6-8 weeks',
-      customers: '40+',
+      id: 'neural-interface'
+      name: 'Neural Interface Development'
+      tagline: 'Build the future of human-computer interaction with neural interfaces'
+      price: '$899'
+      period: '/month'
+      setupTime: '6-8 weeks'
+      customers: '40+'
       features: [
-        'BCI development tools',
-        'Neural signal processing',
-        'AI pattern recognition',
-        'Safety protocols',
-      ],
+        'BCI development tools'
+        'Neural signal processing'
+        'AI pattern recognition'
+        'Safety protocols'
+      ]
       benefits: [
-        'Revolutionary UX',
-        'Accessibility improvements',
-        'Research advancement',
-      ],      roi: 'Average 6.8x ROI within 18 months',      features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols'],
-      benefits: ['Revolutionary UXAccessibility improvementsResearch advancement'],
-      roi: 'Average 6.8x ROI within 18 months',
-      marketSize: '$3B',
-      growthRate: '67% YoY',
-      popular: false,
-      icon: Brain,
-      color: 'from-pink-500 to-rose-500',
+        'Revolutionary UX'
+        'Accessibility improvements'
+        'Research advancement'
+      ],      roi: 'Average 6.8x ROI within 18 months',      features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols']
+      benefits: ['Revolutionary UXAccessibility improvementsResearch advancement']
+      roi: 'Average 6.8x ROI within 18 months'
+      marketSize: '$3B'
+      growthRate: '67% YoY'
+      popular: false
+      icon: Brain
+      color: 'from-pink-500 to-rose-500'
     },    {      color: 'from-pink-500 to-rose-500'
-    };
+    }
     {
-      id: 'quantum-ai',
-      name: 'Quantum AI Neural Networks',
-      tagline: 'Quantum-powered AI with advanced consciousness capabilities',
-      category: 'Quantum AI',
-      price: '$1,299',
-      period: '/month',
-      setupTime: '10-14 weeks',
-      customers: '15+',
+      id: 'quantum-ai'
+      name: 'Quantum AI Neural Networks'
+      tagline: 'Quantum-powered AI with advanced consciousness capabilities'
+      category: 'Quantum AI'
+      price: '$1,299'
+      period: '/month'
+      setupTime: '10-14 weeks'
+      customers: '15+'
       features: [
-        'Quantum neural networks',
-        'Consciousness simulation',
-        'Advanced learning',
-        'Quantum optimization',
-      ],
+        'Quantum neural networks'
+        'Consciousness simulation'
+        'Advanced learning'
+        'Quantum optimization'
+      ]
       benefits: [
-        'Unprecedented AI capabilities',
-        'Breakthrough research',
-        'Competitive advantage',
+        'Unprecedented AI capabilities'
+        'Breakthrough research'
+        'Competitive advantage'
       ],      roi: 'Average 8.5x ROI within 24 months',      price: '$1,299';
-      period: '/month',
-      setupTime: '10-14 weeks',
-      customers: '15+',
-      features: ['Quantum neural networksConsciousness simulationAdvanced learningQuantum optimization'],
-      benefits: ['Unprecedented AI capabilitiesBreakthrough researchCompetitive advantage'],
-      roi: 'Average 8.5x ROI within 24 months',
-      marketSize: '$2B',
-      growthRate: '89% YoY',
-      popular: true,
-      icon: Atom,
-      color: 'from-blue-500 to-cyan-500',
-    },
+      period: '/month'
+      setupTime: '10-14 weeks'
+      customers: '15+'
+      features: ['Quantum neural networksConsciousness simulationAdvanced learningQuantum optimization']
+      benefits: ['Unprecedented AI capabilitiesBreakthrough researchCompetitive advantage']
+      roi: 'Average 8.5x ROI within 24 months'
+      marketSize: '$2B'
+      growthRate: '89% YoY'
+      popular: true
+      icon: Atom
+      color: 'from-blue-500 to-cyan-500'
+    }
   ];
-
   const categories = [
-    'all',
-    ...Array.from(new Set(services.map(s => s.category))),
-
+    'all'
+    ...Array.from(new Set(services.map(s => s.category)))
   const filteredServices = services.filter(service => {
     const matchesCategory =
-      selectedCategory === 'all' || service.category === selectedCategory;
+      selectedCategory === 'all' |service.category === selectedCategory;
     const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;  });
-
   const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ComponentType<any> } = {    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const iconMap: { [key: string]: React.ComponentType<any> } = {    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch
-
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
-      'AI & Analytics': Brain,
-      Security: Shield,
-      Infrastructure: Cpu,
-      'Space Tech': Rocket,
-      'Emerging Tech': Brain,
-      'Quantum AI': Atom,
-    };
-    return iconMap[category] || Brain;
-  };
-
+      'AI & Analytics': Brain
+      Security: Shield
+      Infrastructure: Cpu
+      'Space Tech': Rocket
+      'Emerging Tech': Brain
+      'Quantum AI': Atom
+    }
+    return iconMap[category] |Brain;
+  }
   return (
     <section id='services' className='py-24 px-6 relative overflow-hidden'>
       {/* Background */}
@@ -285,7 +279,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]' />
       </div>
-
       <div className='max-w-7xl mx-auto relative z-10'>
         {/* Header */}
         <div className='text-center mb-16'>
@@ -298,12 +291,10 @@ const EnhancedServicesShowcase: React.FC = () => {
             Cutting-edge technology solutions designed to transform your
             business and accelerate innovation          </p>
         </div>
-
         {/* Filters */}
-        <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>    };
-    return iconMap[category] || Brain
-  };
-
+        <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>    }
+    return iconMap[category] |Brain
+  }
   return (
     <section id="services" className="py-24 px-6 relative overflow-hidden">
       {/* Background */}
@@ -311,7 +302,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]" />
       </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -324,7 +314,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             Cutting-edge technology solutions designed to transform your business and accelerate innovation
           </p>
         </div>
-
         {/* Filters */}
         <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>
           {/* Category Filter */}
@@ -358,7 +347,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             </select>
             <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />
           </div>
-
           {/* Search */}
           <div className='relative'>
             <input
@@ -370,10 +358,8 @@ const EnhancedServicesShowcase: React.FC = () => {
             />
             <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />          </div>
         </div>
-
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          </div>
-
           {/* Search */}
           <div className="relative">
             <input
@@ -386,7 +372,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
           </div>
         </div>
-
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {filteredServices.map((service, index) => (
@@ -412,7 +397,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                   </div>
                 </div>
               )}
-
               {/* Service Content */}
               <div className='p-8'>
                 {/* Icon and Category */}
@@ -425,14 +409,13 @@ const EnhancedServicesShowcase: React.FC = () => {
                   <div className='text-right'>
                     <div className='text-xs text-white/60 mb-1'>
                       {getCategoryIcon(service.category)({
-                        className: 'w-3 h-3',
+                        className: 'w-3 h-3'
                       })}
                     </div>
                     <div className='text-xs text-white/40'>
                       {service.category}
                     </div>                  </div>
                 </div>
-
                 {/* Service Info */}                {/* Icon and Category */}
                 <div className="flex items-center justify-between mb-4">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
@@ -443,7 +426,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <div className="text-xs text-white/40">{service.category}</div>
                   </div>
                 </div>
-
                 {/* Service Info */}
                 <h3 className='text-xl font-bold mb-3 text-white'>
                   {service.name}
@@ -471,7 +453,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                     </span>
                   </div>
                 </div>
-
                 {/* Key Features */}
                 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
@@ -493,7 +474,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Benefits */}
                 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
@@ -515,7 +495,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-white/5 rounded-lg'>
                   <div className='text-xs text-white/60 mb-2'>
@@ -530,7 +509,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                   <div className="mt-2 text-xs text-white/60">
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className='flex gap-3'>
                   <button
@@ -565,7 +543,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
@@ -609,9 +586,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       </div>
     </section>
   );
-};
-
+}
 export default EnhancedServicesShowcase;  )
-};
-
+}
 export default EnhancedServicesShowcase;
+

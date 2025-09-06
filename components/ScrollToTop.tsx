@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronUp } from 'lucide-react';
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 
+import { ChevronUp } from 'lucide-react';
 export default function ScrollToTop() {
 =======
 <<<<<<< HEAD
@@ -14,7 +18,6 @@ const ScrollToTop: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
@@ -30,8 +33,7 @@ const ScrollToTop: React.FC = () => {
         setIsVisible(true);
       } else {
         setIsVisible(false);      }
-    };
-
+    }
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true)
       } else {
@@ -42,8 +44,7 @@ const ScrollToTop: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
       }
-    };
-
+    }
     window.addEventListener('scroll', toggleVisibility);
 <<<<<<< HEAD
     return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
@@ -59,9 +60,9 @@ const ScrollToTop: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
   }, []);
-
   const scrollToTop = () => {
     window.scrollTo({
+<<<<<<< HEAD
       top: 0,
 <<<<<<< HEAD
 =======
@@ -88,9 +89,12 @@ const ScrollToTop: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
       behavior: 'smooth',
+=======
+      top: 0
+      behavior: 'smooth'
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     });  };      behavior: 'smooth'})
-  };
-
+  }
   return (
     <>
       {isVisible && (
@@ -129,14 +133,16 @@ const ScrollToTop: React.FC = () => {
       )}
     </>
   );
-};
-
+}
 export default ScrollToTop;  )
-};
-
+}
 export default ScrollToTop;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

@@ -1,24 +1,25 @@
 
-import { useState } from "react";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'import { formatDistanceToNow } from "date-fns";
+import { useState } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
+import { formatDistanceToNow } from "date-fns",
 import Link from "next/link";
-import {ApplicationStatus} from "@/types/jobs";
+import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
-  const { applications, isLoading, error } = useJobApplications();
-  
+
+  const { applications, isLoading, error } = useJobApplications()
   const getStatusBadge = (status: ApplicationStatus,) => {
     switch (status) {
-      case "new": return <Badge variant="secondary">New</Badge>;
-        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
+      case "new": return <Badge variant="secondary">New</Badge>
+        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-  },
-  
+  }
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -26,7 +27,6 @@ export function MyApplications() {
       </div>
     )
   }
-  
   if (error) {
     return (
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
@@ -34,7 +34,6 @@ export function MyApplications() {
       </div>
     )
   }
-  
   if (applications.length === 0) {
     return (
       <Card className="bg-muted/30">
@@ -49,7 +48,6 @@ export function MyApplications() {
       </Card>
     )
   }
-  
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {applications.map((application,) => (
@@ -57,7 +55,7 @@ export function MyApplications() {
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
-                {application.job?.title || "Unknown Job"}
+                {application.job?.title |"Unknown Job"}
               </CardTitle>
               {getStatusBadge(application.status)}
             </div>
@@ -72,11 +70,10 @@ export function MyApplications() {
                   {application.cover_letter}
                 </p>
               )}
-              
               <div className="flex justify-between items-center">
-                <Button 
-                  variant="outline" 
-                  size="sm" 
+                <Button
+                  variant="outline"
+                  size="sm"
                   className="text-xs"
                   asChild
                 >
@@ -84,9 +81,8 @@ export function MyApplications() {
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-                
-                <Button 
-                  variant="default" 
+                <Button
+                  variant="default"
                   size="sm"
                   className="text-xs"
                   asChild
@@ -103,4 +99,3 @@ export function MyApplications() {
     </div>
   )
 }
-;

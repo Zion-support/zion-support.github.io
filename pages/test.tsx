@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 =======
 <<<<<<< HEAD
@@ -9,7 +10,10 @@ import Head from 'next/head';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 
+import Layout from '../components/Layout';
 export default function TestPage() {
   return (
 <<<<<<< HEAD
@@ -36,12 +40,9 @@ export default function TestPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
   );
-<<<<<<< HEAD
 }
+
 export default function TestPage() {
-=======
-}export default function TestPage() {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
   return (
     <>
       <Head>
@@ -51,12 +52,8 @@ export default function TestPage() {
         <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
       </div>
     </>
-<<<<<<< HEAD
-  );
+);
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
-=======
-  );      <div className="min-h-screen bg-black text-white flex items-center justify-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
         <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
       </div>
     </>

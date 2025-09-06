@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 ;
@@ -38,3 +39,8 @@ export default function Playwright.config({ }: Playwright.configProps) {;
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+}}}
+}
+}}}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
