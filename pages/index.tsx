@@ -23,7 +23,7 @@ export default function Home() {
           <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
           <button 
             onClick={() => window.location.reload()} 
-            className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700"
+            className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
           >
             Reload Page
           </button>
@@ -252,11 +252,5 @@ export default function Home() {
         /> */}
       </ErrorBoundary>
     </>
-  )
   );
-import React from 'react';
-import Homepage2025 from '../components/Homepage2025';
-
-export default function HomePage() {
-  return <Homepage2025 />;
 }
