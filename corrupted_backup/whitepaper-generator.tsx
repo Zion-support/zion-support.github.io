@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
+export default function WhitepaperGeneratorRedirect() {
+  const router = useRouter();
+  useEffect(() => {
+    router.replace('/tokenomics');
+  }, [router]);
+  return null;
+=======
 import React from 'react';
 export default function Page() {
   return (
@@ -8,4 +19,5 @@ export default function Page() {
       </section>
     </main>
   );
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 }

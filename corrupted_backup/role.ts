@@ -1,6 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+  res.status(200).json({ ok: true });
+}
+=======
   if (req.method !== 'GET') {
     res.setHeader('Allow', ['GET']);
     return res.status(405).end('Method Not Allowed');
@@ -8,3 +12,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ role: 'user' });
 }
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

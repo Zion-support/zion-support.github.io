@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // Jest setup file
 import '@testing-library/jest-dom';
 
@@ -65,6 +67,7 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}

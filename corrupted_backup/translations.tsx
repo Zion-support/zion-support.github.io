@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import dynamic from 'next/dynamic';
+
+const TranslationPreview = dynamic(
+  () => import('../../components/admin/TranslationPreview'),
+  { ssr: false }
+);
+
+export default function TranslationsAdminPage() {
+  return (
+    <div className='container mx-auto px-4 py-8'>
+      <TranslationPreview />
+    </div>
+=======
 import React from 'react';
 export default function Page() {
   return (
@@ -7,5 +21,6 @@ export default function Page() {
         <p>Auto-healed placeholder. Replace with real content.</p>
       </section>
     </main>
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   );
 }

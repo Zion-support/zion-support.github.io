@@ -17,6 +17,26 @@ interface SupportRequest {
   response?: string;
 }
 
+<<<<<<< HEAD
+export default function SupportRequests({
+  initialRequests,
+}: {
+  initialRequests: any[];
+}) {
+  const [requests, setRequests] = useState(initialRequests);
+
+  async function resolve(id: string) {
+    await fetch('/api/support/resolve', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id }),
+    });
+    setRequests((prev: any[]) =>
+      prev.map(r =>
+        r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r
+      )
+    );
+=======
 const mockSupportRequests: SupportRequest[] = [
   {
     id: '1',
@@ -59,6 +79,7 @@ const mockSupportRequests: SupportRequest[] = [
     updatedAt: '2025-01-14T16:45:00Z',
     assignedTo: 'support_agent_2',
     response: 'Thank you for your suggestion! We have added dark mode to our roadmap and will implement it in the next update.'
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   }
 ];
 
@@ -128,6 +149,34 @@ const AdminSupportRequestsPage: React.FC = () => {
   const resolvedRequests = requests.filter(r => r.status === 'resolved');
 
   return (
+<<<<<<< HEAD
+    <div className='space-y-6'>
+      <h1 className='text-2xl font-semibold'>Support Requests</h1>
+      <div className='grid gap-3'>
+        {requests.length === 0 && (
+          <div className='opacity-70'>No requests found.</div>
+        )}
+        {requests.map(r => (
+          <div
+            key={r.id}
+            className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex items-center justify-between'
+          >
+            <div className='text-sm'>
+              <div className='font-medium'>{r.id}</div>
+              <div className='opacity-80'>Session: {r.sessionId}</div>
+              <div className='opacity-80'>Tag: {r.tag}</div>
+              <div className='opacity-80'>Reason: {r.reason}</div>
+              <div className='opacity-80'>Status: {r.status}</div>
+            </div>
+            {r.status !== 'resolved' && (
+              <button
+                onClick={() => resolve(r.id)}
+                className='enhanced-button enhanced-button-primary'
+              >
+                Mark Resolved
+              </button>
+            )}
+=======
     <>
       <Head>
         <title>Admin Support Requests - Zion Tech Group</title>
@@ -141,6 +190,7 @@ const AdminSupportRequestsPage: React.FC = () => {
           <div className="bg-white rounded-lg shadow p-4">
             <h3 className="text-sm font-medium text-gray-500">Total Requests</h3>
             <p className="text-2xl font-bold">{requests.length}</p>
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
           <div className="bg-white rounded-lg shadow p-4">
             <h3 className="text-sm font-medium text-gray-500">Open</h3>
@@ -284,6 +334,10 @@ const AdminSupportRequestsPage: React.FC = () => {
       </main>
     </>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 export default AdminSupportRequestsPage;
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

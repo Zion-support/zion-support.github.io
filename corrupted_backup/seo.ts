@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+const p = path.join(process.cwd(), 'data', 'reports', 'seo', 'weekly-seo.json');
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (!fs.existsSync(p)) return res.status(200).json({});
+    res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Failed to read SEO report' });
+  }
+}
+=======
  
 }
 }
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

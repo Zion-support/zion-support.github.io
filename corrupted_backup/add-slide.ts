@@ -1,5 +1,23 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method Not Allowed' });
+
+  return res.status(200).json({
+    title: 'Additional Insight',
+    content:
+      'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.',
+  });
+}
+=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', ['POST']);
@@ -8,3 +26,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ message: 'Slide added' });
 }
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

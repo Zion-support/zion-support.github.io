@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
+<<<<<<< HEAD
+const ADMIN_KEY =
+  typeof window === 'undefined'
+    ? ''
+    : localStorage.getItem('ADMIN_KEY') || 'dev-admin-key';
+=======
 interface Review {
   id: string;
   userId: string;
@@ -12,6 +18,7 @@ interface Review {
   projectId?: string;
   projectName?: string;
 }
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
 const mockReviews: Review[] = [
   {
@@ -89,6 +96,66 @@ const AdminReviewsPage: React.FC = () => {
     }
   };
 
+<<<<<<< HEAD
+  useEffect(() => {
+    refresh();
+  }, []);
+
+  async function moderate(action: 'approve' | 'remove', reviewId: string) {
+    const res = await fetch('/api/reviews/moderate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-key': adminKey || 'dev-admin-key',
+      },
+      body: JSON.stringify({ action, reviewId }),
+    });
+    if (res.ok) refresh();
+  }
+
+  return (
+    <main className='max-w-5xl mx-auto p-6 space-y-6'>
+      <h1 className='text-2xl font-semibold'>Review Moderation</h1>
+
+      <div className='enhanced-card'>
+        <label className='block text-sm mb-2'>Admin Key</label>
+        <input
+          className='border p-2 rounded w-full'
+          value={adminKey}
+          onChange={e => setAdminKey(e.target.value)}
+          placeholder='Enter admin key'
+        />
+      </div>
+
+      <section className='enhanced-card'>
+        <h2 className='text-xl font-semibold mb-4'>Pending Reviews</h2>
+        <div className='space-y-4'>
+          {pending.map(r => (
+            <div key={r.id} className='border rounded p-3'>
+              <div className='text-sm text-gray-600 mb-1'>
+                Project: {r.projectId} • To: {r.toRole} {r.toId}
+              </div>
+              <div className='font-medium'>
+                {r.rating}★ — {r.text}
+              </div>
+              <div className='mt-2 flex gap-2'>
+                <button
+                  className='enhanced-button enhanced-button-primary'
+                  onClick={() => moderate('approve', r.id)}
+                >
+                  Approve
+                </button>
+                <button
+                  className='enhanced-button enhanced-button-secondary'
+                  onClick={() => moderate('remove', r.id)}
+                >
+                  Remove
+                </button>
+              </div>
+            </div>
+          ))}
+          {!pending.length && <div>No pending reviews.</div>}
+=======
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <span
@@ -127,8 +194,18 @@ const AdminReviewsPage: React.FC = () => {
             <h3 className="text-sm font-medium text-gray-500">Rejected</h3>
             <p className="text-2xl font-bold text-red-600">{rejectedReviews.length}</p>
           </div>
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
         </div>
 
+<<<<<<< HEAD
+      <section className='enhanced-card'>
+        <h2 className='text-xl font-semibold mb-2'>All Reviews</h2>
+        <pre className='text-xs whitespace-pre-wrap'>
+          {JSON.stringify(all, null, 2)}
+        </pre>
+      </section>
+    </main>
+=======
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">
           <div className="flex gap-4">
@@ -226,6 +303,7 @@ const AdminReviewsPage: React.FC = () => {
         )}
       </main>
     </>
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   );
 };
 
