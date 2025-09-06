@@ -2,6 +2,7 @@
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 
 import {
   Search
@@ -24,6 +25,30 @@ import {
   Target
   Award
   Lightbulb;} from 'lucide-react';
+=======
+<<<<<<< HEAD
+import {
+  Search,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Rocket,
+  Monitor,
+  Cpu,
+  Zap,
+  Database,
+  Cloud,
+  Lock,
+  Code,
+  Sparkles,
+  Target,
+  Award,;
+  Lightbulb,;} from 'lucide-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
@@ -144,9 +169,12 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
   }
 
 =======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {;
   Search, Star, Users, TrendingUp,;
   DollarSign, Clock, CheckCircle, ArrowRight,;
@@ -314,7 +342,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     >
       <div className="min-h-screen">
         <Head>
@@ -359,7 +391,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className="flex items-center justify-center mb-6">
                 <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
@@ -392,7 +428,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
                   <div className="text-3xl font-bold text-cyan-400">{allServices.length}</div>
                   <div className="text-gray-400">Total Services</div>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
                   <div className="text-3xl font-bold text-purple-400">{aiCount + quantumCount}</div>
@@ -436,7 +476,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
 }
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <input
                     type="text"
                     placeholder="Search services..."
@@ -575,7 +619,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
 }
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               variants={containerVariants  } catch (error) {
     console.error("Error:", error);
@@ -660,7 +708,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-cyan-400">
                         {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-gray-400">
                         <Users className="w-4 h-4" />
@@ -740,7 +792,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
                     <div className="flex items-center justify-between mb-6 text-sm">
                       <div className="flex items-center space-x-1 text-green-400">
                         <TrendingUp className="w-4 h-4" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <span>Average ROI</span>
                       </div>
                       <div className="flex items-center space-x-1 text-blue-400">
@@ -758,7 +814,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
   }
 }
                     <div className="flex gap-3">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <a
                         href={service.link  } catch (error) {
     console.error("Error:", error);
@@ -792,7 +852,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       <div className="text-xs text-gray-400 mb-2">Contact Information:</div>
                       <div className="text-xs text-gray-300 space-y-1">
                         <div>📱 {service.contactInfo.mobile}</div>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <div>✉️ {service.contactInfo.email}</div>
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
@@ -880,7 +944,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -904,7 +972,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 <div className="flex items-center justify-center space-x-3">
                   <div className="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center">
                     <Target className="w-6 h-6 text-cyan-400" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <span className="text-lg text-white">+1 302 464 0950</span>
                 </div>
@@ -931,7 +1003,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
   }
 }
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <a
                   href="/contact" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline">
                   <span className="relative">Start Your Transformation</span>
@@ -1030,4 +1106,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

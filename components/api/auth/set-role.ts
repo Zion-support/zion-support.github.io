@@ -1,12 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
   const { role = "guest", talent } = req.query as {
+=======
+  const { role = "guest", talent } = req.query as {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     role?: string;
     talent?: string;
   }
   export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    const { role = "guest", talent } = req.query as {
+    const { role = "guest", talent } = req.query as {;
       role?: string;
       talent?: string;
     }

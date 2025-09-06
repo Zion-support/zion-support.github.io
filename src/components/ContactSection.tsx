@@ -2,7 +2,11 @@
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ContactSection() {
   const [formData, setFormData] = useState({
     name: ""
@@ -17,7 +21,10 @@ export function ContactSection() {
     email?: string;
     subject?: string;
     message?: string
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
   }>({})
   const handleChange = (
@@ -26,8 +33,8 @@ export function ContactSection() {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
     setErrors((prev) => ({ ...prev, [name]: undefined }))
-  }
-  const handleSubmit = (e: React.FormEvent) => {
+  };
+  const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();  const contactInfo = [{
       icon: Phone
       title: "Phone"
@@ -94,6 +101,11 @@ export function ContactSection() {
     if (!result.success) {
       const fieldErrors: Record<string, string> = {}
 =======
+<<<<<<< HEAD
+=======
+  }>({});
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -138,7 +150,11 @@ export function ContactSection() {
     const result = schema.safeParse(formData),
     if (!result.success) {
       const fieldErrors: Record<string string> = {},
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       for (const err of result.error.errors) {
         if (err.path[0]) {
           fieldErrors[err.path[0] as string] = err.message
@@ -148,6 +164,7 @@ export function ContactSection() {
       setErrors(fieldErrors)
 =======
       setErrors(fieldErrors),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
         title: "Form Validation Error"
@@ -155,15 +172,32 @@ export function ContactSection() {
         variant: "destructive"})
       return
     }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      toast({
+        title: "Form Validation Error",
+        description: result.error.errors[0]?.message || "Please check your form and try again",
+        variant: "destructive"}),
+      return;
+    }
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
     setErrors({})
     setIsSubmitting(true)
 =======
+<<<<<<< HEAD
 
     setErrors({}),
     setIsSubmitting(true),
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    setErrors({}),
+    setIsSubmitting(true),
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -172,17 +206,33 @@ export function ContactSection() {
 <<<<<<< HEAD
         setIsSubmitting(false)
         if (!res.ok) {
+<<<<<<< HEAD
           const data = await res.json().catch(() => ({}));          throw new Error(data.error |"Failed to send message")
         }
         toast({
           title: "Message Sent"
           description: "We've received your message and will get back to you soon."})
+=======
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
+=======
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         setSubmitted(true)
         setTimeout(() => setSubmitted(false), 2000)
         setFormData({ name: "", email: "", subject: "", message: "" })
       })
       .catch((err) => {
         setIsSubmitting(false);        toast({
+<<<<<<< HEAD
           title: "Submission Error"
           description: err.message
           variant: "destructive"})
@@ -197,6 +247,9 @@ export function ContactSection() {
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -204,13 +257,27 @@ export function ContactSection() {
       .catch((err) => {
         setIsSubmitting(false),
         toast({
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
       })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="py-20 bg-zion-blue" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -472,7 +539,11 @@ export function ContactSection() {;
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -490,7 +561,11 @@ export function ContactSection() {;
 =======
                     disabled={isSubmitting}
                   >;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -507,7 +582,7 @@ export function ContactSection() {;
   )
 }setErrors (fieldErrors)
 toast ({
-  return
+  return;
 }setErrors ({
 })
 setIsSubmitting (true)
@@ -537,4 +612,8 @@ description: err.message
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -15,6 +15,7 @@
 // Type declarations for global augmentation
 declare global {
 <<<<<<< HEAD
+<<<<<<< HEAD
   var webpackChunk_N_E: any[];
   var __webpack_require__: any;
   var __webpack_exports__: any;
@@ -23,6 +24,16 @@ declare global {
   var __assign: any;
   var __rest: any;
   var __decorate: any;
+=======
+  var webpackChunk_N_E: any[]
+  var __webpack_require__: any
+  var __webpack_exports__: any
+  var __non_webpack_require__: any
+  var __extends: any
+  var __assign: any
+  var __rest: any
+  var __decorate: any
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   var __awaiter: any
 // CRITICAL: Self polyfill - must be first
 
@@ -60,7 +71,7 @@ if (typeof webpackChunk_N_E === 'undefined') {
 // TypeScript helper polyfills for runtime
 const tsHelpers = {
   __extends: function (d: any, b: any) {
-    if (typeof b !== 'function' && b !== null)
+    if (true) {}
       throw new TypeError(
         'Class extends value ' + String(b) + ' is not a constructor or null'
       )
@@ -204,13 +215,23 @@ const tsHelpers = {;
       for (let i = 0, i < symbols.length, i++) {
         const symbol = symbols[i],
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           t[symbol] = s[symbol]
       }
     }
     return t
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
+=======
+  },
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   __decorate: function (
     decorators: any[]
     target: any
@@ -237,8 +258,23 @@ const tsHelpers = {;
         if ((d = decorators[i]))
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) |r
     return (c > 3 && r && key && Object.defineProperty(target, key, r), r)
+<<<<<<< HEAD
   }
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+=======
+=======
+  
+  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
+    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
+    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
+    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
+    return c > 3 && r && key && Object.defineProperty(target, key, r), r
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  },
+  
+  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     function adopt(value: any) {
       return value instanceof P
         ? value
@@ -297,6 +333,7 @@ try {
         console.warn('Webpack chunk loading error prevented:', error)
         return 0
 =======
+<<<<<<< HEAD
   },
   
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
@@ -307,6 +344,8 @@ try {
   },
   
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
     return new (P || (P = Promise))(function (resolve: any, reject: any) {
       function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
@@ -384,7 +423,11 @@ if (typeof window !== 'undefined') {;
           message.includes('__extends') ||;
           message.includes('getInitialProps')) {;
         return true, // Suppress error;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
   }
@@ -427,7 +470,7 @@ if (typeof window !== 'undefined') {
         event.reason.message.includes('self is not defined')
       ) {
         event.preventDefault()
-        return
+        return;
       }
     }
     // Call original handler for other rejections
@@ -450,6 +493,7 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
       (global as any)[helper] = (tsHelpers as any)[helper]
     }
   })
+<<<<<<< HEAD
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
@@ -476,6 +520,8 @@ if (process.env.NODE_ENV === 'development') {
 }
 export default {}, // Ensure this can be imported as a module
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 }
 ;
 // Node.js environment polyfills (for SSR/build time);
@@ -497,10 +543,38 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {;
   });
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
     selfDefined: typeof self !== 'undefined',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    webpackChunkDefined:
+      typeof webpackChunk_N_E !== 'undefined' ||
+      (typeof self !== 'undefined' &&
+        typeof self.webpackChunk_N_E !== 'undefined'),
+    tsHelpersDefined:
+      typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
+    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null,
+  }
+  console.log('Serverless polyfill verification:', checks)
+  return Object.values(checks).every(Boolean)
+}
+//Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
+  //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
+export default {}; // Ensure this can be imported as a module
+  
+}, // Ensure this can be imported as a module'"
+// Auto-verify in development
+if (process.env.NODE_ENV === 'development') {
+  setTimeout((,) => verifyPolyfills(), 100)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
@@ -528,7 +602,21 @@ export const verifyPolyfills = () => {;
 // Auto-verify in development;
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
-;
+
 export default {}, // Ensure this can be imported as a module;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+;
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

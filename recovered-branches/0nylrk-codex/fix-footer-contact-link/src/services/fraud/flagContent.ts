@@ -12,7 +12,19 @@ import { FlagResult } from './types',
 /**
  * Flag content for review
  */
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+export const flagContent = async (;
+  userId: string;
+  userEmail: string | undefined;
+  contentType: FraudFlag['content_type'];
+  contentId: string;
+  contentExcerpt: string;
+  severity: FraudSeverity;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const flagContent = async (
 <<<<<<< HEAD
   userId: string;
@@ -29,6 +41,7 @@ export const flagContent = async (
   contentId: string,
   contentExcerpt: string,
   severity: FraudSeverity,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   reason: string,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ipAddress?: string
@@ -83,6 +96,17 @@ export const flagContent = async (
     
     if (error) throw error,
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return { success: true }
+  } catch (error) {
+    console.error('Error flagging content:', error);
+    return { 
+      success: false, 
+      error: error instanceof Error ? error.message : 'Unknown error' 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Content flagging functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { FraudSeverity, FraudFlag } from '@/types/fraud',;
@@ -127,6 +151,10 @@ export const flagContent = async (;
     return {;
       success: false;
       error: error instanceof Error ? error.message : 'Unknown error';
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 };

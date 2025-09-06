@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
+import {Card, CardContent} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Loader2, Info, ThumbsUp} from "lucide-react";
+import {PricingSuggestion} from "@/services/pricingSuggestionService";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
@@ -10,7 +22,11 @@ import { PricingSuggestion } from "@/services/pricingSuggestionService";
 =======
 import { Loader2, Info, ThumbsUp } from "lucide-react",
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PricingSuggestionBoxProps {
 
   suggestion: PricingSuggestion | null
@@ -19,6 +35,15 @@ interface PricingSuggestionBoxProps {
 
   rateType: "hourly" | "fixed"
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
+  suggestion;
+  isLoading;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 <<<<<<< HEAD
   suggestion;
@@ -28,6 +53,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 =======
   suggestion,
   isLoading,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onApplySuggestion,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   rateType}) => {
@@ -78,7 +104,11 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         </CardContent>;
       </Card>;
     );
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   if (!suggestion) {
     return null
@@ -137,8 +167,12 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
+=======
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 },
 ;
@@ -194,4 +228,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 };
 
 export default PricingSuggestionBox;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

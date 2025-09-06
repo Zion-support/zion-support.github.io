@@ -7,11 +7,14 @@ interface ReputationDisplayProps {
 
 export const ReputationDisplay = ({
   reputation
+<<<<<<< HEAD
   size = 'md',}: ReputationDisplayProps) => {
 export const ReputationDisplay = ({
   reputation
   size = 'md'
 }: ReputationDisplayProps,) => {
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 import { Trophy } from 'lucide-react'
@@ -23,6 +26,10 @@ interface ReputationDisplayProps {
 
 export const ReputationDisplay = ({ 
   reputation,
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   size = 'md' 
 }: ReputationDisplayProps) => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -34,8 +41,13 @@ export const ReputationDisplay = ({
   const sizeClasses = {
     sm: {
 <<<<<<< HEAD
+<<<<<<< HEAD
       container: 'text-xs'
       icon: 'w-3 h-3'
+=======
+      container: 'text-xs',
+      icon: 'w-3 h-3',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       progress: 'h-1',  // Styling based on size
   const sizeClasses = {
     sm: {
@@ -56,7 +68,11 @@ export const ReputationDisplay = ({
       container: "text-base",
       icon: "w-5 h-5",
       progress: "h-3"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     md: {
       container: "text-sm"
@@ -92,7 +108,11 @@ import { Progress } from "@/components/ui/progress",;
 interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export default ReputationDisplay
 '
@@ -123,6 +143,7 @@ export default ReputationDisplay
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 export default ReputationDisplay
 '
@@ -145,3 +166,12 @@ export default ReputationDisplay
 };
 export default ReputationDisplay;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+};
+export default ReputationDisplay;
+<<<<<<< HEAD
+';
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

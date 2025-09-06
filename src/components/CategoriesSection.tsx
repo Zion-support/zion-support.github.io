@@ -2,18 +2,29 @@
 <<<<<<< HEAD
 color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ...cat
 import { GradientHeading } from "./GradientHeading"
 import Link from "next/link"
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
 import { cn } from "@/lib/utils"
 import { useTranslation } from "react-i18next"
+<<<<<<< HEAD
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
   id: string
   name: string
   description?: string
+=======
+=======
+        ...cat;
+import { GradientHeading } from "./GradientHeading";
+import Link from "next/link";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 =======
 import { GradientHeading } from "./GradientHeading",
@@ -22,13 +33,25 @@ import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
   id: string,
   name: string,
+<<<<<<< HEAD
   description?: string,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  description?: string
+=======
+  description?: string,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
@@ -71,6 +94,19 @@ const categories = [{
 const specialServices = [{
     title: "IT Onsite Services"
     link: "/it - onsite - services"
+<<<<<<< HEAD
+=======
+},
+  {
+    title: "Comprehensive Services",
+    link: "/comprehensive - services"
+},
+  {
+    title: "Services Comparison",
+    link: "/services - comparison"
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   {
     title: "Comprehensive Services"
@@ -100,7 +136,11 @@ const getDefaultCategories = (t: any) => [
   }
 =======
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
     id: "talents"
     name: t('categories.talents')
@@ -257,7 +297,11 @@ export function CategoriesSection({
   const { t } = useTranslation(),
   const defaultCategories = getDefaultCategories(t),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
@@ -271,10 +315,16 @@ export function CategoriesSection({
     : defaultCategories.map(cat => ({
 <<<<<<< HEAD
         ...cat
+<<<<<<< HEAD
         title: cat.name
         icon: getIcon(cat.iconName)}))
 =======
         ...cat,
+=======
+=======
+        ...cat,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         title: cat.name,
         icon: getIcon(cat.iconName)})),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -295,12 +345,19 @@ export function CategoriesSection({
         </div>
       </section>
     )
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           </p>;
         </div>;
       </section>;
     );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -324,7 +381,15 @@ export function CategoriesSection({
 =======
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<<<<<<< HEAD
           {displayCategories.map((category) => (
+=======
+<<<<<<< HEAD
+          {displayCategories.map((category,) => (
+=======
+          {displayCategories.map((category) => (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Link
               key={category.id}
               href={category.link || '#'}
@@ -346,7 +411,11 @@ export function CategoriesSection({
         </div>
 =======
         </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
@@ -375,7 +444,11 @@ export function CategoriesSection({
           </div>
         </div>
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mt-12 flex justify-center">
           <Link
             href="/categories/all"
@@ -406,10 +479,17 @@ style
 categories: fetchedCategories, //Rename prop for clarity
 }: CategoriesSectionProps) {
   const {
+<<<<<<< HEAD
   t
 }= useTranslation ()
 const defaultCategories = getDefaultCategories (t)
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
+=======
+  t ;
+}= useTranslation ();
+const defaultCategories = getDefaultCategories (t);
+//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
@@ -444,4 +524,8 @@ icon: getIcon (cat.iconName)
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

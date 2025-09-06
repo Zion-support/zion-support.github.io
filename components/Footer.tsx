@@ -15,6 +15,7 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight
 import React from "react";
 import Link from "next/link";
 import {
+<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -23,6 +24,16 @@ import {
   Linkedin
   Instagram
   ArrowRight
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  ArrowRight,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -35,10 +46,14 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
 
+<<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function Footer() {
+=======
+export default function Footer() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     services: [
@@ -147,6 +162,7 @@ export default function Footer() {
               cybersecurity, cloud infrastructure, quantum computing,
               blockchain, IoT, and digital transformation services.
             </p>
+<<<<<<< HEAD
 
 =======
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
@@ -160,6 +176,8 @@ export default function Footer() {
               blockchain, IoT, and digital transformation services.
             </p>
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
@@ -325,6 +343,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
             <h3 className="text-lg font-semibold mb-6>Services</h3>
@@ -361,6 +380,8 @@ const Footer: React.FC = () => {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
@@ -397,6 +418,7 @@ const Footer: React.FC = () => {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -410,6 +432,8 @@ const Footer: React.FC = () => {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Company & Resources */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -444,6 +468,7 @@ const Footer: React.FC = () => {
               ))}
             </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -464,6 +489,8 @@ const Footer: React.FC = () => {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (

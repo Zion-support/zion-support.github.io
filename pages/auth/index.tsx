@@ -1,20 +1,30 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 const steps = ["Account", "Profile", "Preferences", "Preview"];
+<<<<<<< HEAD
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0);
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1));
   const prev = () => setStep((s) => Math.max(s - 1, 0));
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 const steps = ['AccountProfilePreferencesPreview'],
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0),
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
@@ -80,7 +90,11 @@ const Onboarding: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </div>
       <div className="flex gap-2">
         <EnhancedButton variant="secondary" onClick={prev} disabled={step === 0}>Back</EnhancedButton>
@@ -91,9 +105,16 @@ const Onboarding: NextPage = () => {
   );
 }
 export default Onboarding;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
 },
 export default Onboarding,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

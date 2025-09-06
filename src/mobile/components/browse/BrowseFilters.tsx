@@ -11,6 +11,7 @@ import {
   SelectTrigger
   SelectValue
 } from '@/components/ui/select'
+<<<<<<< HEAD
 import { X, Filter } from 'lucide-react'
 
   Sheet
@@ -29,17 +30,38 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const addFilter = null;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
 import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  type: 'jobs' | 'talents'
+export function BrowseFilters({ type }: BrowseFiltersProps) {
+  const [activeFilters, setActiveFilters] = useState<string[]>([])
+  const addFilter = (filter: string) => {    if (!activeFilters.includes(filter)) {
+      setActiveFilters([...activeFilters, filter])
+    }
+  }
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   type: "jobs" | "talents"
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -67,7 +89,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -90,7 +116,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <>
                     <div className="space-y-2">
                       <Label>Job Type</Label>
@@ -106,7 +136,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 =======
                     
                     <div className="space-y-2">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <Label>Experience Level</Label>
                       <div className="flex gap-2 flex-wrap">
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
@@ -148,7 +182,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         className="my-4"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <span>0+ years</span>
                         <span>20+ years</span>
                       </div>
@@ -179,7 +217,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 =======
                 
                 <div className="space-y-2">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Label>Salary Range</Label>
                   <div className="flex gap-4 items-center">
                     <Input placeholder="Min" type="number" className="w-full" />
@@ -192,7 +234,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 =======
                 
                 <div className="space-y-2">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Label>Skills</Label>
                   <div className="grid grid-cols-2 gap-2">
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
@@ -208,7 +254,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 =======
                 
                 <div className="flex items-center justify-between">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
@@ -216,7 +266,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 <<<<<<< HEAD
 =======
               
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <SheetFooter>
                 <Button variant="outline" className="w-full">Reset</Button>
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
@@ -226,7 +280,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Select>
             <SelectTrigger className="w-[120px] h-8">
               <SelectValue placeholder="Sort By" />
@@ -251,10 +309,17 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
             </Badge>
           ))}
         </div>
+<<<<<<< HEAD
       </div>
     </div>
   )
 }
+=======
+      </div>;
+    </div>;
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           
           {activeFilters.map((filter) => (
@@ -276,4 +341,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

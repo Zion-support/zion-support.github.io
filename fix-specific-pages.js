@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ')
 
+=======
+'),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (parts.length > 1) {
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0]
@@ -77,7 +81,11 @@ function restorePage(pagePath) {;
       if (parts.length > 1) {;
         // Take the content after the conflict resolution;
         backupContent = parts[1].split('>>>>>>>')[0];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
     // Clean up the content
@@ -89,6 +97,10 @@ function restorePage(pagePath) {;
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Create a backup of the current corrupted file
 
     const timestamp = Date.now()
@@ -113,12 +125,23 @@ function restorePage(pagePath) {;
       restored: true,;
       backupUsed: backupPath,;
       corruptedBackup: corruptedBackupPath;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Function to fix specific corrupted pages
 function fixSpecificPages() {
   const results = {
@@ -128,9 +151,22 @@ function fixSpecificPages() {
     failed: 0
     details: []
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   console.log('🚀 Starting targeted page restoration...')
   console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`)
+=======
+  },
+<<<<<<< HEAD
+  
+  console.log('🚀 Starting targeted page restoration...'),
+  console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
+  
+=======
+  // // // console.log('🚀 Starting targeted page restoration...'),
+  // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   for (const pagePath of corruptedPages) {
     if (!fs.existsSync(pagePath)) {
       console.log(`⚠️  Page not found: ${pagePath}`)
@@ -154,10 +190,18 @@ function fixSpecificPages() {
       continue
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log(`\n🔍 Checking: ${pagePath}`)
     const result = restorePage(pagePath)
 =======
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
+=======
+    
+    console.log(`\n🔍 Checking: ${pagePath}`),
+=======
+    // // // console.log(`\n🔍 Checking: ${pagePath}`),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const result = restorePage(pagePath),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (result.restored) {
@@ -167,9 +211,15 @@ function fixSpecificPages() {
       console.log(`   Corrupted backup: ${result.corruptedBackup}`)
     } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
       results.failed++
       console.log(`❌ Failed: ${pagePath}`)
 
+=======
+      results.failed++,
+<<<<<<< HEAD
+      console.log(`❌ Failed: ${pagePath}`),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       console.log(`   Reason: ${result.reason}`)
     }
     results.details.push({
@@ -191,7 +241,10 @@ function fixSpecificPages() {
 
   return results
 =======
+<<<<<<< HEAD
       results.failed++,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // // // console.log(`❌ Failed: ${pagePath}`),
       // // // console.log(`   Reason: ${result.reason}`)
 ;
@@ -258,12 +311,17 @@ function fixSpecificPages() {;
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
   return results;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 // Run the restoration if this script is executed directly
 if ({
   fixSpecificPages()
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = {
 
@@ -282,3 +340,18 @@ module.exports = {;
 =======
 >>>>>>> main
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+module.exports = {
+  restorePage,
+  fixSpecificPages,
+  findBestBackup;
+<<<<<<< HEAD
+},;
+
+=======
+};
+=======
+>>>>>>> main
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '../components/SEO';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Layout from '../components/layout/Layout';
 
 import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
 import {real2036ITServices} from '../data/real-2036-it-services';
 import {real2036AIServices} from '../data/real-2036-ai-services';
 import {motion} from 'framer-motion';
+<<<<<<< HEAD
 const ComprehensiveServicesShowcase2036: React.FC = () => {
   const allServices = [
     ...real2036InnovativeServices
@@ -14,11 +21,20 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     ...real2036AIServices,  ];
   const categories = [...new Set(allServices.map(service => service.category))]
 =======
+=======
+=======
+import React from 'react',
+import SEO from '../components/SEO',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Layout from '../components/layout/Layout',
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
 import { real2036ITServices } from '../data/real-2036-it-services',
 import { real2036AIServices } from '../data/real-2036-ai-services',
 import { motion } from 'framer-motion',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const ComprehensiveServicesShowcase2036: React.FC = () => {
   const allServices = [
     ...real2036InnovativeServices,
@@ -50,7 +66,11 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 animate-pulse"></div>
           <div className="relative z-10 max-w-7xl mx-auto text-center">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.h1
               initial={{ opacity: 0, y: 50 }  } catch (error) {
     console.error("Error:", error);
@@ -130,7 +150,11 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 }
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -195,7 +219,11 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <h3 className="text-2xl font-bold mb-4 text-cyan-400">{category}</h3>
                   <p className="text-gray-300 mb-4">
@@ -261,7 +289,11 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
               className="text-center mb-16"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Featured Revolutionary Services
@@ -442,7 +474,11 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
               className="text-center mb-16"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Complete Service Portfolio
@@ -489,7 +525,11 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
                 className="mb-16"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <h3 className="text-3xl font-bold mb-8 text-center text-cyan-400">{category}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -528,7 +568,11 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
                         className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-2xl">{service.icon}</span>
@@ -572,7 +616,11 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                         <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
                           View Details
@@ -625,7 +673,11 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
               className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
@@ -646,6 +698,14 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ),
+};
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 <<<<<<< HEAD
 }
@@ -677,5 +737,9 @@ export default ComprehensiveServicesShowcase2036,
     </Layout>;
   );
 },;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ComprehensiveServicesShowcase2036;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

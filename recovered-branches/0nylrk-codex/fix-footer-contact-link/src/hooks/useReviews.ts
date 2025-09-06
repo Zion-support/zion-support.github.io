@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Review, ReviewReport} from "@/types/reviews";
+import {toast} from "@/hooks/use-toast";
+export function useReviews(projectId?: string) {;
+  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [userReview, setUserReview] = useState<Review | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -20,6 +36,7 @@ export function useReviews(projectId?: string) {
   const [reviews, setReviews] = useState<Review[]>([]),
   const [userReview, setUserReview] = useState<Review | null>(null),
   const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Fetch reviews for a project
@@ -237,6 +254,11 @@ export function useReviews(projectId?: string) {
           title: "Error",
           description: "Failed to submit review",
           variant: "destructive"})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -275,18 +297,26 @@ export function useReviews(projectId?: string) {;
         if (!userReviewError && userReviewData) {;
           setUserReview(userReviewData);
         }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       return false
     } finally {
       setIsSubmitting(false)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false;
     setIsSubmitting(true)
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   },;
   // Fetch reviews for a user (to display on profile);
@@ -370,6 +400,10 @@ export function useReviews(projectId?: string) {;
       setIsSubmitting(false);
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
@@ -476,6 +510,10 @@ export function useReviews(projectId?: string) {;
         title: "Error";
         description: "Failed to report review"
         variant: "destructive"})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return false
   }
@@ -491,9 +529,12 @@ export function useReviews(projectId?: string) {;
     fetchProjectReviews;
     fetchUserReviews;
 =======
+<<<<<<< HEAD
         title: "Error",
         description: "Failed to report review",
         variant: "destructive"})
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },;
   // Update a review;
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {;
@@ -574,7 +615,11 @@ export function useReviews(projectId?: string) {;
     isSubmitting,;
     fetchProjectReviews,;
     fetchUserReviews,;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     submitReview;
     updateReview;
 

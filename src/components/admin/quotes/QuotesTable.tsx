@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
   quotes
   isArchived = false
 import React from "react"
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {
   Table
+<<<<<<< HEAD
   TableBody
   TableCell
   TableHead
@@ -16,10 +20,24 @@ import {
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
+=======
+  TableBody, 
+  TableCell, 
+  TableHead, 
+  TableHeader, ;
+  TableRow ;
+} from "@/components/ui/table"; import { Button } from "@/components/ui/button"
+import { 
+  DropdownMenu
+  DropdownMenuContent, 
+  DropdownMenuItem, ;
+  DropdownMenuTrigger ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge"
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes"
 import {formatDate} from "@/utils/dateUtils"
 interface QuotesTableProps {
+<<<<<<< HEAD
   quotes: QuoteRequest[]
   isArchived?: boolean
   isLoading: boolean
@@ -28,6 +46,15 @@ interface QuotesTableProps {
   deleteQuote: (id: string,) => void
   onViewDetails: (quote: QuoteRequest,) => void
 =======
+=======
+  quotes: QuoteRequest[],
+  isArchived?: boolean
+=======
+quotes;
+  isArchived = false;
+import React from "react";
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
 import { 
@@ -51,6 +78,10 @@ import { formatDate } from "@/utils/dateUtils",
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isLoading: boolean,
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
@@ -62,19 +93,29 @@ interface QuotesTableProps {
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   quotes
   isArchived = false
   isLoading
   updateStatus
   toggleArchive
+<<<<<<< HEAD
   deleteQuote
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   quotes,
   isArchived = false,
   isLoading,
   updateStatus,
   toggleArchive,
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   deleteQuote,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onViewDetails
@@ -165,7 +206,11 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 <<<<<<< HEAD
 =======
                     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {isArchived ? (
                       <>
                         <Button
@@ -229,9 +274,18 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
+<<<<<<< HEAD
                               }
                             }}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+                              } }}
+=======
+                              }
+                            }}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             className="text-red-500"
                           >
                             <Trash2 className="h-4 w-4 mr-2" />
@@ -416,7 +470,11 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                   </div>
                 </TableCell>
@@ -427,14 +485,24 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
         </TableBody>
       </Table>
     </div>
+<<<<<<< HEAD
   )
 }
 '"
 
+=======
+  );
+};
+'";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         </TableBody>;
       </Table>;
     </div>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

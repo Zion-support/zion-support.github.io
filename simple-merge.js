@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 <<<<<<< HEAD
 console.log('🚀 Starting simple merge process...');
@@ -20,6 +21,13 @@ try {// Check git status;
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     if (conflictFiles.trim()) {console.log('Found merge conflicts in:', conflictFiles.trim());
 =======
+=======
+<<<<<<< HEAD
+const { execSync } = require('child_process'),;
+=======
+const { execSync } = require('child_process');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 console.log('🚀 Starting simple merge process...'),;
 try {;
   // Check git status;
@@ -45,7 +53,15 @@ try {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Resolve conflicts by accepting our version;
+<<<<<<< HEAD
       const files = conflictFiles.trim().split('\n');
+=======
+<<<<<<< HEAD
+      const files = conflictFiles.trim().split('\n'),;
+=======
+      const files = conflictFiles.trim().split('\n');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       for (const file of files) {;
         if (file.trim()) {;
 <<<<<<< HEAD
@@ -109,7 +125,15 @@ try {;
   const branches = execSync('git branch -r', { encoding: 'utf8' }),;
   const branchList = branches.split('\n');
     .map(branch => branch.trim());
+<<<<<<< HEAD
     .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+=======
+<<<<<<< HEAD
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
+=======
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   console.log(`Found ${branchList.length} branches to merge: `),;
   branchList.forEach(branch => console.log(`  - ${branch}`)),;
   // Merge each branch;

@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React from 'react',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Shield
   Lock
   Eye
@@ -83,6 +89,25 @@ export default function CybersecurityServicesPage() {
   ];
 
 =======
+=======
+  Shield,
+  Lock,
+  Eye,
+  Zap,
+  Cpu,
+  Database,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,;
+  TrendingUp,;
+} from 'lucide-react';
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
+=======
+import React from 'react',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -91,6 +116,10 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CybersecurityServicesPage() {
   const services = [
     {
@@ -123,6 +152,12 @@ export default function CybersecurityServicesPage() {
       features: ["Identity Verification", "Access Control", "Network Segmentation", "Continuous Monitoring"],
       price: "From $15,000",
       icon: Zap,
+<<<<<<< HEAD
+      color: 'from-emerald-500 to-teal-500',
+    },;
+  ];
+
+=======
       color: "from-emerald-500 to-teal-500"
       } catch (error) {
     console.error("Error:", error);
@@ -130,6 +165,7 @@ export default function CybersecurityServicesPage() {
   }
 }
   ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const stats = [
     { number: "99.99%", label: "Threat Detection Rate", icon: Shield },
     { number: "24/7", label: "Security Monitoring", icon: Eye },
@@ -201,7 +237,11 @@ export default function CybersecurityServicesPage() {
   }
 }
             className="mb-8"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-red-400 bg-clip-text text-transparent mb-6">
               Cybersecurity
@@ -218,13 +258,21 @@ export default function CybersecurityServicesPage() {
             className='mb-12'
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
+<<<<<<< HEAD
               From AI-powered threat detection to quantum-resistant encryption
+=======
+              From AI-powered threat detection to quantum-resistant encryption,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               we provide comprehensive cybersecurity solutions that keep your
               business secure and compliant.
 =======
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Advanced security solutions that protect your digital assets and ensure business continuity
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
           </motion.div>
           <motion.div
@@ -445,7 +493,11 @@ export default function CybersecurityServicesPage(req, res) {
   }
 }
                 className="text-center"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-orange-400" />
@@ -508,7 +560,11 @@ export default function CybersecurityServicesPage(req, res) {
   }
 }
             className="text-center mb-16"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold text-white mb-6">Cybersecurity Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -554,7 +610,11 @@ export default function CybersecurityServicesPage(req, res) {
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-red-500/30 transition-all duration-300"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
@@ -591,7 +651,11 @@ export default function CybersecurityServicesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </ul>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-orange-400">{service.price}</span>
@@ -649,7 +713,11 @@ export default function CybersecurityServicesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Secure Your Business?
@@ -671,8 +739,14 @@ export default function CybersecurityServicesPage(req, res) {
       <EnhancedFooter />
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) )
+=======
+),
+
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30
@@ -686,6 +760,13 @@ export default function CybersecurityServicesPage(req, res) {
   {
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+<<<<<<< HEAD
+=======
+
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
           >;
@@ -714,4 +795,8 @@ export default function CybersecurityServicesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

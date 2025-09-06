@@ -1,6 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 export default function UltraFuturisticBackground2035() {
+=======
+export default function UltraFuturisticBackground2035() {;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -233,8 +238,13 @@ export default function UltraFuturisticBackground2035() {
             y: [0, -20, 0];
             opacity: [0.4, 0.7, 0.4]
           transition={{
+<<<<<<< HEAD
             duration: 12
             repeat: Infinity
+=======
+            duration: 12,
+            repeat: Infinity,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
@@ -279,7 +289,11 @@ export default function UltraFuturisticBackground2035() {
 
         </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -302,6 +316,7 @@ export default function UltraFuturisticBackground2035() {
               scale: [0, 1, 0]
             }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             transition={{
               duration: 3 + Math.random() * 2
               repeat: Infinity
@@ -312,14 +327,30 @@ export default function UltraFuturisticBackground2035() {
         ))}
 =======
 
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',            }}
 
             }}
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
         ))}
 
@@ -370,13 +401,25 @@ export default function UltraFuturisticBackground2035() {
             duration: 4,
             repeat: Infinity,
             delay: 2,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            ease: 'easeInOut',          }}            ease: "easeInOut"
+          }}
+        />
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'easeInOut',          }}
 
           }}
 
         />
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (
           <motion.div
@@ -399,10 +442,21 @@ export default function UltraFuturisticBackground2035() {
               rotate: [0, 360]
             }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             transition={{
               duration: 5 + Math.random() * 3
               repeat: Infinity
               delay: Math.random() * 5
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+            transition={{
+              duration: 5 + Math.random() * 3,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
@@ -410,11 +464,14 @@ export default function UltraFuturisticBackground2035() {
         {/* Neural Network Connections */}
         <svg className='absolute inset-0 w-full h-full opacity-20'>
 =======
+<<<<<<< HEAD
 
             transition={{
               duration: 5 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 5,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',            }}
 
             }}
@@ -425,7 +482,11 @@ export default function UltraFuturisticBackground2035() {
         {/* Neural Network Connections */}
         <svg className='absolute inset-0 w-full h-full opacity-20'>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <defs>
             <linearGradient
               id='neuralGradient'
@@ -468,9 +529,16 @@ export default function UltraFuturisticBackground2035() {
                 opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
+<<<<<<< HEAD
                 duration: 4
                 repeat: Infinity
                 delay: i * 0.5
+=======
+                duration: 4,
+                repeat: Infinity,
+                delay: i * 0.5,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
             />
@@ -479,6 +547,7 @@ export default function UltraFuturisticBackground2035() {
         {/* Holographic Effects */}
         <div className='absolute inset-0'>
 =======
+<<<<<<< HEAD
                 r: [3, 6, 3],
                 opacity: [0.3, 0.8, 0.3],              }}
 
@@ -488,6 +557,8 @@ export default function UltraFuturisticBackground2035() {
                 duration: 4,
                 repeat: Infinity,
                 delay: i * 0.5,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ease: 'easeInOut',              }}
 
               }}
@@ -499,7 +570,11 @@ export default function UltraFuturisticBackground2035() {
         {/* Holographic Effects */}
         <div className='absolute inset-0'>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.div
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
             animate={{
@@ -542,6 +617,7 @@ export default function UltraFuturisticBackground2035() {
             }}
             transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
               duration: 15
               repeat: Infinity
               ease: 'linear',              ease: "linear"
@@ -553,6 +629,18 @@ export default function UltraFuturisticBackground2035() {
             }}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+              duration: 15,
+              repeat: Infinity,
+<<<<<<< HEAD
+              ease: 'linear',              ease: "linear"
+            }}
+=======
+
+            }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
         </div>
         {/* Data Streams */}
@@ -560,7 +648,11 @@ export default function UltraFuturisticBackground2035() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={`stream-${i}`}
@@ -589,6 +681,7 @@ export default function UltraFuturisticBackground2035() {
                 opacity: [0.3, 1, 0.3]
               }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               transition={{
                 duration: 2 + Math.random() * 2
                 repeat: Infinity
@@ -596,14 +689,31 @@ export default function UltraFuturisticBackground2035() {
                 ease: 'easeInOut',              }}                ease: "easeInOut"
 =======
 
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ease: 'easeInOut',              }}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
               }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
           ))}
         </div>
@@ -614,4 +724,8 @@ export default function UltraFuturisticBackground2035() {
 }
 =======
   );
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

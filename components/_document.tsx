@@ -3,11 +3,19 @@
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Document, {
+<<<<<<< HEAD
   Html
   Head
   Main
   NextScript
   DocumentContext;
+=======
+  Html,
+  Head,
+  Main,
+  NextScript,;
+  DocumentContext,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'next/document';
 <<<<<<< HEAD
 
@@ -29,7 +37,7 @@ export default function Document() {
           href='https://fonts.gstatic.com'
           crossOrigin=''
         />
-        <link
+        <link;
           href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap'
           rel='stylesheet'
         />      </Head>        <link rel="icon" href="/favicon.ico" />

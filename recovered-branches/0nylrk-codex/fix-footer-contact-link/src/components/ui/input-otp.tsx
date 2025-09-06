@@ -2,11 +2,18 @@
 import * as React from 'react';
 import {OTPInput, OTPInputContext} from 'input-otp';
 import {Dot} from 'lucide-react';
+<<<<<<< HEAD
 import {cn} from '@/lib/utils';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { cn } from "@/lib/utils"
 
@@ -64,6 +71,12 @@ const InputOTPSlot = React.forwardRef<
   const inputOTPContext = React.useContext(OTPInputContext) as any
   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    >
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div
       ref={ref}
@@ -74,7 +87,11 @@ const InputOTPSlot = React.forwardRef<
       )}
       {...props}
     >;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {char}
       {hasFakeCaret && (
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
@@ -110,6 +127,15 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ))
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
+<<<<<<< HEAD
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
+=======
+export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

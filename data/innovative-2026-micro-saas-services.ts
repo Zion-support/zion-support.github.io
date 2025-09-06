@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
-export interface Innovative2026MicroSaasService {
+export interface Innovative2026MicroSaasService {;
   id: string;
   name: string;
   tagline: string;
@@ -901,12 +901,21 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
       }
       realImplementation: true
       implementationDetails:
+<<<<<<< HEAD
         'Advanced quantum blockchain infrastructure with quantum-secured transactions, smart contract automation, and DeFi integration. Includes developer tools and comprehensive APIs.'
       launchDate: '2026-02-10'
       customers: 800
       rating: 4.8
       reviews: 500
     }
+=======
+        'Advanced quantum blockchain infrastructure with quantum-secured transactions, smart contract automation, and DeFi integration. Includes developer tools and comprehensive APIs.',
+      launchDate: '2026-02-10',
+      customers: 800,
+      rating: 4.8,
+      reviews: 500,
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Quantum-secured blockchainPost-quantum cryptographyUltra-fast transactionsSmart contract automationDeFi protocol integrationCross-chain interoperabilityQuantum-resistant walletsAdvanced security features';
       'Performance analyticsDeveloper tools and APIs'
@@ -965,8 +974,11 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     customers: 800;
     rating: 4.8;
     reviews: 500
+<<<<<<< HEAD
   }
 ];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026MicroSaasService {;
@@ -1450,6 +1462,10 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     customers: 800,;
     rating: 4.8;
     reviews: 500;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

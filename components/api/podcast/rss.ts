@@ -22,10 +22,17 @@ function ensureStorage() {
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
+<<<<<<< HEAD
   const siteUrl = process.env.SITE_URL |'http://localhost:3000';
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+  const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const items = episodes
     .filter(e => e.audio?.mp3Url)
@@ -65,6 +72,7 @@ fs.writeFileSync(RSS_PATH, xml, 'utf8');
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
 <<<<<<< HEAD
+<<<<<<< HEAD
   items
 }</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
@@ -73,3 +81,15 @@ fs.writeFileSync(RSS_PATH, xml, 'utf8');
   items 
 }</channel> </rss>`;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  items 
+<<<<<<< HEAD
+}</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
+}
+
+}
+}
+=======
+}</channel> </rss>`;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

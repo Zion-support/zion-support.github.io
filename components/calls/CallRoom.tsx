@@ -1,12 +1,21 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 import {
+<<<<<<< HEAD
   Room
   RoomEvent
   RemoteParticipant
   LocalParticipant
   createLocalTracks
   VideoPresets;
+=======
+  Room,
+  RoomEvent,
+  RemoteParticipant,
+  LocalParticipant,
+  createLocalTracks,;
+  VideoPresets,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
@@ -22,6 +31,7 @@ type Props = {
   onLeave?: (durationSec: number) => void;
 }
 export default function CallRoom({
+<<<<<<< HEAD
   projectId
   userId
   displayName
@@ -31,6 +41,17 @@ export default function CallRoom({
   startMode
   onLeave
 }: Props) {
+=======
+  projectId,
+  userId,
+  displayName,
+  roomName,
+  serverUrl,
+  token,
+  startMode,
+  onLeave,
+}: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<
     Array<RemoteParticipant | LocalParticipant>
@@ -46,8 +67,14 @@ type Props = {
   token: string
   startMode: StartMode
   onLeave?: (durationSec: number) => void
+<<<<<<< HEAD
 }
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
+=======
+};
+
+export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -126,6 +153,10 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 =======
 
   };
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const gridCols = useMemo(() => {
@@ -174,4 +205,8 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

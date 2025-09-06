@@ -56,7 +56,11 @@ const vagueScammyJobPhrases = [;
 function containsSuspiciousHost(text: string): boolean {;
   const lower = text.toLowerCase(),;
   return suspiciousLinkHosts.some((host) => lower.includes(host));
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/fraud/heuristics.ts
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/heuristics.ts
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 function containsSuspiciousPhrase(text: string): string[] {
   const lower = text.toLowerCase();
@@ -74,14 +78,20 @@ function containsVagueJobClaims(text: string): string[] {
 }
 export interface HeuristicDeps {
   countEventsByIp: (
+<<<<<<< HEAD
     ip: string
     source: MonitoredSource
     withinMinutes: number
+=======
+    ip: string,
+    source: MonitoredSource,
+    withinMinutes: number;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ) => Promise<number>;
 export async function evaluateHeuristics(
   event: FraudEvent
   deps: HeuristicDeps
-): Promise<HeuristicEvaluation> {
+): Promise<HeuristicEvaluation> {;
   const reasons: string[] = [];
   let severity: HeuristicEvaluation['severity'] = 'low';
   if (event.source === 'signup' && event.ipAddress) {
@@ -119,7 +129,7 @@ export async function evaluateHeuristics(
   }
 <<<<<<< HEAD:utils/fraud/heuristics.ts
 export function runHeuristics(data: any): HeuristicResult {
-  // Mock implementation - in production, this would run actual fraud detection heuristics
+  // Mock implementation - in production, this would run actual fraud detection heuristics;
   const flags = new Set<string>();
   // Simple heuristics
   if (data.email && data.email.includes('test')) flags.add('test_email');
@@ -140,6 +150,17 @@ export function runHeuristics(data: any): HeuristicResult {
     reasons;
     severity}
 }
+<<<<<<< HEAD
 =======
 >>>>>>> main:utils/fraud/heuristics.ts
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/fraud/heuristics.ts
+=======
+<<<<<<< HEAD:utils/fraud/heuristics.ts
+
+}
+}
+=======
+=======
+>>>>>>> main:utils/fraud/heuristics.ts
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/heuristics.ts
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

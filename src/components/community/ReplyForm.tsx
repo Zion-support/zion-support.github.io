@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
@@ -14,11 +15,27 @@ import {
 } from '@/components/ui/form'
 import { Card, CardContent } from '@/components/ui/card'
 =======
+=======
+import { useState } from 'react'
+import { useForm, ControllerRenderProps } from 'react-hook-form'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  FormMessage,
+} from '@/components/ui/form'
+import { Card, CardContent } from '@/components/ui/card'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
@@ -34,6 +51,10 @@ import {
 import { Card, CardContent } from "@/components/ui/card",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
@@ -45,10 +66,17 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const form = useForm<ReplyFormValues>({
     defaultValues: {
+<<<<<<< HEAD
       content: ''
     }
   })
   const handleSubmit = async (values: ReplyFormValues) => {
+=======
+      content: '',;
+    },;
+  });
+  const handleSubmit = async (values: ReplyFormValues) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setIsSubmitting(true);    try {
       await onSubmit(values.content)
       form.reset()
@@ -95,7 +123,11 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
     }
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card>
       <CardContent className="pt-6">
@@ -142,7 +174,11 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             />
             <div className="mt-4 flex justify-end">
@@ -155,10 +191,25 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 }
 export default ReplyForm
+=======
+<<<<<<< HEAD
+}
+export default ReplyForm;
+;
+}
+}
+=======
+},
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 <<<<<<< HEAD
 =======
 export default ReplyForm,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

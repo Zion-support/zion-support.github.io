@@ -1,7 +1,115 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',;
+import Card from '../../components/ui/Card',;
+import Link from 'next/link',;
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services',;
+import { additionalEnhancedServices } from '../../data/additional-real-services',;
+import { extraServices } from '../../data/extra-services',;
+import { newlyAddedServices } from '../../data/newly-added-services',;
+import { curatedMarketServices } from '../../data/curated-market-services',;
+import { realMarketServices } from '../../data/real-market-services',;
+import { new2025Services } from '../../data/new-2025-services',;
+import { marketValidatedServices } from '../../data/market-validated-services',;
+import { moreRealServices2025 } from '../../data/more-real-services-2025',;
+import { realOperationalServices } from '../../data/real-operational-services',;
+import { verified2025Additions } from '../../data/verified-2025-additions',;
+import { realServicesQ12025 } from '../../data/real-services-q1-2025';
+import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025',;
+import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025',;
+import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2',;
+import { additionalLiveServices2025 } from '../../data/additional-live-services-2025',;
+import { real2025Q2Additions } from '../../data/real-2025-q2-additions',;
+import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3',;
+import { realServicesQ22025 } from '../../data/real-services-q2-2025',;
+import { realServicesQ32025 } from '../../data/real-services-q3-2025',;
+import { realServicesQ42025 } from '../../data/real-services-q4-2025',;
+// Define a common service interface
+interface Service {
+  id?: string,
+  name: string,
+  description?: string,
+  price?: string,
+  category?: string,
+  popular?: boolean,
+  launchDate?: string,
+  [key: string]: unknown, // Allow additional properties
+}
+
+// Define a unified service interface
+interface Service {
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
+  price: string,
+  category: string,
+  features: string[],
+  popular?: boolean,
+  icon?: string,
+  link?: string
+}
+
+// Sample services for now
+const sampleServices: Service[] = [
+  {
+    id: 'ai-services',
+    name: 'AI & Machine Learning',
+    tagline: 'Advanced AI solutions for enterprise',
+    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',
+    price: '$2,999/month',
+    category: 'AI',
+    features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support'],
+    popular: true,
+    link: '/ai-services'
+  },
+  {
+    id: 'quantum-computing',
+    name: 'Quantum Computing',
+    tagline: 'Next-generation quantum solutions',
+    description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.',
+    price: '$9,999/month',
+    category: 'Quantum',
+    features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support'],
+    link: '/quantum-computing'
+  },
+  {
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    tagline: 'Enterprise security solutions',
+    description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.',
+    price: '$1,999/month',
+    category: 'Security',
+    features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'],
+    link: '/cybersecurity'
+  },
+  {
+    id: 'cloud-platform',
+    name: 'Cloud Platform',
+    tagline: 'Scalable cloud infrastructure',
+    description: 'Multi-cloud platform services with automated scaling and global deployment capabilities.',
+    price: '$1,499/month',
+    category: 'Cloud',
+    features: ['Multi-CloudAuto-scalingGlobal CDNDevOps Tools'],
+    link: '/cloud-platform'
+  },
+  {
+    id: 'space-technology',
+    name: 'Space Technology',
+    tagline: 'Innovative space solutions',
+    description: 'Cutting-edge space technology services for satellite operations and space missions.',
+    price: '$24,999/month',
+    category: 'Space',
+    features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'],
+    link: '/space-tech'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
@@ -138,6 +246,10 @@ interface Service {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
@@ -245,10 +357,18 @@ export default function ServicesIndexPage() {
     )
     return acc
 <<<<<<< HEAD
+<<<<<<< HEAD
   }, {} as Record<string, Service[]>)
 =======
   }, {} as Record<string Service[]>),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  }, {} as Record<string, Service[]>),
+
+=======
+  }, {} as Record<string Service[]>),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -275,6 +395,13 @@ export default function ServicesIndexPage() {
             {/* Featured Services */}
 =======
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
+<<<<<<< HEAD
+              ))}
+            </div>
+          </div>
+        </section>
+            {/* Featured Services */}
+=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -288,7 +415,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {featuredServices.length > 0 && (
               <section className="mb-20">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -297,6 +428,7 @@ export default function ServicesIndexPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {featuredServices.map((service: Service, index: number) => (
                     <UltraFuturisticServiceCard2026
+<<<<<<< HEAD
 <<<<<<< HEAD
                       key={`${service.id |service.name}-${index}`}
                       service={service}
@@ -308,6 +440,10 @@ export default function ServicesIndexPage() {
             )}
             {/* Latest Services */}
 =======
+                      key={`${service.id || service.name}-${index}`}
+                      service={service}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
                       key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -318,6 +454,10 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       variant="quantum"
                     />
                   ))  } catch (error) {
@@ -348,7 +488,11 @@ export default function ServicesIndexPage() {
                   {latestServices.map((service: Service, index: number) => (
                     <UltraFuturisticServiceCard2026
 <<<<<<< HEAD
+<<<<<<< HEAD
                       key={`${service.id |service.name}-${index}`}
+=======
+                      key={`${service.id || service.name}-${index}`}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       service={service}
                       variant="ai"
                     />
@@ -388,7 +532,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="mb-20">
               <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                 Services by Category
@@ -441,7 +589,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <span className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300">
                           {categoryServices.length} services
                         </span>
@@ -450,7 +602,11 @@ export default function ServicesIndexPage() {
                         {categoryServices.slice(0, 6).map((service: Service, index: number) => (
                           <UltraFuturisticServiceCard2026
 <<<<<<< HEAD
+<<<<<<< HEAD
                             key={`${service.id |service.name}-${index}`}
+=======
+                            key={`${service.id || service.name}-${index}`}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             service={service}
 =======
                             key={`${service.id || service.name}-${index}`  } catch (error) {
@@ -463,7 +619,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             variant="default"
                           />
                         ))  } catch (error) {
@@ -483,7 +643,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
                           >
                             View All {category} Services
@@ -520,14 +684,26 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="text-center">
               <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                   Need a Custom Solution?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
                   Our team of experts can help you build custom solutions tailored to your specific needs.
+=======
+<<<<<<< HEAD
+                  Our team of experts can help you build custom solutions tailored to your specific needs. 
+=======
+                  Our team of experts can help you build custom solutions tailored to your specific needs.
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Let's discuss how we can transform your business with cutting-edge technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -588,6 +764,12 @@ export default function ServicesIndexPage() {
                     </div>
                   </Card>
                 )
+<<<<<<< HEAD
+              })}
+            </div>
+          </div>
+          {/* Featured Services */}
+=======
             <section className="text-center">;
               <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12">;
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -647,7 +829,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {featuredServices.length > 0 && (
             <section className="mb-20">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -656,6 +842,7 @@ export default function ServicesIndexPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {featuredServices.map((service: Service, index: number) => (
                   <UltraFuturisticServiceCard2026
+<<<<<<< HEAD
 <<<<<<< HEAD
                     key={`${service.id |service.name}-${index}`}
                     service={service}
@@ -667,6 +854,10 @@ export default function ServicesIndexPage() {
           )}
           {/* Latest Services */}
 =======
+                    key={`${service.id || service.name}-${index}`}
+                    service={service}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
                     key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -677,6 +868,10 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     variant="quantum"
                   />
                 ))  } catch (error) {
@@ -707,7 +902,11 @@ export default function ServicesIndexPage() {
                 {latestServices.map((service: Service, index: number) => (
                   <UltraFuturisticServiceCard2026
 <<<<<<< HEAD
+<<<<<<< HEAD
                     key={`${service.id |service.name}-${index}`}
+=======
+                    key={`${service.id || service.name}-${index}`}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     service={service}
                     variant="ai"
                   />
@@ -747,7 +946,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <section className="mb-20">
             <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
               Services by Category
@@ -801,7 +1004,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
                         {categoryServices.length} services
                       </span>
@@ -810,7 +1017,11 @@ export default function ServicesIndexPage() {
                       {categoryServices.slice(0, 6).map((service: Service, index: number) => (
                         <UltraFuturisticServiceCard2026
 <<<<<<< HEAD
+<<<<<<< HEAD
                           key={`${service.id |service.name}-${index}`}
+=======
+                          key={`${service.id || service.name}-${index}`}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           service={service}
 =======
                           key={`${service.id || service.name}-${index}`  } catch (error) {
@@ -823,7 +1034,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           variant="default"
                         />
                       ))  } catch (error) {
@@ -843,7 +1058,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all"
                         >
                           View All {category} Services ({categoryServices.length})
@@ -851,13 +1070,21 @@ export default function ServicesIndexPage() {
                       </div>
 <<<<<<< HEAD
                     )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div className="flex items-center justify-between mb-6">
                       <div className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-300">
                         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
@@ -895,7 +1122,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -967,7 +1198,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             {filteredServices.length === 0 && (
               <div className="text-center py-12">
@@ -991,7 +1226,11 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div
@@ -1044,6 +1283,10 @@ export default function ServicesIndexPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -1052,7 +1295,11 @@ export default function ServicesIndexPage() {
       />
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               animate={{ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
@@ -1124,5 +1371,10 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

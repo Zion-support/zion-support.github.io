@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
+<<<<<<< HEAD
   parseUserFromRequest
   ensureInvolvedOrAdmin
 } from "../../../../utils/auth";
@@ -14,6 +18,17 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const { id, fileName } = req.query as { id?: string; fileName?: string }
+=======
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (
     !id |
     !fileName |
@@ -43,7 +58,10 @@ export default async function handler(
   const stream = fs.createReadStream(att.path);
   stream.pipe(res);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -118,4 +136,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

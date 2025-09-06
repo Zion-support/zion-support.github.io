@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {cn} from "@/lib/utils";
+import {CheckIcon} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 <<<<<<< HEAD
 import { cn } from "@/lib/utils";
@@ -12,6 +20,10 @@ interface StepProps {
 =======
 import { cn } from "@/lib/utils",
 import { CheckIcon } from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
@@ -19,10 +31,21 @@ interface StepProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   className?: string
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function Step({;
+  status;
+  label;
+  description;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function Step({
   status,
   label,
   description,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className}: StepProps) {
   return (
     <li
@@ -96,7 +119,11 @@ export function Step({;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Step number would go here */}
           </span>
         )}
@@ -122,12 +149,21 @@ export function Step({;
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface StepsProps {
   currentStep: number
   className?: string;
   children: React.ReactNode
 }
+<<<<<<< HEAD
 export function Steps({ currentStep, className, children }: StepsProps) {
+=======
+
+export function Steps({ currentStep, className, children }: StepsProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const childrenArray = React.Children.toArray(children);
 =======
 ;
@@ -139,6 +175,7 @@ interface StepsProps {;
 
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -169,6 +206,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
             className="h-full bg-zion-purple transition-all"
             style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />
         </div>
@@ -176,6 +214,8 @@ export function Steps({ currentStep, className, children }: StepsProps) {
     </div>
   )
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
@@ -197,6 +237,10 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />;
         </div>;

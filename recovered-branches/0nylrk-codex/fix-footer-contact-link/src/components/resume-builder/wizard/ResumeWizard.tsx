@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
@@ -19,6 +20,27 @@ import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
 export function ResumeWizard() {
+=======
+import {useState, useEffect} from 'react';
+import {useAuth} from '@/hooks/useAuth';
+import {useResume} from '@/hooks/useResume';
+import {Tabs} from '@/components/ui/tabs';
+import {Card, CardContent} from '@/components/ui/card';
+import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
+import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Resume} from '@/types/resume';
+// Import components
+import {ResumeProgress} from './ResumeProgress';
+import {EmptyResumeState} from './EmptyResumeState';
+import {CreateResumeForm} from './CreateResumeForm';
+import {ResumeSteps} from './ResumeSteps';
+import {ResumeStepContent} from './ResumeStepContent';
+import {useResumeProgress} from './useResumeProgress';
+import {ResumeVersionSelector} from './ResumeVersionSelector';
+import {RESUME_STEPS} from './constants';
+export function ResumeWizard() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const {
     isLoading;
@@ -57,11 +79,15 @@ export function ResumeWizard() {
     if (currentIndex > 0) {
       setActiveTab(RESUME_STEPS[currentIndex - 1].id)
     }
+<<<<<<< HEAD
   }
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
   }
 
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -118,6 +144,10 @@ export function ResumeWizard() {;
       setActiveTab(RESUME_STEPS[currentIndex - 1].id);
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
@@ -144,7 +174,11 @@ export function ResumeWizard() {;
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
 =======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   if (showNewResumeForm) {
     return (

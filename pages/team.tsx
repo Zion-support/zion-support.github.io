@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+<<<<<<< HEAD
   ArrowRight
   Phone
   Mail
@@ -20,6 +24,20 @@ import {
   Globe
   Code
   Shield
+=======
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Award,
+  Users,
+  Globe,
+  Code,
+  Shield,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import Layout from "../components/Layout";
 const teamMembers = [
@@ -559,6 +577,7 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </Layout>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -581,6 +600,9 @@ export default function TeamPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    </Layout>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 import Head from "next/head";
@@ -640,6 +662,7 @@ export default function TeamPage() {
           Profiles coming soon. For inquiries, contact us.
         </p>
       </div>
+<<<<<<< HEAD
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -648,6 +671,9 @@ export default function TeamPage() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    </>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
   return (
     <>
@@ -668,9 +694,16 @@ export default function TeamPage() {
 }
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import SEO from '../components/SEO';
 export default function TeamPage() {	return (
+=======
+import React from 'react',
+import SEO from '../components/SEO',
+export default function TeamPage() {
+	return (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
@@ -681,4 +714,9 @@ export default function TeamPage() {	return (
 	)
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

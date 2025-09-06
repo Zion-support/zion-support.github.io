@@ -2,12 +2,23 @@
 import React from "react";
 
 import {useToast, as, useToastHook, Toast} from "@/components/ui/toast";
+<<<<<<< HEAD
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
   description?: string;
   title?: string;
   variant?: "default" | "destructive" | "success"
 }
+=======
+
+// Extend the Toast component props with common toast options
+export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
+  description?: string;
+  title?: string;
+  variant?: "default" | "destructive" | "success"
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const useToast = useToastHook;
 =======
 import React from "react",
@@ -23,6 +34,7 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
 },
 
 export const useToast = useToastHook,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Base toast function that delegates to the implementation from `useToastHook`.
@@ -68,6 +80,13 @@ baseToast.success = (message: string) => {
 },
 
 // Export the callable toast function.
+<<<<<<< HEAD
+export const toast = baseToast as typeof baseToast & {;
+  title: (title: string) => void;
+  description: (description: string) => void;
+  error: (error: string) => void,
+  success: (message: string) => void
+=======
 export const toast = baseToast as typeof baseToast & {
   title: (title: string) => void,
   description: (description: string) => void,
@@ -110,5 +129,9 @@ export const toast = baseToast as typeof baseToast & {;
   description: (description: string) => void,;
   error: (error: string) => void;
   success: (message: string) => void;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

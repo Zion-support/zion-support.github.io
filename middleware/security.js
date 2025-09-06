@@ -30,7 +30,12 @@
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
+<<<<<<< HEAD
 export function securityMiddleware(request) {
+=======
+
+export function securityMiddleware(request) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const response = NextResponse.next();
   // Add security headers
   const headers = getSecurityHeaders();
@@ -68,11 +73,19 @@ export function securityMiddleware(request) {
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
+<<<<<<< HEAD
     'X-Content-Type-Options': 'nosniff'
     'X-Frame-Options': 'DENY'
     'X-XSS-Protection': '1; mode=block'
     'Referrer-Policy': 'strict-origin-when-cross-origin'
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+=======
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',;
+    'X-XSS-Protection': '1; mode=block',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res.setHeader(key, value);
@@ -80,6 +93,7 @@ export function securityHeaders(req, res, next) {
   next();
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 <<<<<<< HEAD
@@ -99,3 +113,7 @@ export function securityHeaders(req, res, next) {
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

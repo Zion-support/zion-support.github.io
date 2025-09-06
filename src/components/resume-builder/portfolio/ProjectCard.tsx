@@ -19,20 +19,40 @@ import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
 import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
+<<<<<<< HEAD
 
   project: PortfolioProject
   onEdit: (project: PortfolioProject) => void
+=======
+  project: PortfolioProject;
+  onEdit: (project: PortfolioProject) => void;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   onDelete: (projectId: string) => void; import Image from 'next/image'
 interface ProjectCardProps {
   project: PortfolioProject
   onEdit: (project: PortfolioProject,) => void
   onDelete: (projectId: string,) => void
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 }
 <<<<<<< HEAD
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
+<<<<<<< HEAD
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const handleDelete = null;
+=======
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
+  const handleDelete = () => {
+    if (project.id) {
+      onDelete(project.id)
+    }
+    setDeleteDialogOpen(false)
+  }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
@@ -44,7 +64,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
     setDeleteDialogOpen(false)
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -66,7 +90,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
             className="object-cover"
             loading="lazy"
           />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
             <FileText className="h-12 w-12 text-muted-foreground/50" />
@@ -83,12 +111,20 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>
           
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {project.description && (
             <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
           )}
 <<<<<<< HEAD
           {project.technologies && project.technologies.length > 0 && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className='flex flex-wrap gap-1 mt-2'>
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">
@@ -127,8 +163,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
               title='GitHub'
               href = {project.github_url,}
 =======
+<<<<<<< HEAD
           
           {project.technologies && project.technologies.length > 0 && (
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
@@ -145,7 +184,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
           {project.github_url && (
             <a
               href={project.github_url}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -185,7 +228,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
               title="Live demo"
             >
               <Button variant="ghost" size="icon" aria-label="Live demo link">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Link className="h-4 w-4" />
               </Button>
             </Link>
@@ -222,7 +269,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
         </div>
       </CardFooter>
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -240,7 +291,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
             >              Delete              Are you sure you want to delete this project? This action cannot be undone.
 =======
               Are you sure you want to delete this project? This action cannot be undone.
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
@@ -252,11 +307,23 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
             >            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
 =======
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
+<<<<<<< HEAD
+      </AlertDialog>;
+    </Card>;
+  );
+};
+}
+}
+=======
       </AlertDialog>
     </Card>
   )
@@ -265,4 +332,8 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 =======
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

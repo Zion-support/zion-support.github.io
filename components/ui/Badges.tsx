@@ -1,8 +1,13 @@
 import React from 'react';
 
 export function TrustBadge({
+<<<<<<< HEAD
   type
 }: {
+=======
+  type,
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   type: 'Verified' | 'Pro' | 'Top Rated';
 }) {
   const colorMap = {
@@ -17,9 +22,15 @@ export function TrustBadge({
     </span>
   );
 export function MicroTestimonial({
+<<<<<<< HEAD
   quote
   author
 }: {
+=======
+  quote,
+  author,
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   quote: string;
   author: string;
 }) {
@@ -45,6 +56,7 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
     <figure className="border rounded-md p-3 text-sm">
       <blockquote className="italic opacity-90">“{quote}”</blockquote>
       <figcaption className="mt-2 font-medium opacity-80">— {author}</figcaption>
+<<<<<<< HEAD
     </figure>
 <<<<<<< HEAD
 );
@@ -53,3 +65,16 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
   );
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+    </figure>;
+);
+}
+
+}
+=======
+    </figure>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

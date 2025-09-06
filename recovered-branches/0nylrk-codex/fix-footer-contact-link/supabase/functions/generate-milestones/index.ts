@@ -1,15 +1,23 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 =======
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 serve(async (req) => {
@@ -23,9 +31,12 @@ serve(async (req) => {
     const apiKey = Deno.env.get('OPENAI_API_KEY');
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
+<<<<<<< HEAD
     }
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
@@ -42,6 +53,10 @@ serve(async (req) => {;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
     if (!apiKey) {;
       throw new Error('OPENAI_API_KEY is not set');
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
     // Parse request body
@@ -126,6 +141,31 @@ serve(async (req) => {;
     if (!response.ok) {
       throw new Error(data.error?.message || 'Failed to generate milestones')
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    // Parse the AI-generated content to ensure it's valid JSON
+    try {
+      const content = data.choices[0].message.content.trim();
+      // Try to parse the response as JSON
+      const milestones = JSON.parse(content);
+      
+      return new Response(JSON.stringify({ milestones }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+    } catch (parseError) {
+      // If parsing fails, try to extract JSON from the text
+      console.error('Failed to parse AI response as JSON:', parseError);
+      throw new Error('Failed to parse AI response')
+    }
+  } catch (error) {
+    console.error('Error generating milestones:', error);
+    return new Response(
+      JSON.stringify({ error: error.message || 'Failed to generate milestones' });
+      { 
+        status: 500, 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     // Parse the AI-generated content to ensure it's valid JSON;
     try {;
@@ -145,7 +185,11 @@ serve(async (req) => {;
       JSON.stringify({ error: error.message || 'Failed to generate milestones' }),;
       {;
         status: 500,;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

@@ -1,9 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useRef, useEffect  } from 'react';
 import { MessageSquare, X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { ChatMessage, ChatInput  } from '@/components/ChatAssistant';
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+import { useState, useRef, useEffect } from 'react'
+import { MessageSquare, X } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { ChatMessage, ChatInput } from '@/components/ChatAssistant'
+import { logErrorToProduction } from '@/utils/productionLogger'
+interface Msg {
+  id: string
+  role: 'user' | 'assistant'
+  message: string
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
@@ -13,15 +25,28 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Fallback responses when API is unavailable
 
 const FALLBACK_RESPONSES = [
+<<<<<<< HEAD
 <<<<<<< HEAD
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way."
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly."
   'I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.'
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support."
   'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.'
+=======
+  "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
+  "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
+  "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
+  "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
+<<<<<<< HEAD
+  'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ]
 export function SupportChatbot() {
   const [open, setOpen] = useState(false)
@@ -62,10 +87,13 @@ export function SupportChatbot() {
         }
       )
 =======
+<<<<<<< HEAD
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   "While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance."
 ],
 
@@ -98,7 +126,11 @@ export function SupportChatbot() {
         })
       }),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
         res = await fetch('/api/kb-chat', {
@@ -114,6 +146,7 @@ export function SupportChatbot() {
         })
         if (!res.ok) throw new Error(`API error: ${res.status}`)
         const data = await res.json().catch(() => ({}))
+<<<<<<< HEAD
         const message =
           data.message |
           data.choices?.[0]?.message?.content |
@@ -122,6 +155,16 @@ export function SupportChatbot() {
           ''
         const finalMsg =
           message.trim() |
+=======
+        const message = null;
+          data.message ||
+          data.choices?.[0]?.message?.content ||
+          data.choices?.[0]?.text ||
+          data.completion ||
+          ''
+        const finalMsg = null;
+          message.trim() ||
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           FALLBACK_RESPONSES[
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
@@ -145,10 +188,17 @@ export function SupportChatbot() {
         let buffer = ''
         let accumulated = ''
         while (!done) {
+<<<<<<< HEAD
           const result = await reader.read()
           done = result.done
           buffer += decoder.decode(result.value |new Uint8Array())
           const lines = buffer.split('\n')
+=======
+          const result = await reader.read();
+          done = result.done;
+          buffer += decoder.decode(result.value || new Uint8Array());
+          const lines = buffer.split('\n');
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           for (let i = 0; i < lines.length - 1; i++) {
             let line = lines[i]?.trim()
             if (!line) continue
@@ -160,9 +210,15 @@ export function SupportChatbot() {
               }
               try {
                 const json = JSON.parse(line)
+<<<<<<< HEAD
                 const token =
                   json.choices?.[0]?.delta?.content |
                   json.choices?.[0]?.text |
+=======
+                const token = null;
+                  json.choices?.[0]?.delta?.content ||
+                  json.choices?.[0]?.text ||
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ''
                 if (token) {
                   accumulated += token
@@ -279,7 +335,11 @@ export function SupportChatbot() {;
                 if (token) {;
                   accumulated += token,;
                   setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m));
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }
               } catch (_) {
                 // ignore parse errors
@@ -289,8 +349,13 @@ export function SupportChatbot() {;
           buffer = lines[lines.length - 1] |''
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         const final =
           accumulated.trim() |
+=======
+        const final = null;
+          accumulated.trim() ||
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           FALLBACK_RESPONSES[
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
@@ -302,7 +367,7 @@ export function SupportChatbot() {;
     } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err })
       // Provide a helpful fallback response instead of generic error
-      const fallbackResponse =
+      const fallbackResponse = null;
         FALLBACK_RESPONSES[
           Math.floor(Math.random() * FALLBACK_RESPONSES.length)
         ] |
@@ -317,6 +382,18 @@ export function SupportChatbot() {;
       setLoading(false)
       setTyping(false)
     }
+<<<<<<< HEAD
+=======
+  }
+  if (!open) {
+    
+        onClick={() => setOpen(true)}
+        size='icon'
+        variant='outline'
+        className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
+        aria-label='Open help chat'      >
+        <MessageSquare className='h-5 w-5' />
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         const final = accumulated.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
@@ -349,6 +426,7 @@ export function SupportChatbot() {;
         aria-label="Open help chat"
       >
         <MessageSquare className="h-5 w-5" />
+<<<<<<< HEAD
       </Button>
     )
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -361,6 +439,9 @@ export function SupportChatbot() {;
         className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
         aria-label='Open help chat'      >
         <MessageSquare className='h-5 w-5' />
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </Button>
     )
   }
@@ -384,7 +465,11 @@ export function SupportChatbot() {;
           aria-label="Close help bot"
         >
           <X className="h-5 w-5" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto p-3 space-y-4" style={{ maxHeight: '400px' }}>
@@ -448,7 +533,11 @@ export function SupportChatbot() {;
             role="assistant";
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?";
           />;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
         {messages.map(m => (
           <ChatMessage key={m.id} role={m.role} message={m.message} />
@@ -459,7 +548,11 @@ export function SupportChatbot() {;
         {typing && (
           <ChatMessage role="assistant" message="..." />
         )}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div ref={endRef} />
       </div>
       <div className="p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30">
@@ -504,7 +597,15 @@ setTyping (false)
 }'"
 }
 }
+<<<<<<< HEAD
 =======
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+=======
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

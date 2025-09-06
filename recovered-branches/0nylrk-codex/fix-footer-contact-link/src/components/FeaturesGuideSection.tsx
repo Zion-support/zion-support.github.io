@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {Link} from "react-router-dom";
 import {GradientHeading} from "./GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -21,19 +24,37 @@ import {
   Plus,
   HelpCircle
 } from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function FeaturesGuideSection() {
   const features = [
     {
+<<<<<<< HEAD
       id: "ai-matcher"
       title: "AI Matcher"
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system."
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />
+=======
+      id: "ai-matcher",
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
+      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
+<<<<<<< HEAD
+      instructions: [;
+        "Navigate to the AI Matcher page from the homepage or marketplace";
+        "Fill in your project requirements and specifications";
+        "Review the AI-recommended matches tailored to your needs";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace",
         "Fill in your project requirements and specifications",
         "Review the AI-recommended matches tailored to your needs",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         "Connect with matched talents or services directly"
       ]
       link: "/match"
@@ -374,7 +395,11 @@ export function FeaturesGuideSection() {;
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {feature.title}
               </TabsTrigger>
             ))}
@@ -440,6 +465,10 @@ export function FeaturesGuideSection() {;
     </section>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         </Tabs>;
         <div className="mt-12 text-center">;
@@ -457,5 +486,10 @@ export function FeaturesGuideSection() {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

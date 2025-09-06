@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 import React, { useState } from 'react'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
@@ -48,6 +51,10 @@ export function MobileChatView({
       onSendMessage(newMessage)
       setNewMessage('')
 =======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
@@ -110,7 +117,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     if (newMessage.trim() !== "") {;
       onSendMessage(newMessage),;
       setNewMessage("");
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {    if (e.key === 'Enter' && !e.shiftKey) {
@@ -158,7 +169,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     router.push(`/call/${roomId}?audioOnly=true`)
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -182,7 +197,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </Button>
           
           <div className="flex items-center flex-1 gap-3 mx-2">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
               <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
@@ -219,9 +238,31 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               </p>
             </div>
           </div>
+<<<<<<< HEAD
+          <div className='flex'>
+            <Button
+<<<<<<< HEAD
+=======
+              variant='ghost'
+              size='icon'
+              onClick={startAudioCall}
+              aria-label='Start audio call'            >
+              <Phone className='h-5 w-5' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='icon'
+              onClick={startVideoCall}
+              aria-label='Start video call'            >
+              <Video className='h-5 w-5' />
+            </Button>
+            <Button variant='ghost' size='icon' aria-label='More options'>
+              <MoreVertical className='h-5 w-5' />
+=======
           
           <div className="flex">
             <Button
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               variant="ghost"
               size="icon"
               onClick={startAudioCall}
@@ -241,7 +282,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             
             <Button variant="ghost" size="icon" aria-label="More options">
               <MoreVertical className="h-5 w-5" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Button>
           </div>
         </div>
@@ -389,7 +434,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 {message.timestamp}
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>
                 )}
@@ -403,6 +452,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
         <div className='flex items-center gap-2'>
           <Button variant='ghost' size='icon' aria-label='Attach file'>
             <PaperclipIcon className='h-5 w-5' />
+<<<<<<< HEAD
           </Button>
           <Input
             value={newMessage}
@@ -423,10 +473,44 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" aria-label="Attach file">
             <PaperclipIcon className="h-5 w-5" />
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </Button>
+          <Input
+            value={newMessage}
+<<<<<<< HEAD
+=======
+            onChange={e => setNewMessage(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder='Type a message...'
+            className='flex-1'          />
+
+          <Button
+            size='icon'
+            onClick={handleSend}
+            disabled={!newMessage.trim()}
+            className={!newMessage.trim() ? 'opacity-50' : ''}
+            aria-label='Send message'          >
+            <Send className='h-5 w-5' />
+          </Button>
+        </div>
+      </div>;
+    </div>;
+  );
+};
+}
+}
+=======
+      
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" aria-label="Attach file">
+            <PaperclipIcon className="h-5 w-5" />
           </Button>
           
           <Input
             value={newMessage}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onChange={(e) => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
@@ -441,7 +525,10 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </Button>
         </div>
       </div>
@@ -452,4 +539,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 =======
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

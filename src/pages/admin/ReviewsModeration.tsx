@@ -38,6 +38,7 @@ function ReviewsModerationContent() {
         variant: 'destructive'
       })
       setIsLoading(false) }
+<<<<<<< HEAD
   }
   useEffect(() => {
     fetchReviews();        title: "Error"
@@ -55,6 +56,11 @@ function ReviewsModerationContent() {
     fetchReviews()
   }
 
+=======
+  };
+  useEffect(() => {;
+    fetchReviews();        title: "Error",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 import { SEO } from "@/components/SEO",
@@ -83,21 +89,39 @@ function ReviewsModerationContent() {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
       toast({
         title: "Error",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         description: "Failed to load reviews. Please try again later.",
         variant: "destructive"}),
       setIsLoading(false)
     }
+<<<<<<< HEAD
+  }
+  useEffect(() => {
+    fetchReviews()
+  useEffect((,) => {
+    fetchReviews()
+=======
   },
 
   useEffect(() => {
     fetchReviews()
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }, [activeTab]),
 
   const handleRefresh = () => {
     fetchReviews()
+<<<<<<< HEAD
   },
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  }
+=======
+  },
+  
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -121,7 +145,11 @@ function ReviewsModerationContent() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Star className="h-5 w-5" />
               Review Management
             </CardTitle>
@@ -168,7 +196,11 @@ function ReviewsModerationContent() {
                 />
               </TabsContent>
               
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
@@ -178,7 +210,11 @@ function ReviewsModerationContent() {
 <<<<<<< HEAD
 =======
                   </p>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </TabsContent>
             </Tabs>
@@ -204,7 +240,12 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
   handleRefresh "
 }/> </TabsContent> <TabsContent value="reported" className="mt-0" > <div className="text-center py-12 border rounded-lg" > <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" /> <h3 className="text-lg font-medium mb-2" >Reported Reviews</h3> <p className="text-muted-foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>)
 }export default function ReviewsModeration () {
+<<<<<<< HEAD
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
+=======
+  return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"};
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { SEO } from "@/components/SEO",;
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",;
@@ -303,4 +344,8 @@ export default function ReviewsModeration() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -10,8 +10,14 @@ import {useAuth} from '@/hooks/useAuth';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {useDisputeCheck} from '@/hooks/useDisputeCheck';
 import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
+<<<<<<< HEAD
 export function ProjectMilestonesContent() {
   const { projectId } = useParams() as { projectId?: string }
+=======
+
+export function ProjectMilestonesContent() {;
+  const { projectId } = useParams() as { projectId?: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -86,7 +92,11 @@ export function ProjectMilestonesContent() {;
         const projectData = await getProjectById(projectId),;
         if (projectData) {;
           setProject(projectData);
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       } catch (error) {
         console.error("Error loading project:", error)
@@ -161,7 +171,11 @@ export function ProjectMilestonesContent() {;
 
   return (
     <div className="container mx-auto py-8 px-4">
+<<<<<<< HEAD
       <ProjectHeader title={project.job?.title |"Untitled Project"} />
+=======
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="flex justify-between items-center my-6">
         <h2 className="text-2xl font-bold">Payment Milestones</h2>
 <<<<<<< HEAD
@@ -169,6 +183,11 @@ export function ProjectMilestonesContent() {;
           projectId={projectId |''}
 =======
         <ProjectActions 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {;
         console.error("Error loading project:", error);
       } finally {;
@@ -218,6 +237,10 @@ export function ProjectMilestonesContent() {;
       <div className="flex justify-between items-center my-6">;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
         <ProjectActions;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           projectId={projectId || ''}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           isUnderDispute={isUnderDispute}

@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react";
+import {X, ArrowRight} from "lucide-react";
+import {Link} from "react-router-dom";
+import {useIsMobile} from "@/hooks/use-mobile";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from "react",
 import { X, ArrowRight } from "lucide-react",
 <<<<<<< HEAD
@@ -7,7 +16,11 @@ import { useIsMobile } from "@/hooks/use-mobile";
 =======
 import { Link } from "react-router-dom",
 import { useIsMobile } from "@/hooks/use-mobile",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SmartAppBannerProps {
   appName?: string,
   appIconSrc?: string,
@@ -15,6 +28,16 @@ interface SmartAppBannerProps {
   googlePlayUrl?: string,
   delay?: number, // Delay in milliseconds before showing the banner
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
+  appName = "Zion Marketplace";
+  appIconSrc;
+  appStoreUrl = "/download";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 <<<<<<< HEAD
 
@@ -30,6 +53,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   appName = "Zion Marketplace",
   appIconSrc,
   appStoreUrl = "/download",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   googlePlayUrl = "/download",
   delay = 1500
 }) => {
@@ -120,8 +144,12 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
+=======
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 },
 import React, { useState, useEffect } from "react",;
@@ -206,4 +234,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
 };
 
 export default SmartAppBanner;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

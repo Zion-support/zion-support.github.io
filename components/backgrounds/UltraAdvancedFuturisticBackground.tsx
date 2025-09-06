@@ -10,6 +10,7 @@ const particles: Array< {
 for (let i = 0, i < count, i++) {
   particles.push ({
 export default function UltraAdvancedFuturisticBackground({
+<<<<<<< HEAD
   children
   intensity = 'medium'
   theme = 'quantum'
@@ -17,6 +18,15 @@ export default function UltraAdvancedFuturisticBackground({
   animationSpeed = 1.0
   enableHolographic = true
   enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({
+=======
+  children,
+  intensity = 'medium',
+  theme = 'quantum',
+  particleCount = 200,
+  animationSpeed = 1.0,
+  enableHolographic = true,
+  enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({ ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   children;
   intensity = 'medium';
   theme = 'quantum';
@@ -195,7 +205,11 @@ export default function UltraAdvancedFuturisticBackground({
 =======
             ctx.stroke();          }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
 <<<<<<< HEAD
@@ -215,7 +229,11 @@ export default function UltraAdvancedFuturisticBackground({
 =======
             particle.vx *= -1;          }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
 <<<<<<< HEAD
@@ -234,7 +252,11 @@ export default function UltraAdvancedFuturisticBackground({
 =======
             particle.vy *= -1;          }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
 <<<<<<< HEAD
@@ -271,6 +293,10 @@ export default function UltraAdvancedFuturisticBackground({
           gradient.addColorStop(0.6, particle.color + '40');
           gradient.addColorStop(1, 'transparent');
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
           ctx.fillStyle = gradient;
           ctx.fillRect(
             -particle.size * 2
@@ -278,6 +304,13 @@ export default function UltraAdvancedFuturisticBackground({
             particle.size * 4
             particle.size * 4
           );
+<<<<<<< HEAD
+=======
+=======
+            }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           // Quantum wave rings
           if (enableQuantumEffects) {
             for (let i = 1; i <= 3; i++) {
@@ -385,12 +418,19 @@ export default function UltraAdvancedFuturisticBackground({
 <<<<<<< HEAD
           ctx.stroke();        }          ctx.stroke()
         }
+<<<<<<< HEAD
       }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           ctx.stroke();        }
 
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -465,7 +505,11 @@ export default function UltraAdvancedFuturisticBackground({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (
         <div
@@ -488,6 +532,10 @@ export default function UltraAdvancedFuturisticBackground({
 <<<<<<< HEAD
       {children}
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );      }
     }
   }, [intensity, theme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]);
@@ -517,8 +565,13 @@ export default function UltraAdvancedFuturisticBackground({
 );
 }
 =======
+<<<<<<< HEAD
 
       {children}
     </div>
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

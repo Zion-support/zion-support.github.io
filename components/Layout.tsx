@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
@@ -110,6 +113,7 @@ const Layout: React.FC<LayoutProps> = ({
       <Footer />
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import React, { ReactNode } from "react";
@@ -132,6 +136,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 }
 export default Layout;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { ReactNode } from "react";
 interface LayoutProps {
@@ -166,6 +172,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 };
 export default Layout;

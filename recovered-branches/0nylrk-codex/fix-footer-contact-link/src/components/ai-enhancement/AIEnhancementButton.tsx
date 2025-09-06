@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
@@ -15,11 +16,22 @@ interface AIEnhancementButtonProps {
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
 =======
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
+import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
+import {toast} from '@/hooks/use-toast';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
 import { toast } from '@/hooks/use-toast',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -30,6 +42,19 @@ interface AIEnhancementButtonProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   contentLength?: number
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function AIEnhancementButton({;
+  options;
+  onEnhanced;
+  buttonText = "Enhance with AI";
+  className;
+  variant = "ghost";
+  size = "sm";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function AIEnhancementButton({
 <<<<<<< HEAD
   options;
@@ -51,6 +76,7 @@ export function AIEnhancementButton({
   className,
   variant = "ghost",
   size = "sm",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   contentLength = 10
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
@@ -74,7 +100,11 @@ export function AIEnhancementButton({
       setGeneratedContent(enhancedContent);
       setShowActions(true)
     }
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       }),
       return
@@ -122,6 +152,10 @@ export function AIEnhancementButton({;
       setShowActions(true);
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleAccept = () => {
@@ -265,7 +299,11 @@ export function AIEnhancementButton({;
   return (;
     <Button;
       type="button";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       variant={variant}
       size={size}
       className={`gap-1 ${className}`}

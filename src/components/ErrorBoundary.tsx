@@ -1,17 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 interface State {
+<<<<<<< HEAD
 <<<<<<< HEAD
   hasError: boolean
   error?: Error
   errorInfo?: ErrorInfo
+=======
+  hasError: boolean;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
   hasError: boolean;
@@ -19,6 +26,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -90,3 +98,37 @@ export default ErrorBoundary
 
 export default ErrorBoundary;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default class ErrorBoundary extends Component<Props, State> {
+  public state: State = {
+    hasError: false,
+  };
+
+  public static getDerivedStateFromError(_: Error): State {
+    return { hasError: true };
+  }
+
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+
+  public render() {
+    if (this.state.hasError) {
+      return (
+        <div className="error-boundary">
+          <h2>Something went wrong.</h2>
+          <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
+          <button 
+            onClick={() => window.location.reload()}
+            className="btn-primary"
+          >
+            Refresh Page
+          </button>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

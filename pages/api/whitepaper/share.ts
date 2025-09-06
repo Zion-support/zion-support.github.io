@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { randomUUID } from 'crypto',;
+// In-memory store for demo purposes. Replace with persistent storage in production.
+const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {},
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { randomUUID } from 'crypto';
 <<<<<<< HEAD
@@ -17,9 +25,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ id, url })
 }
 export function getShared(id: string) {
+<<<<<<< HEAD
   return store[id]
 }
 =======
+=======
+  return store[id];
+};
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID } from 'crypto';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // In-memory store for demo purposes. Replace with persistent storage in production.;
 const store: Record<string { markdown: string, createdAt: number, public: boolean }> = {};
 export default async function handler(req, res) {
@@ -43,4 +59,8 @@ export function getShared(id: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

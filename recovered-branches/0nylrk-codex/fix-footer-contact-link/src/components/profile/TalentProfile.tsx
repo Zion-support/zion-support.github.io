@@ -1,4 +1,23 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Handshake, MessageSquare, Star} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {HireNowCTA} from "./HireNowCTA";
+import {ProfileHero} from "./ProfileHero";
+import {ProfileSkills} from "./ProfileSkills";
+import {ProfileExperience} from "./ProfileExperience";
+import {ProfileProjects} from "./ProfileProjects";
+import {ProfileAvailability} from "./ProfileAvailability";
+import {ProfileContact} from "./ProfileContact";
+import {ProfileRatings} from "./ProfileRatings";
+import {TalentProfile, as, TalentProfileType} from "@/types/talent";
+import {useAuth} from "@/hooks/useAuth";
+import {Availability} from "@/types/profile";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -17,7 +36,11 @@ import { Availability } from "@/types/profile";
 =======
 import { useAuth } from "@/hooks/useAuth",
 import { Availability } from "@/types/profile",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface TalentProfileProps {
 
   profile: TalentProfileType
@@ -34,9 +57,15 @@ export function TalentProfile({
   const { isAuthenticated } = useAuth();
 =======
 
+<<<<<<< HEAD
+export function TalentProfile({ ;
+  profile;
+  onRequestHire;
+=======
 export function TalentProfile({ 
   profile,
   onRequestHire,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onMessageTalent
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth(),
@@ -80,6 +109,11 @@ export function TalentProfile({
   
   return (
     <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Handshake, MessageSquare, Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -126,7 +160,11 @@ export function TalentProfile({;
   })) || [];
   return (;
     <div className="container mx-auto px-4 py-8">;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Profile Header */}
       <ProfileHero
         name={profile.full_name}
@@ -160,7 +198,11 @@ export function TalentProfile({;
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}

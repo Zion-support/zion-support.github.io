@@ -52,7 +52,7 @@ export default async function handler(
 
   res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
   try {
@@ -244,6 +244,10 @@ export default async function handler(
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
     const result: TextAnalysisResult = {
       text
         characters
@@ -305,6 +309,11 @@ export default async function handler(
   }
 }
 =======
+<<<<<<< HEAD
 
     const result: TextAnalysisResult = {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    const result: TextAnalysisResult = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

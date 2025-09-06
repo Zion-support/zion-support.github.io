@@ -2,6 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   ArrowRight
   Brain
   Zap
@@ -24,6 +25,30 @@ import {
   Megaphone
   Scale
   Network;
+=======
+  ArrowRight,
+  Brain,
+  Zap,
+  Shield,
+  Rocket,
+  Sparkles,
+  Star,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Lock,
+  Cloud,
+  Atom,
+  Microscope,
+  Satellite,
+  DollarSign,
+  Factory,
+  Earth,
+  TestTube,
+  Megaphone,
+  Scale,;
+  Network,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
 import Link from 'next/link';
@@ -220,7 +245,11 @@ const Revolutionary2027ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -244,7 +273,11 @@ const Revolutionary2027ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Category Overview */}
         <motion.div
           variants={containerVariants}
@@ -286,7 +319,11 @@ const Revolutionary2027ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Featured Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -361,7 +398,11 @@ const Revolutionary2027ServicesShowcase = () => {
                     ))}
                   </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Market Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='flex justify-between items-center text-sm text-gray-400'>
@@ -411,7 +452,11 @@ const Revolutionary2027ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -422,7 +467,11 @@ const Revolutionary2027ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -472,7 +521,13 @@ const Revolutionary2027ServicesShowcase = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Revolutionary2027ServicesShowcase;  )
 }
 export default Revolutionary2027ServicesShowcase;
@@ -480,4 +535,10 @@ export default Revolutionary2027ServicesShowcase;
 <<<<<<< HEAD
 =======
 export default Revolutionary2027ServicesShowcase;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default Revolutionary2027ServicesShowcase;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

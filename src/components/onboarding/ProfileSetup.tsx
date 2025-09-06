@@ -13,8 +13,11 @@ const profileSchema = z.object({
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters")
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")})
 type ProfileFormValues = z.infer<typeof profileSchema>
+<<<<<<< HEAD
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues,) => void
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -39,6 +42,10 @@ const profileSchema = z.object({
 
 type ProfileFormValues = z.infer<typeof profileSchema>,
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -54,6 +61,10 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       headline: ""}})
   const getTypeLabel = () => {
     switch (userType) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case "serviceProvider": return "Service Provider"
       case "talent":
         return "Talent"
@@ -64,12 +75,15 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
     }
   }
 =======
+<<<<<<< HEAD
       displayName: "",
       bio: "",
       headline: ""}}),
 
   const getTypeLabel = () => {
     switch (userType) {
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case "serviceProvider": return "Service Provider",
       case "talent":
         return "Talent",
@@ -81,6 +95,10 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -92,7 +110,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
@@ -198,7 +220,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
             control={form.control}
             name="headline"
             render={({ field }: { field: any }) => (
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
@@ -230,7 +256,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
             control={form.control}
             name="bio"
             render={({ field }: { field: any }) => (
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
@@ -258,10 +288,32 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
           >
             Complete Profile
           </Button>
+<<<<<<< HEAD
+=======
         </form>
       </Form>
     </div>
   )
+<<<<<<< HEAD
+=======
+                  />;
+                </FormControl>;
+                <FormMessage className="text-red-400" />;
+              </FormItem>;
+            )}
+          />;
+          <Button;
+            type="submit";
+            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white";
+          >;
+            Complete Profile;
+          </Button>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        </form>;
+      </Form>;
+    </div>;
+  );
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 case "talent": return "Talent";"
 case "client": return "Client"
@@ -280,6 +332,7 @@ getTypeLabel () "
 }/> <Button > Complete Profile </Button> </form> </Form> </div>)
 }"}
 =======
+<<<<<<< HEAD
                   />;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
@@ -299,3 +352,8 @@ getTypeLabel () "
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

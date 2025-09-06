@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface InvestmentPortfolio {
+=======
+export interface InvestmentPortfolio {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   userId: string;
   name: string;
@@ -18,7 +23,12 @@ export interface InvestmentPortfolio {
 
   updatedAt: Date
 }
+<<<<<<< HEAD
 export interface PortfolioAsset {
+=======
+
+export interface PortfolioAsset {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   symbol: string;
   name: string;
@@ -41,7 +51,12 @@ export interface PortfolioAsset {
     totalReturn: number
   }
 }
+<<<<<<< HEAD
 export interface PortfolioPerformance {
+=======
+
+export interface PortfolioPerformance {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   totalReturn: number;
   annualizedReturn: number;
   volatility: number;
@@ -55,7 +70,12 @@ export interface PortfolioPerformance {
 
   sortinoRatio: number
 }
+<<<<<<< HEAD
 export interface InvestmentRecommendation {
+=======
+
+export interface InvestmentRecommendation {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   userId: string;
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
@@ -76,7 +96,12 @@ export interface InvestmentRecommendation {
 
   expiresAt: Date
 }
+<<<<<<< HEAD
 export interface FinancialGoal {
+=======
+
+export interface FinancialGoal {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   userId: string;
   name: string;
@@ -94,7 +119,12 @@ export interface FinancialGoal {
 
   updatedAt: Date
 }
+<<<<<<< HEAD
 export interface MarketAnalysis {
+=======
+
+export interface MarketAnalysis {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   market: string;
 
@@ -111,7 +141,12 @@ export interface MarketAnalysis {
 
   nextUpdate: Date
 }
+<<<<<<< HEAD
 export interface FinancialPlan {
+=======
+
+export interface FinancialPlan {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   userId: string;
   name: string;
@@ -160,7 +195,12 @@ export interface FinancialPlan {
 
   updatedAt: Date
 }
+<<<<<<< HEAD
 export interface FinancialRequest {
+=======
+
+export interface FinancialRequest {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
 
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
@@ -168,7 +208,12 @@ export interface FinancialRequest {
 
   preferences?: Record<string, any>
 }
+<<<<<<< HEAD
 export interface FinancialResponse {
+=======
+
+export interface FinancialResponse {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
@@ -184,7 +229,12 @@ export interface FinancialResponse {
 
   estimatedFees: number
 }
+<<<<<<< HEAD
 export class AIFinancialAdvisorService {
+=======
+
+export class AIFinancialAdvisorService {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   private apiKey: string;
 
   private baseUrl: string
@@ -379,7 +429,10 @@ export class AIFinancialAdvisorService {
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 
 =======
+<<<<<<< HEAD
 export interface InvestmentPortfolio {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   userId: string,;
   name: string,;
@@ -751,5 +804,9 @@ export class AIFinancialAdvisorService {;
   }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

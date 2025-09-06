@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 import { ensureAdminFromApi } from '../../../../utils/auth';
 import OpenAI from 'openai';
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+import OpenAI from 'openai',;
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |process.env.NEXT_PUBLIC_OPENAI_API_KEY });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -32,9 +40,17 @@ response_format: { type: 'json_object' } as any})
     }
 res.status(200).json({ title, content })
   } catch (e: any) {
+<<<<<<< HEAD
     res.status(500).json({ error: e?.message |'Rewrite failed' })
 
 =======
+=======
+    res.status(500).json({ error: e?.message || 'Rewrite failed' })
+  };
+};
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -75,3 +91,7 @@ ${slide.content}`;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

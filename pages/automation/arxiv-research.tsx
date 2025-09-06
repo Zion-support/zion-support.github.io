@@ -1,12 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/arxiv-research.json';
 =======
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/arxiv-research.json',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/arxiv-research.json',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ArxivResearchPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 40)
@@ -27,7 +37,19 @@ export default function ArxivResearchPage() {
 <<<<<<< HEAD
                 {it.title}
               </a>
+<<<<<<< HEAD
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{(it.authors |[]).join(', ')}</div>
+=======
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{(it.authors || []).join(', ')}</div>
+              <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.summary}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                 {it.title  } catch (error) {
     console.error("Error:", error);
@@ -52,4 +74,9 @@ export default function ArxivResearchPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

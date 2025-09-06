@@ -2,9 +2,17 @@
 import React, { useState } from "react";
 =======
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export interface TreeNode {;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export interface TreeNode {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   name: string;
   path: string;
 
@@ -37,10 +45,16 @@ function NodeItem({
   const copyPath = async () => {
     await navigator.clipboard.writeText(node.path);  }
 export interface TreeNode {
+<<<<<<< HEAD
   name: string
   path: string
   type: "folder" | "file"
 
+=======
+  name: string,
+  path: string,
+  type: "folder" | "file",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   exists?: boolean;
   children?: TreeNode[]
 }
@@ -149,7 +163,11 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
 =======
     </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           ))}
         </div>
       )}
@@ -161,7 +179,8 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     <div className='w-full'>
       {nodes.map(n => (        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
       ))}
-    </div>
+<<<<<<< HEAD
+    </div>;
   );  )
 }
 export function Tree({ nodes, onDeploy }: TreeProps) {
@@ -169,7 +188,11 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     <div className="w-full">
       {nodes.map((n) => (
       ))}
+<<<<<<< HEAD
     </div>
+=======
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 export default Tree;
 }</div> </div> {
@@ -196,11 +219,18 @@ export default Tree;
 }depth= {
   0
 }onDeploy= {
+<<<<<<< HEAD
   onDeploy
 }/>) )
 }</div>)
+=======
+  onDeploy 
+}/>) ) 
+}</div>) ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }export default Tree;}
 export default Tree;
+<<<<<<< HEAD
 
 =======
 
@@ -209,3 +239,9 @@ export default Tree;
     </div>
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

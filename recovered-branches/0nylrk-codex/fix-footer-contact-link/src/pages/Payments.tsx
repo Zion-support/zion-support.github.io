@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {TransactionHistory} from "@/components/transactions/TransactionHistory";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -10,7 +21,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GradientHeading } from "@/components/GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Payments() {
   return (
     <>
@@ -98,14 +113,25 @@ export default function Payments() {
     </>
   )
 }
+<<<<<<< HEAD
 // Import UI components for Payment Settings tab
 <<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+// Import UI components for Payment Settings tab;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
+<<<<<<< HEAD
 
 =======
+=======
+=======
+// Import UI components for Payment Settings tab
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Button } from "@/components/ui/button",
 import { Switch } from "@/components/ui/switch",
 import { Label } from "@/components/ui/label",
@@ -208,4 +234,8 @@ import { Button } from "@/components/ui/button",;
 import { Switch } from "@/components/ui/switch",;
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

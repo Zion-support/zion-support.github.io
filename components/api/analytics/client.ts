@@ -5,7 +5,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
+  try {;
     const supabase = createServerClient();
     const clientId = (req.query.clientId as string) |null
     const [jobsR, quotesR] = await Promise.allSettled([

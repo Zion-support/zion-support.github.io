@@ -1,4 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+  ArrowRight,
+  Check,
+  ExternalLink,
+  Slack,
+  Briefcase,
+  Users,
+} from 'lucide-react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 import React from "react",
@@ -9,6 +28,7 @@ import { Badge } from "@/components/ui/badge",
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -25,6 +45,9 @@ import { Badge } from '@/components/ui/badge'
   Briefcase
   Users
 } from 'lucide-react'
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface IntegrationCardProps {
   title: string
   description: string
@@ -32,6 +55,7 @@ interface IntegrationCardProps {
   status?: 'connected' | 'disconnected' | 'pending'
   href?: string
   onConnect?: () => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function IntegrationCard({
   title
@@ -44,6 +68,12 @@ export function IntegrationCard({
 =======
 }
 
+=======
+=======
+}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function IntegrationCard({
   title,
   description,
@@ -116,7 +146,11 @@ interface IntegrationCardProps {;
   status?: "connected" | "disconnected" | "pending",;
   href?: string,;
   onConnect?: () => void;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 export function IntegrationCard({
@@ -195,7 +229,11 @@ export function IntegrationCard({
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
@@ -235,7 +273,11 @@ export function IntegrationCards() {
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
         icon={<Briefcase className="h-5 w-5" />}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />
       <IntegrationCard
@@ -247,13 +289,22 @@ export function IntegrationCards() {
         icon = {<Users className="h-5 w-5" />,}
         onConnect = {() => logDebug('Connect Teams clicked'),}
       />
-    </div>
-  )
+    </div>;
+  );
+};
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       />;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

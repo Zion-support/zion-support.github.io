@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface UserDetails {
+=======
+export interface UserDetails {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string;
   name?: string;
   email?: string;
@@ -15,7 +20,12 @@ export interface UserDetails {
   createdAt?: string;
   updatedAt?: string
 }
+<<<<<<< HEAD
 export interface UserProfile {
+=======
+
+export interface UserProfile {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string;
   displayName?: string;
   email: string;
@@ -34,7 +44,7 @@ export interface UserProfile {
   companyId?: string
 }
 // Update AuthContextType definition to match implementation
-export interface AuthContextType {
+export interface AuthContextType {;
   user: UserDetails | null;
   isLoading: boolean;
 
@@ -52,9 +62,13 @@ export interface AuthContextType {
   signOut?: () => Promise<void>;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
+<<<<<<< HEAD
 }
 =======
 export interface UserDetails {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string,;
   name?: string,;
   email?: string,;
@@ -105,6 +119,10 @@ export interface AuthContextType {;
   signIn?: (email: string, password: string) => Promise<{ error: any }>,;
   signOut?: () => Promise<void>;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

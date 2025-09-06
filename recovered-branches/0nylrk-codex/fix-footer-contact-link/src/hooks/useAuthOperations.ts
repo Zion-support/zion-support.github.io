@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import type { UserProfile } from "@/types/auth";
+import {toast} from "@/hooks/use-toast";
+import {trackReferral, checkUrlForReferralCode} from "@/utils/referralUtils";
+import {cleanupAuthState} from "@/utils/authUtils";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 <<<<<<< HEAD
@@ -11,7 +22,11 @@ import type { UserProfile } from "@/types/auth",
 import { toast } from "@/hooks/use-toast",
 import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils",
 import { cleanupAuthState } from "@/utils/authUtils",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function useAuthOperations(
 
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
@@ -20,8 +35,13 @@ export function useAuthOperations(
 ) {
   // Check for referral code in URL when the hook is first used
   useEffect(() => {
+<<<<<<< HEAD
+    checkUrlForReferralCode();
+  }, []);
+=======
     checkUrlForReferralCode()
   }, []),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const login = async ({ email, password }: { email: string, password: string }) => {
     setIsLoading(true),
@@ -104,11 +124,20 @@ export function useAuthOperations(
         toast({
           variant: "destructive",
           title: "Error during signup",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           description: error.message}),
         return { data: null, error: error.message }
           variant: "destructive",
           title: "Error during signup",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           description: error.message});
         return { data: null, error: error.message };
       }
@@ -290,12 +319,28 @@ export function useAuthOperations(
           variant: "destructive",
           title: "Failed to update profile",
           description: error.message});
+<<<<<<< HEAD
         return { error: error.message };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+        return { error: error.message }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       // Optimistically update the local user state
       setUser((prevUser) => {
         if (prevUser) {
+<<<<<<< HEAD
+=======
+=======
+        return { error: error.message };
+      }
+;
+      // Optimistically update the local user state;
+      setUser((prevUser) => {;
+        if (prevUser) {;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           return { ...prevUser, ...profileData }
         }
         return prevUser
@@ -359,6 +404,16 @@ export function useAuthOperations(
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      }
+    } finally {
+      setIsLoading(false)
+    }
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         return prevUser;
       }),;
       toast({;
@@ -391,6 +446,10 @@ export function useAuthOperations(
       setIsLoading(false);
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const loginWithFacebook = async () => {
@@ -412,6 +471,11 @@ export function useAuthOperations(
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },;
   const loginWithFacebook = async () => {;
     setIsLoading(true),;
@@ -423,15 +487,26 @@ export function useAuthOperations(
           variant: "destructive",;
           title: "Oh no! Something went wrong.",;
           description: error.message});
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } finally {
       setIsLoading(false)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   },
+=======
+  };
+=======
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const loginWithTwitter = async () => {
@@ -453,6 +528,11 @@ export function useAuthOperations(
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },;
   const loginWithTwitter = async () => {;
     setIsLoading(true),;
@@ -464,15 +544,26 @@ export function useAuthOperations(
           variant: "destructive",;
           title: "Oh no! Something went wrong.",;
           description: error.message});
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } finally {
       setIsLoading(false)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   },
+=======
+  };
+=======
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const loginWithWeb3 = async () => {
@@ -560,7 +651,11 @@ export function useAuthOperations(
     resetPassword,;
     updateProfile,;
     loginWithGoogle,;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     loginWithFacebook;
     loginWithTwitter;
 

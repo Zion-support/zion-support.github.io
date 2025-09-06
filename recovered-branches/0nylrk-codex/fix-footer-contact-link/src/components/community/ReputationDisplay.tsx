@@ -1,11 +1,20 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Trophy } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 =======
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import {Trophy} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+=======
+import { Trophy } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ReputationDisplayProps {
 
   reputation: number
@@ -22,8 +31,13 @@ export const ReputationDisplay = ({
   const progress = ((reputation % 100) / 100) * 100;
 =======
 
+<<<<<<< HEAD
+export const ReputationDisplay = ({ ;
+  reputation;
+=======
 export const ReputationDisplay = ({ 
   reputation,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   size = 'md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
@@ -84,6 +98,11 @@ export default ReputationDisplay;
 =======
 },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ReputationDisplay,
 import { Trophy } from "lucide-react",;
 import { Progress } from "@/components/ui/progress",;
@@ -133,5 +152,9 @@ export const ReputationDisplay = ({;
   );
 };
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ReputationDisplay;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

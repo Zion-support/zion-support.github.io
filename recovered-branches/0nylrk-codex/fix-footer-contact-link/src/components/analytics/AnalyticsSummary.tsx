@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Card, CardContent} from "@/components/ui/card";
+import {useQuery} from "@tanstack/react-query";
+import {supabase} from "@/integrations/supabase/client";
+import {Skeleton} from "@/components/ui/skeleton";
+import {formatDistanceToNow} from "date-fns";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Card, CardContent } from "@/components/ui/card",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -8,7 +18,11 @@ import { formatDistanceToNow } from "date-fns";
 =======
 import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
 
@@ -19,12 +33,17 @@ export function AnalyticsSummary() {
       const { data: pageViewsData, error: pageViewsError } = await supabase
         .from('analytics_events')
         .select('count')
+<<<<<<< HEAD
+        .eq('event_typepage_view');
+        .single();
+=======
         .eq('event_typepage_view')
 <<<<<<< HEAD
         .single();
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;
 =======
         .single(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
       
@@ -139,10 +158,13 @@ export function AnalyticsSummary() {
       />
     </div>
   )
+<<<<<<< HEAD
 }
 interface StatCardProps {
   title: string
   value: React.ReactNode
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Card, CardContent } from "@/components/ui/card",;
 import { useQuery } from "@tanstack/react-query",;
@@ -233,6 +255,10 @@ export function AnalyticsSummary() {;
       />;
     </div>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 interface StatCardProps {;

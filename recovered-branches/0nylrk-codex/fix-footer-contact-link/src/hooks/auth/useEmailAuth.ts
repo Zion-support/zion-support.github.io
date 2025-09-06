@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import type { UserProfile } from "@/types/auth";
+import {cleanupAuthState} from "@/utils/authUtils";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 <<<<<<< HEAD
@@ -10,14 +20,23 @@ import {cleanupAuthState} from "@/utils/authUtils";
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
 import { cleanupAuthState } from "@/utils/authUtils",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
 ) => {
   const login = async ({ email, password }: { email: string, password: string }) => {
+<<<<<<< HEAD
+    try {;
+      setIsLoading(true);
+=======
     try {
       setIsLoading(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Clean up any stale auth state before login
 <<<<<<< HEAD
       cleanupAuthState();
@@ -40,8 +59,16 @@ export const useEmailAuth = (
         toast({
           title: "Login failed",
           description: error.message,
+<<<<<<< HEAD
           variant: "destructive"}),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+          variant: "destructive"});
+=======
+          variant: "destructive"}),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         return { error }
           variant: "destructive"});
         return { error };
@@ -107,6 +134,11 @@ export const useEmailAuth = (
         toast({
           title: "Signup failed",
           description: error.message,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           variant: "destructive"}),
         return { error }
       }
@@ -122,7 +154,11 @@ export const useEmailAuth = (
         description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
       return { error }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           variant: "destructive"});
         return { error };
       }
@@ -146,7 +182,15 @@ export const useEmailAuth = (
         title: "Signup failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
+<<<<<<< HEAD
       return { error };
+=======
+<<<<<<< HEAD
+      return { error }
+=======
+      return { error };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } finally {
       setIsLoading(false)
     }
@@ -170,6 +214,11 @@ export const useEmailAuth = (
         toast({
           title: "Password reset failed",
           description: error.message,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           variant: "destructive"}),
         return { error }
       }
@@ -185,7 +234,11 @@ export const useEmailAuth = (
         description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
       return { error }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           variant: "destructive"});
         return { error };
       }
@@ -212,11 +265,26 @@ export const useEmailAuth = (
         title: "Password reset failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
+<<<<<<< HEAD
       return { error };
+=======
+<<<<<<< HEAD
+      return { error }
+=======
+      return { error };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } finally {
       setIsLoading(false)
     }
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return { login, signup, resetPassword }
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

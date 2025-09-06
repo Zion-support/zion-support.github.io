@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage() {
@@ -15,10 +16,19 @@ export default function ComposePage() {
     talentName
   } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
 =======
+import {useRouter} from 'next/router';
+import {useCurrentUser} from '../../hooks/useCurrentUser';
+export default function ComposePage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import { useRouter } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage(req, res) {
   try {
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
@@ -74,17 +84,28 @@ export default function ComposePage(req, res) {
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
 <<<<<<< HEAD
+<<<<<<< HEAD
       const mime = file.type |'application/octet-stream';
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
 =======
       const mime = file.type || 'application/octet-stream';
+=======
+      const mime = file.type || 'application/octet-stream';
+<<<<<<< HEAD
+      attachmentBase64 = `data:${mime};base64,${base64}`;    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       attachmentBase64 = `data:${mime},base64,${base64}`;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -205,6 +226,11 @@ export default function ComposePage(req, res) {
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
   } catch (error) {
@@ -212,4 +238,8 @@ export default function ComposePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

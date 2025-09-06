@@ -1,22 +1,35 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
+=======
+import {supabase} from "@/integrations/supabase/client";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { UserDetails } from "@/types/auth";
 =======
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
  */
 
 export const cleanupAuthState = () => {
+<<<<<<< HEAD
+  // Remove standard auth tokens;
+  localStorage.removeItem('supabase.auth.token');
+=======
   // Remove standard auth tokens
 <<<<<<< HEAD
   localStorage.removeItem('supabase.auth.token');
 =======
   localStorage.removeItem('supabase.auth.token'),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Remove all Supabase auth keys from localStorage
@@ -30,9 +43,12 @@ export const cleanupAuthState = () => {
   Object.keys(sessionStorage |{}).forEach((key) => {
     if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
       sessionStorage.removeItem(key)
+<<<<<<< HEAD
     }
   })
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
@@ -53,6 +69,10 @@ export const cleanupAuthState = () => {;
   Object.keys(sessionStorage || {}).forEach((key) => {;
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;
       sessionStorage.removeItem(key);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   })
 },
@@ -68,11 +88,16 @@ export const checkNewRegistration = async (user: UserDetails) => {
       .from("email_campaigns")
       .select("id")
       .eq("user_id", user.id)
+<<<<<<< HEAD
+      .eq("campaign_type", "welcome_series");
+      .maybeSingle();
+=======
       .eq("campaign_type", "welcome_series")
 <<<<<<< HEAD
       .maybeSingle();
 =======
       .maybeSingle(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // If no welcome email sent yet, schedule one
@@ -119,9 +144,12 @@ export const checkNewRegistration = async (user: UserDetails) => {
     }
   } catch (error) {
     console.error("Error checking or scheduling welcome email:", error)
+<<<<<<< HEAD
   }
 }
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             user_id: user.id,
             email_type: "welcome_series",
@@ -176,6 +204,10 @@ export const checkNewRegistration = async (user: UserDetails) => {;
     console.error("Error checking or scheduling welcome email:", error)
   } catch (error) {;
     console.error("Error checking or scheduling welcome email:", error);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

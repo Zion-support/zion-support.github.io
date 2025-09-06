@@ -17,19 +17,34 @@ import {
   MapPin,
   Globe,
   Github,
-  Linkedin,
+  Linkedin,;
   ExternalLink,;
+<<<<<<< HEAD
 } from 'lucide-react';
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+=======
+} from 'lucide-react';
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
 export default function NeoFuturisticFooter() {
+<<<<<<< HEAD
   return (  website: 'https://ziontechgroup.com'
 }
+=======
+<<<<<<< HEAD
+  return (  website: 'https://ziontechgroup.com';
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function NeoFuturisticFooter() {
   return (
@@ -157,13 +172,24 @@ export default function NeoFuturisticFooter() {
             <a href="/terms" className="hover:text-slate-300">Terms</a>
         </div>
       </div>
-    </footer>
+    </footer>;
   );
 }
+<<<<<<< HEAD
 =======
+=======
+
+;
+=======
+  return (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 };
 
 export default function NeoFuturisticFooter() {
   return (
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

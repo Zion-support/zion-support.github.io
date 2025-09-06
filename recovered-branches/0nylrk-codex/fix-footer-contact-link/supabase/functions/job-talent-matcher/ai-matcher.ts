@@ -1,10 +1,18 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { JobData, TalentProfile, MatchResult } from "./types.ts";
 // Get openAI API key from environment variables
 =======
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
+=======
+import {JobData, TalentProfile, MatchResult} from "./types.ts";
+=======
+import { JobData, TalentProfile, MatchResult } from "./types.ts",
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -16,11 +24,16 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
  * @returns Array of normalized skills
  */
 export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]> {
+<<<<<<< HEAD
+  try {;
+    const skillsString = skills.join(", ");
+=======
   try {
 <<<<<<< HEAD
     const skillsString = skills.join(", ");
 =======
     const skillsString = skills.join(", "),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -125,7 +138,11 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     console.error("Error in normalizeSkillsWithAI:", error),;
     // If AI normalization fails, return the original skills;
     return skills;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 /**
@@ -142,18 +159,31 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
       Description: ${jobDetails.description}
       Category: ${jobDetails.category}
       Required Skills: ${jobDetails.skills.join(", ")}
+<<<<<<< HEAD
       Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     `;
     // Create talent profiles text for AI evaluation
     const talentProfilesText = talents.map((talent, index) => {
       return `
 =======
+<<<<<<< HEAD
+=======
+      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     `,;
     // Create talent profiles text for AI evaluation;
     const talentProfilesText = talents.map((talent, index) => {;
       return `;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         Talent ${index + 1} ID: ${talent.id}
         Name: ${talent.full_name}
         Title: ${talent.professional_title}
@@ -258,6 +288,10 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
     console.error("Error in findBestMatches:", error);
     // If AI matching fails, perform a basic skill matching
     return performBasicSkillMatching(jobDetails, talents)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 /**
@@ -266,7 +300,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
  * @param talents Array of talent profiles
  * @returns Array of matches with scores
  */
-export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {
+export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {;
   const requiredSkills = jobDetails.skills.map((skill: string) => skill.toLowerCase());
   return talents.map(talent => {
     const talentSkills = Array.isArray(talent.skills)
@@ -285,10 +319,13 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
 
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`
 =======
+<<<<<<< HEAD
     console.error("Error in findBestMatches:", error),
     
     // If AI matching fails, perform a basic skill matching
     return performBasicSkillMatching(jobDetails, talents)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         Bio Summary: ${talent.bio ? talent.bio.substring(0, 100) + "..." : "No bio"}
         Skills: ${Array.isArray(talent.skills) ? talent.skills.join(", ") : "No skills listed"}
         Experience: ${talent.years_experience} years;
@@ -376,7 +413,11 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       score: matchScore;
       matchedSkills: matchedSkills;
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   })
   .filter(match => match.score > 30) // Only include matches with at least 30% score

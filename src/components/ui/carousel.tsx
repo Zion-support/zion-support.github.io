@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import * as React from &quot;react&quot;
+import useEmblaCarousel from &quot;embla-carousel-react&quot;
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+;
+import { cn } from &quot;@/lib/utils&quot;
+import { Button } from &quot;@/components/ui/button&quot;
+=======
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from 'lucide-react'
@@ -8,6 +16,7 @@ import { Button } from &quot;@/components/ui/button&quot;
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
@@ -30,7 +39,11 @@ type CarouselContextProps = {
   canScrollPrev: boolean
   canScrollNext: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
@@ -74,6 +87,10 @@ function useCarousel(): CarouselContextProps {;
   const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {;
     throw new Error("useCarousel must be used within a <Carousel />");
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -87,13 +104,17 @@ const Carousel = React.forwardRef<
     {
 <<<<<<< HEAD
       orientation = &quot;horizontal&quot;
+<<<<<<< HEAD
       opts
       setApi
       plugins
       className
       children
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
       orientation = "horizontal",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       opts,
       setApi,
       plugins,
@@ -119,7 +140,7 @@ const Carousel = React.forwardRef<
     const [canScrollNext, setCanScrollNext] = React.useState(false)
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
-        return
+        return;
       }
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
@@ -140,6 +161,7 @@ const Carousel = React.forwardRef<
           scrollNext()
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
       [scrollPrev, scrollNext];
     );
@@ -155,7 +177,11 @@ onSelect(api)
       api.on(&quot;reInit&quot;, onSelect)
       api.on(&quot;select&quot;, onSelect)
 =======
+      };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
       },;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       [scrollPrev, scrollNext];
     );
     React.useEffect(() => {;
@@ -169,6 +195,17 @@ onSelect(api)
       if (!api) {;
         return;
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+onSelect(api)
+      api.on(&quot;reInit&quot; onSelect)
+      api.on(&quot;select&quot; onSelect)
+
+      return () => {
+        api?.off(&quot;select&quot; onSelect)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
       onSelect(api)
       api.on("reInit", onSelect)
@@ -177,6 +214,7 @@ onSelect(api)
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return () => {
         api?.off("select", onSelect)
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     }, [api, onSelect])
     return (
@@ -203,14 +241,22 @@ onSelect(api)
           ref={ref}
           onKeyDownCapture={handleKeyDown}
 <<<<<<< HEAD
+<<<<<<< HEAD
 className={cn(&quot;relative&quot;, className)}
+=======
+className={cn(&quot;relative&quot; className)}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
 =======
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {...props}
         >;
           {children}
@@ -245,7 +291,11 @@ const CarouselContent = React.forwardRef<
           orientation === "horizontal"
             ? "-ml-4 snap-x snap-mandatory"
             : "-mt-4 flex-col snap-y snap-mandatory",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           className
         )}
         {...props}
@@ -276,7 +326,11 @@ const CarouselItem = React.forwardRef<
 =======
         "min-w-0 shrink-0 grow-0 basis-full snap-start",
         orientation === "horizontal" ? "pl-4" : "pt-4",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         className
       )}
       {...props}
@@ -292,7 +346,11 @@ CarouselItem.displayName = "CarouselItem"
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement
   React.ComponentProps<typeof Button>
+<<<<<<< HEAD
+>(({ className, variant = &quot;outline&quot; size = &quot;icon&quot; ...props }, ref) => {
+=======
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
   return (
     <Button
@@ -310,7 +368,11 @@ const CarouselPrevious = React.forwardRef<
         orientation === "horizontal"
           ? "left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2"
           : "top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         className
       )}
       disabled={!canScrollPrev}
@@ -320,14 +382,21 @@ const CarouselPrevious = React.forwardRef<
 >
       <ArrowLeft className=&quot;h-4 w-4&quot; />
       <span className=&quot;sr-only&quot;>Previous slide</span>
+<<<<<<< HEAD
     </Button>
   )
 })
 CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
     >
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </Button>
   )
 })
@@ -337,7 +406,11 @@ CarouselPrevious.displayName = "CarouselPrevious"
 const CarouselNext = React.forwardRef<
   HTMLButtonElement
   React.ComponentProps<typeof Button>
+<<<<<<< HEAD
+>(({ className, variant = &quot;outline&quot; size = &quot;icon&quot; ...props }, ref) => {
+=======
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { orientation, scrollNext, canScrollNext } = useCarousel()
   return (
     <Button
@@ -355,7 +428,11 @@ const CarouselNext = React.forwardRef<
         orientation === "horizontal"
           ? "right-1 sm:right-2 md:-right-12 top-1/2 -translate-y-1/2"
           : "bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         className
       )}
       disabled={!canScrollNext}
@@ -365,6 +442,7 @@ const CarouselNext = React.forwardRef<
 >
       <ArrowRight className=&quot;h-4 w-4&quot; />
       <span className=&quot;sr-only&quot;>Next slide</span>
+<<<<<<< HEAD
     </Button>
   )
 })
@@ -377,9 +455,15 @@ export {
   CarouselPrevious
   CarouselNext}
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </Button>
   )
 })
@@ -390,7 +474,15 @@ export {
   Carousel,
   CarouselContent,
   CarouselItem,
+<<<<<<< HEAD
+  CarouselPrevious,;
+  CarouselNext};
+=======
   CarouselPrevious,
   CarouselNext}
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

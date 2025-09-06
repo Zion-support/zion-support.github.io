@@ -1,7 +1,64 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+// Mock whitepaper data - in a real app, this would come from an API or database
+const whitepapers = {
+  'autonomous-systems-guide': {
+    id: 'autonomous-systems-guide',
+    title: 'The Complete Guide to Autonomous Systems',
+    description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.',
+    category: 'Technology',
+    pages: '45',
+    author: 'Zion Tech Group Research Team',
+    publishDate: 'January 2025',
+    content: {
+      executiveSummary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',
+      keyTopics: [
+        'Understanding Autonomous SystemsImplementation StrategiesBest Practices & Case StudiesFuture Trends & Predictions'
+      ],
+      targetAudience: 'Technology leaders, engineers, and business professionals interested in implementing autonomous systems.'
+    }
+  },
+  'ai-ethics-framework': {
+    id: 'ai-ethics-framework',
+    title: 'AI Ethics Framework for Business',
+    description: 'Establishing ethical guidelines for AI implementation in enterprise environments.',
+    category: 'Ethics',
+    pages: '32',
+    author: 'Zion Tech Group Ethics Committee',
+    publishDate: 'January 2025',
+    content: {
+      executiveSummary: 'This framework provides organizations with a structured approach to implementing AI systems ethically and responsibly. Learn how to balance innovation with ethical considerations.',
+      keyTopics: [
+        'Ethical AI PrinciplesImplementation GuidelinesRisk Assessment & MitigationCompliance & Governance'
+      ],
+      targetAudience: 'Business leaders, compliance officers, and AI practitioners focused on responsible AI development.'
+    }
+  },
+  'automation-roi-calculator': {
+    id: 'automation-roi-calculator',
+    title: 'Automation ROI Calculator Guide',
+    description: 'How to calculate and maximize return on investment for automation initiatives.',
+    category: 'Business',
+    pages: '28',
+    author: 'Zion Tech Group Business Analytics Team',
+    publishDate: 'January 2025',
+    content: {
+      executiveSummary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
+      keyTopics: [
+        'ROI Calculation MethodsCost-Benefit AnalysisSuccess Metrics & KPIsInvestment Justification Strategies'
+      ],
+      targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -83,6 +140,10 @@ const whitepapers = {;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
   },;
@@ -176,7 +237,11 @@ export default function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <nav className="mb-8">
             <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               ← Back to Resources
@@ -224,7 +289,11 @@ export default function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
               <span>By {whitepaper.author}</span>
@@ -242,7 +311,11 @@ export default function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="max-w-4xl mx-auto">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>
@@ -277,7 +350,11 @@ export default function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="mb-12">
               <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Download?</h2>
@@ -293,7 +370,11 @@ export default function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </button>
                 <p className="text-white/60 text-sm mt-4">
                   PDF format • {whitepaper.pages} pages • Free download
@@ -308,7 +389,11 @@ export default function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -316,8 +401,13 @@ export default function WhitepaperPage() {
                   .filter(w => w.id !== whitepaper.id)
                   .slice(0, 2)
                   .map((relatedPaper) => (
+<<<<<<< HEAD
                     <Link
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    <Link 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       key={relatedPaper.id}
                       href={`/resources/whitepapers/${relatedPaper.id}`}
                       className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300"
@@ -335,6 +425,10 @@ export default function WhitepaperPage() {
             </section>
             {/* CTA */}
 =======
+<<<<<<< HEAD
+=======
+                    <Link
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       key={relatedPaper.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -546,7 +640,11 @@ export default function WhitepaperPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Need Custom Research?</h2>
@@ -567,6 +665,13 @@ export default function WhitepaperPage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
             <section className="text-center">;
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">;
@@ -593,4 +698,9 @@ export default function WhitepaperPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 import { ProfileData } from '@/types/profile';
 export const MOCK_PROFILES: Record<string, ProfileData> = {
@@ -9,6 +12,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     avatarUrl:
       'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=200&h=200'
     coverImageUrl:
+<<<<<<< HEAD
       'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600'
     bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.'
     location: 'San Francisco, CA'
@@ -195,6 +199,12 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       ]
     }
   }
+=======
+      'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600',
+    bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.',
+    location: 'San Francisco, CA',
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 =======
 import { ProfileData } from "@/types/profile",
@@ -207,6 +217,10 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
     coverImageUrl: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600",
     bio: "Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.",
     location: "San Francisco, CA",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     rating: 4.9,
     reviewCount: 124,
     aiScore: 95,
@@ -352,6 +366,24 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
       status: "available",
       message: "Open to new projects starting immediately. Prefer projects with 3+ month engagement.",
       availableHours: [
+<<<<<<< HEAD
+        { day: 'Monday', hours: '10:00 AM - 6:00 PM' },
+        { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
+        { day: 'Wednesday', hours: '10:00 AM - 6:00 PM' },
+        { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },
+        { day: 'Friday', hours: '10:00 AM - 2:00 PM' },
+      ],
+    },;
+  },};        { day: "Monday", hours: "10:00 AM - 6:00 PM" };
+        { day: "Tuesday", hours: "10:00 AM - 6:00 PM" };
+        { day: "Wednesday", hours: "10:00 AM - 6:00 PM" };
+        { day: "Thursday", hours: "10:00 AM - 6:00 PM" };
+        { day: "Friday", hours: "10:00 AM - 2:00 PM" }
+      ]
+    }
+  }
+
+=======
         { day: "Monday", hours: "10:00 AM - 6:00 PM" },
         { day: "Tuesday", hours: "10:00 AM - 6:00 PM" },
         { day: "Wednesday", hours: "10:00 AM - 6:00 PM" },
@@ -522,4 +554,8 @@ export const MOCK_PROFILES: Record<string ProfileData> = {;
     }
   }
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

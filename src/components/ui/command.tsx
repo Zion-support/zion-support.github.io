@@ -12,7 +12,11 @@ import { Search } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
@@ -25,10 +29,15 @@ const Command = React.forwardRef<
       className
     )}
     {...props}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   />
 ))
 Command.displayName = CommandPrimitive.displayName
 interface CommandDialogProps
+<<<<<<< HEAD
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {
 =======
@@ -36,10 +45,17 @@ const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {
       className
     )}
     {...props}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   />;
 ));
 Command.displayName = CommandPrimitive.displayName;
 interface CommandDialogProps;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 
 const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
@@ -58,9 +74,12 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
     </Dialog>
   )
 }
+<<<<<<< HEAD
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>
   React.ComponentPropsWithoutRef<typeof Command</typeof>Primitive.Input>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         <Command className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5">
           {children}
@@ -70,6 +89,10 @@ const CommandInput = React.forwardRef<
   );
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
@@ -109,7 +132,11 @@ const CommandList = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.List>;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.List;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ref={ref}
     className={cn("max-h-[300px] overflow-y-auto overflow-x-hidden", className)}
     {...props}
@@ -156,7 +183,11 @@ const CommandSeparator = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.Separator;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ref={ref}
     className={cn("-mx-1 h-px bg-border", className)}
     {...props}
@@ -203,7 +234,11 @@ const CommandItem = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item>;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.Item;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ref={ref}
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50"
@@ -222,6 +257,7 @@ const CommandShortcut =</HTMLSpanElement> ({
   )
 }
 CommandShortcut.displayName = 'CommandShortcut'
+<<<<<<< HEAD
 export {
   Command
   CommandDialog
@@ -233,6 +269,8 @@ export {
   CommandShortcut
   CommandSeparator
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 CommandItem.displayName = CommandPrimitive.Item.displayName
@@ -253,6 +291,10 @@ const CommandShortcut = ({
 }
 CommandShortcut.displayName = "CommandShortcut"
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export {
   Command,
   CommandDialog,
@@ -260,8 +302,18 @@ export {
   CommandList,
   CommandEmpty,
   CommandGroup,
+<<<<<<< HEAD
+  CommandItem,;
+  CommandShortcut,;
+  CommandSeparator;
+};
+=======
   CommandItem,
   CommandShortcut,
   CommandSeparator}
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

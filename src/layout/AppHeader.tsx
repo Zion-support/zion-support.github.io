@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const showTagline = router.pathname === '/'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from 'react',
 import { useMessaging } from '@/context/MessagingContext',
@@ -20,6 +24,10 @@ import { cn } from '@/lib/utils', // Import cn utility
 import { useRouter } from 'next/router',
 export function AppHeader() {
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const [loginOpen, setLoginOpen] = useState(false),
   const isMobile = useIsMobile(),
@@ -60,7 +68,11 @@ export function AppHeader() {
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -88,7 +100,11 @@ export function AppHeader() {
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
@@ -108,12 +124,19 @@ export function AppHeader() {
                 aria-label = {t('auth.login'),}
                 data-testid="login-link"
                 onClick={(e,) => {
+<<<<<<< HEAD
                   e.preventDefault()
                   // For the main login link, we might not have a specific returnTo beyond current page
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -133,7 +156,11 @@ export function AppHeader() {
                 aria-label = {t('auth.signup'),}
 =======
                 aria-label={t('auth.signup')}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 data-testid="signup-nav-link"
               >
                 {t('auth.signup')}
@@ -154,11 +181,24 @@ export function AppHeader() {
 <<<<<<< HEAD
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+<<<<<<< HEAD
             onClick = {(,) => setMobileMenuOpen(false),}
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu
+=======
+<<<<<<< HEAD
+            onClick = {(,) => setMobileMenuOpen(false),}
+=======
+            onClick={() => setMobileMenuOpen(false)}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+            aria-hidden="true"
+          />
+          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               unreadCount = {unreadCount,}
               onClose = {() => setMobileMenuOpen(false),}
               openLoginModal = {openLoginModal,}
@@ -166,6 +206,7 @@ export function AppHeader() {
           </div>
         </div>
 =======
+<<<<<<< HEAD
           <div 
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
@@ -173,13 +214,19 @@ export function AppHeader() {
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
             />;
           </div>;
         </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
@@ -775,6 +822,7 @@ export function AppHeader() {
       </AnimatePresence>
     </header>  )
 }
+<<<<<<< HEAD
 =======
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
@@ -782,3 +830,12 @@ export function AppHeader() {
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+<<<<<<< HEAD
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

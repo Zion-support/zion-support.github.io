@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import {
+  BarChart3,
+  TrendingUp,
+  PieChart,
+  Activity,
+  ArrowRight,
+  Check,;
+  Eye,;
+} from 'lucide-react';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -45,6 +61,10 @@ export default function AnalyticsPage() {
 =======
 import Head from 'next/head',
 import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AnalyticsPage() {
   const features = [
     {
@@ -65,6 +85,12 @@ export default function AnalyticsPage() {
     {
       icon: <Activity className="w-8 h-8 text-white" />,
       title: 'Performance Monitoring',
+<<<<<<< HEAD
+      description: 'Track system performance and user behavior',
+    },;
+  ];
+
+=======
       description: 'Track system performance and user behavior'
       } catch (error) {
     console.error("Error:", error);
@@ -72,6 +98,7 @@ export default function AnalyticsPage() {
   }
 }
   ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const benefits = [
     'Make data-driven decisionsIdentify growth opportunitiesOptimize user experienceMonitor system healthTrack business metricsGenerate actionable insights'
   ],
@@ -98,6 +125,7 @@ export default function AnalyticsPage() {
               </div>
             </div>
             <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
+<<<<<<< HEAD
               Analytics Platform
             </h1>
             <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
@@ -109,6 +137,8 @@ export default function AnalyticsPage() {
                 Start Analyzing
                 <ArrowRight className='w-5 h-5 ml-2' />
               </a>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       <div className="min-h-screen bg-black">
         {/* Hero Section */  } catch (error) {
@@ -129,13 +159,25 @@ export default function AnalyticsPage() {
               </div>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Analytics Platform
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
               Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities.
             </p>
+<<<<<<< HEAD
+            <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+              <a href='/contact' className='shadow-2xl shadow-blue-500/25'>
+                Start Analyzing
+                <ArrowRight className='w-5 h-5 ml-2' />
+              </a>
+=======
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <a
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Start Analyzing
@@ -164,7 +206,11 @@ export default function AnalyticsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Analytics Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -175,7 +221,11 @@ export default function AnalyticsPage() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
 =======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {features.map((feature, index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
@@ -230,7 +280,11 @@ export default function AnalyticsPage() {
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Transform Data into Action
@@ -262,7 +316,11 @@ export default function AnalyticsPage() {
                   <div className="text-center">
                     <Eye className="w-24 h-24 mx-auto mb-6 text-blue-400" />
                     <h3 className="text-2xl font-bold text-white mb-4">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Visual Insights
                     </h3>
                     <p className="text-gray-300 mb-6">
@@ -292,7 +350,11 @@ export default function AnalyticsPage() {
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Ready to Unlock Your Data?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -314,6 +376,11 @@ export default function AnalyticsPage() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
         <section className="py-24 bg-gray-900">;
@@ -391,4 +458,8 @@ export default function AnalyticsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

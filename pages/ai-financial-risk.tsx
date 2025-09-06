@@ -3,6 +3,7 @@ import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { innovativeAIServices } from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
 
@@ -73,6 +74,13 @@ const AIFinancialRisk: React.FC = () => {
                   </li>
                 ))}
 =======
+import {innovativeAIServices} from '../data/innovative-ai-services';
+export default function AIFinancialRiskPage() {
+  const service = innovativeAIServices.find(s =>
+    (s.link || '').endsWith('/ai-financial-risk');
+  );
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import NextHead from 'next/head',
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
@@ -80,6 +88,7 @@ import Button from '../components/ui/Button',
 import { innovativeAIServices } from '../data/innovative-ai-services',
 export default function AIFinancialRiskPage() {
   const service = innovativeAIServices.find(s => (s.link || '').endsWith('/ai-financial-risk')),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -147,6 +156,12 @@ export default function AIFinancialRiskPage() {
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
 import NextHead from 'next/head';
@@ -219,4 +234,8 @@ export default function AIFinancialRiskPage(req, res) {
   }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

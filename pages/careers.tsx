@@ -23,6 +23,7 @@ import { motion } from "framer-motion";
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
+<<<<<<< HEAD
   Users
   MapPin
   Clock
@@ -38,6 +39,23 @@ import {
   GraduationCap
   Globe
   CheckCircle
+=======
+  Users,
+  MapPin,
+  Clock,
+  DollarSign,
+  ArrowRight,
+  Heart,
+  Star,
+  Award,
+  Coffee,
+  Zap,
+  Shield,
+  Briefcase,
+  GraduationCap,
+  Globe,
+  CheckCircle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -457,6 +475,7 @@ export default function CareersPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </MainLayout>
 =======
 <<<<<<< HEAD
@@ -469,5 +488,8 @@ export default function CareersPage() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    </MainLayout>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }

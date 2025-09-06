@@ -9,8 +9,13 @@ import * as React from "react"
  * React version is used where `useId` is unavailable, this hook provides
  * a small fallback that mimics the API using `useRef`.
  */
+<<<<<<< HEAD
+export function useReactId(): string {;
+  if (typeof (React as any).useId === &quot;function&quot;) {
+=======
 export function useReactId(): string {
   if (typeof (React as any).useId === "function") {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     return (React as any).useId()
   }
 <<<<<<< HEAD

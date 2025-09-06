@@ -135,7 +135,15 @@ app.get('/notifications', async (req: any, reply: any) => {
 });
 const port = Number(process.env.API_PORT |4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+<<<<<<< HEAD
 app.log.error(err);
+=======
+<<<<<<< HEAD
+app.log.error(err);
+=======
+  app.log.error(err);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   (process as any).exit(1);
 });  (process as any).exit(1)
 });

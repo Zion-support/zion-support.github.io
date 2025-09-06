@@ -1,10 +1,18 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useCallback  } from 'react';
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {
+=======
+import {useState, useCallback} from 'react';
+import {checkSignupPatterns} from '@/services/fraud/signupCheck';
+import {supabase} from '@/integrations/supabase/client';
+import {toast} from '@/hooks/use-toast';
+export function useFraudPreventionSignup() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isCheckingFraud, setIsCheckingFraud] = useState(false);
   // Get the user's IP address (in a real app, you'd do this server-side)
 
@@ -17,7 +25,11 @@ export function useFraudPreventionSignup() {
       console.error('Error getting IP:', error);
       return undefined
     }
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useCallback } from 'react',;
 import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
@@ -36,6 +48,10 @@ export function useFraudPreventionSignup() {;
       return undefined;
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Check if the signup attempt might be fraudulent
@@ -95,6 +111,10 @@ export function useFraudPreventionSignup() {;
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
             variant: "destructive"});
           return false
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
         // Otherwise, allow but flag for review
         return true
@@ -111,10 +131,13 @@ export function useFraudPreventionSignup() {;
   }, []);
   return {
 =======
+<<<<<<< HEAD
             title: "Signup blocked",
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
             variant: "destructive"}),
           return false
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },;
   // Check if the signup attempt might be fraudulent;
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {;
@@ -169,7 +192,11 @@ export function useFraudPreventionSignup() {;
     }
   }, []);
   return {;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     isCheckingFraud;
 
     checkFraudBeforeSignup}

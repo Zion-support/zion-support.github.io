@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 import {
   Rocket
@@ -168,6 +169,30 @@ export default function GetStarted() {
       setCurrentStep(currentStep - 1);    }
   }
 =======
+import {
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Zap,
+  Users,
+  Clock,
+  Target,
+  Star,
+  FileText,
+  Video,
+  Code,
+  Globe,;
+  Building,;} from 'lucide-react';
+
+export default function GetStarted() {;
+  const [selectedPath, setSelectedPath] = useState<string>('');
+  const [currentStep, setCurrentStep] = useState(1);
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import {
@@ -178,6 +203,7 @@ import {
 export default function GetStarted() {
   const [selectedPath, setSelectedPath] = useState<string>(''),
   const [currentStep, setCurrentStep] = useState(1),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const onboardingSteps = [
     {
       step: 1,
@@ -293,6 +319,28 @@ export default function GetStarted() {
       duration: '4-8 weeks',
       icon: <Rocket className="w-6 h-6" />,
       action: 'Discuss Pilot',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      color: 'from-orange-500 to-red-600',
+    },  ];
+
+  const handlePathSelection = (pathId: string) => {
+    setSelectedPath(pathId);
+    setCurrentStep(2);  };
+
+  const handleNextStep = () => {
+    if (currentStep < 4) {
+      setCurrentStep(currentStep + 1);    }
+  };
+
+  const handlePreviousStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);    }
+  };
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       color: 'from-orange-500 to-red-600'
       } catch (error) {
     console.error("Error:", error);
@@ -322,7 +370,11 @@ export default function GetStarted() {
   }
 }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */  } catch (error) {
@@ -416,7 +468,11 @@ export default function GetStarted() {
   }
 }
             className="text-center mb-16"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Simple 4-Step Process
@@ -468,7 +524,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
                   {step.step  } catch (error) {
@@ -508,7 +568,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {currentStep === 1 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -574,7 +638,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-6">
@@ -594,7 +662,11 @@ export default function GetStarted() {
                     <div className='grid md:grid-cols-2 gap-6 mb-6'>
 =======
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Key Features</h4>
                         <ul className="space-y-2">
@@ -660,7 +732,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                         <span className="flex items-center gap-1">
                           <Target className="w-4 h-4" />
@@ -705,7 +781,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {currentStep === 2 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -749,7 +829,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </h3>
                   <p className="text-gray-300">
                     Now let's gather more details about your specific needs
@@ -761,7 +845,11 @@ export default function GetStarted() {
 =======
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Project Timeline</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
@@ -797,7 +885,11 @@ export default function GetStarted() {
                   <div className='flex justify-between pt-6'>
 =======
                   <div className="flex justify-between pt-6">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <button
                       onClick={handlePreviousStep  } catch (error) {
     console.error("Error:", error);
@@ -864,7 +956,11 @@ export default function GetStarted() {
   }
 }
             className="text-center mb-16"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options
@@ -904,7 +1000,11 @@ export default function GetStarted() {
   }
 }
                 className="group cursor-pointer"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -996,7 +1096,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Begin Your Journey?
@@ -1025,7 +1129,12 @@ export default function GetStarted() {
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 )
+=======
+),
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -1117,4 +1226,8 @@ export default function GetStarted() {
   }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

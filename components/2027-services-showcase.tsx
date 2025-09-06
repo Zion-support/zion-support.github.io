@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Search
   Star
   Users
@@ -45,9 +46,45 @@ import {
  } from 'lucide-react';
 import { cuttingEdge2027Innovations  } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
+=======
+  Search,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Target,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Eye,
+  Heart,
+  Share2,
+  Download,
+  Phone,
+  Mail,;
+  MapPin,;} from 'lucide-react';import {
+  Search, Star, Users, TrendingUp, DollarSign, Clock, 
+  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
+  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud, 
+  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin;
+import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
-export default function ServicesShowcase2027() {
+export default function ServicesShowcase2027() {;
   const [searchTerm, setSearchTerm] = useState('');
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -393,7 +430,11 @@ export default function ServicesShowcase2027() {
                 <DollarSign className="w-5 h-5" />
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <span>View Pricing</span>
               </Link>
             </div>
@@ -403,7 +444,11 @@ export default function ServicesShowcase2027() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Search and Filters */}
       <section className='px-4 sm:px-6 lg:px-8 mb-16'>
         <div className='max-w-7xl mx-auto'>
@@ -460,7 +505,11 @@ export default function ServicesShowcase2027() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Price Range Filter */}
               <div>
                 <label className='block text-cyan-400 font-medium mb-2'>
@@ -486,7 +535,11 @@ export default function ServicesShowcase2027() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Sort By */}
               <div>
                 <label className='block text-cyan-400 font-medium mb-2'>
@@ -571,7 +624,11 @@ export default function ServicesShowcase2027() {
 
                         {service.price}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </div>
                     {/* Features */}
@@ -608,7 +665,11 @@ export default function ServicesShowcase2027() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* ROI */}
                     <div className='mb-6 text-center'>
                       <div className='text-green-400 font-semibold text-lg'>
@@ -637,7 +698,11 @@ export default function ServicesShowcase2027() {
 =======
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         Learn More
                       </Link>
@@ -652,7 +717,11 @@ export default function ServicesShowcase2027() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Category Badge */}
                     <div className='mt-4'>
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service.category}                    <div className="mt-4">
@@ -668,7 +737,11 @@ export default function ServicesShowcase2027() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
@@ -698,7 +771,11 @@ export default function ServicesShowcase2027() {
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >
 
               <button
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
@@ -718,7 +795,11 @@ export default function ServicesShowcase2027() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Contact Section */}
       <section className='px-4 sm:px-6 lg:px-8 mb-20'>
         <div className='max-w-4xl mx-auto'>
@@ -727,7 +808,11 @@ export default function ServicesShowcase2027() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -850,6 +935,14 @@ export default function ServicesShowcase2027() {
 <<<<<<< HEAD
 );  )
 }
+<<<<<<< HEAD
 =======
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

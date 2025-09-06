@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
@@ -12,11 +13,19 @@ export const useRecordActivity = () => {
     previousStatus: string | null
     newStatus: string;
 =======
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {MilestoneActivity} from './types';
+export const useRecordActivity = () => {;
+  const { user } = useAuth();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
 export const useRecordActivity = () => {
   const { user } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const recordMilestoneActivity = async (
     milestoneId: string,
@@ -63,6 +72,14 @@ export const useRecordActivity = () => {
       console.error("Error recording activity:", err),
       return null
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    }
+  };
+  
+  return {
+    recordMilestoneActivity
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -99,6 +116,13 @@ export const useRecordActivity = () => {;
       return null;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
+<<<<<<< HEAD
+=======
+  };
+  return {;
+    recordMilestoneActivity;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 <<<<<<< HEAD
   return {

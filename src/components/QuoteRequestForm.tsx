@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react";
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
@@ -35,7 +38,11 @@ import { QuoteFormData } from "@/types/quotes",
 import { Sparkles, Loader2 } from 'lucide-react'
 import { z } from "zod",
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
@@ -57,8 +64,14 @@ import {z} from "zod"
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary"
 const serviceStepSchema = z.object({
 <<<<<<< HEAD
+<<<<<<< HEAD
   serviceType: z.string().min(1)
   specificItem: z.object({ id: z.string() })})
+=======
+  serviceType: z.string().min(1),
+  specificItem: z.object({ id: z.string() })}),
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function QuoteRequestForm() {
   const router = useRouter()
   const { toast } = useToast()
@@ -67,8 +80,11 @@ export function QuoteRequestForm() {
   const [autoFillLoading, setAutoFillLoading] = useState(false)
   const [autoFillOpen, setAutoFillOpen] = useState(false)
 =======
+<<<<<<< HEAD
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export function QuoteRequestForm() {
   const router = useRouter(),
@@ -78,7 +94,11 @@ export function QuoteRequestForm() {
   const [autoFillLoading, setAutoFillLoading] = useState(false),
   const [autoFillOpen, setAutoFillOpen] = useState(false),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -95,7 +115,11 @@ export function QuoteRequestForm() {
     }
 =======
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     contactInfo: {
       name: ""
       email: ""
@@ -106,11 +130,17 @@ export function QuoteRequestForm() {
   })
   const updateFormData = (data: Partial<QuoteFormData>,) => {
     setFormData(prev => ({
-      ...prev
+      ...prev;
+};
+  );
+};
 }
+<<<<<<< HEAD
 
   )
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   }),
   
@@ -466,4 +496,8 @@ export function QuoteRequestForm() {
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

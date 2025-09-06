@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {cn} from "@/lib/utils";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {StarIcon} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
@@ -39,6 +48,10 @@ export function ListingScoreCard({
 =======
 import { Button } from "@/components/ui/button",
 import { StarIcon } from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -53,8 +66,13 @@ interface ListingScoreCardProps {
   className?: string
 }
 
+<<<<<<< HEAD
+export function ListingScoreCard({ ;
+  title;
+=======
 export function ListingScoreCard({ 
   title,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   description, 
   image, 
   category, 
@@ -114,6 +132,11 @@ export function ListingScoreCard({
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -185,7 +208,11 @@ export function ListingScoreCard({;
                     star <= Math.round(rating);
                       ? "text-zion-cyan fill-zion-cyan";
                       : "text-zion-slate-light";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )}
                 />
               ))}
@@ -204,11 +231,18 @@ export function ListingScoreCard({;
               </Badge>
             ))}
           </div>
+<<<<<<< HEAD
         )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               </Badge>;
             ))}
           </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
         
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

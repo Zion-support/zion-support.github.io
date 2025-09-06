@@ -12,6 +12,7 @@ import { formatDistanceToNow  } from 'date-fns';
 import { toast  } from 'sonner';
 import { useAuth  } from '@/hooks/useAuth';
 import useJobDetails from '@/hooks/useJobDetails';
+<<<<<<< HEAD
 import { ApplyToJobModal  } from '@/components/messaging/job-application';
 import { SEO  } from '@/components/SEO';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
@@ -24,6 +25,18 @@ export default function JobDetails() {
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+=======
+import {ApplyToJobModal} from '@/components/messaging/job-application';
+import {SEO} from '@/components/SEO';
+import {useWhitelabel} from '@/context/WhitelabelContext';
+export default function JobDetails() {
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { jobId } = useParams() as { jobId?: string };
+  const { job, isLoading, error } = useJobDetails(jobId);
+  const { user, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+  const { isWhitelabel, brandName } = useWhitelabel();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
@@ -47,6 +60,7 @@ export default function JobDetails() {
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
@@ -267,7 +281,11 @@ export default function JobDetails() {;
                   <div className="flex flex-wrap gap-2">;
                     {job.skills?.map((skill: string, i: number) => (;
                       <Badge key={i} variant="secondary">;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {skill}
                       </Badge>
                     ))}

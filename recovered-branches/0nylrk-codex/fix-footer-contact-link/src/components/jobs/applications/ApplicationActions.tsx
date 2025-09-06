@@ -1,7 +1,16 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react";
 import { Link } from "react-router-dom";
+=======
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Button} from "@/components/ui/button";
+import {Eye, ChevronDown, Loader2} from "lucide-react";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",
 import { Link } from "react-router-dom",
@@ -20,7 +29,11 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs";
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplicationActionsProps {
 
   application: JobApplication
@@ -29,10 +42,21 @@ interface ApplicationActionsProps {
 
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function ApplicationActions({;
+  application;
+  processingId;
+  onViewApplication;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApplicationActions({
   application,
   processingId,
   onViewApplication,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onStatusChange
 }: ApplicationActionsProps) {
   return (
@@ -83,8 +107,13 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+<<<<<<< HEAD
       <Button
         variant="default"
+=======
+      <Button 
+        variant="default" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         size="sm"
         asChild
       >
@@ -182,4 +211,8 @@ export function ApplicationActions({;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

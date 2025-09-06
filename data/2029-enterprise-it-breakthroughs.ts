@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
 export interface EnterpriseITBreakthroughService2029 {
+=======
+
+export interface EnterpriseITBreakthroughService2029 {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -290,12 +295,21 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       }
       realImplementation: true
       implementationDetails:
+<<<<<<< HEAD
         'Advanced autonomous IT operations center with AI-powered management, self-healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.'
       launchDate: '2025-01-15'
       customers: 180
       rating: 4.9
       reviews: 95
     }
+=======
+        'Advanced autonomous IT operations center with AI-powered management, self-healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.',
+      launchDate: '2025-01-15',
+      customers: 180,
+      rating: 4.9,
+      reviews: 95,
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Autonomous infrastructure managementAI-powered deployment automationSelf-healing systemsPredictive scalingAutomated monitoringIntelligent incident responsePerformance optimizationSecurity automation';
       'Compliance monitoringAnalytics dashboard'
@@ -461,8 +475,11 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     customers: 180;
     rating: 4.9;
     reviews: 95
+<<<<<<< HEAD
   }
 ];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseITBreakthroughService2029 {;
@@ -678,6 +695,10 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     customers: 180,;
     rating: 4.9;
     reviews: 95;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

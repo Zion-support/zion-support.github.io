@@ -17,7 +17,11 @@ import { HelpCategoryList } from "./HelpCategoryList",
 import { HelpArticleList } from "./HelpArticleList",
 import { HelpArticleView } from "./HelpArticleView",
 import { HELP_CATEGORIES } from "./help-content",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Search } from 'lucide-react'
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
@@ -46,11 +50,18 @@ export default function HelpCenter() {
   const handleBackToCategories = () => {
     setSelectedCategory(null)
     setSelectedArticle(null)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   const handleBackToArticles = () => {
     setSelectedArticle(null)
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   },
   
@@ -58,7 +69,11 @@ export default function HelpCenter() {
     setSelectedArticle(null)
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <div className="container mx-auto px-4 py-8">
@@ -167,11 +182,19 @@ export default function HelpCenter() {;
               {!selectedCategory && !selectedArticle && (;
                 <HelpCategoryList;
                   categories={HELP_CATEGORIES} ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}                />
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -219,7 +242,11 @@ export default function HelpCenter() {;
                     onClick={handleBackToArticles}
                     className="mb-4"
                   >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ← Back to Articles
                   </Button>
                   <HelpArticleView articleId={selectedArticle} />
@@ -233,6 +260,7 @@ export default function HelpCenter() {;
                   Frequently Asked Questions
                 </h2>
                 <div className='space-y-6'>
+<<<<<<< HEAD
                   <div>
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       How does the AI matching work?
@@ -246,20 +274,29 @@ export default function HelpCenter() {;
                     </p>
                   </div>
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
             
             <TabsContent value="faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
                 
                 <div className="space-y-6">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3>
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.
                     </p>
                   </div>
+<<<<<<< HEAD
+=======
                   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>
                     <p className="text-zion-slate-light">
@@ -269,7 +306,11 @@ export default function HelpCenter() {;
 <<<<<<< HEAD
 =======
                   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3>
                     <p className="text-zion-slate-light">
@@ -279,7 +320,11 @@ export default function HelpCenter() {;
 <<<<<<< HEAD
 =======
                   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>
                     <p className="text-zion-slate-light">
@@ -327,7 +372,11 @@ export default function HelpCenter() {;
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                           <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </svg>
                       </div>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
@@ -350,7 +399,11 @@ export default function HelpCenter() {;
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </svg>
                       </div>
                       <span className="text-zion-slate-light">+1 302 464 0950</span>
@@ -384,7 +437,11 @@ export default function HelpCenter() {;
                   </p>
                   
                   <form className="space-y-4">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div>
                       <Input
                         placeholder="Your email"
@@ -406,7 +463,11 @@ export default function HelpCenter() {;
 =======
                     
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Submit Feedback
                     </Button>
                   </form>
@@ -415,12 +476,22 @@ export default function HelpCenter() {;
             </TabsContent>
           </Tabs>
         </div>
+<<<<<<< HEAD
+      </div>;
+    </>;
+  );
+};
+}
+=======
       </div>
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
               {selectedArticle && (;
                 <>;
@@ -534,4 +605,8 @@ export default function HelpCenter() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

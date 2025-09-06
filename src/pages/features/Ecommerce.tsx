@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react'
+import { Header } from '@/components/Header'
+import { SEO } from '@/components/SEO'
+import { GradientHeading } from '@/components/GradientHeading'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+export default function Ecommerce() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',;
+    name: 'E-commerce Platform',;
+    description:;
+      'Sell or purchase AI solutions and IT equipment through our secure marketplace.';
+    url: 'https://app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "E-commerce Platform"
+    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
+    "url": "https://app.ziontechgroup.com/features/e-commerce"
+  }
+  return (
+    <>
+      <SEO
+        title='E-commerce Platform'
+        description='Buy and sell hardware, software and services in the Zion marketplace.'
+        keywords='tech marketplace, buy IT hardware, sell AI solutions'
+        canonical='https://app.ziontechgroup.com/features/e-commerce'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -45,7 +76,11 @@ export default function Ecommerce() {
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
         canonical="https://app.ziontechgroup.com/features/e-commerce"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -124,7 +159,11 @@ export default function Ecommerce() {
             </div>
           </div>
 =======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
@@ -136,6 +175,10 @@ export default function Ecommerce() {
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { Header } from "@/components/Header",;
@@ -206,4 +249,8 @@ export default function Ecommerce() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

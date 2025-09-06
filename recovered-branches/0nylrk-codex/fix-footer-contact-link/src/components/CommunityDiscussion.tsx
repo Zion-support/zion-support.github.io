@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { MessageCircle } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -16,6 +29,10 @@ interface DiscussionPost {
 =======
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface DiscussionPost {
   id: number,
   author: string,
@@ -42,6 +59,7 @@ const initialPosts: DiscussionPost[] = [
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
     id: 1
     author: "Anna Zhou"
     time: "2h ago"
@@ -56,6 +74,15 @@ const initialPosts: DiscussionPost[] = [
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."
   }
 ];
+=======
+<<<<<<< HEAD
+export const CommunityDiscussion: React.FC = () => {;
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const CommunityDiscussion: React.FC = () => {
 <<<<<<< HEAD
   const [posts, setPosts] = useState(initialPosts);
@@ -83,6 +110,7 @@ export const CommunityDiscussion: React.FC = () => {
   const [showNew, setShowNew] = useState(false),
   const [newTitle, setNewTitle] = useState(""),
   const [newBody, setNewBody] = useState(""),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleAddPost = () => {
     if (!newTitle.trim() || !newBody.trim()) return,
@@ -219,7 +247,11 @@ export const CommunityDiscussion: React.FC = () => {;
             <Textarea;
               placeholder="What's on your mind?";
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
@@ -290,9 +322,13 @@ export const CommunityDiscussion: React.FC = () => {;
         homepage.
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 
+=======
+);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                 </AvatarFallback>;
               </Avatar>;
@@ -313,5 +349,9 @@ export const CommunityDiscussion: React.FC = () => {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

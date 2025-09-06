@@ -7,6 +7,7 @@ import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Code
   Database
   Shield
@@ -19,6 +20,20 @@ import {
   BarChart3
   Lock
   Brain;
+=======
+  Code,
+  Database,
+  Shield,
+  Zap,
+  Globe,
+  Cpu,
+  BookOpen,
+  CheckCircle,
+  ArrowRight,
+  BarChart3,
+  Lock,;
+  Brain,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 export default function APIDocumentation() {
@@ -57,7 +72,7 @@ export default function APIDocumentation() {
           </li>
         </ul>
       </div>
-    </div>
+    </div>;
   );	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>

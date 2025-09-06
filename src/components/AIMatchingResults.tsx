@@ -6,8 +6,13 @@ import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+<<<<<<< HEAD
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+=======
+import Skeleton from '@/components/ui/skeleton'
+import { cn } from '@/lib/utils'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
@@ -18,13 +23,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
-  isLoading?: boolean
-  projectDescription?: string
+  isLoading?: boolean;
+  projectDescription?: string;
   serviceType?: string;interface AIMatchingResultsProps {
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem,) => void
@@ -33,6 +42,10 @@ interface AIMatchingResultsProps {
 
   serviceType?: string
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 export function AIMatchingResults({
 
@@ -183,8 +196,12 @@ export function AIMatchingResults({
                                       ? '/hour'
                                       : ''}
 =======
+<<<<<<< HEAD
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                   </div>
                                 </div>
                               )}
@@ -234,7 +251,11 @@ export function AIMatchingResults({
               <div className="text-center py-8 text-zion-slate-light">;
                 No {tab} matches found.;
               </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </TabsContent>
         ))}
@@ -242,10 +263,19 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   )
+<<<<<<< HEAD
+=======
+};
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
       </Tabs>;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

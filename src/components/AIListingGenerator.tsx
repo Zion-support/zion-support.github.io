@@ -67,6 +67,49 @@ export function AIListingGenerator({
         break
     }
   }
+<<<<<<< HEAD
+=======
+  const handleGenerate = async () => {
+    if (!title || !category) {
+      toast({
+        title: 'Missing required fields',
+        description: 'Please provide at least a title and category.',
+        variant: 'destructive',
+      })
+      return;
+    }
+
+    setIsLoading(true)
+    try {
+      const { data, error } = await supabase.functions.invoke(
+        'ai-listing-generator',
+        {
+          body: { title, category, keyFeatures, targetAudience },
+        }
+      )
+      if (error) {
+        throw new Error(error.message)
+      }
+
+      if ((data as any)?.error) {
+        throw new Error((data as any).error)
+      }
+
+      setGeneratedContent((data as any)?.generated || null)
+      toast({
+        title: 'Content Generated',
+        description: 'AI has created optimized listing content for you.',
+      })
+    } catch (error) {
+      logErrorToProduction('Error generating content:', { data: error })
+      toast({
+        title: 'Generation Failed',
+        description:
+          error instanceof Error
+            ? error.message
+            : 'Failed to generate content. Please try again.',
+        variant: 'destructive',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -248,7 +291,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       })
     } finally {
       setIsLoading(false)
@@ -263,6 +310,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: 'The generated content has been applied to your listing.'
       })
     }
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   },
 
@@ -277,10 +328,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
   }
 }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -318,7 +373,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               className="bg-zion-blue border border-zion-blue-light text-white"
               disabled={isLoading}
             />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className="space-y-2">
             <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>
@@ -338,7 +397,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               className="bg-zion-blue border border-zion-blue-light text-white"
               disabled={isLoading}
             />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className="space-y-2">
             <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
@@ -358,7 +421,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
               disabled={isLoading}
             />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className="space-y-2">
             <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
@@ -470,7 +537,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {isLoading ? (
               <>Generating Optimized Content...</>
             ) : (
@@ -505,7 +576,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
       )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           <CardContent className="space-y-4">
             <Skeleton className="h-32 w-full bg-zion-blue-light/20" />
@@ -522,6 +596,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             </div>;
           </CardContent>;
         </Card>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -556,7 +634,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               </div>
             </div>
             
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
               <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
@@ -592,7 +674,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               onClick={handleApply}
               className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
             >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Apply to My Listing
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -603,10 +689,17 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
     </div>
   )
   target: {
+<<<<<<< HEAD
   value: string
 }, field: string) => {
   switch (field) {
   case 'title': setTitle (e.target.value)
+=======
+  value: string ;
+}, field: string) => {;
+  switch (field) {;
+  case 'title': setTitle (e.target.value);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 break;'
 case 'category': setCategory (e.target.value)
 break;'
@@ -615,7 +708,7 @@ break;'
 case 'targetAudience': const handleGenerate = async () => {
   if (!title |!category) {
   toast ({
-  return
+  return;
 }setIsLoading (true)
 }catch (error) {'
   logErrorToProduction ('Error generating content:', {
@@ -644,8 +737,17 @@ toast ({
 }
   )
 }
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

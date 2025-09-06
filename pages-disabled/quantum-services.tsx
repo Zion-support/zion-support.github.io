@@ -190,7 +190,11 @@ export default function QuantumServices() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Quantum Services */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -253,8 +257,13 @@ export default function QuantumServices() {
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
                   <a
                     href="/contact"
+=======
+                  <a 
+                    href="/contact" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                   >
                     Get Started
@@ -267,7 +276,11 @@ export default function QuantumServices() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -302,11 +315,23 @@ export default function QuantumServices() {
         </section>
       </main>
     </Layout>
+<<<<<<< HEAD
+  );
+};
+
+export default QuantumServicesPage;
+
+}
+=======
   )
 }
 export default QuantumServicesPage;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 export default QuantumServicesPage;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

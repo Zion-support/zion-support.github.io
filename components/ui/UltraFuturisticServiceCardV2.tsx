@@ -2,6 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   ArrowRight
   Star
   Users
@@ -10,6 +11,16 @@ import {
   Shield
   Globe
   Rocket;
+=======
+  ArrowRight,
+  Star,
+  Users,
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe,;
+  Rocket,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface ServiceCardProps {
@@ -91,12 +102,19 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
       default:
         return <Zap className="w-5 h-5" />
     }
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         return <Zap className='w-5 h-5' />;    }
 
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   };
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -173,7 +191,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 
                     {service.category}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </span>
                 </div>
               </div>
@@ -206,7 +228,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 
             {service.tagline}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </p>
         </div>
         {/* Stats */}
@@ -220,7 +246,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <div className='text-center'>
               <div className='text-2xl font-bold text-purple-400'>
@@ -291,7 +321,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Features preview */}
         <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
@@ -304,7 +338,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 =======
           <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {service.features.slice(0, 3).map((feature, idx) => (
               <motion.div
                 key={idx}
@@ -315,7 +353,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
                 <span className='text-gray-300'>{feature}</span>
@@ -336,7 +378,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 
                 +{service.features.length - 3} more features
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             )}
           </div>
@@ -344,7 +390,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Benefits */}
         <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
@@ -357,7 +407,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 =======
           <div className='space-y-2'>            {service.benefits.slice(0, 2).map((benefit, idx) => (
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
                 key={idx}
@@ -384,7 +438,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
           </div>
         </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Market info */}
         {service.marketSize && service.growthRate && (
           <div className='relative z-10 mb-6'>
@@ -425,7 +483,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 =======
             className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.a
             href={service.link}
             whileHover={{ scale: 1.05 }}
@@ -453,7 +515,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 
         </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Hover overlay */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -462,12 +528,22 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
     </motion.div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraFuturisticServiceCardV2;        />
       </div>
     </motion.div>
@@ -478,4 +554,10 @@ export default UltraFuturisticServiceCardV2;
 <<<<<<< HEAD
 =======
 export default UltraFuturisticServiceCardV2;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default UltraFuturisticServiceCardV2;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

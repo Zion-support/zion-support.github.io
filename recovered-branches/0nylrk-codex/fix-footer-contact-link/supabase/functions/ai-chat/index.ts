@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
@@ -7,8 +8,13 @@ const openAIApiKey = Deno.env.get('OPENAI_API_KEY')
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 =======
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
@@ -28,7 +34,11 @@ const corsHeaders = {;
 interface Message {;
   role: string,;
   content: string;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 interface RequestBody {
   messages: Message[]
@@ -39,6 +49,10 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   try {
     const { messages } = await req.json() as RequestBody;
     // Prepare the system message to define the assistant's behavior
@@ -61,11 +75,14 @@ serve(async (req) => {
     const data = await response.json();
     if (data.error) {
       throw new Error(data.error.message)
+<<<<<<< HEAD
     }
     const assistantMessage = data.choices[0].message.content;
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
     console.log('AI chat interaction logged');
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
   try {;
@@ -90,6 +107,10 @@ serve(async (req) => {
     const data = await response.json(),;
     if (data.error) {;
       throw new Error(data.error.message);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
     const assistantMessage = data.choices[0].message.content,
@@ -107,9 +128,12 @@ serve(async (req) => {
       status: 500
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 });
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
     const assistantMessage = data.choices[0].message.content,;
@@ -123,6 +147,10 @@ serve(async (req) => {
     return new Response(JSON.stringify({ error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

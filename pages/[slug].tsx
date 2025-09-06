@@ -1,12 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Button from '../components/ui/Button',
+=======
+import React, { useMemo } from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+import {GetStaticPaths, GetStaticProps} from 'next';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Button from '../components/ui/Button';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Card from '../components/ui/Card';
 
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
 type Service = typeof enhancedRealMicroSaasServices[number];
 const service = useMemo(() => {
   if (!slug) return undefined;
@@ -50,6 +60,10 @@ const service = useMemo(() => {
 =======
 import React, { useMemo } from 'react';
 import Head from 'next/head';
+=======
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -66,6 +80,10 @@ import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-ad
 import { real2026Q1Additions } from '../data/real-2026-q1-additions';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Service = typeof enhancedRealMicroSaasServices[number];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function getAllServices(): Service[] {
@@ -120,9 +138,15 @@ function getExistingRootPageSlugs(): Set<string> {
 	}
 	return slugs;
 export async function getStaticPaths() {
+<<<<<<< HEAD
 	const services = getAllServices()
 	const slugs = new Set<string>()
 	 }))
+=======
+	const services = getAllServices(),
+	const slugs = new Set<string>(),
+	 })),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 		fallback: false;
 	}
 export async function getStaticProps() {
@@ -133,7 +157,14 @@ export async function getStaticProps() {
 	}
 	return {props: { service }
 	}
+<<<<<<< HEAD
 export default function RootServiceDetailPage({ service }: { service: Service }) {const canonical = `https://ziontechgroup.com/${toSlug(service.id |service.name |'')}`,	return (
+=======
+
+;
+export default function RootServiceDetailPage({ service }: { service: Service }) {;
+	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,	return (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   } catch (error) {
     console.error("Error:", error);
@@ -350,7 +381,11 @@ export async function getStaticProps(req, res) {
 export default function RootServiceDetailPage({ service }: { service: Service }) {
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
 	return (
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
@@ -378,6 +413,15 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 									name: "Zion Tech Group"
 									url: "https://ziontechgroup.com"
 <<<<<<< HEAD
+=======
+								},
+								offers: {
+									"@type": "Offer",
+									price: (service.price || '').replace(/[^0-9.]/g, ''),
+									priceCurrency: "USD",
+									availability: "https://schema.org/InStock"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 								}
 								offers: {
 									"@type": "Offer"
@@ -389,7 +433,6 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 							2;
 							);}
 				/>;			</Head>
-
           {/* Service Details */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <Card className="p-8">
@@ -425,6 +468,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
               </ul>
             </Card>
           </div>
+<<<<<<< HEAD
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
@@ -436,6 +480,9 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 									price: (service.price || '').replace(/[^0-9.]/g, ''),
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 								  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -493,6 +540,10 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
 							<p className="text-gray-300 leading-relaxed">{service.description}</p>
 						</Card>
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
@@ -527,6 +578,12 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 =======
 								{(service.integrations || []).slice(0, 12).map((i: string) => (
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+								))}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 								))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -540,7 +597,11 @@ export default function RootServiceDetailPage({ service }: { service: Service })
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 							</div>
 						</Card>
 					</div>
@@ -555,7 +616,11 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 								</Link>
 =======
 								</a>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</a>
@@ -583,6 +648,15 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 		</UltraFuturisticBackground>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+;
+
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 	);
   } catch (error) {
@@ -598,4 +672,8 @@ export default function RootServiceDetailPage({ service }: { service: Service })
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

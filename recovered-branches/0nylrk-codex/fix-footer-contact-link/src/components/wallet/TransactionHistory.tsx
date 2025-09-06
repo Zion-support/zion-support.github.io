@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {useWallet} from "@/hooks/useWallet";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {ScrollArea} from "@/components/ui/scroll-area";
+import {Badge} from "@/components/ui/badge";
+import {formatDistanceToNow} from "date-fns";
+export function TransactionHistory() {;
+  const { transactions, loading } = useWallet();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -14,6 +28,7 @@ import { Badge } from "@/components/ui/badge",
 import { formatDistanceToNow } from "date-fns",
 export function TransactionHistory() {
   const { transactions, loading } = useWallet(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (loading) {
@@ -114,7 +129,11 @@ export function TransactionHistory() {;
                         +{tx.amount} ZION$;
                       </Badge>;
                     </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </div>
               )}

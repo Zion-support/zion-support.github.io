@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {DynamicListingPage} from "@/components/DynamicListingPage";
+import {ProductListing} from "@/types/listings";
+import {AppLayout} from "@/layout/AppLayout";
+import {TrustedBySection} from "@/components/TrustedBySection";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {Globe} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import { AppLayout } from "@/layout/AppLayout",
@@ -21,6 +33,10 @@ const SERVICE_LISTINGS: ProductListing[] = [
 =======
 import { Link } from "react-router-dom",
 import { Globe } from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -221,6 +237,20 @@ export default function ServicesPage() {
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
         categorySlug="services"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        listings={SERVICE_LISTINGS}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min: 3000, max: 10000 }}
+      />
+      <TrustedBySection />
+    </AppLayout>
+  )
+};
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -371,4 +401,8 @@ export default function ServicesPage() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

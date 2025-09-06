@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
+import {Badge} from "@/types/community";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
 <<<<<<< HEAD
 import { Badge } from "@/types/community";
@@ -7,7 +15,11 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { Badge } from "@/types/community",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface UserBadgesProps {
   badges: Badge[]
 }
@@ -25,8 +37,13 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 =======
 },
 
+<<<<<<< HEAD
+export const UserBadges = ({ badges }: UserBadgesProps) => {;
+  if (!badges?.length) return null;
+=======
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -118,5 +135,9 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UserBadges;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

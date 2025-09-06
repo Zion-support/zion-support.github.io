@@ -1,7 +1,12 @@
 <<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
+<<<<<<< HEAD
 export default function OSDeployPage() {
+=======
+
+export default function OSDeployPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const [loading, setLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -681,7 +686,11 @@ export default function AdminDeployPage() {;
                   ? 'bg-green-900/20 border border-green-500/20 text-green-400';
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
               }`}>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {message}
               </div>
             )}
@@ -740,4 +749,8 @@ function getFeatureDescription(key: string) {;
   }
 }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

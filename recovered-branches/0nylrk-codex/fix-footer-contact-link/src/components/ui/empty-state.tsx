@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { cn } from "@/lib/utils",
 <<<<<<< HEAD
@@ -7,7 +16,11 @@ import { Link } from "react-router-dom";
 =======
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface EmptyStateProps {
 
   icon: React.ReactNode
@@ -40,12 +53,25 @@ interface EmptyStateProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   className?: string
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function EmptyState({;
+  icon;
+  title;
+  description;
+  action;
+  secondaryAction;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EmptyState({
   icon,
   title,
   description,
   action,
   secondaryAction,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className}: EmptyStateProps) {
   return (
     <div
@@ -80,6 +106,11 @@ export function EmptyState({
             <Button 
               size="lg" 
               className="bg-zion-purple hover:bg-zion-purple-light"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button",;
@@ -130,7 +161,11 @@ export function EmptyState({;
             <Button;
               size="lg";
               className="bg-zion-purple hover:bg-zion-purple-light";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onClick={action.onClick}
             >
               {action.text}

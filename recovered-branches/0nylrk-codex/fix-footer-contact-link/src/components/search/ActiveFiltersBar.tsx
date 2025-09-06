@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {X} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 <<<<<<< HEAD
 import { ClickableBadge } from "@/components/ui/clickable-badge";
@@ -6,7 +14,11 @@ import { X } from "lucide-react";
 =======
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { X } from "lucide-react",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ActiveFiltersBarProps {
 
   selectedProductTypes: string[]
@@ -19,6 +31,20 @@ interface ActiveFiltersBarProps {
 
   onClearSearch: () => void
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function ActiveFiltersBar({;
+  selectedProductTypes;
+  selectedLocations;
+  selectedAvailability;
+  selectedRating;
+  searchQuery;
+  onRemoveFilter;
+  onRemoveRating;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ActiveFiltersBar({
   selectedProductTypes,
   selectedLocations,
@@ -27,6 +53,7 @@ export function ActiveFiltersBar({
   searchQuery,
   onRemoveFilter,
   onRemoveRating,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onClearSearch
 }: ActiveFiltersBarProps) {
 <<<<<<< HEAD
@@ -60,6 +87,11 @@ export function ActiveFiltersBar({
 =======
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { X } from "lucide-react",;
@@ -97,7 +129,11 @@ export function ActiveFiltersBar({;
       {searchQuery && (;
         <ClickableBadge;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           onClick={onClearSearch}
         >
           Search: {searchQuery}

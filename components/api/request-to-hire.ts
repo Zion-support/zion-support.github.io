@@ -5,10 +5,11 @@ import path from 'path';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {  if (req.method !== 'POST') {
+) {  if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
+<<<<<<< HEAD
     req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST') {
@@ -19,6 +20,20 @@ export default async function handler(
     req.body |{};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
   if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {
 
+=======
+    req.body || {};  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const { talentSlug, requesterName, requesterEmail, projectInfo } =
+    req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
+  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(400).json({ error: 'Missing required fields' });
   }
 <<<<<<< HEAD
@@ -65,8 +80,16 @@ console.error('Request-to-hire failed', err);
   }
 }
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

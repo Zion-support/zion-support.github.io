@@ -1,7 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+=======
+import { useState } from 'react',;
+import { useRouter } from 'next/router',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function PostJobPage() {
   const router = useRouter()
   const [title, setTitle] = useState('')
@@ -47,11 +52,14 @@ export default function PostJobPage() {
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
   }
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
       {error && <p className="text-red-600 mb-3">{error}</p>}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from 'react';
 import { useRouter } from 'next/router';
@@ -77,6 +85,10 @@ export default function PostJobPage(req, res) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
@@ -117,12 +129,22 @@ export default function PostJobPage(req, res) {
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {error && <p className="text-red-600 mb-3">{error}</p>}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {error && <p className="text-red-600 mb-3">{error}</p>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Project Title *</label>
@@ -166,7 +188,12 @@ export default function PostJobPage(req, res) {
         </div>
       </form>
     </div>
+<<<<<<< HEAD
   )
+=======
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
     console.error("Error:", error);
@@ -182,5 +209,10 @@ export default function PostJobPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

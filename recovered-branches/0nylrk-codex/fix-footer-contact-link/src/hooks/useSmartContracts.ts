@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -11,6 +12,18 @@ export function useSmartContracts() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
+=======
+import {useState} from 'react';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {toast} from 'sonner';
+import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from '@/types/smart-contracts';
+import {TalentProfile} from '@/types/talent';
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+export function useSmartContracts() {;
+  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
 =======
 import { useState } from 'react',
@@ -24,6 +37,7 @@ export function useSmartContracts() {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const generateSolidityContract = async (
@@ -156,6 +170,23 @@ export function useSmartContracts() {
       
       return mockSmartContractInfo
     } catch (err: any) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      console.error("Error deploying smart contract:", err);
+      toast.error("Failed to deploy smart contract");
+      setDeploymentStatus('error');
+      return null
+    }
+  };
+  
+  return {
+    generateSolidityContract;
+    deploySmartContract;
+    isLoading;
+    deploymentStatus
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       console.error("Error deploying smart contract:", err),
       toast.error("Failed to deploy smart contract"),
       setDeploymentStatus('error'),
@@ -248,6 +279,10 @@ export function useSmartContracts() {;
     deploySmartContract;
     isLoading;
     deploymentStatus;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;

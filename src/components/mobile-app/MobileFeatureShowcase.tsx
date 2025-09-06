@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 }
 export const MobileFeatureShowcase: React.FC = () => {
@@ -9,10 +12,18 @@ export const MobileFeatureShowcase: React.FC = () => {
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
     }
 =======
+<<<<<<< HEAD
 import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+import React from "react",
+import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
@@ -21,7 +32,11 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
     }
 =======
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
@@ -30,7 +45,11 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
     }
 =======
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
@@ -39,7 +58,11 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
     }
 =======
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
       title: "Biometric Security"
@@ -50,7 +73,11 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
 =======
   ],
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section id="features" className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -63,20 +90,33 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index,) => (
             <div
               key={index}
               className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover: border-zion-purple/50 transition-all duration-300"            >
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
         
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <div 
               key={index} 
+<<<<<<< HEAD
               className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
             >
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover: border-zion-purple/50 transition-all duration-300"            >
+=======
+              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
+            >
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="mb-4">
                 {feature.icon}
               </div>
@@ -90,9 +130,15 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
     </section>
   )
 }
+<<<<<<< HEAD
 '"}
 }
 
+=======
+'"},
+;
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react';
@@ -153,4 +199,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
+import {ContractFormValues} from "../components/ContractForm";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 <<<<<<< HEAD
@@ -13,6 +22,10 @@ interface Milestone {
 =======
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "../components/ContractForm",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Milestone {
   title: string,
   description: string,
@@ -31,8 +44,13 @@ export async function generateContract(
   const additionalClauses = values.additionalClauses |[];
 =======
   values: ContractFormValues,
+<<<<<<< HEAD
+  talent: TalentProfile, ;
+  clientName: string;
+=======
   talent: TalentProfile, 
   clientName: string,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   generatedMilestones: GeneratedMilestone[]
 ): Promise<string> {
   const additionalClauses = values.additionalClauses || [],
@@ -84,6 +102,16 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      milestones: milestoneData}
+  });
+  
+  if (error) {
+    throw error
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
@@ -126,6 +154,10 @@ export async function generateContract(;
   });
   if (error) {;
     throw error;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -134,14 +166,21 @@ export async function generateContract(;
   } else {
     throw new Error("Failed to generate contract")
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
   if (data.success && data.contract) {;
     return data.contract;
   } else {;
     throw new Error("Failed to generate contract");
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;

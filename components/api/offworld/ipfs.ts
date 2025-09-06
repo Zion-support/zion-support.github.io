@@ -1,4 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+import {
+  addJSON,
+  publishManifesto,;
+  OFFWORLD_TOPICS,;
+} from '@/utils/offworld/ipfs';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
   addJSON
@@ -6,10 +14,15 @@ import {
   OFFWORLD_TOPICS;
 } from '@/utils/offworld/ipfs';
 export default async function handler(
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
+=======
+  req: NextApiRequest,
+  res: NextApiResponse;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
   try {

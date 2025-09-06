@@ -15,8 +15,13 @@ export default function ScrollToTop() {
 <<<<<<< HEAD
 import { ChevronUp } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function ScrollToTop() {
 =======
+=======
+export default function ScrollToTop() {;
+  const [isVisible, setIsVisible] = useState(false);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const ScrollToTop: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -162,7 +167,11 @@ const ScrollToTop: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <svg
             className='w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300'
@@ -256,6 +265,7 @@ const ScrollToTop: React.FC = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ScrollToTop;
 =======
   )
@@ -267,6 +277,8 @@ export default ScrollToTop;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ScrollToTop;  )
 }
 export default ScrollToTop;
@@ -286,4 +298,10 @@ export default ScrollToTop;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 export default ScrollToTop;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default ScrollToTop;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

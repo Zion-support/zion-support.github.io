@@ -61,12 +61,19 @@ const UltraFuturisticBackground2046: React.FC = () => {
 <<<<<<< HEAD
             break;        }            break
         }
+<<<<<<< HEAD
       }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             break;        }
 
         }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -342,8 +349,14 @@ const UltraFuturisticBackground2046: React.FC = () => {
           ease: 'easeInOut',
         }}
       />
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
@@ -473,7 +486,13 @@ export default UltraFuturisticBackground2046;              ease: "easeInOut"
 export default UltraFuturisticBackground2046;  )
 }
 export default UltraFuturisticBackground2046;
+<<<<<<< HEAD
 
 =======
     </div>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

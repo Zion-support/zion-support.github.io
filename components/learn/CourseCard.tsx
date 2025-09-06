@@ -1,6 +1,13 @@
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export type Course = {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export type Course = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   id: string;
   title: string;
   durationMinutes: number;
@@ -48,7 +55,7 @@ export default function CourseCard({ course }: { course: Course }) {
         <Link href={`/learn/${course.id}`}>
           <a className='text-blue-600 hover:underline text-sm'>View course</a>        </Link>
       </div>
-    </div>
+    </div>;
   );
 }          <a className="text-blue-600 hover: underline text-sm">View course</a>
         </Link>
@@ -59,4 +66,8 @@ export default function CourseCard({ course }: { course: Course }) {
 }
 =======
   );
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

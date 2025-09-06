@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Dispute, DisputeMessage, DisputeAttachment, DisputeStatus} from "@/types/disputes";
+import {toast} from "sonner";
+export function useDisputes() {;
+  const { user } = useAuth();
+  const [disputes, setDisputes] = useState<Dispute[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -17,7 +32,11 @@ export function useDisputes() {
   const [disputes, setDisputes] = useState<Dispute[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
@@ -227,7 +246,11 @@ export function useDisputes() {
     }
   }
   const resolveDispute = async (
+<<<<<<< HEAD
     disputeId: string
+=======
+    disputeId: string, 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -370,7 +393,11 @@ export function useDisputes() {;
   },;
   const resolveDispute = async (;
     disputeId: string,;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     resolution: { summary: string, resolution_type: string }
   ): Promise<boolean> => {
     try {
@@ -522,8 +549,11 @@ export function useDisputes() {;
     getDisputeMessages
 
     addDisputeMessage
+<<<<<<< HEAD
   }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   ): Promise<boolean> => {;
     try {;
@@ -618,6 +648,10 @@ export function useDisputes() {;
     resolveDispute;
     getDisputeMessages;
     addDisputeMessage;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;

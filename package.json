@@ -130,6 +130,7 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
+    "@esbuild/linux-x64": "^0.25.9",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^8.57.1",
     "@netlify/plugin-nextjs": "^5.12.1",
@@ -148,8 +149,13 @@
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
+<<<<<<< HEAD
     "autoprefixer": "^10.4.16",
     "eslint": "^9.34.0",
+=======
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.35.0",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     "eslint-config-next": "^14.2.32",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-react": "^7.37.5",

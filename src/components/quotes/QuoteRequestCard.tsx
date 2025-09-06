@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 <<<<<<< HEAD
 =======
@@ -20,7 +25,11 @@ type QuoteRequestCardProps = {
   onMarkAsResponded?: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react"
 import {format} from "date-fns"
@@ -39,10 +48,17 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 <<<<<<< HEAD
   quote
   onViewDetails
+<<<<<<< HEAD
   onMarkAsResponded
 =======
   quote,
   onViewDetails,
+=======
+=======
+  quote,
+  onViewDetails,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   onMarkAsResponded,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onToggleArchive
@@ -59,7 +75,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 =======
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -84,7 +104,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
@@ -92,7 +116,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="flex justify-between items-center mt-4">
           <Button
             variant="outline"
@@ -106,7 +134,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="flex items-center">
             {quote.status !== 'responded' && onMarkAsResponded && (
               <Button
@@ -140,11 +172,18 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
 "}
 }
 
+=======
+  );
+};
+"};
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { format } from "date-fns",;
@@ -243,4 +282,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

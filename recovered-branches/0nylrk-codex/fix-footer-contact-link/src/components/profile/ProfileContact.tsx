@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Mail, Send} from "lucide-react";
+import {useState} from "react";
+import {toast} from "@/hooks/use-toast";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
@@ -37,16 +48,27 @@ export function ProfileContact({
 =======
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ProfileContactProps {
   email?: string,
   profileName: string,
   profileType: 'service' | 'talent'
 }
 
+<<<<<<< HEAD
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {;
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+=======
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState(""),
   const [subject, setSubject] = useState(""),
   const [isSending, setIsSending] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault(),
@@ -113,10 +135,17 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
       </form>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 =======
   )
+=======
+  )
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -198,4 +227,8 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

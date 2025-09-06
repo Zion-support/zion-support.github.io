@@ -2,8 +2,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import type {
+<<<<<<< HEAD
   GrantApplication
   UpdateGrantPayload;
+=======
+  GrantApplication,;
+  UpdateGrantPayload,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -43,8 +48,16 @@ function writeGrant(record: GrantApplication) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const { id } = req.query as { id: string }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const { id } = req.query as { id: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return;  }    return

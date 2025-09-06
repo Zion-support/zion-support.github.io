@@ -1,10 +1,20 @@
+<<<<<<< HEAD
 export interface ContactInfo {
+=======
+<<<<<<< HEAD
+export interface ContactInfo {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   phone: string;
   email: string;
   address: string;
   site: string;
 }
+<<<<<<< HEAD
 export interface Service {
+=======
+
+export interface Service {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   description: string;
@@ -28,7 +38,12 @@ export interface Service {
   color: string;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
+<<<<<<< HEAD
 export interface ServiceCategory {
+=======
+
+export interface ServiceCategory {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   title: string;
   description: string;
   count: number;
@@ -38,7 +53,7 @@ export interface ServiceCategory {
 <<<<<<< HEAD
 }
 
-export interface SEOProps {
+export interface SEOProps {;
   title: string;
   description: string;
   keywords?: string;
@@ -48,11 +63,12 @@ export interface SEOProps {
 <<<<<<< HEAD
 }
 
-export interface LoadingState {
+export interface LoadingState {;
   isLoading: boolean;
   error?: string;
 }
 
+<<<<<<< HEAD
 =======
 }
 export interface SEOProps {
@@ -136,6 +152,14 @@ export interface AnimationState {
   hasError: boolean;
 }
 export interface FormData {
+=======
+export interface AnimationState {;
+  isLoaded: boolean;
+  hasError: boolean;
+}
+
+export interface FormData {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   name: string;
   email: string;
   company?: string;
@@ -156,7 +180,12 @@ export interface ContactForm {
   preferredContact: 'email' | 'phone' | 'both';
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
+<<<<<<< HEAD
 export interface Testimonial {
+=======
+
+export interface Testimonial {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   role: string;
@@ -174,7 +203,12 @@ export interface Testimonial {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   project?: string;
 }
+<<<<<<< HEAD
 export interface BlogPost {
+=======
+
+export interface BlogPost {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   excerpt: string;
@@ -201,7 +235,12 @@ export interface BlogPost {
   readTime: number;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
+<<<<<<< HEAD
 export interface TeamMember {
+=======
+
+export interface TeamMember {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   role: string;
@@ -229,6 +268,7 @@ export interface TeamMember {
   twitter?: string;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
+<<<<<<< HEAD
 export interface Project {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -379,6 +419,10 @@ export interface Service { id: string; name: string; description: string; catego
   description: string, image: string,
   technologies: string[], liveUrl?: string,
 =======
+=======
+
+export interface Project {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
 =======
@@ -633,13 +677,23 @@ export interface Service { id: string; name: string; description: string; catego
     impact: 'positive' | 'negative' | 'neutral';
   }[];
 }
+<<<<<<< HEAD
 export interface FAQ {
+=======
+
+export interface FAQ {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   question: string;
   answer: string;
   category?: string;
 }
+<<<<<<< HEAD
 export interface PricingPlan {
 <<<<<<< HEAD
+=======
+
+export interface PricingPlan {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -669,14 +723,24 @@ export interface PricingTier {
   description: string;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
+<<<<<<< HEAD
 export interface NavigationItem {
+=======
+
+export interface NavigationItem {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   name: string;
   href: string;
   children?: NavigationItem[];
   submenu?: NavigationItem[];
   external?: boolean;
 }
+<<<<<<< HEAD
 export interface SocialLink {
+=======
+
+export interface SocialLink {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   name: string;
   href: string;
   icon: string;
@@ -690,6 +754,7 @@ export interface SocialLink {
   label: string;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
+<<<<<<< HEAD
 export interface FooterLink {
   name: string;
   href: string;
@@ -699,6 +764,20 @@ export interface FooterSection {
   links: FooterLink[];
 }
 export interface HeroSection {
+=======
+
+export interface FooterLink {;
+  name: string;
+  href: string;
+}
+
+export interface FooterSection {;
+  title: string;
+  links: FooterLink[];
+}
+
+export interface HeroSection {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   title: string;
   subtitle: string;
   cta: {
@@ -713,18 +792,33 @@ export interface HeroSection {
   }
   image?: string;
 }
+<<<<<<< HEAD
 export interface Feature {
+=======
+
+export interface Feature {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   title: string;
   description: string;
   icon: string;
   color: string;
 }
+<<<<<<< HEAD
 export interface Stats {
+=======
+
+export interface Stats {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   label: string;
   value: string;
   description?: string;
 }
+<<<<<<< HEAD
 export interface CaseStudy {
+=======
+
+export interface CaseStudy {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   client: string;
@@ -738,7 +832,12 @@ export interface CaseStudy {
   teamSize: number;
   featured?: boolean;
 }
+<<<<<<< HEAD
 export interface JobOpening {
+=======
+
+export interface JobOpening {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   department: string;
@@ -754,7 +853,12 @@ export interface JobOpening {
     currency: string;
   }
 }
+<<<<<<< HEAD
 export interface NewsItem {
+=======
+
+export interface NewsItem {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   excerpt: string;
@@ -765,7 +869,12 @@ export interface NewsItem {
   image?: string;
   featured: boolean;
 }
+<<<<<<< HEAD
 export interface Event {
+=======
+
+export interface Event {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   description: string;
@@ -778,7 +887,7 @@ export interface Event {
 }
 <<<<<<< HEAD
 
-export interface Partner {
+export interface Partner {;
   name: string;
   logo: string;
   website: string;
@@ -786,7 +895,7 @@ export interface Partner {
   tier: 'platinum' | 'gold' | 'silver' | 'bronze';
 }
 
-export interface Award {
+export interface Award {;
   title: string;
   organization: string;
   year: number;
@@ -794,7 +903,7 @@ export interface Award {
   image?: string;
 }
 
-export interface Certification {
+export interface Certification {;
   name: string;
   issuer: string;
   date: string;
@@ -803,7 +912,7 @@ export interface Certification {
   image?: string;
 }
 
-export interface Technology {
+export interface Technology {;
   name: string;
   category: 'frontend' | 'backend' | 'database' | 'cloud' | 'mobile' | 'ai' | 'devops';
   proficiency: 'beginner' | 'intermediate' | 'advanced' | 'expert';
@@ -811,7 +920,7 @@ export interface Technology {
   projects: number;
 }
 
-export interface ContactFormData {
+export interface ContactFormData {;
   name: string;
   email: string;
   company?: string;
@@ -824,7 +933,7 @@ export interface ContactFormData {
   preferredContact?: 'email' | 'phone' | 'both';
 }
 
-export interface NewsletterSubscription {
+export interface NewsletterSubscription {;
   email: string;
   interests: string[];
   frequency: 'daily' | 'weekly' | 'monthly';
@@ -832,7 +941,7 @@ export interface NewsletterSubscription {
   subscribedAt: string;
 }
 
-export interface SearchResult {
+export interface SearchResult {;
   id: string;
   title: string;
   description: string;
@@ -842,19 +951,19 @@ export interface SearchResult {
   highlights?: string[];
 }
 
-export interface FilterOption {
+export interface FilterOption {;
   label: string;
   value: string;
   count?: number;
 }
 
-export interface SortOption {
+export interface SortOption {;
   label: string;
   value: string;
   direction: 'asc' | 'desc';
 }
 
-export interface Pagination {
+export interface Pagination {;
   currentPage: number;
   totalPages: number;
   totalItems: number;
@@ -867,7 +976,7 @@ export interface Pagination {
   pages?: number;
 }
 
-export interface APIResponse<T> {
+export interface APIResponse<T> {;
   data: T;
   success: boolean;
   message?: string;
@@ -875,14 +984,14 @@ export interface APIResponse<T> {
   pagination?: Pagination;
 }
 
-export interface ErrorResponse {
+export interface ErrorResponse {;
   success: false;
   message: string;
   errors: string[];
   code?: string;
 }
 
-export interface SuccessResponse<T> {
+export interface SuccessResponse<T> {;
   success: true;
   data: T;
   message?: string;
@@ -1062,7 +1171,7 @@ export interface FormField {
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 // Environment
-export interface Environment {
+export interface Environment {;
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_APP_URL?: string;
@@ -1072,7 +1181,7 @@ export interface Environment {
 <<<<<<< HEAD
 
 // Additional interfaces
-export interface User {
+export interface User {;
   id: string;
   email: string;
   name: string;
@@ -1110,7 +1219,7 @@ export interface User {
   };
 }
 
-export interface Notification {
+export interface Notification {;
   id: string;
   type: 'info' | 'success' | 'warning' | 'error';
   title: string;
@@ -1126,7 +1235,7 @@ export interface Notification {
   expires?: Date;
 }
 
-export interface BaseComponentProps {
+export interface BaseComponentProps {;
   className?: string;
   children?: React.ReactNode;
   id?: string;
@@ -1136,7 +1245,7 @@ export interface BaseComponentProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-export interface InputProps {
+export interface InputProps {;
   className?: string;
   children?: React.ReactNode;
   id?: string;
@@ -1151,7 +1260,7 @@ export interface InputProps {
   required?: boolean;
 }
 
-export interface ApiRequest {
+export interface ApiRequest {;
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
   data?: any;
@@ -1159,7 +1268,7 @@ export interface ApiRequest {
   headers?: Record<string, string>;
 }
 
-export interface PerformanceMetrics {
+export interface PerformanceMetrics {;
   fcp?: number;
   lcp?: number;
   fid?: number;
@@ -1167,14 +1276,14 @@ export interface PerformanceMetrics {
   ttfb?: number;
 }
 
-export interface AccessibilitySettings {
+export interface AccessibilitySettings {;
   highContrast: boolean;
   fontSize: number;
   reducedMotion: boolean;
   screenReader: boolean;
 }
 
-export interface UserPreferences {
+export interface UserPreferences {;
   theme: 'light' | 'dark' | 'system';
   language: string;
   accessibility: AccessibilitySettings;
@@ -1185,7 +1294,7 @@ export interface UserPreferences {
   };
 }
 
-export interface CompanyInfo {
+export interface CompanyInfo {;
   name: string;
   tagline: string;
   description: string;
@@ -1204,7 +1313,7 @@ export interface CompanyInfo {
   certifications: string[];
 }
 
-export interface ErrorInfo {
+export interface ErrorInfo {;
   message: string;
   code?: string;
   details?: any;
@@ -1213,7 +1322,7 @@ export interface ErrorInfo {
   url?: string;
 }
 
-export interface FormField {
+export interface FormField {;
   name: string;
   label: string;
   type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
@@ -1231,14 +1340,14 @@ export interface FormField {
   };
 }
 
-export interface PaginationParams {
+export interface PaginationParams {;
   page: number;
   limit: number;
   sort?: string;
   order?: 'asc' | 'desc';
 }
 
-export interface PaginatedResponse<T> {
+export interface PaginatedResponse<T> {;
   data: T[];
   pagination: {
     page: number;
@@ -1251,6 +1360,7 @@ export interface PaginatedResponse<T> {
 }
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 =======
@@ -1365,3 +1475,8 @@ export type Response<T> = SuccessResponse<T> | ErrorResponse;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export interface ContactInfo {
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

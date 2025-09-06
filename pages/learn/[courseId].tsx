@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import ProgressBar from '../../components/learn/ProgressBar',
@@ -7,6 +8,20 @@ import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
 export default function CourseView() {
 
+=======
+import {useEffect, useMemo, useState} from 'react';
+import {useRouter} from 'next/router';
+=======
+import { useEffect, useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import ProgressBar from '../../components/learn/ProgressBar';
+import Quiz from '../../components/learn/Quiz';
+import CertificatePreview from '../../components/learn/CertificatePreview';
+import CoachWidget from '../../components/learn/CoachWidget';
+<<<<<<< HEAD
+export default function CourseView() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { courseId } = router.query as { courseId: string }
   const [course, setCourse] = useState<any>(null);
@@ -66,12 +81,15 @@ export default function CourseView() {
   if (!course) return <div>Loading...</div>;
 
 =======
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import ProgressBar from '../../components/learn/ProgressBar';
 import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CourseView(req, res) {
   try {
   const router = useRouter();
@@ -138,7 +156,11 @@ export default function CourseView(req, res) {
   }
 }
   if (!course) return <div>Loading...</div>,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
@@ -179,12 +201,33 @@ export default function CourseView(req, res) {
             <div className="text-xs text-gray-500 mt-1">Progress: {progress.percent || 0}%</div>
           </div>
         </div>
+<<<<<<< HEAD
+        <div className='grid lg:grid-cols-5 gap-4'>
+          <aside className='lg:col-span-2 border rounded p-3 h-max'>
+            <div className='font-medium mb-2'>Lessons</div>
+            <ul className='space-y-2'>
+              {course.lessons?.map((l: any) => (
+                <li key={l.id}>
+<<<<<<< HEAD
+=======
+                  <button
+                    className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
+                    onClick={() => setCurrentLessonId(l.id)}
+                  >                    {l.title}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </aside>
+          <section className='lg:col-span-3 space-y-4'>
+=======
         <div className="grid lg:grid-cols-5 gap-4">
           <aside className="lg:col-span-2 border rounded p-3 h-max">
             <div className="font-medium mb-2">Lessons</div>
             <ul className="space-y-2">
               {course.lessons?.map((l: any) => (
                 <li key={l.id}>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <button className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => setCurrentLessonId(l.id)}>
                     {l.title  } catch (error) {
     console.error("Error:", error);
@@ -201,7 +244,11 @@ export default function CourseView(req, res) {
             </ul>
           </aside>
           <section className="lg:col-span-3 space-y-4">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -270,7 +317,11 @@ export default function CourseView(req, res) {
         </div>
       </div>
       <div className="space-y-4">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -281,6 +332,11 @@ export default function CourseView(req, res) {
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
   } catch (error) {
@@ -288,4 +344,8 @@ export default function CourseView(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

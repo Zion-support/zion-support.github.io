@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 import React from 'react'
 import {
@@ -22,6 +25,12 @@ import React from "react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+<<<<<<< HEAD
+=======
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
+import Link from "next/link"
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
 import Link from "next/link";
@@ -32,7 +41,11 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
 import Link from "next/link",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function TalentDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -50,7 +63,11 @@ export function TalentDashboard() {
 =======
         
         <div className="space-y-3">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -78,7 +95,11 @@ export function TalentDashboard() {
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -105,7 +126,11 @@ export function TalentDashboard() {
                 </Button>              </div>              <div className="flex gap-2 mt-3">
 =======
               <div className="flex gap-2 mt-3">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button size="sm">Apply Now</Button>
                 <Button size="sm" variant="outline">View Details</Button>
               </div>
@@ -116,7 +141,11 @@ export function TalentDashboard() {
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section>
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
         <Card>
@@ -163,7 +192,11 @@ export function TalentDashboard() {
               </div>
             </div>
 =======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Button variant="outline" className="w-full mt-4">
               View All Applications
             </Button>
@@ -173,7 +206,11 @@ export function TalentDashboard() {
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
@@ -238,7 +275,11 @@ export function TalentDashboard() {
             <span>Availability</span>
           </Button>
 =======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">
             <Zap className="h-5 w-5 mb-1" aria-hidden="true" />
             <span>AI Resume Boost</span>
@@ -299,16 +340,28 @@ export function TalentDashboard() {
                 <h3 className="font-medium">Improve your profile visibility</h3>
                 <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>
               </div>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           </CardContent>
         </Card>
       </section>
+<<<<<<< HEAD
+    </div>;
+  );
+};
+=======
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -464,4 +517,8 @@ export function TalentDashboard() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

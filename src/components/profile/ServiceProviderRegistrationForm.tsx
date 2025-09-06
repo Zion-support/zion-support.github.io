@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { useRouter } from 'next/router'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Switch } from '@/components/ui/switch'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -8,6 +25,7 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Switch } from "@/components/ui/switch",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Separator } from "@/components/ui/separator";
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
@@ -20,6 +38,20 @@ import {
   FormItem
   FormLabel
   FormMessage
+=======
+import { Separator } from "@/components/ui/separator",
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+<<<<<<< HEAD
+  FormMessage,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/form'
   Card
   CardContent
@@ -75,6 +107,7 @@ export function ServiceProviderRegistrationForm() {
   } | null>(null)
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null)
 =======
+<<<<<<< HEAD
 import { Separator } from "@/components/ui/separator",
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
 import {
@@ -84,6 +117,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react'
@@ -115,11 +150,16 @@ export function ServiceProviderRegistrationForm() {
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
     resolver: zodResolver(serviceProfileSchema) as any
     defaultValues: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       name: user?.displayName |''
       title: ''
@@ -131,6 +171,19 @@ export function ServiceProviderRegistrationForm() {
       enhancedProfile: false
       website: ''
     }
+=======
+      name: user?.displayName || "",
+      title: "",
+      bio: "",
+      location: "",
+      services: "",
+      hourlyRate: "",
+      availability: "available",
+      enhancedProfile: false,
+<<<<<<< HEAD
+      website: '',
+    },
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   })
   // Handle adding service tags
   const handleAddService = () => {
@@ -148,10 +201,10 @@ export function ServiceProviderRegistrationForm() {
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       e.preventDefault()
-      handleAddService() }
-  }
-  // Handle avatar upload
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+      handleAddService() };
+  };
+  // Handle avatar upload;
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
     const file = e.target.files?.[0];    if (file) {
       const reader = new FileReader()
       reader.onloadend = () => {
@@ -169,7 +222,7 @@ export function ServiceProviderRegistrationForm() {
         description:
           'Please provide at least a detailed bio before generating enhanced content.'
       })
-      return
+      return;
     }
     try {
       setIsGenerating(true)
@@ -190,6 +243,7 @@ export function ServiceProviderRegistrationForm() {
       )
       if (error) {
         throw new Error(error.message)
+<<<<<<< HEAD
       }
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
@@ -221,6 +275,9 @@ export function ServiceProviderRegistrationForm() {
       hourlyRate: "",
       availability: "available",
       enhancedProfile: false,
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       website: ""}}),
 
   // Handle adding service tags
@@ -368,10 +425,38 @@ export function ServiceProviderRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
 
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        setGeneratedContent(data as { summary: string; services: string[] })
+        toast({
+          title: 'Enhanced Profile Generated',
+          description:
+            'AI has created a professional bio and suggested additional services for your profile.',
+        })
+      } else {
+        // Fallback for mock/development mode
+        logWarn('Mock AI response - using fallback content')
+        setGeneratedContent({
+          summary:
+            'Professional service provider with expertise in delivering high-quality solutions.',
+          services: ['Consulting', 'Project Management', 'Technical Support'],
+        })
+        toast({
+          title: 'Enhanced Profile Generated',
+          description:
+            'AI has created a professional bio and suggested additional services for your profile.',
+        })
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         setGeneratedContent(data as { summary: string, services: string[] }),
         
         toast({
@@ -388,7 +473,11 @@ export function ServiceProviderRegistrationForm() {;
         toast({
           title: "Enhanced Profile Generated",
           description: "AI has created a professional bio and suggested additional services for your profile."})
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
     } catch (error: any) {
@@ -439,7 +528,11 @@ export function ServiceProviderRegistrationForm() {;
           service => typeof service === 'string' && service && !serviceTags.includes(service)
         ),
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
         }
@@ -450,17 +543,27 @@ export function ServiceProviderRegistrationForm() {;
 =======
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Handle form submission
   const onSubmit = async (values: ServiceFormValues) => {
     if (serviceTags.length === 0) {
       toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
         title: 'Services required'
         description: 'Please add at least one service to your profile.'
         variant: 'destructive'
+=======
+        title: 'Services required',
+        description: 'Please add at least one service to your profile.',
+        variant: 'destructive',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       })
-      return
+      return;
     }
     setIsSubmitting(true)
     try {
@@ -614,7 +717,11 @@ export function ServiceProviderRegistrationForm() {;
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = (userData as any).user?.email,
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Create the service profile
       const { data: profileData, error } = await supabase
         .from('profiles')
@@ -641,11 +748,22 @@ export function ServiceProviderRegistrationForm() {;
           // Additional fields that might be in profiles table
         })
         .eq('id', user.id)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        .select()
+      if (error) throw error
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         .select(),
 
       if (error) throw error,
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
       /*
@@ -666,10 +784,21 @@ export function ServiceProviderRegistrationForm() {;
           hourly_rate: Number(values.hourlyRate),
           availability_status: values.availability,
           location: values.location,
+<<<<<<< HEAD
           website: values.website || null}),
 
       if (serviceError) throw serviceError,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+          website: values.website || null})
+      if (serviceError) throw serviceError
+=======
+          website: values.website || null}),
+
+      if (serviceError) throw serviceError,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       */
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
@@ -693,9 +822,15 @@ export function ServiceProviderRegistrationForm() {;
                   <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
                 </div>
               </div>
+<<<<<<< HEAD
               `
 <<<<<<< HEAD
             }
+=======
+<<<<<<< HEAD
+              `,
+            },
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           })
         } catch (emailError) {
           logErrorToProduction('Failed to send notification email:', {
@@ -726,6 +861,10 @@ export function ServiceProviderRegistrationForm() {;
     }
   }
 =======
+<<<<<<< HEAD
+=======
+              `
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
@@ -806,6 +945,10 @@ export function ServiceProviderRegistrationForm() {;
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -836,7 +979,11 @@ export function ServiceProviderRegistrationForm() {;
                       render={({ field }: { field: any }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <FormControl>
                             <div className="relative">
                               <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -870,7 +1017,11 @@ export function ServiceProviderRegistrationForm() {;
                       render={({ field }: { field: any }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <FormControl>
                             <div className="relative">
                               <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -904,7 +1055,11 @@ export function ServiceProviderRegistrationForm() {;
                       render={({ field }: { field: any }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <FormControl>
                             <div className="relative">
                               <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -938,7 +1093,11 @@ export function ServiceProviderRegistrationForm() {;
                       render={({ field }: { field: any }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Website (optional)</FormLabel>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <FormControl>
                             <div className="relative">
                               <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -1092,7 +1251,11 @@ export function ServiceProviderRegistrationForm() {;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>
                   <div className="flex items-center gap-6">
                     <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {uploadedAvatar ? (
                         <AspectRatio ratio={1/1}>
                           <img
@@ -1106,7 +1269,11 @@ export function ServiceProviderRegistrationForm() {;
                             className="w-full h-full object-cover"
                             loading="lazy"
                           />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </AspectRatio>
                       ) : (
                         <div className="flex items-center justify-center h-full">
@@ -1134,7 +1301,11 @@ export function ServiceProviderRegistrationForm() {;
                         className="hidden"
                         onChange={handleAvatarUpload}
                       />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </label>
                   </div>
                   <p className="text-sm text-zion-slate">
@@ -1148,7 +1319,11 @@ export function ServiceProviderRegistrationForm() {;
 
               <Separator className="bg-zion-blue-light/50" />
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Bio Section */}
               <div className="space-y-4">
                 <h3 className="text-lg font-medium text-white">Service Description</h3>
@@ -1165,7 +1340,11 @@ export function ServiceProviderRegistrationForm() {;
                   render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel className="text-zion-slate-light">About Your Services</FormLabel>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <FormControl>
                         <Textarea
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
@@ -1180,6 +1359,10 @@ export function ServiceProviderRegistrationForm() {;
                       </FormDescription>
                     </FormItem>
                   )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 />
                 {/* AI Enhancement Option */}
                 <FormField
@@ -1191,12 +1374,15 @@ export function ServiceProviderRegistrationForm() {;
                         <FormLabel className='text-white flex items-center'>
                           <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement
 =======
+<<<<<<< HEAD
                       <FormMessage className="text-red-400" />
                       <FormDescription className="text-zion-slate">
                         {field.value?.length || 0}/1000 characters
                       </FormDescription>
                     </FormItem>
                   )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 />;
                 {/* AI Enhancement Option */}
                 <FormField;
@@ -1208,7 +1394,11 @@ export function ServiceProviderRegistrationForm() {;
                         <FormLabel className="text-white flex items-center">
                           <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
                           AI Profile Enhancement
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your service description for better visibility and client engagement
@@ -1227,7 +1417,11 @@ export function ServiceProviderRegistrationForm() {;
                           onCheckedChange={field.onChange}
                           className="data-[state=checked]:bg-zion-purple"
                         />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </FormControl>
                     </FormItem>
                   )}
@@ -1236,6 +1430,10 @@ export function ServiceProviderRegistrationForm() {;
                 {form.watch('enhancedProfile') && (
                   <div className='flex justify-end'>
                     <Button
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       type='button'
                       variant='outline'
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
@@ -1246,10 +1444,13 @@ export function ServiceProviderRegistrationForm() {;
                         ? 'Generating...'
                         : 'Generate Enhanced Profile'}
 =======
+<<<<<<< HEAD
                 
                 {form.watch("enhancedProfile") && (
                   <div className="flex justify-end">
                     <Button
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -1258,7 +1459,11 @@ export function ServiceProviderRegistrationForm() {;
                     >
                       <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </Button>
                   </div>
                 )}
@@ -1291,7 +1496,11 @@ export function ServiceProviderRegistrationForm() {;
                     </div>
                     
                     <div className="space-y-4">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>
@@ -1345,7 +1554,11 @@ export function ServiceProviderRegistrationForm() {;
 
               <Separator className="bg-zion-blue-light/50" />
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Services and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Services Section */}
@@ -1366,7 +1579,11 @@ export function ServiceProviderRegistrationForm() {;
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Services</FormLabel>
                         <div className="flex gap-2">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <FormControl>
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
@@ -1387,7 +1604,11 @@ export function ServiceProviderRegistrationForm() {;
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
                             onClick={handleAddService}
                           >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             Add
                           </Button>
                         </div>
@@ -1403,6 +1624,10 @@ export function ServiceProviderRegistrationForm() {;
                     {serviceTags.map(service => (
                       <Badge
                         key={service}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1'
                       >
                         {service}
@@ -1412,11 +1637,14 @@ export function ServiceProviderRegistrationForm() {;
                           className='rounded-full hover:bg-zion-purple-dark/20 p-0.5'                        >
                           <X className='h-3 w-3' />
 =======
+<<<<<<< HEAD
 
                   <div className="flex flex-wrap gap-2 mt-2">
                     {serviceTags.map(service => (
                       <Badge
                         key={service}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
                       >
                         {service}
@@ -1426,7 +1654,11 @@ export function ServiceProviderRegistrationForm() {;
                           className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
                         >
                           <X className="h-3 w-3" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </button>
                       </Badge>
                     ))}
@@ -1464,7 +1696,11 @@ export function ServiceProviderRegistrationForm() {;
                     render={({ field }: { field: any }) => (
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Starting Rate (USD)</FormLabel>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <FormControl>
                           <div className="relative">
                             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
@@ -1588,7 +1824,11 @@ export function ServiceProviderRegistrationForm() {;
                               />
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                 Currently Unavailable
                               </label>
                             </div>
@@ -1608,7 +1848,11 @@ export function ServiceProviderRegistrationForm() {;
 
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button
                   type="button"
                   variant="outline"
@@ -1631,7 +1875,11 @@ export function ServiceProviderRegistrationForm() {;
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Service Profile"}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </Button>
               </div>
             </CardFooter>
@@ -1656,7 +1904,7 @@ reader.onloadend = () => {
 }
 reader.readAsDataURL (file)
 }
-//Generate enhanced profile with AI return
+//Generate enhanced profile with AI return;
 }//Call the Supabase Edge Function const {
   data, error
 }= await supabase.functions.invoke ('service-profile-enhancer', {
@@ -1683,7 +1931,7 @@ if (newServices.length > 0) {
 //Handle form submission const onSubmit = async (values: ServiceFormValues) => {
   if (serviceTags.length === 0) {
   toast ({
-  return
+  return;
 }setIsSubmitting (true)
 try {
   //For actual implementation with Supabase if (!user?.id) {
@@ -1709,9 +1957,15 @@ if (error) throw error
   await supabase.functions.invoke ('send-email', {
   body: {'
   <p>Your service provider profile has been successfully created and published.</p> <p>We've enhanced your profile with AI to help you stand out to potential clients.</p> <p>You can now start receiving service requests and connecting with clients.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {
+<<<<<<< HEAD
   new Date () .getFullYear ()
 }Zion Marketplace</p>
 }//Continue with submission even if email fails
+=======
+  new Date () .getFullYear () 
+}Zion Marketplace</p>
+}//Continue with submission even if email fails 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }//Redirect to service provider dashboard or profile page setTimeout ( () => {'
   router.push ('/service-dashboard')
 }, 1500)
@@ -1760,4 +2014,8 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }'"}
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -96,7 +96,11 @@ const UltraAdvancedQuantumBackground: React.FC<
 =======
           this.y = Math.random() * canvas.height;        }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
 <<<<<<< HEAD
@@ -294,7 +298,11 @@ const UltraAdvancedQuantumBackground: React.FC<
 =======
             ctx.stroke();          }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
       }
@@ -405,7 +413,11 @@ const UltraAdvancedQuantumBackground: React.FC<
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -444,18 +456,36 @@ const UltraAdvancedQuantumBackground: React.FC<
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 export default UltraAdvancedQuantumBackground;            ease: "linear"
+=======
+};
+=======
+
+        style={{ zIndex: 1 }}
+      />
+
+      {/* Content Layer */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export default UltraAdvancedQuantumBackground;            ease: "linear",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             delay: 2
           }}
         />
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>
   );
 }
 export default UltraAdvancedQuantumBackground;  )
 }
 export default UltraAdvancedQuantumBackground;
+<<<<<<< HEAD
 
 =======
 
@@ -469,3 +499,8 @@ export default UltraAdvancedQuantumBackground;
       </div>
     </div>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

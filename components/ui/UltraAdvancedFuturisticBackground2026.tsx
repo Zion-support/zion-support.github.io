@@ -119,7 +119,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
 =======
         ctx.restore();      }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
 <<<<<<< HEAD
@@ -175,12 +179,19 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
           }
         });
         ctx.restore()
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         ctx.restore();      }
 
       }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -222,16 +233,28 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
           ctx.stroke();
         }
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
         ctx.restore();      }          ctx.stroke()
         }
         ctx.restore()
+<<<<<<< HEAD
     }
 =======
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ctx.restore();      }
 
       }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -276,6 +299,18 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+        ctx.restore();      }        
+        ctx.beginPath();
+        ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
+        ctx.stroke();
+        
+        ctx.restore()
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ctx.restore();      }
 <<<<<<< HEAD
         ctx.beginPath();
@@ -287,6 +322,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
 
       }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -482,7 +521,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }
           });
         });
@@ -529,7 +572,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Additional visual effects */}
       {enableMultidimensional && (
         <div className='absolute inset-0 pointer-events-none'>
@@ -590,8 +637,14 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
               opacity: [0.1, 0.3, 0.1]
             }}
             transition={{
+<<<<<<< HEAD
               duration: 10
               repeat: Infinity
+=======
+              duration: 10,
+              repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',              ease: "easeInOut"
             }}
           />
@@ -606,13 +659,21 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
   )
 }
 export default UltraAdvancedFuturisticBackground2026;
+<<<<<<< HEAD
 
 =======
               duration: 10,
               repeat: Infinity,
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
             }}
           />
         </div>
       )}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +8,8 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
@@ -17,6 +20,11 @@ interface Props {
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
@@ -36,6 +44,10 @@ interface Props {
   }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface State {
   hasError: boolean;
   error?: Error;
@@ -239,6 +251,87 @@ class ErrorBoundary extends Component<Props, State> {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  static getDerivedStateFromError(error: Error): State {
+    // Update state so the next render will show the fallback UI
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to external service (e.g., Sentry)
+    if (typeof window !== 'undefined' && (window as any).Sentry) {
+      (window as any).Sentry.captureException(error, { extra: errorInfo });    }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+// Log to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send to an error reporting service
+      console.error('Production error:', error, errorInfo);
+    }
+  }
+
+  handleReload = () => {
+    window.location.reload();
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';  };
+
+  render() {
+    if (this.state.hasError) {
+      // Fallback UI
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
+              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            <h2 className="text-xl font-semibold text-gray-900 text-center mb-2">
+              Something went wrong
+            </h2>
+            <p className="text-gray-600 text-center mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="text-left bg-white/5 rounded-xl p-6 mb-8 border border-white/10">
+                <summary className="text-white/80 font-medium cursor-pointer mb-4">
+                  Error Details (Development)
+                </summary>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <strong className="text-red-400">Error:</strong>
+                    <pre className="mt-2 p-3 bg-red-500/10 rounded-lg overflow-x-auto text-red-300">
+                      {this.state.error.toString()}
+                    </pre>
+                  </div>
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong className="text-red-400">Stack Trace:</strong>
+                      <pre className="mt-2 p-3 bg-red-500/10 rounded-lg overflow-x-auto text-red-300 text-xs">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
+                  )}                </div>
+              </details>
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   } catch (error) {
     console.error("Error:", error);
@@ -325,7 +418,11 @@ export default class ErrorBoundary extends Component<Props, State> {
               </p>
             </div>
             <div className="space-y-3">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <button
                 onClick={() => typeof window !== 'undefined' && window.location.reload()  } catch (error) {
     console.error("Error:", error);
@@ -538,13 +635,25 @@ export default class ErrorBoundary extends Component<Props, State> {
               </pre>
             </details>
           )}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       );
     }
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {;
+=======
+<<<<<<< HEAD
+
+class ErrorBoundary extends Component<Props, State> {;
+  constructor(props: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     super(props);
     this.state = { hasError: false }
 }
@@ -603,6 +712,7 @@ class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {
 }
 }
 export default ErrorBoundary;
+<<<<<<< HEAD
 =======
         </div>
       );
@@ -614,6 +724,11 @@ export default ErrorBoundary;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+}
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -646,4 +761,8 @@ export default ErrorBoundary;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

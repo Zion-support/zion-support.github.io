@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {useTheme} from "@/hooks/useTheme";
+import {Moon, Sun, Check} from "lucide-react";
+import {Card, CardContent} from "@/components/ui/card";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/hooks/useTheme",
@@ -9,7 +19,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Moon, Sun, Check } from "lucide-react",
 import { Card, CardContent } from "@/components/ui/card",
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Language {
 
   code: string
@@ -18,11 +32,25 @@ interface Language {
   flag: string
 }
 const languages: Language[] = [
+<<<<<<< HEAD
   { code: "en", name: "English", flag: "🇺🇸" }
   { code: "es", name: "Español", flag: "🇪🇸" }
   { code: "fr", name: "Français", flag: "🇫🇷" }
   { code: "de", name: "Deutsch", flag: "🇩🇪" }
   { code: "zh", name: "中文", flag: "🇨🇳" }]
+=======
+  { code: "en", name: "English", flag: "🇺🇸" },
+  { code: "es", name: "Español", flag: "🇪🇸" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },
+  { code: "zh", name: "中文", flag: "🇨🇳" }],
+
+<<<<<<< HEAD
+export function LanguageThemeSelector() {;
+  const { theme, setTheme } = useTheme();
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function LanguageThemeSelector() {
 <<<<<<< HEAD
   const { theme, setTheme } = useTheme();
@@ -31,7 +59,11 @@ export function LanguageThemeSelector() {
 =======
   const { theme, setTheme } = useTheme(),
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <div className="space-y-8 px-4">
@@ -100,7 +132,11 @@ export function LanguageThemeSelector() {;
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Check className="h-4 w-4 text-primary" />
                 )}
               </CardContent>
@@ -128,7 +164,11 @@ export function LanguageThemeSelector() {;
               )}
             </CardContent>
           </Card>
+<<<<<<< HEAD
           <Card
+=======
+          <Card 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
                 ? "border-primary bg-primary/5"
@@ -149,7 +189,10 @@ export function LanguageThemeSelector() {;
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             </CardContent>;
           </Card>;
@@ -157,6 +200,10 @@ export function LanguageThemeSelector() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

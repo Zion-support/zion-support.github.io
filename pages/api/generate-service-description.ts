@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import OpenAI from "openai";
+export type GenerateServiceDescriptionRequest = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -9,24 +15,36 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ description: 'Service description generated' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export type GenerateServiceDescriptionRequest = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   title: string;
   keyFeatures: string[];
   targetAudience: string;
   additionalNotes?: string;
 <<<<<<< HEAD
   tone?: "professional" | "friendly" | "persuasive" | "technical";
+<<<<<<< HEAD
 }
 export type GenerateServiceDescriptionResponse = {
   description: string;
 }
+=======
+};
+export type GenerateServiceDescriptionResponse = {;
+  description: string;
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
 ) {
-  if (req.method !== "POST") {
+  if (req.method !== "POST") {;
     return res.status(405).json({ error: "Method not allowed" });
   }
   const { title, keyFeatures, targetAudience, additionalNotes, tone } =
@@ -86,7 +104,10 @@ Requirements:
   } catch (error: any) {
     console.error("OpenAI generation error:", error);
     return res.status(500).json({ error: "Failed to generate description" });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   tone?: 'professional' | 'friendly' | 'persuasive' | 'technical';
 };
@@ -294,6 +315,10 @@ Requirements:;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react'
 export const BrowserRouter = ({ children }: { children: any }) => children
 export const Routes = ({ children }: { children: any }) => children
@@ -10,10 +13,10 @@ export const Link = (props: any) => {
 export const NavLink = Link
 export const Navigate = ({ to }: { to: string }) => null
 export const MemoryRouter = BrowserRouter
-export const Outlet = () => null
-export const useNavigate = () => (url: string) => {}
-export const useLocation = () => ({ pathname: '/' })
-export const useParams = () => ({})
+export const Outlet = () => null;
+export const useNavigate = () => (url: string) => {};
+export const useLocation = () => ({ pathname: '/' });
+export const useParams = () => ({});
 export const useSearchParams = () => [new URLSearchParams(), () => {}] as any; export default {
   BrowserRouter
   Routes
@@ -39,8 +42,13 @@ export const useSearchParams = () => [new URLSearchParams(), () => {}] as any; e
   useNavigate
   useLocation
   useParams
+<<<<<<< HEAD
   useSearchParams}
 
+=======
+  useSearchParams};
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',;
 export const BrowserRouter = ({ children }: { children: any }) => children,;
@@ -68,4 +76,8 @@ export default {;
   useLocation,;
   useParams;
   useSearchParams};
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

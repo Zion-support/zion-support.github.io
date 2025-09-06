@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
@@ -14,10 +15,19 @@ const benefits = [
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
     icon: <Globe className="w-8 h-8" />}
 =======
+import {GradientHeading} from "./GradientHeading";
+import {FeatureCard} from "./FeatureCard";
+import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const benefits = [
   {
     title: "AI-Powered Matchmaking",
@@ -62,7 +72,11 @@ export function BenefitsSection() {
       </div>
     </section>
   )
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
@@ -98,5 +112,10 @@ export function BenefitsSection() {;
           {benefits.map((benefit, index) => (;
             <FeatureCard;
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

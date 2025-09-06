@@ -93,7 +93,11 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
     router.push('/auth/login');
   }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (loading) {
     return (
       <Card className="w-full max-w-sm">
@@ -154,6 +158,16 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
 <<<<<<< HEAD
         <Button onClick={handleSignOut} variant='outline' className='w-full'>
           <LogOut className='h-4 w-4 mr-2' />
+<<<<<<< HEAD
+=======
+          Sign Out
+        </Button>;
+      </CardContent>;
+    </Card>;
+  );
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
@@ -164,8 +178,14 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {;
       </CardContent>
     </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 =======
   )
 } 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  )
+} 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

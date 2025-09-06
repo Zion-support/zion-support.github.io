@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
-export interface AdvancedITInfrastructureService {
+export interface AdvancedITInfrastructureService {;
   id: string;
   name: string;
   tagline: string;
@@ -1058,12 +1058,21 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       }
       realImplementation: true
       implementationDetails:
+<<<<<<< HEAD
         'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.'
       launchDate: '2025-05-01'
       customers: 32
       rating: 4.7
       reviews: 24
     }
+=======
+        'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',
+      launchDate: '2025-05-01',
+      customers: 32,
+      rating: 4.7,
+      reviews: 24,
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Multi-cloud orchestration and managementHybrid cloud integration and optimizationIntelligent workload placementCross-cloud resource optimizationUnified monitoring and analyticsAutomated cloud migrationCustom cloud workflowsIntegration with cloud platforms';
       'Advanced cloud analyticsComprehensive cloud management'
@@ -1121,8 +1130,11 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32;
     rating: 4.7;
     reviews: 24
+<<<<<<< HEAD
   }
 ];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
@@ -1752,6 +1764,10 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32,;
     rating: 4.7;
     reviews: 24;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
