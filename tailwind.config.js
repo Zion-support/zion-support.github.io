@@ -8,8 +8,10 @@ module.exports = {
 
 
 
+
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Added for Next.js app directory compatibility
+
 
 
 
@@ -27,6 +29,7 @@ module.exports = {
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
+
 
 
 
@@ -72,6 +75,7 @@ module.exports = {
           '100%': { transform: 'rotate(360deg)' },
 
         },
+
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -90,6 +94,7 @@ module.exports = {
         '4xl': '2rem',
 
 
+
       },
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0.5)',
@@ -105,11 +110,14 @@ module.exports = {
     },
 
 
+
   },
 
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+
+
 
 
 

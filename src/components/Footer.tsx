@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';
 
 import { Link } from 'react-router-dom';
@@ -66,10 +67,12 @@ const Footer: React.FC = () => {
               <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">AI Solutions</Link></li>
               <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
               <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Consulting</Link></li>
+
             </ul>
           </div>
           
           <div>
+
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
@@ -132,6 +135,7 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+
 
 
 
