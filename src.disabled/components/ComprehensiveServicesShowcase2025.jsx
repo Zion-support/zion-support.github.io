@@ -1,5 +1,10 @@
 import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
 :src.disabled/components/ComprehensiveServicesShowcase2025.jsx
@@ -11,4 +16,8 @@ const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock
 :temp_exclude/src.disabled/components/ComprehensiveServicesShowcase2025.jsx
 import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
+<<<<<<< HEAD
 =======import { AnimatePresence,motion } from';framer-motion' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from';';lucide-react' import { useState } from';';react'';';''
+=======
+import { AnimatePresence,motion } from';framer-motion' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from';';lucide-react' import { useState } from';';react'';';''
+>>>>>>> origin/main

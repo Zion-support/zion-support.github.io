@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import _React from 'react';,
+>>>>>>> origin/main
 ';
 import '@testing-library/jest-dom';';
 import Analytics from '../components/Analytics';';
@@ -18,7 +22,12 @@ describe('Analytics', () => {'}
   });,
   test('applies correct styling', () => {'}
     render(<Analytics />);,
+<<<<<<< HEAD
   });import _React from 'react'
+=======
+  });
+import _React from 'react'
+>>>>>>> origin/main
 ''
 import '@testing-library/jest-dom';'
 import Analytics from '../components/Analytics';'
@@ -38,7 +47,15 @@ describe('Analytics', () => {
     render(<Analytics />);
     expect(screen.getByTestId('analytics')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 });'
+=======
+});
+});
+});
+import _React from 'react'
+'
+>>>>>>> origin/main
 import '@testing-library/jest-dom';
 import Analytics from '../components/Analytics';
 describe('Analytics', () => {'
@@ -47,4 +64,7 @@ describe('Analytics', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/main

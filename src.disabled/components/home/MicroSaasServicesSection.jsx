@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,14 +27,31 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface MicroSaasServicesSectionProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 }
 
 =======export default function MicroSaasServicesSection({ }: MicroSaasServicesSectionProps) {
+=======
+
+
+}
+
+export default function MicroSaasServicesSection({ }: MicroSaasServicesSectionProps) {
+>>>>>>> origin/main
   return (
     <div>
       <h1>MicroSaasServicesSection</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
   );}
 =======
+=======
+  );
+
+}
+:src.disabled/components/home/MicroSaasServicesSection.jsx
+}
+}
+>>>>>>> origin/main

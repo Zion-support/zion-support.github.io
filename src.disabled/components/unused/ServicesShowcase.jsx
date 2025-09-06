@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,6 +25,12 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface ServicesShowcaseProps {
   // Add props here as needed
+=======
+import React from 'react';
+interface ServicesShowcaseProps {
+  // Add props here as needed
+
+>>>>>>> origin/main
 
 }
 
@@ -33,4 +40,12 @@ export default function ServicesShowcase({ }: ServicesShowcaseProps) {
       <h1>ServicesShowcase</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
   );}
+=======
+  );
+}
+:src.disabled/components/unused/ServicesShowcase.jsx
+}
+}
+>>>>>>> origin/main

@@ -1,5 +1,10 @@
 import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {\''\';
 const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";""
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {\''\';
 const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";""
 :src.disabled/components/ThemeToggle.js.jsx

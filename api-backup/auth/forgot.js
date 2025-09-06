@@ -29,3 +29,7 @@ export default /**
  */
 function ForgotPassword() {
   return (
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/main

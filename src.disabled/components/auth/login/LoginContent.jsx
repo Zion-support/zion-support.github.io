@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,14 +27,31 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface LoginContentProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 }
 
 =======export default function LoginContent({ }: LoginContentProps) {
+=======
+
+
+}
+
+export default function LoginContent({ }: LoginContentProps) {
+>>>>>>> origin/main
   return (
     <div>
       <h1>LoginContent</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
   );}
 =======
+=======
+  );
+
+}
+:src.disabled/components/auth/login/LoginContent.jsx
+}
+}
+>>>>>>> origin/main

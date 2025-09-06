@@ -6,8 +6,13 @@ const FaqSection: React.FC = () => {
 
   const faqs = [
     {
+<<<<<<< HEAD
       question: "What services does Zion Tech Group offer?",
       answer: "We offer comprehensive AI solutions, IT services, cloud infrastructure, cybersecurity, data analytics, and digital transformation services. Our team specializes in cutting-edge technologies to help businesses modernize and scale."
+=======
+      question: "What services does Zion Tech offer?",
+      answer: "We offer comprehensive AI solutions, IT services, cloud infrastructure, cybersecurity, data analytics, and digital transformation services. Our team specializes in machine learning, cloud migration, system administration, and business process optimization."
+>>>>>>> origin/main
     },
     {
       question: "How long does a typical project take?",
@@ -40,8 +45,8 @@ const FaqSection: React.FC = () => {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-600">
-            Find answers to common questions about our services and processes.
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Find answers to common questions about our services and solutions.
           </p>
         </div>
 
@@ -49,12 +54,20 @@ const FaqSection: React.FC = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
+<<<<<<< HEAD
               className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-200"
             >
               <button
                 className="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+=======
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+            >
+              <button
+>>>>>>> origin/main
                 onClick={() => toggleFaq(index)}
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
               >
+<<<<<<< HEAD
                 <span className="text-lg font-semibold text-gray-900 pr-4">
                   {faq.question}
                 </span>
@@ -65,6 +78,16 @@ const FaqSection: React.FC = () => {
                     <ChevronDown className="w-6 h-6 text-gray-500" />
                   )}
                 </div>
+=======
+                <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                  {faq.question}
+                </h3>
+                {openIndex === index ? (
+                  <ChevronUp className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                )}
+>>>>>>> origin/main
               </button>
               
               {openIndex === index && (
@@ -79,6 +102,7 @@ const FaqSection: React.FC = () => {
         </div>
 
         <div className="mt-12 text-center">
+<<<<<<< HEAD
           <div className="bg-blue-50 rounded-xl p-8">
             <h3 className="text-2xl font-bold mb-4 text-gray-900">
               Still Have Questions?
@@ -95,6 +119,14 @@ const FaqSection: React.FC = () => {
               </button>
             </div>
           </div>
+=======
+          <p className="text-gray-600 mb-4">
+            Still have questions? We&apos;re here to help!
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            Contact Us
+          </button>
+>>>>>>> origin/main
         </div>
       </div>
     </section>

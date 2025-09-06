@@ -13,6 +13,11 @@ function fixImportSyntax(filePath) {
       const fixedImports = imports.replace(/;/g, ",");
       return match.replace(imports, fixedImports);
     });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 
     // Fix missing commas in import statements;
 

@@ -1,4 +1,9 @@
 ;,\"});\"})\"; \"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 ;,\"});\"})\"; \"
 ;,\"});\"})\"; \"
 :src.disabled/src/components/ProductListingCard.js.jsx

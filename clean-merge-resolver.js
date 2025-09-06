@@ -30,7 +30,31 @@ function fixMergeConflicts(filePath) {
     const items = fs.readdirSync(dir);
     for (const item of items) {;
       const fullPath = path.join(dir, item);
+<<<<<<< HEAD
       const stat = fs.statSync(fullPath);console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
+=======
+      const stat = fs.statSync(fullPath);
+
+/**
+ * getAllFiles - Function description
+ */
+function getAllFiles() {
+  let files = [],
+  try {
+    const items = fs.readdir_sync (dir),
+    for (const item of items) {
+      const full_path = path.join (dir, item),
+      const stat = fs.stat_sync (full_path),
+      if (&& !item.starts_with ('.') && item !== 'node_modules' && item !== '.git') {) {
+  $2
+}
+        files = files.concat (getAllFiles (full_path, extensions));
+      } else if ()) {) {
+  $2
+}
+        files.push (full_path);
+console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
+>>>>>>> origin/main
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
   try {;
@@ -38,6 +62,11 @@ function fixMergeConflicts(filePath) {;
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;    const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
+<<<<<<< HEAD
+=======
+    const originalContent = content;
+    // Remove merge conflict markers and keep HEAD version;
+>>>>>>> origin/main
     content = content.replace(/    content = content.replace(/    if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
@@ -107,7 +136,12 @@ function main() {
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.git') {;
         files = files.concat(getAllFiles(fullPath, extensions));
 
+<<<<<<< HEAD
       } else if (extensions.some(ext => item.endsWith(ext))) {;        files.push(fullPath);
+=======
+      } else if (extensions.some(ext => item.endsWith(ext))) {;
+        files.push(fullPath);
+>>>>>>> origin/main
       }
     }
   } catch (error) {
@@ -152,7 +186,12 @@ async function main() {
       // Find files with merge conflicts;
 
         for (const file of files) {;
+<<<<<<< HEAD
           if (file.trim()) {;            }
+=======
+          if (file.trim()) {;
+            }
+>>>>>>> origin/main
             execSync(`git add "${file}"`);
           }
         }
@@ -160,7 +199,12 @@ async function main() {
         execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
       }
     }
+<<<<<<< HEAD
     let fixedCount = 0;    for (const file of files) {;
+=======
+    let fixedCount = 0;
+    for (const file of files) {;
+>>>>>>> origin/main
       try {;
         const content = fs.readFileSync(file, 'utf8'),;
           if (fixMergeConflicts(file)) {;
@@ -217,7 +261,12 @@ async function main() {
   }
 }
 ;
+<<<<<<< HEAD
 main().catch(console.error),;            fixedCount++;
+=======
+main().catch(console.error),;
+            fixedCount++;
+>>>>>>> origin/main
           }
         }
       } catch (error) {
@@ -285,4 +334,8 @@ main().catch(console.error),;            fixedCount++;
 if (|| content.includes (') {
   $2
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 main().catch(console.error);

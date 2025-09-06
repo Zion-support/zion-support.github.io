@@ -1,4 +1,9 @@
 ' \' \' \' \' \' \' \' \' \' \''\''\";\";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 ' \' \' \' \' \' \' \' \' \' \''\''\";\";
 ' \' \' \' \' \' \' \' \' \' \''\''\";\";
 :src.disabled/components/profile/TalentRegistrationForm.js.jsx

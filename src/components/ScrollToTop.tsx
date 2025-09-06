@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> origin/main
 import { ChevronUp } from 'lucide-react';
 
 const ScrollToTop: React.FC = () => {

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> origin/main
 interface AisearchProps {
   // Add props here as needed
 }
@@ -9,6 +13,7 @@ export default function Aisearch({ }: AisearchProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -16,3 +21,5 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/main

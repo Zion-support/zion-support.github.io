@@ -1,5 +1,10 @@
 "export\": const OptimizedImage = ({ ;
 export: const OptimizedImage = ({ ;""
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 "export\": const OptimizedImage = ({ ;
 export: const OptimizedImage = ({ ;""
 :src.disabled/components/OptimizedImage.jsx

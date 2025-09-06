@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 };
 }
@@ -15,11 +16,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 },
 
+=======
+>>>>>>> origin/main
 export const messageChannelHandler = {
-  sendMessage: (message: string) => {},
-  receiveMessage: (callback: (message: string) => void) => {},
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
+<<<<<<< HEAD
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void
@@ -88,3 +90,6 @@ export default MessageChannelHandler;
 },;
 ,;
 ;
+=======
+};
+>>>>>>> origin/main

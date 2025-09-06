@@ -1,6 +1,11 @@
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
+<<<<<<< HEAD
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;/* eslint - disable no - console */;
+=======
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+/* eslint - disable no - console */;
+>>>>>>> origin/main
 import fs from 'fs';
 import path from 'path';
 import https from 'https';
@@ -21,6 +26,7 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
+<<<<<<< HEAD
 
       method: 'POST',
       headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
@@ -30,6 +36,8 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
       res && res.on('data', (d: any) => (buf += d)),
       res && res.on('end', () => {
         try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
+=======
+>>>>>>> origin/main
       })
     });
     req && req.on('error', reject);
@@ -64,7 +72,36 @@ async function post_json (url: string, body: any): Promise < any> {
       let buf = '',
       res.on ('data', (d: any) => (buf += d)),
       res.on ('end', () => {
+<<<<<<< HEAD
         try { resolve (JSON.parse (buf)) } catch { resolve ({}) }    });
+=======
+        try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
+/* eslint-disable no-console */;
+import fs from 'fs',;
+import path from 'path',;
+import https from 'https',;
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+  { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' },;
+  { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' },;
+  { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' },;
+  { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }],;
+async function postJson(url: string, body: any): Promise<any> {;
+  return new Promise((resolve, reject) => {;
+    const u = new URL(url),;
+    const data = JSON.stringify(body),;
+    const opts: any = {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/jsonContent-Length': Buffer.byteLength(data) }},;
+    const lib = u.protocol === 'https: ' ? https : require('http'),;
+    const req = lib.request(url, opts, (res: any) => {;
+      let buf = '',;
+      res.on('data', (d: any) => (buf += d)),;
+      res.on('end', () => {;
+        try { resolve(JSON.parse(buf)) } catch { resolve({}) }
+      });
+    });
+>>>>>>> origin/main
     req.on ('error', reject);
     req.write (data);
     req.end ();
@@ -96,7 +133,16 @@ main ().catch ((e) => {
   process.exit (1);
 });
 
+<<<<<<< HEAD
 ;
+=======
+
+
+
+;
+
+
+>>>>>>> origin/main
 
 ;
 /* eslint-disable no-console */;
@@ -167,3 +213,7 @@ main().catch((e) => {;
   console.error(e),;
   process.exit(1);
 });
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/main

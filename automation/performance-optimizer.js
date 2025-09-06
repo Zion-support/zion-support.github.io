@@ -3,6 +3,41 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/main
 origin/automation-improvements-final
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+#!/usr/bin/env node;
+
+#!/usr/bin/env node;
+  "fs");
+  "path");
+const { execSync } = // // require(;
+  "child_process");
+class $1 {
+  }
+  ensureLogDirectory() {}
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {}
+      fs.mkdirSync(logDir, { "recursive": true });"
+    }
+  }
+  log(message, level = 'INFO') {'}
+    const timestamp = new Date().toISOString();,
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
+    _console.log(`[${level}] ${message}`);,
+    fs.appendFileSync(this.logFile, logMessage);,
+  }
+  async optimizePerformance() {}
+    try {}
+      this.log('Starting performance optimization...');',
+      // Analyze bundle size;
+>>>>>>> origin/main
       const bundleAnalysis = this.analyzeBundleSize();
       // Optimize images;
       const imageOptimization = this.optimizeImages();
@@ -15,28 +50,66 @@ origin/automation-improvements-final
         "imageOptimization": imageOptimization,",
         "dependencies": dependencyAnalysis,",
         "recommendations": this.generateRecommendations()";,
+<<<<<<< HEAD
 
 };,      this.saveReport(report);
       this.log('Performance optimization completed');';
       return report;
     } catch (error) {}  optimizeImages() {
+=======
+;      };,
+      this.saveReport(report);
+      this.log('Performance optimization completed');';
+      return report;
+    } catch (error) {}
+      this.log (`Performance optimization "failed": ${error.message}`, 'ERROR');',
+
+      return null;,
+    }
+  }
+analyzeBundleSize() {
+  analyzeBundleSize() {
+  try {
+  // Placeholder for bundle analysis;
+      return {
+
+  totalSize: "2 && 2.1MB, gzippedSize:;
+  "650KB", ;
+
+
+  optimizeImages() {
+>>>>>>> origin/main
   try {
   // Placeholder for image optimization;
       return {
   optimized: 0, totalImages: 0, savings:;
   "0KB";
 
+<<<<<<< HEAD
+=======
+
+  analyzeBundleSize() {}
+>>>>>>> origin/main
     try {
       // Placeholder for bundle analysis}
       return {}
   optimizeImages() {}
     try {
       // Placeholder for image optimization}
+<<<<<<< HEAD
       return { optimized: 0, "totalImages": 0, "savings": '0KB' };',    } catch (error) {}
       return { "error": error.message }",
     }
   }
   analyze_dependencies () {}      return {
+=======
+    } catch (error) {}
+      return { "error": error.message }",
+    }
+  }
+  analyze_dependencies () {}
+      return {
+>>>>>>> origin/main
 
         "totalDependencies": dependencies && dependencies.length + devDependencies && devDependencies.length,",
         "productionDependencies": dependencies && dependencies.length,",
@@ -44,7 +117,41 @@ origin/automation-improvements-final
         "potentialUnused": this && this.findUnusedDependencies()";,
       };,
     } catch (error) {}
+<<<<<<< HEAD
       return { "error": error && error.message };",    this.optimizations = [];
+=======
+      return { "error": error && error.message };",
+
+        "total_dependencies": dependencies.length + dev_dependencies.length, ",
+        "production_dependencies": dependencies.length, ",
+        "dev_dependencies": dev_dependencies.length, ",
+        "potential_unused": this.findUnusedDependencies ()";,
+      },
+    } catch (error) {}
+      return { "error": error.message }",
+    }
+  }
+  findUnusedDependencies () {
+    // Placeholder for unused dependency detection}
+
+    return ['example - unused - package'];',
+  }
+  generate_recommendations () {
+#!/usr / bin / env node;
+const fs = require ('fs');
+const path = require ('path');
+const { exec_sync } = require ('child_process');
+class PerformanceOptimizer {ursor / migrate - github - actions - to - pm2 - and - clean - up - 5599;
+  constructor () {
+;
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+  constructor() {
+    this.optimizations = [];
+>>>>>>> origin/main
     this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');
     this.ensureLogDirectory();
   }
@@ -54,9 +161,25 @@ origin/automation-improvements-final
       fs.mkdirSync(logDir, { "recursive": true });
     }
   }
+<<<<<<< HEAD
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     fs.appendFileSync(this.logFile, logMessage);  }
+=======
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+  async optimizePerformance() {
+    try {
+  log (message, level = 'INFO') {
+    const timestamp = new Date ().toISOString ();
+    const log_message = `[${timestamp}] [${level}] ${message}\n`;
+    fs.appendFileSync (this.log_file, log_message);
+
+  }
+>>>>>>> origin/main
   async optimize_performance () {
     try {
 
@@ -65,7 +188,12 @@ origin/automation-improvements-final
       this.saveReport(report);
       this.log('Performance optimization completed');
       return report;
+<<<<<<< HEAD
     } catch (error) {      this.log('Starting performance optimization...');
+=======
+    } catch (error) {
+      this.log('Starting performance optimization...');
+>>>>>>> origin/main
       // Analyze bundle size
       const bundleAnalysis = this.analyzeBundleSize();
       // Optimize images
@@ -79,11 +207,21 @@ origin/automation-improvements-final
         "imageOptimization": imageOptimization,
         "dependencies": dependencyAnalysis,
         "recommendations": this.generateRecommendations()
+<<<<<<< HEAD
       };      }      this.saveReport(report);
       this.log('Performance optimization completed');
       return report;
     } catch (error) {
       this.log(`Performance optimization "failed": ${error.message}`, 'ERROR');      return null;
+=======
+      };
+      this.saveReport(report);
+      this.log('Performance optimization completed');
+      return report;
+    } catch (error) {
+      this.log(`Performance optimization "failed": ${error.message}`, 'ERROR');
+      return null;
+>>>>>>> origin/main
     }
   }
   analyzeBundleSize () {
@@ -93,7 +231,51 @@ origin/automation-improvements-final
 
   "totalSize": "2 && 2.1MB, "gzippedSize": ;
   "650KB"
+<<<<<<< HEAD
 "totalSize": '2 && 2.1MB',      const packageJson = JSON && JSON.parse(fs && fs.readFileSync(path && path.resolve(__dirname, '../package && package.json'), 'utf8'));
+=======
+"totalSize": '2 && 2.1MB',
+"totalSize": '2.1MB',
+        "gzippedSize": '650KB',
+
+        "recommendations": ['Consider code splitting', 'Remove unused dependencies']
+      };
+    } catch (error) {
+      return { "error": error.message };
+    }
+  }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+  optimizeImages() {
+    try {
+      // Placeholder for image optimization
+      return { optimized: 0, "totalImages": 0, "savings": '0KB' };
+    } catch (error) {
+      return { "error": error.message };
+    }
+  }ursor / migrate - github - actions - to - pm2 - and - clean - up - 5599;
+  optimize_images () {
+    try {
+
+      // Placeholder for image optimization;
+      return { optimized: 0, "total_images": 0, "savings": '0KB' }
+    } catch (error) {
+
+      return { "error": error.message }
+    }
+  }
+  analyze_dependencies () {
+try {
+
+      return { "error": error && error.message };
+    }
+  }
+  analyzeDependencies() {
+  try {
+  const packageJson = JSON && JSON.parse(fs && fs.readFileSync(path && path.resolve(import && import.meta.url, "../package ;
+      const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || { /* empty */ });
+      const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || { /* empty */ });
+try {
+      const packageJson = JSON && JSON.parse(fs && fs.readFileSync(path && path.resolve(__dirname, '../package && package.json'), 'utf8'));
+>>>>>>> origin/main
       const dependencies = Object && Object.keys(packageJson && packageJson.dependencies || {});
       const devDependencies = Object && Object.keys(packageJson && packageJson.devDependencies || {});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
@@ -104,11 +286,28 @@ origin/automation-improvements-final
       };
     } catch (error) {
       return { "error": error && error.message };
+<<<<<<< HEAD
+=======
+
+  const package_json = JSON.parse (fs.readFileSync (path.resolve (import.meta.url, "../package.json"), "utf8"));
+      const dependencies = Object.keys (package_json.dependencies || { /* empty */ });
+      const dev_dependencies = Object.keys (package_json.dev_dependencies || { /* empty */ });
+try {
+      const package_json = JSON.parse (fs.readFileSync (path.resolve (__dirname, '../package.json'), 'utf8'));
+      const dependencies = Object.keys (package_json.dependencies || {});
+      const dev_dependencies = Object.keys (package_json.dev_dependencies || {});ursor / migrate - github - actions - to - pm2 - and - clean - up - 5599;
+      return {
+        "total_dependencies": dependencies.length + dev_dependencies.length,
+        "production_dependencies": dependencies.length,
+        "dev_dependencies": dev_dependencies.length,
+        "potential_unused": this.findUnusedDependencies ();
+>>>>>>> origin/main
       }
     } catch (error) {
       return { "error": error.message }
     }
   }
+<<<<<<< HEAD
   findUnusedDependencies () {
     // Placeholder for unused dependency detection;
     return ['example - unused - package'];
@@ -116,6 +315,8 @@ origin/automation-improvements-final
 
   return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React && React.memo for expensive components";
     // // // // // // // // console && console.log(;
+=======
+>>>>>>> origin/main
   "Performance report:", report);
 }
   generate_recommendations () {
@@ -124,16 +325,71 @@ return [";Implement code splitting for better performance_optimize images using 
   "Performance report:", report);
 },
 });
+<<<<<<< HEAD
 }}}}}}}}}}}}}}} #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class PerformanceOptimizer {  #!/usr/bin/env node; import fs from ; "fs"); import path from ; "path"); const { execSync } = "child_process"); class $1 { ursor/migrate-github-actions-to-pm2-and-clean-up-5599 constructor() { this.optimizations = []; this.logFile = path.join(__dirname,'logs','performance-optimizer.log'); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile,logMessage)} async optimizePerformance() { try { this.log('Starting performance optimization...'); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: bundleAnalysis,imageOptimization: imageOptimization,dependencies: dependencyAnalysis,recommendations: this.generateRecommendations() }; this.saveReport(report); this.log('Performance optimization completed'); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,'ERROR'); return null} } analyzeBundleSize() { try { return {  totalSize: '2.1MB',gzippedSize: '650KB',recommendations: ['Consider code splitting','Remove unused dependencies'] }} catch (error) { return { error: error.message }} }  totalSize: "2.1MB,gzippedSize:; "650KB" ursor/migrate-github-actions-to-pm2-and-clean-up-5599 optimizeImages() { try { return { optimized: 0,totalImages: 0,savings: '0KB' }} catch (error) { return { error: error.message }} } analyzeDependencies() {  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../package.json'),'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {});  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies || { }); const devDependencies = Object.keys(packageJson.devDependencies || { }); ; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { totalDependencies: dependencies.length + devDependencies.length,productionDependencies: dependencies.length,devDependencies: devDependencies.length,potentialUnused: this.findUnusedDependencies() }} catch (error) { return { error: error.message }} } findUnusedDependencies() { return ['example-unused-package']} generateRecommendations() {  return [ 'Implement code splitting for better performance','Optimize images using WebP format','Remove unused dependencies','Enable gzip compression','Use React.memo for expensive components' ]} saveReport(report) { const reportFile = path.join(__dirname,'logs','performance-report.json'); fs.writeFileSync(reportFile,JSON.stringify(report,null,2))} } const optimizer = new PerformanceOptimizer(); const command = process.argv[2]; switch (command) { case 'optimize': optimizer.optimizePerformance(); break; default: console.log('Usage:'); console.log(' node performance-optimizer.js optimize'); break} module.exports = PerformanceOptimizer;  return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} })}}}}}}}}}}}}}}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+=======
+}}}}}}}}}}}}}}}
+    // // // // // // // // }
+})}}}}}}}}}}}}}}}
+return ['Implement code splitting for better performance',
+      'Optimize images using WebP format',
+      'Remove unused dependencies',
+      'Enable gzip compression',
+      'Use React.memo for expensive components'
+    ];
+  }
+  saveReport(report) {
+    const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+  }
+}
+// CLI interface
+const optimizer = new PerformanceOptimizer();
+      }
+    } catch (error) {
+      return { "error": error.message }
+    }
+  }
+});
+}}}}}}}}}}}}}}}
+    // // // // // // // // }
+})}}}}}}}}}}}}}}}
+    // // // // // // // // }
+})}}}}}}}}}}}}}}}
+const command = process.argv[2];
+switch (command) {
+  case 'optimize':
+    optimizer.optimizePerformance();
+    break;
+  "default": console.log('Usage:');
+    console.log('  node performance-optimizer.js optimize');
+    break;
+}
+module.exports = PerformanceOptimizer;ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+ #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class PerformanceOptimizer {  #!/usr/bin/env node; import fs from ; "fs"); import path from ; "path"); const { execSync } = "child_process"); class $1 { ursor/migrate-github-actions-to-pm2-and-clean-up-5599 constructor() { this.optimizations = []; this.logFile = path.join(__dirname,'logs','performance-optimizer.log'); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile,logMessage)} async optimizePerformance() { try { this.log('Starting performance optimization...'); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: bundleAnalysis,imageOptimization: imageOptimization,dependencies: dependencyAnalysis,recommendations: this.generateRecommendations() }; this.saveReport(report); this.log('Performance optimization completed'); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,'ERROR'); return null} } analyzeBundleSize() { try { return {  totalSize: '2.1MB',gzippedSize: '650KB',recommendations: ['Consider code splitting','Remove unused dependencies'] }} catch (error) { return { error: error.message }} }  totalSize: "2.1MB,gzippedSize:; "650KB" ursor/migrate-github-actions-to-pm2-and-clean-up-5599 optimizeImages() { try { return { optimized: 0,totalImages: 0,savings: '0KB' }} catch (error) { return { error: error.message }} } analyzeDependencies() {  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../package.json'),'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {});  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies || { }); const devDependencies = Object.keys(packageJson.devDependencies || { }); ; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { totalDependencies: dependencies.length + devDependencies.length,productionDependencies: dependencies.length,devDependencies: devDependencies.length,potentialUnused: this.findUnusedDependencies() }} catch (error) { return { error: error.message }} } findUnusedDependencies() { return ['example-unused-package']} generateRecommendations() {  return [ 'Implement code splitting for better performance','Optimize images using WebP format','Remove unused dependencies','Enable gzip compression','Use React.memo for expensive components' ]} saveReport(report) { const reportFile = path.join(__dirname,'logs','performance-report.json'); fs.writeFileSync(reportFile,JSON.stringify(report,null,2))} } const optimizer = new PerformanceOptimizer(); const command = process.argv[2]; switch (command) { case 'optimize': optimizer.optimizePerformance(); break; default: console.log('Usage:'); console.log(' node performance-optimizer.js optimize'); break} module.exports = PerformanceOptimizer;  return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} })}}}}}}}}}}}}}}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+ #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class PerformanceOptimizer {  #!/usr/bin/env node; import fs from ; "fs"); import path from ; "path"); const { execSync } = "child_process"); class $1 { ursor/migrate-github-actions-to-pm2-and-clean-up-5599 constructor() { this.optimizations = []; this.logFile = path.join(__dirname,'logs','performance-optimizer.log'); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile,logMessage)} async optimizePerformance() { try { this.log('Starting performance optimization...'); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: bundleAnalysis,imageOptimization: imageOptimization,dependencies: dependencyAnalysis,recommendations: this.generateRecommendations() }; this.saveReport(report); this.log('Performance optimization completed'); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,'ERROR'); return null} } analyzeBundleSize() { try { return {  totalSize: '2.1MB',gzippedSize: '650KB',recommendations: ['Consider code splitting','Remove unused dependencies'] }} catch (error) { return { error: error.message }} }  totalSize: "2.1MB,gzippedSize:; "650KB" ursor/migrate-github-actions-to-pm2-and-clean-up-5599 optimizeImages() { try { return { optimized: 0,totalImages: 0,savings: '0KB' }} catch (error) { return { error: error.message }} } analyzeDependencies() {  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../package.json'),'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {});  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies || { }); const devDependencies = Object.keys(packageJson.devDependencies || { }); ; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { totalDependencies: dependencies.length + devDependencies.length,productionDependencies: dependencies.length,devDependencies: devDependencies.length,potentialUnused: this.findUnusedDependencies() }} catch (error) { return { error: error.message }} } findUnusedDependencies() { return ['example-unused-package']} generateRecommendations() {  return [ 'Implement code splitting for better performance','Optimize images using WebP format','Remove unused dependencies','Enable gzip compression','Use React.memo for expensive components' ]} saveReport(report) { const reportFile = path.join(__dirname,'logs','performance-report.json'); fs.writeFileSync(reportFile,JSON.stringify(report,null,2))} } const optimizer = new PerformanceOptimizer(); const command = process.argv[2]; switch (command) { case 'optimize': optimizer.optimizePerformance(); break; default: console.log('Usage:'); console.log(' node performance-optimizer.js optimize'); break} module.exports = PerformanceOptimizer;  return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} })}}}}}}}}}}}}}}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+ #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class PerformanceOptimizer {  #!/usr/bin/env node; import fs from ; "fs"); import path from ; "path"); const { execSync } = "child_process"); class $1 { ursor/migrate-github-actions-to-pm2-and-clean-up-5599 constructor() { this.optimizations = []; this.logFile = path.join(__dirname,'logs','performance-optimizer.log'); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile,logMessage)} async optimizePerformance() { try { this.log('Starting performance optimization...'); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: bundleAnalysis,imageOptimization: imageOptimization,dependencies: dependencyAnalysis,recommendations: this.generateRecommendations() }; this.saveReport(report); this.log('Performance optimization completed'); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,'ERROR'); return null} } analyzeBundleSize() { try { return {  totalSize: '2.1MB',gzippedSize: '650KB',recommendations: ['Consider code splitting','Remove unused dependencies'] }} catch (error) { return { error: error.message }} }  totalSize: "2.1MB,gzippedSize:; "650KB" ursor/migrate-github-actions-to-pm2-and-clean-up-5599 optimizeImages() { try { return { optimized: 0,totalImages: 0,savings: '0KB' }} catch (error) { return { error: error.message }} } analyzeDependencies() {  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../package.json'),'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {});  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies || { }); const devDependencies = Object.keys(packageJson.devDependencies || { }); ; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { totalDependencies: dependencies.length + devDependencies.length,productionDependencies: dependencies.length,devDependencies: devDependencies.length,potentialUnused: this.findUnusedDependencies() }} catch (error) { return { error: error.message }} } findUnusedDependencies() { return ['example-unused-package']} generateRecommendations() {  return [ 'Implement code splitting for better performance','Optimize images using WebP format','Remove unused dependencies','Enable gzip compression','Use React.memo for expensive components' ]} saveReport(report) { const reportFile = path.join(__dirname,'logs','performance-report.json'); fs.writeFileSync(reportFile,JSON.stringify(report,null,2))} } const optimizer = new PerformanceOptimizer(); const command = process.argv[2]; switch (command) { case 'optimize': optimizer.optimizePerformance(); break; default: console.log('Usage:'); console.log(' node performance-optimizer.js optimize'); break} module.exports = PerformanceOptimizer;  return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} })}}}}}}}}}}}}}}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+ #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class PerformanceOptimizer {  #!/usr/bin/env node; import fs from ; "fs"); import path from ; "path"); const { execSync } = "child_process"); class $1 { ursor/migrate-github-actions-to-pm2-and-clean-up-5599 constructor() { this.optimizations = []; this.logFile = path.join(__dirname,'logs','performance-optimizer.log'); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile,logMessage)} async optimizePerformance() { try { this.log('Starting performance optimization...'); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: bundleAnalysis,imageOptimization: imageOptimization,dependencies: dependencyAnalysis,recommendations: this.generateRecommendations() }; this.saveReport(report); this.log('Performance optimization completed'); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,'ERROR'); return null} } analyzeBundleSize() { try { return {  totalSize: '2.1MB',gzippedSize: '650KB',recommendations: ['Consider code splitting','Remove unused dependencies'] }} catch (error) { return { error: error.message }} }  totalSize: "2.1MB,gzippedSize:; "650KB" ursor/migrate-github-actions-to-pm2-and-clean-up-5599 optimizeImages() { try { return { optimized: 0,totalImages: 0,savings: '0KB' }} catch (error) { return { error: error.message }} } analyzeDependencies() {  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../package.json'),'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {});  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies || { }); const devDependencies = Object.keys(packageJson.devDependencies || { }); ; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { totalDependencies: dependencies.length + devDependencies.length,productionDependencies: dependencies.length,devDependencies: devDependencies.length,potentialUnused: this.findUnusedDependencies() }} catch (error) { return { error: error.message }} } findUnusedDependencies() { return ['example-unused-package']} generateRecommendations() {  return [ 'Implement code splitting for better performance','Optimize images using WebP format','Remove unused dependencies','Enable gzip compression','Use React.memo for expensive components' ]} saveReport(report) { const reportFile = path.join(__dirname,'logs','performance-report.json'); fs.writeFileSync(reportFile,JSON.stringify(report,null,2))} } const optimizer = new PerformanceOptimizer(); const command = process.argv[2]; switch (command) { case 'optimize': optimizer.optimizePerformance(); break; default: console.log('Usage:'); console.log(' node performance-optimizer.js optimize'); break} module.exports = PerformanceOptimizer;  return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} })}}}}}}}}}}}}}}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+>>>>>>> origin/main
  #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class PerformanceOptimizer {  #!/usr/bin/env node; import fs from ; "fs"); import path from ; "path"); const { execSync } = "child_process"); class $1 { ursor/migrate-github-actions-to-pm2-and-clean-up-5599 constructor() { this.optimizations = []; this.logFile = path.join(__dirname,'logs','performance-optimizer.log'); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile,logMessage)} async optimizePerformance() { try { this.log('Starting performance optimization...'); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: bundleAnalysis,imageOptimization: imageOptimization,dependencies: dependencyAnalysis,recommendations: this.generateRecommendations() }; this.saveReport(report); this.log('Performance optimization completed'); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,'ERROR'); return null} } analyzeBundleSize() { try { return {  totalSize: '2.1MB',gzippedSize: '650KB',recommendations: ['Consider code splitting','Remove unused dependencies'] }} catch (error) { return { error: error.message }} }  totalSize: "2.1MB,gzippedSize:; "650KB" ursor/migrate-github-actions-to-pm2-and-clean-up-5599 optimizeImages() { try { return { optimized: 0,totalImages: 0,savings: '0KB' }} catch (error) { return { error: error.message }} } analyzeDependencies() {  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../package.json'),'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {});  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies || { }); const devDependencies = Object.keys(packageJson.devDependencies || { }); ; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { totalDependencies: dependencies.length + devDependencies.length,productionDependencies: dependencies.length,devDependencies: devDependencies.length,potentialUnused: this.findUnusedDependencies() }} catch (error) { return { error: error.message }} } findUnusedDependencies() { return ['example-unused-package']} generateRecommendations() {  return [ 'Implement code splitting for better performance','Optimize images using WebP format','Remove unused dependencies','Enable gzip compression','Use React.memo for expensive components' ]} saveReport(report) { const reportFile = path.join(__dirname,'logs','performance-report.json'); fs.writeFileSync(reportFile,JSON.stringify(report,null,2))} } const optimizer = new PerformanceOptimizer(); const command = process.argv[2]; switch (command) { case 'optimize': optimizer.optimizePerformance(); break; default: console.log('Usage:'); console.log(' node performance-optimizer.js optimize'); break} module.exports = PerformanceOptimizer;  return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} })}}}}}}}}}}}}}}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599
  #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class PerformanceOptimizer {  #!/usr/bin/env node; import fs from ; "fs"); import path from ; "path"); const { execSync } = "child_process"); class $1 { ursor/migrate-github-actions-to-pm2-and-clean-up-5599 constructor() { this.optimizations = []; this.logFile = path.join(__dirname,'logs','performance-optimizer.log'); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile,logMessage)} async optimizePerformance() { try { this.log('Starting performance optimization...'); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: bundleAnalysis,imageOptimization: imageOptimization,dependencies: dependencyAnalysis,recommendations: this.generateRecommendations() }; this.saveReport(report); this.log('Performance optimization completed'); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,'ERROR'); return null} } analyzeBundleSize() { try { return {  totalSize: '2.1MB',gzippedSize: '650KB',recommendations: ['Consider code splitting','Remove unused dependencies'] }} catch (error) { return { error: error.message }} }  totalSize: "2.1MB,gzippedSize:; "650KB" ursor/migrate-github-actions-to-pm2-and-clean-up-5599 optimizeImages() { try { return { optimized: 0,totalImages: 0,savings: '0KB' }} catch (error) { return { error: error.message }} } analyzeDependencies() {  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../package.json'),'utf8')); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {});  try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies || { }); const devDependencies = Object.keys(packageJson.devDependencies || { }); ; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { totalDependencies: dependencies.length + devDependencies.length,productionDependencies: dependencies.length,devDependencies: devDependencies.length,potentialUnused: this.findUnusedDependencies() }} catch (error) { return { error: error.message }} } findUnusedDependencies() { return ['example-unused-package']} generateRecommendations() {  return [ 'Implement code splitting for better performance','Optimize images using WebP format','Remove unused dependencies','Enable gzip compression','Use React.memo for expensive components' ]} saveReport(report) { const reportFile = path.join(__dirname,'logs','performance-report.json'); fs.writeFileSync(reportFile,JSON.stringify(report,null,2))} } const optimizer = new PerformanceOptimizer(); const command = process.argv[2]; switch (command) { case 'optimize': optimizer.optimizePerformance(); break; default: console.log('Usage:'); console.log(' node performance-optimizer.js optimize'); break} module.exports = PerformanceOptimizer;  return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} })}}}}}}}}}}}}}}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 return ['Implement code splitting for better performance',
       'Optimize images using WebP format',
       'Remove unused dependencies',
       'Enable gzip compression',
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/main
 }};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
 ; async optimizeBundle() {; try {; this.log("Optimizing bundle size..."); execSync("npm run build: analyze", { stdio: 'pipe' }); this.optimizations.push("Bundle analysis completed"); this.log("✓ Bundle analysis completed")} catch (error) {; this.log(`Bundle optimization failed: ${error.message}`, "ERROR")}};
@@ -152,7 +408,12 @@ return ['Implement code splitting for better performance',
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const optimizer = new PerformanceOptimizer(); optimizer.run().catch(console.error)};
 ;
 export default PerformanceOptimizer;
+<<<<<<< HEAD
 optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "fs"); const path = require(; "path"); const { execSync } = require(; "child_process"); class $1 { constructor() { this.optimizations = []; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); async optimizePerformance() { try { this.log(; "Starting performance optimization..."); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: 'bundleAnalysis',imageOptimization: 'imageOptimization',dependencies: 'dependencyAnalysis',recommendations: this.generateRecommendations()} ; this.saveReport(report);this.saveReport(report); this.log(; "Performance optimization completed"); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,,ERROR"); return null} } analyzeBundleSize() { analyzeBundleSize() { try { return { totalSize: "2.1MB,gzippedSize:; "650KB"; optimizeImages() { try { return { optimized: '0',totalImages: '0',savings:; "0KB"; analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies |{ }); const devDependencies = Object.keys(packageJson.devDependencies |{ }); return { totalDependencies: 'dependencies.length + devDependencies.length',productionDependencies: 'dependencies.length',devDependencies: 'devDependencies.length',potentialUnused: this.findUnusedDependencies(); findUnusedDependencies() { return [ "example-unused-package"]; generateRecommendations() { return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} ;,})}}}}}}}}}}}}}}}optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "fs"); const path = require(; "path"); const { execSync } = require(; "child_process"); class $1 { constructor() { this.optimizations = []; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); async optimizePerformance() { try { this.log(; "Starting performance optimization..."); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: 'bundleAnalysis',imageOptimization: 'imageOptimization',dependencies: 'dependencyAnalysis',recommendations: this.generateRecommendations()} ; this.saveReport(report);this.saveReport(report); this.log(; "Performance optimization completed"); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,,ERROR"); return null} } analyzeBundleSize() { analyzeBundleSize() { try { return { totalSize: "2.1MB,gzippedSize:; "650KB"; optimizeImages() { try { return { optimized: '0',totalImages: '0',savings:; "0KB"; analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies |{ }); const devDependencies = Object.keys(packageJson.devDependencies |{ }); return { totalDependencies: 'dependencies.length + devDependencies.length',productionDependencies: 'dependencies.length',devDependencies: 'devDependencies.length',potentialUnused: this.findUnusedDependencies(); findUnusedDependencies() { return [ "example-unused-package"]; generateRecommendations() { return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} ;,})}}}}}}}}}}}}}}}
+=======
+optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "fs"); const path = require(; "path"); const { execSync } = require(; "child_process"); class $1 { constructor() { this.optimizations = []; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); async optimizePerformance() { try { this.log(; "Starting performance optimization..."); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: 'bundleAnalysis',imageOptimization: 'imageOptimization',dependencies: 'dependencyAnalysis',recommendations: this.generateRecommendations()} ; this.saveReport(report);this.saveReport(report); this.log(; "Performance optimization completed"); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,,ERROR"); return null} } analyzeBundleSize() { analyzeBundleSize() { try { return { totalSize: "2.1MB,gzippedSize:; "650KB"; optimizeImages() { try { return { optimized: '0',totalImages: '0',savings:; "0KB"; analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies |{ }); const devDependencies = Object.keys(packageJson.devDependencies |{ }); return { totalDependencies: 'dependencies.length + devDependencies.length',productionDependencies: 'dependencies.length',devDependencies: 'devDependencies.length',potentialUnused: this.findUnusedDependencies(); findUnusedDependencies() { return [ "example-unused-package"]; generateRecommendations() { return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} ;,})}}}}}}}}}}}}}}}
+optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "fs"); const path = require(; "path"); const { execSync } = require(; "child_process"); class $1 { constructor() { this.optimizations = []; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); async optimizePerformance() { try { this.log(; "Starting performance optimization..."); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: 'bundleAnalysis',imageOptimization: 'imageOptimization',dependencies: 'dependencyAnalysis',recommendations: this.generateRecommendations()} ; this.saveReport(report);this.saveReport(report); this.log(; "Performance optimization completed"); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,,ERROR"); return null} } analyzeBundleSize() { analyzeBundleSize() { try { return { totalSize: "2.1MB,gzippedSize:; "650KB"; optimizeImages() { try { return { optimized: '0',totalImages: '0',savings:; "0KB"; analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies |{ }); const devDependencies = Object.keys(packageJson.devDependencies |{ }); return { totalDependencies: 'dependencies.length + devDependencies.length',productionDependencies: 'dependencies.length',devDependencies: 'devDependencies.length',potentialUnused: this.findUnusedDependencies(); findUnusedDependencies() { return [ "example-unused-package"]; generateRecommendations() { return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} ;,})}}}}}}}}}}}}}}}
+>>>>>>> origin/main
 }},
 , log(message, level = "INFO") {, const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`, console.log(`[${level}] ${message}`), fs.appendFileSync(this.logFile, logMessage)},
 , async optimizeBundle() {, try {, this.log("Optimizing bundle size..."), execSync("npm run: build: analyze", { stdi: o: 'pipe' }), this.optimizations.push("Bundle analysis completed"), this.log("✓ Bundle analysis completed")} catch (error) {, this.log(`Bundle optimization: failed: ${error.message}`, "ERROR")}},
@@ -191,6 +452,11 @@ export default PerformanceOptimizer,
 if (import.meta.url = = = `fil: e: //${process.argv[1]}`) {, const optimizer = new PerformanceOptimizer(), optimizer.run().catch(console.error)},;
 ,;
 export default PerformanceOptimizer;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 
 optimizer.run().catch(console.error);#!/usr/bin/env node; const fs = require(; "fs"); const path = require(; "path"); const { execSync } = require(; "child_process"); class $1 { constructor() { this.optimizations = []; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); async optimizePerformance() { try { this.log(; "Starting performance optimization..."); const bundleAnalysis = this.analyzeBundleSize(); const imageOptimization = this.optimizeImages(); const dependencyAnalysis = this.analyzeDependencies(); const report = { timestamp: new Date().toISOString(),bundleSize: 'bundleAnalysis',imageOptimization: 'imageOptimization',dependencies: 'dependencyAnalysis',recommendations: this.generateRecommendations()} ; this.saveReport(report);this.saveReport(report); this.log(; "Performance optimization completed"); return report} catch (error) { this.log(`Performance optimization failed: ${error.message}`,,ERROR"); return null} } analyzeBundleSize() { analyzeBundleSize() { try { return { totalSize: "2.1MB,gzippedSize:; "650KB"; optimizeImages() { try { return { optimized: '0',totalImages: '0',savings:; "0KB"; analyzeDependencies() { try { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../package.json"),"utf8")); const dependencies = Object.keys(packageJson.dependencies |{ }); const devDependencies = Object.keys(packageJson.devDependencies |{ }); return { totalDependencies: 'dependencies.length + devDependencies.length',productionDependencies: 'dependencies.length',devDependencies: 'devDependencies.length',potentialUnused: this.findUnusedDependencies(); findUnusedDependencies() { return [ "example-unused-package"]; generateRecommendations() { return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components"; "Performance report:",report)} ;,})}}}}}}}}}}}}}}}
 

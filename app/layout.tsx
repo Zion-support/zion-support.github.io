@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import './global-styles.css';
@@ -107,15 +108,28 @@ function Footer() {
       </div>
     </footer>
   );
+=======
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - AI-Powered Solutions',
+  description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
+  keywords: 'AI solutions, business automation, digital transformation, software development, tech consulting',
+>>>>>>> origin/main
 }
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body className="min-h-screen bg-gray-50">
         <Header />
         <main>
@@ -125,4 +139,11 @@ export default function RootLayout({
       </body>
     </html>
   );
+=======
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  )
+>>>>>>> origin/main
 }

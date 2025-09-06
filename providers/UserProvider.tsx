@@ -1,7 +1,10 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
+=======
+>>>>>>> origin/main
 export type UserRole = 'client' | 'talent';
 
 export type User = {
@@ -109,4 +112,9 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
 };
 
+<<<<<<< HEAD
 export default UserProvider;
+=======
+export default UserProvider;
+export default UserProvider;
+>>>>>>> origin/main

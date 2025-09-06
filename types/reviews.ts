@@ -1,5 +1,10 @@
 export type ProjectStatus = 'InProgress' | 'Completed';
+<<<<<<< HEAD
 export type Project = {  id: string;
+=======
+export type Project = {
+  id: string;
+>>>>>>> origin/main
   userId: string;
   serviceId: string;
   rating: number;
@@ -92,4 +97,8 @@ export type ReviewsSummary = {
   most_recent: PublicReview[];
 
 }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/main

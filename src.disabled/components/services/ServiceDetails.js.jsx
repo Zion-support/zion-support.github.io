@@ -1,4 +1,9 @@
 '\''\'";\";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 '\''\'";\";
 '\''\'";\";
 :src.disabled/components/services/ServiceDetails.js.jsx

@@ -16,7 +16,12 @@ export type DisputeReason =;
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
+<<<<<<< HEAD
 export type DisputeAttachment = {  id: string;
+=======
+export type DisputeAttachment = {
+  id: string;
+>>>>>>> origin/main
   orderId: string;
   userId: string;
   reason: string,
@@ -28,6 +33,13 @@ export type DisputeAttachment = {  id: string;
   resolvedAt?: Date;
 }
 
+<<<<<<< HEAD
   role: 'admin' | 'client' | 'talent';
 }
 };
+=======
+
+  role: 'admin' | 'client' | 'talent';
+}
+};
+>>>>>>> origin/main

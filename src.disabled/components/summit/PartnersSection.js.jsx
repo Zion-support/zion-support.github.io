@@ -1,4 +1,9 @@
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 :src.disabled/components/summit/PartnersSection.js.jsx

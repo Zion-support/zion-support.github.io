@@ -303,7 +303,12 @@
 ;
     } catch (error) {,;
       this.log(`❌ Error running git workflow: monitor: ${error.message}`),;
+<<<<<<< HEAD
       process.exit(1);    }
+=======
+      process.exit(1);
+    }
+>>>>>>> origin/main
   }
 
   async checkGitStatus() {
@@ -350,6 +355,7 @@
       }).trim().split('\n');
       const branchInfo = [];
 
+<<<<<<< HEAD
       for (const branch of branches) {
         const branchName = branch.replace('origin/', '').trim();
         if (branchName && !branchName.includes('HEAD')) {
@@ -604,3 +610,5 @@ if (require.main === module) {
 }
 
 module.exports = GitWorkflow;
+=======
+>>>>>>> origin/main

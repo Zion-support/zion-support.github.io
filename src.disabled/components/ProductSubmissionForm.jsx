@@ -1,5 +1,10 @@
 ' \' \' \' \' \' \' \' \' \' import { Sparkles\''\";\";
 " " " " " " " " " " import { Sparkles""";";'"'"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 ' \' \' \' \' \' \' \' \' \' import { Sparkles\''\";\";
 " " " " " " " " " " import { Sparkles""";";'"'"
 :src.disabled/components/ProductSubmissionForm.jsx

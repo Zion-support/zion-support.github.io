@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 "await";const { describe, it, expect, vi, beforeEach } = require(
+=======
+"await";
+const { describe, it, expect, vi, beforeEach } = require(
+
+>>>>>>> origin/main
 
   'vitest')'
   'node-mocks-http')'

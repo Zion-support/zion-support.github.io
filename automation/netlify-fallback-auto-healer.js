@@ -10,7 +10,10 @@ body: JSON && JSON.stringify ({
 
 exports.handler = async (_event, _context) => {
     // // // console.log('auto-healer fallback executed locally'),
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/main
     try {
         // Basic fallback logic
         const result = {
@@ -19,8 +22,21 @@ exports.handler = async (_event, _context) => {
 
                 message: 'auto-healer executed locally as fallback'
                 timestamp: new Date().toISOString()
+<<<<<<< HEAD
 #!/usr/bin/env node
 #!/usr/bin/env node
+=======
+
+message: error && error.message 
+}) 
+
+
+
+#!/usr/bin/env node
+#!/usr/bin/env node
+#!/usr/bin/env node
+#!/usr/bin/env node
+>>>>>>> origin/main
 
 // Netlify Function Fallback: auto-healer
 // This is a local fallback when the main function is unavailable
@@ -28,7 +44,12 @@ exports.handler = async (_event, _context) => {
 exports.handler = async (_event, _context) => {
     console.log('auto-healer fallback executed locally'),
 
+<<<<<<< HEAD
         
+=======
+    
+    
+>>>>>>> origin/main
     try {
         // Basic fallback logic;
         const result = {
@@ -36,6 +57,10 @@ exports.handler = async (_event, _context) => {
         console && console.error('Fallback execution error:', error),
         return {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 #!/usr/bin/env node;
 // Netlify Function Fallback: auto-healer;
 // This is a local fallback when the main function is unavailable;

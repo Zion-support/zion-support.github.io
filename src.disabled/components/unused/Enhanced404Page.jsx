@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,14 +27,31 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface Enhanced404PageProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 }
 
 =======export default function Enhanced404Page({ }: Enhanced404PageProps) {
+=======
+
+
+}
+
+export default function Enhanced404Page({ }: Enhanced404PageProps) {
+>>>>>>> origin/main
   return (
     <div>
       <h1>Enhanced404Page</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
   );}
 =======
+=======
+  );
+
+}
+:src.disabled/components/unused/Enhanced404Page.jsx
+}
+}
+>>>>>>> origin/main

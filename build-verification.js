@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+console.log('🔍 Starting build verification...');
+>>>>>>> origin/main
 try {
   console.log('📦 Testing component imports...');
   const React = require('react');
@@ -5,6 +9,15 @@ try {
   const { motion } = require('framer-motion');
   console.log('✅ Framer Motion import successful', typeof motion);
  try {  const React = require('react');  const { motion } = require('framer-motion');  const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react');   } catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} 
+<<<<<<< HEAD
+=======
+  console.log('✅ Framer Motion import successful', typeof motion);
+ try {  const React = require('react');  const { motion } = require('framer-motion');  const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react');   } catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} 
+
+
+  console.log('✅ Framer Motion import successful', typeof motion);
+ try {  const React = require('react');  const { motion } = require('framer-motion');  const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react');   } catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} 
+>>>>>>> origin/main
 // Build Verification Script
 // This script checks if our components can be imported without syntax errors
 console.log('🔍 Starting build verification...');
@@ -24,6 +37,22 @@ try {
     Brain,
     Cloud,
     Shield,
+<<<<<<< HEAD
+=======
+
+
+    Zap,
+  } = require('lucide-react');
+  console.log('✅ Lucide React icons import successful', {
+    ArrowRight: 'typeof ArrowRight',
+    CheckCircle: 'typeof CheckCircle',
+    Brain: 'typeof Brain',
+    Cloud: 'typeof Cloud',
+    Shield: 'typeof Shield',
+    Zap: 'typeof Zap',
+    Zap: 'typeof Zap',;
+    Zap: 'typeof Zap',
+>>>>>>> origin/main
   });
   console.log('🎉 All core dependencies imported successfully!');
   console.log('📋 Components should be ready for build');
@@ -32,18 +61,53 @@ try {
   process.exit(1);
 }
 console.log('🏁 Build verification complete');
+<<<<<<< HEAD
+=======
+
+console.log('🏁 Build verification complete');
+
+
+}
+console.log('🏁 Build verification complete');
+>>>>>>> origin/main
     Zap} = require('lucide-react');
   console.log('✅ Lucide React icons import successful', {
     "ArrowRight": typeof ArrowRight,
     "CheckCircle": typeof CheckCircle,
     "Brain": typeof Brain,
     "Cloud": typeof Cloud,
+<<<<<<< HEAD
     "Shield": typeof Shield,    "Shield": typeof Shield,;
 console.log('🏁 Build verification complete');
 
 console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
 console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
 console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
+=======
+    "Shield": typeof Shield,
+    "Shield": typeof Shield,;
+    "Shield": typeof Shield,
+    "Zap": typeof Zap});
+  console.log('🎉 All core dependencies imported successfully!');
+  console.log('📋 Components should be ready for build');
+} catch (error) {
+  console.error('❌ Import "error": ', error.message);
+  process.exit(1);
+}
+console.log('🏁 Build verification complete');
+console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
+console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
+console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
+
+console.log('🏁 Build verification complete');
+
+
+console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
+console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
+console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
+
+
+>>>>>>> origin/main
 console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
 console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
 console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
@@ -53,3 +117,11 @@ console.log('🔍 Starting build verification...'); try { console.log('📦 Test
 console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
 console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+}
+console.log('🏁 Build verification complete');
+console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
+console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
+console.log('🔍 Starting build verification...'); try { console.log('📦 Testing component imports...'); const React = require('react'); console.log('✅ React import successful',React.version); const { motion } = require('framer-motion'); console.log('✅ Framer Motion import successful',typeof motion); const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react'); console.log('✅ Lucide React icons import successful',{ ArrowRight: typeof ArrowRight,CheckCircle: typeof CheckCircle,Brain: typeof Brain,Cloud: typeof Cloud,Shield: typeof Shield,Zap: typeof Zap,}); console.log('🎉 All core dependencies imported successfully!'); console.log('📋 Components should be ready for build')} catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} console.log('🏁 Build verification complete');
+>>>>>>> origin/main

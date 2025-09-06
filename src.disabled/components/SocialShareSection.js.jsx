@@ -1,4 +1,9 @@
 "export\": function SocialShareSection () { const socialPlatforms = [\' { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\'";\",;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 "export\": function SocialShareSection () { const socialPlatforms = [\' { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\'";\",;
 "export\": function SocialShareSection () { const socialPlatforms = [\' { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\'";\",;
 :src.disabled/components/SocialShareSection.js.jsx

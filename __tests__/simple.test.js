@@ -4,3 +4,8 @@ describe('Simple Test', () => {
   });
 });  });
 });
+<<<<<<< HEAD
+=======
+  });
+});
+>>>>>>> origin/main

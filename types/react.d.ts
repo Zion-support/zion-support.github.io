@@ -134,4 +134,8 @@ declare namespace React {;
   `type_roots` are merged with normal type resolution.;
 */;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main

@@ -16,4 +16,8 @@ declare const __dirname: string;
 declare const __filename: string;
 // eslint - disable - next - line @typescript - eslint / no - empty - object - type;
 interface Buffer {}
+<<<<<<< HEAD
 export {}
+=======
+export {}
+>>>>>>> origin/main

@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+<<<<<<< HEAD
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -24,6 +25,12 @@ export default defineConfig({
     include: /src\/.*\.[jt]sx?$/,
     exclude: []
   },
+=======
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+>>>>>>> origin/main
   server: {
     port: 3000,
     host: true
@@ -31,5 +38,20 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true
+<<<<<<< HEAD
   }
 })
+=======
+  },
+  resolve: {
+    alias: {
+      '@': '/workspace/src'
+    }
+  },
+  css: {
+    postcss: {
+      plugins: []
+    }
+  }
+})
+>>>>>>> origin/main

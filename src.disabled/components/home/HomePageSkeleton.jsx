@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,14 +27,31 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface HomePageSkeletonProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 }
 
 =======export default function HomePageSkeleton({ }: HomePageSkeletonProps) {
+=======
+
+
+}
+
+export default function HomePageSkeleton({ }: HomePageSkeletonProps) {
+>>>>>>> origin/main
   return (
     <div>
       <h1>HomePageSkeleton</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
   );}
 =======
+=======
+  );
+
+}
+:src.disabled/components/home/HomePageSkeleton.jsx
+}
+}
+>>>>>>> origin/main
