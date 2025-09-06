@@ -1,20 +1,9 @@
-import Link from "next/link";
-
-export const metadata = {
-  title: "Services | Zion Tech Group",
-  description:
 };
 
 export default function ServicesOverviewPage() {
   return (
     <div className="animate-fade-in">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Product engineering and AI-first consulting to deliver measurable
-          outcomes for your business.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -57,35 +46,27 @@ export default function ServicesOverviewPage() {
           icon="🔄"
         />
         <ServiceCard
-          href="/services/cybersecurity"
-          title="Cybersecurity"
-          description="Comprehensive security solutions and compliance management"
-          bullets={["Security assessment", "Threat detection", "Compliance"]}
-          icon="🔒"
-        />
-        <ServiceCard
           href="/services/cloud-services"
           title="Cloud Services"
           description="Cloud migration, architecture, and optimization solutions"
           bullets={["Cloud migration", "Multi-cloud", "Cost optimization"]}
           icon="☁️"
         />
+        <ServiceCard
+          href="/services/industry-solutions/healthcare"
+          title="Healthcare Solutions"
+          description="HIPAA-compliant healthcare technology and telemedicine platforms"
+          bullets={["Telemedicine", "EHR systems", "Medical AI", "HIPAA compliance"]}
+          icon="🏥"
+        />
+        <ServiceCard
+          href="/services/industry-solutions/finance"
+          title="Financial Technology"
+          description="Secure fintech solutions including trading platforms and payment systems"
+          bullets={["Trading platforms", "Payment processing", "Fraud detection", "Compliance"]}
+          icon="💰"
+        />
       </div>
-      <CTA />{" "}
-    </div>
-  );
-}
-function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon
-}: {
-  href: string;
-  title: string;
-  description: string;
-  bullets: string[];
   icon: string;
 }) {
   return (

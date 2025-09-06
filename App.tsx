@@ -13,7 +13,7 @@ import ContactPage from './src/pages/Contact';
           <Sidebar />
           <main className="flex-1 lg:ml-80">
             <Routes>
-              <Route path="/" element={<HomePage />} />
+              <Route path="/" element={<LandingPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/services" element={<ServicesPage />} />
