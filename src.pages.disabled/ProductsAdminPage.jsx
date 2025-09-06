@@ -36,6 +36,7 @@ export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD:src.pages.disabled/ProductsAdminPage.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:src.pages.disabled/ProductsAdminPage.jsx
@@ -56,3 +57,11 @@ export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+:src.pages.disabled/ProductsAdminPage.jsx
+}
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.pages.disabled/ProductsAdminPage.jsx

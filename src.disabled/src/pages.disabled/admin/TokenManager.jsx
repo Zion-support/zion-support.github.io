@@ -34,8 +34,4 @@ export default function TokenManager({ }: TokenManagerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

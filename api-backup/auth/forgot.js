@@ -43,7 +43,7 @@ function ForgotPassword() {
     <div>
       <h1>Forgot Password</h1>
       <p>Password reset functionality would go here.</p>
-    </div>
+    </div>;
   );
 <<<<<<< HEAD
 }

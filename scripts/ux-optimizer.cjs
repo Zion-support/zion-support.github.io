@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -6,6 +8,7 @@ const path = require('path');
 console.log('🎨 Running UX optimization...');
 console.log('✅ UX optimization completed');
 =======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
@@ -53,4 +56,15 @@ const path = require('path')
 =======
             "recommendations"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+console.log('🎨 Running UX optimization...');
+console.log('✅ UX optimization completed');
+>>>>>>> origin/main
+=======
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

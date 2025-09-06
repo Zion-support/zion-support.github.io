@@ -36,6 +36,7 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD:src.pages.disabled/SOC2ComplianceAutomation.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:src.pages.disabled/SOC2ComplianceAutomation.jsx
@@ -56,3 +57,11 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+:src.pages.disabled/SOC2ComplianceAutomation.jsx
+}
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.pages.disabled/SOC2ComplianceAutomation.jsx

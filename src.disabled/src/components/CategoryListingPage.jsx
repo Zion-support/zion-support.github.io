@@ -34,8 +34,4 @@ export default function CategoryListingPage({ }: CategoryListingPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

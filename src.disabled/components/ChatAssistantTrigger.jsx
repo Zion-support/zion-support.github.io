@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src.disabled/components/ChatAssistantTrigger.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/components/ChatAssistantTrigger.jsx
 :src.disabled/components/ChatAssistantTrigger.js.jsx
@@ -9,7 +10,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
 =======
+:src.disabled/components/ChatAssistantTrigger.js.jsx
+" " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ChatAssistantTrigger.jsx
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

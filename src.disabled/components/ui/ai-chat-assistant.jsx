@@ -36,6 +36,7 @@ export default function Aichatassistant({ }: AichatassistantProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD:src.disabled/components/ui/ai-chat-assistant.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -44,3 +45,6 @@ export default function Aichatassistant({ }: AichatassistantProps) {
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ui/ai-chat-assistant.jsx

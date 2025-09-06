@@ -14,8 +14,13 @@ const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json');
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const token = req.headers['x-admin-token'] as string | undefined
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+=======
+  const token = req.headers['x-admin-token'] as string | undefined,
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(403).json({ error: 'Forbidden' });
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
