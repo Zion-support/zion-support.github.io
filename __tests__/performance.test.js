@@ -9,11 +9,7 @@ test.describe('Performance Tests', () => {
     // Page should load within 3 seconds
     expect(loadTime).toBeLessThan(3000);
   });
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-12ad
   test('lighthouse performance audit', async ({ page }) => {
     await page.goto('/');
     // Run lighthouse audit
@@ -28,37 +24,25 @@ test.describe('Performance Tests', () => {
         }
       });
     });
-<<<<<<< HEAD
     
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-12ad
     // Check performance score
     if (lighthouse.lhr && lighthouse.lhr.categories) {
       const performanceScore = lighthouse.lhr.categories.performance.score * 100;
       expect(performanceScore).toBeGreaterThan(80);
     }
   });
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-12ad
   test('bundle size check', async ({ page }) => {
     await page.goto('/');
     // Check for large bundle warnings
     const consoleMessages = [];
-<<<<<<< HEAD
-    page.on('console', msg => {
-=======
     page.on('console', (msg) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-12ad
       if (msg.type() === 'warning' && msg.text().includes('bundle')) {
         consoleMessages.push(msg.text());
       }
     });
     
     await page.waitForTimeout(2000);
-<<<<<<< HEAD
     expect(consoleMessages.length).toBe(0);
   });
   
@@ -79,9 +63,4 @@ test.describe('Performance Tests', () => {
       expect(metrics.usedJSHeapSize).toBeLessThan(50 * 1024 * 1024); // 50MB
     }
   });
-=======
-    // Should not have bundle size warnings
-    expect(consoleMessages.length).toBe(0);
-  });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-12ad
 });
