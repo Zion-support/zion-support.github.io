@@ -1,13 +1,16 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: string;
+
   className?: string;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+
   size = 'md', 
   color = 'text-blue-500',
   className = '' 
@@ -51,5 +54,6 @@ const LoadingSpinner: React.FC = () => {
     </div>
   );
 };
+
 
 export default LoadingSpinner;

@@ -1,4 +1,11 @@
 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Button from '../components/Button';
+import Card from '../components/Card';
+import ServiceCard from '../components/ServiceCard';
+
+
 
 
 
@@ -12,6 +19,7 @@ const Home: React.FC = () => {
 
 
   return (
+
 
     <>
       <SEO
@@ -278,6 +286,7 @@ const Home: React.FC = () => {
       </div>
     </>
   );
+
 
 
 

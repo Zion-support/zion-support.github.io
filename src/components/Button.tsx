@@ -5,12 +5,14 @@ interface ButtonProps {
   children: React.ReactNode;
 
 
+
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
   size?: 'sm' | 'md' | 'lg';
   type?: 'button' | 'submit' | 'reset';
   onClick?: () => void;
   disabled?: boolean;
   loading?: boolean;
+
 
 
   className?: string;
@@ -22,6 +24,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'primary',
+
   size = 'md',
   type = 'button',
   onClick,
@@ -42,6 +45,7 @@ const Button: React.FC<ButtonProps> = ({
 
 
 
+
   };
   
   const sizeClasses = {
@@ -56,12 +60,14 @@ const Button: React.FC<ButtonProps> = ({
     <button
 
 
+
       type={type}
       className={classes}
 
 
       onClick={onClick}
       disabled={disabled || loading}
+
     >
       {loading && <LoadingSpinner size="sm" />}
       {children}
