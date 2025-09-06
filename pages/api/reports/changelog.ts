@@ -1,43 +1,56 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const p = path.join(
   process.cwd(),
   'data',
   'reports',
-  'changelog',
-  'weekly-changelog.json'
+  'changelog.json'
 );
-=======
-const p = path.join(process.cwd(), 'datareportschangelogweekly-changelog.json');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-const p = path.join(process.cwd(), 'datareportschangelogweekly-changelog.json');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (!fs.existsSync(p)) return res.status(200).json({});
-<<<<<<< HEAD
-<<<<<<< HEAD
-    res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
-=======
-    res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to read changelog' })
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    try {
+      const data = fs.readFileSync(p, 'utf8');
+      const changelog = JSON.parse(data);
+      return res.status(200).json(changelog);
+    } catch (error) {
+      return res.status(500).json({ error: 'Failed to read changelog' });
+    }
   }
-<<<<<<< HEAD
-=======
-    res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')))
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to read changelog' })
+
+  if (req.method === 'POST') {
+    try {
+      const { version, changes, date } = req.body;
+      
+      if (!version || !changes || !Array.isArray(changes)) {
+        return res.status(400).json({ error: 'Missing required fields' });
+      }
+
+      let changelog = [];
+      try {
+        const data = fs.readFileSync(p, 'utf8');
+        changelog = JSON.parse(data);
+      } catch {
+        // File doesn't exist, start with empty array
+      }
+
+      const newEntry = {
+        version,
+        changes,
+        date: date || new Date().toISOString()
+      };
+
+      changelog.unshift(newEntry);
+      
+      fs.writeFileSync(p, JSON.stringify(changelog, null, 2));
+      return res.status(201).json(newEntry);
+    } catch (error) {
+      return res.status(500).json({ error: 'Failed to update changelog' });
+    }
   }
+
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

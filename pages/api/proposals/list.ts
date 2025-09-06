@@ -1,28 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listProposals } from '../../../utils/data/proposals';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const proposals = listProposals();
-    res.status(200).json({ proposals })
-  } catch (error: any) {
-    res.status(500).json({ error: error?.message || 'Failed to list proposals' })
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-<<<<<<< HEAD
-=======
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+
   try {
-    const proposals = listProposals();
-    res.status(200).json({ proposals })
+    const proposals = await listProposals();
+    return res.status(200).json({ proposals });
   } catch (error: any) {
-    res.status(500).json({ error: error?.message || 'Failed to list proposals' })
+    return res.status(500).json({ error: error?.message || 'Failed to list proposals' });
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -653,15 +653,7 @@ function handleArrowNavigation(event) {
     fs.writeFileSync(fullPath, content);
     console.log(`OK Created ${filename}`);
   });
-<<<<<<< HEAD
 });
-=======
-        .slice(0, 10),
-    };
-  }
-}
-
-export const errorTracker = new ErrorTracker();
 
 // Global error handler
 if (typeof window !== 'undefined') {

@@ -12,14 +12,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "GET") {
       const user = getDemoUser(req);
       if (user.role === "client") {
-        const offers = listOffers({ clientId: user.id }),
-        return res.json({ ok: true, offers })
+        const offers = listOffers({ clientId: user.id });
+        return res.json({ ok: true, offers });
       }
       if (user.role === "talent") {
-        const offers = listOffers({ talentSlug: user.talentSlug }),
-        return res.json({ ok: true, offers })
+        const offers = listOffers({ talentSlug: user.talentSlug });
+        return res.json({ ok: true, offers });
       }
-      return bad(res, "Unknown role", 403)
+      return bad(res, "Unknown role", 403);
     }
 
     if (req.method === "POST") {
@@ -27,21 +27,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const client = assertClient(req);
       const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {};
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
-        return bad(res, "Missing required fields")
+        return bad(res, "Missing required fields");
       }
 
       const offer: Offer = {
-        id: uuidv4();
+        id: uuidv4(),
         createdAtIso: new Date().toISOString(),
         clientId: client.id,
         talentSlug,
-    startDateIso,
-        scopeSummary;
+        startDateIso,
+        scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
-        agreementUrl;
-        status: "SENT"},
+        agreementUrl,
+        status: "SENT"
+      };
       saveOffer(offer);
-      return res.status(201).json({ ok: true, offer })
+      return res.status(201).json({ ok: true, offer });
     }
 
     if (req.method === "PATCH") {
@@ -56,7 +57,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.status = "CONFIRMED";
         // Create a project upon acceptance
         const project: Project = {
-          id: uuidv4();
+          id: uuidv4(),
           title: `Project with ${existing.talentSlug}`,
           summary: existing.scopeSummary,
           clientId: existing.clientId,
@@ -70,13 +71,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   id: uuidv4(),
                   name: "Agreement",
                   url: existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString()}]
+                  uploadedAtIso: new Date().toISOString()
+                }
+              ]
             : [],
-          notes: []},
+          notes: []
+        };
         saveProject(project);
         existing.projectId = project.id;
         saveOffer(existing);
-        return res.json({ ok: true, offer: existing, project })
+        return res.json({ ok: true, offer: existing, project });
       }
 
       if (action === "request_changes") {
@@ -84,22 +88,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.status = "CHANGES_REQUESTED";
         existing.changeRequestNote = changeRequestNote || "";
         saveOffer(existing);
-        return res.json({ ok: true, offer: existing })
+        return res.json({ ok: true, offer: existing });
       }
 
       if (action === "decline") {
         if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
         existing.status = "DECLINED";
         saveOffer(existing);
-        return res.json({ ok: true, offer: existing })
+        return res.json({ ok: true, offer: existing });
       }
 
-      return bad(res, "Unknown action")
+      return bad(res, "Unknown action");
     }
 
-    return bad(res, "Method not allowed", 405)
+    return bad(res, "Method not allowed", 405);
   } catch (e: any) {
     const status = e?.statusCode || 500;
-    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
+    return res.status(status).json({ ok: false, error: e?.message || "Server error" });
   }
 }

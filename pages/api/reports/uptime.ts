@@ -1,38 +1,43 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-const p = path.join(process.cwd(), 'data', 'ops', 'uptime-log.json');
-=======
-const p = path.join(process.cwd(), 'dataopsuptime-log.json');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-const p = path.join(process.cwd(), 'dataopsuptime-log.json');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+const p = path.join(
+  process.cwd(),
+  'data',
+  'reports',
+  'uptime.json'
+);
 
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (!fs.existsSync(p)) return res.status(200).json([]);
-    const arr = JSON.parse(fs.readFileSync(p, 'utf-8'));
-<<<<<<< HEAD
-<<<<<<< HEAD
-    res.status(200).json(arr);
-=======
-    res.status(200).json(arr)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to read uptime log' })
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    try {
+      const data = fs.readFileSync(p, 'utf8');
+      const uptime = JSON.parse(data);
+      return res.status(200).json(uptime);
+    } catch (error) {
+      return res.status(500).json({ error: 'Failed to read uptime report' });
+    }
   }
-<<<<<<< HEAD
-=======
-    res.status(200).json(arr)
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to read uptime log' })
+
+  if (req.method === 'POST') {
+    try {
+      const { uptime, downtime, incidents } = req.body;
+      
+      const report = {
+        uptime: uptime || 0,
+        downtime: downtime || 0,
+        incidents: incidents || [],
+        generatedAt: new Date().toISOString()
+      };
+
+      fs.writeFileSync(p, JSON.stringify(report, null, 2));
+      return res.status(201).json(report);
+    } catch (error) {
+      return res.status(500).json({ error: 'Failed to update uptime report' });
+    }
   }
+
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

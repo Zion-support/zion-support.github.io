@@ -1,10 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-(" ");
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function ForgotPassword() {
   return (
