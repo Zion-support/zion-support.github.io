@@ -1,9 +1,9 @@
- {
-  count 
-}</span>) 
-}</Link> <LoginModal isOpen= {
-  loginOpen 
-}onOpenChange= {
-  setLoginOpen 
-}/> </>) 
+ {;
+  count ;
+}</span>) ;
+}</Link> <LoginModal isOpen= {;
+  loginOpen ;
+}onOpenChange= {;
+  setLoginOpen ;
+}/> </>) ;
 }

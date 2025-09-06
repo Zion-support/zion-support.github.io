@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React, { useState } from "react";
+import Link from "next/link";
 
 const EnhancedNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,75 +10,127 @@ const EnhancedNavigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-white hover:text-blue-200 transition-colors">
+          <Link
+            href="/"
+            className="text-2xl font-bold text-white hover:text-blue-200 transition-colors"
+          >
             Zion Tech Group
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-white hover:text-blue-200 transition-colors font-medium">
+            <Link
+              href="/"
+              className="text-white hover:text-blue-200 transition-colors font-medium"
+            >
               Home
             </Link>
-            
+
             {/* Services Dropdown */}
             <div className="relative group">
-              <button 
+              <button
                 className="text-white hover:text-blue-200 transition-colors font-medium flex items-center"
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
                 Services
-                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <svg
+                  className="ml-1 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              
+
               {isServicesOpen && (
-                <div 
+                <div
                   className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
                   <div className="grid grid-cols-1 gap-2 px-4">
                     <div className="border-b border-gray-100 pb-2 mb-2">
-                      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Micro SAAS</h3>
+                      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                        Micro SAAS
+                      </h3>
                     </div>
-                    <Link href="/services/micro-saas" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors">
+                    <Link
+                      href="/services/micro-saas"
+                      className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors"
+                    >
                       URL Shortener Pro
                     </Link>
-                    <Link href="/services/micro-saas" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors">
+                    <Link
+                      href="/services/micro-saas"
+                      className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors"
+                    >
                       AI Invoice Generator
                     </Link>
-                    <Link href="/services/micro-saas" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors">
+                    <Link
+                      href="/services/micro-saas"
+                      className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors"
+                    >
                       Password Manager
                     </Link>
-                    <Link href="/services/micro-saas" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors">
+                    <Link
+                      href="/services/micro-saas"
+                      className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors"
+                    >
                       Social Media Scheduler
                     </Link>
-                    
+
                     <div className="border-b border-gray-100 pb-2 mb-2 mt-4">
-                      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">IT Services</h3>
+                      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                        IT Services
+                      </h3>
                     </div>
-                    <Link href="/services/it-services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors">
+                    <Link
+                      href="/services/it-services"
+                      className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors"
+                    >
                       Cloud Migration
                     </Link>
-                    <Link href="/services/it-services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors">
+                    <Link
+                      href="/services/it-services"
+                      className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors"
+                    >
                       Cybersecurity
                     </Link>
-                    <Link href="/services/it-services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors">
+                    <Link
+                      href="/services/it-services"
+                      className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors"
+                    >
                       Network Infrastructure
                     </Link>
-                    
+
                     <div className="border-b border-gray-100 pb-2 mb-2 mt-4">
-                      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">AI Services</h3>
+                      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                        AI Services
+                      </h3>
                     </div>
-                    <Link href="/services/ai-services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors">
+                    <Link
+                      href="/services/ai-services"
+                      className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors"
+                    >
                       AI Chatbot Development
                     </Link>
-                    <Link href="/services/ai-services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors">
+                    <Link
+                      href="/services/ai-services"
+                      className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors"
+                    >
                       Predictive Analytics
                     </Link>
-                    <Link href="/services/ai-services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors">
+                    <Link
+                      href="/services/ai-services"
+                      className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded hover:bg-blue-50 transition-colors"
+                    >
                       Computer Vision
                     </Link>
                   </div>
@@ -86,24 +138,36 @@ const EnhancedNavigation = () => {
               )}
             </div>
 
-            <Link href="/products" className="text-white hover:text-blue-200 transition-colors font-medium">
+            <Link
+              href="/products"
+              className="text-white hover:text-blue-200 transition-colors font-medium"
+            >
               Products
             </Link>
-            <Link href="/about" className="text-white hover:text-blue-200 transition-colors font-medium">
+            <Link
+              href="/about"
+              className="text-white hover:text-blue-200 transition-colors font-medium"
+            >
               About
             </Link>
-            <Link href="/contact" className="text-white hover:text-blue-200 transition-colors font-medium">
+            <Link
+              href="/contact"
+              className="text-white hover:text-blue-200 transition-colors font-medium"
+            >
               Contact
             </Link>
-            <Link href="/talent" className="text-white hover:text-blue-200 transition-colors font-medium">
+            <Link
+              href="/talent"
+              className="text-white hover:text-blue-200 transition-colors font-medium"
+            >
               Talent
             </Link>
           </div>
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
             >
               Get Quote
@@ -115,8 +179,18 @@ const EnhancedNavigation = () => {
             className="lg:hidden text-white hover:text-blue-200 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </div>
@@ -125,27 +199,45 @@ const EnhancedNavigation = () => {
         {isMenuOpen && (
           <div className="lg:hidden bg-white border-t border-gray-200 py-4">
             <div className="space-y-4">
-              <Link href="/" className="block text-gray-700 hover:text-blue-600 px-4 py-2 font-medium">
+              <Link
+                href="/"
+                className="block text-gray-700 hover:text-blue-600 px-4 py-2 font-medium"
+              >
                 Home
               </Link>
-              <Link href="/services" className="block text-gray-700 hover:text-blue-600 px-4 py-2 font-medium">
+              <Link
+                href="/services"
+                className="block text-gray-700 hover:text-blue-600 px-4 py-2 font-medium"
+              >
                 Services
               </Link>
-              <Link href="/products" className="block text-gray-700 hover:text-blue-600 px-4 py-2 font-medium">
+              <Link
+                href="/products"
+                className="block text-gray-700 hover:text-blue-600 px-4 py-2 font-medium"
+              >
                 Products
               </Link>
-              <Link href="/about" className="block text-gray-700 hover:text-blue-600 px-4 py-2 font-medium">
+              <Link
+                href="/about"
+                className="block text-gray-700 hover:text-blue-600 px-4 py-2 font-medium"
+              >
                 About
               </Link>
-              <Link href="/contact" className="block text-gray-700 hover:text-blue-600 px-4 py-2 font-medium">
+              <Link
+                href="/contact"
+                className="block text-gray-700 hover:text-blue-600 px-4 py-2 font-medium"
+              >
                 Contact
               </Link>
-              <Link href="/talent" className="block text-gray-700 hover:text-blue-600 px-4 py-2 font-medium">
+              <Link
+                href="/talent"
+                className="block text-gray-700 hover:text-blue-600 px-4 py-2 font-medium"
+              >
                 Talent
               </Link>
               <div className="px-4 pt-4">
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors"
                 >
                   Get Quote

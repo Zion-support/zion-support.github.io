@@ -6,10 +6,11 @@ this.reloadPage ();
 break;
 case 3: // Third attempt: Hard refresh with cache bypass this.hardRefresh ();
 break;
-default: 
-}private async clearCaches () : Promise<void> {
-  try {
-  // Clear service worker caches if ('caches' in window) {
+default: ;
+}private async clearCaches () : Promise<void> {;
+  try {;
+  // Clear service worker caches if ('caches' in window) {;
   errorDiv.innerHTML = ` Go Home </button> </div> `;
-}return this.errorStats.get (sessionKey) ! 
+}return this.errorStats.get (sessionKey) ! ;
 }// Public method to manually trigger recovery // Export for manual usage export default chunkErrorHandler;
+'

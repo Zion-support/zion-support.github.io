@@ -1,14 +1,15 @@
  label: 'Type';
-value: labels[type] || type 
-}) 
+value: labels[type] || type ;
+}) ;
 });
-//Add category filter 
+//Add category filter ;
 }
 };
-{
-  activeFilters.map (filter => (<Badge key= {
-  filter.key 
-}variant="secondary" className="flex items-center gap-1 pl-2 pr-1" > > <X className="h-3 w-3" /> </Button> </Badge>) ) 
-}<Button > Clear all </Button> </div>) 
+{;
+  activeFilters.map (filter => (<Badge key= {;
+  filter.key ;
+}variant="secondary" className="flex items-center gap-1 pl-2 pr-1" > > <X className="h-3 w-3" /> </Button> </Badge>) ) ;
+}<Button > Clear all </Button> </div>) ;
 };
 export default ActiveFiltersBar;
+'"

@@ -10,16 +10,12 @@
     "mergeConflictFix": {
       "success": false,
       "duration": 22,
-      "errors": [
-        "Command failed: node scripts/fix-merge-conflicts.cjs"
-      ]
+      "errors": ["Command failed: node scripts/fix-merge-conflicts.cjs"]
     },
     "typescriptFix": {
       "success": false,
       "duration": 22,
-      "errors": [
-        "Command failed: node automation/typescript-fixer.cjs"
-      ]
+      "errors": ["Command failed: node automation/typescript-fixer.cjs"]
     },
     "lintingFix": {
       "success": false,
@@ -46,9 +42,7 @@
     "testSuite": {
       "success": false,
       "duration": 26,
-      "errors": [
-        "Command failed: node npm run test:smoke"
-      ]
+      "errors": ["Command failed: node npm run test:smoke"]
     }
   },
   "summary": {

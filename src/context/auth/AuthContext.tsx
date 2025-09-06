@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
-
-interface AuthContextType {
+;
+interface AuthContextType {;
   user: any;
   setUser: (user: any) => void;
   isLoading: boolean;
@@ -11,7 +11,7 @@ interface AuthContextType {
   setTokens: (tokens: any) => void;
   login: (email: string, password: string) => Promise<any>;
   register: (name: string, email: string, password: string) => Promise<any>;
-  signup: (email: string, password: string, userData: any) => Promise<any>;
+  signup: (email: string,  password: string, userData: any) => Promise<any>;
   logout: () => void;
   resetPassword: (email: string) => Promise<any>;
   updateProfile: (data: any) => Promise<any>;
@@ -20,15 +20,15 @@ interface AuthContextType {
   loginWithTwitter: () => Promise<any>;
   loginWithWeb3: () => Promise<any>;
 }
-
+;
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
-
-export const useAuth = () => {
+;
+export const useAuth = () => {;
   const context = useContext(AuthContext);
-  if (context === undefined) {
+  if (context === undefined) {';
     throw new Error('useAuth must be used within an AuthProvider');
   }
   return context;
 };
-
-export { AuthContext };
+;
+export { AuthContext };'
