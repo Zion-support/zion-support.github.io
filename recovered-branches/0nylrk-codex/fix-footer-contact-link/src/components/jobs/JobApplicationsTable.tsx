@@ -36,10 +36,7 @@ export function JobApplicationsTable({ jobId } JobApplicationsTableProps) {;
     error, ;
     updateApplicationStatus, ;
 
-export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
-
-
-  } = useJobApplications(jobId);
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {} = useJobApplications(jobId);
   const [processingId, setProcessingId] = useState<string | null>(null);
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
   const [showScoreDialog, setShowScoreDialog] = useState(false);
@@ -96,10 +93,6 @@ import {
 
 interface JobApplicationsTableProps {
   jobId: string
-import { useState } from "react",;
-import { JobApplication, ApplicationStatus } from "@/types/jobs",;
-import { useJobApplications } from "@/hooks/useJobApplications",;
-import {;
   ApplicationsTable,;
   EmptyState,;
   ErrorState,;
@@ -127,7 +120,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
     try {;
       await updateApplicationStatus(applicationId, newStatus),;
       // If it's not already viewed, mark it as viewed;
-      const application = applications.find(app => app.id === applicationId),;
+      const application = applications.find(app => app.id === applicationId);
       if (application && !application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
       }

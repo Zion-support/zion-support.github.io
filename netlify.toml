@@ -11,6 +11,11 @@ ursor/automate-test-improve-and-merge-code-646c
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> main
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -114,3 +119,5 @@ to = "/services/affiliate-attribution-suite/"
 status = 301
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+[[plugins]]
+  package = "netlify-plugin-cloudinary"

@@ -20,13 +20,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export const messageChannelHandler = {
-  sendMessage: (message: string) => {},
-  receiveMessage: (callback: (message: string) => void) => {},
   sendMessage: (message: any) => {},
-  receiveMessage: (callback: any) => {},
-type MessageHandler = {
-  sendMessage: (message: unknown) => void;
-  receiveMessage: (callback: (message: unknown) => void) => void;
+  receiveMessage: (callback: any) => {}
 };
 export const messageChannelHandler: MessageHandler = {
   sendMessage: (_message) => {

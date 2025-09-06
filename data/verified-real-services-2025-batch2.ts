@@ -44,7 +44,7 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
       'AI defect detection',
       'Performance monitoring',
       'Quality metrics',
-      'Continuous integration',
+      'Continuous integration'
     ],
     link: '/services / ai - quality - assurance',
     category: 'Verified Services 2025',
@@ -53,9 +53,9 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
 ];      mobile: "+1 302 464 0950";
 
 

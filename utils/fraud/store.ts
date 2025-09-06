@@ -20,7 +20,7 @@ class FraudStore {
     const newRecord: FraudRecord = {
       ...record,
       id,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString()
     };
     this.records.set(id, newRecord);
     return newRecord;
@@ -62,8 +62,8 @@ class FraudStore {
       averageResolutionTime: 24, // placeholder
       topFraudTypes: [
         { type: "suspicious_activity", count: 5 },
-        { type: "unauthorized_access", count: 3 },
-      ],
+        { type: "unauthorized_access", count: 3 }
+      ]
     };
   }
 }

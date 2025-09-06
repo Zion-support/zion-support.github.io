@@ -32,8 +32,6 @@ import React from 'react';
 
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
-import {CalendarIcon, Loader2} from 'lucide-react';
 import {format} from 'date-fns';
 import {Button} from '@/components/ui/button';
 import {Calendar} from '@/components/ui/calendar';
@@ -41,7 +39,6 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {Input} from '@/components/ui/input';
 import {Textarea} from '@/components/ui/textarea';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
-import {AIMilestoneGenerator} from './AIMilestoneGenerator';
 import {GeneratedMilestone} from '@/hooks/useMilestoneGenerator';
 const formSchema = z.object({
   title: z.string().min(1, 'Title is required');
@@ -98,7 +95,6 @@ import {;
   FormMessage} from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
 import { Textarea } from '@/components/ui/textarea',;
-import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger} from '@/components/ui/popover',;
@@ -144,7 +140,7 @@ export function AddMilestoneForm({;
   const handleAddMilestones = (milestones: GeneratedMilestone[]) => {;
     // If there's only one milestone, submit it directly;
     if (milestones.length === 1) {;
-      const milestone = milestones[0],;
+      const milestone = milestones[0];
       onSubmit({;
         title: milestone.title,;
         description: milestone.description,;
@@ -192,30 +188,16 @@ export function AddMilestoneForm({;
         <AIMilestoneGenerator
 
 
-import React from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { CalendarIcon, Loader2 } from 'lucide-react',;
-import { format } from 'date-fns',;
 ;
-import { Button } from '@/components/ui/button',;
-import { Calendar } from '@/components/ui/calendar',;
-import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
   FormLabel,;
   FormMessage} from '@/components/ui/form',;
-import { Input } from '@/components/ui/input',;
-import { Textarea } from '@/components/ui/textarea',;
-import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger} from '@/components/ui/popover',;
-import { AIMilestoneGenerator } from './AIMilestoneGenerator',;
-import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',;
 ;
 const formSchema = z.object({;
   title:z.string().min(1, 'Title is required'),;

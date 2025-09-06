@@ -106,6 +106,9 @@ describe('AccessibilityManager', () => {'}
   test('applies correct styling', () => {'}
     render(<AccessibilityManager />);
   });
+});
+});
+});
 '
 describe('AccessibilityManager', () => {'
   test('renders without crashing', () => {'

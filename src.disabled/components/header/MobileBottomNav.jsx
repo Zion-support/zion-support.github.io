@@ -40,6 +40,7 @@ interface MobileBottomNavProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function MobileBottomNav({}: MobileBottomNavProps) {
+export default function MobileBottomNav({}: MobileBottomNavProps) {
   return (
     <div>
       <h1>MobileBottomNav</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

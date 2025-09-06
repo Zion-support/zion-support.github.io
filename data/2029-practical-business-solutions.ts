@@ -23,12 +23,7 @@
     link: "/services/2029-practical-business-solution",
     category: "Practical Business Solutions 2029",
     realImplementation: true,
-    contactInfo: {
-
-
-
-
-    }
+    contactInfo: {}
   }
 
 ];
@@ -100,11 +95,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     link: "/services/2029-practical-business-solution",
     category: "Practical Business Solutions 2029",
     realImplementation: true,
-    contactInfo: {
-
-
-
-    }
+    contactInfo: {}
   }
 ];
 

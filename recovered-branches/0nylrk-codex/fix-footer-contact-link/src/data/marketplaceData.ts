@@ -7,57 +7,57 @@ import { SearchSuggestion, FilterOptions } from '@/types/search';
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
 
 
-  },];      name: "ServerPro Systems";
+  }];      name: "ServerPro Systems";
       id: "serverpro"}
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
     createdAt: "2023-12-15T09:45:00.000Z";
     rating: 4.9;
     location: 'Global',
     availability: 'Immediate',
-    ai_score: 88,
+    ai_score: 88
   },
   {
     location: 'North America',
     availability: '1 - 2 Weeks',
-    ai_score: 90,
+    ai_score: 90
   },
   {
     featured: true,
     location: 'Global',
     availability: 'Immediate',
-    ai_score: 94,
+    ai_score: 94
   },
   {
     location: 'Europe',
     availability: '3 - 4 Weeks',
-    ai_score: 91,
+    ai_score: 91
   },
   {
     location: 'Global',
     availability: '1 - 2 Weeks',
-    ai_score: 89,
+    ai_score: 89
   },
   {
     featured: true,
     location: 'Global',
     availability: 'Immediate',
-    ai_score: 97,
+    ai_score: 97
   },
   {
     location: 'North America',
     availability: '4 - 6 Weeks',
-    ai_score: 96,
+    ai_score: 96
   },
   {
     location: 'Global',
     availability: 'Immediate',
-    ai_score: 88,
+    ai_score: 88
   },
   {
     featured: true,
     location: 'Asia',
     availability: '3 - 4 Weeks',
-    ai_score: 93,
+    ai_score: 93
   },
   // Adding equipment listings so they're available in marketplace too
   {
@@ -75,7 +75,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
       avatarUrl:
     featured: true,
     location: 'Global',
-    availability: '1 - 2 Weeks',
+    availability: '1 - 2 Weeks'
   },
   {
 
@@ -160,12 +160,12 @@ export const generateFilterOptions = (): FilterOptions => {
   const locations = [
     ...new Set(
       MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)
-    ),
+    )
   ].sort();
   const availability = [
     ...new Set(
       MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
-    ),
+    )
   ].sort();
 
 

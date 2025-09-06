@@ -12,8 +12,6 @@ import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 
 
 
@@ -99,7 +97,7 @@ serve(async (req) => {;
     // Parse the request body;
     const { days_back = 7 } = await req.json(),;
     // Calculate the start date;
-    const startDate = new Date(),;
+    const startDate = new Date();
     startDate.setDate(startDate.getDate() - days_back),;
     // Query analytics events;
     const { data, error } = await supabaseClient;

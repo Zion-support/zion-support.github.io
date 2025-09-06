@@ -50,7 +50,6 @@ export function useAuthStatus() {
   }
 
 
-import {useState} from 'react';
 export /**
  * useAuthStatus - Function description
  */
@@ -97,7 +96,6 @@ if ( {) {
     toggleAuth
   }
 }
-import { useState } from 'react',;
 export function useAuthStatus() {;
   // Mock authenticated status;
   const [isAuthenticated, setIsAuthenticated] = useState(false),;
@@ -155,7 +153,6 @@ export function useAuthStatus() {;
   }
 
 
-import { useState } from 'react',;
 ;
 export function useAuthStatus() {;
   // Mock authenticated status;
@@ -200,9 +197,7 @@ export function useAuthStatus() {;
   },; //Mock saved talents const [savedTalents, setSavedTalents] = useState<string[]> ([]);
 //Toggle saved talent const handleToggleSave = (talentId: string, isSaved: boolean) => {
   if (isAuthenticated) {
-  if (isSaved) {
-  
-}
+  if (isSaved) {}
 };
 //For demo purposes, let's provide a login/logout toggle const toggleAuth = () => {
   setIsAuthenticated (prev => !prev) 

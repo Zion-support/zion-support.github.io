@@ -8,7 +8,7 @@ const trustedCompanies = [
     logo: "/logos/nvidia-logo.svg"
     alt: "NVIDIA logo"
 
-  },
+  }
 
 
   }
@@ -20,7 +20,7 @@ const trustedCompanies = [
     logo: "/logos/amex-logo.svg"
     alt: "American Express logo"
 
-  },
+  }
 
 
   }
@@ -32,7 +32,7 @@ const trustedCompanies = [
     logo: "/logos/disney-logo.svg"
     alt: "Walt Disney logo"
 
-  },
+  }
 
 
   }
@@ -44,7 +44,7 @@ const trustedCompanies = [
     logo: "/logos/amd-logo.svg"
     alt: "AMD logo"
 
-  },
+  }
 
 
   }
@@ -56,7 +56,7 @@ const trustedCompanies = [
     logo: "/logos/apple-logo.svg"
     alt: "Apple logo"
 
-  },
+  }
 
 
   }
@@ -68,7 +68,7 @@ const trustedCompanies = [
     logo: "/logos/ea-logo.svg"
     alt: "EA Games logo"
 
-  },
+  }
 
 
   }
@@ -80,7 +80,7 @@ const trustedCompanies = [
     logo: "/logos/lv-logo.svg"
     alt: "Louis Vuitton logo"
 
-  },
+  }
 
 
   }
@@ -92,7 +92,7 @@ const trustedCompanies = [
     logo: "/logos/nike-logo.svg"
     alt: "Nike logo"
 
-  },
+  }
 
 
   }
@@ -104,7 +104,7 @@ const trustedCompanies = [
     logo: "/logos/pandora-logo.svg"
     alt: "Pandora logo"
 
-  },
+  }
 
 
   }
@@ -116,7 +116,7 @@ const trustedCompanies = [
     logo: "/logos/huawei-logo.svg"
     alt: "Huawei logo"
 
-  },
+  }
 
 
   }
@@ -128,7 +128,7 @@ const trustedCompanies = [
     logo: "/logos/jnj-logo.svg"
     alt: "Johnson & Johnson logo"
 
-  },
+  }
 
 
   }
@@ -140,7 +140,7 @@ const trustedCompanies = [
     logo: "/logos/universal-logo.svg"
     alt: "Universal Studios logo"
 
-  },
+  }
 
 
   }
@@ -152,7 +152,7 @@ const trustedCompanies = [
     logo: "/logos/ubisoft-logo.svg"
     alt: "Ubisoft logo"
 
-  },
+  }
 
 
   }
@@ -164,7 +164,7 @@ const trustedCompanies = [
     logo: "/logos/bayer-logo.svg"
     alt: "Bayer logo"
 
-  },
+  }
 
 
   }
@@ -176,7 +176,7 @@ const trustedCompanies = [
     logo: "/logos/avaya-logo.svg"
     alt: "Avaya logo"
 
-  },
+  }
 
 
   }
@@ -188,7 +188,7 @@ const trustedCompanies = [
     logo: "/logos/svb-logo.svg"
     alt: "Silicon Valley Bank logo"
 
-  },
+  }
 
 
   }
@@ -200,7 +200,7 @@ const trustedCompanies = [
     logo: "/logos/dell-logo.svg"
     alt: "Dell logo"
 
-  },
+  }
 
 
   }
@@ -212,7 +212,7 @@ const trustedCompanies = [
     logo: "/logos/lenovo-logo.svg"
     alt: "Lenovo logo"
 
-  },
+  }
 
 
   }
@@ -225,10 +225,10 @@ const trustedCompanies = [
     alt: "Citi Bank logo"
 
   }
-  },
+  }
 
 
-  },
+  }
 
 
 
@@ -305,8 +305,6 @@ const trustedCompanies = [;
     name: "NVIDIA",;
 
 
-import { GradientHeading } from "./GradientHeading",;
-import { useState } from "react",;
 ;
 // Real company logos for trusted partners - with more reliable image URLs;
 const trustedCompanies = [;

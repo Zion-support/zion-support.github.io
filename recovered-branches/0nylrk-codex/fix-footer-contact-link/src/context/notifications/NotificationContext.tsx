@@ -38,7 +38,7 @@ const defaultContext: NotificationContextType = {;
 
 ),;
 export const useNotifications = (): NotificationContextType => {;
-  const context = useContext(NotificationContext) as NotificationContextType,;
+  const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {;
     throw new Error('useNotifications must be used within a NotificationProvider');
 
@@ -77,11 +77,6 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   useEffect(() => {;
     notificationOps && notificationOps.fetchNotifications();
 
-import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { useAuth } from '@/hooks/useAuth',;
-import { useNotificationOperations } from './useNotificationOperations',;
-import { NotificationContextType } from './types',;
 ;
 // Default context used when React type definitions are missing. Providing a;
 // fully-typed object here avoids TypeScript errors that occur when an untyped;

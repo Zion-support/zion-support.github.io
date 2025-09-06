@@ -14,7 +14,7 @@ export function SocialShareSection() {
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80"
       onClick: shareToTwitter
 
-    },
+    }
 
 
     }
@@ -27,7 +27,7 @@ export function SocialShareSection() {
       color: "bg-[#4267B2] hover:bg-[#4267B2]/80"
       onClick: shareToFacebook
 
-    },
+    }
 
 
     }
@@ -40,7 +40,7 @@ export function SocialShareSection() {
       color: "bg-[#0077B5] hover:bg-[#0077B5]/80"
       onClick: shareToLinkedIn
 
-    },
+    }
 
 
     }
@@ -97,12 +97,9 @@ export function SocialShareSection() {;
     </section>
   )
 }
-import { Button } from "./ui/button",;
-import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
-import { toast } from "./ui/use-toast",;
 export function SocialShareSection() {;
   // Current URL and text to share;
-  const shareUrl = encodeURIComponent(window.location.href),;
+  const shareUrl = encodeURIComponent(window.location.href);
   const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace"),;
   // Social sharing functions;
   const shareToTwitter = () => {;
@@ -186,9 +183,6 @@ export function SocialShareSection() {;
 }
 
 
-import { Button } from "./ui/button",;
-import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
-import { toast } from "./ui/use-toast",;
 ;
 export function SocialShareSection() {;
   // Current URL and text to share;

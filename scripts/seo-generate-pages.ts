@@ -4,6 +4,23 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
 
 
 
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+/* eslint - disable no - console */;
+import fs from 'fs';
+import path from 'path';
+import https from 'https';
+const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+/* eslint-disable no-console */
+const HOST = process.env.SELF_HOST |'http: //localhost:3000'
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
   { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' }
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }
@@ -53,7 +70,7 @@ async function post_json (url: string, body: any): Promise < any> {
 import fs from 'fs',;
 import path from 'path',;
 import https from 'https',;
-const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000';
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
   { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' },;
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' },;
@@ -111,14 +128,12 @@ main ().catch ((e) => {
 
 
 
+;
 
 
 
 ;
 /* eslint-disable no-console */;
-import fs from 'fs',;
-import path from 'path',;
-import https from 'https',;
 ;
 const HOST = process.env.SELF_HOST || 'http://localhost:3000',;
 ;
@@ -140,7 +155,7 @@ async function postJson(url:string, body:any):Promise<any> {;
       let buf = '',;
       res.on('data', (d:any) => (buf += d)),;
       res.on('end', () => {;
-        try { resolve(JSON.parse(buf)), } catch { resolve({}), }
+        try { resolve(JSON.parse(buf)) } catch { resolve({}) }
       }),;
     }),;
     req.on('error', reject),;
@@ -185,3 +200,4 @@ main().catch((e) => {;
 });
 
 
+;

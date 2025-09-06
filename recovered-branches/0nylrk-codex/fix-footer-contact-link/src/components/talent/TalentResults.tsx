@@ -80,11 +80,6 @@ export function TalentResults(): any ({;
       />;
 
 
-import React from "react",;
-import { TalentProfile } from "@/types/talent",;
-import { ActiveFilters } from "@/components/talent/ActiveFilters",;
-import { ResultsHeader } from "@/components/talent/ResultsHeader",;
-import { TalentGrid } from "@/components/talent/TalentGrid",;
 ;
 interface TalentResultsProps {;
   filteredTalents:TalentProfile[],;

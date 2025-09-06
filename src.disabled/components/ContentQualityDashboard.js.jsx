@@ -14,3 +14,8 @@ import _React from';react' const ContentQualityDashboard = ({ className = ' }) =
 const React from";react" const ContentQualityDashboard = ({ className = " }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(") const [filterStatus,setFilterStatus] = useState("all") const contentAnalyzer = ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {""";""
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+
+const React from";react" const ContentQualityDashboard = ({ className = " }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(") const [filterStatus,setFilterStatus] = useState("all") const contentAnalyzer = ContentQualityAnalyzer && ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {""";""

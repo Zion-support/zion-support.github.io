@@ -40,6 +40,7 @@ interface ForumPostPageProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function ForumPostPage({}: ForumPostPageProps) {
+export default function ForumPostPage({}: ForumPostPageProps) {
   return (
     <div>
       <h1>ForumPostPage</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

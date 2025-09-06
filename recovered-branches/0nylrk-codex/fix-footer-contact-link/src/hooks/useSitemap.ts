@@ -125,7 +125,7 @@ export function useSitemap() {;
   const { user, isAuthenticated } = useAuth(),;
   // Get routes that the current user can access;
   // Cast userType to UserType or pass undefined if not valid;
-  const userType = user?.userType && isValidUserType(user.userType) ? user.userType as UserType : undefined,;
+  const userType = user?.userType && isValidUserType(user.userType) ? user.userType as UserType : undefined;
   const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType),;
   // Helper function to find a route by path;
   const findRouteByPath = (path: string): SitemapItem | undefined => {;

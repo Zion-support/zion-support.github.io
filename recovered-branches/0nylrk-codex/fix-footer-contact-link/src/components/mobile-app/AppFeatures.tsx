@@ -23,7 +23,7 @@ const features = [
     title: "AI Talent Matching"
     description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements."
 
-  },
+  }
 
 
   }
@@ -35,7 +35,7 @@ const features = [
     title: "1-Click Hiring"
     description: "Streamlined hiring process that lets you connect with talent instantly with just one click."
 
-  },
+  }
 
 
   }
@@ -48,10 +48,10 @@ const features = [
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
 
   }
-  },
+  }
 
 
-  },
+  }
 
 
 

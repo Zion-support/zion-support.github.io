@@ -72,8 +72,6 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
                   {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
                 </span>
 
-import {Certification} from '@/types/resume';
-import {format} from 'date-fns';
 interface CertificationsSectionProps {;
   certifications: Certification[];
 }

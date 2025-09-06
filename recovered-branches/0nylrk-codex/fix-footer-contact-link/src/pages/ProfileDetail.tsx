@@ -13,11 +13,10 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 
 import { Badge } from "@/components/ui/badge";
-import {
   MapPin,
   Clock,
   Link,
@@ -29,7 +28,7 @@ import {
   CheckCircle2,
   Mail,
   Phone,
-  Globe,
+  Globe
 } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
@@ -80,7 +79,7 @@ export default function ProfileDetail() {
           toast({
             title: "Error",
             description: err.message || "Failed to fetch profile.",
-            variant: "destructive",
+            variant: "destructive"
           }));
       } finally {
         setIsLoading(false);
@@ -339,7 +338,7 @@ export default function ProfileDetail() {
                 id: profileData?.id || "",
                 full_name: profileData?.full_name || "",
                 professional_title: profileData?.professional_title || "",
-                hourly_rate: profileData?.hourly_rate || 0,
+                hourly_rate: profileData?.hourly_rate || 0
               }}
             />
             {/* Contact Information */}

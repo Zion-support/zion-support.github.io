@@ -10,8 +10,8 @@ export const innovativeMicroSaasSolutions2025 = [
 
       'Analytics tools',
       'Social media platforms',
-      'Marketing tools',
-    ],
+      'Marketing tools'
+    ]
 
 
 ];      'Email campaign automation_customer segmentation and personalization_conversion rate optimization_subscriber engagement improvement_marketing ROI optimization';

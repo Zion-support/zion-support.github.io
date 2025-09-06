@@ -115,6 +115,8 @@ import { NextApiRequest,NextApiResponse } from 'next'; import { ApiScope } from 
 
 
 
+
+
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled/api/devportal/keys.ts
@@ -122,6 +124,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
       return res.status(200).json({ "data": { key: keys[idx], token } })}
     if (action === 'update_scopes') {
       keys[idx].scopes = Array.isArray(scopes) ? scopes : keys[idx].scopes;

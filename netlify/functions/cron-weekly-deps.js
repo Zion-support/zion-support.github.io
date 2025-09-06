@@ -1,10 +1,9 @@
 
 
-        token,
+        token
       });
     }
-    return {
-  }
+    return {}
 }async /**
  * get_latest - Function description
  */

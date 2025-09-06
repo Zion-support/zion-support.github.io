@@ -9,9 +9,6 @@ import {Slider} from "@/components/ui/slider";
       updateFormData({
         budget: {
 
-import {QuoteFormData} from "@/types/quotes";
-import {Label} from "@/components/ui/label";
-import {Slider} from "@/components/ui/slider";
         budget: {;
           ...formData.budget;
           type,
@@ -34,10 +31,7 @@ interface BudgetStepProps {;
 
 
 
-        budget: {
-
-
-        }
+        budget: {}
       });
     } else {;
       updateFormData({;
@@ -69,7 +63,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
     }
   }
 
-  },
+  }
   };
   },
 
@@ -195,9 +189,6 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
                   ? "bg-zion-purple/20 border-zion-purple" 
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
 
-import { QuoteFormData } from "@/types/quotes",;
-import { Label } from "@/components/ui/label",;
-import { Slider } from "@/components/ui/slider",;
 ;
 interface BudgetStepProps {;
   formData:QuoteFormData,;
@@ -364,7 +355,7 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
 
 
                   onValueChange={(value) => {;
-                    const newAmount = value[0],;
+                    const newAmount = value[0];
                     const maxAmount = formData.budget.maxAmount || 50000,;
 
 

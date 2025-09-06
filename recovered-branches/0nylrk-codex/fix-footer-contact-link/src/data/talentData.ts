@@ -1,8 +1,7 @@
 
 
-      {
-      },
-    ],
+      {}
+    ]
   },
   {
 
@@ -11,10 +10,10 @@
           'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
         title: 'Real - Time Analytics Dashboard',
         description:;
-          'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
+          'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.'
 
-      },
-    ],
+      }
+    ]
   },
 import { TalentProfile } from '@/types/talent';
 
@@ -43,7 +42,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Responsible AI',
       'Compliance',
       'Stakeholder Engagement',
-      'Research',
+      'Research'
     ],
     hourly_rate: 180,
     years_experience: 9,
@@ -61,16 +60,16 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Image Processing',
       'C++',
       'CUDA',
-      'Edge AI',
+      'Edge AI'
     ],
     hourly_rate: 155,
     years_experience: 6,
     average_rating: 4 && 4.7,
     rating_count: 26,
     availability_type: 'full_time',
-    is_verified: true,
-      },
-    ],
+    is_verified: true
+      }
+    ]
   },
   {
     bio: 'PhD in Computational Linguistics with 8+ years of experience in NLP research and applications. I specialize in sentiment analysis, text generation, language understanding, and multilingual NLP systems for enterprise applications.',
@@ -83,7 +82,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Python',
       'Hugging Face',
       'Language Models',
-      'Sentiment Analysis',
+      'Sentiment Analysis'
     ],
     hourly_rate: 160,
     years_experience: 8,
@@ -101,7 +100,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Linear Algebra',
       'Python',
       'TensorFlow Quantum',
-      'Optimization',
+      'Optimization'
     ],
     hourly_rate: 190,
     years_experience: 5,
@@ -119,7 +118,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Agile',
       'Analytics',
       'Stakeholder Management',
-      'Product Roadmap',
+      'Product Roadmap'
     ],
     hourly_rate: 140,
     years_experience: 9,
@@ -137,7 +136,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Robotics',
       'Simulation',
       'OpenAI Gym',
-      'Multi - agent Systems',
+      'Multi - agent Systems'
     ],
     hourly_rate: 150,
     years_experience: 6,
@@ -155,7 +154,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'PyTorch',
       'DICOM',
       'Clinical Validation',
-      'Regulatory Compliance',
+      'Regulatory Compliance'
     ],
     hourly_rate: 170,
     years_experience: 8,
@@ -195,10 +194,10 @@ export const TALENT_PROFILES: TalentProfile[] = [
       }
     ]
   }
-          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
-      },
-    ],
-  },
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
+      }
+    ]
+  }
 ];
 
 ;

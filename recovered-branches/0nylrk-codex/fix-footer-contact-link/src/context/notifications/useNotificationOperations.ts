@@ -118,9 +118,7 @@ if (throw error) {
     unread_count;
 
 
-import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations/supabase/client';
-import {Notification, FilterType, NotificationContextType} from './types';
 export const useNotificationOperations = (userId?: string): NotificationContextType => {;
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [loading, setLoading] = useState(false);
@@ -291,7 +289,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       default: return true;
     }
   }),;
-  const unreadCount = notifications.filter(n => !n.read).length,;
+  const unreadCount = notifications.filter(n => !n.read).length;
   return {;
     notifications,;
     filteredNotifications,;
@@ -316,9 +314,6 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 }
 ;
 
-import { useState, useCallback } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { Notification, FilterType, NotificationContextType } from './types',;
 ;
 export const useNotificationOperations = (userId?:string):NotificationContextType => {;
   const [notifications, setNotifications] = useState<Notification[]>([]),;

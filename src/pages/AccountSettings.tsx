@@ -12,7 +12,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
@@ -62,7 +62,7 @@ export default function AccountSettings() {
 
       // Request accounts
       const accounts = await ethereum.request({
-        method: "eth_requestAccounts",
+        method: "eth_requestAccounts"
       });
       const address = accounts[0];
 
@@ -70,7 +70,7 @@ export default function AccountSettings() {
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
       await ethereum.request({
         method: "personal_sign",
-        params: [address, message],
+        params: [address, message]
       });
 
       // Auto-set DID handle if ENS is available

@@ -2,7 +2,7 @@
 
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
-    realService: true,
+    realService: true
   },;
 
 

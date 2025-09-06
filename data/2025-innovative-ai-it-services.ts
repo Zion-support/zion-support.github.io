@@ -2,7 +2,7 @@
 
   {
 
-      'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols',
+      'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols'
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-orchestrator',
     id: 'quantum - ai - orchestrator',
@@ -16,7 +16,7 @@
       yearly: 19990,
       currency: 'USD',
       trial_days: 14,
-      setup_time: '1 week',
+      setup_time: '1 week'
     },
     features: [;
       'Quantum AI orchestration engine',
@@ -28,14 +28,14 @@
       'Predictive analytics platform',
       'Quantum security protocols',
       'Scalable quantum processing',
-      'API - first architecture',
+      'API - first architecture'
     ],
     benefits: [;
       'Solve NP - hard problems in seconds',
       'Optimize operations by 300%+',
       'Reduce computational costs by 80%',
       'Enable real - time decision making',
-      'Future - proof quantum advantage',
+      'Future - proof quantum advantage'
     ],
     target_audience: [;
       'Fortune 500 companies',
@@ -43,13 +43,13 @@
       'Healthcare organizations',
       'Logistics companies',
       'Research institutions',
-      'Government agencies',
+      'Government agencies'
     ],
     market_position:;
       'Leading quantum AI orchestration platform. Competes with IBM Quantum, Google Quantum, and D - Wave. Our advantage: AI integration and enterprise focus.',
     competitors: ['IBM Quantum, Google Quantum, D - Wave, Rigetti, IonQ'],
     tech_stack: [;
-      'Quantum Computing, AI / ML, Python, Qiskit, TensorFlow, Enterprise APIs, Cloud Infrastructure',
+      'Quantum Computing, AI / ML, Python, Qiskit, TensorFlow, Enterprise APIs, Cloud Infrastructure'
     ],
     real_implementation: true,
     implementation_details:;
@@ -61,15 +61,15 @@
       'Drug discovery acceleration',
       'Logistics route optimization',
       'Energy grid optimization',
-      'Risk assessment modeling',
+      'Risk assessment modeling'
     ],
     integrations: [;
-      'Enterprise systems, Cloud platforms, Financial platforms, Healthcare systems, Government networks',
+      'Enterprise systems, Cloud platforms, Financial platforms, Healthcare systems, Government networks'
     ],
     support:;
       '24 / 7 enterprise support, dedicated quantum consultants, implementation specialists, and ongoing optimization.',
     compliance: [;
-      'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols',
+      'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols'
     ],
     link: 'https://ziontechgroup.com / quantum - ai - orchestrator',
 
@@ -81,7 +81,7 @@
     launch_date: '2025 - 01 - 15',
     customers: 150,
     rating: 4 && 4.9,
-    reviews: 89,
+    reviews: 89
   },
   {
 
@@ -129,7 +129,7 @@
       yearly: 15990,
       currency: 'USD',
       trial_days: 60,
-      setup_time: '1 month',
+      setup_time: '1 month'
     },
     features: [;
       'AI - powered medical imaging analysis',
@@ -141,16 +141,16 @@
       'Clinical decision support',
       'Telemedicine integration',
       'Compliance automation',
-      'Research collaboration tools',
+      'Research collaboration tools'
     ],
     benefits: [;
       'Improve diagnostic accuracy by 99.9%',
       'Reduce diagnostic errors by 95%',
       'Enable early disease detection',
       'Improve patient outcomes by 80%',
-      'Reduce healthcare costs by 40%',
+      'Reduce healthcare costs by 40%'
     ],
-      'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards',
+      'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards'
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-healthcare-diagnostic',
     target_audience: [;
@@ -159,15 +159,15 @@
       'Research institutions',
       'Pharmaceutical companies',
       'Insurance companies',
-      'Government health agencies',
+      'Government health agencies'
     ],
     market_position:;
       'Leading AI healthcare diagnostic platform. Competes with IBM Watson Health, Google Health, and Microsoft Healthcare. Our advantage: Specialized diagnostic accuracy.',
     competitors: [;
-      'IBM Watson Health, Google Health, Microsoft Healthcare, GE Healthcare, Siemens Healthineers',
+      'IBM Watson Health, Google Health, Microsoft Healthcare, GE Healthcare, Siemens Healthineers'
     ],
     tech_stack: [;
-      'AI / ML, Medical Imaging, Python, TensorFlow, Medical Databases, Cloud Infrastructure, Security Protocols',
+      'AI / ML, Medical Imaging, Python, TensorFlow, Medical Databases, Cloud Infrastructure, Security Protocols'
     ],
     real_implementation: true,
     implementation_details:;
@@ -179,15 +179,15 @@
       'Treatment planning',
       'Patient monitoring',
       'Drug discovery',
-      'Clinical research',
+      'Clinical research'
     ],
     integrations: [;
-      'EHR systems, Medical devices, Imaging equipment, Laboratory systems, Telemedicine platforms',
+      'EHR systems, Medical devices, Imaging equipment, Laboratory systems, Telemedicine platforms'
     ],
     support:;
       '24 / 7 medical support, dedicated healthcare consultants, implementation specialists, and ongoing optimization.',
     compliance: [;
-      'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards',
+      'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards'
     ],
     link: 'https://ziontechgroup.com / ai - healthcare - diagnostic',
 
@@ -197,9 +197,9 @@
     launch_date: '2025 - 02 - 15',
     customers: 350,
     rating: 4 && 4.9,
-    reviews: 189,
+    reviews: 189
 
-  },
+  }
 
 
   }

@@ -2,16 +2,15 @@
 import { useState, useMemo } from "react";
 import {
   onsiteServicePricing,
-  CountryPricing,
+  CountryPricing
 } from "@/data/onsiteServicePricing";
 import { Input } from "@/components/ui/input";
-import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow
 } from "@/components/ui/table";
 import { Globe, Search, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -22,7 +21,7 @@ export function ITServicePricingTable() {
     direction: "ascending" | "descending";
   }>({
     key: "country",
-    direction: "ascending",
+    direction: "ascending"
   });
 
   const sortedData = useMemo(() => {
@@ -31,7 +30,7 @@ export function ITServicePricingTable() {
 
 
     key: "country",
-    direction: "ascending",
+    direction: "ascending"
   });
 
   const sortedData = useMemo(() => {
@@ -68,7 +67,7 @@ export function ITServicePricingTable() {
       direction:
         sortConfig.key === key && sortConfig.direction === "ascending"
           ? "descending"
-          : "ascending",
+          : "ascending"
     });
   };
 
@@ -148,7 +147,7 @@ export function ITServicePricingTable() {
       direction:;
         sort_config.key === key && sort_config.direction === "ascending";
           ? "descending";
-          : "ascending",
+          : "ascending"
     });
   }
 ;

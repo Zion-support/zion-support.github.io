@@ -23,11 +23,7 @@ export interface HireRequestFormProps {
 
   onSubmitSuccess?: () => void
 }
-export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
-
-
-
-  }
+export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {}
   },
   onSubmitSuccess?: () => void
 }

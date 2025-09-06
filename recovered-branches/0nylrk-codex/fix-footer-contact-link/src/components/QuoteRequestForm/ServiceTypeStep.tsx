@@ -21,48 +21,48 @@ const SAMPLE_LISTINGS: ListingItem[] = [
     title: "AI Development",
     category: "Services",
     image:
-      "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format",
+      "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format"
   },
   {
     id: "service-2",
     title: "Cloud Migration",
     category: "Services",
     image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format",
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format"
   },
   {
     id: "talent-1",
     title: "AI Engineer",
     category: "Talents",
     image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format",
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format"
   },
   {
     id: "talent-2",
     title: "Data Scientist",
     category: "Talents",
     image:
-      "https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format",
+      "https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format"
   },
   {
     id: "equipment-1",
     title: "Workstation",
     category: "Equipment",
     image:
-      "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format",
+      "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format"
   },
   {
     id: "equipment-2",
     title: "Server Rack",
     category: "Equipment",
     image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format",
-  },
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format"
+  }
 ];
 
 export function ServiceTypeStep({
   formData,
-  updateFormData,
+  updateFormData
 }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -76,7 +76,7 @@ export function ServiceTypeStep({
       specificItem: item,
       serviceCategory: item.category,
 
-      serviceType: item.category.toLowerCase() as ServiceType,
+      serviceType: item.category.toLowerCase() as ServiceType
     });
   };
 

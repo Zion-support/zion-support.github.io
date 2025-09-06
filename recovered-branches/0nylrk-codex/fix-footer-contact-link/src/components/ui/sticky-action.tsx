@@ -22,9 +22,6 @@ interface StickyActionProps {;
 import React, { useEffect, useState } from "react",
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import React, { useEffect, useState } from "react";
-import {cn} from "@/lib/utils";
-import {motion, AnimatePresence} from "framer-motion";
 interface StickyActionProps {
   className?: string;
 
@@ -167,9 +164,6 @@ export function StickyAction({;
 }
 
 
-import React, { useEffect, useState } from "react",;
-import { cn } from "@/lib/utils",;
-import { motion, AnimatePresence } from "framer-motion",;
 ;
 interface StickyActionProps {;
   className?:string,;

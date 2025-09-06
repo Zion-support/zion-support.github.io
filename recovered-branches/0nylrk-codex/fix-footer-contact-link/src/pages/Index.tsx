@@ -32,7 +32,7 @@ export default function Index() {
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
 
-    },
+    }
 
 
     }
@@ -45,7 +45,7 @@ export default function Index() {
       icon: <Zap className="h-6 w-6 text-zion-cyan" />
       link: "/services"
 
-    },
+    }
 
 
     }
@@ -58,7 +58,7 @@ export default function Index() {
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"
 
-    },
+    }
 
 
     }
@@ -71,7 +71,7 @@ export default function Index() {
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />
       link: "/analytics"
 
-    },
+    }
 
 
     }

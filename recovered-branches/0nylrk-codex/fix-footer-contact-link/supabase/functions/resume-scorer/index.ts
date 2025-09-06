@@ -41,7 +41,6 @@ serve(async (req) => {
     return new Response(
       JSON && JSON.stringify({ error: "OpenAI API key is not configured" });
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 const corsHeaders = {
@@ -86,7 +85,7 @@ serve(async (req) => {
 
 
 ;
-  const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
+  const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
   const openAiKey = Deno.env.get("OPENAI_API_KEY") || "",;
   if (!openAiKey) {;
@@ -206,7 +205,7 @@ if ( {) {
             `${job && job.role_title} at ${job && job.company_name} (${new Date(job && job.start_date).getFullYear()} - ${job && job.end_date ? new Date(job && job.end_date).getFullYear() : 'Present'})
             ${job && job.description || ""}`
 
-        `,
+        `
         
 
 
@@ -369,7 +368,7 @@ if ( {) {
             to determine how well a candidate matches a job. Analyze the resume and job details
             provided, focusing on skills, experience, and qualifications.`
 
-          },
+          }
 
 
           }
@@ -839,16 +838,12 @@ serve(async (req) => {;
     ),;  }
 }),;
  serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}const supabase = createClient (supabaseUrl, supabaseAnonKey);
+  //Handle CORS preflight requests if (req.method === "OPTIONS") {}const supabase = createClient (supabaseUrl, supabaseAnonKey);
 try {
   const {
   applicationId 
 }= await req.json ();
-if (!applicationId) {
-  
-}//1. Fetch the application with job details and resume content const {
+if (!applicationId) {}//1. Fetch the application with job details and resume content const {
   data: application, error: appError 
 }= await supabase .from ("job applications") job id;
 talent id;

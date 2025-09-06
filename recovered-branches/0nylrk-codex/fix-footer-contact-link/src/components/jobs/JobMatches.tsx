@@ -53,12 +53,6 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
     return (
 
 
-import React from "react",;
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
-import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
-import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
-import { useJobMatches } from "@/hooks/useJobMatches",;
-import { Skeleton } from "@/components/ui/skeleton",;
 ;
 interface JobMatchesProps {;
   jobId:string;
@@ -134,7 +128,7 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-  CardContent,
+  CardContent
 } from '@/components / ui / card';
 import { EmptyMatchesCard  } from '@/components / jobs / EmptyMatchesCard';
 import { JobMatchCard  } from '@/components / jobs / JobMatchCard';

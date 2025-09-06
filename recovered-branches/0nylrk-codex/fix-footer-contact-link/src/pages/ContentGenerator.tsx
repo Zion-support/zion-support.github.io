@@ -56,7 +56,7 @@ import { ScrollArea } from "@/components/ui/scroll-area",;
 import { useNavigate } from "react-router-dom",;
 export default function ContentGenerator() {;
   const { user, isLoading } = useAuth(),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog'),;
   const [customPrompt, setCustomPrompt] = useState(''),;
   const [topic, setTopic] = useState(''),;

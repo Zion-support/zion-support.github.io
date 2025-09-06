@@ -10,12 +10,8 @@ import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
 
-import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
-import {toast} from 'sonner';
-import {Milestone, MilestoneStatus} from './types';
-import {useRecordActivity} from './useRecordActivity';
 export const useUpdateMilestone = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -227,7 +223,7 @@ export const useUpdateMilestone = () => {;
       if (fetchError) throw fetchError,;
       if (!milestoneData) throw new Error("Milestone not found"),;
       ;
-      const previousStatus = milestoneData.status,;
+      const previousStatus = milestoneData.status;
       ;
       // Update the milestone status;
       const { error } = await supabase;

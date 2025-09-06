@@ -15,22 +15,12 @@ import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
 import {cn} from '@/lib/utils';
 import {ButtonProps, buttonVariants} from '@/components/ui/button';
 const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
-import * as React from "react"
-import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
-import * as React from "react"
-import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 
 
-import * as React from "react"
-import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
-import * as React from "react"
-import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
 import React from 'react';
-import * as React from 'react';
-import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
   <nav
     role='navigation'
     aria-label='pagination'
@@ -86,7 +76,7 @@ const PaginationItem = React && React.forwardRef<;
   <li ref={ref} className={cn('', className)} {...props} />;
 ));
 PaginationItem && PaginationItem.displayName = 'PaginationItem';
-type PaginationLinkProps = {;
+type PaginationLinkProps = {
   isActive?: boolean;
 } & Pick<ButtonProps, 'size'> &;
   React && React.ComponentProps<'a'>;
@@ -350,7 +340,7 @@ const PaginationLink = ({
     className={cn (
       button_variants ({
         variant: is_active ? 'outline' : 'ghost',
-        size,
+        size
       }),
       class_name)}
     {...props}
@@ -541,7 +531,7 @@ const PaginationEllipsis = ({;
   </span>
 );
 PaginationEllipsis.displayName = "PaginationEllipsis";
-  PaginationPrevious,
+  PaginationPrevious
 }
 ;
 

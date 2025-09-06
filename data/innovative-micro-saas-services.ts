@@ -5,10 +5,10 @@
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
-    realImplementation: true,
+    realImplementation: true
 
 
-  },];      mobile: '+1 302 464 0950';
+  }];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -49,7 +49,7 @@ export const newInnovativeServices = [
       'Autonomous decision making',
       'Performance analytics',
       'Integration with existing systems',
-      '24 / 7 AI operations',
+      '24 / 7 AI operations'
     ],
     popular: true,
     icon: '🏭',

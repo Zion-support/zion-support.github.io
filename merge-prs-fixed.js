@@ -43,7 +43,7 @@ try {
         // Find files with merge conflicts;
 
 const { execSync } = require('child_process'),;
-const fs = require('fs'),;
+const fs = require('fs');
 const { execSync } = require('child_process');
 const fs = require('fs');
 
@@ -69,6 +69,10 @@ const fs = require('fs');
 
 
 
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
+
 console.log('🚀 Starting merge process for all open PRs...'),;
 try {;
     // Check if we're in a git repository;
@@ -83,6 +87,7 @@ try {;
 
             // Resolve conflicts by accepting our version;
 
+            // Resolve conflicts by accepting our version;
 
 
             for (const file of files) {;
@@ -102,6 +107,13 @@ try {;
                     } catch (e) {execSync(`git checkout --theirs "${file}"`);
 
 
+
+                    console.log(`Resolving conflicts in: ${file}`);
+                    try {execSync(`git checkout --ours "${file}"`);
+                    } catch (e) {execSync(`git checkout --theirs "${file}"`);
+                    console.log(`Resolving conflicts in: ${file}`);
+                    try {execSync(`git checkout --ours "${file}"`);
+                    } catch (e) {execSync(`git checkout --theirs "${file}"`);
 
                     console.log(`Resolving conflicts in: ${file}`),;
                     try {;
@@ -145,7 +157,7 @@ try {;
             exec_sync (`git merge ${branch_name} --no - ff -m "feat: merge ${branch_name} into main\n\n- Integrated changes from ${branch_name}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`),
             console.log (`✅ Successfully merged ${branch_name}`);
         } catch (error) {
-            console.log (`⚠️  Error merging ${branch}: ${error.message}`),
+            console.log (`⚠️  Error merging ${branch}: ${error.message}`)
 
 
                     }
@@ -172,6 +184,16 @@ try {;
             // Resolve conflicts by accepting our version;
             const files = conflictFiles.trim().split('\n');
 
+            for (const file of files) {;
+                if (file.trim()) {;
+                    }
+                    execSync(`git add "${file}"`);
+                }
+            }
+            // Commit the merge;
+            execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
+        }
+    }
             // Continue with other branches;
         }
     }
@@ -253,3 +275,7 @@ try {;
 
 
 
+    process.exit(1);
+}
+    process.exit(1);
+}

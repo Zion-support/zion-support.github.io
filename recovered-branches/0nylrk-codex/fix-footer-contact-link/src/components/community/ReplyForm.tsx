@@ -24,8 +24,8 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 ;
   const form = use_form < ReplyFormValues>({
     default_values: {
-      content: "",
-    },
+      content: ""
+    }
   });
 ;
   const handle_submit = async (values: ReplyFormValues) => {
@@ -127,7 +127,6 @@ import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
-import {
   Form,
   FormControl,
   FormField,
@@ -163,13 +162,7 @@ import { useState  } from './react';
 import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
 import { Textarea  } from '@/components / ui / textarea';
-import {
-import { useState } from "react";
-import { useForm } from "react-hook-form";
 
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
 
 
 

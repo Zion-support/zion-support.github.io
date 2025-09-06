@@ -7,7 +7,7 @@ export function PriceFilter({
   setPriceRange,
   expanded,
   toggleSection,
-  isMobileFilterOpen,
+  isMobileFilterOpen
 }: PriceFilterProps) {
   const handleChange = (values: number[]) => {
     setPriceRange([values[0], values[1]]);

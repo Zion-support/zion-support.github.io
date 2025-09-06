@@ -7,6 +7,8 @@ import React, {;
   useState,;} from 'react';} from 'react';
 
 
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
 export type UserRole = 'client' | 'talent';
 
 export type User = {
@@ -69,7 +71,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
         email,
         role: 'client',
         createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
       };
       
       setUser(mockUser);
@@ -93,7 +95,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     const updatedUser = {
       ...user,
       ...userData,
-      updatedAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
     };
     
     setUser(updatedUser);
@@ -106,7 +108,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
       loading,
       login,
       logout,
-      updateUser,
+      updateUser
     }),
     [user, loading]
   );
@@ -117,3 +119,5 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 
 
 
+export default UserProvider;
+export default UserProvider;

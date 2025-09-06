@@ -28,7 +28,7 @@ export const checkSignupPatterns = async (;
 ): Promise<SignupCheckResult> => {;
   const reasons: string[] = [],;
   // Check email against suspicious patterns;
-  const emailCheck = analyzeEmail(email),;
+  const emailCheck = analyzeEmail(email);
   if (emailCheck.isSuspicious) {;
     reasons.push(...emailCheck.reasons);
   }

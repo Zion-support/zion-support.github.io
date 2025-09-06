@@ -223,7 +223,7 @@ if (throw lastEventError) {
 
         .is('user_idnot.null'),;
       if (uniqueVisitorsError) throw uniqueVisitorsError,;
-      const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []),;
+      const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []);
 
       // Get conversion count;
       const { data: conversionsData, error: conversionsError } = await supabase;
@@ -334,10 +334,7 @@ interface StatCardProps {;
 
   icon: React.ReactNode
 }
-function StatCard({ title, value, icon }: StatCardProps) {
-
-
-}
+function StatCard({ title, value, icon }: StatCardProps) {}
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;

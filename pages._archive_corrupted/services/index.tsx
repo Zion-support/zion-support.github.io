@@ -229,7 +229,7 @@ export default function ServicesIndex() {;
     'Enhance customer experience and satisfaction',;
     'Accelerate time-to-market for new features';
   ];
-  const useCases = ['E-commerce & Retail',;
+  const useCases = ['E-commerce & Retail';
     'SaaS & Technology',;
     'Financial Services',;
     'Healthcare & Medical',;

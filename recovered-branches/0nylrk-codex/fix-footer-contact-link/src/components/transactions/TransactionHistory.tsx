@@ -30,7 +30,7 @@ import {formatDistanceToNow} from "date-fns";
     }
 
 
-  },
+  }
   
 
 
@@ -88,7 +88,7 @@ import {formatDistanceToNow} from "date-fns";
     }
 
 
-  },
+  }
   
 
 

@@ -40,6 +40,7 @@ interface ServiceProcessStepsProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function ServiceProcessSteps({}: ServiceProcessStepsProps) {
+export default function ServiceProcessSteps({}: ServiceProcessStepsProps) {
   return (
     <div>
       <h1>ServiceProcessSteps</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

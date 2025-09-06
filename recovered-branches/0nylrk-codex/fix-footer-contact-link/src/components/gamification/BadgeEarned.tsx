@@ -16,11 +16,7 @@ import { getBadgeMeta, BadgeKey } from "./badgeConfig",
   showName?: boolean;
   showDesc?: boolean;
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
-import React from "react",
-import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
-import React from "react",
-import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
 
 
@@ -97,7 +93,7 @@ export const BadgeEarned:React.FC<BadgeEarnedProps> = ({;
   showName = true,;
   showDesc = false,;
   earnedDate}) => {;
-  const meta = getBadgeMeta(badge),;
+  const meta = getBadgeMeta(badge);
   if (!meta) return null,;
   const Icon = meta.icon,;
 ;

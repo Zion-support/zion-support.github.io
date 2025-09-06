@@ -10,11 +10,6 @@ export default defineConfig({
     open: true,
     host: true
   },
-  server: {
-    port: 3000,
-    open: true,
-    host: true
-  },
   build: {
     outDir: "dist",
     sourcemap: true,
@@ -53,3 +48,18 @@ ursor/automate-test-improve-and-merge-code-646c
 });
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom']
+        }
+      }
+    }
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom']
+  }
+});

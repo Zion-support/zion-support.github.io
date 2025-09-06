@@ -66,7 +66,6 @@ export function RecentContractsTable(): any ({;
 }: RecentContractsTableProps) {;
   return (
 
-import { Button } from "@/components/ui/button",;
 ;
 interface Contract {;
   id:string,;

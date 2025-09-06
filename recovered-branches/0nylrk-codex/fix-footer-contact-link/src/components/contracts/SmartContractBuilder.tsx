@@ -44,16 +44,6 @@ interface SmartContractBuilderProps {
   onContractGenerated?: (contractContent: string) => void
 
   onDeploy?: (contractContent: string) => void
-import { useState } from "react",
-import { Dialog, DialogContent } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from "lucide-react",
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-import { TemplateManager } from "./templates/TemplateManager",
-import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
 interface SmartContractBuilderProps {
 
   isOpen: boolean
@@ -77,16 +67,6 @@ interface SmartContractBuilderProps {;
 export function SmartContractBuilder(): any ({;
 
 
-import { useState } from "react",
-import { Dialog, DialogContent } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from "lucide-react",
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-import { TemplateManager } from "./templates/TemplateManager",
-import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
 import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
 import { useSmartContracts } from "@/hooks/useSmartContracts",
@@ -334,8 +314,7 @@ if ( {) {
         setDeployStatus ('error');
         toast.error ("Failed to deploy smart contract");
       }
-    } catch (error) {
-  }
+    } catch (error) {}
   };
 
 
@@ -396,7 +375,7 @@ export function SmartContractBuilder({;
   const handleContractGenerated = async (formValues: ContractFormValues) => {;
     if (!formValues) return,;
     try {;
-      const generatedContractText = await generateSolidityContract(formValues, talent, clientName),;
+      const generatedContractText = await generateSolidityContract(formValues, talent, clientName);
       setGeneratedContract(generatedContractText),;
       setActiveTab("preview"),;
       if (onContractGenerated) {;
@@ -491,18 +470,6 @@ export function SmartContractBuilder({;
 
   return (
 
-import { useState } from "react",;
-import { Dialog, DialogContent } from "@/components/ui/dialog",;
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
-import { Button } from "@/components/ui/button",;
-import { Save } from "lucide-react",;
-import { TalentProfile } from "@/types/talent",;
-import { ContractForm, ContractFormValues } from "./components/ContractForm",;
-import { ContractPreview } from "./components/ContractPreview",;
-import { TemplateManager } from "./templates/TemplateManager",;
-import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",;
-import { useSmartContracts } from "@/hooks/useSmartContracts",;
-import { toast } from "sonner",;
 ;
 interface SmartContractBuilderProps {;
   isOpen:boolean,;

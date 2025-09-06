@@ -17,6 +17,9 @@
     "target": "es5",
     "lib": ["dom", "dom.iterable", "es6"],
 ursor/automate-test-improve-and-merge-code-646c
+    ],
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -51,13 +54,23 @@ ursor/automate-test-improve-and-merge-code-646c
 
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
-      "@/pages/*": ["./pages/*"],
+      "@/app/*": ["./app/*"],
       "@/styles/*": ["./styles/*"],
       "@/utils/*": ["./utils/*"],
       "@/types/*": ["./types/*"]
     }
   },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
 ursor/automate-test-improve-and-merge-code-646c
+}

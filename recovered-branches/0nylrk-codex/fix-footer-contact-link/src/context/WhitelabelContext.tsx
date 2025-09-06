@@ -27,9 +27,9 @@ const defaultContext: WhitelabelContextType = {
 
     headline: "AI Talent Marketplace",
     subtitle: "Find the best AI talent for your projects",
-    cta: "Get Started",
+    cta: "Get Started"
   },
-  tenant: null,
+  tenant: null
 };
 
 
@@ -68,7 +68,7 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
         brandName: tenant.brand_name,
         themePreset: tenant.theme_preset,
         landingPageCopy: tenant.landing_page_copy,
-        tenant: tenant,
+        tenant: tenant
       });
     } else if (!isLoading) {
       setContextValue(defaultContext);
@@ -252,7 +252,7 @@ const defaultContext:WhitelabelContextType = {;
 // The context may be undefined if the provider is not mounted.  By declaring;
 // the generic as `WhitelabelContextType | null` we get proper type checking;
 // without falling back to an empty object which triggers TS2740 errors.;
-const WhitelabelContext = createContext<WhitelabelContextType | null>(null),;
+const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
 ;
 export const useWhitelabel = ():WhitelabelContextType => {;
   const context = useContext(WhitelabelContext),;

@@ -142,7 +142,7 @@ interface JobPostingFormProps {;
 }
 ;
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs(),;
   const [isFormLoading, setIsFormLoading] = useState(false),;
   const [editorContent, setEditorContent] = useState(""),;
@@ -510,9 +510,7 @@ onSuccess?: () => void
 const [editorContent, setEditorContent] = useState ("");
   if (job) {
   //Set form values Object.entries (job) .forEach ( ([key, value]) => {
-  if (key === 'published date' && value) {
-  
-}
+  if (key === 'published date' && value) {}
 }) 
 }
 }) 
@@ -524,15 +522,11 @@ const [editorContent, setEditorContent] = useState ("");
 }if (onSuccess) {
   onSuccess () 
 }
-}catch (error: any) {
-  
-}finally {
+}catch (error: any) {}finally {
   setIsFormLoading (false) 
 }
 };
-if (isLoading || isFormLoading) {
-  
-}return (<Form {
+if (isLoading || isFormLoading) {}return (<Form {
   ...form 
 }> <form onSubmit= {
   handleSubmit (onSubmit) 

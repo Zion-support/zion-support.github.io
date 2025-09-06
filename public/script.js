@@ -115,18 +115,12 @@ function animateCounter(element) {
     }, 16)
 }
 // Tooltip initialization
-function initializeTooltips() {
-
-
-            }
+function initializeTooltips() {}
         })
     })
 }
 // Modal initialization
-function initializeModals() {
-
-
-            }
+function initializeModals() {}
         })
     })
     // Close modal on overlay click
@@ -244,10 +238,7 @@ function trackEvent(eventName, eventData = {}) {
   const imageObserver = new IntersectionObserver ( (entries, observer) => {
 
   entries && entries.forEach (entry => {
-  if (entry && entry.isIntersecting) {
-  
-
-}) 
+  if (entry && entry.isIntersecting) {}) 
 }//Newsletter subscription submitBtn && submitBtn.disabled = true;
 //Simulate subscription (replace with actual API call) //Reset form this && this.reset ();
 
@@ -255,8 +246,7 @@ function trackEvent(eventName, eventData = {}) {
 //Initialize modals initializeModals ()
 
 });
-//Analytics tracking (replace with your analytics service) function trackEvent (eventName, eventData = {
-}) {
+//Analytics tracking (replace with your analytics service) function trackEvent (eventName, eventData = {}) {
   //Implement your analytics tracking here
 }//Track page views trackEvent ('page view', {
 

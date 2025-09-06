@@ -5,17 +5,16 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { ShieldAlert, Info } from "lucide-react";
-import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
+  AccordionTrigger
 } from "@/components/ui/accordion";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
@@ -43,7 +42,7 @@ export function FraudDetectionSettings() {
 
       toast({
         title: "Settings saved",
-        description: "Your fraud detection preferences have been updated.",
+        description: "Your fraud detection preferences have been updated."
       });
     } catch (error) {
 
@@ -52,7 +51,7 @@ export function FraudDetectionSettings() {
       toast({
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSaving(false);

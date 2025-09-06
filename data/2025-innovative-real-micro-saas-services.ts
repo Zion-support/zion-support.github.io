@@ -71,11 +71,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
         'Custom KPI tracking',
         'Mobile - responsive design',
         'API for third - party integrations',
-        '24 / 7 AI monitoring and alerts',
+        '24 / 7 AI monitoring and alerts'
       ],
       popular: true,
 
-      icon: '📊',
+      icon: '📊'
 
 
     ];
@@ -293,7 +293,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants',;
 export interface EnhancedRealMicroSaasService {;
   id: string,;
   name: string,;

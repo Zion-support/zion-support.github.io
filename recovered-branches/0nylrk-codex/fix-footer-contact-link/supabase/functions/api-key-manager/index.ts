@@ -12,8 +12,6 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 
 
 
@@ -516,7 +514,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
 
 ;
 // Create a Supabase client;
-const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
+const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,;
 const supabase = createClient(supabaseUrl, supabaseKey),;
 serve(async (req) => {;
@@ -1147,9 +1145,7 @@ expiresAt?: string | null
   keyId: string 
 }//Create a Supabase client //Handle CORS for browser requests if (req.method === 'OPTIONS') {
   return new Response ('ok', {
-  headers: {
-  
-}
+  headers: {}
 });
 async function createApiKey (userId: string, name: string, scopes: string[], expiresAt: string | null = null) {
   try {

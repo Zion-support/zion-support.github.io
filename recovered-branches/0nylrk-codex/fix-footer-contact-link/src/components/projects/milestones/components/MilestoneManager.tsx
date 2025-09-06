@@ -29,7 +29,7 @@ export function MilestoneManager({;
       toast.error("Failed to approve milestone")
     }
 
-  },
+  }
   
 
   }
@@ -102,8 +102,6 @@ refetch: () => Promise<void>
 }projectId, milestones, activities, isLoading, isClient, isTalent, paymentTerms, isSubmitting, onCreateMilestone, onUpdateStatus, onDeleteMilestone, onUploadDeliverable, refetch 
 }: MilestoneManagerProps) {
   const handleMilestoneApproved = async (milestoneId: string) => {
-  try {
-  
-}
+  try {}
 
 

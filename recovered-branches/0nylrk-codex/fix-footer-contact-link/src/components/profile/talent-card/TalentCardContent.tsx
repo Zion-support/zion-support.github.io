@@ -15,7 +15,7 @@ export function TalentCardContent({
   summary,
   bio,
   timezone,
-  skills,
+  skills
 }: TalentCardContentProps) {
 
   const [isHovering, setIsHovering] = useState(false);
@@ -47,9 +47,6 @@ import { MapPin } from "lucide-react",;
 import { TalentCardSkills } from "./TalentCardSkills",;
 
 
-import React, { useState } from "react",;
-import { MapPin } from "lucide-react",;
-import { TalentCardSkills } from "./TalentCardSkills",;
 
       {/* Location */}
       {timezone && (;

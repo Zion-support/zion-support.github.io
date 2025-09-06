@@ -106,6 +106,9 @@ describe('Analytics', () => {'}
   test('applies correct styling', () => {'}
     render(<Analytics />);
   });
+});
+});
+});
 '
 describe('Analytics', () => {'
   test('renders without crashing', () => {'

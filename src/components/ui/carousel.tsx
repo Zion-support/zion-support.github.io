@@ -45,7 +45,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1];
-type CarouselOptions = {;
+type CarouselOptions = {
   axis?: 'x' | 'y';
   [key: string]: any;
 }
@@ -138,7 +138,6 @@ const Carousel = React.forwardRef<
 
 import * as React from &quot;react & quot;
 import useEmblaCarousel from &quot;embla - carousel - react & quot;
-import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { cn } from &quot;@/lib / utils & quot;
 import { Button } from &quot;@/components / ui / button & quot;
 

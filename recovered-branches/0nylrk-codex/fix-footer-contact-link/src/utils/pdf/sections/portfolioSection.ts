@@ -135,7 +135,7 @@ export function addPortfolioSection(;
   doc.line(20, yPos, 100, yPos),;
   yPos += 8,;
   // Limit the number of projects shown based on maxProjects parameter;
-  const displayProjects = projects.slice(0, maxProjects),;
+  const displayProjects = projects.slice(0, maxProjects);
   for (const project of displayProjects) {;
     // Check if we need to add a new page;
     if (yPos > 260) {;
@@ -266,9 +266,6 @@ if ( {) {
 ;
 
 
-import { jsPDF } from 'jspdf',;
-import { PortfolioProject } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
 ;
 export function addPortfolioSection(;
   doc:jsPDF,;

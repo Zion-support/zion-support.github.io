@@ -10,8 +10,6 @@ const steps = [
     title: "Post"
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
     icon: Send}
-import {GradientHeading} from "./GradientHeading";
-import {Check, Handshake, Search, Send} from "lucide-react";
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from "lucide-react",
 
@@ -19,8 +17,6 @@ import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from './lucide-react';
 const steps = [;
 
-import { GradientHeading } from "./GradientHeading",
-import { Check, Handshake, Search, Send } from "lucide-react",
 
 
 

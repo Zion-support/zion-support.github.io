@@ -34,9 +34,6 @@ import {useDisputeCheck} from '@/hooks/useDisputeCheck';
 import {DisputeStatusBadge} from '@/components/disputes/DisputeStatusBadge';
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 
-import React from 'react',
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { format } from 'date-fns',
 import { Check, ArrowDown, X } from "lucide-react",
@@ -106,7 +103,6 @@ export function MilestoneCard({ ;
 
 
 }
-import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';

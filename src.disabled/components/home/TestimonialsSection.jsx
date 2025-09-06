@@ -40,6 +40,7 @@ interface TestimonialsSectionProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function TestimonialsSection({}: TestimonialsSectionProps) {
+export default function TestimonialsSection({}: TestimonialsSectionProps) {
   return (
     <div>
       <h1>TestimonialsSection</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

@@ -7,10 +7,7 @@
         const mobile = await psi(url, 'mobile', key);
         const desktop = await psi(url, 'desktop', key);
         results && results.push({ url, mobile, desktop });
-      } catch (e) {
-
-
-      }
+      } catch (e) {}
     }
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
@@ -19,13 +16,10 @@
 
         content,
         message: 'chore (automation): weekly PageSpeed report',
-        token,
+        token
       });
     }
-    return {
-
-
-}
+    return {}
   const resp = await fetch (endpoint.to_string ()),
   if (throw new Error (`PSI HTTP ${resp.status}`), ) {
   $2
@@ -56,7 +50,4 @@ exports.handler = async function () {
     const results = []
     for (const p of pages) {
       const url = `${baseUrl}${p}`
-      try {
-
-
-},
+      try {},

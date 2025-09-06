@@ -131,7 +131,7 @@ print (data)`;
 
 
 }),;
-const data = await response.json(),;
+const data = await response.json();
 // // // console.log(data),`,;
                 python: `import requests;
 headers = {;
@@ -242,7 +242,7 @@ print(data)`;
               }}
 
             />;
-  ],
+  ]
   ];
   ],
   "meta": {
@@ -755,7 +755,6 @@ print(data)`;
 const data = await response.json(),;
 // // // console.log(data),`,;
                 python:`import requests;
-import json;
 ;
 headers = {;
     'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';}
@@ -879,7 +878,7 @@ print(data)`;
     "deadline": "2025-06-30T23:59:59Z"
 
 
-  },
+  }
 
 
 
@@ -899,10 +898,7 @@ print(data)`;
     description: 'We need an experienced React developer...',
     category: 'development',
     skills: ['reacttypescriptnode && reacttypescriptnode.js'],
-    budget: {
-
-
-})
+    budget: {})
 
 const data = await response && response.json()
 console && console.log(data),`
@@ -929,7 +925,6 @@ const data = await response.json(),
 
 
                 python: `import requests
-import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 
@@ -1183,7 +1178,7 @@ print(data)`;
               }}
 
             />;
-  ],
+  ]
   ];
   ],
   "meta": {
@@ -1392,7 +1387,6 @@ print(data)`;
 const data = await response.json(),;
 // // // console.log(data),`,;
                 python: `import requests;
-import json;
 headers = {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
 }
@@ -1581,7 +1575,6 @@ console.log(data),`;
 const data = await response && response.json()
 console && console.log(data),`
                 python: `import requests
-import json
     requester_email: 'john@example.com';
   });
 });
@@ -1589,7 +1582,6 @@ import json
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
-import json;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }

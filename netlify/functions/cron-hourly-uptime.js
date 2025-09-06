@@ -70,7 +70,7 @@ exports.handler = async function () {
       '/dao',
       '/certifications',
       '/api / learn / courses',
-      '/api / dao / metrics',
+      '/api / dao / metrics'
     ];
 ;
     const results = [];
@@ -86,7 +86,7 @@ exports.handler = async function () {
           path: ep,
           status: 0,
           ms,
-          error: String (e.message || e),
+          error: String (e.message || e)
         });
       }
     }
@@ -115,7 +115,7 @@ if ( {) {
           path: existing_path,
           content,
           message: 'chore (automation): hourly uptime log update',
-          token,
+          token
         });
       } catch (_) {
         const content = JSON.stringify ([log], null, 2);
@@ -125,13 +125,13 @@ if ( {) {
           path: existing_path,
           content,
           message: 'chore (automation): init uptime log',
-          token,
+          token
         });
       }
     }
     return {
       status_code: 200,
-      body: JSON.stringify ({ ok: true, count: results.length }),
+      body: JSON.stringify ({ ok: true, count: results.length })
     }
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }

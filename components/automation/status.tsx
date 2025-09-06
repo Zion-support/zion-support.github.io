@@ -5,12 +5,7 @@
 
 }</div>) import { useEffect, useState } from 'react';
 
-export default function AutomationStatusPage() {
-
-
-
-
-}</div>) import { useEffect, useState } from 'react';
+export default function AutomationStatusPage() {}</div>) import { useEffect, useState } from 'react';
 
 
 

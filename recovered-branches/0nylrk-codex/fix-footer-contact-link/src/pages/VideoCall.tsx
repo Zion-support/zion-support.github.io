@@ -30,8 +30,8 @@ export default function VideoCall() {
       id: "user-1",
       name: "You",
       isVideoEnabled: true,
-      isMuted: false,
-    },
+      isMuted: false
+    }
   ]);
 
   const navigate = useNavigate();
@@ -72,7 +72,7 @@ export default function VideoCall() {
   const handleLeaveCall = () => {
     setHasJoined(false),
     toast.info("Call ended", {
-      description: "You have left the meeting",
+      description: "You have left the meeting"
     });
 
     // Navigate back after a short delay
@@ -89,15 +89,15 @@ export default function VideoCall() {
         id: "user-3",
         name: "Taylor Kim",
         isVideoEnabled: false,
-        isMuted: true,
+        isMuted: true
       },
       {
         id: "user-4",
         name: "Jordan Smith",
         isVideoEnabled: true,
         isMuted: false,
-        isScreenSharing: true,
-      },
+        isScreenSharing: true
+      }
     ];
 
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];

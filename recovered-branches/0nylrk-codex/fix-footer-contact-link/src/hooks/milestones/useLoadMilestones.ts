@@ -10,11 +10,8 @@ import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
 
 
-import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
-import {toast} from 'sonner';
-import {Milestone, MilestoneActivity} from './types';
 export const useLoadMilestones = (projectId?: string) => {;
   const { user } = useAuth();
   const [milestones, setMilestones] = useState<Milestone[]>([]);
@@ -250,11 +247,6 @@ if ( {) {
 
 ;
 
-import { useState, useEffect } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { useAuth } from '@/hooks/useAuth',;
-import { toast } from 'sonner',;
-import { Milestone, MilestoneActivity } from './types',;
 ;
 export const useLoadMilestones = (projectId?:string) => {;
   const { user } = useAuth(),;
@@ -329,9 +321,7 @@ export const useLoadMilestones = (projectId?:string) => {;
   data: milestonesData, error: milestonesError 
 }= await supabase .from ('project milestones') .select ('*') .eq ('project id', projectId) if (milestonesError) throw milestonesError;
 setMilestones (milestonesData);
-//Fetch activities for each milestone const activitiesMap: Record<string MilestoneActivity[]> = {
-  
-};
+//Fetch activities for each milestone const activitiesMap: Record<string MilestoneActivity[]> = {};
 for (const milestone of milestonesData) {
   const {
   data: activitiesData, error: activitiesError 

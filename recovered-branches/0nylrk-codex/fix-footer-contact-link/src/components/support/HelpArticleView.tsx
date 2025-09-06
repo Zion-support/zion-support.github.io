@@ -35,7 +35,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
         description:
           type === "helpful"
             ? "We're glad this article was helpful."
-            : "We'll work on improving this article.",
+            : "We'll work on improving this article."
       }));
   };
 
@@ -146,7 +146,7 @@ function format_date (date: string): string {
   return new Date (date).toLocaleDateString ("en - US", {
     year: "numeric",
     month: "long",
-    day: "numeric",
+    day: "numeric"
   });
 }
 
@@ -158,7 +158,7 @@ function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
-    day: "numeric",
+    day: "numeric"
   });
 }
 

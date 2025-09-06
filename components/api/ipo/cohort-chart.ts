@@ -7,9 +7,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
-import type { NextApiRequest, NextApiResponse } from "next";
 
-import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 

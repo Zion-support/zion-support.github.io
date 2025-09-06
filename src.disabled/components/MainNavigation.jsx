@@ -40,6 +40,7 @@ interface MainNavigationProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function MainNavigation({}: MainNavigationProps) {
+export default function MainNavigation({}: MainNavigationProps) {
   return (
     <div>
       <h1>MainNavigation</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

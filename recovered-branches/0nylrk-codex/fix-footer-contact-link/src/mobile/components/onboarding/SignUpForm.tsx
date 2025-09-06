@@ -58,7 +58,7 @@ export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
 export function SignUpForm() {;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth(),;
 
 
@@ -268,14 +268,6 @@ if ( {) {
             <path d="M24 12 && 12.073c0-5 && 5.8-4 && 4.85-10 && 10.5-10 && 10.826-10 && 10.5-6 && 6.02 0-10 && 10.93 4 && 4.7-10 && 10.93 10 && 10.5 0 5 && 5.234 3 && 3.875 9 && 9.575 8 && 8.95 10 && 10.359v-7 && 7.318h-2 && 2.696v-3 && 3.041h2.696V9 && 696V9.898c0-2 && 2.586 1 && 1.581-4 && 4.016 4 && 4.003-4 && 4.016 1 && 1.159 0 2 && 2.37.204 2 && 2.37.204v2 && 204v2.543h-1 && 1.334c-1 && 1.316 0-1 && 1.727.8-1 && 1.727 1 && 1.622v1.95h2 && 95h2.938l-.47 3 && 3.04h-2 && 2.468v7.318C20 && 318C20.125 21 && 21.648 24 17 && 17.307 24 12 && 12.073z" fill="#1877F2" />;
 
 
-import React, { useState } from "react",;
-import { Label } from "@/components/ui/label",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { useNavigate } from "react-router-dom",;
-import { useAuth } from "@/hooks/useAuth",;
-import { AlertCircle } from "lucide-react",;
-import { Alert, AlertDescription } from "@/components/ui/alert",;
 ;
 export function SignUpForm() {;
   const navigate = useNavigate(),;

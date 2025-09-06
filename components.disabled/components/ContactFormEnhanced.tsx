@@ -4,3 +4,5 @@
 
 
 
+// Auto-generated module
+export {};

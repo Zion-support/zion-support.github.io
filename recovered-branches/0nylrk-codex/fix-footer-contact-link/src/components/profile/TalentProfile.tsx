@@ -38,7 +38,7 @@ import {Availability} from "@/types/profile";
     level: 3 // Default level since we don't have this data
 
 
-  })) || [],
+  })) || []
   
 
 

@@ -73,7 +73,7 @@ interface PaymentSummaryProps {
 }
 export const PaymentSummary: React.FC < PaymentSummaryProps> = ({
   milestones,
-  payment_terms,
+  payment_terms
 }) => {
   const total_payment = milestones;
     .reduce ((sum, m) => sum + parse_float (m.amount.to_string ()), 0);

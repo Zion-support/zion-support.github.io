@@ -29,10 +29,7 @@ export default function TranslationManager() {;
       if (res) {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
-          return Object.keys(obj).reduce((acc, key) => {
-
-
-            } else {;
+          return Object.keys(obj).reduce((acc, key) => {} else {;
             const pre = prefix.length ? `${prefix}.` : '';
             // Check condition
 if ( {) {
@@ -67,7 +64,7 @@ if ( {) {
     }),;
     setTranslations(currentTranslations),;
     // Get all unique keys across all languages;
-    const allKeys = new Set<string>(),;
+    const allKeys = new Set<string>();
     Object.values(currentTranslations).forEach(langTranslations => {;
       Object.keys(langTranslations).forEach(key => allKeys.add(key));
     }),;

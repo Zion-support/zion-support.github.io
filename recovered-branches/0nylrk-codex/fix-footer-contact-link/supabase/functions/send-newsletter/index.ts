@@ -35,8 +35,6 @@ import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Resend} from "npm: resend@2.0.0";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { Resend } from "npm: resend@2.0.0",
 
 
 
@@ -182,7 +180,7 @@ serve(async (req) => {;
   }
 ;
   try {;
-    const resendApiKey = Deno.env.get("RESEND_API_KEY"),;
+    const resendApiKey = Deno.env.get("RESEND_API_KEY");
     if (!resendApiKey) {;
       throw new Error("Resend API key is not set in environment variables"),;
     }
@@ -228,9 +226,7 @@ previewText: string;
 body: string;
 testMode?: boolean;
 testEmail?: string 
-}serve (async (req) => {
-  
-}const resend = new Resend (resendApiKey);
+}serve (async (req) => {}const resend = new Resend (resendApiKey);
 const {
   subject, previewText, body, testMode, testEmail 
 }= await req.json () as SendNewsletterRequest;

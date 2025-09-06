@@ -120,8 +120,7 @@ export interface SortFilterProps {;
 }
 ;
 }
-export interface SearchFilterProps {
-}
+export interface SearchFilterProps {}
 
 ;
 

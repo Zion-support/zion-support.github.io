@@ -10,10 +10,10 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
       percentage: 25
 
     }
-    },
+    }
 
 
-    },
+    }
 
 
 
@@ -146,10 +146,6 @@ export function UsageOverview() {;
   return (
 
 
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Progress } from "@/components/ui/progress",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 export function UsageOverview() {;
   // Mock usage data;
   const usage = {;

@@ -32,3 +32,12 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-build-nav-links
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+  "generatedAt": "2025-08-26T13:27:56.076Z",
+  "functions": [];
+}
+  "functions": [],
+  "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
+}
+  "generatedAt": "2025-08-26T22:07:00.945Z",
+  "functions": []
+}

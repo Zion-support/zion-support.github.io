@@ -12,7 +12,7 @@ interface EducationListProps {
 export function EducationList({
   educationEntries,
   onEdit,
-  onDelete,
+  onDelete
 }: EducationListProps) {
   if (!educationEntries || educationEntries.length === 0) {
 

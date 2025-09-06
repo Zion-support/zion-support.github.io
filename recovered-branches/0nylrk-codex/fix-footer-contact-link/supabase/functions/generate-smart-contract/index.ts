@@ -128,7 +128,7 @@ if ( {) {
             role: 'user',;
             content: prompt}],;
         temperature: 0.7})}),;
-    const data = await response.json(),;
+    const data = await response.json();
     if (!response.ok) {;
       throw new Error(data.error?.message || 'Failed to generate smart contract');
     }

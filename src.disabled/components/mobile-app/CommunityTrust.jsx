@@ -40,6 +40,7 @@ interface CommunityTrustProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function CommunityTrust({}: CommunityTrustProps) {
+export default function CommunityTrust({}: CommunityTrustProps) {
   return (
     <div>
       <h1>CommunityTrust</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

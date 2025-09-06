@@ -73,7 +73,7 @@ if (=== offer.talent_slug) {
 if ( {) {
   $2
 }
-    throw new Error ('Authentication required'),
+    throw new Error ('Authentication required')
   }
   return user;
 }

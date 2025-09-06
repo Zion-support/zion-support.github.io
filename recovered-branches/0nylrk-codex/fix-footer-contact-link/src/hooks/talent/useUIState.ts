@@ -10,11 +10,7 @@ export function useUIState() {;
 import { useState  } from 'react';
 import { TalentProfile } from '@/types/talent';
 export function useUIState() {
-import {useState} from 'react';
-import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
-import {useState} from 'react';
-import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
 
 
@@ -23,7 +19,6 @@ export function useUIState() {;
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
   const [expandedSections, setExpandedSections] = useState({
 
-import {useState} from 'react';
 import {TalentProfile} from '@/types / talent';
 export /**
  * useUIState - Function description
@@ -126,8 +121,6 @@ export function useUIState() {;
 
 }
 
-import { useState } from 'react',;
-import { TalentProfile } from '@/types/talent',;
 ;
 export function useUIState() {;
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false),;

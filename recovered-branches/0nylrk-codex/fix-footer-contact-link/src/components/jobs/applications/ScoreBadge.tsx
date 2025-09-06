@@ -18,7 +18,6 @@ export function ScoreBadge(): any ({ application }: ScoreBadgeProps) {;
 
 
 
-import { JobApplication } from "@/types/jobs";
 interface ScoreBadgeProps {
   application: JobApplication;
 }
@@ -62,7 +61,7 @@ interface ScoreBadgeProps {;
 }
 ;
 export function ScoreBadge({ application }: ScoreBadgeProps) {;
-  const score = application.match_score || 0,;
+  const score = application.match_score || 0;
 
 
   // Determine color based on score;

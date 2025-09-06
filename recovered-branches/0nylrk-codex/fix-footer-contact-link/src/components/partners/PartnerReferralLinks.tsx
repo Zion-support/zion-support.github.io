@@ -230,7 +230,7 @@ export function PartnerReferralLinks() {;
   const [customParam, setCustomParam] = useState<string>(""),;
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
   // Get the base referral link;
-  const baseLink = getReferralLink(),;
+  const baseLink = getReferralLink();
   const handleCopyLink = (link: string) => {;
     navigator.clipboard.writeText(link),;
     toast({;

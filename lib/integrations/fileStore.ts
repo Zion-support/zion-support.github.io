@@ -34,7 +34,7 @@ function ensureDataDir (): void {
 
       connections: [],
       logs: [],
-      overrides: [],
+      overrides: []
 
 
   }

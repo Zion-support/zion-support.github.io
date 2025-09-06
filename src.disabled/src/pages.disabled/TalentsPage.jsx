@@ -40,6 +40,7 @@ interface TalentsPageProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function TalentsPage({}: TalentsPageProps) {
+export default function TalentsPage({}: TalentsPageProps) {
   return (
     <div>
       <h1>TalentsPage</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

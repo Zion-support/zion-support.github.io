@@ -27,7 +27,6 @@ import {
   FormLabel,
   FormMessage} from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea",
-import {
   Select,
   SelectContent,
   SelectItem,
@@ -109,7 +108,6 @@ import {;
   FormLabel,;
   FormMessage} from "@/components/ui/form",;
 import { Textarea } from "@/components/ui/textarea",;
-import {;
   Select,;
   SelectContent,;
   SelectItem,;
@@ -128,7 +126,7 @@ const formSchema = z.object({;
     .min(20, { message:"Description must be at least 20 characters" }),;
   attachments:z.array(z.any()).optional()}),;
 ;
-type DisputeFormProps = {;
+type DisputeFormProps = {
   projectId:string,;
   milestoneId?:string,;
   onDisputeCreated?:(disputeId:string) => void,;
@@ -218,7 +216,7 @@ export function DisputeForm({ ;
   };
 
   const removeFile = (index: number) => {;
-    const newFiles = [...files],;
+    const newFiles = [...files];
     newFiles && newFiles.splice(index, 1);
     setFiles(newFiles);
     form && form.setValue("attachments", newFiles);

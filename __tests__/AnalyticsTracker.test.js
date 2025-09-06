@@ -34,6 +34,8 @@ import AnalyticsTracker from '../components/AnalyticsTracker';
 
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
   test('displays correct content', () => {
     render(<AnalyticsTracker />);
   });

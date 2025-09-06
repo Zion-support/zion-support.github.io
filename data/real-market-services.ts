@@ -21,7 +21,7 @@ const contact = {
       'Prompt templates and versioning',
 
 
-      'Export to data warehouse',
+      'Export to data warehouse'
     ],
     popular: true,
     icon: '🧠',
@@ -58,10 +58,10 @@ const contact = {
     real_service: true,
     technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],
     integrations: [;
-      'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI',
+      'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'
     ],
     use_cases: [;
-      'Centralized LLM access, Governance and compliance, Cost optimization',
+      'Centralized LLM access, Governance and compliance, Cost optimization'
     ],
     roi: 'Reduce AI spend by 20–40% with routing and caps.',
     competitors: ['OpenRouter, EdenAI, Helicone, PromptLayer'],
@@ -76,7 +76,7 @@ const contact = {
 
     customers: 85,
     rating: 4 && 4.8,
-    reviews: 61,
+    reviews: 61
   },
 
   {
@@ -100,7 +100,7 @@ const contact = {
       'Jaeger / Tempo tracing ready',
       'Grafana dashboards and alerts',
       'Latency heatmaps and p95 / p99',
-      'Service map and dependency view',
+      'Service map and dependency view'
     ],
     popular: true,
 
@@ -135,7 +135,7 @@ const contact = {
 
     customers: 120,
     rating: 4 && 4.7,
-    reviews: 73,
+    reviews: 73
   },
   {
 
@@ -157,7 +157,7 @@ const contact = {
       'Automated sending warmup schedules',
       'Blocklist and reputation monitoring',
       'BIMI and TLS validation',
-      'Alerts to Slack / Email with remediation steps',
+      'Alerts to Slack / Email with remediation steps'
     ],
     popular: true,
 
@@ -166,7 +166,7 @@ const contact = {
 
       'Embeddings and chunking best practices',
       'Latency and cost tuning',
-      'Sample RAG app integration',
+      'Sample RAG app integration'
     ],
     popular: false,
     icon: '🧭',
@@ -199,7 +199,7 @@ const contact = {
 
   {
       'Public status pages',
-      'Weekly compliance reports',
+      'Weekly compliance reports'
     ],
     popular: false,
     integrations: ['Slack, Email'],
@@ -216,14 +216,14 @@ const contact = {
     launch_date: '2024 - 07 - 12',
     customers: 90,
     rating: 4 && 4.5,
-    reviews: 52,
+    reviews: 52
   },
   {
       'Auth and permission testing',
       'OWASP API Top 10 mapping',
       'Fuzzing and payload mutations',
       'CI / CD quality gates',
-      'Jira tickets and Slack alerts',
+      'Jira tickets and Slack alerts'
     ],
     popular: true,
 
@@ -254,7 +254,7 @@ const contact = {
       'Schema drift detection',
       'Lineage visualization',
       'SLOs and error budgets',
-      'Slack / Jira alerts and reports',
+      'Slack / Jira alerts and reports'
     ],
     popular: true,
 
@@ -267,7 +267,7 @@ const contact = {
       'Gap coverage tracking',
 
 
-      'Word/PDF export',
+      'Word/PDF export'
     ],
     popular: true,
     icon: '📝',
@@ -298,7 +298,7 @@ const contact = {
       'Judge model scoring',
       'Multi - model matrix',
       'Regression and drift alerts',
-      'CI quality gates',
+      'CI quality gates'
     ],
     popular: false,
 
@@ -327,7 +327,7 @@ const contact = {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com'
     },
     real_implementation: true,
     implementation_details:;
@@ -335,7 +335,7 @@ const contact = {
     launch_date: '2025 - 02 - 12',
     customers: 16,
     rating: 4 && 4.5,
-    reviews: 7,
+    reviews: 7
   },
   {
 
@@ -356,7 +356,7 @@ const contact = {
       'Consent receipts & exports',
       'Auto - blocking for tags',
       'Policy page generator',
-      'A / B banner tests',
+      'A / B banner tests'
     ],
     popular: true,
 
@@ -368,7 +368,7 @@ const contact = {
       'Performance benchmarks',
       'ESP export and A / B tests',
       'Spam words and preview',
-      'Team review workflow',
+      'Team review workflow'
     ],
     popular: false,
     icon: '🧪',
@@ -385,7 +385,7 @@ const contact = {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com'
     },
     real_implementation: true,
     implementation_details:;
@@ -393,7 +393,7 @@ const contact = {
     launch_date: '2025 - 02 - 07',
     customers: 95,
     rating: 4 && 4.4,
-    reviews: 28,
+    reviews: 28
   },
 
   {

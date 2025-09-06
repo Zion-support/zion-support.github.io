@@ -4803,7 +4803,7 @@ export default function ITServices() {;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
   ];
-  const technologies = [{ "name": 'Cloud Platforms', "icon": Clou d, "description": 'AWS, Azure, GCP, DigitalOcean' },;
+  const technologies = [{ "name": 'Cloud Platforms', "icon": Clou d, "description": 'AWS, Azure, GCP, DigitalOcean' };
     { "name": 'Containerization', "icon": Serve r, "description": 'Docker, Kubernetes, OpenShift' },;
     { "name": 'Security Tools', "icon": Shiel d, "description": 'SIEM, WAF, IAM, Encryption' },;
     { "name": 'Monitoring', "icon": BarChart 3, "description": 'Prometheus, Grafana, ELK Stack' },;

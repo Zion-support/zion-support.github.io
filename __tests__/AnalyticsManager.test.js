@@ -106,6 +106,9 @@ describe('AnalyticsManager', () => {'}
   test('applies correct styling', () => {'}
     render(<AnalyticsManager />);
   });
+});
+});
+});
 '
 describe('AnalyticsManager', () => {'
   test('renders without crashing', () => {'

@@ -106,6 +106,9 @@ describe('Button', () => {'}
   test('applies correct styling', () => {'}
     render(<Button />);
   });
+});
+});
+});
 '
 describe('Button', () => {'
   test('renders without crashing', () => {'

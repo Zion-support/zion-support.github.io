@@ -154,7 +154,7 @@ function StatusIcon() {
     shortlisted: 3,
     interview: 4,
     hired: 5,
-    rejected: 5,
+    rejected: 5
   }
 ;
   const current_rank = status_rank[current];

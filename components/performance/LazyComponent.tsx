@@ -25,7 +25,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 }
 ;
 export default LazyComponent;
-import React from 'react'
 },
 
     <Suspense fallback={fallback}>

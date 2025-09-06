@@ -41,7 +41,7 @@ function handler() {
       supabase;
         .from ('search_matches');
         .select ('talent_id, tag');
-        .eq ('talent_id', talent_id),
+        .eq ('talent_id', talent_id)
     ]);
     const views =;
       views_r.status === 'fulfilled' && views_r.value.data;
@@ -83,7 +83,7 @@ function handler() {
       top_tags: Object.entries (tag_counts);
         .sort ((a, b) => b[1] - a[1]);
         .slice (0, 5);
-        .map (([label, value]) => ({ label, value })),
+        .map (([label, value]) => ({ label, value }))
     });
   } catch (e) {
     res.status (200).json ({
@@ -94,8 +94,8 @@ function handler() {
       top_tags: [;
         { label: 'react', value: 2 },
         { label: 'node', value: 1 },
-        { label: 'ai', value: 1 },
-      ],
+        { label: 'ai', value: 1 }
+      ]
     });
   }
 }

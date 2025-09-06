@@ -17,7 +17,7 @@ const syncLogs = [
     timestamp: "2024-05-20T12:30:45Z"
     details: "Successfully synced contact data for Job #1234"
 
-  },
+  }
 
 
   }
@@ -32,7 +32,7 @@ const syncLogs = [
     timestamp: "2024-05-20T10:15:22Z"
     details: "New applicant created in Greenhouse from Zion application"
 
-  },
+  }
 
 
   }
@@ -47,7 +47,7 @@ const syncLogs = [
     timestamp: "2024-05-19T16:45:12Z"
     details: "Failed to update deal - API rate limit exceeded"
 
-  },
+  }
 
 
   }
@@ -62,7 +62,7 @@ const syncLogs = [
     timestamp: "2024-05-19T14:22:33Z"
     details: "Job synced but some fields were skipped due to mapping issues"
 
-  },
+  }
 
 
   }
@@ -95,7 +95,7 @@ export function IntegrationsSyncLog() {
         return <Badge variant="outline">Unknown</Badge>
     }
 
-  },
+  }
   
 
   }

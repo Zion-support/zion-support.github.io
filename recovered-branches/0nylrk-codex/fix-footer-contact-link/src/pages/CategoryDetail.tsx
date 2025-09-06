@@ -21,7 +21,7 @@ export default function CategoryDetail() {
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
 
-    },
+    }
 
 
     }
@@ -33,7 +33,7 @@ export default function CategoryDetail() {
       description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
 
-    },
+    }
 
 
     }
@@ -45,7 +45,7 @@ export default function CategoryDetail() {
       description: "Generate high-quality content for your projects"
       icon: <PenLine className="w-6 h-6" />
 
-    },
+    }
 
 
     }
@@ -57,7 +57,7 @@ export default function CategoryDetail() {
       description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
 
-    },
+    }
 
 
     }
@@ -69,7 +69,7 @@ export default function CategoryDetail() {
       description: "Image and video processing solutions"
       icon: <Eye className="w-6 h-6" />
 
-    },
+    }
 
 
     }
@@ -81,7 +81,7 @@ export default function CategoryDetail() {
       description: "Intelligent automation for your workflow"
       icon: <Bot className="w-6 h-6" />
 
-    },
+    }
 
 
     }
@@ -93,7 +93,7 @@ export default function CategoryDetail() {
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
 
-    },
+    }
 
 
     }
@@ -106,10 +106,10 @@ export default function CategoryDetail() {
       icon: <Code className="w-6 h-6" />
 
     }
-    },
+    }
 
 
-    },
+    }
 
 
 
@@ -191,7 +191,7 @@ export default function CategoryDetail() {
         description: `Your quote request for ${listing.title} has been sent.`
 
 
-      }),
+      })
       
 
 

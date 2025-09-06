@@ -68,7 +68,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'Neuromorphic hardware integration',
         'Custom neural model development',
         'Performance optimization tools',
-        'Research collaboration platform',
+        'Research collaboration platform'
       ],
       popular: true,
 

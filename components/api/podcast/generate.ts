@@ -99,8 +99,8 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     const episode = {
         intro: '00:00',
         segments: [],
-        closing: '14:30',
-      },
+        closing: '14:30'
+      }
     }
 
     const episodes = readEpisodes();
@@ -124,7 +124,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       youtube_description: generated.youtube_description || '',
       spotify_description: generated.spotify_description || '',
       best_quote: generated.best_quote || '',
-      audio: {},
+      audio: {}
     }
     episodes.unshift (episode);
     write_episodes (episodes);
@@ -144,9 +144,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 }
 
 }
-    const episode = {
-
-}
+    const episode = {}
 }
     const episode = {
 

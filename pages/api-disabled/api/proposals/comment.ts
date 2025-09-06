@@ -201,7 +201,7 @@ res.status(405).json({ error: "Method not allowed" });
 }
 export default function handler($2) {;
   res.status(200).json({ message: 'API endpoint' });
-const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json'),;
+const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json');
 async function ensure() {;
   await fs.ensureFile(FILE_PATH);
   try { await fs.readJson(FILE_PATH) } catch { await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 })   } catch (error) {;

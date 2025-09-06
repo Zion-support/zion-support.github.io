@@ -470,7 +470,7 @@ export default function EquipmentDetail() {;
   const [quantity, setQuantity] = useState(1),;
   const [isAdding, setIsAdding] = useState(false),;
   // In a real app, this would fetch from an API;
-  const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined,;
+  const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
   if (!equipment) {;
     return (;
       <>;

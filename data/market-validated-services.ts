@@ -27,7 +27,7 @@
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
-      'Access controls',
+      'Access controls'
     ],
     category: 'AI & Search',
 
@@ -39,7 +39,7 @@
     customers: 410,
     trial_days: 14,
     setup_time: '2 hours',
-    contact_info,
+    contact_info
   },
 
 

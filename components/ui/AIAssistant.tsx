@@ -28,7 +28,7 @@ class ErrorBoundary extends React.Component {
   defaultPrompt,
   systemPrompt,
   onAccept,
-  authorizationToken,
+  authorizationToken
 }: AIAssistantProps) {;
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);

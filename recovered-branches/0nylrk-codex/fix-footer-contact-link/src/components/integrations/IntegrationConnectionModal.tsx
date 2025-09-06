@@ -431,7 +431,7 @@ function IntegrationConnectionModal() {
     autoCreateContacts: true,
     push_notes: false,
     syncJobDetails: true,
-    syncApplicantData: true,
+    syncApplicantData: true
   });
 ;
   const handleConnectOAuth = () =>: any {
@@ -495,7 +495,7 @@ function IntegrationConnectionModal() {
                     onCheckedChange={(checked) =>;
                       setSyncSettings ({
                         ...sync_settings,
-                        autoCreateContacts: checked as boolean,
+                        autoCreateContacts: checked as boolean
                       });
                     }
                   />;
@@ -510,7 +510,7 @@ function IntegrationConnectionModal() {
                     onCheckedChange={(checked) =>;
                       setSyncSettings ({
                         ...sync_settings,
-                        push_notes: checked as boolean,
+                        push_notes: checked as boolean
                       });
                     }
                   />;
@@ -523,7 +523,7 @@ function IntegrationConnectionModal() {
                     onCheckedChange={(checked) =>;
                       setSyncSettings ({
                         ...sync_settings,
-                        syncJobDetails: checked as boolean,
+                        syncJobDetails: checked as boolean
                       });
                     }
                   />;
@@ -536,7 +536,7 @@ function IntegrationConnectionModal() {
                     onCheckedChange={(checked) =>;
                       setSyncSettings ({
                         ...sync_settings,
-                        syncApplicantData: checked as boolean,
+                        syncApplicantData: checked as boolean
                       });
                     }
                   />;

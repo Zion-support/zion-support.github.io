@@ -59,10 +59,7 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = 
     link: "/services/2027-revolutionary-micro-saas",
     category: "Revolutionary 2027 Micro SAAS",
     realImplementation: true,
-    contactInfo: {
-
-
-    }
+    contactInfo: {}
   }
 ];
 

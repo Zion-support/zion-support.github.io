@@ -156,13 +156,6 @@ const talentsData = [;
             variant={browseType === "jobs" ? "default" : "ghost"}
             className="rounded-full"
 
-import React, { useState } from "react",;
-import { MobileHeader } from "../components/common/MobileHeader",;
-import { BottomNavigation } from "../components/common/BottomNavigation",;
-import { BrowseFilters } from "../components/browse/BrowseFilters",;
-import { BrowseCards } from "../components/browse/BrowseCards",;
-import { Button } from "@/components/ui/button",;
-import { useAuth } from "@/hooks/useAuth",;
 ;
 // Mock data for demonstration;
 const jobsData = [;
@@ -239,7 +232,7 @@ const talentsData = [;
 ;
 export function MobileBrowse() {;
   const { user } = useAuth(),;
-  const isClient = user?.userType === 'employer' || user?.userType === 'buyer',;
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" :"jobs"),;
   ;
   const handleViewDetails = (id:string) => {;

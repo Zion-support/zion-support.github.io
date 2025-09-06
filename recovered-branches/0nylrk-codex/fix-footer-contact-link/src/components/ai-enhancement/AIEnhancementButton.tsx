@@ -108,7 +108,7 @@ export function AIEnhancementButton({;
       return;
     }
 ;
-    const enhancedContent = await enhanceContent(options),;
+    const enhancedContent = await enhanceContent(options);
     if (enhancedContent) {;
       setGeneratedContent(enhancedContent),;
       setShowActions(true);

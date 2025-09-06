@@ -140,9 +140,6 @@ if ( {) {
 
 }
 
-import { jsPDF } from 'jspdf',;
-import { ResumeBasicInfo } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
 ;
 export function addBasicInfoSection(;
   doc:jsPDF,;
@@ -175,7 +172,7 @@ export function addBasicInfoSection(;
     doc.setTextColor(colors.text),;
     ;
     // Split text into multiple lines to fit within page width;
-    const summaryLines = doc.splitTextToSize(basicInfo.summary, 170),;
+    const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
     doc.text(summaryLines, 20, yPos),;
     yPos += (summaryLines.length * 6) + 10,;
   }

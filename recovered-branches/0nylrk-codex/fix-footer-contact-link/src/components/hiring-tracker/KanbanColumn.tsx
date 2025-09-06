@@ -61,7 +61,7 @@ function KanbanColumn() {
 
   const getColumnBgColor = (columnId: string) => {
     switch (columnId) {
-      case "hired": return "bg-green-50",
+      case "hired": return "bg-green-50"
 
 
   }

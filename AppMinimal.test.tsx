@@ -71,3 +71,8 @@ describe('AppMinimal'
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+  it('handles user interactions', () => {
+    render(<AppMinimal />);
+    // Add interaction tests here
+  });
+});

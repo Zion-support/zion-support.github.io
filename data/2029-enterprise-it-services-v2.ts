@@ -1,7 +1,5 @@
 
-export interface EnterpriseITService2029V2 {
-
-    }
+export interface EnterpriseITService2029V2 {}
   }
 ];
 

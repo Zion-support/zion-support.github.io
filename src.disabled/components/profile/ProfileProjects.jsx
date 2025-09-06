@@ -40,6 +40,7 @@ interface ProfileProjectsProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function ProfileProjects({}: ProfileProjectsProps) {
+export default function ProfileProjects({}: ProfileProjectsProps) {
   return (
     <div>
       <h1>ProfileProjects</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

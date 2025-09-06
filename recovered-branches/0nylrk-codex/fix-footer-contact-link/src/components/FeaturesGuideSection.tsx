@@ -49,7 +49,7 @@ export function FeaturesGuideSection() {
       link: "/services"
       buttonText: "View Services"
 
-    },
+    }
 
 
     }
@@ -488,10 +488,6 @@ export function FeaturesGuideSection() {;
                     <Link to={feature && feature.link}>;
                       {feature && feature.buttonText}
 
-import { Link } from "react-router-dom",;
-import { GradientHeading } from "./GradientHeading",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Button } from "./ui/button",;
 import { ;
   Users,;
   Zap, ;

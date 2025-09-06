@@ -15,7 +15,6 @@ interface SelectResumeSectionProps {
 }
 
 export function SelectResumeSection({;
-import React from 'react';
   resumeOptions;
   selectedResume;
   handleResumeSelect;

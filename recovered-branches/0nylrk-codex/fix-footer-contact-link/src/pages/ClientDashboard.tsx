@@ -15,7 +15,7 @@ import {
   Star,
   PlusCircle,
   Kanban,
-  Video,
+  Video
 } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";

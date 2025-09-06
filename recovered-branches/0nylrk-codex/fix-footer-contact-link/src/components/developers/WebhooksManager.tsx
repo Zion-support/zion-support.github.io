@@ -88,7 +88,7 @@ export function WebhooksManager() {
     createWebhook,
     toggleWebhook,
     deleteWebhook,
-    testWebhook,
+    testWebhook
 
   } = useWebhooks();
   const [showCreateDialog, setShowCreateDialog] = useState(false);

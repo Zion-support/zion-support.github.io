@@ -33,11 +33,11 @@ export interface Innovative2025Service {
       'Emotional response generation',
       'Cultural context awareness',
       'Privacy - preserving processing',
-      'Multi - language support',
+      'Multi - language support'
     ],
     popular: true,
 
-    icon: '💝',
+    icon: '💝'
 
 
   }

@@ -30,27 +30,27 @@ reviews: 167;
     ];
 
 
-    popular: true, icon: '🔍',
+    popular: true, icon: '🔍'
 
     ];
 
-    popular: true, icon: '🤖',
+    popular: true, icon: '🤖'
 
     ];
 
-    popular: false, icon: '⚡',
+    popular: false, icon: '⚡'
 
     ];
 
-    popular: false, icon: '📊',
+    popular: false, icon: '📊'
 
     ];
 
-    popular: true, icon: '🛡️',
+    popular: true, icon: '🛡️'
 
     ];
 
-    popular: false, icon: '📈',
+    popular: false, icon: '📈'
 
   }
 ];

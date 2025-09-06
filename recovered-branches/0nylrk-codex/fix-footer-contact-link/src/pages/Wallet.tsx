@@ -5,7 +5,7 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-  CardDescription,
+  CardDescription
 } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { BadgeDollarSign } from "lucide-react";

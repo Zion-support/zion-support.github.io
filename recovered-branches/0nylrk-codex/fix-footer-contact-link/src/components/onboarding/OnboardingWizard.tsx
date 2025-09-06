@@ -65,7 +65,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
   const [currentStep, setCurrentStep] = useState(0),
   const navigate = useNavigate(),
-  const { user } = useAuth(),
+  const { user } = useAuth()
 
   
 
@@ -101,7 +101,7 @@ interface OnboardingWizardProps {
 
       },
       skipText: "Skip for now"
-    },
+    }
 
 
 
@@ -146,7 +146,7 @@ interface OnboardingWizardProps {
     }
       },
       skipText: "I'll do this later"
-    },
+    }
       },
       skipText: "I'll do this later"
     },
@@ -163,7 +163,7 @@ interface OnboardingWizardProps {
 
       },
       skipText: "Skip for now"
-    },
+    }
 
 
 
@@ -188,12 +188,12 @@ interface OnboardingWizardProps {
     }
       },
       skipText: "Skip for now"
-    },
+    }
 
 
       },
       skipText: "Skip for now"
-    },
+    }
 
 
 
@@ -318,14 +318,6 @@ interface OnboardingWizardProps {
 
   return (
 
-import { useState, useEffect } from 'react',;
-import { useNavigate } from 'react-router-dom',;
-import { useAuth } from '@/hooks/useAuth',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
-import Rocket from 'lucide-react/dist/esm/icons/rocket',;
-import { FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react',;
-import { cn } from '@/lib/utils',;
 ;
 interface WizardStep {;
   title:string,;
@@ -346,7 +338,7 @@ interface OnboardingWizardProps {;
 ;
 export function OnboardingWizard({ type, onComplete, onSkip, className } OnboardingWizardProps) {;
   const [currentStep, setCurrentStep] = useState(0),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const { user } = useAuth(),;
   ;
   // Define steps based on user type;

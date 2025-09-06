@@ -21,7 +21,7 @@ import ReputationDisplay from "@/components/community/ReputationDisplay";
       icon: "Trophy"
       color: "#F59E0B"
 
-    },
+    }
 
 
     }

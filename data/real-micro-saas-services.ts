@@ -1332,12 +1332,10 @@
     customers: 19
     rating: 4.6
     reviews: 6
-  },];
+  }];
 // Helper functions
 
-export const getServicesByCategory = (category: string) => {
-
-  }, ];
+export const getServicesByCategory = (category: string) => {} ];
 ;
 // Helper functions;
 export const getServicesByCategory = (category: string) =>: any {
@@ -1493,7 +1491,7 @@ export const service_categories = [;
   'Biotechnology & Healthcare',
   'Financial Technology',
   'Education Technology',
-  'Enterprise IT',
+  'Enterprise IT'
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';

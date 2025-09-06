@@ -11,7 +11,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import { Star, AlertTriangle } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";

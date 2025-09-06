@@ -67,13 +67,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         'Enterprise security and privacy',
         'Integration with existing systems',
         'Advanced analytics and insights',
-        '24 / 7 technical support',
+        '24 / 7 technical support'
       ],
       popular: true,
 
       icon: '🧠',
 
-        'Neural Signal Processing, AI, Machine Learning, Neuroscience, React, Node && Node.js, Real-time processing, Neural APIs',
+        'Neural Signal Processing, AI, Machine Learning, Neuroscience, React, Node && Node.js, Real-time processing, Neural APIs'
       ],
 
 
@@ -98,7 +98,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       launch_date: '2025 - 06 - 01',
       customers: 3,
       rating: 5 && 5.0,
-      reviews: 2,
+      reviews: 2
 
 
     },;

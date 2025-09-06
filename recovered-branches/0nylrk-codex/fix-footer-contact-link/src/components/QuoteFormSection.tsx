@@ -9,8 +9,6 @@ export function QuoteFormSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
-import { GradientHeading } from "./GradientHeading";
-import { useState } from "react";
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
 
@@ -224,7 +222,7 @@ import { useState } from "react",
                     "Storage Solutions",
                     "Networking",
                     "24/7 Support",
-                    "Recycling Services",
+                    "Recycling Services"
                   ].map((item, index) => (
                     <div key={index} className="flex items-center">
 
@@ -425,7 +423,7 @@ function QuoteFormSection() {
                     "Storage Solutions",
                     "Networking",
                     "24 / 7 Support",
-                    "Recycling Services",
+                    "Recycling Services"
                   ].map ((item, index) => (
                     <div key={index} className="flex items - center">;
                       <input;

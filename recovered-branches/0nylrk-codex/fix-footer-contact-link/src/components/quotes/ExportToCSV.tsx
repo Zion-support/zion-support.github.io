@@ -162,9 +162,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
             ? `$${quote.budget_min}`;
 
 
-import { Button } from "@/components/ui/button",;
-import { Download } from "lucide-react",;
-import type { QuoteRequest } from "@/types/quotes",;
 ;
 interface ExportToCSVProps {;
   quotes:QuoteRequest[],;
@@ -214,7 +211,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       );
     ].join('\n'),;
     // Create download link;
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),;
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
     const url = URL.createObjectURL(blob),;
     const link = document.createElement('a'),;
     link.setAttribute('href', url),;

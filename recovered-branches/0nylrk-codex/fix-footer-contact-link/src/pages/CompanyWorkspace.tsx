@@ -34,7 +34,7 @@ export default function CompanyWorkspace() {
     ? {
         primaryColor: tenant?.primary_color || company.theme?.primaryColor,
         backgroundColor: company.theme?.backgroundColor || "var(--background)",
-        textColor: company.theme?.textColor || "var(--foreground)",
+        textColor: company.theme?.textColor || "var(--foreground)"
       }
     : company.theme;
 
@@ -63,7 +63,7 @@ export default function CompanyWorkspace() {
         className="min-h-screen"
         style={{
           backgroundColor:
-            effectiveTheme?.backgroundColor || "var(--background)",
+            effectiveTheme?.backgroundColor || "var(--background)"
         }}
       >
         <CompanyDashboard company={company} />
@@ -210,7 +210,6 @@ textColor: company.theme?.textColor || 'var (--foreground) '
   if (!hasAccess) {
 
     return <Navigate to="/unauthorized" />  }
-import React from "react";
 
 export default function CompanyWorkspace() {_const { companySlug} = useParams() as {_companySlug?: string};
   const {_user} = useAuth();

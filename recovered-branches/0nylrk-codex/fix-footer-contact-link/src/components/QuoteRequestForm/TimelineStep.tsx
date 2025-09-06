@@ -9,7 +9,7 @@ import { CalendarIcon } from "@/components/icons";
 import {
   Popover,
   PopoverContent,
-  PopoverTrigger,
+  PopoverTrigger
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";

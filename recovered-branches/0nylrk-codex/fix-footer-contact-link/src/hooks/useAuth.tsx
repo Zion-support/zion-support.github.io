@@ -126,7 +126,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       avatarUrl: "",
       profileComplete: true,
       role: "enterprise_admin",
-      permissions: ["billing_access", "admin_access", "team_management"],
+      permissions: ["billing_access", "admin_access", "team_management"]
 
 
 

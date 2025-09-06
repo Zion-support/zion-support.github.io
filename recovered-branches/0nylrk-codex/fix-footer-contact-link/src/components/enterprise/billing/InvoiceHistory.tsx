@@ -24,8 +24,6 @@ import { toast } from "@/hooks/use-toast",
 
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
-import { Input } from "@/components/ui/input",
-import { toast } from "@/hooks/use-toast",
 
 
 export function InvoiceHistory() {

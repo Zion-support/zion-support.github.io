@@ -83,10 +83,7 @@ if ( {) {
         return
       }
       setReferralCode(data)
-    } catch (error) {
-
-
-    } finally {
+    } catch (error) {} finally {
       setIsLoading (false);
     }
 
@@ -476,7 +473,7 @@ if ( {) {
         .eq('user_id', user.id),;
       if (rewardsError) throw rewardsError,;
       // Calculate stats;
-      const totalReferrals = referrals ? referrals.length : 0,;
+      const totalReferrals = referrals ? referrals.length : 0;
       const pendingReferrals = referrals ? referrals.filter(r => r.status === 'pending').length : 0,;
       const completedReferrals = referrals ? referrals.filter(r => r.status === 'completed').length : 0,;
       const totalRewards = rewards ? rewards.reduce((sum, item) => {;
@@ -851,9 +848,7 @@ const {
   data, error 
 }= await supabase 
 }setReferralCode (data) 
-}catch (error) {
-  
-}finally {
+}catch (error) {}finally {
   setIsLoading (false) 
 }
 };
@@ -901,9 +896,7 @@ return `$ {
 //Copy the referral link to clipboard const copyReferralLink = () => {
   const link = getReferralLink ();
 navigator.clipboard.writeText (link);
-toast ({
-  
-}
+toast ({}
 };
 //Share on social media platforms return;
 }

@@ -14,7 +14,7 @@ export const real2026Q2Additions = [
       'GitHub',
       'Azure OpenAI',
       'Vertex AI',
-      'Datadog',
+      'Datadog'
     ],
     competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
     price: '$2, 500',
@@ -25,7 +25,7 @@ export const real2026Q2Additions = [
     setup_time: 'Fast',
     market_position: 'Strong enterprise traction with compliance - led buyers',
     roi: 'Reduce audit prep by 60% and non - compliance risk by 40%',
-    link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub',
+    link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub'
 
   },
 
@@ -42,12 +42,12 @@ export const real2026Q2Additions = [
       'Class balancing, minority class boosters',
       'Bias and fairness testing with reports',
       'Evaluation dashboard with KS / JS metrics',
-      'SDKs for Python / JS and API access',
+      'SDKs for Python / JS and API access'
     ],
     use_cases: [;
       'MSPs and IT providers',
       'Internal IT for SMBs',
-      'BYOD governance',
+      'BYOD governance'
     ],
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],
@@ -60,7 +60,7 @@ export const real2026Q2Additions = [
 
       'Training data augmentation',
       'Privacy - preserving analytics',
-      'Test data generation',
+      'Test data generation'
     ],
     integrations: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],
     competitors: ['Mostly AI', 'Gretel', 'YData'],
@@ -76,7 +76,7 @@ export const real2026Q2Additions = [
 
       'MSPs and IT providers',
       'Internal IT for SMBs',
-      'BYOD governance',
+      'BYOD governance'
     ],
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],

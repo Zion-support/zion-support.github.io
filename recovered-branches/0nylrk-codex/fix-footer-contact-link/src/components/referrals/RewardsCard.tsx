@@ -29,7 +29,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 
 } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
@@ -45,7 +45,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 
 } from '@/components / ui / card';
 import { ReferralReward  } from '@/types / referrals';

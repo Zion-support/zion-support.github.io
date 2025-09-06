@@ -81,7 +81,7 @@ export function DisputeDashboard() {;
     refetch(),;
   }, [refetch]),;
 ;
-  const openDisputes = disputes.filter(d => d.status === 'open'),;
+  const openDisputes = disputes.filter(d => d.status === 'open');
   const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),;
   const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),;
 ;
@@ -162,7 +162,7 @@ export function DisputeDashboard() {;
           <CardContent>
 
 
-                  width: `${Math && Math.min(100, (openDisputes && openDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
+                  width: `${Math && Math.min(100, (openDisputes && openDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`
                 }}></div>;
             </div>;
           </CardContent>;

@@ -1,5 +1,10 @@
 
 
+    // Fix double commas in import statements
+
+    // Fix double commas in import statements;
+    const doubleCommaRegex = /,\s*,/g;
+    const fixedContent = content.replace(doubleCommaRegex, ",");
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
 
@@ -51,7 +56,7 @@ if ( {) {
             "apps && apps.backup",
             "backup-merge-conflicts",
             "apps",
-            "temp_exclude",
+            "temp_exclude"
 
 
           ].includes(item)

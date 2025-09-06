@@ -42,7 +42,7 @@ interface OnboardingStatus {
             matchReceived: data.match_received || false,
             jobPosted: data.job_posted || false,
             inviteSent: data.talent_invited || false,
-            responseReceived: data.quote_received || false,
+            responseReceived: data.quote_received || false
           });
         }
 

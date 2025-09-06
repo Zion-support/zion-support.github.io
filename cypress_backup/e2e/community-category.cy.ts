@@ -48,6 +48,8 @@ ursor/automate-test-improve-and-merge-code-646c
 });''
 });''
 });''
+});''
+});''
 describe ('community category listing', () => {
   it ('displays posts in Getting Hired category', () => {
     cy.visit ('/community / getting - hired');
@@ -82,3 +84,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 });''
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+});''
+});''
+});''

@@ -373,7 +373,7 @@ export interface QRCodeTemplate {;
         name: 'Business Card';
     address?: string;
   }): Promise<QRCodeResult> {;
-    const vcard = this.generateVCard(data),;
+    const vcard = this.generateVCard(data);
     return this.generateQRCode({;
       text: vcard,;
       size: 300,;
@@ -586,8 +586,7 @@ export interface QRCodeTemplate {;
     if (options && options.size && (options && options.size < 64 || options && options.size > 1024)) {
       throw new Error('Size must be between 64 and 1024 pixels')
     }
-    if (options && options.margin && (options && options.margin < 0 || options && options.margin > 10)) {
-      }
+    if (options && options.margin && (options && options.margin < 0 || options && options.margin > 10)) {}
     ]
   }
 
@@ -609,10 +608,7 @@ export interface QRCodeTemplate {;
       throw new Error('Size must be between 64 and 1024 pixels')
     }
     
-    if (options && options.margin && (options && options.margin < 0 || options && options.margin > 10)) {
-
-
-  }
+    if (options && options.margin && (options && options.margin < 0 || options && options.margin > 10)) {}
   private validateOptions(options: QRCodeOptions): void {
     if (!options.text |options.text.trim().length === 0) {
       throw new Error('Text content is required')

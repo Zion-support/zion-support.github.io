@@ -8,8 +8,6 @@ export interface WhitelabelTenant {;
 import { useState, useEffect  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
 
 
@@ -183,7 +181,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
 ;
       try {;
         // Get the current hostname, fallback to localhost if not available;
-        const hostname = window.location.hostname || 'localhost',;
+        const hostname = window.location.hostname || 'localhost';
         const functionName = 'tenant-detector',;
         // Build the query parameters;
         const params = externalSubdomain;
@@ -283,8 +281,6 @@ export function useTenantAdminStatus(tenantId?: string) {;
 
         ) {
           message = 'Unable to reach the server. Please check your internet connection and try again.'
-import { useState, useEffect } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
 ;
 export interface WhitelabelTenant {;
   id:string,;

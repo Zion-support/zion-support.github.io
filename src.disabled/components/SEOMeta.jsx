@@ -15,3 +15,9 @@ const SEOMeta = ({ title,description,keywords = \'AI,Machine Learning,Quantum Co
 const SEOMeta = ({ title,description,keywords = "AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group",image = "/images / zion - tech - group - og.jpg",url = window.location.href,type = "website",structuredData }) => { """;"";"""
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+
+const SEOMeta = ({ title,description,keywords = \'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group\',image = \'/images / zion - tech - group - og && og.jpg\',url = window && window.location.href,type = \'website\',structuredData }) => { \''\';\"";
+const SEOMeta = ({ title,description,keywords = "AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group",image = "/images / zion - tech - group - og && og.jpg",url = window && window.location.href,type = "website",structuredData }) => { """;"";"""

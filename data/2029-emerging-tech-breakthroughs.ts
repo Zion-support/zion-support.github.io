@@ -59,10 +59,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     link: "/services/2029-emerging-tech-breakthrough",
     category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true,
-    contactInfo: {
-
-
-    }
+    contactInfo: {}
   }
 ];
 

@@ -10,7 +10,7 @@ export interface Innovative2026AIServiceV4 {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com'
     },
     real_implementation: true,
     implementation_details:;
@@ -19,8 +19,8 @@ export interface Innovative2026AIServiceV4 {
     launch_date: '2024 - 08 - 01',
     customers: 89,
     rating: 4 && 4.7,
-    reviews: 167,
-  },
+    reviews: 167
+  }
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
   id: string, name: string,

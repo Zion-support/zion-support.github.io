@@ -78,8 +78,6 @@ export default function EnhancedButton({
   variant = 'primary',
   size = 'md',
   fullWidth,
-import React from "react";
-import clsx from "clsx";
 export type EnhancedButtonProps =
   React.ButtonHTMLAttributes<HTMLButtonElement> & {;
     variant?: "primary" | "secondary" | "ghost";

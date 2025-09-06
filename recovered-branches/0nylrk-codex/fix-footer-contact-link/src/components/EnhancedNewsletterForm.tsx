@@ -11,8 +11,6 @@ export function EnhancedNewsletterForm() {;
   const [isSubmitted, setIsSubmitted] = useState(false);
 
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
     // Simulate API call;
     setTimeout(() => {;
@@ -252,10 +250,6 @@ function EnhancedNewsletterForm() {
     </div>
 
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { useState } from "react",;
-import { Mail } from "lucide-react",;
 export function EnhancedNewsletterForm() {;
   const [email, setEmail] = useState(""),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -324,9 +318,7 @@ export function EnhancedNewsletterForm() {;
   ),; const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault ();
 setIsSubmitting (true);
-//Simulate API call setTimeout ( () => {
-  
-};
+//Simulate API call setTimeout ( () => {};
 }</div>) ) 
 }</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) 
 }

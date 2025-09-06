@@ -104,7 +104,7 @@ export default function ListingDetail() {;
 
     return (;
   // Find the listing from our shared data source - now also checking equipment listings;
-  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),;
+  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {;
     return (;
 

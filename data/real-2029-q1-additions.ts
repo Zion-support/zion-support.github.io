@@ -24,7 +24,7 @@
     launchDate: '2025-02-12',
     customers: 18,
     rating: 4.5,
-    reviews: 9,
+    reviews: 9
 
   },;
 

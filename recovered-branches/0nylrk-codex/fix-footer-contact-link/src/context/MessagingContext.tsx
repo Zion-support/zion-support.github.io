@@ -185,7 +185,7 @@ if ( {) {
 // Hook for using the messaging context;
 export function useMessaging():MessagingContextType {;
   // Cast to avoid type errors when React type definitions are missing;
-  const context = useContext(MessagingContext) as MessagingContextType,;
+  const context = useContext(MessagingContext) as MessagingContextType;
   if (context === undefined) {;
     throw new Error('useMessaging must be used within a MessagingProvider'),;
   }

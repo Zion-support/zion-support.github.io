@@ -23,10 +23,8 @@ export const PROJECTS: Project[] = [
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 
-import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 import { Project } from '@/types/projects';
-import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 
 
@@ -48,9 +46,9 @@ export const PROJECTS: Project[] = [
     talent_profile: {
 
       full_name: 'Alexandra Chen',
-      professional_title: 'Senior AI Engineer',
-    },
-  },
+      professional_title: 'Senior AI Engineer'
+    }
+  }
 ];
 }];      title: "AI Dashboard Development";
       description: "Develop dashboards using React and integrate ML models"

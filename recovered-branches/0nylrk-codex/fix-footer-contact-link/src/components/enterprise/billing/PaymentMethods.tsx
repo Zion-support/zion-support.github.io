@@ -18,7 +18,7 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       expYear: 2026,
 
 
-      isDefault: false,
+      isDefault: false
     },;
   ];
       isDefault: false}
@@ -119,7 +119,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { CreditCard, Plus, Trash  } from './lucide-react';
@@ -136,7 +136,7 @@ function PaymentMethods() {
       last4: "4242",
       exp_month: 12,
       exp_year: 2025,
-      is_default: true,
+      is_default: true
     },
     {
       id: "pm - 2",
@@ -145,8 +145,8 @@ function PaymentMethods() {
       last4: "8888",
       exp_month: 4,
       exp_year: 2026,
-      is_default: false,
-    },
+      is_default: false
+    }
   ];
 ;
   return (

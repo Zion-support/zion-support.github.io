@@ -62,7 +62,6 @@ interface HireRequest {
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
-import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
 
 
 
@@ -186,7 +185,7 @@ serve(async (req) => {;
     const { talent, requester, project } = requestData,;
     ;
     // Format budget for display;
-    const budgetDisplay = `$${project.budgetMin.toLocaleString()} - $${project.budgetMax.toLocaleString()}`,;
+    const budgetDisplay = `$${project.budgetMin.toLocaleString()} - $${project.budgetMax.toLocaleString()}`;
     ;
     // 1. Optional:Enhance content with AI;
     let enhancedContent:EnhancedContent | null = null,;

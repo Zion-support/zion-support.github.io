@@ -14,21 +14,21 @@ import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
       label: "Complete your profile",
       completed: onboardingStatus.profileCompleted,
       link: "/profile",
-      action: "Update",
+      action: "Update"
     },
     {
       id: "skills",
       label: "Add your top skills",
       completed: onboardingStatus.skillsAdded,
       link: "/profile/skills",
-      action: "Add Skills",
+      action: "Add Skills"
     },
     {
       id: "availability",
       label: "Set your availability",
       completed: onboardingStatus.availabilitySet,
       link: "/profile/availability",
-      action: "Set",
+      action: "Set"
     },
     {
 
@@ -40,8 +40,8 @@ import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
       completed: onboardingStatus.matchReceived,
       link: "/talent-dashboard",
 
-      action: "View Matches",
-    },
+      action: "View Matches"
+    }
   ];
 
 
@@ -68,29 +68,29 @@ function TalentOnboardingSteps() {
       label: "Complete your profile",
       completed: onboarding_status.profile_completed,
       link: "/profile",
-      action: "Update",
+      action: "Update"
     },
     {
       id: "skills",
       label: "Add your top skills",
       completed: onboarding_status.skills_added,
       link: "/profile / skills",
-      action: "Add Skills",
+      action: "Add Skills"
     },
     {
       id: "availability",
       label: "Set your availability",
       completed: onboarding_status.availability_set,
       link: "/profile / availability",
-      action: "Set",
+      action: "Set"
     },
     {
       id: "match",
       label: "Receive your first job match",
       completed: onboarding_status.match_received,
       link: "/talent - dashboard",
-      action: "View Matches",
-    },
+      action: "View Matches"
+    }
   ];
 ;
   return <OnboardingTracker steps={steps} />;
@@ -105,7 +105,7 @@ import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",;
 ;
 export function TalentOnboardingSteps() {;
   const { user } = useAuth(),;
-  const onboardingStatus = useOnboardingStatus(),;
+  const onboardingStatus = useOnboardingStatus();
   ;
   const steps:OnboardingStep[] = [;
     {;
@@ -168,8 +168,8 @@ return <OnboardingTracker steps= {
   steps 
 }/> 
 }
-      action: "View Matches",
-    },
+      action: "View Matches"
+    }
   ];
 
   return <OnboardingTracker steps={steps} />;

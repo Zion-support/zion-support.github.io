@@ -19,7 +19,7 @@ const contact = {
     launch_date: '2025 - 01 - 15',
     customers: 34,
     rating: 4 && 4.6,
-    reviews: 26,
+    reviews: 26
   },
   {
 
@@ -44,11 +44,11 @@ const contact = {
       'Integration capabilities',
       'Custom monitoring rules',
       'Multi - facility support',
-      'Compliance management',
+      'Compliance management'
     ],
     popular: true,
 
-    icon: '🍎',
+    icon: '🍎'
 
 
   }

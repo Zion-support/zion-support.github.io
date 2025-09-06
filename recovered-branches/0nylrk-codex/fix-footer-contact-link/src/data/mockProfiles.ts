@@ -7,7 +7,7 @@
           'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=500 & h=300',
 
         tags: ['Finance', 'Analytics', 'Python'],
-        date: 'Jun 2023',
+        date: 'Jun 2023'
       },
 
       {
@@ -38,7 +38,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         imageUrl:
       {
         tags: ['Finance', 'Analytics', 'Python'],
-        date: 'Jun 2023',
+        date: 'Jun 2023'
       },
       {
         id: 'p2'
@@ -62,8 +62,8 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       }
     ]
         tags: ['Logistics', 'Optimization', 'AI'],
-        date: 'Jan 2023',
-      },
+        date: 'Jan 2023'
+      }
     ],
     experience: [
       {
@@ -122,16 +122,16 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
           'Built a state-of-the-art facial recognition system using deep learning.'
         imageUrl:
         tags: ['Computer Vision', 'Deep Learning', 'Python'],
-        date: 'Sep 2023',
+        date: 'Sep 2023'
       },
       {
         tags: ['NLP', 'API', 'Python'],
-        date: 'May 2023',
+        date: 'May 2023'
       },
       {
         tags: ['Predictive Analytics', 'IoT', 'Machine Learning'],
-        date: 'Dec 2022',
-      },
+        date: 'Dec 2022'
+      }
     ],
         current: true
       }
@@ -166,11 +166,11 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         { day: 'Friday', hours: '10:00 AM - 2:00 PM' }
       ]
     }
-  },};        { day: "Monday", hours: "10:00 AM - 6:00 PM" }
+  }};        { day: "Monday", hours: "10:00 AM - 6:00 PM" }
 
 
 
-        current: true,
+        current: true
       },
       {
         id: 'e2',
@@ -219,8 +219,8 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
       {
         id: 'e3',
         role: 'Data Scientist',
-        company: 'DataCorp',
-      },
+        company: 'DataCorp'
+      }
     ],
     availability: {
       status: 'available',
@@ -228,8 +228,8 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
         { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Wednesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },
-        { day: 'Friday', hours: '10:00 AM - 2:00 PM' },
-      ],
+        { day: 'Friday', hours: '10:00 AM - 2:00 PM' }
+      ]
     },
         { day: "Friday", hours: "10:00 AM - 2:00 PM" }
       ];

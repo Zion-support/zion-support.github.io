@@ -41,7 +41,7 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
   size: number;
 
 
-  uploaded_at: string,
+  uploaded_at: string
 
 }
 

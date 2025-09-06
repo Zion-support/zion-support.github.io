@@ -42,7 +42,7 @@ const mockTalent: SearchResult[] = [
     price: 75,
     location: "Remote",
     skills: ["react", "javascript", "typescript", "node"],
-    keywords: ["frontend", "web", "ui"],
+    keywords: ["frontend", "web", "ui"]
   },
   {
     id: "2",
@@ -53,8 +53,8 @@ const mockTalent: SearchResult[] = [
     price: 65,
     location: "New York",
     skills: ["react", "node", "python", "postgresql"],
-    keywords: ["fullstack", "web", "api"],
-  },
+    keywords: ["fullstack", "web", "api"]
+  }
 ];
 
 const mockJobs: SearchResult[] = [
@@ -67,8 +67,8 @@ const mockJobs: SearchResult[] = [
     price: 80000,
     location: "San Francisco",
     skills: ["react", "javascript", "css"],
-    keywords: ["frontend", "web", "ui"],
-  },
+    keywords: ["frontend", "web", "ui"]
+  }
 ];
 
 const mockProjects: SearchResult[] = [
@@ -81,8 +81,8 @@ const mockProjects: SearchResult[] = [
     price: 15000,
     location: "Remote",
     skills: ["react", "node", "mongodb"],
-    keywords: ["ecommerce", "web", "fullstack"],
-  },
+    keywords: ["ecommerce", "web", "fullstack"]
+  }
 ];
 
 export function searchAll(
@@ -164,7 +164,7 @@ export function searchAll(
     all: filteredResults,
     talent: filteredResults.filter((r) => r.type === "talent"),
     jobs: filteredResults.filter((r) => r.type === "job"),
-    projects: filteredResults.filter((r) => r.type === "project"),
+    projects: filteredResults.filter((r) => r.type === "project")
   };
 }
 

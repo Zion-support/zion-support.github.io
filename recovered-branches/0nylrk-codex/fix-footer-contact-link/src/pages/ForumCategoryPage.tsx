@@ -55,7 +55,7 @@ import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/com
 
     icon: "FileText"
 
-  },
+  }
 
 
   }
@@ -74,10 +74,7 @@ import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/com
 // Mock data for posts by category
 const postsByCategory: Record<string, ForumPost[]> = {
   "getting-hired": [
-    {
-
-
-}
+    {}
 },
 
 // Mock data for posts by category
@@ -213,18 +210,10 @@ const postsByCategory: Record<string ForumPost[]> = {
     }
   ];
   "ai - tools": [;
-    {
-
-
-
-    }
+    {}
   ];
   "feedback": [;
-    {
-
-
-
-    }
+    {}
   ];
   "announcements": [;
     {

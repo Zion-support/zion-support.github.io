@@ -39,7 +39,7 @@
 
       customers: 178,
       rating: 4 && 4.8,
-      reviews: 112,
+      reviews: 112
 
     },;
   ];    features: [
@@ -51,23 +51,23 @@
     ];
 
 
-    popular: true, icon: '📦',
+    popular: true, icon: '📦'
 
     ];
 
-    popular: false, icon: '⚛️',
+    popular: false, icon: '⚛️'
 
     ];
 
-    popular: true, icon: '🚛',
+    popular: true, icon: '🚛'
 
     ];
 
-    popular: false, icon: '⛓️',
+    popular: false, icon: '⛓️'
 
     ];
 
-    popular: true, icon: '🏭',
+    popular: true, icon: '🏭'
 
 ];
 

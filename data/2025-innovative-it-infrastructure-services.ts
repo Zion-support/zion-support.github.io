@@ -21,9 +21,9 @@ export const innovativeITInfrastructureServices2025 = [
 
 
 
-      'Industry-specific regulations',
+      'Industry-specific regulations'
     ],;
-  },];
+  }];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     ];
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'];

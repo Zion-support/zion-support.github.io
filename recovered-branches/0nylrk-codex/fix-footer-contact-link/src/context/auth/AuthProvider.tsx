@@ -139,22 +139,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           if (event === 'SIGNED_OUT') {
             handleSignedOut()
 
-import React, { useEffect } from "react",;
-import { supabase, getFromProfiles } from "../../integrations/supabase/client",;
-import { useAuthOperations } from "../../hooks/useAuthOperations",;
-import { AuthContext } from "./AuthContext",;
-import { cleanupAuthState } from "../../utils/authUtils",;
-import { useNavigate, useLocation } from 'react-router-dom',;
-import { useAuthState } from "./useAuthState",;
-import { useAuthEventHandlers } from "./useAuthEventHandlers",;
-import { mapProfileToUser } from "./profileMapper",;
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
   const {;
     user, setUser,;
     isLoading, setIsLoading,;
     onboardingStep, setOnboardingStep;
   } = useAuthState(),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const location = useLocation(),;
   const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),;
   const {;

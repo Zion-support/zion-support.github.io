@@ -18,7 +18,7 @@
   };
 };
 
-type FormItemContextValue = {;
+type FormItemContextValue = {
   id: string,;
 };
 
@@ -86,7 +86,7 @@ export {
   FormDescription,
   FormMessage,
 
-  FormField,
+  FormField
 }
 ;
   FormField} const Form = FormProvider type FormFieldContextValue = {
@@ -188,7 +188,7 @@ React.HTMLAttributes<HTMLParagraphElement> > ( ({
 
 
 
-  FormField,
+  FormField
 }
 ;
 

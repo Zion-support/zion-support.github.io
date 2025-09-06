@@ -62,7 +62,7 @@ export type AmlCheckResult = {
   status: "clear" | "match" | "review" | "unknown";
 };
 
-export type AmlCheckResult = {;
+export type AmlCheckResult = {
 export type WatchlistMatch = {
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;

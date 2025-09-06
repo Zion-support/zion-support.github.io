@@ -14,7 +14,7 @@ export function JobMatchesCard({
   match,
   onApply,
   onDecline,
-  showApplied = false,
+  showApplied = false
 }: JobMatchCardProps) {;
   const job = match.job;
 
@@ -47,7 +47,7 @@ interface JobMatchCardProps {;
 }
 ;
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false } JobMatchCardProps) {;
-  const job = match.job,;
+  const job = match.job;
   ;
   if (!job) return null,;
   ;
@@ -116,13 +116,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                 <Badge key={i} variant="secondary" className="text-xs">
 
 
-import { useState } from "react",;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react",;
-import { format } from "date-fns",;
-import { JobMatch } from "@/types/jobs",;
 interface JobMatchCardProps {;
   match: JobMatch,;
   onApply: (matchId: string, jobId: string) => void,;
@@ -381,7 +374,7 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-  CardFooter,
+  CardFooter
 } from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';

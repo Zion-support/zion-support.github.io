@@ -51,7 +51,7 @@ const contact = {
 
       customers: 24,
       rating: 4 && 4.3,
-      reviews: 18,
+      reviews: 18
 
     },;
 
@@ -71,10 +71,7 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {;
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
-) => {
-
-
-  })
+) => {})
 }
 
 

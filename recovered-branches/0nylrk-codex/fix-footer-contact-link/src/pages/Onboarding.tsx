@@ -63,10 +63,7 @@ export default function Onboarding() {
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
       return
-    } else if (type === "talent") {
-
-
-  },
+    } else if (type === "talent") {},
 
 
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
@@ -104,7 +101,7 @@ export default function Onboarding() {
         profileComplete: true
 
 
-      }),
+      })
       
 
 
@@ -121,7 +118,7 @@ export default function Onboarding() {
         _status: true
 
 
-      }),
+      })
       
 
 
@@ -230,7 +227,7 @@ export default function Onboarding() {
       return,;
     }
     ;
-    const dbUserType = mapUserTypeToDatabase(userType),;
+    const dbUserType = mapUserTypeToDatabase(userType);
     ;
     try {;
       await updateProfile({ ;

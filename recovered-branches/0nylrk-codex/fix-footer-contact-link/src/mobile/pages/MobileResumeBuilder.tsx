@@ -5,7 +5,7 @@ import { BottomNavigation } from "../components/common/BottomNavigation";
 import {
   MobileResumeBuilder,
   as,
-  ResumeBuilderComponent,
+  ResumeBuilderComponent
 } from "../components/resume/MobileResumeBuilder";
 export function MobileResumeBuilder() {
 

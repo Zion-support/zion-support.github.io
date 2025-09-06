@@ -6,6 +6,10 @@ const WebVitals = dynamic(() => import("./WebVitals"),{'; loading: () => <p>Load
 ursor/automate-test-improve-and-merge-code-646c
 
 
+const WebVitals = dynamic(() => import("./WebVitals"),{'; loading: () => <p>Loading...</p,>}) export: 'default WebVitals' ,'
+</p>'
+</p>'
+</p>'
 
 
 </p>'

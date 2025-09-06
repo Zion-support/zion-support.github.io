@@ -17,7 +17,7 @@ export function VideoCallRoom({
   token,
   serverUrl,
   onDisconnect,
-  className,
+  className
 }: VideoCallRoomProps) {
   return (
     <Card className={className || "w-full max-w-3xl mx-auto"}>

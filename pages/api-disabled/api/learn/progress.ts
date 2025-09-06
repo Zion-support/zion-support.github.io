@@ -209,7 +209,7 @@ export default function handler($2) {;
     if (req.method === 'GET') {;
       const { userId = 'demo-user', courseId, lessonId, percent } = req.body || {},;
       if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },;
+      const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
       const courseProgress = user.progress[courseId] || { completedLessons: [], percent: 0, completed: false },;
       if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {;
         courseProgress.completedLessons.push(lessonId);

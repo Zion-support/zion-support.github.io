@@ -239,7 +239,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
       "Singapore": "SGT",;
       "default": "Local timezone";
     },;
-    const timezone = timeZones[country] || timeZones["default"],;
+    const timezone = timeZones[country] || timeZones["default"];
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;
            `Response times are typically within 4 hours for metropolitan areas. ` +;
            `Please have site access permissions and contact details ready for our technicians. ` +;

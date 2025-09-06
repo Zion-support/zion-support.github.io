@@ -6,8 +6,6 @@ import {cn} from '@/lib/utils';
 
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
-import * as React from "react"
-import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
 
 
@@ -20,7 +18,6 @@ const Separator = React.forwardRef<
   (
 
 
-import { cn } from "@/lib/utils"
 
 
 
@@ -34,7 +31,6 @@ import { cn } from "@/lib/utils"
 
 
 import React from 'react';
-import * as React from 'react';
 
       ref={ref}
       decorative={decorative}
@@ -104,7 +100,6 @@ React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>)
   Separator 
 }
 
-import { cn } from "@/lib/utils"
 
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>

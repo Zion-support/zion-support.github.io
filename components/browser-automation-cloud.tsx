@@ -107,7 +107,7 @@ function BrowserAutomationCloudPage() {
     'Queued jobs with retries and rate limits',
     'Artifacts: HAR, traces, screenshots, videos',
     'Rotating proxies and geo targeting',
-    'Webhook callbacks and REST API',
+    'Webhook callbacks and REST API'
   ];
 ;
   return (
@@ -196,7 +196,7 @@ function BrowserAutomationCloudPage() {
     </div>;
     </section>;
   </main>;
-  </>),
+  </>)
 }
 
 

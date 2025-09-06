@@ -97,13 +97,8 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
 
 }transition= {
-  {
-
-
-}initial= {
-  {
-
-}transition= {
+  {}initial= {
+  {}transition= {
   {
 
 

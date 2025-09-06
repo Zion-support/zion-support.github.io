@@ -321,7 +321,7 @@ export {;
 
       // Implementation of toast functionality;
       console.log ('Toast:', props);
-    },
+    }
   }
 ;
 
@@ -357,7 +357,7 @@ export {;
   ToastAction}
       // Implementation of toast functionality;
       console.log('Toast:', props);
-    },
+    }
   };
 
 }

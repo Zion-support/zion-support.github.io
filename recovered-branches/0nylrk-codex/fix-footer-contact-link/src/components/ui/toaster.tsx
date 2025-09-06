@@ -14,11 +14,11 @@ export function Toaster() {
 
           background: "#0a1429",
           color: "#fff",
-          border: "1px solid #1e3a6f",
+          border: "1px solid #1e3a6f"
         },
         duration: 4000,
 
-        descriptionClassName: "text-zion-slate-light",
+        descriptionClassName: "text-zion-slate-light"
       }}
     />
   );

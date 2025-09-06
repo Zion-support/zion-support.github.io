@@ -25,11 +25,7 @@ export interface EmergingTechService2028 {
     address: string;
   }
 export const emergingTech2028Services: EmergingTechService2028[] = [
-  {
-
-
-
-  }
+  {}
 ;
 export const emergingTech2028Services: EmergingTechService2028[] = [;
   {
@@ -44,7 +40,7 @@ export const emergingTech2028Services: EmergingTechService2028[] = [;
       'Innovation platform',
       'Future capabilities',
       'Advanced features',
-      'Expert insights',
+      'Expert insights'
     ],
     link: '/services / 2028 - emerging - tech - service',
     category: 'Emerging Tech Services 2028',
@@ -53,9 +49,9 @@ export const emergingTech2028Services: EmergingTechService2028[] = [;
 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
 ];      mobile: "+1 302 464 0950";
 
 

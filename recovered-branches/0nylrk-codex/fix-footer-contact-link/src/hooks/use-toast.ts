@@ -53,7 +53,7 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
   title?: string,;
   variant?: "default" | "destructive" | "success";
 },;
-export const useToast = useToastHook,;
+export const useToast = useToastHook;
 // Base toast function that delegates to the implementation from `useToastHook`.;
 function baseToast(props: ToastOptions) {;
   const { toast } = useToastHook(),;

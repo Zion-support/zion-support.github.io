@@ -6,6 +6,10 @@ const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; loading: () => <
 ursor/automate-test-improve-and-merge-code-646c
 
 
+const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; loading: () => <p>Loading...</p,>}) export: 'default SEOOptimizer' ,'
+</p>'
+</p>'
+</p>'
 
 
 </p>'

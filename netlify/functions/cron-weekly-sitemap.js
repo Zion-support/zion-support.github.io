@@ -19,7 +19,7 @@
 
         content: xml,
         message: 'chore (automation): weekly sitemap refresh',
-        token,
+        token
       });
     }
     return {

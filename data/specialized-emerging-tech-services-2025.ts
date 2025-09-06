@@ -64,7 +64,7 @@ const contact = {
     ];
 
 
-    popular: true, icon: '🧠',
+    popular: true, icon: '🧠'
 
 
   }

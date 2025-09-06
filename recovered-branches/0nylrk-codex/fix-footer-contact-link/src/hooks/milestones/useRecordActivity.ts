@@ -35,7 +35,7 @@ export const useRecordActivity = () => {
           user_id: user.id,
           action,
           previous_status: previousStatus,
-          new_status: newStatus,
+          new_status: newStatus
 
 
 

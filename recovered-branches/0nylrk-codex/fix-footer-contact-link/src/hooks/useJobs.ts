@@ -152,7 +152,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   const [jobs, setJobs] = useState<Job[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
-  const clientId = userId || user?.id,;
+  const clientId = userId || user?.id;
   const fetchJobs = async () => {;
     if (!clientId) {;
       setIsLoading(false),;

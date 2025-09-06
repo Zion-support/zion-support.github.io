@@ -9,7 +9,7 @@
       'Guardrail policy engine',
       'Drift and performance alerts',
       'SDKs for JS, Python, Go',
-      'Grafana and Datadog exporters',
+      'Grafana and Datadog exporters'
     ],
     popular: true,
     icon: '📈',

@@ -50,11 +50,11 @@ const Breadcrumb = React.forwardRef<
 
   />));
 Breadcrumb.display_name = 'Breadcrumb';
-    ref = {ref, }
+    ref = {ref }
     aria - label="breadcrumb";
     class_name = {cn (
       "inline - flex items - center gap - 1 text - sm text - zion - slate - light",
-      class_name), }
+      class_name) }
     {...props}
   />));
 Breadcrumb.display_name = 'Breadcrumb';
@@ -101,10 +101,7 @@ BreadcrumbLink.displayName = "BreadcrumbLink"
  
 
 
-const BreadcrumbSeparator = ({
-
-
-}: React.ComponentProps<"li">) => (
+const BreadcrumbSeparator = ({}: React.ComponentProps<"li">) => (
   <li
     role="presentation"
     aria-hidden="true"
@@ -120,12 +117,12 @@ const BreadcrumbSeparator = ({
   />;
 ));
 Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
-    ref = {ref,}
+    ref = {ref}
     aria-label="breadcrumb";
     className = {cn(;
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",;
       className;
-    ),}
+    )}
     {...props}
   />;
 ));
@@ -135,12 +132,7 @@ Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
   React && React.ComponentPropsWithoutRef<'ol'>;
 >(({ className, ...props }, ref) => (;
 
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { ChevronRight } from 'lucide-react'
  
-import { cn } from "@/lib/utils"
-import { ChevronRight } from 'lucide-react';
  
 const Breadcrumb = React.forwardRef<
   HTMLElement,

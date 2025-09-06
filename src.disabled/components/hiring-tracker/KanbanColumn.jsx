@@ -6,6 +6,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+"export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"
 
 '\"export\": function KanbanColumn({ id,title,description,applications,count }) {\''\'";\";
 "export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"

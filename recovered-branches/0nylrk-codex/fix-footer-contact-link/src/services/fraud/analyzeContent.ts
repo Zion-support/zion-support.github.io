@@ -42,7 +42,7 @@ export const analyzeContent = (content: string): AnalysisResult => {
   return {
 
     isSuspicious: reasons.length > 0,
-    reasons,
+    reasons
   };
 
 };

@@ -8,7 +8,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";

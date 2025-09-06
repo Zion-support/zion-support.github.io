@@ -174,7 +174,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
       description: `You've selected ${match.item.title}`});
   },;
   // Extract just the items from each MatchResult for the AIMatchingResults component;
-  const matchItems = matches.map(match => match.item),;
+  const matchItems = matches.map(match => match.item);
   // Map the onSelectMatch handler to work with the item directly;
   const handleItemSelect = (item: any) => {;
     // Find the original MatchResult that contains this item;

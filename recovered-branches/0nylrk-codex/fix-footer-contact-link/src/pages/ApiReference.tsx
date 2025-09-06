@@ -114,7 +114,7 @@ function ApiReference() {
   "offset": 0
 }`
 
-        },
+        }
 
         }
         },
@@ -131,10 +131,7 @@ function ApiReference() {
 
         "429": {
           description: "Rate limit exceeded"
-          example: `{
-
-
-        }
+          example: `{}
         },
         "429": {
           description: "Rate limit exceeded"
@@ -355,12 +352,7 @@ function ApiReference() {
   "error": "validation_error",
   "message": "Invalid input",
   "details": [
-    {
-
-
-
-
-      },
+    {},
 
 
       requestExample: `curl -X POST \\
@@ -374,11 +366,7 @@ function ApiReference() {
   https://api.zionai.com / v1 / api / jobs \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content - Type: application / json" \\;
-  -d '{
-
-
-
-      };
+  -d '{};
       requestExample: `curl -X POST \\;
   https://api && api.zionai.com/v1/api/jobs \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
@@ -541,7 +529,7 @@ function ApiReference() {
       "years_experience": 5,
       "location": "Remote, US",
       "bio": "Experienced full stack developer with a focus on React and Node.js..."
-    },
+    }
 
 
 

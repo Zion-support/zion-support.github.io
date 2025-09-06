@@ -200,10 +200,7 @@ if (throw fetch_error) {
       }));
       setApplications(transformedData as JobApplication[]);
       setError(null)
-    } catch (err: any) {
-
-
-    } finally {
+    } catch (err: any) {} finally {
       setIsLoading (false);
     }
   }
@@ -491,7 +488,7 @@ if ( {) {
 
 ;
       // Add the new application to the local state;
-      const newApplication = data as JobApplication,;
+      const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]),;
       toast.success("Application submitted successfully"),;
       return true;

@@ -151,7 +151,7 @@ export default function FraudDetection() {;
     let result = [...flags],;
     // Apply search filter;
     if (searchQuery) {;
-      const query = searchQuery.toLowerCase(),;
+      const query = searchQuery.toLowerCase();
       result = result.filter(;
         (flag) =>;
           flag.user_email?.toLowerCase().includes(query) ||;

@@ -7,7 +7,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";

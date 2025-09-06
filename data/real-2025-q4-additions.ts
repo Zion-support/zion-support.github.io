@@ -48,7 +48,7 @@ const contact = {
 
       'Affiliate programs',
       'Influencer tracking',
-      'Partnership analytics',
+      'Partnership analytics'
     ],
     roi: 'Increase attributed sales 10–25% with optimized partnerships.',
     competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
@@ -76,7 +76,7 @@ const contact = {
 
     customers: 120,
     rating: 4 && 4.7,
-    reviews: 48,
+    reviews: 48
   },
   {
 
@@ -97,7 +97,7 @@ const contact = {
       'Chapter detection and show notes',
       'Embeddings and semantic search',
       'Export to SRT, VTT, DOCX',
-      'Podcast platform integrations',
+      'Podcast platform integrations'
     ],
     popular: false,
     icon: '🎧',
@@ -130,7 +130,7 @@ const contact = {
     launch_date: '2025 - 09 - 15',
     customers: 60,
     rating: 4 && 4.6,
-    reviews: 22,
+    reviews: 22
   },
   {
 
@@ -143,7 +143,7 @@ const contact = {
 
       'Email/SMS notifications',
 
-      'Analytics on reasons and cost',
+      'Analytics on reasons and cost'
     ],
     popular: false,
     icon: '📦',
@@ -184,7 +184,7 @@ const contact = {
     launch_date: '2025 - 10 - 05',
     customers: 95,
     rating: 4 && 4.6,
-    reviews: 35,
+    reviews: 35
   },
   {
 
@@ -224,7 +224,7 @@ const contact = {
     launch_date: '2025 - 03 - 10',
     customers: 42,
     rating: 4 && 4.6,
-    reviews: 23,
+    reviews: 23
   },
   {
 
@@ -244,7 +244,7 @@ const contact = {
       'Seed data and fixtures',
       'Smoke tests and screenshots',
       'Secrets and policies as code',
-      'Cost and TTL controls',
+      'Cost and TTL controls'
     ],
 
     icon: '🚀',
@@ -275,7 +275,7 @@ const contact = {
     launch_date: '2025 - 03 - 05',
     customers: 27,
     rating: 4 && 4.7,
-    reviews: 16,
+    reviews: 16
   },
   {
 

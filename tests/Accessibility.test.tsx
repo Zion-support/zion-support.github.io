@@ -10,3 +10,7 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 </ModeToggle>'
 </ModeToggle>'
 ursor/automate-test-improve-and-merge-code-646c
+</ModeToggle>'
+</ModeToggle>'
+</ModeToggle>'
+</ModeToggle>'

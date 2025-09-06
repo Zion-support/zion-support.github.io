@@ -75,7 +75,7 @@ export function ProductListingCard({;
   view = 'grid',;
   onRequestQuote;
 }: ProductListingCardProps) {;
-  const isGrid = view === 'grid',;
+  const isGrid = view === 'grid';
   const navigate = useNavigate(),;
   // Get the first image or use a placeholder;
   const imageUrl = listing.images && listing.images.length > 0;

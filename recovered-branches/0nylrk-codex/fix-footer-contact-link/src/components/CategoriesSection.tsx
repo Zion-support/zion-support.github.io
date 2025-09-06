@@ -79,8 +79,7 @@ interface CategoriesSectionProps {;
 
 }
 
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-}
+export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {}
   return (
 
 }

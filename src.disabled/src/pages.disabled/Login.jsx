@@ -40,6 +40,7 @@ interface LoginProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function Login({}: LoginProps) {
+export default function Login({}: LoginProps) {
   return (
     <div>
       <h1>Login</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

@@ -250,7 +250,7 @@ export interface PerformanceMetrics {;
 ;
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {;
     try {;
-      const params = url ? `?url=${encodeURIComponent(url)}` : '',;
+      const params = url ? `?url=${encodeURIComponent(url)}` : '';
       const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {;
         headers: {;
           'Authorization': `Bearer ${this.apiKey}`}}),;

@@ -65,7 +65,7 @@ export function DisputeDetail() {
 
     setIsSending(true);
     try {;
-      const success = await addDisputeMessage(disputeId, message, isAdmin),;
+      const success = await addDisputeMessage(disputeId, message, isAdmin);
       if (success) {;
         // Refresh messages;
         const updatedMessages = await getDisputeMessages(disputeId),;

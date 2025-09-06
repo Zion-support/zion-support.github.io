@@ -71,7 +71,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
   const handleAddSkill = async (data: Skill) => {;
     try {;
       setError(null),;
-      const success = await addSkill(resumeId, data),;
+      const success = await addSkill(resumeId, data);
 
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {
     if (confirm('Are you sure you want to delete this skill?')) {

@@ -134,8 +134,6 @@ export function DisputesList ({
   disputes, isLoading 
 }: DisputesListProps) {
   const filteredDisputes = statusFilter === "all" const getStatusBadgeVariant = (status: DisputeStatus) => {
-  switch (status) {
-  
-}
+  switch (status) {}
 
 

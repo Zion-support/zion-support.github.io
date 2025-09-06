@@ -90,16 +90,6 @@ export default function Analytics() {;
       startDate && startDate.setDate(startDate && startDate.getDate() - days);
 
 
-import React, { useState } from "react",;
-import { useQuery } from "@tanstack/react-query",;
-import { supabase } from "@/integrations/supabase/client",;
-import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",;
-import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary",;
-import { PageViewsTable } from "@/components/analytics/PageViewsTable",;
-import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",;
-import { PageViewsChart } from "@/components/analytics/PageViewsChart",;
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart",;
-import { ExportPanel } from "@/components/analytics/ExportPanel",;
 ;
 export default function Analytics() {;
   const [timeRange, setTimeRange] = useState('30d'),;
@@ -108,7 +98,7 @@ export default function Analytics() {;
     queryKey:['page-views-trend', timeRange],;
     queryFn:async () => {;
       // Get daily page views for trend chart;
-      const days = parseInt(timeRange.replace('d', '')),;
+      const days = parseInt(timeRange.replace('d', ''));
       const startDate = new Date(),;
       startDate.setDate(startDate.getDate() - days),;
       ;
@@ -195,10 +185,7 @@ export default function Analytics() {;
       data?.forEach(item => {
         const date = new Date(item.created_at).toISOString().split('T')[0];
         const conversionType = item.metadata?.conversionType |'unknown';
-        if (!conversionsByType[conversionType]) {
-
-
-  }),;
+        if (!conversionsByType[conversionType]) {}),;
   const { data: conversionData } = useQuery({;
     queryKey: ['conversion-data', timeRange],;
     queryFn: async () => {;

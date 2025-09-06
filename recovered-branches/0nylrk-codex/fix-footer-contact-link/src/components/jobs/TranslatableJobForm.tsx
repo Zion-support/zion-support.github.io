@@ -199,12 +199,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         variant: "destructive"})
       return
     }
-    try {
-
-
-
-
-      }
+    try {}
     }
 
 
@@ -296,7 +291,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 
 
 
-  },
+  }
   };
   },
 
@@ -523,7 +518,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false } Translata
   ;
   // Ensure all translations are available;
   const ensureAllTranslations = async () => {;
-    const promises = [],;
+    const promises = [];
     ;
     if (!title.en && !title.es && !title.pt && !title.ar) return,;
     if (!description.en && !description.es && !description.pt && !description.ar) return,;

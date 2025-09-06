@@ -21,7 +21,6 @@ import {;
 
 } from "@/components/ui/card";
 
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {;
   data: Array<Record<string, any>>;
   timeRange: string;
@@ -41,13 +40,11 @@ export function ConversionAnalysisChart(): any ({;
 
 import React from './react';
 
-import React from './react';
-import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from '@/components / ui / card';
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
 
@@ -70,7 +67,7 @@ interface ConversionAnalysisProps {
 export function ConversionAnalysisChart({
   data,
   timeRange,
-  onTimeRangeChange,
+  onTimeRangeChange
 }: ConversionAnalysisProps) {
   const dataKeys =
     data && data.length > 0
@@ -158,9 +155,6 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange } C
     </Card>
 
 
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
 interface ConversionAnalysisProps {;
   data: Array<Record<string any>>,;
   timeRange: string,;

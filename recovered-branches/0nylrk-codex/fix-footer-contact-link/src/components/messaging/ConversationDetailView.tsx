@@ -75,7 +75,7 @@ import React, { useState, useEffect, useRef } from 'react';
   // Group messages by date;
   const groupedMessages: { date: string, messages: any[] }[] = [],;
   activeMessages.forEach(message => {;
-    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd'),;
+    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages.find(group => group.date === messageDate),;
     if (existingGroup) {;
       existingGroup.messages.push(message);

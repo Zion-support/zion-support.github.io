@@ -167,8 +167,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       onViewProfile(profile.id |'')
     }
   }
-import { UserProfile } from "@/types/auth",
-import { useNavigate } from "react-router-dom",
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,

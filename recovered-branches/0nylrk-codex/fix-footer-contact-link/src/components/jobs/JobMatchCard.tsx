@@ -117,7 +117,7 @@ export function JobMatchCard({ ;
   },;
 ;
   // Generate a formatted date for display;
-  const postedDate = new Date(),;
+  const postedDate = new Date();
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks;
   ;
   return (;

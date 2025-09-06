@@ -40,6 +40,7 @@ interface ClientDashboardProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function ClientDashboard({}: ClientDashboardProps) {
+export default function ClientDashboard({}: ClientDashboardProps) {
   return (
     <div>
       <h1>ClientDashboard</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

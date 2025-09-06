@@ -16,7 +16,6 @@ import {toast} from '@/hooks / use - toast';
 import {Share, Users} from 'lucide-react';
 
 
-import {useEffect} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {useReferrals} from '@/hooks/useReferrals';
 import {ReferralStats} from '@/components/referrals/ReferralStats';
@@ -29,7 +28,6 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Button} from '@/components/ui/button';
 import {toast} from '@/hooks/use-toast';
-import {Share, Users} from 'lucide-react';
 import {useNavigate} from 'react-router-dom';
 export default function ReferralsPage() {;
   const navigate = useNavigate();
@@ -99,7 +97,7 @@ import { useNavigate } from 'react-router-dom',;
 
 
 export default function ReferralsPage() {;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const { isAuthenticated } = useAuth(),;
   const {;
     isLoading,;

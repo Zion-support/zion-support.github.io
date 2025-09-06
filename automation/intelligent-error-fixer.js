@@ -16,6 +16,8 @@ ursor/automate-test-improve-and-merge-code-646c
 <:corrupted_backup/intelligent-error-fixer.js
 =>:automation/intelligent-error-fixer.js
 >>>>>>> main
+=
+>        fix: (content) => {
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
@@ -113,6 +115,17 @@ ursor/automate-test-improve-and-merge-code-646c
         }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+=
+        fix: (content) => {
+          // Remove merge conflict markers
+          return content
+        }
+>        fix: (content) => {
+          // Remove merge conflict markers
+          return content
+        }
       },
       invalidJSX: {
         pattern: /return\(\)\s*</gm,
@@ -136,6 +149,7 @@ ursor/automate-test-improve-and-merge-code-646c
           if (!content.includes("import React")) {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+          if (!content.includes("import React")) {
             return `import React from 'react';\n${content}`;
           }
           return content;
@@ -158,6 +172,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
   async runBuildCheck() {
+=
+>  async runBuildCheck() {
     try {
       this.log('Running build check...');
       const result = execSync('yarn build', { 
@@ -187,6 +203,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
   async runLintCheck() {
+=
+>  async runLintCheck() {
     try {
       this.log('Running lint check...');
       const result = execSync('yarn lint --format=json', { 
@@ -216,6 +234,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
   async runTypeCheck() {
+=
+>  async runTypeCheck() {
     try {
       this.log('Running TypeScript check...');
       const result = execSync('npx tsc --noEmit --skipLibCheck', { 
@@ -243,6 +263,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =>>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+<=
 
   extractErrorInfo(buildOutput) {
     const errors = [];
@@ -275,6 +296,13 @@ ursor/automate-test-improve-and-merge-code-646c
       
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>    lines.forEach((line, index) => {
+      // Extract file paths and error messages
+      const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/);
+      const errorMatch = line.match(/Error:|SyntaxError:|TypeError:/);
+=
+      
+>      
       if (fileMatch && errorMatch) {
         errors.push({
           file: fileMatch[1],
@@ -296,6 +324,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =>>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+<=
     
     return errors;
   }
@@ -307,6 +336,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
   async fixFile(filePath) {
+>  async fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
       this.log(`File not found: ${filePath}`, 'ERROR');
       return false;
@@ -326,6 +356,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
     try {
+=
+>    try {
       this.log(`Attempting to fix file: ${filePath}`);
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
@@ -344,6 +376,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
       // Apply error pattern fixes
+=
+>      // Apply error pattern fixes
       for (const [patternName, pattern] of Object.entries(this.errorPatterns)) {
         const matches = content.match(pattern.pattern);
         if (matches) {
@@ -371,6 +405,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
       // Specific fixes for common issues
+=
+>      // Specific fixes for common issues
       if (content.includes('return()')) {
         content = content.replace(/return\(\)/g, 'return (');
         modified = true;
@@ -408,6 +444,14 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+=
+>      if (content.includes('};')) {
+        content = content.replace(/}\s*;\s*$/gm, '}');
+        modified = true;
+      }
+=
+
+>
       // Fix import statements
       if (content.includes('React.') && !content.includes("import React")) {
         content = `import React from 'react';\n${content}`;
@@ -461,6 +505,16 @@ ursor/automate-test-improve-and-merge-code-646c
         
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+=
+>      if (modified) {
+        // Create backup
+        const backupPath = `${filePath}.backup.${Date.now()}`;
+        fs.copyFileSync(filePath, backupPath);
+=
+        
+>        
         // Write fixed content
         fs.writeFileSync(filePath, content);
         this.log(`Successfully fixed and saved: ${filePath}`);
@@ -481,6 +535,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
       return false;
+=
+>      return false;
     } catch (error) {
       this.log(`Error fixing file ${filePath}: ${error.message}`, 'ERROR');
       return false;
@@ -498,6 +554,34 @@ ursor/automate-test-improve-and-merge-code-646c
 =
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 ursor/automate-test-improve-and-merge-code-646c
+  async cleanupDuplicateFiles() {
+    this.log('Checking for duplicate page files...');
+    const pagesDir = path.join(process.cwd(), 'pages');
+    if (!fs.existsSync(pagesDir)) {
+      return;
+    }
+    const duplicates = [];
+    const seen = new Set();
+    function scanDirectory(dir) {
+      const files = fs.readdirSync(dir, { withFileTypes: true });
+
+=
+
+>  async cleanupDuplicateFiles() {
+    this.log('Checking for duplicate page files...');
+    const pagesDir = path.join(process.cwd(), 'pages');
+    
+    if (!fs.existsSync(pagesDir)) {
+      return;
+    }
+
+    const duplicates = [];
+    const seen = new Set();
+
+    function scanDirectory(dir) {
+      const files = fs.readdirSync(dir, { withFileTypes: true });
+
+
   async cleanupDuplicateFiles() {
     this.log('Checking for duplicate page files...');
     const pagesDir = path.join(process.cwd(), 'pages');
@@ -554,6 +638,12 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
       files.forEach(file => {
+>      
+
+
+=
+      
+>      files.forEach(file => {
         if (file.isDirectory()) {
           scanDirectory(path.join(dir, file.name));
         } else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) {
@@ -576,6 +666,9 @@ ursor/automate-test-improve-and-merge-code-646c
           
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+=
+          
+>          
           if (seen.has(relativePath)) {
             duplicates.push(path.join(dir, file.name));
           } else {
@@ -601,6 +694,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+<=
+
+>
     scanDirectory(pagesDir);
 
     // Remove duplicate .js files if .tsx exists
@@ -654,6 +750,9 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 <:corrupted_backup/intelligent-error-fixer.js
 =
+
+
+
     scanDirectory(pagesDir);
 
     // Remove duplicate .js files if .tsx exists
@@ -664,6 +763,16 @@ ursor/automate-test-improve-and-merge-code-646c
 >:automation/intelligent-error-fixer.js
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+=
+>    scanDirectory(pagesDir);
+
+    // Remove duplicate .js files if .tsx exists
+    `);
+          fs.unlinkSync(duplicate);
+        }
+      }
 const fs = require('fs');
 const path = require('path');
 const {
@@ -744,6 +853,12 @@ ursor/automate-test-improve-and-merge-code-646c
 =>:automation/intelligent-error-fixer.js
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+=
+          "fix": content => {
+            // Remove merge conflict markers
+            return content
           pattern: /||
           "fix": content => {
             // Remove merge conflict markers
@@ -811,6 +926,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
         this.log('Running build check...');
+<
+
+
+
+=
+>        execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
+        this.log('Successfully installed missing dependencies');
+      } catch (error) {
+        this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
+
+
+=
+>        this.log('Running build check...');
         const result = execSync('yarn build', {
           "encoding": 'utf8',
           "stdio": 'pipe',
@@ -855,6 +983,12 @@ ursor/automate-test-improve-and-merge-code-646c
 =>>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 >>>>>>> main
     };
+<
+
+
+
+=
+>    };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
     return report;
@@ -900,6 +1034,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+        );
+        );
           }
         }
         // Run build again after fixes
@@ -966,6 +1102,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >:automation/intelligent-error-fixer.js
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+=
+>}
     }
     async runTypeCheck() {
       try {
@@ -1228,3 +1366,16 @@ module.exports = IntelligentErrorFixer;
 =>:automation/intelligent-error-fixer.js
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||
+
+
+=
+module.exports = IntelligentErrorFixer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||
+}
+module.exports = IntelligentErrorFixer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||

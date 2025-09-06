@@ -185,7 +185,7 @@ export function useMessages(;
   const sendMessage = async (conversationId: string, content: string) => {;
     if (!user || !content.trim() || !conversationId) return,;
     try {;
-      const conversation = conversations.find(c => c.id === conversationId),;
+      const conversation = conversations.find(c => c.id === conversationId);
       if (!conversation) {;
         throw new Error('Conversation not found');
       }
@@ -291,10 +291,6 @@ if (throw error) {
 
 }
 
-import { UserProfile, UserDetails } from '@/types/auth',;
-import { supabase } from '@/integrations/supabase/client',;
-import { Message, Conversation } from '@/types/messaging',;
-import { toast } from '@/hooks/use-toast',;
 ;
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null,;

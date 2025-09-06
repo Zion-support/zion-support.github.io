@@ -12,7 +12,6 @@ import type { QuoteStatus } from "@/types/quotes";
 
 import React from "react",
 import { Badge } from "@/components/ui/badge",
-import { 
   Select,
   SelectContent, 
   SelectItem, 
@@ -56,7 +55,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   statusFilter;
   setStatusFilter;
 }) => {
-type RequestsHeaderProps = {;
+type RequestsHeaderProps = {
   unreadCount: number,;
   statusFilter: QuoteStatus | 'all',;
   setStatusFilter: (value: QuoteStatus | 'all') => void,;

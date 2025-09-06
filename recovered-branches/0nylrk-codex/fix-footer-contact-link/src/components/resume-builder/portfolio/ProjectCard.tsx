@@ -12,7 +12,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle,
+  AlertDialogTitle
 
 } from "@/components/ui/alert-dialog";
 import { Edit, Trash2, Github, Link, FileText } from "lucide-react";

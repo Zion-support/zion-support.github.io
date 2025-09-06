@@ -25,6 +25,9 @@ describe('OptimizedImagedynamic', () => {
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-website-loading-errors-and-merge-6662
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
     // Test content display
   test('handles user interactions', () => {
     // Test user interactions
@@ -54,6 +57,7 @@ describe('OptimizedImagedynamic'
 
     expect(screen && screen.getByTestId('optimizedimage ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage ; describe('OptimizedImagedynamic', () => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen && screen.getByTestId("optimizedimage && optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    expect(screen && screen.getByTestId('optimizedimage ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage ; describe('OptimizedImagedynamic', () => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen && screen.getByTestId("optimizedimage && optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling"
 import { render, screen } from '@testing-library/react';
 import OptimizedImage from '../components/OptimizedImage.dynamic';
 

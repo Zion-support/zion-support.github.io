@@ -35,7 +35,6 @@ import {;
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import {;
   Select,;
   SelectContent,;
   SelectItem,;
@@ -45,7 +44,6 @@ import {;
 import { Checkbox } from '@/components/ui/checkbox';
 import { Slider } from '@/components/ui/slider';
 import { Separator } from '@/components/ui/separator';
-import {;
   Sheet,;
   SheetContent,;
   SheetHeader,;
@@ -56,7 +54,6 @@ import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data/marketplaceData';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 interface SearchResult {;
-import React, { useState, useEffect, useMemo } from 'react';
 import { use_router } from 'next / router';
 import {
   Search,
@@ -66,7 +63,7 @@ import {
   SortDesc,
   GridIcon,
   List,
-  Loader2,
+  Loader2
 } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -75,7 +72,7 @@ import { Badge } from '@/components / ui / badge';
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue
 } from '@/components / ui / select';
 import { Checkbox } from '@/components / ui / checkbox';
 import { Slider } from '@/components / ui / slider';
@@ -84,9 +81,8 @@ import { Separator } from '@/components / ui / separator';
   SheetContent,
   SheetHeader,
   SheetTitle,
-  SheetTrigger,
+  SheetTrigger
 } from '@/components / ui / sheet';
-import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data / marketplace_data';
 import { logErrorToProduction, log_info } from '@/utils / production_logger';
 interface SearchResult {
@@ -242,7 +238,7 @@ const SearchResultCard: React.FC<{;
   searchTerm: string,;
   viewMode: 'grid' | 'list';
 }> = ({ result, searchTerm, viewMode }) => {;
-  const router = useRouter(),;
+  const router = useRouter();
   const handleClick = () => {;
     if (result.url) {;
       router.push(result.url);
@@ -435,7 +431,7 @@ const FilterSidebar: React.FC<{
     { id: 'product', label: 'Products' },
     { id: 'talent', label: 'Talent' },
     { id: 'service', label: 'Services' },
-    { id: 'blog', label: 'Blog Posts' },
+    { id: 'blog', label: 'Blog Posts' }
   ];
   const handleTypeChange = (type_id: string, checked: boolean) =>: any {
     const new_types = checked      ? [...filters.types, type_id];
@@ -446,7 +442,7 @@ const FilterSidebar: React.FC<{
     onFiltersChange ({
       ...filters,
       min_price: values[0] ?? 0,
-      max_price: values[1] ?? 10000,
+      max_price: values[1] ?? 10000
     });
 
   }
@@ -567,7 +563,7 @@ const FilterSidebar: React.FC<{;
           onValueChange={value =>;
             onFiltersChange ({
               ...filters,
-              category: value === 'all' ? '' : value,
+              category: value === 'all' ? '' : value
             });
           }
         >          <SelectTrigger>;
@@ -712,10 +708,7 @@ const FilterSidebar: React.FC<{;
 
 }
 // No Results Component;
-const NoResultsState: React.FC<{
-
-
-},
+const NoResultsState: React.FC<{},
 
 // No Results Component
 const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({ 
@@ -851,7 +844,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
     'Mobile App Development',
     'Data Analysis',
     'UI / UX Design',
-    'Blockchain Development',
+    'Blockchain Development'
   ];
   return (
     <div className='text - center py - 12'>;
@@ -891,11 +884,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 
 }
 // Main Search Results Page Component;
-export const AdvancedSearchResults: React.FC = () => {
-
-
-
-},
+export const AdvancedSearchResults: React.FC = () => {},
 
 // Main Search Results Page Component
 export const AdvancedSearchResults: React.FC = () => {
@@ -939,7 +928,7 @@ export const AdvancedSearchResults: React.FC = () => {
     min_price: 0,
     max_price: 10000,
     min_rating: 0,
-    sort: 'relevance',
+    sort: 'relevance'
   });
   const suggestions = generateSearchSuggestions ();
   // Extract available categories from results for filter;
@@ -978,7 +967,7 @@ if ( {) {
       const params = new URLSearchParams ({
         query: term,
         page: page.to_string (),
-        limit: '20',
+        limit: '20'
       });
       // Check condition
 if ( {) {
@@ -1021,7 +1010,7 @@ if ( {) {
       log_info ('Search completed', {
         term,
         result_count: data.results.length,
-        total_count: data.total_count,
+        total_count: data.total_count
       });
 
     } catch (error) {
@@ -1044,7 +1033,7 @@ if ( {) {
   const handle_search = (term: string) =>: any {
     setSearchTerm (term);
     router.push (`/search?q=${encodeURIComponent (term)}`, undefined, {
-      shallow: true,
+      shallow: true
     });
 
   }
@@ -1392,9 +1381,9 @@ export const AdvancedSearchResults: React.FC = () => {;
                   </SheetHeader>;
                   <div className='mt - 6'>;
                     <FilterSidebar;
-                      filters = {filters, }
-                      onFiltersChange = {handleFiltersChange, }
-                      available_categories = {available_categories, }
+                      filters = {filters }
+                      onFiltersChange = {handleFiltersChange }
+                      available_categories = {available_categories }
 
               <Sheet open={showFilters} onOpenChange={setShowFilters}>
                 <SheetTrigger asChild>
@@ -1453,9 +1442,9 @@ export const AdvancedSearchResults: React.FC = () => {;
                 )}
               </div>
               <FilterSidebar
-                filters = {filters,}
-                onFiltersChange = {handleFiltersChange,}
-                availableCategories = {availableCategories,}
+                filters = {filters}
+                onFiltersChange = {handleFiltersChange}
+                availableCategories = {availableCategories}
 
 
                     variant="ghost"

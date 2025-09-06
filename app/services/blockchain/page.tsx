@@ -1,8 +1,9 @@
-import Link from 'next/link';
+import React from 'react';
 
 export const metadata = { 
 
 title: 'Blockchain Services | Zion Tech Group',
+  title: 'Blockchain Services | Zion Tech Group',
   description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and enterprise blockchain solutions.',
   keywords: 'blockchain development, smart contracts, DeFi, NFT, Web3, cryptocurrency, enterprise blockchain, dApp development'
 
@@ -15,9 +16,12 @@ export default function BlockchainPage() {
 <div className="animate-fade-in">
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+    <div className="space-y-16">
+      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
           Blockchain Services
         </h1>
-        <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           Build the future of decentralized applications with our comprehensive blockchain development services. 
           From smart contracts to DeFi protocols, we help you create secure, scalable Web3 solutions.
         </p>
@@ -385,22 +389,17 @@ export default function BlockchainPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
+            href="mailto:kleber@ziontechgroup.com?subject=Blockchain Services Inquiry"
+            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+          >
+            Start Your Blockchain Project
+          </a>
+          <a
             href="tel:+13024640950"
-            className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center"
+            className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
           >
             Call +1 302 464 0950
           </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-colors text-center"
-          >
-            Email Us
-          </a>
-        </div>
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-500">
-            📍 364 E Main St STE 1008, Middletown DE 19709
-          </p>
         </div>
       </section>
 

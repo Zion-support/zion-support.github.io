@@ -91,10 +91,7 @@ function InterviewCard() {
       });
       setIsResponseDialogOpen (false);
       await on_refresh ();
-    } else {
-
-
-      });
+    } else {});
     }
     setIsLoading (false);
   }
@@ -121,7 +118,7 @@ if ( {) {
   // Format interview date and time;
   const interviewDate = parseISO(interview && interview.scheduled_date);
   const formattedDate = format(interviewDate, 'EEEE, MMMM d');
-  const formattedTime = format(interviewDate, 'h: mm a'),;
+  const formattedTime = format(interviewDate, 'h: mm a');
 
   // Calculate when interview ends;
   const endTime = new Date(interviewDate);

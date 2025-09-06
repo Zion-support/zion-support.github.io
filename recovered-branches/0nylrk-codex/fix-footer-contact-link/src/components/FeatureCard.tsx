@@ -31,8 +31,6 @@ export function FeatureCard(): any ({;
 
 
 
-import { cn } from "@/lib/utils";
-import React from "react";
 interface FeatureCardProps {
   title: string;
   description: string;
@@ -47,8 +45,6 @@ export function FeatureCard({
   className
 }: FeatureCardProps) {
   return (
-import { cn } from "@/lib/utils";
-import React from "react";
 
     <div
       className={cn(

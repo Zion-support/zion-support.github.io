@@ -31,21 +31,13 @@ export function Sidebar(): any ({ className, children, ...props }: SidebarProps)
 
 
 import { cn } from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
-import {cn} from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode
 
 
-import React from "react",
-import { cn } from "@/lib/utils",
 
 
-import {cn} from "@/lib/utils";
 interface SidebarProps extends React && React.HTMLAttributes<HTMLDivElement> {;
   className?: string;
   children?: React && React.ReactNode;
@@ -104,8 +96,6 @@ function Sidebar() {
 }
 
 
-import React from "react",;
-import { cn } from "@/lib/utils",;
 ;
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?:string,;

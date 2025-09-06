@@ -143,7 +143,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     // Base rate calculation based on years of experience;
     let baseRate = 25 + (yearsExperience * 5),;
     // Adjust for in-demand skills;
-    const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'],;
+    const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
     const hasInDemandSkills = skills.some(skill =>;
       inDemandSkills.some(demandSkill => skill.toLowerCase().includes(demandSkill));
     ),;
@@ -166,7 +166,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     }
     
     const minRate = Math.round(baseRate * locationFactor * 0.9),
-    const maxRate = Math.round(baseRate * locationFactor * 1.2),
+    const maxRate = Math.round(baseRate * locationFactor * 1.2)
 
 
 
@@ -323,9 +323,7 @@ maxRate;
 confidence;
 explanation 
 }
-}catch (error) {
-  
-}
+}catch (error) {}
 }// Function to save pricing analytics data 
 }
 }

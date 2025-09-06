@@ -513,7 +513,7 @@ export default function Blog() {
   }),
   
   // Get featured posts
-  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured),
+  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured)
 
 
 ],

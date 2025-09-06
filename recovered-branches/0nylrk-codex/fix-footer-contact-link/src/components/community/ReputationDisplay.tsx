@@ -64,7 +64,7 @@ export const ReputationDisplay = ({
     }
 
 
-  },
+  }
   
 
 
@@ -109,7 +109,7 @@ export const ReputationDisplay = ({;
   size = 'md';
 }: ReputationDisplayProps) => {;
   // Calculate next milestone;
-  const currentLevel = Math.floor(reputation / 100),;
+  const currentLevel = Math.floor(reputation / 100);
   const nextMilestone = (currentLevel + 1) * 100,;
   const progress = ((reputation % 100) / 100) * 100,;
 
@@ -163,8 +163,6 @@ interface ReputationDisplayProps {
   size?: 'sm' | 'md' | 'lg';
 
 
-import { Trophy } from "lucide-react",;
-import { Progress } from "@/components/ui/progress",;
 ;
 interface ReputationDisplayProps {;
   reputation:number,;

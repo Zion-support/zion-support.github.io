@@ -89,7 +89,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage
 } from '@/components / ui / form';
 import { Badge  } from '@/components / ui / badge';
 import { X  } from './lucide-react';
@@ -409,9 +409,7 @@ if ( {) {
 }) => {
   e.preventDefault ();
 const value = e.currentTarget.value.trim ();
-if (value && !keywords.includes (value) ) {
-  
-}
+if (value && !keywords.includes (value) ) {}
 };
 }/> <FormField <FormItem> <FormLabel>Short Description</FormLabel> <FormControl> <Input </FormDescription> </FormItem>) 
 }/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> {

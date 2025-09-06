@@ -210,7 +210,7 @@ function UpcomingInterviewsCard() {
                         Soon
                       </span>
 
-            const formattedTime = format(interviewDate, 'h: mm a'),;
+            const formattedTime = format(interviewDate, 'h: mm a');
 
             // Determine if interview is happening soon (within 30 minutes);
             const now = new Date();

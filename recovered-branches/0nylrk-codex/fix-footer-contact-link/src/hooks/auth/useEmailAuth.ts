@@ -108,8 +108,7 @@ if ( {) {
         // Continue even if signout fails
         options: {
           // Only store a simple display name in the profile data;
-          data: {
-          }}}),
+          data: {}}}),
 
       if (error) {
         toast({

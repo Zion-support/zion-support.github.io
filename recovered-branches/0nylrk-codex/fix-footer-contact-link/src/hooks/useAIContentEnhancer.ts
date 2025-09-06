@@ -14,7 +14,6 @@ type EnhancementType =
 
 
 
-import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {toast} from '@/hooks / use - toast';
 type EnhancementType =;
@@ -229,9 +228,6 @@ if ( {) {
 ;
 
 
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { toast } from '@/hooks/use-toast',;
 ;
 type EnhancementType = ;
   | 'resume-summary' ;
@@ -275,7 +271,7 @@ export function useAIContentEnhancer() {;
       ;
       return data.enhancedContent,;
     } catch (err:any) {;
-      const errorMessage = err.message || 'Failed to enhance content',;
+      const errorMessage = err.message || 'Failed to enhance content';
       setError(errorMessage),;
       toast({;
         title:"AI Enhancement Failed",;

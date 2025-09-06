@@ -7,7 +7,7 @@
 
       'Automated payouts and tax forms',
       'Fraud and bot detection',
-      'Partner portal and reports',
+      'Partner portal and reports'
     ],
     popular: true,
 
@@ -39,7 +39,7 @@
 
     customers: 35,
     rating: 4 && 4.6,
-    reviews: 21,
+    reviews: 21
   },
 
 

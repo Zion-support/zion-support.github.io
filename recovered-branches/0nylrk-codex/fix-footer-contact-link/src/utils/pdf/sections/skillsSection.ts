@@ -63,7 +63,7 @@ export function addSkillsSection(;
   yPos += 8,;
   // Group skills by category;
   const skillsByCategory = skills.reduce((acc, skill) => {;
-    const category = skill.category || 'Other',;
+    const category = skill.category || 'Other';
     if (!acc[category]) {;
       acc[category] = [];
     }
@@ -149,9 +149,6 @@ if ( {) {
 
 }
 
-import { jsPDF } from 'jspdf',;
-import { Skill } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
 ;
 export function addSkillsSection(;
   doc:jsPDF,;

@@ -544,9 +544,7 @@ if ( {) {
     title: string;
     message: string;
     related_id: string) => {
-    try {
-
-  }
+    try {}
   },
 
 

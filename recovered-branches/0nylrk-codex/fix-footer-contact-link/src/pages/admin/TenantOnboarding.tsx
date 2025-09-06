@@ -92,7 +92,7 @@ export default function TenantOnboarding() {;
   }),;
   ;
   // Check if user has admin role;
-  const isAdmin = user?.role === "admin",;
+  const isAdmin = user?.role === "admin";
   ;
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" />,;
@@ -161,9 +161,7 @@ export default function TenantOnboarding() {
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-
-  }
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {}
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
@@ -204,7 +202,7 @@ export default function TenantOnboarding() {
         subtitle: `Find the best talent for your ${formData.industry |"company"}`
         cta: "Get Started"
 
-      },
+      }
       
 
       }
@@ -525,21 +523,6 @@ if (throw error) {
                         value={form_data.brand_name}
                         on_change={handleInputChange}
 
-import React, { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { SEO } from "@/components/SEO",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Navigate } from "react-router-dom",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { toast } from "sonner",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Switch } from "@/components/ui/switch",;
 export default function TenantOnboarding() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState("company"),;

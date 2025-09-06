@@ -61,6 +61,10 @@ class ErrorMonitor {
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+=
+
+
+
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -126,6 +130,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+        timestamp: new Date().toISOString()
+=
+        timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
       });
     }
@@ -217,6 +224,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
           timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString()
         });
         this.monitoringReport.metrics.totalErrors += 1;
       }
@@ -251,6 +259,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
             timestamp: new Date().toISOString()
+            timestamp: new Date().toISOString()
           });
         }
       }
@@ -268,6 +277,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 >>>>>>>> main:corrupted_backup/error-monitor.js
+            timestamp: new Date().toISOString()
+
+
             timestamp: new Date().toISOString()
           });
 
@@ -297,6 +309,8 @@ ursor/automate-test-improve-and-merge-code-646c
             timestamp: new Date().toISOString()
 >>>>>>> main
             timestamp: new Date().toISOString()
+=
+            timestamp: new Date().toISOString()
           });
         }
       }
@@ -307,6 +321,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
     return errors;
   }
   parseESLintErrors(output) {
@@ -380,6 +396,24 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>          timestamp: new Date().toISOString()
+        });
+      }
+    }
+<
+
+
+    );
+      }
+    }
+          timestamp: new Date().toISOString()
+        });
+      }
+    }
+=
+
+
+
     return errors;
   }
   updateHealthStatus() {
@@ -419,6 +453,13 @@ ursor/automate-test-improve-and-merge-code-646c
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 <:automation/error-monitor.js
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`📊 Health Status: ${status.toUpperCase()}`);
+    console.log(`📈 Total Errors: ${totalErrors}`);
+    console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+>    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+<    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 ursor/add-new-services-and-deploy-updates-0462
@@ -441,6 +482,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =>>>>>>>> main:corrupted_backup/error-monitor.js
 >>>>>>> main
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+=
+>    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
@@ -500,6 +543,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
       console.log('✅ Error fixer completed');
+=
+      console.log('✅ Error fixer completed');
+
+
+
+      console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
@@ -538,6 +587,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+        timestamp: new Date().toISOString()
+=
+        timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
       });
     }
@@ -588,6 +640,10 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+=
+
+
+
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(
@@ -640,6 +696,7 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
@@ -659,3 +716,5 @@ module.exports = ErrorMonitor;
 module.exports = ErrorMonitor;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
+module.exports = ErrorMonitor;

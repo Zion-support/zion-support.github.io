@@ -113,7 +113,7 @@ export function AutocompleteSuggestions({
 
 
 ;
-  const lowerText = text.toLowerCase(),;
+  const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase(),;
   const index = lowerText.indexOf(lowerSearchTerm),;
   if (index === -1) {;

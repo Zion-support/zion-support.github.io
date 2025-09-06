@@ -38,14 +38,6 @@ interface ContractBuilderProps {
   clientName: string
 
   onContractGenerated?: (contractContent: string) => void
-import { useState } from "react",
-import { Dialog, DialogContent } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from "lucide-react",
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
 interface ContractBuilderProps {
 
   isOpen: boolean
@@ -55,14 +47,6 @@ interface ContractBuilderProps {
 
   onContractGenerated?: (contractContent: string) => void
 }
-import { useState } from "react",
-import { Dialog, DialogContent } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from "lucide-react",
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
 interface ContractBuilderProps {
 
   isOpen: boolean
@@ -84,14 +68,6 @@ interface ContractBuilderProps {;
 export function ContractBuilder(): any ({;
 
 
-import { useState } from "react",
-import { Dialog, DialogContent } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from "lucide-react",
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
 import { TemplateManager } from "./templates/TemplateManager",
@@ -268,7 +244,7 @@ export function ContractBuilder({
   const [generatedContract, setGeneratedContract] = useState<string | null>(null),
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
-  ),
+  )
 
   },;
 ;

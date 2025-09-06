@@ -84,11 +84,6 @@ export const CreateResumeForm = ({;
   isLoading;
 
 
-import { useState } from "react",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Loader2 } from "lucide-react",;
-import { CreateResumeFormProps } from "./types",;
 ;
 export const CreateResumeForm = ({ ;
   onCreateResume,;
@@ -249,7 +244,7 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
 }
 
 
-},
+}
 };
 },
 

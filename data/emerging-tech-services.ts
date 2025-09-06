@@ -21,7 +21,7 @@
       'Space debris tracking and avoidance',
       'Quantum communication ground stations',
       'Advanced space analytics dashboard',
-      '24 / 7 quantum space operations center',
+      '24 / 7 quantum space operations center'
     ],
     popular: true,
 

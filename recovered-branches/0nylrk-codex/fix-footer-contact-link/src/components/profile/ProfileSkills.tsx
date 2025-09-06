@@ -88,8 +88,6 @@ export function ProfileSkills({ skills } ProfileSkillsProps) {;
               <div 
                 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
   )
-import { Badge } from "@/components/ui/badge",;
-import { ProfileSkill } from "@/types/profile";
 interface ProfileSkillsProps {;
   skills: ProfileSkill[];
 }

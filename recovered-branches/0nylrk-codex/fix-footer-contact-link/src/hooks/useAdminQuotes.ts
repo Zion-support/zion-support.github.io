@@ -101,7 +101,7 @@ import { quoteRequestService  } from '@/services/quoteRequestService';
 ;
     // Search filter;
     if (searchQuery) {;
-      const query = searchQuery.toLowerCase(),;
+      const query = searchQuery.toLowerCase();
       if (;
         !quote.requester_name.toLowerCase().includes(query) &&;
         !quote.project_name.toLowerCase().includes(query) &&;
@@ -156,7 +156,7 @@ import { quoteRequestService  } from '@/services/quoteRequestService';
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to update status: " + error && error.message,
+        description: "Failed to update status: " + error && error.message
 
       }),
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
@@ -217,7 +217,7 @@ import { quoteRequestService  } from '@/services/quoteRequestService';
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to update quote: " + error && error.message,
+        description: "Failed to update quote: " + error && error.message
 
       }),
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
@@ -537,9 +537,7 @@ export const useAdminQuotes = () => {;
     deleteQuote:(id:string) => deleteMutation.mutate(id)},;},
  //Filter quotes based on selected filters const filteredQuotes = allQuotes.filter ( (quote) => {
   //Status filter if (statusFilter !== 'all' && quote.status !== statusFilter) {
-  if (!quote.requester name.toLowerCase () .includes (query) && !quote.project name.toLowerCase () .includes (query) && !quote.project summary.toLowerCase () .includes (query) && ! (quote.talent name && quote.talent name.toLowerCase () .includes (query) ) ) {
-  
-}return true;
+  if (!quote.requester name.toLowerCase () .includes (query) && !quote.project name.toLowerCase () .includes (query) && !quote.project summary.toLowerCase () .includes (query) && ! (quote.talent name && quote.talent name.toLowerCase () .includes (query) ) ) {}return true;
 });
 //Update quote status mutation 
 }
@@ -549,9 +547,7 @@ export const useAdminQuotes = () => {;
 });
 // Delete mutation const deleteMutation = useMutation ({
   mutationFn: (id: string) => quoteRequestService.delete (id), onSuccess: () => {
-  toast ({
-  
-}
+  toast ({}
 });
 
 

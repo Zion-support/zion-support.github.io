@@ -9,6 +9,7 @@ import { describe, it, expect } from 'vitest';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
 describe('Login', () => {
   it('should work', () => {
     expect(true).toBe(true);
@@ -30,6 +31,8 @@ import { describe, it, expect } from 'vitest'
 describe('Login'
   it('should work'
 const { describe,it,expect } from "vitest"; describe('Login', () => { it("should work"
+});''
+});''
 describe('Login'
   it('should work'
 const { describe,it,expect } from "vitest"; describe('Login', () => { it("should work"
@@ -51,3 +54,5 @@ const { describe,it,expect } from "vitest"; describe('Login', () => { it("should
 });''
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+});''
+});''

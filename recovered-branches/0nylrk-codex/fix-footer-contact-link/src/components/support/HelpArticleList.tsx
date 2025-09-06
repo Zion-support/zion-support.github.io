@@ -5,7 +5,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleListProps {
@@ -17,7 +17,7 @@ interface HelpArticleListProps {
 export function HelpArticleList({
   categoryId,
   onArticleSelect,
-  searchQuery,
+  searchQuery
 }: HelpArticleListProps) {
   const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
 
@@ -119,7 +119,7 @@ interface HelpArticleListProps {;
 }
 ;
 export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } HelpArticleListProps) {;
-  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
   ;
   if (!category) {;
     return <div>Category not found</div>,;
@@ -193,7 +193,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
-    month: "long",
+    month: "long"
 
 
 
@@ -209,12 +209,11 @@ function formatDate(): any (date: string): string {;
 }
 
 import React from './react';
-import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from '@/components / ui / card';
 import { HELP_CATEGORIES  } from './help - content';
 interface HelpArticleListProps {
@@ -277,7 +276,7 @@ function format_date (date: string): string {
   return new Date (date).toLocaleDateString ("en - US", {
     year: "numeric",
     month: "long",
-    day: "numeric",
+    day: "numeric"
   });
 
 

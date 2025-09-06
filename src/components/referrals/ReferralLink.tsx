@@ -22,7 +22,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from '@/components / ui / card';
 import { Input } from '@/components / ui / input';
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
@@ -41,7 +41,6 @@ function ReferralLink() {
     set_timeout (() => set_copied (false), 2000);
 
   }
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
   Card,;
@@ -52,7 +51,6 @@ import {;
   CardTitle,;
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
 interface ReferralLinkProps {;
   referralLink: string;
   onCopy: () => void;
@@ -94,7 +92,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 interface ReferralLinkProps {
@@ -115,7 +112,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         <div className='flex flex - col space - y-3'>;
           <div className='flex space - x-2'>;
             <Input;
-              value = {referral_link, }
+              value = {referral_link }
               read_only;
               className='font - mono text - sm';
             />;

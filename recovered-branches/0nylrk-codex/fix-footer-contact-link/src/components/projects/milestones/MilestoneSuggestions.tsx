@@ -18,7 +18,6 @@ interface MilestoneSuggestionsProps {
 }
 
 export function MilestoneSuggestions({;
-import React, { useState } from 'react';
   projectName;
   scopeSummary;
   startDate;
@@ -139,7 +138,7 @@ export function MilestoneSuggestions({;
       endDate: endDate ? endDate.toISOString() : null,;
       projectType: projectType || "Other";
     },;
-    const milestones = await generateMilestones(input),;
+    const milestones = await generateMilestones(input);
     if (milestones.length > 0) {;
       setShowSuggestions(true),;
 
@@ -153,7 +152,6 @@ export function MilestoneSuggestions({;
 import {Button} from '@/components / ui / button';
 import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
-import {Loader2, Sparkles, Check} from 'lucide-react';
 import {Badge} from '@/components / ui / badge';
 import {format, parseISO} from 'date - fns';
 interface MilestoneSuggestionsProps {
@@ -199,9 +197,7 @@ if ( {) {
 
     try {
       return format (parseISO (date_string), 'MMM dd, yyyy');
-    } catch (error) {
-
-  };
+    } catch (error) {};
 
   const formatDate = (dateString: string) => {;
     try {;
@@ -253,13 +249,6 @@ if ( {) {
           disabled={isGenerating || !scopeSummary || !startDate}
           className="w-full">;
 
-import React, { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Loader2, Sparkles, Check } from 'lucide-react',;
-import { Badge } from '@/components/ui/badge',;
-import { format, parseISO } from 'date-fns',;
 ;
 interface MilestoneSuggestionsProps {;
   projectName:string,;

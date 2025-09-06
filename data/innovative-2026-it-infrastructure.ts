@@ -69,11 +69,11 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Advanced security protocols',
         'Real - time performance monitoring',
         'Global edge computing network',
-        'Quantum - safe data storage',
+        'Quantum - safe data storage'
       ],
       popular: true,
 
-      icon: '⚛️',
+      icon: '⚛️'
 
 
     ];

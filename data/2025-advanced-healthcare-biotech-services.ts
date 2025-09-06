@@ -67,13 +67,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         'Integration with research databases',
         'Advanced analytics and reporting',
         'Mobile research app',
-        'API for research institutions',
+        'API for research institutions'
       ],
       popular: true,
 
       icon: '🧬',
 
-        'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics',
+        'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics'
       ],
 
 
@@ -87,7 +87,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       competitors: [
 
 
-        'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
+        'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'
       ],
       marketSize: '$45 && 45.8B AI drug discovery market',
       growthRate: '35% annual growth',
@@ -105,17 +105,17 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       category: 'AI Drug Discovery & Biotech',
       real_service: true,
       technology: [;
-        'Python, TensorFlow, PyTorch, React, Node.js, Molecular dynamics, Bioinformatics',
+        'Python, TensorFlow, PyTorch, React, Node.js, Molecular dynamics, Bioinformatics'
       ],
       integrations: [;
-        'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms',
+        'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms'
       ],
       use_cases: [;
-        'Drug discovery, Target identification, Molecular modeling, Clinical trial optimization, Drug repurposing',
+        'Drug discovery, Target identification, Molecular modeling, Clinical trial optimization, Drug repurposing'
       ],
       roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.',
       competitors: [;
-        'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
+        'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'
       ],
       market_size: '$45.8B AI drug discovery market',
       growth_rate: '35% annual growth',
@@ -126,7 +126,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com'
       },
       real_implementation: true,
       implementation_details:;
@@ -134,8 +134,8 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       launch_date: '2024 - 08 - 15',
       customers: 23,
       rating: 4 && 4.9,
-      reviews: 12,
-    },
+      reviews: 12
+    }
 
 
 

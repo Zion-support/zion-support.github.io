@@ -34,7 +34,7 @@ class ErrorBoundary extends React.Component {
 }</button> </form>) ;
 };
 
-type Props = {;
+type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {;

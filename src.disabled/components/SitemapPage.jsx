@@ -14,3 +14,8 @@ import _React from';react' "export": default function SitemapPage() { const publ
 const React from";react" export: default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>"";'"'"
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+
+const React from";react" export: default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>"";'"'"

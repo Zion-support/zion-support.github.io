@@ -36,7 +36,6 @@ export default function FeaturesPage() {
     </EnhancedLayout>;
   );
 import EnhancedLayout from '../components / layout / EnhancedLayout';
-import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 export default /**
  * FeaturesPage - Function description
  */

@@ -35,14 +35,11 @@ export function ScoreDialog({;
   onScoreUpdated;
 }: ScoreDialogProps) {;
 
-import {;
   Dialog,;
   DialogContent,;
   DialogHeader,;
   DialogTitle;
 } from "@/components/ui/dialog",;
-import { JobApplication } from "@/types/jobs",;
-import { ApplicationScoreCard } from "../ApplicationScoreCard",;
 ;
 interface ScoreDialogProps {;
   open:boolean,;

@@ -123,17 +123,19 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center mb-4">
-              <div className="h-8 w-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Z</span>
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="ml-2 text-xl font-bold">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
-              Leading provider of AI-powered technology solutions and enterprise services. 
-              Transform your business with cutting-edge innovation.
+            <p className="text-gray-400 mb-4 max-w-md">
+              Leading AI & Technology Solutions for a Smarter Future. We deliver cutting-edge
+              technology solutions that transform businesses and drive innovation.
             </p>
             <div className="space-y-2">
               <div className="flex items-center text-gray-400">
@@ -254,15 +256,76 @@ ursor/automate-test-improve-and-merge-code-646c
           </div>
           <div className="flex space-x-4">
             {socialLinks.map((social) => (
+            <div className="flex space-x-4">
               <a
-                key={social.name}
-                href={social.href}
+                href="https://twitter.com/ziontechgroup"
                 className="text-gray-400 hover:text-white transition-colors"
-                aria-label={social.name}
+                aria-label="Twitter"
               >
-                <social.icon className="h-5 w-5" />
+                <Twitter className="h-5 w-5" />
               </a>
-            ))}
+              <a
+                href="https://linkedin.com/company/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="https://facebook.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://instagram.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://github.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">
+                  Pricing
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Stay Updated</h3>
+            <FooterNewsletter />
           </div>
         </div>
 
@@ -297,7 +360,7 @@ ursor/fix-website-loading-errors-and-merge-7da4
 ursor/automate-test-improve-and-merge-code-646c
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

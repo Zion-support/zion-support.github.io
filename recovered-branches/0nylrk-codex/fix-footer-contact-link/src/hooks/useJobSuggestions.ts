@@ -49,7 +49,7 @@ export function useJobSuggestions(talentId?: string) {;
         .update(updates)
         .eq("id", matchId),
         
-      if (error) throw error,
+      if (error) throw error
       
 
     }

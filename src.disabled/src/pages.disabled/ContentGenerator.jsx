@@ -40,6 +40,7 @@ interface ContentGeneratorProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function ContentGenerator({}: ContentGeneratorProps) {
+export default function ContentGenerator({}: ContentGeneratorProps) {
   return (
     <div>
       <h1>ContentGenerator</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

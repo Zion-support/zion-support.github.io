@@ -34,7 +34,7 @@ interface ApplicationScoreCardProps {;
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
   const [isScoring, setIsScoring] = useState(false),;
   // Determine if application has been scored;
-  const hasScore = typeof application.match_score === 'number',;
+  const hasScore = typeof application.match_score === 'number';
   // Format the date when the application was scored;
   const scoredDate = application.scored_at;
     ? new Date(application.scored_at).toLocaleDateString();

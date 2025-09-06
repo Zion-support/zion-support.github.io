@@ -21,32 +21,25 @@ import {;
 
 } from "@/components/ui/card";
 
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
   timeRange: string;
   onTimeRangeChange: (range: string) => void
 }
 
 
 
-import React from "react";
-import {
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
 } from "@/components/ui/card";
-import React from "react";
-import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
 } from "@/components/ui/card";
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>;
   timeRange: string;
@@ -62,9 +55,6 @@ export function PageViewsChart({
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
 
 
 interface PageViewsChartProps {
@@ -75,7 +65,6 @@ interface PageViewsChartProps {
 
 
 } from "@/components/ui/card";
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface PageViewsChartProps {;
   data: Array<{ date: string; views: number }>;
   timeRange: string;
@@ -113,12 +102,11 @@ export function PageViewsChart(): any ({;
 
   );
 import React from './react';
-import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from '@/components / ui / card';
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
 interface PageViewsChartProps {

@@ -9,7 +9,6 @@ export function useAuthState() {;
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null);
 import React, { useState } from "react",
-import type { UserProfile } from "@/types/auth";
 import type { UserProfile } from "@/types/auth",
 
 
@@ -45,12 +44,8 @@ export function useAuthState() {
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
 
-import React, { useState } from "react",;
-import type { UserProfile } from "@/types/auth",;
   }
 }
-import React, { useState } from "react",;
-import type { UserProfile } from "@/types/auth",;
 
 
 /**;

@@ -14,33 +14,33 @@ const features = [
   {
     name: 'AI-Powered Research',
     description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
-    icon: LightBulbIcon,
+    icon: LightBulbIcon
   },
   {
     name: 'Quantum Computing',
     description: 'Next-generation quantum neural networks for solving complex computational problems.',
-    icon: CpuChipIcon,
+    icon: CpuChipIcon
   },
   {
     name: 'Global Solutions',
     description: 'Worldwide deployment of autonomous business operations and digital transformation.',
-    icon: GlobeAltIcon,
+    icon: GlobeAltIcon
   },
   {
     name: 'Security First',
     description: 'Advanced cybersecurity and data protection for enterprise-grade applications.',
-    icon: ShieldCheckIcon,
+    icon: ShieldCheckIcon
   },
   {
     name: 'Analytics & Insights',
     description: 'Real-time data analysis and predictive modeling for informed decision making.',
-    icon: ChartBarIcon,
+    icon: ChartBarIcon
   },
   {
     name: 'Team Collaboration',
     description: 'Seamless integration tools for distributed teams and remote work environments.',
-    icon: UserGroupIcon,
-  },
+    icon: UserGroupIcon
+  }
 ];
 
 export default function HomePage() {

@@ -1,6 +1,6 @@
 
   courseId,
-  userId = "demo-user",
+  userId = "demo-user"
 }: {;
 
 

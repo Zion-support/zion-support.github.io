@@ -18,7 +18,6 @@ interface AIEnhancementDialogProps {
 }
 
 export function AIEnhancementDialog({;
-import React from 'react';
   title;
   isOpen;
   onClose;
@@ -92,14 +91,10 @@ export function AIEnhancementDialog(): any ({;
   return (
 
 
-import React from 'react',;
-import {;
   Dialog,;
   DialogContent,;
   DialogHeader,;
   DialogTitle} from '@/components/ui/dialog',;
-import { AIEnhancementPanel } from './AIEnhancementPanel',;
-import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
 ;
 interface AIEnhancementDialogProps {;
   title:string,;
@@ -152,7 +147,6 @@ export function AIEnhancementDialog({;
 
 
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
-import {AIEnhancementPanel} from './AIEnhancementPanel';
 import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
 interface AIEnhancementDialogProps {
   title: string,

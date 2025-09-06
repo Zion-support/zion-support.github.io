@@ -40,6 +40,7 @@ interface HomePageSkeletonProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function HomePageSkeleton({}: HomePageSkeletonProps) {
+export default function HomePageSkeleton({}: HomePageSkeletonProps) {
   return (
     <div>
       <h1>HomePageSkeleton</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

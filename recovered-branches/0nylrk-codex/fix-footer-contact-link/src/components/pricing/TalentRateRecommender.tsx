@@ -71,7 +71,7 @@ import { Sparkles } from './lucide-react';
         skills,;
         yearsExperience,;
         location},;
-      const result = await getTalentRateSuggestion(params),;
+      const result = await getTalentRateSuggestion(params);
       setSuggestion(result);
     } catch (error) {;
       console.error("Error generating rate suggestion:", error);
@@ -372,9 +372,7 @@ location?: string;
 };
 if (suggestion) {
   //We'll use the middle of the range as the suggested rate //Track this suggestion application if (user) {
-  trackPricingSuggestion ({
-  
-}
+  trackPricingSuggestion ({}
 }
 };
 return (<div className="space-y-4" > <div> {

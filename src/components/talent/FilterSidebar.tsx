@@ -36,7 +36,7 @@ export function FilterSidebar(): any ({;
   sortOption,;
   setSortOption,;
   clearFilters,;
-  isMobileFilterOpen,}: FilterSidebarProps) {;
+  isMobileFilterOpen}: FilterSidebarProps) {;
   return (
     <>
       {/* Filter header */}
@@ -99,8 +99,6 @@ export function FilterSidebar({
   setSortOption,
   clearFilters,
 
-import { PriceFilter } from "./filters/PriceFilter",
-import { FilterSidebarProps } from "@/types/filters",
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -146,7 +144,6 @@ export function FilterSidebar({
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
-import { Filter } from 'lucide-react';
 import { SearchFilter } from "./filters/SearchFilter",;
 import { SortFilter } from "./filters/SortFilter",;
 import { SkillsFilter } from "./filters/SkillsFilter",;
@@ -276,9 +273,7 @@ export function FilterSidebar({;
             window.dispatchEvent(new CustomEvent('closeMobileFilter'))
           }
 
-import React from 'react';
 import { Button } from '@/components / ui / button';
-import { Filter } from 'lucide-react';
 import { SearchFilter } from './filters / SearchFilter';
 import { SortFilter } from './filters / SortFilter';
 import { SkillsFilter } from './filters / SkillsFilter';
@@ -397,7 +392,7 @@ function FilterSidebar() {
           }
           className='w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4'        >;
         <Button;
-          on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')), }
+          on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')) }
           className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
       {/* Search */}
       <SearchFilter search_term={search_term} setSearchTerm={setSearchTerm} />;
@@ -426,7 +421,7 @@ function FilterSidebar() {
 
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
         <Button
-          onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter')),}
+          onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;

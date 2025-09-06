@@ -104,7 +104,6 @@ import {WorkExperienceForm} from '../forms / WorkExperienceForm';
 import {EducationForm} from '../forms / EducationForm';
 import {SkillsForm} from '../forms / SkillsForm';
 import {CertificationsForm} from '../forms / CertificationsForm';
-import {PreviewResume} from '../PreviewResume';
 interface ResumeStepContentProps {
   active_tab: string,
   resume: Resume,

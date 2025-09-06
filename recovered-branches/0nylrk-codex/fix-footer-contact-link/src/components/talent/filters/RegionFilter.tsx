@@ -10,7 +10,7 @@ const REGION_OPTIONS = [
   { id: "South America", label: "South America" },
   { id: "Australia", label: "Australia" },
 
-  { id: "Africa", label: "Africa" },
+  { id: "Africa", label: "Africa" }
 ];
 
 
@@ -19,7 +19,7 @@ export function RegionFilter({
   toggleRegion,
   expanded,
   toggleSection,
-  isMobileFilterOpen,
+  isMobileFilterOpen
 }: RegionFilterProps) {
 
 
@@ -119,7 +119,7 @@ const REGION_OPTIONS = [;
   { id: "Asia", label: "Asia" },
   { id: "South America", label: "South America" },
   { id: "Australia", label: "Australia" },
-  { id: "Africa", label: "Africa" },
+  { id: "Africa", label: "Africa" }
 ];
 ;
 
@@ -159,9 +159,6 @@ function RegionFilter() {
     </div>);
 }
 
-import { ChevronDown, ChevronUp } from "lucide-react",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { RegionFilterProps } from "@/types/filters",;
 ;
 const REGION_OPTIONS = [;
   { id:"North America", label:"North America" },;

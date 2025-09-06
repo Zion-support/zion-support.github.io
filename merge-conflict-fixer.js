@@ -17,6 +17,10 @@ function resolveMergeConflicts(filePath) {
         content = content.replace(/\n/g, '');
         content = content.replace(/
         
+        content = content.replace(/        
+        // Remove any remaining conflict markers
+        content = content.replace(/        content = content.replace(/\n/g, '');
+        content = content.replace(/        
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');
         
@@ -48,6 +52,7 @@ function findConflictFiles() {
                         const content = fs.readFileSync(itemPath, 'utf8');
                         if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
                             conflictFiles.push(itemPath);
+                        if (content.includes('                            conflictFiles.push(itemPath);
                         }
                     } catch (error) {
                         // Skip files that can't be read

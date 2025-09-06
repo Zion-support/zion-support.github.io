@@ -237,7 +237,7 @@ export function ChatAssistant({;
   contextHeader;
 } ChatAssistantProps) {;
   const [messages, setMessages] = useState<Message[]>(initialMessages),;
-  const messagesEndRef = useRef<HTMLDivElement | null>(null),;
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
   ;
   useEffect(() => {;
     if (initialMessages.length > 0) {;

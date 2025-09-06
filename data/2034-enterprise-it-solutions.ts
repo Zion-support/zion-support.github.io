@@ -18,14 +18,14 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 
 
       'Device posture checks',
-      'SSO & MFA integration',
+      'SSO & MFA integration'
     ],
     integrations: ['Okta', 'Azure AD', 'Cloudflare Zero Trust'],
 
     use_cases: ['Secure remote work', 'Lateral movement prevention'],
     link: 'https://ziontechgroup.com / services / zero - trust - network - architecture',
     real_service: true,
-    launch_date: '2025 - 11 - 01',
+    launch_date: '2025 - 11 - 01'
 
   },
   {
@@ -44,14 +44,14 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 
       'Golden pipelines',
       'RBAC and policy packs',
-      'Cost guardrails',
+      'Cost guardrails'
     ],
     integrations: ['GitHub', 'ArgoCD', 'Backstage'],
 
     use_cases: ['Developer productivity', 'Standardized delivery'],
     link: 'https://ziontechgroup.com / services / platform - engineering - foundation',
     real_service: true,
-    rating: 4.8,
+    rating: 4.8
 
   },
   {
@@ -61,13 +61,13 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
       'Domain data products',
       'Catalog & lineage',
       'Access governance',
-      'Quality SLAs',
+      'Quality SLAs'
     ],
     integrations: ['Snowflake', 'Databricks', 'BigQuery'],
 
     use_cases: ['Faster analytics', 'Federated governance'],
     link: 'https://ziontechgroup.com / services / enterprise - data - mesh',
-    real_service: true,
+    real_service: true
 
   },
   {
@@ -77,13 +77,13 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
       'Landing zones',
       'Infra as Code',
       'Automated cutovers',
-      'FinOps baselines',
+      'FinOps baselines'
     ],
     integrations: ['AWS', 'Azure', 'GCP'],
 
     use_cases: ['Datacenter exit', 'Hybrid cloud enablement'],
     link: 'https://ziontechgroup.com / services / cloud - landing - zone',
-    real_service: true,
+    real_service: true
 
   },
   {
@@ -102,13 +102,13 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 
       'SOAR playbooks',
       'Attack surface monitoring',
-      'Threat intel',
+      'Threat intel'
     ],
     integrations: ['CrowdStrike', 'Wiz', 'Snyk', 'Cloudflare'],
 
     use_cases: ['Compliance readiness', 'Breaches prevention'],
     link: 'https://ziontechgroup.com / services / quantum - cybersecurity - services',
-    real_service: true,
+    real_service: true
 
   },
   {
@@ -118,13 +118,13 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
       'OpenTelemetry ingest',
       'SLO dashboards',
       'Burn rate alerts',
-      'Incident workflows',
+      'Incident workflows'
     ],
     integrations: ['Grafana', 'Datadog', 'PagerDuty'],
 
     use_cases: ['MTTR reduction', 'Reliability governance'],
     link: 'https://ziontechgroup.com / services / api - observability - starter',
-    real_service: true,
+    real_service: true
 
   },
   {
@@ -134,9 +134,9 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
       'Lifecycle automation',
       'Access reviews',
       'RBAC & SoD',
-      'Provisioning workflows',
+      'Provisioning workflows'
     ],
-    integrations: ['Okta', 'Azure AD', 'Google Workspace'],
+    integrations: ['Okta', 'Azure AD', 'Google Workspace']
 
 
 

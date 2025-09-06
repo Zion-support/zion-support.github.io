@@ -12,10 +12,6 @@ import type { UserDetails } from "@/types/auth",
 
 
 import { supabase } from "@/integrations/supabase/client";
-import {supabase} from "@/integrations/supabase/client";
-import type { UserDetails } from "@/types/auth";
-import { supabase } from "@/integrations/supabase/client",
-import type { UserDetails } from "@/types/auth",
 
 
 /**
@@ -169,8 +165,7 @@ if ( {) {
           job_type: "send_retention_email";
           scheduled_for: new Date ().toISOString ();
           status: "pending";
-          payload: {
-          }
+          payload: {}
         });
 
 
@@ -256,12 +251,7 @@ export const checkNewRegistration = async (user: UserDetails) => {;
           }
         });
     }
-  } catch (error) {
-
-
-
-
-  }
+  } catch (error) {}
 }
 
 

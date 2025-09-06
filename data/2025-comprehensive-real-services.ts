@@ -301,10 +301,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     ];
     integrations: ['SAPOracleSiemensRockwellGE DigitalPTC'], compliance: ['ISO 9001ISO 14001OHSAS 18001SOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
-    contact: {
-
-
-  }
+    contact: {}
 ];
   id: string, name: string,
   tagline: string, description: string,

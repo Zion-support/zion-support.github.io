@@ -4,7 +4,6 @@ import {supabase} from '@/integrations / supabase / client';
 
 
 
-import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
 
@@ -55,7 +54,7 @@ export function useTalentProfileEnhancer() {;
       setError(err && err.message || 'Failed to enhance profile'),
 
 
-      setError(err && err.message || 'Failed to enhance profile'),
+      setError(err && err.message || 'Failed to enhance profile')
       }
       return data as EnhancedProfile
     } catch (err: any) {

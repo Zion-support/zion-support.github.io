@@ -306,7 +306,7 @@ ursor/automate-test-improve-and-merge-code-646c
   ];
 export default function AboutPage() {;
   return (
-  const stats = [{ "number": '150+', "label": 'Projects Completed' },;
+  const stats = [{ "number": '150+', "label": 'Projects Completed' };
     { "number": '50+', "label": 'Happy Clients' },;
     { "number": '5+', "label": 'Years Experience' },;
     { "number": '24/7', "label": 'Support Available' }

@@ -40,6 +40,7 @@ interface DisputeDashboardProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function DisputeDashboard({}: DisputeDashboardProps) {
+export default function DisputeDashboard({}: DisputeDashboardProps) {
   return (
     <div>
       <h1>DisputeDashboard</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

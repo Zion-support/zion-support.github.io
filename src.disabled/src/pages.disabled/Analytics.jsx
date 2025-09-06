@@ -40,6 +40,7 @@ interface AnalyticsProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function Analytics({}: AnalyticsProps) {
+export default function Analytics({}: AnalyticsProps) {
   return (
     <div>
       <h1>Analytics</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

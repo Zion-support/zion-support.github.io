@@ -101,7 +101,6 @@ interface CardProps {
   style?: React.CSSProperties;
   onClick?: () => void;
 
-import React from 'react';
 interface CardProps {
   children: React.ReactNode
   className?: string

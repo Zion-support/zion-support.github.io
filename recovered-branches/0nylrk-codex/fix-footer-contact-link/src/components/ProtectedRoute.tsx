@@ -10,7 +10,6 @@ import React from 'react';
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
 }
 
-import React from 'react';
 import { Navigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { useTenantAdminStatus  } from '@/hooks/useWhitelabelTenant';
@@ -19,7 +18,6 @@ export interface ProtectedRouteProps {
 
   children: React.ReactNode
 
-import {Navigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {useTenantAdminStatus} from '@/hooks/useWhitelabelTenant';
 import {useWhitelabel} from '@/context/WhitelabelContext';

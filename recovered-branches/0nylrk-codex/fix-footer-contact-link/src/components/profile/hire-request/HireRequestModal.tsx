@@ -5,7 +5,7 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
+  DialogTitle
 } from "@/components/ui/dialog";
 import { HireRequestForm } from "./HireRequestForm";
 import { TalentProfile } from "@/types/talent";
@@ -25,7 +25,7 @@ export function HireRequestModal({
   talent,
   isOpen,
   onClose,
-  userDetails,
+  userDetails
 }: HireRequestModalProps) {
   const handleClose = () => {
 

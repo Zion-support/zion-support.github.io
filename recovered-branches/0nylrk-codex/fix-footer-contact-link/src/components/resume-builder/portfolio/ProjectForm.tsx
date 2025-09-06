@@ -132,7 +132,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   const { user } = useAuth(),;
   const { addProject, updateProject } = usePortfolio(),;
   const [isLoading, setIsLoading] = useState(false),;
-  const isEditing = !!project,;
+  const isEditing = !!project;
 
 
 

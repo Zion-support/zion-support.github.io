@@ -6,13 +6,13 @@ import {
   CompanyRecord,
   CompanyMember,
   EnterpriseRole,
-  InvoiceRecord,
+  InvoiceRecord
 } from '../types/enterprise';
 
 
 
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise',;
-const generateId = () => Math.random().toString(36).slice(2, 10),;
+const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {;
   id: 'cmp_acme',;
   name: 'Acme Corporation',;

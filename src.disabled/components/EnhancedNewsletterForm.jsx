@@ -6,6 +6,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+" " export: function EnhancedNewsletterForm () { " const [email,setEmail] = useState (") const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const { toast } = useToast () "";"";";"""
 
 ' \' \"export\": function EnhancedNewsletterForm () { \' const [email,setEmail] = useState (\') const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const { toast } = useToast () \'';\'";\";
 " " export: function EnhancedNewsletterForm () { " const [email,setEmail] = useState (") const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const { toast } = useToast () "";"";";"""

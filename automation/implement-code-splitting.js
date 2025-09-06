@@ -12,7 +12,7 @@ console.log ('✅ Code splitting implementation completed'),
 
 
 
-const fs = require('fs'),;
+const fs = require('fs');
 const path = require('path'),;
 console.log('🚀 Implementing Code Splitting...'),;
 // This script would automatically convert static imports to dynamic imports;

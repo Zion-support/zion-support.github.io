@@ -15,3 +15,5 @@ export: function WaitlistSection () { const [email,setEmail] = useState (") cons
 export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = (e) => { e.preventDefault () "";"";"""
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = (e) => { e && e.preventDefault () "";"";"""
+

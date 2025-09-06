@@ -81,13 +81,6 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
 
 
 
@@ -139,7 +132,7 @@ export function HireConfirmationModal({;
   const [isLoading, setIsLoading] = useState(false),;
   const { user } = useAuth(),;
   // Get talent information from either candidateData or application;
-  const talentData = candidateData || (application?.talent_profile as TalentProfile),;
+  const talentData = candidateData || (application?.talent_profile as TalentProfile);
   const handleHireCandidate = async () => {;
     if (!projectName || !projectDescription) {;
       toast({;

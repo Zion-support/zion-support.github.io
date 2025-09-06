@@ -10,17 +10,16 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
   MessageSquare,
   FileText,
   Video,
   Calendar,
   Users,
   Settings,
-  X,
+  X
 } from "lucide-react";
 import { VideoCallRoom } from "@/components/video/VideoCallRoom";
 import { toast } from "sonner";
@@ -45,8 +44,8 @@ export default function ProjectRoom() {
       name: "You",
       isHost: true,
       isVideoEnabled: true,
-      isMuted: false,
-    },
+      isMuted: false
+    }
   ]);
 
 
@@ -65,7 +64,7 @@ import {toast} from 'sonner';
     setIsInCall(true),
     toast.success("Video call started", {
 
-      description: "Others can join with the project room link",
+      description: "Others can join with the project room link"
     });
 
     // Switch to video tab if not already there
@@ -78,7 +77,7 @@ import {toast} from 'sonner';
   const endVideoCall = () => {
     setIsInCall(false);
     toast.info("Video call ended", {
-      description: "Call duration and participants will be logged",
+      description: "Call duration and participants will be logged"
     });
   };
 
@@ -90,15 +89,15 @@ import {toast} from 'sonner';
         id: "user-3",
         name: "Taylor Kim",
         isVideoEnabled: false,
-        isMuted: true,
+        isMuted: true
       },
       {
         id: "user-4",
         name: "Jordan Smith",
         isVideoEnabled: true,
         isMuted: false,
-        isScreenSharing: true,
-      },
+        isScreenSharing: true
+      }
 
     ];
 

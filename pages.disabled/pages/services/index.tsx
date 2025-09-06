@@ -193,6 +193,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
+
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">
                       <Check className=\"w-4 h-4 text-green-500 mr-2\" />
@@ -364,6 +366,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
                 href=\"/contact\"
                 className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors\">;
                 Get Free Consultation;

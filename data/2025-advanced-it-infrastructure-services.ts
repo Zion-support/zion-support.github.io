@@ -4,7 +4,7 @@ import { ServiceVariant } from '../types / service - variants';
 
 export interface AdvancedITInfrastructureService {
 
-        'Hybrid quantum-classical computing',
+        'Hybrid quantum-classical computing'
 
     ];
     popular: true, icon: '☁️',

@@ -21,7 +21,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
       badge: unreadCount
       authRequired: true
 
-    },
+    }
 
 
     }

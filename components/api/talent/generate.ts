@@ -76,11 +76,11 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
 
         {
           role: 'system',
-          content: 'You produce only valid JSON. No commentary.',
+          content: 'You produce only valid JSON. No commentary.'
         },
-        { role: 'user', content: prompt },
+        { role: 'user', content: prompt }
       ],
-      response_format: { type: 'json_object' },
+      response_format: { type: 'json_object' }
 
 
 

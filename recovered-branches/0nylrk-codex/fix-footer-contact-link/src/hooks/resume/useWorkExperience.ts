@@ -102,7 +102,7 @@ if ( {) {
           location: work.location
         }),
       
-      if (error) throw error,
+      if (error) throw error
       
 
 
@@ -185,7 +185,7 @@ if ( {) {
 
         .eq('id', workId),
       
-      if (error) throw error,
+      if (error) throw error
       
 
 

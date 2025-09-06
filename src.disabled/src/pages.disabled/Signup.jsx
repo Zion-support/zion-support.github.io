@@ -40,6 +40,7 @@ interface SignupProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function Signup({}: SignupProps) {
+export default function Signup({}: SignupProps) {
   return (
     <div>
       <h1>Signup</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

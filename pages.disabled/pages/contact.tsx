@@ -304,6 +304,7 @@ const "Contact": NextPage = () => {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
   return (
     <MainLayout
       title=\"Contact Us - Zion Tech Group\"
@@ -316,6 +317,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -843,6 +845,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
   );
 };
           {/* Contact Information */}
@@ -893,6 +896,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
                     key={index}
                     initial={{ \"opacity\": 0, \"y\": 20 }}
                     animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -965,6 +969,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
                   transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -1109,6 +1114,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
                        />;
                     </div>;
                   </div>;
@@ -1126,6 +1132,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
                     <select
                       id=\"service\"
                       name=\"service\"
@@ -1258,6 +1265,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
+
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -1654,6 +1663,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
+
           {/* Services Overview */}
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;

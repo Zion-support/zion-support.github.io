@@ -2,6 +2,13 @@
 
 
 
+console.log('🚀 Starting simple merge process...');
+try {// Check git status;
+  console.log('📊 Checking git status...');
+  const status = execSync('git status --porcelain', { encoding: 'utf8' });
+  console.log('Git status:', status |'Clean working directory');
+
+
 const { exec_sync } = require ('child_process'),
 console.log ('🚀 Starting simple merge process...'),
 try {
@@ -45,11 +52,12 @@ const { execSync } = require('child_process');
 
 
 
+
 console.log('🚀 Starting simple merge process...'),;
 try {;
   // Check git status;
   console.log('📊 Checking git status...'),;
-  const status = execSync('git status --porcelain', { encoding: 'utf8' }),;
+  const status = execSync('git status --porcelain', { encoding: 'utf8' });
   console.log('Git status:', status || 'Clean working directory'),;
   // Fetch latest changes;
   console.log('📥 Fetching latest changes...'),;
@@ -86,6 +94,14 @@ try {;
       const files = conflictFiles.trim().split('\n'),;
       const files = conflictFiles.trim().split('\n');
 
+          console.log(`Resolving conflicts in: ${file}`);
+          try {execSync(`git checkout --ours "${file}"`);
+          } catch (e) {execSync(`git checkout --theirs "${file}"`);
+      for (const file of files) {;
+        if (file.trim()) {;
+          console.log(`Resolving conflicts in: ${file}`);
+          try {execSync(`git checkout --ours "${file}"`);
+          } catch (e) {execSync(`git checkout --theirs "${file}"`);
           console.log(`Resolving conflicts in: ${file}`),;
           try {;
             execSync(`git checkout --ours "${file}"`);
@@ -220,6 +236,16 @@ try {;
   // Push all changes;
 
 
+      for (const file of files) {;
+        if (file.trim()) {;
+          }
+          execSync(`git add "${file}"`);
+        }
+      }
+      // Commit the merge;
+      execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
+    }
+  }
       // Continue with other branches;
     }
   }
@@ -295,3 +321,7 @@ try {;
 
 
 
+  process.exit(1);
+}
+  process.exit(1);
+}

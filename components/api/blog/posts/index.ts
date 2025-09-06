@@ -96,11 +96,11 @@ if ( {) {
       seo: {
         meta_title: body.seo?.meta_title || body.title!,
         meta_description: body.seo?.meta_description || '',
-        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
+        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || ''
       },
       body: body.body || '',
       status: body.status || 'draft',
-      metrics: { views: 0, likes: 0, shares: 0 },
+      metrics: { views: 0, likes: 0, shares: 0 }
     }
     posts.unshift (post);
     write_posts (posts);

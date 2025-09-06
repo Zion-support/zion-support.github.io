@@ -79,7 +79,7 @@ export interface NextGenAIService2026 {
 
     launchDate: '2025-06-01',
     customers: 45,
-    reviews: 89,  },    implementationDetails: 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.',
+    reviews: 89  },    implementationDetails: 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.',
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4.9,
@@ -121,7 +121,7 @@ export interface NextGenAIService2026 {
 
     launchDate: '2025-04-20',
     customers: 92,
-    reviews: 203,  },    implementationDetails: 'Production-ready personalization engine with real-time processing, comprehensive analytics, and easy integration capabilities.',
+    reviews: 203  },    implementationDetails: 'Production-ready personalization engine with real-time processing, comprehensive analytics, and easy integration capabilities.',
     launchDate: '2025-04-20',
     customers: 92,
     rating: 4.6,
@@ -163,7 +163,7 @@ export interface NextGenAIService2026 {
       'React',
       'Node.js',
       'AWS Polly',
-      'Google Cloud TTS',
+      'Google Cloud TTS'
     ],
 
 
@@ -182,7 +182,7 @@ export interface NextGenAIService2026 {
 
     customers: 203,
     rating: 4 && 4.7,
-    reviews: 445,
+    reviews: 445
   },
 
 

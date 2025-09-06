@@ -4,7 +4,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
+  DialogDescription
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";
@@ -45,7 +45,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     }
   }
   };
-import {format} from "date-fns";
 
   const formatDate = (dateString?: string) => {
     if (!dateString) return "Not specified";
@@ -81,12 +80,11 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   if (!quote) return null;
 
 import React from './react';
-import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
+  DialogDescription
 } from '@/components / ui / dialog';
 import { Button  } from '@/components / ui / button';
 import { Calendar, User, Mail, Clock, DollarSign  } from './lucide-react';

@@ -188,7 +188,6 @@ import {useJobDetails} from '@/hooks / useJobDetails';
 import {use_auth} from '@/hooks / use_auth';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
 import {useDisputeCheck} from '@/hooks / useDisputeCheck';
-import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
 ;
 export /**
  * ProjectMilestonesContent - Function description
@@ -396,9 +395,7 @@ if (return, ) {
 
 
   ),; setIsLoading (true);
-try {
-  
-}finally {
+try {}finally {
   setIsLoading (false) 
 }
 

@@ -220,9 +220,7 @@ if ( {) {
     try {
       const { error } = await supabase
         .from('portfolio_projects')
-        .update({
-
-  }
+        .update({}
 
 ;
   const update_project = async (project_id: string, project: PortfolioProject): Promise < boolean> => {
@@ -285,7 +283,7 @@ if ( {) {
         .eq('id', projectId)
         .eq('user_id', user.id),
       
-      if (error) throw error,
+      if (error) throw error
       
 
       });
@@ -375,9 +373,7 @@ if ( {) {
     } catch (e: any) {
       console && console.error('Error deleting portfolio project:', e);
       setError(e && e.message);
-      toast({
-
-      }),
+      toast({}),
       
       setProjects(projects.filter(p => p.id !== projectId)),
       return true
@@ -388,7 +384,7 @@ if ( {) {
         title: "Error"
         description: `Could not delete project: ${e.message}`;
         title: "Error",
-        description: `Could not delete project: ${e.message}`,
+        description: `Could not delete project: ${e.message}`
 
     }
     setIsLoading (true);

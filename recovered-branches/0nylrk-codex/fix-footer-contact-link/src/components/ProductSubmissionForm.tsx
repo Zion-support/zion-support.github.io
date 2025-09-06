@@ -254,7 +254,7 @@ type ProductFormValues = z.infer<typeof productSchema>,;
 export function ProductSubmissionForm() {;
   const { user } = useAuth(),;
   const { toast } = useToast(),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = React.useState(false),;
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;
   const [activeTab, setActiveTab] = React.useState("manual"),;
@@ -908,9 +908,7 @@ const {
   productRecord.id 
 }`) 
 }catch (error) {
-  toast ({
-  
-}finally {
+  toast ({}finally {
   setIsSubmitting (false) 
 }
 };

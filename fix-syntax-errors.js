@@ -166,12 +166,27 @@ if ( {) {
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
 
+});
+
+console.log(`\nTotal files fixed: ${totalFixed}`);
+  }
+}},
+,
+// Run all fixes,
+fixFooter();
+fixAccessibility();
+fixAiServices();
+fixApiDocs();
+fixCareers();
+,
+console.log('🎉 Syntax error fixes completed');
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
 fixAiServices(),
 fixApiDocs(),
 fixCareers(),
+// // // console.log('🎉 Syntax error fixes completed')
 // // // console.log('🎉 Syntax error fixes completed')
 }},;
 // Run all fixes,;
@@ -187,6 +202,7 @@ fixCareers(),;
 
 
 
+}},
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -253,3 +269,4 @@ const main = () => {
 
 main();
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

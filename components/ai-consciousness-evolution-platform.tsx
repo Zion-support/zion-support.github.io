@@ -86,10 +86,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   {
   once: true
 }transition= {
-  {
-
-
-}> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion && motion.button ;
+  {}> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion && motion.button ;
 };
 const containerVariants = {;
   hidden: {;

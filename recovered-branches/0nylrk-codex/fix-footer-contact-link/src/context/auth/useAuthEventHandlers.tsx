@@ -15,8 +15,6 @@ import type { UserProfile } from "@/types/auth",;
 import { checkNewRegistration } from "@/utils/authUtils",;
 import { useNavigate } from 'react-router-dom',;
 
-import {checkNewRegistration} from "@/utils/authUtils";
-import {useNavigate} from 'react-router-dom';
 /**;
  * Custom hook for auth event handling;
  */;
@@ -34,10 +32,6 @@ export function useAuthEventHandlers(): any (;
   return {
     handleSignedIn,
     handleSignedOut
-import { toast } from "@/hooks/use-toast",;
-import type { UserProfile } from "@/types/auth",;
-import { checkNewRegistration } from "@/utils/authUtils",;
-import { useNavigate } from 'react-router-dom',;
 /**;
  * Custom hook for auth event handling;
  */;
@@ -47,7 +41,7 @@ export function useAuthEventHandlers(;
 
 
 ) {;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
 
   const handleSignedIn = (mappedUser: UserProfile) => {;
     toast({;
@@ -159,10 +153,6 @@ if ( {) {
   return {
     handleSignedIn,
     handleSignedOut
-import { toast } from "@/hooks/use-toast",;
-import type { UserProfile } from "@/types/auth",;
-import { checkNewRegistration } from "@/utils/authUtils",;
-import { useNavigate } from 'react-router-dom',;
 /**;
  * Custom hook for auth event handling;
  */;
@@ -178,10 +168,6 @@ export function useAuthEventHandlers(): any (;
   }
 }
 
-import { toast } from "@/hooks/use-toast",;
-import type { UserProfile } from "@/types/auth",;
-import { checkNewRegistration } from "@/utils/authUtils",;
-import { useNavigate } from 'react-router-dom',;
 ;
 /**;
  * Custom hook for auth event handling;

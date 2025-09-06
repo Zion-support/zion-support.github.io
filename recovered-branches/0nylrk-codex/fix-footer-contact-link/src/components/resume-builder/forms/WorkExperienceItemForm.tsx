@@ -43,8 +43,6 @@ import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDi
 
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
 
 
 // Define form schema
@@ -176,7 +174,6 @@ interface WorkExperienceItemFormProps {
 
 
 
-import {useState} from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from './react - hook - form';
 import { z } from './zod';

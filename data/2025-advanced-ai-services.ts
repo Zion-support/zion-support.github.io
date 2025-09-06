@@ -35,8 +35,8 @@ export const advancedAIServices2025 = [;
     target_audience:;
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
     competitive_advantage:;
-      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
-  },
+      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
+  }
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
 

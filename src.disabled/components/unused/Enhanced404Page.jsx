@@ -40,6 +40,7 @@ interface Enhanced404PageProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function Enhanced404Page({}: Enhanced404PageProps) {
+export default function Enhanced404Page({}: Enhanced404PageProps) {
   return (
     <div>
       <h1>Enhanced404Page</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

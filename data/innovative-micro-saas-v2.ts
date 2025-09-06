@@ -71,11 +71,11 @@
       'Integration with business systems',
       'Mobile app access',
       'API for developers',
-      '24 / 7 contract management',
+      '24 / 7 contract management'
     ],
     popular: true,
 
-    icon: '📋',
+    icon: '📋'
 
 
 }

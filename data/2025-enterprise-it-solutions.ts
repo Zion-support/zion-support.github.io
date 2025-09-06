@@ -8,7 +8,7 @@
     launch_date: '2025 - 01 - 18',
     customers: 56,
     rating: 4 && 4.8,
-    reviews: 38,
+    reviews: 38
 
 
   },;

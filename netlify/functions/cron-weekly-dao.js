@@ -44,7 +44,7 @@ if ( {) {
 
         content,
         message: 'chore (automation): weekly DAO metrics update',
-        token,
+        token
       });
     }
     return {
@@ -66,7 +66,7 @@ exports.handler = async function() {
 
     }
       status_code: 200,
-      body: JSON.stringify ({ ok: true, updated_at: data.updated_at }),
+      body: JSON.stringify ({ ok: true, updated_at: data.updated_at })
     }
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -93,7 +93,7 @@ if ( {) {
 
 
       statusCode: 200,
-      body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }),
+      body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt })
     };
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };

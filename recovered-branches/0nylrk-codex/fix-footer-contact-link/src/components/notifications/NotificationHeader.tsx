@@ -13,7 +13,7 @@ interface NotificationHeaderProps {
 
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
   unreadCount,
-  onMarkAllAsRead,
+  onMarkAllAsRead
 
 }) => {
   return (
@@ -43,7 +43,7 @@ interface NotificationHeaderProps {
 }
 export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
   unread_count,
-  onMarkAllAsRead,
+  onMarkAllAsRead
 }) => {
   return (
     <div className="flex justify - between items - center p - 4 border - b border - zion - blue - light">;

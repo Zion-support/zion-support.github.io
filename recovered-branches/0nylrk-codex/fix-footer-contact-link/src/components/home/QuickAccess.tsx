@@ -41,7 +41,7 @@ export function QuickAccess() {
       icon: <Briefcase className="h-6 w-6 text-zion-cyan" />
       link: "/services"
 
-    },
+    }
 
 
     }
@@ -54,7 +54,7 @@ export function QuickAccess() {
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"
 
-    },
+    }
 
 
     }
@@ -67,7 +67,7 @@ export function QuickAccess() {
       icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />
       link: "/community"
 
-    },
+    }
 
 
     }
@@ -137,7 +137,6 @@ export function QuickAccess() {
       </div>;
     </section>;
   ),;}
- import {
   ArrowRight;
 Search;
 Users;

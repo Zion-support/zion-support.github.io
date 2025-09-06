@@ -11,7 +11,7 @@ interface ProjectDetailsStepProps {
 
 export function ProjectDetailsStep({
   formData,
-  updateFormData,
+  updateFormData
 
 
 }: ProjectDetailsStepProps) {
@@ -134,8 +134,8 @@ value={formData.contactInfo.name}
                 updateFormData({
                   contactInfo: {
                     ...formData.contactInfo,
-                    name: e.target.value,
-                  },
+                    name: e.target.value
+                  }
                 })
               }
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
@@ -156,8 +156,8 @@ value={formData.contactInfo.name}
                 updateFormData({
                   contactInfo: {
                     ...formData.contactInfo,
-                    company: e.target.value,
-                  },
+                    company: e.target.value
+                  }
                 })
               }
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
@@ -184,8 +184,8 @@ value={formData.contactInfo.name}
                 updateFormData({
                   contactInfo: {
                     ...formData.contactInfo,
-                    email: e.target.value,
-                  },
+                    email: e.target.value
+                  }
                 })
               }
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
@@ -206,8 +206,8 @@ value={formData.contactInfo.name}
                 updateFormData({
                   contactInfo: {
                     ...formData.contactInfo,
-                    phone: e.target.value,
-                  },
+                    phone: e.target.value
+                  }
                 })
               }
 

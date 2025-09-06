@@ -43,9 +43,7 @@ export function ConversationsList(): any ({ ;
       )}
 
 
-import {User} from 'lucide-react';
 import {Conversation} from '@/types / messaging';
-import {ConversationItem} from './ConversationItem';
 interface ConversationsListProps {
   conversations: Conversation[],
   active_conversation: Conversation | null,

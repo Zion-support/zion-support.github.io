@@ -2,7 +2,7 @@
 
 
 
-type QuoteRequestsListProps = {;
+type QuoteRequestsListProps = {
   quotes: QuoteRequest[],;
   isLoading: boolean,;
   isArchived: boolean,;

@@ -8,9 +8,20 @@ import React,{ useState,useEffect,useRef,useContext } from';react' import { Auth
 ursor/automate-test-improve-and-merge-code-646c
 
 
+' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
+" " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
 
 
 ' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
 " " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+:src.disabled/components/ChatAssistant/ChatAssistant.jsx
+' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
+" " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
+" " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
+:temp_exclude/src.disabled/components/ChatAssistant/ChatAssistant.jsx
+' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
+" " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""

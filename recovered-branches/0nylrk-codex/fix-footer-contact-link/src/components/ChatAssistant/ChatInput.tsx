@@ -68,7 +68,7 @@ interface ChatInputProps {;
 ;
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState(''),;
-  const inputRef = useRef<HTMLTextAreaElement>(null),;
+  const inputRef = useRef<HTMLTextAreaElement>(null);
   useEffect(() => {;
     // Focus input when component mounts;
     inputRef.current?.focus();
@@ -97,7 +97,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
   }
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
-import React, {
   useState
   useRef
   useEffect
@@ -105,8 +104,6 @@ import React, {
   KeyboardEvent
 } from "react";
 
-import { Button } from "@/components/ui/button";
-import { Send } from "lucide-react";
 interface ChatInputProps {
   onSend: (message: string) => void;
   disabled?: boolean
@@ -148,7 +145,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
   useRef,
   useEffect,
   FormEvent,
-  KeyboardEvent,
+  KeyboardEvent
 } from './react';
 import { Button  } from '@/components / ui / button';
 import { Send  } from './lucide-react';

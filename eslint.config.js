@@ -7,14 +7,16 @@ ursor/automate-test-improve-and-merge-code-646c
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import nextPlugin from '@next/eslint-plugin-next';
+const { FlatCompat } = require('@eslint/eslintrc');
+const js = require('@eslint/js');
 
 const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
+  baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all
 });
 
-export default [
+module.exports = [
   ...compat.extends('next/core-web-vitals'),
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
@@ -82,6 +84,23 @@ ursor/automate-test-improve-and-merge-code-646c
         __dirname: 'readonly',
         __filename: 'readonly',
         global: 'readonly',
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
+    },
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
         module: 'readonly',
         require: 'readonly',
         exports: 'readonly'
@@ -96,3 +115,6 @@ ursor/automate-test-improve-and-merge-code-646c
   }
 ];
 
+    }
+  }
+];

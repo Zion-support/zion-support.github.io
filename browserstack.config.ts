@@ -44,7 +44,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         channel: 'chrome'
 
       }
-    },
+    }
       }    },
 ursor/fix-lint-push-and-merge-to-main-ae4e
 
@@ -54,7 +54,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         browserName: 'firefox'
 
       }
-    },
+    }
       }    },
 ursor/fix-lint-push-and-merge-to-main-ae4e
 
@@ -64,8 +64,8 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         browserName: 'webkit'
 
       }
-    },
-      }    },
+    }
+      }    }
       }    },
 ursor/fix-lint-push-and-merge-to-main-ae4e
 
@@ -76,7 +76,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         ...devices['Pixel 5']
 
       }
-    },
+    }
       }    },
 ursor/fix-lint-push-and-merge-to-main-ae4e
 
@@ -98,14 +98,14 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
   ]
         browserName: "webkit",
-        ...devices["iPhone 12"],
-      },
-    },
+        ...devices["iPhone 12"]
+      }
+    }
   ],
   reporter: [
     ['list'],
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }],
-  ],});        browserName: 'chromium';
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
+  ]});        browserName: 'chromium';
         channel: 'chrome'}
     };
     {

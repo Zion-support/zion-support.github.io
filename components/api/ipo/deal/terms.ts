@@ -33,7 +33,7 @@ function handler() {
     target: '$10, 000, 000',
     valuation_cap: '$80, 000, 000',
     discount: '20%',
-    lead_investor: 'TBD',
+    lead_investor: 'TBD'
   });
   res.status (200).json (terms);export default /**
  * handler - Function description

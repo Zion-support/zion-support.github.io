@@ -99,9 +99,6 @@ const baseRoutes = [;
 ];
 import React, { Suspense } from 'react',
 import { Routes, Route } from 'react-router-dom',
-import './App.css',
-import { ThemeProvider } from "./components/ThemeProvider",
-import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
 
@@ -125,20 +122,9 @@ import { WhitelabelProvider  } from './context / WhitelabelContext';
 import { Toaster  } from './components / ui / toaster';
 import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
 
-import React, { Suspense } from 'react';
-import { Routes, Route  } from 'react-router-dom';
-import './App.css',
-import { ThemeProvider } from "./components/ThemeProvider",
-import { WhitelabelProvider } from "./context/WhitelabelContext",
-import React, { Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
-import "./App.css";
-import { ThemeProvider } from "./components/ThemeProvider";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 
 import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
-import {
   AuthRoutes
   DashboardRoutes
   MarketplaceRoutes
@@ -185,16 +171,8 @@ const baseRoutes = [
   { path: "/community", element: <CommunityPage /> }
   { path: "/contact", element: <ContactPage /> }
 ];
-import React, { Suspense } from 'react',
-import { Routes, Route } from 'react-router-dom',
-import './App.css',
-import { ThemeProvider } from "./components/ThemeProvider",
-import { WhitelabelProvider } from "./context/WhitelabelContext",
-import { Toaster } from "./components/ui/toaster",
-import { Toaster as SonnerToaster } from "./components/ui/sonner",
 
 
-import {
   AuthRoutes,
   DashboardRoutes,
   MarketplaceRoutes,
@@ -223,22 +201,12 @@ import {
         <Toaster />;
 
 
-import { Toaster } from "./components/ui/toaster";
-
-import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
-
-
-import React, { Suspense } from 'react',
-import { Routes, Route } from 'react-router-dom',
-import './App.css',
-import { ThemeProvider } from "./components/ThemeProvider",
-import { WhitelabelProvider } from "./context/WhitelabelContext",
-import { Toaster } from "./components/ui/toaster",
-import { Toaster as SonnerToaster } from "./components/ui/sonner",
 
 
 
-import {
+
+
+
   AuthRoutes,
   DashboardRoutes,
   MarketplaceRoutes,

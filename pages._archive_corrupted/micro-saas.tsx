@@ -2142,7 +2142,7 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
-  const technologies = [{ "name": 'Frontend', "icon": Monito r, "description": 'React, Next && Next.js, Vue && Vue.js, Angular' },;
+  const technologies = [{ "name": 'Frontend', "icon": Monito r, "description": 'React, Next && Next.js, Vue && Vue.js, Angular' };
     { "name": 'Backend', "icon": Serve r, "description": 'Node && Node.js, Python, Go, Java' },;
     { "name": 'Database', "icon": Databas e, "description": 'PostgreSQL, MongoDB, Redis' },;
     { "name": 'Cloud', "icon": Clou d, "description": 'AWS, Azure, GCP, DigitalOcean' },;

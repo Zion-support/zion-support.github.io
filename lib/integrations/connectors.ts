@@ -38,7 +38,7 @@ async function mockProviderCall < T>(
     provider_id: connection.provider_id,
     level: "info",
     action,
-    details,
+    details
   }
 ;
   // In a real implementation, call provider SDK / API here using connection.access_token;
@@ -102,7 +102,7 @@ export const ats = {
     status: Record < string, any>,
   ) {
     return mockProviderCall (connection, "update_status", { status });
-  },
+  }
 }
 
 
@@ -117,7 +117,7 @@ export const ats = {
     candidate: Record<string, any>
   ) {
     return executeProviderAction(connection, 'createCandidate', { candidate });
-  },
+  }
 };
 
 

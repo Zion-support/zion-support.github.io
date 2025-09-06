@@ -10,7 +10,6 @@ const corsHeaders = {
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
@@ -20,7 +19,6 @@ const corsHeaders = {
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 
 
@@ -227,9 +225,7 @@ if ( {) {
       } else {
         throw new Error ("Could not extract JSON from response");
       }
-    } catch (e) {
-      } else {
-      }
+    } catch (e) {} else {}
     }
 
     return new Response(
@@ -244,7 +240,7 @@ if ( {) {
           }
         ],;
         temperature: 0.7})}),;
-    const openAIData = await openAIResponse.json(),;
+    const openAIData = await openAIResponse.json();
     if (!openAIData.choices || openAIData.choices.length === 0) {;
       throw new Error("Failed to generate profile content");
     }

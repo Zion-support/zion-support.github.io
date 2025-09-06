@@ -239,7 +239,7 @@ const "ContactPage": React.FC = () => {;
     \"Blockchain Technology\",;
     \"Digital Transformation\",;
     \"Consulting & Strategy\";
-  const services = ["AI & Machine Learning Solutions",;
+  const services = ["AI & Machine Learning Solutions";
     "IT Infrastructure & Support",;
     "Micro SaaS Development",;
     "Cybersecurity Services",;

@@ -40,6 +40,7 @@ interface CommunityProfilePageProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function CommunityProfilePage({}: CommunityProfilePageProps) {
+export default function CommunityProfilePage({}: CommunityProfilePageProps) {
   return (
     <div>
       <h1>CommunityProfilePage</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

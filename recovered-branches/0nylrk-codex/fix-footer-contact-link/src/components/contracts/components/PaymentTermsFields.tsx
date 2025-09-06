@@ -29,10 +29,8 @@ import { Input } from "@/components/ui/input",
 
 
 import { Input } from "@/components/ui/input";
-import { Input } from "@/components/ui/input",
 
 
-import { 
   Select;
   SelectContent;
   SelectItem;
@@ -50,8 +48,6 @@ import { ContractFormValues } from "./ContractForm",
 
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
 import { ContractFormValues } from "./ContractForm";
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
-import { ContractFormValues } from "./ContractForm",
 
 
 interface PaymentTermsFieldsProps {
@@ -111,7 +107,6 @@ import {;
   FormMessage;
 } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
-import {;
   Select,;
   SelectContent,;
   SelectItem,;
@@ -355,7 +350,6 @@ export function PaymentTermsFields({;
 }
 
   ),;}
- import {
   FormField;
 FormItem;
 FormLabel;

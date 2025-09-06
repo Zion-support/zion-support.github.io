@@ -55,6 +55,8 @@ if (.ends_with (") {
 }")) {
           return match.trim () + ";";
 
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 
       (match) => {
         return match.replace(";", ";");

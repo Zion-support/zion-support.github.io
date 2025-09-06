@@ -35,7 +35,7 @@ async function createAnalyticsTables() {
 
         CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public && public.analytics_events(event_type);
         CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public && public.analytics_events(user_id);
-        CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public && public.analytics_events(created_at),
+        CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public && public.analytics_events(created_at)
         
 
 
@@ -240,7 +240,7 @@ function createAnalyticsTables() {
         LEFT JOIN page_views p ON c.date = p.date
 
         ORDER BY c.date DESC;
-      `,
+      `
     });
 
     console.log("Analytics tables created successfully");

@@ -87,7 +87,7 @@ export function addEducationSection(;
   const sortedEducation = [...education].sort((a, b) => {;
     if (a.is_current && !b.is_current) return -1,;
     if (!a.is_current && b.is_current) return 1,;
-    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date),;
+    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
     return dateB.getTime() - dateA.getTime();
   }),;
@@ -218,10 +218,6 @@ if ( {) {
 
 }
 
-import { jsPDF } from 'jspdf',;
-import { Education } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
-import { formatDate } from '../formatters',;
 ;
 export function addEducationSection(;
   doc:jsPDF,;

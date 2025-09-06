@@ -5,16 +5,15 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
+  DialogTitle
 } from "@/components/ui/dialog";
 import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
 import { Resume } from "@/types/resume";
@@ -28,7 +27,7 @@ interface ResumeVersionSelectorProps {
 
 export function ResumeVersionSelector({
   currentResume,
-  onResumeChange,
+  onResumeChange
 }: ResumeVersionSelectorProps) {
 
   const { createResume, fetchResume } = useResume();
@@ -90,7 +89,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
   const handleCreateNewVersion = async () => {;
     if (newResumeTitle.trim()) {;
       setIsLoading(true),;
-      const resumeId = await createResume({ title: newResumeTitle.trim() }),;
+      const resumeId = await createResume({ title: newResumeTitle.trim() });
       if (resumeId) {;
         await fetchResume(resumeId),;
         onResumeChange(resumeId),;

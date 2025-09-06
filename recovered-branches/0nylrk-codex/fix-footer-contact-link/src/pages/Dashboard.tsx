@@ -11,12 +11,11 @@ import {
   MessageSquare,
   LogOut,
   Send,
-  Settings,
+  Settings
 } from "lucide-react";
-import {
   createTestNotification,
   createOnboardingNotification,
-  createSystemNotification,
+  createSystemNotification
 } from "@/utils/notifications";
 import { NotificationCenter } from "@/components/NotificationCenter";
 import { useToast } from "@/hooks/use-toast";
@@ -28,7 +27,7 @@ export default function Dashboard() {
 
                         toast({
                           title: "System notification sent",
-                          description: "Check your notification center",
+                          description: "Check your notification center"
                         });
 
                       }}

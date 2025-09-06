@@ -283,7 +283,6 @@ import {Job} from "./types";
 
           <MessageTab
 
-import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Loader2 } from './lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';

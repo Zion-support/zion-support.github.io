@@ -601,7 +601,7 @@ class AICustomerSupportService {
   }
 ;
   async assignTicket(ticketId: string, agentId: string): Promise<void> {;
-    const ticket = this.tickets.find(t => t.id === ticketId),;
+    const ticket = this.tickets.find(t => t.id === ticketId);
     if (ticket) {;
       ticket.assignedAgentId = agentId,;
       ticket.status = 'in_progress',;

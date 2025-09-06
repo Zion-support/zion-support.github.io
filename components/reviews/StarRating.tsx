@@ -43,7 +43,7 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
 
 
 
-type Props = {;
+type Props = {
   value: number,;
   onChange: (val: number) => void,;
   size?: number;

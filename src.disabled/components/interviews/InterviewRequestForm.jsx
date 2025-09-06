@@ -40,6 +40,7 @@ interface InterviewRequestFormProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function InterviewRequestForm({}: InterviewRequestFormProps) {
+export default function InterviewRequestForm({}: InterviewRequestFormProps) {
   return (
     <div>
       <h1>InterviewRequestForm</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

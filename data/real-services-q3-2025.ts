@@ -26,11 +26,11 @@ export const realServicesQ32025: Q3Service[] = [
       'Price testing and packaging experiments',
       'Revenue leakage detection',
       'Revenue forecasting models',
-      'Weekly executive summaries',
+      'Weekly executive summaries'
 
 
 
-  },];    contactInfo: contact
+  }];    contactInfo: contact
   }
 ];
 
@@ -50,7 +50,7 @@ export const realServicesQ32025: Q3Service[] = [
   },
   {
     id: 'digital-product-commerce-stack',
-    name: 'Digital Product Commerce Stack',
+    name: 'Digital Product Commerce Stack'
     ],
     icon: '🛒',
     color: 'from-cyan-600 to-blue-700',
@@ -67,7 +67,7 @@ export const realServicesQ32025: Q3Service[] = [
   },
   {
     id: 'wordpress-internal-linking-automation',
-    name: 'WordPress Internal Linking Automation',
+    name: 'WordPress Internal Linking Automation'
     ],
     icon: '🔗',
     color: 'from-purple-600 to-pink-600',
@@ -85,7 +85,7 @@ export const realServicesQ32025: Q3Service[] = [
   },
   {
     id: 'reviews-ugc-activation',
-    name: 'Ecommerce Reviews & UGC Activation',
+    name: 'Ecommerce Reviews & UGC Activation'
     ],
     icon: '⭐',
     color: 'from-amber-600 to-rose-600',

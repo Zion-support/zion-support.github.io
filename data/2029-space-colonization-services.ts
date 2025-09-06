@@ -35,11 +35,11 @@ export interface SpaceColonization2029Service {
       'Bandwidth optimization',
       'Network redundancy systems',
       'Real - time monitoring',
-      'Emergency communication channels',
+      'Emergency communication channels'
     ],
     popular: true,
 
-    icon: '🌐',
+    icon: '🌐'
 
 
 }

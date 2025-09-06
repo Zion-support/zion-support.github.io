@@ -117,7 +117,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
         body: JSON.stringify(payload);
       }),;
       if (!res.ok) {;
-        const t = await res.text(),;
+        const t = await res.text();
         throw new Error(t || "Failed to generate");
       }
       const data = await res.json(),;
@@ -259,8 +259,6 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
                     value={item.description}
                     on_change={(e) => update_item (idx, { description: e.target.value })}
 
-import React, { useMemo, useState } from "react",;
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
 ;
 export interface MilestoneAssistantProps {;
   scopeOfWork:string,;

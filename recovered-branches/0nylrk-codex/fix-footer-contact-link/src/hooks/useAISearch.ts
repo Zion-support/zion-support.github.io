@@ -26,10 +26,6 @@ import { TALENT_PROFILES } from "@/data/talentData",
 import { JOB_POSTS } from "@/data/jobsData";
 import { PROJECTS } from "@/data/projectsData";
 export interface SearchResult {
-import {useState} from "react";
-import {TALENT_PROFILES} from "@/data/talentData";
-import {JOB_POSTS} from "@/data/jobsData";
-import {PROJECTS} from "@/data/projectsData";
 export interface SearchResult {;
   id: string;
   type: "talent" | "job" | "project";
@@ -67,9 +63,7 @@ interface SearchFilters {
           filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()))
         )
       }
-      if (!filters.type |filters.type === "talent" |filters.type === "all") {
-
-      },
+      if (!filters.type |filters.type === "talent" |filters.type === "all") {},
 
       if (!filters.type || filters.type === "talent" || filters.type === "all") {
         TALENT_PROFILES.forEach((t) => {
@@ -118,9 +112,7 @@ interface SearchFilters {
         })
       }
       setResults(items)
-    } catch (err) {
-
-    }
+    } catch (err) {}
   }
 
 
@@ -158,7 +150,7 @@ export function useAISearch() {;
           headers: { "Content-Type": "application/json" },;
           body: JSON.stringify({ query })}
       ),;
-      const data = await response.json(),;
+      const data = await response.json();
       const filters: SearchFilters = data.filters || {},;
       const items: SearchResult[] = [],;
       const matchSkill = (skills: string[] | undefined) => {;

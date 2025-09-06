@@ -11,7 +11,7 @@ const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'Solutions', href: '/solutions' },
   { name: 'Research', href: '/research' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Contact', href: '/contact' }
 ];
 
 export default function Navigation() {

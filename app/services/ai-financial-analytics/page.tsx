@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
 
@@ -95,6 +94,11 @@ function PricingTier({
 }
 
 
+  title: 'AI Financial Analytics | Zion Tech Group - Intelligent Financial Intelligence Platform',
+  description: 'Revolutionary AI-powered financial analytics platform with predictive modeling, risk assessment, investment optimization, and real-time market intelligence.',
+  keywords: 'AI financial analytics, financial intelligence, predictive finance, investment AI, risk assessment, financial modeling, market analysis'
+};
+
 export default function AIFinancialAnalyticsPage() {
   return (
     <div className="space-y-16">
@@ -117,6 +121,24 @@ export default function AIFinancialAnalyticsPage() {
           <a
             href="tel:+13024640950"
             className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+      <section className="text-center py-16 bg-gradient-to-br from-emerald-50 to-teal-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          AI Financial Analytics
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Transform your financial decision-making with AI-powered analytics. 
+          Predict market trends, optimize investments, and manage risk with unprecedented accuracy and speed.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics Inquiry"
+            className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+          >
+            Get Financial Intelligence Demo
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-emerald-600 text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-600 hover:text-white transition-colors"
           >
             Call +1 302 464 0950
           </a>
@@ -129,6 +151,9 @@ export default function AIFinancialAnalyticsPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Financial Intelligence</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Our AI-powered platform provides comprehensive financial analysis with unprecedented accuracy and speed.
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Financial Intelligence</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Our AI-powered platform processes millions of data points to deliver actionable financial insights and predictions.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -142,277 +167,339 @@ export default function AIFinancialAnalyticsPage() {
               "Cash flow analysis",
               "Scenario modeling",
               "Risk-adjusted projections"
+            title="Predictive Market Analysis"
+            description="Advanced machine learning models analyze market data to predict trends, volatility, and investment opportunities with 87% accuracy."
+            features={[
+              "Real-time market scanning",
+              "Trend prediction algorithms",
+              "Volatility forecasting",
+              "Sector analysis",
+              "Risk-return optimization"
             ]}
           />
           <FeatureCard
             icon="🎯"
-            title="Investment Optimization"
-            description="AI-driven portfolio optimization and investment recommendations based on risk tolerance and market conditions."
-            benefits={[
-              "Portfolio optimization",
-              "Risk assessment",
-              "Asset allocation",
-              "Rebalancing alerts",
-              "Performance tracking"
+            title="Portfolio Optimization"
+            description="AI-driven portfolio management that automatically rebalances assets based on market conditions and risk tolerance."
+            features={[
+              "Dynamic rebalancing",
+              "Risk-adjusted returns",
+              "Diversification optimization",
+              "Tax-loss harvesting",
+              "Performance attribution"
             ]}
           />
           <FeatureCard
-            icon="🔍"
-            title="Risk Assessment & Management"
-            description="Comprehensive risk analysis including market risk, credit risk, and operational risk with mitigation strategies."
-            benefits={[
-              "Market risk analysis",
-              "Credit risk assessment",
-              "Operational risk monitoring",
+            icon="⚠️"
+            title="Risk Assessment Engine"
+            description="Comprehensive risk analysis using multiple models to identify potential threats and opportunities in real-time."
+            features={[
+              "Credit risk modeling",
+              "Market risk assessment",
+              "Liquidity analysis",
               "Stress testing",
-              "Risk mitigation strategies"
+              "Scenario analysis"
             ]}
           />
           <FeatureCard
-            icon="📊"
-            title="Real-time Market Analysis"
-            description="Continuous monitoring of market conditions, news sentiment, and economic indicators for informed decisions."
-            benefits={[
-              "Market sentiment analysis",
-              "News impact assessment",
-              "Economic indicator tracking",
-              "Real-time alerts",
-              "Trend identification"
+            icon="💰"
+            title="Alternative Data Integration"
+            description="Incorporate satellite imagery, social sentiment, news analysis, and other alternative data sources for superior insights."
+            features={[
+              "Satellite data analysis",
+              "Sentiment analysis",
+              "News impact scoring",
+              "Social media monitoring",
+              "Economic indicators"
             ]}
           />
           <FeatureCard
             icon="🤖"
-            title="Automated Reporting"
-            description="AI-generated financial reports, insights, and recommendations tailored to your specific needs and goals."
-            benefits={[
-              "Custom report generation",
-              "Automated insights",
-              "Executive summaries",
-              "Compliance reporting",
-              "Performance dashboards"
+            title="Automated Trading Signals"
+            description="AI-generated trading signals with backtesting capabilities and real-time execution recommendations."
+            features={[
+              "Signal generation",
+              "Backtesting engine",
+              "Performance tracking",
+              "Risk management",
+              "Execution optimization"
             ]}
           />
           <FeatureCard
-            icon="💡"
-            title="Smart Recommendations"
-            description="Personalized financial advice and recommendations based on your financial goals, risk profile, and market conditions."
-            benefits={[
-              "Personalized advice",
-              "Goal-based planning",
-              "Action recommendations",
-              "Opportunity identification",
-              "Strategy optimization"
+            icon="📊"
+            title="Regulatory Compliance"
+            description="Automated compliance monitoring and reporting to ensure adherence to financial regulations and standards."
+            features={[
+              "Regulatory reporting",
+              "Compliance monitoring",
+              "Audit trail generation",
+              "Risk limit tracking",
+              "Documentation automation"
             ]}
           />
         </div>
       </section>
 
-      {/* Accuracy Metrics */}
+      {/* Pricing Section */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Accuracy</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Investment-Grade Pricing</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI models have been trained on decades of financial data and continuously improve through machine learning.
+            Professional-grade financial analytics with transparent pricing and no hidden fees.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">Prediction Accuracy</div>
-            <div className="text-sm text-gray-600">Financial forecasting accuracy</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">40%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">Better Returns</div>
-            <div className="text-sm text-gray-600">Average improvement in investment returns</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-600 mb-2">60%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">Risk Reduction</div>
-            <div className="text-sm text-gray-600">Reduction in portfolio volatility</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-orange-600 mb-2">80%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">Time Saved</div>
-            <div className="text-sm text-gray-600">Reduction in analysis time</div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <PricingCard
+            name="Professional"
+            price="$2,500"
+            period="per month"
+            description="Perfect for financial advisors and wealth managers"
+            features={[
+              "Up to 100 portfolios",
+              "Basic AI analytics",
+              "Market predictions",
+              "Risk assessment",
+              "Email support",
+              "Standard reporting"
+            ]}
+            popular={false}
+          />
+          <PricingCard
+            name="Institutional"
+            price="$7,500"
+            period="per month"
+            description="Ideal for hedge funds and investment firms"
+            features={[
+              "Unlimited portfolios",
+              "Advanced AI models",
+              "Alternative data",
+              "Custom strategies",
+              "Priority support",
+              "API access",
+              "White-label options"
+            ]}
+            popular={true}
+          />
+          <PricingCard
+            name="Enterprise"
+            price="$25,000"
+            period="per month"
+            description="Complete solution for large financial institutions"
+            features={[
+              "Custom AI development",
+              "Dedicated support team",
+              "On-premise deployment",
+              "Advanced security",
+              "Custom integrations",
+              "SLA guarantee",
+              "Training & consulting"
+            ]}
+            popular={false}
+          />
+        </div>
+      </section>
+
+      {/* Performance Metrics */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Performance</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Our AI financial analytics platform has consistently outperformed traditional methods across various metrics.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <MetricCard
+            number="87%"
+            label="Prediction Accuracy"
+            description="Average accuracy of market trend predictions over 12 months"
+          />
+          <MetricCard
+            number="23%"
+            label="Excess Returns"
+            description="Average outperformance compared to benchmark indices"
+          />
+          <MetricCard
+            number="45%"
+            label="Risk Reduction"
+            description="Average reduction in portfolio volatility through optimization"
+          />
+          <MetricCard
+            number="$2.8B"
+            label="Assets Under Analysis"
+            description="Total assets currently being analyzed by our platform"
+          />
         </div>
       </section>
 
       {/* Use Cases */}
-      <section className="py-12">
+      <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry Applications</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI financial analytics platform serves a wide range of financial professionals and organizations.
+            Our AI financial analytics platform serves diverse financial institutions and investment professionals.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-            <div className="text-3xl mb-4">🏦</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Financial Institutions</h3>
-            <p className="text-gray-600 mb-4">Banks, credit unions, and financial services companies managing complex portfolios and risk.</p>
-            <ul className="space-y-2">
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Credit risk assessment
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Regulatory compliance
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Portfolio management
-              </li>
-            </ul>
-          </div>
-          <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-            <div className="text-3xl mb-4">💼</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Investment Firms</h3>
-            <p className="text-gray-600 mb-4">Hedge funds, asset managers, and investment advisors optimizing client portfolios.</p>
-            <ul className="space-y-2">
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Portfolio optimization
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Market analysis
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Client reporting
-              </li>
-            </ul>
-          </div>
-          <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-            <div className="text-3xl mb-4">🏢</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Corporate Finance</h3>
-            <p className="text-gray-600 mb-4">Large corporations managing treasury operations, financial planning, and risk management.</p>
-            <ul className="space-y-2">
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Treasury management
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Financial planning
-              </li>
-              <li className="text-sm text-gray-600 flex items-center">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Risk management
-              </li>
-            </ul>
-          </div>
+          <UseCaseCard
+            icon="🏦"
+            title="Investment Banks"
+            description="Equity research, M&A analysis, and trading desk optimization"
+            benefits={[
+              "Enhanced research accuracy",
+              "Faster deal analysis",
+              "Improved trading performance",
+              "Risk management"
+            ]}
+          />
+          <UseCaseCard
+            icon="💼"
+            title="Hedge Funds"
+            description="Alpha generation, risk management, and portfolio optimization"
+            benefits={[
+              "Alpha identification",
+              "Risk-adjusted returns",
+              "Market timing",
+              "Strategy optimization"
+            ]}
+          />
+          <UseCaseCard
+            icon="👥"
+            title="Wealth Management"
+            description="Client portfolio management and financial planning"
+            benefits={[
+              "Personalized strategies",
+              "Goal-based investing",
+              "Tax optimization",
+              "Client reporting"
+            ]}
+          />
+          <UseCaseCard
+            icon="🏢"
+            title="Asset Managers"
+            description="Fund management and performance attribution"
+            benefits={[
+              "Performance enhancement",
+              "Risk control",
+              "Benchmark beating",
+              "Cost optimization"
+            ]}
+          />
+          <UseCaseCard
+            icon="🏛️"
+            title="Central Banks"
+            description="Monetary policy analysis and economic forecasting"
+            benefits={[
+              "Economic modeling",
+              "Policy impact analysis",
+              "Market stability",
+              "Crisis prediction"
+            ]}
+          />
+          <UseCaseCard
+            icon="🏪"
+            title="Retail Banks"
+            description="Credit risk assessment and loan optimization"
+            benefits={[
+              "Credit scoring",
+              "Default prediction",
+              "Pricing optimization",
+              "Regulatory compliance"
+            ]}
+          />
         </div>
       </section>
 
-      {/* Security & Compliance */}
-      <section className="py-12 bg-gray-50 rounded-lg">
+      {/* ROI Calculator */}
+      <section className="py-12 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise-Grade Security</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Calculate Your Investment ROI</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Your financial data is protected with bank-level security and regulatory compliance.
+            See how AI financial analytics can improve your investment performance and reduce costs.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="text-center p-4">
-            <div className="text-3xl mb-3">🔒</div>
-            <h3 className="font-semibold text-gray-900 mb-2">256-bit Encryption</h3>
-            <p className="text-sm text-gray-600">End-to-end encryption for all data</p>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold text-gray-900 mb-6">Without AI Analytics</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Portfolio value:</span>
+                  <span className="font-semibold">$10M</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Annual return:</span>
+                  <span className="font-semibold">8.5%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Management fees:</span>
+                  <span className="font-semibold">1.5%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Research costs:</span>
+                  <span className="font-semibold">$200K</span>
+                </div>
+                <div className="border-t pt-4">
+                  <div className="flex justify-between text-lg font-bold">
+                    <span>Net Annual Return:</span>
+                    <span className="text-red-600">6.5%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold text-gray-900 mb-6">With AI Analytics</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Portfolio value:</span>
+                  <span className="font-semibold">$10M</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Enhanced return:</span>
+                  <span className="font-semibold text-green-600">11.2%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">AI platform cost:</span>
+                  <span className="font-semibold text-red-600">$90K</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Reduced research:</span>
+                  <span className="font-semibold text-green-600">-$100K</span>
+                </div>
+                <div className="border-t pt-4">
+                  <div className="flex justify-between text-lg font-bold">
+                    <span>Net Annual Return:</span>
+                    <span className="text-green-600">10.1%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="text-center p-4">
-            <div className="text-3xl mb-3">🛡️</div>
-            <h3 className="font-semibold text-gray-900 mb-2">SOC 2 Compliant</h3>
-            <p className="text-sm text-gray-600">Certified security standards</p>
+          <div className="mt-8 text-center">
+            <div className="bg-emerald-100 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-emerald-800 mb-2">Additional Annual Value</h3>
+              <div className="text-3xl font-bold text-emerald-600">$360,000</div>
+              <p className="text-emerald-700">3.6% improvement in net returns</p>
+            </div>
           </div>
-          <div className="text-center p-4">
-            <div className="text-3xl mb-3">📋</div>
-            <h3 className="font-semibold text-gray-900 mb-2">GDPR Ready</h3>
-            <p className="text-sm text-gray-600">Full data privacy compliance</p>
-          </div>
-          <div className="text-center p-4">
-            <div className="text-3xl mb-3">🔐</div>
-            <h3 className="font-semibold text-gray-900 mb-2">Multi-Factor Auth</h3>
-            <p className="text-sm text-gray-600">Advanced authentication</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your organization's size and financial analysis needs.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <PricingTier
-            name="Professional"
-            price="$299"
-            period="month"
-            description="Perfect for individual financial advisors and small firms"
-            features={[
-              "Up to 5 users",
-              "Basic AI analytics",
-              "Portfolio optimization",
-              "Risk assessment",
-              "Standard reporting",
-              "Email support"
-            ]}
-          />
-          <PricingTier
-            name="Enterprise"
-            price="$799"
-            period="month"
-            description="Most popular for mid-size financial institutions"
-            features={[
-              "Up to 25 users",
-              "Advanced AI models",
-              "Custom analytics",
-              "Real-time data feeds",
-              "API access",
-              "Priority support",
-              "Custom integrations"
-            ]}
-            popular={true}
-          />
-          <PricingTier
-            name="Institutional"
-            price="$1,999"
-            period="month"
-            description="For large financial institutions and corporations"
-            features={[
-              "Unlimited users",
-              "Custom AI development",
-              "White-label options",
-              "Dedicated support",
-              "On-premise deployment",
-              "Advanced security",
-              "Custom compliance"
-            ]}
-          />
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Financial Analysis?</h2>
+      <section className="py-12 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-lg text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Financial Intelligence?</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Join leading financial institutions already using our AI-powered analytics platform to make smarter, data-driven decisions.
+          Schedule a personalized demo and discover how AI can revolutionize your financial decision-making.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics Inquiry"
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics - Demo Request"
+            className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Start Free Trial
+            Schedule Demo
           </a>
           <a
             href="tel:+13024640950"
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
           >
             Call +1 302 464 0950
           </a>
@@ -423,6 +510,111 @@ export default function AIFinancialAnalyticsPage() {
         </div>
       </section>
 
+    </div>
+  );
+}
+
+function FeatureCard({ icon, title, description, features }: {
+  icon: string;
+  title: string;
+  description: string;
+  features: string[];
+}) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2">
+        {features.map((feature, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function PricingCard({ name, price, period, description, features, popular }: {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+}) {
+  return (
+    <div className={`p-8 rounded-lg border-2 ${popular ? 'border-emerald-500 bg-emerald-50' : 'border-gray-200 bg-white'} relative`}>
+      {popular && (
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <span className="bg-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </span>
+        </div>
+      )}
+      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
+      <div className="mb-4">
+        <span className="text-4xl font-bold text-gray-900">{price}</span>
+        <span className="text-gray-600 ml-2">{period}</span>
+      </div>
+      <p className="text-gray-600 mb-6">{description}</p>
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-3"></span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <a
+        href={`mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics - ${name} Plan Inquiry`}
+        className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+          popular
+            ? 'bg-emerald-600 text-white hover:bg-emerald-700'
+            : 'bg-gray-900 text-white hover:bg-gray-800'
+        }`}
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
+
+function MetricCard({ number, label, description }: {
+  number: string;
+  label: string;
+  description: string;
+}) {
+  return (
+    <div className="text-center p-6">
+      <div className="text-4xl font-bold text-emerald-600 mb-2">{number}</div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{label}</h3>
+      <p className="text-sm text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function UseCaseCard({ icon, title, description, benefits }: {
+  icon: string;
+  title: string;
+  description: string;
+  benefits: string[];
+}) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2">
+        {benefits.map((benefit, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span>
+            {benefit}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

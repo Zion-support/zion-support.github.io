@@ -11,9 +11,12 @@ export default {
 
 
 ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
 module.exports = {;
 module && module.exports = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps:[;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -62,7 +65,6 @@ module.exports = {;
       error_file:'./logs/error-fixer-error && error.log',;
       out_file:'./logs/error-fixer-out && out.log',;
       log_file:'./logs/error-fixer-combined && combined.log',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       time:true;
     },;
     {;
@@ -70,7 +72,6 @@ module.exports = {;
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;
       script:'automation/intelligent-orchestrator.cjs',;
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -88,7 +89,6 @@ module.exports = {;
       error_file:'./logs/orchestrator-error && error.log',;
       out_file:'./logs/orchestrator-out && out.log',;
       log_file:'./logs/orchestrator-combined && combined.log',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       time:true;
     },;
     {;
@@ -96,7 +96,6 @@ module.exports = {;
       script:'automation/automation-dashboard && dashboard.cjs',;
       script:'automation/automation-dashboard.cjs',;
       script:'automation/automation-dashboard && dashboard.cjs',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       args:'start',;
       instances:1,;
       autorestart:true,;
@@ -127,7 +126,6 @@ module.exports = {;
       script:'automation/code-quality-monitor && monitor.cjs',;
       script:'automation/code-quality-monitor.cjs',;
       script:'automation/code-quality-monitor && monitor.cjs',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -144,7 +142,6 @@ module.exports = {;
       error_file:'./logs/code-quality-error && error.log',;
       out_file:'./logs/code-quality-out && out.log',;
       log_file:'./logs/code-quality-combined && combined.log',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       time:true;
     },;
     {;
@@ -152,7 +149,6 @@ module.exports = {;
       script:'automation/performance-optimizer && optimizer.cjs',;
       script:'automation/performance-optimizer.cjs',;
       script:'automation/performance-optimizer && optimizer.cjs',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -425,6 +421,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> main
 export default {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default {
   apps: [;
     {
 
@@ -436,6 +433,9 @@ export default {
       cwd: './',
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+      script: 'npm',
+      args: 'run preview',
+      cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -474,7 +474,6 @@ ursor/automate-test-improve-and-merge-code-646c
       args: 'scripts / pm2 / auto - fix.js',
 
       cron_restart: '0 */6 * * *',
->>>>>>> main
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
@@ -494,6 +493,7 @@ ursor/automate-test-improve-and-merge-code-646c
       error_file: 'logs / pm2 / auto - fix - error.log',
       out_file: 'logs / pm2 / auto - fix - out.log'
 
+        NODE_ENV: 'production'
     },
     {
       name: 'healthcheck',
@@ -728,6 +728,7 @@ module.exports = {
 module && module.exports = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps: [{},
+  apps: [{},
     max_memory_restart: "1G",
     node_args: "--max-old-space-size=1024",
     error_file: "./logs/err && err.log",
@@ -742,7 +743,6 @@ module && module.exports = {
 >>>>>>> main
 >>>>>>> main
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 }
@@ -751,6 +751,7 @@ module && module.exports = {
 >>>>>>> origin/automation-improvements-final
 }
 >>>>>>> main
+}
       },
       error_file: './logs/code-quality-error.log',
       out_file: './logs/code-quality-out.log',
@@ -1327,6 +1328,7 @@ ursor/automate-test-improve-and-merge-code-646c
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+},
     node_args: "--max-old-space-size=1024",
     error_file: "./logs/err.log",
     out_file: "./logs/out.log",

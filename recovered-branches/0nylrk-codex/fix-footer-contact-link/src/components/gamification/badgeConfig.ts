@@ -266,10 +266,7 @@ export const getBadgeMeta = (key: BadgeKey) =>: any;
 }
 export const badgeList: BadgeMeta[] = [
 
-  {
-
-
-}
+  {}
 export const badgeList: BadgeMeta[] = [
 
   {

@@ -70,7 +70,7 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
+  CarouselPrevious
 } from '@/components / ui / carousel';
                       <img;
 
@@ -105,7 +105,6 @@ import {
 
     </section>;
   ),;}
- import {
   Carousel;
 CarouselContent;
 CarouselItem;

@@ -8,7 +8,7 @@ import { EducationItemProps } from "./types";
 export function EducationItem({
   education,
   onEdit,
-  onDelete,
+  onDelete
 }: EducationItemProps) {
 
   return (

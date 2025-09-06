@@ -17,18 +17,18 @@
 
       type: 'text',
 
-      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
     },;
   ];
   const web3Extras: MediaAsset[] = [
 
       type: 'text',
-      content: `# Terms of Use\n\n_by using Zion products, you agree to these terms. Replace with counsel - approved language.`,
+      content: `# Terms of Use\n\n_by using Zion products, you agree to these terms. Replace with counsel - approved language.`
     },
     {
       path: '',
       type: 'text',
-      content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`,
+      content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`
     },
     {
       path: '',
@@ -37,8 +37,8 @@
       filename: 'legal / jurisdictional - disclosures.md',
 
       type: 'text',
-      content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
-    },
+      content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`
+    }
 
   ];
 
@@ -47,7 +47,7 @@
 
     {
 
-      path: '',
+      path: ''
 
   ];
 
@@ -102,13 +102,7 @@ export function buildPressRelease(
 
 
 
-function titleCase(s: string) {
-
-
-
-
-
-}
+function titleCase(s: string) {}
     return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces a seed round of ${params.raise_amount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\n_quotes:\n- CEO: "We are thrilled..."\n\n_about ${params.company_name}:\n${boilerplate}`;
   }
   // Check condition
@@ -131,9 +125,9 @@ function build_timeline() {
     { label: 'Week 2: ZionGPT Core Reveal', date: fmt (add_days (start_date, 7)) },
     {
       label: 'Week 3: Token Airdrop Snapshot',
-      date: fmt (add_days (start_date, 14)),
+      date: fmt (add_days (start_date, 14))
     },
-    { label: 'Week 4: Zion Global Summit', date: fmt (add_days (start_date, 21)) },
+    { label: 'Week 4: Zion Global Summit', date: fmt (add_days (start_date, 21)) }
   ];
 ;
 /**

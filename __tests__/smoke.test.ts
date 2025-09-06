@@ -18,6 +18,9 @@ describe('smoke', () => { it("true is truthy"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+});''
+
+
 describe('smoke', () => {
   it('true is truthy', () => {
     expect(true).toBeTruthy();
@@ -45,6 +48,10 @@ describe('smoke', () => {
 describe('smoke'
   it('true is truthy'
 describe('smoke', () => { it("true is truthy"
+
+});''
+
+});
 
 describe('smoke'
   it('true is truthy'
@@ -74,3 +81,6 @@ describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})
 });''
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})}
+});''
+});''

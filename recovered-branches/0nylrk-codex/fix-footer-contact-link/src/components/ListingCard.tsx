@@ -53,9 +53,6 @@ export function ListingCard({ ;
   authorImage, ;
 
 
-import {cn} from "@/lib/utils";
-import {Badge} from "@/components/ui/badge";
-import {Link} from "react-router-dom";
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";

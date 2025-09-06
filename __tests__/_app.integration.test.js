@@ -16,6 +16,8 @@ import _React from 'react" import { render,screen } from '@testing-library/react
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
+
+
 ursor/fix-syntax-push-and-merge-to-main-40de
 const React from "react" import { render,screen } from "@testing-library/react" import "@testing-library/jest-dom import _app from "./pages/_app" describe("_app Integration Tests",() => {" test("page renders correctly",() => {" render(<_app / />) expect(screen.getByRole("main")).toBeInTheDocument();" }) test("navigation works",() => {" render(<_app / />) }) test("page content is accessible",() => {" render(<_app / />) }) test("page loads with correct data",() => {" render(<_app / />) }) })'"'"
 const React from "react" import { render,screen } from "@testing-library/react" import "@testing-library/jest-dom import _app from "./pages/_app" describe("_app Integration Tests",() => {" test("page renders correctly",() => {" render(<_app / />) expect(screen.getByRole("main")).toBeInTheDocument();" }) test("navigation works",() => {" render(<_app / />) }) test("page content is accessible",() => {" render(<_app / />) }) test("page loads with correct data",() => {" render(<_app / />) }) })'"'"

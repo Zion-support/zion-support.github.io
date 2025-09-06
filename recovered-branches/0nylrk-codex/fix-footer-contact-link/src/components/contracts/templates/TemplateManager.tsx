@@ -101,8 +101,6 @@ currentValues
   if (template && template.template data) {
   onSelectTemplate (template.template data);
 onClose ();
-toast ({
-  
-}
+toast ({}
 
 

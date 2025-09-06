@@ -103,7 +103,7 @@ export async function generateContract(;
   clientName: string,;
   generatedMilestones: GeneratedMilestone[];
 ): Promise<string> {;
-  const additionalClauses = values.additionalClauses || [],;
+  const additionalClauses = values.additionalClauses || [];
   // Prepare milestone data if we have AI-generated milestones;
   const milestoneData = generatedMilestones.length > 0;
     ? generatedMilestones.map(m => ({;

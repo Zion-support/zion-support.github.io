@@ -7,8 +7,7 @@
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
     res && res.status(200).json({ items });
-  } catch {
-  } catch {
+  } catch {} catch {
     res.status (200).json ({ items: [] });
   }
   try {

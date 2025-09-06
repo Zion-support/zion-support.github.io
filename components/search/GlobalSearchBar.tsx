@@ -21,7 +21,6 @@ import React from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function GlobalSearchBar() {;
-import { useEffect, useMemo, useRef, useState } from 'react';
   useEffect(() => {;
     if (!query) {;
       setSuggestions([]);
@@ -66,8 +65,6 @@ import { useEffect, useMemo, useRef, useState } from 'react';
     if (typeof window === 'undefined') return;
     const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
 import { useEffect, useMemo, useRef, useState  } from 'react';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
 
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;

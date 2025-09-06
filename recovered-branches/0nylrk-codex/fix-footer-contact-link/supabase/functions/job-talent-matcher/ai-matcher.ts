@@ -5,7 +5,6 @@
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
 import {JobData, TalentProfile, MatchResult} from "./types.ts";
-import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
 
 // Get openAI API key from environment variables
@@ -104,7 +103,7 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
 
 import { JobData, TalentProfile, MatchResult } from "./types.ts",;
 // Get openAI API key from environment variables;
-const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",;
+const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "";
 /**;
  * Normalizes skills using OpenAI;
  * @param skills Array of skill strings to normalize;
@@ -259,9 +258,7 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
       },
 
 
-      body: JSON.stringify({
-
-      };
+      body: JSON.stringify({};
       body: JSON && JSON.stringify({
 
         model: "gpt-4o-mini";

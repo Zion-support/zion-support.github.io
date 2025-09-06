@@ -25,7 +25,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
@@ -41,7 +41,7 @@ interface ReferralLinkProps {
 export function ReferralLink({
   referralLink,
   onCopy,
-  onShare,
+  onShare
 }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false);
 

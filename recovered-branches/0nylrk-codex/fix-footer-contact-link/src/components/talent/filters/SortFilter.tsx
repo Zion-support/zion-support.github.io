@@ -6,7 +6,7 @@ import {
   SelectItem,
   SelectTrigger,
 
-  SelectValue,
+  SelectValue
 } from "@/components/ui/select";
 import { SortFilterProps } from "@/types/filters";
 
@@ -42,7 +42,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue
 } from '@/components / ui / select';
 import { SortFilterProps  } from '@/types / filters';
 export /**

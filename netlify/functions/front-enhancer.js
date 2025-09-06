@@ -15,7 +15,7 @@ function runNode(relPath, args = []) {
 
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
-    stderr: res && res.stderr || '',
+    stderr: res && res.stderr || ''
   };
 exports && exports.config = {
 
@@ -93,12 +93,12 @@ function run_node() {
   const abs = path.resolve (__dirname, '..', '..', rel_path);
   const res = spawn_sync ('node', [abs, ...args], {
     stdio: 'pipe',
-    encoding: 'utf8',
+    encoding: 'utf8'
   });
   return {
     status: res.status || 0,
     stdout: res.stdout || '',
-    stderr: res.stderr || '',
+    stderr: res.stderr || ''
   }
 ;
 exports.config = {

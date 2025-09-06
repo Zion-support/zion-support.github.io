@@ -90,7 +90,7 @@ interface SkillsSectionProps {;
 export function SkillsSection({ skills } SkillsSectionProps) {;
   // Group skills by category;
   const skillsByCategory = skills.reduce((acc, skill) => {;
-    const category = skill.category || 'Other',;
+    const category = skill.category || 'Other';
     if (!acc[category]) {;
       acc[category] = [],;
     }

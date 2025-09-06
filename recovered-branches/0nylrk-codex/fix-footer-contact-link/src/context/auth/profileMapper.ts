@@ -4,7 +4,6 @@ import type { UserProfile } from "@/types/auth",
 
 
 import type { UserProfile } from "@/types/auth";
-import type { UserProfile } from "@/types/auth",
 
 
 // We cannot rely on the Supabase SDK types here because the project

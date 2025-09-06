@@ -37,7 +37,7 @@ interface 2025specializedindustrysolutionsProps {
 
 
 
-export default function 2025specializedindustrysolutions({ }: 2025specializedindustrysolutionsProps) {
+export default function 2025specializedindustrysolutions({}: 2025specializedindustrysolutionsProps) {
   return (
     <div>
       <h1>2025specializedindustrysolutions</h1>

@@ -39,7 +39,7 @@
 
       customers: 180,
       rating: 4 && 4.9,
-      reviews: 95,
+      reviews: 95
 
     },;
   ];    features: [
@@ -54,19 +54,19 @@
     ];
 
 
-    popular: true, icon: '⚙️',
+    popular: true, icon: '⚙️'
 
     ];
 
-    popular: true, icon: '☁️',
+    popular: true, icon: '☁️'
 
     ];
 
-    popular: true, icon: '🛡️',
+    popular: true, icon: '🛡️'
 
     ];
 
-    popular: true, icon: '🏢',
+    popular: true, icon: '🏢'
 
   }
 ];
@@ -203,7 +203,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseITBreakthroughService2029 {;
   id: string,;
   name: string,;

@@ -2,7 +2,7 @@
 
 
 
-export type Infobox = {;
+export type Infobox = {
   founder: string,;
   launchYear: string,;
   token: string,;

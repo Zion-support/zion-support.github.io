@@ -6,11 +6,9 @@ import {format} from 'date-fns';
 
 
 
-import {format} from 'date-fns';
 
 
 import { format } from 'date-fns';
-import {format} from 'date-fns';
 
 
 /**
@@ -79,7 +77,7 @@ if ( {) {
  */;
 export async function trackReferral(userId: string, email: string) {;
   try {;
-    const refCode = localStorage.getItem('referral_code'),;
+    const refCode = localStorage.getItem('referral_code');
     if (!refCode) return,;
     // Call API to record the referral;
     const response = await fetch('/api/track-referral', {;

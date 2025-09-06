@@ -45,7 +45,7 @@ class ErrorBoundary extends React.Component {
       message: "The request was invalid. Check the details for specific field errors."
       details: "Includes field-specific validation errors."
 
-    },
+    }
 
 
     }
@@ -58,7 +58,7 @@ class ErrorBoundary extends React.Component {
       message: "The request is invalid or malformed."
       details: "The request could not be processed due to syntactical errors."
 
-    },
+    }
 
 
     }
@@ -71,7 +71,7 @@ class ErrorBoundary extends React.Component {
       message: "Invalid or expired API key."
       details: "The provided API key is incorrect, expired, or revoked."
 
-    },
+    }
 
 
     }
@@ -84,7 +84,7 @@ class ErrorBoundary extends React.Component {
       message: "You don't have permission to access this resource."
       details: "Your API key doesn't have the required permissions for this operation."
 
-    },
+    }
 
 
     }
@@ -97,7 +97,7 @@ class ErrorBoundary extends React.Component {
       message: "The requested resource was not found."
       details: "The specified ID does not exist or is not accessible."
 
-    },
+    }
 
 
     }
@@ -110,7 +110,7 @@ class ErrorBoundary extends React.Component {
       message: "The request conflicts with the current state of the resource."
       details: "For example, trying to create a duplicate resource or updating a resource that has been modified."
 
-    },
+    }
 
 
     }
@@ -123,7 +123,7 @@ class ErrorBoundary extends React.Component {
       message: "Rate limit exceeded. Try again later."
       details: "Includes retry_after parameter indicating when to retry."
 
-    },
+    }
 
 
     }
@@ -136,7 +136,7 @@ class ErrorBoundary extends React.Component {
       message: "An unexpected error occurred."
       details: "Something went wrong on our end. If the problem persists, contact support."
 
-    },
+    }
 
 
     }
@@ -161,7 +161,7 @@ class ErrorBoundary extends React.Component {
       limit: "100 requests per minute"
       notes: "Aggregate limit across all GET endpoints"
 
-    },
+    }
 
 
     }
@@ -173,7 +173,7 @@ class ErrorBoundary extends React.Component {
       limit: "30 requests per minute"
       notes: "Aggregate limit across all POST endpoints"
 
-    },
+    }
 
 
     }
@@ -185,7 +185,7 @@ class ErrorBoundary extends React.Component {
       limit: "30 requests per minute"
       notes: "Aggregate limit across all PUT/PATCH endpoints"
 
-    },
+    }
 
 
     }
@@ -197,7 +197,7 @@ class ErrorBoundary extends React.Component {
       limit: "15 requests per minute"
       notes: "Aggregate limit across all DELETE endpoints"
 
-    },
+    }
 
 
     }
@@ -209,7 +209,7 @@ class ErrorBoundary extends React.Component {
       limit: "50 requests per minute"
       notes: "Higher limit for common search operations"
 
-    },
+    }
 
 
     }
@@ -222,10 +222,10 @@ class ErrorBoundary extends React.Component {
       notes: "Higher limit for common search operations"
 
     }
-    },
+    }
 
 
-    },
+    }
 
 
 

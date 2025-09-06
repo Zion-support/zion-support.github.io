@@ -55,12 +55,12 @@ function run_node() {
   const abs = path.resolve (__dirname, '..', '..', rel_path);
   const res = spawn_sync ('node', [abs, ...args], {
     stdio: 'pipe',
-    encoding: 'utf8',
+    encoding: 'utf8'
   });
   return {
     status: res.status || 0,
     stdout: res.stdout || '',
-    stderr: res.stderr || '',
+    stderr: res.stderr || ''
   }
 ;
 exports.config = { schedule: '0 */6 * * *' }
@@ -87,7 +87,7 @@ exports.handler = async () => {
   return {
     status_code: 200,
     headers: { 'content - type': 'text / plain' },
-    body: logs.join ('\n'),
+    body: logs.join ('\n')
   }
 }/**
  * run_node - Function description

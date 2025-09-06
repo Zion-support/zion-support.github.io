@@ -32,12 +32,38 @@ ursor/automate-test-improve-and-merge-code-646c
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  page_extensions: ['tsx', 'ts', 'jsx', 'js'],
+  images: {
+    domains: ["localhost", "ziontechgroup.com"]
+  },
+  output: 'standalone',
+  trailing_slash: false,
+  dist_dir: '.next'
+}
+;
+module.exports = next_config;
+;
+
+  trailingSlash: false,
+  distDir: '.next'
+};
+
+module.exports = nextConfig;
+module.exports = nextConfig;
+
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   images: {
     domains: ["localhost", "ziontechgroup.com"]
   },
   output: "standalone",
   trailingSlash: false,
+  distDir: '.next'
   distDir: '.next'
 };
 /** @type {import('next').NextConfig} */;
@@ -180,6 +206,12 @@ module.exports = nextConfig;
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+module.exports = nextConfig;
+module.exports = nextConfig;
+
+  distDir: ".next"
+};
+
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   
@@ -363,3 +395,6 @@ module.exports = nextConfig;
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+module.exports = nextConfig;
+module.exports = nextConfig;
+

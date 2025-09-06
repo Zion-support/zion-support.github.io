@@ -139,7 +139,7 @@ export default function Signup() {;
     'Non-profit',;
     'Other';
   ];
-  const useCases = ['AI & Machine Learning',;
+  const useCases = ['AI & Machine Learning';
     'Cloud Infrastructure',;
     'Cybersecurity',;
     'Digital Transformation',;

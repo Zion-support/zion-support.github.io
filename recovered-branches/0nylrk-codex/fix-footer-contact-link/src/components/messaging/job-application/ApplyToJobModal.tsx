@@ -11,7 +11,7 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogHeader,
+  DialogHeader
 
 
 
@@ -57,8 +57,6 @@ import {;
 
   DialogTitle,;
 } from "@/components/ui/dialog";
-import { ApplyForm } from "./ApplyForm";
-import { ApplyToJobModalProps } from "./types";
 export function ApplyToJobModal(): any ({;
   job,;
   isOpen,;
@@ -76,12 +74,11 @@ export function ApplyToJobModal(): any ({;
 
 
 import React from './react';
-import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,
+  DialogTitle
 } from '@/components / ui / dialog';
 import { ApplyForm  } from './ApplyForm';
 import { ApplyToJobModalProps  } from './types';

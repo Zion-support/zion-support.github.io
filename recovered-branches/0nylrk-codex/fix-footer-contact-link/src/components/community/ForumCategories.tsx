@@ -45,7 +45,7 @@ import {ForumCategory, ForumCategoryInfo} from "@/types/community";
 
     icon: "FileText"
 
-  },
+  }
 
 
   }

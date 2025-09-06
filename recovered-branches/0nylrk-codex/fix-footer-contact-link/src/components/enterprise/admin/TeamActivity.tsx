@@ -80,7 +80,7 @@ export function TeamActivity() {
       action: "Updated budget",
       target: "Monthly spending cap",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
-      category: "billing",
+      category: "billing"
     },;
   ];
   // Function to format the date in a readable way
@@ -228,7 +228,7 @@ export function TeamActivity() {
 ;
   // Function to format the date in a readable way;
   const formatDate = (date:Date) => {;
-    const now = new Date(),;
+    const now = new Date();
     const diffMs = now.getTime() - date.getTime(),;
     const diffMins = Math.floor(diffMs / (1000 * 60)),;
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),;
@@ -313,8 +313,6 @@ export function TeamActivity() {
               className="w-[200px] md:w-[300px] pl-9"
 
 
-import React from "react",;
-import {;
   Table,;
   TableBody,;
   TableCell,;
@@ -451,13 +449,12 @@ export function TeamActivity() {;
         </Button>;
 
 import React from './react';
-import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow
 } from '@/components / ui / table';
 import { Badge  } from '@/components / ui / badge';
 import { CalendarIcon, Search  } from './lucide-react';
@@ -475,7 +472,7 @@ function TeamActivity() {
       action: "Posted a job",
       target: "Senior AI Engineer",
       timestamp: new Date (Date.now () - 1000 * 60 * 30),
-      category: "jobs",
+      category: "jobs"
     },
     {
       id: 2,
@@ -483,7 +480,7 @@ function TeamActivity() {
       action: "Contacted candidate",
       target: "Michael Chen",
       timestamp: new Date (Date.now () - 1000 * 60 * 120),
-      category: "candidates",
+      category: "candidates"
     },
     {
       id: 3,
@@ -491,7 +488,7 @@ function TeamActivity() {
       action: "Updated job",
       target: "Frontend Developer",
       timestamp: new Date (Date.now () - 1000 * 60 * 60 * 5),
-      category: "jobs",
+      category: "jobs"
     },
     {
       id: 4,
@@ -499,7 +496,7 @@ function TeamActivity() {
       action: "Added team member",
       target: "Chris Rodriguez",
       timestamp: new Date (Date.now () - 1000 * 60 * 60 * 24),
-      category: "team",
+      category: "team"
     },
     {
       id: 5,
@@ -507,7 +504,7 @@ function TeamActivity() {
       action: "Viewed candidate profile",
       target: "Sarah Kim",
       timestamp: new Date (Date.now () - 1000 * 60 * 60 * 24 * 2),
-      category: "candidates",
+      category: "candidates"
     },
     {
       id: 6,
@@ -515,8 +512,8 @@ function TeamActivity() {
       action: "Updated budget",
       target: "Monthly spending cap",
       timestamp: new Date (Date.now () - 1000 * 60 * 60 * 24 * 3),
-      category: "billing",
-    },
+      category: "billing"
+    }
   ];
 ;
   // Function to format the date in a readable way;

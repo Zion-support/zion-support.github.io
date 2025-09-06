@@ -124,7 +124,7 @@ export function EnhancedSearchInput({
     ;
     // Sort suggestions to prioritize those that start with the search term;
     filtered.sort((a, b) => {;
-      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 :0,;
+      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 :0;
       const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 :0,;
       return aStartsWith - bStartsWith,;
     }),;
@@ -321,9 +321,7 @@ if (!value) {
 }, [value, searchSuggestions]);
 //Handle clicks outside the component to close suggestions useEffect ( () => {
   function handleClickOutside (event: MouseEvent) {
-  if (containerRef.current && !containerRef.current.contains (event.target as Node) ) {
-  
-}<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick= {
+  if (containerRef.current && !containerRef.current.contains (event.target as Node) ) {}<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick= {
   () => onChange ('') 
 }> <X className="h-4 w-4" /> </button>) 
 }</div> <AutocompleteSuggestions suggestions= {

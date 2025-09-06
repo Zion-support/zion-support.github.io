@@ -13,7 +13,6 @@ interface ServiceProfileData {
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 
 
 
@@ -145,7 +144,7 @@ if ( {) {
           error: "OpenAI API key not configured"}),
 ;
     // Get OpenAI API key from environment;
-    const apiKey = Deno.env.get("OPENAI_API_KEY"),;
+    const apiKey = Deno.env.get("OPENAI_API_KEY");
     if (!apiKey) {;
       return new Response(;
         JSON.stringify({;
@@ -315,10 +314,7 @@ if ( {) {
         { headers, status: 500 }
       );
     }
-  } catch (error) {
-
-
-      }
+  } catch (error) {}
     );
   }
 });

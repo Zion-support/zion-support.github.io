@@ -9,7 +9,7 @@ import {
   ChevronRight,
   FileText,
   MessageSquare,
-  Video,
+  Video
 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { SeverityIndicator } from "../common/SeverityIndicator";
@@ -47,7 +47,7 @@ interface ProjectViewProps {
   const startProjectCall = () => {
     const roomId = `project-${project.id}`,
     toast.success("Starting project call", {
-      description: "Initializing video connection...",
+      description: "Initializing video connection..."
     });
 
     navigate(`/call/${roomId}`);
@@ -55,7 +55,7 @@ interface ProjectViewProps {
 
   const messageClient = () => {
     toast.info("Opening message thread with client", {
-      description: `Messaging ${project.client.name}...`,
+      description: `Messaging ${project.client.name}...`
     });
     // Navigate to messaging with this client
   };

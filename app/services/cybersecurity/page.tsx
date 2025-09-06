@@ -1,9 +1,13 @@
+import React from 'react';
+
 export const metadata = { 
   title: 'Cybersecurity Services | Zion Tech Group',
 
   description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.'
   description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.'
 
+  description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.',
+  keywords: 'cybersecurity, threat detection, compliance management, security audits, incident response, penetration testing'
 };
 
 export default function CybersecurityPage() {
@@ -339,19 +343,27 @@ function ContactSection() {
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
           Let's discuss how we can protect your business from cyber threats and ensure compliance. 
           Our security experts have protected 200+ organizations from cyber attacks.
+    <div className="space-y-16">
+      <section className="text-center py-16 bg-gradient-to-br from-red-50 to-orange-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Cybersecurity Services
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Protect your business with comprehensive cybersecurity solutions. 
+          From threat detection to compliance management, we keep your data secure.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            href="mailto:kleber@ziontechgroup.com?subject=Cybersecurity Services Inquiry"
+            className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
           >
-            Call +1 302 464 0950
+            Get Security Assessment
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            href="tel:+13024640950"
+            className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
           >
-            Email Us
+            Call +1 302 464 0950
           </a>
         </div>
         <div className="mt-8 text-sm text-gray-500">
@@ -360,5 +372,7 @@ function ContactSection() {
       </div>
     </section>
 
+      </section>
+    </div>
   );
 }

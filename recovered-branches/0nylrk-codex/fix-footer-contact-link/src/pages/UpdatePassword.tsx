@@ -137,7 +137,7 @@ export default function UpdatePassword() {;
   const [accessToken, setAccessToken] = useState<string | null>(null),;
   const [error, setError] = useState<string | null>(null),;
   const [success, setSuccess] = useState(false),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const location = useLocation(),;
 ;
   // Initialize react-hook-form;
@@ -172,7 +172,7 @@ export default function UpdatePassword() {;
     }
 
 
-    setIsLoading(true),
+    setIsLoading(true)
 
 
     }

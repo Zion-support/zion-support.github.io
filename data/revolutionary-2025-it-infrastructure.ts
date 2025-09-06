@@ -632,10 +632,7 @@
 export default revolutionary2025ITServices;
 
     growthRate: '800% annual growth'
-    contactInfo: {
-
-
-}
+    contactInfo: {}
 
 export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   // 🔒 Next-Generation Cybersecurity Services

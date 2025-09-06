@@ -10,11 +10,7 @@ export function useTrackUserBehavior(componentName: string) {;
 import { useRef, useEffect  } from 'react';
 import { useAnalytics } from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {
-import {useRef, useEffect} from 'react';
-import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
-import {useRef, useEffect} from 'react';
-import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
 
 
@@ -78,7 +74,7 @@ import { useAnalytics } from '@/context/AnalyticsContext',;
 ;
 export function useTrackUserBehavior(componentName:string) {;
   const { trackEvent } = useAnalytics(),;
-  const componentRef = useRef<HTMLDivElement>(null),;
+  const componentRef = useRef<HTMLDivElement>(null);
 ;
   useEffect(() => {;
     const component = componentRef.current,;

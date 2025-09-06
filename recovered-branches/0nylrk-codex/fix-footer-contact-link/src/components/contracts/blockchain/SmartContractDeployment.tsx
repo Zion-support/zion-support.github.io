@@ -184,7 +184,7 @@ export function SmartContractDeployment({ ;
   ;
   const handleDownloadSolidity = () => {;
     // Create a blob from the Solidity code;
-    const blob = new Blob([solidityCode], { type:'text/plain' }),;
+    const blob = new Blob([solidityCode], { type:'text/plain' });
     const url = URL.createObjectURL(blob),;
     ;
   }),;

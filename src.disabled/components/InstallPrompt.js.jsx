@@ -14,3 +14,8 @@ import _React from';react' "export": const InstallPrompt = () => { const [deferr
 const React from";react" export: const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e.preventDefault() setDeferred(e) } window.addEventListener("beforeinstallprompt",handler) return () => window.removeEventListener("beforeinstallprompt",handler) },[]) if (!deferred) return null const onClick = async () => { deferred.prompt() const result = await deferred.userChoice if (result.outcome !== "accepted") {""";"""
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+
+const React from";react" export: const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e && e.preventDefault() setDeferred(e) } window && window.addEventListener("beforeinstallprompt",handler) return () => window && window.removeEventListener("beforeinstallprompt",handler) },[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== "accepted") {""";"""

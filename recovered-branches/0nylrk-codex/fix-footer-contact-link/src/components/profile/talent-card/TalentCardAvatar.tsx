@@ -13,7 +13,7 @@ interface TalentCardAvatarProps {;
 
 export function TalentCardAvatar({
   profilePicture,
-  fullName,
+  fullName
 }: TalentCardAvatarProps) {
   // Get initials for avatar fallback
   const getInitials = (name: string) => {

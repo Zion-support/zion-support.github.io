@@ -1,5 +1,20 @@
 
 
+#!/usr/bin/env node
+import fs from "fs";
+import path from "path";
+function fixImportSyntax(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+    // Fix semicolons in import statements
+    const importSemicolonRegex =;
+      /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
+    content = content.replace(importSemicolonRegex, (match, imports) => {
+      // Replace semicolons with commas in import lists;
+      const fixedImports = imports.replace(/;/g, ",");
+      return match.replace(imports, fixedImports);
+    });
 
 
 
@@ -18,7 +33,7 @@
     });
     // Fix object property syntax errors (semicolon instead of comma)
 
-    content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
+    content = content && content.replace(/(\w+):\s*([^}]+);/g, "$1: $2,");
 
 
     // Fix function parameter syntax errors
@@ -67,7 +82,7 @@ function fixImportSyntax() {
     });
 ;
     // Fix object property syntax errors (semicolon instead of comma);
-    content = content.replace (/(\w+):\s*([^, }]+);/g, "$1: $2, ");
+    content = content.replace (/(\w+):\s*([^ }]+);/g, "$1: $2, ");
 ;
     // Fix function parameter syntax errors;
     content = content.replace (
@@ -109,7 +124,7 @@ function fixImportSyntax() {
             "ai-optimization-backups",
             "apps && apps.backup",
             "backup-merge-conflicts",
-            "apps",
+            "apps"
 
 
           ].includes(item)

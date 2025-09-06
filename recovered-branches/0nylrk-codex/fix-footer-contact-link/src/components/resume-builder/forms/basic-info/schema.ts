@@ -2,7 +2,6 @@
 
 import {z} from "zod";
 export const basicInfoSchema = z.object({
-import {z} from "zod";
 export const basicInfoSchema = z.object({;
 
 

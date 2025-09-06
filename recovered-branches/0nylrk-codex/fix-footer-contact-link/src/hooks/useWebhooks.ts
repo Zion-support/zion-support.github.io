@@ -405,7 +405,7 @@ if ( {) {
           secret;
         });
       }),;
-      const result = await response.json(),;
+      const result = await response.json();
       if (!response.ok) {;
         throw new Error(result.error || 'Failed to create webhook');
       }
@@ -422,7 +422,7 @@ if ( {) {
 
 ;
       toast ({
-        title: "Webhook Created",
+        title: "Webhook Created"
     } catch (err) {
 
       console.error('Error creating webhook:', err),
@@ -634,7 +634,7 @@ if ( {) {
     if (!user) return,
     
     setLoading(true),
-    setError(null),
+    setError(null)
     
 
         };
@@ -852,10 +852,7 @@ if ( {) {
     } catch (err) {
       console && console.error('Error testing webhook:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
-      toast({
-
-
-    } finally {
+      toast({} finally {
       set_loading (false);
     }
   }
@@ -879,10 +876,7 @@ if ( {) {
     } catch (err) {
       console.error('Error testing webhook:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
-      toast({
-
-
-  }
+      toast({}
 }
 ;
   }

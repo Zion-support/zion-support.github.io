@@ -54,6 +54,7 @@ interface Nextgenai2026servicesProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
+}
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -64,6 +65,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+export default function Nextgenai2026services({}: Nextgenai2026servicesProps) {
 export default function Nextgenai2026services({}: Nextgenai2026servicesProps) {
   return (
     <div>
@@ -104,9 +106,12 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
+}
+
 
 
 }
+
 
 
 }

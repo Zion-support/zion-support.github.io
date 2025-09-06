@@ -39,9 +39,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -67,9 +64,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!u) return res.status(404).json({ error: 'Not found' });
 }
 
-import type { NextApiRequest, NextApiResponse } from './next';
-import { readJsonFile  } from '../../../../utils / api / storage';
-import { requireSuperadminApi  } from '../../../../utils / api / auth';
 export default /**
  * handler - Function description
  */

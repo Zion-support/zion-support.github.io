@@ -52,12 +52,8 @@ function createSystemNotification() {
 ;
 }
 
-import { createNotification } from './createNotification',;
-import { SystemNotificationParams } from './types',;
 ;
 }
-import { createNotification } from './createNotification',;
-import { SystemNotificationParams } from './types',;
 /**;
  * Creates a system notification for a user;
  */;

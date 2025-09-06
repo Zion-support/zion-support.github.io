@@ -50,7 +50,6 @@ interface MilestoneActivitiesProps {
 
   projectId: string;
 
-import React from "react";
 interface MilestoneActivitiesProps {
   projectId: string;
 

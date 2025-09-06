@@ -2,7 +2,7 @@
 
 import {
   onsiteServicePricing,
-  CountryPricing,
+  CountryPricing
 } from "@/data/onsiteServicePricing";
 import { CountrySelector } from "./CountrySelector";
 import { PaymentSection } from "./PaymentSection";
@@ -14,7 +14,7 @@ interface CountryServiceSelectorProps {
 
 export function CountryServiceSelector({
   onCountryChange,
-  selectedCountry: initialCountry,
+  selectedCountry: initialCountry
 
 
 }: CountryServiceSelectorProps) {
@@ -78,9 +78,7 @@ selectedCountry?: CountryPricing | null
 }export function CountryServiceSelector ({
   onCountryChange, selectedCountry: initialCountry 
 }: CountryServiceSelectorProps) {
-  return (<div className="space-y-6" > <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light" > onCountryChange || ( () => {
-  
-}) 
+  return (<div className="space-y-6" > <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light" > onCountryChange || ( () => {}) 
 }selectedCountry= {
   initialCountry || null 
 }/> {

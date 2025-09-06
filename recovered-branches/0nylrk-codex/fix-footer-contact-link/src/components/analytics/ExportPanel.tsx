@@ -37,7 +37,7 @@ export function ExportPanel() {
     // Placeholder for actual export functionality
 
     toast({
-      title: `Exporting as ${format.toUpperCase()}`,
+      title: `Exporting as ${format.toUpperCase()}`
 
         });
       }, 1500));

@@ -495,7 +495,7 @@ if ( {) {
       console.error ("Error setting default template:", error);
       toast ({
         title: "Failed to set default template";
-        description: "There was an error setting your default contract template.",
+        description: "There was an error setting your default contract template."
       } finally {
         setIsLoading (false);
       }
@@ -571,11 +571,7 @@ if (throw error) {
 
     onError: (error: Error) => {
       console && console.error("Error deleting template:", error);
-      toast({
-
-
-
-    }
+      toast({}
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),
@@ -865,7 +861,7 @@ import { ContractFormValues } from "@/components/contracts/components/ContractFo
 ;
 export function useContractTemplates() {;
   const { user, isAuthenticated } = useAuth(),;
-  const queryClient = useQueryClient(),;
+  const queryClient = useQueryClient();
   const { toast } = useToast(),;
   const [isLoading, setIsLoading] = useState(false),;
 ;

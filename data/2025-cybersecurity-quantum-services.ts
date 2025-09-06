@@ -7,7 +7,7 @@
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
     techStack: [
-      'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
+      'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch'
     ],
     realImplementation: true,
 
@@ -30,7 +30,7 @@
     compliance: [
 
 
-      'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
+      'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA'
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform',
     id: 'ai - powered - threat - hunting - platform',
@@ -45,7 +45,7 @@
       currency: 'USD',
       trial_days: 21,
       setup_time: '1 - 2 weeks',
-      enterprise: 'Custom pricing',
+      enterprise: 'Custom pricing'
     },
     features: [;
       'Autonomous threat hunting',
@@ -57,14 +57,14 @@
       'Advanced analytics dashboard',
       'Multi - source data correlation',
       'Custom threat hunting rules',
-      'API for security tools integration',
+      'API for security tools integration'
     ],
     benefits: [;
       'Detect threats 10x faster than traditional methods',
       'Reduce false positives by 80%',
       'Prevent 95% of cyber attacks',
       'Automate 70% of security operations',
-      'Improve incident response time by 90%',
+      'Improve incident response time by 90%'
     ],
     target_audience: [;
       'Security operations centers',
@@ -72,13 +72,13 @@
       'IT security professionals',
       'Managed security providers',
       'Government agencies',
-      'Financial institutions',
+      'Financial institutions'
     ],
     market_position:;
       'Leading AI - powered threat hunting platform. Competes with CrowdStrike ($8.99 - 15 / user), SentinelOne ($4.99 - 8.99 / user), and Carbon Black ($6.27 - 8.57 / user). Our advantage: Autonomous threat hunting and AI intelligence.',
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
     tech_stack: [;
-      'OpenAI GPT - 4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch',
+      'OpenAI GPT - 4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch'
     ],
     real_implementation: true,
     implementation_details:;
@@ -90,15 +90,15 @@
       'Network security monitoring',
       'Endpoint threat detection',
       'Security incident investigation',
-      'Threat intelligence sharing',
+      'Threat intelligence sharing'
     ],
     integrations: [;
-      'SIEM systems, EDR platforms, Firewalls, IDS / IPS, Custom security tools',
+      'SIEM systems, EDR platforms, Firewalls, IDS / IPS, Custom security tools'
     ],
     support:;
       '24 / 7 security support, threat hunting training, custom development, and dedicated security manager.',
     compliance: [;
-      'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
+      'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA'
     ],
     link: 'https://ziontechgroup.com / ai - powered - threat - hunting - platform',
 
@@ -109,12 +109,12 @@
     launch_date: '2024 - 02 - 01',
     customers: 1200,
     rating: 4 && 4.8,
-    reviews: 950,
+    reviews: 950
   },
   {
 
 
-      'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
+      'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security'
     ],
     techStack: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes'],
     realImplementation: true,
@@ -152,7 +152,7 @@
       currency: 'USD',
       trial_days: 21,
       setup_time: '1 - 2 weeks',
-      enterprise: 'Custom pricing',
+      enterprise: 'Custom pricing'
     },
     features: [;
       'Continuous identity verification',
@@ -164,14 +164,14 @@
       'Multi - factor authentication',
       'Single sign - on integration',
       'Advanced analytics',
-      'API for enterprise systems',
+      'API for enterprise systems'
     ],
     benefits: [;
       'Reduce security breaches by 90%',
       'Eliminate VPN vulnerabilities',
       'Improve user experience',
       'Simplify compliance management',
-      'Enable secure remote work',
+      'Enable secure remote work'
     ],
     target_audience: [;
       'Enterprise organizations',
@@ -179,12 +179,12 @@
       'Financial institutions',
       'Government agencies',
       'Educational institutions',
-      'Remote workforces',
+      'Remote workforces'
     ],
     market_position:;
       'Leading zero - trust platform. Competes with Zscaler ($5 - 15 / user), Palo Alto Prisma ($7 - 15 / user), and Cloudflare Access ($3 - 7/user). Our advantage: AI - powered risk assessment and continuous verification.',
     competitors: [;
-      'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
+      'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security'
     ],
     tech_stack: ['OpenAI GPT - 4, React, Node.js, PostgreSQL, Redis, Kubernetes'],
     real_implementation: true,
@@ -197,10 +197,10 @@
       'Cloud security',
       'Compliance management',
       'Identity governance',
-      'Risk management',
+      'Risk management'
     ],
     integrations: [;
-      'Active Directory, LDAP, SAML, OAuth, Custom identity providers',
+      'Active Directory, LDAP, SAML, OAuth, Custom identity providers'
     ],
     support:;
       '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
@@ -214,12 +214,12 @@
     launch_date: '2024 - 01 - 20',
     customers: 1800,
     rating: 4 && 4.7,
-    reviews: 1400,
+    reviews: 1400
   },
   {
 
 
-      'Highest security standards, Government security requirements, Industry-specific standards',
+      'Highest security standards, Government security requirements, Industry-specific standards'
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network',
     id: 'quantum - key - distribution - network',
@@ -234,7 +234,7 @@
       currency: 'USD',
       trial_days: 30,
       setup_time: '2 - 4 weeks',
-      enterprise: 'Custom pricing',
+      enterprise: 'Custom pricing'
     },
     features: [;
       'Quantum key distribution',
@@ -246,14 +246,14 @@
       'Network monitoring',
       'Key management system',
       'API for integration',
-      'Custom quantum protocols',
+      'Custom quantum protocols'
     ],
     benefits: [;
       'Provide mathematically unbreakable security',
       'Enable ultra - secure communications',
       'Future - proof against quantum attacks',
       'Meet highest security requirements',
-      'Enable quantum internet development',
+      'Enable quantum internet development'
     ],
     target_audience: [;
       'Government agencies',
@@ -261,15 +261,15 @@
       'Financial institutions',
       'Healthcare providers',
       'Research institutions',
-      'Critical infrastructure',
+      'Critical infrastructure'
     ],
     market_position:;
       'First - to - market quantum key distribution network. No direct competitors in commercial QKD space. Traditional competitors: Classical encryption providers. Our advantage: Quantum entanglement security.',
     competitors: [;
-      'Classical encryption providers, Quantum computing companies',
+      'Classical encryption providers, Quantum computing companies'
     ],
     tech_stack: [;
-      'Quantum hardware, Quantum protocols, Python, C++, Custom quantum software',
+      'Quantum hardware, Quantum protocols, Python, C++, Custom quantum software'
     ],
     real_implementation: true,
     implementation_details:;
@@ -281,15 +281,15 @@
       'Financial transactions',
       'Healthcare data transmission',
       'Critical infrastructure',
-      'Research collaboration',
+      'Research collaboration'
     ],
     integrations: [;
-      'Custom quantum protocols, Classical encryption systems, Network infrastructure',
+      'Custom quantum protocols, Classical encryption systems, Network infrastructure'
     ],
     support:;
       'Quantum experts, implementation consulting, custom protocol development, and 24 / 7 technical support.',
     compliance: [;
-      'Highest security standards, Government security requirements, Industry - specific standards',
+      'Highest security standards, Government security requirements, Industry - specific standards'
     ],
     link: 'https://ziontechgroup.com / quantum - key - distribution - network',
 
@@ -300,7 +300,7 @@
     launch_date: '2024 - 03 - 01',
     customers: 120,
     rating: 4 && 4.9,
-    reviews: 95,
+    reviews: 95
   },
   {
 
@@ -338,7 +338,7 @@
     launchDate: '2024-02-15',
     customers: 2500,
     rating: 4.8,
-    reviews: 1900,
+    reviews: 1900
   },;
 
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
@@ -363,7 +363,7 @@
       currency: 'USD',
       trial_days: 14,
       setup_time: '1 - 3 days',
-      enterprise: 'Custom pricing',
+      enterprise: 'Custom pricing'
     },
     features: [;
       'AI - powered vulnerability scanning',
@@ -375,14 +375,14 @@
       'Integration with security tools',
       'Mobile app support',
       'API for automation',
-      'Compliance reporting',
+      'Compliance reporting'
     ],
     benefits: [;
       'Reduce false positives by 70%',
       'Improve vulnerability detection by 40%',
       'Speed up remediation by 60%',
       'Reduce security assessment costs',
-      'Improve compliance posture',
+      'Improve compliance posture'
     ],
     target_audience: [;
       'Security teams',
@@ -390,7 +390,7 @@
       'Compliance officers',
       'IT managers',
       'Security consultants',
-      'Penetration testers',
+      'Penetration testers'
     ],
     market_position:;
       'Leading AI - powered vulnerability assessment platform. Competes with Nessus ($2, 190 - 6, 570 / year), Qualys ($2, 000 - 5, 000 / year), and Rapid7 ($2, 000 - 8, 000 / year). Our advantage: AI intelligence and automated remediation.',
@@ -406,10 +406,10 @@
       'Cloud security scanning',
       'Compliance auditing',
       'Penetration testing',
-      'Security monitoring',
+      'Security monitoring'
     ],
     integrations: [;
-      'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools',
+      'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ],
     support:;
       '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
@@ -424,8 +424,8 @@
     launch_date: '2024 - 02 - 15',
     customers: 2500,
     rating: 4 && 4.8,
-    reviews: 1900,
-  },
+    reviews: 1900
+  }
 
 
 

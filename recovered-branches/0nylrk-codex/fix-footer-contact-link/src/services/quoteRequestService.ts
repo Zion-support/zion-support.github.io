@@ -26,8 +26,6 @@ export const quoteRequestService = {
 
 
 import { supabase } from "@/integrations/supabase/client";
-import {supabase} from "@/integrations/supabase/client";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 

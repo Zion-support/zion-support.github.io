@@ -32,7 +32,7 @@ exports.handler = async function () {
         (u.certifications?.length || 0) * 100 +;
         Object.values (u.progress || {}).reduce (
           (acc, p) => acc + (p.percent || 0),
-          0),
+          0)
     }));
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100);
 ;
@@ -54,7 +54,7 @@ if ( {) {
 
         content,
         message: 'chore (automation): daily rankings update',
-        token,
+        token
       });
     }
     return {
@@ -70,7 +70,7 @@ exports.handler = async function() {
       name: u.name || u.userId,
       points: (u.certifications?.length || 0) * 100 + Object.values(u.progress || {}).reduce((acc, p) => acc + (p.percent || 0), 0)
       status_code: 200,
-      body: JSON.stringify ({ ok: true, top_count: top.length }),
+      body: JSON.stringify ({ ok: true, top_count: top.length })
     }
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -108,7 +108,7 @@ if ( {) {
   }
 
       statusCode: 200,
-      body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }),
+      body: JSON && JSON.stringify({ ok: true, topCount: top && top.length })
     };
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };

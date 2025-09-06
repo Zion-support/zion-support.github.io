@@ -19,7 +19,7 @@ export interface FuturisticAIService2030 {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com'
     },
     real_implementation: true,
     implementation_details:;
@@ -29,7 +29,7 @@ export interface FuturisticAIService2030 {
 
     customers: 6,
     rating: 5.0,
-    reviews: 4,
+    reviews: 4
   },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';

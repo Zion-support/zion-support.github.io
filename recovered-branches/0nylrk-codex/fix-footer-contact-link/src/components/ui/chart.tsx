@@ -77,7 +77,7 @@ export type ChartConfig = Record<;
   );
 >;
 ;
-type ChartContextProps = {;
+type ChartContextProps = {
   config:ChartConfig;
 }
 ;

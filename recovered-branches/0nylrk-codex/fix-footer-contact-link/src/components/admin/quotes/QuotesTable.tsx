@@ -170,7 +170,6 @@ import { ;
   TableRow ;
 } from "@/components/ui/table",;
 import { Button } from "@/components/ui/button",;
-import { ;
   DropdownMenu,;
   DropdownMenuContent, ;
   DropdownMenuItem, ;
@@ -473,9 +472,7 @@ onViewDetails
   () => updateStatus (quote.id, 'closed') 
 }> Mark as Closed </DropdownMenuItem> Archive </DropdownMenuItem> <DropdownMenuItem onClick= {
   () => {
-  if (window.confirm ('Are you sure you want to delete this quote request? This action cannot be undone.') ) {
-  
-}
+  if (window.confirm ('Are you sure you want to delete this quote request? This action cannot be undone.') ) {}
 }className=" text-red-500"> <Trash2 className=" h-4 w-4 mr-2" /> Delete </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) 
 }</div> </TableCell> </TableRow>) ) ) 
 }</TableBody> </Table> </div>) 

@@ -40,6 +40,7 @@ interface EnterpriseHeroProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function EnterpriseHero({}: EnterpriseHeroProps) {
+export default function EnterpriseHero({}: EnterpriseHeroProps) {
   return (
     <div>
       <h1>EnterpriseHero</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

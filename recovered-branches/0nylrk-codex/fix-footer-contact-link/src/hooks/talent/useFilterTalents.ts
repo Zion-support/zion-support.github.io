@@ -10,11 +10,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 import { useState, useMemo  } from 'react';
 import { TalentProfile } from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {
-import {useState, useMemo} from 'react';
-import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
-import {useState, useMemo} from 'react';
-import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
 
 
@@ -167,7 +163,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 ;
     // Filter by price range;
     result = result.filter(talent => {;
-      const hourlyRate = talent.hourly_rate || 0,;
+      const hourlyRate = talent.hourly_rate || 0;
       return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1];
     }),;
     // Filter by experience range;
@@ -269,7 +265,6 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
     clearFilters}
 
-import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types / talent';
 export /**
  * useFilterTalents - Function description

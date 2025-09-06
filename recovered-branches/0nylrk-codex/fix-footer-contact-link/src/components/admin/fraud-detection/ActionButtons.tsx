@@ -19,10 +19,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
   onAction
 }) => {
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
 
-import React from "react",
 import { Button } from "@/components/ui/button",
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
 

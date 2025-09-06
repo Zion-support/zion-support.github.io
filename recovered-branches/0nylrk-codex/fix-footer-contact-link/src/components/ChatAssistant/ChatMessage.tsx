@@ -17,8 +17,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 interface ChatMessageProps {;
   role: 'user' | 'assistant',;
   message: string,;
-import {cn} from "@/lib/utils";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -28,13 +26,7 @@ interface ChatMessageProps {
   message: string
 
   timestamp?: Date;
-import {cn} from "@/lib/utils";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import { cn } from "@/lib/utils",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 
-import { cn } from "@/lib/utils",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 
 
 
@@ -75,7 +67,7 @@ interface ChatMessageProps {;
 }
 ;
 export function ChatMessage({ role, message, timestamp } ChatMessageProps) {;
-  const isUser = role === 'user',;
+  const isUser = role === 'user';
   ;
   return (;
     <div className={cn(;
@@ -107,8 +99,6 @@ export function ChatMessage({ role, message, timestamp } ChatMessageProps) {;
           <div className="text-xs text-zion-slate mt-1 text-right">
 
 
-import { cn } from "@/lib/utils",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 interface ChatMessageProps {;
   role: 'user' | 'assistant',;
   message: string,;

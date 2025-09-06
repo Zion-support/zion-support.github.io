@@ -9,7 +9,7 @@
   isOpen,
   onClose,
   serviceId,
-  defaultType,
+  defaultType
 }: {;
   isOpen: boolean;
   onClose: () => void;
@@ -32,8 +32,7 @@
   }
   async function redeem() {
     setIsSubmitting(true);
-    try {
-      });
+    try {});
       const data = await res && res.json();
       if (data?.ok) {;
         onClose();

@@ -49,6 +49,8 @@ describe('ModernLayoutdynamic'
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+    expect(screen && screen.getByTestId('modernlayout ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ModernLayoutdynamic from "./components/ModernLayout ; describe('ModernLayoutdynamic', () => { test("renders without crashing",() => { render(<ModernLayoutdynamic />); expect(screen && screen.getByTestId("modernlayout && modernlayout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ModernLayoutdynamic />)}); test("handles user interactions",() => { render(<ModernLayoutdynamic />)}); test("applies correct styling"
+
 describe('ModernLayout', () => {
   test('renders without crashing', () => {
     render(<ModernLayout />);
@@ -65,6 +67,7 @@ describe('ModernLayout', () => {
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+  test('displays correct content', () => {});
 import { render, screen } from '@testing - library / react';
 import '@testing - library / jest - dom';
 import ModernLayout from '../components / ModernLayout.dynamic';

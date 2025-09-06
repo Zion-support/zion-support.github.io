@@ -82,11 +82,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   // Initialize the form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema);
-    defaultValues: {
-
-
-
-    } catch (error) {;
+    defaultValues: {} catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
       setIsSubmitting(false);
@@ -192,7 +188,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
         }
       },;
 ;
-      const result = await submitHireRequest(requestData),;
+      const result = await submitHireRequest(requestData);
       if (result.success) {;
         onClose(),;
       }
@@ -252,9 +248,7 @@ budgetMax: talent.hourly rate ? talent.hourly rate * 1.5 : 50
 });
 // Handle form submission try {
   const requestData = {
-  talent: {
-  
-}finally {
+  talent: {}finally {
   setIsSubmitting (false) 
 }
 };

@@ -60,7 +60,7 @@ import {AppLayout} from "@/layout/AppLayout";
         department: "Operations"
         description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
 
-      },
+      }
 
 
       }
@@ -92,7 +92,7 @@ import {AppLayout} from "@/layout/AppLayout";
         </svg>
       )
 
-    },
+    }
 
 
     }
@@ -108,7 +108,7 @@ import {AppLayout} from "@/layout/AppLayout";
         </svg>
       )
 
-    },
+    }
 
 
     }

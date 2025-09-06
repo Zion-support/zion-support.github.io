@@ -4,9 +4,7 @@
     contractCode: string;
     options: DeploymentOptions
   ): Promise<SmartContractInfo | null> => {
-    if (!user?.id) {
-
-  }
+    if (!user?.id) {}
   },
   
   const deploySmartContract = async (

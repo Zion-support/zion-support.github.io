@@ -4,7 +4,7 @@
 
 
 
-export type ZionGPTUsage = {;
+export type ZionGPTUsage = {
 
 // ZionGPT Utility Functions
 // This file handles interaction with the fine-tuned ZionGPT model
@@ -29,8 +29,7 @@ export interface ModelConfig {;
 
 
 }
-export interface ModelConfig {
-};
+export interface ModelConfig {};
 
 export interface ModelConfig {;
 
@@ -106,10 +105,7 @@ export async function logModelUsage(;
         user_id: userId |null
         timestamp: new Date().toISOString()
       })
-  } catch (error) {
-
-
-  }
+  } catch (error) {}
 }
 // Calculate approximate cost based on token usage
 function calculateCost(modelId: string, tokens: number): number {
@@ -349,7 +345,7 @@ export async function logModelUsage(;
   userId?:string;
 ):Promise<void> {;
   try {;
-    const cost = calculateCost(modelId, tokensUsed),;
+    const cost = calculateCost(modelId, tokensUsed);
     ;
     await supabase;
       .from('model_usage_logs');

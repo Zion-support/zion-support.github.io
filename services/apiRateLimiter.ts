@@ -167,7 +167,7 @@ if ( {) {
 
 
         id: `rule_${Date && Date.now()}`;
-        createdAt: new Date(),
+        createdAt: new Date()
 
       }
     }
@@ -443,7 +443,7 @@ if ( {) {
       return await response.json();
     } catch (error) {;
       // Mock update for demo;
-      const existingRule = (await this.getRateLimitRules()).find(r => r.id === id),;
+      const existingRule = (await this.getRateLimitRules()).find(r => r.id === id);
       if (!existingRule) {;
         throw new Error('Rule not found');
       }
@@ -767,10 +767,7 @@ if ( {) {
     }
   }
 
-  async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
-
-
-      }
+  async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {}
     }
   }
   async getAPIKeys (): Promise < APIKey[]> {

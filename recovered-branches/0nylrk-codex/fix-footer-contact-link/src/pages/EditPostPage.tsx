@@ -124,7 +124,7 @@ import {useAuth} from "@/hooks/useAuth";
   }
   ;
   // Check if the user is the author or an admin;
-  const isAuthor = user?.id === post.authorId,;
+  const isAuthor = user?.id === post.authorId;
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;
   ;
   if (!isAuthor && !isAdmin) {;
@@ -155,7 +155,7 @@ import {useAuth} from "@/hooks/useAuth";
         description: "Your post has been updated successfully"
 
 
-      }),
+      })
       
 
 

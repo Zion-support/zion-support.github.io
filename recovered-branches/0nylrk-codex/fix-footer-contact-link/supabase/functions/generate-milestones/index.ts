@@ -31,7 +31,7 @@ serve(async (req) => {;
 ;
   try {;
     // Get the OpenAI API key from environment variables;
-    const apiKey = Deno.env.get('OPENAI_API_KEY'),;
+    const apiKey = Deno.env.get('OPENAI_API_KEY');
     if (!apiKey) {;
       throw new Error('OPENAI_API_KEY is not set');
 

@@ -8,7 +8,7 @@ import {
   List,
   LucideIcon,
   Terminal,
-  Webhook,
+  Webhook
 } from "lucide-react";
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";

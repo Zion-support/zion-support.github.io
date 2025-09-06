@@ -38,14 +38,6 @@ interface ApplicationRowProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 
   onViewScore: (application: JobApplication) => void
-import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom",
-import { Calendar, User, FileText, BarChart } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Avatar } from "@/components/ui/avatar",
-import { TableRow, TableCell } from "@/components/ui/table",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { StatusBadge } from "./StatusBadge",
 interface ApplicationRowProps {
 
   application: JobApplication
@@ -55,14 +47,6 @@ interface ApplicationRowProps {
 
   onViewScore: (application: JobApplication) => void
 }
-import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom",
-import { Calendar, User, FileText, BarChart } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Avatar } from "@/components/ui/avatar",
-import { TableRow, TableCell } from "@/components/ui/table",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { StatusBadge } from "./StatusBadge",
 interface ApplicationRowProps {
 
   application: JobApplication
@@ -84,14 +68,6 @@ interface ApplicationRowProps {;
 export function ApplicationRow(): any ({;
 
 
-import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom",
-import { Calendar, User, FileText, BarChart } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Avatar } from "@/components/ui/avatar",
-import { TableRow, TableCell } from "@/components/ui/table",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { StatusBadge } from "./StatusBadge",
 import { ScoreBadge } from "./ScoreBadge";
 import { ApplicationActions } from "./ApplicationActions";
 import { ScoreBadge } from "./ScoreBadge",

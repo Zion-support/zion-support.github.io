@@ -83,8 +83,8 @@ import BlogCard from '@/components/blog/BlogCard';
                   utm:;
                     'utm_source=' +;
                     network +;
-                    '&utm_medium = share & utm_campaign = category',
-                }),
+                    '&utm_medium = share & utm_campaign = category'
+                })
               }).catch (() => {});
             }
           />;
@@ -182,8 +182,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const topic = String(ctx.params?.topic |'');
 };
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-};
+export const getServerSideProps: GetServerSideProps = async (ctx) => {};
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx && ctx.params?.topic || '');

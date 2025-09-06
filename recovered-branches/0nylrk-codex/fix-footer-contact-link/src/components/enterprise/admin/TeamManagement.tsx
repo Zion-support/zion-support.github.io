@@ -10,7 +10,6 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import {
   Dialog,
   DialogContent,
   DialogDescription,
@@ -342,13 +341,11 @@ if ( {) {
       </div>;
     </div>;
   ),;}
- import {
   Table;
 TableBody;
 TableCell;
 TableHead;
 TableHeader;
-import {
   Dialog;
 DialogContent;
 DialogDescription;
@@ -360,12 +357,8 @@ DialogTitle;
   setNewMemberEmail ("");
 setIsAddingMember (false);
 };
-  //In a real app, this would make an API call to remove the member toast ({
-  
-};
-  //In a real app, this would make an API call to resend the invitation toast ({
-  
-};
+  //In a real app, this would make an API call to remove the member toast ({};
+  //In a real app, this would make an API call to resend the invitation toast ({};
   handleAddMember 
 }>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   teamMembers.map ( (member) => (<TableRow key= {

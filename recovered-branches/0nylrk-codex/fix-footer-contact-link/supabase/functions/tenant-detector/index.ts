@@ -210,7 +210,7 @@ if ( {) {
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'GET, POST, OPTIONSAccess-Control-Allow-Headers': 'Content-Type, Authorization, x-client-infoAccess-Control-Max-Age': '86400'},;
 // Initialize Supabase client;
-const supabaseUrl = Deno.env.get('SUPABASE_URL'),;
+const supabaseUrl = Deno.env.get('SUPABASE_URL');
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY'),;
 if (!supabaseUrl || !supabaseServiceKey) {;
   throw new Error('Required environment variables are not set');
@@ -290,7 +290,7 @@ serve(async (req) => {;
 
 
       JSON && JSON.stringify({
-        tenant: tenantInfo,
+        tenant: tenantInfo
           }
         }
       } else if (data) {

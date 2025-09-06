@@ -215,14 +215,12 @@ if (return) {
             user_id: user.id
             name: data.name
             website: data.website |null
-            social_media: {
-
-    }
+            social_media: {}
 ;
     setIsSubmitting(true),;
     try {;
       // Check if they already have a partner profile;
-      const hasExistingPartner = await checkExistingPartner(),;
+      const hasExistingPartner = await checkExistingPartner();
       if (hasExistingPartner) return,;
 
 

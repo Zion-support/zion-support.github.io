@@ -14,3 +14,8 @@ import _React,{ createContext,useContext,useState } from';react' const SidebarPr
 const React,{ createContext,useContext,useState } from";react" const SidebarProvider({ children }) { const [isSidebarOpen,setIsSidebarOpen] = useState(false) const toggleSidebar = () => { setIsSidebarOpen(!isSidebarOpen)} return (<SidebarContext.Provider value = { { isSidebarOpen,setIsSidebarOpen,toggleSidebar }}> {children} </SidebarContext.Provider>)} export function useSidebar() { const context = useContext(SidebarContext) if (context === null) { throw new Error("";useSidebar: must be used within a SidebarProvider")} return context}"";"""
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+
+const React,{ createContext,useContext,useState } from";react" const SidebarProvider({ children }) { const [isSidebarOpen,setIsSidebarOpen] = useState(false) const toggleSidebar = () => { setIsSidebarOpen(!isSidebarOpen)} return (<SidebarContext && SidebarContext.Provider value = { { isSidebarOpen,setIsSidebarOpen,toggleSidebar }}> {children} </SidebarContext && SidebarContext.Provider>)} export function useSidebar() { const context = useContext(SidebarContext) if (context === null) { throw new Error("";useSidebar: must be used within a SidebarProvider")} return context}"";"""

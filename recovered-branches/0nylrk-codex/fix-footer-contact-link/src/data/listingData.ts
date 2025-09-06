@@ -22,35 +22,35 @@ import { SearchSuggestion } from '@/types/search';
     featured: true,
     location: 'Global',
     availability: 'Immediate',
-    ai_score: 98,
+    ai_score: 98
   },
   {
     location: 'North America',
     availability: '4 - 6 Weeks',
-    ai_score: 92,
+    ai_score: 92
   },
   {
     featured: true,
     location: 'Global',
     availability: '2 - 3 Weeks',
-    ai_score: 95,
+    ai_score: 95
   },
   {
     location: 'Global',
     availability: 'Immediate',
-    ai_score: 88,
+    ai_score: 88
   },
   {
     location: 'North America',
     availability: '1 - 2 Weeks',
-    ai_score: 90,
+    ai_score: 90
   },
   {
     featured: true,
     location: 'Global',
     availability: 'Immediate',
-    ai_score: 94,
-  }, ];      name: "VisionTech AI";
+    ai_score: 94
+  } ];      name: "VisionTech AI";
       id: "visiontech";
     aiScore: 94
   }
@@ -185,7 +185,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     location: 'Global',
     availability: 'Immediate',
     aiScore: 94,;
-  },];      name: "VisionTech AI";
+  }];      name: "VisionTech AI";
       id: "visiontech";
       avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100"};
     images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"];
@@ -253,27 +253,27 @@ export const generateFilterOptions = () => {
   const locations = [
     ...new Set(
       MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.location).filter(Boolean)
-    ),
+    )
   ].sort();
   const availability = [
     ...new Set(
       MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.availability).filter(Boolean)
-    ),
+    )
   ].sort();
 
     productTypes: productTypes && productTypes.map(type => ({
       label: type,
-      value: type,
+      value: type
     })),
     locations: locations && locations.map(location => ({
       label: location,
-      value: location,
+      value: location
     })),
     availabilityOptions: availability && availability.map(item => ({
       label: item,
-      value: item,
+      value: item
     })),
-    ratingOptions: [1, 2, 3, 4, 5],
+    ratingOptions: [1, 2, 3, 4, 5]
   };
 };
 
@@ -339,7 +339,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Content generation',
     'Code assistant',
     'Virtual assistant',
-    'Enterprise AI solutions',
+    'Enterprise AI solutions'
   ];
 ;
   return suggestions.map (text => ({
@@ -357,15 +357,15 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 export const generateFilterOptions = () =>: any {
   // Extract unique categories, locations, and availability options from listings;
   const product_types = [;
-    ...new Set (MARKETPLACE_LISTINGS.map (listing => listing.category)),
+    ...new Set (MARKETPLACE_LISTINGS.map (listing => listing.category))
   ].sort ();
   const locations = [;
     ...new Set (
-      MARKETPLACE_LISTINGS.map (listing => listing.location).filter (Boolean)),
+      MARKETPLACE_LISTINGS.map (listing => listing.location).filter (Boolean))
   ].sort ();
   const availability = [;
     ...new Set (
-      MARKETPLACE_LISTINGS.map (listing => listing.availability).filter (Boolean)),
+      MARKETPLACE_LISTINGS.map (listing => listing.availability).filter (Boolean))
   ].sort ();
 ;
     product_types: product_types.map (type => ({
@@ -376,12 +376,12 @@ export const generateFilterOptions = () =>: any {
   const locations = [
     ...new Set(
       MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)
-    ),
+    )
   ].sort();
   const availability = [
     ...new Set(
       MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
-    ),
+    )
   ].sort();
 
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
@@ -393,18 +393,18 @@ export const generateFilterOptions = () =>: any {
 
 
       label: type,
-      value: type,
+      value: type
     })),
     locations: locations.map (location => ({
       label: location,
-      value: location,
+      value: location
     })),
     availability_options: availability.map (item => ({
       label: item,
-      value: item,
+      value: item
     })),
 
-    ratingOptions: [1, 2, 3, 4, 5],
+    ratingOptions: [1, 2, 3, 4, 5]
   };
 };
 
@@ -626,7 +626,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {;
 // Generate filter options for sidebar;
 export const generateFilterOptions = () => {;
   // Extract unique categories, locations, and availability options from listings;
-  const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),;
+  const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort();
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),;
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),;
   return {;

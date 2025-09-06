@@ -128,7 +128,7 @@ import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 ;
 export function BottomNavigation() {;
-  const location = useLocation(),;
+  const location = useLocation();
   ;
   const navItems = [;
     { path:"/mobile", icon:<Home />, label:"Home" },;

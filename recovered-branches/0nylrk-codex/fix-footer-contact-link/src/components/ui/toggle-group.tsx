@@ -78,7 +78,7 @@ type ToggleGroupContextProps = VariantProps < typeof toggle_variants>;
 ;
 const ToggleGroupContext = React.create_context < ToggleGroupContextProps>({
   size: 'default',
-  variant: 'default',
+  variant: 'default'
 });
 ;
 const ToggleGroup = React.forward_ref<;

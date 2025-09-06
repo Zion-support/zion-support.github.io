@@ -32,12 +32,6 @@ import {ProductListingCard} from "@/components/ProductListingCard";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
 interface FeaturedListingsSectionProps {
   showTitle?: boolean
 }
@@ -114,7 +108,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         id: "visual-ai"
       }
 
-    },
+    }
 
 
     }
@@ -151,10 +145,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       }
 
 
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
 
 
 

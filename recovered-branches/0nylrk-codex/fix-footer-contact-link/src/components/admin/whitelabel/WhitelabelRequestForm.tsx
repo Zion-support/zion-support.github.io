@@ -116,18 +116,6 @@ export function WhitelabelRequestForm() {;
       const tenantData = {;
 
 
-import React from 'react',;
-import { useForm } from 'react-hook-form',;
-import { z } from 'zod',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { Input } from '@/components/ui/input',;
-import { Button } from '@/components/ui/button',;
-import { Textarea } from '@/components/ui/textarea',;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',;
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form',;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
-import { toast } from '@/hooks/use-toast',;
-import { supabase } from '@/integrations/supabase/client',;
 ;
 // Form schema;
 const formSchema = z.object({;

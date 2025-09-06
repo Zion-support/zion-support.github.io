@@ -14,3 +14,8 @@ import _React from 'react';'''; import AdminLayout from '@/components/admin/Admi
 const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+
+const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""

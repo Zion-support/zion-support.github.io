@@ -2,7 +2,7 @@
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
-type Props = {;
+type Props = {
   region?: string;
   service?: string;
 };

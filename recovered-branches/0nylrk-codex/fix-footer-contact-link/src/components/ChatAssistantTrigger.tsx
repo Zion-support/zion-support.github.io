@@ -10,11 +10,7 @@ export function ChatAssistantTrigger() {;
         throw new Error("Failed to get response from AI assistant")
       }
       return Promise.resolve()
-    } catch (error) {
-
-
-
-          }}
+    } catch (error) {}}
           onSendMessage={handleSendMessage}
         />;
       )}
@@ -100,12 +96,8 @@ if ( {) {
     </>;
   ),; export function ChatAssistantTrigger () {
   const [isOpen, setIsOpen] = useState (false);
-try {
-  
-}return Promise.resolve () 
-}catch (error) {
-  
-}
+try {}return Promise.resolve () 
+}catch (error) {}
 };
 h-5 w-5" /> </Button> {
   isOpen && (<ChatAssistant isOpen= {

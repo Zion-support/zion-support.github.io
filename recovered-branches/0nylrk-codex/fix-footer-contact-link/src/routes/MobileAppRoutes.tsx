@@ -5,14 +5,9 @@ import MobileLaunchPage from "../pages/MobileLaunchPage";
 import OpenAppRedirect from "../pages/OpenAppRedirect";
 const MobileAppRoutes = () => {
 
-import MobileAppPage from "../pages/MobileAppPage";
-import MobileLaunchPage from "../pages/MobileLaunchPage";
-import OpenAppRedirect from "../pages/OpenAppRedirect";
 
 import { Route, Routes } from "react-router-dom",
 import MobileAppPage from "../pages/MobileAppPage",
-import MobileLaunchPage from "../pages/MobileLaunchPage";
-import OpenAppRedirect from "../pages/OpenAppRedirect";
 
 import MobileLaunchPage from "../pages/MobileLaunchPage",
 import OpenAppRedirect from "../pages/OpenAppRedirect",

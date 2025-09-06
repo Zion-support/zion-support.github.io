@@ -840,7 +840,7 @@ if ( {) {
    * Check if password contains common words;
    */;
   private hasCommonWords(password:string):boolean {;
-    const lowerPassword = password.toLowerCase(),;
+    const lowerPassword = password.toLowerCase();
     for (const word of this.commonWords) {;
       if (lowerPassword.includes(word)) {;
         return true;

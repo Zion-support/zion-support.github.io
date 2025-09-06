@@ -170,7 +170,7 @@ const QUICK_REPLIES = [;
   { id: "hire", text: "How do I hire?" },;
   { id: "match", text: "How do I get matched?" },;
   { id: "billing", text: "Billing help" }],;
-type Message = {;
+type Message = {
   id: string,;
   content: string,;
   sender: "user" | "bot",;
@@ -186,7 +186,7 @@ export function ChatBotPanel() {;
   const [inputValue, setInputValue] = useState(""),;
   const [isLoading, setIsLoading] = useState(false),;
   const [failedAttempts, setFailedAttempts] = useState(0),;
-  const scrollAreaRef = useRef<HTMLDivElement>(null),;
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null),;
   const { theme } = useTheme(),;
   // Auto-scroll to bottom when messages change;
@@ -415,17 +415,6 @@ if ( {) {
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later.";
 
-import React, { useState, useRef, useEffect } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { ScrollArea } from "@/components/ui/scroll-area",;
-import { Separator } from "@/components/ui/separator",;
-import { toast } from "@/components/ui/use-toast",;
-import { cn } from "@/lib/utils",;
-import { ChatMessage } from "./ChatMessage",;
-import { QuickReplyButton } from "./QuickReplyButton",;
-import { Send, Loader2 } from "lucide-react",;
-import { useTheme } from "@/hooks/useTheme",;
 ;
 // Define suggested quick replies;
 const QUICK_REPLIES = [;
@@ -596,7 +585,7 @@ export function ChatBotPanel() {;
         sender: "user"
         timestamp: new Date()
 
-      },
+      }
 
 
       }
@@ -939,18 +928,14 @@ const sendToAIAssistant = async (message: string) => {
 headers: {
   "Content-Type" : "application/json" 
 };
-body: JSON.stringify ({
-  
-}) 
+body: JSON.stringify ({}) 
 });
 }const data = await response.json ();
 return {
   success: true;
 message: data.message 
 }
-}catch (error) {
-  
-}
+}catch (error) {}
 };
 const suggestEscalation = () => {
   const escalationMessage: Message = {
@@ -967,9 +952,7 @@ sender: m.sender;
 timestamp: m.timestamp 
 }) ) 
 }) 
-}catch (error) {
-  
-}
+}catch (error) {}
 };
 const handleQuickReply = (text: string) => {
   handleSendMessage (text) 

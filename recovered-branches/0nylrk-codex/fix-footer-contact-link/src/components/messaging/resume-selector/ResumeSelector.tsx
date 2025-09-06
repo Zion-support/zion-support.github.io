@@ -35,11 +35,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
 import { Plus, Loader2 } from "lucide-react";
 import { useResume } from "@/hooks/useResume";
 import { exportResumeToPDF } from "@/utils/pdfExport";
-import { toast } from "@/components/ui/use-toast";
 import { ResumePreviewCard } from "./ResumePreviewCard";
 import { UploadSection } from "./UploadSection";
 import { SelectResumeSection } from "./SelectResumeSection";
@@ -137,9 +135,7 @@ if ( {) {
         await fetchResume()
       } catch (error) {
         console.error("Error loading resumes:", error)
-      } finally {
-
-  };
+      } finally {};
 
 
 
@@ -210,7 +206,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   },;
   // Handle resume selection change;
   const handleResumeSelect = (resumeId: string) => {;
-    const selected = resumeOptions.find(opt => opt.id === resumeId),;
+    const selected = resumeOptions.find(opt => opt.id === resumeId);
     if (selected) {;
       setSelectedResume(selected),;
       onResumeSelected(selected);
@@ -231,9 +227,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
       // Check if it's a PDF file
       if (file.type !== "application/pdf") {
-        toast({
-
-  };
+        toast({};
 
   // Handle resume selection change;
   const handleResumeSelect = (resumeId: string) => {;
@@ -270,7 +264,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
           variant: "destructive"
           title: "Invalid file type",
           description: "Please upload a PDF file",
-          variant: "destructive",
+          variant: "destructive"
         });
         return;
       }
@@ -323,8 +317,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
     } catch (error) {
       console.error("Error downloading PDF:", error);
-      toast({
-      });
+      toast({});
 
 
 
@@ -573,9 +566,7 @@ const {
   setIsLoading (true);
 try {
   await fetchResume () 
-}catch (error) {
-  
-}finally {
+}catch (error) {}finally {
   setIsLoading (false) 
 }
 };
@@ -598,9 +589,7 @@ onResumeSelected (customOption)
 //Handle resume download 
 }catch (error) {
   console.error ('Error downloading PDF:', error);
-toast ({
-  
-}finally {
+toast ({}finally {
   setIsLoading (false) 
 }
 };

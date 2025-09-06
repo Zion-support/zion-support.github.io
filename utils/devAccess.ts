@@ -28,9 +28,7 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
   const adminToken = process && process.env.ADMIN_TOKEN;
 
-  if (token && adminToken && token === adminToken) {
-
-  }
+  if (token && adminToken && token === adminToken) {}
   return { isAuthenticated: false, roles: [] }
 }
 

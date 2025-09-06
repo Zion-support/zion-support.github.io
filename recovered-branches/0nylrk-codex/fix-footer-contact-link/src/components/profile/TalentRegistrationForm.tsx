@@ -84,7 +84,7 @@ export function TalentRegistrationForm() {
     }
 
 
-    const skillInput = form.getValues("skills"),;
+    const skillInput = form.getValues("skills");
     if (skillInput && !skillTags.includes(skillInput)) {;
       setSkillTags([...skillTags, skillInput]),;
       form.setValue("skills", "");
@@ -632,8 +632,7 @@ if ( {) {
 
         try {
           const { data: ai_data } = await supabase.functions.invoke ('talent - profile - enhancer', {
-            body: {
-    }
+            body: {}
 ;
     setIsSubmitting(true),;
 

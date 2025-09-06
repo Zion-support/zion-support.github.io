@@ -87,7 +87,7 @@ if (throw error) {
 
 
         title: "Error",
-        description: "Failed to load matched talents. Please try again later.",
+        description: "Failed to load matched talents. Please try again later."
 
 
     } catch (error) {
@@ -103,7 +103,7 @@ if (throw error) {
       setIsLoading(false)
     }
 
-  },
+  }
 
 
 

@@ -51,7 +51,7 @@ export default function CreatePostPage() {;
 }
 ;
 export default function CreatePostPage() {;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const { toast } = useToast(),;
   const [searchParams] = useSearchParams(),;
   // Get category from URL query params if available;

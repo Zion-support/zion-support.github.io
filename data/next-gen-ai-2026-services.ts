@@ -30,11 +30,11 @@ export interface NextGenAi2026Service {;
     }
   }
 
-],
+]
 
 
 
-],
+]
 
 
 

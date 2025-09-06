@@ -17,7 +17,7 @@ interface ProfileRatingsProps {
 export function ProfileRatings({
   userId,
   averageRating = 0,
-  ratingCount = 0,
+  ratingCount = 0
 }: ProfileRatingsProps) {
 
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
@@ -33,7 +33,7 @@ export function ProfileRatings({
         2: 0,
         3: 0,
         4: 0,
-        5: 0,
+        5: 0
       };
 
       reviews.forEach((review) => {

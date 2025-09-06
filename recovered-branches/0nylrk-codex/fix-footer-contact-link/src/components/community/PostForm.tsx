@@ -25,7 +25,6 @@ import {
   CardHeader;
   CardTitle
 } from "@/components/ui/card",
-import {
   Form;
   FormControl;
   FormField;
@@ -41,8 +40,6 @@ import { ForumCategory } from "@/types/community",
 
 import { Textarea } from "@/components/ui/textarea";
 import { ForumCategory } from "@/types/community";
-import { Textarea } from "@/components/ui/textarea",
-import { ForumCategory } from "@/types/community",
 interface PostFormValues {
 
 
@@ -63,7 +60,6 @@ import {;
   CardHeader,;
   CardTitle;
 } from "@/components/ui/card",;
-import {;
   Form,;
   FormControl,;
   FormField,;
@@ -105,9 +101,7 @@ export const PostForm = ({
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
-    defaultValues: {
-
-    }
+    defaultValues: {}
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 

@@ -74,7 +74,7 @@ export function MicroTestimonial(_{_quote, _author}: {_quote: string; author: st
 export function TrustBadge({
   type
 }: {
-  type,
+  type
 }: {;
 
 
@@ -96,7 +96,7 @@ export function MicroTestimonial({
   author
 }: {
   quote,
-  author,
+  author
 }: {;
 
   quote: string;

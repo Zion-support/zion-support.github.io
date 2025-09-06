@@ -26,7 +26,7 @@ export class MerkleTree {
     // Create leaf nodes
     this.leaves = data.map((item) => ({
       hash: this.hashData(JSON.stringify(item)),
-      data: item,
+      data: item
     }));
 
     // Build tree bottom-up
@@ -43,7 +43,7 @@ export class MerkleTree {
         const parent: MerkleNode = {
           hash: this.hashData(combinedHash),
           left,
-          right,
+          right
         };
 
         nextLevel.push(parent);
@@ -93,7 +93,7 @@ export class MerkleTree {
         const parent: MerkleNode = {
           hash: this.hashData(combinedHash),
           left,
-          right,
+          right
         };
 
         nextLevel.push(parent);

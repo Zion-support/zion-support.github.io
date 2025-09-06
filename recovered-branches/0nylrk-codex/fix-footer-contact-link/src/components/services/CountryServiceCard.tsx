@@ -87,7 +87,7 @@ function CountryServiceCard() {
     }
 
 
-  },
+  }
   
 
 
@@ -150,7 +150,7 @@ export function CountryServiceCard({ country, onSelect, isPopular } CountryServi
   ;
   // Get response time estimate based on country;
   const getResponseTime = (countryName:string):string => {;
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],;
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],;
     ;
     if (tier1.includes(countryName)) {;

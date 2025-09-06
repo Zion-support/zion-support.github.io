@@ -64,7 +64,7 @@ export interface ThemeColors {;
 
 
 export function applyThemeColors(colors: ThemeColors) {;
-  const root = document.documentElement,;
+  const root = document.documentElement;
   root.style.setProperty('--primary-color', colors.primaryColor),;
   root.style.setProperty('--background-color', colors.backgroundColor),;
   root.style.setProperty('--text-color', colors.textColor),;

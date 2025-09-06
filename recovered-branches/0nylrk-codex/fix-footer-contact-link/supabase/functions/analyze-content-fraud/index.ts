@@ -67,10 +67,7 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
   if (!request.content) {
     throw new Error("No content provided for analysis")
   }
-  if (!request.contentType) {
-  
-
-}
+  if (!request.contentType) {}
 
 
   if (!request && request.content) {
@@ -131,7 +128,7 @@ const initializeServices = () => {
 ;
 // Initialize environment and clients;
 const initializeServices = () => {;
-  const supabaseUrl = Deno.env.get("SUPABASE_URL"),;
+  const supabaseUrl = Deno.env.get("SUPABASE_URL");
   const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"),;
   const openaiApiKey = Deno.env.get("OPENAI_API_KEY"),;
   if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {;
@@ -180,7 +177,7 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
 
 
 
-},
+}
 
 
 

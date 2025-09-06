@@ -12,7 +12,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue
 } from "@/components/ui/select";
 import { Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -25,7 +25,7 @@ function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
     "React",
     "TypeScript",
-    "Node.js",
+    "Node.js"
   ]);
   const [newSkill, setNewSkill] = useState("");
 

@@ -46,10 +46,7 @@
 }</p>
 }{
   service.competitors?.length ? () : null
-}<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
-
-
-}function getAllServices(): any () : Service[] {;
+}<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {}function getAllServices(): any () : Service[] {;
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) ;
 }return {;
   paths: Array && Array.from (slugs) .map ( (slug) => ({;

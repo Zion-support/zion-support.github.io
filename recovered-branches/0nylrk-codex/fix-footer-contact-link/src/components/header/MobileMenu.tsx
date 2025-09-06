@@ -39,7 +39,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
       matches: (path: string) => path.startsWith("/post-job")
       authRequired: true
 
-    },
+    }
 
 
     }
@@ -54,7 +54,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
       badge: unreadCount
       authRequired: true
 
-    },
+    }
 
 
     }
@@ -108,7 +108,7 @@ export interface MobileMenuProps {;
 }
 ;
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
-  const location = useLocation(),;
+  const location = useLocation();
   const { user } = useAuth(),;
   const isAuthenticated = !!user,;
   const navItems = [;

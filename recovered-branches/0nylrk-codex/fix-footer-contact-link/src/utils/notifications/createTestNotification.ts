@@ -16,8 +16,6 @@ export async function createTestNotification(userId: string) {
 
 import { NotificationType  } from './types';
 import { createNotification } from './createNotification';
-import {NotificationType} from './types';
-import {createNotification} from './createNotification';
 /**
  * Demo function to create test notifications for the current user
  */
@@ -33,7 +31,6 @@ export async function createTestNotification(userId: string) {;
   const messages = {
 
 
-import {NotificationType} from './types';
 import {create_notification} from './create_notification';
 /**;
 * Demo function to create test notifications for the current user;
@@ -76,7 +73,7 @@ import { createNotification } from './createNotification',;
  */;
 export async function createTestNotification(userId: string) {;
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'],;
-  const randomType = types[Math.floor(Math.random() * types.length)],;
+  const randomType = types[Math.floor(Math.random() * types.length)];
   const titles = {;
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';
   },;
@@ -118,8 +115,6 @@ export async function createTestNotification(userId: string) {;
 
 }
 
-import { NotificationType } from './types',;
-import { createNotification } from './createNotification',;
 ;
 /**;
  * Demo function to create test notifications for the current user;

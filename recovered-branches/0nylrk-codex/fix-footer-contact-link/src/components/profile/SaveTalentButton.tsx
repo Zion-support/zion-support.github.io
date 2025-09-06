@@ -16,14 +16,14 @@ interface SaveTalentButtonProps {
 export function SaveTalentButton({
   talentId,
   onSave,
-  isSaved,
+  isSaved
 }: SaveTalentButtonProps) {
 
 
 export function SaveTalentButton({
   talentId,
   onSave,
-  isSaved,
+  isSaved
 }: SaveTalentButtonProps) {
 
   return (

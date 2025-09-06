@@ -375,7 +375,7 @@ if ( {) {
           expiresAt: expiresAt ? expiresAt.toISOString() : null;
         });
       }),;
-      const result = await response.json(),;
+      const result = await response.json();
       if (!response.ok) {;
         throw new Error(result.error || 'Failed to create API key');
       }
@@ -432,10 +432,7 @@ if ( {) {
     } catch (err) {
       console && console.error('Error regenerating API key:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
-      toast({
-
-
-  },
+      toast({},
 
   // Fetch API usage logs
   const fetchApiLogs = async (limit = 50, offset = 0) => {
@@ -665,10 +662,7 @@ if ( {) {
     } catch (err) {
       console && console.error('Error fetching API logs:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
-      toast({
-
-
-    } finally {
+      toast({} finally {
       set_loading (false);
     }
   }

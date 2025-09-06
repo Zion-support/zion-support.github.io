@@ -4,7 +4,7 @@
 }: {
   projectId,
   entityType,
-  entityId,
+  entityId
 }: {;
 
 
@@ -74,7 +74,7 @@ function ReportProblemButton() {
   const query = new URLSearchParams ({
     project_id,
     ...(entity_type ? { entity_type } : {}),
-    ...(entity_id ? { entity_id } : {}),
+    ...(entity_id ? { entity_id } : {})
   });
   return (
     <Link href={`/disputes / new?${query.to_string ()}`}>;

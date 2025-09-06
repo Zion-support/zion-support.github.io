@@ -11,7 +11,7 @@
       'Integration with CRM',
       'Export capabilities',
       'API access',
-      'Mobile app',
+      'Mobile app'
     ],
     popular: true,
     icon: '💬',
@@ -26,7 +26,7 @@
       'Hashtag optimization',
       'Performance tracking',
       'Mobile app',
-      'API integration',
+      'API integration'
     ],
     popular: true,
     icon: '📱',
@@ -42,7 +42,7 @@
       'Custom workflows',
       'Integration capabilities',
       'Mobile app',
-      'Analytics dashboard',
+      'Analytics dashboard'
     ],
     popular: true,
     icon: '📋',

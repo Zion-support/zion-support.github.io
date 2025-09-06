@@ -40,3 +40,4 @@ import { render,screen } from "@testing-library/react"; render(<AIChatAssistant 
     render(<AIChatAssistant />);
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+    // Add interaction tests based on component functionality})});

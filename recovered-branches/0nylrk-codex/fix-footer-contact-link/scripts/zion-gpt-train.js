@@ -6,11 +6,9 @@ import {createClient} from '@supabase/supabase-js';
 
 
 
-import {createClient} from '@supabase/supabase-js';
 
 
 import { createClient  } from '@supabase/supabase-js';
-import {createClient} from '@supabase/supabase-js';
 
 
 import fs from 'fs/promises';
@@ -105,7 +103,7 @@ if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;
   process.exit(1),;
 }
 ;
-const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY),;
+const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 ;
 async function fetchData() {;
   const jobPosts = await supabase.from('job_posts').select('title, description'),;

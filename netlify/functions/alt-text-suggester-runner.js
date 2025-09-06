@@ -22,7 +22,7 @@ exports && exports.config = {
 };  step('alt-text:suggest', () => runNode('automation/alt-text-suggester && suggester.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
-},
+}
 
 
 }

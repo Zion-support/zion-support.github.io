@@ -21,7 +21,7 @@ const defaultLanguageContext: LanguageContextType = {
 }
 
 
-export type LanguageContextType = {;
+export type LanguageContextType = {
   currentLanguage: SupportedLanguage,;
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,;
   isRTL: boolean,;
@@ -119,7 +119,7 @@ const defaultLanguageContext: LanguageContextType = {;
   isRTL: false,;
   supportedLanguages;
 },;
-const LanguageContext = createContext(defaultLanguageContext),;
+const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext),;
 interface LanguageProviderProps {;
   children: ReactNode,;

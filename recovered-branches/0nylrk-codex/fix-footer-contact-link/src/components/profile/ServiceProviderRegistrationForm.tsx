@@ -87,7 +87,7 @@ export function ServiceProviderRegistrationForm() {
   // Handle adding service tags;
   const handleAddService = () => {;
 
-    const serviceInput = form.getValues("services"),;
+    const serviceInput = form.getValues("services");
     if (serviceInput && !serviceTags.includes(serviceInput)) {;
       setServiceTags([...serviceTags, serviceInput]),;
       form.setValue("services", "");
@@ -357,10 +357,7 @@ if ( {) {
 
         try {
           await supabase.functions.invoke ('send - email', {
-            body: {
-
-
-            }
+            body: {}
           })
         } catch (emailError) {
           console.error("Failed to send notification email:", emailError),
@@ -578,8 +575,7 @@ if ( {) {
       if (error) throw error;
         try {
           await supabase.functions.invoke ('send - email', {
-            body: {
-            }
+            body: {}
           });
         } catch (emailError) {;
 

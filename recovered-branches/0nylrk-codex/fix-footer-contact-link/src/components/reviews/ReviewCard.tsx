@@ -14,7 +14,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
+  DialogTrigger
 } from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -125,7 +125,7 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
             <div className="text-sm text-muted-foreground">
 
               {formatDistanceToNow(new Date(review.created_at), {
-                addSuffix: true,
+                addSuffix: true
               })}
             </div>
           </div>

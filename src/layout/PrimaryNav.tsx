@@ -113,14 +113,14 @@ if ( {) {
         .catch (err =>;
           logErrorToProduction ('Search navigation failed', err, {
             query: trimmed,
-            component: 'PrimaryNav',
+            component: 'PrimaryNav'
           })) }
   }
 export function PrimaryNav() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
   const [loginOpen, setLoginOpen] = useState(false),;
   const { user } = useAuth(),;
-  const isLoggedIn = !!user,;
+  const isLoggedIn = !!user;
   const isMobile = useIsMobile(),;
   const { t } = useTranslation(),;
   const router = useRouter(),;
@@ -214,7 +214,7 @@ export function PrimaryNav() {;
                 on_change={set_query}
                 onSelectSuggestion={sugg => {
                   log_debug ('PrimaryNav search suggestion selected:', {
-                    suggestion: sugg,
+                    suggestion: sugg
                   });                  // Handle different suggestion types with proper navigation;
                   // Check condition
 if ( {) {
@@ -302,7 +302,7 @@ if ( {) {
                       suggestion_id: sugg && sugg.id || sugg && sugg.slug;
 })}
                 }}
-                searchSuggestions = {suggestions,}
+                searchSuggestions = {suggestions}
               />;
             </form>;
 
@@ -323,7 +323,7 @@ if ( {) {
                     window.gtag ('event', 'search_suggestion_click', {
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
-                      suggestion_id: sugg.id || sugg.slug,
+                      suggestion_id: sugg.id || sugg.slug
                     });
                   }
                   // // // // // console.log ('PrimaryNav search suggestion selected:',

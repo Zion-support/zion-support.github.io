@@ -202,7 +202,7 @@ export function MobileMessages() {;
     setMessages([...messages, newMessage]),;
   },;
   ;
-  const currentContact = mockConversations.find(c => c.id === activeConversation),;
+  const currentContact = mockConversations.find(c => c.id === activeConversation);
   ;
   },;
   const currentContact = mockConversations.find(c => c.id === activeConversation),;

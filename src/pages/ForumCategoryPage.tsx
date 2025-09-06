@@ -98,8 +98,6 @@ function CategoryContent({
 
 import React from 'react';
 import { logInfo } from '@/utils/productionLogger';
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
-import { logInfo } from '@/utils/productionLogger';
 
 
 import { useState, useEffect } from "react",;
@@ -120,7 +118,6 @@ import { useCommunity } from "@/context",;
 import { useToast } from "@/hooks/use-toast",;
 import { useFollowedCategories } from "@/hooks/useFollowedCategories",;
 import { logInfo } from '@/utils/productionLogger',;
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
 const categoriesInfo: Record<string ForumCategoryInfo> = {;
   "getting-hired": {;
@@ -194,7 +191,7 @@ function CategoryContent({;
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
     : categoryPosts,;
-  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),;
+  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin');
   const { isFollowed, follow, unfollow } = useFollowedCategories(),;
   const { toast } = useToast(),;
   const handleFollow = () => {;

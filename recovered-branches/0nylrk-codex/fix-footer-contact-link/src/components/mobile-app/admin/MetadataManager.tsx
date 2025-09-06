@@ -105,7 +105,7 @@ export type AppPlatform = "ios" | "android",;
 
 
 
-export type AppMetadataValues = {;
+export type AppMetadataValues = {
   appTitle: string,;
   shortDescription: string,;
   longDescription: string,;
@@ -126,7 +126,7 @@ export const MetadataManager: React.FC = () => {;
   const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios"),;
   const [isSaving, setIsSaving] = useState(false),;
   // Separate form instances for each platform;
-  const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } }),;
+  const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } });
   const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } }),;
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm,;
 
@@ -151,15 +151,6 @@ export const MetadataManager: React.FC = () => {;
   };
 
 
-import React, { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { MetadataForm } from "./MetadataForm",;
-import { ScreenshotManager } from "./ScreenshotManager",;
-import { ChangelogManager } from "./ChangelogManager",;
-import { ExportPanel } from "./ExportPanel",;
-import { Button } from "@/components/ui/button",;
-import { toast } from "sonner",;
 ;
 export type AppPlatform = "ios" | "android",;
 ;

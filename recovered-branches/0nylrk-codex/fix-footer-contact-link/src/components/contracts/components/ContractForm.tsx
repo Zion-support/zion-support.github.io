@@ -101,7 +101,7 @@ interface ContractFormProps {
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
 
 
-  },
+  }
   
 
 

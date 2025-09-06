@@ -12,7 +12,7 @@ import {
   Share2,
   Facebook,
   Twitter,
-  Linkedin,
+  Linkedin
 } from "lucide-react";
 import type { BlogPost as BlogPostType } from "@/types/blog";
 

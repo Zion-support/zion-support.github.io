@@ -135,10 +135,7 @@ if (throw fetch_error) {
   }
 
 ;
-  const getProjectById = async (project_id: string): Promise < Project | null> => {
-
-
-      }));
+  const getProjectById = async (project_id: string): Promise < Project | null> => {}));
       setProjects(transformedData as Project[]);
       setError(null)
     } catch (err: any) {
@@ -174,7 +171,7 @@ if (throw fetch_error) {
       setIsLoading(false)
     }
 
-  },
+  }
 
 
 

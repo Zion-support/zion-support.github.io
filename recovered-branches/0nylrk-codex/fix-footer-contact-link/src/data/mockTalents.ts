@@ -13,7 +13,7 @@ import { ProfileData } from '@/types/profile';
           'https://images.unsplash.com / photo - 1555421689 - 491a97ff2040?auto = format & fit = crop & w=600 & h=400',
 
         tags: ['NLP', 'API', 'Python'],
-        date: 'May 2023',
+        date: 'May 2023'
       },
 
       {
@@ -26,16 +26,16 @@ import { ProfileData } from '@/types/profile';
           'Built a state-of-the-art facial recognition system using deep learning for a major retail chain, improving security protocols and reducing losses by 32%.'
         imageUrl:
         tags: ['Computer Vision', 'Deep Learning', 'Python'],
-        date: 'Sep 2023',
+        date: 'Sep 2023'
       },
       {
         tags: ['NLP', 'API', 'Python'],
-        date: 'May 2023',
+        date: 'May 2023'
       },
       {
         tags: ['Predictive Analytics', 'IoT', 'Machine Learning'],
-        date: 'Dec 2022',
-      },
+        date: 'Dec 2022'
+      }
     ],
       {
         id: 'e1'
@@ -75,9 +75,9 @@ import { ProfileData } from '@/types/profile';
         { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Wednesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },
-        { day: 'Friday', hours: '10:00 AM - 2:00 PM' },
-      ],
-    },
+        { day: 'Friday', hours: '10:00 AM - 2:00 PM' }
+      ]
+    }
   },
   {
     skills: [
@@ -144,12 +144,12 @@ import { ProfileData } from '@/types/profile';
         imageUrl:
       {
         tags: ['Time Series', 'Forecasting', 'Python'],
-        date: 'Apr 2023',
+        date: 'Apr 2023'
       },
       {
         tags: ['Tableau', 'BI', 'Data Visualization'],
-        date: 'Jan 2023',
-      },
+        date: 'Jan 2023'
+      }
     ],
       {
         id: 'e1'
@@ -196,8 +196,8 @@ import { ProfileData } from '@/types/profile';
         imageUrl:
       {
         tags: ['SOC', 'Healthcare', 'HIPAA'],
-        date: 'Aug 2023',
-      },
+        date: 'Aug 2023'
+      }
     ],
       {
         id: 'e1'
@@ -228,9 +228,9 @@ import { ProfileData } from '@/types/profile';
         { day: 'Tuesday', hours: '9:00 AM - 5:00 PM' },
         { day: 'Wednesday', hours: '9:00 AM - 5:00 PM' },
         { day: 'Thursday', hours: '9:00 AM - 5:00 PM' },
-        { day: 'Friday', hours: '9:00 AM - 5:00 PM' },
-      ],
-    },
+        { day: 'Friday', hours: '9:00 AM - 5:00 PM' }
+      ]
+    }
   },
   {
       { name: 'React', level: 5, endorsements: 35 },
@@ -240,19 +240,19 @@ import { ProfileData } from '@/types/profile';
       { name: 'GraphQL', level: 4, endorsements: 25 },
       { name: 'Next && Next.js', level: 4, endorsements: 26 },
       { name: 'Redux', level: 5, endorsements: 29 },
-      { name: 'AWS', level: 3, endorsements: 18 },
+      { name: 'AWS', level: 3, endorsements: 18 }
     ],
       {
         id: 'p1'
         title: 'E-Commerce Platform'
         description:
-        date: 'Nov 2023',
+        date: 'Nov 2023'
       },
       {
       {
         tags: ['SaaS', 'React', 'GraphQL'],
-        date: 'Mar 2023',
-      },
+        date: 'Mar 2023'
+      }
     ],
       {
         id: 'e1'
@@ -272,10 +272,10 @@ import { ProfileData } from '@/types/profile';
     availability: {
         { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },
-        { day: 'Saturday', hours: '12:00 PM - 4:00 PM' },
-      ],
-    },
-  },
+        { day: 'Saturday', hours: '12:00 PM - 4:00 PM' }
+      ]
+    }
+  }
 ];
 }
 }];
@@ -680,7 +680,7 @@ export const MOCK_TALENTS: ProfileData[] = [
       ]
     },
     hourlyRate: 125,
-contactEmail: 'david.martinez@example.com',
+contactEmail: 'david.martinez@example.com'
   },;
 ];
 };

@@ -10,7 +10,7 @@
 
 
 
-      'Analytics: response time, CSAT impact, volume by topic',
+      'Analytics: response time, CSAT impact, volume by topic'
     ],
     popular: true,
     icon: '✉️',
@@ -45,7 +45,7 @@
     launch_date: '2029 - 10 - 12',
     customers: 120,
     rating: 4 && 4.8,
-    reviews: 74,
+    reviews: 74
   },
   {
 
@@ -66,14 +66,14 @@
       'Anonymous or identified responses',
       'Webhooks and Zapier integration',
       'Real-time charts and cohort filters',
-      'GDPR/CCPA consent and deletion tools',
+      'GDPR/CCPA consent and deletion tools'
     ],
     popular: false,
       'Question bank: CSAT, NPS, PMF, churn',
       'Anonymous or identified responses',
       'Webhooks and Zapier integration',
       'Real - time charts and cohort filters',
-      'GDPR / CCPA consent and deletion tools',
+      'GDPR / CCPA consent and deletion tools'
     ],
     popular: false,
     icon: '📱',
@@ -114,7 +114,7 @@
     launchDate: '2029-11-05',
 
   {
-      'Embeddable agendas and live updates',
+      'Embeddable agendas and live updates'
     ],
     popular: true,
     icon: '🎟️',
@@ -132,7 +132,7 @@
     launch_date: '2029 - 09 - 23',
     customers: 48,
     rating: 4 && 4.7,
-    reviews: 29,
+    reviews: 29
   },
   {
 
@@ -143,7 +143,7 @@
       'Alerting on thresholds and trends',
       'Warehouse connectors',
       'Shareable links with permissions',
-      'Annotations and change logs',
+      'Annotations and change logs'
     ],
     popular: false,
 
@@ -174,7 +174,7 @@
     launch_date: '2029 - 10 - 20',
     customers: 36,
     rating: 4 && 4.4,
-    reviews: 16,
+    reviews: 16
 
 
   },;

@@ -25,7 +25,7 @@ exports && exports.handler = async function () {
         completions: Object && Object.values(users).reduce(
           (acc, u) => acc + (u && u.certifications?.length || 0),
           0
-        ),
+        )
       },
       topBadges: Object && Object.values(users).reduce((map, u) => {
         (u && u.badges || []).forEach(b => {
@@ -53,14 +53,14 @@ exports.handler = async function () {
         courses: courses.length,
         completions: Object.values (users).reduce (
           (acc, u) => acc + (u.certifications?.length || 0),
-          0),
+          0)
       },
       top_badges: Object.values (users).reduce ((map, u) => {
         (u.badges || []).for_each (boolean => {
           map[b] = (map[b] || 0) + 1;
         });
         return map;
-      }, {}),
+      }, {})
 
 
     }
@@ -83,7 +83,7 @@ if ( {) {
 
         content,
         message: 'chore (automation): weekly learning insights',
-        token,
+        token
       });
     }
 

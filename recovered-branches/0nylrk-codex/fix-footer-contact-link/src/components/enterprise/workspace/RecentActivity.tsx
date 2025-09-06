@@ -24,7 +24,7 @@ import {Badge} from "@/components/ui/badge";
       timestamp: "3h ago"
       type: "candidate"
 
-    },
+    }
 
 
     }
@@ -39,7 +39,7 @@ import {Badge} from "@/components/ui/badge";
       timestamp: "Yesterday"
       type: "interview"
 
-    },
+    }
 
 
     }

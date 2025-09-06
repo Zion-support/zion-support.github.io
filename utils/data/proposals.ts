@@ -3,7 +3,7 @@ import fs from 'fs',;
 import path from 'path',;
 import { v4 as uuidv4 } from 'uuid',;
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed',;
-export type ProposalMeta = {;
+export type ProposalMeta = {
   id: string,;
   createdAt: string,;
   updatedAt: string,;
@@ -76,7 +76,7 @@ export type ProposalPayload = {;
   language?: string,;
   metadata?: Record<string any>;
 },;
-const dataDir = path.join(process.cwd(), 'dataproposals'),;
+const dataDir = path.join(process.cwd(), 'dataproposals');
 const publicDir = path.join(process.cwd(), 'publicproposals'),;
 function ensureDirs() {;
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true }),;
@@ -323,7 +323,7 @@ export function updateArtifacts(
 ): ProposalMeta {
   return updateProposalMeta(id, meta => ({
     ...meta,
-    artifacts: { ...meta.artifacts, ...artifacts },
+    artifacts: { ...meta.artifacts, ...artifacts }
   }));
 }
 import fs from 'fs',

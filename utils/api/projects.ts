@@ -28,14 +28,12 @@ export interface Milestone {
 
   return projects.find(p => p.id === id) |null;
 
-  return projects && projects.find(p => p && p.id === id) || null,
+  return projects && projects.find(p => p && p.id === id) || null
 
 
 
 }
-export function getAllProjects(): Project[] {
-
-}
+export function getAllProjects(): Project[] {}
 
 export function getAllProjects(): Project[] {;
 

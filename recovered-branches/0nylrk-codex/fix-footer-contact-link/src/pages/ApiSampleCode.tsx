@@ -32,7 +32,6 @@ import axios from 'axios',
 export function ApiSampleCode() {
   // JavaScript example with Axios
   const jsAxiosExample = `// Using Axios with JavaScript
-import axios from 'axios';
 // Configure Axios with the base URL and headers
 const api = axios.create({
   baseURL: 'https://api.zionai.com/v1'
@@ -49,7 +48,6 @@ export /**
 function ApiSampleCode() {
   // JavaScript example with Axios;
   const jsAxiosExample = `// Using Axios with JavaScript;
-import axios from 'axios';
 // Configure Axios with the base URL and headers;
 const api = axios.create ({
   baseURL: 'https://api.zionai.com / v1',
@@ -61,7 +59,6 @@ const api = axios.create ({
 export function ApiSampleCode() {;
   // JavaScript example with Axios;
   const jsAxiosExample = `// Using Axios with JavaScript;
-import axios from 'axios';
 // Configure Axios with the base URL and headers;
 const api = axios && axios.create({;
   baseURL: 'https://api && api.zionai.com/v1',;
@@ -120,7 +117,7 @@ const api = axios.create({;
 // Get all jobs;
 async function getJobs(filters = {}) {;
   try {;
-    const response = await api.get('/api/jobs', { params: filters }),;
+    const response = await api.get('/api/jobs', { params: filters });
     return response.data;
   } catch (error) {;
     console.error('Error fetching jobs:', error.response?.data || error.message),;
@@ -275,8 +272,6 @@ API_KEY = 'YOUR_API_KEY';
 main(),`,;
   // Python example with requests;
   const pythonExample = `# Using requests with Python;
-import requests;
-import json;
 API_KEY = 'YOUR_API_KEY';
 BASE_URL = 'https://api.zionai.com/v1';
 headers = {;
@@ -429,8 +424,6 @@ main(),`,;
 
   // Python example with requests;
   const pythonExample = `# Using requests with Python;
-import requests;
-import json;
 
 ;
 API_KEY = 'YOUR_API_KEY';

@@ -27,7 +27,7 @@ export default function SEO({
   description = "Leading provider of AI-powered automation, blockchain solutions, and enterprise software development.",
   image = "/og-image.jpg",
   url,
-  type = "website",
+  type = "website"
 }: SEOProps) {
   const router = useRouter();
   const canonicalUrl = url || `https://zion.app${router.asPath}`;

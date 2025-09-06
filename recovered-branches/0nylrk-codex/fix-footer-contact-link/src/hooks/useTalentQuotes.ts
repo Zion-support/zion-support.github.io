@@ -49,7 +49,7 @@
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to update status: " + error && error.message,
+        description: "Failed to update status: " + error && error.message
 
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
@@ -248,7 +248,7 @@ import { useToast } from '@/hooks/use-toast',;
 export const useTalentQuotes = () => {;
   const { user } = useAuth(),;
   const { toast } = useToast(),;
-  const queryClient = useQueryClient(),;
+  const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all'),;
   const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active'),;
 ;

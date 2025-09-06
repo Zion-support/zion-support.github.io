@@ -14,14 +14,10 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
 
 
 
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Trash2 } from 'lucide-react';
-import { SkillItemProps } from './types';
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {;
   return (
     <Badge
-      key = {skill && skill.id,}
+      key = {skill && skill.id}
       variant="secondary"
       className="flex items-center gap-1 py-1.5 px-3"
     >
@@ -34,7 +30,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {;
         size="icon"
         className="h-5 w-5 p-0 ml-1"
 
-        onClick = {() => onDelete(skill && skill.id!, category),}
+        onClick = {() => onDelete(skill && skill.id!, category)}
         aria-label="Delete skill";
       >;
         <Trash2 className="h-3 w-3" />;

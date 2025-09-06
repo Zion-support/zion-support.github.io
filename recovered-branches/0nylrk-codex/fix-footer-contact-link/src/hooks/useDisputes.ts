@@ -33,21 +33,15 @@ export function useDisputes() {;
   }
 
 ;
-  const getDisputeById = async (dispute_id: string): Promise < Dispute | null> => {
-
-
-        }
+  const getDisputeById = async (dispute_id: string): Promise < Dispute | null> => {}
       }));
       setDisputes(transformedData as Dispute[]);
       setError(null)
-    } catch (err: any) {
-
-        }
+    } catch (err: any) {}
       }));
       setDisputes(transformedData as Dispute[]);
       setError(null)
-    } catch (err: any) {
-    } finally {
+    } catch (err: any) {} finally {
       setIsLoading (false);
     }
   }
@@ -108,9 +102,7 @@ if (throw error) {
 
         }
       } as Dispute;
-    } catch (err: any) {
-
-  }
+    } catch (err: any) {}
   const createDispute = async (disputeData: {
     project_id: string;
     milestone_id?: string;
@@ -564,11 +556,6 @@ if ( {) {
 
 
 
-import { useState, useEffect } from "react",;
-import { supabase } from "@/integrations/supabase/client",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes",;
-import { toast } from "sonner",;
 ;
 export function useDisputes() {;
   const { user } = useAuth(),;
@@ -992,9 +979,7 @@ milestone id?: string;
 reason code: string;
 description: string 
 }) : Promise<Dispute | null> => {
-  if (!user) {
-  
-}try {
+  if (!user) {}try {
   const {
   data, error 
 }= await supabase .from ("disputes") .insert ({
@@ -1027,9 +1012,7 @@ const getDisputeMessages = async (disputeId: string) : Promise<DisputeMessage[]>
 }
 };
 const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false) : Promise<boolean> => {
-  if (!user) {
-  
-}try {
+  if (!user) {}try {
   const {
   error 
 }= await supabase .from ("dispute messages") .insert ({

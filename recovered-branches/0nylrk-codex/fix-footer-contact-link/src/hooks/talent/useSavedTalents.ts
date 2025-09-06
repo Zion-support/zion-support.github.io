@@ -126,7 +126,7 @@ export function useSavedTalents() {;
         if (error) throw error,
         
         setSavedTalents(prev => [...prev, talent]),
-        setSavedTalentIds(prev => [...prev, talent.id]),
+        setSavedTalentIds(prev => [...prev, talent.id])
         
 
 

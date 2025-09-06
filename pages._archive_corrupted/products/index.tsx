@@ -528,7 +528,7 @@ ursor/automate-test-improve-and-merge-code-646c
     \'Data Analytics\',;
     \'IoT Platforms\',;
     \'Blockchain\';
-  const categories = ['All Products',;
+  const categories = ['All Products';
     'AI & Machine Learning',;
     'Cloud Solutions',;
     'Cybersecurity',;

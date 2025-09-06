@@ -103,9 +103,7 @@ export interface ClickEvent {;
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this && this.urls.get(shortCode);
     if (!url) return;
-    const clickEvent: ClickEvent = {
-
-    }
+    const clickEvent: ClickEvent = {}
     return url
   }
 
@@ -127,7 +125,7 @@ export interface ClickEvent {;
         analytics.referrers.push(clickData.referrer)
 ;
   async trackClick(shortCode: string, clickData: Omit<ClickEvent 'id'>): Promise<void> {;
-    const url = this.urls.get(shortCode),;
+    const url = this.urls.get(shortCode);
     if (!url) return,;
     const clickEvent: ClickEvent = {;
       id: this.generateId(),;
@@ -324,11 +322,7 @@ class UrlShortenerService {;
       }
     }
   }
-  async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {
-
-
-
-  }
+  async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {}
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
     return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)
   }
@@ -510,9 +504,7 @@ if ( {) {
 
     }
   }
-  async importData(data: any): Promise<void> {
-
-    }
+  async importData(data: any): Promise<void> {}
     return result
   }
   private generateId(): string {

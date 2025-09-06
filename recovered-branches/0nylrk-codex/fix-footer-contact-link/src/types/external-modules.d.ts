@@ -669,7 +669,6 @@ declare module 'i18next',;
 declare module 'i18next-browser-languagedetector',;
 declare module 'react-helmet-async',;
 declare module 'react-hook-form' {;
-  import type { ComponentType, ReactElement, ReactNode } from 'react';
 ;
   // Minimal generic typings to satisfy local usage without full type defs;
   export type FieldValues = Record<string any>;

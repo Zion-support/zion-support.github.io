@@ -56,7 +56,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: "/"
       matches: (path: string) => path === "/"
 
-    },
+    }
 
 
     }
@@ -68,7 +68,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: "/marketplace"
       matches: (path: string) => path.startsWith("/marketplace")
 
-    },
+    }
 
 
     }
@@ -80,7 +80,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: "/categories"
       matches: (path: string) => path.startsWith("/categories")
 
-    },
+    }
 
 
     }
@@ -92,7 +92,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: "/talent"
       matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")
 
-    },
+    }
 
 
     }
@@ -105,10 +105,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith("/equipment")
 
     }
-    },
+    }
 
 
-    },
+    }
 
 
 
@@ -122,7 +122,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     }
 
 
-  ],
+  ]
   
 
 
@@ -333,12 +333,8 @@ href: "/community";
 matches: (path: string) => path.startsWith ("/community") || path.startsWith ("/forum") 
 }];
 //Add authenticated-only links if (isAuthenticated) {
-  links.push ({
-  
-}//Add admin-only links if (isAdmin) {
-  links.push ({
-  
-}return (<nav className= {
+  links.push ({}//Add admin-only links if (isAdmin) {
+  links.push ({}return (<nav className= {
   cn ("ml-6 hidden md:flex", className) 
 }> <ul className="flex items-center gap-1" > {
   links.map ( (link) => (<li key= {

@@ -23,9 +23,6 @@ import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
 import {Badge} from "@/types/community";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
 
-import { Trophy, Award, BadgeCheck, Star, MessageSquare } from './lucide-react';
-import { Badge } from '@/types / community';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 
 interface UserBadgesProps {
   badges: Badge[];
@@ -49,9 +46,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { Badge } from "@/types/community",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 
-import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
-import {Badge} from "@/types/community";
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
 
 interface UserBadgesProps {;
   badges: Badge[];

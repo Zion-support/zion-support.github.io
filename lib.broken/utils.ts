@@ -18,7 +18,7 @@ export function cn(...classes: Array<string | undefined | null | false>) {; retu
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export function cn(...classes: Array<string | undefined | null | false>) {, return classes && classes.filter(Boolean).join(' '),}
+export function cn(...classes: Array<string | undefined | null | false>) {, return classes && classes.filter(Boolean).join(' ')}
 export function cn(..."classes": Array<string | undefined | null | false>) {;
   return classes && classes.filter(Boolean).join(' ')}
 export function cn(...classes: Array<string | undefined | null | false>) {; return classes && classes.filter(Boolean).join(' ')}
@@ -39,7 +39,7 @@ export function cn(...classes: Array<string | undefined | null | false>) {; retu
 export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' ')}
 export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' ')}
 export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' ')}
-export function cn(...classes: Array<string | undefined | null | false>) {, return classes && classes.filter(Boolean).join(' '),}
+export function cn(...classes: Array<string | undefined | null | false>) {, return classes && classes.filter(Boolean).join(' ')}
 export function cn(..."classes": Array<string | undefined | null | false>) {;
   return classes && classes.filter(Boolean).join(' ')}
 export function cn(...classes: Array<string | undefined | null | false>) {; return classes && classes.filter(Boolean).join(' ')}

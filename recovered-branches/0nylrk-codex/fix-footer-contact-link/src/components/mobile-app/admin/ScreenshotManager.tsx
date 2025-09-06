@@ -120,7 +120,7 @@ import {toast} from "sonner";
 interface ScreenshotManagerProps {;
   platform: AppPlatform;
 }
-type Screenshot = {;
+type Screenshot = {
   id: string,;
   url: string,;
   file: File;
@@ -152,7 +152,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     }
   };
       // Revoke object URL to avoid memory leaks;
-      const removed = prev && prev.find(screenshot => screenshot && screenshot.id === id),;
+      const removed = prev && prev.find(screenshot => screenshot && screenshot.id === id);
       if (removed) {;
         URL && URL.revokeObjectURL(removed && removed.url);
       }

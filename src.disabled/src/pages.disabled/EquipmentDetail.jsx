@@ -40,6 +40,7 @@ interface EquipmentDetailProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function EquipmentDetail({}: EquipmentDetailProps) {
+export default function EquipmentDetail({}: EquipmentDetailProps) {
   return (
     <div>
       <h1>EquipmentDetail</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

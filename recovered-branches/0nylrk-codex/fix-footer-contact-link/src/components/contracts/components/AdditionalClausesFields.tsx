@@ -4,7 +4,7 @@
   FormField,
   FormItem,
   FormLabel,
-  FormControl,
+  FormControl
 
 } from "@/components/ui/form";
 
@@ -51,7 +51,7 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormDescription,
+  FormDescription
 } from '@/components / ui / form';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { ContractFormValues  } from './ContractForm';
@@ -111,7 +111,7 @@ function AdditionalClausesFields() {
 
                       checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {;
-                        const currentValues = field.value || [],;
+                        const currentValues = field.value || [];
                         return checked;
                           ? field.onChange([...currentValues, 'nda']);
                           : field.onChange(;

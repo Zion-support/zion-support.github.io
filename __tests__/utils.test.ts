@@ -34,3 +34,8 @@ describe('Utils', () => {
 });
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+export {};
+
+module.exports = {};
+module.exports = {};

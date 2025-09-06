@@ -160,7 +160,7 @@ if (throw error) {
         title: "Error",
         description:;
           "Failed to load suggested talents. Please try again later.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsLoading (false);
@@ -172,7 +172,7 @@ if (throw error) {
     console.log ("View talent profile:", talent_id);
     toast ({
       title: "View Profile",
-      description: `Navigating to talent profile: ${talent_id}`,
+      description: `Navigating to talent profile: ${talent_id}`
     });
   }
 ;
@@ -181,7 +181,7 @@ if (throw error) {
     console.log ("Invite talent:", talent_id);
     toast ({
       title: "Invite Talent",
-      description: `Inviting talent: ${talent_id}`,
+      description: `Inviting talent: ${talent_id}`
     });
   }
 ;
@@ -234,7 +234,7 @@ if ( {) {
       avatar: talent.talent_profile?.profile_picture_url || "",
       location: talent.talent_profile?.location || "Remote",
       category: talent.talent_profile?.category || "Technology",
-      skills: talent.talent_profile?.skills || [],
+      skills: talent.talent_profile?.skills || []
     }
   });
       fetchSuggestedTalents()
@@ -340,12 +340,6 @@ interface SuggestedTalentsProps {;
                 talent_id={talent.id}
 
 
-import { useEffect, useState } from "react",;
-import { supabase } from "@/integrations/supabase/client",;
-import { toast } from "@/hooks/use-toast",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { EmptyMatchesCard } from "./EmptyMatchesCard",;
-import { JobMatchCard } from "./JobMatchCard",;
 ;
 interface SuggestedTalentsProps {;
   jobId:string,;

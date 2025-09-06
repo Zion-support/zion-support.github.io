@@ -27,12 +27,7 @@ import {
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight } from "lucide-react";
 
-import {
   Card
   CardContent
   CardFooter
@@ -45,7 +40,7 @@ import {
   CardFooter,
   CardHeader,
 
-  CardTitle,
+  CardTitle
 } from '@/components / ui / card';
 interface GeneratedContent {
   description: string;
@@ -61,9 +56,6 @@ interface GeneratedContentDisplayProps {;
 
 
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
@@ -123,11 +115,6 @@ export function GeneratedContentDisplay(): any ({;
   return (
 
 
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ArrowRight } from "lucide-react",;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 ;
 interface GeneratedContent {;
   description:string,;

@@ -72,7 +72,7 @@ if ( {) {
     user_id,
     message,
     contact_email,
-    created_at: new Date ().toISOString (),
+    created_at: new Date ().toISOString ()
   }
 ;
   try {

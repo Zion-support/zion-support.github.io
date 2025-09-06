@@ -13,15 +13,11 @@
 
       label,
       reason: parsed && parsed.reason || 'No reason provided',
-      confidence,
+      confidence
 
     } as GptClassification;
   } catch {
-    return {
-
-
-
-}
+    return {}
 
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
   

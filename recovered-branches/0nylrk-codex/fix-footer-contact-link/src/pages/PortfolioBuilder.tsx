@@ -9,7 +9,7 @@ import { ResumeWizard } from "@/components/resume-builder/ResumeWizard";
 import {
   PortfolioBuilder,
   as,
-  PortfolioSection,
+  PortfolioSection
 } from "@/components/resume-builder/portfolio/PortfolioBuilder";
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState("resume");
@@ -94,7 +94,6 @@ export default function PortfolioBuilder() {;
 }
 
 
-import {useState} from 'react';
 import {AppHeader} from '@/layout / AppHeader';
 import {Footer} from '@/components / Footer';
 import {SEO} from '@/components / SEO';

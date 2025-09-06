@@ -170,7 +170,7 @@ export default function JobDetails() {;
   const { jobId } = useParams() as { jobId?: string },;
   const { job, isLoading, error } = useJobDetails(jobId),;
   const { user, isAuthenticated } = useAuth(),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel(),;
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),;
   if (isLoading) {;

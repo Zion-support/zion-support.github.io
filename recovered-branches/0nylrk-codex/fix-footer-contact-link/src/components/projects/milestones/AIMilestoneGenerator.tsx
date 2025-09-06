@@ -110,7 +110,7 @@ export function AIMilestoneGenerator({;
     },;
     await generateMilestones(input),;
     // Initially select all milestones;
-    const initialSelection = {},;
+    const initialSelection = {};
     generatedMilestones.forEach((_, index) => {;
       initialSelection[index] = true;
     }),;
@@ -161,18 +161,10 @@ export function AIMilestoneGenerator({;
 
   return (
 
-import React, { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent } from '@/components/ui/card',;
-import {;
   Accordion,;
   AccordionContent,;
   AccordionItem,;
   AccordionTrigger} from '@/components/ui/accordion',;
-import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react',;
-import { format, parseISO } from 'date-fns',;
-import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
-import { Badge } from '@/components/ui/badge',;
 ;
 interface AIMilestoneGeneratorProps {;
   scope:string,;
@@ -540,9 +532,7 @@ if ( {) {
   const selectedMilestonesList = generatedMilestones.filter ( (, index) => selectedMilestones[index]);
 onAddMilestones (selectedMilestonesList);
 clearGeneratedMilestones ();
-setSelectedMilestones ({
-  
-}) 
+setSelectedMilestones ({}) 
 };
 return (<div className="space-y-4" > <div className="flex items-center justify-between" > <h3 className="text-lg font-medium flex items-center" > <Sparkles className="w-5 h-5 mr-2 text-primary" /> AI Milestone Generator </h3> <Button > {
   isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Generate Milestones </>) 

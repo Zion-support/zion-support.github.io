@@ -42,7 +42,6 @@ import {;
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
   CLOUD_SOLUTIONS;
-import { ServiceCategory, ServiceSolution } from '@/types/services';
   const filteredServices = ALL_SERVICES && ALL_SERVICES.filter(service => {;
     const matchesCategory =;
       selectedCategory === 'all' || service && service.category === selectedCategory;
@@ -110,7 +109,7 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
   MICRO_SAAS_SERVICES,
   CYBERSECURITY_SERVICES,
   DATA_ANALYTICS_SERVICES,
-  CLOUD_SOLUTIONS,} from '@/data / services_data';import {
+  CLOUD_SOLUTIONS} from '@/data / services_data';import {
   SERVICE_CATEGORIES;
   ALL_SERVICES,
   AI_SERVICES,

@@ -15,3 +15,9 @@ import React,{ Component } from';react' import { motion } from';';framer-motion'
 class: EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e,error: "nul",l,errorInfo: "nul",l,errorId: "nul",l,showStackTrace: "false"}} static: getDerivedStateFromError(error) { return { hasError: tru,e,error,errorId: this.generateErrorId()}} componentDidCatch(error,errorInfo) { this.setState({ errorInfo: ""})'"'"
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+
+"class\": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,\"error\": \'nul\',l,\"errorInfo\": \'nul\',l,\"errorId\": \'nul\',l,\"showStackTrace\": \'false\'}} \"static\": getDerivedStateFromError(error) { return { hasError: tru,e,error,\"errorId\": this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ \"errorInfo\": \''})
+class: EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,error: "nul",l,errorInfo: "nul",l,errorId: "nul",l,showStackTrace: "false"}} static: getDerivedStateFromError(error) { return { hasError: tru,e,error,errorId: this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ errorInfo: ""})'"'"

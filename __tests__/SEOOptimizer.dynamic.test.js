@@ -50,7 +50,6 @@ describe('SEOOptimizer', () => {
 import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'
 describe('SEOOptimizerdynamic'
   test('renders without crashing'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     expect(screen.getByTestId('seooptimizer.dynamic'
   test('displays correct content'
   test('handles user interactions'
@@ -88,3 +87,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOOptimizerdynamic from "./components/SEOOptimizer.dynamic"; describe('SEOOptimizerdynamic', () => { test("renders without crashing",() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId("seooptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOOptimizerdynamic />)}); test("handles user interactions",() => { render(<SEOOptimizerdynamic />)}); test("applies correct styling"
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOOptimizerdynamic from "./components/SEOOptimizer.dynamic"; describe('SEOOptimizerdynamic', () => { test("renders without crashing",() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId("seooptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOOptimizerdynamic />)}); test("handles user interactions",() => { render(<SEOOptimizerdynamic />)}); test("applies correct styling"

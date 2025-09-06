@@ -105,9 +105,6 @@ export function SeverityIndicator({;
   }
   return (
 
-import React from "react",;
-import { cn } from "@/lib/utils",;
-import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
 ;
 interface SeverityIndicatorProps {;
   severity:"safe" | "suspicious" | "dangerous",;
@@ -167,9 +164,6 @@ function SeverityIndicator() {
 ;
 
 
-import React from "react",;
-import { cn } from "@/lib/utils",;
-import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
 ;
 interface SeverityIndicatorProps {;
   severity:"safe" | "suspicious" | "dangerous",;

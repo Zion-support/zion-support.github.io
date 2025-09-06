@@ -49,6 +49,8 @@ describe('MainSidebardynamic'
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+    expect(screen && screen.getByTestId('mainsidebar ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import MainSidebardynamic from "./components/MainSidebar ; describe('MainSidebardynamic', () => { test("renders without crashing",() => { render(<MainSidebardynamic />); expect(screen && screen.getByTestId("mainsidebar && mainsidebar.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<MainSidebardynamic />)}); test("handles user interactions",() => { render(<MainSidebardynamic />)}); test("applies correct styling"
+
 describe('MainSidebar', () => {
   test('renders without crashing', () => {
     render(<MainSidebar />);

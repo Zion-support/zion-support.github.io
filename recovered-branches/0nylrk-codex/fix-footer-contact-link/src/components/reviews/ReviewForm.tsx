@@ -75,7 +75,6 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage} from "@/components/ui/form",;
-import {;
   RadioGroup,;
   RadioGroupItem} from "@/components/ui/radio-group",;
 import { Switch } from "@/components/ui/switch",;
@@ -207,7 +206,7 @@ function ReviewForm() {
       would_work_again: default_values.would_work_again,
       is_anonymous: default_values.is_anonymous} : {
 
-    const success = await onSubmit(formattedData),;
+    const success = await onSubmit(formattedData);
     if (success) {;
       form.reset();
     }

@@ -57,8 +57,7 @@ declare namespace React {;
 }
 ;
 // Type declarations for modules used in Vite configuration;
-  export interface BadgeProps {
-  }
+  export interface BadgeProps {}
   export interface BadgeProps {};
 ;
   export const Badge: React.FC<BadgeProps>;

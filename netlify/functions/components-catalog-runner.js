@@ -24,7 +24,7 @@ exports && exports.config = {
 };  step('components:catalog', () => runNode('automation/components-catalog && catalog.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
-},
+}
 
 
 }

@@ -50,7 +50,6 @@ describe('TestimonialsSection', () => {
 import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic'
 describe('TestimonialsSectiondynamic'
   test('renders without crashing'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       screen.getByTestId('testimonialssection.dynamic'
   test('displays correct content'
   test('handles user interactions'
@@ -90,3 +89,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import TestimonialsSectiondynamic from "./components/TestimonialsSection.dynamic"; describe('TestimonialsSectiondynamic', () => { test("renders without crashing",() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId("testimonialssection.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<TestimonialsSectiondynamic />)}); test("handles user interactions",() => { render(<TestimonialsSectiondynamic />)}); test("applies correct styling"
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import TestimonialsSectiondynamic from "./components/TestimonialsSection.dynamic"; describe('TestimonialsSectiondynamic', () => { test("renders without crashing",() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId("testimonialssection.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<TestimonialsSectiondynamic />)}); test("handles user interactions",() => { render(<TestimonialsSectiondynamic />)}); test("applies correct styling"

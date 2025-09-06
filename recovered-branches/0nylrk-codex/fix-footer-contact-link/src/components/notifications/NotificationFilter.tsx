@@ -20,7 +20,7 @@ interface NotificationFilterProps {
 
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter,
-  onFilterChange,
+  onFilterChange
 
 }) => {
   return (
@@ -54,7 +54,7 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
 };
 export const NotificationFilter: React.FC < NotificationFilterProps> = ({
   filter,
-  onFilterChange,
+  onFilterChange
 }) => {
   return (
     <div className="border - b border - zion - blue - light">;
@@ -96,7 +96,7 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
 }
 
   )
-},
+}
 };
   )
 },

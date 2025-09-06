@@ -9,7 +9,7 @@ export interface AdvancedCybersecurityService {
       launchDate: '2024-09-25',
       customers: 43,
       rating: 4.7,
-      reviews: 21,
+      reviews: 21
 
     },;
       id: 'iot - security - platform',
@@ -30,7 +30,7 @@ export interface AdvancedCybersecurityService {
         'Compliance monitoring and reporting',
         'Real - time security alerts',
         'Integration with IoT platforms',
-        'Mobile security management',
+        'Mobile security management'
       ],
       popular: true,
       icon: '📱',
@@ -38,14 +38,14 @@ export interface AdvancedCybersecurityService {
       trial_days: 14,
       setup_time: '1 - 2 weeks',
       category: 'IoT Security & Protection',
-        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance',
+        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'
       ],
       roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',
       competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com'
       },
       real_implementation: true,
       implementation_details:;
@@ -53,7 +53,7 @@ export interface AdvancedCybersecurityService {
       launch_date: '2024 - 09 - 25',
       customers: 43,
       rating: 4 && 4.7,
-      reviews: 21,
+      reviews: 21
   ];    features: [
 
 
@@ -152,7 +152,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedCybersecurityService {;
   id: string,;
   name: string,;

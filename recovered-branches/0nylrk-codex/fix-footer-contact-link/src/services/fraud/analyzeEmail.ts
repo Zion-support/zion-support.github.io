@@ -21,7 +21,7 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {
 
   return {
     isSuspicious: reasons.length > 0,
-    reasons,
+    reasons
   };
 };
 

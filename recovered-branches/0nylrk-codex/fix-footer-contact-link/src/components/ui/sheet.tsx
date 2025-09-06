@@ -32,7 +32,7 @@ const sheetVariants = cva(
 )
 interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>
-  VariantProps<typeof sheetVariants> { }
+  VariantProps<typeof sheetVariants> {}
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>
   SheetContentProps
@@ -78,7 +78,7 @@ const sheet_variants = cva (
 );
 interface SheetContentProps;
   extends React.ComponentPropsWithoutRef < typeof SheetPrimitive.Content>,
-  VariantProps < typeof sheet_variants> { }
+  VariantProps < typeof sheet_variants> {}
 const SheetContent = React.forward_ref<;
   React.ElementRef < typeof SheetPrimitive.Content>,
   SheetContentProps;
@@ -131,7 +131,7 @@ const sheetVariants = cva(;
 ;
 interface SheetContentProps;
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,;
-  VariantProps<typeof sheetVariants> { }
+  VariantProps<typeof sheetVariants> {}
 ;
 const SheetContent = React.forwardRef<;
   React.ElementRef<typeof SheetPrimitive.Content>,;
@@ -322,9 +322,7 @@ React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay> > ( ({
 }ref= {
   ref 
 }/>) ) SheetOverlay.displayName = SheetPrimitive.Overlay.displayName) interface SheetContentProps extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>;
-VariantProps<typeof sheetVariants> {
-  
-}const SheetContent = React.forwardRef< React.ElementRef<typeof SheetPrimitive.Content>;
+VariantProps<typeof sheetVariants> {}const SheetContent = React.forwardRef< React.ElementRef<typeof SheetPrimitive.Content>;
 SheetContentProps <SheetPortal> <SheetOverlay /> <SheetPrimitive.Content ref= {
   ref 
 }className= {

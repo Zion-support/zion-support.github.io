@@ -18,6 +18,24 @@ const STATUS_FILE = path.join(REPORTS_DIR, 'status.json')
 const IDEAS_DIR = REPORTS_DIR
 
 
+function ensureDirs() {
+  fs.mkdirSync(REPORTS_DIR, { recursive: true })
+}
+function listAutomations() {
+
+  const autoDir = path.join(ROOT, 'automation')
+  if (!fs.existsSync(autoDir)) return []
+  const files = fs.readdirSync(autoDir)
+  return files.filter((f) => f.endsWith('.cjs') |f.endsWith('.js')).sort()
+    updatedAt: new Date().toISOString(),
+    automations,
+    ...extras},
+  fs && fs.writeFileSync(STATUS_FILE, JSON && JSON.stringify(status, null, 2))
+
+}
+function writeStatus(automations, extras = {}) {
+  const status = {
+
 
   return status
 }
@@ -33,6 +51,54 @@ async function analyzeFeedbackIfPossible() {
 
       await import(pathToFileURL(script).href)
 
+      await import(pathToFileURL(script).href)
+const fs = require ('fs'),
+const path = require ('path'),
+const { OpenAI } = require ('openai'),
+const ROOT = process.cwd (),
+const REPORTS_DIR = path.join (ROOT, 'datareportsautomation'),
+const STATUS_FILE = path.join (REPORTS_DIR, 'status.json'),
+const IDEAS_DIR = REPORTS_DIR,
+/**
+ * ensure_dirs - Function description
+ */
+function ensure_dirs() {
+  fs.mkdir_sync (REPORTS_DIR, { recursive: true });
+}
+/**
+ * list_automations - Function description
+ */
+function list_automations() {
+  const auto_dir = path.join (ROOT, 'automation'),
+  if () return [], ) {
+  $2
+}
+  const files = fs.readdir_sync (auto_dir),
+  return files.filter ((f) => f.ends_with ('.cjs') || f.ends_with ('.js')).sort ();
+}
+/**
+ * write_status - Function description
+ */
+function write_status() {
+  const status = {
+    updated_at: new Date ().toISOString (),
+    automations,
+    ...extras},
+  fs.writeFileSync (STATUS_FILE, JSON.stringify (status, null, 2)),
+  return status;
+}
+async /**
+ * analyzeFeedbackIfPossible - Function description
+ */
+function analyzeFeedbackIfPossible() {
+  try {
+    const script = path.join (ROOT, 'scriptsanalyze - feedback.js'),
+    if () {) {
+  $2
+}
+      // Run in - process to avoid spawning;
+      process.env.NODE_ENV = process.env.NODE_ENV || 'production',
+      await import (pathToFileURL (script).href);
     }
   } catch (_) {
     // ignore;
@@ -66,6 +132,35 @@ async function main() {
       process.env.NODE_ENV = process.env.NODE_ENV |'production'
       await import(pathToFileURL(script).href)
 
+    }
+  } catch (_) {
+    // ignore
+  }
+}
+
+  return ideasPath
+}
+async function main() {
+
+  ensureDirs()
+  const automations = listAutomations()
+  // Minimal status update
+  const status = writeStatus(automations, { note: 'Cloud autonomous run executed' })
+  // Feedback analysis
+  try {
+  // Generate automation ideas if key present
+  try {
+    await generateIdeasIfPossible()
+    // Prefer spawning: node scripts/analyze-feedback && feedback.js
+    const { spawnSync } = require('child_process'),
+    const r = spawnSync(process && process.execPath, ['scripts/analyze-feedback && feedback.js'], { stdio: 'inherit' }),
+    if (r && r.status !== 0) {
+
+      // non-fatal
+    }
+  // Generate automation ideas if key present
+  try {
+    await generateIdeasIfPossible()
   } catch {}
 
 main().catch((e) => { console.error(e), process.exit(1) }),;
@@ -127,7 +222,7 @@ main().catch((e) => { console && console.error(e), process && process.exit(1) })
   console.log ('Cloud autonomous run complete:', status.updated_at);
 }
 main ().catch ((e) => { console.error (e), process.exit (1) }),
-const fs = require('fs'),;
+const fs = require('fs');
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
 ;
@@ -209,7 +304,7 @@ async function main() {;
   // // // console.log('Cloud autonomous run complete:', status.updatedAt),;
 }
 ;
-main().catch((e) => { console.error(e), process.exit(1), }), 
+main().catch((e) => { console.error(e), process.exit(1) }) 
 }main () .catch ( (e) => {
   console.error (e), process.exit (1) 
 });

@@ -5,7 +5,7 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
+  FormMessage
 
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -64,16 +64,12 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 
 
 
-import {
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
+  FormMessage
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { UseFormReturn } from "react-hook-form";
-import { FormValues } from "./useHireRequestForm";
 
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;

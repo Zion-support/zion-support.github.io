@@ -52,7 +52,7 @@ import { useAISearch } from "@/hooks/useAISearch",;
 import { AppLayout } from "@/layout/AppLayout",;
 export default function SearchPage() {;
   const [params] = useSearchParams(),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const initial = params.get("q") || "",;
   const [query, setQuery] = useState(initial),;
   const { results, loading, search } = useAISearch(),;

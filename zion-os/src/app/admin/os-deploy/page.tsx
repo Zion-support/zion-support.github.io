@@ -930,7 +930,7 @@ export default function AdminDeployPage() {;
           aiModeration: formData.get("aiModeration") === "on",;
           affiliatePanel: formData.get("affiliatePanel") === "on"}},;
     try {;
-      const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) }),;
+      const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) });
       const data = await res.json(),;
       if (!res.ok) {;
         setMessageType('error'),;

@@ -9,7 +9,6 @@ export interface FontConfig {;
 
 import { jsPDF } from 'jspdf';
 export interface FontConfig {
-import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 
 
@@ -47,7 +46,6 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
 
     // Fall back to default font
 
-import {jsPDF} from 'jspdf';
 export interface FontConfig {
   regular: ArrayBuffer;
   bold?: ArrayBuffer;

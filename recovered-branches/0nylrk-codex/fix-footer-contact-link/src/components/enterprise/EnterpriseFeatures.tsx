@@ -10,7 +10,6 @@ import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 
-import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 
   return (
     <section className="py-20 px-4 md:px-6 bg-muted/50">
@@ -43,8 +42,6 @@ const features = [;
   )
 }
 };
-import React from "react",;
-import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 const features = [;
   {;
     title: "Private Hiring Portal",;
@@ -73,8 +70,6 @@ const features = [;
     description: "Connect with talent across multiple regions with localized interfaces.",;
 
 
-import React from "react",;
-import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 ;
 const features = [;
   {;

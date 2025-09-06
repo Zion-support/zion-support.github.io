@@ -1521,7 +1521,7 @@ export default function MicroSaasPage() {;
     }
   ],;
 ;
-  const categories = [...new Set(microSaasServices.map(service => service.category))],;
+  const categories = [...new Set(microSaasServices.map(service => service.category))];
 ;
   const competitiveAdvantages = [;
     {;
@@ -2187,13 +2187,8 @@ export default function MicroSaasPage() {;
 
 
 }</>) import React from 'react';
-import React from 'react';
-import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target  } from 'lucide-react';
-import Button from '../components/ui/Button';
 
 
-import {Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap, as, Lightning} from 'lucide-react';
 export default function MicroSaasPage() {;
 
 
@@ -2220,12 +2215,8 @@ dedicated support, enterprise-grade reliability, and 14-day free trials. Start w
   /* CTA Section */
 }</>) import React from 'react';
 
-import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target  } from 'lucide-react';
-import Button from '../components/ui/Button';
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
 export default function MicroSaasPage() {
-import {Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap, as, Lightning} from 'lucide-react';
 export default function MicroSaasPage() {;
 
 
@@ -5510,7 +5501,7 @@ export default function MicroSaasPage() {;
 
   ],
 
-  const categories = [...new Set(microSaasServices.map(service => service.category))],
+  const categories = [...new Set(microSaasServices.map(service => service.category))]
 
 
 
@@ -5561,7 +5552,7 @@ export default function MicroSaasPage() {;
       description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
     }
 
-  ],
+  ]
 
 
 
@@ -5700,7 +5691,6 @@ dedicated support, enterprise - grade reliability, and 14 - day free trials. Sta
 import Head from 'next / head';
 import {Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target} from 'lucide-react';
 import Button from '../components / ui / Button';
-import {Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap, as, Lightning} from 'lucide-react';
 export default /**
  * MicroSaasPage - Function description
  */

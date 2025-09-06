@@ -324,7 +324,7 @@ class MarketplaceStore {
         return conversation
 
 
-        return conversation,
+        return conversation
 
       }
     }
@@ -362,7 +362,7 @@ class MarketplaceStore {
       .length
 
 
-      .length,
+      .length
 
   }
 
@@ -439,7 +439,7 @@ export async function createOffer(offer: Offer): Promise<Offer> {
 
 }
 export async function getOffer(id: string): Promise<Offer | null> {
-  return marketplaceStore && marketplaceStore.getOffer(id),
+  return marketplaceStore && marketplaceStore.getOffer(id)
 }
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
   return marketplaceStore && marketplaceStore.updateOffer(id, updates);
@@ -462,7 +462,7 @@ export async function createApplication(application: Application): Promise<Appli
 
 }
 export async function getApplication(id: string): Promise<Application | null> {
-  return marketplaceStore && marketplaceStore.getApplication(id),
+  return marketplaceStore && marketplaceStore.getApplication(id)
 }
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
   return marketplaceStore && marketplaceStore.updateApplication(id, updates);
@@ -485,7 +485,7 @@ export async function createMessage(message: Message): Promise<Message> {
 
 }
 export async function getMessage(id: string): Promise<Message | null> {
-  return marketplaceStore && marketplaceStore.getMessage(id),
+  return marketplaceStore && marketplaceStore.getMessage(id)
 }
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
   return marketplaceStore && marketplaceStore.updateMessage(id, updates);
@@ -507,12 +507,12 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
     const lowercase_query = query.toLowerCase ();
     return Array.from (this.projects.values ()).filter (project =>;
       project.title.toLowerCase ().includes (lowercase_query) ||;
-      project.summary.toLowerCase ().includes (lowercase_query)),
+      project.summary.toLowerCase ().includes (lowercase_query))
   }
   async search_offers (query: string): Promise < Offer[]> {
     const lowercase_query = query.toLowerCase ();
     return Array.from (this.offers.values ()).filter (offer =>;
-      offer.scope_summary.toLowerCase ().includes (lowercase_query)),
+      offer.scope_summary.toLowerCase ().includes (lowercase_query))
   }
   // Cleanup methods;
   async clear_all (): Promise < void> {
@@ -528,7 +528,7 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
     total_offers: number;
     total_applications: number;
     total_messages: number;
-    total_conversations: number,
+    total_conversations: number
   }> {
     return {
       total_projects: this.projects.size,
@@ -544,52 +544,52 @@ export const marketplace_store = new MarketplaceStore ();
 ;
 // Main functions for external use;
 export async function create_project (project: Project): Promise < Project> {
-  return marketplace_store.create_project (project),
+  return marketplace_store.create_project (project)
 }
 export async function get_project (id: string): Promise < Project | null> {
-  return marketplace_store.get_project (id),
+  return marketplace_store.get_project (id)
 }
 export async function update_project (id: string, updates: Partial < Project>): Promise < Project | null> {
   return marketplace_store.update_project (id, updates);
 }
 export async function delete_project (id: string): Promise < boolean> {
-  return marketplace_store.delete_project (id),
+  return marketplace_store.delete_project (id)
 }
 export async function create_offer (offer: Offer): Promise < Offer> {
-  return marketplace_store.create_offer (offer),
+  return marketplace_store.create_offer (offer)
 }
 export async function get_offer (id: string): Promise < Offer | null> {
-  return marketplace_store.get_offer (id),
+  return marketplace_store.get_offer (id)
 }
 export async function update_offer (id: string, updates: Partial < Offer>): Promise < Offer | null> {
   return marketplace_store.update_offer (id, updates);
 }
 export async function delete_offer (id: string): Promise < boolean> {
-  return marketplace_store.delete_offer (id),
+  return marketplace_store.delete_offer (id)
 }
 export async function create_application (application: Application): Promise < Application> {
-  return marketplace_store.create_application (application),
+  return marketplace_store.create_application (application)
 }
 export async function get_application (id: string): Promise < Application | null> {
-  return marketplace_store.get_application (id),
+  return marketplace_store.get_application (id)
 }
 export async function update_application (id: string, updates: Partial < Application>): Promise < Application | null> {
   return marketplace_store.update_application (id, updates);
 }
 export async function delete_application (id: string): Promise < boolean> {
-  return marketplace_store.delete_application (id),
+  return marketplace_store.delete_application (id)
 }
 export async function create_message (message: Message): Promise < Message> {
-  return marketplace_store.create_message (message),
+  return marketplace_store.create_message (message)
 }
 export async function get_message (id: string): Promise < Message | null> {
-  return marketplace_store.get_message (id),
+  return marketplace_store.get_message (id)
 }
 export async function update_message (id: string, updates: Partial < Message>): Promise < Message | null> {
   return marketplace_store.update_message (id, updates);
 }
 export async function delete_message (id: string): Promise < boolean> {
-  return marketplace_store.delete_message (id),
+  return marketplace_store.delete_message (id)
 }
 // Utility functions;
 export function createProjectData (

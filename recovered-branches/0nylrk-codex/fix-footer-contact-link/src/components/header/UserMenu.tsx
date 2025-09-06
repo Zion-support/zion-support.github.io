@@ -77,7 +77,7 @@ export function UserMenu() {
         description: "There was an error signing you out. Please try again.",
         variant: "destructive"})
     }
-  },
+  }
 
       });
     }
@@ -224,7 +224,7 @@ export function UserMenu() {;
       toast ({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
-        variant: "destructive",
+        variant: "destructive"
       });
     }
   }

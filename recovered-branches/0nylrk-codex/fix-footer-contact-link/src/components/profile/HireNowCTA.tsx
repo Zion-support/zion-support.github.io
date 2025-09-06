@@ -47,10 +47,6 @@ export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
 
   // Calculate talent profile completeness (simplified);
 
-import { Button } from "@/components/ui/button",
-import { HireRequestModal } from "./hire-request",
-import { useState } from "react";
-import { TalentProfile } from "@/types/talent";
 interface HireNowCTAProps {
   talentProfile: {
 

@@ -8,9 +8,20 @@ import React,{ useEffect } from 'react''';' import { supabase,getFromProfiles } 
 ursor/automate-test-improve-and-merge-code-646c
 
 
+' \' \' \' \' \' \''\''\";\";
+" " " " " " """"";";'"'"
 
 
 ' \' \' \' \' \' \''\''\";\";
 " " " " " " """"";";'"'"
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+:src.disabled/context/auth/AuthProvider.jsx
+' \' \' \' \' \' \''\''\";\";
+" " " " " " """"";";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+' \' \' \' \' \' \''\''\";\";
+" " " " " " """"";";'"'"
+:temp_exclude/src.disabled/context/auth/AuthProvider.jsx
+' \' \' \' \' \' \''\''\";\";
+" " " " " " """"";";'"'"

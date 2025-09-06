@@ -20,7 +20,7 @@ interface ChangelogManagerProps {;
   platform: AppPlatform;
 }
 ;
-type ChangelogEntry = {;
+type ChangelogEntry = {
   id: string,;
   version: string,;
   date: string,;
@@ -72,13 +72,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   return (
 
 
-import React, { useState } from "react",;
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Plus, Trash2 } from "lucide-react",;
-import { AppPlatform } from "./MetadataManager",;
 ;
 interface ChangelogManagerProps {;
   platform:AppPlatform;
@@ -261,14 +254,14 @@ onClick={handleAddEntry}
       id: "1",
       version: "1.0.0",
       date: "2025 - 05 - 15",
-      changes: "Initial release of the Zion AI Marketplace app.",
-    },
+      changes: "Initial release of the Zion AI Marketplace app."
+    }
   ]);
 ;
   const [new_entry, setNewEntry] = useState < Omit < ChangelogEntry, "id">>({
     version: "",
     date: new Date ().toISOString ().split ("T")[0],
-    changes: "",
+    changes: ""
   });
 ;
   const handleAddEntry = () =>: any {
@@ -278,14 +271,14 @@ if (return) {
 }
     const entry: ChangelogEntry = {
       ...new_entry,
-      id: Math.random ().to_string (36).substring (2, 9),
+      id: Math.random ().to_string (36).substring (2, 9)
     }
 ;
     set_entries ([entry, ...entries]);
     setNewEntry ({
       version: "",
       date: new Date ().toISOString ().split ("T")[0],
-      changes: "",
+      changes: ""
     });
   }
 ;

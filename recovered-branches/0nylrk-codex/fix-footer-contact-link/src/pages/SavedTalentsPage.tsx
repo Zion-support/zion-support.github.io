@@ -523,9 +523,7 @@ useEffect ( () => {
   const fetchSavedTalents = async () => {
   setIsLoading (true);
 try {
-  if (!user) {
-  
-}const {
+  if (!user) {}const {
   data, error 
 }= await supabase .from ("saved talents") user id;
 full name;

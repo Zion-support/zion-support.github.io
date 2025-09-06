@@ -11,3 +11,4 @@ import React from \'react\'; const LazyWrapper = ({ children,threshold = 0.1,cla
 const React from "react"; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ amount: "threshold" }); useEffect(() => {}}}})'"'"
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+const React from "react"; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ amount: "threshold" }); useEffect(() => {}}}})'"'"

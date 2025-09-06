@@ -25,8 +25,7 @@ import {
                     {application && application.talent_profile?.profile_picture_url ? (;
                       <img
                         src={application && application.talent_profile.profile_picture_url}
-                        alt={
-                        }
+                        alt={}
                       />;
                     ) : (;
 
@@ -316,7 +315,7 @@ function CandidateCard() {
     // For now, we'll just show a toast;
     toast ({
       title: "Notes saved",
-      description: "Your notes have been saved",
+      description: "Your notes have been saved"
     });
     setShowNotes (false);
   }
@@ -325,7 +324,7 @@ function CandidateCard() {
     // Hiring process completed via the modal;
     toast ({
       title: "Hiring process initiated",
-      description: "Offer has been sent to the talent.",
+      description: "Offer has been sent to the talent."
     });
   }
 ;
@@ -399,7 +398,7 @@ function CandidateCard() {
                 <div className="flex items - center">;
                   <Calendar className="h - 3 w - 3 mr - 1" />;
                   {formatDistanceToNow (new Date (application.created_at), {
-                    add_suffix: true,
+                    add_suffix: true
                   })}
                 </div>;
                 {is_stalled && (

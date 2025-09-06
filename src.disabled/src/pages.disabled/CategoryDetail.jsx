@@ -40,6 +40,7 @@ interface CategoryDetailProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function CategoryDetail({}: CategoryDetailProps) {
+export default function CategoryDetail({}: CategoryDetailProps) {
   return (
     <div>
       <h1>CategoryDetail</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

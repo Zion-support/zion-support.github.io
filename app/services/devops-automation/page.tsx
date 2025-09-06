@@ -3,6 +3,8 @@
 import Link from "next/link";
 
 export const metadata = {
+  title: 'DevOps Automation Services | Zion Tech Group',
+  description: 'Professional DevOps automation with CI/CD pipelines, infrastructure as code, and monitoring solutions. DevOps services starting at $12k.',
   title: "DevOps Automation | Zion Tech Group",
   description: "Streamline your development workflow with comprehensive DevOps automation solutions. CI/CD, infrastructure as code, and monitoring.",
 
@@ -10,12 +12,18 @@ export const metadata = {
   description:
     "Streamline your development workflow with comprehensive DevOps automation solutions. CI/CD, infrastructure as code, and monitoring.",
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 };
 
 export default function DevOpsAutomationPage() {
   return (
 
 
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <section className="mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">DevOps Automation Services</h1>
+        <p className="text-xl text-gray-600 mb-8">
+          Professional DevOps automation with CI/CD pipelines, infrastructure as code, monitoring, and deployment automation solutions.
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -25,9 +33,21 @@ export default function DevOpsAutomationPage() {
           Streamline your development workflow with comprehensive DevOps
           automation solutions. Accelerate deployments, improve reliability, and
           reduce manual overhead.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         </p>
-      </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <Item
+            title="CI/CD Pipelines"
+            details={[
+              'Automated testing',
+              'Build automation',
+              'Deployment pipelines',
+              'Quality gates',
+              'Rollback automation',
+              'Multi-environment support',
+              'Performance testing'
+            ]}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
@@ -127,25 +147,53 @@ export default function DevOpsAutomationPage() {
             step="1"
             title="Assessment"
             description="Analyze your current development workflow, infrastructure, and identify automation opportunities."
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           />
-          <StepCard
-            step="2"
-            title="Design"
-            description="Design custom DevOps architecture and automation workflows tailored to your needs."
+          <Item
+            title="Infrastructure as Code"
+            details={[
+              'Terraform automation',
+              'Ansible playbooks',
+              'Kubernetes deployment',
+              'Docker containerization',
+              'Server provisioning',
+              'Configuration management',
+              'Environment replication'
+            ]}
           />
-          <StepCard
-            step="3"
-            title="Implementation"
-            description="Build and deploy CI/CD pipelines, monitoring systems, and infrastructure automation."
-          />
-          <StepCard
-            step="4"
-            title="Optimization"
-            description="Monitor performance, optimize workflows, and provide ongoing support and improvements."
+          <Item
+            title="Monitoring & Observability"
+            details={[
+              'Application monitoring',
+              'Infrastructure monitoring',
+              'Log aggregation',
+              'Alerting systems',
+              'Performance metrics',
+              'Error tracking',
+              'Uptime monitoring'
+            ]}
           />
         </div>
-      </div>
 
+        <div className="bg-gradient-to-r from-green-50 to-teal-50 border border-green-200 rounded-lg p-6 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">DevOps Automation Benefits</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Faster Deployments</h3>
+              <p className="text-gray-600">Reduce deployment time from hours to minutes with automated CI/CD pipelines and testing.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Improved Reliability</h3>
+              <p className="text-gray-600">Automated testing and rollback capabilities reduce deployment failures by up to 90%.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Cost Reduction</h3>
+              <p className="text-gray-600">Automate infrastructure provisioning and scaling to reduce operational costs by 30-50%.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2">Enhanced Security</h3>
+              <p className="text-gray-600">Automated security scanning, compliance checks, and vulnerability management.</p>
+            </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <div className="bg-white border border-gray-200 rounded-xl p-6">
           <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -253,10 +301,12 @@ export default function DevOpsAutomationPage() {
             <div className="text-4xl mb-4">🛡️</div>
             <h3 className="font-semibold text-gray-900 mb-2">Recovery Time</h3>
             <p className="text-gray-600">Recover from incidents 10x faster</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           </div>
         </div>
-      </div>
+      </section>
 
+      <Pricing />
       <div className="text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
           Ready to Transform Your Development Workflow?
@@ -293,10 +343,15 @@ ursor/automate-test-improve-and-merge-code-646c
           <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         </div>
       </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     </div>
   );
 }
 
+function Item({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white">
+      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
 function FeatureItem({
   icon,
   title,
@@ -347,6 +402,7 @@ function PricingCard({
         <span className="text-gray-600 ml-1">{period}</span>
       </div>
       <p className="text-gray-600 mb-6">{description}</p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       <ul className="space-y-2">
         {features.map((feature) => (
           <li key={feature} className="flex items-center">
@@ -354,6 +410,10 @@ function PricingCard({
 
 
             <span className="text-gray-600">{feature}</span>
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-start">
+            <span className="text-green-500 mr-2 mt-1">•</span>
+            <span className="text-gray-600">{detail}</span>
           </li>
         ))}
       </ul>
@@ -363,6 +423,7 @@ function PricingCard({
   );
 }
 
+function Pricing() {
 function StepCard({
   step,
   title,
@@ -372,15 +433,108 @@ function StepCard({
   title: string;
   description: string;
 }) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return (
-    <div className="text-center">
-      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-        {step}
+    <section>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">DevOps Automation Pricing</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <Plan
+          name="Basic DevOps"
+          price="$12k–$25k"
+          duration="4–8 weeks"
+          features={[
+            'Basic CI/CD pipeline',
+            'Docker containerization',
+            'Simple monitoring',
+            'Automated testing',
+            'Basic documentation',
+            'Email support',
+            '30-day warranty'
+          ]}
+        />
+        <Plan
+          name="Professional DevOps"
+          price="$25k–$50k"
+          duration="8–16 weeks"
+          features={[
+            'Everything in Basic',
+            'Advanced CI/CD',
+            'Infrastructure as Code',
+            'Comprehensive monitoring',
+            'Security automation',
+            'Priority support',
+            '90-day warranty'
+          ]}
+        />
+        <Plan
+          name="Enterprise DevOps"
+          price="$50k+"
+          duration="12–24 weeks"
+          features={[
+            'Everything in Professional',
+            'Custom automation',
+            'Multi-cloud deployment',
+            'Advanced security',
+            'Dedicated support',
+            'SLA guarantees',
+            'Ongoing optimization'
+          ]}
+        />
       </div>
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
 
 
+
+      <div className="mt-12 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Automate Your DevOps?</h3>
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Let&apos;s implement DevOps automation that accelerates your development cycle and improves reliability.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Plan({ name, price, duration, features }: {
+  name: string;
+  price: string;
+  duration: string;
+  features: string[];
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-green-600 mb-1">{price}</div>
+      <div className="text-gray-500 mb-6">{duration}</div>
+      <ul className="space-y-3">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-start">
+            <span className="text-green-500 mr-2 mt-1">✓</span>
+            <span className="text-gray-600">{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <a
+        href="mailto:kleber@ziontechgroup.com?subject=DevOps Automation Services Inquiry"
+        className="block w-full mt-6 bg-green-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+      >
+        Get Started
+      </a>
     </div>
   );
 }

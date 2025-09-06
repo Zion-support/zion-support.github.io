@@ -18,10 +18,7 @@ export type Database = {
   public: {
     Tables: {
       ai_chats: {
-        Row: {
-
-
-        }
+        Row: {}
         Insert: {
           created_at?: string;
           id?: string;
@@ -1113,9 +1110,7 @@ export type Database = {
           viewed_at?: string | null;
         }
         Relationships: [;
-          {
-
-          }
+          {}
           },
           {
             foreignKeyName: "fraud_flags_user_id_fkey"
@@ -1298,7 +1293,7 @@ export type Database = {
 
 
 
-          },
+          }
 
 
 
@@ -1405,9 +1400,7 @@ export type Database = {
           user_id?: string;
         }
         Relationships: [;
-          {
-
-          }
+          {}
           },
           {
             foreignKeyName: "job_applications_talent_id_fkey"
@@ -1552,8 +1545,7 @@ export type Database = {
           user_id?: string;
         }
         Relationships: [;
-          {
-      }
+          {}
       notifications: {
         Row: {
           created_at: string | null;
@@ -1589,8 +1581,7 @@ export type Database = {
           user_id?: string;
         }
         Relationships: [;
-          {
-      }
+          {}
       partner_payouts: {
         Row: {
           amount: number;
@@ -1626,9 +1617,7 @@ export type Database = {
           updated_at?: string;
         }
         Relationships: [;
-          {
-
-          }
+          {}
           },
           {
             foreignKeyName: "milestone_activities_user_id_fkey"
@@ -2036,9 +2025,7 @@ export type Database = {
           updated_at?: string;
         }
         Relationships: [;
-          {
-
-          }
+          {}
           },
           {
             foreignKeyName: "profiles_tenant_id_fkey"
@@ -2115,9 +2102,7 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "projects";
             referenced_columns: ["id"];
-          {
-
-          }
+          {}
           },
           {
             foreignKeyName: "project_milestones_project_id_fkey"
@@ -2219,9 +2204,7 @@ export type Database = {
           updated_at?: string;
         }
         Relationships: [;
-          {
-
-          }
+          {}
           },
           {
             foreignKeyName: "project_notes_user_id_fkey"
@@ -2281,7 +2264,7 @@ export type Database = {
 
 
 
-          },
+          }
 
 
 
@@ -2356,9 +2339,7 @@ export type Database = {
           updated_at?: string;
           viewed_at?: string | null;
         }
-        Update: {
-
-          }
+        Update: {}
           },
           {
             foreignKeyName: "projects_talent_id_fkey"
@@ -2566,9 +2547,7 @@ export type Database = {
           user_id?: string;
         }
         Relationships: [;
-          {
-
-        }
+          {}
         Relationships: [
           {
             foreignKeyName: "referral_codes_user_id_fkey"
@@ -2619,7 +2598,7 @@ export type Database = {
 
 
 
-          },
+          }
 
 
 
@@ -2712,9 +2691,7 @@ export type Database = {
           status?: Database["public"]["Enums"]["referral_status"];
         }
         Relationships: [;
-          {
-
-          }
+          {}
           },
           {
             foreignKeyName: "referral_rewards_user_id_fkey"
@@ -2783,7 +2760,7 @@ export type Database = {
 
 
 
-          },
+          }
 
 
 
@@ -2798,7 +2775,7 @@ export type Database = {
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
 
-          },
+          }
 
 
           }
@@ -2968,9 +2945,7 @@ export type Database = {
           status?: string;
         }
         Relationships: [;
-          {
-
-        }
+          {}
         Relationships: [
           {
             foreignKeyName: "reminder_logs_user_id_fkey"
@@ -3130,9 +3105,7 @@ export type Database = {
           would_work_again?: boolean | null;
         }
         Relationships: [;
-          {
-
-          }
+          {}
           },
           {
             foreignKeyName: "review_reports_review_id_fkey"
@@ -3207,7 +3180,7 @@ export type Database = {
 
 
 
-          },
+          }
 
 
 
@@ -3389,9 +3362,7 @@ export type Database = {
           user_id?: string;
         }
         Relationships: [;
-          {
-
-          }
+          {}
           },
           {
             foreignKeyName: "reviews_reviewer_id_fkey"
@@ -4139,10 +4110,7 @@ export type Database = {
     }
     Views: {
       conversion_rates: {
-        Row: {
-
-
-        }
+        Row: {}
         Relationships: [];
       }
       daily_page_views: {
@@ -4314,10 +4282,7 @@ export type Database = {
       }
       get_event_distribution: {
         Args: { days_back?: number }
-        Returns: {
-
-
-      }
+        Returns: {}
       hash_api_key: {
         Args: { api_key: string }
         Returns: string;
@@ -4348,7 +4313,7 @@ export type Database = {
   | { [key:string]:Json | undefined }
   | Json[];
 ;
-export type Database = {;
+export type Database = {
   public:{;
     Tables:{;
       ai_chats:{;

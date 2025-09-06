@@ -14,17 +14,16 @@ import {
   PlusCircle,
   FileText,
   Inbox,
-  Video,
+  Video
 } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
 import { useAuth } from "@/hooks/useAuth";
-import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";

@@ -6,7 +6,7 @@ import {
   WorkExperienceSection,
   EducationSection,
   SkillsSection,
-  CertificationsSection,
+  CertificationsSection
 } from "./preview";
 
 interface PreviewResumeProps {
@@ -19,14 +19,12 @@ interface PreviewResumeProps {
 
 
 
-import { Resume } from "@/types/resume";
-import {
   PreviewHeader,
   ResumeBasicInfoSection,
   WorkExperienceSection,
   EducationSection,
   SkillsSection,
-  CertificationsSection,
+  CertificationsSection
 } from "./preview";
 
 interface PreviewResumeProps {

@@ -134,7 +134,7 @@ export async function exportResumeToPDF(;
   await loadCustomFonts(doc, fontFamily),;
   ;
   // Set up colors based on theme;
-  const colors = getPdfThemeColors(theme),;
+  const colors = getPdfThemeColors(theme);
   ;
   // Set background color;
   doc.setFillColor(colors.background),;

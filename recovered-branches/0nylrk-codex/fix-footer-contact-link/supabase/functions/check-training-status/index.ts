@@ -17,10 +17,6 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -208,7 +204,6 @@ if ( {) {
     );
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 ;
 const corsHeaders = {;
   "Access-Control-Allow-Origin":"*",;
@@ -220,7 +215,7 @@ serve(async (req) => {;
   }
 ;
   try {;
-    const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
+    const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAIApiKey) {;
       throw new Error("OpenAI API key is not set in environment variables"),;
     }

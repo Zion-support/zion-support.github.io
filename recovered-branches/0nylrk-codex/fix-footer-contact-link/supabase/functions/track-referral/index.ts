@@ -95,7 +95,7 @@ serve(async (req) => {;
 ;
   // Get request data;
   const { refCode, userId, email } = await req.json(),;
-  const ipAddress = req.headers.get('x-forwarded-for') || req.headers.get('cf-connecting-ip'),;
+  const ipAddress = req.headers.get('x-forwarded-for') || req.headers.get('cf-connecting-ip');
   // Create Supabase client;
   const supabase = createClient(;
     Deno.env.get('SUPABASE_URL') ?? '',;

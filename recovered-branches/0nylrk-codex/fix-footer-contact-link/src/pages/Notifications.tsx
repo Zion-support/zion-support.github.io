@@ -25,7 +25,6 @@ import {
   NotificationContextType
 } from "@/context/notifications",
 import { formatDistanceToNow } from "date-fns",
-import { 
   Bell, Check, Trash2, ChevronRight, CheckCircle, 
   AlertCircle, MessageCircle, Briefcase, UserCheck, Settings
 } from "lucide-react",
@@ -98,7 +97,6 @@ const getNotificationTypeBadge = (type: NotificationType) => {
 
 
 
-import React, { useState } from 'react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
 import { use_notifications } from '@/context / notifications / NotificationContext';
@@ -113,8 +111,7 @@ import { SEO } from '@/components / SEO';
 import { use_navigate } from './react-router-dom';
 import { cn } from '@/lib / utils';
 const getNotificationIcon = (type: NotificationType, class_name: string = "h - 5 w - 5") =>: any {
-  switch (type) {
-  }
+  switch (type) {}
 }
 ;
 const getNotificationTypeBadge = (type: NotificationType) =>: any {
@@ -169,7 +166,6 @@ import {;
   NotificationContextType;
 } from "@/context/notifications",;
 import { formatDistanceToNow } from "date-fns",;
-import {;
   Bell, Check, Trash2, ChevronRight, CheckCircle,;
   AlertCircle, MessageCircle, Briefcase, UserCheck, Settings;
 } from "lucide-react",;
@@ -233,10 +229,10 @@ const NotificationCard: React.FC<{;
 
 
 
-  },
+  }
 
   };
-  },
+  }
   
 
   };
@@ -267,26 +263,13 @@ const NotificationCard: React.FC<{;
                 )}
 
 
-import React, { useState } from 'react',;
-import { AppHeader } from "@/layout/AppHeader",;
-import { Footer } from "@/components/Footer",;
-import { useNotifications } from "@/context/notifications/NotificationContext",;
-import {;
   NotificationType,;
   NotificationContextType;
 } from "@/context/notifications",;
-import { formatDistanceToNow } from "date-fns",;
 import { ;
   Bell, Check, Trash2, ChevronRight, CheckCircle, ;
   AlertCircle, MessageCircle, Briefcase, UserCheck, Settings;
 } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
-import { Badge } from "@/components/ui/badge",;
-import { Skeleton } from "@/components/ui/skeleton",;
-import { SEO } from "@/components/SEO",;
-import { useNavigate } from "react-router-dom",;
-import { cn } from "@/lib/utils",;
 ;
 const getNotificationIcon = (type:NotificationType, className:string = "h-5 w-5") => {;
   switch (type) {;
@@ -353,7 +336,7 @@ const NotificationCard: React.FC<{;
   onMarkAsRead: (id: string) => Promise<void>,;
   onDismiss: (id: string) => Promise<void>;
 }> = ({ notification, onMarkAsRead, onDismiss }) => {;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const handleAction = () => {;
     if (!notification.read) {;
       onMarkAsRead(notification.id);
@@ -362,7 +345,7 @@ const NotificationCard: React.FC<{;
       navigate(notification.action_url)
     }
   }
-  },
+  }
   };
   },
   

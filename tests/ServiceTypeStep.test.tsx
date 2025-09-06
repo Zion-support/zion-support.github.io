@@ -27,6 +27,19 @@ interface ServiceTypeStep.testProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function ServiceTypeStep.test({}: ServiceTypeStep.testProps) {
+interface ServiceTypeStep.testProps {
+  // Add props here as needed
+}
+
+interface ServiceTypeStep.testProps {
+  // Add props here as needed
+<=
+}
+
+>interface ServiceTypeStep.testProps {
+  // Add props here as needed
+}
+export default function ServiceTypeStep.test({}: ServiceTypeStep.testProps) {
   return (
     <div>
       <h1>ServiceTypeStep.test</h1>
@@ -51,3 +64,13 @@ export default function ServiceTypeStep.test({}: ServiceTypeStep.testProps) {
 >>>>>>>> main:corrupted_backup/ServiceTypeStep.test.tsx
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+<
+
+=
+}
+}
+=
+
+
+>}
+>

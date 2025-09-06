@@ -25,8 +25,6 @@ import { useNavigate } from "react-router-dom",
 
 import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
-import { toast } from "@/components/ui/use-toast",
-import { useNavigate } from "react-router-dom",
 
 
 export interface MessageTalentModalProps {
@@ -213,7 +211,7 @@ export function MessageTalentModal({;
   jobTitle;
 } MessageTalentModalProps) {;
   const { createConversation } = useMessaging(),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const [message, setMessage] = useState(;
     jobTitle ;
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project:${jobTitle}`;

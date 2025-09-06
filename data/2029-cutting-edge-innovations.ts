@@ -36,11 +36,11 @@ export interface CuttingEdge2029Service {
       'Risk assessment and mitigation',
       'Compliance automation',
       'Stakeholder communication',
-      'Performance optimization',
+      'Performance optimization'
     ],
     popular: false,
 
-    icon: '🏢',
+    icon: '🏢'
 
 
 }

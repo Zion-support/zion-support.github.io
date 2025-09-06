@@ -31,6 +31,13 @@ const fixApi = () => {
 
     // Ensure proper closing structure
 
+      content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
+    }
+
+    
+    fs && fs.writeFileSync('pages/api && api.tsx', content);
+    console && console.log('✅ Fixed api && api.tsx');
+
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing api && api.tsx:', error && error.message);

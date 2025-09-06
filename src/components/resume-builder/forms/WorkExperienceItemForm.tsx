@@ -16,12 +16,12 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage
 } from '@/components / ui / form';
 import { Input } from '@/components / ui / input';
   Popover,
   PopoverContent,
-  PopoverTrigger,
+  PopoverTrigger
 } from '@/components / ui / popover';
 import { Textarea } from '@/components / ui / textarea';
 import { cn } from '@/lib / utils';
@@ -76,12 +76,12 @@ const form_schema = z.object ({
   company_name: z.string ().min (1, 'Company name is required'),
   role_title: z.string ().min (1, 'Role title is required'),
   start_date: z.date ({
-    required_error: 'Start date is required',
+    required_error: 'Start date is required'
   }),
   end_date: z.date ().optional (),
   is_current: z.boolean ().default (false),
   description: z.string ().optional (),
-  location: z.string ().optional (),
+  location: z.string ().optional ()
 });
 type FormValues = z.infer < typeof form_schema>;
 interface WorkExperienceItemFormProps {
@@ -107,8 +107,8 @@ function WorkExperienceItemForm() {
         : undefined,
       is_current: initial_data?.is_current || false,
       description: initial_data?.description || '',
-      location: initial_data?.location || '',
-    },
+      location: initial_data?.location || ''
+    }
   });
   const { is_submitting } = form.form_state;
   const watchIsCurrent = form.watch ('is_current');
@@ -134,10 +134,8 @@ function WorkExperienceItemForm() {
   }
 
 
-import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
 import { WorkExperience } from '@/types/resume';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
@@ -150,7 +148,6 @@ import {;
   FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
@@ -159,7 +156,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import { Switch } from '@/components/ui/switch';
 import { format } from 'date-fns';
-import { CalendarIcon, Loader2 } from 'lucide-react';
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",;
 // Define form schema;
@@ -196,7 +192,7 @@ export function WorkExperienceItemForm({;
       description: initialData?.description || "",;
       location: initialData?.location || ""}}),;
   const { isSubmitting } = form.formState,;
-  const watchIsCurrent = form.watch("is_current"),;
+  const watchIsCurrent = form.watch("is_current");
   const watchRoleTitle = form.watch("role_title"),;
   const watchCompanyName = form.watch("company_name"),;
   const handleFormSubmit = async (values: FormValues) => {;

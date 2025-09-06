@@ -44,7 +44,7 @@ export interface KycProfile {
   const missing: string[] = [];
   
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
-    missing && missing.push('name'),
+    missing && missing.push('name')
   }
   if (!profile && profile.country) {
     missing && missing.push('country');

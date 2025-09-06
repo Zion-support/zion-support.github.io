@@ -12,8 +12,8 @@ export const cuttingEdgeITServices2025 = [
 
       'DevOps Best Practices',
       'Security Standards',
-      'Quality Assurance Protocols',
-    ],
+      'Quality Assurance Protocols'
+    ]
 
   },;
 

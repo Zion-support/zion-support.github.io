@@ -45,7 +45,6 @@ export async function createNotification({
 
 
 import { supabase } from '@/integrations / supabase / client';
-import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**;
 * Creates a notification for a user and optionally sends an email notification;
 */;
@@ -96,8 +95,7 @@ if ( {) {
 ;
 
 
-  } catch (error) {
-  } catch (error) {;
+  } catch (error) {} catch (error) {;
     console.error('Error creating notification:', error);
 
 

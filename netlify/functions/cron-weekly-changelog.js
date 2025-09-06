@@ -3,7 +3,7 @@
 
       ? {
 
-          Authorization: `token ${token}`,
+          Authorization: `token ${token}`
 
         }
       : {}
@@ -34,7 +34,7 @@ exports && exports.handler = async function () {
 
       return {
         statusCode: 200,
-        body: JSON && JSON.stringify({ ok: true, skipped: 'Missing GitHub envs' }),
+        body: JSON && JSON.stringify({ ok: true, skipped: 'Missing GitHub envs' })
       };
     }
 
@@ -49,13 +49,11 @@ exports && exports.handler = async function () {
 
     );    }    const byAuthor = {}
     const messages = []
-    for (const c of commits) {
-
-  } catch (e) {
+    for (const c of commits) {} catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 
-},
+}
 
 
   } catch (e) {

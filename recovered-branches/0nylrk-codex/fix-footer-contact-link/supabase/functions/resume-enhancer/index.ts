@@ -62,7 +62,6 @@ serve(async (req) => {;
     return new Response(null, { headers:corsHeaders }),;
   }
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 const corsHeaders = {
@@ -86,7 +85,7 @@ serve(async (req) => {
 ;
   try {;
     const { content, enhancementType, context } = await req.json(),;
-    const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
+    const openAiKey = Deno.env.get("OPENAI_API_KEY");
 
 
 
@@ -321,9 +320,7 @@ if ( {) {
     ),;  }
 }),;
  serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}//Call OpenAI API const response = await fetch ("https://api.openai.com/v1/chat/completions", {
+  //Handle CORS preflight requests if (req.method === "OPTIONS") {}//Call OpenAI API const response = await fetch ("https://api.openai.com/v1/chat/completions", {
   method: "POST";
 headers: {
   "Authorization" : `Bearer $ {

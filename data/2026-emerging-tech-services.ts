@@ -94,7 +94,7 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
     launchDate: '2024-06-25',
     customers: 56,
     rating: 4.4,
-    reviews: 29,
+    reviews: 29
   },;
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) => {
@@ -126,7 +126,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Integration with classical computing frameworks',
       'Custom quantum algorithm development',
       'Quantum performance analytics and benchmarking',
-      'API for quantum application development',
+      'API for quantum application development'
     ],
     popular: true,
     icon: '🔮',
@@ -164,11 +164,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'IBM Quantum',
       'Amazon Braket',
       'Google Quantum AI',
-      'Rigetti',
+      'Rigetti'
     ],
     customers: 23,
     rating: 4 && 4.9,
-    reviews: 18,
+    reviews: 18
   },
   // Blockchain & Web3 Solutions
   {
@@ -189,7 +189,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Integration with major blockchains',
       'Custom blockchain analytics dashboards',
       'Real - time alerts and notifications',
-      'API for blockchain applications',
+      'API for blockchain applications'
     ],
     popular: true,
     icon: '⛓️',
@@ -207,7 +207,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'React',
       'Node && Node.js',
       'PostgreSQL',
-      'Redis',
+      'Redis'
     ],
     integrations: [
       'Ethereum'
@@ -222,13 +222,13 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'DeFi optimization',
       'Portfolio management',
       'Security auditing',
-      'Market analysis',
+      'Market analysis'
     ],
     roi: 'Users report 300% ROI through improved trading strategies and DeFi optimization.',
     competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'Glassnode'],
     customers: 156,
     rating: 4 && 4.7,
-    reviews: 89,
+    reviews: 89
   },
   // Internet of Things (IoT) Platform
   {
@@ -248,7 +248,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Custom IoT application development',
       'Security and privacy management',
       'Scalable device connectivity',
-      'Advanced analytics and reporting',
+      'Advanced analytics and reporting'
     ],
     popular: false,
     icon: '📡',
@@ -264,7 +264,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'React',
       'Node && Node.js',
       'PostgreSQL',
-      'Redis',
+      'Redis'
     ],
     integrations: [
       'AWS IoT'
@@ -279,13 +279,13 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Industrial monitoring',
       'Smart city management',
       'Predictive maintenance',
-      'Energy optimization',
+      'Energy optimization'
     ],
     roi: 'Organizations report 250% ROI through improved device management and operational efficiency.',
     competitors: ['AWS IoT', 'Azure IoT Hub', 'Google Cloud IoT', 'ThingWorx'],
     customers: 89,
     rating: 4 && 4.6,
-    reviews: 45,
+    reviews: 45
   },
   // Edge Computing & 5G Services
   {
@@ -306,7 +306,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Custom edge computing workflows',
       'Advanced analytics and reporting',
       'Mobile edge computing support',
-      'API for edge applications',
+      'API for edge applications'
     ],
     popular: false,
     icon: '📶',
@@ -346,11 +346,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'AWS Outposts',
       'Azure Stack Edge',
       'Google Anthos',
-      'VMware Edge',
+      'VMware Edge'
     ],
     customers: 45,
     rating: 4 && 4.5,
-    reviews: 23,
+    reviews: 23
   },
   // Augmented Reality (AR) & Virtual Reality (VR)
   {
@@ -371,7 +371,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Custom AR / VR workflows',
       'Real - time content analytics',
       'Multi - platform deployment support',
-      'API for AR / VR applications',
+      'API for AR / VR applications'
     ],
     popular: false,
     icon: '🥽',
@@ -403,13 +403,13 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       '3D content creation',
       'Immersive training',
       'Virtual events',
-      'Gaming and entertainment',
+      'Gaming and entertainment'
     ],
     roi: 'Developers report 400% ROI through faster development and improved content quality.',
     competitors: ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],
     customers: 67,
     rating: 4 && 4.4,
-    reviews: 34,
+    reviews: 34
   },
   // Robotics & Automation Services
   {
@@ -430,7 +430,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Safety and compliance management',
       'Advanced analytics and reporting',
       'Mobile app for robot control',
-      'API for robotics applications',
+      'API for robotics applications'
     ],
     popular: false,
     icon: '🤖',
@@ -463,11 +463,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'ABB RobotStudio',
       'FANUC ROBOGUIDE',
       'KUKA Sim',
-      'Universal Robots',
+      'Universal Robots'
     ],
     customers: 34,
     rating: 4 && 4.3,
-    reviews: 18,
+    reviews: 18
   },
   // Digital Twin & Simulation
   {
@@ -487,7 +487,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       '3D visualization and modeling',
       'Advanced analytics and reporting',
       'API for custom integrations',
-      'Mobile app for monitoring',
+      'Mobile app for monitoring'
     ],
     popular: false,
     icon: '🔄',

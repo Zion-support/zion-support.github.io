@@ -142,8 +142,6 @@ console.log(response.data),`;
 
 }
 
-import React from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 
 import React from "react",;
@@ -170,16 +168,13 @@ console && console.log(response && response.data),`;
         <h1>Getting Started</h1>;
 
 
-import React from "react",;
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
-import { CodeBlock } from "@/components/developers/CodeBlock",;
 ;
 export function ApiGettingStarted() {;
   const authExample = `curl -X GET \\;
   https://api.zionai.com/v1/jobs \\;
   -H "Authorization:Bearer YOUR_API_KEY"`,;
 ;
-  const quickStartJs = `import axios from 'axios',;
+  const quickStartJs = `import axios from 'axios';
 ;
 const response = await axios.get('https://api.zionai.com/v1/jobs', {;
   headers:{;
@@ -192,9 +187,6 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {;
 }
 export default ApiGettingStarted;
 
-import React from "react",;
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
-import { CodeBlock } from "@/components/developers/CodeBlock",;
 export function ApiGettingStarted() {;
   const authExample = `curl -X GET \\;
   https: //api.zionai.com/v1/jobs \\;

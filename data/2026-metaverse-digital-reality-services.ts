@@ -59,10 +59,7 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
     link: "/services/2026-metaverse-digital-reality",
     category: "Metaverse Digital Reality 2026",
     realImplementation: true,
-    contactInfo: {
-
-
-    }
+    contactInfo: {}
   }
 ];
 

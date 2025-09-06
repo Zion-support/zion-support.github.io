@@ -16,9 +16,7 @@ export interface JobData {
 }
 
 }
-export interface TalentProfile {
-
-  }
+export interface TalentProfile {}
   deadline: string
 
 }

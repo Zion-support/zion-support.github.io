@@ -65,7 +65,7 @@ exports && exports.handler = async function () {
         broken && broken.push({
           url: `${base}${p}`,
           status: 0,
-          error: String(e && e.message || e),
+          error: String(e && e.message || e)
         });
       }
     }
@@ -100,7 +100,7 @@ exports && exports.handler = async function () {
         broken.push ({
           url: `${base}${p}`,
           status: 0,
-          error: String (e.message || e),
+          error: String (e.message || e)
         });
       }
     }
@@ -123,7 +123,7 @@ if ( {) {
         message: 'chore (automation): weekly link check',
 
 
-        token,
+        token
       });
     }
     return {
@@ -133,11 +133,9 @@ if ( {) {
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
   return resp.text()
       status_code: 200,
-      body: JSON.stringify ({ ok: true, broken: broken.length }),
+      body: JSON.stringify ({ ok: true, broken: broken.length })
     }
-  } catch (e) {
-
-    }
+  } catch (e) {}
 
     const report = { updated_at: Date.now (), checked: checked.length, broken },
     const owner = process.env.GITHUB_OWNER,
@@ -156,7 +154,7 @@ if ( {) {
   }
 
       statusCode: 200,
-      body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }),
+      body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length })
     };
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };

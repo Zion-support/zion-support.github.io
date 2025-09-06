@@ -11,6 +11,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+;
 }}};
 }}}};
 export default function Jest.setup({}: Jest.setupProps) {;
@@ -37,6 +38,7 @@ interface Jest.setupProps {
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+export default function Jest.setup({}: Jest.setupProps) {
 export default function Jest.setup({}: Jest.setupProps) {
   return (
     <div>
@@ -91,6 +93,11 @@ origin/automation-improvements-final
 }}},;
 }}};
 }}},;
+}
+}
+}
+}
+}
 }}};
 }}}
 }}}

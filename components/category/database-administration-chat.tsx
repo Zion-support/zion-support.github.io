@@ -38,9 +38,6 @@ export default DatabaseAdministrationChat;
 
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -100,12 +97,6 @@ export default DatabaseAdministrationChat;
 export default DatabaseAdministrationChat
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 const DatabaseAdministrationChat: NextPage = () => {
   return (

@@ -20,7 +20,6 @@ export async function createOnboardingNotification({
       case 'profile_completed':
 
 import {create_notification} from './create_notification';
-import {OnboardingNotificationParams} from './types';
 /**;
 * Creates an onboarding notification for a user;
 */;

@@ -59,7 +59,6 @@ export function useIsMobile() {;
 
 }
 
-import { useState, useEffect } from 'react',;
 ;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;

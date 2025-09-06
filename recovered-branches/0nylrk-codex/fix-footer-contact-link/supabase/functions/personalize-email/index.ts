@@ -264,9 +264,8 @@ if ( {) {
       headers: { ...cors_headers, "Content - Type": "application / json" }});
 
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
+const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 const corsHeaders = {;
   "Access-Control-Allow-Origin": "*",;
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
@@ -481,9 +480,7 @@ serve(async (req) => {;
       headers:{ ...corsHeaders, "Content-Type":"application/json" }}),;  }
 }),;
  serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}try {
+  //Handle CORS preflight requests if (req.method === "OPTIONS") {}try {
   //Get personalization request data const {
   break;
 case "inactivity reminder" : userPrompt = `Create a re-engagement email for a $ {
@@ -534,12 +531,8 @@ messages: [ {
 if (jsonMatch) {
   try {
   generatedContent = JSON.parse (jsonMatch[0]) 
-}catch (e2) {
-  
-}
-}// Apply the generated content to the template or return it directly return new Response (JSON.stringify (generatedContent), {
-  
-}
+}catch (e2) {}
+}// Apply the generated content to the template or return it directly return new Response (JSON.stringify (generatedContent), {}
 });
   }
 });

@@ -38,7 +38,7 @@ export default function ModerationModal(): any ({;
 
   flag,
   onClose,
-  onAction,
+  onAction
 }: ModerationModalProps) {;
 
 

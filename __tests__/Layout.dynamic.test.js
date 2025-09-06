@@ -25,6 +25,9 @@ describe('Layoutdynamic', () => {
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-website-loading-errors-and-merge-6662
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
     // Test content display
   test('handles user interactions', () => {
     // Test user interactions
@@ -54,6 +57,7 @@ describe('Layoutdynamic'
 
     expect(screen && screen.getByTestId('layout ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Layoutdynamic from "./components/Layout ; describe('Layoutdynamic', () => { test("renders without crashing",() => { render(<Layoutdynamic />); expect(screen && screen.getByTestId("layout && layout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Layoutdynamic />)}); test("handles user interactions",() => { render(<Layoutdynamic />)}); test("applies correct styling"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    expect(screen && screen.getByTestId('layout ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Layoutdynamic from "./components/Layout ; describe('Layoutdynamic', () => { test("renders without crashing",() => { render(<Layoutdynamic />); expect(screen && screen.getByTestId("layout && layout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Layoutdynamic />)}); test("handles user interactions",() => { render(<Layoutdynamic />)}); test("applies correct styling"
 import { render, screen } from '@testing-library/react';
 import Layout from '../components/Layout.dynamic';
 

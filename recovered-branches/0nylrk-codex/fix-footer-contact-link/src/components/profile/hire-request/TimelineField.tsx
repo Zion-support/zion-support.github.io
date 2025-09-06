@@ -5,14 +5,13 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
+  FormMessage
 } from "@/components/ui/form";
-import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue
 } from "@/components/ui/select";
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
@@ -37,7 +36,7 @@ import {FormValues} from "./useHireRequestForm";
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
 
-    { value: "Ongoing", label: "Ongoing" },
+    { value: "Ongoing", label: "Ongoing" }
   ];
 
 
@@ -91,7 +90,7 @@ function TimelineField() {
     { value: "1 - 2 months", label: "1 - 2 months" },
     { value: "3 - 6 months", label: "3 - 6 months" },
     { value: "6+ months", label: "6+ months" },
-    { value: "Ongoing", label: "Ongoing" },
+    { value: "Ongoing", label: "Ongoing" }
   ];
 ;
   return (

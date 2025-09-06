@@ -7,15 +7,14 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
   BarChart,
   DollarSign,
   LineChart,
   TrendingUp,
-  Users,
+  Users
 } from "lucide-react";
 
 
@@ -29,7 +28,7 @@ export function PartnerDashboard() {
     conversionRate: 18.5,
 
     totalRevenue: 850.0,
-    pendingRevenue: 200.0,
+    pendingRevenue: 200.0
   };
 
 

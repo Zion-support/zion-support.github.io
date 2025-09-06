@@ -111,7 +111,7 @@ export interface HeaderProps {;
 export function Header({ hideLogin = false, customLogo, customTheme } HeaderProps) {;
   const { user } = useAuth(),;
   const { isWhitelabel, primaryColor } = useWhitelabel(),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const [query, setQuery] = useState(""),;
   const searchSuggestions = generateSearchSuggestions(),;
   ;
@@ -184,9 +184,7 @@ color: effectiveTheme.textColor;
 borderColor: `$ {
   effectiveTheme.primaryColor 
 }20` 
-}: {
-  
-};
+}: {};
 const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault ();
 }

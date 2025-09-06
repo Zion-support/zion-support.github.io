@@ -189,7 +189,7 @@ class MessagingStorage {
 
 
 
-          count++,
+          count++
 
 
 
@@ -343,7 +343,7 @@ class MessagingStorage {
     const queryLower = query && query.toLowerCase();
     
     let score = 0;
-    const queryWords = queryLower && queryLower.split(/\s+/),
+    const queryWords = queryLower && queryLower.split(/\s+/)
 
     
 

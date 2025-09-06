@@ -21,7 +21,7 @@ export const REGIONS = [
   'Asia Pacific'
   'South America'
   'Middle East'
-  'Africa',];  "North America";
+  'Africa'];  "North America";
 
 
   "Europe";

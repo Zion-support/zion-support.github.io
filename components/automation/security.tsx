@@ -5,8 +5,7 @@
 }
 </pre> </div>)
 
-export default function SecurityAudit({ report }: Props) {
-};
+export default function SecurityAudit({ report }: Props) {};
 
 
 

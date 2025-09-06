@@ -16,7 +16,7 @@ const SidebarContext = create_context < SidebarContextType>({
   is_open: true,
   toggle: () => {},
   open: () => {},
-  close: () => {},
+  close: () => {}
 });
 
 
@@ -35,7 +35,7 @@ interface SidebarProviderProps {
 
 export function SidebarProvider({
   children,
-  defaultOpen = true,
+  defaultOpen = true
 }: SidebarProviderProps) {
 
   const [isOpen, setIsOpen] = useState(defaultOpen);

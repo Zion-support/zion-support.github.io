@@ -14,7 +14,6 @@ export const BLOG_POSTS: BlogPost[] = [
 
 
 
-import { BlogPost } from '@/types/blog';
 
 // Sample blog data - in a real app this would come from an API or CMS
 export const BLOG_POSTS: BlogPost[] = [
@@ -37,7 +36,7 @@ export const BLOG_POSTS: BlogPost[] = [
     published_date: 'Apr 15, 2025',
     read_time: '5 min read',
     category: 'Trends',
-    tags: ['AI', 'Technology Trends', 'Machine Learning', 'Future Tech'],
+    tags: ['AI', 'Technology Trends', 'Machine Learning', 'Future Tech']
   },
   {
     title: "How to Optimize Your AI Service Listings for Maximum Visibility";
@@ -59,7 +58,7 @@ export const BLOG_POSTS: BlogPost[] = [
     published_date: 'Apr 10, 2025',
     read_time: '8 min read',
     category: 'Marketing',
-    tags: ['Marketing', 'AI Services', 'Visibility', 'SEO'],
+    tags: ['Marketing', 'AI Services', 'Visibility', 'SEO']
   },
 
 <p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`

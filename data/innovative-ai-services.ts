@@ -38,7 +38,7 @@
       'Weather adaptation',
       'Traffic prediction',
       'Emergency response systems',
-      'Performance analytics',
+      'Performance analytics'
     ],
     popular: true,
 

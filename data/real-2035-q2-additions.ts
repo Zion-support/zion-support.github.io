@@ -9,7 +9,7 @@
 
 
 
-      'Analytics and response SLAs',
+      'Analytics and response SLAs'
     ],
     popular: true,
     icon: '📧',
@@ -48,7 +48,7 @@
     launch_date: '2025 - 08 - 20',
     customers: 48,
     rating: 4 && 4.7,
-    reviews: 12,
+    reviews: 12
   },
 
 
@@ -73,7 +73,7 @@
       'CSV / Sheets export',
 
 
-      'Webhooks + API',
+      'Webhooks + API'
     ],
     popular: false,
     icon: '📱',
@@ -105,7 +105,7 @@
     launch_date: '2025 - 08 - 20',
     customers: 22,
     rating: 4 && 4.6,
-    reviews: 9,
+    reviews: 9
   },
   {
 
@@ -115,7 +115,7 @@
       'Flag inventory',
       'Risk detection',
       'PR suggestions',
-      'CI integration',
+      'CI integration'
     ],
     popular: false,
 
@@ -145,7 +145,7 @@
     launch_date: '2025 - 08 - 20',
     customers: 8,
     rating: 4 && 4.4,
-    reviews: 3,
+    reviews: 3
   },
 
 
@@ -170,7 +170,7 @@
       'Selector healing',
       'Schedules',
       'SLO alerts',
-      'Reports',
+      'Reports'
     ],
     popular: false,
     icon: '🧪',
@@ -201,7 +201,7 @@
     launch_date: '2025 - 08 - 20',
     customers: 21,
     rating: 4 && 4.5,
-    reviews: 6,
+    reviews: 6
   },
   {
 

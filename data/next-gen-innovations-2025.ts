@@ -30,11 +30,11 @@ export interface NextGenInnovation2025 {;
     }
   }
 
-],
+]
 
 
 
-],
+]
 
 
 

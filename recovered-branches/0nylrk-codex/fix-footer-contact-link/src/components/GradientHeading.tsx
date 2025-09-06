@@ -26,9 +26,6 @@ interface GradientHeadingProps {
 import { cn } from "@/lib/utils",
 import React from "react",
 import {cn} from "@/lib/utils";
-import React from "react";
-import { cn } from "@/lib/utils",
-import React from "react",
 
 
 
@@ -72,7 +69,7 @@ interface GradientHeadingProps {;
 }
 ;
 export function GradientHeading({ children, className, level = "h2" } GradientHeadingProps) {;
-  const Tag = level,;
+  const Tag = level;
   ;
   return (;
     <Tag ;

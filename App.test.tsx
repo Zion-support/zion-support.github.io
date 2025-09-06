@@ -26,6 +26,10 @@ describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
 >>>>>>> main
+
+describe('App', () => {
+  it('renders without crashing', () => {
+    render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
 ursor/automate-test-improve-and-merge-code-646c
   });
@@ -49,3 +53,13 @@ describe('App', () => {
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+  it('displays correct content', () => {
+    render(<App />);
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
+  });
+
+  it('handles user interactions', () => {
+    render(<App />);
+    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
+  });
+});

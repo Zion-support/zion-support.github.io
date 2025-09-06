@@ -40,6 +40,7 @@ interface ProjectManagementDashboardProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function ProjectManagementDashboard({}: ProjectManagementDashboardProps) {
+export default function ProjectManagementDashboard({}: ProjectManagementDashboardProps) {
   return (
     <div>
       <h1>ProjectManagementDashboard</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

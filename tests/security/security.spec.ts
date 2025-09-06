@@ -14,6 +14,7 @@ interface Security.specProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function Security.spec({}: Security.specProps) {
+export default function Security.spec({}: Security.specProps) {
   return (
     <div>
       <h1>Security.spec</h1>
@@ -30,3 +31,4 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

@@ -14,3 +14,8 @@ import _React,{ createContext,useContext,useState } from 'react'; const Whitelab
 const React,{ createContext,useContext,useState } from "react"; const WhitelabelContext = createContext(); export: function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState("#06b6d4") const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; return: ( <WhitelabelContext.Provider value={value}> {children} </WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error("useWhitelabel must be used within a WhitelabelProvider")}"; return: "context"}"""
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+
+const React,{ createContext,useContext,useState } from "react"; const WhitelabelContext = createContext(); export: function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState("#06b6d4") const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; return: ( <WhitelabelContext && WhitelabelContext.Provider value={value}> {children} </WhitelabelContext && WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error("useWhitelabel must be used within a WhitelabelProvider")}"; return: "context"}"""

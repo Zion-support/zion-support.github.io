@@ -8,7 +8,7 @@ interface TalentDirectoryHeaderProps {
 
 export function TalentDirectoryHeader({
   title,
-  description,
+  description
 }: TalentDirectoryHeaderProps) {
   return (
     <div className="bg-zion-blue-dark border-b border-zion-blue-light">

@@ -23,7 +23,7 @@
       'Predictive maintenance',
       'Real - time monitoring',
       'Mobile management app',
-      'API for integration',
+      'API for integration'
     ],
     popular: true,
     icon: '🛰️',

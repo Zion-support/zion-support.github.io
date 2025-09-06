@@ -169,8 +169,7 @@ export class AIMarketResearchService {
     }
   }
   async generateComprehensiveReport(request: MarketResearchRequest): Promise<MarketReport> {
-    try {
-    } catch (error) {
+    try {} catch (error) {
       console && console.error('Error generating comprehensive report:', error);
 
       return data && data.report

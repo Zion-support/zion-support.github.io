@@ -6,6 +6,10 @@ const SecurityEnhancer = dynamic(() => import("./SecurityEnhancer"),{'; loading:
 ursor/automate-test-improve-and-merge-code-646c
 
 
+const SecurityEnhancer = dynamic(() => import("./SecurityEnhancer"),{'; loading: () => <p>Loading...</p,>}) export: 'default SecurityEnhancer' ,'
+</p>'
+</p>'
+</p>'
 
 
 </p>'

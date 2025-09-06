@@ -140,7 +140,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-const routes = [{ "name": 'Home', "href": '/' },;
+const routes = [{ "name": 'Home', "href": '/' };
   { "name": 'Solutions', "href": '/solutions' },;
   { "name": 'Services', "href": '/services' },;
   { "name": 'Pricing', "href": '/pricing' },;

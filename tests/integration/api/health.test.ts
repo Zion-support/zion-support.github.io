@@ -14,6 +14,7 @@ interface Health.testProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function Health.test({}: Health.testProps) {
+export default function Health.test({}: Health.testProps) {
   return (
     <div>
       <h1>Health.test</h1>
@@ -30,3 +31,4 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

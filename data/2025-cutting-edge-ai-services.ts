@@ -14,8 +14,8 @@ export const cuttingEdgeAIServices2025 = [
       'ISO 27001',
       'GDPR',
       'CCPA',
-      'Intellectual property protection',
-    ],
+      'Intellectual property protection'
+    ]
 
 
 ];      'Creative content generation and design_marketing and advertising creative_product design and innovation_artistic expression and creation_creative problem - solving and ideation';

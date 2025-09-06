@@ -78,7 +78,7 @@ export function QuoteRequestForm() {
       amount: 0
       type: "fixed"
 
-    },
+    }
 
 
     }
@@ -93,7 +93,7 @@ export function QuoteRequestForm() {
     }
 
 
-  }),
+  })
   
 
 
@@ -435,7 +435,7 @@ import { QuoteFormData } from "@/types/quotes",;
 import { Sparkles } from "lucide-react",;
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",;
 export function QuoteRequestForm() {;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const { toast } = useToast(),;
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -556,20 +556,6 @@ export function QuoteRequestForm() {;
   return (
 
 
-import { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { useNavigate } from "react-router-dom",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { StepProgress } from "@/components/QuoteRequestForm/StepProgress",;
-import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep",;
-import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep",;
-import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep",;
-import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep",;
-import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep",;
-import { QuoteFormData } from "@/types/quotes",;
-import { Sparkles } from "lucide-react",;
 ;
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",;
 ;

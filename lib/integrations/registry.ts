@@ -23,7 +23,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     id: "zoho",
     name: "Zoho CRM",
     category: "crm",
-    description: "All - in - one CRM",
+    description: "All - in - one CRM"
   },
 
 
@@ -46,11 +46,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     category: "ats"
     description: "Recruiting software"
   }
-  {
-
-
-
-}
+  {}
 import { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
@@ -69,7 +65,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     id: "bamboohr",
     name: "BambooHR",
     category: "ats",
-    description: "HRIS & ATS",
+    description: "HRIS & ATS"
   },;
 
 ];

@@ -296,7 +296,7 @@ export function useConversations(;
       if (error) throw error,;
       // Format conversations;
       const formattedConversations: Conversation[] = data.map(conv => {;
-        const isUserOne = conv.user_one_id === user.id,;
+        const isUserOne = conv.user_one_id === user.id;
         const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id,;
         return {;
           id: conv.id,;

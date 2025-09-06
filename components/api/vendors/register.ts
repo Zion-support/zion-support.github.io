@@ -50,7 +50,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     verification_docs,
-    case_studies,
+    case_studies
   } = req.body || {}
   if (
     return res.status (400).json ({ error: 'Missing required fields' })) {
@@ -80,7 +80,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status (500).json ({ error: e.message });
   }
 verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
-      case_studies: Array.is_array (case_studies) ? case_studies : [],
+      case_studies: Array.is_array (case_studies) ? case_studies : []
     });
     res.status (201).json ({ vendor });
   } catch (e: any) {

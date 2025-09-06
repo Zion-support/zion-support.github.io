@@ -18,7 +18,7 @@ import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
       title: "AI-Match Instantly"
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
 
-    },
+    }
 
 
     }
@@ -30,7 +30,7 @@ import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
       title: "Track Milestones"
       description: "Monitor project progress and approve milestones directly from your phone."
 
-    },
+    }
 
 
     }
@@ -43,10 +43,10 @@ import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
       description: "Chat with candidates or clients and receive notifications in real-time."
 
     }
-    },
+    }
 
 
-    },
+    }
 
 
 

@@ -14,13 +14,9 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
-import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
 
 
@@ -71,7 +67,7 @@ serve(async (req) => {
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
-    const openai = new OpenAIApi(configuration),;
+    const openai = new OpenAIApi(configuration);
     const prompt = `Generate an optimized marketplace listing for the following product:;
 
 
@@ -128,9 +124,7 @@ Format the response as a JSON object with the following structure: {
 
       JSON && JSON.stringify({ 
         generated: parsedResponse
-      JSON.stringify({
-
-      }
+      JSON.stringify({}
     );
   }
 });

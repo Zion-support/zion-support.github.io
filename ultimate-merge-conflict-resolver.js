@@ -143,6 +143,8 @@ function fixSyntaxAndConflicts() {
       content = content.replace(//g, '');
       content = content.replace(/
       
+      content = content.replace(/      content = content.replace(/[\s\S]*?      content = content.replace(/      content = content.replace(//g, '');
+      content = content.replace(/      
       // Fix import statements
       content = content.replace(/import React from "react",/g, 'import React from "react";');
       content = content.replace(/import Head from 'next\/head',/g, "import Head from 'next/head';");
@@ -189,7 +191,6 @@ function createGitHubPRAutomation() {
   
   const prScript = `#!/usr/bin/env node
 
-import { execSync } from 'child_process';
 
 const GITHUB_TOKEN = 'ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY';
 const REPO_OWNER = 'Zion-Holdings';
@@ -292,8 +293,6 @@ function runComprehensiveImprovements() {
   // Create improvement scripts
   const improvements = {
     'syntax-fixer.js': `#!/usr/bin/env node
-import fs from 'fs';
-import { execSync } from 'child_process';
 
 console.log('🔧 Running comprehensive syntax fixer...');
 
@@ -335,7 +334,6 @@ fixSyntaxErrors();
 `,
 
     'build-optimizer.js': `#!/usr/bin/env node
-import { execSync } from 'child_process';
 
 console.log('🔨 Running build optimizer...');
 

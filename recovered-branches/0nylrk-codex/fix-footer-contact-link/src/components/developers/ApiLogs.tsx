@@ -167,7 +167,7 @@ export function ApiLogs() {;
     }
   },;
   // Calculate pagination info;
-  const totalPages = Math.ceil(totalLogs / pageSize),;
+  const totalPages = Math.ceil(totalLogs / pageSize);
   const hasNextPage = currentPage < totalPages - 1,;
   const hasPrevPage = currentPage > 0;
   return (;

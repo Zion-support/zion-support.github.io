@@ -214,9 +214,7 @@ try {
 }= await query;
 if (error) throw error;
 setJobs (data as Job[]) 
-}catch (error) {
-  
-}finally {
+}catch (error) {}finally {
   setIsLoading (false) 
 }
 

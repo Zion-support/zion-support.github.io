@@ -14,3 +14,8 @@ import _React from';react'';"export": { function }';"export": default function C
 const React from";react"";export: { function }";export: default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'"
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+
+const React from";react"";export: { function }";export: default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'"

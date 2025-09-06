@@ -23,10 +23,6 @@ export function AdminDashboard() {
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">
       <AdminHeader />
 
-import React from "react",
-import { AdminHeader } from "./AdminHeader",
-import { TeamManagement } from "./TeamManagement",
-import { UsageStats } from "./UsageStats",
 import { RoleManagement } from "./RoleManagement",
 import { TeamActivity } from "./TeamActivity",
 import {

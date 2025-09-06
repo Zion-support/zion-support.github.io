@@ -55,7 +55,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 
     const success = await onAddSkill(newSkill);
 
-    const success = await onAddSkill(newSkill),;
+    const success = await onAddSkill(newSkill);
 
     if (success) {;
       setSkillName('');
@@ -70,7 +70,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
   
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
-  },
+  }
   
 
   };
@@ -196,7 +196,7 @@ const newSkill: Skill = {
 }
 
 
-},
+}
 };
 },
 

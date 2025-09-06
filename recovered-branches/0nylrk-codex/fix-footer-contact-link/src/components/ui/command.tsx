@@ -439,7 +439,7 @@ export {
   CommandItem,
   CommandShortcut,
 
-  CommandSeparator,
+  CommandSeparator
 }
 ;
   CommandSeparator} const Command = React.forwardRef< React.ElementRef<typeof CommandPrimitive>;
@@ -448,9 +448,7 @@ React.ComponentPropsWithoutRef<typeof CommandPrimitive> > ( ({
 }, ref) => (<CommandPrimitive) 
 }{
   ...props 
-}/>) ) Command.displayName = CommandPrimitive.displayName interface CommandDialogProps extends React.ComponentPropsWithoutRef<typeof Dialog> {
-  
-}const CommandDialog = ({
+}/>) ) Command.displayName = CommandPrimitive.displayName interface CommandDialogProps extends React.ComponentPropsWithoutRef<typeof Dialog> {}const CommandDialog = ({
   children, ...props 
 }: CommandDialogProps) => {
   return (<Dialog {
@@ -528,7 +526,7 @@ React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item> > ( ({
 
 
 
-  CommandSeparator,
+  CommandSeparator
 }
 ;
 

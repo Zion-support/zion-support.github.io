@@ -74,7 +74,7 @@ import { FileText, ShieldCheck } from "lucide-react";
         <CardFooter>
 
 
-  CardTitle,
+  CardTitle
 } from '@/components / ui / card';
 import { FileText, ShieldCheck  } from './lucide-react';
 interface ContractTypeCardsProps {
@@ -106,9 +106,6 @@ interface ContractTypeCardsProps {;
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
   return (;
 
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { FileText, ShieldCheck } from "lucide-react",;
 ;
 interface ContractTypeCardsProps {;
   onStandardClick:() => void,;

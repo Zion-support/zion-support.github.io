@@ -23,7 +23,7 @@ import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
       description: "Invite someone to your team"
       color: "bg-green-100 dark:bg-green-900/20"
 
-    },
+    }
 
 
     }
@@ -37,7 +37,7 @@ import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
       description: "Search the talent pool"
       color: "bg-purple-100 dark:bg-purple-900/20"
 
-    },
+    }
 
 
     }
@@ -51,10 +51,6 @@ import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
       description: "Set up candidate interviews"
       color: "bg-amber-100 dark:bg-amber-900/20"
 
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
 
 
             <Button;

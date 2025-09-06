@@ -46,14 +46,14 @@ const contact = {
       'Post - mortem report generation',
       'Incident timeline tracking',
       'Performance metrics and analytics',
-      'Integration with monitoring tools',
+      'Integration with monitoring tools'
     ],
     popular: true,
       'AI incident detection engine with automated response workflows and team coordination.',
     launch_date: '2025 - 02 - 01',
     customers: 89,
     rating: 4 && 4.7,
-    reviews: 67,
+    reviews: 67
   },
   {
       'Quantum key distribution (QKD)',
@@ -63,12 +63,12 @@ const contact = {
       'Compliance with NIST standards',
       'Performance optimization',
       'Integration APIs',
-      'Migration tools from classical crypto',
+      'Migration tools from classical crypto'
     ],
     popular: false,
     customers: 23,
     rating: 4 && 4.9,
-    reviews: 18,
+    reviews: 18
   },
   {
       'Autonomous infrastructure management',
@@ -79,12 +79,12 @@ const contact = {
       'Automated troubleshooting',
       'Cost optimization',
       'Security compliance monitoring',
-      'Real - time analytics dashboard',
+      'Real - time analytics dashboard'
     ],
     popular: true,
     customers: 134,
     rating: 4 && 4.8,
-    reviews: 92,
+    reviews: 92
   },
   {
       'Edge model deployment',
@@ -95,14 +95,14 @@ const contact = {
       'Bandwidth optimization',
       'Offline capability',
       'Security and privacy controls',
-      'Scalable edge infrastructure',
+      'Scalable edge infrastructure'
     ],
     popular: false,
       'Edge deployment framework with model optimization and device management capabilities.',
     launch_date: '2025 - 01 - 25',
     customers: 67,
     rating: 4 && 4.6,
-    reviews: 41,
+    reviews: 41
   },
   {
       'Automated compliance monitoring',
@@ -113,12 +113,12 @@ const contact = {
       'Stakeholder voting systems',
       'Audit trail and transparency',
       'Multi - chain support',
-      'Integration with DeFi protocols',
+      'Integration with DeFi protocols'
     ],
     popular: false,
     customers: 45,
     rating: 4 && 4.7,
-    reviews: 33,
+    reviews: 33
   },
   {
       'Predictive churn risk scoring',
@@ -129,12 +129,12 @@ const contact = {
       'Success metric tracking',
       'Integration with CRM systems',
       'Real - time alerts and notifications',
-      'Performance analytics dashboard',
+      'Performance analytics dashboard'
     ],
     popular: true,
     customers: 178,
     rating: 4 && 4.8,
-    reviews: 124,
+    reviews: 124
   },
   {
       'Quantum algorithm implementations',
@@ -145,12 +145,12 @@ const contact = {
       'Scientific computing tools',
       'Quantum circuit design',
       'Performance benchmarking',
-      'Integration with classical ML frameworks',
+      'Integration with classical ML frameworks'
     ],
     popular: false,
     customers: 28,
     rating: 4 && 4.9,
-    reviews: 22,
+    reviews: 22
   },
   {
       'Demand forecasting and planning',
@@ -161,12 +161,12 @@ const contact = {
       'Cost analysis and optimization',
       'Real - time visibility and tracking',
       'Compliance monitoring',
-      'Performance analytics and reporting',
+      'Performance analytics and reporting'
     ],
     popular: true,
     customers: 89,
     rating: 4 && 4.7,
-    reviews: 67,
+    reviews: 67
   },
   {
       'Threat intelligence sharing',
@@ -176,12 +176,12 @@ const contact = {
       'Threat hunting tools',
       'Integration with security tools',
       'Compliance reporting',
-      '24 / 7 security monitoring',
+      '24 / 7 security monitoring'
     ],
     popular: true,
     customers: 156,
     rating: 4 && 4.8,
-    reviews: 118,
+    reviews: 118
   },
   {
       'AI content generation',
@@ -192,7 +192,7 @@ const contact = {
       'Brand voice consistency',
       'Content calendar management',
       'Collaboration tools',
-      'Integration with marketing platforms',
+      'Integration with marketing platforms'
     ],
     popular: true,
     icon: '✍️',
@@ -204,7 +204,7 @@ const contact = {
     launch_date: '2025 - 03 - 01',
     customers: 234,
     rating: 4 && 4.7,
-    reviews: 167,
+    reviews: 167
   },
   {
       'Automated data quality monitoring',
@@ -215,12 +215,12 @@ const contact = {
       'Policy enforcement',
       'Audit and reporting',
       'Integration with data platforms',
-      'Real - time monitoring and alerts',
+      'Real - time monitoring and alerts'
     ],
     popular: false,
     customers: 78,
     rating: 4 && 4.6,
-    reviews: 56,
+    reviews: 56
   },
   {
       'Quantum portfolio optimization',
@@ -231,14 +231,14 @@ const contact = {
       'Backtesting and simulation',
       'Compliance monitoring',
       'Performance analytics',
-      'Integration with trading platforms',
+      'Integration with trading platforms'
     ],
     popular: false,
       'Quantum algorithm implementations for financial optimization and risk management.',
     launch_date: '2025 - 03 - 10',
     customers: 34,
     rating: 4 && 4.9,
-    reviews: 28,
+    reviews: 28
   },
   {
       'Automated interview scheduling',
@@ -248,12 +248,12 @@ const contact = {
       'Employee engagement monitoring',
       'Compliance and reporting',
       'Integration with HR systems',
-      'Predictive analytics dashboard',
+      'Predictive analytics dashboard'
     ],
     popular: true,
     customers: 189,
     rating: 4 && 4.7,
-    reviews: 134,
+    reviews: 134
   },
   {
       'IoT device management',
@@ -264,12 +264,12 @@ const contact = {
       'Edge computing capabilities',
       'Integration with cloud platforms',
       'Custom dashboard creation',
-      'API and webhook support',
+      'API and webhook support'
     ],
     popular: false,
     customers: 67,
     rating: 4 && 4.6,
-    reviews: 45,
+    reviews: 45
   },
   {
       'Quantum key distribution',
@@ -278,12 +278,12 @@ const contact = {
       'Compliance monitoring',
       'Performance optimization',
       'Integration with security tools',
-      'Migration assistance',
+      'Migration assistance'
     ],
     popular: false,
     customers: 19,
     rating: 4 && 4.9,
-    reviews: 15,
+    reviews: 15
   },
   {
 

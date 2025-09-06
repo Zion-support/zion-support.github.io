@@ -23,7 +23,7 @@ import {;
   TableBody,
   TableCell,
   TableHead,
-  TableHeader,
+  TableHeader
 
 
 } from "@/components/ui/table";
@@ -34,7 +34,7 @@ import {
   DropdownMenuItem,
 DropdownMenuTrigger,;
   DropdownMenuTrigger,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger
 
 
 } from "@/components/ui/dropdown-menu";

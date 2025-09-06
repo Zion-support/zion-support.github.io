@@ -63,12 +63,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle} from "@/components/ui/card",
-import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
-import {
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -84,7 +82,6 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
-import {
   AlertCircle,
   Calendar,
   CheckCircle2,
@@ -183,12 +180,10 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle} from "@/components/ui/card",;
-import {;
   Tabs,;
   TabsContent,;
   TabsList,;
   TabsTrigger} from "@/components/ui/tabs",;
-import {;
   AlertDialog,;
   AlertDialogAction,;
   AlertDialogCancel,;
@@ -204,7 +199,6 @@ import { Textarea } from "@/components/ui/textarea",;
 import { toast } from "@/hooks/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",;
-import {;
   AlertCircle,;
   Calendar,;
   CheckCircle2,;
@@ -326,7 +320,7 @@ if ( {) {
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { projectId } = useParams() as { projectId?: string },;
   const { user } = useAuth(),;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects(),;
   const [project, setProject] = useState<Project | null>(null),;
   const [isLoading, setIsLoading] = useState(true),;
@@ -473,7 +467,7 @@ if ( {) {
       }
     }
 
-  },
+  }
   
 
   }

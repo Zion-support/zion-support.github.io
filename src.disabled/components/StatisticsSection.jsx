@@ -40,6 +40,7 @@ interface StatisticsSectionProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function StatisticsSection({}: StatisticsSectionProps) {
+export default function StatisticsSection({}: StatisticsSectionProps) {
   return (
     <div>
       <h1>StatisticsSection</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

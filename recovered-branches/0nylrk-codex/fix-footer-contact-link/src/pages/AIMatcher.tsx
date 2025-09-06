@@ -10,7 +10,7 @@ import {
   SelectValue,
   SelectTrigger,
   SelectContent,
-  SelectItem,
+  SelectItem
 } from "@/components/ui/select";
 import { toast } from "@/hooks/use-toast";
 import { MatchResult } from "@/lib/ai-matchmaking";
@@ -36,14 +36,14 @@ export default function AIMatcherPage() {
 
     (toast({
       title: "Match Selected",
-      description: `You've selected ${match.item.title}`,
+      description: `You've selected ${match.item.title}`
     }),
       // Navigate to the quote request page with the selected item
       navigate("/request-quote", {
         state: {
           serviceType: itemType,
-          specificItem: match.item,
-        },
+          specificItem: match.item
+        }
       }));
   };
 

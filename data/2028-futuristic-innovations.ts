@@ -25,11 +25,7 @@ export interface FuturisticInnovation2028 {
     address: string;
   }
 export const futuristic2028Services: FuturisticInnovation2028[] = [
-  {
-
-
-
-  }
+  {}
 ;
 export const futuristic2028Services: FuturisticInnovation2028[] = [;
   {
@@ -44,7 +40,7 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [;
       'Breakthrough technologies',
       'Future capabilities',
       'Innovation platform',
-      'Expert insights',
+      'Expert insights'
     ],
     link: '/services / 2028 - futuristic - innovation',
     category: 'Futuristic Innovations 2028',
@@ -53,9 +49,9 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [;
 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
 ];      mobile: "+1 302 464 0950";
 
 

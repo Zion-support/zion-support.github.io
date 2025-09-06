@@ -12,7 +12,7 @@ import {toast} from "@/hooks/use-toast";
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
 
-    },
+    }
 
 
     }
@@ -27,7 +27,7 @@ import {toast} from "@/hooks/use-toast";
       icon: <FileImage className="h-10 w-10 text-zion-purple" />
       url: '#'
 
-    },
+    }
 
 
     }
@@ -42,7 +42,7 @@ import {toast} from "@/hooks/use-toast";
       icon: <FileVideo className="h-10 w-10 text-red-500" />
       url: '#'
 
-    },
+    }
 
 
     }
@@ -57,7 +57,7 @@ import {toast} from "@/hooks/use-toast";
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
 
-    },
+    }
 
 
     }
@@ -256,10 +256,6 @@ export function PartnerResources() {;
         <CardContent>;
 
 
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
-import {toast} from "@/hooks/use-toast";
 
 
                     size="sm";

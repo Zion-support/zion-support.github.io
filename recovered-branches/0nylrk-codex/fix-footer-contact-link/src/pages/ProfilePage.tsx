@@ -22,7 +22,7 @@ import {
   Twitter,
   Linkedin,
 
-  CheckCircle2,
+  CheckCircle2
 } from "lucide-react";
 
 
@@ -71,7 +71,7 @@ export default function ProfilePage() {
 
           title: "Error",
           description: "Failed to load profile. Please try again later.",
-          variant: "destructive",
+          variant: "destructive"
         });
       } finally {
 

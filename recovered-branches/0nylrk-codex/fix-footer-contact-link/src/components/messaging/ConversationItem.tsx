@@ -144,11 +144,6 @@ export function ConversationItem(): any ({ conversation, isActive, onClick }: Co
         conversation && conversation.unread_count> 0 && "bg-zion-blue-dark/20";
 
 
-import React from 'react',;
-import { format } from 'date-fns',;
-import { cn } from '@/lib/utils',;
-import { Conversation } from '@/types/messaging',;
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
 ;
 interface ConversationItemProps {;
   conversation:Conversation,;

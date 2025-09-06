@@ -29,7 +29,7 @@ export function InterviewResponseForm({
   interview,
   onConfirm,
   onClose,
-  isLoading,
+  isLoading
 }: InterviewResponseFormProps) {
   // Format interview date and time;
   const interviewDate = parseISO(interview.scheduled_date);

@@ -18,9 +18,7 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
  */
 
 
-import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
-import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
 
 /**
@@ -337,7 +335,7 @@ export async function createNotification({;
     ;
     // If sendEmail is true, call the edge function to send an email;
     if (sendEmail && data) {;
-      const notificationId = data,;
+      const notificationId = data;
       await supabase.functions.invoke('send-notification-email', {;
         body:{ user_id:userId, notification_id:notificationId }
       }),;

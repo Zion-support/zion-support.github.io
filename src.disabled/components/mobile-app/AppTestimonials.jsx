@@ -40,6 +40,7 @@ interface AppTestimonialsProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function AppTestimonials({}: AppTestimonialsProps) {
+export default function AppTestimonials({}: AppTestimonialsProps) {
   return (
     <div>
       <h1>AppTestimonials</h1>
@@ -65,3 +66,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

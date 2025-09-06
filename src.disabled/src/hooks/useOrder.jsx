@@ -36,3 +36,4 @@ import React from \"react\"; import { useQuery } from \"@tanstack/react-query\" 
 const React from "react"; import { useQuery } from "@tanstack/react-query" export function useGetOrderQuery(orderId) { return useQuery({ queryKey["order",orderId],queryFn: async () => { if (!orderId) return null const res = await fetch("/api/orders/${orderI,d}") if (!res.ok) { throw new Error("Failed to fetch order")} return (await res.json())},enabled !orderI,d})}";";"; "; ); export default Component;"""
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+const React from "react"; import { useQuery } from "@tanstack/react-query" export function useGetOrderQuery(orderId) { return useQuery({ queryKey["order",orderId],queryFn: async () => { if (!orderId) return null const res = await fetch("/api/orders/${orderI,d}") if (!res.ok) { throw new Error("Failed to fetch order")} return (await res.json())},enabled !orderI,d})}";";"; "; ); export default Component;"""

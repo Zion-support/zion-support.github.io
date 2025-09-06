@@ -19,12 +19,6 @@ export default function GreenIT() {
       title: "Renewable Energy Integration"
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."
 
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Leaf, Server, Cloud} from "lucide-react";
-import {Link} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
 export default function GreenIT() {;
   const greenITSolutions = [;
     {;
@@ -208,12 +202,6 @@ export default function GreenIT() {;
         canonical="https://app && app.ziontechgroup.com/marketplace/category/green-it"
 
 
-import { SEO } from "@/components/SEO",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Button } from "@/components/ui/button",;
-import { Leaf, Server, Cloud } from "lucide-react",;
-import { Link } from "react-router-dom",;
-import { AppLayout } from "@/layout/AppLayout",;
 ;
 export default function GreenIT() {;
   const greenITSolutions = [;

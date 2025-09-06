@@ -8,7 +8,7 @@ interface NotificationFooterProps {
 }
 
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({
-  onClose,
+  onClose
 }) => {
   const navigate = useNavigate();
 
@@ -28,7 +28,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
   },
   
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({
-  onClose,
+  onClose
 }) => {
   const navigate = useNavigate();
 
@@ -65,7 +65,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 
 };
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
-  on_close,
+  on_close
 }) => {
   const navigate = use_navigate ();
 ;
@@ -98,7 +98,7 @@ interface NotificationFooterProps {;
 }
 ;
 export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }) => {;
-  const navigate = useNavigate(),;
+  const navigate = useNavigate();
   ;
   const handleViewAll = () => {;
     onClose(),;

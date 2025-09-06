@@ -443,7 +443,7 @@ ursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/messages.
 ;
   if (req.method === 'GET') {;
     const { conversationId } = req.query;
-    const conversations = readJsonFile<Conversation[]>(FILE, []),;
+    const conversations = readJsonFile<Conversation[]>(FILE, []);
     const conv = conversations.find((c) => c.id === String(conversationId));
     if (!conv) {;
       res.status(404).json({ error: 'Conversation not found' });

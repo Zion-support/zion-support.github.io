@@ -2,7 +2,7 @@ import React from 'react';
 interface ComprehensiveServicesProps {
   // Add props here as needed
 }
-export default function ComprehensiveServices({ }: ComprehensiveServicesProps) {
+export default function ComprehensiveServices({}: ComprehensiveServicesProps) {
   return (
     <div>
       <h1>ComprehensiveServices</h1>

@@ -150,7 +150,7 @@ export default function AccountSettings() {
         console && console.error('ENS lookup error:', error);
       }
   };
-  },
+  }
 
   }
 

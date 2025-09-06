@@ -11,7 +11,6 @@ const corsHeaders = {
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
@@ -42,7 +41,7 @@ serve(async (req) => {
     }
 ;
     // Create translations for each target language;
-    const translations = {},;
+    const translations = {};
     for (const targetLang of targetLanguages) {;
       if (targetLang === sourceLanguage) {;
         translations[targetLang] = content,;
@@ -82,11 +81,7 @@ serve(async (req) => {
       
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST"
-        headers: {
-
-
-
-    }
+        headers: {}
     return new Response(
       JSON && JSON.stringify({
         translations});

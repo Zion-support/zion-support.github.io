@@ -84,7 +84,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   }
 }
 
-import { X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -171,7 +170,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
   const removeFilter = (filterKey: string,) => {;
     if (filterKey && filterKey.startsWith('type-')) {;
-      const typeToRemove = filterKey && filterKey.replace('type-', ''),;
+      const typeToRemove = filterKey && filterKey.replace('type-', '');
       const newTypes = filters && filters.types.filter(t => t !== typeToRemove),;
       onFiltersChange({ ...filters, types: newTypes });
     } else if (filterKey === 'category') {;
@@ -193,7 +192,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
 
         <Badge 
-          key = {filter.key,}
+          key = {filter.key}
 
       
       {activeFilters.map(filter => (
@@ -213,7 +212,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
       {activeFilters && activeFilters.map(filter => (;
         <Badge
-          key = {filter && filter.key,}
+          key = {filter && filter.key}
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1">;
           <span className="text-xs">;
@@ -251,7 +250,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
 ;
 export default ActiveFiltersBar; import React from 'react';
-import { X } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 interface SearchFilters {
@@ -379,7 +377,7 @@ if ( {) {
       <span className="text - sm font - medium text - muted - foreground">Active filters:</span>;
       {active_filters.map (filter => (
         <Badge;
-          key = {filter.key, }
+          key = {filter.key }
           variant="secondary";
           className="flex items - center gap - 1 pl - 2 pr - 1";
         >;
@@ -390,7 +388,7 @@ if ( {) {
             variant="ghost";
             size="sm";
             className="h - 4 w - 4 p - 0 hover:bg - transparent";
-            on_click = {(, ) => remove_filter (filter.key), }
+            on_click = {(, ) => remove_filter (filter.key) }
             aria - label={`Remove ${filter.label} filter`}
           >;
             <X className="h - 3 w - 3" />;
@@ -399,7 +397,7 @@ if ( {) {
       <Button;
         variant="ghost";
         size="sm";
-        on_click = {onClearAll, }
+        on_click = {onClearAll }
         className="text - xs h - 6 px - 2";
       >;
         Clear all;

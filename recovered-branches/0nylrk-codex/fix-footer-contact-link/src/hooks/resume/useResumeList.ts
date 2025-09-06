@@ -111,8 +111,7 @@ if ( {) {
       }));
       setResumes(transformedResumes);
       return transformedResumes
-    } catch (e: any) {
-    } finally {
+    } catch (e: any) {} finally {
       setIsLoading (false);
     }
   }

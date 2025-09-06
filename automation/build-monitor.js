@@ -194,6 +194,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -235,6 +238,9 @@ ursor/automate-test-improve-and-merge-code-646c
       
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+      
+      
+      
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -625,3 +631,7 @@ module.exports = BuildMonitor;
 module.exports = BuildMonitor;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+module.exports = BuildMonitor;
+module.exports = BuildMonitor;
