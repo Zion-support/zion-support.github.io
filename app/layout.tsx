@@ -33,6 +33,9 @@ export const metadata = {
   },
 };
 
+/**
+ * Header - Function description
+ */
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
@@ -55,6 +58,9 @@ function Header() {
   );
 }
 
+/**
+ * Footer - Function description
+ */
 function Footer() {
   return (
     <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
@@ -73,8 +79,8 @@ function Footer() {
             <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
             <div className="space-y-2">
               <Link href="/" className="block text-gray-600 hover:text-blue-600 transition-colors">Home</Link>
+              <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">About</Link>
               <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
-              <a href="https://ziontechgroup.com" className="block text-gray-600 hover:text-blue-600 transition-colors">Main Site</a>
             </div>
           </div>
           <div>
@@ -82,7 +88,7 @@ function Footer() {
             <div className="text-sm text-gray-600 space-y-1">
               <div>Mobile: +1 302 464 0950</div>
               <div>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600 transition-colors">kleber@ziontechgroup.com</a></div>
-              <div>Address: 364 E Main St STE 1008<br />Middletown, DE 19709</div>
+              <div>Address: 364 E Main St STE 1008<br />Middletown DE 19709</div>
             </div>
           </div>
         </div>
