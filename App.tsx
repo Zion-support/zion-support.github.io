@@ -178,3 +178,28 @@ export default function App(): JSX.Element {
 >>>>>>> main
   );
 }
+<<<<<<< HEAD
+=======
+
+export default function App() {
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+<<<<<<< HEAD
+export default function App(): React.JSX.Element {
+=======
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+
+export default function App(): React.JSX.Element {
+  return (
+    <main>
+      <h1>Zion Tech Group - AI, Micro SaaS & IT Services</h1>
+      <p>Building the future with innovative technology solutions</p>
+    </main>
+  );
+}
+=======
+>>>>>>> main
