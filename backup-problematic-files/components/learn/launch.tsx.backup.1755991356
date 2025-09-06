@@ -1,0 +1,22 @@
+import { GetServerSideProps } from 'next';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/academy/founder-course',
+<<<<<<< HEAD:backup-problematic-files/components/learn/launch.tsx.backup.1755991356
+      permanent: false,
+    },
+  };
+=======
+
+>>>>>>> main:components/learn/launch.tsx
+};
+
+export default function LaunchRedirect() {
+  return null;
+<<<<<<< HEAD:backup-problematic-files/components/learn/launch.tsx.backup.1755991356
+}
+=======
+}
+>>>>>>> main:components/learn/launch.tsx

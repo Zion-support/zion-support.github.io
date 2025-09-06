@@ -1,70 +1,236 @@
-import Link from 'next/link';
+import React, { useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+origin/automation-improvements-final
+import {
+  Search
+  HelpCircle
+  BookOpen
+  MessageCircle
+  Phone
+  Mail
+  FileText
+  Video
+  Download
+  ExternalLink
+  ChevronDown
+  Cloud
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
+  Video,
+  Download,
+  ExternalLink,
+  ChevronDown,
+  Cloud,;
+} from "lucide-react";
+const helpArticles = [
+  {
+    id: "overview"
+    title: "Understanding Our Services"
+    description: "Overview of all available services and solutions"
+    readTime: "7 min read"
+    type: "Overview"
+  }
+  {
+    id: "ai-services"
+    title: "AI Services"
+    description: "Everything about our AI and machine learning solutions."
+    icon: HelpCircle
+    color: "green"
+    articles: [
+      {
+        title: "AI Implementation Guide"
+        description: "How to implement AI solutions in your business"
+        readTime: "10 min read"
+        type: "Guide"
+      }
+      {
+        title: "Machine Learning Models"
+        description: "Understanding different ML models and their applications"
+        readTime: "8 min read"
+        type: "Technical"
+      }
+      {
+        title: "AI Best Practices",
+        description: "Tips and best practices for AI development",
+        readTime: "6 min read",
+        type: "Best Practice",
+      },
+    ],
+  },
+  {
+    id: "cloud-services",
+    title: "Cloud Services",
+    description: "Cloud infrastructure and deployment solutions.",
+        title: 'AI Best Practices',
+        description: 'Tips and best practices for AI development',
+        readTime: '6 min read',
+        type: 'Best Practice'
+      }
+    ]
+  },
+  {
+    id: 'cloud-services',
+    title: 'Cloud Services',
+    description: 'Cloud infrastructure and deployment solutions.',
+origin/automation-improvements-final
+    icon: Cloud,
+    color: "blue",
+        title: "AI Best Practices"
+        description: "Tips and best practices for AI development"
+        readTime: "6 min read"
+        type: "Best Practice"
+      }
+    ]
+  }
+  {
+    id: "cloud-services"
+    title: "Cloud Services"
+    description: "Cloud infrastructure and deployment solutions."
+    icon: Cloud
+    color: "blue"
+    articles: [
+      {
+        title: "Cloud Migration Guide"
+        description: "Step-by-step guide to migrating to the cloud"
+        readTime: "12 min read"
+        type: "Guide"
+      }
+      {
+        title: "Cloud Security",
+        description: "Best practices for securing your cloud infrastructure",
+        readTime: "9 min read",
+        type: "Security",
+      },
+    ],
+  },
+        title: 'Cloud Security',
+        description: 'Best practices for securing your cloud infrastructure',
+        readTime: '9 min read',
+        type: 'Security'
+      }
+    ]
+  }
+origin/automation-improvements-final
+        title: "Cloud Security"
+        description: "Best practices for securing your cloud infrastructure"
+        readTime: "9 min read"
+        type: "Security"
+      }
+    ]
+  }
+];
+const helpCategories = [
+  {
+    title: "Getting Started",
+    description: "New to our platform? Start here.",
+    icon: BookOpen,
+    color: "blue",
+    articles: helpArticles,
+  },
+    title: "Getting Started"
+    description: "New to our platform? Start here."
+    icon: BookOpen
+    color: "blue"
+    articles: helpArticles
+  }
+];
+export default function HelpPage() {
+  const [searchTerm, setSearchTerm] = useState("");
+    color: 'blue',
+    articles: helpArticles
+  }
+];
+export default function HelpPage() {
 
-export default function Help() {
+export default function HelpPage() {;
+  const [searchTerm, setSearchTerm] = useState("");
+  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+  const toggleCategory = (index: number) => {
+    setExpandedCategory(expandedCategory === index ? null : index);
+
+export default function HelpPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+origin/automation-improvements-final
+  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+  const toggleCategory = (index: number) => {
+    setExpandedCategory(expandedCategory === index ? null : index);
+  };
+
+  }
+  const filteredCategories = helpCategories
+    .map((category) => ({
+      ...category
+      articles: category.articles.filter(
+        (article) =>
+          article.title.toLowerCase().includes(searchTerm.toLowerCase()) |
+          article.description.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    }))
+    .filter((category) => category.articles.length > 0);
+  const filteredCategories = helpCategories.map(category => ({
+    ...category,
+    articles: category.articles.filter(article =>
+      article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      article.description.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  })).filter(category => category.articles.length > 0);
+origin/automation-improvements-final
+
   return (
     <>
       <Head>
-        <title>Help & Support - Zion Tech Group</title>
-        <meta name="description" content="Get help and support for our services, products, and solutions. Find documentation, FAQs, and contact information." />
-        <meta name="keywords" content="help, support, documentation, FAQ, customer service, technical support" />
-        <link rel="canonical" href="https://ziontechgroup.com/help" />
+        <title>Help Center - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources."
+        />
+        <meta
+          name="keywords"
+          content="help, support, documentation, FAQ, tutorials, guides"
+        />
       </Head>
-      
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Help & Support</h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Get the help you need for our services and solutions
-            </p>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Help <span className="text-blue-600">Center</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Find answers, get support, and learn how to make the most of our
+                services.
+              </p>
+              <div className="relative max-w-md mx-auto">
+                <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search help articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+            </motion.div>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-              <h3 className="text-xl font-bold mb-4 text-blue-400">Documentation</h3>
-              <p className="text-slate-300 mb-4">Comprehensive guides and documentation</p>
-              <ul className="text-slate-400 space-y-2">
-                <li>• API documentation</li>
-                <li>• User guides</li>
-                <li>• Integration guides</li>
-                <li>• Best practices</li>
-              </ul>
-            </div>
-
-            <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-              <h3 className="text-xl font-bold mb-4 text-green-400">FAQ</h3>
-              <p className="text-slate-300 mb-4">Frequently asked questions and answers</p>
-              <ul className="text-slate-400 space-y-2">
-                <li>• General questions</li>
-                <li>• Technical issues</li>
-                <li>• Billing questions</li>
-                <li>• Service inquiries</li>
-              </ul>
-            </div>
-
-            <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-              <h3 className="text-xl font-bold mb-4 text-purple-400">Contact Support</h3>
-              <p className="text-slate-300 mb-4">Get in touch with our support team</p>
-              <ul className="text-slate-400 space-y-2">
-                <li>• Email support</li>
-                <li>• Phone support</li>
-                <li>• Live chat</li>
-                <li>• Ticket system</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Link href="/faq" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4">
-              View FAQ
-            </Link>
-            <Link href="/contact" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-              Contact Support
-            </Link>
-          </div>
-        </div>
-      </main>
+        </section>
+      </div>
     </>
   );
 }

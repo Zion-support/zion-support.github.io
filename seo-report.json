@@ -1,53 +1,9 @@
 {
-  "timestamp": "2025-09-03T13:52:00.442Z",
-  "issues": [
-    {
-      "file": "faq.tsx",
-      "issue": "Missing meta tags",
-      "recommendation": "Add Head component with title and meta description"
-    },
-    {
-      "file": "green-it.tsx",
-      "issue": "Missing meta tags",
-      "recommendation": "Add Head component with title and meta description"
-    },
-    {
-      "file": "index.tsx",
-      "issue": "Missing meta tags",
-      "recommendation": "Add Head component with title and meta description"
-    },
-    {
-      "file": "news.tsx",
-      "issue": "Missing meta tags",
-      "recommendation": "Add Head component with title and meta description"
-    },
-    {
-      "file": "request-quote.tsx",
-      "issue": "Missing meta tags",
-      "recommendation": "Add Head component with title and meta description"
-    },
-    {
-      "file": "research-development.tsx",
-      "issue": "Missing meta tags",
-      "recommendation": "Add Head component with title and meta description"
-    },
-    {
-      "file": "services.tsx",
-      "issue": "Missing meta tags",
-      "recommendation": "Add Head component with title and meta description"
-    },
-    {
-      "file": "test.tsx",
-      "issue": "Missing meta tags",
-      "recommendation": "Add Head component with title and meta description"
-    }
-  ],
-  "improvements": [
-    "Generated sitemap.xml",
-    "Generated robots.txt"
-  ],
-  "summary": {
-    "totalIssues": 8,
-    "improvements": 2
-  }
+  "timestamp": "2025-09-06T10:43:26.240Z",
+  "score": 90,
+  "issues": [],
+  "recommendations": [
+    "Add meta descriptions",
+    "Use proper title tags"
+  ]
 }

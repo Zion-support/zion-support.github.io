@@ -4,29 +4,24 @@
   "name": "Zion Tech Group",
   "url": "https://ziontechgroup.com",
   "logo": "https://ziontechgroup.com/logo.png",
-  "description": "Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.",
+  "description": "AI-powered business solutions and technology services",
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "US";
-},
+    "addressCountry": "US"
+  },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-XXX-XXX-XXXX",
+    "telephone": "+1-302-464-0950",
     "contactType": "customer service",
-    "availableLanguage": "English";
-},
+    "email": "kleber@ziontechgroup.com"
+  },
   "sameAs": [
-    "https://linkedin.com/company/zion-tech-group",
-    "https://twitter.com/ziontechgroup"
+    "https://twitter.com/ziontechgroup",
+    "https://linkedin.com/company/ziontechgroup"
   ],
-  "foundingDate": "2020",
-  "numberOfEmployees": "50-100",
-  "industry": "Information Technology",
-  "services": [
-    "AI Development",
-    "Cybersecurity",
-    "Cloud Solutions",
-    "Digital Transformation",
-    "IT Consulting"
-  ]
+  "offers": {
+    "@type": "Offer",
+    "description": "AI-powered business solutions",
+    "category": "Technology Services"
+  }
 }

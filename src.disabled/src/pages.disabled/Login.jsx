@@ -1,64 +1,20 @@
-import { useEffect } from 'react';''';
-import { useNavigate, useLocation } from 'react-router-dom';''';
-import { useAuth } from '@/hooks/useAuth';''';
-import { safeStorage } from '@/utils/safeStorage';''';
-import { LoginContent } from '@/components/auth/login';''';
-import { ErrorBoundary } from 'react-error-boundary';''';
-import { useCart } from '@/context/CartContext';'';
-''';
-import { toast } from '@/hooks/use-toast';''';
-import { useDispatch } from 'react-redux';''';
-import { setLoggedIn } from '@/store/authSlice';
-;
-  useEffect ( () => {}
-    // This effect handles token processing (e.g., from magic link) // It runs when component mounts or location.search changes;
-    const queryString = location.search;
-    const params = new URLSearchParams(queryString);';
-    const token = params.get('token');
-    if (token) {}
-';
-'';
-''';
-      safeStorage.setItem('zion_token', token);''';
-      // Clear token from URL to prevent re-processing and clean up history'''';
-      // The actual authentication state will update via useAuth's listeners,;
-      // which should trigger the other useEffect.;
-      navigate (location.pathname, { replace: true }) ;,
+import React from 'react';
+interface LoginProps {
+  // Add props here as needed
 }
-  }, [location.search, location.pathname, navigate]) ;
-;
-  useEffect ( () => {}
-    if (!isLoading && isAuthenticated) {}
-      reduxDispatch(setLoggedIn(true));';
-      const next = location.state?.from?.pathname || '/dashboard';
-      navigate (next, { replace: true }) ;,
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default function Login({ }: LoginProps) {
+  return (
+    <div>
+      <h1>Login</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+:src.disabled/src/pages.disabled/Login.jsx
 }
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]) ;
-;
-  // Render LoginContent if not authenticated and auth is not loading;
-  if (!isAuthenticated && !isLoading) {}
-    return();
-      <div>Broken JSX</div>
-        fallback={<div>Something went wrong. Please try again.</div>}
-      >;
-        <LoginContent />;
-      </ErrorBoundary>) ;,
 }
-;
-  // Optional: Render a loading indicator while isLoading is true;
-  if (isLoading) {}
-    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component;,
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
-;
-  // If authenticated and isLoading is false, the useEffect above should have navigated.;
-  // Return null or a minimal layout if needed, though direct navigation is preferred.;
-  return null;,
-}
-;
-export { Login };
-;
-export { Login };
-;
-export { Login };
-;
-export { Login };
+:temp_exclude/src.disabled/src/pages.disabled/Login.jsx

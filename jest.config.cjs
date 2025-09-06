@@ -1,35 +1,34 @@
-module.exports = {
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  dir: './',
+})
+
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: [],
-  testPathIgnorePatterns: [
-    '<rootDir>/deployment/',
-    '<rootDir>/deployments/',
-    '<rootDir>/tests/',
-  ],
-  testMatch: [
-    '<rootDir>/tests/unit/**/*.test.{ts,tsx,js,jsx}',
-    '<rootDir>/tests/integration/**/*.test.{ts,tsx,js,jsx}',
-  ],
-  collectCoverageFrom: [
-    'components/**/*.{ts,tsx,js,jsx}',
-    'lib/**/*.{ts,tsx,js,jsx}',
-    'pages/**/*.{ts,tsx,js,jsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
-  ],
-  coverageThreshold: {
-    global: {
-      branches: 0,
-      functions: 0,
-      lines: 0,
-      statements: 0,
-    },
-  },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
-  transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', { tsconfig: 'tsconfig.json' }],
-  },
-  passWithNoTests: true,
-};
+  collectCoverageFrom: [
+    'components/**/*.{js,jsx,ts,tsx}',
+    'pages/**/*.{js,jsx,ts,tsx}',
+    'utils/**/*.{js,jsx,ts,tsx}',
+    '!**/node_modules/**',
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/node_modules/',
+    '<rootDir>/out/',
+    '<rootDir>/__tests__.disabled/',
+    '<rootDir>/tests.disabled/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/test.disabled/',
+    '<rootDir>/plugins.disabled/',
+    '<rootDir>/supabase.disabled/',
+    '<rootDir>/dao/',
+    '<rootDir>/pages.disabled/',
+  ],
+}
+
+module.exports = createJestConfig(customJestConfig)

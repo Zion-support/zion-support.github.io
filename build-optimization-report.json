@@ -1,33 +1,29 @@
 {
-  "timestamp": "2025-09-03T16:31:12.923Z",
-  "optimizer": "Build Optimizer",
-  "results": [
+  "timestamp": "2025-09-06T05:00:31.301Z",
+  "optimizations": [
+    "Build issues could not be automatically fixed"
+  ],
+  "errors": [
     {
-      "name": "Clean Build Directory",
-      "success": true
+      "command": "npm run lint:fix",
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
     },
     {
-      "name": "Optimize Next.js Config",
-      "success": true
+      "command": "npm run type-check",
+      "error": "spawnSync /bin/sh ENOBUFS"
     },
     {
-      "name": "Check Dependencies",
-      "success": true
+      "command": "npm run build",
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token '.']\n"
     },
     {
-      "name": "Type Check",
-      "success": true
-    },
-    {
-      "name": "Build Application",
-      "success": true,
-      "result": false
+      "command": "npm run build",
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Unexpected token '.']\n"
     }
   ],
   "summary": {
-    "total": 5,
-    "successful": 5,
-    "failed": 0,
-    "successRate": 100
+    "totalOptimizations": 1,
+    "totalErrors": 4,
+    "success": false
   }
 }

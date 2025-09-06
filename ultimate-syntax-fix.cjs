@@ -1,91 +1,82 @@
 #!/usr/bin/env node
 
-const fs = require('fs')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-// Function to fix all remaining syntax errors
-function fixSyntaxErrors(content) {
-  // Fix extra commas in JSX attributes
-  content = content.replace(/className="[^"]*"\s*,\s*>/g, (match) => {
-    return match.replace(/,\s*$/, '');});
-  
-  // Fix malformed function declarations: {, -> {
-  content = content.replace(/\{\s*,/g, '{');
-  
-  // Fix malformed JSX elements: >, -> >
-  content = content.replace(/>\s*,\s*$/gm, '>');
-  
-  // Fix malformed JSX elements: >, -> >
-  content = content.replace(/>\s*,\s*</g, '><');
-  
-  // Fix malformed function declarations: ) {, -> ) {
-  content = content.replace(/\)\s*\{\s*,/g, ') {');
-  
-  // Fix malformed JSX elements: >, -> >
-  content = content.replace(/>\s*,\s*$/gm, '>');
-  
-  // Fix missing closing braces in for loops
-  content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
-    return match.replace(/\;}\);/g, '}\n      });')});
-  
-  // Fix missing closing braces in for loops (alternative pattern)
-  content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
-    return match.replace(/\;}\);/g, '}\n      });')});
-  
-  return content;}
+console.log('🔧 Ultimate syntax fix...');
 
-// Function to process a file
-function processFile(filePath) {
+// Find all files with syntax errors
+const findSyntaxErrorFiles = () => {
   try {
-    const content = fs.readFileSync(filePath, 'utf8';);
-    const fixedContent = fixSyntaxErrors(conten;t;);
+    const result = execSync('npm run build 2>&1 | grep -E "Syntax error|Unexpected token" | grep -o "\./[^:]*" | sort -u', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(Boolean);
+  } catch (error) {
+    return [];
+  }
+};
+
+const syntaxErrorFiles = findSyntaxErrorFiles();
+console.log(`📋 Found ${syntaxErrorFiles.length} files with syntax errors`);
+
+let fixedCount = 0;
+
+for (const filePath of syntaxErrorFiles) {
+  try {
+    console.log(`🔧 Fixing ${filePath}...`);
     
-    if ( {
-      fs.writeFileSync(filePath, fixedContent, 'utf8')) {
-     {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+    // Fix common syntax issues
+    
+    // Fix missing semicolons
+    content = content.replace(/(\w+)\s*(\n\s*res\.status)/g, '$1;\n$2');
+    content = content.replace(/(\w+)\s*(\n\s*return)/g, '$1;\n$2');
+    content = content.replace(/(\w+)\s*(\n\s*export)/g, '$1;\n$2');
+    content = content.replace(/(\w+)\s*(\n\s*function)/g, '$1;\n$2');
+    
+    // Fix malformed import statements
+    content = content.replace(/import\s+{\s*([^}]+),\s*;\s*}/g, 'import { $1 }');
+    content = content.replace(/,\s*;\s*}/g, ' }');
+    
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    if (openBraces > closeBraces) {
+      const missingBraces = openBraces - closeBraces;
+      content += '\n' + '}'.repeat(missingBraces);
+    }
+    
+    // Fix malformed function declarations
+    content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm, 'function $1() {\n');
+    
+    // Fix missing commas in object literals
+    content = content.replace(/(\w+)\s*(\n\s*})/g, '$1,\n$2');
+    
+    // Fix malformed return statements
+    content = content.replace(/return\s+([^;]+)\s*$/gm, 'return $1;');
+    
+    // Fix missing newlines between statements
+    content = content.replace(/(\w+)\s*(\n\s*export)/g, '$1;\n$2');
+    content = content.replace(/(\w+)\s*(\n\s*function)/g, '$1;\n$2');
+    
+    // Fix missing semicolons in function calls
+    content = content.replace(/(\w+\([^)]*\))\s*(\n\s*})/g, '$1;\n$2');
+    
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed ${filePath}`);
+      fixedCount++;
+    } else {
+      console.log(`ℹ️  No changes needed for ${filePath}`);
+    }
+  } catch (error) {
+    console.log(`⚠️  Could not fix ${filePath}: ${error.message}`);
   }
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;}
-    return false;} catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;}
 }
 
-// Main execution
-console.log('🔧 Starting ultimate syntax error fixing...');
-
-const filesToFix = [
-  'components/ContactForm.tsx',
-  'components/ErrorBoundary.tsx',
-  'components/PerformanceMonitor.tsx',
-  'pages/cybersecurity.tsx',
-  'pages/docs.tsx'
-;];
-
-let totalFixed = ;0;
-
-for (const file of filesToFix) {
-  if () {
-    if (processFile(file)) {
-      totalFixed++}
-  }
-}
-
-console.log(`\n📊 Syntax fixing complete:`)) {
-    ) {
-    if (processFile(file)) {
-      totalFixed++}
-  }
-}
-
-console.log(`\n📊 Syntax fixing complete:`);
-  }
-console.log(`   - Files fixed: ${totalFixed}`);
-console.log(`   - Issues encountered: 0`);
-
-if ( {
-  console.log('\n✅ All syntax errors have been fixed!')) {
-     {
-  console.log('\n✅ All syntax errors have been fixed!');
-  }} else {
-  console.log('\n✅ No syntax errors found!');}
+console.log(`🎉 Fixed ${fixedCount} files with syntax errors!`);

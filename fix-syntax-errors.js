@@ -1,49 +1,105 @@
 #!/usr/bin/env node
 
-import fs from 'fs'
-import path from 'path'
+import fs from "fs";
+import path from "path";
+import { glob } from "glob";
 
-function listFiles(dir, exts) {
-	const out = []
-	for (const entry of fs.readdirSync(dir)) {
-		const full = path.join(dir, entry)
-		const st = fs.statSync(full)
-		if (st.isDirectory()) {
-			if (entry === 'node_modules' || entry.startsWith('.')) continue
-			out.push(...listFiles(full, exts))
-		} else if (exts.some(ext => full.endsWith(ext))) {
-			out.push(full)
-		}
-	}
-	return out
-}
+// Find all TypeScript and JavaScript files
+const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
 
-function fixContent(content) {
-	let next = content
-	next = next.replace(/,\s*;/g, ',')
-	next = next.replace(/;\s*,/g, ',')
-	next = next.replace(/;\s*\]/g, ']')
-	next = next.replace(/;\s*\}/g, '}')
-	return next
-}
+let totalFixed = 0;
 
-function fixFile(filePath) {
-	try {
-		const before = fs.readFileSync(filePath, 'utf8')
-		const after = fixContent(before)
-		if (after !== before) {
-			fs.writeFileSync(filePath, after, 'utf8')
-			console.log(`Fixed: ${filePath}`)
-			return true
-		}
-		return false
-	} catch (e) {
-		console.error(`Error fixing ${filePath}:`, e.message)
-		return false
-	}
-}
+files.forEach((file) => {
+  try {
+    const filePath = path.join(process.cwd(), file);
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
 
-const files = listFiles('.', ['.js', '.jsx', '.ts', '.tsx'])
-let fixed = 0
-for (const f of files) if (fixFile(f)) fixed++
-console.log(`Fixed syntax errors in ${fixed} files.`)
+    // Fix import statements with double punctuation (comma + semicolon);
+    const originalContent = content;
+    content = content.replace(
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+      (match) => {
+        modified = true;
+        return match.replace(",;", ";");
+      },
+    );
+
+    // Fix import statements missing semicolons
+    content = content.replace(
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+      (match) => {;
+        if (!match.trim().endsWith(";")) {
+          modified = true;
+          return match.trim() + ";";
+        }
+        return match;
+      },
+    );
+
+    // Fix other common syntax issues
+    // Fix missing semicolons after variable declarations
+    content = content.replace(
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+      (match, varName) => {
+        if (
+          !match.includes("function") &&
+          !match.includes("if") &&
+          !match.includes("for") &&
+          !match.includes("while") &&
+          !match.includes("switch") &&
+          !match.includes("try") &&
+          !match.includes("catch") &&
+          !match.includes("finally") &&
+          !match.includes("return") &&
+          !match.includes("throw") &&
+          !match.includes("break") &&
+          !match.includes("continue") &&
+          !match.includes("debugger") &&
+          !match.includes("export") &&
+          !match.includes("import")
+        ) {
+          modified = true;
+          return match + ";";
+        }
+        return match;
+      },
+    );
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, "utf8");
+      console.log(`Fixed: ${file}`);
+      totalFixed++;
+    }
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
+  }
+});
+
+console.log(`\nTotal files fixed: ${totalFixed}`);
+  }
+}},
+,
+// Run all fixes,
+fixFooter();
+fixAccessibility();
+fixAiServices();
+fixApiDocs();
+fixCareers();
+,
+console.log('🎉 Syntax error fixes completed');
+// Run all fixes,
+fixFooter(),
+fixAccessibility(),
+fixAiServices(),
+fixApiDocs(),
+fixCareers(),
+// // // console.log('🎉 Syntax error fixes completed'),
+}},;
+// Run all fixes,;
+fixFooter(),;
+fixAccessibility(),;
+fixAiServices(),;
+fixApiDocs(),;
+fixCareers(),;
+// // // console.log('🎉 Syntax error fixes completed'),;
