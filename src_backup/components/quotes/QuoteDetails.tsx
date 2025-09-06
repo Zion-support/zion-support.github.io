@@ -62,15 +62,6 @@ interface QuoteDetailsProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-<<<<<<< HEAD:src/components/quotes/QuoteDetails.tsx
-=======
-;
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null,;
-  const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified',;
-    try {;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/quotes/QuoteDetails.tsx
 
       return format(new Date(dateString), 'PPP');
     } catch (e) {;

@@ -1,13 +1,3 @@
-<<<<<<< HEAD:src/components/support/help-content.tsx
-<<<<<<< HEAD
-export const HELP_CATEGORIES: HelpCategory[] = [
-  {
-    id: "getting-started",
-    name: "Getting Started",
-    description: "Learn the basics of using the Zion AI Marketplace",
-=======
-    icon: <HelpCircle className="h-6 w-6 text-zion-purple" />,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/support/help-content.tsx
 
     articles: [
       {
@@ -215,27 +205,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
     ],;
   },;
   {;
-<<<<<<< HEAD:src/components/support/help-content.tsx
-=======
-    id: "payments",;
-    name: "Payments",;
-    description: "Everything about payments and billing",;
-    icon: <CreditCard className="h-6 w-6 text-zion-cyan" />,;
-    articles: [;
-      {;
-        id: "payment-methods",;
-        title: "Accepted payment methods",;
-        content: "Zion AI Marketplace supports a variety of payment methods to accommodate users worldwide. Currently accepted payment methods include:\n\n• Credit Cards (Visa, Mastercard, American Express, Discover)\n• PayPal\n• Bank Transfers (ACH for US, SEPA for Europe)\n• Wire Transfers for international payments\n• Cryptocurrency (Bitcoin, Ethereum)\n\nTo add or update your payment method:\n1. Go to Settings > Billing & Payments\n2. Select 'Add Payment Method'\n3. Follow the prompts to enter your information\n4. Set your preferred default payment method\n\nAll payment information is securely encrypted and stored in compliance with PCI DSS standards.",;
-        lastUpdated: "2023-11-01",;
-        tags: ["payment", "billing", "finance"];
-      },;
-      {;
-        id: "escrow-system",;
-        title: "How our escrow system works",;
-        content: "Zion's escrow system protects both clients and talent by ensuring secure and fair payments. Here's how it works:\n\n1. Client makes a payment into escrow when beginning a project\n2. Funds are held securely by Zion, not released to either party\n3. Talent begins work knowing that funds are secured\n4. Upon milestone or project completion, talent submits deliverables\n5. Client reviews and approves the work\n6. Funds are released from escrow to the talent\n\nIf any disputes arise, our resolution team will review the situation and determine the appropriate distribution of escrowed funds based on contract terms and delivered work.",;
-        lastUpdated: "2023-11-15",;
-        tags: ["escrow", "payment", "security"];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/support/help-content.tsx
 
       },;
       {;

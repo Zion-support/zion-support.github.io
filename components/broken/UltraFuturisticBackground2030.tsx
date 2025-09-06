@@ -153,44 +153,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
           style={{
             clipPath:
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Animated Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
-          background:;
-            'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)',
-        }}
-      />;
-      {/* Floating Geometric Shapes */}
-      <div className='fixed inset - 0 pointer - events - none z - 10'>;
-        {/* Hexagon Grid */}
-        <motion.div;
-          className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30';
-          style={{
-            clip_path:;
-              'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',  }, []);
-;
-  return (
-    <div className="relative min - h-screen bg-black overflow-hidden">;
-      {/* Animated Canvas Background */}
-      <canvas;
-        ref={canvas_ref}
-        className="fixed inset - 0 w - full h - full pointer - events-none z-0";
-        style={{ background: 'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)' }}
-      />;
-      {/* Floating Geometric Shapes */}
-      <div className="fixed inset - 0 pointer - events-none z-10">;
-        {/* Hexagon Grid */}
-        <motion.div;
-          className="absolute top - 20 left - 20 w - 32 h - 32 border border-cyan-400 / 30";
-          style={{ clip_path: 'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-          animate={{
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
           }}
           animate={{
@@ -284,69 +246,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
         {/* Animated Lines */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <motion&& motion.div
-          className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
-          animate={{
-          transition={{
-            duration: 6
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-          animate={{
-            height: [32, 64, 32];
-            opacity: [0.3, 0.8, 0.3];
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-          transition={{
-            duration: 8
-            repeat: Infinity
-            ease: 'easeInOut',          }}          className="absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent"
-          animate={{
-            height: [32, 64, 32]
-            opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-
-          }}
-
-        />;
-        <motion&& motion.div
-          className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent'
-          animate={{
-            height: [24, 48, 24],
-            opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],          className="absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent"
-          animate={{
-            height: [24, 48, 24]
-            opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
-          transition={{
-
-        />
-      </div>
-      {/* Gradient Overlays */}
-      <div className='fixed inset-0 pointer-events-none z-20'>
-
-        {/* Top gradient */}
-
-        <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />;
-            duration: 8,
-            repeat: Infinity,
-
-          }}
-
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-      {/* Gradient Overlays */}
-      <div className='fixed inset-0 pointer-events-none z-20'>;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         <motion.div
 className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
           animate={{
@@ -430,72 +329,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-              y: [0, -100, 0]
-              opacity: [0, 1, 0]
-              scale: [0, 1, 0],            }}        {/* Top gradient */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent" />;
-
-        {/* Bottom gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-900/20 via-transparent to-transparent" />;
-
-        {/* Left gradient */}
-        <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-indigo-900/20 via-transparent to-transparent" />;
-
-        {/* Right gradient */}
-        <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-pink-900/20 via-transparent to-transparent" />;
-      </div>;
-      {/* Floating Particles */}
-      <div className="fixed inset-0 pointer-events-none z-15">;
-        {[...Array(20)].map((_, i) => (;
-          <motion&& motion.div
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`,
-            }}
-            animate={{
-              coordinate_y: [0, -100, 0],
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0],            }}        {/* Top gradient */}
-        <div className="absolute top - 0 left - 0 right - 0 h - 32 bg - gradient - to - b from - purple - 900 / 20 via-transparent to-transparent" />;
-        {/* Bottom gradient */}
-        <div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - cyan - 900 / 20 via-transparent to-transparent" />;
-        {/* Left gradient */}
-        <div className="absolute top - 0 bottom - 0 left - 0 w - 32 bg - gradient - to - r from - indigo - 900 / 20 via-transparent to-transparent" />;
-        {/* Right gradient */}
-        <div className="absolute top - 0 bottom - 0 right - 0 w - 32 bg - gradient - to - l from - pink - 900 / 20 via-transparent to-transparent" />;
-      </div>;
-      {/* Content */}
-      <div className="relative z-30">;
-        {children}
-      </div>;
-      {/* Floating Particles */}
-      <div className="fixed inset - 0 pointer - events-none z-15">;
-        {[...Array (20)].map ((_, i) => (
-          <motion.div;
-            key={i}
-            className="absolute w - 1 h - 1 bg - cyan-400 rounded-full";
-            style={{
-            }}
-            animate={{
-              y: [0, -100, 0]
-              opacity: [0, 1, 0]
-              scale: [0, 1, 0]
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10
-              repeat: Infinity
-              delay: Math.random() * 10
-
-              duration: Math && Math.random() * 10 + 10,
-              repeat: Infinity,
-              delay: Math && Math.random() * 10,
-
-            transition={{
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               y: [0, -100, 0],
               opacity: [0, 1, 0],
               scale: [0, 1, 0],

@@ -121,41 +121,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
-<<<<<<< HEAD
-<<<<<<< HEAD
-            ease: 'easeInOut',          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 opacity-20";
-          animate={{
-          transition={{
-            duration: 7
-            repeat: Infinity
-            ease: 'easeInOut',          }}          }}
-
-        <motion&& motion.div
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
-        />;
-        <motion.div;
-          className='absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20';
-          animate={{
-            rotate: [360, 0],
-            scale: [1, 0.9, 1],
-            opacity: [0.1, 0.3, 0.1],          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: 'easeInOut',          }}          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green-400 opacity-20";
-          animate={{
-            duration: 7
-            repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 ctx.stroke();
             }
           }
@@ -392,64 +357,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='relative z-40'>{children}</div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </svg>;
-      </div>;
-
-      {/* Content */}
-
-};
-
-export default UltraAdvancedFuturisticBackgroundV2;
-      {/* Content */}
-      <div className='relative z-40'>{children}</div>
-    </div>
-  );
-                duration: 4 + Math.random () * 2,
-                repeat: Infinity,
-              }}
-            />;
-          ))}
-      {/* Content */}
-      <div className='relative z-40'>{children}</div>;
-    </div>;
-  );
-export default UltraAdvancedFuturisticBackgroundV2;
-
-      <div className="relative z-40">
-        {children}
-      </div>
-    </div>
-  )
-};
-
-export default UltraAdvancedFuturisticBackgroundV2;
-                delay: Math.random () * 2,
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-              }}
-            />))}
-        </svg>;
-      </div>;
-      {/* Content */}
-      <div className='relative z - 40'>{children}</div>;
-    </div>);
-}
-;
-export default UltraAdvancedFuturisticBackgroundV2;    </div>);
-}
-;
-export default UltraAdvancedFuturisticBackgroundV2
-};
-
-=======
-};
-
-export default UltraAdvancedFuturisticBackgroundV2;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 };
 
 export default UltraAdvancedFuturisticBackgroundV2;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

@@ -98,26 +98,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setEditingId(null),
 
                     form.reset({
-<<<<<<< HEAD:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
-<<<<<<< HEAD
-                      name: '',
-                      issuing_organization: '',
-                      issue_date: '',
-                      expiration_date: '',
-                      credential_id: '',
-
-                    setEditingId(null),
-                    setEditingId(null),
-                    form.reset({
-                      name: '',
-                      issuing_organization: '',
-                      issue_date: '',
-                      expiration_date: '',
-                      credential_id: '',
-                      credential_url: ''})
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
                       name: ''
                       issuing_organization: ''
                       issue_date: ''

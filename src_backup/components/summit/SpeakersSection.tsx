@@ -1,14 +1,3 @@
-<<<<<<< HEAD:src/components/summit/SpeakersSection.tsx
-<<<<<<< HEAD
-interface Speaker {
-=======
-  name: string
-  title: string
-  avatar: string
-  twitter?: string
-  linkedin?: string
-  linkedin?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/summit/SpeakersSection.tsx
 
 }
 interface Speaker {

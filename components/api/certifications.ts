@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-const CERTS_FILE = path.join(
-  process.cwd()
-  'data'
-  'certifications'
-  'certifications.json'
-const CERTS_FILE = path.join(
-  process.cwd()
-  'data'
-  'certifications'
-  'certifications.json'
-);
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-}
-};
-  if (req && req.method !== 'GET') {
-    res && res.setHeader('Allow', 'GET');
-    return res && res.status(405).json({ error: 'Method Not Allowed' });
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";

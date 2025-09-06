@@ -16,94 +16,6 @@ import { TalentProfile } from "@/types/talent";
 import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
-<<<<<<< HEAD:src/components/talent/TalentCard.tsx
-<<<<<<< HEAD
-
-import { TalentProfile } from "@/types/talent",
-import { RatingStars } from '@/components/RatingStars',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { useCart } from '@/context/CartContext',
-
-export interface TalentCardProps {
-
-  talent: TalentProfile
-  onViewProfile: (id: string,) => void
-  onRequestHire: (talent: TalentProfile,) => void
-  isAuthenticated: boolean
-
-import React from 'react',;
-import { useRouter } from 'next/router',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { FavoriteButton } from "@/components/FavoriteButton",;
-import { TalentProfile } from "@/types/talent",;
-import { RatingStars } from '@/components/RatingStars',;
-import { useAuth } from '@/context/auth/AuthProvider',;
-import { useCart } from '@/context/CartContext',;
-export interface TalentCardProps {;
-  talent: TalentProfile,;
-  onViewProfile: (id: string) => void,;
-  onRequestHire: (talent: TalentProfile) => void,;
-  isAuthenticated: boolean;
-
-}
-const TalentCardComponent = ({
-  talent
-  onViewProfile
-  onRequestHire
-  isAuthenticated
-}: TalentCardProps,) => {
-  const router = useRouter()
-  const handleViewProfile = () => {
-    // Navigate directly to the talent profile
-    router.push(`/talent/${talent.id}`)
-    // Also call the onViewProfile callback if provided
-    if (onViewProfile) {
-      onViewProfile(talent.id)
-    }
-
-  const handleRequestHire = (e: React.MouseEvent,) => {
-    e.preventDefault()
-    e.stopPropagation()
-    if (onRequestHire) {
-      onRequestHire(talent)
-    }
-
-  },
-
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) |[]
-export interface TalentCardProps {;
-  talent: TalentProfile,;
-  onViewProfile: (id: string,) => void,;
-  onRequestHire: (talent: TalentProfile,) => void,;
-  isAuthenticated: boolean;
-}
-
-const TalentCardComponent = ({;
-  talent,;
-  onViewProfile,;
-  onRequestHire,;
-  isAuthenticated;
-}: TalentCardProps,) => {;
-  const router = useRouter(),;
-
-  const handleViewProfile = () => {;
-    // Navigate directly to the talent profile;
-    router && router.push(`/talent/${talent && talent.id}`),;
-
-    // Also call the onViewProfile callback if provided;
-    if (onViewProfile) {;
-      onViewProfile(talent && talent.id);
-    }
-  },;
-=======
-  const handleRequestHire = (e: React.MouseEvent) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/TalentCard.tsx
 
     if (onRequestHire) {;
       onRequestHire(talent);
@@ -129,14 +41,6 @@ const TalentCardComponent = ({;
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
-<<<<<<< HEAD:src/components/talent/TalentCard.tsx
-=======
-          <div className="relative mr-4">
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
-              {talent.profile_picture_url ? (
-
-                <img
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/TalentCard.tsx
 
                 <img
 
@@ -173,24 +77,6 @@ const TalentCardComponent = ({;
             <p className="text-white font-medium">{talent && talent.professional_title}</p>;
 
             {/* Location & Availability */}
-<<<<<<< HEAD:src/components/talent/TalentCard.tsx
-=======
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">
-              {talent.location && (
-                <div className="flex items-center text-zion-slate-light">
-                  <MapPin className="h-4 w-4 mr-1" />
-                  <span>{talent.location}</span>
-                </div>
-              )}
-              {talent.availability_type && (
-                <div className="flex items-center text-zion-slate-light">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>{talent.availability_type}</span>
-                </div>
-              )}
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/TalentCard.tsx
 
             </div>;
           </div>;
@@ -230,11 +116,6 @@ const TalentCardComponent = ({;
                 </span>;
 
               )}
-<<<<<<< HEAD:src/components/talent/TalentCard.tsx
-=======
-            </div>
-          </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/TalentCard.tsx
 
         )}
 

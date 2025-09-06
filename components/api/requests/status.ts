@@ -31,24 +31,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (idx === -1) return res.status(404).json({ error: 'Not found' });
   items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() };
   writeAll(items);
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-;
-const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
-;
-const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
-  const items = readAll();
-  const idx = items && items.findIndex((r: any) => r && r.id === id),
-  if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
-  items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() };
-  try {
-    return JSON.parse (fs.readFileSync (REQUESTS_PATH, 'utf - 8'));
-  } catch {
-    return [];
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   res.status(200).json({ ok: true });
 origin/cursor/automate-test-improve-and-merge-code-2533

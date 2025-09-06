@@ -137,17 +137,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            Cancel;
-          </button>;
-        </div>;
-      </div>;
-    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>
 origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl'>
@@ -210,31 +199,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return <ModalInner {...props} />;        </div>
-        {error && (
-          <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
-        )}
-        <div className="space-y-3">
-          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
-            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
-          </button>
-          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
-            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
-          </button>
-        </div>
-        <div className="mt-4 flex justify-end">
-        </div>
-      </div>
-    </div>
-  )
-}
-
-export default function Web3LoginModal(props: Web3LoginModalProps) {;
-  if (!isClient) return null;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   return <ModalInner {...props} />;
   return <ModalInner {...props} />
 }

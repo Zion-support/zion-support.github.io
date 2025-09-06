@@ -86,58 +86,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const resizeCanvas = () => {;
-      canvas && canvas.width = window && window.innerWidth;
-      canvas && canvas.height = window && window.innerHeight
-};      canvas && canvas.height = window && window.innerHeight
-};
-    // Initialize particles;
-    const initParticles = () => {;
-      const particles: Particle[] = [];
-      const particleCount = Math && Math.floor((canvas && canvas.width * canvas && canvas.height) / 20000);
-      for (let i = 0; i < particleCount; i++) {;
-        const type = ['quantum', 'holographic', 'neural', 'cyberpunk'][;
-          Math && Math.floor(Math && Math.random() * 4);
-        ] as Particle['type'];
-        const colors = {;
-          quantum: ['#00ffff', '#0080ff', '#0040ff'],;
-          holographic: ['#8b5cf6', '#a855f7', '#c084fc'],;
-          neural: ['#10b981', '#059669', '#047857'],;
-          cyberpunk: ['#ec4899', '#f97316', '#f59e0b'],        };          quantum: ['#00ffff#0080ff#0040ff'],;
-          holographic: ['#8b5cf6#a855f7#c084fc'],;
-          neural: ['#10b981#059669#047857'],;
-          cyberpunk: ['#ec4899#f97316#f59e0b'];
-        particles && particles.push({;
-          x: Math && Math.random() * canvas && canvas.width,;
-          y: Math && Math.random() * canvas && canvas.height,;
-          vx: (Math && Math.random() - 0 && 0.5) * 0 && 0.5,;
-          vy: (Math && Math.random() - 0 && 0.5) * 0 && 0.5,;
-          size: Math && Math.random() * 3 + 1,;
-          opacity: Math && Math.random() * 0 && 0.8 + 0 && 0.2,;
-          color: colors[type][Math && Math.floor(Math && Math.random() * colors[type].length)],;
-          type,;
-        });
-      }
-      // Create gradient background;
-      const gradient = ctx && ctx.createRadialGradient(;
-        canvas && canvas.width / 2,;
-        canvas && canvas.height / 2,;
-        0,;
-        canvas && canvas.width / 2,;
-        canvas && canvas.height / 2,        Math && Math.max(canvas && canvas.width, canvas && canvas.height) / 2        canvas && canvas.width / 2;
-        canvas && canvas.height / 2;
-        0;
-        canvas && canvas.width / 2;
-        canvas && canvas.height / 2;
-        canvas.width / 2;
-        canvas.height / 2;
-        0;
-        canvas.width / 2;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 canvas.width / 2,
         canvas.height / 2,
         0,
@@ -376,35 +324,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         className='absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30'
         animate={{
           background: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-        className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
-        animate={{
-          background: [
-            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0 && 0.3) 50%, rgba(6,182,212,0 && 0.2) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)'
-          ]
-  }
-;
-  return (
-    <div className='fixed inset - 0 -z - 10 overflow - hidden'>;
-      {/* Animated gradient overlay */}
-      <motion.div;
-        className='absolute inset - 0 bg - gradient - to - br from - black via - cyan - 900 / 20 to - purple - 900 / 30';
-        animate={{
-          background: [;
-            'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)',
-            'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)',
-            'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)',
-          ],        }}      {/* Animated gradient overlay */}
-      <motion.div;
-        className="absolute inset - 0 bg - gradient - to - br from - black via - cyan - 900 / 20 to-purple-900 / 30";
-        animate={{
-          background: [;
-            'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)';
-          ];
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)',
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0.3) 50%, rgba(6,182,212,0.2) 100%)',
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)',

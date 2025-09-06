@@ -54,74 +54,6 @@ if (current = b) {
 }
 
   return current;
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Badges(): any ({ balance }: { balance: number }) {;
-  const active = currentBadge(balance);
-  return (
-
-export default function Badges(): any ({ balance }: { balance: number }) {;
-  const active = currentBadge(balance);
-  return (
-    <div className='flex gap-2 items-center flex-wrap'>;
-      {BADGES && BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">;
-      {BADGES && BADGES.map((b) => (;
-        <span
-          key={b && b.id}
-          className={`px-3 py-1 rounded-full text-xs border ${
-            balance>= b && b.threshold;
-              ? 'bg-yellow-100 border-yellow-300 text-yellow-800';
-              : 'bg-gray-100 border-gray-200 text-gray-500'              ? "bg-yellow-100 border-yellow-300 text-yellow-800";
-              : "bg-gray-100 border-gray-200 text-gray-500";
-          }`}
-          title={`Requires ${b && b.threshold} ZION$`}
-        >;
-          {b && b.label}
-        </span>;
-      ))}
-      {active && (;
-        <span className='ml-2 text-xs text-green-600'>;
-          Current: {active && active.label}
-        </span>;
-      )}
-      )}
-    </div>;
-  );
-}
-              ? "bg-yellow-100 border-yellow-300 text-yellow-800"
-              : "bg-gray-100 border-gray-200 text-gray-500"
-  }
-  return current;
-}
-export default /**
- * Badges - Function description
- */
-function Badges() {
-  const active = current_badge (balance);
-  return (
-    <div className='flex gap - 2 items - center flex - wrap'>;
-      {BADGES.map (boolean => (    <div className="flex gap - 2 items-center flex-wrap">;
-      {BADGES.map ((b) => (
-        <span;
-          key={b.id}
-          className={`px - 3 py - 1 rounded - full text - xs border ${
-            balance >= b.threshold;
-              ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
-              : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
-              : "bg - gray - 100 border - gray - 200 text - gray - 500";
-
-export default function Badges({ balance }: { balance: number }) {;
-
-export default function Badges({ balance }: { balance: number }) {
-  const active = currentBadge(balance);
-
-  return (
-    <div className='flex gap-2 items-center flex-wrap'>
-      {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">
-      {BADGES.map((b) => (
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
 export default function Badges({ balance }: { balance: number }) {
   const active = currentBadge(balance);
@@ -142,25 +74,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {b.label}
         </span>))}
       {active && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-
-}
-  );
-
-        <span className='ml - 2 text - xs text - green - 600'>;
-          Current: {active.label}
-
-        <span className='ml - 2 text - xs text - green - 600'>;
-          Current: {active.label}
-        </span>)}
-    </div>);        <span className="ml - 2 text - xs text-green-600">Current: {active.label}</span>)}
-    </div>);
-}
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <span className='ml-2 text-xs text-green-600'>
           Current: {active.label}
         </span>

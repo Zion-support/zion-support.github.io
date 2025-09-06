@@ -282,10 +282,3 @@ const Services: React.FC = () => {
       </section>
     </div>
   );
-<<<<<<< HEAD:src/pages/Services.tsx
-};
-
-export default Services;
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/pages/Services.tsx

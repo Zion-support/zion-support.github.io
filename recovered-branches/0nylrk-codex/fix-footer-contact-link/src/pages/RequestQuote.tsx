@@ -47,4 +47,3 @@ function RequestQuote() {
       <Footer />;
     </>);
 }
-<<<<<<< HEAD

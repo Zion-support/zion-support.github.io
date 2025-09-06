@@ -49,21 +49,6 @@ export function TalentCardHeader(): any ({;
             )}
 
           </h3>
-<<<<<<< HEAD:src/components/profile/talent-card/TalentCardHeader.tsx
-<<<<<<< HEAD
-
-    </div>;
-  );
-};
-
-}
-          </h3>;
-
-          <TalentCardAvailability availabilityType={availabilityType} />;
-        </div>;
-=======
-        <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/profile/talent-card/TalentCardHeader.tsx
 
       </div>;
     </div>;

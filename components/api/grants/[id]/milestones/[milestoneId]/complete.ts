@@ -141,34 +141,6 @@ if ( {) {
   const tranche = ms[idx].tranche_amount || 0;
   existing.funds_released = (existing.funds_released || 0) + tranche;
   existing.milestones = ms;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  existing.updated_at = new Date ().toISOString ();
-;
-write_grant (existing);
-  res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
-  const tranche = ms[idx].trancheAmount || 0
-  existing.fundsReleased = (existing.fundsReleased || 0) + tranche,
-  existing.milestones = ms,
-  existing.updatedAt = new Date().toISOString(),
-
-writeGrant(existing);
-  res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
-}
-
-}
-}
-}
-  writeGrant(existing);
-  res.status(200).json({ record: existing });
-}
-}
-}
-  writeGrant(existing);
-  res.status(200).json({ record: existing });
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   existing.updatedAt = new Date().toISOString();
 
   writeGrant(existing);

@@ -3,20 +3,16 @@
     "lib": [
       "dom",
       "dom.iterable",
-<<<<<<< HEAD
-      "ES2020"
-=======
       "esnext"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
     "incremental": true,
-    "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -25,34 +21,7 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
-    "paths": {
-<<<<<<< HEAD
-      "@/*": ["./*"]
-    }
-=======
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/pages/*": [
-        "./pages/*"
-      ],
-      "@/styles/*": [
-        "./styles/*"
-      ],
-      "@/utils/*": [
-        "./utils/*"
-      ],
-      "@/types/*": [
-        "./types/*"
-      ]
-    },
-    "allowSyntheticDefaultImports": true,
     "strictNullChecks": true
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   },
   "include": [
     "next-env.d.ts",

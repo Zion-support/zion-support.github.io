@@ -1,47 +1,3 @@
-<<<<<<< HEAD:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
-<<<<<<< HEAD
-}
-
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-        <div>
-          <h1 className="text-2xl font-bold">Portfolio Projects</h1>
-          <p className="text-muted-foreground">Showcase your best work and projects</p>
-        </div>
-
-        <Button 
-          onClick={() => setShowAddProject(true)} 
-          className="gap-2"
-          disabled={showAddProject || !!editingProject}
-        >
-          <FilePlus className="h-4 w-4" />
-          Add Project
-        </Button>
-      </div>
-
-          Add Project
-        </Button>
-      </div>
-
-      {/* Edit or Add Form */}
-      {(showAddProject |editingProject) && (
-        <Card>
-
-          <CardContent className='pt-6'>
-            <h2 className='text-xl font-semibold mb-6'>
-              {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>
-
-            <ProjectForm              project={editingProject || undefined}
-
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {
-                setShowAddProject(false)
-                setEditingProject(null) }}
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -170,55 +126,12 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
-<<<<<<< HEAD:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
-=======
-            </h2>;
-            <ProjectForm;
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 
                 setShowAddProject(false);
 
                 setEditingProject(null)
 
               }}
-<<<<<<< HEAD:src/components/resume-builder/portfolio/PortfolioBuilder.tsx
-
-      )}
-<<<<<<< HEAD
-
-      {/* Projects List */}
-      {projects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <ProjectCard
-
-              key={project.id}
-              project={project}
-
-            <CardContent>
-              <div className="flex flex-col items-center gap-4">
-                <div className="bg-muted/50 p-6 rounded-full">
-                  <FilePlus className="h-12 w-12 text-muted-foreground" />
-                </div>
-                <h3 className="text-xl font-medium">No portfolio projects yet</h3>
-                <p className="text-muted-foreground max-w-md mx-auto">
-                  Add your best work to showcase your skills and experience to potential employers.
-                </p>
-
-                <Button 
-                  onClick={() => setShowAddProject(true)} 
-                  className="mt-2"
-=======
-=======
-            />;
-          </CardContent>;
-        </Card>;
-
-      )}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 {/* Projects List */}
       {projects.length > 0 ? (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>

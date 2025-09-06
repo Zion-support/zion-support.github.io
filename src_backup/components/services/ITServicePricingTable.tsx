@@ -56,18 +56,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
         return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
       }
-<<<<<<< HEAD:src/components/services/ITServicePricingTable.tsx
-=======
-      if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1
-      }
-      return 0
-    }),
-    
-    return filteredData
-  }, [onsiteServicePricing, searchQuery, sortConfig]),
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/services/ITServicePricingTable.tsx
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({

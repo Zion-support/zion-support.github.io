@@ -15,21 +15,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {content ? (
         <pre className='mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm'>;
           {content}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </pre>) : (
-        <div className='mt - 6 rounded - xl border border - gray - 200 bg - white p - 6 text - gray - 600'>          No changelog generated yet.      {generated_at && (
-        <p className="mt - 2 text - sm text-gray-600">Generated: {generated_at}</p>)}
-
-      {content ? (
-        <pre className="mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray-800 shadow-sm">;
-{content}
-        </pre>
-      ) : (
-        <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         </pre>
       ) : (
         <div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600'>
@@ -74,36 +59,6 @@ export default function ChangelogPage(): any ({ content, generatedAt }: Props) {
     </main>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  } catch {
-  }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
-
-  } catch {
-
-export async function getStaticProps() {;
-  try {;
-    const file = path && path.join(process && process.cwd(), 'CHANGELOG && CHANGELOG.md');
-    const content = fs && fs.readFileSync(file, 'utf8');
-    return {;
-      props: { content, generatedAt: new Date().toISOString() },;
-      revalidate: 300,
-};
-  } catch {;
-    return { props: { content: null, generatedAt: null }, revalidate: 300 };
-  }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
-  } catch {;
-
-    return { props: { content: null, generatedAt: null }, revalidate: 300 }
-}
-
-export async /**
- * getStaticProps - Function description
- */
-function getStaticProps() {
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
 export async function getStaticProps() {
 origin/cursor/automate-test-improve-and-merge-code-2533

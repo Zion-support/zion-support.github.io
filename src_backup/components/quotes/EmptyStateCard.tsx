@@ -4,25 +4,6 @@ import { Card, CardContent } from "@/components/ui/card",
 import React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 
-<<<<<<< HEAD:src/components/quotes/EmptyStateCard.tsx
-<<<<<<< HEAD
-import { MessageSquare, ArchiveIcon } from 'lucide-react'
-
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import React from './react';
-import { Card, CardContent  } from '@/components / ui / card';
-import { MessageSquare, ArchiveIcon } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
-type EmptyStateCardProps = {
-
-import { MessageSquare, ArchiveIcon } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { MessageSquare, ArchiveIcon } from 'lucide-react';
-type EmptyStateCardProps = {;
-  type: 'active' | 'archived';
-=======
-},;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/quotes/EmptyStateCard.tsx
 
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
   const isActive = type === 'active';  ;

@@ -28,25 +28,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   $2
 }
       } finally {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (set_loading (false)) {
-  $2
-}      }      } catch (e: any) {
-        if (set_error (e?.message || 'Translation failed')) {
-  $2
-}
-      } finally {
-        if (set_loading (false)) {
-  $2
-}
-      }
-    }
-  }, [key, debounce_ms]);
-;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         if (!cancelled) setLoading(false);
       }
     }, debounceMs);

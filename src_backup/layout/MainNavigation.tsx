@@ -139,99 +139,17 @@ interface MainNavigationProps {;
   unreadCount?: number,;
   className?: string;
 }
-<<<<<<< HEAD:src/layout/MainNavigation.tsx
-=======
-;
-export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false), // Add state;
-  const { user } = useAuth(),;
-  const isAuthenticated = !!user,;
-  const [loginOpen, setLoginOpen] = useState(false),;
-  const { count } = useFavorites(),;
-  const { items } = useCart(),;
-  const cartCount = items.length,;
-  const router = useRouter(), // Changed from useLocation;
-  const { t } = useTranslation(),;
-  const handleCartClick = (e: React.MouseEvent) => {;
-    if (!isAuthenticated) {;
-      e.preventDefault(),;
-      setLoginOpen(true),;
-      return;
-    }
-    setIsMobileMenuOpen(false);
-  },;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/layout/MainNavigation.tsx
 
   const baseLinks = [;
     {;
       key: 'home',;
       href: '/',;
-<<<<<<< HEAD:src/layout/MainNavigation.tsx
-=======
-      matches: (path: string) => path === '/';
-    },;
-    {;
-      key: 'marketplace',;
-      href: '/marketplace',;
-      matches: (path: string) => path.startsWith('/marketplace');
-    },;
-    {;
-      key: 'categories',;
-      href: '/categories',;
-      matches: (path: string) => path.startsWith('/categories');
-    },;
-    {;
-      key: 'talent',;
-      href: '/talent',;
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard');
-    },;
-    {;
-      key: 'equipment',;
-      href: '/equipment',;
-      matches: (path: string) => path.startsWith('/equipment');
-    },;
-    {;
-      key: 'community',;
-      href: '/community',;
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum');
-    }
-  ],;
-  const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),;
-  // Add authenticated-only links;
-  if (isAuthenticated) {;
-    links.push({;
-      key: 'dashboard',;
-      name: t('nav.dashboard'),;
-      href: '/dashboard',;
-      matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard';
-    });
-  }
-;
-  // Add admin-only links;
-  if (isAdmin) {;
-    links.push({;
-      key: 'analytics',;
-      name: t('nav.analytics'),;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/layout/MainNavigation.tsx
 
       href: '/analytics',;
       matches: (path: string) => path && path.startsWith('/analytics'),;
     });  }
 
   return (
-<<<<<<< HEAD:src/layout/MainNavigation.tsx
-=======
-    <>
-      <button
-        className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-expanded={isMobileMenuOpen}
-        aria-controls="main-navbar-collapse"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/layout/MainNavigation.tsx
 
       <nav
         className={cn('navbar', className)}
@@ -239,10 +157,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         aria-label='Main navigation'>;
 
         <div
-<<<<<<< HEAD:src/layout/MainNavigation.tsx
-=======
-          id="main-navbar-collapse"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/layout/MainNavigation.tsx
 
           className={cn(
 
@@ -344,17 +258,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 </Link>;
               </li>;
             )}
-<<<<<<< HEAD:src/layout/MainNavigation.tsx
-=======
-;
-            {/* Cart icon with badge */}
-            <li className="nav-item">
-              <HoverCard openDelay={100}>
-                <HoverCardTrigger asChild>
-                  <Link
-                    href="/cart"
-                    aria-label={t('nav.cart')}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/layout/MainNavigation.tsx
 
                     onClick={handleCartClick}
                     className={cn(
@@ -374,10 +277,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       href: '/marketplace',
       matches: (path: string) => path.starts_with ('/marketplace'),    },
     {
-<<<<<<< HEAD:src/layout/MainNavigation.tsx
-=======
-      matches: (path: string)  => path.startsWith('/contact')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/layout/MainNavigation.tsx
 
 }
     links.push ({
@@ -1006,55 +905,5 @@ export default function Page() {; []);
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-<<<<<<< HEAD:src/layout/MainNavigation.tsx
-<<<<<<< HEAD
-
-                        {link && link.name}
-                      </Link>;
-                    )}
-                                on_click={: unknown setIsMobileMenuOpen (false)}
-                                {child.name}
-                              </Link>))}
-                          </div>)}
-                      </div>) : (
-                      <Link;
-                        to={link.href}`;
-                        className={`block px - 4 py - 3 text - sm font - medium rounded - md transition - colors ${is_active (link);
-                            ? 'bg - zion - cyan text - white'';
-                            : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
-}`}
-                        on_click={: unknown setIsMobileMenuOpen (false)}
-                        {link.name}
-                      </Link>)}
-
-                  </Link>;
-                </HoverCardTrigger>;
-                <HoverCardContent>;
-                  <MiniCartPreview />;
-                </HoverCardContent>;
-              </HoverCard>;
-            </li>;
-          </ul>;
-
-          <div className='flex items - center gap - 2 mt - 4 md:mt - 0 md:ml - auto'>;
-
-            <LanguageSelector />;
-          </div>;
-        </div>;
-      </nav>;
-
-      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>));
-}
-
-;
-}
-
-  )
-}
-;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/layout/MainNavigation.tsx
   );
 origin/cursor/automate-test-improve-and-merge-code-2533

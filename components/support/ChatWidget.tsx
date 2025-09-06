@@ -129,55 +129,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-    <div className='fixed bottom-4 right-4 z-50'>      }
-      if (data?.meta?.intentMatched === false) {
-        setFailedIntents((n) => {
-
-      if (data?.meta?.intentMatched === false) {;
-        setFailedIntents((n) => {;
-          const next = n + 1;
-          if (next >= 3) {;
-            escalateSupport('Failed to match user intent 3+ times');
-          }
-          return next;
-        });
-      } else if (data?.meta?.intentMatched === true) {;
-        setFailedIntents(0);
-      }
-    }
-  }
-    <div className='fixed bottom-4 right-4 z-50'>
-
-  return (
-
-    }
-  }
-
-  return (
-
-    }
-  }
-  return (
-    <div className='fixed bottom-4 right-4 z-50'>;
-      {!isOpen && (;
-        <button
-          aria-label='Open support chat'
-          onClick={() => setIsOpen(true)}
-          className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'        >      {!isOpen && (;
-        <button
-          aria-label="Open support chat"
-          onClick={() => setIsOpen(true)}
-          className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black";
-        >;
-          ?;
-        </button>;
-      )}
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     } catch (e) {
       setMessages(prev => [
         ...prev
@@ -236,27 +187,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            )}
-                  <button
-                    key={q}
-                    onClick={() => onSend(q)}
-                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">;
-              <div className="flex flex-wrap gap-2 mb-2">;
-                {quickReplies && quickReplies.map((q) => (;
-                  <button
-                    key={q}
-                    onClick={() => onSend(q)}
-                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
-
-                  >
-
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             {isLoading && (
 <div className='text-sm'>
                 <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>
@@ -282,20 +212,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
-                    {q}
-                  </button>;
-                ))}
-              </div>;
-            </div>;
-          )}
-
-          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
 <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533

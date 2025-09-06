@@ -1,49 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function AutomationInsightsPage() {
-
-  const automationTrends = [
-    {
-      id: 'ai-automation-2025'
-      title: 'AI Automation Trends 2025'
-      description:
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
-      readTime: '8 min read',
-export default function AutomationInsightsPage() {;
-  const automationTrends = [;
-    {;
-      id: 'ai-automation-2025',;
-      title: 'AI Automation Trends 2025',,
-  description:;
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',;
-      readTime: '8 min read',;
-      featured: true;
-    {
-      id: 'ai - automation - 2025',
-      title: 'AI Automation Trends 2025',
-    };
-    {
-      id: 'autonomous-systems'
-      title: 'Building Autonomous Systems'
-      description: 'Learn how to design and implement truly autonomous systems that operate independently.'
-      category: 'Implementation'
-      readTime: '12 min read'
-      featured: false
-    }
-    {
-      id: 'automation-roi'
-      title: 'Calculating Automation ROI'
-      description: 'A comprehensive guide to measuring and maximizing return on investment for automation projects.'
-      category: 'Business'
-      readTime: '10 min read'
-      featured: false
-    },      featured: false
-    }
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const automationTrends = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   ];
@@ -58,38 +14,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       complexity: 'Advanced',      type: 'Framework',;
       complexity: 'Advanced';
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      id: 'automation - framework',
-      title: 'Zion Automation Framework',
-    };
-    {;
-      id: 'performance-monitor',;
-      title: 'Performance Monitoring Suite',,
-  description: 'Comprehensive tools for monitoring and optimizing automation performance.',;
-      type: 'Tool',;
-      complexity: 'Intermediate',;
-    },;
-    {;
-      id: 'performance-monitor',;
-      title: 'Performance Monitoring Suite',,
-  description:;
-        'Comprehensive tools for monitoring and optimizing automation performance.',;
-      type: 'Tool',;
-      complexity: 'Intermediate',;
-    },    {      complexity: 'Intermediate'
-};
-    {;
-      id: 'deployment-automation',;
-      title: 'Deployment Automation',,
-  description: 'Streamlined deployment processes for automation systems.',;
-      type: 'Process',;
-      complexity: 'Beginner',;
-    },  ];      complexity: 'Beginner';
-    }
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       id: 'automation-framework',
       title: 'Zion Automation Framework',
 description:
@@ -129,96 +53,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       label: 'Uptime',,
   description: 'Reliable automation performance';
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      id: 'deployment - automation',
-      title: 'Deployment Automation',
-      description: 'Streamlined deployment processes for automation systems.',
-      type: 'Process',
-    }
-  ];
-;
-  const success_metrics = [;
-    {
-      metric: '227',
-      label: 'Active Automations',
-    };
-    {;
-      metric: '40%',;
-      label: 'Efficiency Gain',;
-      label: 'Average improvement across projects'
-};
-    {;
-      metric: '2,960+';
-      label: 'Pages Generated',,
-  description: 'Content created autonomously',;
-    },;
-    {;
-      metric: '40%',;
-      label: 'Efficiency Gain',;
-      label: 'Average improvement across projects',;
-    },;
-    {;
-      metric: '2,960+',;
-      label: 'Pages Generated',,
-  description: 'Content created autonomously',;
-    },  ],
-  description: 'Content created autonomously',
-  description: 'Successfully deployed and running',
-    },
-    {
-      metric: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable automation performance',    {
-      metric: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable automation performance';
-    }
-    {
-      metric: '40%',
-      label: 'Efficiency Gain',
-      label: 'Average improvement across projects';
-    }
-    {
-      metric: '2, 960+';
-      label: 'Pages Generated',
-      description: 'Content created autonomously',
-    },
-    {
-      metric: '40%',
-      label: 'Efficiency Gain',
-      label: 'Average improvement across projects',
-    },
-    {
-      metric: '2, 960+',
-      label: 'Pages Generated',
-      description: 'Content created autonomously',
-    },  ],
-  description: 'Content created autonomously';
-    }
-  ];
-;
-  return (
-    <>;
-      <Head>;
-        <title>;
-          Automation Insights | Zion Tech Group - AI Automation Expertise;
-        </title>;
-
-      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
-        <main className='container mx-auto px-6 py-12'>;
-          <section className='text-center mb-16'>;
-            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>;
-              Automation Insights;
-            </h1>;
-            <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
-              Deep insights into AI automation, autonomous systems, and the;
-              future of intelligent technology;
-            </p>;
-          </section>;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       metric: '227',
       label: 'Active Automations',
 description: 'Successfully deployed and running',

@@ -226,74 +226,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               background_size: '50px 50px',
               animation: 'grid_move 20s linear infinite',
             }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          />;
-        </div>;
-      {/* Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ zIndex: -1 }}
-      {/* Floating Elements */}
-      <div className="absolute inset-0">;
-        {/* Animated Grid Pattern */}
-        <div className="absolute inset-0 opacity-20">;
-          <divclassName="absolute top-0 left-0 w-full h-full" style={{
-            backgroundImage: `
-            ease: 'linear',  }, []);
-;
-  return (
-    <div className="fixed inset - 0 pointer - events-none overflow-hidden">;
-      {/* Canvas Background */}
-      <canvas;
-        ref={canvas_ref}
-        className="absolute inset - 0 w-full h-full";
-        style={{ z_index: -1 }}
-      />;
-      {/* Overlay Gradients */}
-      <div className="absolute inset - 0 bg - gradient - to - br from - black / 80 via-transparent to-black / 80" />;
-      <div className="absolute inset - 0 bg - gradient - to - t from - black / 60 via-transparent to-black / 60" />;
-      {/* Floating Elements */}
-      <div className="absolute inset-0">;
-        {/* Animated Grid Pattern */}
-        <div className="absolute inset-0 opacity-20">;
-          <div className="absolute top - 0 left - 0 w-full h-full" style={{
-            background_image: `;
-              linear - gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px);
-              linear - gradient (90deg, rgba (6, 182, 212, 0.1) 1px, transparent 1px);
-            `;
-            background_size: '50px 50px',
-            animation: 'grid_move 20s linear infinite';
-          }} />;
-        </div>;
-        {/* Floating Geometric Elements */}
-        <motion.div;
-          className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan-400 / 20 rounded-lg";
-          animate={{
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
-        />;
-        <motion.div;
-          className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full';
-          animate={{
-            rotate: [360, 0],
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.5, 0.2],          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'linear',          }}
-        />;
-        <motion.div;
-          className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple-400 / 20 rounded-full";
-          animate={{
-          transition={{
-            duration: 12
-            repeat: Infinity
-            ease: 'linear',          }}
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
           />
         </div>
         {/* Floating Geometric Elements */}
@@ -341,93 +273,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
           animate={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-            rotate: [12, 372]
-            scale: [1, 1.1, 1]
-            opacity: [0.15, 0.25, 0.15],          }}
-          transition={{
-            duration: 15
-            repeat: Infinity
-            ease: 'linear',          }}
-        />
-        {/* Additional Floating Elements */}
-        <motion.div
-          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
-          animate={{
-            rotate: [12, 372];
-            scale: [1, 1.1, 1];
-            opacity: [0.15, 0.25, 0.15]
-
-            rotate: [360, 0];
-            scale: [1, 1.2, 1];
-            opacity: [0.2, 0.5, 0.2];
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
-        />;
-        <motion.div;
-          className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45';
-          animate={{
-            rotate: [45, 405],
-            scale: [1, 1.15, 1],
-            opacity: [0.2, 0.3, 0.2],          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: 'linear',          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 / 20 transform rotate-45";
-          animate={{
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-        {/* Additional Floating Elements */}
-        <motion&& motion.div
-          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
-        />;
-        {/* Additional Floating Elements */}
-        <motion.div;
-          className='absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 transform rotate - 12';
-          animate={{
-            rotate: [12, 372],
-            scale: [1, 1.1, 1],
-            opacity: [0.15, 0.25, 0.15],          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-          transition={{
-            duration: 18
-            repeat: Infinity
-            ease: 'linear',          }}
-            duration: 15,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-
-          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
-        />;
-        <motion.div;
-          className='absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full';
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-            opacity: [0.15, 0.3, 0.15],          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: 'linear',          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green-400 / 20 rounded-full";
-          animate={{
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             rotate: [12, 372],
             scale: [1, 1.1, 1],
             opacity: [0.15, 0.25, 0.15],
@@ -455,27 +300,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full'
           animate={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-          transition={{
-            duration: 3
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-        {/* Particle Effects */}
-        <motion&& motion.div
-          className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
-          animate={{
-
-          }}
-          transition={{
-
-            duration: 3
-            repeat: Infinity
-            ease: 'easeInOut'
-
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             y: [0, -20, 0],
             opacity: [0.4, 0.8, 0.4],
           }}

@@ -28,28 +28,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
   if (!isOpen) return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    setLoading(false);
-    onClose(true);
-
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
-        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
-    } catch {}
-    setLoading(false);
-    onClose(true)
-  }
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-      <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
-        <div className="text-lg font-medium">Was this helpful?</div>
-        <div className="flex gap-2">
-          {[1,2,3,4,5].map(n => (
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   async function submit() {
     if (rating < 1) return onClose(false);
     setLoading(true);
@@ -263,44 +241,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className='flex justify - end gap - 2'>;
-          <button;
-            on_click={() => on_close (false)}
-            className='px - 3 py - 2 rounded border';
-          >;
-            Later;
-          </button>;
-          <button;
-            on_click={submit}
-            disabled={loading || rating < 1}
-            className='px - 3 py - 2 rounded bg - gray - 900 text - white';
-          >;
-          </button>        </div>;
-      </div>;
-    </div>);
-}              aria - label={`${n} stars`}
-        </div>;
-        <div className="text-sm">;
-          <label className="block mb-1" html_for="input - Optional comment">Optional comment</label>;
-          <textarea value={comment} on_change={(e)=>set_comment (e.target.value)} className="w-full border rounded p-2" rows={3} />;
-        </div>;
-        <div className="text-sm">;
-          <label className="block mb-1" html_for="input - Also">Also</label>;
-          <div className="flex gap-3">;
-            <label className="inline - flex items-center gap-1"><input type="radio" checked={kind==='general'} on_change={()=>set_kind ('general')} />General</label>;
-            <label className="inline - flex items-center gap-1"><input type="radio" checked={kind==='bug'} on_change={()=>set_kind ('bug')} />Report a bug</label>;
-            <label className="inline - flex items-center gap-1"><input type="radio" checked={kind==='feature'} on_change={()=>set_kind ('feature')} />Suggest a feature</label>;
-          </div>;
-        </div>;
-        <div className="flex justify-end gap-2">;
-          <button on_click={()=>on_close (false)} className="px-3 py-2 rounded border">Later</button>;
-
-}
-  );
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

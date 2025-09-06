@@ -104,39 +104,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className='text-center mt-12'
-
-        >
-          <Link
-            href='/services'
-            className='inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105'>;
-            View All Services;
-            <ArrowRight className='w-4 h-4 ml-2' />          </Link>        >;
-          <Link
-            href="/services"
-            className="inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">;
-            View All Services;
-            <ArrowRight className="w-4 h-4 ml-2" />;
-          </Link>;
-        </motion && motion.div>;
-      </div>;
-    </section>;
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <Link
-            href="/services"
-            className="inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
-          >
-            View All Services
-            <ArrowRight className="w-4 h-4 ml-2" />
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 className='text-center mt-12'
         >
           <Link
@@ -151,60 +118,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              </p>;
-              <div className='flex items - center justify - between mb - 4'>;
-                <span className='text - 2xl font - bold text - cyan - 400'>;
-                  {service.price}
-                </span>;
-                <div className='flex items - center space - x-2'>;
-                  <Zap className='w - 4 h - 4 text - yellow - 400' />;
-                  <Shield className='w - 4 h - 4 text - green - 400' />;
-                  <Brain className='w - 4 h - 4 text - purple - 400' />                </div>              <div className="flex items - center justify-between mb-4">;
-                <span className="text - 2xl font - bold text-cyan-400">{service.price}</span>;
-                <div className="flex items-center space-x-2">;
-                  <Zap className="w - 4 h - 4 text-yellow-400" />;
-                  <Shield className="w - 4 h - 4 text-green-400" />;
-                  <Brain className="w - 4 h - 4 text-purple-400" />;
-              </div>;
-              <Link;
-                href={service.link}
-                className='inline - flex items - center justify - center w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 6 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25';
-              >;
-                Get Started;
-                <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform' />              </Link>                className="inline - flex items - center justify - center w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 6 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow-cyan-500 / 25";
-              >;
-                Get Started;
-                <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate-x-1 transition-transform" />;
-            </motion.div>))}
-        </div>;
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className='text - center mt - 12';
-        >;
-          <Link;
-            href='/services';
-            className='inline - flex items - center justify - center bg - transparent border - 2 border - cyan - 500 text - cyan - 400 hover:bg - cyan - 500 hover:text - white font - semibold py - 4 px - 8 rounded - xl transition - all duration - 300 transform hover:scale - 105';
-          >;
-            View All Services;
-            <ArrowRight className='w - 4 h - 4 ml - 2' />          </Link>        >;
-          <Link;
-            href="/services";
-            className="inline - flex items - center justify - center bg - transparent border - 2 border - cyan - 500 text - cyan - 400 hover: bg - cyan - 500 hover:text - white font - semibold py - 4 px - 8 rounded - xl transition - all duration-300 transform hover:scale-105";
-          >;
-            View All Services;
-            <ArrowRight className="w - 4 h-4 ml-2" />;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }

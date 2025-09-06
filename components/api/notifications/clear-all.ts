@@ -9,18 +9,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .from('notifications')
       .delete()
       .eq('user_id', userId);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    if (error) return res && res.status(200).json({ ok: true });
-
-    return res && res.status(200).json({ ok: true });
-  } catch (e) {
-    return res && res.status(500).json({ error: 'Unexpected error' });
-  }    return res && res.status(200).json({ ok: true })
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     if (error) return res.status(200).json({ ok: true });
 
 return res.status(200).json({ ok: true });

@@ -8,21 +8,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   path
   requiresAuth
 }: TryItProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
-
-interface TryItProps {
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-
-  method,
-  path,
-  requiresAuth,
-}: TryItProps) {;
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
 origin/cursor/automate-test-improve-and-merge-code-2533
   path: string, // full URL or relative

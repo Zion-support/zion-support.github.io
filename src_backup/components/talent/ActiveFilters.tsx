@@ -1,61 +1,3 @@
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
-<<<<<<< HEAD
-import { X } from 'lucide-react'
-interface ActiveFiltersProps {
-
-  selectedSkills: string[]
-  toggleSkill: (skill: string) => void
-  selectedAvailability: string[]
-  toggleAvailability: (status: string) => void
-  selectedRegions: string[]
-  toggleRegion: (region: string) => void
-  priceRange: [number, number]
-  setPriceRange: (range: [number, number]) => void
-  experienceRange: [number, number]
-  setExperienceRange: (range: [number, number]) => void
-  clearFilters: () => void;interface ActiveFiltersProps {
-  selectedSkills: string[]
-  toggleSkill: (skill: string,) => void
-  selectedAvailability: string[]
-  toggleAvailability: (status: string,) => void
-  selectedRegions: string[]
-  toggleRegion: (region: string,) => void
-  priceRange: [number, number]
-  setPriceRange: (range: [number, number],) => void
-  experienceRange: [number, number]
-  setExperienceRange: (range: [number, number],) => void
-
-  clearFilters: () => void
-}
-
-  const hasActiveFilters = null;
-    selectedSkills.length > 0 ||
-    selectedAvailability.length > 0 ||
-
-    selectedRegions.length > 0 ||
-    experienceRange[0] !== 0 ||
-    experienceRange[1] !== 15 ||
-    priceRange[0] !== 50 ||
-
-    selectedRegions.length > 0 ||
-    experienceRange[0] !== 0 ||
-    experienceRange[1] !== 15 ||
-    priceRange[0] !== 50 ||
-
-    priceRange[1] !== 200,
-  
-  if (!hasActiveFilters) return null,
-
-  const hasActiveFilters = null;
-    selectedSkills.length > 0 ||
-    selectedAvailability.length > 0 ||
-    selectedRegions.length > 0 ||
-    experienceRange[0] !== 0 ||
-    experienceRange[1] !== 15 ||
-    priceRange[0] !== 50 ||
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/ActiveFilters.tsx
 import React from 'react';
 import { ClickableBadge } from '@/components/ui/clickable-badge';
 import { Button } from '@/components/ui/button';
@@ -108,23 +50,6 @@ import { Button } from "@/components/ui/button",;
 import { X } from 'lucide-react';
 
 interface ActiveFiltersProps {;
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
-=======
-  selectedSkills: string[],;
-  toggleSkill: (skill: string) => void,;
-  selectedAvailability: string[],;
-  toggleAvailability: (status: string) => void,;
-  selectedRegions: string[],;
-  toggleRegion: (region: string) => void,;
-  priceRange: [number, number],;
-  setPriceRange: (range: [number, number]) => void,;
-  experienceRange: [number, number],;
-  setExperienceRange: (range: [number, number]) => void,;
-  clearFilters: () => void;
-}
-;
-export function ActiveFilters({;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/ActiveFilters.tsx
 
   selectedSkills,;
   toggleSkill,;
@@ -136,16 +61,6 @@ export function ActiveFilters({;
   setPriceRange,;
   experienceRange,;
   setExperienceRange,;
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
-=======
-  clearFilters;
-}: ActiveFiltersProps) {;
-  // Check if any filters are active;
-  const hasActiveFilters =;
-    selectedSkills.length > 0 ||;
-    selectedAvailability.length > 0 ||;
-    selectedRegions.length > 0 ||;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/ActiveFilters.tsx
 
     experienceRange[0] !== 0 ||;
     experienceRange[1] !== 15 ||;
@@ -161,17 +76,6 @@ export function ActiveFilters({;
       {selectedSkills && selectedSkills.map(skill => (;
         <ClickableBadge
           key={skill}
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
-=======
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-          onClick={() => toggleSkill(skill)}
-        >;
-          {skill}
-          <X className="h-3 w-3" />
-        </ClickableBadge>
-
-      ))}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/ActiveFilters.tsx
 
       ))}
 
@@ -179,19 +83,6 @@ export function ActiveFilters({;
 
         <ClickableBadge
           key={status}
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
-=======
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleAvailability(status)}
-        >;
-          {status === 'full-time' ? 'Full-time' :;
-           status === 'part-time' ? 'Part-time' :;
-           'Project-based'}
-          <X className="h-3 w-3" />
-        </ClickableBadge>
-
-      ))}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/ActiveFilters.tsx
 
       ))}
 
@@ -199,14 +90,6 @@ export function ActiveFilters({;
 
         <ClickableBadge
           key={region}
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
-=======
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleRegion(region)}
-        >;
-
-          {region}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/ActiveFilters.tsx
 
           {region}
 
@@ -279,47 +162,6 @@ export function ActiveFilters({;
       </Button>
     </div>
 
-<<<<<<< HEAD:src/components/talent/ActiveFilters.tsx
-        className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
-
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
-      ))}
-;
-      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
-        <ClickableBadge;
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-          onClick={() => setPriceRange([50, 200])}
-        >;
-          ${priceRange[0]}-${priceRange[1]}/hr;
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
-      )}
-;
-      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
-        <ClickableBadge;
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-          onClick={() => setExperienceRange([0, 15])}
-        >;
-          {experienceRange[0]}-{experienceRange[1]} years;
-          <X className="h-3 w-3" />;
-        </ClickableBadge>;
-      )}
-;
-      <Button;
-        variant="ghost";
-        size="sm";
-        onClick={clearFilters}
-        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent";
-      >;
-
-        Clear All;
-      </Button>;
-    </div>;
-  );
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/ActiveFilters.tsx
 }
 
 import React from 'react';

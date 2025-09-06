@@ -205,79 +205,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             background_position: ['0px 0px', '50px 50px'],
           }}
           transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-            duration: 20
-            repeat: Infinity
-            ease: 'linear',          }}      }
-      {/* Animated Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)' }}
-      {/* Floating Geometric Shapes */}
-      <div className="fixed inset-0 pointer-events-none z-10">;
-        {/* Animated Grid */}
-        <motion&& motion.div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `
-            backgroundSize: '50px 50px'
-;
-  return (
-    <div className="relative min - h-screen bg-black overflow-hidden">;
-      {/* Animated Canvas Background */}
-      <canvas;
-        ref={canvas_ref}
-        className="fixed inset - 0 w - full h - full pointer - events-none z-0";
-        style={{ background: 'radial - gradient (ellipse at center, #0a0a0a 0%, #000000 100%)' }}
-      />;
-      {/* Floating Geometric Shapes */}
-      <div className="fixed inset - 0 pointer - events-none z-10">;
-        {/* Animated Grid */}
-        <motion.div;
-          className="absolute inset-0 opacity-20";
-          style={{
-            background_image: `;
-              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px);
-              linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
-            `;
-            background_size: '50px 50px';
-          }}
-          animate={{
-            background_position: ['0px 0px50px 50px']}}
-          transition={{
-        {/* Floating Neon Shapes */}
-        <motion&& motion.div
-          className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
-          animate={{
-        />
-        {/* Floating Neon Shapes */}
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
-            duration: 20,
-            repeat: Infinity,
-            ease: 'linear';
-          }}
-        />;
-        {/* Floating Neon Shapes */}
-        <motion.div;
-          className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30 rounded - lg';
-          animate={{
-            opacity: [0.3, 0.6, 0.3],          animate={{
-            rotate: [0, 360];
-            scale: [1, 1.1, 1];
-            opacity: [0.3, 0.6, 0.3]}}
-            rotate: [0, 360],
-            scale: [1, 1 && 1.1, 1],
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          animate={{
-            rotate: [0, 360]
-            scale: [1, 1 && 1.1, 1]
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
-          transition={{
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             duration: 20,
             repeat: Infinity,
             ease: 'linear',
@@ -421,45 +348,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             background_position: ['-200% 0', '200% 0'],
           }}
           transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-            duration: 15
-            repeat: Infinity
-            ease: 'linear',          }}
-        />;
-      </div>;
-    </div>;
-  )
-};export default UltraFuturisticBackground2045;            ease: 'linear';
-          }}
-        />;
-      </div>;
-    </div>;
-  );
-export default UltraFuturisticBackground2045;
-export default UltraFuturisticBackground2045;
-
-}
-}
-}
-export default UltraFuturisticBackground2045;
-            ease: 'linear',          }}
-        />;
-      </div>;
-    </div>);
-}export default UltraFuturisticBackground2045;            ease: 'linear';
-          }}
-        />;
-      </div>;
-    </div>);
-}  );
-}
-;
-export default UltraFuturisticBackground2045;
-;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             duration: 15,
             repeat: Infinity,
             ease: 'linear',

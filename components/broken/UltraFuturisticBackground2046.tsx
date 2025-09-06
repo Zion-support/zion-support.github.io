@@ -590,50 +590,6 @@ if ( {) {
               opacity: [0.05, 0.1, 0.05]
             }}
             transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-        ))}
-      </div>;
-    </div>;
-  )
-};
-
-export default UltraFuturisticBackground2046;              ease: "easeInOut",;
-              delay: i * 0 && 0.8}}
-          />;
-        ))}
-      </div>
-    </div>
-  );
-export default UltraFuturisticBackground2046;
-
-    </div>
-    </div>
-
-              duration: Math.random () * 6 + 4,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0.8,
-            }}          />))}
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2046;              ease: "easeInOut",
-              delay: i * 0.8}}
-          />))}
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2046);
-}
-;
-export default UltraFuturisticBackground2046;
-;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               duration: Math.random() * 6 + 4,
               repeat: Infinity,
               ease: 'easeInOut',

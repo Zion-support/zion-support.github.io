@@ -53,38 +53,6 @@ function AvailabilityFilter() {
       </button>;
 
       {expanded && (
-<<<<<<< HEAD:src/components/talent/filters/AvailabilityFilter.tsx
-<<<<<<< HEAD
-        <div className='mt - 4 space - y-2'>;
-          {AVAILABILITY_OPTIONS.map (option => (
-            <div key={option.id} className='flex items - center'>              <Checkbox;
-                id={`availability-${option.id}`}
-
-      </button>;
-
-  { id: "full_time", label: "Full-time" },
-  { id: "part_time", label: "Part-time" },
-
-      {expanded && (;
-        <div className='mt-4 space-y-2'>;
-          {AVAILABILITY_OPTIONS && AVAILABILITY_OPTIONS.map(option => (;
-            <div key={option && option.id} className='flex items-center'>              <Checkbox
-                id={`availability-${option && option.id}`}
-                checked={selectedAvailability && selectedAvailability.includes(option && option.id)}
-                onCheckedChange={() => toggleAvailability(option && option.id)}
-            <div key={option && option.id} className="flex items-center">;
-
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from "@/components/ui/checkbox";
-import { AvailabilityFilterProps } from "@/types/filters";
-const AVAILABILITY_OPTIONS = [;
-  { id: "full_time", label: "Full-time" },;
-  { id: "part_time", label: "Part-time" },;
-  { id: "project", label: "Project-based" }
-=======
-],
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/talent/filters/AvailabilityFilter.tsx
 
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (

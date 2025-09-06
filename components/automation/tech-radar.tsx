@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- 
-
- 
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-;
-}
-type Props = { pypi: Item[], crates: Item[], github: { [key: string]: Item[] } },
-export const getStaticProps: GetStaticProps < Props> = async () => {
-  try {
-    const file = path.join (process.cwd (), 'publicautomationtech - radar.json');
-    const raw = fs.readFileSync (file, 'utf8');
-    const data = JSON.parse (raw);
-    return {
-      props: {
-      revalidate: 7200}
-  } catch {;
-    return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
-  }
-  const langs = Object.keys(github);
-
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';

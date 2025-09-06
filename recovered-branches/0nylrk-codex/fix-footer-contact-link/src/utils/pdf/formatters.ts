@@ -26,4 +26,3 @@ export function formatDate(date: Date | string | undefined): string {;
   return format (date, 'MMM yyyy');
 }}
 }
-<<<<<<< HEAD

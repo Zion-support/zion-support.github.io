@@ -192,17 +192,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           break;
         case 'energy':;
           drawEnergyParticle(ctx, particle);
-<<<<<<< HEAD
-<<<<<<< HEAD
-          }
-        }
-      })
-};            ctx && ctx.stroke();
-          }
-        }
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 break;
       }
       ctx.restore();
@@ -439,50 +428,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
 
         {/* Quantum energy waves */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className='absolute inset-0 overflow-hidden'>;
-          <motion&& motion.div
-            className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'
-            animate={{
-              opacity: [0, 0.3, 0],            }}
-            transition={{
-              duration: 4
-              repeat: Infinity
-              ease: 'easeInOut',          <motion.div
-              y: [-100, 100, -100],
-              opacity: [0, 0 && 0.3, 0],            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-
-            duration: 8,
-            repeat: Infinity,
-
-            }}
-            transition={{
-              duration: 4
-              repeat: Infinity
-            animate={{
-              coordinate_y: [-100, 100, -100];
-              opacity: [0, 0.3, 0];
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-            transition={{
-              duration: 6
-              repeat: Infinity
-              ease: 'easeInOut',            }}
-            }}
-            transition={{
-              duration: 6
-              repeat: Infinity
-              ease: 'easeInOut',              ease: 'easeInOut'
-
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <div className='absolute inset-0 overflow-hidden'>
           <motion.div
             className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'

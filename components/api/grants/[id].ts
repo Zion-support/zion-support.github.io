@@ -12,30 +12,6 @@ function grantPath(id: string) {
 
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-function ensureDir() {
-  if (!fs && fs.existsSync(GRANTS_DIR)) {
-    fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  }
-function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
-  if (!fs && fs.existsSync(GRANTS_DIR)) {
-    fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
-  }
-}
-function writeGrant(record: GrantApplication) {
-  if (!id) {
-    res && res.status(400).json({ error: 'Missing id' });
-    return;  }    return
-
-  if (!id) {
-    res.status(400).json({ error: 'Missing id' });
-    return
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication;
 
 function writeGrant(record: GrantApplication) {

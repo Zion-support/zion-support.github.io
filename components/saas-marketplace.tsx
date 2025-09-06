@@ -1,47 +1,5 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-  Zap,
-  Shield,
-  BarChart3,
-  Globe,
-  Users,
-  Lock,
-  TrendingUp,
-  Code,
-  Database,
-  Cloud,
-  ArrowRight,
-  Star,
-  Zap;
-  Shield
-  BarChart3
-  Globe
-  Users
-  Lock
-  TrendingUp
-  Code
-  Database
-
-  Zap;
-  Shield,
-  BarChart3,
-  Globe,
-  Users,
-  Lock,
-  TrendingUp,
-  Code,
-  Database,
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { Zap;
   Shield;
   BarChart3;

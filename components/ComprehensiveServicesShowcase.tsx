@@ -518,21 +518,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {service && service.features.slice(0, 3).map((feature, idx) => (;
                         <div
                           key={idx}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                          className='flex items-center gap-2 text-sm text-white/60'>;
-                          <CheckCircle className='w-4 h-4 text-green-400' />                          {feature}                      </div>;
-                    </div>;
-
-                    <h3 className="text-xl font-bold text-white mb-2">{service && service.name}</h3>;
-                    <p className="text-white/70 text-sm mb-4">{service && service.tagline}</p>;
-
-                    {/* Stats */}
-                    <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
-
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                           className='flex items-center gap-2 text-sm text-white/60'
                         >
                           <CheckCircle className='w-4 h-4 text-green-400' />
@@ -786,24 +771,6 @@ className='text-center py-20'
             </h3>
             <p className='text-white/60'>
               Try adjusting your search or filter criteria
-<<<<<<< HEAD
-<<<<<<< HEAD
-        )}
-            </p>          </motion.div>
-
-          </motion.div>
-
-        )}
-
-            </p>          </motion.div>
-
-          </motion.div>
-
-        )}
-
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             </p>
           </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -845,16 +812,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-                Call +1 302 464 0950;
-              </a>;
-            </div>;
-          </div>;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

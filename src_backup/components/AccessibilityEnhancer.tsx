@@ -117,23 +117,6 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
       }
     };
 
-<<<<<<< HEAD:src/components/AccessibilityEnhancer.tsx
-<<<<<<< HEAD
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation')
-};
-
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown)
-};
-  }, [fontSize]);
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/AccessibilityEnhancer.tsx
       // Skip to navigation
       if (e.key === 'Tab' && e.shiftKey && e.altKey) {
         e.preventDefault();
@@ -253,62 +236,6 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 
   return (
     <>
-<<<<<<< HEAD:src/components/AccessibilityEnhancer.tsx
-<<<<<<< HEAD
-      <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4 border">
-        <h3 className="text-sm font-semibold mb-2">Accessibility</h3>
-        <div className="space-y-2">
-          <button
-            onClick={toggleHighContrast}
-            className="block w-full text-left text-sm px-2 py-1 hover:bg-gray-100 rounded"
-            aria-label="Toggle high contrast mode"
-          >
-            {isHighContrast ? '✓' : '○'} High Contrast
-          </button>
-          <button
-            onClick={toggleReducedMotion}
-            className="block w-full text-left text-sm px-2 py-1 hover:bg-gray-100 rounded"
-            aria-label="Toggle reduced motion"
-          >
-            {isReducedMotion ? '✓' : '○'} Reduce Motion
-          </button>
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={decreaseFontSize}
-              className="text-sm px-2 py-1 hover:bg-gray-100 rounded"
-              aria-label="Decrease font size"
-            >
-              A-
-            </button>
-            <span className="text-sm">{fontSize}px</span>
-            <button
-              onClick={increaseFontSize}
-              className="text-sm px-2 py-1 hover:bg-gray-100 rounded"
-              aria-label="Increase font size"
-            >
-              A+
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      {/* Skip to main content link */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-      >
-        Skip to main content
-      </a>
-      
-      {children}
-    </>
-  )
-};
-
-export default AccessibilityEnhancer;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/AccessibilityEnhancer.tsx
       {/* Accessibility Controls Button */}
       {showControls && (
         <motion.button
