@@ -1,14 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
-    <div className="fixed inset-0 z-50 md:hidden">
+
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 lg:hidden">
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
-      <div className="fixed top-0 left-0 h-full w-64 bg-gray-900 border-r border-gray-800">
-        <div className="flex items-center justify-between p-4 border-b border-gray-800">
-          <h2 className="text-xl font-bold text-white">Menu</h2>
+      <div className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg">
+        <div className="flex items-center justify-between p-4 border-b">
+          <h2 className="text-lg font-semibold">Menu</h2>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-white"
+            className="p-2 hover:bg-gray-100 rounded-lg"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+        
+        <nav className="p-4">
           <ul className="space-y-2">
             <li>
               <Link
@@ -56,3 +72,10 @@ import { X } from 'lucide-react';
               </Link>
             </li>
           </ul>
+        </nav>
+      </div>
+    </div>
+  );
+};
+
+export default Sidebar;
