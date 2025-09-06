@@ -1,9 +1,61 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn(),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+    };
+  },
+}));
+=======
 import React from 'react';
+>>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
+=======
+import React from 'react';
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 
 interface SetupProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Mock IntersectionObserver
+// @ts-ignore
+global.IntersectionObserver = class IntersectionObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+// @ts-ignore
+global.ResizeObserver = class ResizeObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock window.scrollTo
+global.window.scrollTo = jest.fn();
+=======
+=======
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 export default function Setup({ }: SetupProps) {
   return (
     <div>
@@ -42,6 +94,9 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
+<<<<<<< HEAD
+>>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
+=======
 import React from 'react';
 
 interface SetupProps {
@@ -56,3 +111,4 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739

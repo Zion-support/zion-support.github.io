@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+=======
+<<<<<<< HEAD
 /** @type {import(
   'next').NextConfig} */
 const nextConfig = {
@@ -80,13 +88,24 @@ module.exports = nextConfig;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
   eslint: {
     ignoreDuringBuilds: true
   },
   typescript: {
     ignoreBuildErrors: true
+<<<<<<< HEAD
+  },
+  experimental: {
+    esmExternals: false
+  }
+};
+
+module.exports = nextConfig;
+=======
   }
 };
 
 export default nextConfig;
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739

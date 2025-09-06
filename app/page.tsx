@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+export default function Home() {
+  return (
+    <div>
+      <h1>Zion Tech Group</h1>
+      <p>AI, Micro SaaS, and IT Services</p>
+=======
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -258,6 +265,7 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
     </div>
-  );
+  )
 }

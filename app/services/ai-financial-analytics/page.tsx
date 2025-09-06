@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+
+=======
 import Link from 'next/link';
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 
 export const metadata = {
   title: 'AI-Powered Financial Analytics Platform | Zion Tech Group',
