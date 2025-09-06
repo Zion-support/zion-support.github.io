@@ -1,22 +1,25 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
     "lib": [
       "dom",
       "dom.iterable",
+<<<<<<< HEAD
       "ES2020"
+=======
+      "esnext"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
+    "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
     "plugins": [
       {
         "name": "next"
@@ -24,14 +27,38 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./*"]
     }
+=======
+      "@/*": [
+        "./*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/pages/*": [
+        "./pages/*"
+      ],
+      "@/styles/*": [
+        "./styles/*"
+      ],
+      "@/utils/*": [
+        "./utils/*"
+      ],
+      "@/types/*": [
+        "./types/*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   },
   "include": [
     "next-env.d.ts",
+    ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules"

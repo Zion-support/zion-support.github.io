@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -102,9 +99,8 @@ function fixSyntaxErrors(filePath) {
         if (items.length > 1) {
           modified = true;
           return `[${items.join(', ')}]`;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
         }
         return match;
       },
@@ -121,104 +117,6 @@ function fixSyntaxErrors(filePath) {
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
-<<<<<<< HEAD
-}},
-,
-// Run all fixes,
-fixFooter();
-fixAccessibility();
-fixAiServices();
-fixApiDocs();
-fixCareers();
-,
-console.log('🎉 Syntax error fixes completed');
-// Run all fixes,
-fixFooter(),
-fixAccessibility(),
-fixAiServices(),
-fixApiDocs(),
-fixCareers(),
-// // // console.log('🎉 Syntax error fixes completed'),
-}},;
-// Run all fixes,;
-fixFooter(),;
-fixAccessibility(),;
-fixAiServices(),;
-fixApiDocs(),;
-fixCareers(),;
-// // // console.log('🎉 Syntax error fixes completed'),;
-}},
-=======
-<<<<<<< HEAD
-}
-
-// Function to find all TypeScript and JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let files = [];
-
-  try {
-    const items = fs.readdirSync(dir);
-
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-
-      if (
-        stat.isDirectory() &&
-        !item.startsWith('.') &&
-        item !== 'node_modules'
-      ) {
-        files = files.concat(findFiles(fullPath, extensions));
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
-    }
-  } catch (error) {
-    console.error(`Error reading directory ${dir}:`, error.message);
-  }
-
-  return files;
-}
-
-// Main execution
-function main() {
-  console.log('Starting syntax error fixes...');
-
-  const srcDir = path.join(process.cwd(), 'src');
-  const files = findFiles(srcDir);
-
-  let fixedCount = 0;
-  let totalCount = files.length;
-
-  console.log(`Found ${totalCount} files to check...`);
-
-  for (const file of files) {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
-    }
-  }
-
-  console.log(
-    `\nFixed syntax errors in ${fixedCount} out of ${totalCount} files.`
-  );
-
-  // Run linting to check remaining errors
-  console.log('\nRunning linting to check remaining errors...');
-  try {
-    execSync('npm run lint', { stdio: 'inherit' });
-  } catch (error) {
-    console.log('Linting completed with some remaining errors.');
-  }
-}
-
-// Run if this is the main module
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export { fixSyntaxErrors, findFiles };
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -284,5 +182,5 @@ const main = () => {
 };
 
 main();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+origin/cursor/automate-test-improve-and-merge-code-646c
+

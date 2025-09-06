@@ -1,191 +1,36 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+main
+
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-<<<<<<< HEAD
-
-interface Props {;
-  children: ReactNode;
-  level?: string;
-  fallback?: ReactNode;
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-=======
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-interface State {
-  hasError: boolean;
-  error?: Error;
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-interface Props {
-  children: ReactNode,
-  level?: string;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;import { AlertTriangle, RefreshCw } from 'lucide-react';
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    return { hasError: true, error };
-    return { hasError: true, error }
-  }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    return { hasError: true, error };
-    return { hasError: true, error }
-  }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-origin/automation-improvements-final
-    return { hasError: true, error };
-    return { hasError: true, error }
-  }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
-    console.error('Error caught by boundary:', error, errorInfo);    this.setState({
-ursor/integrate-build-improve-and-re-verify-8f7d
-    // Log the error to console or error reporting service
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    this.setState({
-origin/automation-improvements-final
-      error,
-      error_info;
-    });
-
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-      error
-=======
 }
 
-<<<<<<< HEAD
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-=======
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-<<<<<<< HEAD
-    hasError: false,
-  };
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-=======
     hasError: false
   }
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
   }
 
-<<<<<<< HEAD
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    this.setState({
-      error,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      errorInfo
-    });
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-<<<<<<< HEAD
-// Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send to an error reporting service
-      console.error('Production error:', error, errorInfo);
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
-    console && console.error('Error caught by boundary:', error, errorInfo);    this && this.setState({;
-      error,;
-      errorInfo;
-    });
-    // Call custom error handler if provided;
-    if (this && this.props.onError) {;
-      this && this.props.onError(error, errorInfo);
-    }
-    // You can also log the error to an error reporting service here
-    // Example: logErrorToService(error, errorInfo);
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-=======
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
   }
@@ -268,28 +113,17 @@ class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
       console.error('Production error:', error, errorInfo);
-=======
 
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error details:', error);
       console.error('Error info:', errorInfo);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     }
   }
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
-      // Fallback UI
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-=======
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error: ', error, errorInfo);
 
@@ -340,7 +174,7 @@ class ErrorBoundary extends Component<Props, State> {
                   </button>
                 </div>
               </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             </div>
             <h2 className="text-xl font-semibold text-gray-900 text-center mb-2">
               Something went wrong
@@ -434,8 +268,7 @@ export default class ErrorBoundary extends Component<Props, State> {
                 Refresh Page;
               </button>;
               <button
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       return this.props.fallback || (
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">
           <div className="text-center text-white max-w-md mx-auto p-6">
@@ -455,72 +288,26 @@ export default class ErrorBoundary extends Component<Props, State> {
               >
                 Reload Page
               </button>
-<<<<<<< HEAD
-                onClick={() => this.setState({ hasError: false })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
               <button 
                 onClick={() => this.setState({ hasError: false })} 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
               >
                 Try Again
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
-<<<<<<< HEAD
-              <details className="mt-4 p-4 bg-gray-100 rounded-md">
-                <summary className="cursor-pointer font-medium text-gray-700">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-gray-600 overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
                   {this.state.error.stack}
-<<<<<<< HEAD
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
-                  {this.state.error.stack  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 </pre>
               </details>
             )}
-<<<<<<< HEAD
-=======
           </div>;
     // Log the error to an error reporting service;
     console && console.error('ErrorBoundary caught an error:', error, errorInfo);
@@ -556,33 +343,16 @@ export default class ErrorBoundary extends Component<Props, State> {
             >
               Reload Page
             </button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+main
+
+main
+
           </div>
         )
       );
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return this.props.children;
-  }
-}
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
     return this && this.props.children;
   }
@@ -747,23 +517,13 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
+main
     return this.props.children;
   }
 }
 
-<<<<<<< HEAD
-export default ErrorBoundary;
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+main
+
+main
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

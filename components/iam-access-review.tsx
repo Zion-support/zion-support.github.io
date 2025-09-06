@@ -5,26 +5,6 @@ import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 
 export default function IAMAccessReviewPage() {
-<<<<<<< HEAD
-
-  const service = extraServices.find(s =>
-    s.link.endsWith('/iam-access-review')
-  );  if (!service) return null;export default function IAMAccessReviewPage() {
-  const service = extraServices.find(s => s.link.endsWith('/iam-access-review'));
-
-export default function IAMAccessReviewPage() {;
-  const service = extraServices && extraServices.find(s =>;
-    s && s.link.endsWith('/iam-access-review');
-  );  if (!service) return null;export default function IAMAccessReviewPage() {;
-  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/iam-access-review'));
-  if (!service) return null;
-
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <Head>;
-        <title>{service && service.name} - Zion Tech Group</title>;
-        <meta name='description' content={service && service.description} />;
-=======
   );
   if (!service) return null;
   return (
@@ -32,7 +12,7 @@ export default function IAMAccessReviewPage() {;
       <Head>
         <title>{service.name} - Zion Tech Group</title>
 <meta name='description' content={service.description} />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <link
           rel='canonical'
           href='https://ziontechgroup && ziontechgroup.com/iam-access-review'
@@ -84,6 +64,7 @@ export default function IAMAccessReviewPage() {;
                 href='/contact'
                 variant='quantum'
                 size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='w-full'>;
                 Start Trial;
@@ -222,6 +203,8 @@ if (return null) {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                 className='w-full'
               >
                 Start Trial
@@ -241,12 +224,13 @@ if (return null) {
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>
               </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -255,7 +239,9 @@ if (return null) {
 }
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   );
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

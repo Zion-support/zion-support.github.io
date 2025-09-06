@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, X, Smartphone, Monitor } from 'lucide-react';
@@ -154,6 +148,5 @@ const PWARegistration: React.FC = () => {
 };
 
 export default PWARegistration;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+

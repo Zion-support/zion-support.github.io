@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };export default EnhancedNavigation2025;
 export default function EnhancedNavigation2025() {;
@@ -574,6 +575,8 @@ function EnhancedNavigation2025() {
     </>);
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 'use client',
 
 import { useState, useEffect  } from 'react';
@@ -589,4 +592,4 @@ import { Menu, ChevronDown;
   Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
  } from 'lucide-react';
 const navigationItems = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

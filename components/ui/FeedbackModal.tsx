@@ -1,11 +1,8 @@
 import { useState } from 'react';
-<<<<<<< HEAD
-
-=======
 export type FeedbackContext = any;
     onClose(true)
 export default function FeedbackModal({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   isOpen
   onClose
   defaultContext
@@ -22,22 +19,16 @@ export default function FeedbackModal({
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
-<<<<<<< HEAD
-  userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
-  isOpen;
-  onClose;
-  defaultContext;
-  defaultKind = 'general';
-=======
   userHeaders?: Record<string, string>;
 }) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
   if (!isOpen) return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     setLoading(false);
@@ -57,6 +48,8 @@ export default function FeedbackModal({
         <div className="flex gap-2">
           {[1,2,3,4,5].map(n => (
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   async function submit() {
     if (rating < 1) return onClose(false);
     setLoading(true);
@@ -81,16 +74,14 @@ headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
         <div className='flex gap-2'>
           {[1, 2, 3, 4, 5].map(n => (
             <button
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}
-<<<<<<< HEAD
-=======
 className={
                 hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               }
               aria-label={`${n} stars`}
             >;
@@ -252,8 +243,6 @@ function submit() {
           ))}
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
-<<<<<<< HEAD
-=======
         <div className='flex justify-end gap-2'>
           <button
             onClick={() => onClose(false)}
@@ -269,11 +258,12 @@ function submit() {
             {loading ? 'Submitting…' : 'Submit'}
           </button>
         </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className='flex justify - end gap - 2'>;
           <button;
@@ -311,3 +301,6 @@ function submit() {
   );
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

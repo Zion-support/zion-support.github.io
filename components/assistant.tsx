@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-interface Message {;
-  role: 'user' | 'assistant';
-  content: string;
-
-export default function Assistant() {;
-  const params =;
-    typeof window !== 'undefined';
-      ? new URLSearchParams(window && window.location.search);
-      : new URLSearchParams();  const tenantId = params && params.get('tenantId') || '';
-  const brand = params && params.get('brand') || 'Zion AI';
-  const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
-export default function Assistant() {;
-  const [messages, setMessages] = useState<Message[]>([;
-    {;
-      role: 'assistant',;
-      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,;
-    },;
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
-  const tenantId = params.get('tenantId') |'';
-  const brand = params.get('brand') |'Zion AI';
-=======
 import { useEffect, useMemo, useState } from 'react';
 interface Message { role: 'user' | 'assistant', content: string }
 
@@ -37,7 +15,7 @@ export default function Assistant() {
   const tenantId = params.get('tenantId') || '';
   const brand = params.get('brand') || 'Zion AI';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [messages, setMessages] = useState<Message[]>([
 {
       role: 'assistant',
@@ -57,24 +35,6 @@ export default function Assistant() {
     }),;
     [];
   );
-<<<<<<< HEAD
-    { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
-  const [input, setInput] = useState('');
-
-  const faqs: Record<string, string> = useMemo(() => ({;
-    'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics && specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability && availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
-  async function handleAsk(): any (question: string) {;
-    const lower = question && question.toLowerCase();
-    const faq = Object && Object.keys(faqs).find(key => lower && lower.includes(key)),;
-    if (faq) {;
-      setMessages(prev => [;
-        ...prev,;
-        { role: 'user', content: question },;
-        { role: 'assistant', content: faqs[faq] },;
-      ]);
-      return;
-
-=======
 
   async function handleAsk(question: string) {
     const lower = question.toLowerCase();
@@ -86,7 +46,7 @@ setMessages(prev => [
         { role: 'assistant', content: faqs[faq] },
       ]);
       return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     ]);
   }
@@ -109,11 +69,6 @@ setMessages(prev => [
               m && m.role === 'assistant'
                 ? 'text-gray-800'
                 : 'text-gray-900 font-medium'
-<<<<<<< HEAD
-            }>            {m && m.content}    }
-    // Basic fallback;
-    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
-=======
             }
           >
             {m.content}
@@ -130,7 +85,7 @@ className='p-3 border-t flex gap-2'
           }
         }}
       >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."
@@ -148,9 +103,8 @@ className='p-3 border-t flex gap-2'
         </button>
       </form>
     </div>
-<<<<<<< HEAD
-}
   );
+<<<<<<< HEAD
   );
 
   );
@@ -313,3 +267,6 @@ if ( {) {
 =======
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

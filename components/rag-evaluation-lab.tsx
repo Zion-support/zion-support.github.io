@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
@@ -15,7 +13,7 @@ export default function RAGEvaluationLabPage() {
 							</div>
 						))}
 					</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <>;
@@ -34,6 +32,7 @@ export default function RAGEvaluationLabPage() {
                 <p className='mt-2 text-sm text-gray-300'>{f && f.desc}</p>;
               </div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     /mo;
                   </span>;
@@ -75,6 +74,8 @@ export default function RAGEvaluationLabPage() {
   </>);
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
           </div>
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
@@ -161,4 +162,4 @@ export default function RAGEvaluationLabPage() {
       </section>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

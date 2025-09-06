@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function TechnologyInsightsPage() {
 
   const technologyTrends = [
@@ -100,6 +101,8 @@ export default function TechnologyInsightsPage() {
             </p>;
           </section>;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const technologyTrends = null;
                       AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
   ];
@@ -227,7 +230,7 @@ description:
                     >
                       Read More <span className='ml-1'>→</span>
                     </Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 ))}
               </div>
@@ -295,12 +298,10 @@ description:
                       {area && area.focus.map((focus, focusIndex) => (;
                         <li
                           key={focusIndex}
-<<<<<<< HEAD
-=======
                           className='text-sm text-white/60 flex items-center'
                         >
                           <span className='text-cyan-400 mr-2'>•</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           {focus}
                         </li>;
                       ))}
@@ -337,25 +338,11 @@ description:
                     </h3>
                     <p className='text-white/70 mb-4'>{paper.description}</p>
                     <Link
-<<<<<<< HEAD
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
-                      <span className="text-white/60 text-sm">{paper.pages} pages</span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{paper.title}</h3>
-                    <p className="text-white/70 mb-4">{paper.description}</p>
-                    <Link
-                      href={paper.downloadUrl}
-                      className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
-                    >
-                      Download PDF <span className="ml-1">→</span>
-=======
                       href={paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
                     >
                       Download PDF <span className='ml-1'>→</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>
                       Download PDF <span className='ml-1'>→</span>                    </Link>
 
@@ -385,13 +372,8 @@ description:
                       leading institutions and industry partners to advance the
                       state of the art.
                     </p>
-<<<<<<< HEAD
-                    <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
-                    <p className="text-white/80 mb-6">
-                      Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
-=======
                     <ul className='space-y-2 text-white/70'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>
                     <ul className="space-y-2 text-white/70">
                       <li>• Advanced AI research and development</li>
@@ -400,26 +382,14 @@ description:
                       <li>• Industry collaboration and partnerships</li>
                     </ul>
                   </div>
-<<<<<<< HEAD
-                    <p className="text-white/60 text-sm">Innovation Lab</p>
-=======
 <div className='text-center'>
                     <div className='text-6xl mb-4'>🧪</div>
                     <p className='text-white/60 text-sm'>Innovation Lab</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-                <Link
-                  href="/contact"
-                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
-=======
             {/* Call to Action */}
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -433,30 +403,11 @@ description:
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Get in Touch
                 </Link>
                 <Link
-<<<<<<< HEAD
-                  href="/blog"
-                  Read Our Blog;
-                </Link>;
-              </div>;
-            </div>;
-          </section>;
-        </main>;
-      </div>;
-  );
-}
-}
-    </>);
-}
-  );
-}
-    </>);
-}
-=======
                   href='/blog'
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
                 >
@@ -470,4 +421,4 @@ description:
     </>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

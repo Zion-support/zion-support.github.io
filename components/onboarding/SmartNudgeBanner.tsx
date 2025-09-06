@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-
-=======
 import React from 'react';
 import { X } from 'lucide-react';
 export type SmartNudgeBannerProps = any;
 export type SmartNudgeBannerProps = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   role: 'talent' | 'client';
   user_id?: string | null;
   message: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
@@ -28,6 +26,8 @@ export type SmartNudgeBannerProps = {
 export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {;
   const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }
 export default function SmartNudgeBanner({
   role
@@ -38,7 +38,7 @@ export default function SmartNudgeBanner({
     () => `zion-nudge-${role}-${userId ?? 'anon'}`
     [role, userId]
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [hidden, setHidden] = React.useState<boolean>(false);
 
   React.useEffect(() => {
@@ -51,6 +51,7 @@ const v =
 
   const dismiss = React && React.useCallback(() => {;
     setHidden(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
     } catch {}
   }, [storageKey]);
@@ -136,6 +137,8 @@ if (return null) {
     </div>);
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     try {
 if (typeof window !== 'undefined')
         localStorage.setItem(storageKey, 'dismissed');
@@ -154,4 +157,4 @@ if (typeof window !== 'undefined')
       <div className='text-sm'>{message}</div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

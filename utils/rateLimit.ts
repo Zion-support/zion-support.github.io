@@ -1,43 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
-  const ip =
-    (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
-    req.socket.remoteAddress ||
-    "unknown";
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
-  const now = Date.now();
-  const key = `rate_limit_${ip}`;
-  const current = rateLimitMap.get(key);
-
-  if (!current || now > current.resetTime) {
-    // Reset or initialize
-    rateLimitMap.set(key, {
-      count: 1,
-      resetTime: now + RATE_LIMIT_WINDOW,
-    });
-    return true;
-  }
-
-  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
-    res.status(429).json({ error: "Too Many Requests" });
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+main
     return false;
   }
 
@@ -46,14 +12,11 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   return true;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -127,9 +90,8 @@ export const rateLimiter = new RateLimiter({
 // Express middleware for rate limiting
 export function rateLimit(config: RateLimitConfig) {
   const limiter = new RateLimiter(config);
-=======
 export function rateLimit(options: { windowMs: number; max: number }) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (req: any, res: any, next: any) => {
     const info = limiter.isAllowed(req);
     res.set({
@@ -147,11 +109,8 @@ export function rateLimit(options: { windowMs: number; max: number }) {
     next();
   };
 }
-<<<<<<< HEAD
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
@@ -211,25 +170,14 @@ if ( {) {
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
 
 
 }
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533

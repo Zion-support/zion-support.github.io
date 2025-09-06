@@ -12,6 +12,7 @@ export default function CaseStudiesPage() {;
         title='Case Studies | Zion Tech Group'
         description='Proven outcomes across AI, cloud, and automation projects.'
 <<<<<<< HEAD
+<<<<<<< HEAD
         canonical='https://ziontechgroup && ziontechgroup.com/case-studies/'
       />;
       <div className='container mx-auto px-4 py-16 text-white'>;
@@ -80,6 +81,8 @@ function CaseStudiesPage() {
       </div>
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         canonical='https://ziontechgroup.com/case-studies/'
       />
       <div className='container mx-auto px-4 py-16 text-white'>
@@ -94,4 +97,4 @@ function CaseStudiesPage() {
       </div>
     </UltraFuturisticBackground>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

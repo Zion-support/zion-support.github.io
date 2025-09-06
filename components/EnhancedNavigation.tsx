@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 
 import {motion} from 'framer-motion';
@@ -445,9 +446,11 @@ export default EnhancedNavigation;
 export default EnhancedNavigation;
 export default EnhancedNavigation;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { motion } from 'framer-motion';
 import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket;
   Cpu, Database, Users, Award, BookOpen, Phone
  } from 'lucide-react';
 const EnhancedNavigation: React.FC;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

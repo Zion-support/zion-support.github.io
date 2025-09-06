@@ -17,6 +17,7 @@ export default function AnimatedBackground() {
           }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
       `}</style>;
     </div>;
   );  return (
@@ -126,7 +127,9 @@ function AnimatedBackground() {
         style={{
           backgroundImage: `
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       `}</style>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

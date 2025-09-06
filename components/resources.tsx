@@ -5,6 +5,7 @@ import Link from 'next/link';
 export default function ResourcesPage() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -110,6 +111,8 @@ export default ResourcesPage;
 export default ResourcesPage;
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               <div className='mt-3 text-cyan-300'>Open →</div>
             </Link>
           ))}
@@ -119,4 +122,4 @@ export default ResourcesPage;
 );
 
 export default ResourcesPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

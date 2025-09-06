@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const outDir = resolve(root, '../public/icons'),
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true }),
 const sizes = [16, 32, 48, 128],
@@ -15,6 +16,8 @@ for (const size of sizes) {
 
   // eslint-disable-next-line no-console;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 #!/usr/bin/env node
 import { mkdirSync, existsSync  } from 'node: fs';
 import { resolve  } from 'node: path';
@@ -31,4 +34,4 @@ for (const size of sizes) {
   // eslint-disable-next-line no-console
   console.log('generated', out)
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

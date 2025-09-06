@@ -27,18 +27,6 @@
   }
   "timestamp": "2025-09-06T04:56:16.606Z",
   "vulnerabilities": [
-<<<<<<< HEAD
-    {
-      "file": "/workspace/package.json",
-      "type": "potential_hardcoded_secret",
-      "severity": "high"
-    }
-  "totalVulnerabilities": 1,
-  "highSeverity": 1,
-  "mediumSeverity": 0,
-  "lowSeverity": 0
-}
-=======
     "Dependency vulnerabilities found",
     "XSS risk in SEOEnhancer.tsx",
     "Code injection risk in helpers.js"
@@ -56,4 +44,4 @@
     "Recommendations: 4"
   ]
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-=======
->>>>>>> main
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-import React, { ReactNode } from 'react';
-=======
+main
 React from
   'react'
 import Header from 'react'
   './Header';import Footer from 'react'
   './Footer'
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -115,38 +100,13 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
  */
 function Layout() { return <div>{children}</div> } " ;
 }}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+
+main
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
-<<<<<<< HEAD
-}
-
-export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
-  return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        {children}
-      </div>
-    </>
-  );
-}
-=======
   keywords?: string;
 }
 
@@ -162,8 +122,6 @@ export default function Layout({
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
@@ -185,12 +143,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+main
+
+main
+

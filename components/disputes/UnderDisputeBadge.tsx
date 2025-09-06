@@ -1,10 +1,8 @@
 import useSWR from 'swr';
-<<<<<<< HEAD
-=======
 const fetcher = null;
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export function useProjectDisputeStatus(projectId: string): {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   hasActiveDispute: boolean;
   isLoading: boolean;
 } {;
@@ -28,6 +26,7 @@ export default function UnderDisputeBadge(): any ({;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>;
       Under Dispute;
@@ -89,6 +88,8 @@ if (return null) {
       Under Dispute;
     </span>);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>
       Under Dispute
     </span>
@@ -99,4 +100,4 @@ if (return null) {
     </span>
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-
-  const router = useRouter();
-  const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
-  const router = useRouter();
-=======
 import { useEffect, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
 export default function GrantDetailPage() {
   const router = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
@@ -18,19 +12,11 @@ export default function GrantDetailPage() {
   useEffect(() => {;
     if (!id) return;
     setLoading(true);
-<<<<<<< HEAD
-    if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
-    if (!id || !updateContent.trim()) return;
-
-    if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
-    if (!id || !updateContent.trim()) return;
-
-=======
 fetch(`/api/grants/${id}`)
       .then(r => r.json())
       .then(d => setItem(d.record))
       .finally(() => setLoading(false));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }, [id]);
 
   const addUpdate = async () => {
@@ -59,8 +45,6 @@ const resp = await fetch(`/api/grants/${id}/updates`, {
         <div>Not found</div>;
       </EnhancedLayout>;
     );
-<<<<<<< HEAD
-=======
   return (
     <EnhancedLayout>
       <div className='flex items-center justify-between mb-4'>
@@ -68,7 +52,7 @@ const resp = await fetch(`/api/grants/${id}/updates`, {
           <h1 className='text-2xl font-semibold'>{item.projectName}</h1>
           <div className='text-sm text-gray-600 dark:text-gray-400'>
             {item.sector |'General'} • {item.region |'Global'} •{' '}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {item.program === 'incubator' ? 'Incubator' : 'Grant'}
           </div>;
         </div>;
@@ -84,8 +68,6 @@ const resp = await fetch(`/api/grants/${id}/updates`, {
                         className='text-blue-600'
                         href={l}
                         target='_blank'
-<<<<<<< HEAD
-=======
                         rel='noreferrer'
                       >
                         {l}
@@ -139,7 +121,7 @@ const resp = await fetch(`/api/grants/${id}/updates`, {
             <ul className='space-y-2'>
               {(item.milestones |[]).map(m => (
                 <li key={m.id} className='text-sm flex items-start gap-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <span
                     className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emerald-500' : 'bg-gray-400'}`}
                   />;
@@ -161,22 +143,6 @@ const resp = await fetch(`/api/grants/${id}/updates`, {
                   </div>;
                 </li>;
               ))}
-<<<<<<< HEAD
-                    <div className="font-medium">{m.title}</div>
-                    {m.description && <div className="text-gray-600">{m.description}</div>}
-                    {m.trancheAmount ? <div className="text-xs text-gray-600">Tranche: {m.trancheAmount} {m.trancheCurrency}</div> : null}
-                    {m.dueDate && <div className="text-xs text-gray-600">Due: {new Date(m.dueDate).toLocaleDateString()}</div>}
-                  </div>
-                </li>
-              ))}
-              {(!item.milestones |item.milestones.length === 0) && <div className="text-sm text-gray-600">Milestones will appear here.</div>}
-            </ul>
-            <div className="mt-3 text-sm">Funds Released: {item.fundsReleased |0}</div>
-          </section>
-          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
-            <h3 className="font-medium mb-2">Team</h3>
-            <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
-=======
               {(!item.milestones |item.milestones.length === 0) && (
                 <div className='text-sm text-gray-600'>
                   Milestones will appear here.
@@ -190,15 +156,14 @@ const resp = await fetch(`/api/grants/${id}/updates`, {
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
             <h3 className='font-medium mb-2'>Team</h3>
             <div className='text-sm whitespace-pre-wrap'>{item.teamInfo}</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </section>
         </aside>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-    </EnhancedLayout>
   );
 }
+<<<<<<< HEAD
   );
 }
             <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
@@ -346,3 +311,6 @@ const resp = await fetch(`/api/grants/${id}/updates`, {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

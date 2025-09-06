@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,;
-  Smartphone,;
-=======
 import React from 'react',
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-react';
@@ -21,7 +13,7 @@ import {
   Check
   ArrowRight
   Smartphone;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -29,24 +21,6 @@ import { extraServices } from '../data/extra-services';
 export default function MDMPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management')
-<<<<<<< HEAD
-
-export default function MDMPage() {;
-  const service = extraServices && extraServices.find(s =>;
-    s && s.link.endsWith('/mdm-mobile-device-management');
-  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { extraServices } from '../data/extra-services';
-export default function MDMPage() {;
-  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/mdm-mobile-device-management'));
-  if (!service) return null;
-
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <Head>;
-        <title>{service && service.name} - Zion Tech Group</title>;
-        <meta name='description' content={service && service.description} />;
-=======
   );
   if (!service) return null;
   return (
@@ -54,7 +28,7 @@ export default function MDMPage() {;
       <Head>
         <title>{service.name} - Zion Tech Group</title>
 <meta name='description' content={service.description} />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <link
           rel='canonical'
           href='https://ziontechgroup && ziontechgroup.com/mdm-mobile-device-management'
@@ -106,6 +80,7 @@ export default function MDMPage() {;
                 href='/contact'
                 variant='quantum'
                 size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='w-full'>;
                 Start Trial;
@@ -256,6 +231,8 @@ import { extraServices } from '../data/extra-services';
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                 className='w-full'
               >
                 Start Trial
@@ -275,12 +252,13 @@ import { extraServices } from '../data/extra-services';
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>
               </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -289,7 +267,9 @@ import { extraServices } from '../data/extra-services';
 }
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   );
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

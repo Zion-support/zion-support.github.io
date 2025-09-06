@@ -59,6 +59,7 @@ export default function InvestorsPage() {
         <div className='pt-4 text-slate-300'>;
           Contact IR:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
 			<Head>
 				<title>Investors | Zion Tech Group</title>
@@ -138,6 +139,8 @@ function InvestorsPage() {
   </div>),
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
             kleber@ziontechgroup.com
           </a>
@@ -145,4 +148,4 @@ function InvestorsPage() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

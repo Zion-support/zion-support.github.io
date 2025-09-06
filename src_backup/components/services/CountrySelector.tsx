@@ -1,0 +1,78 @@
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
+interface CountrySelectorProps {
+  onCountryChange: (country: CountryPricing | null) => void;
+import {
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'
+  CountryPricing
+  onsiteServicePricing
+} from '@/data/onsiteServicePricing'
+interface CountrySelectorProps {
+  onCountryChange: (country: CountryPricing | null) => void
+  selectedCountry: CountryPricing | null
+export function CountrySelector({
+  onCountryChange
+  selectedCountry
+}: CountrySelectorProps) {
+  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
+  onCountryChange: (country: CountryPricing | null,) => void
+origin/cursor/automate-test-improve-and-merge-code-2533
+  selectedCountry: CountryPricing | null
+}
+  // Set top/popular countries
+  useEffect(() => {
+    const popular = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+
+      </h3>;
+
+
+      <Select
+        onValueChange={handleCountryChange}
+        value={selectedCountry?.country}>;
+        <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>;
+          <SelectValue placeholder='Select a country' />;
+        </SelectTrigger>;
+        <SelectContent className='bg-zion-blue-dark border-zion-blue-light max-h-80'>;
+          <div className='p-2 border-b border-zion-blue-light'>;
+            <p className='text-sm text-zion-slate-light pb-1'>;
+              Popular Countries;
+            </p>;
+            {topCountries && topCountries.map(item => (;
+              <SelectItem
+                key={item.country}
+                value={item.country}
+                className='text-white'
+              >
+origin/cursor/automate-test-improve-and-merge-code-2533
+                {item.country} - ${item.pricePerIncident.toFixed(2)}
+              </SelectItem>
+            ))}
+          </div>
+
+<div className='p-2'>
+            <p className='text-sm text-zion-slate-light pb-1'>All Countries</p>
+            {onsiteServicePricing
+              .sort((a, b) => a.country.localeCompare(b.country))
+              .map(item => (
+                <SelectItem
+                  key={item.country}
+                  value={item.country}
+                  className='text-white'
+                >
+                  {item.country} - ${item.pricePerIncident.toFixed(2)}
+                </SelectItem>
+              ))}
+          </div>
+        </SelectContent>
+      </Select>
+    </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

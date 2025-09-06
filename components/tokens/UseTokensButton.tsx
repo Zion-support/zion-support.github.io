@@ -1,17 +1,13 @@
-<<<<<<< HEAD
-=======
 
 export default function UseTokensButton({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   serviceId
   defaultType
 }: {
   serviceId?: string;
   defaultType?: RedemptionType;
-<<<<<<< HEAD
-=======
 }) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -56,6 +52,7 @@ export default function UseTokensButton({
     </>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -90,3 +87,6 @@ export default function UseTokensButton({
     </>);
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

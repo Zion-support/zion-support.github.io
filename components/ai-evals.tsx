@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-  Check,
-  ShieldCheck,
-  TrendingUp,
-  Clock,
-  Phone,
-  Mail,
-=======
 import React from 'react',
 import Head from 'next/head';
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
@@ -31,7 +23,7 @@ import {
   Mail
   MapPin
   ExternalLink;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -58,6 +50,7 @@ export default function AIEvalsPage() {
         <title>AI Evals & Observability | Zion Tech Group</title>;
         <meta
           name='description'
+<<<<<<< HEAD
 <<<<<<< HEAD
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-evals' />;
@@ -123,6 +116,8 @@ export default function AIEvalsPage() {
   </QuantumHolographicMatrixBackground>);
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
           content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />
@@ -246,4 +241,4 @@ export default function AIEvalsPage() {
       </section>
     </QuantumHolographicMatrixBackground>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

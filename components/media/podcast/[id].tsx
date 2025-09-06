@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function EpisodePage() {
@@ -91,6 +92,8 @@ if (return <div > Loading…</div>) {
 }
     <div className='space-y-4'>
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
   const router = null;
@@ -98,7 +101,7 @@ import { useRouter } from 'next/router';
   if (!episode) return <div>Loading…</div>;
   return (
 <div className='space-y-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <h1 className='text-2xl font-bold'>{episode.title}</h1>
       <p className='text-sm text-gray-600'>
         Guest: {episode.invitee?.name} ·{' '}
@@ -116,7 +119,5 @@ import { useRouter } from 'next/router';
         </pre>
       </div>
     </div>
-<<<<<<< HEAD
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

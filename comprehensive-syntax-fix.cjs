@@ -1,30 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-    return match.replace(/,\s*$/, '')
-  // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
-  content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"
-  content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, '$"1": "$2"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+main
+
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const { execSync } = require('child_process');
 
 class ComprehensiveSyntaxFixer {
@@ -61,79 +42,7 @@ class ComprehensiveSyntaxFixer {
           let content = fs.readFileSync(filePath, 'utf8');
           
           // Remove merge conflict markers
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-          
-          fs.writeFileSync(filePath, content);
-          this.log(`✅ Fixed merge conflicts in ${file}`);
-        } catch (error) {
-          this.log(`❌ Failed to fix merge conflicts in ${file}: ${error.message}`);
-        }
-      }
-    }
-  }
 
-  async fixSyntaxErrors() {
-    this.log('🔧 Fixing syntax errors...');
-    
-    const commands = [
-      { cmd: 'npm run lint:fix', desc: 'Fix linting errors' },
-      { cmd: 'npm run format', desc: 'Format code' }
-    ];
-
-    for (const { cmd, desc } of commands) {
-      try {
-        this.log(`🚀 ${desc}`);
-        execSync(cmd, { stdio: 'pipe', cwd: this.projectRoot });
-        this.log(`✅ ${desc} completed`);
-      } catch (error) {
-        this.log(`⚠️ ${desc} failed: ${error.message}`);
-      }
-    }
-  }
-
-  async generateReport() {
-    this.log('📊 Generating syntax fix report...');
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      status: 'completed',
-      fixes: [
-        'Merge conflicts resolved',
-        'Syntax errors fixed',
-        'Code formatted'
-      ],
-      summary: 'Comprehensive syntax fix completed successfully'
-    };
-
-    const reportPath = path.join(this.reportsDir, 'syntax-fix-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 Report saved to: ${reportPath}`);
-    return report;
-  }
-
-  async run() {
-    try {
-      this.log('🎯 Starting Comprehensive Syntax Fix...');
-      
-      await this.fixMergeConflicts();
-      await this.fixSyntaxErrors();
-      await this.generateReport();
-      
-      this.log('🎉 Comprehensive Syntax Fix completed successfully!');
-    } catch (error) {
-      this.log(`❌ Comprehensive Syntax Fix failed: ${error.message}`);
-      process.exit(1);
-    }
-  }
-}
-
-// Run the syntax fixer
-const fixer = new ComprehensiveSyntaxFixer();
-fixer.run().catch(console.error);
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 console.log('🔧 Running comprehensive syntax fix...');
 
@@ -388,9 +297,7 @@ for (const fix of fixes) {
 }
 
 console.log(`✅ Fixed ${fixedCount} files`);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-<<<<<<< HEAD
-=======
+ursor/automate-test-improve-and-merge-code-59d5
 const { execSync } = require('child_process');
 
 class ComprehensiveSyntaxFixer {
@@ -427,78 +334,5 @@ class ComprehensiveSyntaxFixer {
           let content = fs.readFileSync(filePath, 'utf8');
           
           // Remove merge conflict markers
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-          
-          fs.writeFileSync(filePath, content);
-          this.log(`✅ Fixed merge conflicts in ${file}`);
-        } catch (error) {
-          this.log(`❌ Failed to fix merge conflicts in ${file}: ${error.message}`);
-        }
-      }
-    }
-  }
+main
 
-  async fixSyntaxErrors() {
-    this.log('🔧 Fixing syntax errors...');
-    
-    const commands = [
-      { cmd: 'npm run lint:fix', desc: 'Fix linting errors' },
-      { cmd: 'npm run format', desc: 'Format code' }
-    ];
-
-    for (const { cmd, desc } of commands) {
-      try {
-        this.log(`🚀 ${desc}`);
-        execSync(cmd, { stdio: 'pipe', cwd: this.projectRoot });
-        this.log(`✅ ${desc} completed`);
-      } catch (error) {
-        this.log(`⚠️ ${desc} failed: ${error.message}`);
-      }
-    }
-  }
-
-  async generateReport() {
-    this.log('📊 Generating syntax fix report...');
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      status: 'completed',
-      fixes: [
-        'Merge conflicts resolved',
-        'Syntax errors fixed',
-        'Code formatted'
-      ],
-      summary: 'Comprehensive syntax fix completed successfully'
-    };
-
-    const reportPath = path.join(this.reportsDir, 'syntax-fix-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 Report saved to: ${reportPath}`);
-    return report;
-  }
-
-  async run() {
-    try {
-      this.log('🎯 Starting Comprehensive Syntax Fix...');
-      
-      await this.fixMergeConflicts();
-      await this.fixSyntaxErrors();
-      await this.generateReport();
-      
-      this.log('🎉 Comprehensive Syntax Fix completed successfully!');
-    } catch (error) {
-      this.log(`❌ Comprehensive Syntax Fix failed: ${error.message}`);
-      process.exit(1);
-    }
-  }
-}
-
-// Run the syntax fixer
-const fixer = new ComprehensiveSyntaxFixer();
-fixer.run().catch(console.error);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

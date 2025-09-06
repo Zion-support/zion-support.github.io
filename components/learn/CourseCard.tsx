@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-
-=======
 import Link from 'next/link';
 export type Course = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export type Course = {
 
   id: string;
@@ -12,6 +9,7 @@ export type Course = {
   level: string;
   is_free: boolean;
   category: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   certification_badge: string,
   description?: string;
@@ -55,6 +53,8 @@ function CourseCard() {
   );
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   certificationBadge: string;
   description?: string;
 };
@@ -87,4 +87,4 @@ export default function CourseCard({ course }: { course: Course }) {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

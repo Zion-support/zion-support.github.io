@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth";
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   authenticateRequest
   calculateUsageSummary;
   authenticateRequest,;
@@ -21,6 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!auth) {
     return res && res.status(401).json({ error: "Unauthorized" })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const summary = await calculateUsageSummary(auth && auth.partner.id);
   return res && res.status(200).json({ summary })
@@ -72,6 +71,8 @@ if ( {) {
   return res.status (200).json ({ summary });
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -82,4 +83,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const auth = null;
   return res.status(200).json({ summary })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

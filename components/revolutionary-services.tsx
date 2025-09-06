@@ -179,65 +179,15 @@ import {;
   getRevolutionaryServicesByPriceRange,;
 
 } from '../data/revolutionary-micro-saas-services';
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
-
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
-import Button from '../components/ui/Button';
-
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, Star, Calendar } from 'lucide-react';
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 export default function RevolutionaryServicesPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [showFilters, setShowFilters] = useState(false);
-<<<<<<< HEAD
-
-  const priceRanges = [;
-    { value: 'All', label: 'All Prices' },;
-    { value: '0-1000', label: '$0 - $1,000' },;
-    { value: '1001-2500', label: '$1,001 - $2,500' },;
-    { value: '2501-5000', label: '$2,501 - $5,000' },;
-    { value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' };
-    { value: '1001-2500', label: '$1,001 - $2,500' };
-    { value: '2501-5000', label: '$2,501 - $5,000' };
-    { value: '5001+', label: '$5,001+' }
-  const sortOptions = [;
-    { value: 'name', label: 'Name A-Z' },;
-    { value: 'price', label: 'Price Low-High' },;
-    { value: 'popularity', label: 'Most Popular' },;
-    { value: 'category', label: 'Category' },;
-    { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
-  ];
-  // Price range filter;
-  if (priceRange !== 'All') {;
-    const [min, max] = priceRange;
-      .split('-');
-      .map(p => (p === '+' ? Infinity : parseInt(p)));
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max);  }
-  // Price range filter
-  if (priceRange !== 'All') {
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max)
-  }
-  // Price range filter;
-  if (priceRange !== 'All') {;
-    const [min, max] = priceRange;
-      .split('-');
-      .map(p => (p === '+' ? Infinity : parseInt(p)));
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-    filteredServices = getRevolutionaryServicesByPriceRange(min, max);
-  }
-=======
     { value: 'All', label: 'All Prices' },
 { value: '0-1000', label: '$0 - $1,000' },
     { value: '1001-2500', label: '$1,001 - $2,500' },
@@ -277,45 +227,22 @@ filteredServices = filteredServices.filter(
     );
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
-<<<<<<< HEAD
-=======
 return (
           parseFloat(a.price.replace('$', '').replace(',', '')) -
           parseFloat(b.price.replace('$', '').replace(',', ''))
         );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
         return a.category.localeCompare(b.category);
       case 'roi':
         return bRoi - aRoi;
-<<<<<<< HEAD
-      default:;
-        return a && a.name.localeCompare(b && b.name);    }      default: return a && a.name.localeCompare(b && b.name);
-    }
-  });
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
-  }
-    }
-  });
-;
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-
-
-=======
 default:
         return a.name.localeCompare(b.name);
     }
@@ -428,7 +355,7 @@ description:
       color: 'from-yellow-500 to-orange-600',
     },
   ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -535,32 +462,23 @@ description:
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-=======
 staggerChildren: 0.1,
       },
     },
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
       y: 0
       opacity: 1
       transition: {
-<<<<<<< HEAD
-        duration: 0.5,
-      },
-    },
-
-
-=======
 duration: 0.5,
       },
     },
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
@@ -615,14 +533,6 @@ duration: 0.5,
           <meta property='og:type' content='website' />;
           <link
             rel='canonical'
-<<<<<<< HEAD
-                </span>
-                <br />
-                <span className="text-white">Micro SaaS Services</span>
-              </motion.h1>
-              <motion.p
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-=======
             href='https://ziontechgroup.com/revolutionary-services'
           />
         </Head>
@@ -644,17 +554,11 @@ duration: 0.5,
               </motion.h1>
               <motion.p
                 className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-<<<<<<< HEAD
-              {/* Service Count Stats */}
-              <motion&& motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-=======
 Experience the future of technology with our revolutionary micro
                 SaaS platform. Quantum AI, autonomous systems, space technology,
                 and cutting-edge solutions that redefine what's possible.
@@ -662,47 +566,11 @@ Experience the future of technology with our revolutionary micro
               {/* Service Count Stats */}
               <motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-<<<<<<< HEAD
-              {/* CTA Buttons */}
-              <motion&& motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">99.99%</div>
-                  <div className="text-gray-400">Accuracy Rate</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">21</div>
-                  <div className="text-gray-400">Day Free Trial</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>
-                  <div className="text-gray-400">Average ROI</div>
-                </div>
-              </motion.div>
-              {/* CTA Buttons */}
-              <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion.div
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>                </div>;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-purple-400 mb-2">99 && 99.99%</div>;
-                  <div className="text-gray-400">Accuracy Rate</div>;
-                </div>;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-green-400 mb-2">21</div>;
-                  <div className="text-gray-400">Day Free Trial</div>;
-                </div>;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>;
-                  <div className="text-gray-400">Average ROI</div>;
-                </div>;
-              </motion && motion.div>;
-=======
 <div className='text-center'>
                   <div className='text-3xl font-bold text-cyan-400 mb-2'>
                     {revolutionaryMicroSaasServices.length}+
@@ -755,57 +623,13 @@ Experience the future of technology with our revolutionary micro
                 >
                   Get Started
                   <Rocket className='ml-2 w-5 h-5' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
               </motion.div>
             </div>
           </div>
         </section>
         {/* Contact Information Banner */}
-<<<<<<< HEAD
-                <MapPin className="w-5 h-5 text-green-400" />
-                <span className="text-white">{contactInfo.address}</span>
-                <Globe className="w-5 h-5 text-blue-400" />
-                <span className="text-white">{contactInfo.website}</span>
-                  Get Started;
-                  <Rocket className='ml-2 w-5 h-5' />                </Button>                  <Rocket className="ml-2 w-5 h-5" />;
-                </Button>;
-              </motion && motion.div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Contact Information Banner */}
-        <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>;
-          <div className='container mx-auto px-4'>;
-            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>;
-              <div className='flex items-center gap-4'>;
-                <Phone className='w-5 h-5 text-cyan-400' />;
-                <span className='text-white'>{contactInfo && contactInfo.mobile}</span>;
-                <Mail className='w-5 h-5 text-purple-400' />;
-                <span className='text-white'>{contactInfo && contactInfo.email}</span>;
-              </div>;
-              <div className='flex items-center gap-4'>;
-                <MapPin className='w-5 h-5 text-green-400' />;
-                <span className='text-white'>{contactInfo && contactInfo.address}</span>;
-                <Globe className='w-5 h-5 text-blue-400' />;
-                <span className='text-white'>{contactInfo && contactInfo.website}</span>              </div>              <div className="flex items-center gap-4">;
-                <MapPin className="w-5 h-5 text-green-400" />;
-                <span className="text-white">{contactInfo && contactInfo.address}</span>;
-                <Globe className="w-5 h-5 text-blue-400" />;
-                <span className="text-white">{contactInfo && contactInfo.website}</span>;
-            </div>;
-          </div>;
-        </section>;
-          <div className="container mx-auto px-4">
-            <motion.div
-              whileInView='visible'              viewport={{ once: true }}        <section className="py-12">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div 
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-=======
 <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>
           <div className='container mx-auto px-4'>
             <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
@@ -832,7 +656,7 @@ Experience the future of technology with our revolutionary micro
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true }}
             >
               {enhancedCategories.map((category, index) => (
@@ -842,22 +666,6 @@ Experience the future of technology with our revolutionary micro
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}>;
                   <UltraFuturisticCard
-<<<<<<< HEAD
-        {/* Popular Services Showcase */}
-
-        <section className="py-16">
-
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-
-              initial={{ opacity: 0, y: 20 }}
-
-              ))}
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-=======
 variant='quantum-advanced'
                     size='small'
                     className='text-center cursor-pointer h-full'
@@ -895,39 +703,11 @@ variant='quantum-advanced'
             <motion.div
               className='text-center mb-12'
               initial={{ opacity: 0, y: 20 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-<<<<<<< HEAD
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-              variants={containerVariants}
-              initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}                  Most Popular
-                </span>;
-                <br />;
-                <span className="text-white">Revolutionary Services</span>;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.;
-              </p>;
-            </motion && motion.div>;
-
-            <motion&& motion.div 
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-
-                    onClick={() => setSelectedService(service)}
-
-                  variants={item_variants}
-                  while_hover={{ coordinate_y: -10 }}
-                >;
-                  <UltraFuturisticCard;
-                    variant={service.variant as any}
-=======
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
                   Most Popular
@@ -962,7 +742,7 @@ size='large'
                     <div className='text-center mb-6'>
                       <div className='text-4xl mb-4'>{service.icon}</div>
                       <h3 className='text-2xl font-bold text-white mb-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.name}
                       </h3>;
                       <p className='text - gray - 300 mb - 4'>{service.tagline}</p>;
@@ -971,9 +751,6 @@ size='large'
                       </div>;
                       <div className='text - sm text - gray - 400'>;
                         {service.period}
-<<<<<<< HEAD
-                             size="md"
-=======
                       </div>
                     </div>
                     <div className='space-y-3 mb-6'>
@@ -1000,27 +777,9 @@ size='large'
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
         {/* Services Grid */}
-<<<<<<< HEAD
-        <section id='services-grid' className='py-16'>;
-          <div className='container mx-auto px-4'>;
-
-        {/* Services Grid */}
-        <section id="services-grid" className="py-16">
-          <div className="container mx-auto px-4">
-            {/* Filters and Controls */}
-            <motion&& motion.div
-              className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-grid" className="py-16">;
-          <div className="container mx-auto px-4">;
-            {/* Filters and Controls */}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0 && 0.6 }}>;
-              <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
-                <div className='flex flex-wrap gap-4'>;
-=======
 <section id='services-grid' className='py-16'>
           <div className='container mx-auto px-4'>
             {/* Filters and Controls */}
@@ -1033,7 +792,7 @@ size='large'
             >
 <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
                 <div className='flex flex-wrap gap-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <select
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e && e.target.value)}
@@ -1049,30 +808,6 @@ size='large'
                       type='text'
                       placeholder='Search services...'
                       value={searchQuery}
-<<<<<<< HEAD
-                    <button
-                      onClick={() => setViewMode('grid')}
-                      className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >;
-                      <Grid className='w-4 h-4' />                      <Grid className="w-4 h-4" />;
-                    </button>;
-                    <button
-                      onClick={() => setViewMode('list')}
-                      className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    </button>;
-                  </div>;
-                </div>;
-              </div>;
-
-              whileInView='visible'              viewport={{ once: true }}            <motion.div 
-              className={viewMode === 'grid' 
-
-                ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
-                : "space-y-6"
-              }
-              variants={containerVariants}
-              initial="hidden"
-=======
                       onChange={e => setSearchQuery(e.target.value)}
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64'
                     />
@@ -1106,7 +841,7 @@ size='large'
               initial='hidden'
               whileInView='visible'
               viewport={{ once: true }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1118,30 +853,6 @@ size='large'
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                     onClick={() => setSelectedService(service)}
-<<<<<<< HEAD
-                            <div
-                              key={idx}
-                              className='flex items-center gap-2 text-sm'>;
-                              <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
-                              <span className='text-gray-300'>{feature}</span>                            </div>;
-                            >;
-                              View Details;
-                              <Eye className='ml-2 w-4 h-4' />;
-                            </Button>                          </div>                          ;
-                          <div className="flex gap-2">;
-                                                         <Button
-                               variant="primary" 
-                               size="sm"
-                               onClick={() => window && window.open(service && service.link, '_blank')}
-                             >;
-                               Learn More;
-                               <ExternalLink className="ml-2 w-4 h-4" />;
-                             </Button>;
-                             <Button
-                               variant="futuristic" 
-                               size="sm"
-                               onClick={() => setSelectedService(service)}
-=======
                   >
                     {viewMode === 'grid' ? (
                       // Grid View
@@ -1269,23 +980,11 @@ size='large'
                           </div>
                         </div>
                       </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     )}
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-                                         <Button
-                           variant="primary"
-                           onClick={() => {;
-                             setSearchQuery('');
-                             setSelectedCategory('All');
-        {/* Service Details Modal */}
-        <AnimatePresence>;
-          {selectedService && (;
-            <motion&& motion.div
-              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-=======
             </motion.div>
             {filteredServices.length === 0 && (
 <motion.div
@@ -1320,53 +1019,17 @@ size='large'
             )}
           </div>
         </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Service Details Modal */}
         <AnimatePresence>
           {selectedService && (
             <motion.div
-<<<<<<< HEAD
-              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-
-
-
-
-=======
 className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedService(null)}
-<<<<<<< HEAD
-                            ))}
-                          </div>;
-                        </div>;
-                        <div>;
-                              <div
-                                key={idx}
-                                className='flex items-center gap-2 text-sm'>;
-                                <Star className='w-3 h-3 text-yellow-400 flex-shrink-0' />;
-                                <span className='text-gray-300'>{benefit}</span>                              </div>;
-                        <div>
-                          <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>
-                          <div className="space-y-2">
-                            {selectedService.benefits.map((benefit, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-sm">
-                                <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                                <span className="text-gray-300">{benefit}</span>
-                              </div>
-                           onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
-                         >;
-                           Contact Sales;
-                           <Mail className="ml-2 w-4 h-4" />;
-                         </Button>;
-                    </div>;
-                  </div>;
-                </div>;
-              </motion && motion.div>;
-            </motion && motion.div>;
-=======
             >
               <motion.div
 className='bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
@@ -1537,29 +1200,21 @@ className='text-gray-400 hover:text-white text-2xl'
                 </div>
               </motion.div>
             </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           )}
         </AnimatePresence>
 
         {/* Contact Section */}
-<<<<<<< HEAD
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              className="max-w-4xl mx-auto"
-=======
 <section className='py-20'>
           <div className='container mx-auto px-4 text-center'>
             <motion.div
               className='max-w-4xl mx-auto'
               initial={{ opacity: 0, y: 20 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-=======
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Experience the Future?
               </h2>
@@ -1568,7 +1223,7 @@ className='text-gray-400 hover:text-white text-2xl'
                 with our revolutionary micro SaaS services.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button
                   variant='primary'
                   size='lg'
@@ -1585,45 +1240,6 @@ className='text-gray-400 hover:text-white text-2xl'
                   onClick={() =>;
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
                   }
-<<<<<<< HEAD
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of companies already transforming their business with our revolutionary micro SaaS services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                                 <Button
-                   variant="primary"
-                   size="lg"
-                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-                 >
-                   Start Free Trial
-                   <Rocket className="ml-2 w-5 h-5" />
-                 </Button>
-                 <Button
-                   variant="futuristic"
-                   size="lg"
-                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-                 >
-                   Schedule Demo
-                   <Calendar className="ml-2 w-5 h-5" />
-                 </Button>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{contactInfo.mobile}</div>
-                  <div className="text-gray-400 text-sm">Call us anytime</div>
-                </div>
-                <div>
-                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{contactInfo.email}</div>
-                  <div className="text-gray-400 text-sm">Email us 24/7</div>
-                </div>
-                <div>
-                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{contactInfo.address}</div>
-                  <div className="text-gray-400 text-sm">Visit our office</div>
-=======
                 >
                   Schedule Demo
                   <Calendar className='ml-2 w-5 h-5' />
@@ -1650,7 +1266,7 @@ className='text-gray-400 hover:text-white text-2xl'
                     {contactInfo.address}
                   </div>
                   <div className='text-gray-400 text-sm'>Visit our office</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </motion.div>
@@ -1658,164 +1274,5 @@ className='text-gray-400 hover:text-white text-2xl'
         </section>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
-                  <div className='mt - 8 pt - 6 border - t border - gray - 700'>;
-                    <div className='flex flex - col sm:flex - row gap - 4 justify - between items - center'>;
-                      <div className='text - sm text - gray - 400'>;
-                        <div > Setup Time: {selected_service.setup_time}</div>;
-                        <div > Trial: {selected_service.trial_days} days</div>;
-                      </div>;
-                      <div className='flex gap - 4'>;
-                        <Button;
-                          variant='primary';
-                          on_click={() =>;
-                            window.open (selected_service.link, '_blank');
-                          }
-                        >;
-                          Visit Service;
-                          <ExternalLink className='ml - 2 w - 4 h - 4' />;
-                        </Button>;
-                        <Button;
-                          variant='futuristic';
-                          on_click={() =>;
-                            window.open (
-                              'https://ziontechgroup.com / contact',
-                              '_blank');
-                          }
-                        >;
-                          Contact Sales;
-                          <Mail className='ml - 2 w - 4 h - 4' />;
-                        </Button>                      </div>;
-                      <div className="flex gap - 4">;
-                                                <Button;
-                          variant="primary";
-                          on_click={() => window.open (selected_service.link, '_blank')}
-                          >;
-                          Visit Service;
-                          <ExternalLink className="ml - 2 w - 4 h - 4" />;
-                        </Button>;
-                        <Button;
-                          variant="futuristic";
-                          on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
-                          >;
-                          Contact Sales;
-                          <Mail className="ml - 2 w - 4 h - 4" />;
-                        </Button>;
-                    </div>;
-                  </div>;
-                </div>;
-              </motion.div>;
-            </motion.div>)}
-        </AnimatePresence>;
-        {/* Contact Section */}
-        <section className='py - 20'>;
-          <div className='container mx - auto px - 4 text - center'>;
-            <motion.div;
-              className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 20">;
-          <div className="container mx - auto px - 4 text - center">;
-            <motion.div;
-              className="max - w-4xl mx - auto";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >;
-              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-                Ready to Experience the Future?;
-              </h2>;
-              <p className='text - xl text - gray - 300 mb - 8'>;
-                Join thousands of companies already transforming their business;
-                with our revolutionary micro SaaS services.;
-              </p>;
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8'>;
-                <Button;
-                  variant='primary';
-                  size='lg';
-                  on_click={() =>;
-                    window.open ('https://ziontechgroup.com / contact', '_blank');
-                  }
-                >;
-                  Start Free Trial;
-                  <Rocket className='ml - 2 w - 5 h - 5' />;
-                </Button>;
-                <Button;
-                  variant='futuristic';
-                  size='lg';
-                  on_click={() =>;
-                    window.open ('https://ziontechgroup.com / contact', '_blank');
-                  }
-                >;
-                  Schedule Demo;
-                  <Calendar className='ml - 2 w - 5 h - 5' />;
-                </Button>;
-              </div>;
-              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center'>;
-                <div>;
-                  <Phone className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;
-                  <div className='text - white font - semibold'>;
-                    {contact_info.mobile}
-                  </div>;
-                  <div className='text - gray - 400 text - sm'>Call us anytime</div>;
-                </div>;
-                <div>;
-                  <Mail className='w - 8 h - 8 text - purple - 400 mx - auto mb - 2' />;
-                  <div className='text - white font - semibold'>;
-                    {contact_info.email}
-                  </div>;
-                  <div className='text - gray - 400 text - sm'>Email us 24 / 7</div>;
-                </div>;
-                <div>;
-                  <MapPin className='w - 8 h - 8 text - green - 400 mx - auto mb - 2' />;
-                  <div className='text - white font - semibold'>;
-                    {contact_info.address}
-                  </div>;
-                  <div className='text - gray - 400 text - sm'>Visit our office</div>                </div>                Ready to Experience the Future?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Join thousands of companies already transforming their business with our revolutionary micro SaaS services.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8">;
-                                <Button;
-                  variant="primary";
-                  size="lg";
-                  on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
-                  >;
-                  Start Free Trial;
-                  <Rocket className="ml - 2 w - 5 h - 5" />;
-                </Button>;
-                <Button;
-                  variant="futuristic";
-                  size="lg";
-                  on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
-                  >;
-                  Schedule Demo;
-                  <Calendar className="ml - 2 w - 5 h - 5" />;
-                </Button>;
-              </div>;
-              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center">;
-                <div>;
-                  <Phone className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.mobile}</div>;
-                  <div className="text - gray - 400 text - sm">Call us anytime</div>;
-                </div>;
-                <div>;
-                  <Mail className="w - 8 h - 8 text - purple - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.email}</div>;
-                  <div className="text - gray - 400 text - sm">Email us 24 / 7</div>;
-                </div>;
-                <div>;
-                  <MapPin className="w - 8 h - 8 text - green - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.address}</div>;
-                  <div className="text - gray - 400 text - sm">Visit our office</div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraFuturisticBackground>));
-}
-
-  );
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

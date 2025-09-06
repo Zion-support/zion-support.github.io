@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 import { Metadata } from 'next';
@@ -276,6 +277,14 @@ export default function HomePage() {
           Get Started Today
         </Link>
       </section>
+=======
+export default function Home() {
+  return (
+    <div>
+      <h1>Zion Tech Group</h1>
+      <p>AI, Micro SaaS, and IT Services</p>
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     </div>
-  );
+  )
 }

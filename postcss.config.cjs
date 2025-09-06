@@ -1,5 +1,6 @@
 module.exports = {
   plugins: {
+<<<<<<< HEAD
     tailwindcss: {},
     autoprefixer: {},
   },
@@ -20,3 +21,18 @@ module.exports = {
 =======
 };
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+=======
+>:postcss.config.js
+    autoprefixer: {},
+  },
+}
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

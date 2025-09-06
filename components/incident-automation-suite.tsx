@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
-=======
 import React from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-  if (!service) return null;
-
-=======
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function IncidentAutomationSuitePage() {
   const service = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -37,6 +29,7 @@ export default function IncidentAutomationSuitePage() {
                 {service && service.features.slice(0, 12).map((feat, i) => (;
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0 && 0.5" /><span>{feat}</span></li>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </ul>;
             </div>;
@@ -113,6 +106,8 @@ if (return null) {
 }
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
@@ -135,4 +130,4 @@ if (return null) {
     </UltraAdvancedFuturisticBackground>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

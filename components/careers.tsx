@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };export default CareersPage;import React, { useState } from 'react';
 
@@ -385,6 +386,8 @@ export default function Careers() {;
             </div>;
           </div>;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout';
@@ -396,4 +399,4 @@ export default function Careers() {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = null;
 export default CareersPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

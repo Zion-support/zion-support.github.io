@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Search, Filter, Star, Users, TrendingUp;
   DollarSign, Clock, CheckCircle, ArrowRight;
@@ -57,7 +55,7 @@ import { quantumSpaceServices  } from '../data/quantum-space-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 const allServices = null;
 ...realMicroSaasServices2025;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 ...innovativeAIServices2025;
 ...innovativeITServices2025;
 ...emergingTechServices2025;
@@ -89,6 +87,7 @@ const allServices = null;
 }</div>) 
 
 }</motion.div> {
+<<<<<<< HEAD
 <<<<<<< HEAD
   /* Enhanced CTA Section */
 }<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)   // Combine all services
@@ -740,10 +739,12 @@ and micro SAAS services designed to transform your business and drive innovation
                   onClick={() => {;
                     setSearchTerm('');
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   /* Enhanced CTA Section */ 
 }<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)
                     setSelectedCategory('All')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   }}
                   className="mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
                 >
@@ -1149,8 +1150,6 @@ and micro SAAS services designed to transform your business and drive innovation
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 1.4 }}
-<<<<<<< HEAD
-=======
                     className="mb-8"
                   >
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6">
@@ -1197,4 +1196,4 @@ and micro SAAS services designed to transform your business and drive innovation
     </UltraFuturisticBackground2029>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

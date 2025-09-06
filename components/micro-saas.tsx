@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 inventory forecasting, and more. Focused, affordable solutions that deliver specific value without the complexity of enterprise platforms. Start with a free trial and scale as you grow. </p> </div> <div className="flex items - center text-green-400" > <Check className="w - 4 h-4 mr-2" /> <span > Unified dashboard</span> </div> <div className="flex items - center text-green-400" > <Check className="w - 4 h-4 mr-2" /> <span > Integrated billing</span> </div> </div> </div> <div className="flex flex - col sm:flex - row gap-6 justify-center" > <Button href="#services" variant="secondary" size="lg" className="bg - gradient - to - r from - green - 500 to - emerald - 600 hover:from - green - 600 hover:to - emerald-700 shadow-2xl" > Explore Services <ArrowRight className="w - 5 h-5 ml-2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border - green - 500 text - green - 400 hover:bg - green-500 hover:text-white" > View All 75 Services <ArrowRight className="w - 5 h-5 ml-2" /> </Button> </div> </div> </section> Professional Micro SaaS Solutions </h2> <p className="text - xl text - gray - 300 max-w-3xl mx-auto" > Each service is designed to solve specific business problems with enterprise - grade quality and competitive pricing. </p> </div> Popular </span>);
 }</div> </li>) );
@@ -2820,8 +2821,10 @@ description: 'AI - powered social media automation with content scheduling and e
               predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization,
  const microSaasServices = [ {
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 const microSaasServices = [ {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (<> <Head> <title>Micro SaaS Services | Zion Tech Group - Specialized Business Solutions</title> <meta name="description" content="Discover our 20 specialized micro SaaS solutions for content creation, design systems, performance monitoring, SEO automation, chatbots, business intelligence, video generation, e-commerce analytics, HR management, legal automation, inventory management, customer support, financial planning, learning management, and real estate management. Competitive pricing with 14-day free trials." /> <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" /> <meta property="og:description" content="Specialized business solutions with competitive pricing and free trials." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" /> Comprehensive Micro SaaS Guide </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > Micro SaaS Services </h1> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12" > Real solutions with comprehensive market research, competitive analysis, and proven business models. Each service is designed to solve specific business problems with AI-powered automation. </p> <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto" > <div className="text-center" > <div className="text-3xl font-bold text-blue-400 mb-2" >6+</div> <div className="text-sm text-gray-400" >Services</div> </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > Specialized Tools for <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400" > Every Business Need</span> </h1> <p className="text-xl text-gray-400 max-w-5xl mx-auto leading-relaxed mb-12" > 65+ specialized micro SaaS solutions covering AI-powered content creation, video generation, design systems, performance monitoring;
 SEO automation, chatbots, business intelligence, email marketing, social media management;
 customer feedback, billing, project management, API infrastructure, e-commerce analytics, legal document generation;
@@ -2846,6 +2849,7 @@ dedicated support, enterprise-grade reliability, and 14-day free trials. Start w
 }</div> </Card>) )
 }</div> </div> </section> Comprehensive Service Breakdown </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Detailed analysis of each micro SaaS service with market data, pricing, and use cases. </p> </div> <div> <h4 className="text-xl font-bold text-white mb-4 flex items-center" > <Zap className="w-5 h-5 mr-2 text-blue-400" /> Key Features </h4> </li>) )
 }</ul> </div> {
+<<<<<<< HEAD
 <<<<<<< HEAD
   /* Pricing */
 }<div> <h4 className="text-xl font-bold text-white mb-4 flex items-center" > <DollarSign className="w-5 h-5 mr-2 text-green-400" /> Pricing Plans </h4> </li>) )
@@ -4162,6 +4166,8 @@ export default function MicroSaasPage() {;
               dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const microSaasServices = null;
               dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution 
               and add more as your business grows.
@@ -4212,7 +4218,7 @@ export default function MicroSaasPage() {;
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Competitive Advantages */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -4410,6 +4416,7 @@ export default function MicroSaasPage() {;
               href="/contact"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl">;
@@ -4774,6 +4781,8 @@ import {Zap, Star, Calendar} from 'lucide-react';
       </section>;
     </>);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
             >
               Contact Sales
@@ -4783,5 +4792,5 @@ import {Zap, Star, Calendar} from 'lucide-react';
       </section>
     </>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

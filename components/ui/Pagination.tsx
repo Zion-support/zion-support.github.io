@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
 export type PaginationProps = any;
@@ -17,7 +13,7 @@ export default function Pagination({
   total,
   onChange,
 }: PaginationProps) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
@@ -43,20 +39,13 @@ if (p >= 1 && p <= totalPages) onChange(p);
         size='md'
         onClick={() => goTo(page + 1)}
         disabled={!canNext}
-<<<<<<< HEAD
-      >        Next;
-      </EnhancedButton>;
-    </div>;
-  );
-
-=======
       >
         Next
       </EnhancedButton>
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>;
@@ -128,6 +117,7 @@ interface PaginationProps {;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       for (let index = 1; i <= total_pages; i++) {
         pages.push (i);
@@ -233,6 +223,8 @@ if ( {) {
   );
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 export default Pagination;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

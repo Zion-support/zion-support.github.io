@@ -2,16 +2,7 @@
 
 # Find all files with merge conflicts
 find ./app -name "*.tsx" -o -name "*.ts" | while read file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
-    echo "Fixing merge conflicts in: $file"
-    
-    # Create a temporary file
-    temp_file=$(mktemp)
-    
-    # Process the file to resolve conflicts by choosing the newer version (after =======)
     awk '
-    /^<<<<<<< HEAD/ { in_old=1; next }
-    /^=======/ { in_old=0; in_new=1; next }
     /^>>>>>>>/ { in_new=0; next }
     in_old { next }
     { print }

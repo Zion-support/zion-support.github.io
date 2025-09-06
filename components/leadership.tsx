@@ -32,6 +32,7 @@ export default function LeadershipPage() {
           name='description'
           content="Meet the leadership team guiding Zion Tech Group's vision and execution."
 <<<<<<< HEAD
+<<<<<<< HEAD
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/leadership' />;
       </Head>;
@@ -111,6 +112,8 @@ function LeadershipPage() {
   </div>),
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         />
         <link rel='canonical' href='https://ziontechgroup.com/leadership' />
       </Head>
@@ -152,4 +155,4 @@ function LeadershipPage() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

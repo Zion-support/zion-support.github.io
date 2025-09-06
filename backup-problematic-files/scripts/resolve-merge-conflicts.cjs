@@ -10,25 +10,6 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false;
-    }
-    console.log(`📝 Resolving conflicts in: ${filePath}`);
-    // Split by merge conflict markers
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
-    let conflictType = '';
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      if (line.includes('')) {
-        inConflict = true;
-        conflictType = 'head';
-conflictType = 'incoming';
-        continue;
-      }
-      
-      if (line.includes('=======')) {
         conflictType = 'incoming';
         continue;
       }
@@ -140,52 +121,3 @@ function findConflictedFiles(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-            conflictedFiles.push(fullPath);
-          }
-        } catch (error) {
-          // Skip files that can't be read
-        }
-      }
-    }
-  }
-  
-  scanDirectory(dir);
-  return conflictedFiles;
-}
-
-// Main execution
-try {
-  const conflictedFiles = findConflictedFiles('.');
-  
-  if (conflictedFiles.length === 0) {
-    console.log('✅ No merge conflicts found!');
-    process.exit(0);
-  }
-  
-  console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts:`);
-  conflictedFiles.forEach(file => console.log(`  - ${file}`));
-  
-  let resolvedCount = 0;
-  for (const file of conflictedFiles) {
-    if (resolveMergeConflicts(file)) {
-      resolvedCount++;
-    }
-  }
-  
-  console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
-  
-  // Try to build after resolving conflicts
-  console.log('\n🔨 Testing build after conflict resolution...');
-  try {
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build successful after conflict resolution!');
-  } catch (error) {
-    console.log('⚠️  Build still has issues, but conflicts are resolved');
-  }
-  
-} catch (error) {
-  console.error('❌ Error during merge conflict resolution:', error.message);
-  process.exit(1);
-}
-}

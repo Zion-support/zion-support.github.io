@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-      x: number;
-=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2040: React.FC;
@@ -8,7 +5,7 @@ const UltraFuturisticBackground2040: React.FC;
     // Particle system
     const particles: Array<{
 x: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       y: number;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
 ;
@@ -38,14 +35,6 @@ if (return) {
       color: string;
       opacity: number;
     }> = [];
-<<<<<<< HEAD
-      vx: number,
-      vy: number,
-      size: number,
-      color: string,
-        opacity: Math.random() * 0.5 + 0.1
-      })
-=======
     // Initialize particles
     for (let i = 0; i < 100; i++) {
       particles.push({
@@ -59,7 +48,7 @@ color: ['#06b6d4', '#3b82f6', '#8b5cf6', '#ec4899'][
         ],
         opacity: Math.random() * 0.5 + 0.1,
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     const animate = () => {
       time += 0.01;
@@ -79,9 +68,6 @@ color: ['#06b6d4', '#3b82f6', '#8b5cf6', '#ec4899'][
         // Draw particle with glow effect
         ctx.save();
         ctx.globalAlpha = particle.opacity;
-<<<<<<< HEAD
-        ctx.restore()
-=======
 // Glow effect
         ctx.shadowColor = particle.color;
         ctx.shadowBlur = 10;
@@ -90,20 +76,11 @@ color: ['#06b6d4', '#3b82f6', '#8b5cf6', '#ec4899'][
         ctx.fillStyle = particle.color;
         ctx.fill();
 ctx.restore();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
       // Draw connecting lines between nearby particles
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
       ctx.lineWidth = 0.5;
-<<<<<<< HEAD
-      for (let i = 0, i < particles.length, i++) {
-        for (let j = i + 1, j < particles.length, j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-            ctx.stroke();          }
-
-=======
 for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -114,7 +91,7 @@ for (let i = 0; i < particles.length; i++) {
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
 ctx.stroke();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }
 
         }
@@ -123,9 +100,6 @@ ctx.stroke();
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
-<<<<<<< HEAD
-        { x: canvas.width * 0.6, y: canvas.height * 0.2, size: 50, rotation: time * 0.7 }
-=======
 const gridSize = 50;
       const offset = (time * 20) % gridSize;
       for (let x = offset; x < canvas.width; x += gridSize) {
@@ -160,14 +134,12 @@ const gridSize = 50;
           size: 50,
           rotation: time * 0.7,
         },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       ];
       shapes.forEach((shape, index) => {
         ctx.save();
         ctx.translate(shape.x, shape.y);
         ctx.rotate(shape.rotation);
-<<<<<<< HEAD
-=======
 ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
         ctx.lineWidth = 2;
         if (index === 0) {
@@ -177,7 +149,7 @@ ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
             -shape.size / 2
             shape.size
             shape.size
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           );
         } else if (index === 1) {;
           // Circle;
@@ -193,8 +165,6 @@ ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
           ctx && ctx.closePath();
           ctx && ctx.stroke();
         }
-<<<<<<< HEAD
-=======
 
         ctx.restore();
       });
@@ -202,28 +172,11 @@ ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
       const waveCount = 3;
 for (let i = 0; i < waveCount; i++) {
         const waveOffset = (time * 100 + i * 200) % (canvas.width + 200);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;
         ctx.strokeStyle = `rgba(236, 72, 153, ${0.1 + Math.sin(time + i) * 0.05})`;
         ctx.lineWidth = 3;
         ctx.beginPath();
-<<<<<<< HEAD
-        for (let x = -100, x < canvas.width + 100, x += 5) {
-          const y = waveY + Math.sin((x + waveOffset) * 0.02) * 20;
-          if (x === -100) {
-            ctx.moveTo(x, y)
-          } else {
-            ctx.lineTo(x, y)
-        ctx && ctx.beginPath();
-        for (let x = -100, x < canvas && canvas.width + 100, x += 5) {;
-          const y = waveY + Math && Math.sin((x + waveOffset) * 0 && 0.02) * 20;
-          if (x === -100) {;
-            ctx && ctx.moveTo(x, y);
-          } else {;
-            ctx && ctx.lineTo(x, y);
-          }
-        }
-=======
         for (let x = -100; x < canvas.width + 100; x += 5) {
           const y = waveY + Math.sin((x + waveOffset) * 0.02) * 20;
           if (x === -100) {
@@ -261,7 +214,7 @@ cancelAnimationFrame(animationFrameId);
       {/* Overlay Gradients */}
       <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Floating Elements */}
       <div className='absolute inset-0'>
         {/* Animated Grid Pattern */}
@@ -273,6 +226,7 @@ cancelAnimationFrame(animationFrameId);
               background_size: '50px 50px',
               animation: 'grid_move 20s linear infinite',
             }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           />;
         </div>;
@@ -338,6 +292,8 @@ cancelAnimationFrame(animationFrameId);
             repeat: Infinity
             ease: 'linear',          }}
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
           />
         </div>
         {/* Floating Geometric Elements */}
@@ -378,13 +334,14 @@ ease: 'linear',
             duration: 12,
             repeat: Infinity,
 ease: 'linear',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />
         {/* Additional Floating Elements */}
         <motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
           animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
             rotate: [12, 372]
             scale: [1, 1.1, 1]
@@ -469,6 +426,8 @@ ease: 'linear',
           className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green-400 / 20 rounded-full";
           animate={{
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             rotate: [12, 372],
             scale: [1, 1.1, 1],
             opacity: [0.15, 0.25, 0.15],
@@ -490,12 +449,13 @@ ease: 'linear',
             duration: 18,
             repeat: Infinity,
 ease: 'linear',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         {/* Particle Effects */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full'
           animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
           transition={{
             duration: 3
@@ -514,6 +474,8 @@ ease: 'linear',
             ease: 'easeInOut'
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             y: [0, -20, 0],
             opacity: [0.4, 0.8, 0.4],
           }}
@@ -521,7 +483,7 @@ ease: 'linear',
             duration: 3,
             repeat: Infinity,
 ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
 
         />;
@@ -530,61 +492,6 @@ ease: 'easeInOut',
           className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
           animate={{
             y: [0, -15, 0],
-<<<<<<< HEAD
-            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          }}
-
-          transition={{
-            duration: 4
-            repeat: Infinity
-            ease: 'easeInOut'
-            delay: 1,          }}
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full"
-          animate={{
-          }}
-          transition={{
-            duration: 5
-            repeat: Infinity,          }}
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-
-            delay: 2
-          }}
-          }}
-        />
-      </div>
-          }}
-        />
-      </div>
-            duration: 5,
-            repeat: Infinity,
-      <style jsx>{`
-        @keyframes gridMove {
-          0% {
-            duration: 5,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: 2,
-          }}
-        />;
-      </div>;
-            ease: "easeInOut",;
-            delay: 2;
-          }}
-        />;
-      </div>;
-            transform: translate(0, 0);
-=======
             opacity: [0.4, 0.7, 0.4],
           }}
           transition={{
@@ -614,7 +521,7 @@ ease: 'easeInOut',
         @keyframes gridMove {
           0% {
 transform: translate(0, 0);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }
           100% {;
             transform: translate(50px, 50px);
@@ -631,29 +538,6 @@ transform: translate(0, 0);
           0% {
             transform: translate(0, 0)
           }
-<<<<<<< HEAD
-          100% {
-            transform: translate(50px, 50px)
-          }
-          50% {;
-            opacity: 0 && 0.5;          }
-        }
-
-      `}</style>;
-    </div>);
-}export default UltraFuturisticBackground2040;            opacity: 0.5;
-          }
-        }
-      `}</style>;
-    </div>);
-}  );
-}
-;
-export default UltraFuturisticBackground2040;
-export default UltraFuturisticBackground2040;
-export default UltraFuturisticBackground2040;
-;
-=======
           50% {
             opacity: 0.5;
           }
@@ -663,4 +547,4 @@ export default UltraFuturisticBackground2040;
 );
 };
 export default UltraFuturisticBackground2040;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

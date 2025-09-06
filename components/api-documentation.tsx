@@ -1,20 +1,13 @@
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-
-=======
 import { Code, Database, Shield, Zap, Globe, Cpu;
   BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
  } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
 } from 'lucide-react';
-<<<<<<< HEAD
-
-export default function APIDocumentation() {;
-=======
 export default function APIDocumentation() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -25,6 +18,7 @@ export default function APIDocumentation() {
         />;
         <link
           rel='canonical'
+<<<<<<< HEAD
 <<<<<<< HEAD
           href='https://ziontechgroup && ziontechgroup.com/api-documentation'
         />;
@@ -97,6 +91,8 @@ export default function APIDocumentation() {
   </div>),
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
           href='https://ziontechgroup.com/api-documentation'
         />
       </Head>
@@ -124,4 +120,4 @@ export default function APIDocumentation() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

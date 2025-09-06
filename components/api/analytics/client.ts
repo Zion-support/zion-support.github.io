@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -68,7 +66,7 @@ supabase
               (1000 * 60 * 60 * 24)
           0
         ) / filled.length
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const talentViewed = 12; // Placeholder
     const shortlisted = 5; // Placeholder
     const funnel = [
@@ -84,38 +82,11 @@ supabase
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
-<<<<<<< HEAD
-
-        { label: 'Hire', value: 2 }]})
-  }
-    res.status (200).json ({
-      jobs_posted: 3,
-      quotes_received: 2,
-      timeToHireDays: 3.1,
-      talent_viewed: 12,
-      shortlisted: 5,
-      funnel: [;
-        { label: 'Post', value: 3 },
-        { label: 'Invite', value: 2 },
-        { label: 'Hire', value: 2 },
-      ],
-    });
-  }      jobs_posted: 3;
-      quotes_received: 2;
-      timeToHireDays: 3.1;
-      talent_viewed: 12;
-      shortlisted: 5;
-      funnel: [;
-        { label: 'Post', value: 3 }
-        { label: 'Invite', value: 2 }
-        { label: 'Hire', value: 2 }]});
-  }
-=======
         { label: 'Hire', value: 2 }
       ]
     });
   }
         { label: 'Hire', value: 2 }]})
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

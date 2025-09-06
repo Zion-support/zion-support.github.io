@@ -1,98 +1,17 @@
-<<<<<<< HEAD
-
-export default function Partners() {
-  const [form, setForm] = useState({
-
-export default function Partners() {
-  const [form, setForm] = useState({
-    name: '',
-    entityType: '',
-    pocName: '',
-    pocEmail: '',
-    useCaseType: 'Education Partnership',;
-  });  const [result, setResult] = useState<any>(null);    name: "",
-    entityType: "",
-    pocName: "",
-    pocEmail: "",
-    useCaseType: "Education Partnership"}),
-  const [loading, setLoading] = useState(false);
-
-    name: ''
-    entityType: ''
-    pocName: ''
-    pocEmail: ''
-    useCaseType: 'Education Partnership'
-  });  const [result, setResult] = useState<any>(null);    name: ""
-    entityType: ""
-    pocName: ""
-    pocEmail: ""
-    useCaseType: "Education Partnership"})
-=======
     name: "";
     entityType: "";
     pocName: "";
     pocEmail: "";
     useCaseType: "Education Partnership"});
   const [result, setResult] = useState<any>(null),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [loading, setLoading] = useState(false);
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     setResult(null);
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { useState } from 'react';
-import Head from 'next/head';
-export default function Partners() {;
-  const [form, setForm] = useState({;
-    name: '',;
-    entityType: '',;
-    pocName: '',;
-    pocEmail: '',;
-    useCaseType: 'Education Partnership',;
-  });  const [result, setResult] = useState<any>(null);    name: "",;
-    entityType: "",;
-    pocName: "",;
-    pocEmail: "",;
-    useCaseType: "Education Partnership"}),;
-  const [loading, setLoading] = useState(false);
-  async function submit(): any (e: React && React.FormEvent) {;
-    e && e.preventDefault();
-    setLoading(true);
-    setResult(null);
-    const res = await fetch('/api/partners/register', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },      body: JSON && JSON.stringify({;
-        name: form && form.name,;
-        entityType: form && form.entityType,;
-        useCaseType: form && form.useCaseType,;
-        pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },;
-      }),;
-    });    const res = await fetch("/api/partners/register", {;
-      method: "POST",;
-      headers: { "Content-Type": "application/json" },;
-      body: JSON && JSON.stringify({;
-        name: form && form.name,;
-        entityType: form && form.entityType,;
-        useCaseType: form && form.useCaseType,;
-        pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },;
-      }),;
-=======
     const res = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     });
     const data = await res && res.json();
     setLoading(false);
@@ -147,18 +66,6 @@ export default function Partners() {;
             <label className='block text-sm mb-2'>Use Case</label>;
             <select
               className='w-full border rounded px-3 py-2 mb-6'
-<<<<<<< HEAD
-              value={form && form.useCaseType}
-              onChange={e => setForm({ ...form, useCaseType: e && e.target.value })}
-            >              <option>Education Partnership</option>    const data = await res && res.json();
-    setLoading(false);
-      method: "POST",
-      headers: { "Content - Type": "application / json" },
-      body: JSON.stringify ({
-        name: form.name,
-        entity_type: form.entity_type,
-        useCaseType: form.useCaseType,
-=======
               value={form.useCaseType}
               onChange={e => setForm({ ...form, useCaseType: e.target.value })}
             >
@@ -202,16 +109,14 @@ export default function Partners() {;
             <h2 className='text-xl font-medium mb-4'>Available Endpoints</h2>
             <ul className='list-disc ml-6 space-y-1 text-sm'>
               <li>POST /talents</li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <li>GET /jobs</li>
               <li>GET /certifications</li>
               <li>POST /verify-student</li>
               <li>POST /redeem-grant</li>
             </ul>
-<<<<<<< HEAD
-=======
 <div className='mt-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <a
                 className='text-blue-600 underline mr-4'
                 href='/api/partners/sdk?type=rest'>;
@@ -219,13 +124,6 @@ export default function Partners() {;
               </a>;
               <a
                 className='text-blue-600 underline'
-<<<<<<< HEAD
-            <div className="mt-6 text-sm text-gray-600">
-              <p>Badges:</p>
-              <div className="flex gap-2 mt-2">
-                <span className="inline-flex items-center bg-green-100 text-green-800 px-2 py-1 rounded">Verified Partner</span>
-                <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded">Government API Active</span>
-=======
                 href='/api/partners/sdk?type=graphql'
               >
                 Download GraphQL SDK
@@ -240,12 +138,13 @@ export default function Partners() {;
                 <span className='inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded'>
                   Government API Active
                 </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </div>
         </div>
         {result && (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <a
               href={result && result.dashboardUrl}
@@ -376,6 +275,8 @@ export default function Partners() {;
 }
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <div className='mt-8 bg-white p-6 rounded-lg shadow'>
             <h3 className='text-lg font-medium mb-2'>
               Registration Successful
@@ -396,4 +297,4 @@ export default function Partners() {;
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

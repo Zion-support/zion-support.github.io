@@ -10,9 +10,6 @@ function fixSyntaxErrors(filePath) {
     const originalContent = content;
 
     // Fix common syntax errors
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
     // Fix missing semicolons in imports
     content = content.replace(/import\s+([^;]+)\s*$/gm, 'import $1;');
