@@ -13,9 +13,7 @@ function fixMergeConflicts(filePath) {
     const originalContent = content;
     
     // Remove merge conflict markers and keep HEAD version
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-    
+    content = content.replace(/    content = content.replace(/    
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
@@ -28,70 +26,14 @@ function fixMergeConflicts(filePath) {
   }
 }
 
-<<<<<<< HEAD
-/**
- * getAllFiles - Function description
- */
-function getAllFiles() {
-  let files = [],
-  try {
-    const items = fs.readdir_sync (dir),
-    for (const item of items) {
-      const full_path = path.join (dir, item),
-      const stat = fs.stat_sync (full_path),
-      if (&& !item.starts_with ('.') && item !== 'node_modules' && item !== '.git') {) {
-  $2
-}
-        files = files.concat (getAllFiles (full_path, extensions));
-      } else if ()) {) {
-  $2
-}
-        files.push (full_path);
-<<<<<<< HEAD
-=======
-=======
-function getAllFiles(dir, extensions) {let files = [];
-=======
-=======
-<<<<<<< HEAD
-const { execSync } = require('child_process'),;
-const fs = require('fs'),;
-const path = require('path'),;
-=======
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8'),;
-<<<<<<< HEAD
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    const originalContent = content,;
-    // Remove merge conflict markers and keep HEAD version;
-    content = content.replace(/[\s\S]*?
-    content = content.replace(/
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    const originalContent = content;
-    // Remove merge conflict markers and keep HEAD version;
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),;
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    if (content !== originalContent) {;
+    content = content.replace(/    content = content.replace(/    if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
       return true;
@@ -105,23 +47,8 @@ function fixMergeConflicts(filePath) {;
 ;
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  let files = [],;
-  try {;
-    const items = fs.readdirSync(dir),;
-    for (const item of items) {;
-      const fullPath = path.join(dir, item),;
-      const stat = fs.statSync(fullPath),;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 // Function to get all files recursively
 function getAllFiles(dir, extensions) {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
   let files = [];
   try {
     const items = fs.readdirSync(dir);
@@ -203,19 +130,6 @@ async function main() {
     console.log('🔍 Scanning for merge conflicts in files...');
     const files = getAllFiles(process.cwd(), ['.tsx', '.ts', '.jsx', '.js', '.json', '.md', '.css']);
     let fixedCount = 0;
-<<<<<<< HEAD
-    for (const file of files) {;
-      try {;
-        const content = fs.readFileSync(file, 'utf8'),;
-          if (fixMergeConflicts(file)) {;
-=======
-    
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-          if (fixMergeConflicts(file)) {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
             fixedCount++;
           }
         }
@@ -274,28 +188,4 @@ async function main() {
   }
 }
 
-<<<<<<< HEAD
-    console.log ('🔍 Scanning for merge conflicts in files...'),
-    const files = getAllFiles (process.cwd (), ['.tsx.ts.jsx.js', '.json.md.css']),
-    let fixed_count = 0,
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync (file, 'utf8'),
-        // Check condition
-if (|| content.includes (') {
-  $2
-}
-
-=======
-
-;
-    // Now scan for and fix any remaining merge conflicts in files;
-    console.log('🔍 Scanning for merge conflicts in files...'),;
-    const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md.css']),;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 main().catch(console.error);
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80

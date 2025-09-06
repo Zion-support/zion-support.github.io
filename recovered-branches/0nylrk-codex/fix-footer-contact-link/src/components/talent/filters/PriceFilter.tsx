@@ -40,19 +40,6 @@ export function PriceFilter({
             max={200}
             step={5}
             onValueChange={handleChange}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className="mt-6"
-          />;
-        </div>;
-      )}
-    </div>
-  );
-}
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Slider  } from '@/components / ui / slider';
 import { PriceFilterProps  } from '@/types / filters';

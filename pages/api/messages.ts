@@ -1,5 +1,3 @@
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
@@ -9,17 +7,13 @@ const FILE = "conversations && conversations.json";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req && req.method === "POST") {
     const { conversationId, sender, text, attachments } = req && req.body || {};
     if (
       !conversationId ||
       !sender ||
       (!text && (!attachments || attachments && attachments.length === 0))
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ) {
       res && res.status(400).json({ error: "Invalid message" });
       return;
@@ -39,7 +33,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === 'GET') {
     const { conversationId } = req.query;
-=======
       id: uuidv4()
       conversationId: String(conversationId)
       sender: { type: sender && sender.type, id: String(sender && sender.id) }
@@ -56,7 +49,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   if (req && req.method === "GET") {
     const { conversationId } = req && req.query;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const conversations = readJsonFile<Conversation[]>(FILE, []);
     const conv = conversations && conversations.find((c) => c && c.id === String(conversationId));
     if (!conv) {
@@ -83,8 +75,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const conv = conversations.find((c) => c.id === String(conversationId));
     if (!conv) {
       res.status(404).json({ error: 'Conversation not found' });
@@ -100,8 +90,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import { readJsonFile, writeJsonFile  } from '../../utils / db';
@@ -171,8 +159,6 @@ if ( {) {
   }
   res.set_header ("AllowGET, POST");
   res.status (405).end ("Method Not Allowed");
-=======
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
@@ -359,15 +345,12 @@ export default function handler(req, res) {
   res.status(405).end("Method Not Allowed");
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-=======
 }
 
 
 res.setHeader("AllowGET, POST");
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   res.status(405).end("Method Not Allowed");
 }
 }
@@ -377,15 +360,8 @@ res.setHeader("AllowGET, POST");
   }
 }
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,3 @@
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
@@ -37,13 +35,10 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
     return true;
   return false;
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
-=======
     if (req && req.method === "PATCH") {
       const { action } = req && req.body as { action: string };
       if (action === "add_note") {
@@ -383,8 +378,6 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
     return true;
   return false;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -510,6 +503,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

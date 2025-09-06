@@ -61,11 +61,6 @@ function ReferralLeaderboard() {
               <span className="text - sm">;
                 {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from "lucide-react",;
 ;
@@ -103,9 +98,6 @@ export function ReferralLeaderboard() {;
               key={entry && entry.rank}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors">;
               <div className="flex items-center gap-3">;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                 <div
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry && entry.rank === 1
@@ -119,7 +111,6 @@ export function ReferralLeaderboard() {;
               <span className="text - sm">;
                 {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       : entry && entry.rank === 2
                       ? "bg-slate-200 text-slate-800"
                       : entry && entry.rank === 3
@@ -132,10 +123,6 @@ export function ReferralLeaderboard() {;
               </div>;
               <span className="text-sm">;
                 {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? "s" : ""}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </span>;
             </div>;
           ))}
@@ -146,9 +133,6 @@ export function ReferralLeaderboard() {;
 }
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                 <span className="font-medium">{entry.name}</span>;
               </div>;
               <span className="text-sm">;
@@ -187,6 +171,3 @@ referrals: number
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

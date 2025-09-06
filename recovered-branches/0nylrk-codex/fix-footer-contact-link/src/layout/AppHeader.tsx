@@ -20,31 +20,9 @@ export function AppHeader() {
   } catch (error) {
     console.warn("Messaging context not available");
   }
-<<<<<<< HEAD
-
-  return (
-    <>
-      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">
-        <div className="container flex h-16 items-center px-4 sm:px-6">
-          <Logo />
-          <div className="ml-6 flex-1 hidden md:block">
-            <MainNavigation unreadCount={unreadCount} />
-          </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button
-=======
-          ;
-          {/* Mobile menu button */}
-          <div className="md:hidden ml-auto mr-4">;
-            <button;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          {/* Mobile menu button */}
-          <div className="md:hidden ml-auto mr-4">;
-            <button
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none";
               aria-expanded={mobileMenuOpen}
@@ -53,47 +31,11 @@ export function AppHeader() {
               <span className="sr-only">Open main menu</span>;
               {mobileMenuOpen ? (;
                 <X className="block h-6 w-6" aria-hidden="true" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              ) : (;
-                <Menu className="block h-6 w-6" aria-hidden="true" />;
-              )}
-            </button>
-          </div>
-
-          <ModeToggle />
-        </div>
-      </header>
-
-=======
-            </button>;
-          </div>;
-          <ModeToggle />;
-        </div>;
-      </header>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-40 pt-16">
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-<<<<<<< HEAD
-=======
-              ) :(;
-                <Menu className="block h-6 w-6" aria-hidden="true" />;              )}
-            </button>;
-          </div>;
-          ;
-          <ModeToggle />;
-        </div>;
-      </header>;
-      ;
-      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-      {mobileMenuOpen && (;
-        <div className="md:hidden fixed inset-0 z-40 pt-16">;
-          <div ;
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
@@ -108,16 +50,12 @@ export function AppHeader() {
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
   );
 }
 
-=======
-=======
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
 
@@ -126,14 +64,11 @@ export function AppHeader() {
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
               ) : (;
                 <Menu className="block h-6 w-6" aria-hidden="true" />;
               )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md">;
         <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
@@ -177,10 +112,6 @@ export function AppHeader() {
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
 ) : (<Menu className="block h-6 w-6" aria-hidden="true" />) 
 }</button> </div> <ModeToggle /> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick= {
@@ -204,6 +135,3 @@ export function AppHeader() {
     </>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

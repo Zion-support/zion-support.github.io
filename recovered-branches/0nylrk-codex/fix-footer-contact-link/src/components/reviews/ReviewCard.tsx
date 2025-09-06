@@ -55,9 +55,6 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
     );
   };
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const renderStars = (rating?: number) => {
     if (!rating) return null;
 
@@ -66,23 +63,6 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
         {[1, 2, 3, 4, 5].map ((star) => (
           <Star;
             key={star}
-<<<<<<< HEAD
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />
-        ))}
-      </div>
-<<<<<<< HEAD
-    )
-  },
-  
-=======
-    );
-  };
-
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const getInitials = (name: string) => {
     return name
       .split(" ")
@@ -139,60 +119,6 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      {(review.communication_rating ||
-        review.quality_rating ||
-        review.timeliness_rating ||
-        review.would_work_again !== undefined) && (
-        <div className="border-t pt-3 mt-3">
-          <div className="flex flex-wrap gap-2">
-            {review.communication_rating && (
-              <Badge variant="outline" className="flex gap-1 items-center">
-                Communication
-                <span className="ml-1 text-yellow-500">
-                  {review.communication_rating}/5
-                </span>
-              </Badge>
-            )}
-
-            {review.quality_rating && (
-              <Badge variant="outline" className="flex gap-1 items-center">
-                Quality
-                <span className="ml-1 text-yellow-500">
-                  {review.quality_rating}/5
-                </span>
-              </Badge>
-            )}
-
-            {review.timeliness_rating && (
-              <Badge variant="outline" className="flex gap-1 items-center">
-                Timeliness
-                <span className="ml-1 text-yellow-500">
-                  {review.timeliness_rating}/5
-                </span>
-              </Badge>
-            )}
-
-            {review.would_work_again !== undefined && (
-              <Badge
-                variant={review.would_work_again ? "default" : "secondary"}
-                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
-              >
-                {review.would_work_again
-                  ? "Would work again"
-                  : "Would not work again"}
-              </Badge>
-            )}
-
-=======
-=======
-
-        <div className="border-t pt-3 mt-3">
-          <div className="flex flex-wrap gap-2">
-            {review.communication_rating && (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication
                 <span className="ml-1 text-yellow-500">
@@ -319,8 +245,6 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
         </Dialog>
       </div>
     </div>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {review && review.quality_rating && (;
               <Badge variant="outline" className="flex gap-1 items-center">;
                 Quality;
@@ -347,11 +271,6 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
 
           </div>;
         </div>;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
         </div>;
 
@@ -458,24 +377,12 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   );
 }
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

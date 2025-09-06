@@ -1,6 +1,4 @@
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
@@ -42,8 +40,6 @@ export default async function handler(
     return res && res.status(400).json({ error: "Invalid id" });
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "POST") {
@@ -89,8 +85,6 @@ if ( {) {
     }
     const { files } =;
       req.body ||;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { recursive: true }
       (err: any) => {
         if (return reject (err)) {
@@ -102,10 +96,8 @@ if ( {) {
       }
     );
   });
-=======
 }
 
-=======
 }
 
 
@@ -121,8 +113,6 @@ if ( {) {
 
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -150,12 +140,10 @@ export default async function handler(req, res) {
 
 
 }
-=======
 
 
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -247,7 +235,3 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

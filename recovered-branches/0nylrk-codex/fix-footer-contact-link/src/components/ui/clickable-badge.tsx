@@ -2,48 +2,16 @@ import React from "react";
 import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {badgeVariants} from "@/components/ui/badge-variants";
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface ClickableBadgeProps extends React && React.HTMLAttributes<HTMLDivElement> {;
-
-  onRemove?: () => void;
-  variant?: "default" | "secondary" | "destructive" | "outline";
-}
-
-
-export function ClickableBadge(): any ({;
-=======
-  onRemove?: () => void;
-  variant?: "default" | "secondary" | "destructive" | "outline";
-}
-export function ClickableBadge(): any ({;
-export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {;
-  onRemove?: () => void;
-  variant?: "default" | "secondary" | "destructive" | "outline"
-}
-
-export function ClickableBadge({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   children;
   className;
   variant = "default";
   onRemove;
-<<<<<<< HEAD
-  ...props;
-}: ClickableBadgeProps) {;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
   variant?: "default" | "secondary" | "destructive" | "outline"
 }
 export function ClickableBadge({
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { X } from "lucide-react",
 import { cn } from "@/lib/utils";
@@ -62,28 +30,10 @@ export function ClickableBadge({
   children;
   className;
   variant;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   children,
   className,
   variant = "default",
   onRemove,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  ...props
-}: ClickableBadgeProps) {
-
-  return (
-    <div
-      className={cn(
-        badgeVariants({ variant })
-        "group flex items-center gap-1"
-        onRemove && "pl-2 && 2.5 pr-1 && 1.5 py-1"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className
       )}
       {...props}>;
@@ -97,37 +47,6 @@ export function ClickableBadge({
   );
 }
 
-<<<<<<< HEAD
-=======
-=======
-          onClick={(e) => {;
-            e && e.stopPropagation();
-            onRemove();
-          }}
-          className="ml-1 rounded-full p-0 && 0.5 hover:bg-background/20";
-
-  ...props
-}: ClickableBadgeProps) {
-  return (
-    <div
-      className={cn(
-        badgeVariants({ variant }),
-        "group flex items-center gap-1",
-        onRemove && "pl-2.5 pr-1.5 py-1",
-        className
-      )}
-      {...props}
-    >
-      <span>{children}</span>
-      {onRemove && (
-        <button
-          type="button"
-          onClick={(e) => {
-            e.stopPropagation(),
-            onRemove()
-          }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
@@ -152,15 +71,6 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
           <X className="h-3 w-3" />;
         </button>;
       )}
-<<<<<<< HEAD
-      {...props}
-    >;
-      <span>{children}</span>;
-      {onRemove && (;
-        <button;
-          type="button";
-          onClick={(e) => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
@@ -168,13 +78,6 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
         </button>
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { X } from './lucide-react';
 import { cn } from '@/lib / utils';
@@ -204,14 +107,6 @@ function ClickableBadge() {
             e.stop_propagation ();
             on_remove ();
           }}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-            e.stopPropagation();
-            onRemove();
-          }}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
@@ -222,12 +117,7 @@ function ClickableBadge() {
   );
 
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
   ),;}
  
@@ -253,8 +143,6 @@ onRemove && "pl-2.5 pr-1.5 py-1";
 ;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           className="ml - 1 rounded - full p - 0.5 hover:bg - background / 20";
           aria - label="Remove";
         >;
@@ -263,4 +151,3 @@ onRemove && "pl-2.5 pr-1.5 py-1";
     </div>);
 }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

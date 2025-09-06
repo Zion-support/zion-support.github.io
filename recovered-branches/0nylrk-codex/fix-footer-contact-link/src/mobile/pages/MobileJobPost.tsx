@@ -18,7 +18,6 @@ import { Card, CardContent } from "@/components/ui/card";
 
 
 
-=======
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -337,7 +336,6 @@ function DetailsStep() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
     "React",
@@ -679,7 +677,6 @@ function PreviewStep() {
   );
 }
 
-=======
       <div className="space - y-2">;
         <Label html_for="additional_info">Additional Budget Information</Label>;
         <Textarea;

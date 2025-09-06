@@ -5,39 +5,12 @@ export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
 
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import {X} from "lucide-react";
-import {useIsMobile} from "@/hooks/use-mobile";
-export const AppStoreBanner: React.FC = () => {;
-  const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
-=======
-import React, { useState, useEffect } from "react",
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { X } from "lucide-react",
 import { useIsMobile } from "@/hooks/use-mobile",
 export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),
   
-<<<<<<< HEAD
-=======
-import React, { useState, useEffect } from "react";
-import { X } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
-export const AppStoreBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
-
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed before
     if (isMobile && !localStorage.getItem("appBannerDismissed")) {
@@ -58,8 +31,6 @@ export const AppStoreBanner: React.FC = () => {
   // Only render on mobile devices
   if (!isMobile || !isVisible) return null;
 
-=======
-=======
         setIsVisible(true);
       }, 2000);
 
@@ -75,10 +46,6 @@ export const AppStoreBanner: React.FC = () => {
   // Only render on mobile devices
   if (!isMobile || !isVisible) return null;
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
       <div className="flex items-center">
@@ -95,15 +62,7 @@ export const AppStoreBanner: React.FC = () => {
             className="px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
           >
             View
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </a>
-=======
           </Link>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          </Link>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button onClick={dismissBanner} className="text-gray-400">
             <X className="h-5 w-5" />
           </button>
@@ -113,11 +72,6 @@ export const AppStoreBanner: React.FC = () => {
   );
 };
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from './react';
 import { X  } from './lucide-react';
 import { useIsMobile  } from '@/hooks / use - mobile';
@@ -174,15 +128,9 @@ if (return null) {
     </div>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
   )
 
@@ -200,9 +148,6 @@ return (<div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-
 };
 
 export default AppStoreBanner;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   )
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

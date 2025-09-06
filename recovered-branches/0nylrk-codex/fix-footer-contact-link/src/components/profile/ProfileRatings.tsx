@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from "react";
 import {Star} from "lucide-react";
 import {ReviewStats} from "@/components/reviews/ReviewStats";
@@ -49,34 +42,10 @@ export function ProfileRatings({
       setRatingDistribution(distribution);
     }
   }, [reviews]);
-<<<<<<< HEAD
-
-  // Fetch reviews when component mounts
-  useEffect(() => {
-    fetchUserReviews(userId);
-  }, [userId]);
-
-  return (
-    <div className="space-y-6">;
-      <div className="flex flex-col md:flex-row gap-6">;
-        <div className="md:w-1/3">;
-<<<<<<< HEAD
-=======
-=======
-
-  // Fetch reviews when component mounts
-  useEffect(() => {
-    fetchUserReviews(userId);
-  }, [userId]);
-
->>>>>>> main
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ReviewStats
             averageRating={averageRating}
             totalReviews={ratingCount}
@@ -124,12 +93,9 @@ export function ProfileRatings({
   );
 }
 
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>;
   ),; interface ProfileRatingsProps {
   userId: string;
@@ -191,6 +157,3 @@ reviews.forEach ( (review) => {
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,7 +1,5 @@
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -22,14 +20,8 @@ function toSDL() {
   });
   return typedefs.join ("\n");
 }
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   res.status(200).send(toSDL());
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 

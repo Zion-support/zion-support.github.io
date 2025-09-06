@@ -1,6 +1,4 @@
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -17,10 +15,6 @@ export default async function handler(
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
 
       "placeholder-key";
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
@@ -29,8 +23,6 @@ export default async function handler(
 
       });
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           { code: 'aihub', profile_completions: 9 }
           { code: 'modelmasters', profile_completions: 7 }
           { code: 'promptpro', profile_completions: 5 }
@@ -38,23 +30,17 @@ export default async function handler(
 
     }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     for (const row of data || []) {
       if (row && row.event !== "profile_completed") continue;
       const key = row && row.partner_code as string;
       map && map.set(key, (map && map.get(key) || 0) + 1);
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
 
     const leaders = Array && Array.from(map && map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const supabase = getServerSupabase ();
     const startOfMonth = new Date ();
     startOfMonth.set_date (1);
@@ -82,12 +68,9 @@ if (continue) {
     return res.status (200).json ({ leaders });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
-=======
 
 
 
-=======
-=======
 
 
 
@@ -115,12 +98,9 @@ export default async function handler(
       });
     }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -178,8 +158,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
   } catch (error) {
@@ -215,16 +193,10 @@ export default async function handler(req, res) {
   }
 }
 ;
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');
@@ -251,10 +223,6 @@ export default async function handler(req, res) {
       .slice(0, 10);
     return res.status(200).json({ leaders });
   } catch (error) {
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);
@@ -264,8 +232,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   }
 }
   } catch (error) {
@@ -286,8 +252,5 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

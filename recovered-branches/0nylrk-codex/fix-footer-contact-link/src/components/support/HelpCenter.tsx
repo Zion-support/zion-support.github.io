@@ -76,11 +76,7 @@ export default function HelpCenter() {
                   searchQuery={searchQuery}
                 />
               )}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -97,33 +93,7 @@ export default function HelpCenter() {
                   />;
                 </>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              {selectedArticle && (
-                <>
-
-              {selectedArticle && (;
-                <>;
-                  <Button
-                    variant="ghost"
-                    onClick={handleBackToArticles}
-                    className="mb-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              ;
-              {selectedArticle && (;
-                <>;
-                  <Button;
-                    variant="ghost";
-                    onClick={handleBackToArticles}
-                    className="mb-4";
-                  >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     ← Back to Articles;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </Button>;
                   <HelpArticleView articleId={selectedArticle} />;
                 </>;
@@ -136,12 +106,6 @@ export default function HelpCenter() {
                   Frequently Asked Questions
                 </h2>
 
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -224,88 +188,11 @@ export default function HelpCenter() {
                         className="text-zion-cyan hover:underline"
                       >
                         support@ziontechgroup.com
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      </a>
-                    </div>
-
-                    <div className="flex items-center">
-                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5 text-zion-purple"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                        </svg>
-                      </div>
-                      <span className="text-zion-slate-light">
-                        +1 302 464 0950
-                      </span>
-                    </div>
-                  </div>
-
-                  <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
-                    Open Live Chat
-                  </Button>
-                </div>
-
-                <div className="bg-zion-blue-light/20 rounded-lg p-6">
-                  <h2 className="text-xl font-semibold mb-4">
-                    Feedback & Suggestions
-                  </h2>
-                  <p className="text-zion-slate-light mb-4">
-                    We value your input and are constantly looking to improve
-                    our platform.
-                  </p>
-
-                  <form className="space-y-4">
-                    <div>
-                      <Input placeholder="Your email" />
-                    </div>
-                    <div>
-                      <Input placeholder="Subject" />
-                    </div>
-                    <div>
-                      <textarea
-                        className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-white"
-                        placeholder="Your feedback or suggestion"
-                      />
-                    </div>
-
-                    <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
-                      Submit Feedback
-                    </Button>
-                  </form>
-                </div>
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </div>
-    </AppLayout>
   );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   );
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
     </AppLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </AppLayout>;
   );}
  export default function HelpCenter () {
@@ -358,7 +245,3 @@ const handleBackToArticles = () => {
 
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

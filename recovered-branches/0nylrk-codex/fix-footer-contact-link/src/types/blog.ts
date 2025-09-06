@@ -7,33 +7,15 @@ export interface BlogAuthor {
   title: string,
   avatar_url: string;
 
-<<<<<<< HEAD
-}
-export interface BlogPost {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface BlogAuthor {
   name: string;
 }
-<<<<<<< HEAD
-export interface BlogPost {
-
-export interface BlogPost {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   slug: string;
   excerpt: string;
   content: string;
   author: BlogAuthor;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   published_date: string;
   read_time: string;
   category: string;
@@ -65,7 +47,6 @@ export interface GeneratedBlogContent {
   tweet_summary?: string,
   image_prompt?: string;
 }
-=======
   publishedDate: string;
   readTime: string;
   category: string;
@@ -99,8 +80,6 @@ export interface GeneratedNewsletterContent {;
   cta: string
 }
 export interface BlogAuthor {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   name: string,;
   title: string,;
   avatarUrl: string;
@@ -134,10 +113,6 @@ export interface GeneratedBlogContent {;
   imagePrompt?: string;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Type for generated newsletter content;
 export interface GeneratedNewsletterContent {
   subject: string;
@@ -145,14 +120,6 @@ export interface GeneratedNewsletterContent {
   body: string;
   cta: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-export interface BlogAuthor {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 export interface BlogAuthor {;
 
@@ -164,6 +131,3 @@ export interface GeneratedNewsletterContent {;
   cta: string;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

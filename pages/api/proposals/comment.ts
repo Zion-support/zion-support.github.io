@@ -35,9 +35,6 @@ export default async function handler(
       text: body.text |""
       createdAt: new Date().toISOString()
     }
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -68,12 +65,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const comment = {
       id: Date.now().toString(), proposalId: body.proposalId
       region: body.region || 'Global', author: body.author || 'anon'
-=======
       id: Date.now().toString()
       proposalId: body.proposalId
       region: body.region || 'Global'
       author: body.author || 'anon'
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       text: body.text || ''
       createdAt: new Date().toISOString()
     };
@@ -150,7 +145,6 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
-=======
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
@@ -256,6 +250,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

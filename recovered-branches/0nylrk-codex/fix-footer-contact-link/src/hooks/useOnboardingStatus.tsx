@@ -11,28 +11,15 @@ interface OnboardingStatus {
   responseReceived: boolean;
 }
 
-<<<<<<< HEAD
-
-
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function useOnboardingStatus() {;
   const { user } = useAuth();
 export function useOnboardingStatus() {
   const { user } = useAuth(),
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [status, setStatus] = useState<OnboardingStatus>({
     profileCompleted: false,
     skillsAdded: false,
@@ -48,20 +35,6 @@ export function useOnboardingStatus() {
     const fetchOnboardingStatus = async () => {
       if (!user) return;
 
-<<<<<<< HEAD
-=======
-  });
-  }),
-  
-  useEffect(() => {
-
-    const fetchOnboardingStatus = async () => {
-      if (!user) return;
-      if (!user) return,
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
@@ -87,12 +60,10 @@ export function useOnboardingStatus() {
           });
         }
 
-=======
       } catch (err) {
         console.error("Error in onboarding status hook:", err);
       }
 
-=======
       } catch (err) {
         console.error("Error in onboarding status hook:", err)
 
@@ -123,7 +94,6 @@ export function useOnboardingStatus() {
       } catch (err) {;
         console && console.error("Error in onboarding status hook:", err);
       }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     };
 
     fetchOnboardingStatus();
@@ -131,15 +101,9 @@ export function useOnboardingStatus() {
 
   return status;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       } catch (err) {;
         console && console.error("Error in onboarding status hook:", err);
       }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
 import { use_auth } from './use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -167,60 +131,6 @@ function useOnboardingStatus() {
     response_received: false;
   });
 ;
-<<<<<<< HEAD
-  useEffect (() => {
-    const fetchOnboardingStatus = async () => {
-      // Check condition
-if (return) {
-  $2
-}
-      try {
-        // Get user onboarding progress from database;
-        const { data, error } = await supabase;
-          .from ('user_onboarding');
-          .select ('*');
-          .eq ('user_id', user.id);
-          .single ();
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          console.error ("Error fetching onboarding status:", error);
-          return;
-        }
-        // Check condition
-if ( {) {
-  $2
-}
-          set_status ({
-            profile_completed: data.profile_completed || false,
-            skills_added: data.skills_added || false,
-            availability_set: data.availability_set || false,
-            match_received: data.match_received || false,
-            job_posted: data.job_posted || false,
-            invite_sent: data.talent_invited || false,
-            response_received: data.quote_received || false;
-          });
-        }
-      } catch (err) {
-        console.error ("Error in onboarding status hook:", err);
-      }
-    }
-;
-    fetchOnboardingStatus ();
-  }, [user]);
-;
-  return status;
-<<<<<<< HEAD
-}
-
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           .eq('user_id', user.id);
           .single(),;
           ;
@@ -315,6 +225,3 @@ const { data, error} = await supabase
 return status;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

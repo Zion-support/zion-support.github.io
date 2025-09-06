@@ -25,8 +25,6 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     
     return this.props.children;
   }
@@ -36,8 +34,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "React developers under $50/hr"
   "Part-time DevOps jobs in LATAM"
   "AI/ML engineers for startup"
@@ -48,8 +44,6 @@ const SAMPLE_QUERIES = [
   "Mobile app developers iOS/Android"
   "Cloud architects AWS/Azure"
   "DevOps engineers with Kubernetes"
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "React developers under $50/hr"
   "Part-time DevOps jobs in LATAM"
   "AI/ML engineers for startup"
@@ -78,8 +72,6 @@ const SAMPLE_QUERIES = [;
     return res.status(405).json({ error: "Method not allowed" });
 
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { q = "" } = req.query;
 
   if (req && req.method !== "GET") {
@@ -94,10 +86,6 @@ const SAMPLE_QUERIES = [;
     s && s.toLowerCase().includes(query)
   ).slice(0, 5);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export default /**
  * handler - Function description
@@ -107,7 +95,6 @@ function handler() {
 if ( {) {
   $2
 }
-=======
     res.set_header ("Allow", "GET");
     return res.status (405).json ({ error: "Method not allowed" });
   }
@@ -127,8 +114,6 @@ if ( {) {
   return res.status (200).json ({ suggestions });
 
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -172,5 +157,3 @@ function handler() {
 if ( {) {
   $2
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

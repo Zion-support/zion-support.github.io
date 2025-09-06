@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth'
->>>>>>> main
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req)

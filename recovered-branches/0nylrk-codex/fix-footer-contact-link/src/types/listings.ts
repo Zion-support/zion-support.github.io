@@ -6,26 +6,13 @@ export interface ListingCategory {
 }
 
 }
-=======
   description: string,
   icon: string;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export interface ProductListing {
   id: string;
   title: string;
   description: string;
-<<<<<<< HEAD
-
-  category: string,
-  subcategory?: string, // Adding optional subcategory field;
-
-=======
-  category: string,
-  subcategory?: string, // Adding optional subcategory field;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ListingCategory {
 export interface ListingCategory {;
   id: string;
@@ -65,27 +52,19 @@ export interface ProductListing {
   created_at: string;
   rating?: number;
 
-=======
     avatar_url?: string,
     email?: string, // Added optional email property;
   }
   images: string[];
   created_at: string;
   rating?: number;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   review_count?: number;
   featured?: boolean,
   ai_score?: number, // Added ai_score as optional property;
   location?: string, // Adding location property to fix TypeScript errors;
   availability?: string, // Adding availability property to fix TypeScript errors;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 export interface ListingItem {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   category: string;

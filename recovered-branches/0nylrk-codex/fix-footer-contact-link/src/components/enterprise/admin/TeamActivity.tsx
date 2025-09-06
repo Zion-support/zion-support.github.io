@@ -1,133 +1,29 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-import React from "react";
-import {
-
-
-
-
-import React from "react",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {;
   Table,;
   TableBody,;
   TableCell,;
   TableHead,;
   TableHeader,;
-<<<<<<< HEAD
-  TableRow,;
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from "react";
 import {
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Table
   TableBody
   TableCell
   TableHead
   TableHeader
   TableRow
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-<<<<<<< HEAD
 TableRow,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-TableRow,;
-=======
-  TableRow,
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-TableRow,;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
 
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-<<<<<<< HEAD
-
-
-=======
-export function TeamActivity() {
-  // Mock activity data
-
-  const activities = [
-    {
-      id: 1
-      user: "Alex Johnson"
-      action: "Posted a job"
-      target: "Senior AI Engineer"
-      timestamp: new Date(Date.now() - 1000 * 60 * 30)
-      category: "jobs"
-    }
-    {
-      id: 2
-      user: "Jamie Smith"
-      action: "Contacted candidate"
-      target: "Michael Chen"
-      timestamp: new Date(Date.now() - 1000 * 60 * 120)
-      category: "candidates"
-    }
-    {
-      id: 3
-      user: "Sam Williams"
-      action: "Updated job"
-      target: "Frontend Developer"
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5)
-      category: "jobs"
-    }
-    {
-      id: 4
-      user: "Alex Johnson"
-      action: "Added team member"
-      target: "Chris Rodriguez"
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24)
-      category: "team"
-    }
-    {
-      id: 5
-      user: "Taylor Brown"
-      action: "Viewed candidate profile"
-      target: "Sarah Kim"
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2)
-      category: "candidates"
-    }
-    {
-
-      id: 6
-      user: "Jamie Smith"
-      action: "Updated budget"
-      target: "Monthly spending cap"
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
-      category: "billing"
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
@@ -143,151 +39,10 @@ export function TeamActivity() {
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-<<<<<<< HEAD
-
-import React from "react",
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { CalendarIcon, Search } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-export function TeamActivity() {
-  // Mock activity data
-  const activities = [
-    {
-      id: 1,
-      user: "Alex Johnson",
-      action: "Posted a job",
-      target: "Senior AI Engineer",
-      timestamp: new Date(Date.now() - 1000 * 60 * 30),
-      category: "jobs"},
-    {
-      id: 2,
-      user: "Jamie Smith",
-      action: "Contacted candidate",
-      target: "Michael Chen",
-      timestamp: new Date(Date.now() - 1000 * 60 * 120),
-      category: "candidates"},
-    {
-      id: 3,
-      user: "Sam Williams",
-      action: "Updated job",
-      target: "Frontend Developer",
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5),
-      category: "jobs"},
-    {
-      id: 4,
-      user: "Alex Johnson",
-      action: "Added team member",
-      target: "Chris Rodriguez",
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24),
-      category: "team"},
-    {
-      id: 5,
-      user: "Taylor Brown",
-      action: "Viewed candidate profile",
-      target: "Sarah Kim",
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2),
-      category: "candidates"},
-    {
-      id: 6,
-      user: "Jamie Smith",
-      action: "Updated budget",
-      target: "Monthly spending cap",
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
-      category: "billing"}],
-
-  // Function to format the date in a readable way
-  const formatDate = (date: Date) => {
-    const now = new Date(),
-    const diffMs = now.getTime() - date.getTime(),
-    const diffMins = Math.floor(diffMs / (1000 * 60)),
-    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),
-    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
-
-<<<<<<< HEAD
-
-
-    if (diffMins < 60) {
-=======
-=======
-  TableRow} from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { CalendarIcon, Search } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function TeamActivity() {;
   // Mock activity data;
   const activities = [;
     {;
-<<<<<<< HEAD
-      id: 1,;
-      user: "Alex Johnson",;
-      action: "Posted a job",;
-      target: "Senior AI Engineer",;
-      timestamp: new Date(Date && Date.now() - 1000 * 60 * 30),;
-      category: "jobs",;
-    },;
-    {;
-      id: 2,;
-      user: "Jamie Smith",;
-      action: "Contacted candidate",;
-      target: "Michael Chen",;
-      timestamp: new Date(Date && Date.now() - 1000 * 60 * 120),;
-      category: "candidates",;
-    },;
-    {;
-      id: 3,;
-      user: "Sam Williams",;
-      action: "Updated job",;
-      target: "Frontend Developer",;
-      timestamp: new Date(Date && Date.now() - 1000 * 60 * 60 * 5),;
-      category: "jobs",;
-    },;
-    {;
-      id: 4,;
-      user: "Alex Johnson",;
-      action: "Added team member",;
-      target: "Chris Rodriguez",;
-      timestamp: new Date(Date && Date.now() - 1000 * 60 * 60 * 24),;
-      category: "team",;
-    },;
-    {;
-      id: 5,;
-      user: "Taylor Brown",;
-      action: "Viewed candidate profile",;
-      target: "Sarah Kim",;
-      timestamp: new Date(Date && Date.now() - 1000 * 60 * 60 * 24 * 2),;
-      category: "candidates",;
-    },;
-    {;
-      id: 6,;
-      user: "Jamie Smith",;
-      action: "Updated budget",;
-      target: "Monthly spending cap",;
-      timestamp: new Date(Date && Date.now() - 1000 * 60 * 60 * 24 * 3),;
-      category: "billing",;
-    },;
-  ];
-
-  // Function to format the date in a readable way;
-  const formatDate = (date: Date) => {;
-    const now = new Date();
-    const diffMs = now && now.getTime() - date && date.getTime();
-    const diffMins = Math && Math.floor(diffMs / (1000 * 60));
-    const diffHrs = Math && Math.floor(diffMs / (1000 * 60 * 60));
-    const diffDays = Math && Math.floor(diffMs / (1000 * 60 * 60 * 24));
-
-    if (diffMins < 60) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return `${diffMins} minutes ago`;
     } else if (diffHrs < 24) {;
       return `${diffHrs} hours ago`;
@@ -296,16 +51,12 @@ export function TeamActivity() {;
     } else {;
       return date && date.toLocaleDateString();
     }
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   };
 
   const getCategoryBadge = (category: string) => {;
     const categoryStyles: Record<;
       string,;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { variant: "default" | "outline" | "secondary" | "destructive" }
     > = {;
       jobs: { variant: "default" },;
@@ -313,21 +64,11 @@ export function TeamActivity() {;
       team: { variant: "secondary" },;
       billing: { variant: "destructive" },;
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
 
   const getCategoryBadge = (category: string) => {
@@ -340,186 +81,18 @@ export function TeamActivity() {;
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
   return (
-=======
-    return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
-  }
-  return (
-      id:1,;
-      user:"Alex Johnson",;
-      action:"Posted a job",;
-      target:"Senior AI Engineer",;
-      timestamp:new Date(Date.now() - 1000 * 60 * 30),;
-      category:"jobs"},;
-    {;
-      id:2,;
-      user:"Jamie Smith",;
-      action:"Contacted candidate",;
-      target:"Michael Chen",;
-      timestamp:new Date(Date.now() - 1000 * 60 * 120),;
-      category:"candidates"},;
-    {;
-      id:3,;
-      user:"Sam Williams",;
-      action:"Updated job",;
-      target:"Frontend Developer",;
-      timestamp:new Date(Date.now() - 1000 * 60 * 60 * 5),;
-      category:"jobs"},;
-    {;
-      id:4,;
-      user:"Alex Johnson",;
-      action:"Added team member",;
-      target:"Chris Rodriguez",;
-      timestamp:new Date(Date.now() - 1000 * 60 * 60 * 24),;
-      category:"team"},;
-    {;
-      id:5,;
-      user:"Taylor Brown",;
-      action:"Viewed candidate profile",;
-      target:"Sarah Kim",;
-      timestamp:new Date(Date.now() - 1000 * 60 * 60 * 24 * 2),;
-      category:"candidates"},;
-    {;
-      id:6,;
-      user:"Jamie Smith",;
-      action:"Updated budget",;
-      target:"Monthly spending cap",;
-      timestamp:new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),;
-      category:"billing"}],;
-;
-  // Function to format the date in a readable way;
-  const formatDate = (date:Date) => {;
-    const now = new Date(),;
-    const diffMs = now.getTime() - date.getTime(),;
-    const diffMins = Math.floor(diffMs / (1000 * 60)),;
-    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),;
-    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),;
-;
-    if (diffMins < 60) {;
-      return `${diffMins} minutes ago`,;
-    } else if (diffHrs < 24) {;
-      return `${diffHrs} hours ago`,;
-    } else if (diffDays < 7) {;
-      return `${diffDays} days ago`,;
-    } else {;
-      return date.toLocaleDateString(),;
-    }
-  },;
-;
-  const getCategoryBadge = (category:string) => {;
-    const categoryStyles:Record<string { variant:"default" | "outline" | "secondary" | "destructive" }> = {;
-      jobs:{ variant:"default" },;
-      candidates:{ variant:"outline" },;
-      team:{ variant:"secondary" },;
-      billing:{ variant:"destructive" }},;
-;
-    return <Badge variant={categoryStyles[category].variant}>{category}</Badge>,;
-  },;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <h3 className="text-xl font-medium">Recent Team Activity</h3>;
         <div className="flex items-center gap-2">;
           <div className="relative">;
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
-=======
-    if (diffMins < 60) {
-      return `${diffMins} minutes ago`
-    } else if (diffHrs < 24) {
-      return `${diffHrs} hours ago`
-    } else if (diffDays < 7) {
-      return `${diffDays} days ago`
-    } else {
-      return date.toLocaleDateString()
-    }
-  }
-  const getCategoryBadge = (category: string) => {
-    const categoryStyles: Record<
-      string
-      { variant: "default" | "outline" | "secondary" | "destructive" }
-    > = {
-      jobs: { variant: "default" }
-      candidates: { variant: "outline" }
-      team: { variant: "secondary" }
-      billing: { variant: "destructive" }
-    }
-    return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
-  }
-  },
-
-  const getCategoryBadge = (category: string) => {
-    const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {
-      jobs: { variant: "default" },
-      candidates: { variant: "outline" },
-      team: { variant: "secondary" },
-      billing: { variant: "destructive" }},
-
-    return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
-  },
-
-  return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h3 className="text-xl font-medium">Recent Team Activity</h3>
-        <div className="flex items-center gap-2">
-          <div className="relative">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Input
               type="search"
               placeholder="Search activities..."
               className="w-[200px] md:w-[300px] pl-9"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-            />
-          </div>
-          <Button variant="outline" size="icon" className="h-10 w-10">
-            <CalendarIcon className="h-4 w-4" />
-          </Button>
-        </div>
-      </div>
-      <div className="rounded-md border">
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>User</TableHead>
-              <TableHead>Activity</TableHead>
-              <TableHead>Target</TableHead>
-              <TableHead>Category</TableHead>
-              <TableHead>Time</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {activities.map((activity) => (
-              <TableRow key={activity.id}>
-                <TableCell className="font-medium">{activity.user}</TableCell>
-                <TableCell>{activity.action}</TableCell>
-                <TableCell>
-                  <span className="font-medium">{activity.target}</span>
-                </TableCell>
-                <TableCell>{getCategoryBadge(activity.category)}</TableCell>
-                <TableCell className="text-muted-foreground">
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import {;
   Table,;
@@ -613,13 +186,6 @@ export function TeamActivity() {;
               type="search";
               placeholder="Search activities...";
               className="w-[200px] md:w-[300px] pl-9";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
           </div>;
           <Button variant="outline" size="icon" className="h-10 w-10">;
@@ -627,14 +193,6 @@ export function TeamActivity() {;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
@@ -647,133 +205,10 @@ export function TeamActivity() {;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {activities && activities.map((activity) => (;
-              <TableRow key={activity && activity.id}>;
-                <TableCell className="font-medium">{activity && activity.user}</TableCell>;
-                <TableCell>{activity && activity.action}</TableCell>;
-                <TableCell>;
-                  <span className="font-medium">{activity && activity.target}</span>;
-                </TableCell>;
-                <TableCell>{getCategoryBadge(activity && activity.category)}</TableCell>;
-                <TableCell className="text-muted-foreground">;
-                  {formatDate(activity && activity.timestamp)}
-                </TableCell>;
-              </TableRow>;
-            ))}
-          </TableBody>;
-        </Table>;
-      </div>;
-
-=======
-            {activities.map((activity) => (;
-              <TableRow key={activity.id}>;
-                <TableCell className="font-medium">{activity.user}</TableCell>;
-                <TableCell>{activity.action}</TableCell>;
-                <TableCell>;
-                  <span className="font-medium">{activity.target}</span>;
-                </TableCell>;
-                <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
-                <TableCell className="text-muted-foreground">;
-      ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="flex items-center justify-between">;
         <Button variant="outline" size="sm">;
           Previous;
         </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="text-sm text-muted-foreground">Page 1 of 10</div>;
-=======
-import React from './react';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components / ui / table';
-import { Badge  } from '@/components / ui / badge';
-import { CalendarIcon, Search  } from './lucide-react';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-export /**
- * TeamActivity - Function description
- */
-function TeamActivity() {
-  // Mock activity data;
-  const activities = [;
-    {
-      id: 1,
-      user: "Alex Johnson",
-      action: "Posted a job",
-      target: "Senior AI Engineer",
-      timestamp: new Date (Date.now () - 1000 * 60 * 30),
-      category: "jobs",
-    },
-    {
-      id: 2,
-      user: "Jamie Smith",
-      action: "Contacted candidate",
-      target: "Michael Chen",
-      timestamp: new Date (Date.now () - 1000 * 60 * 120),
-      category: "candidates",
-    },
-    {
-      id: 3,
-      user: "Sam Williams",
-      action: "Updated job",
-      target: "Frontend Developer",
-      timestamp: new Date (Date.now () - 1000 * 60 * 60 * 5),
-      category: "jobs",
-    },
-    {
-      id: 4,
-      user: "Alex Johnson",
-      action: "Added team member",
-      target: "Chris Rodriguez",
-      timestamp: new Date (Date.now () - 1000 * 60 * 60 * 24),
-      category: "team",
-    },
-    {
-      id: 5,
-      user: "Taylor Brown",
-      action: "Viewed candidate profile",
-      target: "Sarah Kim",
-      timestamp: new Date (Date.now () - 1000 * 60 * 60 * 24 * 2),
-      category: "candidates",
-    },
-    {
-      id: 6,
-      user: "Jamie Smith",
-      action: "Updated budget",
-      target: "Monthly spending cap",
-      timestamp: new Date (Date.now () - 1000 * 60 * 60 * 24 * 3),
-      category: "billing",
-    },
-  ];
-;
-  // Function to format the date in a readable way;
-  const format_date = (date: Date) =>: any {
-    const now = new Date ();
-    const diff_ms = now.get_time () - date.get_time ();
-    const diff_mins = Math.floor (diff_ms / (1000 * 60));
-    const diff_hrs = Math.floor (diff_ms / (1000 * 60 * 60));
-    const diff_days = Math.floor (diff_ms / (1000 * 60 * 60 * 24));
-;
-    // Check condition
-if ( {) {
-  $2
-=======
-                <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
-                <TableCell className="text-muted-foreground">;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -790,72 +225,8 @@ if ( {) {
         </Button>
       </div>
     </div>
-<<<<<<< HEAD
-  )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
-<<<<<<< HEAD
-  const getCategoryBadge = (category: string) =>: any {
-    const category_styles: Record<;
-      string,
-      { variant: "default" | "outline" | "secondary" | "destructive" }
-    > = {
-      jobs: { variant: "default" },
-      candidates: { variant: "outline" },
-      team: { variant: "secondary" },
-      billing: { variant: "destructive" },
-    }
-;
-    return <Badge variant={category_styles[category].variant}>{category}</Badge>;
-  }
-;
-  return (
-    <div className="space - y-6">;
-      <div className="flex items - center justify - between">;
-        <h3 className="text - xl font - medium">Recent Team Activity</h3>;
-        <div className="flex items - center gap - 2">;
-          <div className="relative">;
-            <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted - foreground" />;
-            <Input;
-              type="search";
-              placeholder="Search activities...";
-              className="w-[200px] md:w-[300px] pl - 9";
-            />;
-          </div>;
-          <Button variant="outline" size="icon" className="h - 10 w - 10">;
-            <CalendarIcon className="h - 4 w - 4" />;
-          </Button>;
-        </div>;
-      </div>;
-      <div className="rounded - md border">;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead > User</TableHead>;
-              <TableHead > Activity</TableHead>;
-              <TableHead > Target</TableHead>;
-              <TableHead > Category</TableHead>;
-              <TableHead > Time</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {activities.map ((activity) => (
-              <TableRow key={activity.id}>;
-                <TableCell className="font - medium">{activity.user}</TableCell>;
-                <TableCell>{activity.action}</TableCell>;
-                <TableCell>;
-                  <span className="font - medium">{activity.target}</span>;
-                </TableCell>;
-
-    </div>);
-
-}
-=======
-                <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
-                <TableCell className="text-muted-foreground">;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -866,7 +237,6 @@ if ( {) {
 
       
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -884,9 +254,6 @@ if ( {) {
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
                 <TableCell>{getCategoryBadge (activity.category)}</TableCell>;
                 <TableCell className="text - muted - foreground">;
@@ -1005,7 +372,4 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

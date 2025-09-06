@@ -204,7 +204,7 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Let's discuss your project and create a custom solution that drives real business value. 
+            Let&apos;s discuss your project and create a custom solution that drives real business value. 
             Our team has delivered 1000+ successful projects across various industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

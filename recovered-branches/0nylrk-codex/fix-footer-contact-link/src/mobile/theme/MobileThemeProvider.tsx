@@ -22,10 +22,7 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 export function MobileThemeProvider(): any ({ children }: MobileThemeProviderProps) {;
   const { theme } = useTheme();
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
 
 
@@ -34,21 +31,6 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
   return (
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
       {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    </div>;
-  );
-}
-
-=======
-=======
-    </div>;
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * MobileThemeProvider - Function description
  */
@@ -60,10 +42,6 @@ function MobileThemeProvider() {
       {children}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import React from "react",;
 import { useTheme } from "@/hooks/useTheme",;
@@ -106,6 +84,3 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
     </div>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -48,8 +48,6 @@ export default function ProjectRoom() {
   ]);
 
   const startVideoCall = () => {
-=======
-=======
 import React, { useState } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -83,7 +81,6 @@ export default function ProjectRoom() {;
     }
   ]),
   const startVideoCall = () => {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useParams} from 'react-router-dom';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -91,7 +88,6 @@ import {SEO} from '@/components/SEO';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
-=======
 import React, { useState } from 'react';
 import {use_params} from 'react-router-dom';
 import {Header} from '@/components / Header';
@@ -100,25 +96,12 @@ import {SEO} from '@/components / SEO';
 import {Button} from '@/components / ui / button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components / ui / card';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
 import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {toast} from 'sonner';
-<<<<<<< HEAD
-
-  ]),
-
-
-
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
@@ -419,133 +402,14 @@ import {toast} from 'sonner';
                 <div className="flex items - center justify - center h - full">;
                   <p className="text - muted - foreground">Chat functionality will be implemented soon</p>;
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </CardContent>;
             </Card>;
           </TabsContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          <TabsContent value="files" className="space - y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle > Project Files</CardTitle>;
-                <CardDescription > Manage documents and files</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items - center justify - center h - full">;
-                  <p className="text - muted - foreground">File management will be implemented soon</p>;
-
-=======
-          ;
-          <TabsContent value="team" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Team Members</CardTitle>;
-                <CardDescription>Manage project participants</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items-center justify-center h-full">;
-                  <p className="text-muted-foreground">Team management will be implemented soon</p>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </div>;
               </CardContent>;
             </Card>;
           </TabsContent>;
-<<<<<<< HEAD
-
-          <TabsContent value="video" className="space - y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle > Video Meetings</CardTitle>;
-                <CardDescription > Schedule and join video calls</CardDescription>;
-              </CardHeader>;
-              <CardContent className="min - h-[400px] p - 4">;
-                {isInCall ? (
-                  <div className="space - y-4">;
-                    <VideoCallRoom;
-                      room_id={`project-${project_id}`}
-                      participants={call_participants}
-                      on_leave={endVideoCall}
-                    />;
-                    {/* This button is just for demo / testing purposes */}
-                    <div className="flex justify - center mt - 4">;
-                      <Button variant="outline" on_click={simulateUserJoining} className="text - sm">;
-                        Simulate user joining (demo only);
-                      </Button>;
-                    </div>;
-                  </div>) : (
-                  <div className="flex flex - col items - center justify - center h-[400px] space - y-4">;
-                    <p className="text - muted - foreground">Start a video call with your team</p>;
-                    <div className="flex gap - 2">;
-                      <Button on_click={startVideoCall} className="bg - zion - blue hover:bg - zion - blue - light gap - 2">;
-                        <Video className="h - 4 w - 4" />;
-                        Start Video Call;
-                      </Button>;
-                    </div>;
-                    <div className="text - xs text - muted - foreground mt - 4">;
-                      <p > Recent calls:</p>;
-                      <p > No recent calls for this project</p>;
-                    </div>;
-                  </div>)}
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-          <TabsContent value="calendar" className="space - y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle > Project Calendar</CardTitle>;
-                <CardDescription > Schedule and manage events</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items - center justify - center h - full">;
-                  <p className="text - muted - foreground">Calendar will be implemented soon</p>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-          <TabsContent value="team" className="space - y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle > Team Members</CardTitle>;
-                <CardDescription > Manage project participants</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items - center justify - center h - full">;
-                  <p className="text - muted - foreground">Team management will be implemented soon</p>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-          <TabsContent value="settings" className="space - y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle > Project Settings</CardTitle>;
-                <CardDescription > Configure project parameters</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items - center justify - center h - full">;
-                  <p className="text - muted - foreground">Settings will be implemented soon</p>;
-
-=======
-          ;
-          <TabsContent value="settings" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Project Settings</CardTitle>;
-                <CardDescription>Configure project parameters</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items-center justify-center h-full">;
-                  <p className="text-muted-foreground">Settings will be implemented soon</p>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </CardContent>;
             </Card>;
@@ -553,18 +417,6 @@ import {toast} from 'sonner';
         </Tabs>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    </>);
-}
-
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>;
   ),; //Switch to video tab if not already there if (activeTab !== 'video') {
   setActiveTab ('video') 
@@ -595,6 +447,3 @@ return (<> End Call </Button>)
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

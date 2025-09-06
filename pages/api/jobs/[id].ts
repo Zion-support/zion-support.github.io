@@ -1,9 +1,7 @@
 
 
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
@@ -20,15 +18,11 @@ const FILE = "jobs.json";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (idx === -1) {
     res && res.status(404).json({ error: "Job not found" });
     return;
@@ -213,8 +207,6 @@ export default function handler(req, res) {
     if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
@@ -242,10 +234,6 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
   } catch (error) {
@@ -253,7 +241,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-=======
 }
 
   if (req.method === "PATCH") {
@@ -264,8 +251,6 @@ export default function handler(req, res) {
       res.status(403).json({ error: "Forbidden" });
       return;
     }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     const {
       title
@@ -302,6 +287,3 @@ res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

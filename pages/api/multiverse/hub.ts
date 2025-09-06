@@ -32,8 +32,6 @@ if ( {) {
       instance_id: state.config.instance_id
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -65,29 +63,16 @@ export default async function handler(req, res) {
     return res.status(200).json({
       route: "/multiverse/hub"
       instanceId: state.config.instanceId
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       peers: state.config.peers,
       scope: state.config.scope,
       opt_in: state.config.opt_in,
       paused: state.config.paused,
-=======
       peers: state.config.peers
       scope: state.config.scope
       opt_in: state.config.opt_in
       paused: state.config.paused
->>>>>>> main
       lastSyncedAt: state.lastSyncedAt})
   }
 

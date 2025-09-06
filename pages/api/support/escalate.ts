@@ -1,5 +1,3 @@
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
@@ -29,8 +27,6 @@ function handler() {
 }
   const { session_id, reason, tag } = req.body as {
     session_id: string;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reason?: string;
     tag?: string;
   }
@@ -39,9 +35,7 @@ function handler() {
 }
   const requests = read_json < any[]>("support / requests.json", []);
   const id = `sr_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`;
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const record = {
     id
     sessionId
@@ -63,8 +57,6 @@ function handler() {
     tag: tag ?? "escalate"
     status: "open"
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -75,7 +67,6 @@ function handler() {
   await tagOperatorSession (session_id, tag ?? "escalate");
   return res.status (200).json ({ ok: true, id });
 }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -100,6 +91,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

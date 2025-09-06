@@ -5,7 +5,6 @@ import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 import { AppLayout } from "@/layout/AppLayout";
 export const SitemapPage: React.FC = () => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <AppLayout>
       <SEO

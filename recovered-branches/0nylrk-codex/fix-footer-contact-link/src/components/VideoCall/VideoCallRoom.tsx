@@ -36,16 +36,7 @@ export function VideoCallRoom({
 ;
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className={className || "w-full max-w-3xl mx-auto"}>;
       <CardHeader>;
         <CardTitle>Video Call</CardTitle>;
@@ -93,15 +84,6 @@ function VideoCallRoom() {
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 
 
@@ -150,6 +132,3 @@ className?: string
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

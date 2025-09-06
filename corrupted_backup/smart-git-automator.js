@@ -168,8 +168,7 @@ class SmartGitAutomator {
           encoding: 'utf8',
           stdio: 'pipe'
         });
-        riskFactors.conflicts = conflictCheck.includes('<<<<<<<') ? 0.8 : 0;
-      } catch (error) {
+        riskFactors.conflicts = conflictCheck.includes('      } catch (error) {
         riskFactors.conflicts = 0.5; // Medium risk if can't check
       }
 
@@ -312,8 +311,7 @@ class SmartGitAutomator {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       
-      if (!content.includes('<<<<<<<') || !content.includes('>>>>>>>')) {
-        return { type: 'none', success: true };
+      if (!content.includes('        return { type: 'none', success: true };
       }
 
       // Simple conflict resolution strategies
@@ -372,8 +370,7 @@ class SmartGitAutomator {
         const current = JSON.parse(match[1].trim());
         const incoming = JSON.parse(match[2].trim());
         const merged = { ...current, ...incoming };
-        return content.replace(/<<<<<<<[\s\S]*?>>>>>>>/g, JSON.stringify(merged, null, 2));
-      } catch (error) {
+        return content.replace(/      } catch (error) {
         return null;
       }
     }
@@ -385,8 +382,7 @@ class SmartGitAutomator {
     if (match) {
       const current = match[1].trim();
       const incoming = match[2].trim();
-      return content.replace(/<<<<<<<[\s\S]*?>>>>>>>/g, 
-        current.length > incoming.length ? current : incoming);
+      return content.replace(/        current.length > incoming.length ? current : incoming);
     }
     return null;
   }

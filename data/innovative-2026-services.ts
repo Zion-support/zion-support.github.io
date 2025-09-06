@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-=======
-
-import { ServiceVariant } from '../types / service - variants';
-
-export interface Innovative2026Service {
-
-  {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -47,7 +37,6 @@ export interface Innovative2026Service {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const innovative2026Services: Innovative2026Service[] = [
@@ -62,24 +51,7 @@ export const innovative2026Services: Innovative2026Service[] = [
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-<<<<<<< HEAD
-    reviews: 234
-=======
-      website: 'https://ziontechgroup.com';
-    }
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Advanced emotional intelligence platform with real - time emotion detection, analysis, and response generation capabilities.';
-    launch_date: '2026 - 01 - 25';
-    customers: 450;
-    rating: 4.8,
-    reviews: 234;
-
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
     realImplementation: true
     implementationDetails:
       'Advanced neural interface platform with quantum security, real-time processing, and comprehensive integration capabilities.'
@@ -320,21 +292,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Advanced emotional intelligence platform with real-time emotion detection, analysis, and response generation capabilities.'
-    launchDate: '2026-01-25'
-    customers: 450
-    rating: 4.8
-    reviews: 234
-  }
-=======
-      'Advanced emotional intelligence platform with real-time emotion detection, analysis, and response generation capabilities.',
-    launchDate: '2026-01-25',
-    customers: 450,
-    rating: 4.8,
-    reviews: 234,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -347,13 +304,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.8
 
     reviews: 234
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026Service {;
   id: string,;
@@ -845,15 +795,4 @@ export const innovative2026Services: Innovative2026Service[] = [
     customers: 450,;
     rating: 4.8;
     reviews: 234;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
-<<<<<<< HEAD
-;
-=======
-];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> main
 import fs from 'fs',;
 import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')

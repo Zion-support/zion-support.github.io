@@ -1,5 +1,3 @@
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const q = (req.query.q as string) || '';
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -56,8 +54,6 @@ function handler() {
       "public") as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ok: true
       query: q
       parsed
@@ -67,7 +63,6 @@ function handler() {
     });
 
   } catch (e: any) {
-=======
         all: results.all.length
         talent: results.talent.length
         jobs: results.jobs.length
@@ -80,20 +75,14 @@ function handler() {
 
   }
 }
-=======
     res.status (500).json ({ ok: false, error: e?.message || "Search failed" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const q = (req.query.q as string) || '';
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
     const parsed = await parseQueryToFilters(q);
@@ -102,16 +91,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     res.status(500).json({ ok: false, error: e?.message || "Search failed" });
   }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

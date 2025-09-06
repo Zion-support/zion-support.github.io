@@ -5,27 +5,6 @@ export async function createJob(jobData: any) {
     const { data, error } = await supabase
       .from("jobs")
       .insert([jobData])
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      .select();
-      .single();
-      .select()
-      .single();
-    if (error) throw error;
-    return data
-  } catch (error: any) {
-    console.error("Error creating job:", error);
-    throw new Error(error.message |"Failed to create job")
-      .single(),
-      
-    if (error) throw error,
-    return data
-  } catch (error: any) {
-    console.error("Error creating job:", error),
-    throw new Error(error.message || "Failed to create job")
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     console && console.error("Error creating job:", error);
     throw new Error(error && error.message || "Failed to create job")
 
@@ -114,17 +93,7 @@ if (throw error) {
     console.error ("Error fetching job:", error);
     toast.error ("Failed to load job details");
     return null;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-<<<<<<< HEAD
-
-}
-;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   const {
   data, error 
 }= await supabase 
@@ -151,8 +120,5 @@ if (throw error) {
   }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
