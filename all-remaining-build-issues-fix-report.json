@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-09-06T09:28:45.536Z",
+  "filesFixed": 5,
+  "errors": 0,
+  "fixedFiles": [
+    "pages/api/enterprise/companies/[companyId]/members.ts",
+    "pages/api/enterprise/companies/[companyId]/usage.ts",
+    "pages/api/generate-service-description.ts",
+    "pages/api/homepage/content.ts",
+    "pages/api/integrations/connect.ts"
+  ]
+}

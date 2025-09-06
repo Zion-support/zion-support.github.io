@@ -1,13 +1,13 @@
 
 import React, { useState } from "react";
-import { Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
-import { TalentProfile } from "@/types/talent";
-import { HireRequestModal } from "@/components/profile/hire-request";
-import { useAuthStatus } from "@/hooks/talent";
-import { UserProfile } from "@/types/auth";
-import { useNavigate } from "react-router-dom";
+import {Star} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {ExternalLink} from "lucide-react";
+import {TalentProfile} from "@/types/talent";
+import {HireRequestModal} from "@/components/profile/hire-request";
+import {useAuthStatus} from "@/hooks/talent";
+import {UserProfile} from "@/types/auth";
+import {useNavigate} from "react-router-dom";
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -32,7 +32,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 
   // Handle request to hire
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.stopPropagation();
+    e.stopPropagation(),
     
     if (onRequestHire) {
       onRequestHire(profile)
@@ -44,7 +44,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 
   // Handle view profile
   const handleViewProfile = (e: React.MouseEvent) => {
-    e.stopPropagation();
+    e.stopPropagation(),
     
     // Navigate to the talent profile page
     navigate(`/talent/${profile.id || ''}`);
@@ -106,3 +106,4 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     </>
   )
 }
+;

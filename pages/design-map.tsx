@@ -1,7 +1,7 @@
-import React, { useMemo, useState } from 'react'
-import Head from 'next/head'
+import React, { useMemo, useState } from 'react';
+import Head from 'next/head';
 import { getZionDesignMap } from '../utils/design-map'
-
+;
 export default function DesignMapPage() {
   const designMap = useMemo(() => getZionDesignMap(), [])
   const [screenName, setScreenName] = useState('')

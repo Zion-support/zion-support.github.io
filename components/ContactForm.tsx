@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
-
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
-}
-
+  name: string, email: string,
+  company: string, phone: string,
+  service: string,
+  message: string,
+};
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -19,10 +15,8 @@ const ContactForm: React.FC = () => {
     service: '',
     message: '',
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -35,12 +29,10 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
-
-    try {
-      // Simulate API call
+    try {,
+      // Simulate form submission,
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Reset form
+      setSubmitStatus('success');
       setFormData({
         name: '',
         email: '',

@@ -1,8 +1,8 @@
 
-import { jsPDF } from 'jspdf';
-import { Education } from '@/types/resume';
-import { PdfThemeColors } from '../themeConfig';
-import { formatDate } from '../formatters';
+import {jsPDF} from 'jspdf';
+import {Education} from '@/types/resume';
+import {PdfThemeColors} from '../themeConfig';
+import {formatDate} from '../formatters';
 export function addEducationSection(
   doc: jsPDF;
   education: Education[];
@@ -15,7 +15,7 @@ export function addEducationSection(
   
   // Check if we need to add a new page
   if (yPos > 250) {
-    doc.addPage();
+    doc.addPage(),
     yPos = 20
   }
   
@@ -78,3 +78,4 @@ export function addEducationSection(
   
   return yPos + 5
 }
+;

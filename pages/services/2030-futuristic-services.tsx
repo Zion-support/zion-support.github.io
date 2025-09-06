@@ -1,32 +1,32 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react';
-import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031';
-import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031';
-import UltraFuturisticFooter2030 from '../../components/layout/UltraFuturisticFooter2030';
-import { futuristicAIServices2030 } from '../../data/2030-futuristic-ai-services';
-import { quantumEmergingTechServices2030 } from '../../data/2030-quantum-emerging-tech';
-import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutions';
-import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech';
-import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas';
-import { researchDevelopmentServices2030 } from '../../data/2030-research-development';
+import React from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
+import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react',;
+import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031',;
+import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031',;
+import UltraFuturisticFooter2030 from '../../components/layout/UltraFuturisticFooter2030',;
+import { futuristicAIServices2030 } from '../../data/2030-futuristic-ai-services',;
+import { quantumEmergingTechServices2030 } from '../../data/2030-quantum-emerging-tech',;
+import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutions',;
+import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech',;
+import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas',;
+import { researchDevelopmentServices2030 } from '../../data/2030-research-development',;
 export default function FuturisticServices2030Page() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const all2030Services = [
-    ...futuristicAIServices2030;
-    ...quantumEmergingTechServices2030;
-    ...enterpriseITSolutions2030;
-    ...spaceMetaverseTechServices2030;
-    ...innovativeMicroSaasServices2030;
+    ...futuristicAIServices2030,
+    ...quantumEmergingTechServices2030,
+    ...enterpriseITSolutions2030,
+    ...spaceMetaverseTechServices2030,
+    ...innovativeMicroSaasServices2030,
     ...researchDevelopmentServices2030
-  ];
+  ],
 
   const serviceCategories = [
     {
@@ -35,35 +35,35 @@ export default function FuturisticServices2030Page() {
       color: 'from-cyan-500 to-blue-500',
       services: futuristicAIServices2030,
       description: 'Next-generation AI consciousness and autonomous systems'
-    };
+    },
     {
       title: '⚛️ Quantum & Emerging Tech 2030',
       icon: Atom,
       color: 'from-purple-500 to-indigo-500',
       services: quantumEmergingTechServices2030,
       description: 'Quantum computing and breakthrough technologies'
-    };
+    },
     {
       title: '🏢 Enterprise IT Solutions 2030',
       icon: Globe,
       color: 'from-blue-500 to-cyan-500',
       services: enterpriseITSolutions2030,
       description: 'Autonomous enterprise infrastructure and operations'
-    };
+    },
     {
       title: '🌌 Space & Metaverse Tech 2030',
       icon: Rocket,
       color: 'from-emerald-500 to-green-500',
       services: spaceMetaverseTechServices2030,
       description: 'Space exploration and digital reality platforms'
-    };
+    },
     {
       title: '🎯 Innovative Micro SAAS 2030',
       icon: Target,
       color: 'from-yellow-500 to-orange-500',
       services: innovativeMicroSaasServices2030,
       description: 'Cutting-edge micro solutions and platforms'
-    };
+    },
     {
       title: '🔬 Research & Development 2030',
       icon: Microscope,
@@ -71,7 +71,7 @@ export default function FuturisticServices2030Page() {
       services: researchDevelopmentServices2030,
       description: 'Breakthrough research and development solutions'
     }
-  ];
+  ],
 
   return (
     <>
@@ -93,7 +93,7 @@ export default function FuturisticServices2030Page() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta name="twitter:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
-        <meta name="twitter: image" content="https://ziontechgroup.com/twitter-image-2030.jpg" />
+        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image-2030.jpg" />
         
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />
@@ -104,20 +104,20 @@ export default function FuturisticServices2030Page() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org";
-              "@type": "Service";
-              "name": "2030 Futuristic Technology Services";
-              "description": "Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology";
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "2030 Futuristic Technology Services",
+              "description": "Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology",
               "provider": {
-                "@type": "Organization";
-                "name": "Zion Tech Group";
+                "@type": "Organization",
+                "name": "Zion Tech Group",
                 "url": "https://ziontechgroup.com"
-              };
-              "url": "https://ziontechgroup.com/services/2030-futuristic-services";
+              },
+              "url": "https://ziontechgroup.com/services/2030-futuristic-services",
               "contactPoint": {
-                "@type": "ContactPoint";
-                "telephone": "+1-302-464-0950";
-                "contactType": "customer service";
+                "@type": "ContactPoint",
+                "telephone": "+1-302-464-0950",
+                "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
               }
             })
@@ -321,4 +321,4 @@ export default function FuturisticServices2030Page() {
       </UltraFuturisticBackground2031>
     </>
   )
-}
+};

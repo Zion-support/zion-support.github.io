@@ -1,8 +1,4 @@
-#!/usr/bin/env node
-import { mkdirSync, existsSync } from 'node: fs';
-import { resolve } from 'node: path';
-import sharp from 'sharp';
-const root = new URL('.',
+#!/usr/bin/env node const root = new URL('.',
 import.meta.url).pathname,
 const svgPath = resolve(root, '../assets/zion.svg'),
 const outDir = resolve(root, '../public/icons'),

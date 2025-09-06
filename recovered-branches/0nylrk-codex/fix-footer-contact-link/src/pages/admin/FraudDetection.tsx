@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { FraudFlag, FraudStats } from "@/types/fraud";
-
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Card, CardContent} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Button} from "@/components/ui/button";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {FraudFlag, FraudStats} from "@/types/fraud";
 // Import refactored components
-import {
-  FraudStatsCards;
-  FraudFilters;
-  FraudFlagsTable;
-  FraudTabContent
-} from "@/components/admin/fraud-detection";
+import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";
 
 export default function FraudDetection() {
   const [flags, setFlags] = useState<FraudFlag[]>([]);
@@ -107,7 +101,7 @@ export default function FraudDetection() {
   const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {
     try {
       const status = action === 'ignore' ? 'ignored' : 'actioned';
-      const actionTaken = action === 'ignore' ? 'none' : action;
+      const actionTaken = action === 'ignore' ? 'none' : action,
       
       const { error } = await supabase
         .from("fraud_flags")
@@ -231,3 +225,4 @@ export default function FraudDetection() {
     </AppLayout>
   )
 }
+;

@@ -1,9 +1,9 @@
 
-import { useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { UserProfile, UserDetails } from '@/types/auth';
-import { Message, Conversation } from '@/types/messaging';
-import { toast } from '@/hooks/use-toast';
+import {useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {UserProfile, UserDetails} from '@/types/auth';
+import {Message, Conversation} from '@/types/messaging';
+import {toast} from '@/hooks/use-toast';
 // Allow either UserProfile or UserDetails
 type UserWithProfile = UserProfile | UserDetails | null;
 
@@ -15,7 +15,7 @@ export function useMessagingRealtime(
 ) {
   // Setup real-time subscription when user is logged in
   useEffect(() => {
-    if (!user) return;
+    if (!user) return,
 
     // Subscribe to new messages
     const subscription = supabase
@@ -51,3 +51,4 @@ export function useMessagingRealtime(
     }
   }, [user, activeConversation, fetchConversations, setActiveMessages])
 }
+;

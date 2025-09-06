@@ -1,8 +1,8 @@
 
 // Types used across fraud detection modules
-import { FraudSeverity } from '@/types/fraud';
+import {FraudSeverity} from '@/types/fraud';
 export interface AnalysisResult {
-  isSuspicious: boolean;
+  isSuspicious: boolean,
   reasons: string[]
 }
 
@@ -13,7 +13,7 @@ export interface MessageAnalysisResult extends AnalysisResult {
 export interface EmailAnalysisResult extends AnalysisResult {}
 
 export interface FlagResult {
-  success: boolean;
+  success: boolean,
   error?: string
 }
 

@@ -2,10 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
 interface SearchResult {
-  title: string;
-  description: string;
-  url: string;
-  type: 'service' | 'page' | 'category';
+  title: string, description: string,
+  url: string, type: 'service' | 'page' | 'category',
 }
 
 const SearchBar: React.FC = () => {
@@ -19,75 +17,87 @@ const SearchBar: React.FC = () => {
   // Mock search data - in a real app, this would come from an API
   const searchData: SearchResult[] = [
     {
-      title: 'Web Development',
-      description: 'Custom websites and web applications',
-      url: '/services/web-development',
-      type: 'service'
+      title: 'Micro SaaS Products',
+      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
+      url: '/micro-saas',
+      type: 'category',
     },
     {
-      title: 'Mobile App Development',
-      description: 'iOS and Android applications',
-      url: '/services/mobile-apps',
-      type: 'service'
+      title: 'AI Services',
+      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
+      url: '/ai-services',
+      type: 'category',
     },
     {
-      title: 'AI Solutions',
-      description: 'Artificial intelligence integration',
-      url: '/services/ai-solutions',
-      type: 'service'
+      title: 'IT Services',
+      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
+      url: '/it-services',
+      type: 'category',
     },
     {
-      title: 'About Us',
-      description: 'Learn about Zion Tech Group',
-      url: '/about',
-      type: 'page'
+      title: 'Cloud Cost Guard',
+      description: 'FinOps Assistant for anomaly detection and cost optimization',
+      url: '/services',
+      type: 'service',
     },
     {
-      title: 'Contact',
-      description: 'Get in touch with our team',
+      title: 'Contact Us',
+      description: 'Get in touch with our experts for consultation and quotes',
       url: '/contact',
-      type: 'page'
-    }
+      type: 'page',
+    },
+    {
+      title: 'Pricing',
+      description: 'View our transparent pricing for all services',
+      url: '/pricing',
+      type: 'page',
+    },
   ];
 
-  const handleSearch = (searchQuery: string) => {
+  const handleSearch = async (searchQuery: string) => {
     if (!searchQuery.trim()) {
       setResults([]);
       setIsOpen(false);
-      return;
+      return,
     }
 
     setIsLoading(true);
-    
+
     // Simulate API delay
-    setTimeout(() => {
-      const filteredResults = searchData.filter(item =>
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-      
-      setResults(filteredResults);
-      setIsOpen(true);
-      setIsLoading(false);
-    }, 300);
+    await new Promise(resolve => setTimeout(resolve, 300));
+
+    const filteredResults = searchData.filter(item =>
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    setResults(filteredResults);
+    setIsOpen(true);
+    setIsLoading(false);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    handleSearch(value);
+    handleSearch(value),
   };
 
   const handleResultClick = () => {
-    setIsOpen(false);
-    setQuery('');
+    setIsOpen(false),
+    setQuery('')
   };
 
-  // Close dropdown when clicking outside
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+    setIsOpen(false),
+    inputRef.current?.blur()
+  }
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
+        setIsOpen(false),
       }
     };
 
@@ -133,7 +143,7 @@ const SearchBar: React.FC = () => {
 
       {/* Search Results Dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
           {results.length > 0 ? (
             <div className="py-2">
               {results.map((result, index) => (

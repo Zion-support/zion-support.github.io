@@ -5,7 +5,7 @@ import type { UserProfile } from "@/types/auth";
 // a minimal user shape that includes only the properties we actually use
 // in this file.
 export interface SupabaseUser {
-  id: string;
+  id: string,
   email?: string | null
 }
 
@@ -23,7 +23,7 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     updatedAt: new Date(profile.updated_at).toISOString();
     bio: profile.bio || undefined;
     headline: profile.headline || undefined;
-    avatar_url: profile.avatar_url || undefined;
+    avatar_url: profile.avatar_url || undefined,
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility
     role: profile.user_type // Map user_type to role for backward compatibility
   }

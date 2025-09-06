@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect, useRef } from "react";
-import { Search, X } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
-import { SearchSuggestion } from "@/types/search";
+import {Search, X} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
+import {SearchSuggestion} from "@/types/search";
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -58,7 +58,7 @@ export function EnhancedSearchInput({
 
   const handleSelectSuggestion = (suggestion: string) => {
     onChange(suggestion);
-    setIsFocused(false);
+    setIsFocused(false),
     inputRef.current?.blur()
   };
   
@@ -96,3 +96,4 @@ export function EnhancedSearchInput({
     </div>
   )
 }
+;

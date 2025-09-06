@@ -1,53 +1,24 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
-import { format } from "date-fns";
-import { useAuth } from "@/hooks/useAuth";
-import { useProjects } from "@/hooks/useProjects";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Project, ProjectStatus } from "@/types/projects";
-import { Button } from "@/components/ui/button";
-import {
-  Card;
-  CardContent;
-  CardDescription;
-  CardFooter;
-  CardHeader;
-  CardTitle} from "@/components/ui/card";
-import {
-  Tabs;
-  TabsContent;
-  TabsList;
-  TabsTrigger} from "@/components/ui/tabs";
-import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle;
-  AlertDialogTrigger} from "@/components/ui/alert-dialog";
-import { Avatar } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
-import {
-  AlertCircle;
-  Calendar;
-  CheckCircle2;
-  Clock;
-  FileText;
-  Layers;
-  MessageSquare;
-  Video;
-  User;
-  XCircle} from "lucide-react";
+import {useState, useEffect} from "react";
+import {useParams, useNavigate, Link} from "react-router-dom";
+import {format} from "date-fns";
+import {useAuth} from "@/hooks/useAuth";
+import {useProjects} from "@/hooks/useProjects";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {Project, ProjectStatus} from "@/types/projects";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger} from "@/components/ui/alert-dialog";
+import {Avatar} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {Textarea} from "@/components/ui/textarea";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
+import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
 
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -145,7 +116,7 @@ function ProjectDetailsContent() {
   };
   
   const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return;
+    if (!project) return,
     
     const success = await updateProjectStatus(project.id, newStatus);
     
@@ -175,7 +146,7 @@ function ProjectDetailsContent() {
       case "completed":
         return <Badge variant="default">Completed</Badge>;
       case "canceled":
-        return <Badge variant="destructive">Canceled</Badge>;
+        return <Badge variant="destructive">Canceled</Badge>,
       default:
         return <Badge variant="outline">{status}</Badge>
     }
@@ -676,3 +647,4 @@ export default function ProjectDetails() {
     </ProtectedRoute>
   )
 }
+;

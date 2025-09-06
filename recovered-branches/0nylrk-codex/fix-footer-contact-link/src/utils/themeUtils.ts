@@ -6,7 +6,7 @@ export interface ThemeColors {
   backgroundColor: string;
   textColor: string;
   accentColor: string;
-  buttonColor: string;
+  buttonColor: string,
   cardBackground: string
 }
 
@@ -19,7 +19,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         backgroundColor: '#0f172a';
         textColor: '#e2e8f0';
         accentColor: primaryColor;
-        buttonColor: primaryColor;
+        buttonColor: primaryColor,
         cardBackground: '#1e293b'};
     case 'neon':
       return {
@@ -27,7 +27,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         backgroundColor: '#030712';
         textColor: '#f8fafc';
         accentColor: '#00ffbb';
-        buttonColor: primaryColor;
+        buttonColor: primaryColor,
         cardBackground: '#0f172a'};
     case 'corporate':
       return {
@@ -35,7 +35,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         backgroundColor: '#f8fafc';
         textColor: '#334155';
         accentColor: primaryColor;
-        buttonColor: primaryColor;
+        buttonColor: primaryColor,
         cardBackground: '#ffffff'};
     case 'startup':
       return {
@@ -43,23 +43,22 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         backgroundColor: '#16181d';
         textColor: '#fafafa';
         accentColor: '#ff7f50';
-        buttonColor: primaryColor;
+        buttonColor: primaryColor,
         cardBackground: '#1e2127'};
     case 'light':
-    default:
-      return {
+    default: return {
         primaryColor;
         backgroundColor: '#ffffff';
         textColor: '#0f172a';
         accentColor: primaryColor;
-        buttonColor: primaryColor;
+        buttonColor: primaryColor,
         cardBackground: '#f8fafc'}
   }
 }
 
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
-  const root = document.documentElement;
+  const root = document.documentElement,
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);
@@ -71,3 +70,4 @@ export function applyThemeColors(colors: ThemeColors) {
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor
 }
+;

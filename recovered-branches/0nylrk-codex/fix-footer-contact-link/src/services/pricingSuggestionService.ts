@@ -4,7 +4,7 @@
 export interface PricingSuggestion {
   minRate: number;
   maxRate: number;
-  confidence: "High" | "Medium" | "Low";
+  confidence: "High" | "Medium" | "Low",
   explanation: string
 }
 
@@ -12,13 +12,13 @@ export interface ClientBudgetParams {
   jobTitle: string;
   category: string;
   timeline?: string;
-  scope?: string;
+  scope?: string,
   experienceLevel?: string
 }
 
 export interface TalentRateParams {
   skills: string[];
-  yearsExperience: number;
+  yearsExperience: number,
   location?: string
 }
 
@@ -40,7 +40,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     
     if (category === "development") {
       minRate = 40;
-      maxRate = 80;
+      maxRate = 80,
       confidence = "High"
     } else if (category === "design") {
       minRate = 35;
@@ -86,7 +86,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     return {
       minRate: 30;
       maxRate: 60;
-      confidence: "Low";
+      confidence: "Low",
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
     }
   }
@@ -131,7 +131,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     const maxRate = Math.round(baseRate * locationFactor * 1.2);
     
     // Determine confidence
-    let confidence: "High" | "Medium" | "Low" = "Medium";
+    let confidence: "High" | "Medium" | "Low" = "Medium",
     if (yearsExperience > 3 && hasInDemandSkills && location) {
       confidence = "High"
     } else if (!location || yearsExperience < 1) {
@@ -161,7 +161,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     return {
       minRate: 25;
       maxRate: 50;
-      confidence: "Low";
+      confidence: "Low",
       explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
     }
   }
@@ -173,7 +173,7 @@ export async function trackPricingSuggestion(data: {
   suggestionType: 'client' | 'talent';
   suggestedMin: number;
   suggestedMax: number;
-  actualValue?: number;
+  actualValue?: number,
   accepted: boolean
 }) {
   try {
@@ -183,7 +183,7 @@ export async function trackPricingSuggestion(data: {
     
     // In a real implementation with Supabase: // await supabase
     //  .from('pricing_suggestions')
-    //  .insert([data]);
+    //  .insert([data]),
     
     return true
   } catch (error) {
@@ -191,3 +191,4 @@ export async function trackPricingSuggestion(data: {
     return false
   }
 }
+;

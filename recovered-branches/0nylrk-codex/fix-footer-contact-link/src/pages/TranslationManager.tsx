@@ -1,19 +1,19 @@
 
 import React, { useState, useEffect } from 'react';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
-import { useTranslation } from "react-i18next";
-import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-import { useTranslationService } from "@/hooks/useTranslationService";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {toast} from "@/components/ui/use-toast";
+import {useTranslation} from "react-i18next";
+import {AlertTriangle, Check, Globe, Search, Loader2} from "lucide-react";
+import {useIsMobile} from "@/hooks/use-mobile";
+import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
+import {useTranslationService} from "@/hooks/useTranslationService";
 export default function TranslationManager() {
   const { t, i18n } = useTranslation();
   const isMobile = useIsMobile();
@@ -95,7 +95,7 @@ export default function TranslationManager() {
   }, [searchQuery, translations]);
   
   const handleEdit = (key: string) => {
-    setEditingKey(key);
+    setEditingKey(key),
     
     // Initialize edited translations for this key
     const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>;
@@ -110,7 +110,7 @@ export default function TranslationManager() {
   };
   
   const handleSave = (key: string) => {
-    setIsSaving(true);
+    setIsSaving(true),
     
     // In a real application, you would save these to your backend
     setTimeout(() => {
@@ -196,7 +196,7 @@ export default function TranslationManager() {
     setEditedTranslations({
       ...editedTranslations;
       [key]: {
-        ...editedTranslations[key];
+        ...editedTranslations[key],
         [lang]: value
       }
     })
@@ -378,3 +378,4 @@ export default function TranslationManager() {
     </>
   )
 }
+;

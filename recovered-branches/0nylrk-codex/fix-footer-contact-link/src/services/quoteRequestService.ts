@@ -1,7 +1,6 @@
 
-import { supabase } from "@/integrations/supabase/client";
+import {supabase} from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-
 export const quoteRequestService = {
   // Get all quote requests (for admin)
   getAll: async () => {
@@ -19,7 +18,7 @@ export const quoteRequestService = {
     
     // Format the data to include talent_name
     return data.map((item: any) => ({
-      ...item;
+      ...item,
       talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
   

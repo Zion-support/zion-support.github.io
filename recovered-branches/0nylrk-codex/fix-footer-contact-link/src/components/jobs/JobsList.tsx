@@ -1,14 +1,14 @@
 
-import { useState, useEffect } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { Job, JobStatus } from "@/types/jobs";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Loader2, Edit, X, Eye } from "lucide-react";
-import { format } from "date-fns";
-import { Link } from "react-router-dom";
+import {useState, useEffect} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {Job, JobStatus} from "@/types/jobs";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Loader2, Edit, X, Eye} from "lucide-react";
+import {format} from "date-fns";
+import {Link} from "react-router-dom";
 interface JobsListProps {
   filter?: JobStatus;
   onSelectJob?: (jobId: string, jobTitle: string) => void
@@ -80,7 +80,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       case "filled":
         return "bg-green-100 text-green-800";
       case "closed":
-        return "bg-gray-100 text-gray-800";
+        return "bg-gray-100 text-gray-800",
       default:
         return "bg-gray-100 text-gray-800"
     }
@@ -154,3 +154,4 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     </div>
   )
 }
+;

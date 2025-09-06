@@ -1,14 +1,14 @@
 
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { PlusCircle, Save, Trash, Play } from "lucide-react";
-import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { toast } from "sonner";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {PlusCircle, Save, Trash, Play} from "lucide-react";
+import {useWebhooks, WebhookEventType} from "@/hooks/useWebhooks";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {toast} from "sonner";
 export function WebhookManager() {
   const { 
     webhooks;
@@ -58,7 +58,7 @@ export function WebhookManager() {
   
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
-      ...newWebhook;
+      ...newWebhook,
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
     })
   };
@@ -290,3 +290,4 @@ export function WebhookManager() {
     </div>
   )
 }
+;

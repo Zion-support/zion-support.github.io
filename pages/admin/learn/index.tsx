@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react';
-
+import { useEffect, useState } from 'react',
+;
 export default function AdminLearn() {
   const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState(''),
 
   async function saveCourse() {
-    setMessage('');
+    setMessage(''),
     const resp = await fetch('/api/admin/learn/course', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form)
-    });
-    const data = await resp.json();
-    if (data.ok) setMessage('Saved');
+    }),
+    const data = await resp.json(),
+    if (data.ok) setMessage('Saved'),
     else setMessage('Error: ' + (data.error || 'unknown'))
   }
 
@@ -41,4 +41,4 @@ export default function AdminLearn() {
       {message && <div className="text-sm">{message}</div>}
     </div>
   )
-}
+};

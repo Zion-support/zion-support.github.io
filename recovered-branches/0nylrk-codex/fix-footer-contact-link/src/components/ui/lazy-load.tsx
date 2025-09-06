@@ -1,7 +1,7 @@
 
-import { useEffect, useState, useRef, ReactNode } from "react";
-import { cn } from "@/lib/utils";
-import { Skeleton } from "@/components/ui/skeleton";
+import {useEffect, useState, useRef, ReactNode} from "react";
+import {cn} from "@/lib/utils";
+import {Skeleton} from "@/components/ui/skeleton";
 interface LazyLoadProps {
   height?: string | number;
   width?: string | number;
@@ -81,3 +81,4 @@ export function LazyLoad({
     </div>
   )
 }
+;

@@ -1,9 +1,8 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0";
-
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*";
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 serve(async (req) => {
@@ -43,7 +42,7 @@ The description should: 1. Be approximately 200-300 words
 5. Include a compelling opening and closing statement`;
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini";
+      model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
       temperature: 0.7});
 
@@ -60,7 +59,7 @@ The description should: 1. Be approximately 200-300 words
     
     return new Response(
       JSON.stringify({ 
-        error: "Failed to generate service description";
+        error: "Failed to generate service description",
         details: error.message 
       });
       { 

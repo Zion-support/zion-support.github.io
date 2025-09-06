@@ -1,12 +1,12 @@
 
-import { NotificationType } from './types';
-import { createNotification } from './createNotification';
+import {NotificationType} from './types';
+import {createNotification} from './createNotification';
 /**
  * Demo function to create test notifications for the current user
  */
 export async function createTestNotification(userId: string) {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
-  const randomType = types[Math.floor(Math.random() * types.length)];
+  const randomType = types[Math.floor(Math.random() * types.length)],
   
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
@@ -31,7 +31,8 @@ export async function createTestNotification(userId: string) {
     message: messages[randomType];
     type: randomType;
     sendEmail: true;
-    actionUrl: actions[randomType].url;
+    actionUrl: actions[randomType].url,
     actionText: actions[randomType].text
   })
 }
+;

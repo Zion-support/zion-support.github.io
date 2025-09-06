@@ -1,10 +1,9 @@
 
-import { useState, useEffect } from "react";
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals";
-
+import {useState, useEffect} from "react";
+import {toast} from "@/hooks/use-toast";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {ReferralCode, ReferralStats, Referral, ReferralReward} from "@/types/referrals";
 export function useReferrals() {
   const { user } = useAuth();
   const [referralCode, setReferralCode] = useState<ReferralCode | null>(null);
@@ -14,7 +13,7 @@ export function useReferrals() {
   const [stats, setStats] = useState<ReferralStats>({
     totalReferrals: 0;
     pendingReferrals: 0;
-    completedReferrals: 0;
+    completedReferrals: 0,
     totalRewards: 0});
 
   useEffect(() => {
@@ -130,7 +129,7 @@ export function useReferrals() {
       if (!user) {
         toast({
           title: "Authentication required";
-          description: "You need to be logged in to generate a referral code";
+          description: "You need to be logged in to generate a referral code",
           variant: "destructive"});
         return
       }
@@ -143,7 +142,7 @@ export function useReferrals() {
 
       toast({
         title: "Success!";
-        description: "Your referral code has been generated";
+        description: "Your referral code has been generated",
         variant: "success"});
 
       // Refresh the code
@@ -154,7 +153,7 @@ export function useReferrals() {
       console.error("Error generating referral code:", error);
       toast({
         title: "Error generating code";
-        description: error.message || "There was a problem generating your referral code";
+        description: error.message || "There was a problem generating your referral code",
         variant: "destructive"})
     }
   };
@@ -174,12 +173,12 @@ export function useReferrals() {
       navigator.clipboard.writeText(link);
       toast({
         title: "Copied!";
-        description: "Referral link copied to clipboard";
+        description: "Referral link copied to clipboard",
         variant: "success"})
     } else {
       toast({
         title: "Cannot copy link";
-        description: "Please generate a referral code first";
+        description: "Please generate a referral code first",
         variant: "destructive"})
     }
   };
@@ -192,7 +191,7 @@ export function useReferrals() {
     if (!link) {
       toast({
         title: "Cannot share";
-        description: "Please generate a referral code first";
+        description: "Please generate a referral code first",
         variant: "destructive"});
       return
     }
@@ -231,3 +230,4 @@ export function useReferrals() {
     fetchRewards,   // Added this method for refreshing rewards
   }
 }
+;

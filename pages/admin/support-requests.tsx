@@ -1,13 +1,13 @@
-import { GetServerSideProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
+import { GetServerSideProps } from 'next',;
+import { useState } from 'react',;
+import { readJson } from '../../utils/fsDb',;
 export const getServerSideProps: GetServerSideProps = async () => {
-  const requests = readJson<any[]>('support/requests.json', []);
+  const requests = readJson<any[]>('support/requests.json', []),
   return { props: { initialRequests: requests } }
-};
+},
 
 export default function SupportRequests({ initialRequests }: { initialRequests: any[] }) {
-  const [requests, setRequests] = useState(initialRequests);
+  const [requests, setRequests] = useState(initialRequests),
 
   async function resolve(id: string) {
     await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) }),
@@ -36,4 +36,4 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
       </div>
     </div>
   )
-}
+};

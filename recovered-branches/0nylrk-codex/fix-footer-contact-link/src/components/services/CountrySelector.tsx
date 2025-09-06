@@ -1,9 +1,8 @@
 
-import { useState, useEffect } from "react";
-import { Globe } from "lucide-react";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
-
+import {useState, useEffect} from "react";
+import {Globe} from "lucide-react";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void,
   selectedCountry: CountryPricing | null
@@ -23,7 +22,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
-    const country = onsiteServicePricing.find(item => item.country === countryName) || null;
+    const country = onsiteServicePricing.find(item => item.country === countryName) || null,
     onCountryChange(country)
   };
 
@@ -65,3 +64,4 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
     </div>
   )
 }
+;

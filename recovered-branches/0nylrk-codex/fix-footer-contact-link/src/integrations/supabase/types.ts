@@ -2406,7 +2406,7 @@ export const Constants = {
         "jobs:write";
         "talent:read";
         "quotes:write";
-        "webhooks:manage"];
+        "webhooks:manage"],
       fraud_severity: ["safe", "suspicious", "dangerous"];
       quote_request_status: [
         "new";
@@ -2414,5 +2414,6 @@ export const Constants = {
         "accepted";
         "responded";
         "closed";
-        "archived"];
+        "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const
+;

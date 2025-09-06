@@ -1,6 +1,6 @@
 
-import { TalentCard } from "@/components/talent/TalentCard";
-import { TalentProfile } from "@/types/talent";
+import {TalentCard} from "@/components/talent/TalentCard";
+import {TalentProfile} from "@/types/talent";
 export interface TalentGridProps {
   talents: TalentProfile[],
   isLoading: boolean,
@@ -78,3 +78,4 @@ export function TalentGrid({
     </div>
   )
 }
+;

@@ -1,14 +1,14 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { format } from 'date-fns';
-import { MessageSquare } from 'lucide-react';
-import { useMessaging } from '@/context/MessagingContext';
-import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { useAuth } from '@/hooks/useAuth';
-import { MessageBubble } from './MessageBubble';
-import { DateDivider } from './DateDivider';
+import {format} from 'date-fns';
+import {MessageSquare} from 'lucide-react';
+import {useMessaging} from '@/context/MessagingContext';
+import {Button} from '@/components/ui/button';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
+import {AspectRatio} from '@/components/ui/aspect-ratio';
+import {useAuth} from '@/hooks/useAuth';
+import {MessageBubble} from './MessageBubble';
+import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {
   const { user } = useAuth();
   const { 
@@ -36,7 +36,7 @@ export function ConversationDetailView() {
   
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!messageText.trim() || !activeConversation) return;
+    if (!messageText.trim() || !activeConversation) return,
     
     await sendMessage(activeConversation.id, messageText);
     setMessageText('')
@@ -180,3 +180,4 @@ export function ConversationDetailView() {
     </div>
   )
 }
+;

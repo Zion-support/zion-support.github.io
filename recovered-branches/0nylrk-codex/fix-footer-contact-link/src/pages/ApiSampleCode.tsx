@@ -1,8 +1,8 @@
 
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {CodeBlock} from "@/components/developers/CodeBlock";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 
 export function ApiSampleCode() {
   // JavaScript example with Axios
@@ -143,7 +143,7 @@ if __name__ == "__main__":
         print(f"Error: {e}")`,
 
   // Node.js example with fetch
-  const nodeFetchExample = `// Using node-fetch with Node.js
+const nodeFetchExample = `// Using node-fetch with Node.js
 import fetch from 'node-fetch';
 const API_KEY = 'YOUR_API_KEY';
 const BASE_URL = 'https: //api.zionai.com/v1',

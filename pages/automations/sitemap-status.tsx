@@ -1,7 +1,8 @@
-import type { NextPage, GetServerSideProps } from 'next';
-import fs from 'fs';
-import path from 'path';
+import type { NextPage, GetServerSideProps } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 type Props = { urlCount: number },
+
 const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
     <main className="space-y-4">
@@ -12,16 +13,16 @@ const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
       </div>
     </main>
   )
-};
+},
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join(process.cwd(), 'publicsitemap.xml');
-  let urlCount = 0;
+  const p = path.join(process.cwd(), 'publicsitemap.xml'),
+  let urlCount = 0,
   try {
-    const raw = fs.readFileSync(p, 'utf8');
+    const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
   } catch {}
   return { props: { urlCount } }
-};
+},
 
-export default SitemapStatus;
+export default SitemapStatus,;

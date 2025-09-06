@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
   id: string;
   brand_name: string;
@@ -10,14 +10,14 @@ export interface WhitelabelTenant {
   theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
   landing_page_copy: {
     headline: string;
-    subtitle: string;
+    subtitle: string,
     cta: string
   };
   is_active: boolean;
   created_at: string;
   updated_at: string;
   account_manager_id: string | null;
-  dns_verified: boolean;
+  dns_verified: boolean,
   email_template_override: Record<string, any> | null
 }
 
@@ -138,4 +138,4 @@ export function useTenantAdminStatus(tenantId?: string) {
   }, [tenantId]);
 
   return { isAdmin, isLoading }
-}
+};

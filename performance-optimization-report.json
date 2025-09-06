@@ -1,22 +1,16 @@
 {
-  "timestamp": "2025-09-06T04:54:54.441Z",
-  "totalDuration": 10984,
+  "timestamp": "2025-09-06T09:02:41.637Z",
+  "totalDuration": 9112,
   "results": {
     "bundleAnalysis": {
-      "success": true,
-      "size": 0.00390625,
-      "recommendations": [
-        "Use dynamic imports for large components",
-        "Implement tree shaking to remove unused code",
-        "Consider using a CDN for static assets"
-      ]
+      "success": false,
+      "size": 0,
+      "recommendations": []
     },
     "imageOptimization": {
       "success": true,
       "optimized": 0,
-      "recommendations": [
-        "No images found to optimize"
-      ]
+      "recommendations": ["No images found to optimize"]
     },
     "codeSplitting": {
       "success": true,
@@ -31,11 +25,7 @@
     },
     "caching": {
       "success": true,
-      "strategies": [
-        "static",
-        "dynamic",
-        "api"
-      ],
+      "strategies": ["static", "dynamic", "api"],
       "recommendations": [
         "Implement service worker for offline caching",
         "Use HTTP caching headers appropriately",
@@ -57,7 +47,7 @@
     }
   },
   "summary": {
-    "bundleOptimized": true,
+    "bundleOptimized": false,
     "imagesOptimized": true,
     "codeSplittingImplemented": true,
     "cachingConfigured": true,

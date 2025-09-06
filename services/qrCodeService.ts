@@ -8,7 +8,7 @@ export interface QRCodeOptions {
   format?: 'svg' | 'png' | 'jpeg' | 'webp';
   logo?: {
     url: string;
-    width: number;
+    width: number,
     height: number
   }
 }
@@ -18,7 +18,7 @@ export interface QRCodeResult {
   options: QRCodeOptions;
   generatedAt: Date;
   size: {
-    width: number;
+    width: number,
     height: number
   }
 }
@@ -27,7 +27,7 @@ export interface QRCodeTemplate {
   id: string;
   name: string;
   description: string;
-  options: Partial<QRCodeOptions>;
+  options: Partial<QRCodeOptions>,
   category: 'business' | 'personal' | 'social' | 'custom'
 }
 
@@ -37,7 +37,7 @@ class QRCodeService {
     foregroundColor: '#000000';
     backgroundColor: '#FFFFFF';
     errorCorrectionLevel: 'M';
-    margin: 4;
+    margin: 4,
     format: 'svg'
   };
 
@@ -62,7 +62,7 @@ class QRCodeService {
       options: finalOptions;
       generatedAt: new Date();
       size: {
-        width: finalOptions.size!;
+        width: finalOptions.size!,
         height: finalOptions.size!
       }
     }
@@ -74,7 +74,7 @@ class QRCodeService {
     title: string;
     email: string;
     phone: string;
-    website?: string;
+    website?: string,
     address?: string
   }): Promise<QRCodeResult> {
     const vcard = this.generateVCard(data);
@@ -82,7 +82,7 @@ class QRCodeService {
     return this.generateQRCode({
       text: vcard;
       size: 300;
-      errorCorrectionLevel: 'H';
+      errorCorrectionLevel: 'H',
       format: 'svg'
     })
   }
@@ -90,7 +90,7 @@ class QRCodeService {
   async generateWiFiQR(data: {
     ssid: string;
     password: string;
-    encryption: 'WPA' | 'WEP' | 'nopass';
+    encryption: 'WPA' | 'WEP' | 'nopass',
     hidden?: boolean
   }): Promise<QRCodeResult> {
     const wifiString = this.generateWiFiString(data);
@@ -98,14 +98,14 @@ class QRCodeService {
     return this.generateQRCode({
       text: wifiString;
       size: 256;
-      errorCorrectionLevel: 'M';
+      errorCorrectionLevel: 'M',
       format: 'svg'
     })
   }
 
   async generateEmailQR(data: {
     to: string;
-    subject?: string;
+    subject?: string,
     body?: string
   }): Promise<QRCodeResult> {
     const mailto = this.generateMailtoString(data);
@@ -113,13 +113,13 @@ class QRCodeService {
     return this.generateQRCode({
       text: mailto;
       size: 256;
-      errorCorrectionLevel: 'M';
+      errorCorrectionLevel: 'M',
       format: 'svg'
     })
   }
 
   async generateSMSQR(data: {
-    phone: string;
+    phone: string,
     message?: string
   }): Promise<QRCodeResult> {
     const smsString = this.generateSMSString(data);
@@ -127,7 +127,7 @@ class QRCodeService {
     return this.generateQRCode({
       text: smsString;
       size: 256;
-      errorCorrectionLevel: 'M';
+      errorCorrectionLevel: 'M',
       format: 'svg'
     })
   }
@@ -135,7 +135,7 @@ class QRCodeService {
   async generateGeoLocationQR(data: {
     latitude: number;
     longitude: number;
-    altitude?: number;
+    altitude?: number,
     name?: string
   }): Promise<QRCodeResult> {
     const geoString = this.generateGeoString(data);
@@ -143,7 +143,7 @@ class QRCodeService {
     return this.generateQRCode({
       text: geoString;
       size: 256;
-      errorCorrectionLevel: 'M';
+      errorCorrectionLevel: 'M',
       format: 'svg'
     })
   }
@@ -153,42 +153,42 @@ class QRCodeService {
       {
         id: 'business-card';
         name: 'Business Card';
-        description: 'Professional contact information in QR format';
+        description: 'Professional contact information in QR format',
         options: { size: 300, errorCorrectionLevel: 'H' };
         category: 'business'
       };
       {
         id: 'wifi-network';
         name: 'WiFi Network';
-        description: 'Share WiFi credentials easily';
+        description: 'Share WiFi credentials easily',
         options: { size: 256, errorCorrectionLevel: 'M' };
         category: 'business'
       };
       {
         id: 'email-contact';
         name: 'Email Contact';
-        description: 'Quick email composition with pre-filled details';
+        description: 'Quick email composition with pre-filled details',
         options: { size: 256, errorCorrectionLevel: 'M' };
         category: 'business'
       };
       {
         id: 'social-media';
         name: 'Social Media';
-        description: 'Link to your social media profiles';
+        description: 'Link to your social media profiles',
         options: { size: 256, errorCorrectionLevel: 'M' };
         category: 'social'
       };
       {
         id: 'website-link';
         name: 'Website Link';
-        description: 'Direct link to your website';
+        description: 'Direct link to your website',
         options: { size: 256, errorCorrectionLevel: 'M' };
         category: 'business'
       };
       {
         id: 'phone-number';
         name: 'Phone Number';
-        description: 'Quick dial with pre-filled number';
+        description: 'Quick dial with pre-filled number',
         options: { size: 256, errorCorrectionLevel: 'M' };
         category: 'personal'
       }
@@ -234,7 +234,7 @@ class QRCodeService {
   }
 
   private generateVCard(data: any): string {
-    let vcard = 'BEGIN:VCARD\nVERSION:3.0\n';
+    let vcard = 'BEGIN:VCARD\nVERSION:3.0\n',
     vcard += `FN:${data.name}\n`;
     vcard += `ORG:${data.company}\n`;
     vcard += `TITLE:${data.title}\n`;
@@ -244,12 +244,12 @@ class QRCodeService {
     if (data.website) vcard += `URL:${data.website}\n`;
     if (data.address) vcard += `ADR:,${data.address},\n`;
     
-    vcard += 'END: VCARD';
+    vcard += 'END: VCARD',
     return vcard
   }
 
   private generateWiFiString(data: any): string {
-    let wifiString = 'WIFI:';
+    let wifiString = 'WIFI:',
     wifiString += `S:${data.ssid},`;
     wifiString += `T:${data.encryption},`;
     
@@ -267,7 +267,7 @@ class QRCodeService {
 
   private generateMailtoString(data: any): string {
     let mailto = `mailto:${data.to}`;
-    const params: string[] = [];
+    const params: string[] = [],
     
     if (data.subject) params.push(`subject=${encodeURIComponent(data.subject)}`);
     if (data.body) params.push(`body=${encodeURIComponent(data.body)}`);
@@ -306,7 +306,7 @@ class QRCodeService {
   // Utility methods
   estimateQRCodeCapacity(text: string, errorCorrectionLevel: 'L' | 'M' | 'Q' | 'H'): {
     canFit: boolean;
-    recommendedLevel: string;
+    recommendedLevel: string,
     maxCapacity: number
   } {
     const textLength = text.length;
@@ -315,7 +315,7 @@ class QRCodeService {
     
     return {
       canFit: textLength <= maxCapacity;
-      recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel;
+      recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel,
       maxCapacity
     }
   }

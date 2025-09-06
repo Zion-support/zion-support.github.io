@@ -1,9 +1,9 @@
 
-import { useState, useCallback } from 'react';
-import { PortfolioProject } from '@/types/resume';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
+import {useState, useCallback} from 'react';
+import {PortfolioProject} from '@/types/resume';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {toast} from '@/hooks/use-toast';
 export function usePortfolio() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
@@ -41,7 +41,7 @@ export function usePortfolio() {
   
   const addProject = async (project: PortfolioProject): Promise<string | null> => {
     if (!user) {
-      setError('You must be logged in to add a portfolio project');
+      setError('You must be logged in to add a portfolio project'),
       return null
     }
     
@@ -58,7 +58,7 @@ export function usePortfolio() {
           technologies: project.technologies;
           image_url: project.image_url;
           github_url: project.github_url;
-          demo_url: project.demo_url;
+          demo_url: project.demo_url,
           pdf_url: project.pdf_url
         })
         .select('id')
@@ -67,7 +67,7 @@ export function usePortfolio() {
       if (error) throw error;
       
       toast({
-        title: "Project added";
+        title: "Project added",
         description: "Your project has been added to your portfolio"
       });
       
@@ -77,7 +77,7 @@ export function usePortfolio() {
       console.error('Error adding portfolio project:', e);
       setError(e.message);
       toast({
-        title: "Error";
+        title: "Error",
         description: `Could not add project: ${e.message}`;
         variant: "destructive"
       });
@@ -89,7 +89,7 @@ export function usePortfolio() {
   
   const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to update a portfolio project');
+      setError('You must be logged in to update a portfolio project'),
       return false
     }
     
@@ -105,7 +105,7 @@ export function usePortfolio() {
           technologies: project.technologies;
           image_url: project.image_url;
           github_url: project.github_url;
-          demo_url: project.demo_url;
+          demo_url: project.demo_url,
           pdf_url: project.pdf_url
         })
         .eq('id', projectId)
@@ -114,7 +114,7 @@ export function usePortfolio() {
       if (error) throw error;
       
       toast({
-        title: "Project updated";
+        title: "Project updated",
         description: "Your portfolio project has been updated"
       });
       
@@ -124,7 +124,7 @@ export function usePortfolio() {
       console.error('Error updating portfolio project:', e);
       setError(e.message);
       toast({
-        title: "Error";
+        title: "Error",
         description: `Could not update project: ${e.message}`;
         variant: "destructive"
       });
@@ -136,7 +136,7 @@ export function usePortfolio() {
   
   const deleteProject = async (projectId: string): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to delete a portfolio project');
+      setError('You must be logged in to delete a portfolio project'),
       return false
     }
     
@@ -153,7 +153,7 @@ export function usePortfolio() {
       if (error) throw error;
       
       toast({
-        title: "Project deleted";
+        title: "Project deleted",
         description: "Your portfolio project has been deleted"
       });
       
@@ -163,7 +163,7 @@ export function usePortfolio() {
       console.error('Error deleting portfolio project:', e);
       setError(e.message);
       toast({
-        title: "Error";
+        title: "Error",
         description: `Could not delete project: ${e.message}`;
         variant: "destructive"
       });
@@ -183,3 +183,4 @@ export function usePortfolio() {
     deleteProject
   }
 }
+;

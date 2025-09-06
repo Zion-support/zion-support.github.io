@@ -1,15 +1,15 @@
 
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection";
-import { ProfileSetup } from "@/components/onboarding/ProfileSetup";
-import { Steps, Step } from "@/components/ui/steps";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {UserTypeSelection} from "@/components/onboarding/UserTypeSelection";
+import {ProfileSetup} from "@/components/onboarding/ProfileSetup";
+import {Steps, Step} from "@/components/ui/steps";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
 export default function Onboarding() {
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
@@ -23,7 +23,7 @@ export default function Onboarding() {
       case "talent":
         return "jobSeeker";
       case "client":
-        return "employer";
+        return "employer",
       default:
         return "buyer"
     }
@@ -34,7 +34,7 @@ export default function Onboarding() {
     
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
-      navigate('/service-onboarding');
+      navigate('/service-onboarding'),
       return
     } else if (type === "talent") {
       navigate('/talent-onboarding');
@@ -162,3 +162,4 @@ export default function Onboarding() {
     </>
   )
 }
+;

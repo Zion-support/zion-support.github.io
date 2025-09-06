@@ -2,97 +2,194 @@
 
 const fs = require('fs');
 const path = require('path');
-
-console.log('🔧 Starting comprehensive syntax fixer...');
-
-// Fix the v1.ts file structure
-function fixV1ApiDocs() {
-  const filePath = '/workspace/data/api-docs/v1.ts';
-  try {
+;
+function fixSyntaxErrors(filePath) {;
+  try {;
     let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix the structure by adding missing closing bracket
-    content = content.replace(
-      /versions: \['v1'\]\}\]\}\]\s*\]\s*\};/,
-      "versions: ['v1']}]}]\n  ]\n};"
-    );
-    
-    fs.writeFileSync(filePath, content);
-    console.log('✅ Fixed v1.ts structure');
-  } catch (error) {
-    console.log('⚠️ Could not fix v1.ts:', error.message);
-  }
-}
-
-// Fix partner update file
-function fixPartnerUpdate() {
-  const filePath = '/workspace/pages/api/admin/partners/update.ts';
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix syntax errors
-    content = content.replace(
-      /if \(req\.method !== 'POST'\) return res\.status\(405\)\.json\(\{ error: 'Method not allowed' \}\),/,
-      "if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });"
-    );
-    
-    content = content.replace(
-      /if \(!code\) return res\.status\(400\)\.json\(\{ error: 'Missing code' \}\),/,
-      "if (!code) return res.status(400).json({ error: 'Missing code' });"
-    );
-    
-    fs.writeFileSync(filePath, content);
-    console.log('✅ Fixed partner update syntax');
-  } catch (error) {
-    console.log('⚠️ Could not fix partner update:', error.message);
-  }
-}
-
-// Fix pitch files
-function fixPitchFiles() {
-  const files = [
-    '/workspace/pages/api/admin/pitch/add-slide.ts',
-    '/workspace/pages/api/admin/pitch/export.ts',
-    '/workspace/pages/api/admin/pitch/generate.ts'
-  ];
-  
-  files.forEach(filePath => {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Fix common syntax patterns
-      content = content.replace(
-        /const \{ allowed \} = await ensureAdminFromApi\(req\),/g,
-        "const { allowed } = await ensureAdminFromApi(req);"
-      );
-      
-      content = content.replace(
-        /if \(!allowed\) return res\.status\(403\)\.json\(\{ error: 'Forbidden' \}\),/g,
-        "if (!allowed) return res.status(403).json({ error: 'Forbidden' });"
-      );
-      
-      content = content.replace(
-        /if \(req\.method !== 'POST'\) return res\.status\(405\)\.json\(\{ error: 'Method Not Allowed' \}\),/g,
-        "if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });"
-      );
-      
-      // Fix OpenAI client declaration
-      content = content.replace(
-        /const client = new OpenAI\(\{ apiKey: process\.env\.OPENAI_API_KEY \|\| process\.env\.NEXT_PUBLIC_OPENAI_API_KEY \}\),/,
-        "const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY });"
-      );
-      
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed ${path.basename(filePath)}`);
-    } catch (error) {
-      console.log(`⚠️ Could not fix ${path.basename(filePath)}:`, error.message);
+    let originalContent = content;
+    ;
+    // Fix common syntax errors;
+    content = content.replace(/([\s\S]*?);
+    content = content.replace(//g, '');
+    content = content.replace(/;
+    ;
+    // Fix shebang issues;
+    if (content.includes('#!/usr/bin/env node') && !content.startsWith('#!/usr/bin/env node')) {;
+      content = content.replace(/.*#!/usr\/bin\/env node.*\n/g, '#!/usr/bin/env node\n');
     }
-  });
+    ;
+    // Fix missing commas in object literals;
+    content = content.replace(/(\w+)\s*(\w+)\s*:/g, '$1:$2:');
+    content = content.replace(/(\w+):\s*(\w+)\s*:/g, '$1:$2:');
+    ;
+    // Fix missing semicolons;
+    content = content.replace(/(\w+)\s*(\w+)\s*}/g, '$1; $2}');
+    content = content.replace(/(\w+)\s*(\w+)\s*]/g, '$1; $2]');
+    ;
+    // Fix unterminated strings;
+    content = content.replace(/(['"`])([^'"`]*?)(\n)/g, '$1$2$1$3');
+    ;
+    // Fix missing quotes in object keys;
+    content = content.replace(/(\w+):/g, '"$1":');
+    ;
+    // Fix missing commas between array elements;
+    content = content.replace(/(\w+)\s*(\w+)\s*]/g, '$1, $2]');
+    ;
+    // Clean up extra whitespace;
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/^\s*\n/gm, '');
+    ;
+    if (content !== originalContent) {;
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors:in:${filePath}`);
+      return true;
+    }
+    ;
+    return false;
+  } catch (error) {;
+    console.error(`Error processing ${filePath} `, error.message);
+    return false;
+  }
+}
+;
+function findFilesWithErrors(dir) {;
+  const files = [];
+  const extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs'];
+  ;
+  function traverse(currentDir) {;
+    const items = fs.readdirSync(currentDir);
+    ;
+    for (const item of items) {;
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      ;
+      if (stat.isDirectory()) {;
+        if (!['node_modules', '.git', '.next', 'dist', 'build', 'backup-merge-conflicts'].includes(item)) {;
+          traverse(fullPath);
+        }
+      } else if (stat.isFile()) {;
+        const ext = path.extname(fullPath);
+        if (extensions.includes(ext)) {;
+          files.push(fullPath);
+        }
+      }
+    }
+  }
+  ;
+  traverse(dir);
+  return files;
+}
+;
+// Main execution;
+console.log('🔍 Scanning for files with syntax errors...');
+const files = findFilesWithErrors(process.cwd());
+;
+console.log(`Found ${files.length} files to check`);
+;
+let fixedCount = 0;
+for (const file of files) {;
+  if (fixSyntaxErrors(file)) {;
+    fixedCount++;
+  }
 }
 
-// Run all fixes
-fixV1ApiDocs();
-fixPartnerUpdate();
-fixPitchFiles();
+// Run the fixer
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.fixAllSyntaxErrors().catch(console.error);
+}
 
-console.log('🎉 Comprehensive syntax fixing completed!');
+    this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
+    for (const file of problematicFiles) {;
+  const result = await this.fixFile(file);
+      if (result.fixed) {;
+  this.fixedFiles++;,
+}
+    }
+
+    this.log(`🎉 Fixed syntax in ${this.fixedFiles} files`);
+    if (this.errors.length > 0) {;
+  this.log(`⚠️  ${this.errors.length} errors occurred:`);
+      this.errors.forEach(error => {;
+  this.log(`   - ${error.file}: ${error.error}`);,
+});,
+}
+
+    return {;
+  totalFiles: allFiles.length,
+      fixedFiles: this.fixedFiles.length,
+      errors: this.errors.length,
+      fixedFileList: this.fixedFiles,
+      errorList: this.errors;,
+}
+  }
+
+  generateReport(results) {;
+  const report = {;
+  timestamp: new Date().toISOString(),
+      summary: results,
+      fixedFiles: this.fixedFiles,
+      errors: this.errors;,
+}
+      fixed: this.fixedFiles,
+      errors: this.errors,
+      totalFiles: problematicFiles.length;,
+}
+  }
+
+  async createCleanESLintConfig() {;
+  this.log("🔧 Creating clean ESLint configuration...");
+    const eslintConfig = `module.exports = {;
+  extends: [ "next/core-web-vitals",
+    "eslint: recommended",
+    "@typescript-eslint/recommended" ],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {;
+  "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "warn";,
+},
+  ignorePatterns: ["node_modules/", ".next/", "out/"];,
+};`;
+    try {;
+  fs.writeFileSync(".eslintrc.js", eslintConfig);
+      this.log("✅ Created clean ESLint configuration");,
+} catch (error) {;
+  this.log(`❌ Error creating ESLint config: ${error.message}`);,
+}
+  }
+
+  async run() {;
+  try {;
+  // Fix syntax issues;
+      const fixResult = await this.fixAllFiles();
+      // Create clean ESLint config;
+      await this.createCleanESLintConfig();
+      this.log("🎉 Comprehensive syntax fixing completed successfully");
+      return fixResult;,
+} catch (error) {;
+  this.log(`💥 Syntax fixing failed: ${error.message}`);
+      throw error;,
+}
+  }
+}
+
+// Run the syntax fixer if this file is executed directly;
+if (require.main === module) {;
+  const fixer = new ComprehensiveSyntaxFixer();
+  fixer.run();
+    .then((result) => {;
+  console.log("✅ Syntax fixing completed");
+      console.log(`📊 Fixed ${result.fixed} files`);
+      if (result.errors.length > 0) {;
+  console.log(`⚠️  ${result.errors.length} errors occurred`);,
+}
+      process.exit(0);,
+});
+    .catch((error) => {;
+  console.error("❌ Syntax fixing failed: ", error.message);
+      process.exit(1);,
+});,
+}
+
+module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))

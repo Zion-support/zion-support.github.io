@@ -1,17 +1,10 @@
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { 
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle;
-  DialogDescription;
-  DialogOverlay
-} from "@/components/ui/dialog";
-import { DisputeForm } from "./DisputeForm";
-import { useNavigate } from "react-router-dom";
-import { ShieldAlert } from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
+import {DisputeForm} from "./DisputeForm";
+import {useNavigate} from "react-router-dom";
+import {ShieldAlert} from "lucide-react";
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string;
@@ -31,7 +24,7 @@ export function RaiseDisputeButton({
   const navigate = useNavigate();
   
   const handleDisputeCreated = (disputeId: string) => {
-    setIsDialogOpen(false);
+    setIsDialogOpen(false),
     navigate(`/dashboard/disputes/${disputeId}`)
   };
   
@@ -67,3 +60,4 @@ export function RaiseDisputeButton({
     </>
   )
 }
+;

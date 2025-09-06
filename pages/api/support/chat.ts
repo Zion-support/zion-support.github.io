@@ -27,20 +27,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini';
-      messages: [sysMessage, ...messages];
-      temperature: 0.2});
+      model: 'gpt-4o-mini',
+      messages: [sysMessage, ...messages],
+      temperature: 0.2
+    });
 
     const assistantMessage = completion.choices?.[0]?.message?.content ?? 'Let me know how I can help.';
 
     await logSupportEventToOperator({ type: 'chat_completion', sessionId: sessionId ?? 'unknown', payload: { intent } });
 
     return res.status(200).json({
-      assistantMessage;
+      assistantMessage,
       meta: {
-        intentMatched: intent.intentMatched;
-        matchedArticleIds: intent.matchedArticleIds;
-        links: matchedArticles.map((a) => ({ title: a.title, href: `/help/${a.slug}` }))}})
+        intentMatched: intent.intentMatched,
+        matchedArticleIds: intent.matchedArticleIds,
+        links: matchedArticles.map((a) => ({ title: a.title, href: `/help/${a.slug}` }))
+      }
+    })
   } catch (e: any) {
     return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
   }

@@ -1,13 +1,13 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-import { Resend } from "npm: resend@2.0.0";
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+import {Resend} from "npm: resend@2.0.0";
 // Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 const corsHeaders = {
@@ -21,7 +21,7 @@ interface EmailData {
   user_type: string;
   days_inactive?: number;
   onboarding_status?: any;
-  job_id?: string;
+  job_id?: string,
   job_title?: string
 }
 
@@ -70,7 +70,7 @@ serve(async (req) => {
     const emailResponse = await resend.emails.send({
       from: "Zion AI Marketplace <notifications@zion.ai>";
       to: userEmail;
-      subject: subject;
+      subject: subject,
       html: html});
 
     if (emailResponse.error) {
@@ -81,7 +81,7 @@ serve(async (req) => {
     await supabase
       .from("scheduled_jobs")
       .update({
-        status: "completed";
+        status: "completed",
         completed_at: new Date().toISOString()})
       .eq("id", jobId);
 
@@ -89,7 +89,7 @@ serve(async (req) => {
     await supabase
       .from("email_campaigns")
       .update({
-        status: "sent";
+        status: "sent",
         sent_at: new Date().toISOString()})
       .eq("user_id", emailData.user_id)
       .eq("campaign_type", emailData.email_type);
@@ -97,11 +97,11 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({
         success: true;
-        message: "Email sent successfully";
+        message: "Email sent successfully",
         email: emailResponse});
       {
         headers: {
-          ...corsHeaders;
+          ...corsHeaders,
           "Content-Type": "application/json"};
         status: 200}
     )
@@ -110,11 +110,11 @@ serve(async (req) => {
 
     return new Response(
       JSON.stringify({
-        success: false;
+        success: false,
         error: error.message});
       {
         headers: {
-          ...corsHeaders;
+          ...corsHeaders,
           "Content-Type": "application/json"};
         status: 500}
     )
@@ -360,3 +360,4 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       </div>
     `}
 }
+;

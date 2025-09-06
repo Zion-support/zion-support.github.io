@@ -1,7 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {
-  onCreateClick: () => void
+  onCreateClick: () => void;
 }
 
 export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
@@ -13,10 +12,10 @@ export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
           Create legally binding agreements with optional blockchain deployment
         </p>
       </div>
-      
+
       <Button size="lg" onClick={onCreateClick}>
         Create New Contract
       </Button>
     </div>
-  )
+  );
 }

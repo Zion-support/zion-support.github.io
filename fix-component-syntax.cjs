@@ -24,8 +24,7 @@ function fixComponentSyntax(filePath) {
     // Fix more general patterns
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
-    
-    // Clean up extra whitespace
+        // Clean up extra whitespace
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     if (content !== originalContent) {
@@ -36,6 +35,8 @@ function fixComponentSyntax(filePath) {
     
     return false;
   } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);    return false;
+    console.error(`Error processing ${filePath}:`, error.message);
     console.error(`Error processing ${filePath}: `, error.message);
     return false;
   }
@@ -47,6 +48,8 @@ const filesToFix = [
   '/workspace/components/ErrorBoundary.tsx',
   '/workspace/pages/index.tsx'
 ];
+
+
 console.log('🔍 Fixing syntax errors in component files...');
 
 let fixedCount = 0;

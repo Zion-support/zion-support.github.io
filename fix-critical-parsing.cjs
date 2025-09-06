@@ -21,8 +21,8 @@ function fixCriticalParsing(content) {
   fixed = fixed.replace(/(\w+)\s*;\s*(\w+)\s*:\s*([^,}]+);/g, '$1, $2: $3,');
   
   // Fix missing commas in function parameters
-  fixed = fixed.replace(/(\w+)\s*:\s*([^,}]+)\s*;\s*(\w+)\s*:\s*([^,}]+)/g, '$1: $2, $3: $4');
-  
+  fixed = fixed.replace(/(\w+)\s*:\s*([^,}]+)\s*;\s*(\w+)\s*:\s*([^,}]+)/g, '$1: $2, $3: $4'),
+  fixed = fixed.replace(/(\w+)\s*:\s*([^,}]+)\s*;\s*(\w+)\s*:\s*([^,}]+)/g, '$1: $2, $3: $4'),
   // Fix missing semicolons
   fixed = fixed.replace(/(\s+return\s+[^;]+)\n(\s*})/g, '$1;\n$2');
   

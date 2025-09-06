@@ -1,8 +1,8 @@
 
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import {useState} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
 
 export interface ApiKey {
@@ -12,7 +12,7 @@ export interface ApiKey {
   scopes: ApiKeyScope[];
   created_at: string;
   last_used_at: string | null;
-  expires_at: string | null;
+  expires_at: string | null,
   is_active: boolean
 }
 
@@ -22,7 +22,7 @@ export interface ApiLog {
   method: string;
   status_code: number;
   created_at: string;
-  ip_address?: string;
+  ip_address?: string,
   response_time_ms?: number
 }
 
@@ -60,7 +60,7 @@ export function useApiKeys() {
       }
 
       const response = await fetch(`${getApiUrl()}/keys`, {
-        method: 'GET';
+        method: 'GET',
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -79,7 +79,7 @@ export function useApiKeys() {
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive";
-        title: "Error fetching API keys";
+        title: "Error fetching API keys",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
@@ -102,14 +102,14 @@ export function useApiKeys() {
       }
 
       const response = await fetch(`${getApiUrl()}/create`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
         };
         body: JSON.stringify({
           name;
-          scopes;
+          scopes,
           expiresAt: expiresAt ? expiresAt.toISOString() : null
         })
       });
@@ -127,7 +127,7 @@ export function useApiKeys() {
       setNewApiKey(result.key);
       
       toast({
-        title: "API Key Created";
+        title: "API Key Created",
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
       
       return result
@@ -136,7 +136,7 @@ export function useApiKeys() {
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive";
-        title: "Error creating API key";
+        title: "Error creating API key",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
@@ -149,7 +149,7 @@ export function useApiKeys() {
     
     setLoading(true);
     setError(null);
-    setNewApiKey(null);
+    setNewApiKey(null),
     
     try {
       const { data: { session } } = await supabase.auth.getSession();
@@ -159,7 +159,7 @@ export function useApiKeys() {
       }
 
       const response = await fetch(`${getApiUrl()}/regenerate`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -182,7 +182,7 @@ export function useApiKeys() {
       setNewApiKey(result.key);
       
       toast({
-        title: "API Key Regenerated";
+        title: "API Key Regenerated",
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
       
       return result
@@ -191,7 +191,7 @@ export function useApiKeys() {
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive";
-        title: "Error regenerating API key";
+        title: "Error regenerating API key",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
@@ -203,7 +203,7 @@ export function useApiKeys() {
     if (!user) return;
     
     setLoading(true);
-    setError(null);
+    setError(null),
     
     try {
       const { data: { session } } = await supabase.auth.getSession();
@@ -213,7 +213,7 @@ export function useApiKeys() {
       }
 
       const response = await fetch(`${getApiUrl()}/revoke`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -233,7 +233,7 @@ export function useApiKeys() {
       ));
       
       toast({
-        title: "API Key Revoked";
+        title: "API Key Revoked",
         description: "The API key has been revoked successfully."});
       
       return result
@@ -242,7 +242,7 @@ export function useApiKeys() {
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive";
-        title: "Error revoking API key";
+        title: "Error revoking API key",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
@@ -266,7 +266,7 @@ export function useApiKeys() {
       const response = await fetch(
         `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`, 
         {
-          method: 'GET';
+          method: 'GET',
           headers: {
             'Authorization': `Bearer ${session.access_token}`;
             'Content-Type': 'application/json'
@@ -289,7 +289,7 @@ export function useApiKeys() {
       setError(err instanceof Error ? err.message : 'An unknown error occurred');
       toast({
         variant: "destructive";
-        title: "Error fetching API logs";
+        title: "Error fetching API logs",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
@@ -311,3 +311,4 @@ export function useApiKeys() {
     clearNewApiKey: () => setNewApiKey(null)
   }
 }
+;

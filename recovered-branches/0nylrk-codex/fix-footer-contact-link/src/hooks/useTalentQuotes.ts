@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { quoteRequestService } from '@/services/quoteRequestService';
-import { useAuth } from '@/hooks/useAuth';
+import {useState} from 'react';
+import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
+import {quoteRequestService} from '@/services/quoteRequestService';
+import {useAuth} from '@/hooks/useAuth';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
-import { useToast } from '@/hooks/use-toast';
+import {useToast} from '@/hooks/use-toast';
 export const useTalentQuotes = () => {
   const { user } = useAuth();
   const { toast } = useToast();
@@ -17,7 +17,7 @@ export const useTalentQuotes = () => {
   // Fetch quotes for this talent
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotestalent', talentId];
-    queryFn: () => quoteRequestService.getByTalentId(talentId);
+    queryFn: () => quoteRequestService.getByTalentId(talentId),
     enabled: !!talentId});
 
   // Count unread quotes
@@ -56,7 +56,7 @@ export const useTalentQuotes = () => {
       }
       
       toast({
-        title: message;
+        title: message,
         description: "The quote request status has been updated"
       });
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
@@ -64,7 +64,7 @@ export const useTalentQuotes = () => {
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to update status: " + error.message;
+        description: "Failed to update status: " + error.message,
         variant: "destructive"
       })
     }
@@ -76,7 +76,7 @@ export const useTalentQuotes = () => {
       quoteRequestService.toggleArchive(id, isArchived);
     onSuccess: (_, variables) => {
       toast({
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived";
+        title: variables.isArchived ? "Quote archived" : "Quote unarchived",
         description: variables.isArchived 
           ? "The quote request has been archived" 
           : "The quote request has been moved back to active quotes"
@@ -86,7 +86,7 @@ export const useTalentQuotes = () => {
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to update quote: " + error.message;
+        description: "Failed to update quote: " + error.message,
         variant: "destructive"
       })
     }
@@ -100,7 +100,7 @@ export const useTalentQuotes = () => {
     statusFilter;
     setStatusFilter;
     archiveFilter;
-    setArchiveFilter;
+    setArchiveFilter,
     markAsViewed: (id: string) => 
       updateStatusMutation.mutate({ id, status: 'in_review' });
     markAsResponded: (id: string) => 

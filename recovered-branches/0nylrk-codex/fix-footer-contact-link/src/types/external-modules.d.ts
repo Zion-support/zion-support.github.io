@@ -26,7 +26,7 @@ declare module 'react-day-picker' {
 }
 declare module 'sonner';
 declare module 'lucide-react' {
-  import { FC, SVGProps } from 'react';
+import {FC, SVGProps} from 'react';
   export type LucideProps = SVGProps<SVGSVGElement>;
   export type LucideIcon = FC<LucideProps>;
 
@@ -220,14 +220,14 @@ declare module 'lucide-react' {
   export const Webhook: LucideIcon;
   export const X: LucideIcon;
   export const XCircle: LucideIcon;
-  export const Zap: LucideIcon;
+  export const Zap: LucideIcon,
   const icons: { [key: string]: LucideIcon };
   export default icons
 }
 declare module 'child_process';
 declare module 'date-fns';
 declare module 'jspdf' {
-  export const jsPDF: any;
+  export const jsPDF: any,
   export default jsPDF
 }
 declare module '@hookform/resolvers/zod';
@@ -267,8 +267,8 @@ declare module 'i18next';
 declare module 'i18next-browser-languagedetector';
 declare module 'react-helmet-async';
 declare module 'react-hook-form' {
-  import type { ComponentType, ReactElement, ReactNode } from 'react'
-
+  import type { ComponentType, ReactElement, ReactNode } from 'react';
+;
   // Minimal generic typings to satisfy local usage without full type defs
   export type FieldValues = Record<string, any>
   export type FieldPath<TFieldValues extends FieldValues> =
@@ -296,7 +296,7 @@ declare module 'react-hook-form' {
 
   export interface ControllerProps<
     TFieldValues extends FieldValues = FieldValues;
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>;
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
   > {
     name: TName
     control?: Control<TFieldValues>
@@ -316,7 +316,7 @@ declare module 'react-hook-form' {
 
   export const FormProvider: ComponentType<FormProviderProps<any>>
   export function useFormContext<
-    TFieldValues extends FieldValues = FieldValues;
+    TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn<TFieldValues>
 }
 declare module 'react-i18next';

@@ -3,8 +3,7 @@ import Image from 'next/image';
 
 interface OptimizedImageProps {
 
-  src: string;
-  alt: string;
+  src: string, alt: string,
   width?: number;
   height?: number;
   className?: string;
@@ -42,8 +41,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
   }
 
-
-  return (
     <Image
       src={src}
       alt={alt}
@@ -53,10 +50,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       className={className}
       priority={priority}
       sizes={sizes}
-      quality={quality}
+quality={quality}
       style={style}
-
-    />
   );
 };
 

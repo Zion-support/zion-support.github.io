@@ -1,44 +1,30 @@
-import fs from 'fs';
-import path from 'path';
-
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-
 export interface ModerationFlag {
   id: string;
-  contentType: 'post' | 'comment' | 'user';
   contentId: string;
+  contentType: 'post' | 'comment' | 'user';
   reason: string;
   userEmail: string;
-  status: ModerationStatus;
+  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
   createdAt: string;
   adminNotes?: string;
-  updatedAt?: string;
 }
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const FLAGS_FILE = path.join(DATA_DIR, 'moderation-flags.json');
+// Mock data storage - replace with actual database
+let flags: ModerationFlag[] = [];
 
-function loadFlags(): ModerationFlag[] {
-  try {
-    if (!fs.existsSync(FLAGS_FILE)) return [];
-    const raw = fs.readFileSync(FLAGS_FILE, 'utf8');
-    return JSON.parse(raw);
-  } catch {
-    return [];
-  }
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find(flag => flag.id === id) || null;
 }
 
-function saveFlags(flags: ModerationFlag[]): void {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(FLAGS_FILE, JSON.stringify(flags, null, 2));
+export async function readAllFlags(): Promise<ModerationFlag[]> {
+  return [...flags];
 }
 
 export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag> {
-  const flags = loadFlags();
   const flag: ModerationFlag = {
     id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    contentType: data.contentType || 'post',
     contentId: data.contentId || '',
+    contentType: data.contentType || 'post',
     reason: data.reason || '',
     userEmail: data.userEmail || '',
     status: 'pending',
@@ -47,35 +33,19 @@ export async function createFlag(data: Partial<ModerationFlag>): Promise<Moderat
   };
   
   flags.push(flag);
-  saveFlags(flags);
   return flag;
-}
-
-export async function readAllFlags(): Promise<ModerationFlag[]> {
-  return loadFlags();
-}
-
-export async function getFlagById(id: string): Promise<ModerationFlag | null> {
-  const flags = loadFlags();
-  return flags.find(f => f.id === id) || null;
 }
 
 export async function updateFlagStatus(
   id: string, 
-  status: ModerationStatus, 
+  status: ModerationFlag['status'], 
   adminNotes?: string
-): Promise<ModerationFlag | null> {
-  const flags = loadFlags();
-  const flagIndex = flags.findIndex(f => f.id === id);
-  
-  if (flagIndex === -1) return null;
-  
-  flags[flagIndex].status = status;
-  flags[flagIndex].updatedAt = new Date().toISOString();
-  if (adminNotes) {
-    flags[flagIndex].adminNotes = adminNotes;
-  }
-  
-  saveFlags(flags);
-  return flags[flagIndex];
+): Promise<FlaggedContent | undefined> {
+  const flag = await getFlagById(id);
+  if (!flag) return undefined;
+  flag.status = status;
+  flag.adminNotes = adminNotes || flag.adminNotes;
+  flag.updatedAt = new Date().toISOString();
+  await upsertFlag(flag);
+  return flag;
 }

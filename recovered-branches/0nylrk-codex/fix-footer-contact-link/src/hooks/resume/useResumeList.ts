@@ -1,8 +1,8 @@
 
-import { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Resume } from '@/types/resume';
-import { useAuth } from '@/hooks/useAuth';
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Resume} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
@@ -41,13 +41,13 @@ export function useResumeList() {
         basic_info: {
           id: resume.id;
           title: resume.title;
-          headline: resume.headline;
+          headline: resume.headline,
           summary: resume.summary
         };
         work_experience: [];
         education: [];
         skills: [];
-        certifications: [];
+        certifications: [],
         is_active: resume.is_active
       }));
       
@@ -76,3 +76,4 @@ export function useResumeList() {
     fetchResumes
   }
 }
+;

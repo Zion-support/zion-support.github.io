@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { Project, ProjectStatus } from "@/types/projects";
-import { toast } from "sonner";
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Project, ProjectStatus} from "@/types/projects";
+import {toast} from "sonner";
 export function useProjects() {
   const { user } = useAuth();
   const [projects, setProjects] = useState<Project[]>([]);
@@ -26,7 +26,7 @@ export function useProjects() {
         .select(`
           *;
           job:jobs(title, description);
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url);
+          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
           client_profile:profiles!client_id(display_name, avatar_url)
         `)
         .order("created_at", { ascending: false });
@@ -45,7 +45,7 @@ export function useProjects() {
       const transformedData = data.map((project: any) => ({
         ...project;
         talent_profile: project.talent_profile ? {
-          ...project.talent_profile;
+          ...project.talent_profile,
           full_name: project.talent_profile.display_name
         } : undefined
       }));
@@ -54,7 +54,7 @@ export function useProjects() {
       setError(null)
     } catch (err: any) {
       console.error("Error fetching projects:", err);
-      setError("Failed to fetch projects: " + err.message);
+      setError("Failed to fetch projects: " + err.message),
       toast.error("Failed to fetch projects")
     } finally {
       setIsLoading(false)
@@ -68,7 +68,7 @@ export function useProjects() {
         .select(`
           *;
           job:jobs(title, description);
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url);
+          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
           client_profile:profiles!client_id(display_name, avatar_url)
         `)
         .eq("id", projectId)
@@ -80,7 +80,7 @@ export function useProjects() {
       const transformedProject = {
         ...data;
         talent_profile: data.talent_profile ? {
-          ...data.talent_profile;
+          ...data.talent_profile,
           full_name: data.talent_profile.display_name
         } : undefined
       };
@@ -128,7 +128,7 @@ export function useProjects() {
     isLoading;
     error;
     refetch: fetchProjects;
-    getProjectById;
+    getProjectById,
     updateProjectStatus
   }
-}
+};

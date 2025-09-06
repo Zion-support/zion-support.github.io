@@ -4,11 +4,9 @@ interface SkeletonProps {
   className?: string;
   height?: string;
   width?: string;
-  rounded?: string
-}
-
+  rounded?: string;
 const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = '';
+  className = '',
   height = 'h-4', 
   width = 'w-full', 
   rounded = 'rounded' 
@@ -77,16 +75,21 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[...Array(4)].map((_, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className='text-center'>
+              <Skeleton className='w-16 h-16 rounded-full mx-auto mb-4' />
+              <Skeleton className='h-10 w-20 mx-auto mb-2' />
+              <Skeleton className='h-5 w-24 mx-auto' />            <div key={index} className="text-center">
               <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />
               <Skeleton className="h-10 w-20 mx-auto mb-2" />
               <Skeleton className="h-5 w-24 mx-auto" />
-            </div>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
+};
+
+export default Skeleton;  )
 };
 
 export default Skeleton;

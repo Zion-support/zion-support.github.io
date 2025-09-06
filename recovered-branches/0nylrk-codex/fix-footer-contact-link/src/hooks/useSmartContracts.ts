@@ -1,11 +1,11 @@
 
-import { useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from 'sonner';
-import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from '@/types/smart-contracts';
-import { TalentProfile } from '@/types/talent';
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
+import {useState} from 'react';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {toast} from 'sonner';
+import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from '@/types/smart-contracts';
+import {TalentProfile} from '@/types/talent';
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
 export function useSmartContracts() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
@@ -17,7 +17,7 @@ export function useSmartContracts() {
     clientName: string
   ): Promise<string> => {
     try {
-      setIsLoading(true);
+      setIsLoading(true),
       
       const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
         body: {
@@ -28,7 +28,7 @@ export function useSmartContracts() {
           startDate: values.startDate.toISOString();
           endDate: values.endDate?.toISOString();
           paymentTerms: values.paymentTerms;
-          paymentAmount: values.paymentAmount;
+          paymentAmount: values.paymentAmount,
           additionalClauses: values.additionalClauses || []}
       });
       
@@ -53,7 +53,7 @@ export function useSmartContracts() {
     options: DeploymentOptions
   ): Promise<SmartContractInfo | null> => {
     if (!user?.id) {
-      toast.error("You must be logged in to deploy a contract");
+      toast.error("You must be logged in to deploy a contract"),
       return null
     }
     
@@ -69,12 +69,12 @@ export function useSmartContracts() {
         id: crypto.randomUUID();
         transactionHash: mockTransactionHash;
         networkName: options.network;
-        blockNumber: Math.floor(Math.random() * 1000000);
+        blockNumber: Math.floor(Math.random() * 1000000),
         deployedAddress: `0x${Array.from({length: 40}, () => 
           Math.floor(Math.random() * 16).toString(16)).join('')}`;
         contractType: 'escrow';
         createdAt: new Date().toISOString();
-        createdBy: user.id;
+        createdBy: user.id,
         status: 'deployed'
       };
       
@@ -100,3 +100,4 @@ export function useSmartContracts() {
     deploymentStatus
   }
 }
+;

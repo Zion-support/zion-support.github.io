@@ -1,9 +1,9 @@
 
-import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { Review, ReviewReport } from "@/types/reviews";
-import { toast } from "@/hooks/use-toast";
+import {useState} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Review, ReviewReport} from "@/types/reviews";
+import {toast} from "@/hooks/use-toast";
 export function useReviews(projectId?: string) {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +15,7 @@ export function useReviews(projectId?: string) {
   const fetchProjectReviews = async (projectId: string) => {
     if (!projectId) return;
     
-    setIsLoading(true);
+    setIsLoading(true),
     
     try {
       const { data, error } = await supabase
@@ -49,7 +49,7 @@ export function useReviews(projectId?: string) {
       console.error("Error fetching reviews:", err);
       toast({
         title: "Error";
-        description: "Failed to load reviews";
+        description: "Failed to load reviews",
         variant: "destructive"})
     } finally {
       setIsLoading(false)
@@ -60,7 +60,7 @@ export function useReviews(projectId?: string) {
   const fetchUserReviews = async (userId: string) => {
     if (!userId) return;
     
-    setIsLoading(true);
+    setIsLoading(true),
     
     try {
       const { data, error } = await supabase
@@ -81,7 +81,7 @@ export function useReviews(projectId?: string) {
       console.error("Error fetching user reviews:", err);
       toast({
         title: "Error";
-        description: "Failed to load reviews";
+        description: "Failed to load reviews",
         variant: "destructive"})
     } finally {
       setIsLoading(false)
@@ -97,13 +97,13 @@ export function useReviews(projectId?: string) {
     communication_rating?: number;
     quality_rating?: number;
     timeliness_rating?: number;
-    would_work_again?: boolean;
+    would_work_again?: boolean,
     is_anonymous: boolean
   }) => {
     if (!user) {
       toast({
         title: "Error";
-        description: "You must be logged in to submit a review";
+        description: "You must be logged in to submit a review",
         variant: "destructive"});
       return false
     }
@@ -122,7 +122,7 @@ export function useReviews(projectId?: string) {
       if (error) throw error;
       
       toast({
-        title: "Success";
+        title: "Success",
         description: "Your review has been submitted and is pending approval"});
       
       setUserReview(data);
@@ -134,12 +134,12 @@ export function useReviews(projectId?: string) {
       if (err.code === "23505") {
         toast({
           title: "Error";
-          description: "You have already submitted a review for this project";
+          description: "You have already submitted a review for this project",
           variant: "destructive"})
       } else {
         toast({
           title: "Error";
-          description: "Failed to submit review";
+          description: "Failed to submit review",
           variant: "destructive"})
       }
       return false
@@ -152,7 +152,7 @@ export function useReviews(projectId?: string) {
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false;
     
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     
     try {
       const { error } = await supabase
@@ -165,7 +165,7 @@ export function useReviews(projectId?: string) {
       if (error) throw error;
       
       toast({
-        title: "Success";
+        title: "Success",
         description: "Your review has been updated"});
       
       if (userReview) {
@@ -177,7 +177,7 @@ export function useReviews(projectId?: string) {
       console.error("Error updating review:", err);
       toast({
         title: "Error";
-        description: "Failed to update review";
+        description: "Failed to update review",
         variant: "destructive"});
       return false
     } finally {
@@ -187,14 +187,14 @@ export function useReviews(projectId?: string) {
   
   // Report a review
   const reportReview = async (reviewId: string, reason: string) => {
-    if (!user) return false;
+    if (!user) return false,
     
     try {
       const { error } = await supabase
         .from("review_reports")
         .insert({
           review_id: reviewId;
-          reporter_id: user.id;
+          reporter_id: user.id,
           reason});
         
       if (error) {
@@ -202,14 +202,14 @@ export function useReviews(projectId?: string) {
         if (error.code === "23505") {
           toast({
             title: "Error";
-            description: "You have already reported this review";
+            description: "You have already reported this review",
             variant: "destructive"})
         } else {
           throw error
         }
       } else {
         toast({
-          title: "Report Submitted";
+          title: "Report Submitted",
           description: "Thank you. Our team will review your report"});
         return true
       }
@@ -217,7 +217,7 @@ export function useReviews(projectId?: string) {
       console.error("Error reporting review:", err);
       toast({
         title: "Error";
-        description: "Failed to report review";
+        description: "Failed to report review",
         variant: "destructive"})
     }
     
@@ -240,3 +240,4 @@ export function useReviews(projectId?: string) {
     updateReview;
     reportReview}
 }
+;

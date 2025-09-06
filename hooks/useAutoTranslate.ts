@@ -3,10 +3,14 @@ import { translateTextViaAI } from '../utils/translation';
 export type UseAutoTranslateResult = {
   translations: Record<string, string>;
   loading: boolean;
-  error?: string
+  error?: string;
 };
 
-export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
+export function useAutoTranslate(
+  text: string,
+  targets: string[],
+  debounceMs = 600
+): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
@@ -16,7 +20,7 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
   useEffect(() => {
     if (!text || targets.length === 0) {
       setTranslations({});
-      return
+      return;    }      return
     }
 
     let cancelled = false;
@@ -25,8 +29,11 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
         setLoading(true);
         setError(undefined);
         const res = await translateTextViaAI(text, targets);
-        if (!cancelled) setTranslations(res)
+        if (!cancelled) setTranslations(res);
       } catch (e: any) {
+        if (!cancelled) setError(e?.message || 'Translation failed');
+      } finally {
+        if (!cancelled) setLoading(false);      }      } catch (e: any) {
         if (!cancelled) setError(e?.message || 'Translation failed')
       } finally {
         if (!cancelled) setLoading(false)
@@ -35,7 +42,11 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
 
     return () => {
       cancelled = true;
-      clearTimeout(timer)
+      clearTimeout(timer);
+    };
+  }, [key, debounceMs]);
+
+  return { translations, loading, error };
     }
   }, [key, debounceMs]);
 
