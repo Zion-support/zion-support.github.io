@@ -1,15 +1,20 @@
 import React from 'react';
-import { SEO } from "../components/SEO";
-import { GradientHeading } from "../components/GradientHeading";
-import { ContactSection } from "../components/ContactSection";
-import Link from "next/link";
+import { Link } from 'react-router-dom';
+import SEO from "../components/SEO";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
+    <>
+      <SEO
+        title="About Zion Tech Group"
+        description="Learn about Zion Tech Group's mission to deliver cutting-edge AI and technology solutions that empower businesses to achieve their goals."
+        keywords="about, company, mission, vision, AI solutions, technology"
+        url="/about"
+      />
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-lg text-gray-600 mb-6">
               Zion Tech Group is a leading provider of AI and technology solutions
@@ -37,7 +42,7 @@ export default function About() {
             </div>
             <div className="mt-8">
               <Link
-                href="/contact"
+                to="/contact"
                 className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Get in Touch
@@ -46,6 +51,7 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
