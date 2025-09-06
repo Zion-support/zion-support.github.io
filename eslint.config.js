@@ -4,7 +4,7 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import nextPlugin from '@next/eslint-plugin-next';
+// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
 import globals from 'globals';
 
 const compat = new FlatCompat({
@@ -14,7 +14,7 @@ const compat = new FlatCompat({
 });
 
 export default [
-  ...compat.extends('next/core-web-vitals'),
+  // ...compat.extends('next/core-web-vitals'), // Not needed for Vite project
   {
     ignores: [
       'node_modules/**',
@@ -134,7 +134,7 @@ export default [
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
-      '@next/next': nextPlugin,
+      // '@next/next': nextPlugin, // Not needed for Vite project
     },
     rules: {
       ...typescript.configs.recommended.rules,
