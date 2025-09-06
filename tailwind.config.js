@@ -20,6 +20,10 @@ ursor/automate-test-improve-and-merge-code-646c
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
@@ -27,11 +31,18 @@ ursor/automate-test-improve-and-merge-code-646c
         primary: {
 
           50: '#eff6ff',
+        blue: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
+          950: '#172554'
           950: '#172554'
         },
         gray: {
@@ -167,6 +178,8 @@ ursor/automate-test-improve-and-merge-code-646c
       borderRadius: {
         '4xl': '2rem',
         '5xl': '2.5rem'
+          950: '#030712'
+        },
         'zion-slate-dark': '#1e293b',
         'zion-slate': '#334155',
         'zion-slate-light': '#475569'
@@ -201,5 +214,22 @@ ursor/automate-test-improve-and-merge-code-646c
 };
   plugins: []
 }
+  plugins: []
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.5s ease-out'
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' }
+        }
+      }
+    }
+  },
   plugins: []
 };

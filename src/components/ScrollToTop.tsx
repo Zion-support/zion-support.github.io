@@ -17,11 +17,10 @@ const ScrollToTop: React.FC = () => {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-<<<<<<< HEAD
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: 'smooth'
     });
   };
 
@@ -38,7 +37,6 @@ const ScrollToTop: React.FC = () => {
       )}
     </>
   );
-=======
   return null;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 };

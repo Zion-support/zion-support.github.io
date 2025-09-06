@@ -203,7 +203,7 @@ export function FooterNewsletter(): React.ReactElement {;
       } else {;
         logErrorToProduction('Newsletter subscription failed:', { data: data }),;
         // Use a more specific error message if available from API, otherwise generic;
-        const errorMessage = data.error || 'Subscription failed. Please try again.',;
+        const errorMessage = data.error || 'Subscription failed. Please try again.';
         toast.error(errorMessage, { id: `${uniqueToastIdBase}-api-error` });
       }
     } catch (err: any) {;
