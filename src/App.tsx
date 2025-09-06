@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
 import ToastContainer from './components/ToastContainer';
 import { ThemeProvider } from './components/ThemeProvider';
+import ScrollToTop from './components/ScrollToTop';
+import BackToTop from './components/BackToTop';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
@@ -19,6 +21,7 @@ function App() {
     <ThemeProvider>
       <ErrorBoundary>
         <Router>
+          <ScrollToTop />
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-1">
@@ -32,6 +35,7 @@ function App() {
             </main>
             <Footer />
             <ToastContainer />
+            <BackToTop />
           </div>
         </Router>
       </ErrorBoundary>
