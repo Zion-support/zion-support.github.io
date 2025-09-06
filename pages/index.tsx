@@ -265,12 +265,7 @@ export default function HomePage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-          </div>
-=======
-}          </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
         </section>
 
         {/* Services Section */}
@@ -381,12 +376,8 @@ export default function HomePage() {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
-=======
-                We deliver exceptional results through innovation, expertise, and dedication              </p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -402,12 +393,8 @@ export default function HomePage() {
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
-<<<<<<< HEAD
                   <p className="text-gray-600">{item.description}</p>
                 </motion.div>
-=======
-                  <p className="text-gray-600">{item.description}</p>                </motion.div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
               ))}
             </div>
           </div>
@@ -441,12 +428,8 @@ export default function HomePage() {
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
-<<<<<<< HEAD
                 </Link>
               </div>
-=======
-                </Link>              </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
             </motion.div>
           </div>
         </section>
@@ -454,8 +437,3 @@ export default function HomePage() {
     </MainLayout>
   );
 }
-<<<<<<< HEAD
-      </main>
-    </>
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
