@@ -18,9 +18,6 @@ export default defineConfig({
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
-  css: {
-    postcss: false
-  },
   esbuild: {
     loader: 'tsx',
     include: /src\/.*\.[jt]sx?$/,
