@@ -15,6 +15,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       <div 
         className="fixed inset-0 bg-black bg-opacity-50"
         onClick={onClose}
+        onKeyDown={(e) => e.key === 'Escape' && onClose()}
+        role="button"
+        tabIndex={0}
+        aria-label="Close sidebar"
       />
       
       {/* Sidebar */}
