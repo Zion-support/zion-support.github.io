@@ -1,4 +1,0 @@
- return (<> <Head> ← Back to Case Studies </Link> </nav> </div>) ) 
-}</div> </section> </div> </div>) ) 
-}</div> </section> This case study demonstrates the real impact of AI automation in content generation. Let's discuss how we can help you achieve similar results. </p> <Link href="/contact" className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300" > Get Started </Link> <Link href="/case-studies" className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300" > View More Case Studies </Link> </div> </div> </section> </div> </main> </div> </>) 
-}

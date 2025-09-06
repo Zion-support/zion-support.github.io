@@ -1,3 +1,0 @@
- return (<div> <Head> <title>Resume Builder - Zion AI Marketplace</title> </Head> <h1 className="text-2xl font-semibold mb-4" >Resume Builder</h1> </label> </div> </section> <section className="mb-8" > <div className="flex items-center justify-between mb-2" > <h2 className="text-lg font-semibold" >Summary</h2> <div className="flex gap-2" > <AIAssistant </section> <section className="mb-8" > <div className="flex items-center justify-between mb-2" > <h2 className="text-lg font-semibold" >Experience</h2> <AIAssistant </section> <section className="mb-8" > <div className="flex items-center justify-between mb-2" > <h2 className="text-lg font-semibold" >Skills</h2> <AIAssistant </section> </div>) 
-};
-export default ResumeBuilder;

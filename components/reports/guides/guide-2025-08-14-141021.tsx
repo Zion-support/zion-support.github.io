@@ -1,2 +1,0 @@
- <Head> <title>Guide — Techcrunch Pebble Implementation</title> <meta name="description" content="Step-by-step guidance derived from live research signals." /> <meta property="og:title" content="Guide — Techcrunch Pebble Implementation" /> <meta property="og:description" content="Step-by-step guidance derived from live research signals." /> <meta name="twitter:card" content="summary large image" /> </Head> 
-}
