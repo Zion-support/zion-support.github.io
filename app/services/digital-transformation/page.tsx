@@ -339,7 +339,7 @@ function ContactSection() {
           Ready to Transform Your Business Digitally?
         </h3>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Let's discuss how digital transformation can modernize your business
+          Let&apos;s discuss how digital transformation can modernize your business
           and drive growth. Our experts have successfully transformed 100+
           organizations across industries.
         </p>

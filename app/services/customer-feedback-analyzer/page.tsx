@@ -77,7 +77,7 @@ export default function CustomerFeedbackAnalyzerPage() {
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Understand Your Customers Better?</h2>
-        <p className="text-gray-600 mb-6">Start with a free analysis of your existing feedback data and see what insights you're missing.</p>
+        <p className="text-gray-600 mb-6">Start with a free analysis of your existing feedback data and see what insights you&apos;re missing.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="tel:+13024640950"

@@ -239,7 +239,7 @@ function ContactSection() {
         Ready to Optimize Your Financial Performance?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your financial analysis needs and create an AI-powered
+        Let&apos;s discuss your financial analysis needs and create an AI-powered
         solution that drives better financial decisions.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Social Media Scheduler | Zion Tech Group',

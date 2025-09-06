@@ -1,4 +1,3 @@
-import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Documentation Generator | Zion Tech Group',

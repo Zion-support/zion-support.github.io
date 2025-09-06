@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'AI-Powered Financial Analytics Platform | Zion Tech Group',

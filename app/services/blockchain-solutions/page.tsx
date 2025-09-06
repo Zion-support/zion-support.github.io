@@ -188,7 +188,7 @@ export default function BlockchainSolutionsPage() {
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Build the Future with Blockchain?</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Let's discuss how blockchain technology can transform your business and create new opportunities.
+          Let&apos;s discuss how blockchain technology can transform your business and create new opportunities.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

@@ -241,7 +241,7 @@ function ContactSection() {
         Ready to Optimize Your Inventory?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your inventory management needs and create an AI-powered
+        Let&apos;s discuss your inventory management needs and create an AI-powered
         solution that reduces costs and improves efficiency.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">

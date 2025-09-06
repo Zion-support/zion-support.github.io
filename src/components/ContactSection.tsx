@@ -50,7 +50,7 @@ const ContactSection: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-xl text-blue-200 max-w-2xl mx-auto">
             Ready to transform your business with cutting-edge technology? 
-            Let's discuss how we can help you achieve your goals.
+            Let&apos;s discuss how we can help you achieve your goals.
           </p>
         </div>
 
@@ -193,7 +193,7 @@ const ContactSection: React.FC = () => {
 
               {submitted && (
                 <div className="text-center p-4 bg-green-600/20 border border-green-500 rounded-lg">
-                  <p className="text-green-300">Thank you! We'll be in touch soon.</p>
+                  <p className="text-green-300">Thank you! We&apos;ll be in touch soon.</p>
                 </div>
               )}
             </form>

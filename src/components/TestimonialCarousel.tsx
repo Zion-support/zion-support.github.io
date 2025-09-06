@@ -113,7 +113,7 @@ const TestimonialCarousel: React.FC = () => {
 
           {/* Testimonial Text */}
           <blockquote className="text-xl md:text-2xl text-gray-700 text-center mb-8 leading-relaxed">
-            "{currentTestimonial.content}"
+            &ldquo;{currentTestimonial.content}&rdquo;
           </blockquote>
 
           {/* Author Info */}

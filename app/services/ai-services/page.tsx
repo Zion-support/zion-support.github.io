@@ -129,7 +129,7 @@ export default function AIServicesPage() {
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Let's discuss how AI can solve your specific business challenges and drive growth.
+          Let&apos;s discuss how AI can solve your specific business challenges and drive growth.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

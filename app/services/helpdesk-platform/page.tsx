@@ -147,7 +147,7 @@ function Pricing() {
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Helpdesk?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let's create a powerful helpdesk platform that streamlines your customer support and improves satisfaction.
+          Let&apos;s create a powerful helpdesk platform that streamlines your customer support and improves satisfaction.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

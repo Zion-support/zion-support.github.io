@@ -520,7 +520,7 @@ function CTASection() {
         Ready to Transform Healthcare with Technology?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your healthcare technology needs and create a compliant,
+        Let&apos;s discuss your healthcare technology needs and create a compliant,
         secure solution that improves patient care and operational efficiency.
         Our healthcare IT experts are ready to help.
       </p>
