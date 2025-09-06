@@ -30,7 +30,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech</span>
+              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-pulse">Zion Tech</span>
             </motion.h1>
             <motion.p 
               className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Leading AI-powered technology solutions for modern businesses. Transform your digital future with cutting-edge innovation.
+              Leading AI-powered technology solutions for modern businesses. Transform your digital future with cutting-edge innovation and enterprise-grade reliability.
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -101,6 +101,40 @@ const Home: React.FC = () => {
           }}
         />
       </div>
+      
+      {/* Stats Section */}
+      <div className="py-16 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            {[
+              { number: "500+", label: "Projects Completed", icon: "🚀" },
+              { number: "99.9%", label: "Uptime Guarantee", icon: "⚡" },
+              { number: "50+", label: "Expert Team Members", icon: "👥" },
+              { number: "24/7", label: "Support Available", icon: "🛡️" }
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                className="text-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-4xl mb-2">{stat.icon}</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300 text-sm md:text-base">{stat.label}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
       {/* Features Section */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

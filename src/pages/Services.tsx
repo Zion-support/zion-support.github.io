@@ -1,12 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-const ServiceCard = ({ title, description, icon }) => (
-  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-    <div className="text-4xl mb-4">{icon}</div>
+const ServiceCard = ({ title, description, icon, gradient, index }) => (
+  <motion.div 
+    className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: index * 0.1 }}
+    viewport={{ once: true }}
+    whileHover={{ scale: 1.05 }}
+  >
+    <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+      <div className="text-2xl">{icon}</div>
+    </div>
     <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
     <p className="text-gray-600 leading-relaxed">{description}</p>
-  </div>
+  </motion.div>
 );
 
 const Card = ({ title, description }) => (
@@ -21,15 +31,30 @@ const Services = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6 animate-fade-in">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h1 
+            className="text-5xl font-bold text-white mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
+          </motion.h1>
+          <motion.p 
+            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             Comprehensive technology solutions designed to transform your business 
             and drive innovation across all sectors.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Main Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -37,31 +62,43 @@ const Services = () => {
             title="AI & Machine Learning"
             description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
             icon="🤖"
+            gradient="from-blue-500 to-purple-500"
+            index={0}
           />
           <ServiceCard
             title="Cybersecurity"
             description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
             icon="🔒"
+            gradient="from-red-500 to-pink-500"
+            index={1}
           />
           <ServiceCard
             title="Cloud Infrastructure"
             description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
             icon="☁️"
+            gradient="from-green-500 to-blue-500"
+            index={2}
           />
           <ServiceCard
             title="Digital Transformation"
             description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
             icon="🚀"
+            gradient="from-purple-500 to-pink-500"
+            index={3}
           />
           <ServiceCard
             title="Data Analytics"
             description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
             icon="📊"
+            gradient="from-orange-500 to-red-500"
+            index={4}
           />
           <ServiceCard
             title="IoT Solutions"
             description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
             icon="🌐"
+            gradient="from-cyan-500 to-blue-500"
+            index={5}
           />
         </div>
 
