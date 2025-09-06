@@ -1,3 +1,32 @@
+} from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
+
+import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
+
+import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';
+
+
+  };
+
+  return (
+
+
+
+  ArrowRight,
+  Star,
+  Zap,
+  TrendingUp,
+  Users,
+  Award,
+  Phone,
+
+  Mail,;
+  MapPin,;
 import { motion } from 'framer-motion';
 import {;
   ArrowRight,;
@@ -189,40 +218,25 @@ import { innovative2030Services } from '../data/2030-innovative-services';
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
+      {/* Services Showcase */}
+      <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+      {/* Services Showcase */}
+      <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+
+
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-            className='text-center mb-20'
-          </motion.div>
-          {/* Services Grid */}
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>            {innovative2030Services.map((service, index) => (
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive range of cutting-edge 2030 technology services that will
-              transform your business and propel you into the future.
-          </motion.div>
-            <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                Revolutionary;
-              </span>;
-              <br />;
-              <span className='bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>;
-                2030 Services;
-              </span>;
-            </h2>;
-
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-              Discover our comprehensive range of cutting-edge 2030 technology;
-              services that will transform your business and propel you into the;
-              future.            </p>;
-          </motion && motion.div>;
-
-          {/* Services Grid */}
-          {/* Services Grid */}
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">;
-            {innovative2030Services && innovative2030Services.map((service, index) => (;
-              <motion&& motion.div
-                key={service && service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -244,7 +258,6 @@ import { innovative2030Services } from '../data/2030-innovative-services';
                   </div>
 
                   {/* Description */}
-
                   {/* Features */}
                   <div className="grid grid-cols-2 gap-3 mb-6">
                     {service.features.slice(0, 6).map((feature, featureIndex) => (
@@ -255,7 +268,6 @@ import { innovative2030Services } from '../data/2030-innovative-services';
                     ))}
                   </div>
                   </div>;
-
                   {/* Service Details */}
                   <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;
                     <div className='flex items-center space-x-2'>;
@@ -292,7 +304,6 @@ import { innovative2030Services } from '../data/2030-innovative-services';
                         <span>{feature}</span>;
                       </div>;
                     ))}
-
                   {/* Price and CTA */}
                   <div className='flex items-center justify-between'>;
                     <div>;
@@ -317,16 +328,17 @@ import { innovative2030Services } from '../data/2030-innovative-services';
                 </div>;
               </motion && motion.div>;
             ))}
+
+
           {/* Call to Action */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-                  Contact Us;
-                </button>;
-              </div>;
-            </div>;
+
+
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -335,6 +347,15 @@ import { innovative2030Services } from '../data/2030-innovative-services';
               Ready to Transform Your Business with;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 {' '}
+
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business with
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 {' '}2030 Technology?
               </span>
@@ -364,9 +385,76 @@ import { innovative2030Services } from '../data/2030-innovative-services';
           </motion.div>
         </div>
       </section>
+
+                2030 Technology?;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8'>;
+              Contact our team of technology experts to discuss how our;
+              revolutionary 2030 services can transform your business and propel;
+              you into the future.;
+            </p>;
+
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
+                Schedule Consultation;
+              </button>;
+              <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>                View Pricing;
+              </button>;
+            </div>;
+
+            <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>;
+              <div className='flex items-center justify-center space-x-2'>;
+                <Phone className='w-5 h-5 text-cyan-400' />              Ready to Transform Your Business with;
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+                {' '}2030 Technology?;
+              </span>;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8">;
+              Contact our team of technology experts to discuss how our revolutionary 2030 services ;
+              can transform your business and propel you into the future.;
+            </p>;
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">;
+                Schedule Consultation;
+              </button>;
+              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">;
+                View Pricing;
+              </button>;
+            </div>;
+
+            <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>;
+              <div className='flex items-center justify-center space-x-2'>;
+                <Phone className='w-5 h-5 text-cyan-400' />;
+                <span>{contactInfo && contactInfo.mobile}</span>;
+              </div>;
+              <div className='flex items-center justify-center space-x-2'>;
+                <Mail className='w-5 h-5 text-purple-400' />;
+                <span>{contactInfo && contactInfo.email}</span>;
+              </div>;
+              <div className='flex items-center justify-center space-x-2'>;
+                <MapPin className='w-5 h-5 text-pink-400' />;
+                <span className='text-sm'>{contactInfo && contactInfo.address}</span>              </div>                <span>{contactInfo && contactInfo.mobile}</span>;
+              </div>;
+              <div className="flex items-center justify-center space-x-2">;
+                <Mail className="w-5 h-5 text-purple-400" />;
+                <span>{contactInfo && contactInfo.email}</span>;
+              </div>;
+              <div className="flex items-center justify-center space-x-2">;
+                <MapPin className="w-5 h-5 text-pink-400" />;
+                <span className="text-sm">{contactInfo && contactInfo.address}</span>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
       {/* Footer */}
-      <UltraFuturisticFooter2030 />
-    </UltraFuturisticBackground2030>
+      <UltraFuturisticFooter2030 />;
+    </UltraFuturisticBackground2030>;
+  );  );
+
           </motion.div>;
         </div>;
       </section>;

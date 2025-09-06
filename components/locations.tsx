@@ -25,7 +25,6 @@ import React from "react";
 import Head from "next/head";
 
 export default function LocationsPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
@@ -54,9 +53,6 @@ export default function LocationsPage() {;
             +1 302 464 0950;
           </a>{" "}
           or email{" "}
-          <a className="text-cyan-400" href="mailto:kleber@ziontechgroup && ziontechgroup.com">;
-            kleber@ziontechgroup && ziontechgroup.com;
-=======
 import React from './react';
 import Head from './next / head';
 export default /**
@@ -93,7 +89,6 @@ function LocationsPage() {
           or email{" "}
           <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com">;
             kleber@ziontechgroup.com;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </a>;
           .;
         </p>;
@@ -102,9 +97,5 @@ function LocationsPage() {
           .;
         </p>;
       </div>;
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

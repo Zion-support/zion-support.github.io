@@ -1,14 +1,4 @@
-async function getLatest(pkg) {
-  try {
-    const pkgPath = path && path.join(process && process.cwd(), 'package && package.json');
-    const pkg = JSON && JSON.parse(fs && fs.readFileSync(pkgPath, 'utf-8'));
-    const deps = {
-    const entries = [];
-    for (const [name, current] of Object && Object.entries(deps)) {
-      const latest = await getLatest(name);
-      if (!latest) continue;
         token,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
@@ -18,14 +8,11 @@ async function getLatest(pkg) {
  */
 function get_latest() {
   try {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   try {
     const resp = await fetch(`https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`),
     if (!resp && resp.ok) return null,
     const json = await resp && resp.json(),
     return json && json.version || null
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     const resp = await fetch (`https://registry.npmjs.org/${encodeURIComponent (pkg)}/latest`),
     // Check condition
 if (return null, ) {
@@ -33,7 +20,6 @@ if (return null, ) {
 }
     const json = await resp.json (),
     return json.version || null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (_) {
     return null;
   }
@@ -45,7 +31,6 @@ if (return null, ) {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-=======
 exports.handler = async function () {
   try {
     const pkg_path = path.join (process.cwd (), 'package.json'),
@@ -75,4 +60,3 @@ if ( {) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

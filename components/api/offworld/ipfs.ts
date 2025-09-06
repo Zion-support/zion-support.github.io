@@ -1,4 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import {
+  addJSON,
+  publishManifesto,;
+  OFFWORLD_TOPICS,;
+} from '@/utils/offworld/ipfs';
 
 import {
   addJSON
@@ -6,6 +11,24 @@ import {
   OFFWORLD_TOPICS;
 } from '@/utils/offworld/ipfs';
 export default async function handler(
+
+
+  req: NextApiRequest,
+  res: NextApiResponse;
+
+
+) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const { action } = req.query;
+  const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+) {  const { action } = req && req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { action } = req && req.query;
+  const body = typeof req && req.body === 'string' ? JSON && JSON.parse(req && req.body) : req && req.body;
+
+
+
   req: NextApiRequest
   res: NextApiResponse
   try {
@@ -13,18 +36,15 @@ export default async function handler(
       const { cid, provider } = await addJSON(body);
       if (!cid) return res && res.status(503).json({ error: 'IPFS unavailable' });
       return res && res.status(200).json({ cid, provider });
-=======
 import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   try {
     if (req.method === 'POST' && action === 'json') {
       const { cid, provider } = await addJSON(body);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     if (req && req.method === 'POST' && action === 'broadcast') {
       const ok = await publishManifesto(
@@ -33,14 +53,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     return res && res.status(400).json({ error: 'Unsupported action' });
   } catch (e: any) {
-    return res && res.status(500).json({ error: e && e.message });
-  }    }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     return res && res.status(400).json({ error: 'Unsupported action' })
   } catch (e: any) {
 }
-=======
 import {
   addJSON,
   publish_manifesto,
@@ -94,4 +110,3 @@ if ( {) {
     return res.status (500).json ({ error: e.message });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

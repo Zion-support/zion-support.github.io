@@ -1,7 +1,8 @@
-        { status: 400 }
-      );
-    }
-    // Hash password;
+    // Check condition
+if ( {) {
+  $2
+}
+      return NextResponse.json (
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;

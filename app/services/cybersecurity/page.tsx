@@ -1,15 +1,19 @@
 export const metadata = { 
   title: 'Cybersecurity Services | Zion Tech Group',
 <<<<<<< HEAD
+<<<<<<< HEAD
   description: 'Comprehensive cybersecurity services including penetration testing, security audits, compliance management, and incident response for enterprise protection.',
   keywords: 'cybersecurity, penetration testing, security audit, compliance, incident response, vulnerability assessment, security consulting'
 =======
   description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.'
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 };
 
 export default function CybersecurityPage() {
   return (
+<<<<<<< HEAD
     <div className="animate-fade-in">
 <<<<<<< HEAD
       <section className="text-center mb-16">
@@ -66,10 +70,13 @@ export default function CybersecurityPage() {
             features={["Phishing simulation", "Security workshops", "Policy training", "Incident response drills", "Executive briefings"]}
             price="$3,000-15,000"
             icon="🎓"
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
           />
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Cybersecurity Process</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -169,10 +176,13 @@ export default function CybersecurityPage() {
             price="$5k–$15k/mo"
             icon="📊"
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
           />
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Security Technology Stack</h2>
@@ -267,11 +277,14 @@ export default function CybersecurityPage() {
               "Ongoing optimization and improvement"
             ]} 
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
           />
         </div>
       </section>
 
       <Pricing />
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       <section className="mt-16">
@@ -314,15 +327,20 @@ export default function CybersecurityPage() {
 =======
       <ContactSection />
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
     </div>
   );
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function CybersecurityServiceCard({ title, description, features, price, icon }: { 
 =======
 function CyberServiceCard({ title, description, features, price, icon }: { 
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
   title: string; 
   description: string; 
   features: string[]; 
@@ -330,6 +348,7 @@ function CyberServiceCard({ title, description, features, price, icon }: {
   icon: string; 
 }) {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
       <div className="text-4xl mb-4">{icon}</div>
@@ -352,10 +371,13 @@ function CyberServiceCard({ title, description, features, price, icon }: {
       >
         Get Started
       </a>
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
     </div>
   );
 }
 
+<<<<<<< HEAD
 function CybersecurityProcessStep({ step, title, description }: { 
   step: string; 
   title: string; 
@@ -417,6 +439,8 @@ function IndustrySecurity({ title, description, solutions, icon }: {
             <span className="text-green-500 mr-2">✓</span>
             {feature}
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
           </li>
         ))}
       </ul>
@@ -424,6 +448,7 @@ function IndustrySecurity({ title, description, solutions, icon }: {
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function CybersecurityBenefitCard({ title, description, icon }: { 
   title: string; 
@@ -449,6 +474,8 @@ function Item({ title, details }: { title: string; details: string[] }) {
         ))}
       </ul>
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
     </div>
   );
 }
@@ -456,12 +483,16 @@ function Item({ title, details }: { title: string; details: string[] }) {
 function Pricing() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <section className="mb-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Cybersecurity Service Pricing</h2>
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Plan 
           name="Security Assessment" 
           price="$5k–$15k" 
+<<<<<<< HEAD
           features={["1–2 weeks", "Vulnerability scan", "Risk assessment", "Report", "Recommendations"]} 
           popular={false}
         />
@@ -519,12 +550,15 @@ function Pricing() {
             "Monthly security reports"
           ]} 
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
         />
       </div>
     </section>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function Plan({ name, price, features, popular }: { 
   name: string; 
@@ -563,11 +597,14 @@ function Plan({ name, price, duration, features }: {
             <span className="text-green-500 mr-3">✓</span>
             {feature}
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
           </li>
         ))}
       </ul>
       <a 
         href="tel:+13024640950" 
+<<<<<<< HEAD
 <<<<<<< HEAD
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular 
@@ -577,6 +614,8 @@ function Plan({ name, price, duration, features }: {
 =======
         className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
       >
         Get Started
       </a>
@@ -584,6 +623,7 @@ function Plan({ name, price, duration, features }: {
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function CTASection() {
   return (
@@ -645,5 +685,7 @@ function ContactSection() {
       </div>
     </section>
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
   );
 }

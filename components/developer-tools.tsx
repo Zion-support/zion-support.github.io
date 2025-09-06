@@ -1,9 +1,7 @@
-  Code;
-  GitBranch, ;
-  Database, ;
-  Cloud, ;
-  Shield, ;
-  Zap, ;
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+import {
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
@@ -19,6 +17,15 @@ import {
   CheckCircle,
   TrendingUp,
   Code;
+  GitBranch
+  Database
+  Cloud
+  Shield
+  Zap
+
+
+
+  Code;
   GitBranch,
   Database,
   Cloud,
@@ -30,7 +37,6 @@ import {
   TrendingUp;
   Cpu;
 
-      ];
       pricing: '$10 / month',
       market_price: '$10 - 20 / month',
       website: 'https://github.com / features / copilot',
@@ -123,53 +129,6 @@ import {
       title: 'AI Code Tools',
       value: '$2.1B',
       growth: '+45% YoY',
-    {
-      avgPrice: '$62/month'
-    }
-    },    {
-      name: 'API Development'
-      description: 'Tools for building, testing, and managing APIs';
-    }
-  ];
-  const devWorkflow = [
-    {
-      description: 'Write and manage code with AI assistance'
-    }
-;
-  const dev_workflow = [;
-    {
-      phase: 'Development',
-      tools: ['GitHub Copilot', 'VS Code', 'Git'],
-      description: 'Write and manage code with AI assistance',
-    },
-    {
-      phase: 'Testing',
-      tools: ['Jest', 'Cypress', 'Postman'],
-      description: 'Test code quality and API functionality',
-    },
-    {
-      phase: 'Security',
-      tools: ['Snyk', 'GitHub Advanced Security'],
-      description: 'Scan for vulnerabilities and security issues',
-    },
-    {
-      phase: 'Deployment',
-      tools: ['Vercel', 'GitHub Actions', 'Docker'],
-      description: 'Deploy and host applications',
-    },  ];    {
-      phase: 'Testing',
-      tools: ['JestCypressPostman'],
-      description: 'Test code quality and API functionality';
-    }
-    {
-      phase: 'Security',
-      tools: ['SnykGitHub Advanced Security'],
-      description: 'Scan for vulnerabilities and security issues';
-    }
-    {
-      phase: 'Deployment',
-      tools: ['VercelGitHub ActionsDocker'],
-      description: 'Deploy and host applications';
     }
   ];
 ;
@@ -204,7 +163,16 @@ import {
               informed decisions about your development stack.;
             </p>;
           </div>;
-            ))}
+
+
+
+      {/* Developer Tools Grid */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+              Curated Developer Tools & Services
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
@@ -235,13 +203,6 @@ import {
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
-                        {tool.title}
-                      </h3>;
-                      <span className="text - xs bg - gray - 800 text - gray - 300 px - 2 py - 1 rounded - full">;
-                        {tool.category}
-                          {feature}
-                        </li>;
-                      ))}
                       <Button
                         href={tool && tool.website}
                         variant='primary'
@@ -270,7 +231,24 @@ import {
                   </div>;
                 </div>;
               </Card>;
-            ))}
+      {/* Developer Workflow */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+
+
+
+              Complete Developer Workflow
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Build a complete development pipeline with these essential tools
+              that work together seamlessly.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {devWorkflow.map((phase, index) => (
               Build a complete development pipeline with these essential tools;
               that work together seamlessly.;
             </p>;
@@ -288,9 +266,6 @@ import {
               Build a complete development pipeline with these essential tools that work together seamlessly.;
             </p>;
           </div>;
-              <Card
-                key={index}
-                className="card-hover border-gradient-blue"
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <div className="p-6 text-center">;
                   <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">;
@@ -302,12 +277,33 @@ import {
                     {phase && phase.tools.map((tool, toolIndex) => (;
                       <div key={toolIndex} className="text-sm text-cursor-blue font-medium">;
                         {tool}
-                      </div>;
+                      </div>
                     ))}
-                  </div>;
-                </div>;
-              </Card>;
+                  </div>
+                </div>
+              </Card>
             ))}
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Understanding the different types of developer tools helps you
+              build a comprehensive development stack.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {devCategories.map((category, index) => (
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Tool Categories */}
+      <section className='section-padding bg-gradient-cursor'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
+            {dev_workflow.map ((phase, index) => (
             ))}
       {/* CTA Section */}
       <section className='section-padding bg-gradient-cursor-accent'>;
@@ -327,14 +323,93 @@ import {
           </div>;
         </div>;
       </section>;
+      {/* Tool Categories */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Understanding the different types of developer tools helps you
+              build a comprehensive development stack.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {devCategories.map((category, index) => (
+              <Card
+                key={index}
+                className='card-hover border-gradient-blue'
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className='p-6'>
+                  <h3 className='text-xl font-semibold text-white mb-3'>
+                    {category.name}
+                  </h3>
+                  <p className='text-gray-400 mb-4'>{category.description}</p>
+                  <div className='flex items-center justify-between text-sm'>
+                    <span className='text-gray-500'>
+                      Tools Available:{' '}
+                      <span className='text-white'>{category.tools}</span>
+                    </span>
+                    <span className='text-cursor-blue font-semibold'>
+                      {category.avgPrice}
+                    </span>                  </div>                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
+                  <p className="text-gray-400 mb-4">{category.description}</p>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
+                    <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
+
             Start with one tool or build a complete development stack. Each tool;
             is designed to work independently and integrate seamlessly with your;
             existing workflow.;
           </p>;
+      {/* CTA Section */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor text-center'>
+          <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+          </h2>
+          <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
+            Start with one tool or build a complete development stack. Each tool
+            is designed to work independently and integrate seamlessly with your
+            existing workflow.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+            <Button
+              href='/ai-tools'
+              variant='primary'
+              size='lg'
+              className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
+              Explore AI Tools;
+            </Button>;
+            <Button
+              href='/contact'
+              variant='outline'
+              size='lg'
               Get Dev Consultation
             </Button>;
           </div>;
         </div>;
       </section>;
-    </>);
-}
+              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/ai-tools"
+              variant="primary"
+              size="lg"
+              className="bg-cursor-blue hover:bg-cursor-blue-dark"
+              Explore AI Tools
+            </Button>
+

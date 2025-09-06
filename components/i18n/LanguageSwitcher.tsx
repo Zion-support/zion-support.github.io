@@ -1,25 +1,19 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
+
+
+const localeToFlag: Record<string, string> = {
+
+  en: 'us',
+  pt: 'br',
+  es: 'es',
+  ar: 'sa'},
+const localeLabelKey: Record<string, string> = {
+  en: 'lang.english',
+  pt: 'lang.portuguese',
+  es: 'lang.spanish',
+  ar: 'lang.arabic',
+};  ar: 'lang.arabic'},
+export default function LanguageSwitcher() {;
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';
@@ -58,7 +52,6 @@ import React, { useState } from 'react';
             <li key={lng}>;
               <button
                 role='option'
-
   return (
     <div className="relative">;
       <button
@@ -79,6 +72,11 @@ import React, { useState } from 'react';
           ))}
         </ul>;
       )}
+    </div>
+);
+}
+  );
+}
 import {use_translation} from 'react - i18next';
 import i18n from '../../utils / i18n';
 import {supported_locales, is_rtl} from '../../utils / i18n';

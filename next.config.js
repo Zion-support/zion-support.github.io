@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   
@@ -42,11 +43,14 @@ const nextConfig = {
   }
 
     minimumCacheTTL: 31536000
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
   },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
         ignored: [
+<<<<<<< HEAD
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
@@ -57,14 +61,19 @@ const nextConfig = {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
     }
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
     // Exclude apps directory from compilation
     config.module.rules.push({
       test: /\.(ts|tsx|js|jsx)$/
       include: /apps\//
       use: "ignore-loader"
     });
+<<<<<<< HEAD
     return config;
   }
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
   async headers() {
     return [
       {

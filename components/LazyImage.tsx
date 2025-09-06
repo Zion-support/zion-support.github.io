@@ -1,8 +1,6 @@
 interface LazyImageProps {
-=======
 
 interface LazyImageProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   src: string;
   alt: string;
   width?: number;
@@ -14,13 +12,25 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
+  src,
+  alt,
+  width,
+  height,
+  className = "",
+  priority = false,
+  placeholder = "empty",
+  blurDataURL,
+  sizes,
+  quality = 75,
+  fill = false,
+  style,
+  onLoad,
+  onError,
+}: LazyImageProps) {;
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-          setIsInView(true);
-          observer && observer.disconnect();
-        }
     return (
       <div
         ref={imgRef}
@@ -41,7 +51,6 @@ interface LazyImageProps {;
         </div>;
       )}
         <Image
-=======
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
@@ -119,7 +128,6 @@ if ( {) {
         </div>)}
       {isInView && (
         <Image;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           src={src}
           alt={alt}
           width={width}

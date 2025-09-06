@@ -1,0 +1,23 @@
+
+  // Image optimization
+  images: {
+    domains: [
+      "localhost",
+      "ziontechgroup.com",
+      "images.unsplash.com",
+      "via.placeholder.com",
+    ],
+    formats: ["image/webp", "image/avif"],
+  },
+  // Dist directory
+  distDir: ".next",
+};
+
+module.exports = nextConfig;
+
+module.exports = nextConfig;
+
+module.exports = nextConfig;
+module.exports = nextConfig;
+
+

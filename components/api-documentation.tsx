@@ -1,17 +1,7 @@
-import {;
-  Code,;
-  Database,;
-  Shield,;
-  Zap,;
-  Globe,;
-  Cpu,;
-  BookOpen,;
-  CheckCircle,;
-  ArrowRight,;
-  BarChart3,;
-  Lock,;
-  Brain,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+
+import {
 } from 'lucide-react';
 
 export default function APIDocumentation() {;
@@ -35,8 +25,6 @@ export default function APIDocumentation() {;
         <ul className='list-disc list-inside text-slate-300 space-y-2'>;
           <li>;
             <a className='text-cyan-400' href='/api-docs'>;
-=======
-import {
   Code,
   Database,
   Shield,
@@ -47,35 +35,6 @@ import {
   CheckCircle,
   ArrowRight,
   BarChart3,
-  Lock,
-  Brain,
-} from 'lucide-react';
-;
-export default /**
- * APIDocumentation - Function description
- */
-function APIDocumentation() {
-  return (
-    <div className='min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
-      <Head>;
-        <title > API Documentation | Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content='Explore API docs, references, and code generators.';
-        />;
-        <link;
-          rel='canonical';
-          href='https://ziontechgroup.com / api - documentation';
-        />;
-      </Head>;
-      <div className='max - w-5xl mx - auto space - y-6'>;
-        <h1 className='text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-          API Documentation;
-        </h1>;
-        <ul className='list - disc list - inside text - slate - 300 space - y-2'>;
-          <li>;
-            <a className='text - cyan - 400' href='/api - docs'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               API Reference;
             </a>;
           </li>;
@@ -89,6 +48,11 @@ function APIDocumentation() {
           </li>;
         </ul>;
       </div>;
+
+} from 'lucide-react';
+
+export default function APIDocumentation() {
+	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>API Documentation | Zion Tech Group</title>
@@ -104,11 +68,6 @@ function APIDocumentation() {
 				</ul>
 			</div>
 		</div>
-	)
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);	return (
   <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
   <Head>;
@@ -126,4 +85,3 @@ function APIDocumentation() {
   </div>;
   </div>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

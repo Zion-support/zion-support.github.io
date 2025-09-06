@@ -1,3 +1,16 @@
+function useCounter(target: number, durationMs: number) {
+  const [value, setValue] = useState(0);
+  useEffect(() => {
+
+function useCounter(target: number, durationMs: number) {
+  const [value, setValue] = useState(0);
+  useEffect(() => {;
+
+    let start: number | null = null;
+    let raf: number;    const step = (ts: number) => {;
+    let start: number | null = null,
+    let raf: number,
+    const step = (ts: number) => {
       if (start === null) start = ts;
       if (progress < 1) raf = requestAnimationFrame(step);
     }
@@ -10,6 +23,19 @@
   }, [target, durationMs]);
   return value;
 }
+      if (progress < 1) raf = requestAnimationFrame(step)
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf)
+  }, [target, durationMs]);
+  return value
+}
+
+
+
+export default function InteractiveStats() {;
+
+export default function InteractiveStats() {;
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
@@ -18,6 +44,11 @@
       <Stat label='AI Experts' value={experts} suffix='+' />;
       <Stat label='Partners' value={partners} suffix='+' />;
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
+function Stat({
+  label
+  value
+  suffix = ''
+}: {
     </div>);
     </div>);
 }
@@ -43,3 +74,7 @@ function Stat() {
       <div className='text - sm text - gray - 600 dark:text - gray - 300'>{label}</div>;
     </div>);
 }
+      </div>
+      <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
+    </div>
+

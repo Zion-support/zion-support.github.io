@@ -1,10 +1,11 @@
+    <div className="min-h-screen">;
       {/* Hero Section */}
-      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
-            <span className="gradient - text">Cybersecurity Services</span>;
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto text-center">;
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">;
+            <span className="gradient-text">Cybersecurity Services</span>;
           </h1>;
-          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
             Protect your organization from evolving cyber threats with our comprehensive;
             we secure your digital assets and ensure business continuity.;
           </p>;
@@ -118,6 +119,7 @@
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 12l2 2 4 - 4m5.618 - 4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01 - 8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176 - 1.332 9 - 6.03 9 - 11.622 0 - 1.042-.133 - 2.052-.382 - 3.016z" />;
                 </svg>;
               </div>;
+                GDPR, and industry-specific regulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
                 <li>• SOC2 compliance</li>;

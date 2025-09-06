@@ -179,3 +179,6 @@ module.exports = ImprovedMasterAutomationOrchestrator;
       this.log('⚠  Some automation phases failed. Check the report above.', 'WARNING')
     this.log(' Starting Improved Master Automation Orchestrator', 'PHASE')
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)

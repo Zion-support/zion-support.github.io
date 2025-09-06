@@ -1,9 +1,23 @@
 export interface ShortUrl {
+export interface ShortUrl {;
+  id: string;
+  originalUrl: string;
+  shortCode: string;
+  shortUrl: string;
+  createdAt: Date;
+  expiresAt?: Date;
+
+  original_url: string;
+  short_code: string;
+  short_url: string;
+  created_at: Date;
+  expires_at?: Date;
+  is_active: boolean,
+  user_id?: string;
+
+export interface ShortUrl {
   id: string;
 }
-export interface UrlAnalytics {
-  total_clicks: number;
-  unique_visitors: number;
   referrers: string[];
   countries: string[];
   devices: string[];
@@ -18,12 +32,13 @@ export interface ClickEvent {
   country: string;
   city: string;
   device: string;
+    const shortCode = request && request.customCode || this && this.generateShortCode(),
+    if (this && this.urls.has(shortCode)) {
       throw new Error('Short code already exists')
     }
     const shortUrl: ShortUrl = {
       totalClicks: 0;
       uniqueVisitors: 0;
-=======
   browser: string,
   os: string;
 }
@@ -60,18 +75,99 @@ class UrlShortenerService {
     this.analytics.set (short_code, {
       total_clicks: 0;
       unique_visitors: 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       referrers: [];
       countries: [];
       devices: [];
       browsers: [];
-    return shortUrl
+  id: string,;
+  originalUrl: string,;
+  shortCode: string,;
+  shortUrl: string,;
+  createdAt: Date,;
+  expiresAt?: Date,;
+  isActive: boolean,;
+  userId?: string;
+}
+;
+export interface UrlAnalytics {;
+  totalClicks: number,;
+  uniqueVisitors: number,;
+  referrers: string[],;
+  countries: string[],;
+  devices: string[],;
+  browsers: string[],;
+  lastClicked: Date,;
+  clickHistory: ClickEvent[];
+}
+;
+export interface ClickEvent {;
+  id: string,;
+  timestamp: Date,;
+  ipAddress: string,;
+  userAgent: string,;
+  referrer: string,;
+  country: string,;
+  city: string,;
+  device: string,;
+  browser: string,;
+  os: string;
+}
+;
+export interface CreateShortUrlRequest {;
+  originalUrl: string,;
+  customCode?: string,;
+  expiresAt?: Date,;
+  userId?: string;
+}
+;
+class UrlShortenerService {;
+  private urls: Map<string ShortUrl> = new Map(),;
+  private analytics: Map<string UrlAnalytics> = new Map(),;
+  private clicks: Map<string ClickEvent[]> = new Map(),;
+  async createShortUrl(request: CreateShortUrlRequest): Promise<ShortUrl> {;
+    const shortCode = request.customCode || this.generateShortCode(),;
+    if (this.urls.has(shortCode)) {;
+      throw new Error('Short code already exists');
+    }
+;
+    const shortUrl: ShortUrl = {;
+      id: this.generateId(),;
+      originalUrl: request.originalUrl,;
+      shortCode,;
+      shortUrl: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://zion.app'}/s/${shortCode}`,;
+      createdAt: new Date(),;
+      expiresAt: request.expiresAt,;
+      isActive: true,;
+      userId: request.userId;
+    },;
+    this.urls.set(shortCode, shortUrl),;
+    this.analytics.set(shortCode, {;
+      totalClicks: 0,;
+      uniqueVisitors: 0,;
+      referrers: [],;
+      countries: [],;
+      devices: [],;
+      browsers: [],;
+      lastClicked: new Date(),;
+      clickHistory: [];
+    }),;
+    this.clicks.set(shortCode, []),;
+    return shortUrl;
   }
-  async getShortUrl(shortCode: string): Promise<ShortUrl | null> {
-      return null
+;
+  async getShortUrl(shortCode: string): Promise<ShortUrl | null> {;
+    const url = this.urls.get(shortCode),;
+    if (!url || !url.isActive) return null,;
+    if (url.expiresAt && url.expiresAt < new Date()) {;
+      url.isActive = false,;
+      return null;
+
+export interface ShortUrl {;
+
     }
     return url
   }
+
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this && this.urls.get(shortCode);
     if (!url) return;
@@ -93,6 +189,11 @@ class UrlShortenerService {
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
     return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)
   }
+
+
+
+
+
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
     return true
   }
@@ -103,15 +204,16 @@ class UrlShortenerService {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     for (let i = 0, i < 6, i++) {
-      result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
-=======
-      last_clicked: new Date (),
-      click_history: [];
-    });
-    this.clicks.set (short_code, []);
-;
-    return short_url;
+    }
+    return result
   }
+  private generateId(): string {
+    return Math.random().toString(36).substr(2, 9)
+  }
+
+
+
+
   async getShortUrl (short_code: string): Promise < ShortUrl | null> {
     const url = this.urls.get (short_code);
     // Check condition
@@ -198,10 +300,17 @@ if ( {) {
     let result = '';
     for (let index = 0, i < 6, i++) {
       result += chars.char_at (Math.floor (Math.random () * chars.length));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     return result;
   }
+  // Utility methods for data persistence (in a real app, this would use a database)
+  async exportData(): Promise<any> {
+    return {
+
+      urls: Array && Array.from(this && this.urls.entries());
+      analytics: Array && Array.from(this && this.analytics.entries()),
+      clicks: Array && Array.from(this && this.clicks.entries())
+
     }
   }
   async importData(data: any): Promise<void> {
@@ -209,10 +318,6 @@ if ( {) {
 }
 export const urlShortenerService = new UrlShortenerService();
 
-=======
-  private generate_id (): string {
-    return Math.random ().to_string (36).substr (2, 9);
-  }
   // Utility methods for data persistence (in a real app, this would use a database);
   async export_data (): Promise < any> {
     return {
@@ -229,4 +334,8 @@ export const urlShortenerService = new UrlShortenerService();
 }
 export const urlShortenerService = new UrlShortenerService ();
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+export const urlShortenerService = new UrlShortenerService();

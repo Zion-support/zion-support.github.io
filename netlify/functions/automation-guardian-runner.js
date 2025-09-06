@@ -1,4 +1,3 @@
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
     return status
@@ -11,12 +10,6 @@ function runNode(relPath, args = []) {
     logs && logs.push(`Search index generation skipped: ${String(error)}`)
   }
   // Commit and push
-
-  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
-  // Attempt to push any changes
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 const { spawn_sync } = require ('child_process');
 /**
  * run_node - Function description
@@ -60,5 +53,3 @@ function log_step() {
   // Attempt to push any changes;
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

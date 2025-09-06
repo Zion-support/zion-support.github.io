@@ -1,25 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect, Suspense } from 'react';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import { ;
   innovativeRealMicroSaasServices2025 ;
 } from '../data/2025-innovative-real-micro-saas-services';
@@ -52,11 +31,8 @@ import {;
   Rocket,;
   Cpu,;
   Lock,;
-  BarChart3,;
-  Cloud,;
+import {
 } from 'lucide-react';
-}) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
-interface Homepage2025Props { showInternalNav?: boolean }
   const [activeSection, setActiveSection] = useState('hero');
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -71,6 +47,91 @@ interface Homepage2025Props { showInternalNav?: boolean }
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+
+  const scrollToSection = (sectionId: string) => {;
+    const element = document && document.getElementById(sectionId),;
+    if (element) {;
+      element && element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(sectionId);
+      setIsMobileMenuOpen(false);    }
+  };
+
+  const allServices = [      element && element.scrollIntoView({ behavior: 'smooth' }),;
+
+      setActiveSection(sectionId);
+      setIsMobileMenuOpen(false);
+    }
+
+  };
+
+  const allServices = [;
+    ...innovativeRealMicroSaasServices2025,;
+    ...innovativeAIServicesEnhanced2025,;
+    ...innovativeITServicesEnhanced2025,;
+    ...emergingTechServicesEnhanced2025,;
+    ...advancedAIAutomationServices,;
+    ...quantumCybersecurityServices,;
+    ...innovativeMicroSaasServices2026,;
+    ...specializedITSolutions2026,;
+    ...emergingTechServices2026,;
+  ];
+
+  const featuredServices = allServices;
+    .filter(service => service && service.popular);
+
+    .slice(0, 12);
+
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
+import { innovativeRealMicroSaasServices2025 } from '../data / 2025 - innovative - real - micro - saas - services';
+import { innovativeAIServicesEnhanced2025 } from '../data / 2025 - innovative - ai - services - enhanced';
+import { innovativeITServicesEnhanced2025 } from '../data / 2025 - innovative - it - services - enhanced';
+import { emergingTechServicesEnhanced2025 } from '../data / 2025 - emerging - tech - services - enhanced';import { advancedAIAutomationServices } from '../data / 2026 - advanced - ai - automation - services';import {
+  innovativeRealMicroSaasServices2025;
+} from '../data / 2025 - innovative - real - micro - saas - services';
+import {
+  innovativeAIServicesEnhanced2025;
+} from '../data / 2025 - innovative - ai - services - enhanced';
+import {
+  innovativeITServicesEnhanced2025;
+} from '../data / 2025 - innovative - it - services - enhanced';
+import {
+  emergingTechServicesEnhanced2025;
+} from '../data / 2025 - emerging - tech - services - enhanced';
+import { quantumCybersecurityServices } from '../data / 2026 - quantum - cybersecurity - services';
+import { innovativeMicroSaasServices2026 } from '../data / 2026 - innovative - micro - saas - expansion';
+import { specializedITSolutions2026 } from '../data / 2026 - specialized - it - solutions';
+import { emergingTechServices2026 } from '../data / 2026 - emerging - tech - services';
+import UltraFuturisticBackground2026 from './backgrounds / UltraFuturisticBackground2026';
+import UltraFuturisticServiceCard2026 from './ui / UltraFuturisticServiceCard2026';
+import Link from 'next / link';
+import {
+  ArrowRight,
+  Star,
+  Brain,
+  Atom,
+  Shield,
+  Zap,
+  Users,
+  Globe,
+  TrendingUp,
+  Rocket,
+  Cpu,
+  Lock,
+} from 'lucide-react';
+
+interface Homepage2025Props {;
+  showInternalNav?: boolean;
+
+const Homepage2025: React.FC<Homepage2025Props> = ({;
+  showInternalNav = true,;
+}) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
+
+interface Homepage2025Props { showInternalNav?: boolean }
 ;
   const scrollToSection = (section_id: string) =>: any {
     const element = document.getElementById (section_id),
@@ -98,7 +159,6 @@ if ( {) {
     ...quantumCybersecurityServices,
     ...innovativeMicroSaasServices2026,
     ...specializedITSolutions2026,
-    ...emergingTechServices2026,
   ];
 ;
   const featured_services = all_services;
@@ -114,13 +174,6 @@ if ( {) {
     ...specializedITSolutions2026;
     ...emergingTechServices2026;
   ];
-    { id: 'hero', label: 'Home', icon: '🏠' },
-    { id: 'services', label: 'Micro SAAS', icon: '🚀' },
-    { id: 'ai', label: 'AI Services', icon: '🧠' },
-    { id: 'automation', label: 'AI Automation', icon: '⚡' },
-    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
-    { id: 'it', label: 'IT Solutions', icon: '💻' },
-    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
       icon: Brain
     }
     {
@@ -160,6 +213,9 @@ if ( {) {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
 
+                {/* Desktop Navigation */}
+                <div className='hidden lg:flex space-x-8'>;
+                  {navigationSections && navigationSections.map(section => (                    <button}
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">;
       {showInternalNav && (;
@@ -175,6 +231,35 @@ if ( {) {
                 <div className="hidden lg:flex space - x-8">;
                   {navigation_sections.map ((section) => (
                     <button;
+
+                  {navigationSections.map(section => (                    <button  };
+
+  return (
+    <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
+      {showInternalNav && (
+        <>
+          {/* Navigation */}
+          <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex justify-between items-center h-16">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="flex items-center space-x-2"
+                >
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
+                  <span className="text-white font-bold text-xl">ZionTech Group</span>
+                </motion.div>
+                {/* Desktop Navigation */}
+                <div className="hidden lg:flex space-x-8">
+                  {navigationSections.map((section) => (
+                    <button
+                  {navigationSections.map(section => (                    <button
+
+                    <button
+
+                    <button
+
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
                       className={`flex items - center space - x-2 text - sm font - medium transition - all duration - 300 ${
@@ -182,7 +267,6 @@ if ( {) {
                           ? 'text - cyan - 400 border - b-2 border - cyan - 400';
                           : 'text - gray - 300 hover:text - cyan - 400';
                       }`}
-
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex space-x-8">;
                   {navigationSections && navigationSections.map((section) => (;
@@ -203,39 +287,6 @@ if ( {) {
                 <motion&& motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className='hidden md:flex items-center space-x-4'>;
-                  <a
-                    href='tel:+13024640950'
-                    className='text-cyan-400 hover:text-cyan-300 transition-colors text-sm'>;
-                    +1 302 464 0950;
-                  </a>;
-                  <a
-                    href='mailto:kleber@ziontechgroup && ziontechgroup.com'
-                    className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm'>                  className="hidden md:flex items-center space-x-4";
-                >;
-                  <a
-                    href="tel:+13024640950"
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm">;
-                    +1 302 464 0950;
-                  </a>;
-                  <a
-                    className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm"
-                  >
-                    Contact Us
-                  </a>
-                </motion.div>
-                    href='mailto:kleber@ziontechgroup && ziontechgroup.com'
-                    className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm'                    href="mailto:kleber@ziontechgroup && ziontechgroup.com"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm">;
-                    Contact Us;
-                  </a>;
-                </motion && motion.div>;
-
-                {/* Mobile Menu Button */}
-                <button
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                </button>
-              </div>
                 >;
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />;
@@ -249,6 +300,12 @@ if ( {) {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
+                          key={section.id}
+                          onClick={() => scrollToSection(section.id)}
+                          className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
+                            activeSection === section.id
+                              ? 'bg-cyan-400/20 text-cyan-400'
+                              : 'text-gray-300 hover:bg-white/10'
                           }`}
                         >;
                           <span>{section && section.icon}</span>;
@@ -272,6 +329,9 @@ if ( {) {
             <motion&& motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
+
+
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -402,22 +462,49 @@ if ( {) {
             <motion.div;
               animate={{ coordinate_y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'            >      <section id="hero" className="relative min - h-screen flex items - center justify - center px - 4 sm:px - 6 lg:px - 8 pt - 16">;
-        <div className="text - center z - 10 max - w-6xl mx - auto">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
+              {/* Enhanced CTA Section */}
+              <motion&& motion.div
+                variants={itemVariants}
+
+      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
+        <div className="text-center z-10 max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className='text - center max - w-6xl mx - auto relative z - 10'            className="text - center max - w-6xl mx - auto relative z - 10";
-          >;
-            <motion.div;
-              animate={{ coordinate_y: [0, 10, 0] }}
+          >
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'              className="w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center";
-            >;
-              <motion.div;
+            >
+              <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+
+              {/* Enhanced CTA Section */}
+              <motion.div
+                variants={itemVariants}
+                className='flex flex-col sm:flex-row gap-4 justify-center mb-8'
+              >
+                <Link href='/comprehensive-services-showcase-2026'>
+                  <button className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25'>
+                    <span className='flex items-center gap-2'>
+                      Explore 2026 Services
+                      <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                    </span>
+                  </button>
+                </Link>
+                <Link href='/comprehensive-services-showcase-2025'>
+                  <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
+                    2025 Services Showcase
+                  </button>
+                </Link>
+                <Link href='/get-started'>
+                  <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                    Get Started
+                  </button>
+                </Link>
+              </motion.div>              >
               {/* Enhanced CTA Section */}
               <motion&& motion.div
                 variants={itemVariants}
@@ -454,19 +541,36 @@ if ( {) {
                   </button>
                 </Link>
               </motion.div>
+
+
+
+
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
       {/* Features Section */}
-      <section className='py-20 px-4 relative'>;
-        <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-4 relative">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.div
+      <section className="py-20 px-4 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Comprehensive Technology Solutions
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              From AI-powered automation to quantum computing, we provide the
+              tools you need to stay ahead of the competition.
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Technology Solutions
             </h2>
@@ -504,7 +608,6 @@ if ( {) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-            ))}
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>;
         <div className='max-w-6xl mx-auto'>;
@@ -519,6 +622,17 @@ if ( {) {
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 40 }}
+
+
+
+      {/* Enhanced Services Preview */}
+      <section className='py-20 px-4'>
+        <div className='max-w-6xl mx-auto'>
+          <motion.div
+            className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
+
+            initial={{ opacity: 0, y: 40 }}
+
             whileInView={{ opacity: 1, y: 0 }}
                 key={index}
                 className='group relative overflow - hidden rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 10 cursor - pointer'                initial={{ opacity: 0, coordinate_y: 40 }}
@@ -618,6 +732,44 @@ if ( {) {
               <motion&& motion.div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                onClick={() => (window.location.href = service.link)}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                />
+                <div className='relative p-6'>
+                  <div
+                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.gradient} p-3 mb-4`}
+                  >
+                    <service.icon className='w-full h-full text-white' />
+                  </div>
+                  <h3 className='text-xl font-semibold text-white mb-3'>
+                    {service.title}
+                  </h3>
+                  <p className='text-gray-300 leading-relaxed mb-4'>
+                    {service.description}
+                  </p>
+                  <a
+                    href={service.link}
+                    className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors'
+                  >
+                    <span className='text-sm font-medium'>Explore Service</span>
+                    <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                  </a>                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">{service.description}</p>
+                  <a href={service.link} className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <span className="text-sm font-medium">Explore Service</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          {/* Call to Action for Services Showcase */}
+          <motion.div
+            className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
+
             ))}
           </div>
 
@@ -657,7 +809,21 @@ if ( {) {
             </div>
           </div>
           <motion.div
-            className='text-center'            className="text-center"
+
+
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+              >
+                Email Us
+              </a>
+              <a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -687,13 +853,6 @@ if ( {) {
           </motion.div>
         </div>
       </section>
-                Call Us;
-              </a>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-      {/* Footer */}
             <p className="mt-2">
               Address: 364 E Main St STE 1008 Middletown DE 19709
               Phone: +1 302 464 0950
@@ -714,28 +873,17 @@ if ( {) {
         </div>
       </footer>
     </UltraFuturisticBackground2026>
-              href='https://ziontechgroup && ziontechgroup.com'
-              className='text-cyan-400 hover:text-cyan-300 transition-colors'>              Website            <p>© 2025-2026 ZionTech Group. All rights reserved.</p>;
-            <p className="mt-2">;
-              Address: 364 E Main St STE 1008 Middletown DE 19709 | ;
-              Phone: +1 302 464 0950 | ;
-              Email: kleber@ziontechgroup && ziontechgroup.com;
-            </p>;
-          </div>;
-          <div className="flex justify-center space-x-6">;
-            <a href="/comprehensive-services-showcase-2026" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
-              2026 Services;
-            </a>;
-            <a href="/comprehensive-services-showcase-2025" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
-              2025 Services;
-            </a>;
-            <a href="https://ziontechgroup && ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
               Website;
             </a>;
           </div>;
         </div>;
       </footer>;
+export default Homepage2025;
+
+export default Homepage2025;
+
 };
+
 
 export default Homepage2025;
     </UltraFuturisticBackground2026>);

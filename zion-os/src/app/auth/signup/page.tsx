@@ -1,3 +1,27 @@
+  return (;
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
+      <div className="max-w-md w-full space-y-8 p-8">;
+        <div className="text-center">;
+          <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
+          <p className="text-zinc-400 mb-4">;
+            Start your free trial and launch sovereign AI-powered digital economies;
+      return;
+    }
+    try {
+      await register (name, email, password);
+    } catch (error) {
+      set_error (error instanceof Error ? error.message : "Registration failed");
+    } finally {
+      setIsLoading (false);
+    }
+  }
+  return (;
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
+      <div className="max-w-md w-full space-y-8 p-8">;
+        <div className="text-center">;
+          <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
+          <p className="text-zinc-400 mb-4">;
+            Start your free trial and launch sovereign AI-powered digital economies;
           </p>;
           {/* Free Trial Badge */}
           <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;

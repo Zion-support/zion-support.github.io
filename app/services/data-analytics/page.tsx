@@ -2,15 +2,21 @@ import Link from 'next/link';
 
 export const metadata = { 
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'Data Analytics Services | Zion Tech Group',
   description: 'Comprehensive data analytics services including business intelligence, data visualization, predictive analytics, and data science solutions for data-driven decision making.',
   keywords: 'data analytics, business intelligence, data visualization, predictive analytics, data science, machine learning, data consulting'
 =======
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+  title: 'Advanced Data Analytics & BI | Zion Tech Group',
+  description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.'
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 };
 
 export default function DataAnalyticsPage() {
   return (
+<<<<<<< HEAD
     <div className="animate-fade-in">
 <<<<<<< HEAD
       <section className="text-center mb-16">
@@ -202,41 +208,18 @@ export default function DataAnalyticsPage() {
       </section>
 
       <CTASection />
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
     </div>
   );
 }
 
-function DataAnalyticsServiceCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-  price: string; 
-  icon: string; 
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <div className="mb-4">
-        <div className="text-2xl font-bold text-blue-600 mb-2">{price}</div>
-        <div className="text-sm text-gray-500">Starting price</div>
-      </div>
-      <ul className="text-gray-600 space-y-2">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {feature}
-          </li>
-        ))}
-      </ul>
-      <a 
-        href="tel:+13024640950" 
-        className="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
       >
         Get Started
       </a>
     </div>
   );
+<<<<<<< HEAD
 }
 
 function DataAnalyticsProcessStep({ step, title, description }: { 
@@ -418,3 +401,5 @@ function CTASection() {
           </a>
         </div>
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671

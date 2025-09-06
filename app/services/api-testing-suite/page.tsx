@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "API Testing Suite | Zion Tech Group",
-  description: "Comprehensive API testing platform with automated testing, monitoring, and documentation. Ensure your APIs are reliable and performant.",
+  description:
+    "Comprehensive API testing platform with automated testing, monitoring, and documentation. Ensure your APIs are reliable and performant.",
 };
 
 export default function APITestingSuitePage() {
@@ -13,14 +14,17 @@ export default function APITestingSuitePage() {
           API Testing Suite
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Comprehensive API testing platform with automated testing, monitoring, and documentation. 
-          Ensure your APIs are reliable, performant, and secure with enterprise-grade testing tools.
+          Comprehensive API testing platform with automated testing, monitoring,
+          and documentation. Ensure your APIs are reliable, performant, and
+          secure with enterprise-grade testing tools.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Key Features
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="🧪"
@@ -68,7 +72,7 @@ export default function APITestingSuitePage() {
                 "Basic testing suite",
                 "Standard monitoring",
                 "Email support",
-                "Basic documentation"
+                "Basic documentation",
               ]}
               popular={false}
             />
@@ -83,7 +87,7 @@ export default function APITestingSuitePage() {
                 "Performance testing",
                 "Priority support",
                 "Team collaboration",
-                "Custom integrations"
+                "Custom integrations",
               ]}
               popular={true}
             />
@@ -98,7 +102,7 @@ export default function APITestingSuitePage() {
                 "Advanced security testing",
                 "24/7 support",
                 "Custom integrations",
-                "On-premise deployment"
+                "On-premise deployment",
               ]}
               popular={false}
             />
@@ -107,7 +111,9 @@ export default function APITestingSuitePage() {
       </div>
 
       <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Testing Capabilities</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Testing Capabilities
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <TestingCapability
             icon="✅"
@@ -143,7 +149,9 @@ export default function APITestingSuitePage() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Supported Technologies</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Supported Technologies
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <TechCard name="REST APIs" icon="🌐" />
           <TechCard name="GraphQL" icon="🔷" />
@@ -157,28 +165,46 @@ export default function APITestingSuitePage() {
       </div>
 
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Our API Testing Suite?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Why Choose Our API Testing Suite?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">90% Faster Testing</h3>
-            <p className="text-gray-600">Reduce API testing time by 90% with automated test generation and execution</p>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              90% Faster Testing
+            </h3>
+            <p className="text-gray-600">
+              Reduce API testing time by 90% with automated test generation and
+              execution
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">99.9% Uptime</h3>
-            <p className="text-gray-600">Ensure your APIs are always available with comprehensive monitoring and alerting</p>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              99.9% Uptime
+            </h3>
+            <p className="text-gray-600">
+              Ensure your APIs are always available with comprehensive
+              monitoring and alerting
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">🔒</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise Security</h3>
-            <p className="text-gray-600">Advanced security testing and compliance with industry standards</p>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              Enterprise Security
+            </h3>
+            <p className="text-gray-600">
+              Advanced security testing and compliance with industry standards
+            </p>
           </div>
         </div>
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Integration & CI/CD</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Integration & CI/CD
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <IntegrationCard name="GitHub Actions" icon="🐙" />
           <IntegrationCard name="Jenkins" icon="🔧" />
@@ -192,7 +218,9 @@ export default function APITestingSuitePage() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Use Cases</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Use Cases
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <UseCaseCard
             icon="🏢"
@@ -222,7 +250,15 @@ export default function APITestingSuitePage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
       <div className="text-2xl">{icon}</div>
@@ -234,7 +270,14 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
   );
 }
 
-function PricingCard({ title, price, period, description, features, popular }: {
+function PricingCard({
+  title,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   title: string;
   price: string;
   period: string;
@@ -243,7 +286,9 @@ function PricingCard({ title, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-indigo-500 bg-indigo-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-indigo-500 bg-indigo-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="bg-indigo-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
@@ -263,18 +308,28 @@ function PricingCard({ title, price, period, description, features, popular }: {
           </li>
         ))}
       </ul>
-      <button className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
-        popular 
-          ? 'bg-indigo-600 text-white hover:bg-indigo-700' 
-          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-      }`}>
+      <button
+        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
+          popular
+            ? "bg-indigo-600 text-white hover:bg-indigo-700"
+            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+        }`}
+      >
         Start Free Trial
       </button>
     </div>
   );
 }
 
-function TestingCapability({ icon, title, description }: { icon: string; title: string; description: string }) {
+function TestingCapability({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center p-6 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">
       <div className="text-4xl mb-4">{icon}</div>
@@ -302,7 +357,15 @@ function IntegrationCard({ name, icon }: { name: string; icon: string }) {
   );
 }
 
-function UseCaseCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+function UseCaseCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="p-6 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">
       <div className="text-4xl mb-4">{icon}</div>
@@ -319,8 +382,8 @@ function CTA() {
         Ready to Ensure API Reliability?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Start your free trial today and experience comprehensive API testing and monitoring. 
-        Test your first 5 APIs for free.
+        Start your free trial today and experience comprehensive API testing and
+        monitoring. Test your first 5 APIs for free.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a

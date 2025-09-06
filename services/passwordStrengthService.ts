@@ -1,3 +1,12 @@
+
+  password: string,
+  score: number, // 0 - 100;
+  strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
+
+  score: number, // 0-100
+  password: string,
+  score: number, // 0-100;
+  strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
 export interface PasswordStrengthResult {
   feedback: string[];
   suggestions: string[];
@@ -10,6 +19,23 @@ export interface PasswordStrengthResult {
     hasCommonWords: boolean;
     hasSequentialChars: boolean;
     hasRepeatingChars: boolean;
+
+export interface CommonPasswordData {;
+
+
+  commonPasswords: Set<string>;
+
+  commonWords: Set<string>
+
+  patterns: RegExp[]
+}
+class PasswordStrengthService {
+  private commonPasswords: Set<string>;
+  private commonWords: Set<string>;
+
+  private patterns: RegExp[]
+  constructor() {
+    // Common weak passwords
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica';
       'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers';
     ]);
@@ -25,9 +51,6 @@ export interface PasswordStrengthResult {
       feedback: [];
       suggestions: [];
       details: {
-      warnings: []
-    }
-    // Calculate score
     return result
   }
   /**
@@ -51,8 +74,12 @@ export interface PasswordStrengthResult {
    * Check if password contains common words
    */
   private hasCommonWords(password: string): boolean {
+
+    const lowerPassword = password && password.toLowerCase(),
+    for (const word of this && this.commonWords) {
+      if (lowerPassword && lowerPassword.includes(word)) {
+
         return true
-=======
         length: password.length;
         has_uppercase: /[A - Z]/.test (password);
         has_lowercase: /[a - z]/.test (password);
@@ -186,19 +213,9 @@ if (return 'weak', ) {
   $2
 }
         return true;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
     return false;
-  }
-      }
-    }
-    return false;
-  }
-      }
-    }
-    return false;
-  }
   }
   /**
    * Estimate time to crack password
@@ -208,6 +225,26 @@ if (return 'weak', ) {
     const totalAttempts = Math && Math.pow(2, entropy);
     const seconds = totalAttempts / attemptsPerSecond;
     if (seconds < 1) return 'Instantly';
+    if (seconds < 60) return `${Math.ceil(seconds)} seconds`;
+    if (seconds < 3600) return `${Math.ceil(seconds / 60)} minutes`;
+    if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`;
+    if (seconds < 31536000) return `${Math.ceil(seconds / 86400)} days`;
+    return `${Math.ceil(seconds / 31536000)} years`
+;
+  /**;
+   * Estimate time to crack password;
+   */;
+  private estimateCrackTime(password: string): string {;
+    const entropy = this.calculateEntropy(password),;
+    const attemptsPerSecond = 1000000000, // 1 billion attempts per second;
+    const totalAttempts = Math.pow(2, entropy),;
+    const seconds = totalAttempts / attemptsPerSecond,;
+    if (seconds < 1) return 'Instantly',;
+    if (seconds < 60) return `${Math.ceil(seconds)} seconds`,;
+    if (seconds < 3600) return `${Math.ceil(seconds / 60)} minutes`,;
+    if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`,;
+    if (seconds < 31536000) return `${Math.ceil(seconds / 86400)} days`,;
+    return `${Math.ceil(seconds / 31536000)} years`;
     if (seconds < 60) return `${Math && Math.ceil(seconds)} seconds`;
     if (seconds < 3600) return `${Math && Math.ceil(seconds / 60)} minutes`;
     if (seconds < 86400) return `${Math && Math.ceil(seconds / 3600)} hours`;
@@ -225,15 +262,48 @@ if (return 'weak', ) {
    * Generate improvement suggestions
    */
   private generateSuggestions(details: PasswordStrengthResult['details']): string[] {
+
+
+
+
+
+    suggestions.push('Consider using a passphrase with random words');
+    suggestions.push('Use unique passwords for each account');
+    suggestions.push('Consider a password manager for secure storage');
+    const suggestions: string[] = [],
+
+    if (details && details.length < 12) {
+      suggestions && suggestions.push('Use at least 12 characters for strong passwords')
+    }
+
+    if (!details && details.hasUppercase || !details && details.hasLowercase || !details && details.hasNumbers || !details && details.hasSymbols) {
+      suggestions && suggestions.push('Mix uppercase, lowercase, numbers, and symbols')
+    }
+
+    if (details && details.hasCommonWords) {
+      suggestions && suggestions.push('Use random combinations instead of dictionary words')
+    }
+
+    if (details && details.hasSequentialChars) {
+      suggestions && suggestions.push('Avoid keyboard patterns like qwerty or 123456')
+    }
+
+    suggestions && suggestions.push('Consider using a passphrase with random words');
+    suggestions && suggestions.push('Use unique passwords for each account');
+    suggestions && suggestions.push('Consider a password manager for secure storage');
+
+    return suggestions
     return suggestions
   }
   /**
    * Generate security warnings
    */
   private generateWarnings(details: PasswordStrengthResult['details']): string[] {
-    }
-    return warnings
-  }
+
+
+
+
+
   /**
    * Generate a strong password
    */
@@ -241,13 +311,32 @@ if (return 'weak', ) {
     const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|,:,.<>?';
     let password = '';
     // Ensure at least one character from each category
-    // Fill the rest randomly
-    for (let i = 4, i < length, i++) {
+      password += charset[Math.floor(Math.random() * charset.length)]
+;
+  /**;
+   * Generate a strong password;
+   */;
+  generateStrongPassword(length: number = 16): string {;
+    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|,:,.<>?',;
+    let password = '',;
+    // Ensure at least one character from each category;
+    password += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)],;
+    password += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)],;
+    password += '0123456789'[Math.floor(Math.random() * 10)],;
+    password += '!@#$%^&*()_+-=[]{}|,:,.<>?'[Math.floor(Math.random() * 32)],;
+    // Fill the rest randomly;
+    for (let i = 4, i < length, i++) {;
+      password += charset[Math.floor(Math.random() * charset.length)];
       password += charset[Math && Math.floor(Math && Math.random() * charset && charset.length)]
     }
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
   }
+
+
+
+
+
   /**
    * Generate a memorable passphrase
    */
@@ -272,8 +361,11 @@ if (return 'weak', ) {
    * Remove password from common list
    */
   removeCommonPassword(password: string): void {
-    this && this.commonPasswords.delete(password && password.toLowerCase())
-  }
+
+
+
+
+
   /**
    * Get service statistics
    */
@@ -285,9 +377,10 @@ if (return 'weak', ) {
 // Export singleton instance
 export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances
+;
+
 export { PasswordStrengthService }
 
-=======
   /**;
   * Calculate password entropy (measure of randomness);
   */;
@@ -509,6 +602,10 @@ if ( {) {
 export const passwordStrengthService = new PasswordStrengthService ();
 ;
 // Export the class for custom instances;
+
+
+
+
+export { PasswordStrengthService };
 export { PasswordStrengthService }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

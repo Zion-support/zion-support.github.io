@@ -1,28 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect } from 'react';
-import {Star} from 'lucide-react';
   memory: {
     used: number
     total: number
@@ -37,7 +12,6 @@ interface Performance {
   now (): number;
 }
 interface PerformanceEntry {
-=======
 
 interface PerformanceData {;
   domContentLoaded: number,;
@@ -113,7 +87,6 @@ interface Performance {;
 }
 
 interface PerformanceEntry {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   name: string;
   entry_type: string;
   start_time: number;
@@ -122,12 +95,10 @@ interface PerformanceEntry {;
   readonly connectEnd: number;
   readonly connectStart: number;
   readonly domComplete: number;
-=======
 interface PerformanceNavigationTiming extends PerformanceEntry {
   readonly connect_end: number;
   readonly connect_start: number;
   readonly dom_complete: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   readonly domContentLoadedEventEnd: number;
   readonly domContentLoadedEventStart: number;
   readonly dom_interactive: number;
@@ -157,7 +128,6 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   }, [onPerformanceData]);
   return null;
 }
-=======
 const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect (() => {
 // Only run on client side;
@@ -218,7 +188,6 @@ if ( {) {
   return null;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default PerformanceMonitor;
 import React, { useEffect, useState } from 'react;
 interface PerformanceMetrics {fcp?: number;
@@ -251,7 +220,6 @@ interface PerformanceMetrics {fcp?: number;
         )}
           </div>;
         )}
-=======
 const PerformanceMonitor: React.FC = () => {
   const [metrics, set_metrics] = useState < PerformanceMetrics>({});
   const [is_visible, setIsVisible] = useState (false);
@@ -339,7 +307,6 @@ if (return 'Needs Improvement) {
         {metrics.ttfb && (
 <div className="flex justify - between>            <span className="text - gray - 600">TTFB: </span>"            <span className={getScoreColor (metrics.ttfb, { good: 800, poor: 1800 })}>"              {Math.round (metrics.ttfb)}ms ({getScoreText (metrics.ttfb, { good: 800, poor: 1800 })})</span>;
           </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       </div>;
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;

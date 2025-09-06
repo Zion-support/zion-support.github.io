@@ -1,7 +1,66 @@
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import {
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import {
+  Check
+  Star
+  Users
+  TrendingUp
+  DollarSign
+  Clock
+  Shield
+  Zap
+  Rocket
+  Brain
+  Atom
+  Globe
+  Target
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  ExternalLink;} from 'lucide-react';
+  Check,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Shield,
+  Zap,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Target,
+  ArrowRight,
+  Phone,
+  Mail,
   MapPin,;
   ExternalLink,;} from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock, ;
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+  Shield, Zap, Rocket, Brain, Atom, Globe, Target;
+  ArrowRight, Phone, Mail, MapPin, ExternalLink
+ } from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+// Import all service data
+import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
+import { innovativeAIServices2029  } from '../data/2029-innovative-ai-services';
+import { quantumSpaceInnovations2029  } from '../data/2029-quantum-space-innovations';
+import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovations';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
@@ -18,28 +77,9 @@ export default function PricingPage() {;
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s =>
     Array.isArray(s.category) ? s.category[0] : s.category
   )))];
-        acc[category] = [];
-      }
-      acc[category].push (service);
-      return acc;
-    const category = Array.isArray(service.category) ? service.category[0] : service.category;
-    if (!acc[category]) {
-      acc[category] = []
-    },;
-    {} as Record<string, typeof filteredServices>;
-  );
-  const faqs = [;
-    {;
-      question: 'Can I change my plan at any time?',;
-      answer:;
-        'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.',;
-    },  const servicesByCategory = filteredServices && filteredServices.reduce((acc, service) => {;
-    const category = Array && Array.isArray(service && service.category) ? service && service.category[0] : service && service.category;
-    if (!acc[category]) {;
-      acc[category] = [];
     }
     acc[category].push(service);
-    return acc;
+    return acc
   }, {} as Record<string, typeof filteredServices>);
       answer: 'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.'
     }
@@ -60,87 +100,14 @@ export default function PricingPage() {;
       answer: 'No setup fees for any of our plans. You can start using our services immediately after signing up.'
     }
   ];
-  const categories = [
-  const faqs = [;
-    {;
-      question: 'Can I change my plan at any time?',;
-      answer:;
-        'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.',;
-    },;
-    {;
-      question: 'Is there a free trial available?',;
-      answer:;
-        'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.',;
-    },;
-    {;
-      question: 'What payment methods do you accept?',;
-      answer:;
-        'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can be invoiced.',;
-    },;
-    {;
-      question: 'Do you offer volume discounts?',;
-      answer:;
-        'Yes, we offer volume discounts for teams and organizations. Contact our sales team for custom pricing.',;
-    },;
-    {;
-      question: 'Can I cancel my subscription?',;
-      answer:;
-        "Yes, you can cancel your subscription at any time. You'll continue to have access until the end of your billing period.",;
-    },;
-    {;
-      question: 'Is there a setup fee?',;
-      answer:;
-        'No setup fees for any of our plans. You can start using our services immediately after signing up.',;
-    },;
-  ];
+  const filteredServices = selectedCategory === 'All'
+    ? microSaasServices
+    : microSaasServices.filter(service => service.category === selectedCategory);
 
-  const categories = [;
-    'All',;
-    'Content & Marketing',;
-    'Development & DevOps',;
-    'Sales & CRM',;
-    'Legal & Compliance',;
-    'Human Resources',;
-    'Analytics & Data',;
-    'Finance & Accounting',;
-    'Project Management',;
-    'Customer Experience',;
-    'Security & Compliance',;
-  ];
+  const yearlyDiscount = 0.2, // 20% discount for yearly billing
 
-  const filteredServices =;
-    selectedCategory === 'All';
-      ? microSaasServices;
-      : microSaasServices && microSaasServices.filter(;
-          service => service && service.category === selectedCategory;
-        );
 
-  const yearlyDiscount = 0 && 0.2; // 20% discount for yearly billing    {;
-      question: 'Is there a free trial available?',;
-      answer: 'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.';
-    };
-    {;
-      question: 'What payment methods do you accept?',;
-      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can be invoiced.';
-    };
-    {;
-      question: 'Do you offer volume discounts?',;
-      answer: 'Yes, we offer volume discounts for teams and organizations. Contact our sales team for custom pricing.';
-    };
-    {;
-      question: 'Can I cancel my subscription?',;
-      answer: 'Yes, you can cancel your subscription at any time. You\'ll continue to have access until the end of your billing period.';
-    };
-    {;
-      question: 'Is there a setup fee?',;
-      answer: 'No setup fees for any of our plans. You can start using our services immediately after signing up.';
-    }
-  ];
 
-  const categories = [;
-    'AllContent & MarketingDevelopment & DevOpsSales & CRMLegal & ComplianceHuman ResourcesAnalytics & DataFinance & Accounting';
-    'Project ManagementCustomer ExperienceSecurity & Compliance';
-  ];
 
   const filteredServices = selectedCategory === 'All' ;
     ? microSaasServices ;
@@ -153,13 +120,27 @@ export default function PricingPage() {;
         <section className='py-20 px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-        {/* Hero Section */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8 text-center'>      <main className="relative z-10 pt-20">;
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            {/* Filter Controls */}
+            <div className='flex flex-col lg:flex-row gap-4 justify-center items-center mb-8'>
+              <select
+                value={selectedCategory}
+                onChange={e => setSelectedCategory(e.target.value)}
+                className='px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20'
+              >
+                {categories.map(category => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
+              <select
+                value={selectedPriceRange}
+                onChange={e => setSelectedPriceRange(e.target.value)}
+                className='px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20'
+              >
+                {priceRanges.map(range => (
+                  <option key={range.id} value={range.id}>
+                    {range.name}
+                  </option>                ))}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -184,7 +165,6 @@ export default function PricingPage() {;
             <p className="text-xl text-gray-300 mb-8">;
               Transparent pricing for our cutting-edge technology services that are already operational and delivering transformative results;
             </p>;
-
             {/* Filter Controls */}
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mb-8">;
               <select
@@ -195,21 +175,15 @@ export default function PricingPage() {;
                 {categories && categories.map(category => (;
                   <option key={category} value={category}>{category}</option>;
                 ))}
+            transition={{ duration: 0.8 }}
+
+
+
                 ))}
               <p>Showing {filteredServices.length} services in {Object.keys(servicesByCategory).length} categories</p>
             </div>
           </motion.div>
         </section>
-            <div className='text-center text-gray-400'>;
-              <p>;
-                Showing {filteredServices && filteredServices.length} services in{' '}
-                {Object && Object.keys(servicesByCategory).length} categories;
-              </p>            </div>            <div className="text-center text-gray-400">;
-              <p>Showing {filteredServices && filteredServices.length} services in {Object && Object.keys(servicesByCategory).length} categories</p>;
-            </div>;
-          </motion && motion.div>;
-        </section>;
-        {/* Pricing Categories */}
                         }}
                         viewport={{ once: true }}
                         className='group cursor-pointer'>;
@@ -329,8 +303,6 @@ export default function PricingPage() {;
                           {/* CTA */}
                           <div className='flex items-center justify-between'>;
                             <Link
-
-        {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
                         {/* Market Position */}
@@ -350,10 +322,29 @@ export default function PricingPage() {;
                           </div>;
                         )}
                         {/* CTA */}
+                            <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
+                              <span className="flex items-center">
+                                Learn More
+                                <ArrowRight className="w-4 h-4 ml-2" />
+                              </span>
+                            </button>
+                          </Link>
+                          <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                        </div>
+                      </div>
+                    </motion.div>
                   ))}
                 </div>;
               </motion && motion.div>;
             ))}
+        </section>
+        {/* Contact CTA Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+
+
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -366,6 +357,29 @@ export default function PricingPage() {;
               <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>;
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                   {' '}
+
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+        </section>
+        {/* Contact CTA Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Ready to Get Started with
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Revolutionary Technology?</span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Link href="/contact">
                   <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
@@ -375,8 +389,6 @@ export default function PricingPage() {;
                   </button>
                 </a>
               </div>
-              {/* Contact Information */}
-                </div>
                 <div className="flex items-center justify-center space-x-2">
                   <Mail className="w-5 h-5 text-purple-400" />
                   <span>{contactInfo.email}</span>
@@ -395,8 +407,16 @@ export default function PricingPage() {;
           </div>
         </section>
       </main>
-      <UltraFuturisticFooter2029 />
-    </UltraFuturisticBackground2029>
+  );
+
+}whileInView= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+  duration: 0.8
+}viewport= {
+  {
                           </p>;
                           {/* Key Features */}
                           <div className='mb - 6'>;
@@ -641,6 +661,12 @@ export default function PricingPage() {;
   {
   duration: 0.8;
 }viewport= {
-  {
-  once: true;
-}> <h2 className="text - 3xl sm:text - 4xl lg:text - 5xl font - bold text - white mb - 6" > Ready to Get Started with <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent" > Revolutionary Technology?</span> </h2> <p className="text - xl text - gray - 300 mb - 8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8" > <Link href="/contact" > <button className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 200 transform hover:scale - 105" > <Phone className="inline - block w - 5 h - 5 mr - 2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt - 12 p - 6 bg - gray - 900 / 30 rounded - 2xl border border - cyan - 500 / 20"> <h3 className="text - xl font - semibold text - white mb - 4">Why Choose Zion Tech Group?</h3> <div className="grid grid - cols - 1 md: grid - cols - 2 gap - 4 text - sm text - gray - 300"> <div className="flex items - center space - x-2"> <Check className="w - 4 h - 4 text - green - 400" /> flex items - center space - x-2"> <Check className=" w - 4 h - 4 text - green - 400"/> <span > Proven ROI and customer success stories</span> </div> <div className=" flex items - center space - x-2"> <Check className=" w - 4 h - 4 text - green - 400"/> <span > Comprehensive support and implementation</span> </div> <div className=" flex items - center space - x-2"> <Check className=" w - 4 h - 4 text - green - 400" /> <span > Cutting - edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
+
+  once: true 
+
+}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
+
+}
+}
+}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)
+

@@ -9,10 +9,28 @@
   useEffect(() => {;
     if (!id) return;
     setLoading(true);
-    fetch(`/api/grants/${id}`);
-      .then(r => r && r.json());
-      .then(d => setItem(d && d.record));
-      .finally(() => setLoading(false));  }, [id]);
+    if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id || !updateContent.trim()) return;
+
+    if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id || !updateContent.trim()) return;
+
+  }, [id]);
+  const addUpdate = async () => {
+    if (!id |!updateContent.trim()) return;
+    const resp = await fetch(`/api/grants/${id}/updates`, {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ content: updateContent })
+    });
+      const u = await resp.json();
+      setItem(prev =>
+        prev ? { ...prev, updates: [...(prev.updates |[]), u.update] } : prev
+      );
+      setUpdateContent('');
+    }
+  }
+  if (loading)
     return (
       <EnhancedLayout>;
         <div>Loading...</div>;
@@ -39,15 +57,6 @@
                         className='text-blue-600'
                         href={l}
                         target='_blank'
-                        rel='noreferrer'>;
-                        {l}
-                      </a>;
-                    </li>;
-                  ))}                </ul>              <div className="mt-2">;
-                <div className="text-sm font-medium">Supporting Links</div>;
-                <ul className="list-disc list-inside text-sm">;
-                  {item && item.supportingLinks.map((l, i) => <li key={i}><a className="text-blue-600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
-              </div>;
                   <span
                     className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emerald-500' : 'bg-gray-400'}`}
                   />;
@@ -87,6 +96,11 @@
         </aside>
       </div>
     </EnhancedLayout>
+    </EnhancedLayout>
+  );
+}
+  );
+}
             <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
               Incubated by Zion;
             </span>)}

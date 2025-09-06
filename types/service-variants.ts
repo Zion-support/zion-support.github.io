@@ -10,8 +10,6 @@ export default function Servicevariants({ }: ServicevariantsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 export type ServiceVariant =
   | 'default'
   | 'holographic'
@@ -118,9 +116,6 @@ export type ServiceVariant =
   | 'real-estate-futuristic'
   | 'industrial-futuristic'
   | 'neural-futuristic',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
   | 'quantum - hologographic';
   | 'quantum - advanced';
   | 'holographic - advanced';
@@ -221,4 +216,3 @@ export type ServiceVariant =
   | 'real - estate - futuristic';
   | 'industrial - futuristic';
   | 'neural - futuristic';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

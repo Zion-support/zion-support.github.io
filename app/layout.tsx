@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
@@ -34,6 +37,9 @@ export const metadata = {
   },
 };
 
+/**
+ * Header - Function description
+ */
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
@@ -46,7 +52,6 @@ function Header() {
           <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
           <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
         </div>
-        {/* Mobile menu button */}
         <button className="md:hidden p-2" aria-label="Toggle menu">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -57,6 +62,9 @@ function Header() {
   );
 }
 
+/**
+ * Footer - Function description
+ */
 function Footer() {
   return (
     <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
@@ -69,17 +77,14 @@ function Footer() {
               <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
               <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Services</Link>
               <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
-              <Link href="/services/blockchain" className="block text-gray-600 hover:text-blue-600 transition-colors">Blockchain</Link>
-              <Link href="/services/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">Cybersecurity</Link>
-              <Link href="/services/data-analytics" className="block text-gray-600 hover:text-blue-600 transition-colors">Data Analytics</Link>
             </div>
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
             <div className="space-y-2">
               <Link href="/" className="block text-gray-600 hover:text-blue-600 transition-colors">Home</Link>
+              <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">About</Link>
               <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
-              <a href="https://ziontechgroup.com" className="block text-gray-600 hover:text-blue-600 transition-colors">Main Site</a>
             </div>
           </div>
           <div>
@@ -87,7 +92,7 @@ function Footer() {
             <div className="text-sm text-gray-600 space-y-1">
               <div>Mobile: +1 302 464 0950</div>
               <div>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600 transition-colors">kleber@ziontechgroup.com</a></div>
-              <div>Address: 364 E Main St STE 1008<br />Middletown, DE 19709</div>
+              <div>Address: 364 E Main St STE 1008<br />Middletown DE 19709</div>
             </div>
           </div>
         </div>
@@ -111,6 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </body>
     </html>
   );
+<<<<<<< HEAD
 }
 =======
 import React from 'react'; import Link from 'next / link'; import './globals.css'; export const metadata = { title: 'Zion Tech Group — AI, Micro SaaS, and IT Services', description: 'Enterprise - grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.', keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software', authors: [{ name: 'Zion Tech Group' }], open_graph: { title: 'Zion Tech Group — AI, Micro SaaS, and IT Services', description: 'Enterprise - grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.', url: 'https: site_name: 'Zion Tech Group', locale: 'en_US', type: 'website', }, twitter: { card: 'summary_large_image', title: 'Zion Tech Group — AI, Micro SaaS, and IT Services', description: 'Enterprise - grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.', }, robots: { index: true, follow: true, google_bot: { index: true, follow: true, 'max - video - preview': -1, 'max - image - preview': 'large', 'max - snippet': -1, }, }, } /**
@@ -124,3 +130,6 @@ function Footer() { return ( <footer className="border - t border - gray - 200 m
  */
 function RootLayout() { return ( <html lang="en"> <body className="min - h-screen bg - white text - gray - 900"> <Header /> <main className="max - w-6xl mx - auto px - 4 py - 6 min - h-screen"> {children} </main> <Footer /> </body> </html> )}
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+}
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671

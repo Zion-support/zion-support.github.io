@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "AI Expense Tracker | Zion Tech Group",
-  description: "Smart expense tracking with receipt scanning, categorization, and automated reporting. Simplify expense management for individuals and teams.",
+  description:
+    "Smart expense tracking with receipt scanning, categorization, and automated reporting. Simplify expense management for individuals and teams.",
 };
 
 export default function ExpenseTrackerPage() {
@@ -13,14 +14,17 @@ export default function ExpenseTrackerPage() {
           AI Expense Tracker
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Smart expense tracking with receipt scanning, categorization, and automated reporting. 
-          Simplify expense management for individuals and teams with AI-powered insights.
+          Smart expense tracking with receipt scanning, categorization, and
+          automated reporting. Simplify expense management for individuals and
+          teams with AI-powered insights.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Key Features
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="📱"
@@ -68,7 +72,7 @@ export default function ExpenseTrackerPage() {
                 "Basic categorization",
                 "Mobile app",
                 "Basic reporting",
-                "Email support"
+                "Email support",
               ]}
               popular={false}
             />
@@ -83,7 +87,7 @@ export default function ExpenseTrackerPage() {
                 "Team management",
                 "Advanced reporting",
                 "Priority support",
-                "API access"
+                "API access",
               ]}
               popular={true}
             />
@@ -98,7 +102,7 @@ export default function ExpenseTrackerPage() {
                 "Advanced workflows",
                 "24/7 support",
                 "Custom integrations",
-                "Advanced security"
+                "Advanced security",
               ]}
               popular={false}
             />
@@ -107,7 +111,9 @@ export default function ExpenseTrackerPage() {
       </div>
 
       <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">How It Works</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          How It Works
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <WorkflowStep
             step="1"
@@ -131,7 +137,9 @@ export default function ExpenseTrackerPage() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Key Benefits</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Key Benefits
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <BenefitCard
             icon="⏰"
@@ -167,7 +175,9 @@ export default function ExpenseTrackerPage() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Expense Categories</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Expense Categories
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <CategoryCard icon="🍽️" name="Meals & Dining" />
           <CategoryCard icon="⛽" name="Transportation" />
@@ -181,7 +191,9 @@ export default function ExpenseTrackerPage() {
       </div>
 
       <div className="bg-gradient-to-r from-blue-50 to-orange-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Integration Partners</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Integration Partners
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <IntegrationCard name="QuickBooks" icon="📊" />
           <IntegrationCard name="Xero" icon="📈" />
@@ -195,7 +207,9 @@ export default function ExpenseTrackerPage() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Perfect For</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Perfect For
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <UseCaseCard
             icon="👤"
@@ -225,7 +239,15 @@ export default function ExpenseTrackerPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
       <div className="text-2xl">{icon}</div>
@@ -237,7 +259,14 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
   );
 }
 
-function PricingCard({ title, price, period, description, features, popular }: {
+function PricingCard({
+  title,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   title: string;
   price: string;
   period: string;
@@ -246,7 +275,9 @@ function PricingCard({ title, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-orange-500 bg-orange-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-orange-500 bg-orange-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="bg-orange-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
@@ -266,18 +297,30 @@ function PricingCard({ title, price, period, description, features, popular }: {
           </li>
         ))}
       </ul>
-      <button className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
-        popular 
-          ? 'bg-orange-600 text-white hover:bg-orange-700' 
-          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-      }`}>
+      <button
+        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
+          popular
+            ? "bg-orange-600 text-white hover:bg-orange-700"
+            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+        }`}
+      >
         Start Free Trial
       </button>
     </div>
   );
 }
 
-function WorkflowStep({ step, title, description, icon }: { step: string; title: string; description: string; icon: string }) {
+function WorkflowStep({
+  step,
+  title,
+  description,
+  icon,
+}: {
+  step: string;
+  title: string;
+  description: string;
+  icon: string;
+}) {
   return (
     <div className="text-center">
       <div className="bg-orange-100 text-orange-800 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mx-auto mb-3">
@@ -290,7 +333,15 @@ function WorkflowStep({ step, title, description, icon }: { step: string; title:
   );
 }
 
-function BenefitCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+function BenefitCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center p-6 border border-gray-200 rounded-lg hover:border-orange-300 transition-colors">
       <div className="text-4xl mb-4">{icon}</div>
@@ -318,7 +369,15 @@ function IntegrationCard({ name, icon }: { name: string; icon: string }) {
   );
 }
 
-function UseCaseCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+function UseCaseCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="p-6 border border-gray-200 rounded-lg hover:border-orange-300 transition-colors">
       <div className="text-4xl mb-4">{icon}</div>
@@ -335,8 +394,8 @@ function CTA() {
         Ready to Simplify Your Expense Tracking?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Start your free trial today and experience the power of AI-driven expense management. 
-        Track your first 100 expenses for free.
+        Start your free trial today and experience the power of AI-driven
+        expense management. Track your first 100 expenses for free.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a

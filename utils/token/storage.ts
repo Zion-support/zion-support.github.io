@@ -1,15 +1,22 @@
+  tokenName: string;
+  tokenSymbol: string;
+
+
+
+
+
+export interface TokenConfig {
 
 export interface TokenConfig {
   token_name: string;
   token_symbol: string;
   decimals: number;
-  total_supply: number;
-  issue_rate: number;
-  redeem_rate: number;
+  totalSupply: number;
+  issueRate: number;
+  redeemRate: number;
   minIssueAmount: number;
   maxIssueAmount: number;
 }
-
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
@@ -57,10 +64,21 @@ export class TokenStorageManager {
     lastUpdated: new Date()
   };
 
-  async saveConfigs(configs: TokenConfig[]): Promise<void> {
-    this.storage.configs = configs;
-    this.storage.lastUpdated = new Date();
+
   }
+export interface TokenStoreData {
+  wallets: Record<string, Wallet>;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+}
+function readFromDisk(): TokenStoreData | null {
+  try {
+    ensureDataDir();
+}
+
+
+}
+
 
   async loadConfigs(): Promise<TokenConfig[]> {
     return this.storage.configs;
@@ -96,3 +114,5 @@ export const tokenStorage = new TokenStorageManager();
 }
 export const token_store = new TokenStore ();
 ;
+
+

@@ -21,11 +21,26 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
+export default function RequestToHirePage() {
+
+
+export default function RequestToHirePage() {;
+  const router = useRouter();
+  const { talent } = router.query as { talent?: string }
+  const selected = useMemo(
+    () => TALENT_PROFILES.find(t => t.slug === talent)
+    [talent]
+  );export default function RequestToHirePage() {;
+
+
+  const router = useRouter();
+  const { talent } = router.query as { talent?: string }
+  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
+  const [form, setForm] = useState({
     name: '',
     email: '',
     budget: '',
     timeline: '',
-
 export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router && router.query as { talent?: string };
@@ -52,7 +67,6 @@ export default function RequestToHirePage() {;
   const [error, setError] = useState<string | null>(null);
       setError('Please fill in name, email, and description.');
       return;    }      return;
-    }
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setResult({ id: data.id, message: 'Request submitted successfully.' })
@@ -61,7 +75,6 @@ export default function RequestToHirePage() {;
     } finally {
       setSubmitting(false)
     }
-  }
 
   if (result) {;
     return (
@@ -159,7 +172,6 @@ export default function RequestToHirePage() {;
           <textarea className="w-full border rounded px-3 py-2" rows={5} value={form && form.description} onChange={(e) => setForm({ ...form, description: e && e.target.value })} />;
         </div>;
         {error && <div className="text-sm text-red-600">{error}</div>}
-          {submitting ? 'Submitting…' : 'Submit Request'}
   );
 }
     description: '',

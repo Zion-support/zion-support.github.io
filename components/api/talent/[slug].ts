@@ -1,14 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
     const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated });
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'GET') {
-    return res && res.setHeader('AllowGET').status(405).end('Method Not Allowed');
-  }
   try {
     if (hasSupabase) {
       const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single();
@@ -16,6 +12,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang);
       return res && res.status(200).json({ item, translated })
     }
+    const { item, translated } = applyTranslations(base, lang);
+    return res && res.status(200).json({ item, translated })
+  } catch (e: any) {
+
+
+
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
 import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';
@@ -32,36 +34,8 @@ function apply_translations() {
 if (return { item, translated: false }) {
   $2
 }
-  const t = item.translations;
-  const translated: Partial < TalentProfile> = {}
-  // Check condition
-if (translated.title = t.title[lang]) {
-  $2
-}
-  // Check condition
-if (translated.summary = t.summary[lang]) {
-  $2
-}
-  // Check condition
-if (translated.bio = t.bio[lang]) {
-  $2
-}
-  // Check condition
-if (translated.category = t.category[lang]) {
-  $2
-}
-  return {
-    item: { ...item, ...translated },
-    translated: Object.keys (translated).length > 0,
   }
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
+
 }
     return res.set_header ('Allow', 'GET').status (405).end ('Method Not Allowed');
   }

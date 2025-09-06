@@ -8,9 +8,6 @@
           <input;
             type=&quot;text & quot;
             placeholder=&quot;Search content by title, description, tags, or keywords...&quot;
-        {/* Advanced Filter Controls */}
-        <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4&quot;>;
-          {/* Category Filter */}
               }}
 className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200 & quot;
             >;
@@ -82,7 +79,6 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
                 on_click={() => setSortOrder (sort_order === 'asc' ? 'desc' : 'asc')}
                 className=&quot;p - 1 bg - white / 5 border border - white / 10 rounded hover:bg - white / 10 transition - colors duration - 200 & quot;
               >;
-                {sort_order === 'asc' ? '↑' : '↓'}
               </button>;
             </div>;
           </div>;
@@ -117,8 +113,6 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
               {/* Title and Description */}
 <h3 className=&quot;text - lg font - semibold text - white mb - 2 group - hover:text - cyan - 300 transition - colors duration - 200 & quot;>;
                 {item.title}
-              </h3>;
-              <p className=&quot;text - sm text - white / 75 mb - 4 leading - relaxed & quot;>;
                 {item.desc}
               </p>;
               {/* Tags */}
@@ -145,4 +139,3 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
         })}
       </div>;
       {/* No Results */}
-export default ContentCategorizer;

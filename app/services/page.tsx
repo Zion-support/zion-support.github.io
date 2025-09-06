@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 import Link from 'next/link';
 
 export const metadata = {
@@ -21,14 +24,20 @@ export default function ServicesOverviewPage() {
           href="/services/micro-saas"
           title="Micro SaaS"
           description="End-to-end product development with billing, auth, and analytics"
+<<<<<<< HEAD
 =======
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
           bullets={[
             'Foundational architecture',
             'Billing + subscriptions',
             'Growth analytics'
           ]}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
           icon="🚀"
         />
         <ServiceCard
@@ -86,6 +95,156 @@ export default function ServicesOverviewPage() {
           ]}
           icon="📊"
         />
+<<<<<<< HEAD
+=======
+        <ServiceCard
+          href="/services/digital-transformation"
+          title="Digital Transformation"
+          description="Complete digital transformation solutions and legacy modernization"
+          bullets={["Process automation", "Legacy modernization", "Digital strategy"]}
+          icon="🔄"
+        />
+        <ServiceCard
+          href="/services/cloud-services"
+          title="Cloud Services"
+          description="Cloud migration, architecture, and optimization solutions"
+          bullets={["Cloud migration", "Multi-cloud", "Cost optimization"]}
+          icon="☁️"
+        />
+        <ServiceCard
+          href="/services/ai-content-generation"
+          title="AI Content Generation"
+          description="Scale content marketing with AI-powered content creation and optimization"
+          bullets={["Content creation", "SEO optimization", "Social media automation"]}
+          icon="✍️"
+        />
+        <ServiceCard
+          href="/services/blockchain-development"
+          title="Blockchain Development"
+          description="Secure blockchain applications, smart contracts, and Web3 solutions"
+          bullets={["Smart contracts", "DeFi applications", "NFT marketplaces"]}
+          icon="⛓️"
+        />
+        <ServiceCard
+          href="/services/email-automation-suite"
+          title="Email Automation Suite"
+          description="AI-powered email marketing with advanced segmentation and personalization"
+          bullets={["AI personalization", "Advanced analytics", "Smart segmentation"]}
+          icon="📧"
+        />
+        <ServiceCard
+          href="/services/social-media-scheduler"
+          title="Social Media Scheduler"
+          description="AI-powered social media management with intelligent scheduling and analytics"
+          bullets={["Smart scheduling", "Content creation", "Cross-platform publishing"]}
+          icon="📱"
+        />
+        <ServiceCard
+          href="/services/ai-chatbot-builder"
+          title="AI Chatbot Builder"
+          description="No-code AI chatbot platform with advanced NLP and multi-language support"
+          bullets={["No-code builder", "Advanced NLP", "Easy integrations"]}
+          icon="🤖"
+        />
+        <ServiceCard
+          href="/services/lead-generation-tool"
+          title="Lead Generation Tool"
+          description="AI-powered lead generation with automated prospecting and qualification"
+          bullets={["AI prospecting", "Automated outreach", "Lead scoring"]}
+          icon="🎯"
+        />
+        <ServiceCard
+          href="/services/ai-content-writer"
+          title="AI Content Writer"
+          description="Advanced AI-powered content creation with SEO optimization and brand voice training"
+          bullets={["Multi-format support", "SEO optimization", "Brand voice training"]}
+          icon="✍️"
+        />
+        <ServiceCard
+          href="/services/website-analyzer"
+          title="Website Analyzer"
+          description="Comprehensive website analysis with SEO audit and performance monitoring"
+          bullets={["SEO audit", "Performance monitoring", "Competitive intelligence"]}
+          icon="🔍"
+        />
+        <ServiceCard
+          href="/services/ai-video-generator"
+          title="AI Video Generator"
+          description="Create professional videos with AI-powered editing and voice synthesis"
+          bullets={["AI video editing", "Voice synthesis", "Multi-format export"]}
+          icon="🎬"
+        />
+        <ServiceCard
+          href="/services/cybersecurity-suite"
+          title="Cybersecurity Suite"
+          description="Enterprise-grade security solutions with threat detection and 24/7 monitoring"
+          bullets={["Threat detection", "Vulnerability assessment", "Compliance management"]}
+          icon="🛡️"
+        />
+        <ServiceCard
+          href="/services/ai-data-analytics"
+          title="AI Data Analytics"
+          description="Advanced AI-powered analytics with predictive modeling and real-time insights"
+          bullets={["Predictive modeling", "Real-time dashboards", "Business intelligence"]}
+          icon="📊"
+        />
+        <ServiceCard
+          href="/services/ai-code-reviewer"
+          title="AI Code Reviewer"
+          description="Automated code review and quality analysis powered by AI with 99% accuracy"
+          bullets={["Intelligent analysis", "Real-time feedback", "Security scanning", "Quality metrics"]}
+          icon="🔍"
+        />
+        <ServiceCard
+          href="/services/ai-meeting-assistant"
+          title="AI Meeting Assistant"
+          description="Transform meetings with AI transcription, action items, and intelligent insights"
+          bullets={["Real-time transcription", "Smart action items", "AI summaries", "Meeting analytics"]}
+          icon="🎤"
+        />
+        <ServiceCard
+          href="/services/ai-document-processor"
+          title="AI Document Processor"
+          description="Intelligent document processing with OCR, data extraction, and automated workflows"
+          bullets={["Multi-format OCR", "Data extraction", "Automated workflows", "Smart classification"]}
+          icon="📄"
+        />
+        <ServiceCard
+          href="/services/invoice-automation"
+          title="Invoice Automation"
+          description="Automate invoice processing, approval workflows, and payment tracking"
+          bullets={["Smart capture", "Automated approval", "Payment processing", "Duplicate detection"]}
+          icon="🧾"
+        />
+        <ServiceCard
+          href="/services/expense-tracker"
+          title="AI Expense Tracker"
+          description="Smart expense tracking with receipt scanning, categorization, and automated reporting"
+          bullets={["Receipt scanning", "Smart categorization", "Real-time analytics", "Team management"]}
+          icon="💰"
+        />
+        <ServiceCard
+          href="/services/api-testing-suite"
+          title="API Testing Suite"
+          description="Comprehensive API testing platform with automated testing, monitoring, and documentation"
+          bullets={["Automated testing", "Performance testing", "Security testing", "Real-time monitoring"]}
+          icon="🧪"
+        />
+        <ServiceCard
+          href="/services/email-campaign-manager"
+          title="AI Email Campaign Manager"
+          description="Intelligent email marketing with AI personalization, automation, and analytics"
+          bullets={["AI personalization", "Advanced analytics", "Automated workflows", "A/B testing"]}
+          icon="📧"
+        />
+        <ServiceCard
+          href="/services/ai-customer-insights"
+          title="AI Customer Insights"
+          description="Unlock customer behavior insights with AI-powered analytics and predictive modeling"
+          bullets={["Predictive analytics", "Sentiment analysis", "Customer segmentation", "Churn prediction"]}
+          icon="🧠"
+        />
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
       </div>
 
       <div className="bg-gray-50 rounded-lg p-8 text-center">
@@ -110,6 +269,7 @@ export default function ServicesOverviewPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 =======
           icon="🚀";
         />{" "}
@@ -137,6 +297,8 @@ export default function ServicesOverviewPage() {
 }) {;
     </div>);
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 }
 
 function ServiceCard({ 
@@ -156,6 +318,9 @@ function ServiceCard({
     <Link
       href={href}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
@@ -171,6 +336,7 @@ function ServiceCard({
       </ul>
     </Link>
   );
+<<<<<<< HEAD
 }
 =======
         service and create a custom solution for your business needs.{" "}
@@ -237,3 +403,6 @@ function CTA() {
         </a>{" "}
       </div>{" "}
 >>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+=======
+}
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671

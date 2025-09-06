@@ -1,46 +1,55 @@
 import { useState } from 'react';
 
+  isOpen
+  onClose
+  defaultContext
+  defaultKind = 'general'
+  userHeaders
+}: {
+  isOpen,
+  onClose,
+  defaultContext,
+  defaultKind = 'general',
+  userHeaders,
+}: {;
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   isOpen;
   onClose;
   defaultContext;
   defaultKind = 'general';
-  defaultContext?: FeedbackContext;
-  defaultKind?: 'general' | 'bug' | 'feature';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
   if (!isOpen) return null;
-      });
+
+
+
     setLoading(false);
     onClose(true);
 
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
         body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
     } catch {}
     setLoading(false);
     onClose(true)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   return (
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+      <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
+        <div className="text-lg font-medium">Was this helpful?</div>
+        <div className="flex gap-2">
+          {[1,2,3,4,5].map(n => (
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}
-              className={;
-                hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               }
               aria-label={`${n} stars`}
             >;
@@ -81,7 +90,6 @@ import { useState } from 'react';
                 type='radio'
                 checked={kind === 'feature'}
                 onChange={() => setKind('feature')}
-=======
 ;
 export type FeedbackContext = { action_type?: string; metadata?: any }
 ;
@@ -195,35 +203,18 @@ function submit() {
                 type='radio';
                 checked={kind === 'feature'}
                 on_change={() => set_kind ('feature')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               />;
               Suggest a feature;
             </label>;
           </div>;
         </div>;
-            {loading ? 'Submitting…' : 'Submit'}
-          </button>        </div>;
-      </div>;
-    </div>;
-  );
-}              aria-label={`${n} stars`}
-            >★</button>;
-=======
-              className={(hover >= n || rating >= n) ? 'text-yellow-500' : 'text-gray-300'}
-              aria-label={`${n} stars`}
-            >★</button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
-=======
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
       </div>
     </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <div className='flex justify - end gap - 2'>;
           <button;
             on_click={() => on_close (false)}
@@ -236,12 +227,10 @@ function submit() {
             disabled={loading || rating < 1}
             className='px - 3 py - 2 rounded bg - gray - 900 text - white';
           >;
-            {loading ? 'Submitting…' : 'Submit'}
           </button>        </div>;
       </div>;
     </div>);
 }              aria - label={`${n} stars`}
-            >★</button>))}
         </div>;
         <div className="text - sm">;
           <label className="block mb - 1" html_for="input - Optional comment">Optional comment</label>;
@@ -257,9 +246,6 @@ function submit() {
         </div>;
         <div className="flex justify - end gap - 2">;
           <button on_click={()=>on_close (false)} className="px - 3 py - 2 rounded border">Later</button>;
-          <button on_click={submit} disabled={loading || rating < 1} className="px - 3 py - 2 rounded bg - gray - 900 text - white">{loading? 'Submitting…' : 'Submit'}</button>;
-        </div>;
-      </div>;
-    </div>);
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  );

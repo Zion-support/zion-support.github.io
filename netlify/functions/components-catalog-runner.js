@@ -1,20 +1,11 @@
-function runNode(relPath, args = []) {
 exports.config = {
   schedule: '*/30 * * * *'
 }
-=======
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 
 exports && exports.config = {
   schedule: '*/30 * * * *',
-
-exports && exports.handler = async () => {
-  const logs = [];
-  function step(name, fn) {
-    logs && logs.push(`\n=== ${name} ===`);
-    const res = fn();
-
     logs.push(`exit=${res.status |0}`);
     return res.status |0;
   }
@@ -22,17 +13,12 @@ exports && exports.handler = async () => {
     runNode('automation/components-catalog && catalog.cjs')
   );
 }
-
-=======
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
 };  step('components:catalog', () => runNode('automation/components-catalog && catalog.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
 ;
 exports.handler = async () => {
@@ -59,5 +45,3 @@ function step() {
 }  step ('components:catalog', () => run_node ('automation / components - catalog.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

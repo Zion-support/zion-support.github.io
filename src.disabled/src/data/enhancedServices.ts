@@ -1,4 +1,3 @@
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   "website": "https://ziontechgroup.com",
   ;
   ;
@@ -15,4 +14,3 @@ export default function enhancedServices() {return (
         </p>
       </div>
   );"}"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

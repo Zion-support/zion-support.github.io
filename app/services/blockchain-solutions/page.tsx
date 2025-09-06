@@ -138,11 +138,6 @@ function BlockchainServiceCard({ title, description, features, price, icon }: {
     <div className="border border-gray-200 rounded-xl p-6 hover:border-orange-300 hover:shadow-lg transition-all duration-200 bg-white">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2 mb-4">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-orange-500 mr-2">•</span> {feature}
           </li>
         ))}
       </ul>
@@ -151,38 +146,6 @@ function BlockchainServiceCard({ title, description, features, price, icon }: {
   ); 
 } 
 
-function SpecializedBlockchainCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-  price: string;
-  icon: string;
-}) { 
-  return ( 
-    <div className="border border-gray-200 rounded-xl p-8 hover:border-purple-300 hover:shadow-lg transition-all duration-200 bg-white">
-      <div className="text-5xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2 mb-6">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-purple-500 mr-2">•</span> {feature}
-          </li>
-        ))}
-      </ul>
-      <div className="text-xl font-semibold text-purple-600">{price}</div>
-    </div>
-  ); 
-} 
-
-function TechStackCard({ title, details }: { title: string; details: string[] }) { 
-  return ( 
-    <div className="border border-gray-200 rounded-xl p-6 bg-gray-50">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="text-gray-600 space-y-2">
-        {details.map((detail) => (
-          <li key={detail} className="flex items-center">
-            <span className="text-orange-500 mr-2">•</span> {detail}
           </li>
         ))}
       </ul>
@@ -196,16 +159,6 @@ function Pricing() {
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Blockchain Service Packages</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Plan 
-          name="Smart Contract Audit" 
-          price="$5k–$15k" 
-          duration="1–2 weeks"
-          features={["Code review", "Security analysis", "Gas optimization", "Vulnerability report"]} 
-        />
-        <Plan 
-          name="DApp Development" 
-          price="$20k–$60k" 
-          duration="6–12 weeks"
-          features={["Frontend + backend", "Smart contracts", "Testing", "Deployment"]} 
         />
         <Plan 
           name="Enterprise Solution" 
@@ -229,10 +182,6 @@ function Plan({ name, price, duration, features }: {
       <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-orange-600 mb-2">{price}</div>
       <div className="text-gray-600 mb-6">{duration}</div>
-      <ul className="text-gray-600 space-y-3">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-orange-500 mr-2">✓</span> {feature}
           </li>
         ))}
       </ul>

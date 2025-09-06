@@ -3,7 +3,6 @@ interface SeparatorProps {
   orientation?: "horizontal" | "vertical";
 }
 }) => {
-=======
 
 interface SeparatorProps {;
   className?: string;
@@ -14,5 +13,4 @@ const Separator: React.FC<SeparatorProps> = ({;
   className = "",;
   orientation = "horizontal",;
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (

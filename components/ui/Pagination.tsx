@@ -1,26 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import EnhancedButton from './EnhancedButton';
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
@@ -66,7 +44,6 @@ interface PaginationProps {;
   baseUrl: string;
   className?: string;
 }
-    const maxVisiblePages = 5;
       if (startPage > 1) {;
         pages && pages.push(1);
         if (startPage > 2) {;
@@ -216,8 +193,13 @@ if ( {) {
         </Link>) : (
         <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
           Next;
+}
+}
+}
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
 }
-export default Pagination;
+
+  );
+

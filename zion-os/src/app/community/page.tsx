@@ -1,15 +1,3 @@
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
-=======
-import Link from './next / link';
-export default /**
- * CommunityPage - Function description
- */
-function CommunityPage() {
-  return (
-    <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
-      <div className="max - w-7xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Header */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 5xl font - bold mb - 6">;

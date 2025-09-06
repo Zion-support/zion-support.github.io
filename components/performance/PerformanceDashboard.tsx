@@ -1,10 +1,8 @@
   loadTime: number;
-=======
 import React, { useState, useEffect } from './react';
 ;
 interface PerformanceMetrics {
   load_time: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
@@ -47,7 +45,6 @@ interface PerformanceMetrics {
   );
 }
 export default PerformanceDashboard;
-=======
 const PerformanceDashboard: React.FC = () => {
   const [metrics, set_metrics] = useState < PerformanceMetrics | null>(null);
   const [is_visible, setIsVisible] = useState (false);
@@ -189,5 +186,3 @@ if (return null) {
 }
 ;
 export default PerformanceDashboard;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

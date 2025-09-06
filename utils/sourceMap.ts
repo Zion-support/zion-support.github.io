@@ -57,10 +57,49 @@ export function getSourceMapWithExistence(): SourceNode[] {
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
+    connected: false,
+    branch: 'main';
+  };
+}
+
+export function getSourceMapWithExistence(): SourceNode[] {;
+  const nodes = buildZionSourceMap();
+  return nodes.map(markExistenceRecursive);
+}
+
+export interface DeployTemplateResult {;
+  createdPaths: string[];
+  skippedPaths: string[];
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
   }
+
+
+export function deployBasicTemplateForPath(
+  repoRelativePath: string
+): DeployTemplateResult {;
+  const absoluteDir = path.join(ROOT, repoRelativePath);
+  const createdPaths: string[] = [];
+  const skippedPaths: string[] = [];
+  ensureDirectory(absoluteDir);
+  } else {
+    skippedPaths.push(keepFile);
+  }
+  } else {
+    skippedPaths.push(readmeFile);
+  }
+
+
+
+
+  return { createdPaths, skippedPaths };
+
+}
+  return { createdPaths, skippedPaths }
+
+
+
   created_paths: string[];
   skipped_paths: string[];
 ;
@@ -77,3 +116,4 @@ export function ensure_directory (dir_path: string): void {
   }
   return { created_paths, skipped_paths }
 ;
+

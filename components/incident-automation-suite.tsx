@@ -1,6 +1,5 @@
 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
@@ -42,7 +41,6 @@ import Button from '../components/ui/Button';
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
   service.name;
 }- Zion Tech Group</title>) );
 }</ul> </div> <div className="bg - black / 30 rounded - 2xl border border - emerald - 500 / 30 p - 6 h - fit" > <div className="flex items - end justify - between mb - 3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
@@ -94,18 +92,12 @@ if (return null) {
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </UltraAdvancedFuturisticBackground>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

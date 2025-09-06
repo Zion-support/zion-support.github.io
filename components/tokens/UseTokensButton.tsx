@@ -1,28 +1,8 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from "react";
-import UseTokensModal, { RedemptionType } from "./UseTokensModal";
-
+  serviceId
+  defaultType
+}: {
+  serviceId?: string;
+  defaultType?: RedemptionType;
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -37,8 +17,6 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-      />;
-    </>;
   );
   const [open, setOpen] = useState(false);
   return (
@@ -54,17 +32,21 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-      />;
-    </>;
+      />
+    </>
+);
   );
-import React, { useState } from './react';
-import UseTokensModal, { RedemptionType } from "./UseTokensModal";
-;
-export default /**
- * UseTokensButton - Function description
- */
-function UseTokensButton() {
-  const [open, set_open] = useState (false);
+  const [open, setOpen] = useState(false);
+  return (
+      <UseTokensModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        serviceId={serviceId}
+        defaultType={defaultType}
+      />
+    </>
+  );
+  const [open, setOpen] = useState(false);
   return (
     <>;
       <button;

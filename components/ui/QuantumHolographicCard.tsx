@@ -1,27 +1,26 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-import { motion } from 'framer-motion';
+  Star
+  Zap
+  Shield
+  TrendingUp
+  ArrowRight
+  ExternalLink
+  Check
+  Users
+  Clock
+  DollarSign;
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  ArrowRight,
+  ExternalLink,
+  Check,
+  Users,
+  Clock,;
+  DollarSign,;
+} from 'lucide-react';
+interface QuantumHolographicCardProps {
+  service: {
 import {;
   Star,;
   Zap,;
@@ -46,22 +45,6 @@ interface QuantumHolographicCardProps {;
     popular: boolean;
     icon: string;
     color: string;
-    text_color: string;
-    link: string;
-    market_position: string;
-    target_audience: string;
-    trial_days: number;
-    setup_time: string;
-    category: string;
-    real_service: boolean;
-    technology: string[];
-    integrations: string[];
-    use_cases: string[];
-    roi: string;
-    competitors: string[];
-    market_size: string;
-    growth_rate: string;
-    variant: string;
       mobile: string;
       email: string;
       address: string;
@@ -93,6 +76,8 @@ interface QuantumHolographicCardProps {;
       opacity: 1
       x: 0
       transition: {
+      }
+
     };
     hover: {;
       y: -10,;
@@ -136,6 +121,16 @@ interface QuantumHolographicCardProps {;
       },;
     }),;
   };
+
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: 'easeOut' as const,
+      },
+    }),
+
+  };
+
+    >
       {/* Holographic glow effect */}
       <motion&& motion.div
         className='absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-xl'
@@ -150,7 +145,6 @@ interface QuantumHolographicCardProps {;
               <div>;
                 <h3 className='text - xl font - bold text - white mb - 1'>;
                   {service.name}
-
         {/* Header */}
         <div className='relative z-10'>;
           <div className='flex items-start justify-between mb-4'>;
@@ -190,6 +184,16 @@ interface QuantumHolographicCardProps {;
                 <Star className="w-3 h-3 fill-current" />;
                 <span>Popular</span>;
               </motion && motion.div>;
+                <span>Popular</span>
+
+              </motion.div>
+            )}
+          </div>
+
+
+            )}
+          </div>
+
             )}
           </div>
 
@@ -202,9 +206,6 @@ interface QuantumHolographicCardProps {;
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <Clock className="w-4 h-4" />
             </div>
-          </div>
-          {/* Description */}
-
           {/* Key metrics */}
           <div className='grid grid-cols-2 gap-4 mb-6'>;
             <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>;
@@ -230,24 +231,18 @@ interface QuantumHolographicCardProps {;
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;
               <Zap className='w-4 h-4 text-yellow-400' />;
           {/* Key metrics */}
-                  variants={feature_variants}
-                  initial='hidden';
-                  whileInView='visible';
-                  viewport={{ once: true }}
-                >;
-                  <Check className='w - 3 h - 3 text - green - 400 flex - shrink - 0' />                  <span>{feature}</span>              <span > Key Features</span>;
-            </h4>;
-            <div className="space - y-2">;
-              {service.features.slice (0, 4).map ((feature, index) => (
-                <motion.div;
-                  key={index}
-                  className="flex items - center space - x-2 text - sm text - gray - 300";
-                  custom={index}
-                  viewport={{ once: true }}>;
-                  <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
-                  <span>{feature}</span>;
-                </motion && motion.div>;
+                </motion.div>
               ))}
+            </div>
+          </div>
+
+          {/* Market data */}
+
+          <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-semibold text-blue-300">Market Position</span>
+              <TrendingUp className="w-4 h-4 text-green-400" />
+            </div>
           </div>
           {/* ROI and competitors */}
               </div>
@@ -349,6 +344,39 @@ interface QuantumHolographicCardProps {;
             </div>;
           </div>;
 
+
+
+          {/* ROI and competitors */}
+
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <motion.a
+            href={service.link}
+            className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
+
+
+
+
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <span className='mr-2'>Get Started</span>
+            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />
+            {/* Button glow effect */}
+            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />
+          </motion.a>
+          {/* CTA Button */}
+            whileHover={{ scale: 1 && 1.02 }}
+            whileTap={{ scale: 0 && 0.98 }}>;
+            <span className='mr-2'>Get Started</span>;
+            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />;
+
+            {/* Button glow effect */}
+            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />;
+          </motion && motion.a>;
           {/* CTA Button */}
           {/* Learn more link */}
           <div className='text-center mt-4'>;
@@ -360,19 +388,12 @@ interface QuantumHolographicCardProps {;
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
           </motion.a>
-          {/* Learn more link */}
-          <div className="text-center mt-4">;
-            <a
-              href={service && service.link}
-              className="inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300">;
-              <span>Learn more about {service && service.name}</span>;
-              <ExternalLink className="w-3 h-3" />;
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </motion && motion.div>;
-  );
+export default QuantumHolographicCard;  )
+}
+export default QuantumHolographicCard;
+
+export default QuantumHolographicCard;
+export default QuantumHolographicCard;
 };
 
 export default QuantumHolographicCard;  );

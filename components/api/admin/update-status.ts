@@ -13,6 +13,10 @@ import path from 'path';
     res && res.status(401).json({ error: 'Unauthorized' });
     return
   }
+
+  const merged = {
+    ...existing;
+    ...body;
 import { isInternalAgentRequest } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -78,3 +82,6 @@ if ( {) {
     updated_at: new Date ().toISOString ()}
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
   res.status (200).json ({ ok: true });
+
+
+

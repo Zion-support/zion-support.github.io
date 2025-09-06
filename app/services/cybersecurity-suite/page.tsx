@@ -1,82 +1,12 @@
-export const metadata = { 
-  title: 'Cybersecurity Suite | Zion Tech Group',
-  description: 'Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, compliance management, and 24/7 security monitoring.'
 };
 
 export default function CybersecuritySuitePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cybersecurity Suite
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, 
-            compliance management, and 24/7 security monitoring.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <FeatureCard
-            icon="🛡️"
-            title="Threat Detection"
-            description="Advanced AI-powered threat detection and response"
-            features={["Real-time monitoring", "Behavioral analysis", "Anomaly detection", "Automated response"]}
-          />
-          <FeatureCard
-            icon="🔍"
-            title="Vulnerability Assessment"
-            description="Comprehensive security scanning and risk assessment"
-            features={["Network scanning", "Penetration testing", "Code analysis", "Risk prioritization"]}
-          />
-          <FeatureCard
-            icon="📋"
-            title="Compliance Management"
-            description="Automated compliance monitoring and reporting"
-            features={["GDPR compliance", "HIPAA compliance", "SOC 2", "PCI DSS"]}
-          />
-          <FeatureCard
-            icon="🔐"
-            title="Identity & Access Management"
-            description="Secure user authentication and authorization"
-            features={["Multi-factor authentication", "Single sign-on", "Role-based access", "Privileged access"]}
-          />
-          <FeatureCard
-            icon="📊"
-            title="Security Analytics"
-            description="Advanced security intelligence and reporting"
-            features={["Threat intelligence", "Security dashboards", "Incident reporting", "Trend analysis"]}
-          />
-          <FeatureCard
-            icon="🚨"
-            title="24/7 SOC Monitoring"
-            description="Round-the-clock security operations center"
-            features={["24/7 monitoring", "Incident response", "Threat hunting", "Expert analysts"]}
-          />
-        </div>
-
-        <SecurityServicesSection />
-        <PricingSection />
-        <ContactSection />
       </div>
     </div>
   );
 }
 
-function FeatureCard({ icon, title, description, features }: { icon: string; title: string; description: string; features: string[] }) {
-  return (
-    <div className="bg-gradient-to-br from-red-600 to-pink-600 p-8 rounded-2xl hover:transform hover:scale-105 transition-all duration-300">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
-      <p className="text-red-100 mb-6">{description}</p>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-red-100">
-            <svg className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            {feature}
           </li>
         ))}
       </ul>

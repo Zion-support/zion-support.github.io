@@ -2,13 +2,14 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+  if (!isAuthorized(req))
+    return res.status(401).json({ error: "Unauthorized" });
+  function isAuthorized(req: NextApiRequest): boolean {
   }
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
-    if (req && req.method !== "POST")
-      return res && res.status(405).json({ error: "Method not allowed" });
     if (!isAuthorized(req))
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
@@ -58,4 +59,3 @@ function isAuthorized(req: NextApiRequest): boolean {
       latency_ms,
       payload: { error: e?.message || "unknown" },
     });
-    return res.status (500).json ({ error: "Router failure" });

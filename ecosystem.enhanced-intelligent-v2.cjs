@@ -1,7 +1,6 @@
-module.exports = {
-  apps: [
-    // Main Application
-    {
+module.exports = {}
+  "apps": [// Main Application;]
+    {}
       name: 'ziontechgroup-web',
       script: 'npm',
       args: 'start',
@@ -580,6 +579,6 @@ module.exports = {
       'pre-deploy-local': '',
       'post-deploy': 'npm install && pm2 reload ecosystem.enhanced-intelligent-v2.cjs --env staging',
       'pre-setup': ''
-    }
-  }
+    };
+  };
 };
