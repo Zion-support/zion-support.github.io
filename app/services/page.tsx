@@ -66,6 +66,27 @@ export default function ServicesOverviewPage() {
           bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
           icon="📊"
         />
+        <ServiceCard
+          href="/services/digital-transformation"
+          title="Digital Transformation"
+          description="Complete digital transformation solutions and legacy modernization"
+          bullets={["Process automation", "Legacy modernization", "Digital strategy"]}
+          icon="🔄"
+        />
+        <ServiceCard
+          href="/services/cybersecurity"
+          title="Cybersecurity"
+          description="Comprehensive security solutions and compliance management"
+          bullets={["Security assessment", "Threat detection", "Compliance"]}
+          icon="🔒"
+        />
+        <ServiceCard
+          href="/services/cloud-services"
+          title="Cloud Services"
+          description="Cloud migration, architecture, and optimization solutions"
+          bullets={["Cloud migration", "Multi-cloud", "Cost optimization"]}
+          icon="☁️"
+        />
       </div>
       <CTA />{" "}
     </div>

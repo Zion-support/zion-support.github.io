@@ -61,6 +61,48 @@ export default function ITServicesPage() {
             price="$10k–$30k"
             icon="🌐"
           />
+          <ITServiceCard
+            title="API Development & Management"
+            description="RESTful and GraphQL API development with comprehensive management"
+            features={["API design", "Documentation", "Rate limiting", "Authentication", "Monitoring", "Version control"]}
+            price="$12k–$35k"
+            icon="🔌"
+          />
+          <ITServiceCard
+            title="Microservices Architecture"
+            description="Modern microservices implementation with container orchestration"
+            features={["Service design", "Container orchestration", "Service mesh", "API gateway", "Monitoring", "Scaling"]}
+            price="$25k–$70k"
+            icon="🏗️"
+          />
+          <ITServiceCard
+            title="Data Center & Colocation"
+            description="Physical infrastructure management and data center optimization"
+            features={["Hardware management", "Power optimization", "Cooling systems", "Physical security", "Uptime monitoring", "Disaster recovery"]}
+            price="$15k–$45k"
+            icon="🏢"
+          />
+          <ITServiceCard
+            title="IT Service Management (ITSM)"
+            description="Complete IT service delivery and support management"
+            features={["Service desk", "Incident management", "Change management", "Asset management", "Knowledge base", "SLA management"]}
+            price="$18k–$50k"
+            icon="🎯"
+          />
+          <ITServiceCard
+            title="Cloud Cost Optimization"
+            description="Intelligent cloud spending optimization and cost management"
+            features={["Cost analysis", "Resource optimization", "Reserved instances", "Auto-scaling", "Budget alerts", "Cost forecasting"]}
+            price="$8k–$25k"
+            icon="💰"
+          />
+          <ITServiceCard
+            title="Disaster Recovery & Business Continuity"
+            description="Comprehensive disaster recovery planning and implementation"
+            features={["Backup strategies", "Recovery testing", "RTO/RPO planning", "Failover systems", "Documentation", "Training"]}
+            price="$20k–$60k"
+            icon="🔄"
+          />
         </div>
       </section>
 
