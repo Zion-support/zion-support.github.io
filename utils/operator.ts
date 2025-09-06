@@ -20,6 +20,8 @@ export interface SupportEvent {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 // Operator utilities;
 export const operator = {
@@ -53,6 +55,7 @@ export const operator = {
 =======
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   tagOperatorSession(sessionId: string, tag: string): void {
     // Simple implementation - in a real app this would update a database
     console.log(`Tagging session ${sessionId} with tag: ${tag}`);
@@ -84,6 +87,10 @@ export const logSupportEventToOperator = (event: SupportEvent) =>
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();
 export const getSupportEvents = () => operatorManager.getSupportEvents();
 =======
+<<<<<<< HEAD
+export const getOperatorSessions = () => operatorManager.getOperatorSessions();
+export const getSupportEvents = () => operatorManager.getSupportEvents();
+=======
 export const getOperatorSessions = () => operatorManager && operatorManager.getOperatorSessions();
 export async function logSupportEventToOperator(
   event: OperatorEvent
@@ -111,3 +118,4 @@ export const operator = {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

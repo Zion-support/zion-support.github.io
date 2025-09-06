@@ -24,12 +24,17 @@ export interface AdminAction {;
   case_id: string;
   type: AdminActionType;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
   adminId: string;
   reason: string;
   details: Record<string, any>;
   createdAt: string;
   executedAt?: string;
   status: "pending" | "executed" | "failed";
+<<<<<<< HEAD
+=======
 =======
 
   admin_id: string;
@@ -48,6 +53,7 @@ export interface FraudDetectionResult {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 
 
@@ -56,6 +62,10 @@ export interface FraudDetectionResult {;
   isFraud: boolean;
   confidence: number;
   reasons: string[];
+<<<<<<< HEAD
+  suggestedActions: AdminActionType[];
+  metadata: Record<string, any>;
+=======
 <<<<<<< HEAD
   suggestedActions: AdminActionType[];
   metadata: Record<string, any>;
@@ -75,6 +85,7 @@ export interface FraudDetectionResult {;
 export interface FraudDetectionConfig {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 
 
@@ -83,8 +94,11 @@ export interface FraudDetectionConfig {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   enabled: boolean;
   rules: {
     suspiciousActivity: {
@@ -93,14 +107,20 @@ export interface FraudDetectionConfig {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
       threshold: number,
     }
     fake_profile: {
       enabled: boolean;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
       threshold: number;
     };
     fakeProfile: {
@@ -121,6 +141,8 @@ export interface FraudDetectionConfig {;
     actions: AdminActionType[];
     confidenceThreshold: number;
   };
+<<<<<<< HEAD
+=======
 =======
       threshold: number,
     }
@@ -152,6 +174,7 @@ export interface FraudDetectionConfig {;
 
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

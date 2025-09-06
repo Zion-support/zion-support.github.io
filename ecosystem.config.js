@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export default {
@@ -8,6 +10,7 @@ export default {
     {
       name: 'bolt-zion-app',
 =======
+>>>>>>> main
 
 
 <<<<<<< HEAD
@@ -339,7 +342,48 @@ module.exports = {apps:[;
       time: true
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
 module.exports = {
+<<<<<<< HEAD
+  apps: [
+    {
+      name: 'error-fixer',
+      script: 'automation/lint-error-fixer.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      error_file: './logs/error-fixer-error.log',
+      out_file: './logs/error-fixer-out.log',
+      log_file: './logs/error-fixer-combined.log',
+      time: true
+    },
+    {
+      name: 'intelligent-orchestrator',
+      script: 'automation/intelligent-orchestrator.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      error_file: './logs/orchestrator-error.log',
+      out_file: './logs/orchestrator-out.log',
+      log_file: './logs/orchestrator-combined.log',
+      time: true
+    },
+    {
+      name: 'automation-dashboard',
+      script: 'automation/automation-dashboard.cjs',
+      args: 'start',
+=======
   apps: [{
     name: "ziontechgroup-site"
     script: "npm"
@@ -491,13 +535,26 @@ export default {
       script: 'npm',
       args: 'run preview',
       cwd: './',
+>>>>>>> main
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
+        PORT: 3001
       },
+<<<<<<< HEAD
+      error_file: './logs/dashboard-error.log',
+      out_file: './logs/dashboard-out.log',
+      log_file: './logs/dashboard-combined.log',
+      time: true
+    },
+    {
+      name: 'code-quality-monitor',
+      script: 'automation/code-quality-monitor.cjs',
+      instances: 1,
+=======
 <<<<<<< HEAD
       log_file: 'logs/pm2/preview.log',
       error_file: 'logs/pm2/preview-error.log',
@@ -522,10 +579,14 @@ export default {
 
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       cron_restart: '0 */6 * * *',
+>>>>>>> main
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
+<<<<<<< HEAD
+        NODE_ENV: 'production'
+=======
 <<<<<<< HEAD
         NODE_ENV: 'production'
       },
@@ -870,8 +931,14 @@ module && module.exports = {
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> main
       },
+      error_file: './logs/code-quality-error.log',
+      out_file: './logs/code-quality-out.log',
+      log_file: './logs/code-quality-combined.log',
       time: true
+<<<<<<< HEAD
+=======
     }
   ]
 }
@@ -1217,18 +1284,20 @@ export default {
       log_file: 'logs / pm2 / preview.log',
       error_file: 'logs / pm2 / preview - error.log',
       out_file: 'logs / pm2 / preview - out.log',
+>>>>>>> main
     },
     {
-      name: 'auto - fix',
-      script: 'node',
-      args: 'scripts / pm2 / auto - fix.js',
-      cron_restart: '0 */6 * * *',
+      name: 'performance-optimizer',
+      script: 'automation/performance-optimizer.cjs',
+      instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production';
+        NODE_ENV: 'production'
       },
+<<<<<<< HEAD
+=======
       log_file: 'logs / pm2 / auto - fix.log',
       error_file: 'logs / pm2 / auto - fix - error.log',
       out_file: 'logs / pm2 / auto - fix - out.log',
@@ -1445,12 +1514,14 @@ module && module.exports = {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+>>>>>>> main
       error_file: './logs/performance-error.log',
       out_file: './logs/performance-out.log',
       log_file: './logs/performance-combined.log',
       time: true
     }
   ]
+<<<<<<< HEAD
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1470,4 +1541,10 @@ module && module.exports = {
   }]
 };
 >>>>>>> main
+<<<<<<< HEAD
+=======
+};
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

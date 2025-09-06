@@ -22,11 +22,16 @@ export interface User {
   id: string;
   email: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
   role: "admin" | "user" | "guest";
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
+<<<<<<< HEAD
+=======
 =======
   role: string;
   isAdmin: boolean;
@@ -119,6 +124,7 @@ export interface User {;
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return { id: "guest", email: "guest@example.com", role: "guest" };
@@ -132,10 +138,15 @@ export function parseUserFromRequest(req: NextApiRequest): User {
 
   return { id: "user-1", email: "user@zion.os", role: "user" };
 =======
+<<<<<<< HEAD
+
+  return { id: "user-1", email: "user@zion.os", role: "user" };
+=======
   
   return { id: 'user-1', email: 'user@zion.os', role: 'user' };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 
 export function ensureAdmin(user: User): void {
@@ -147,10 +158,13 @@ export function ensureAdmin(user: User): void {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
 <<<<<<< HEAD
     ensureAdmin(user);
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
 export async function ensureAdminFromApi(
   req: NextApiRequest,
@@ -246,6 +260,9 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -292,11 +309,15 @@ if (return null) {
   $2
 }
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   try {
     return JSON.parse (decodeURIComponent (match[1]));
   } catch {
     return null;
   }
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 }
 =======
@@ -347,3 +368,4 @@ export function isModerator(session: AuthSession | null): boolean {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

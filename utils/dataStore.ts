@@ -89,6 +89,9 @@ class DataStore {
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
   createProject(data: Partial<Project>): Project {
     const project: Project = {
       id: Math.random().toString(36).substr(2, 9),
@@ -101,10 +104,13 @@ class DataStore {
     this.projects.push(project);
     return project;
   }
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
   // Review methods
   hasExistingReview(
@@ -121,6 +127,9 @@ class DataStore {
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
   upsertReview(data: Partial<Review>): Review {
     const existingIndex = this.reviews.findIndex(
       (review) =>
@@ -171,6 +180,8 @@ class DataStore {
   counterpartRole(role: "client" | "talent"): "client" | "talent" {
     return role === "client" ? "talent" : "client";
   }
+<<<<<<< HEAD
+=======
 =======
 =======
 =======
@@ -188,6 +199,7 @@ export const data_store = {
   update_data: (id: string, data: any) => null,
   delete_data: (id: string) => null;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -320,6 +332,10 @@ export const getAllReviews = () => store.getAllReviews();
 export const counterpartRole = (role: "client" | "talent") =>
   store.counterpartRole(role);
 =======
+<<<<<<< HEAD
+export const counterpartRole = (role: "client" | "talent") =>
+  store.counterpartRole(role);
+=======
 export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
 <<<<<<< HEAD
 
@@ -338,3 +354,4 @@ export const counterpartRole = (role: 'client' | 'talent') => store.counterpartR
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

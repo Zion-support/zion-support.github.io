@@ -14,6 +14,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
 import ServiceCard from './src/components/ServiceCard';
@@ -69,6 +70,9 @@ export default function App() {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 <<<<<<< HEAD
+export default function App(): JSX.Element {
+=======
+<<<<<<< HEAD
 export default function App(): React.JSX.Element {
 =======
 <<<<<<< HEAD
@@ -91,7 +95,13 @@ export default function App(): JSX.Element {
 =======
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   return (
+<<<<<<< HEAD
+    <main>
+
+    </main>
+=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />
       <Header />
@@ -104,7 +114,8 @@ export default function App(): JSX.Element {
               Welcome to Zion Tech
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Your trusted partner for AI and IT solutions. We help businesses transform through cutting-edge technology and innovative solutions.
+              Your trusted partner for AI and IT solutions. We help businesses transform through
+              cutting-edge technology and innovative solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
@@ -160,9 +171,14 @@ export default function App(): JSX.Element {
       <ChatAssistant />
       <ScrollToTop />
     </div>
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> main
   );
 }
+<<<<<<< HEAD
 =======
 
 export default function App() {
@@ -185,3 +201,5 @@ export default function App(): React.JSX.Element {
     </main>
   );
 }
+=======
+>>>>>>> main

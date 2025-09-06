@@ -1,10 +1,20 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseUrl =
   process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
 const supabaseKey =
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+export function getServerSupabase() {
+  return createClient(supabaseUrl, supabaseKey);
+}
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,3 +139,4 @@ export function getServerSupabase() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

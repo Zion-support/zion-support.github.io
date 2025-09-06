@@ -2,12 +2,16 @@
 export const generateId = (prefix: string = "id"): string => {
 =======
 <<<<<<< HEAD
+export const generateId = (prefix: string = "id"): string => {
+=======
+<<<<<<< HEAD
 export const generateId = (prefix: string = 'id'): string => {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
 export const announceToScreenReader = (message: string): void => {
 export const generateId = (prefix: string = 'id'): string => {;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
@@ -15,10 +19,15 @@ export const announceToScreenReader = (message: string): void => {
   if (typeof window === "undefined") return;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
   const announcement = document.createElement("div");
   announcement.setAttribute("aria-live", "polite");
   announcement.setAttribute("aria-atomic", "true");
   announcement.className = "sr-only";
+<<<<<<< HEAD
+=======
 =======
 
 =======
@@ -31,6 +40,7 @@ export const announceToScreenReader = (message: string): void => {
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   announcement.textContent = message;
   document.body.appendChild(announcement);
 
@@ -45,11 +55,15 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
 =======
 <<<<<<< HEAD
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+=======
+<<<<<<< HEAD
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
 =======
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   );
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[
@@ -118,6 +132,9 @@ if ( {) {
     }
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 
   element.addEventListener("keydown", handleTabKey);
@@ -153,15 +170,22 @@ export const getContrastRatio = (color1: string, color2: string): number => {
   return (brightest + 0.05) / (darkest + 0.05);
 };
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 }
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 export const isHighContrast = (color1: string, color2: string): boolean => {
   return getContrastRatio(color1, color2) >= 4.5;
 };
 
 export const validateAriaLabel = (element: HTMLElement): boolean => {
+<<<<<<< HEAD
+  const hasAriaLabel = element.hasAttribute("aria-label");
+  const hasAriaLabelledBy = element.hasAttribute("aria-labelledby");
+=======
 <<<<<<< HEAD
   const hasAriaLabel = element.hasAttribute("aria-label");
   const hasAriaLabelledBy = element.hasAttribute("aria-labelledby");
@@ -185,6 +209,7 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {;
   const hasAriaLabel = element.hasAttribute('aria-label');
   const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   const hasVisibleText = element.textContent?.trim().length > 0;
 
   return hasAriaLabel || hasAriaLabelledBy || hasVisibleText;
@@ -193,6 +218,9 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {;
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
   const focusableSelectors = [
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
     "button:not([disabled])",
     "input:not([disabled])",
     "select:not([disabled])",
@@ -208,6 +236,8 @@ export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
 
 export const isElementInViewport = (element: HTMLElement): boolean => {;
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -285,6 +315,7 @@ export const isElementInViewport = (element: HTMLElement): boolean => {
     '[tabindex]:not([tabindex="-1"])';
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   const rect = element.getBoundingClientRect();
   return (
     rect.top >= 0 &&
@@ -326,11 +357,16 @@ export const scrollToElement = (
 };
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 export const createSkipLink = (
   targetId: string,
   text: string = "Skip to main content",
 ): HTMLElement => {
   const skipLink = document.createElement("a");
+<<<<<<< HEAD
+=======
 =======
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
 <<<<<<< HEAD
@@ -340,6 +376,7 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const skipLink = document.createElement('a');
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
   skipLink.className =
@@ -362,6 +399,9 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
 <<<<<<< HEAD
   return skipLink;
 =======
+<<<<<<< HEAD
+  return skipLink;
+=======
 
   
 =======
@@ -380,6 +420,7 @@ export const generateId = (prefix: string = 'id'): string = > { return `${prefix
 
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 };
 <<<<<<< HEAD
 =======

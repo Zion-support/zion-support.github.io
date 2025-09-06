@@ -21,20 +21,30 @@ export interface ModerationFlag {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 // Mock data storage - replace with actual database;
 let flags: ModerationFlag[] = [];
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
 ;
 export async function getFlagById (id: string): Promise < ModerationFlag | null> {
   return flags.find (flag => flag.id === id) || null;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> main
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {
   return [...flags];
 
+<<<<<<< HEAD
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find((flag) => flag.id === id) || null;
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 }
@@ -79,6 +89,7 @@ let flags: ModerationFlag[] = [];
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
   return flags.find(flag => flag.id === id) || null;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 
 export async function readAllFlags(): Promise<ModerationFlag[]> {;
@@ -91,6 +102,9 @@ export async function createFlag(
   const flag: ModerationFlag = {
     id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
     contentId: data.contentId || "",
     contentType: data.contentType || "post",
     reason: data.reason || "",
@@ -101,6 +115,8 @@ export async function createFlag(
   };
 
   flags.push(flag);
+<<<<<<< HEAD
+=======
 =======
     contentId: data.contentId || '',
     contentType: data.contentType || 'post',
@@ -117,17 +133,23 @@ export async function createFlag(
 ;
   flags.push (flag);
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   return flag;
 }
 
 export async function updateFlagStatus(
   id: string,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
   status: ModerationFlag["status"],
   adminNotes?: string,
 ): Promise<FlaggedContent | undefined> {
   const flag = await getFlagById(id);
   if (!flag) return undefined;
+<<<<<<< HEAD
+=======
 =======
   status: ModerationFlag['status'],
   admin_notes?: string): Promise < FlaggedContent | undefined> {
@@ -160,6 +182,7 @@ export async function updateFlagStatus(
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();

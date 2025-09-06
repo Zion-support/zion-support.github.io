@@ -119,6 +119,9 @@ export interface Project {;
   status: "ACTIVE" | "COMPLETED" | "CANCELLED";
 =======
 <<<<<<< HEAD
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -128,6 +131,7 @@ export interface Project {;
 =======
   status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   timeline: any[];
   documents: ProjectDocument[];
   notes: ProjectNote[];
@@ -141,6 +145,8 @@ export interface ProjectNote {
   content: string;
   createdAtIso: string;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -158,3 +164,4 @@ export interface ProjectNote {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

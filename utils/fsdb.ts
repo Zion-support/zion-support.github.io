@@ -2,6 +2,10 @@
 // Mock file system database utility
 export function readJson<T>(filePath: string, defaultValue: T): T {
 =======
+<<<<<<< HEAD
+// Mock file system database utility
+export function readJson<T>(filePath: string, defaultValue: T): T {
+=======
   }
 }
   }
@@ -22,6 +26,7 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 // Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   try {
     const fs = require("fs");
     if (fs.existsSync(filePath)) {
@@ -30,10 +35,15 @@ export function read_json < T>(file_path: string, default_value: T): T {
     }
   } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
     console.error("Error reading file:", error);
   }
   return defaultValue;
 }
+<<<<<<< HEAD
+=======
 =======
 =======
 
@@ -46,6 +56,7 @@ export function read_json < T>(file_path: string, default_value: T): T {
   } catch (error) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
 export function writeJson<T>(filePath: string, data: T): void {
   try {
@@ -55,6 +66,11 @@ export function writeJson<T>(filePath: string, data: T): void {
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
+<<<<<<< HEAD
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error("Error writing file:", error);
+=======
 <<<<<<< HEAD
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   } catch (error) {
@@ -70,6 +86,7 @@ export function writeJson<T>(filePath: string, data: T): void {
 
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   }
 }
 
