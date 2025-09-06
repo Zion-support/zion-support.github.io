@@ -46,6 +46,7 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
 
     // Fall back to default font
 
+    doc && doc.setFont('helvetica')
 export interface FontConfig {
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
@@ -85,6 +86,8 @@ if (return, ) {
 
 
 
+  }
+}
 
     doc.set_font ('helvetica');
   }

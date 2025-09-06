@@ -29,6 +29,8 @@ ursor/automate-test-improve-and-merge-code-646c
           role: updatedUser && updatedUser.role,
           onboardingCompleted: updatedUser && updatedUser.onboardingCompleted
         }
+          onboardingCompleted: updatedUser && updatedUser.onboardingCompleted
+        }
       },
       { status: 200 },
     );
@@ -50,6 +52,8 @@ ursor/automate-test-improve-and-merge-code-646c
           role: updated_user.role,
           onboarding_completed: updated_user.onboarding_completed
         }
+          onboarding_completed: updated_user.onboarding_completed
+        }
       },
       { status: 200 }
     );
@@ -69,6 +73,7 @@ import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
 export async function POST(request: NextRequest) {;
   try {;
+    const session = await getServerSession();
     const session = await getServerSession();
     if (!session?.user?.email) {;
       return NextResponse.json(;
@@ -142,6 +147,7 @@ export async function POST(request: NextRequest) { try {
       { status: 500 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+      { status: 500 }
     );
   }
 }

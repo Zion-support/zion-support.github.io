@@ -19,6 +19,8 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 
 
+  DialogTrigger
+} from "@/components/ui/dialog";
 interface ReviewCardProps {
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>;
@@ -84,6 +86,9 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
   };
 
 
+      .substring(0, 2);
+  };
+
   return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
@@ -108,6 +113,9 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
                     ? getInitials(review.reviewer_profile.display_name)
                     : "??"}
 
+                  {review.reviewer_profile?.display_name
+                    ? getInitials(review.reviewer_profile.display_name)
+                    : "??"}
                 </AvatarFallback>
               )}
             </Avatar>;
@@ -126,6 +134,11 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
 
               {formatDistanceToNow(new Date(review.created_at), {
                 addSuffix: true
+                : review.reviewer_profile?.display_name || "User"}
+            </div>
+            <div className="text-sm text-muted-foreground">
+              {formatDistanceToNow(new Date(review.created_at), {
+                addSuffix: true
               })}
             </div>
           </div>
@@ -138,6 +151,180 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Communication
+                <span className="ml-1 text-yellow-500">
+                  {review.communication_rating}/5
+                </span>
+              </Badge>
+            )}
+
+            {review.quality_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Quality
+                <span className="ml-1 text-yellow-500">
+                  {review.quality_rating}/5
+                </span>
+              </Badge>
+            )}
+
+            {review.timeliness_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Timeliness
+                <span className="ml-1 text-yellow-500">
+                  {review.timeliness_rating}/5
+                </span>
+              </Badge>
+            )}
+
+            {review.would_work_again !== undefined && (
+              <Badge
+                variant={review.would_work_again ? "default" : "secondary"}
+                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
+              >
+                {review.would_work_again
+                  ? "Would work again"
+                  : "Would not work again"}
+              </Badge>
+            )}
+{(review.communication_rating |
+        review.quality_rating |
+        review.timeliness_rating |
+        review.would_work_again !== undefined) && (
+      {(review.communication_rating |
+        review.quality_rating |
+        review.timeliness_rating |
+        review.would_work_again !== undefined) && (
+      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
+        <div className="border-t pt-3 mt-3">
+          <div className="flex flex-wrap gap-2">
+            {review.communication_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Communication
+                <span className="ml-1 text-yellow-500">
+                  {review.communication_rating}/5
+                </span>
+              </Badge>
+            )}
+
+            {review.quality_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Quality
+                <span className="ml-1 text-yellow-500">
+                  {review.quality_rating}/5
+                </span>
+              </Badge>
+            )}
+
+            {review.timeliness_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Timeliness
+                <span className="ml-1 text-yellow-500">
+                  {review.timeliness_rating}/5
+                </span>
+              </Badge>
+            )}
+
+            {review.would_work_again !== undefined && (
+              <Badge;
+                variant={review.would_work_again ? "default" : "secondary"}
+                className={`${review.would_work_again ? "bg - green - 100 text - green - 800 hover:bg - green - 200" : "bg - gray - 100 text - gray - 800 hover:bg - gray - 200"}`}
+              >;
+                {review.would_work_again;
+                  ? "Would work again";
+                  : "Would not work again"}
+      )}
+          </div>;
+      )}
+      
+      <div className="mt-3 flex justify-end">
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
+          <DialogTrigger asChild>
+            <Button variant="ghost" size="sm" className="text-muted-foreground">
+              <Flag className="h-3 w-3 mr-1" />
+              Report
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Report Review</DialogTitle>
+              <DialogDescription>
+                If you believe this review violates our community guidelines
+                please provide details below.
+              </DialogDescription>
+            </DialogHeader>
+            <Textarea
+              placeholder="Why are you reporting this review?"
+              value={reportReason}
+              onChange={(e) => setReportReason(e.target.value)}
+              className="min-h-[100px]"
+            />
+            <DialogFooter>
+              <Button
+                variant="outline"
+                onClick={() => setIsReportDialogOpen(false)}
+              >
+                Cancel
+              </Button>
+              <Button
+                onClick={handleReport}
+                disabled={!reportReason.trim() |isReporting}
+              >
+                {isReporting ? "Submitting..." : "Submit Report"}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      </div>
+    </div>
+            {review && review.quality_rating && (;
+              <Badge variant="outline" className="flex gap-1 items-center">;
+                Quality;
+                <span className="ml-1 text-yellow-500">{review && review.quality_rating}/5</span>;
+              </Badge>;
+            )}
+
+            {review && review.timeliness_rating && (;
+              <Badge variant="outline" className="flex gap-1 items-center">;
+                Timeliness;
+                <span className="ml-1 text-yellow-500">{review && review.timeliness_rating}/5</span>;
+              </Badge>;
+            )}
+
+            {review && review.would_work_again !== undefined && (;
+              <Badge
+                variant={review && review.would_work_again ? "default" : "secondary"}
+                className={`${review && review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}>;
+                {review && review.would_work_again ? "Would work again" : "Would not work again"}
+              </Badge>;
+
+            )}
+
+
+          </div>;
+        </div>;
+          </div>;
+        </div>;
+
+
+      )}
+
+      <div className="mt-3 flex justify-end">
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
+          <DialogTrigger asChild>
+            <Button variant="ghost" size="sm" className="text-muted-foreground">
+              <Flag className="h-3 w-3 mr-1" />
+              Report
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Report Review</DialogTitle>
+              <DialogDescription>
+                If you believe this review violates our community guidelines,
+                please provide details below.
+              </DialogDescription>
+            </DialogHeader>
 
             <Textarea
               placeholder="Why are you reporting this review?"
@@ -235,4 +422,8 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 ;
 
 
+
+;
+;
+;
 

@@ -7,6 +7,13 @@ import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 
 
+import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',
+import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
+import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
+import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
+
+import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
+
 interface TenantInfo {
   id: string;
   brand_name: string;
@@ -38,6 +45,7 @@ serve(async (req) => {
   if (req.method === 'OPTIONS') {
 
 
+  if (req && req.method === 'OPTIONS') {
     return new Response(null, {
       status: 204
       headers: corsHeaders})
@@ -84,6 +92,8 @@ serve(async (req) => {
         throw new Error(`Database error: ${error.message}`)
 
 
+        console && console.error('Database error:', error);
+        throw new Error(`Database error: ${error && error.message}`)
       }
       tenantInfo = data as TenantInfo
     } else {
@@ -100,6 +110,7 @@ serve(async (req) => {
         const subdomain = hostname.split('.')[0];
 
 
+        const subdomain = hostname && hostname.split('.')[0];
         if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {
           const subdomainResult = await supabase
             .from('whitelabel_tenants')
@@ -127,6 +138,7 @@ interface TenantInfo {;
 
 
 
+  logo_url: string | null,
   theme_preset: string;
 }
 const cors_headers = {
@@ -211,7 +223,7 @@ const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'GET, POST, OPTIONSAccess-Control-Allow-Headers': 'Content-Type, Authorization, x-client-infoAccess-Control-Max-Age': '86400'},;
 // Initialize Supabase client;
 const supabaseUrl = Deno.env.get('SUPABASE_URL');
-const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY'),;
+const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
 if (!supabaseUrl || !supabaseServiceKey) {;
   throw new Error('Required environment variables are not set');
 }
@@ -278,6 +290,35 @@ serve(async (req) => {;
 
 
 
+      // Check condition
+if ( {) {
+  $2
+}
+        const subdomain = hostname.split ('.')[0];
+        if () {) {
+  $2
+}
+          const subdomain_result = await supabase;
+            .from ('whitelabel_tenants');
+            .select ('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
+            .eq ('subdomain', subdomain);
+            .eq ('is_active', true);
+            .single ();
+;
+          // Check condition
+if ( {) {
+  $2
+}
+            tenant_info = subdomain_result.data as TenantInfo;
+          }
+        }
+      } else // Check condition
+if ( {) {
+  $2
+}
+        tenant_info = data as TenantInfo;
+      }
+    }
 
 
 
@@ -317,6 +358,7 @@ serve(async (req) => {;
 
         status: 'error'
 
+        status: 'error'
     return new Response (
       JSON.stringify ({
         tenant: tenant_info,
@@ -370,6 +412,14 @@ serve(async (req) => {;
           'Content-Type': 'application/json',;
           ...corsHeaders}});
 
+  }
+});
+
+  }
+});
+
+  }
+});
 
           'Content - Type': 'application / json',
           ...cors_headers}}

@@ -9,3 +9,4 @@ const { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from 
 const { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from "@/components/ui/
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

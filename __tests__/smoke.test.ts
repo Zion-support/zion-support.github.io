@@ -53,6 +53,13 @@ describe('smoke', () => { it("true is truthy"
 
 });
 
+<<<<<<< HEAD
+=======
+describe('smoke'
+  it('true is truthy'
+describe('smoke', () => { it("true is truthy"
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 describe('smoke'
   it('true is truthy'
 describe('smoke', () => { it("true is truthy"

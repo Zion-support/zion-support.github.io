@@ -16,6 +16,9 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
     (acc, skill) => {
       const category = skill.category || "Other";
 
+  const skillsByCategory = skills.reduce(
+    (acc, skill) => {
+      const category = skill.category || "Other";
       if (!acc[category]) {
         acc[category] = [];
       }
@@ -29,6 +32,7 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
 
 
 
+  if (skills.length === 0) return null;
 
   return (
     <div className="mb-6">
@@ -41,6 +45,7 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
 
               {skills.map((skill) => skill.name).join(", ")}
 
+              {skills.map((skill) => skill.name).join(", ")}
             </p>
           </div>
         ))}
@@ -52,6 +57,11 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
 
 
 
+  );
+}
+
+  );
+}
 import {Skill} from '@/types/resume';
 interface SkillsSectionProps {;
   skills: Skill[];

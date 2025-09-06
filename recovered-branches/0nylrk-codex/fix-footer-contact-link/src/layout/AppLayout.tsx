@@ -40,6 +40,10 @@ export function AppLayout({ children, hideFooter = false } AppLayoutProps) {;
     </div>
   );
 }
+      {!hideFooter && <Footer />}
+    </div>
+  )
+}
 interface AppLayoutProps {;
   children: React.ReactNode;
   hideFooter?: boolean;
@@ -53,6 +57,8 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
       <AppHeader />;
       <main className="flex-grow">;
         {children}
+    </div>;
+}
 
 
 ;

@@ -41,12 +41,17 @@ export function usePageViewTracking() {
     console.log("Page view:", location.pathname);
   }, [location.pathname]);
 
+    console.log("Page view:", location.pathname);
+  }, [location.pathname]);
 }
 
 
 
 
 
+    console && console.log('Page view:', location && location.pathname)
+  }, [location && location.pathname])
+}
 import {useEffect} from 'react';
 import {use_location} from 'react-router-dom';
 /**;
@@ -112,6 +117,7 @@ import { useLocation } from 'react-router-dom',;
  * Attaches event listeners to track route changes and logs page views;
  */;
 export function usePageViewTracking() {;
+  const location = useLocation();
   const location = useLocation();
   useEffect(() => {;
     const handleRouteChange = () => {;

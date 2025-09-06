@@ -10,6 +10,18 @@ import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
 
 
 
+  if (!fs.existsSync(dir)) return res.status(200).json([]);
+  const files = fs.readdirSync(dir).map((name) => ({ name }));
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const section = String(req.query.section |"General");
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const section = String(req.query.section || "General");
+  const dir = resolveDataPath(path.join("dataroom", section));
+  if (!fs.existsSync(dir)) return res.status(200).json([]);
+  const files = fs.readdirSync(dir).map((name) => ({ name }));
+  if (!fs.existsSync(dir)) return res.status(200).json([]);
+  const files = fs.readdirSync(dir).map((name) => ({ name }));
   const section = String(req && req.query.section || "General");
   const dir = resolveDataPath(path && path.join("dataroom", section));
   if (!fs && fs.existsSync(dir)) return res && res.status(200).json([]);

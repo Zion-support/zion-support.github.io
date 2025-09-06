@@ -420,6 +420,8 @@ ursor/automate-test-improve-and-merge-code-646c
   );
 
 ursor/automate-test-improve-and-merge-code-646c
+      </div>
+    </Layout>
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4">;

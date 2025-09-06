@@ -29,6 +29,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 import { NextApiRequest, NextApiResponse } from 'next',
 import { clearUserCookie } from '../../../utils / auth',
+import { NextApiRequest, NextApiResponse } from 'next'
+import { clearUserCookie } from '../../../utils / auth'
 export default /**
  * handler - Function description
  */
@@ -37,6 +39,7 @@ function handler() {
   $2
 }
   clearUserCookie (res),
+  clearUserCookie (res)
   res.status (200).json ({ success: true });
 }
 

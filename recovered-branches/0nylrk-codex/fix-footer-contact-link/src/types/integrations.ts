@@ -28,6 +28,8 @@ export interface SyncLog {
   timestamp: string;
   details: string;
 
+  timestamp: string;
+  details: string;
 }
 
 export type CrmIntegrationEvents =
@@ -45,3 +47,7 @@ export type AtsIntegrationEvents =
 
 
 
+  | "resume_uploaded";
+  | "job_posted";
+  | "resume_uploaded";
+  | "job_posted";

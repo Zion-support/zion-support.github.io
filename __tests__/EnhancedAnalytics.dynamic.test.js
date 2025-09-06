@@ -5,6 +5,7 @@
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic'; describe('EnhancedAnalyticsdynamic',() => { test('renders without crashing',() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedAnalyticsdynamic />)}); test('handles user interactions',() => { render(<EnhancedAnalyticsdynamic />)}); test('applies correct styling',() => { render(<EnhancedAnalyticsdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -16,6 +17,7 @@ describe('EnhancedAnalyticsdynamic', () => {
   });
 });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   test('displays correct content', () => {
     render(<EnhancedAnalyticsdynamic />);
   });
@@ -62,3 +64,4 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 ursor/automate-test-improve-and-merge-code-646c
 });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -12,6 +12,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export default function _app({}: _appProps) {
+export default function _app({}: _appProps) {
   return (
     <div>
       <h1>_app</h1>

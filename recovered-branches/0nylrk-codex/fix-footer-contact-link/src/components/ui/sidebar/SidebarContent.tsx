@@ -29,6 +29,10 @@ export function SidebarContent({ className, children, ...props }: SidebarContent
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
       {children}
 
+    <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
+      {children}
+
+}
 
 ;
 

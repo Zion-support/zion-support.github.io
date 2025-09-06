@@ -4574,3 +4574,7 @@ ursor/automate-test-improve-and-merge-code-646c
     </>
   );
 }
+
+const Page = () => {
+  return (
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

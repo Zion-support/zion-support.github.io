@@ -64,6 +64,13 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
 
     document.head.append_child (style);
 ;
+
+
+
+  );
+}
+    document.head.append_child (style);
+;
     // Trigger print dialog;
     window.print ();
 ;

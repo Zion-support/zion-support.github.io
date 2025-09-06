@@ -20,6 +20,7 @@ module && module.exports = {;
   apps:[;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 module.exports = {apps:[;
 
 
@@ -65,6 +66,7 @@ module.exports = {;
       error_file:'./logs/error-fixer-error && error.log',;
       out_file:'./logs/error-fixer-out && out.log',;
       log_file:'./logs/error-fixer-combined && combined.log',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       time:true;
     },;
     {;
@@ -72,6 +74,7 @@ module.exports = {;
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;
       script:'automation/intelligent-orchestrator.cjs',;
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -89,6 +92,7 @@ module.exports = {;
       error_file:'./logs/orchestrator-error && error.log',;
       out_file:'./logs/orchestrator-out && out.log',;
       log_file:'./logs/orchestrator-combined && combined.log',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       time:true;
     },;
     {;
@@ -96,6 +100,7 @@ module.exports = {;
       script:'automation/automation-dashboard && dashboard.cjs',;
       script:'automation/automation-dashboard.cjs',;
       script:'automation/automation-dashboard && dashboard.cjs',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       args:'start',;
       instances:1,;
       autorestart:true,;
@@ -126,6 +131,7 @@ module.exports = {;
       script:'automation/code-quality-monitor && monitor.cjs',;
       script:'automation/code-quality-monitor.cjs',;
       script:'automation/code-quality-monitor && monitor.cjs',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -142,6 +148,7 @@ module.exports = {;
       error_file:'./logs/code-quality-error && error.log',;
       out_file:'./logs/code-quality-out && out.log',;
       log_file:'./logs/code-quality-combined && combined.log',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       time:true;
     },;
     {;
@@ -149,6 +156,7 @@ module.exports = {;
       script:'automation/performance-optimizer && optimizer.cjs',;
       script:'automation/performance-optimizer.cjs',;
       script:'automation/performance-optimizer && optimizer.cjs',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -302,6 +310,7 @@ module.exports = {
     env: {
       NODE_ENV: "production"
       PORT: 3000
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     }
     env_production: {
       NODE_ENV: "production"
@@ -473,6 +482,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
       args: 'scripts / pm2 / auto - fix.js',
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       cron_restart: '0 */6 * * *',
       autorestart: true,
       watch: false,
@@ -494,6 +504,7 @@ ursor/automate-test-improve-and-merge-code-646c
       out_file: 'logs / pm2 / auto - fix - out.log'
 
         NODE_ENV: 'production'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     },
     {
       name: 'healthcheck',
@@ -502,6 +513,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
       args: 'scripts / pm2 / healthcheck.js',
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       cron_restart: '*/5 * * * *',
       autorestart: true,
       watch: false,
@@ -527,6 +539,7 @@ ursor/automate-test-improve-and-merge-code-646c
       name: 'code - quality - monitor',
       script: 'scripts / pm2 / code - quality - monitor.js',
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
@@ -535,6 +548,7 @@ ursor/automate-test-improve-and-merge-code-646c
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         PM2_PROCESS_NAME: 'code - quality - monitor',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true'
       },
@@ -555,6 +569,7 @@ ursor/automate-test-improve-and-merge-code-646c
       name: 'auto - commit - fixes',
       script: 'scripts / pm2 / auto - commit - fixes.js',
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
@@ -563,6 +578,7 @@ ursor/automate-test-improve-and-merge-code-646c
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         PM2_PROCESS_NAME: 'auto - commit - fixes',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false'
       },
@@ -583,6 +599,7 @@ ursor/automate-test-improve-and-merge-code-646c
       name: 'dependency - monitor',
       script: 'scripts / pm2 / dependency - monitor.js',
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
@@ -591,6 +608,7 @@ ursor/automate-test-improve-and-merge-code-646c
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'dependency-monitor',
         PM2_PROCESS_NAME: 'dependency - monitor',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         AUTO_UPDATE_DEV: 'true',
         SECURITY_ALERTS: 'true'
       },
@@ -611,6 +629,7 @@ ursor/automate-test-improve-and-merge-code-646c
       name: 'performance - monitor',
       script: 'scripts / pm2 / performance - monitor.js',
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
@@ -619,6 +638,7 @@ ursor/automate-test-improve-and-merge-code-646c
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'performance-monitor',
         PM2_PROCESS_NAME: 'performance - monitor',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         PERFORMANCE_THRESHOLD: '3000',
         BUNDLE_SIZE_LIMIT: '2MB'
       },
@@ -639,6 +659,7 @@ ursor/automate-test-improve-and-merge-code-646c
       name: 'git - workflow',
       script: 'scripts / pm2 / git - workflow - automator.js',
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
@@ -647,6 +668,7 @@ ursor/automate-test-improve-and-merge-code-646c
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'git-workflow',
         PM2_PROCESS_NAME: 'git - workflow',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         AUTO_BRANCH_CLEANUP: 'true',
         AUTO_MERGE_SAFE: 'true',
         CONFLICT_RESOLUTION: 'true',
@@ -669,6 +691,7 @@ ursor/automate-test-improve-and-merge-code-646c
       name: 'error - detection',
       script: 'scripts / pm2 / error - detection - service.js',
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
@@ -677,6 +700,7 @@ ursor/automate-test-improve-and-merge-code-646c
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'error-detection',
         PM2_PROCESS_NAME: 'error - detection',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         AUTO_FIX_ENABLED: 'true',
         MONITOR_FREQUENCY: '*/5 * * * *'
       },
@@ -697,6 +721,7 @@ ursor/automate-test-improve-and-merge-code-646c
       name: 'syntax - fixer',
       script: 'scripts / pm2 / syntax - error - fixer.js',
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
@@ -705,6 +730,7 @@ ursor/automate-test-improve-and-merge-code-646c
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'syntax-fixer',
         PM2_PROCESS_NAME: 'syntax - fixer',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         AUTO_FIX_ENABLED: 'true',
         MONITOR_FREQUENCY: '*/10 * * * *'
       },
@@ -715,6 +741,7 @@ ursor/automate-test-improve-and-merge-code-646c
     }
   ],
 >>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 module.exports = {
   apps: [{
     name: "ziontechgroup-site",
@@ -1300,6 +1327,7 @@ module && module.exports = {
       PORT: 3000;
     },
     max_memory_restart: "1G",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     node_args: "--max - old - space - size = 1024",
     error_file: "./logs / err.log",
     out_file: "./logs / out.log",
@@ -1329,6 +1357,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 },
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     node_args: "--max-old-space-size=1024",
     error_file: "./logs/err.log",
     out_file: "./logs/out.log",

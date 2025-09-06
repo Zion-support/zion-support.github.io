@@ -17,6 +17,9 @@ export default function HelpCenterPage() {
       <HelpCenter />
     </>
 
+      />
+      <HelpCenter />
+    </>
   );
 }
 
@@ -65,6 +68,9 @@ export default function HelpCenterPage() {;
 }
 ;
 
+}
+;
+
     </>;
   ),;
 } export default function HelpCenterPage () {
@@ -78,3 +84,5 @@ export default function HelpCenterPage() {;
 ;
 
 
+    </>);
+}

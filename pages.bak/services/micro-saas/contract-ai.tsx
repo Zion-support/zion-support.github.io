@@ -71,6 +71,7 @@ interface ContractaiProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function Contractai({}: ContractaiProps) {
+export default function Contractai({}: ContractaiProps) {
   return (
     <div>
       <h1>Contractai</h1>
@@ -107,3 +108,5 @@ export default function Contractai({}: ContractaiProps) {
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
+}

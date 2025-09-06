@@ -8,6 +8,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+  if (req.method === 'POST') {
+    // In a real implementation, validate and insert review into Supabase
+  }
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse

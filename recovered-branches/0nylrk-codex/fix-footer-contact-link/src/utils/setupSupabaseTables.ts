@@ -20,6 +20,9 @@ export const ensureProfilesTableExists = async () => {
     });
 
 
+      ),`
+    });
+
     // If there's an error, log it and proceed with table creation
     if (error) {
       console.warn(
@@ -93,6 +96,47 @@ if ( {) {
       $$;
 
 
+        id UUID PRIMARY KEY REFERENCES auth.users (id) ON DELETE CASCADE;
+        display_name TEXT;
+        user_type TEXT;
+        profile_complete BOOLEAN DEFAULT FALSE;
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now ());
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now ());
+        bio TEXT;
+        avatar_url TEXT;
+      -- Create policies
+      DO $$
+      BEGIN
+        IF NOT EXISTS (
+          SELECT FROM pg_catalog && pg_catalog.pg_policies 
+          SELECT FROM pg_catalog.pg_policies
+          WHERE policyname = 'Users can view their own profile'
+          AND tablename = 'profiles'
+        ) THEN
+          CREATE POLICY "Users can view their own profile" 
+            ON public && public.profiles FOR SELECT 
+            USING (auth && auth.uid() = id);
+        headline TEXT);
+;
+      -- Create RLS policies;
+      ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
+;
+      -- Create policies;
+      DO $$;
+      BEGIN;
+        IF NOT EXISTS (
+          SELECT FROM pg_catalog.pg_policies;
+          WHERE policyname = 'Users can view their own profile';
+          AND tablename = 'profiles') THEN;
+          CREATE POLICY "Users can view their own profile";
+            ON public.profiles FOR SELECT;
+            USING (auth.uid () = id);
+        END IF;
+      END;
+      $$;
+        END IF;
+      END
+      $$;
           CREATE POLICY "Users can view their own profile" 
             ON public.profiles FOR SELECT 
             USING (auth.uid() = id),
@@ -124,6 +168,9 @@ if ( {) {
             USING (auth && auth.uid() = id);
 
 
+          WHERE policyname = 'Users can update their own profile'
+          AND tablename = 'profiles'
+        ) THEN
 ;
       DO $$;
       BEGIN;
@@ -143,6 +190,12 @@ if ( {) {
       $$;
 
 
+        END IF;
+      END;
+      $$;
+        END IF;
+      END
+      $$;
           CREATE POLICY "Users can update their own profile" 
             ON public.profiles FOR UPDATE 
             USING (auth.uid() = id),
@@ -339,3 +392,10 @@ export const ensureProfilesTableExists = async () => {;
 };
 
 
+  }
+};
+// Call this when the app starts to ensure the table exists;
+export const initializeDatabase = async () => {;
+
+  await ensureProfilesTableExists();
+};

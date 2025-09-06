@@ -96,6 +96,7 @@ fetch("/api/contact", {
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
   return (
     <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
@@ -550,6 +551,7 @@ ursor/automate-test-improve-and-merge-code-646c
 toast ({
   return;
 }set_errors ({});
+}set_errors ({});
 setIsSubmitting (true);
 }) .catch ( (err) => {
   setIsSubmitting (false);
@@ -574,3 +576,4 @@ description: err.message;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default ContactSection;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

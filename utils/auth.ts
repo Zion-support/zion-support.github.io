@@ -15,6 +15,13 @@ export interface User {
   id: string;
   email: string;
 >>>>>>> main
+
+
+// Authentication utilities
+
+export interface User {
+  id: string;
+  email: string;
   role: "admin" | "user" | "guest";
 }
 
@@ -139,6 +146,7 @@ export async function ensureAdminFromApi(
 
 
 
+    ensureAdmin(user);
 
     return { allowed: true }
   } catch {
@@ -167,11 +175,13 @@ export function ensureDemoUsers(): void {
         name: "Admin User",
         role: "admin",
         email: "admin@zion.os"
+        email: "admin@zion.os"
       },
       {
         id: "user-1",
         name: "Regular User",
         role: "user",
+        email: "user@zion.os"
         email: "user@zion.os"
       },
     );
@@ -188,6 +198,7 @@ export function generateUser(
     name,
     role,
 
+    email: `${name.toLowerCase().replace(/\s+/g, ".")}@zion.os`
     email: `${name.toLowerCase().replace(/\s+/g, ".")}@zion.os`
   };
 }
@@ -206,6 +217,8 @@ export function upsertUser(user: DemoUser): void {
 export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
   res.setHeader("Set-Cookie", `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
 
+export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
+  res.setHeader("Set-Cookie", `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
 }
 
 export function getUserFromRequest(req: NextApiRequest): DemoUser | null {

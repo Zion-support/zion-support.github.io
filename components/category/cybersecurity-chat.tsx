@@ -1,10 +1,19 @@
 
 
 
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+
+const CybersecurityChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+
 const CybersecurityChat: NextPage = () => {;
   return (
     <div>;
@@ -21,6 +30,28 @@ const CybersecurityChat: NextPage = () => {;
         <meta name="description" content="CybersecurityChat blog post" />
       </Head>
 
+      </Head>;
+
+
+      <main>
+        <h1>CybersecurityChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
+      </main>
+    </div>
+      </Head>;
+
+      <main>;
+        <h1>CybersecurityChat</h1>;
+        <p>Blog content coming soon...</p>;
+        <a href="/blog">Back to Blog</a>;
+      </main>;
+    </div>;
+  );
+}
+export default CybersecurityChat;
+
+        <title>CybersecurityChat - Zion Tech Solutions</title>
 
 import type { NextPage } from './next';
 import Head from './next / head';
@@ -61,9 +92,6 @@ export default CybersecurityChat;
 export default CybersecurityChat
 
 
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 const CybersecurityChat: NextPage = () => {
   return (

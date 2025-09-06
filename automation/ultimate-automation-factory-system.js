@@ -131,6 +131,7 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
   const factory = new UltimateAutomationFactory();
   factory.start().then(report => {,;
     console.log('Ultimate Automation Factory: completed:', report.summary),;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     process.exit(0);
   }).catch(error => {,;
     console.error('Ultimate Automation Factory: failed:', error),;
@@ -138,6 +139,8 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
   });
 },;
 ,;
+export default UltimateAutomationFactory;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 import {exec_sync} from 'child_process';
 ;
@@ -176,6 +179,7 @@ export default UltimateAutomationFactory;
 ;
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
 ;
 export default UltimateAutomationFactory;
@@ -191,6 +195,7 @@ class UltimateAutomationFactory {constructor() {; this.logsDir = path.join(proce
     failedAutomations: 0}}; // Calculate summary; report.automations.forEach(automation = > {if (automation.result.success) {; report.summary.successfulAutomations++} else {report.summary.failedAutomations++}}); // Save report; const reportFile = path.join(this.logsDir, `ultimate-automation-report-${Date.now()}.json`); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)); this.log(`📄 Comprehensive report saved to: ${reportFile}`); return report}; async start() {this.log('🎯 Starting Ultimate Automation Factory System...'); const report = await this.generateComprehensiveReport(); this.log('🏁 Ultimate Automation Factory completed'); return report}}
 // CLI interface;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 export default UltimateAutomationFactory;
 import { execSync } from 'child_process';
 ;
@@ -226,7 +231,7 @@ export default UltimateAutomationFactory;
   async runAllAutomations() {,;
     this.log('🚀 Starting Ultimate Automation Factory...'),;
 ,;
-    const automations = [,;
+    const automations = [;
       { comman: d: 'node automation/master-automation.cjs start', descriptio: n: 'Master Automation' },;
       { comman: d: 'node scripts/automation/ai-intelligent-code-analyzer.cjs', descriptio: n: 'AI Code Analyzer' },;
       { comman: d: 'node scripts/automation/intelligent-git-workflow.cjs', descriptio: n: 'Git Workflow' },;
@@ -312,3 +317,5 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default UltimateAutomationFactory;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

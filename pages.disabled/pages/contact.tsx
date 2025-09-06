@@ -150,6 +150,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+const "Contact": NextPage = () => {
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -304,6 +308,7 @@ const "Contact": NextPage = () => {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
   return (
     <MainLayout
@@ -318,6 +323,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -390,6 +396,7 @@ ursor/automate-test-improve-and-merge-code-646c
                       Last Name *;
                     </label>;
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                     <input
                       type=\"text\"
                       id=\"lastName\"
@@ -412,6 +419,7 @@ ursor/automate-test-improve-and-merge-code-646c
                     Email Address *;
                   </label>;
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                   <input
                     type=\"email\"
                     id=\"email\"
@@ -432,6 +440,7 @@ ursor/automate-test-improve-and-merge-code-646c
                     Company;
                   </label>;
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                   <input
                     type=\"text\"
                     id=\"company\"
@@ -451,6 +460,7 @@ ursor/automate-test-improve-and-merge-code-646c
                     Phone Number;
                   </label>;
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                   <input
                     type=\"tel\"
                     id=\"phone\"
@@ -511,6 +521,7 @@ ursor/automate-test-improve-and-merge-code-646c
                     Message *;
                   </label>;
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                   <textarea
                     id=\"message\"
                     name=\"message\"
@@ -630,6 +641,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -774,6 +786,7 @@ ursor/automate-test-improve-and-merge-code-646c
                       <input type=\"text\"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -846,6 +859,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   );
 };
           {/* Contact Information */}
@@ -897,6 +911,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                     key={index}
                     initial={{ \"opacity\": 0, \"y\": 20 }}
                     animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -970,6 +985,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
                   transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -1002,6 +1018,7 @@ ursor/automate-test-improve-and-merge-code-646c
                       </label>;
                       <inputtype=\"email\"
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                         id=\"email\"
                         name=\"email\"
                         required
@@ -1070,6 +1087,7 @@ ursor/automate-test-improve-and-merge-code-646c
                       </label>;
                       <inputtype=\"text\"
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                         id=\"company\"
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -1133,6 +1151,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                     <select
                       id=\"service\"
                       name=\"service\"
@@ -1229,6 +1248,7 @@ ursor/automate-test-improve-and-merge-code-646c
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                     whileHover={{ scale: 1 && 1.02 }}
                     whileTap={{ \"scale\": 0 && 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
@@ -1238,6 +1258,9 @@ ursor/automate-test-improve-and-merge-code-646c
                 </motion && motion.form>;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -1294,6 +1317,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
 
 
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -1361,6 +1390,7 @@ ursor/automate-test-improve-and-merge-code-646c
                           Full Name *;
                         </label>;
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                         <input
                           type=\"text\"
                           id=\"name\"
@@ -1388,6 +1418,7 @@ ursor/automate-test-improve-and-merge-code-646c
                           Email Address *;
                         </label>;
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                         <input
                           type=\"email\"
                           id=\"email\"
@@ -1417,6 +1448,7 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
@@ -1470,6 +1502,7 @@ ursor/automate-test-improve-and-merge-code-646c
                           Phone Number;
                         </label>;
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                         <input
                           type=\"tel\"
                           id=\"phone\"
@@ -1531,6 +1564,7 @@ ursor/automate-test-improve-and-merge-code-646c
                         Message *;
                       </label>;
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                       <textarea
                         id=\"message\"
                         name=\"message\"
@@ -1610,6 +1644,7 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -1720,6 +1755,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+export default ContactPage
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
           </div>
         </section>
       </div>
@@ -1742,6 +1781,7 @@ export default ContactPage;
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 }
 ursor/add-new-services-and-deploy-updates-0462
@@ -1751,3 +1791,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

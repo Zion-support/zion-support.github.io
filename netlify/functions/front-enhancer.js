@@ -94,10 +94,12 @@ function run_node() {
   const res = spawn_sync ('node', [abs, ...args], {
     stdio: 'pipe',
     encoding: 'utf8'
+    encoding: 'utf8'
   });
   return {
     status: res.status || 0,
     stdout: res.stdout || '',
+    stderr: res.stderr || ''
     stderr: res.stderr || ''
   }
 ;

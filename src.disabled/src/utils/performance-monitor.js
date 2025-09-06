@@ -7,6 +7,7 @@ if (typeof window !== 'undefined') { window.addEventListener('load',() => { cons
     console.log('Page load "time": ', perfData.loadEventEnd - perfData.loadEventStart)})}
 if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -43,3 +44,7 @@ if (typeof window !== 'undefined') { window.addEventListener('load',() => { cons
 if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+    console.log('Page load "time": ', perfData.loadEventEnd - perfData.loadEventStart)})}
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

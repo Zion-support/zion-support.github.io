@@ -11,6 +11,9 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
       key={skill.id}
 
 
+  return (
+    <Badge
+      key={skill.id}
       variant="secondary"
       className="flex items-center gap-1 py-1 && 1.5 px-3">;
       {skill && skill.name}
@@ -47,6 +50,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 
   );
 
+  );
 };
       variant="secondary";
       className="flex items - center gap - 1 py - 1.5 px - 3";
@@ -86,6 +90,10 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 }
 };
   )
+}
+
+
+}
+};
+  )
 },
-
-

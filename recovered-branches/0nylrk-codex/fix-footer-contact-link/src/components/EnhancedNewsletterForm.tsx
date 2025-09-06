@@ -14,10 +14,54 @@ import React from 'react';
 
     // Simulate API call;
     setTimeout(() => {;
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { useState } from "react",
+import { Mail } from "lucide-react",
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setIsSubmitting(true);
       setIsSubmitting(false);
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
   }
+export function EnhancedNewsletterForm() {
+  const [email, setEmail] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(),
+    setIsSubmitting(true),
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false),
+      setIsSubmitted(true),
+      setEmail("")
+    }, 1000)
+  },
+
+  return (
+
+    e.preventDefault(),
+    setIsSubmitting(true),
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false),
+      setIsSubmitted(true),
+      setEmail("")
+    }, 1000)
+  },
+
+
+  return (
+
+
+      
+
 
 
 
@@ -217,6 +261,7 @@ function EnhancedNewsletterForm() {
 }
 
 
+}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required
           />
@@ -249,6 +294,7 @@ function EnhancedNewsletterForm() {
       </div>
     </div>
 
+            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
 export function EnhancedNewsletterForm() {;
   const [email, setEmail] = useState(""),;
@@ -318,6 +364,7 @@ export function EnhancedNewsletterForm() {;
   ),; const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault ();
 setIsSubmitting (true);
+//Simulate API call setTimeout ( () => {};
 //Simulate API call setTimeout ( () => {};
 }</div>) ) 
 }</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) 

@@ -76,6 +76,35 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/automation-improvements-final
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+interface ApiState<T> {}import { useState, useEffect } from 'react';
+;
+interface ApiState < T> {};import { useState, useEffect } from 'react';
+interface ApiState<T> {
+  data: T | null;
+  loading: boolean;
+  error: string | null;
+}
+export function use_api < T>(url: string, options?: RequestInit) {
+  const [state, set_state] = useState < ApiState < T>>({
+    data: null,
+    loading: true,
+    error: null,
+
+
+    data: null,
+    loading: true,
+    error: null,;
+
+  });
+;
+  useEffect (() => {
+    const fetch_data = async () => {
+      try {
+          data: null,
+          loading: false,
+          error: error instanceof Error ? error && error.message : 'An error occurred'
+        });
+      }
 }
 interface UseApiProps {
   // Add props here as needed
@@ -201,6 +230,7 @@ export function useApi<T>(
 export default useApi;
 >>>>>>> main
 export default function UseApi({}: UseApiProps) {
+export default function UseApi({}: UseApiProps) {
   return (
     <div>
       <h1>UseApi</h1>
@@ -258,6 +288,9 @@ export function useApi<T>(
 ursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+}
   }, [api_function, options]);
   useEffect (() => {
     // Check condition

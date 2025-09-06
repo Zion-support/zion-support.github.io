@@ -302,6 +302,15 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['SAPOracleSiemensRockwellGE DigitalPTC'], compliance: ['ISO 9001ISO 14001OHSAS 18001SOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {}
+    contact: {
+      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    trialDays: 60, setupTime: '4-6 weeks',
+    competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',
+    launchDate: '2024-01-10', customers: 950,
+    rating: 4.9
+  }
 ];
   id: string, name: string,
   tagline: string, description: string,

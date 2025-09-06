@@ -86,3 +86,4 @@ const FAQ: React.FC = () => {
 export default FAQ;
 ursor/integrate-build-improve-and-re-verify-9d47
 ursor/automate-test-improve-and-merge-code-646c
+export default FAQ;

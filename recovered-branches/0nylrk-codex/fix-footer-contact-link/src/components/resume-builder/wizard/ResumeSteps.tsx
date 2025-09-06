@@ -15,6 +15,8 @@ export const ResumeSteps = ({
 }: ResumeStepsProps) => {
 
 
+  onChange
+}: ResumeStepsProps) => {
   return (
     <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
       {steps.map((step) => (
@@ -40,12 +42,22 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
       ))}
 
     </TabsList>
+    </TabsList>
+  );
+};
+
+    </TabsList>;
+  );
+};
 
   );
 };
 
 
 
+  steps,
+  active_tab,
+  on_change
   steps,
   active_tab,
   on_change

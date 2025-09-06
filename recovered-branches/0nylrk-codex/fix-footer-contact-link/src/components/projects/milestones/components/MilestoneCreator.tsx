@@ -10,6 +10,28 @@
 
 
 
+export function MilestoneCreator({;
+
+export function MilestoneCreator(): any ({;
+
+import React from 'react';
+import { AddMilestoneForm } from '../AddMilestoneForm';
+interface MilestoneCreatorProps {
+
+  onSubmit: (data: any) => Promise<void>
+  isSubmitting: boolean
+  onCancel: () => void
+
+  projectScope?: string;
+  projectStartDate?: string;
+  projectEndDate?: string | null;
+  projectType?: string
+}
+export function MilestoneCreator({
+
+export function MilestoneCreator({;
+
+export function MilestoneCreator({;
   onSubmit;
   isSubmitting;
   onCancel;
@@ -26,6 +48,9 @@
   return (
 
 
+  projectType
+}: MilestoneCreatorProps) {
+  return (
 import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
@@ -49,6 +74,44 @@ export function MilestoneCreator({;
 }: MilestoneCreatorProps) {;
 
 
+  return (
+    <AddMilestoneForm
+
+;
+interface MilestoneCreatorProps {;
+  onSubmit:(data:any) => Promise<void>,;
+  isSubmitting:boolean,;
+  onCancel:() => void,;
+  projectScope?:string,;
+  projectStartDate?:string,;
+  projectEndDate?:string | null,;
+  projectType?:string;
+}
+;
+export function MilestoneCreator({;
+  onSubmit,;
+  isSubmitting,;
+  onCancel,;
+  projectScope,;
+  projectStartDate,;
+  projectEndDate,;
+  projectType;
+} MilestoneCreatorProps) {;
+  return (;
+    <AddMilestoneForm ;
+  return (;
+    <AddMilestoneForm;
+  projectType;
+}: MilestoneCreatorProps) {;
+  return (
+    <AddMilestoneForm
+      onSubmit={onSubmit}
+      isSubmitting={isSubmitting}
+      onCancel={onCancel}
+      projectScope={projectScope}
+      projectStartDate={projectStartDate}
+      projectEndDate={projectEndDate}
+      projectType={projectType}
   on_submit: (data: any) => Promise < void>,
   is_submitting: boolean,
   on_cancel: () => void,

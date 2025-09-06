@@ -26,6 +26,8 @@ function ProjectMilestones() {
         <SEO
           title="Payment Milestones | Zion AI Marketplace"
 
+        <SEO
+          title="Payment Milestones | Zion AI Marketplace"
           description="Manage project payment milestones and deliverables"
 import React from 'react';
 import {SEO} from '@/components / SEO';
@@ -67,6 +69,18 @@ function ProjectMilestones() {;
       </>;
 
 
+;
+
+
+export default ProjectMilestones;
+
+export default ProjectMilestones;
+;
+    </ProtectedRoute>;
+  ),;
+}
+;
+export default ProjectMilestones,; <ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables" /> <AppHeader /> <ProjectMilestonesContent /> <Footer /> </> </ProtectedRoute> export default ProjectMilestones;
           description="Manage project payment milestones and deliverables"
         />
         <AppHeader />
@@ -77,6 +91,13 @@ function ProjectMilestones() {;
   );
 }
 
+
+  )
+}
+export default ProjectMilestones;
+
+    </ProtectedRoute>);
+}
 
 ;
 export default ProjectMilestones;

@@ -99,6 +99,7 @@ function Layout() { return <div>{children}</div> } " ;
 >>>>>>> main
 
 ursor/automate-test-improve-and-merge-code-646c
+
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;

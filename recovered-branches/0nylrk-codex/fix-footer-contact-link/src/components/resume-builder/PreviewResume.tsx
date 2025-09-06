@@ -1,6 +1,18 @@
-
 import { Resume } from "@/types/resume";
 import {
+  PreviewHeader,
+  ResumeBasicInfoSection,
+  WorkExperienceSection,
+  EducationSection,
+  SkillsSection,
+  CertificationsSection
+} from "./preview";
+
+interface PreviewResumeProps {
+  resume: Resume;
+  onBack: () => void;
+}
+
   PreviewHeader,
   ResumeBasicInfoSection,
   WorkExperienceSection,
@@ -24,6 +36,7 @@ interface PreviewResumeProps {
   WorkExperienceSection,
   EducationSection,
   SkillsSection,
+  CertificationsSection
   CertificationsSection
 } from "./preview";
 
@@ -52,6 +65,8 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
         <CertificationsSection certifications={resume.certifications} />
       </div>
     </div>
+  );
+}
 
   );
 }
@@ -60,3 +75,19 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
 
 
 
+    </div>;
+  ),;}
+ </div> </div>) 
+}
+  );
+}
+}
+;
+
+  );
+}
+  )
+}
+;
+;
+}

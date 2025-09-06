@@ -18,7 +18,7 @@ if ( {) {
   $2
 }
 const fs = require('fs');
-const path = require('path'),;
+const path = require('path');
 const fs = require('fs');
 const path = require('path');
 
@@ -60,6 +60,10 @@ function getAllFiles(dir, extensions) {;
   let files = [];
   try {;
     content = content.replace(/    
+    
+    // Remove merge conflict markers and keep HEAD version
+    content = content.replace(/    content = content.replace(/    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
@@ -109,6 +113,7 @@ async function main() {;
   }
 }
 ;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   let fixedCount = 0;
   for (const file of files) {;
     try {;
@@ -129,4 +134,6 @@ async function main() {;
 ;
 main().catch(console.error),;
 main().catch(console.error),;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 main().catch(console.error);

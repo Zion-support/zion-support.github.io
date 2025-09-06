@@ -26,6 +26,7 @@ export default function PaymentCanceled() {
 
             onClick={() => navigate("/payments")}
 
+            onClick={() => navigate("/payments")}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Try Again
@@ -34,6 +35,7 @@ export default function PaymentCanceled() {
 
           <Button
 
+          <Button
             variant="outline"
             onClick={() => navigate("/dashboard")}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -54,3 +56,26 @@ export default function PaymentCanceled() {
 
 
 
+  );
+}
+    </div>);
+}
+}
+    </div>);
+}
+    </div>);
+}
+    </div>;
+  );}
+ </div> <h1 className="text-2xl font-bold text-white mb-2" >Payment Canceled</h1> <p className="text-zion-slate-light mb-6" > Your payment process was canceled. No charges have been made to your account. </p> <div className="flex flex-col space-y-3" > <Button onClick= {
+  () => navigate ('/payments') 
+}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Try Again </Button> <Button 
+}
+    </div>;
+  );
+}
+;
+}
+;
+    </div>);
+}

@@ -19,6 +19,9 @@ const corsHeaders = {
 // Initialize the Supabase client
 
 
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",
@@ -107,6 +110,8 @@ serve(async (req) => {
         JSON.stringify({ message: "No talent profiles found" }),
 
 
+      return new Response(
+        JSON && JSON.stringify({ message: "No talent profiles found" });
         { headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
@@ -114,6 +119,30 @@ serve(async (req) => {
 
 
 
+    const matchedTalents = await processJobMatching(job, talents),
+    
+    // 4. Store matches in database and create notifications
+    await storeMatchResults(jobId, matchedTalents, job.title),
+
+        matches: matchedTalents.length 
+      }),
+
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    )
+  } catch (error) {
+
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
+import { processJobMatching, storeMatchResults } from "./job-matching.ts",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
 import { processJobMatching, storeMatchResults } from './job - matching.ts';

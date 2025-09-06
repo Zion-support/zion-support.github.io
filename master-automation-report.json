@@ -13,6 +13,7 @@
       "success": true,
       "duration": 12508,
       "errors": []
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   "timestamp": "2025-09-05T15:05:30.907Z",
   "totalDuration": "86s",
   "results": {
@@ -37,6 +38,7 @@
       ]
 
       "duration": 19,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "errors": [
         "Command failed: node automation/typescript-fixer.cjs"
       ]
@@ -60,6 +62,7 @@
       "success": true,
       "duration": 20538,
       "errors": []
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     }
   },
   "summary": {
@@ -70,5 +73,6 @@
     "successfulPhases": 6,
     "failedPhases": 0,
     "overallSuccess": true
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   }
 }

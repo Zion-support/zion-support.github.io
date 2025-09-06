@@ -35,6 +35,7 @@ class ErrorBoundary extends React.Component {
 };
 
 type Props = {
+type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {;
@@ -86,6 +87,57 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
   return (
 
 
+      const data = await res.json ();
+      if (throw new Error (data.error || 'Failed to submit')) {
+  $2
+}
+      set_message ('Review submitted! Pending admin approval.');
+    } catch (err: any) {
+      set_message (err.message);
+    } finally {
+      set_submitting (false);    }
+  }
+  return (
+    <form on_submit={handle_submit} className='space - y-6'>;
+      <div>;
+        <label className='block text - sm font - medium mb - 2'>Overall Rating</label>        <StarRating value={rating} on_change={set_rating} />;
+      </div>;
+      <div>;
+        <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
+            communication;
+            qualityOfWork;
+            timeliness;
+            wouldWorkWithAgain}})});
+    }
+  }
+  return (
+
+
+    }
+  }
+  return (
+      <div>
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
+        <StarRating value={rating} onChange={setRating} />
+      </div>
+      <div>
+    <form onSubmit={handleSubmit} className='space-y-6'>;
+      <div>;
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">;
+      <div>;
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>;
+        <StarRating value={rating} onChange={setRating} />;
+      </div>;
+
+      <div>;
+        <label className='block text-sm font-medium mb-2'>Your Review</label>;
+        <textarea
+          className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
+          rows={5}
+          value={text}
+          onChange={e => setText(e && e.target.value)}          required;
+        />;
+      </div>;
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}

@@ -18,6 +18,21 @@ export interface TokenTransaction {
   userId: string;
   type: "earn" | "spend" | "transfer";
 
+export interface TokenTransaction {
+
+
+export interface TokenTransaction {;
+
+;
+
+export interface TokenTransaction {
+
+
+export interface TokenTransaction {;
+
+  id: string;
+  userId: string;
+  type: "earn" | "spend" | "transfer";
   amount: number;
   description: string;
   timestamp: string;
@@ -68,6 +83,9 @@ function loadTransactions(): TokenTransaction[] {
     const raw = fs.readFileSync(TRANSACTIONS_FILE, "utf8");
     return JSON.parse(raw);
 
+    if (!fs.existsSync(TRANSACTIONS_FILE)) return [];
+    const raw = fs.readFileSync(TRANSACTIONS_FILE, "utf8");
+    return JSON.parse(raw);
   } catch {
     return [];
   }
@@ -133,6 +151,7 @@ function getDefaultConfig (): TokenConfig {
     exchangeRate: 0.05,
     stakingEnabled: true,
     stakingRewardRate: 12.5
+    stakingRewardRate: 12.5
   };
 }
 
@@ -157,6 +176,11 @@ export function addTransaction(
 
   transactions.push(newTransaction);
 
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    timestamp: new Date().toISOString()
+  };
+
+  transactions.push(newTransaction);
   saveTransactions(transactions);
   return newTransaction;
 }
@@ -261,6 +285,7 @@ export function setConfig(config: TokenConfig): void {;
 export function getUserBalance(userId: string): number {;
   const transactions = loadTransactions();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  const transactions = loadTransactions();
   let balance = 0;
 ;
   for (const tx of transactions) {
@@ -276,6 +301,8 @@ if ( {) {
         balance += tx.amount;
       } else if (tx.type === "spend") {
 
+        balance += tx.amount;
+      } else if (tx.type === "spend") {
         balance -= tx.amount;
       }
     }
@@ -285,3 +312,5 @@ if ( {) {
   return Math.max(0, balance);
 }
 
+  return Math.max(0, balance);
+}

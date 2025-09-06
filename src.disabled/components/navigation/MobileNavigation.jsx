@@ -8,6 +8,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 
 export default function MobileNavigation({}: MobileNavigationProps) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+export default function MobileNavigation({}: MobileNavigationProps) {
   return (
     <div>
       <h1>MobileNavigation</h1>
@@ -31,3 +33,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 :src.disabled/components/navigation/MobileNavigation.jsx
 }
 }
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/navigation/MobileNavigation.jsx
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

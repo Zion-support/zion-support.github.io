@@ -1,5 +1,31 @@
 
 
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { Button  } from '@/components/ui/button';
+import { Form  } from '@/components/ui/form';
+import { Certification  } from '@/types/resume';
+import { Loader2  } from 'lucide-react';
+import { useResume  } from '@/hooks/useResume';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { format  } from 'date-fns';
+import { CertificationsList  } from './CertificationsList';
+import { CertificationFormFields  } from './CertificationFormFields';
+import { CertificationFormValues, certificationSchema } from './types';
+import {useState} from 'react';
+import {useForm} from 'react-hook-form';
+import {Button} from '@/components/ui/button';
+import {Form} from '@/components/ui/form';
+import {Certification} from '@/types/resume';
+import {Loader2} from 'lucide-react';
+import {useResume} from '@/hooks/useResume';
+import {Alert, AlertDescription} from '@/components/ui/alert';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {format} from 'date-fns';
+import {CertificationsList} from './CertificationsList';
+import {CertificationFormFields} from './CertificationFormFields';
+import {CertificationFormValues, certificationSchema} from './types';
 interface CertificationsFormProps {
 
   resumeId: string
@@ -12,6 +38,18 @@ interface CertificationsFormProps {
 
 
 
+import {use_form} from 'react - hook - form';
+import {Button} from '@/components / ui / button';
+import {Form} from '@/components / ui / form';
+import {Certification} from '@/types / resume';
+import {use_resume} from '@/hooks / use_resume';
+import {Alert, AlertDescription} from '@/components / ui / alert';
+import {zod_resolver} from '@hookform / resolvers / zod';
+import {format} from 'date - fns';
+
+
+
+export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
 
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -121,6 +159,27 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         success = await updateCertification(editingId, certData);
       } else {;
         success = await addCertification(resumeId, certData);
+      }
+      if (success) {
+        form.reset({
+          name: ''
+          issuing_organization: ''
+          issue_date: ''
+          expiration_date: ''
+          credential_id: ''
+          credential_url: ''})
+        setEditingId(null)
+      }
+    } catch (err: any) {
+      setError(err.message |'An error occurred')
+    }
+
+      }
+
+
+  };
+
+
 
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
@@ -260,10 +319,12 @@ if ( {) {
       await deleteCertification(id);
     }
   }
+  },
 
 
 
 
+  return (
 
     }
   }
@@ -289,6 +350,7 @@ if ( {) {
   }
   return (
 
+;
 ;
 ;
 interface CertificationsFormProps {;
@@ -338,6 +400,19 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       } else {;
         success = await addCertification(resumeId, certData),;
 
+      } else {
+        success = await add_certification (resume_id, cert_data);
+      }
+    }
+    <div className="space-y-6">;
+      <div>;
+        <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>;
+        <p className="text-muted-foreground">;
+          Add any professional certifications, licenses, or credentials you have earned.;
+        </p>;
+      </div>;
+  }
+  return (
               <Button
                 type="button"
                 variant="outline"
@@ -595,3 +670,12 @@ form.reset ({}
 
 
 
+form.reset ({}
+
+}> {
+  editingId ? 'Cancel' : 'Back' 
+}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) 
+}
+}
+}
+;

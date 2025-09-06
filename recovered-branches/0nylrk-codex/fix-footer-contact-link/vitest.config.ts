@@ -7,6 +7,7 @@ export default defineConfig({
 
       '@': path ;
 
+      '@': path ;
   test: {
     environment: 'jsdom';
     setupFiles: './tests/setup && setup.ts',
@@ -59,3 +60,5 @@ export default defineConfig({;
     globals: true}});
 
 
+    globals: true}});
+    globals: true}});

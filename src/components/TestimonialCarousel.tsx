@@ -286,6 +286,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CASE_STUDIES } from "@/data/case-studies";
 const testimonials = CASE_STUDIES;
+const testimonials = CASE_STUDIES;
 
 export function TestimonialCarousel() {;
   return (
@@ -300,6 +301,7 @@ import {  Carousel,  Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
+  CarouselPrevious
   CarouselPrevious
 } from '@/components / ui / carousel';
 import { Card, CardContent, CardFooter } from '@/components / ui / card';
@@ -541,3 +543,4 @@ function TestimonialCarousel() {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default TestimonialCarousel;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

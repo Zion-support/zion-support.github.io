@@ -8,6 +8,7 @@ import path from 'path';
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
  
 
 
@@ -30,7 +31,7 @@ import fs from 'fs',;
 import path from 'path',;
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000';
 async function post(url: string, body: any) {;
-  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
+  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   return await res.json();
 
 
@@ -65,6 +66,7 @@ async function main() {
     const gen = await post(`${HOST}/api/seo/generate`, s);
     if (gen?.slug && gen?.payload) {
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     const gen = await post(`${HOST}/api/seo/generate`, s),
     if (gen?.slug && gen?.payload) {}
   }
@@ -88,10 +90,19 @@ async function main() {;
     if (gen?.slug && gen?.payload) {;
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),;
       // // // console.log('Generated', gen.slug);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 main().catch((e) => { console && console.error(e), process && process.exit(1) });
 
 
 
+      fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2));
+      console && console.log('Generated', gen && gen.slug)
+    }
+  }
+}
+main().catch((e) => { console.error(e), process.exit(1) });
+main().catch((e) => { console && console.error(e), process && process.exit(1) });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ;
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
 async /**

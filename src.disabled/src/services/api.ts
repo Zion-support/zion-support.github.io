@@ -37,6 +37,7 @@ export default new apiService()
 }
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");} return await response && response.json();} } catch (error) {; console && console.error("Error fetching data:",error);} throw error;} } export default new apiService();}
 export default new apiService()}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");} return await response && response.json();} } catch (error) {; console && console.error("Error fetching data:",error);} throw error;} } export default new apiService();}
 export default new apiService()}
@@ -56,6 +57,18 @@ export default new apiService()
 }
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");} return await response && response.json();} } catch (error) {; console && console.error("Error fetching data:",error);} throw error;} } export default new apiService();}
 export default new apiService()}
+export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";} async get() {; try {; const response = await fetch("${this.baseUrl}/api");} return await response.json();} } catch (error) {; console.error("Error fetching data:",error);} throw error;} } export default new apiService();}
+export default new apiService()}
+export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"} async get() {; try {; const response = await fetch("${this.baseUrl}/api")} return await response.json()} } catch (error) {; console.error("Error fetching data:",error)} throw error} } export default new apiService()}
+export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"} async get() {; try {; const response = await fetch("${this.baseUrl}/api")} return await response.json()} } catch (error) {; console.error("Error fetching data:",error)} throw error} } export default new apiService()}
+export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"} async get() {; try {; const response = await fetch("${this.baseUrl}/api")} return await response.json()} } catch (error) {; console.error("Error fetching data:",error)} throw error} } export default new apiService()}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+export default new apiService()
+}
+export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");} return await response && response.json();} } catch (error) {; console && console.error("Error fetching data:",error);} throw error;} } export default new apiService();}
+export default new apiService()}
     this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"}
   async get() {;
     try {;
@@ -70,3 +83,7 @@ export default new apiService()}
 export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"} async get() {; try {; const response = await fetch("${this.baseUrl}/api")} return await response.json()} } catch (error) {; console.error("Error fetching data:",error)} throw error} } export default new apiService()}
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";} async get() {; try {; const response = await fetch("${this.baseUrl}/api");} return await response.json();} } catch (error) {; console.error("Error fetching data:",error);} throw error;} } export default new apiService();}
+export default new apiService()}
+export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"} async get() {; try {; const response = await fetch("${this.baseUrl}/api")} return await response.json()} } catch (error) {; console.error("Error fetching data:",error)} throw error} } export default new apiService()}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -20,6 +20,16 @@ ursor/fix-website-loading-errors-and-merge-6662
   case_id: string;
   type: AdminActionType;
 >>>>>>> main
+export interface AdminAction {;
+export interface AdminAction {
+
+
+
+export interface AdminAction {;
+
+  id: string;
+  case_id: string;
+  type: AdminActionType;
   adminId: string;
   reason: string;
   details: Record<string, any>;
@@ -82,6 +92,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     fake_profile: {
       enabled: boolean;
 >>>>>>> main
+      threshold: number
+    }
+    fake_profile: {
+      enabled: boolean;
       threshold: number;
     };
     fakeProfile: {
@@ -133,3 +147,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+    confidenceThreshold: number
+  };
+
+}
+}

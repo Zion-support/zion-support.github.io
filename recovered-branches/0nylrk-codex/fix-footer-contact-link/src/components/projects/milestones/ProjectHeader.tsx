@@ -25,6 +25,12 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {;
           onClick={() => navigate(-1)}
 }
 
+          variant="ghost"
+          size="sm"
+          className="mr-2"
+          onClick={() => navigate(-1)}
+}
+  
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
@@ -44,6 +50,7 @@ interface ProjectHeaderProps {;
 }
 ;
 export function ProjectHeader({ title } ProjectHeaderProps) {;
+  const navigate = useNavigate();
   const navigate = useNavigate();
   ;
   return (;
@@ -92,3 +99,21 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 
 
 
+}
+;
+
+  ),;}
+ <Button variant="ghost" size="sm" className="mr-2" onClick= {
+  () => navigate (-1) 
+}> <ArrowLeft className="h-4 w-4 mr-1" /> Back </Button> </div> </div>) 
+}
+  );
+}
+}
+;
+
+  );
+}
+  )
+}
+;

@@ -1,11 +1,53 @@
 
 
+import { useState, useEffect  } from 'react';
+import { useNavigate  } from 'react-router-dom';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+import {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {useAuth} from '@/hooks/useAuth';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
+import Rocket from 'lucide-react/dist/esm/icons/rocket';
+
+import {use_navigate} from 'react-router-dom';
+import {use_auth} from '@/hooks / use_auth';
+import {Button} from '@/components / ui / button';
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components / ui / card';
+import Rocket from 'lucide-react / dist / esm / icons / rocket';
+import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
+import {cn} from '@/lib / utils';
+
+interface WizardStep {
+  title: string
+  description: string
+  icon: React.ReactNode
+  action: {
+import {cn} from '@/lib/utils';
+interface WizardStep {;
+  title: string,;
+  description: string,;
+  icon: React && React.ReactNode,;
+  action: {;
+    text: string,;
+    url: string;
+  };
+  skipText?: string;
+}
+
+interface OnboardingWizardProps {;
+  type: 'client' | 'talent',;
+  onComplete: () => void,;
+  onSkip: () => void,;
+  className?: string;
+}
   const [currentStep, setCurrentStep] = useState(0);
 
   const navigate = useNavigate();
   const { user } = useAuth();
 
-import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import { FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
 import { cn } from '@/lib/utils';
 interface WizardStep {
@@ -70,6 +112,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   
 
 
+  const { user } = useAuth()
+
+  
+
 }
 
   title: string
@@ -89,6 +135,30 @@ interface OnboardingWizardProps {
   onSkip: () => void
 
   className?: string
+
+}
+export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const [currentStep, setCurrentStep] = useState(0),
+  const navigate = useNavigate(),
+  const { user } = useAuth(),
+  
+  // Define steps based on user type
+  const clientSteps: WizardStep[] = [
+    {
+      title: "Post your first job"
+      description: "Describe the talent you need for your project"
+      icon: <FileText className="h-6 w-6 text-zion-purple" />
+      action: {
+        text: "Post a Job"
+        url: "/post-job"
+      },
+      skipText: "I'll do this later"
+    },
+
 
     {
       title: "View suggested matches"
@@ -213,6 +283,62 @@ interface OnboardingWizardProps {
       }
     }
 
+  ];
+  const steps = type === 'client' ? clientSteps : talentSteps;
+  // Navigate to the specified URL
+  const handleAction = () => {
+    if (currentStep < steps.length - 1) {
+      navigate(steps[currentStep].action.url);
+      setCurrentStep(currentStep + 1)
+    } else {
+      // Last step
+      navigate(steps[currentStep].action.url);
+      onComplete()
+    }
+  }
+  // Skip the current step
+  const handleSkip = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1)
+    } else {
+      // Last step
+      onSkip()
+    }
+  }
+        text: "Enable Matchmaking",
+        url: "/talent-dashboard"
+      }
+    }
+  };
+  ],;
+  const steps = type === 'client' ? clientSteps : talentSteps;
+  // Navigate to the specified URL;
+  const handleAction = () => {;
+    if (currentStep < steps.length - 1) {;
+      navigate(steps[currentStep].action.url),;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      navigate(steps[currentStep].action.url),;
+      onComplete();
+    }
+  },;
+  // Skip the current step;
+  const handleSkip = () => {;
+    if (currentStep < steps.length - 1) {;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      onSkip();
+    }
+  },
+
+
+  
+
+  
+  
+  
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
@@ -451,6 +577,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
             "Ready to find top IT talent?" :;
 
 
+            "Ready to find top IT talent?" :;
+    {
+      title: "Complete your profile"
+      description: "Add your skills, experience, and preferences";
             "Let's build your professional profile"}
         </CardTitle>;
       </CardHeader>;
@@ -490,6 +620,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
 
 
 
+                  "h-2 w-2 rounded-full mx-1",
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep

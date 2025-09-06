@@ -67,6 +67,8 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 
 
+}
+// Utility to detect network connectivity. navigator.onLine is not reliable in
 // all environments, so we also try a small request with a short timeout.
 export const checkOnline = async (): Promise<boolean> => {
   if (typeof navigator !== "undefined" && !navigator.onLine) {
@@ -79,6 +81,10 @@ export const checkOnline = async (): Promise<boolean> => {
 
     const controller = new AbortController();
 
+    const id = setTimeout(() => controller.abort(), 3000);
+    await fetch("https://clients3.google.com/generate_204", {
+      mode: "no-cors",
+      signal: controller.signal
     const id = setTimeout(() => controller.abort(), 3000);
     await fetch("https://clients3.google.com/generate_204", {
       mode: "no-cors",
@@ -120,3 +126,11 @@ export const getFromProfiles = () => supabase.from("profiles");
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/integrations/supabase/client.ts
 ursor/automate-test-improve-and-merge-code-646c
+}
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  global: { fetch: safeFetch }
+});
+
+// Helper function to get profiles table
+export const getFromProfiles = () => supabase.from("profiles");

@@ -75,6 +75,42 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
 
 
 
+    title: string;
+  }
+  created_by_profile: {
+    display_name: string,
+    avatar_url: string | null;
+  }
+}
+export /**
+ * MilestoneActivities - Function description
+ */
+function MilestoneActivities() {
+  const [activities, set_activities] = useState < Activity[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+;
+  useEffect (() => {
+    async /**
+ * fetch_activities - Function description
+ */
+function fetch_activities() {
+      try {
+        setIsLoading (true);
+;
+        const { data, error } = await supabase;
+          .from ('milestone_activities');
+          .select (`;
+            *;
+            milestone: milestone_id (title),
+            created_by_profile:profiles ! user_id (display_name, avatar_url);
+          `);
+          .eq ('project_id', project_id);
+          .order ('created_at', { ascending: false }),
+        // Check condition
+if (throw error) {
+  $2
+}
+        set_activities (data || []);
       } catch (err) {
         console.error ('Error fetching milestone activities:', err);
       } finally {
@@ -167,7 +203,9 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
       } finally {;
         setIsLoading(false);
 
-      }
+      } catch (err) {
+        console.error('Error fetching milestone activities:', err)
+      } finally {}
     }
     if (projectId) {
       fetchActivities()
@@ -223,6 +261,15 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
             </CardContent>
           </Card>
 
+  if (isLoading) {;
+
+        return activity.action.replace(/_/g, ' ');
+
+
+    }
+  }
+
+        return activity.action.replace(/_/g, ' ');
     }
   }
 
@@ -252,6 +299,12 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   }
 
 
+        ))}
+      </div>;
+  if (activities && activities.length === 0) {;
+    return (
+    ),;
+  }
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
@@ -394,3 +447,11 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
     </div>;
 
 
+    // Check condition
+if ( {) {
+  $2
+}
+      fetch_activities ();
+    }
+  }, [project_id]);
+;

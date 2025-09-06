@@ -19,6 +19,9 @@ const { execSync } = require('child_process');
 
 
 
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 console.log('Testing Next.js installation...'),;
 try {;
   // Check if Next.js is installed;

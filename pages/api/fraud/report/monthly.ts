@@ -61,6 +61,8 @@ export default async function handler(
   }
 
 
+    return;
+  }
   const month =;
     (req.query.month as string) || new Date ().toISOString ().slice (0, 7);
   const store = getFraudStore ();

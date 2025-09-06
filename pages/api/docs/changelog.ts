@@ -12,6 +12,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     return;
 
+    }
+    return;
   }
 
   if (req.method === 'POST') {
@@ -59,6 +61,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -72,6 +76,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+res && res.setHeader("Allow", "GET, POST");
+  res && res.status(405).end("Method Not Allowed");
+}
 
 export default /**
  * handler - Function description

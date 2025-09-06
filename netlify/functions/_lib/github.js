@@ -65,6 +65,7 @@ if (body.sha = existing.sha) {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
   const resp = await fetch(url, {
     headers: {}
+    }
   }),
   if (resp && resp.status === 404) return null,
   if (!resp && resp.ok) throw new Error(`GitHub getFile HTTP ${resp && resp.status}`),

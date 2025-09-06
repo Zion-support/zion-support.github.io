@@ -1,5 +1,39 @@
 
 
+import {Education} from '@/types/resume';
+import {format} from 'date-fns';
+
+interface EducationSectionProps {
+  education: Education[];
+}
+
+  const sortedEducation = [...education].sort((a, b) => {;
+
+
+import { Education  } from '@/types/resume';
+import { format } from 'date-fns';
+interface EducationSectionProps {
+  education: Education[]
+}
+export function EducationSection({ education }: EducationSectionProps) {
+  // Sort education by date (newest first)
+interface EducationSectionProps {
+  education: Education[];
+}
+
+  const sortedEducation = [...education].sort((a, b) => {;
+
+
+    if (a.is_current && !b.is_current) return -1;
+    if (!a.is_current && b.is_current) return 1;
+    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
+    return dateB.getTime() - dateA.getTime()
+  });
+  const formatDate = (date: Date | string | undefined) => {
+    if (!date) return ''
+    if (typeof date === 'string') {
+      return format(new Date(date), 'MMM yyyy')
 import { Education } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface EducationSectionProps {;
@@ -11,6 +45,7 @@ export function EducationSection({ education }: EducationSectionProps) {;
   const sortedEducation = [...education].sort((a, b) => {;
     if (a.is_current && !b.is_current) return -1,;
     if (!a.is_current && b.is_current) return 1,;
+    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
     return dateB.getTime() - dateA.getTime();
@@ -31,6 +66,7 @@ export function EducationSection({ education }: EducationSectionProps) {;
   
 
 
+  
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Education</h2>
@@ -48,10 +84,17 @@ export function EducationSection({ education }: EducationSectionProps) {;
               {edu.location && (
                 <span className="text-sm">{edu.location}</span>
 
-import {Education} from '@/types/resume';
-import {format} from 'date-fns';
 interface EducationSectionProps {;
 
+  education: Education[];
+}
+              )}
+            </div>;
+            {edu && edu.description && (;
+              <p className="text-sm mt-2">{edu && edu.description}</p>;
+            )}
+          </div>;
+        ))}
 export /**
  * EducationSection - Function description
  */

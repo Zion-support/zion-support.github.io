@@ -27,9 +27,12 @@ export function ResumeBasicInfoSection({
 
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
+interface ResumeBasicInfoSectionProps {
+  basicInfo: ResumeBasicInfo;
 }
 
 export function ResumeBasicInfoSection({
+  basicInfo
   basicInfo
 }: ResumeBasicInfoSectionProps) {
   return (

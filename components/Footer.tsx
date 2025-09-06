@@ -285,6 +285,8 @@ const Footer: React.FC = () => {
                 <Phone className="w-4 h-4 mr-2 text-blue-400 />
                 <a href="tel:+13024640950" className=hover:text-blue-400 transition-colors">
                   +1 302 464 0950
+} from "lucide-react";
+
                 </a>
               </div>
               <div className="flex items-center>
@@ -357,6 +359,9 @@ ursor/automate-test-improve-and-merge-code-646c
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
 
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                     className="text-gray-300 hover:text-white transition-colors"

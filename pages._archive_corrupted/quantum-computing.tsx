@@ -29,6 +29,7 @@ interface QuantumcomputingProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 export default function Quantumcomputing({}: QuantumcomputingProps) {
+export default function Quantumcomputing({}: QuantumcomputingProps) {
   return (
     <div>
       <h1>Quantumcomputing</h1>
@@ -64,3 +65,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

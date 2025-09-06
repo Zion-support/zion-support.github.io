@@ -40,6 +40,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -223,6 +225,7 @@ export default function ServicesIndex() {;
     }
   ];
   const benefits = ['Reduce operational costs by 50%';
+  const benefits = ['Reduce operational costs by 50%';
     'Increase productivity by 70%',;
     'Improve business efficiency by 60%',;
     'Scale operations without proportional cost increase',;
@@ -230,6 +233,7 @@ export default function ServicesIndex() {;
     'Accelerate time-to-market for new features';
   ];
   const useCases = ['E-commerce & Retail';
+  const useCases = ['E-commerce & Retail',;
     'SaaS & Technology',;
     'Financial Services',;
     'Healthcare & Medical',;
@@ -280,6 +284,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 >>>>>>> origin/main
 ursor/automate-test-improve-and-merge-code-646c
+  return (
+
+      <div className=\"min-h-screen bg-white\">
+      <div className="min-h-screen bg-white">
   return (
     <EnhancedLayout>
       <h1 className=\"text-3xl font-bold mb-4\">Our Services</h1>
@@ -335,6 +343,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+      <div className=\"min-h-screen bg-white\">
+      <div className="min-h-screen bg-white">
         {/* Header */}
         <header className=\"bg-white shadow-sm\">
           <div className=\"max-w-7xl mx-auto px-4 \"sm\": p x-6 lg: p x-8\">
@@ -968,6 +978,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <div
                 key={service.title}
@@ -1031,6 +1043,8 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -1149,6 +1163,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/main
 >>>>>>> main
 >>>>>>> origin/main
+              );
+            })}
                   <Link
                     href={service.href}
                     className=\"text-blue-600 \"hover\": text-blue-700 font-medium flex items-center\"
@@ -1207,6 +1223,11 @@ ursor/automate-test-improve-and-merge-code-646c
               );
             })}
 ursor/automate-test-improve-and-merge-code-646c
+                        {feature}
+                      </li>;
+                    ))}
+              );
+            })}
           </div>;
         </section>;
         <section className="py-16 bg-gray-50">;
@@ -1342,6 +1363,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step) => (
               <div key={step.step} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-xl font-bold\">

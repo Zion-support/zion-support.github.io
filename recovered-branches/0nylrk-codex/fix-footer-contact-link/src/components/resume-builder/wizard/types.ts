@@ -32,6 +32,11 @@ export interface NavigationButtonsProps {;
   onNext?: () => void;
   isNextDisabled?: boolean;
 
+export interface NavigationButtonsProps {;
+
+  onBack?: () => void;
+  onNext?: () => void;
+  isNextDisabled?: boolean;
   backLabel?: string;
   nextLabel?: string;
   isLoading?: boolean;
@@ -51,6 +56,9 @@ export interface CreateResumeFormProps {;
 }
 
 
+  onCancel: () => void;
+  isLoading: boolean;
+}
 ;
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
@@ -61,6 +69,7 @@ export interface CreateResumeFormProps {;
 
   onCancel: () => void;
 
+  onCancel: () => void;
   isLoading: boolean;
 }
 
@@ -95,4 +104,12 @@ export interface EmptyResumeProps {
 ;
 
 
+
+}
+;
+}
+export interface EmptyResumeProps {
+  onCreateClick: () => void;
+}
+;
 

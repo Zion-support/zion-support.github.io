@@ -10,6 +10,14 @@ import {
   FormControl,
   FormDescription,
   FormMessage,;
+import { format } from "date-fns",
+
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+  FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -23,7 +31,15 @@ import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {} from "@/components/ui/form";
 
 
+} from "@/components/ui/popover";
+
 import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormDescription,;
+} from "@/components/ui/form";
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
@@ -35,6 +51,19 @@ import {;
 interface ProjectDetailsFieldsProps {;
 
 
+} from "@/components/ui/popover";
+
+interface ProjectDetailsFieldsProps {;
+
+
+  form: UseFormReturn<ContractFormValues>;
+}
+
+
+export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
+
+  form: UseFormReturn<ContractFormValues>;
+}
   return (
     <>;
       <FormField
@@ -100,6 +129,9 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
         name="scopeSummary";
 
 
+      <FormField
+        control={form && form.control}
+        name="scopeSummary"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
@@ -173,6 +205,20 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           name="startDate"
 
 
+        <FormField
+          control={form && form.control}
+          name="startDate"
+          </FormItem>;
+        )}
+      />;
+      ;
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+        <FormField;
+          control={form.control}
+          name="startDate";
+        <FormField
+          control={form && form.control}
+          name="startDate"
           render={({ field }) => (;
             <FormItem className="flex flex-col">;
               <FormLabel>Start Date</FormLabel>;
@@ -218,6 +264,25 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               <FormMessage />;
 
 
+        />;
+        <FormField;
+
+          control={form.control}
+          name="endDate"
+          control={form.control}
+          name="endDate"
+            </FormItem>;          )}
+        />;
+        ;
+        <FormField;
+          control={form.control}
+          name="endDate";
+                  <Calendar
+                    mode="single"
+          control={form.control}
+        <FormField
+          control={form && form.control}
+          name="endDate"
           render={({ field }) => (;
             <FormItem className="flex flex-col">;
               <FormLabel>End Date (Optional)</FormLabel>;
@@ -330,6 +395,12 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           )}
 
 
+                  <Calendar
+                    mode="single"
+    </>
+        />;
+      </div>;
+    </>;
 
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
@@ -422,3 +493,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
   );
 
 
+            </FormItem>)}
+        />;
+      </div>;
+    </>);
+}

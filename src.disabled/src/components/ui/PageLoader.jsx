@@ -32,6 +32,7 @@ const React from "react"; import { cn } from "@/lib/utils"; export const PageLoa
 import _React from "react"; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = "Loading...",className }) => {}; return (); <div" className={cn( "flex flex-col items-center justify-center min-h-screen',className)}>; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
 
 >>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from \"react\"; import { cn } from \"@/lib/utils\"; export const PageLoader = ({ text = \"Loading...\",className }) => {}; return (); <div\"; className={cn(; \"flex flex-col items-center justify-center min-h-screen\',className)}; >; <div className=\"animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
 const React from "react"; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = "Loading.",className }) => {}; return (); <div"; className={cn(; "flex flex-col items-center justify-center min-h-screen",className)}; >; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;"""
 >>>>>>> main

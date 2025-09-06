@@ -45,3 +45,4 @@ describe('AIChatbot'
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)})});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -33,6 +33,18 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {
 
     }
 
+      setUser(null);
+    } catch (error) {
+      console.error("Error during logout:", error);
+    }
+  };
+
+  return { logout };
+};
+
+    }
+  }
+    }
   };
   return { logout }
 }

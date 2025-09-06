@@ -93,6 +93,9 @@ export const AppFeatures: React.FC = () => {
 
 
 
+import React from "react",;
+import { Brain, Clock, Award, Zap } from "lucide-react",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 
 const features = [;
   {;
@@ -117,9 +120,6 @@ const features = [;
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired.";
 
 
-import React from "react",;
-import { Brain, Clock, Award, Zap } from "lucide-react",;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 ;
 const features = [;
   {;

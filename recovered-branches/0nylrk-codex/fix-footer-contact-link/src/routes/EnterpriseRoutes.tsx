@@ -9,6 +9,9 @@ import ZionHireAI from "../pages/ZionHireAI";
 const EnterpriseRoutes = () => {
 
 
+const EnterpriseRoutes = () => {;
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import EnterprisePlans from "../pages/EnterprisePlans",
@@ -58,6 +61,9 @@ const EnterpriseRoutes = () => {;
     <Routes>;
       {/* Enterprise Routes */}
 
+  return (
+    <Routes>;
+      {/* Enterprise Routes */}
       <Route path="/enterprise" element={<EnterprisePlans />} />
       <Route path="/plans/enterprise" element={<EnterprisePlans />} />
       <Route path="/enterprise/admin" element={<EnterpriseAdmin />} />
@@ -69,6 +75,8 @@ const EnterpriseRoutes = () => {;
 
       {/* Zion Hire AI Routes */}
 
+      ;
+      {/* Zion Hire AI Routes */}
       <Route path="/zion-hire-ai" element={<ZionHireAI />} />
       <Route path="/hire-ai" element={<ZionHireAI />} />
     </Routes>
@@ -77,6 +85,7 @@ const EnterpriseRoutes = () => {;
 
 
 
+};
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import EnterprisePlans from "../pages / EnterprisePlans";

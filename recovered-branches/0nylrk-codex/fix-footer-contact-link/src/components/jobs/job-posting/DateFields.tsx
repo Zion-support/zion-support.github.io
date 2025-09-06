@@ -39,6 +39,32 @@ import { cn } from "@/lib/utils";
 
 
 
+} from "@/components/ui/popover";
+
+interface DateFieldsProps {
+  startDate: Date | undefined;
+  setStartDate: (date: Date | undefined) => void;
+  endDate: Date | undefined;
+  setEndDate: (date: Date | undefined) => void
+}
+export function DateFields({
+  startDate
+  setStartDate
+  endDate
+  setEndDate
+}: DateFieldsProps) {
+
+
+
+
+import React from 'react',
+import { format } from 'date-fns',
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Calendar } from "@/components/ui/calendar",
+import { FormControl } from "@/components/ui/form",
+import { cn } from "@/lib/utils",
 interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
@@ -75,6 +101,7 @@ export function DateFields(): any ({;
 
                   !startDate && "text-muted-foreground"
 
+                  !startDate && "text-muted-foreground"
                 )}
               >
                 {startDate ? (
@@ -102,6 +129,8 @@ import { Calendar } from "@/components/ui/calendar",;
 import { FormControl } from "@/components/ui/form",;
 import { cn } from "@/lib/utils",;
 
+              selected={startDate}
+              onSelect={setStartDate}
 interface DateFieldsProps {;
   startDate: Date | undefined;
   setStartDate: (date: Date | undefined) => void;
@@ -148,6 +177,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
 
                 )}
 
+                )}
               </Button>;
             </FormControl>;
           </PopoverTrigger>;
@@ -175,6 +205,12 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
               }
 
 
+              disabled={(date) =>;
+                date > new Date();
+              }
+              disabled={(date) =>;
+                date > new Date();
+              }
               initialFocus
             />
           </PopoverContent>

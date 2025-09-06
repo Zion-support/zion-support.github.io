@@ -5,6 +5,9 @@ import { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigati
 const { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [" """;""";"""
 const { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [" """;""";"""
 const { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [" """;""";"""
+const { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [" """;""";"""
+const { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [" """;""";"""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);

@@ -12,7 +12,10 @@ updated at: "2024-05-05"
 }];
 
 
-
+created at: "2024 - 05 - 05";
+updated at: "2024 - 05 - 05";
+}];
+;
 
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
@@ -20,6 +23,11 @@ import { Job } from '@/types/jobs';
 export const JOB_POSTS: Job[] = [
 
 
+export const JOB_POSTS: Job[] = [
+export const JOB_POSTS: Job[] = [
+
+
+export const JOB_POSTS: Job[] = [
   {
     id: "job-1",
     client_id: "client-1",
@@ -44,6 +52,8 @@ id: 'job-2',
     deadline: '2024-06-15',
     status: 'new',
     created_at: '2024-05-05',
+    updated_at: '2024-05-05'
+  }
     updated_at: '2024-05-05'
   }
 ];
@@ -137,6 +147,7 @@ import { Job } from '@/types / jobs';
     status: 'new',
     created_at: '2024 - 05 - 10',
     updated_at: '2024 - 05 - 10'
+    updated_at: '2024 - 05 - 10'
   },
   {
 id: 'job - 2',
@@ -149,6 +160,8 @@ id: 'job - 2',
     deadline: '2024 - 06 - 15',
     status: 'new',
     created_at: '2024 - 05 - 05',
+    updated_at: '2024 - 05 - 05'
+  }
     updated_at: '2024 - 05 - 05'
   }
 ];

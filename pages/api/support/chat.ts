@@ -45,6 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Build context with top matched articles as brief references
   const matchedArticles = articles.filter((a) =>
     intent.matchedArticleIds.includes(a.id),
+    intent.matchedArticleIds.includes(a.id)
   );
   const context = matchedArticles
     .map((a) => `- ${a.title}: /help/${a.slug}`)
@@ -52,6 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const sysMessage = {
     role: "system" as const,
+    role: "system" as const
     content:
       SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
   };
@@ -65,6 +67,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: [sysMessage, ...messages]
 
 
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini"
+      messages: [sysMessage, ...messages]
   }
   if ()) {
   $2
@@ -82,6 +88,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Build context with top matched articles as brief references;
   const matched_articles = articles.filter ((a) =>;
     intent.matchedArticleIds.includes (a.id),
+    intent.matchedArticleIds.includes (a.id)
   );
   const context = matched_articles;
     .map ((a) => `- ${a.title}: /help/${a.slug}`);
@@ -89,6 +96,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 ;
   const sys_message = {
     role: "system" as const,
+    role: "system" as const
     content:;
       SYSTEM_PROMPT + (context ? `\n_relevant help links:\n${context}` : "")
   }
@@ -100,6 +108,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+      model: "gpt - 4o - mini"
+      messages: [sys_message, ...messages]
       temperature: 0.2
     });
 
@@ -128,9 +138,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           href: `/help/${a.slug}`
         }))
       }
-
-
+      type: "chat_completion"
+      sessionId: sessionId ?? "unknown"
+      payload: { intent }
     });
+      meta: {
+        intent_matched: intent.intent_matched
+        matchedArticleIds: intent.matchedArticleIds
+
+        links: matched_articles.map ((a) => ({
+
+    return res.status(200).json({
+      assistantMessage
+      meta: {
+        intentMatched: intent.intentMatched
+        matchedArticleIds: intent.matchedArticleIds
+        links: matchedArticles.map((a) => ({
+          title: a.title
+          href: `/help/${a.slug}`
+        }))
+      }
+  } catch (e: any) {});
   } catch (e: any) {
 
     return res.status(200).json({
@@ -144,3 +172,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 
+  }
+}

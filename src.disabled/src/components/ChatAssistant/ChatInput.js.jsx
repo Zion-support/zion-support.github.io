@@ -7,3 +7,4 @@ const React,{ useState,useRef,useEffect } from "react"; import { Button } from "
 import React,{ useState,useRef,useEffect } from \'react\'
 const React,{ useState,useRef,useEffect } from "react"; import { Button } from "./ui/
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

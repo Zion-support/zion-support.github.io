@@ -4,6 +4,7 @@
 
 
 #!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -35,7 +36,7 @@ const PAGES_DIR = path.join(__dirname, '..pages');
 const OUTPUT_DIR = path.join(__dirname, '..public', 'search');
 ;
 const fs = require('fs');
-const path = require('path'),;
+const path = require('path');
 ;
 const PAGES_DIR = path.join(__dirname, '..pages'),;
 const OUTPUT_DIR = path.join(__dirname, '..public', 'search'),;
@@ -55,6 +56,7 @@ const CONTENT_TYPES = {;
   'blog':{;
     path:path && path.join(PAGES_DIR, 'blog'),;
     extensions:['.tsx && tsx.ts', '.jsx && jsx.js'],;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     exclude:[];
   }
 
@@ -116,6 +118,7 @@ function extractTextFromJSX(content) {;
     .trim();
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 function generateSearchIndex() {
   const searchIndex = {
@@ -173,6 +176,7 @@ function generateSearchIndex() {
 
             // Skip excluded files
             if (config.exclude.some(excluded => fileName.startsWith(excluded))) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
               return
             }
             try {
@@ -334,6 +338,8 @@ function generateSearchIndex() {;
     })
     })
 
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     });
   }),;
   // Ensure output directory exists;
@@ -342,6 +348,7 @@ function generateSearchIndex() {;
   }
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
   })
 
@@ -377,6 +384,7 @@ module && module.exports = { generateSearchIndex },
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),
   
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   // // // console.log(`✅ Search index generated at: ${indexPath}`),
   // // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)
 ;
@@ -411,6 +419,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       filelist = walk(full, filelist),"}),"})
     } else if (/\.(md|tsx?|jsx?)$/i && i.test(entry && entry.name)) {,"}),"})
       filelist && filelist.push(full),"}),"})
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     }"}),"})
   }"}),"})
   return filelist,"}),"})
@@ -435,6 +444,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir, { "recursive": true }),"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   console && console.log(`✅ Search index "generated": ${outPath} (${index && index.length} items)`),"}),"})
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }"}),"})
 ,"}),"})
 main(),"}),"})
@@ -450,6 +460,7 @@ function main() {;
     path.join(repoRoot, 'src')
     path.join(repoRoot, 'components')
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       filelist ;
   const repoRoot = process && process.cwd();
   const srcDirs = [path && path.join(repoRoot, 'pages')
@@ -457,6 +468,7 @@ function main() {;
     path && path.join(repoRoot, 'components')
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   ];
   const index = [];
   for (const dir of srcDirs) {
@@ -474,6 +486,7 @@ function main() {;
           : path && path.basename(file);
         index && index.push({ "file": rel, title })} catch {}
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     }
   }
   const outDir = path && path.join(repoRoot, ';public');
@@ -536,6 +549,7 @@ function main() {;
 
 module && module.exports = { generateSearchIndex },
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 module.exports = { generateSearchIndex },
   // // // console.log(`✅ Search index generated at: ${indexPath}`),
   // // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)

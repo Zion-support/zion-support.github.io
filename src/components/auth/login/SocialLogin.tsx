@@ -32,6 +32,9 @@ return (
         <div className='relative flex justify-center text-sm'>
           <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>
 >>>>>>> main
+        </div>
+        <div className="relative flex justify-center text-sm">
+          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">
             Or continue with
           </span>
         </div>
@@ -334,3 +337,5 @@ export function SocialLogin() {;
     </div>);
 
 }
+}
+;

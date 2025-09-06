@@ -53,6 +53,8 @@ export default function Aianalytics(): any ({}: AianalyticsProps) {;
 export default function Aianalytics({}: AianalyticsProps) {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
+export default function Aianalytics({}: AianalyticsProps) {
   return (
     <div>
       <h1>Aianalytics</h1>
@@ -85,3 +87,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

@@ -33,6 +33,9 @@ export default function EnterprisePlans() {
 
 }
 
+  );
+}
+
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";
@@ -84,6 +87,8 @@ function EnterprisePlans() {
       <main className="min-h-screen bg-background">;
 
 
+      <main className="min-h-screen bg-background">;
+      <main className="min-h-screen bg-background">;
         <EnterpriseHero />;
         <EnterprisePricingTable />;
         <EnterpriseFeatures />;
@@ -112,3 +117,7 @@ function EnterprisePlans() {
 
 
 
+}
+;
+    </>);
+}

@@ -8,11 +8,14 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+  CardDescription
+} from "@/components/ui/card";
   ChevronRight,
   FileText,
   Image,
   Clock,
   Zap,
+  BookOpen
   BookOpen
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -184,5 +187,6 @@ export function TalentDashboard() {
   );
 }
 
+;
 
 

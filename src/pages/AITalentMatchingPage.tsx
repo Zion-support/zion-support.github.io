@@ -124,8 +124,11 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
   ];
   const features = [;
-    "Machine learning - based candidate matching",
+    "Machine learning - based candidate matching"
 
+  ];
+  const features = [;
+    "Machine learning - based candidate matching",
     "Comprehensive skill assessment tools",
     "Real - time market analysis",
     "Automated interview scheduling",

@@ -11,3 +11,4 @@ import { Link } from 'react-router-dom';'''; import { ShieldAlert } from 'lucide
 const { Link } from "react-router-dom"; import {}; </>)} ; export { Unauthorized }; export { Unauthorized }; export { Unauthorized }; export { Unauthorized }; export { Unauthorized }}""
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

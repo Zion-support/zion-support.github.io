@@ -27,6 +27,49 @@ import {AppLayout} from "@/layout/AppLayout";
 
 
 
+import { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card } from "@/components/ui/card",
+import { toast } from "@/components/ui/use-toast",
+import z from "zod",
+import { ChatAssistant } from "@/components/ChatAssistant",
+import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
+import { AppLayout } from "@/layout/AppLayout";
+import { Mail, MessageSquare, MapPin, Phone } from "lucide-react",
+import { AppLayout } from "@/layout/AppLayout",
+export default function Contact() {
+  const [formData, setFormData] = useState({
+
+
+export default function Contact() {;
+  const [formData, setFormData] = useState({;
+    name: "",;
+    email: "",;
+    subject: "",;
+    message: "";
+
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  }),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isChatOpen, setIsChatOpen] = useState(false)
+  }
+  },
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
@@ -37,6 +80,23 @@ import {AppLayout} from "@/layout/AppLayout";
         email: z.string().email("Invalid email address")
         subject: z.string().min(2, "Subject must be at least 2 characters");
 
+        message: z.string().min(10, "Message must be at least 10 characters")
+      });
+      schema.parse(formData);
+      // Simulate form submission
+        name: z.string().min(2, "Name must be at least 2 characters"),
+        email: z.string().email("Invalid email address"),
+        subject: z.string().min(2, "Subject must be at least 2 characters"),
+        message: z.string().min(10, "Message must be at least 10 characters")
+      }),
+      
+      schema.parse(formData),
+      
+      // Simulate form submission
+      setIsSubmitting(true),
+      
+      setTimeout(() => {
+        setIsSubmitting(false),
         toast({
           title: "Message Sent"
           description: "We've received your message and will get back to you soon."})
@@ -98,12 +158,88 @@ import {AppLayout} from "@/layout/AppLayout";
       console.error("Error in AI chat:", error),
 
 
+      console.error("Error in AI chat:", error),
       toast({
         title: "Chat Error"
         description: "There was an error communicating with our AI assistant. Please try again."
         variant: "destructive"
 
 
+  const handleChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
+    const { name, value } = e && e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault(),;
+
+    try {;
+      // Basic validation with Zod;
+      const schema = z && z.object({;
+        name: z && z.string().min(2, "Name must be at least 2 characters");
+        email: z && z.string().email("Invalid email address"),;
+        subject: z && z.string().min(2, "Subject must be at least 2 characters");
+        message: z && z.string().min(10, "Message must be at least 10 characters");
+      });
+
+      schema && schema.parse(formData);
+
+      // Simulate form submission;
+      setIsSubmitting(true);
+
+      setTimeout(() => {;
+        setIsSubmitting(false);
+        toast({;
+          title: "Message Sent",;
+          description: "We've received your message and will get back to you soon."}),;
+
+        // Reset form;
+        setFormData({;
+          name: "",;
+          email: "",;
+          subject: "",;
+          message: "";
+        });
+      }, 1500);
+    } catch (error) {;
+      if (error instanceof z && z.ZodError) {;
+        toast({;
+          title: "Form Validation Error",;
+          description: error && error.errors[0].message,;
+          variant: "destructive";
+        });
+      } else {;
+        toast({;
+          title: "An error occurred",;
+          description: "Please try again later",;
+          variant: "destructive";
+        });
+      }
+    }
+  };
+
+  // Handle sending messages to the AI chat assistant;
+  const handleSendMessage = async (message: string): Promise<void> => {;
+    try {;
+      const response = await fetch("https://ziontechgroup && ziontechgroup.functions.supabase && supabase.co/functions/v1/ai-chat", {;
+        method: "POST",;
+        headers: {;
+          "Content-Type": "application/json"};
+        body: JSON && JSON.stringify({ ;
+          messages: [{ role: "user", content: message }] ;
+        })});
+
+      if (!response && response.ok) {;
+        throw new Error("Failed to get response from AI assistant");
+      }
+
+      return Promise && Promise.resolve();
+    } catch (error) {;
+      console && console.error("Error in AI chat:", error);
+      toast({;
+        title: "Chat Error",;
+        description: "There was an error communicating with our AI assistant. Please try again.",;
+        variant: "destructive";
       });
       return Promise && Promise.resolve();
     }
@@ -270,6 +406,9 @@ if ( {) {
     }
   ]
 
+  ],
+
+  return (
 
     }
   ];
@@ -281,6 +420,89 @@ if ( {) {
         description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
         keywords="contact Zion, AI marketplace support, tech platform contact"
         canonical="https://app && app.ziontechgroup.com/contact"
+      />;
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+          <div className="text-center mb-16">;
+            <GradientHeading>Contact Us</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              Have questions or want to learn more? We'd love to hear from you.;
+            </p>;
+          </div>;
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">;
+            <div>;
+              <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>;
+              <p className="text-zion-slate-light text-lg mb-8">;
+                Whether you have a question about our platform, pricing, or anything else, ;
+                our team is ready to answer all your questions.;
+              </p>;
+              <form onSubmit={handleSubmit} className="space-y-6">;
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
+                  <div>;
+                    <label htmlFor="name" className="block text-white mb-2">Your Name</label>;
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData && formData.name}
+                      onChange={handleChange}
+                      className="bg-zion-blue-dark border-zion-blue-light text-white"
+                      placeholder="John Doe"
+                      required
+                    />;
+                  </div>;
+                  <div>;
+                    <label htmlFor="email" className="block text-white mb-2">Email Address</label>;
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      onChange={handleChange}
+                      className="bg-zion-blue-dark border-zion-blue-light text-white"
+                      placeholder="john@example && example.com"
+                      required
+                  <Input
+                    id="subject"
+                    name="subject"
+                    value={formData && formData.subject}
+                    onChange={handleChange}
+                    className="bg-zion-blue-dark border-zion-blue-light text-white"
+                    placeholder="How can we help you?"
+                    required
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData && formData.message}
+                    onChange={handleChange}
+                    className="bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px]"
+                    placeholder="Tell us what you'd like to know..."
+                    required
+
+                  />;
+                </div>;
+
+                <Button
+                  type="submit" 
+
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Sending..." : "Send Message"}
+
+
+
+
+                  />;
+                </div>;
+                <Button
+                  type="submit" 
+
+                <Button 
+                  type="submit" 
+
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Sending..." : "Send Message"}
+
+
 
 import { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -1096,6 +1318,9 @@ export default function Contact() {;
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
 
 
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Sending..." : "Send Message"}
                   >;
                     Chat With Our AI Assistant;
                   </Button>;

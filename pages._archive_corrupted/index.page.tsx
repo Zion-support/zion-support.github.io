@@ -43,6 +43,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -86,6 +88,7 @@ export default function HomePage() {
 export default function HomePage() {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+export default function HomePage() {
   return (
     <>;
       <Head>;
@@ -153,6 +156,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+              <a className="text-blue-700" href=""mailto": kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E
               Main St STE 1008 Middletown DE 19709
             </p>
           </div>
@@ -179,6 +183,7 @@ import React from 'react'; import Link from 'next/link'; import Head from 'next/
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
               <a className="text-blue-700" href=""mailto": kleber@ziontechgroup && ziontechgroup.com">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
               Main St STE 1008 Middletown DE 19709;
             </p>;

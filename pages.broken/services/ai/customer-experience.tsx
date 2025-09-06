@@ -23,6 +23,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export default function Customerexperience({}: CustomerexperienceProps) {
+
+
+export default function Customerexperience({}: CustomerexperienceProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -50,6 +53,10 @@ export default function Customerexperience(): any ({}: CustomerexperienceProps) 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+interface CustomerexperienceProps {;
+  // Add props here as needed;
+}
+export default function Customerexperience(): any ({}: CustomerexperienceProps) {;
   return (
     <div>
       <h1>Customerexperience</h1>

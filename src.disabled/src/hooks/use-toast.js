@@ -26,6 +26,7 @@ import React,{ useState,useCallback } from "react"; export const toast = ({ titl
 ursor/automate-test-improve-and-merge-code-646c
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console.log(Toast [${variant}]: ${title} -,${description}"");} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]);} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]);} setTimeout(() => {}} },5000);} return id},[]);} const dismiss = useCallback((id) => {}} },[]);} return {}; toast,dismiss,toasts}};"`
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console.log(""Toast [${variant}]: ${title} -,${description}"")} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([])} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast])} setTimeout(() => {}} },5000)} return id},[])} const dismiss = useCallback((id) => {}} },[])} return {}; toast,dismiss,toasts}};"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -42,3 +43,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -12,6 +12,7 @@ ursor/automate-test-improve-and-merge-code-646c
 " " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
 " " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
 >>>>>>> main
@@ -25,3 +26,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 :temp_exclude/src.disabled/components/ChatAssistant/ChatAssistant.jsx
 ' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
 " " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
+' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
+" " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

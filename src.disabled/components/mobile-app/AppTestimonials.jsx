@@ -41,6 +41,8 @@ interface AppTestimonialsProps {
 ursor/automate-test-improve-and-merge-code-646c
 export default function AppTestimonials({}: AppTestimonialsProps) {
 export default function AppTestimonials({}: AppTestimonialsProps) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+export default function AppTestimonials({}: AppTestimonialsProps) {
   return (
     <div>
       <h1>AppTestimonials</h1>
@@ -50,6 +52,7 @@ export default function AppTestimonials({}: AppTestimonialsProps) {
 ursor/automate-test-improve-and-merge-code-646c
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 :src.disabled/components/mobile-app/AppTestimonials.jsx
 }
@@ -67,3 +70,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 }
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/mobile-app/AppTestimonials.jsx
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

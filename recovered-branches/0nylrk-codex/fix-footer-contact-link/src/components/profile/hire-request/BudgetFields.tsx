@@ -8,6 +8,7 @@ import {
   FormLabel,
   FormControl,
   FormMessage
+  FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { TalentProfile } from "@/types/talent";
@@ -21,6 +22,11 @@ interface BudgetFieldsProps {
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   return (
     <>;
       <FormField
@@ -83,6 +89,18 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 
 
+;
+
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   return (
     <>
       <FormField
@@ -116,3 +134,8 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 ;
 
 
+      <FormField
+        control={form.control}
+  )
+}
+;

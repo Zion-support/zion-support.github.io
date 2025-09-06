@@ -29,6 +29,10 @@ export function SidebarGroup({ className, children, ...props }: SidebarGroupProp
     <div className={cn("mb-4", className)} {...props}>;
       {children}
 
+    <div className={cn("mb-4", className)} {...props}>;
+      {children}
+
+}
 
 ;
 

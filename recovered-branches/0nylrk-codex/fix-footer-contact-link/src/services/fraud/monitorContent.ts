@@ -56,6 +56,7 @@ export const monitorContent = async (;
   content: string;
 ): Promise<void> => {;
   const analysis = analyzeContent(content);
+  const analysis = analyzeContent(content);
   if (analysis.isSuspicious) {;
     let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',;
     // If contains highly suspicious phrases, mark as dangerous;
@@ -153,6 +154,7 @@ if (||) {
       severity;
       analysis.reasons.join ();
       undefined // IP address would be added in a real implementation);
+
 
 
 ;

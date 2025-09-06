@@ -17,12 +17,22 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom']
+        },
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
           router: ["react-router-dom"]
         }
       }
 
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+      }
     },
     terserOptions: {
       compress: {
@@ -62,4 +72,8 @@ ursor/automate-test-improve-and-merge-code-646c
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom']
   }
+});
+    include: ['react', 'react-dom', 'react-router-dom']
+  },
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 });

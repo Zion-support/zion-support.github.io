@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import _React from 'react'; const ComprehensiveServices = () => { return ( <div> <h1>ComprehensiveServices</h1> <p>Component placeholder</p> </div> )}; export default ComprehensiveServices;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 import React from \'react\'; const ComprehensiveServices = () => { return ( <div> <h1>ComprehensiveServices</h1> <p>Component placeholder</p> </div> )}; export default ComprehensiveServices;

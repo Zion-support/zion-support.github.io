@@ -46,6 +46,11 @@ export interface ProfileExperience {
 export interface ProfileExperience {;
 
 
+  url?: string,
+  date: string;
+
+}
+export interface ProfileExperience {
   id: string;
   role: string;
   company: string;
@@ -68,9 +73,35 @@ export interface Availability {
 }
 
 
+export interface Availability {}
+export interface ProfileData {
+  id: string;
+  name: string;
+  title: string;
+  avatar_url: string;
+  startDate: string;
+
+  endDate?: string
+
+  current?: boolean
+}
 export interface Availability {
 
+export interface Availability {;
+  status: 'available' | 'limited' | 'unavailable';
+  nextAvailable?: string;
 
+  message?: string
+
+  availableHours?: { day: string, hours: string }[]
+}
+export interface ProfileData {
+
+export interface ProfileData {;
+  id: string;
+  name: string;
+  title: string;
+  avatarUrl: string;
   coverImageUrl?: string;
   bio: string;
   location?: string;
@@ -80,6 +111,9 @@ export interface Availability {
   aiScore?: number;
   profileType: "service" | "talent";
 
+  reviewCount?: number;
+  aiScore?: number;
+  profileType: "service" | "talent";
   skills: ProfileSkill[];
   projects: ProfileProject[];
   experience: ProfileExperience[];
@@ -88,6 +122,12 @@ export interface Availability {
   hourlyRate?: number;
   contactEmail?: string;
 
+  hourlyRate?: number;
+  contactEmail?: string;
+}
+  hourlyRate?: number
+
+  contactEmail?: string
 }
 export interface ProfileSkill {;
   name: string,;
@@ -146,3 +186,4 @@ export interface ProfileData {;
 
 }
 
+}

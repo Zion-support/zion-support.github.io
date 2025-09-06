@@ -8,3 +8,4 @@ export: const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,
 export\": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState (\'dark\') const [isParticleMode,setIsParticleMode] = useState (enableParticles) const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') useEffect () => { \''\'
 import React from';react'
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

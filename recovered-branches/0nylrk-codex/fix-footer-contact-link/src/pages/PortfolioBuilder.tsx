@@ -10,6 +10,7 @@ import {
   PortfolioBuilder,
   as,
   PortfolioSection
+  PortfolioSection
 } from "@/components/resume-builder/portfolio/PortfolioBuilder";
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState("resume");
@@ -153,3 +154,15 @@ export default function PortfolioBuilder() {
 }
 
 
+  )
+}
+;
+export default function PortfolioBuilder() {;
+  return (;
+    <ProtectedRoute>;
+      <PortfolioBuilderContent />;
+    </ProtectedRoute>;
+  );
+}
+;
+;

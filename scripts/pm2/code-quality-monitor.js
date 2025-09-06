@@ -206,6 +206,7 @@
 ,
       if (status.trim()) {,
         this.log('⚠️  Uncommitted changes detected'),
+<<<<<<< HEAD
         return false,
       };
 ,
@@ -213,6 +214,8 @@
     } catch (error) {,
       this.log(`Error checking git status: ${error.message}`),
       return false,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     };
   };
 ,
@@ -247,7 +250,10 @@
         this.log('\n💡 Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
+<<<<<<< HEAD
           this.log(`    Action: ${rec.action}`),
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         }),
 ,
         // If there are many issues and git is clean, suggest running the lint fixer,

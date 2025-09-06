@@ -10,6 +10,7 @@ export interface Dispute {
 
 
 
+export interface Dispute {
   id: string;
   project_id: string;
   milestone_id?: string;
@@ -50,6 +51,10 @@ export interface DisputeMessage {
 export interface DisputeMessage {;
 
 
+export interface DisputeMessage {;
+
+
+export interface DisputeMessage {
   id: string;
   dispute_id: string;
   user_id: string;
@@ -76,6 +81,10 @@ export interface DisputeAttachment {
 export interface DisputeAttachment {;
 
 
+export interface DisputeAttachment {;
+
+
+export interface DisputeAttachment {
   id: string;
   dispute_id: string;
   uploaded_by: string;
@@ -84,6 +93,8 @@ export interface DisputeAttachment {;
   file_type: string;
   file_size: number;
 
+;
+export const disputeReasonLabels: Record < DisputeReason, string> = {
 
 
 
@@ -119,6 +130,9 @@ other: 'Other Issue'};
 
 
 
+  contract_terms: 'Contract Terms Disagreement',
+
+other: 'Other Issue'};
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed',;
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null,;
 export interface Dispute {;

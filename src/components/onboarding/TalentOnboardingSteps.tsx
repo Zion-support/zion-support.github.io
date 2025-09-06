@@ -60,6 +60,8 @@ ursor/automate-test-improve-and-merge-code-646c
       action: "Set"
     },
 
+      action: "Set"
+    },
     {
       id: "match",
       label: "Receive your first job match",
@@ -76,3 +78,10 @@ ursor/automate-test-improve-and-merge-code-646c
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
 
+      action: "View Matches"
+    }
+  ];
+
+      id: "match",
+      label: "Receive your first job match",
+      completed: onboardingStatus.matchReceived,

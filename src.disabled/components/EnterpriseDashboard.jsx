@@ -6,6 +6,7 @@ export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics 
 "export": const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [activeTab,setActiveTab] = useState ('overview') const [refreshInterval,setRefreshInterval] = useState (30000) ';"";""
 ursor/automate-test-improve-and-merge-code-646c
 "export": const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [activeTab,setActiveTab] = useState ('overview') const [refreshInterval,setRefreshInterval] = useState (30000) ';"";""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 :src && src.disabled/components/EnterpriseDashboard && EnterpriseDashboard.js.jsx
 
@@ -13,6 +14,9 @@ export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics 
 :src.disabled/components/EnterpriseDashboard.js.jsx
 export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("overview") const [refreshInterval,setRefreshInterval] = useState (30000) ";"";"""
 
+:src.disabled/components/EnterpriseDashboard.js.jsx
+export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("overview") const [refreshInterval,setRefreshInterval] = useState (30000) ";"";"""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 :src && src.disabled/components/EnterpriseDashboard && EnterpriseDashboard.js.jsx
 
 :src.disabled/components/EnterpriseDashboard.jsx
@@ -36,6 +40,8 @@ export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 "export": const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [activeTab,setActiveTab] = useState ('overview') const [refreshInterval,setRefreshInterval] = useState (30000) ';"";""
+"export": const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [activeTab,setActiveTab] = useState ('overview') const [refreshInterval,setRefreshInterval] = useState (30000) ';"";""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 :src.disabled/components/EnterpriseDashboard.js.jsx
 export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("overview") const [refreshInterval,setRefreshInterval] = useState (30000) ";"";"""
 "export": const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [activeTab,setActiveTab] = useState ('overview') const [refreshInterval,setRefreshInterval] = useState (30000) ';"";""

@@ -32,6 +32,8 @@ function LoadingState() {
       <Loader2 className='h-8 w-8 animate-spin text-primary' />
     </div>;
 >>>>>>> main
+export function LoadingState() {;
+  return (
   );
 };
 
@@ -45,5 +47,6 @@ export function LoadingState() {
     </div>
   )
 
+  )
 }
 ;

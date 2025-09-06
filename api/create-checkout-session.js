@@ -7,6 +7,7 @@ export default function handler(req, res) {
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
   res.status(200).json({ message: 'Checkout session created' });
 }
@@ -14,6 +15,7 @@ export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import Stripe from 'stripe';
 
 
@@ -76,6 +78,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
@@ -85,6 +89,8 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       url: session.url
     })
   } catch (err) {,
@@ -107,3 +113,5 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 
 export default withErrorLogging(handler);
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

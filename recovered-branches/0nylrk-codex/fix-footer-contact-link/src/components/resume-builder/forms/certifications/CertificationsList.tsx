@@ -15,6 +15,7 @@ export function CertificationsList({
   certifications,
   onEdit,
   onDelete
+  onDelete
 }: CertificationsListProps) {
   if (certifications.length === 0) {
     return null;

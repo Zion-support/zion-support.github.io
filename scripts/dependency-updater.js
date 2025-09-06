@@ -184,6 +184,7 @@ class DependencyUpdater {
 
 }
 
+<<<<<<< HEAD
 // Run the dependency updater
 const updater = new DependencyUpdater();
 
@@ -192,6 +193,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 // Run the dependency updater
 const updater = new DependencyUpdater();
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 updater && updater.updateDependencies().then(() => {
     console && console.log('📦 Dependency Updater Completed'),
     process && process.exit(0)

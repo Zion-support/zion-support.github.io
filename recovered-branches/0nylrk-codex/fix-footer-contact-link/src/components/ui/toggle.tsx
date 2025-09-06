@@ -23,6 +23,33 @@ const toggleVariants = cva(
 
 
         default: "bg-transparent"
+        default: "bg-transparent",
+        outline:;
+          "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"};
+        outline:
+          "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"}
+          "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"},
+
+
+        default: "bg-transparent",
+
+
+      size: {
+        default: "h-10 px-3"
+        sm: "h-9 px-2.5"
+        lg: "h-11 px-5"}}
+    defaultVariants: {
+      variant: "default"
+
+      size: "default"}}
+)
+type ToggleRef = React.ElementRef<typeof TogglePrimitive.Root>
+type ToggleProps = React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &
+  VariantProps<typeof toggleVariants>
+
+import {cn} from "@/lib/utils";
+
+
 
 Toggle.displayName = TogglePrimitive.Root.displayName
 
@@ -42,7 +69,6 @@ import { cn } from "@/lib/utils";
       ref={ref}
       className={cn (toggle_variants ({ variant, size, class_name }))}
       {...props}
-import {cn} from "@/lib/utils";
 
 
 const toggleVariants = cva(;
@@ -103,6 +129,11 @@ const Toggle = React.forwardRef<ToggleRef ToggleProps>(;
   );
 );
 
+    />));
+Toggle.display_name = TogglePrimitive.Root.display_name;
+export { Toggle, toggle_variants }
+
+;
 
 
     />));
@@ -117,3 +148,41 @@ export { Toggle, toggle_variants }
 
 
 
+;
+Toggle.displayName = TogglePrimitive.Root.displayName;
+;
+export { Toggle, toggleVariants } {
+  variants: {
+  variant: {
+  default: "bg-transparent";
+outline: "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground" 
+};
+size: {
+  default: "h-10 px-3";
+sm: "h-9 px-2.5";
+lg: "h-11 px-5" 
+}
+};
+defaultVariants: {
+  variant: "default";
+size: "default" 
+}
+}ref 
+}className= {
+  cn (toggleVariants ({
+  variant, size, className 
+}) ) 
+}{
+  ...props 
+}/>) ) Toggle.displayName = TogglePrimitive.Root.displayName export {
+  Toggle, toggleVariants 
+}
+Toggle.displayName = TogglePrimitive.Root.displayName;
+export { Toggle, toggleVariants }
+;
+      ref={ref}
+      className={cn (toggle_variants ({ variant, size, class_name }))}
+      {...props}
+    />));
+Toggle.display_name = TogglePrimitive.Root.display_name;
+export { Toggle, toggle_variants }

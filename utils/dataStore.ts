@@ -9,6 +9,12 @@ export const dataStore = {
 
   deleteData: (id: string) => null;
 };
+  getData: () => []
+  setData: (data: any) => null
+  updateData: (id: string, data: any) => null
+  deleteData: (id: string) => null
+}
+
 
   getData: () => [],
   setData: (data: any) => null,
@@ -18,6 +24,11 @@ export const dataStore = {
 
 
 
+  getData: () => [],
+  setData: (data: any) => null,
+  updateData: (id: string, data: any) => null,
+  deleteData: (id: string) => null;
+};
 interface Project {
   id: string;
   title: string;
@@ -42,6 +53,7 @@ interface Project {
       description: data.description || "",
       status: data.status || "active",
       createdAt: new Date(),
+      updatedAt: new Date()
       updatedAt: new Date()
     };
     this.projects.push(project);
@@ -78,6 +90,7 @@ interface Project {
         ...this.reviews[existingIndex],
         ...data,
         updatedAt: new Date()
+        updatedAt: new Date()
       };
       return this.reviews[existingIndex];
     } else {
@@ -96,6 +109,7 @@ interface Project {
         approved: data.approved || false,
         removed: data.removed || false,
         createdAt: new Date(),
+        updatedAt: new Date()
         updatedAt: new Date()
       };
       this.reviews.push(review);
@@ -127,6 +141,7 @@ export const data_store = {
 >>>>>>> main
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
   createProject(data: Partial<Project>): Project {
     const project: Project = {
       id: Math.random().toString(36).substr(2, 9),

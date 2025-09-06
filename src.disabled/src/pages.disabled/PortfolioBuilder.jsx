@@ -51,6 +51,15 @@ interface PortfolioBuilderProps {
   // Add props here as needed
 }
 >export default function PortfolioBuilder({}: PortfolioBuilderProps) {
+=
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+interface PortfolioBuilderProps {
+  // Add props here as needed
+}
+>export default function PortfolioBuilder({}: PortfolioBuilderProps) {
+export default function PortfolioBuilder({}: PortfolioBuilderProps) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   return (
     <div>
       <h1>PortfolioBuilder</h1>
@@ -60,6 +69,7 @@ interface PortfolioBuilderProps {
 ursor/automate-test-improve-and-merge-code-646c
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 :src.disabled/src/pages.disabled/PortfolioBuilder.jsx
 }
@@ -89,6 +99,12 @@ ursor/add-new-services-and-deploy-updates-0462
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/src/pages.disabled/PortfolioBuilder.jsx
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 :src.pages.disabled/PortfolioBuilder.jsx
 }
 }
@@ -124,3 +140,10 @@ ursor/automate-test-improve-and-merge-code-646c
 =
 }
 >
+}
+
+}
+
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

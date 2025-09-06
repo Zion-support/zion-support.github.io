@@ -6,6 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle
+  CardTitle
 } from "@/components/ui/card";
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleListProps {
@@ -17,6 +18,7 @@ interface HelpArticleListProps {
 export function HelpArticleList({
   categoryId,
   onArticleSelect,
+  searchQuery
   searchQuery
 }: HelpArticleListProps) {
   const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
@@ -37,6 +39,9 @@ export function HelpArticleList({
     : category.articles;
 
 
+          article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          article.content.toLowerCase().includes(searchQuery.toLowerCase()),
+      )
   return (
     <div>
       <div className="mb-6">
@@ -83,6 +88,29 @@ export function HelpArticleList({
 
 
 
+            <Card
+              key={article.id}
+              className="cursor-pointer hover:border-zion-purple/50 transition-colors"
+              onClick={() => onArticleSelect(article.id)}
+            >
+              <CardHeader className="pb-2">
+                <CardTitle className="text-lg">{article.title}</CardTitle>
+                <CardDescription className="text-zion-slate-light text-sm">
+                  Last updated: {formatDate(article.lastUpdated)}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-zion-slate-light truncate">
+                  {article.content.substring(0, 120)}...
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES && HELP_CATEGORIES.find(cat => cat && cat.id === categoryId);
 
@@ -197,7 +225,12 @@ function formatDate(date: string): string {
 
 
 
-}
+function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString("en-US", {}
 
 function formatDate(): any (date: string): string {;
   return new Date(date).toLocaleDateString("en-US", {;
@@ -213,6 +246,7 @@ import React from './react';
   CardContent,
   CardDescription,
   CardHeader,
+  CardTitle
   CardTitle
 } from '@/components / ui / card';
 import { HELP_CATEGORIES  } from './help - content';
@@ -281,3 +315,31 @@ function format_date (date: string): string {
 
 
 
+    day: "numeric"
+  });
+                  {article.content.substring(0, 120)}...;
+                </p>;
+              </CardContent>;
+            </Card>;          ))}
+        </div>;
+      )}
+    </div>;
+  ),;
+}
+
+  })
+  })
+
+
+  })
+  })
+}
+;
+function formatDate(date: string): string {;
+  return new Date(date).toLocaleDateString("en-US", {;
+    year: "numeric";
+    month: "long";
+    day: "numeric";
+  });
+}
+;

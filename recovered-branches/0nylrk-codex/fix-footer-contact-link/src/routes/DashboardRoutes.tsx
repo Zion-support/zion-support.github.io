@@ -24,6 +24,10 @@ import ContractBuilder from "@/pages/ContractBuilder";
 const DashboardRoutes = () => {
 
 
+const DashboardRoutes = () => {;
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -463,3 +467,39 @@ const DashboardRoutes = () => {;
 export default DashboardRoutes;
 
 
+        }
+      />;
+    </Routes>);
+}
+;
+export default DashboardRoutes;
+;
+      />
+      <Route
+        path="/wallet"
+        element={
+          <ProtectedRoute>
+            <WalletPage />
+          </ProtectedRoute>
+        }
+      />;
+      <Route;
+        path="/dashboard/api-access";
+        element={;
+          <ProtectedRoute>;
+            <DeveloperPortal />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route;
+        path="/contract-builder";
+        element={;
+          <ProtectedRoute>;
+            <ContractBuilder />;
+          </ProtectedRoute>;
+        } ;
+      />;
+    </Routes>;
+  );
+},;
+export default DashboardRoutes;

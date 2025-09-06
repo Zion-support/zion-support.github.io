@@ -8,6 +8,8 @@ export const useTheme = () => {
 
     theme: "dark",
     setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
+    theme: "dark",
+    setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
   };
 };
 
@@ -29,6 +31,8 @@ export const useTheme = () => {;
 
 
 
+  }
+}
 
     theme: "dark",
     setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
@@ -50,3 +54,6 @@ export const use_theme = () =>: any {
 
 
 
+    theme: "dark"
+
+};

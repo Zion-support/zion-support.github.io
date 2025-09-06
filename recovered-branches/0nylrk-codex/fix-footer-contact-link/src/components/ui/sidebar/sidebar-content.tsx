@@ -1,5 +1,14 @@
 
 
+import * as React from "react"
+import { Input } from "@/components/ui/input"
+import { Separator } from "@/components/ui/separator"
+import { cn } from "@/lib/utils"
+import type { SafeRef } from "../sidebar.types"
+
+export const SidebarInput = React.forwardRef<
+  React.ElementRef<typeof Input>
+  React.ComponentProps<typeof Input>
 import * as React from &quot;react & quot;
 import { Input } from &quot;@/components / ui / input & quot;
 import { Separator } from &quot;@/components / ui / separator & quot;
@@ -51,6 +60,14 @@ export const SidebarHeader = React.forward_ref<;
   React.ComponentProps<&quot;div & quot;>;
 
 
+SidebarInput.displayName = "SidebarInput"
+
+export const SidebarHeader = React.forwardRef<
+
+>((props, ref) => {
+  return (
+    <Input;
+      ref={ref}
 >((props, ref) => {
   return (
     <div;
@@ -59,6 +76,9 @@ export const SidebarHeader = React.forward_ref<;
       className={cn (&quot;flex flex - col gap - 2 p - 2&quot;, props.class_name)}
       {...props}
 
+SidebarHeader.displayName = "SidebarHeader"
+
+export const SidebarFooter = React.forwardRef<
 
 >((props, ref) => {
   return (
@@ -95,6 +115,9 @@ export const SidebarContent = React.forward_ref<;
   HTMLDivElement,
   React.ComponentProps<&quot;div & quot;>;
 
+SidebarSeparator.displayName = "SidebarSeparator"
+
+export const SidebarContent = React.forwardRef<
 
 >((props, ref) => {
   return (
@@ -139,6 +162,9 @@ export const SidebarContent = React.forwardRef<
   )
 })
 
+SidebarContent.displayName = "SidebarContent"
+
+export const SidebarGroup = React.forwardRef<
 
 >((props, ref) => {
   return (
@@ -150,3 +176,20 @@ export const SidebarContent = React.forwardRef<
 
 
 
+export const SidebarGroup = React.forwardRef<
+  HTMLDivElement,;
+  React.ComponentProps<&quot;div&quot;>
+  HTMLDivElement,
+  React.ComponentProps<"div">
+>((props, ref) => {
+  return (
+    <div
+      ref={ref}
+      data-sidebar="group"
+      className={cn("relative flex w-full min-w-0 flex-col p-2", props.className)}
+      {...props}
+    />
+  )
+})
+SidebarGroup.displayName = &quot;SidebarGroup&quot;
+SidebarGroup.displayName = "SidebarGroup"

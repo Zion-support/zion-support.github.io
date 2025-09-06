@@ -38,6 +38,7 @@ module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config.plugi
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) => {if ( {;
       config.plugins.push() {;
@@ -98,6 +99,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
           reportFilename: 'bundle-analysis.html'
           reportFilename: 'bundle-analysis.html'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         })
       );
     }
@@ -127,6 +129,7 @@ module.exports = {,;
 
 }
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 };
 /* eslint-env node */
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -152,6 +155,9 @@ module.exports = {
   }
 
 
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
       config.plugins.push(};
         new BundleAnalyzerPlugin({;
@@ -194,6 +200,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 };
 
@@ -222,6 +229,10 @@ if ( {) {
 
 
 
+origin/main
+origin/automation-improvements-final
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 };
 ;

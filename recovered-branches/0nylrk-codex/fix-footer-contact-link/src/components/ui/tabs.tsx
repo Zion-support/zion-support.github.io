@@ -10,6 +10,7 @@ import * as TabsPrimitive from "@radix-ui/react-tabs"
 
 
 
+const Tabs = TabsPrimitive.Root;
 
 import { cn } from "@/lib/utils"
 
@@ -24,6 +25,8 @@ const TabsList = React.forwardRef<
 ></typeof>(({ className, ...props }, ref) => (
   <TabsPrimitive.List
 
+    ref={ref}
+    className={cn(
 
 import * as React from "react";
 import * as TabsPrimitive from "@radix-ui/react-tabs";
@@ -50,6 +53,9 @@ const TabsList = React.forwardRef<;
       className;
 
 
+    ref={ref}
+    className={cn(
+      className
     )}
     {...props}
   />;
@@ -167,6 +173,9 @@ const TabsContent = React && React.forwardRef<;
 
 
 
+    ref={ref}
+    className={cn(
+      'mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
 const TabsContent = React.forwardRef<;
   React.ElementRef<typeof TabsPrimitive.Content>,;
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>;

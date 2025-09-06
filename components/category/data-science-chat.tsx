@@ -1,10 +1,19 @@
 
 
 
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+
+const DataScienceChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+
 const DataScienceChat: NextPage = () => {;
   return (
     <div>;
@@ -21,6 +30,28 @@ const DataScienceChat: NextPage = () => {;
         <meta name="description" content="DataScienceChat blog post" />
       </Head>
 
+      </Head>;
+
+
+      <main>
+        <h1>DataScienceChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
+      </main>
+    </div>
+      </Head>;
+
+      <main>;
+        <h1>DataScienceChat</h1>;
+        <p>Blog content coming soon...</p>;
+        <a href="/blog">Back to Blog</a>;
+      </main>;
+    </div>;
+  );
+}
+export default DataScienceChat;
+
+        <title>DataScienceChat - Zion Tech Solutions</title>
 
 import type { NextPage } from './next';
 import Head from './next / head';
@@ -61,9 +92,6 @@ export default DataScienceChat;
 export default DataScienceChat
 
 
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
 const DataScienceChat: NextPage = () => {
   return (

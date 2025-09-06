@@ -26,6 +26,7 @@ exports && exports.handler = async function () {
           (acc, u) => acc + (u && u.certifications?.length || 0),
           0
         )
+        )
       },
       topBadges: Object && Object.values(users).reduce((map, u) => {
         (u && u.badges || []).forEach(b => {
@@ -53,6 +54,7 @@ exports.handler = async function () {
         courses: courses.length,
         completions: Object.values (users).reduce (
           (acc, u) => acc + (u.certifications?.length || 0),
+          0)
           0)
       },
       top_badges: Object.values (users).reduce ((map, u) => {
@@ -89,6 +91,12 @@ if ( {) {
 
 
 
+      }, {}),
+        content,
+        message: 'chore (automation): weekly learning insights',
+        token
+      });
+    }
         return map
       }, {})
     },
@@ -107,6 +115,10 @@ if ( {) {
   }
 
 
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
 };      }
       topBadges: Object.values(users).reduce((map, u) => {
         (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 })

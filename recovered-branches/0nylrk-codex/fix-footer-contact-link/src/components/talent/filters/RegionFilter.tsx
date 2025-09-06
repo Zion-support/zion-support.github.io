@@ -14,6 +14,9 @@ const REGION_OPTIONS = [
 ];
 
 
+  { id: "Africa", label: "Africa" }
+];
+
 export function RegionFilter({
   selectedRegions,
   toggleRegion,
@@ -23,6 +26,8 @@ export function RegionFilter({
 }: RegionFilterProps) {
 
 
+  isMobileFilterOpen
+}: RegionFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -208,3 +213,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
   );
 
 
+  { id: "Africa", label: "Africa" }
+];
+;

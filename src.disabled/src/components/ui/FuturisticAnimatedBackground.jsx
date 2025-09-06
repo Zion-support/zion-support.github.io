@@ -12,3 +12,8 @@ const React,{ useEffect,useRef } from "react";"; import { motion } from "framer-
 const React,{ useEffect,useRef } from "react";"; import { motion } from "framer-motion";"; export const FuturisticAnimatedBackground = ({ variant = "cyberpunk",intensity = "medium",className = "" }) => {}; const canvasRef = useRef(null); const particlesRef = useRef([]); const animationRef = useRef(null); useEffect(() => {}; const canvas = canvasRef.current; if(!canvas); return;"; const ctx = canvas.getContext("2d"); if(!ctx); return; )""
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+const React,{ useEffect,useRef } from "react";"; import { motion } from "framer-motion";"; export const FuturisticAnimatedBackground = ({ variant = "cyberpunk",intensity = "medium",className = "" }) => {}; const canvasRef = useRef(null); const particlesRef = useRef([]); const animationRef = useRef(null); useEffect(() => {}; const canvas = canvasRef && canvasRef.current; if(!canvas); return;"; const ctx = canvas && canvas.getContext("2d"); if(!ctx); return; )""
+
+
+const React,{ useEffect,useRef } from "react";"; import { motion } from "framer-motion";"; export const FuturisticAnimatedBackground = ({ variant = "cyberpunk",intensity = "medium",className = "" }) => {}; const canvasRef = useRef(null); const particlesRef = useRef([]); const animationRef = useRef(null); useEffect(() => {}; const canvas = canvasRef && canvasRef.current; if(!canvas); return;"; const ctx = canvas && canvas.getContext("2d"); if(!ctx); return; )""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

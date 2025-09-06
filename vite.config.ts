@@ -7,6 +7,7 @@ import react from '@vitejs/plugin-react';
 import path from 'node:path';
 >>>>>>> main
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -71,3 +72,4 @@ ursor/automate-test-improve-and-merge-code-646c
     }
   }
 })
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

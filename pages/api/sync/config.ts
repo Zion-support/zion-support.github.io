@@ -1,6 +1,16 @@
 
 
 
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, writeState } from "../../../utils/sync/storage",;
+import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
+;
+
+
+  if (req.method === "GET") {
+
+    return res.status(200).json({ config: state.config })
+  }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -31,6 +41,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+import type { NextApiRequest, NextApiResponse } from "next"
+import { readState, writeState } from "../../../utils/sync/storage"
+import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types"
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const state = readState()
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
   }
@@ -73,6 +88,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
+
+    writeState(state)
+
     return res.status(200).json({ config: state.config })
     } catch (error) {
     console.error("Error:", error);
@@ -86,3 +105,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(405).json({ error: "Method not allowed" })
 };
 
+  return res.status(405).json({ error: "Method not allowed" })
+};

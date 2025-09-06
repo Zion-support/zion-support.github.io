@@ -10,6 +10,7 @@ export const CommunityTrust: React.FC = () => {
     { value: "96%", label: "User Satisfaction" },
 
     { value: "12M+", label: "Matches Made" }
+    { value: "12M+", label: "Matches Made" }
   ];
 
   return (
@@ -69,6 +70,9 @@ export const CommunityTrust: React.FC = () => {
   );
 };
 
+
+  );
+};
 
                 className="w - 6 h - 6 text - zion - cyan";
                 fill="current_color";

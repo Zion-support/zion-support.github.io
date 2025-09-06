@@ -41,6 +41,12 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+  const fetchJobs = async () => {
+    if (!clientId) {
+      setIsLoading(false);
+      return
+    }
+    try {
 
   
   const clientId = userId || user?.id,
@@ -54,6 +60,93 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
 
   
   const clientId = userId || user?.id,
+  const fetchJobs = async () => {
+    if (!clientId) {
+      setIsLoading(false),
+      return
+    }
+    try {
+      let query = supabase
+        .from("jobs")
+        .select("*")
+        .eq("client_id", clientId)
+import { useState, useEffect } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { Job, JobStatus } from '@/types / jobs';
+import { toast } from './sonner';
+import { use_auth } from './use_auth';
+import { create_job, update_job, getJobById } from '@/services / job_service';
+export const use_jobs = (user_id?: string, status?: JobStatus) =>: any {
+  const { user } = use_auth ();
+  const [jobs, set_jobs] = useState < Job[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const client_id = user_id || user?.id;
+;
+  const fetch_jobs = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      setIsLoading (false);
+      return;
+    }
+    try {
+      setIsLoading (true);
+;
+      let query = supabase;
+        .from ("jobs");
+        .select ("*");
+        .eq ("client_id", client_id);
+        .order ("created_at", { ascending: false });
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        query = query.eq ("status", status);
+      }
+      const { data, error: fetch_error } = await query;
+;
+      // Check condition
+if (throw fetch_error) {
+  $2
+}
+      set_jobs (data as Job[]);
+      set_error (null);
+    } catch (err: any) {
+      console.error ("Error fetching jobs:", err);
+      set_error ("Failed to fetch jobs. Please try again.");
+      toast.error ("Failed to fetch jobs");
+
+    } finally {
+      setIsLoading (false);
+    }
+  }
+
+
+        .order("created_at", { ascending: false }),
+      
+      if (status) {
+        query = query.eq("status", status)
+      }
+      
+      const { data, error: fetchError } = await query,
+      
+      if (fetchError) throw fetchError,
+      
+      setJobs(data as Job[]),
+      setError(null)
+    } catch (err: any) {
+      console.error("Error fetching jobs:", err),
+      setError("Failed to fetch jobs. Please try again."),
+      toast.error("Failed to fetch jobs")
+    } finally {
+      setIsLoading(false)
+    }
+  },
+  
 
 
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
@@ -153,6 +246,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   const [isLoading, setIsLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
   const clientId = userId || user?.id;
+  const clientId = userId || user?.id;
   const fetchJobs = async () => {;
     if (!clientId) {;
       setIsLoading(false),;
@@ -239,3 +333,5 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 };
 
 
+  }
+};

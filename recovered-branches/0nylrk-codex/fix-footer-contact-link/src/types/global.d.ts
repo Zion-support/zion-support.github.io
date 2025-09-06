@@ -3,6 +3,8 @@ import { ReactNode } from "react";
 // Extend FeatureCardProps to include key for mapping
 declare module "@/components/FeatureCard" {
 
+// Extend FeatureCardProps to include key for mapping
+declare module "@/components/FeatureCard" {
   export interface FeatureCardProps {
     title: string;
     description: string;
@@ -64,3 +66,8 @@ declare module "@/components/ProductListingCard" {
 
 
 
+    author_image?: string;
+    ai_score?: number;
+    rating?: number;
+  }
+}

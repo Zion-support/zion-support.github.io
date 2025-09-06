@@ -45,3 +45,4 @@ describe('AICodeGenerator'
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)})});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

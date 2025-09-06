@@ -3,7 +3,26 @@ import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
 
-        }
+import { QuoteFormData } from "@/types/quotes",
+import { Label } from "@/components/ui/label";
+import { Slider } from "@/components/ui/slider";
+import { Label } from "@/components/ui/label",
+import { Slider } from "@/components/ui/slider",
+
+
+
+
+interface BudgetStepProps {
+
+  formData: QuoteFormData
+
+  updateFormData: (data: Partial<QuoteFormData>) => void
+}
+export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
+
+  const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
+    if (type === "range" && !formData.budget.maxAmount) {
+      updateFormData({}
       })
     } else {
       updateFormData({
@@ -30,6 +49,13 @@ interface BudgetStepProps {;
 }
 
 
+
+        budget: {}
+        }
+      })
+    } else {
+      updateFormData({
+          maxAmount: formData && formData.budget.amount + 5000;
 
         budget: {}
       });
@@ -64,13 +90,18 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
   }
 
   }
+  }
+  };
+  }
+
+
+
+
+
+  }
+  }
   };
   },
-
-
-
-
-
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
@@ -162,6 +193,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
           
 
 
+          
+
+
+          
+          
           {formData.budget.type === "fixed" && (
             <div className="mt-6">
               <Label className="text-zion-slate-light mb-4 block">
@@ -279,6 +315,9 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
       });
     }
 
+        }
+      });
+    }
               <Slider
                 defaultValue={[formData && formData.budget.amount]}
                 max={50000}
@@ -356,18 +395,25 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
 
                   onValueChange={(value) => {;
                     const newAmount = value[0];
-                    const maxAmount = formData.budget.maxAmount || 50000,;
+                    const maxAmount = formData.budget.maxAmount || 50000;
 
 
                   onValueChange={(value) => {;
                     const newAmount = value[0];
                     const maxAmount = formData && formData.budget.maxAmount || 50000;
 
+                    const newAmount = value[0],;
+                    const maxAmount = formData.budget.maxAmount || 50000,;
+
                     updateFormData({;
                       budget: { ;
                         ...formData && formData.budget, ;
                         amount: newAmount,;
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
+                      }
+                    });
+                  }}
+
 
               <Slider
                 defaultValue={[formData.budget.amount]}
@@ -457,6 +503,7 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
                   defaultValue={[formData.budget.maxAmount || formData.budget.amount + 5000]}
 
 
+                  min={formData.budget.amount}
                   className="py-4";
                 />;
                 <div className="flex justify-between text-sm text-zion-slate-light mt-2">;

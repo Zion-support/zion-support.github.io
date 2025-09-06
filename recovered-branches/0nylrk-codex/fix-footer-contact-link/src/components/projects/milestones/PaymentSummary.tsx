@@ -10,6 +10,13 @@ interface PaymentSummaryProps {
 
 
 
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
+  milestones,
+  paymentTerms
+}) => {
+  const totalPayment = milestones
+    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
+    .toFixed(2);
 
   const paidAmount = milestones
     .filter((m) => m.status === "paid")
@@ -49,6 +56,9 @@ interface PaymentSummaryProps {
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">${paidAmount}</p>
 
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
+            <p className="font-medium">${paidAmount}</p>
           </div>
         </div>
       </CardContent>
@@ -62,6 +72,10 @@ interface PaymentSummaryProps {
 
 
 
+  );
+};
+  );
+  );
 };
 import React from './react';
 import { Milestone  } from '@/hooks / use_milestones';
@@ -73,6 +87,7 @@ interface PaymentSummaryProps {
 }
 export const PaymentSummary: React.FC < PaymentSummaryProps> = ({
   milestones,
+  payment_terms
   payment_terms
 }) => {
   const total_payment = milestones;

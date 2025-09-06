@@ -46,6 +46,13 @@ export default async function handler(
 
 
 
+  const state = readState();
+  const crms = state && state.connections.filter(
+    (c) =>
+      c && c.providerId === "salesforce" ||
+      c && c.providerId === "hubspot" ||
+      c && c.providerId === "zoho" ||
+      c && c.providerId === "pipedrive"
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -70,6 +77,7 @@ function handler() {
       c.provider_id === "zoho" ||;
       c.provider_id === "pipedrive",
 
+      c.provider_id === "pipedrive"
   );
   const results: any[] = [];
   for (const conn of connections) {
@@ -93,6 +101,14 @@ function handler() {
     results && results.push({ providerId: conn && conn.providerId, ok: true });
 
 
+      id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`
+      providerId: conn && conn.providerId
+      level: "info"
+      action: "sync_contact"
+    };
+    await crm && crm.syncContact(conn, {
+      company: job && job.company
+      contact: job && job.contact
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -126,6 +142,10 @@ results.push({ providerId: conn.providerId, ok: true })
       id: `${Date && Date.now()}-job-posted`,
       type: "zion && zion.job.posted",
       timestamp: Date && Date.now(),
+    s && s.events.push({
+      id: `${Date && Date.now()}-job-posted`
+      type: "zion && zion.job.posted"
+      timestamp: Date && Date.now()
       payload: { job }
     });
   });
@@ -134,6 +154,8 @@ results.push({ providerId: conn.providerId, ok: true })
 
 
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 export default async function handler(req, res) {
@@ -175,7 +197,16 @@ export default async function handler(req, res) {
       action: "sync_contact"
     }
     await crm.sync_contact (conn, {
-      company: job.company,
+      company: job.company
+}
+
+      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
+      provider_id: conn.provider_id
+      level: "info"
+      action: "sync_contact"
+    }
+    await crm.sync_contact (conn, {
+      company: job.company
       contact: job.contact
     });
     write_state ((s) => s.logs.push (log));
@@ -187,6 +218,9 @@ export default async function handler(req, res) {
       id: `${Date.now ()}-job - posted`,
       type: "zion.job.posted",
       timestamp: Date.now (),
+      id: `${Date.now ()}-job - posted`
+      type: "zion.job.posted"
+      timestamp: Date.now ()
       payload: { job }
     });
   });
@@ -197,3 +231,51 @@ export default async function handler(req, res) {
 }
 
 
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+  res.status(200).json({ ok: true, results });
+}
+
+res.status(200).json({ ok: true, results });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+export default async function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact });
+    writeState(s => s.logs.push(log));
+    results.push({ providerId: conn.providerId, ok: true });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // record Zapier event;
+  writeState(s => {;
+    s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } });
+  });
+  res.status(200).json({ ok: true, results });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

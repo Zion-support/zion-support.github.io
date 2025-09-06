@@ -36,6 +36,42 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       description: "Credits earned from referrals"
     }
 
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
+import { ReferralStats, as, ReferralStatsType  } from '@/types / referrals';
+import { Award, Share, Star, TrendingUp  } from './lucide-react';
+interface ReferralStatsProps {
+  stats: ReferralStatsType;
+  is_loading: boolean;
+}
+export /**
+ * ReferralStats - Function description
+ */
+function ReferralStats() {
+  const stat_cards = [;
+    {
+      title: "Total Referrals",
+      value: stats.total_referrals,
+      icon: <Share className="h - 5 w - 5 text - muted - foreground" />,
+      description: "People you've invited"
+    },
+    {
+      title: "Completed",
+      value: stats.completed_referrals,
+      icon: <Star className="h - 5 w - 5 text - muted - foreground" />,
+      description: "Signed up & completed onboarding"
+    },
+    {
+      title: "Pending",
+      value: stats.pending_referrals,
+      icon: <TrendingUp className="h - 5 w - 5 text - muted - foreground" />,
+      description: "Not yet completed onboarding"
+    },
+    {
+      title: "Total Rewards",
+      value: stats.total_rewards > 0 ? `$${stats.total_rewards.to_fixed (2)}` : "-",
+      icon: <Award className="h - 5 w - 5 text - muted - foreground" />,
+      description: "Credits earned from referrals"
+    }
   ];
 ;
   return (
@@ -70,11 +106,13 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       value: stats.totalReferrals,
       icon: <Share className="h-5 w-5 text-muted-foreground" />,
       description: "People you've invited"
+      description: "People you've invited"
     },
     {
       title: "Completed",
       value: stats.completedReferrals,
       icon: <Star className="h-5 w-5 text-muted-foreground" />,
+      description: "Signed up & completed onboarding"
       description: "Signed up & completed onboarding"
     },
     {
@@ -82,11 +120,14 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       value: stats.pendingReferrals,
       icon: <TrendingUp className="h-5 w-5 text-muted-foreground" />,
       description: "Not yet completed onboarding"
+      description: "Not yet completed onboarding"
     },
     {
       title: "Total Rewards",
       value: stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` : "-",
       icon: <Award className="h-5 w-5 text-muted-foreground" />,
+      description: "Credits earned from referrals"
+    }
       description: "Credits earned from referrals"
     }
   ];
@@ -120,4 +161,14 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 }
 
 
+                </p>;
+              </>)}
+          </CardContent>;
+        </Card>))}
+    </div>);
+}
+    </div>
+  );
+}
+;
 

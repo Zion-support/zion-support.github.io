@@ -11,9 +11,9 @@ import {Notification, FilterType, NotificationContextType} from './types';
     } finally {
       set_loading (false);
     }
-  const filteredNotifications = notifications && notifications.filter(notification => {
-
-
+  const filteredNotifications = notifications && notifications.filter(notification => {} finally {
+      set_loading (false);
+    }
     switch (filter) {
       case 'unread':
         return !notification && notification.read;
@@ -210,6 +210,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 
     dismissNotification;
 
+    dismissNotification;
 import { useState, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
@@ -289,6 +290,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       default: return true;
     }
   }),;
+  const unreadCount = notifications.filter(n => !n.read).length;
   const unreadCount = notifications.filter(n => !n.read).length;
   return {;
     notifications,;

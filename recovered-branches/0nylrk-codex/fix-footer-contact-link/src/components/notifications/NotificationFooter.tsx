@@ -21,6 +21,9 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
     <div className="p-3 text-center border-t border-zion-blue-light">;
 
 
+interface NotificationFooterProps {
+  onClose: () => void;
+}
   
   const handleViewAll = () => {
     onClose(),
@@ -28,6 +31,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
   },
   
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({
+  onClose
   onClose
 }) => {
   const navigate = useNavigate();
@@ -66,6 +70,11 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 };
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
   on_close
+  );
+  );
+};
+export const NotificationFooter: React.FC < NotificationFooterProps> = ({
+  on_close
 }) => {
   const navigate = use_navigate ();
 ;
@@ -98,6 +107,7 @@ interface NotificationFooterProps {;
 }
 ;
 export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }) => {;
+  const navigate = useNavigate();
   const navigate = useNavigate();
   ;
   const handleViewAll = () => {;

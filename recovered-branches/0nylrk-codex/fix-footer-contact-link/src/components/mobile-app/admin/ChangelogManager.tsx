@@ -8,6 +8,95 @@ import { Textarea } from "@/components/ui/textarea";
 import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
 
+import React, { useState } from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+
+
+
+interface ChangelogManagerProps {
+  platform: AppPlatform
+}
+
+type ChangelogEntry = {}
+
+
+import { Plus, Trash2 } from "lucide-react",
+import { AppPlatform } from "./MetadataManager",
+
+
+
+
+interface ChangelogManagerProps {
+  platform: AppPlatform
+}
+
+type ChangelogEntry = {;
+import React, { useState } from './react';
+import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import { Textarea  } from '@/components / ui / textarea';
+import { Plus, Trash2  } from './lucide-react';
+import { AppPlatform  } from './MetadataManager';
+interface ChangelogManagerProps {
+  platform: AppPlatform;
+}
+type ChangelogEntry = {
+  id: string;
+  version: string;
+  date: string;
+  changes: string;
+}) => {
+  const [entries, setEntries] = useState<ChangelogEntry[]>([
+    {
+interface ChangelogManagerProps {
+  platform: AppPlatform;
+}
+type ChangelogEntry = {}
+;
+export const ChangelogManager: React.FC < ChangelogManagerProps> = ({
+  platform
+};
+
+export const ChangelogManager: React.FC<ChangelogManagerProps> = ({;
+  platform,;
+}) => {;
+
+  id: string,
+  version: string,
+  date: string,
+  changes: string
+},
+
+export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {
+  const [entries, setEntries] = useState<ChangelogEntry[]>([
+    {
+      id: "1",
+      version: "1.0.0",
+      date: "2025-05-15",
+
+  
+  return (
+    <Card className="bg-zion-blue border-zion-purple/30">
+      <CardHeader>
+        <CardTitle>Version History</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          <div className="flex flex-col md:flex-row gap-3">
+            <div className="flex-1 grid grid-cols-2 gap-3">
+              <Input
+                placeholder="Version (e.g. 1.0.1)"
+                name="version"
+                value={newEntry.version}
+                onChange={handleInputChange}
+              />
+              <Input
+                type="date"
+                name="date"
 
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -21,6 +110,7 @@ interface ChangelogManagerProps {;
 }
 ;
 type ChangelogEntry = {
+type ChangelogEntry = {;
   id: string,;
   version: string,;
   date: string,;
@@ -158,6 +248,48 @@ onClick={handleAddEntry}
           </div>
 
 
+              onClick={handleAddEntry}
+
+            <Button
+              onClick={handleAddEntry}
+              disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
+              <Input;
+                placeholder="Version (e.g. 1.0.1)";
+                name="version";
+                value={newEntry.version}
+                onChange={handleInputChange}
+              />;
+              <Input;
+                type="date";
+                name="date";
+                value={newEntry.date}
+                onChange={handleInputChange}
+              />;
+            </div>;
+              onClick={handleAddEntry}
+              disabled={!newEntry.version || !newEntry.changes}
+              <Plus className="mr-2 h-4 w-4" />;
+              Add;
+            </Button>;
+          </div>;
+          
+            <Button
+              onClick={handleAddEntry}
+          <Textarea
+            placeholder="What's new in this version?"
+            name="changes"
+            value={newEntry && newEntry.changes}
+            onChange={handleInputChange}
+            rows={3}
+
+
+          
+
+
+          <div className="border-t border-zion-purple/20 pt-4 space-y-4">
+            {entries.map((entry) => (
+          <div className="border-t border-zion-purple/20 pt-4 space-y-4">
+            {entries.map((entry) => (
           />;
 
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">;
@@ -243,6 +375,21 @@ onClick={handleAddEntry}
             ))}
             
             {entries.length === 0 && (
+              <p className="text-center text-gray-400 py-4">
+                No changelog entries yet
+              </p>
+            )}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
+
+
+            {entries && entries.length === 0 && (;
+              <p className="text-center text-gray-400 py-4">;
+                No changelog entries yet;
+              </p>;
 
             )}
           </div>;
@@ -372,6 +519,9 @@ if (return) {
 
 
 
+
+};
+  );
 };
   ),;
 },; interface ChangelogManagerProps {

@@ -15,6 +15,11 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
   unreadCount,
   onMarkAllAsRead
 
+}
+
+export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+  unreadCount,
+  onMarkAllAsRead
 }) => {
   return (
     <div className="flex justify-between items-center p-4 border-b border-zion-blue-light">
@@ -33,6 +38,7 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
     </div>
 
+    </div>
   );
 };
 import React from './react';
@@ -43,6 +49,7 @@ interface NotificationHeaderProps {
 }
 export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
   unread_count,
+  onMarkAllAsRead
   onMarkAllAsRead
 }) => {
   return (
@@ -72,3 +79,5 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
 };
 
 
+  );
+};

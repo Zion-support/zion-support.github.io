@@ -77,10 +77,52 @@ export function EducationForm({ ;
     let success,;
 
 
+export function EducationForm(): any ({ ;
+  resumeId;
+  educationEntries, ;
+  onComplete, ;
+  onBack ;
+}: EducationFormProps) {;
+  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
+  const [editingId, setEditingId] = useState<string | null>(null);
+
+  // Helper function to format dates to string;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;
+    if (!dateValue) return '';
+    if (typeof dateValue === 'string') return dateValue,;
+    return format(dateValue, 'yyyy-MM-dd');
+  };
+
+  const handleAddOrUpdate = async (data: any) => {;
+    const educationData: Education = {;
+      institution: data && data.institution,;
+      degree: data && data.degree,;
+      field_of_study: data && data.field_of_study,;
+      start_date: data && data.start_date,;
+      end_date: data && data.is_current ? undefined : (data && data.end_date || undefined),;
+      is_current: data && data.is_current,;
+      description: data && data.description,;
+      location: data && data.location},;
+
+    let success;
+    let success;
     if (editingId) {;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
+    }
+    if (success) {
+      setEditingId(null)
+    }
+
+
+
+
+    }
+
+
+  };
+
 
 
   const handleEdit = (edu: Education) => {
@@ -100,6 +142,7 @@ export function EducationForm({ ;
 
 
 
+    }
     if (success) {;
       setEditingId(null);
     }
@@ -138,8 +181,42 @@ export function EducationForm({ ;
       onBack();
     }
 
+  }
+
+  }
+
+
   },
 
+  return (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-xl font-semibold mb-2">Education</h2>
+        <p className="text-muted-foreground">
+          Add your educational background and academic achievements.
+        </p>
+      </div>
+
+
+
+
+  return (
+
+
+      <EducationList 
+        educationEntries={educationEntries} 
+
+        onEdit={handleEdit}
+        onDelete={handleDelete}
+      />
+
+      <EducationList
+        educationEntries={educationEntries}
+      <EducationList 
+        educationEntries={educationEntries} 
+        onEdit={handleEdit}
+        onDelete={handleDelete}
+      />
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
@@ -156,6 +233,42 @@ export function EducationForm({ ;
       </div>;
 
 
+        <EducationFormFields
+          isEditing={!!editingId}
+          onSubmit={handleAddOrUpdate}
+          onCancel={handleCancel}
+
+        />;
+      </div>;
+
+      {!editingId && educationEntries && educationEntries.length > 0 && (;
+;
+      <EducationList ;
+        educationEntries={educationEntries} ;
+        onEdit={handleEdit}
+        onDelete={handleDelete}
+      />;
+;
+      <div className="bg-muted/40 p-6 rounded-lg">;
+        <h3 className="text-md font-medium mb-4">;
+          {editingId ? 'Update Education' :'Add Education'}
+        </h3>;
+    }
+    }
+  }
+
+  return (
+        <EducationFormFields
+          isEditing={!!editingId}
+          onSubmit={handleAddOrUpdate}
+          onCancel={handleCancel}
+        <div className="flex justify-end">;
+          <Button type="button" onClick={onComplete}>;
+            Next;
+          </Button>;
+        </div>;
+      )}
+    </div>;
 export /**
  * EducationForm - Function description
  */

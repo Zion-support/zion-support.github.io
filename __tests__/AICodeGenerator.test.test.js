@@ -22,6 +22,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import { render, screen } from '@testing-library/react';
 
 ursor/add-new-services-and-deploy-updates-0462
@@ -45,6 +48,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 describe('AICodeGeneratortest', () => {
   test('renders without crashing', () => {
     render(<AICodeGeneratortest />);
@@ -82,6 +87,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   
 ursor/automate-test-improve-and-merge-code-646c
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   test('displays correct content', () => {
     render(<AICodeGeneratortest />);
   });
@@ -116,6 +122,7 @@ ursor/automate-test-improve-and-merge-code-646c
 });
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   
   test('applies correct styling', () => {
     render(<AICodeGeneratortest />);

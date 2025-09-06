@@ -8,6 +8,7 @@ export function ExperienceFilter({
   expanded,
   toggleSection,
   isMobileFilterOpen
+  isMobileFilterOpen
 }: ExperienceFilterProps) {
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0], values[1]]);

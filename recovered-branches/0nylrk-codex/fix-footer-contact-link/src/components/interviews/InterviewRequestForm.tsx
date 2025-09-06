@@ -153,6 +153,21 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
     setIsSubmitting(true);
+    try {
+      // Combine date and time
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
+      const scheduledDate = new Date(dateTimeString);
+      // Calculate end time based on duration
+
+    setIsSubmitting(true),
+
+    try {
+      // Combine date and time
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`,
+      const scheduledDate = new Date(dateTimeString),
+      
+      // Calculate end time based on duration
+      const durationMinutes = parseInt(values.duration),
 
       await requestInterview({
         talent_id: talent.id
@@ -179,6 +194,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       console.error("Failed to schedule interview:", error),
 
 
+      console.error("Failed to schedule interview:", error),
       toast({
         title: "Failed to schedule interview"
         description: "An error occurred while scheduling the interview. Please try again."
@@ -479,6 +495,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
     try {;
       // Combine date and time;
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time} 00`;
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time} 00`;
       const scheduledDate = new Date(dateTimeString),;
       ;
       // Calculate end time based on duration;
@@ -561,6 +578,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
             name="date";
 
 
+          <FormField
+            control={form && form.control}
+            name="date"
             render={({ field }) => (;
               <FormItem className="flex flex-col">;
                 <FormLabel>Date</FormLabel>;
@@ -576,6 +596,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                           !field.value && "text-muted-foreground"
 
 
+                      <Button
+                        variant="outline"
+                        className={cn(
+                          !field.value && "text-muted-foreground"
                           "w-full pl-3 text-left font-normal"
                           !field && field.value && "text-muted-foreground"
                         )}>;
@@ -660,6 +684,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                 <FormMessage />
               </FormItem>
 
+
+                      selected={field && field.value}
+                      onSelect={field && field.onChange}
 
                       selected={field && field.value}
                       onSelect={field && field.onChange}
@@ -837,6 +864,18 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
 
+                    <Calendar;
+                      mode="single";
+                      selected={field.value}
+                      onSelect={field.onChange}
+                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+                      className="p-3 pointer-events-auto";
+                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+                      className="p-3 pointer-events-auto";
+                    <Calendar
+                      mode="single"
                     />;
                   </PopoverContent>;
                 </Popover>;
@@ -1037,6 +1076,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="meetingLink";
 
 
+          <FormField
+            control={form && form.control}
+            name="meetingLink"
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Meeting Link (Optional)</FormLabel>;
@@ -1063,6 +1105,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     placeholder={`Add your ${form.watch('platform')} link here`}
 
 
+                  <Input;
+                    placeholder={`Add your ${form.watch('platform')} link here`}
                     {...field}
                   />;
                 </FormControl>;
@@ -1217,6 +1261,44 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormControl>;
 
 
+                <Textarea 
+
+                  placeholder="Share what you'd like to discuss in this interview"
+                  className="h-20"
+              </FormItem>)}
+          />)}
+        <FormField;
+          control={form.control}
+          name="notes";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Notes (Optional)</FormLabel>;
+              <FormControl>;
+                <Textarea;
+                  placeholder="Share what you'd like to discuss in this interview";
+                  className="h - 20";
+                <Textarea ;
+                  placeholder="Share what you'd like to discuss in this interview";
+                  className="h-20";
+                  {...field}
+                />;
+              </FormControl>;
+              <FormMessage />;
+        <div className="flex justify-end gap-4 pt-4">;
+          <Button variant="outline" onClick={onClose} type="button">;
+            Cancel;
+          </Button>;
+          <Button type="submit" disabled={isSubmitting}>;
+          </Button>;
+        </div>;
+      </form>;
+    </Form>;
+            )}
+          />
+        )}
+                  placeholder="Share what you'd like to discuss in this interview"
+                  className="h-20"
+                  {...field}
             </FormItem>)}
         />;
         <div className="flex justify - end gap - 4 pt - 4">;
@@ -1230,6 +1312,35 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       </form>;
     </Form>);
 
+}
+;
+
+  ),; interface InterviewRequestFormProps {
+  talent: TalentProfile;
+onClose: () => void;
+userDetails?: UserProfile 
+}const formSchema = z.object ({
+  date: z.date ({
+  required error: "Please select a date for the interview." 
+}) .refine (date => date > new Date (), {
+  message: "Interview date must be in the future" 
+});
+time: z.string () .min (1, "Please select a time for the interview.");
+duration: z.string () .min (1, "Please select the interview duration.");
+platform: z.string () .min (1, "Please select a meeting platform.");
+const form = useForm<z.infer<typeof formSchema>> ({
+  resolver: zodResolver (formSchema), defaultValues: {
+  title: `Interview with $ {
+  talent.full name 
+}`;
+async function onSubmit (values: z.infer<typeof formSchema>) {
+  if (!userDetails?.id) {
+  toast ({
+  return;
+}setIsSubmitting (true);
+}finally {
+  setIsSubmitting (false) 
+}
 
 }
 ;
@@ -1237,3 +1348,43 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
 
+}const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";
+"12:00", "12:30", "13:00", "13:30", "14:00", "14:30";
+"15:00", "15:30", "16:00", "16:30", "17:00", "17:30";
+"18:00", "18:30", "19:00", "19:30", "20: 00" ];
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
+}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {
+  field.onChange 
+}defaultValue= {
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) ) 
+}</SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {
+  field.onChange 
+}defaultValue= {
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {
+  field.onChange 
+}defaultValue= {
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> </div> {
+  form.watch ('platform') !== 'in-app' && (<FormField control= {
+  form.control 
+}<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
+  `Add your $ {
+  form.watch ('platform') 
+}link here` 
+}{
+  ...field 
+}/> </FormControl> <FormMessage /> </FormItem>) 
+}/>) 
+}<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+}/> </Button> </div> </form> </Form>) 
+}
+}
+}
+;
+}

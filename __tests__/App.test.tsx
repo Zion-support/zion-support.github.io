@@ -7,6 +7,7 @@ import React from 'react';
 
 import { render, screen } from '@testing-library/react';
 >>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import App from '../src/App';
 describe('App', () => {
   it('renders without crashing', () => {
@@ -15,6 +16,7 @@ describe('App', () => {
   });
   it('has proper heading structure', () => {
     render(<App />);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
   });

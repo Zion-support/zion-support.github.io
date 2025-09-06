@@ -18,6 +18,8 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
 
 
 
+  );
+  );
 };
       },
       {} as Record < string, Skill[]>,

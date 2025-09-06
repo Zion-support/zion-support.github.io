@@ -1,5 +1,15 @@
 
 
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Resume  } from '@/types/resume';
+import { useAuth } from '@/hooks/useAuth';
+export function useFetchResume() {
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Resume} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+export function useFetchResume() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -46,12 +56,32 @@ let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
         if (resumeError.code === 'PGRST116') {
 
 
+      if (resumeError) {
+        if (resumeError && resumeError.code === 'PGRST116') {
           // No resume found, this is not a critical error for a new user
           setResume(null);
           setIsLoading(false);
           return null
 
 
+import {supabase} from '@/integrations / supabase / client';
+import {Resume} from '@/types / resume';
+import {use_auth} from '@/hooks / use_auth';
+export /**
+ * useFetchResume - Function description
+ */
+function useFetchResume() {
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+  const [resume, set_resume] = useState < Resume | null>(null);
+;
+  const fetch_resume = async (resume_id?: string) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('You must be logged in to access resumes');
       return null;
     }
     setIsLoading (true);
@@ -120,6 +150,7 @@ if ( {) {
         .eq('resume_id', resumeData.id)
 
 
+        .eq('resume_id', resumeData && resumeData.id)
         .order('is_current', { ascending: false })
         .order('start_date', { ascending: false });
       if (workError) throw workError;
@@ -131,6 +162,7 @@ if ( {) {
         .eq('resume_id', resumeData.id)
 
 
+        .eq('resume_id', resumeData && resumeData.id)
         .order('is_current', { ascending: false })
         .order('start_date', { ascending: false });
       if (educationError) throw educationError;
@@ -504,3 +536,7 @@ is active: resumeData.is active
 }
 
 
+    is_loading;
+    error;
+    resume;
+}

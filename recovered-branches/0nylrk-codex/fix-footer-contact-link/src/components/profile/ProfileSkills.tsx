@@ -33,6 +33,9 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
               <div
                 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
 
+            <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">
+              <div
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
                 style={{ width: `${(skill.level / 5) * 100}%` }}
               />
             </div>
@@ -44,6 +47,8 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
   );
 }
 
+  );
+}
 export /**
  * ProfileSkills - Function description
  */

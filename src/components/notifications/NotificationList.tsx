@@ -134,6 +134,7 @@ import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Bell } from 'lucide-react'
 interface NotificationListProps {}; import React from 'react'
+interface NotificationListProps {}; import React from 'react'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import Skeleton from '@/components/ui/skeleton'
 import { Button } from '@/components/ui/button'
@@ -180,6 +181,7 @@ import { Button } from '@/components / ui / button';
 import { Notification } from '@/context / notifications';
 import { EmptyState } from '@/components / ui / empty - state';
 
+},) => {} import React from 'react';
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
@@ -263,6 +265,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             size="sm";
             className="mt - 2";
             on_click = {on_retry }
+            on_click = {on_retry }
           >;
             Try Again;
           </Button>;
@@ -275,6 +278,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         <div className="p - 8">;
           <EmptyState;
             icon = {<Bell className="h - 8 w - 8" /> }
+            icon = {<Bell className="h - 8 w - 8" /> }
             title="No Notifications";
             description="You're all caught up.";
             action={{ text: 'Refresh', on_click: on_retry }}
@@ -283,6 +287,10 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         </div>) : (
         notifications.map ((notification, ) => (
           <NotificationItem;
+            key = {notification.id }
+            notification = {notification }
+            onMarkAsRead = {onMarkAsRead }
+            on_dismiss = {on_dismiss }
             key = {notification.id }
             notification = {notification }
             onMarkAsRead = {onMarkAsRead }

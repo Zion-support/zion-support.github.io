@@ -5,6 +5,7 @@
 import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancer from '../components/AccessibilityEnhancer'; describe('AccessibilityEnhancer',() => { test('renders without crashing',() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancer />)}); test('handles user interactions',() => { render(<AccessibilityEnhancer />)}); test('applies correct styling',() => { render(<AccessibilityEnhancer />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -16,6 +17,7 @@ describe('AccessibilityEnhancer', () => {
   });
 });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   test('displays correct content', () => {
     render(<AccessibilityEnhancer />);
     // Add specific content tests based on component
@@ -65,3 +67,4 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 ursor/automate-test-improve-and-merge-code-646c
 });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -8,6 +8,8 @@ const React,{ useState,useEffect,useCallback } from";react" import { motion,Anim
 
 <
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
 :src.disabled/components/unused/ContentQualityEnhancer.js.jsx
 const React,{ useState,useEffect,useCallback } from";react" import { motion,AnimatePresence } from";";framer-motion" import { DocumentTextIcon,CheckCircleIcon,ExclamationTriangleIcon,InformationCircleIcon,WrenchScrewdriverIcon,XMarkIcon,ArrowPathIcon } from";";@heroicons/react/24/outline" export: const ContentQualityEnhancer = ({ className = "";";,showAnalysis: "= true",autoAnalyze = true,targetElements = ["p"";,"h1";";,"h2";";,"h3";";,"h4";";,"h5";";,"h6";";,"div[class*="content"]";";,"article";";,"section";";] }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState("overview";";) const [selectedElement,setSelectedElement] = useState(null)""";] }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState("overview";) const [selectedElement,setSelectedElement] = useState(null)"'"'"
 
@@ -19,3 +21,4 @@ const React,{ useState,useEffect,useCallback } from";react" import { motion,Anim
 ursor/automate-test-improve-and-merge-code-646c
 =
 >import _React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { DocumentTextIcon,CheckCircleIcon,ExclamationTriangleIcon,InformationCircleIcon,WrenchScrewdriverIcon,XMarkIcon,ArrowPathIcon } from';';@heroicons/react/24/outline' "export": const ContentQualityEnhancer = ({ className = '';';,"showAnalysis": '= true',autoAnalyze = true,targetElements = ['p'';,'h1';';,'h2';';,'h3';';,'h4';';,'h5';';,'h6';';,'div[class*='content']';';,'article';';,'section';';] }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [selectedElement,setSelectedElement] = useState(null)''';] }) => { const [isOpen,setIsOpen] = useState(false) const [analysis,setAnalysis] = useState(null) const [isAnalyzing,setIsAnalyzing] = useState(false) const [activeTab,setActiveTab] = useState('overview';) const [selectedElement,setSelectedElement] = useState(null)'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

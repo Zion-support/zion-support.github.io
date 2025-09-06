@@ -60,6 +60,10 @@ function EnhancedHomePage() {
 
 
 
+  )
+}
+
+
 export default function EnhancedHomePage() {
   return (
     <div className='container mx-auto px-4 py-10'>

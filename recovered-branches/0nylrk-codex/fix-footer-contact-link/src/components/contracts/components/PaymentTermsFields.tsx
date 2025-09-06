@@ -16,6 +16,7 @@ import { UseFormReturn } from "react-hook-form",
 
 
 
+
 import { 
   FormField;
   FormItem;
@@ -217,6 +218,25 @@ export function PaymentTermsFields({;
               <FormLabel > Payment Terms</FormLabel>;
               <Select onValueChange={field.on_change} default_value={field.value}>;
 
+                <FormControl>;
+                  <SelectTrigger>;
+                    <SelectValue placeholder="Select payment terms" />;
+                  </SelectTrigger>;
+                </FormControl>;
+                <SelectContent>;
+                  <SelectItem value="hourly">Hourly Rate</SelectItem>;
+                  <SelectItem value="fixed">Fixed Price</SelectItem>;
+                  <SelectItem value="milestone">Milestone Payments</SelectItem>;
+                </SelectContent>;
+              </Select>;
+              <FormMessage />;
+        <FormField
+          control={form && form.control}
+          name="paymentAmount"
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Payment Amount</FormLabel>;
+              <FormControl>;
                   "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
               </FormDescription>;
               <FormMessage />;
@@ -349,6 +369,7 @@ export function PaymentTermsFields({;
     </>);
 }
 
+  ),;}
   ),;}
   FormField;
 FormItem;

@@ -10,6 +10,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue
+  SelectValue
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react";
@@ -29,12 +30,28 @@ import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
 
 
+type ResumeStep = "basics" | "experience" | "education" | "skills",
+
+export function MobileResumeBuilder() {;
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
+export function MobileResumeBuilder() {
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
+  
+  const renderStepContent = () => {
+    switch (currentStep) {
+          <Textarea
+            id="summary"
+            placeholder="Write a brief summary about yourself"
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
             rows={4}
           />
         </div>
       </CardContent>
     </Card>
   );
+  )
 }
           <Textarea 
             id="summary" 
@@ -121,6 +138,9 @@ export function MobileResumeBuilder() {;
           className="flex-1 rounded-full";
 
 
+        <Button
+          variant={currentStep === "experience" ? "default" : "outline"}
+          className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
         >;
           Experience;
@@ -131,12 +151,171 @@ export function MobileResumeBuilder() {;
           className="flex-1 rounded-full";
 
 
+        <Button
+          variant={currentStep === "education" ? "default" : "outline"}
+          className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
         >;
           Education;
         </Button>;
 
 
+      {renderStepContent()}
+
+      <Button className="w-full flex gap-2" size="lg">
+        <Zap className="h-5 w-5" /> Enhance with AI
+      </Button>
+
+      <Button variant="default" className="w-full" size="lg">
+        Save & Preview
+      </Button>
+    </div>
+  );
+}
+
+function BasicsStep() {;
+  return (
+    <Card>
+      <CardContent className="p-4 space-y-4">
+        <div className="space-y-2">
+          <Label htmlFor="title">Resume Title</Label>
+          <Input id="title" placeholder="e.g. Senior Frontend Developer" />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="fullName">Full Name</Label>
+          <Input id="fullName" placeholder="Your full name" />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="email">Email Address</Label>
+          <Input id="email" type="email" placeholder="you@example.com" />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="phone">Phone Number</Label>
+          <Input id="phone" placeholder="Your phone number" />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="location">Location</Label>
+          <Input id="location" placeholder="City, Country" />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="summary">Professional Summary</Label>
+          <Textarea
+            id="summary"
+            placeholder="Write a brief summary about yourself"
+            rows={4}
+          />
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+
+function ExperienceStep() {
+  const [experiences, setExperiences] = useState([{ id: "1" }]);
+
+  const addExperience = () => {
+    const newId = (experiences.length + 1).toString();
+    setExperiences([...experiences, { id: newId }]);
+  };
+
+  const removeExperience = (id: string) => {
+    setExperiences(experiences.filter((exp) => exp.id !== id));
+  };
+
+  return (
+    <div className="space - y-6 px - 4 pb - 24">;
+      <div className="flex justify - between px - 1 py - 2 overflow - x-auto hide - scrollbar">;
+        <Button;
+          variant={current_step === "basics" ? "default" : "outline"}
+          className="flex - 1 rounded - full";
+          on_click={() => setCurrentStep ("basics")}
+        >;
+          Basics;
+        </Button>;
+        <Button;
+          variant={current_step === "experience" ? "default" : "outline"}
+          className="flex - 1 rounded - full";
+          on_click={() => setCurrentStep ("experience")}
+        >;
+          Experience;
+        </Button>;
+        <Button;
+          variant={current_step === "education" ? "default" : "outline"}
+          className="flex - 1 rounded - full";
+          on_click={() => setCurrentStep ("education")}
+        >;
+          Education;
+        </Button>;
+        <Button;
+          variant={current_step === "skills" ? "default" : "outline"}
+          className="flex - 1 rounded - full";
+          on_click={() => setCurrentStep ("skills")}
+        >;
+          Skills;
+        </Button>;
+      </div>;
+      {renderStepContent ()}
+      <Button className="w - full flex gap - 2" size="lg">;
+        <Zap className="h - 5 w - 5" /> Enhance with AI;
+      </Button>;
+      <Button variant="default" className="w - full" size="lg">;
+        Save & Preview;
+      </Button>;
+    </div>);
+}
+/**
+ * BasicsStep - Function description
+ */
+function BasicsStep() {
+  return (
+    <Card>;
+      <CardContent className="p - 4 space - y-4">;
+        <div className="space - y-2">;
+          <Label html_for="title">Resume Title</Label>;
+          <Input id="title" placeholder="e.g. Senior Frontend Developer" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="full_name">Full Name</Label>;
+          <Input id="full_name" placeholder="Your full name" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="email">Email Address</Label>;
+          <Input id="email" type="email" placeholder="you@example.com" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="phone">Phone Number</Label>;
+          <Input id="phone" placeholder="Your phone number" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="location">Location</Label>;
+          <Input id="location" placeholder="City, Country" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="summary">Professional Summary</Label>;
+          <Textarea;
+            id="summary";
+            placeholder="Write a brief summary about yourself";
+            rows={4}
+          />;
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+/**
+ * ExperienceStep - Function description
+ */
+function ExperienceStep() {
+  const [experiences, set_experiences] = useState ([{ id: '1' }]),
+  const add_experience = () =>: any {
+    const new_id = (experiences.length + 1).to_string ();
+    set_experiences ([...experiences, { id: new_id }]);
+  }
+;
+  const remove_experience = (id: string) =>: any {
+    set_experiences (experiences.filter (exp => exp.id !== id));
+  }
+;
   return (
     <div className="space - y-4">;
       {experiences.map ((exp, index) => (
@@ -299,6 +478,10 @@ function SkillsStep() {
 
   const updateSkill = (id: string, field: string, value: string) => {
 
+  const [educations, setEducations] = useState([{ id: "1" }]);
+
+  const addEducation = () => {
+  const updateSkill = (id: string, field: string, value: string) => {
     setSkills(
       skills.map((skill) =>
         skill.id === id ? { ...skill, [field]: value } : skill,
@@ -370,6 +553,7 @@ function SkillsStep() {
 function EducationStep() {;
   const [educations, setEducations] = useState([{ id: '1' }]),;
   const addEducation = () => {;
+    const newId = (educations.length + 1).toString();
     const newId = (educations.length + 1).toString();
     setEducations([...educations, { id: newId }]);
   },;
@@ -461,6 +645,9 @@ function SkillsStep() {;
   return (;
 
 
+  ]);
+
+  return (
     <div className="space-y-4">;
       <Card>;
         <CardContent className="p-4">;
@@ -575,3 +762,54 @@ function SkillsStep() {;
 
 
 
+    </div>;
+  ),; import {
+  Select;
+SelectContent;
+SelectItem;
+SelectTrigger;
+type ResumeStep = "basics" | "experience" | "education" | "skills";
+const renderStepContent = () => {
+  switch (currentStep) {
+  case "basics": return <BasicsStep />;
+case "experience": return <ExperienceStep />;
+case "education": return <EducationStep />;
+case "skills": default: return <BasicsStep /> 
+}
+
+}
+
+};
+return (<div className="space-y-6 px-4 pb-24" > <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar" > <Button variant= {
+  currentStep === "basics" ? "default" : "outline" 
+}className="flex-1 rounded-full" onClick= {
+  () => setCurrentStep ("basics") 
+}renderStepContent () 
+}<Button className="w-full flex gap-2" size="lg" > <Zap className="h-5 w-5" /> Enhance with AI </Button> <Button variant="default" className="w-full" size="lg" > Save & Preview </Button> </div>) 
+}function BasicsStep () {
+  return (<Card> <CardContent className="p-4 space-y-4" > <div className="space-y-2" > <Label htmlFor="title" >Resume Title</Label> <Input id="title" placeholder="e.g. Senior Frontend Developer" /> </div> <div className="space-y-2" > <Label htmlFor="fullName" >Full Name</Label> <Input id="fullName" placeholder="Your full name" /> </div> <div className="space-y-2" > <Label htmlFor="email" >Email Address</Label> <Input id="email" type="email" placeholder="you@example.com" /> </div> <div className="space-y-2" > <Label htmlFor="phone" >Phone Number</Label> <Input id="phone" placeholder="Your phone number" /> </div> </div> <div className="space-y-2" > <Label htmlFor="summary" >Professional Summary</Label> <Textarea id="summary" placeholder="Write a brief summary about yourself" rows= {
+  4 
+}/> </div> </CardContent> </Card>) 
+}<Button variant="ghost" size="icon" onClick= {
+  () => removeExperience (exp.id) 
+}> <Trash2 className="h-5 w-5 text-destructive" /> </Button>) 
+}</div> /> </div> </CardContent> </Card>) ) 
+}<Button > <Plus className="h-4 w-4" /> Add Another Experience </Button> </div>) 
+}<Button variant="ghost" size="icon" onClick= {
+  () => removeEducation (edu.id) 
+}> <Trash2 className="h-5 w-5 text-destructive" /> </Button>) 
+}</div> </div> </div> </CardContent> </Card>) ) 
+}<Button > <Plus className="h-4 w-4" /> Add Another Education </Button> </div>) 
+}
+};
+  () => removeSkill (skill.id) 
+}> <Trash2 className="h-4 w-4 text-destructive" /> </Button>) 
+}</div>) ) 
+}<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>) 
+}
+}
+}
+;
+;
+    </div>);
+}

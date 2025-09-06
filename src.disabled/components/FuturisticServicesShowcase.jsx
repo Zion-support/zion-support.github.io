@@ -8,6 +8,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 
 export default function FuturisticServicesShowcase({}: FuturisticServicesShowcaseProps) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+export default function FuturisticServicesShowcase({}: FuturisticServicesShowcaseProps) {
   return (
     <div>
       <h1>FuturisticServicesShowcase</h1>
@@ -31,3 +33,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 :src.disabled/components/FuturisticServicesShowcase.jsx
 }
 }
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/FuturisticServicesShowcase.jsx
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

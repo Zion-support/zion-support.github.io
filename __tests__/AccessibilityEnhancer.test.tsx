@@ -24,6 +24,7 @@ describe('AccessibilityEnhancer'
     fireEvent.keyDown(element, { "key";
     fireEvent.keyDown(element, { "key"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 describe('AccessibilityEnhancer', () => {
@@ -109,3 +110,5 @@ describe('AccessibilityEnhancer'
     fireEvent.keyDown(element, { "key";
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

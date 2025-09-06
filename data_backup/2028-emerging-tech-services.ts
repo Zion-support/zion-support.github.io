@@ -746,6 +746,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 export interface EmergingTech2028Service {
   "id": string;
   name: string;
@@ -2202,3 +2203,4 @@ reviews: number;export const emergingTech2028Services: EmergingTech2028Service[]
 ]}}
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

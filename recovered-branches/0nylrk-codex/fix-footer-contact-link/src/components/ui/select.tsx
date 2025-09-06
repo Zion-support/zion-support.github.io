@@ -1,4 +1,9 @@
 
+import * as React from "react"
+import * as SelectPrimitive from "@radix-ui/react-select"
+import { Check, ChevronDown, ChevronUp } from "lucide-react"
+
+import { cn } from "@/lib/utils"
 
 const Select = SelectPrimitive.Root
 const SelectGroup = SelectPrimitive.Group
@@ -63,6 +68,7 @@ const SelectScrollUpButton = React.forwardRef<
     <ChevronUp className="h-4 w-4" />
 
 
+    <ChevronUp className="h-4 w-4" />
   </SelectPrimitive.ScrollUpButton>
 ))
 SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName
@@ -89,6 +95,7 @@ const SelectScrollDownButton = React.forwardRef<
     <ChevronDown className="h-4 w-4" />
 
 
+    <ChevronDown className="h-4 w-4" />
   </SelectPrimitive.ScrollDownButton>
 ))
 SelectScrollDownButton.displayName =
@@ -100,6 +107,7 @@ const SelectContent = React.forwardRef<
 >(({ className, children, position = "popper", ...props }, ref) => (
 
 
+>(({ className, children, position = "popper", ...props }, ref) => (
   <SelectPrimitive.Portal>
     <SelectPrimitive.Content
       ref={ref}
@@ -139,6 +147,7 @@ const SelectContent = React.forwardRef<
         )}
 
 
+        )}
 import * as React from &quot;react & quot;
 import * as SelectPrimitive from &quot;@radix - ui / react - select & quot;
 import { Check, ChevronDown, ChevronUp } from &quot;lucide-react & quot;
@@ -312,6 +321,14 @@ const SelectContent = React.forwardRef<;
             "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]";
 
 
+        )}
+          &quot;p-1&quot;
+          position === &quot;popper&quot; &&
+            &quot;h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]&quot;
+          "p-1",
+          position === "popper" &&
+            "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
+        )}
       >;
         {children}
       </SelectPrimitive.Viewport>;
@@ -332,6 +349,8 @@ const SelectLabel = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
 
 
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
+>(({ className, ...props }, ref) => (;
   </SelectPrimitive.Portal>));
 SelectContent.display_name = SelectPrimitive.Content.display_name;
 const SelectLabel = React.forward_ref<;
@@ -363,6 +382,7 @@ const SelectItem = React.forwardRef<;
 
 
   React.ElementRef<typeof SelectPrimitive.Item>;
+
   React.ElementRef<typeof SelectPrimitive.Item>,;
 
 
@@ -371,6 +391,24 @@ const SelectItem = React.forwardRef<;
   <SelectPrimitive.Item;
     ref={ref}
 
+
+      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+
+
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+
+      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
       className
     )}
@@ -382,6 +420,9 @@ const SelectItem = React.forwardRef<;
         <Check className="h-4 w-4" />
 
 
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+      <SelectPrimitive.ItemIndicator>
+        <Check className="h-4 w-4" />
       </SelectPrimitive.ItemIndicator>
     </span>
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
@@ -400,6 +441,35 @@ const SelectSeparator = React.forwardRef<
     {...props}
 
 
+  />));
+SelectLabel.display_name = SelectPrimitive.Label.display_name;
+const SelectItem = React.forward_ref<;
+  React.ElementRef < typeof SelectPrimitive.Item>,
+  React.ComponentPropsWithoutRef < typeof SelectPrimitive.Item>;
+>(({ class_name, children, ...props }, ref) => (
+  <SelectPrimitive.Item;
+    ref={ref}
+className={cn (
+      &quot;relative flex w - full cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      class_name)}
+    {...props}
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <SelectPrimitive.ItemIndicator>;
+        <Check className=&quot;h - 4 w - 4&quot; />;
+      </SelectPrimitive.ItemIndicator>;
+    </span>;
+    <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>;
+  </SelectPrimitive.Item>));
+SelectItem.display_name = SelectPrimitive.Item.display_name;
+const SelectSeparator = React.forward_ref<;
+  React.ElementRef < typeof SelectPrimitive.Separator>,
+  React.ComponentPropsWithoutRef < typeof SelectPrimitive.Separator>;
+>(({ class_name, ...props }, ref) => (
+  <SelectPrimitive.Separator;
+    ref={ref}
+    className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
+    {...props}
   />));
 SelectSeparator.display_name = SelectPrimitive.Separator.display_name;
 export {

@@ -18,6 +18,7 @@
   },
   // Output configuration;
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   // Image optimization
   images: {
     domains: [
@@ -30,6 +31,7 @@
   },
 
   // Output configuration
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   output: 'standalone',
 
   // Trailing slash
@@ -44,6 +46,7 @@
   distDir: '.next'
 };
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -64,6 +67,7 @@
 
 
 module.exports = nextConfig;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 module.exports = nextConfig;
 module.exports = nextConfig;

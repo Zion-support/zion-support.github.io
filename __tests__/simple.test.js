@@ -26,6 +26,7 @@ describe('Simple Test', () => {
     expect(1 + 1).toBe(2);
   });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   });
 });
 ursor/automate-test-improve-and-merge-code-646c

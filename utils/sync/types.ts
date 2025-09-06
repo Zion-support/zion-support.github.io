@@ -24,6 +24,8 @@ export interface InstanceConfig {
 ;
 
 
+}
+;
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
@@ -45,6 +47,23 @@ export interface BaseEventPayload {;
   timestamp: number;
 
 
+  fromNation: string;
+  toNation: string;
+  role: string;
+  startDate: string;
+  endDate?: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface DaoEndorsementPayload extends BaseEventPayload {;
+  fromDAO: string;
+  toDAO: string;
+  resolutionId: string;
+  decision: "endorse" | "reject",;
+  timestamp: number;
 
   } catch (error) {
     console.error("Error:", error);
@@ -68,6 +87,10 @@ export interface TalentMobilityPayload extends BaseEventPayload {;
 export interface BaseEventPayload {
   id: string;
 
+export interface LeaderboardEntryPayload extends BaseEventPayload {;
+  subjectId: string, // userId or teamId;
+}
+;
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
@@ -109,3 +132,17 @@ export interface MultiverseState {
 }
 
 
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface MultiverseState {;
+  config: InstanceConfig,;

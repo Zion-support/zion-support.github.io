@@ -897,6 +897,8 @@ ursor/automate-test-improve-and-merge-code-646c
                 }`}
               >
 
+                }`}
+              >
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -909,6 +911,7 @@ export default function AdminDeployPage() {;
     event.preventDefault(),;
     setLoading(true),;
     setMessage(null),;
+    const formData = new FormData(event.currentTarget);
     const formData = new FormData(event.currentTarget);
     const features: Record<string boolean> = {},;
     FeatureKeys.forEach((k) => (features[k] = formData.get(k) === "on")),;
@@ -931,6 +934,7 @@ export default function AdminDeployPage() {;
           affiliatePanel: formData.get("affiliatePanel") === "on"}},;
     try {;
       const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) });
+      const res = await fetch("/api/deploy", { method: "POST", body: JSON.stringify(payload) }),;
       const data = await res.json(),;
       if (!res.ok) {;
         setMessageType('error'),;

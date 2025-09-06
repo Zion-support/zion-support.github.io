@@ -2,6 +2,7 @@
 
 export function extractClientIp(req: NextApiRequest): string | null {
 
+export function extractClientIp(req: NextApiRequest): string | null {
   const xff = (req.headers['x-forwarded-for'] as string) |'';
 
 export function extractClientIp(req: NextApiRequest): string | null {;
@@ -13,12 +14,28 @@ export function extractClientIp(req: NextApiRequest): string | null {;
     (req.socket?.remoteAddress ?? null);
   if (!ip) return null;
   if (ip.startsWith("::ffff:")) return ip.substring(7);
+    (req.socket?.remoteAddress ?? null);
+  if (!ip) return null;
+  if (ip.startsWith('::ffff:')) return ip.substring(7);
   return ip;
 }
 export function getClientIp(req: any): string {
 
 
 export function getClientIp(req: any): string {;
+
+
+export function getClientIp(req: any): string {;
+
+
+import type { NextApiRequest } from 'next';
+  
+  if (forwarded) {
+    return Array && Array.isArray(forwarded) ? forwarded[0] : forwarded && forwarded.split(',')[0].trim();
+  }
+  
+  return remoteAddress || 'unknown';
+export function getClientIp(req: any): string {
 
 
   const forwarded = req.headers['x-forwarded-for'];

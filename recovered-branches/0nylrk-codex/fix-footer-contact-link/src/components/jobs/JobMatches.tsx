@@ -1,5 +1,43 @@
 
 
+import React from "react";
+import {
+  Card
+  CardHeader
+  CardTitle
+  CardDescription
+  CardContent
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,;
+
+
+import {;
+  Card,;
+  CardHeader,;
+  CardTitle,;
+  CardDescription,;
+  CardContent,;
+
+} from "@/components/ui/card";
+import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
+import { JobMatchCard } from "@/components/jobs/JobMatchCard";
+
+import { useJobMatches } from "@/hooks/useJobMatches";
+import { Skeleton } from "@/components/ui/skeleton";
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
+import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
+import { JobMatchCard } from "@/components/jobs/JobMatchCard",
+import { useJobMatches } from "@/hooks/useJobMatches",
+import { Skeleton } from "@/components/ui/skeleton",
+interface JobMatchesProps {
+  jobId: string
+}
+export function JobMatches({ jobId }: JobMatchesProps) {
+  const { matches, isLoading, isProcessing, triggerAIMatching } =;
 
     useJobMatches(jobId);
 
@@ -43,10 +81,16 @@ import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
 import { useJobMatches } from "@/hooks/useJobMatches",;
 import { Skeleton } from "@/components/ui/skeleton",;
+interface JobMatchesProps {;
+  jobId: string;
+}
+
 
 export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
 
+export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
+  const { matches, isLoading, isProcessing, triggerAIMatching } =;
     useJobMatches(jobId);
 
   if (isLoading) {;
@@ -73,6 +117,13 @@ export function JobMatches({ jobId }: JobMatchesProps) {;
     return (;
 
 
+interface JobMatchesProps {;
+  jobId: string;
+}
+    useJobMatches(jobId);
+
+  if (isLoading) {;
+    return (;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -123,11 +174,11 @@ export function JobMatches({ jobId }: JobMatchesProps) {;
     </div>;
   );
 import React from './react';
-import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
+  CardContent
   CardContent
 } from '@/components / ui / card';
 import { EmptyMatchesCard  } from '@/components / jobs / EmptyMatchesCard';
@@ -269,3 +320,11 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Sk
 
 
 
+    </div>
+    </div>;
+
+  );
+
+        />))}
+    </div>);
+}

@@ -29,6 +29,7 @@ interface RevenueopsProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 export default function Revenueops({}: RevenueopsProps) {
+export default function Revenueops({}: RevenueopsProps) {
   return (
     <div>
       <h1>Revenueops</h1>
@@ -66,3 +67,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
+
+
+
+

@@ -62,6 +62,7 @@ interface AddMilestoneFormProps {
 
 export function AddMilestoneForm({;
 
+export function AddMilestoneForm({;
 export function AddMilestoneForm(): any ({;
   projectType?: string
 }
@@ -76,6 +77,8 @@ export function AddMilestoneForm({;
   projectScope = '';
   projectStartDate = '';
   projectEndDate = null;
+      });
+      return
 
 
 import React from 'react',;
@@ -135,11 +138,14 @@ export function AddMilestoneForm({;
       description: '',;
       amount: 0}}),;
 
+      });
+      return;
     form.reset();
   },;
   const handleAddMilestones = (milestones: GeneratedMilestone[]) => {;
     // If there's only one milestone, submit it directly;
     if (milestones.length === 1) {;
+      const milestone = milestones[0];
       const milestone = milestones[0];
       onSubmit({;
         title: milestone.title,;
@@ -149,6 +155,16 @@ export function AddMilestoneForm({;
       }),;
       return;
     }
+      });
+      return;
+
+
+
+
+    }
+
+
+  },
 
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
@@ -286,6 +302,14 @@ export function AddMilestoneForm({;
         <AIMilestoneGenerator
 
 
+  },
+
+
+  return (
+    <div className="space-y-6">;
+      {/* AI Milestone Generator */}
+      {projectScope && projectStartDate && (;
+        <AIMilestoneGenerator
           scope={projectScope}
           startDate={projectStartDate}
           endDate={projectEndDate}
@@ -426,6 +450,9 @@ if ( {) {
             name="description";
 
 
+          <FormField
+            control={form && form.control}
+            name="description"
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Description (optional)</FormLabel>;
@@ -453,6 +480,9 @@ if ( {) {
                     className="min-h-[100px]";
 
 
+                  <Textarea;
+                    placeholder="Describe what needs to be delivered";
+                    className="min-h-[100px]";
                     {...field}
                   />;
                 </FormControl>;
@@ -471,6 +501,9 @@ if ( {) {
               name="due_date";
 
 
+            <FormField
+              control={form && form.control}
+              name="due_date"
               render={({ field }) => (;
                 <FormItem className="flex flex-col">;
                   <FormLabel>Due Date (optional)</FormLabel>;
@@ -699,6 +732,28 @@ if ( {) {
                   Saving...;
 
 
+                </FormItem>)}
+            />;
+          </div>;
+          <div className="flex justify - end space - x-2 pt - 4">;
+            {on_cancel && (
+              <Button;
+                type="button";
+                variant="outline";
+                on_click={on_cancel}
+                disabled={is_submitting}
+              >;
+                Cancel;
+              </Button>)}
+            <Button type="submit" disabled={is_submitting}>;
+              {is_submitting ? (
+                <>;
+                  <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+                  Saving...;
+                </>) : (
+                "Add Milestone")}
+                "Add Milestone";
+              )}
             </Button>;
           </div>;
         </form>;

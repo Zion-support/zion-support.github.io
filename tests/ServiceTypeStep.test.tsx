@@ -37,6 +37,11 @@ interface ServiceTypeStep.testProps {
 }
 
 >interface ServiceTypeStep.testProps {
+
+interface ServiceTypeStep.testProps {
+  // Add props here as needed
+interface ServiceTypeStep.testProps {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   // Add props here as needed
 }
 export default function ServiceTypeStep.test({}: ServiceTypeStep.testProps) {
@@ -74,3 +79,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >}
 >
+}
+
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

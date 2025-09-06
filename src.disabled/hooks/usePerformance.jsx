@@ -7,3 +7,4 @@ import { useEffect,useRef,useState } from';react' "export": function usePerforma
 const { useEffect,useRef,useState } from";react" export: function usePerformance() { const [metrics,setMetrics] = useState({ fcp: "nul",l,lcp: "nul",l,fid: "nul",l,cls: "nul",l,ttfb: "nul",l,domLoad: "nul",l,windowLoad: "null"}) const [observers,setObservers] = useState([]) const observerRef = useRef(null) useEffect(() => {"";'"'"
 src && src.disabled/hooks/
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -21,6 +21,23 @@ export interface ErrorCode {
 
 export interface EndpointSpec {
 
+export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+
+export interface CodeSample {;
+  language: 'curl' | 'javascript' | 'python';
+  code: string;
+
+export interface RateLimitInfo {;
+  tier: 'free' | 'partner' | 'internal';
+  limitPerMinute: number;
+  burst?: number;
+
+export interface ErrorCode {;
+  code: string;
+  httpStatus: number;
+  message: string;
+
+export interface EndpointSpec {;
   id: string;
   title: string;
   description: string;
@@ -40,6 +57,10 @@ export interface EndpointSpec {
   versions: string[]; // e && e.g., ['v1'] or ['v1','v2']
 
 
+export interface SectionSpec {
+  versions: string[]; // e.g., ['v1'] or ['v1','v2']
+
+export interface SectionSpec {;
 
   id: string;
   title: string;
@@ -62,6 +83,29 @@ export type Visibility = 'public' | 'partner' | 'internal';
 export interface CodeSample {
   language: 'curl' | 'javascript' | 'python'
   code: string
+export type Visibility = 'public' | 'partner' | 'internal';
+;
+export interface CodeSample {
+  language: 'curl' | 'javascript' | 'python',
+  code: string;
+}
+export interface RateLimitInfo {
+  tier: 'free' | 'partner' | 'internal', limitPerMinute: number,
+  burst?: number;
+}
+export interface ErrorCode {
+  code: string, http_status: number,
+  message: string;
+}
+export interface EndpointSpec {}
+
+
+}
+}
+}
+}
+}
+}
 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
 export type Visibility = 'public' | 'partner' | 'internal',;

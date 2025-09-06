@@ -13,6 +13,7 @@ export const useResumeProgress = (resume: Resume | null) => {
     }
 
 
+    let completed = 0;
 
     // Basic info is always considered (1 point)
     completed += 1;
@@ -45,6 +46,8 @@ export const useResumeProgress = (resume: Resume | null) => {
 
 
 
+  return progress;
+  return progress;
 };
 
 import { useState, useEffect } from 'react',;
@@ -85,6 +88,7 @@ export const useResumeProgress = (resume:Resume | null) => {;
       completed += 1,;
     }
     ;
+    const progressPercentage = (completed / 5) * 100;
     const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage),;
   }, [resume]),;

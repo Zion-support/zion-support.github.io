@@ -57,6 +57,8 @@ import {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+  Target;
+
 } from 'lucide-react';
 export default function ITServices() {
   const title = 'IT Services — Zion Tech Group';
@@ -4802,6 +4804,8 @@ export default function ITServices() {;
 >>>>>>> origin/main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+  ];
+  const technologies = [{ "name": 'Cloud Platforms', "icon": Clou d, "description": 'AWS, Azure, GCP, DigitalOcean' };
   ];
   const technologies = [{ "name": 'Cloud Platforms', "icon": Clou d, "description": 'AWS, Azure, GCP, DigitalOcean' };
     { "name": 'Containerization', "icon": Serve r, "description": 'Docker, Kubernetes, OpenShift' },;

@@ -5,6 +5,12 @@ import {MessageSquare} from "lucide-react";
 
 
 
+import { Link, useLocation } from "react-router-dom",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth",
+import { MessageSquare } from "lucide-react",
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
@@ -21,12 +27,6 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
 
 
 
-import { Link, useLocation } from "react-router-dom",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth",
-import { MessageSquare } from "lucide-react",
 
 
 interface MainNavigationProps {
@@ -150,6 +150,98 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   }
 
 
+  return (
+    <nav className={cn("ml-6 hidden md:flex", className)}>
+      <ul className="flex items-center gap-1">
+        {links.map((link) => (
+          <li key={link.name}>
+            <Link
+              to={link.href}
+              className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+                link.matches(location.pathname)
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+import { Link, useLocation } from "react-router-dom",;
+import { cn } from "@/lib/utils",;
+import { useAuth } from "@/hooks/useAuth",;
+import { MessageSquare } from "lucide-react",;
+interface MainNavigationProps {;
+  isAdmin?: boolean,;
+  unreadCount?: number,;
+  className?: string;
+}
+;
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
+  const { user } = useAuth(),;
+  const isAuthenticated = !!user;
+  const location = useLocation(),;
+  const links = [;
+    {;
+      name: "Home",;
+      href: "/",;
+      matches: (path: string) => path === "/";
+      name: "Dashboard",;
+      href: "/dashboard",;
+      matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard";
+    });
+  }
+  return (
+    <nav className={cn("ml-6 hidden md:flex", className)}>;
+      <ul className="flex items-center gap-1">;
+
+        {links && links.map((link) => (;
+          <li key={link && link.name}>;
+            <Link
+              to={link && link.href}
+              className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors"
+                link && link.matches(location && location.pathname)
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}>;
+              {link && link.name}
+        {links.map((link) => (;
+          <li key={link.name}>;
+            <Link;
+              to={link.href}
+              className={cn(;
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
+                link.matches(location.pathname);
+                  ? "bg-zion-purple/20 text-zion-cyan";
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+        ))}
+
+
+
+        {/* Messages link with unread counter */}
+        {isAuthenticated && (;
+          <li>;
+            <Link
+              to="/messages"
+              className={cn(
+
+
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
+                location && location.pathname === "/messages" || location && location.pathname === "/inbox"
+
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
+                location.pathname === "/messages" || location.pathname === "/inbox"
+
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}>;
+              )}
+            >
+              {link.name}
+            </Link>
+          </li>
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",;
+                link.matches(location.pathname);
+                  ? "bg-zion-purple/20 text-zion-cyan";
+                  :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";              )}
+            >;
+              {link.name}
             </Link>;
           </li>;
         ))}
@@ -178,6 +270,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         )}
 
 
+                </span>;
+              )}
+            </Link>;
+          </li>;
+        )}
 import { Link, use_location } from './react-router-dom';
 import { cn } from '@/lib / utils';
 import { use_auth } from '@/hooks / use_auth';
@@ -333,6 +430,8 @@ href: "/community";
 matches: (path: string) => path.startsWith ("/community") || path.startsWith ("/forum") 
 }];
 //Add authenticated-only links if (isAuthenticated) {
+  links.push ({}//Add admin-only links if (isAdmin) {
+  links.push ({}return (<nav className= {
   links.push ({}//Add admin-only links if (isAdmin) {
   links.push ({}return (<nav className= {
   cn ("ml-6 hidden md:flex", className) 

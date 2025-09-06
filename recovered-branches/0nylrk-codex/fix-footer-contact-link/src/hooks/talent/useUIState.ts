@@ -83,6 +83,8 @@ function useUIState() {
     setIsHireModalOpen;
 
 
+    selected_talent;
+    setSelectedTalent;
 import { useState } from 'react',;
 import { TalentProfile } from '@/types/talent',;
 export function useUIState() {;
@@ -168,3 +170,19 @@ export function useUIState() {;
 }
 
 
+    expandedSections;
+    toggleSection;
+
+    expandedSections;
+    toggleSection;
+
+    expanded_sections;
+    toggle_section;
+    closeMobileFilter}
+    expandedSections;
+    toggleSection;
+
+    expanded_sections;
+    toggle_section;
+    closeMobileFilter}
+}

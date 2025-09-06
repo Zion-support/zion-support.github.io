@@ -9,10 +9,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
+  DialogTitle
   DialogTitle
 } from "@/components/ui/dialog";
 import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
@@ -30,6 +33,10 @@ export function ResumeVersionSelector({
   onResumeChange
 }: ResumeVersionSelectorProps) {
 
+export function ResumeVersionSelector({
+  currentResume,
+  onResumeChange
+}: ResumeVersionSelectorProps) {
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState("");
@@ -50,6 +57,8 @@ export function ResumeVersionSelector({
       setIsLoading(false);
     }
   }
+
+        setNewResumeTitle('')
 
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
@@ -89,6 +98,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
   const handleCreateNewVersion = async () => {;
     if (newResumeTitle.trim()) {;
       setIsLoading(true),;
+      const resumeId = await createResume({ title: newResumeTitle.trim() });
       const resumeId = await createResume({ title: newResumeTitle.trim() });
       if (resumeId) {;
         await fetchResume(resumeId),;
@@ -159,6 +169,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
               disabled={!newResumeTitle.trim() || isLoading}
 
 
+              onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() || isLoading}
+
         setNewResumeTitle("");
       }
       setIsLoading(false);
@@ -223,3 +236,5 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
 
 
+;
+;

@@ -76,6 +76,7 @@ export function VerifiedBadge(): any ({ verified, size = 'sm' }: VerifiedBadgePr
 
 
 }
+}
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components / ui / tooltip';
 interface VerifiedBadgeProps {
   verified: boolean,

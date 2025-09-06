@@ -3,24 +3,33 @@
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 
+
+
+
+
+const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'>) => (;
+import React from 'react';
+import * as React from 'react';
+import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
+const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'>) => (;
   <nav
     role='navigation'
     aria-label='pagination'
     className={cn('mx-auto flex w-full justify-center', className)}
     {...props}
 
-import * as React from 'react';
-import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
 
 import {cn} from '@/lib/utils';
 import {ButtonProps, buttonVariants} from '@/components/ui/button';
 const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
 
 
+const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
+
+
 
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
-import React from 'react';
   <nav
     role='navigation'
     aria-label='pagination'
@@ -48,6 +57,34 @@ const PaginationContent = React.forwardRef<
     {...props}
 
 
+Pagination && Pagination.displayName = 'Pagination';
+
+const PaginationContent = React && React.forwardRef<;
+  HTMLUListElement,;
+  React && React.ComponentProps<'ul'>;
+>(({ className, ...props }, ref) => (;
+  <ul
+;
+import {cn} from '@/lib / utils';
+import {ButtonProps, button_variants} from '@/components / ui / button';
+;
+const Pagination = ({ class_name, ...props }: React.ComponentProps<'nav'>) =>: any (
+  <nav;
+    role='navigation';
+    aria - label='pagination';
+    className={cn ('mx - auto flex w - full justify - center', class_name)}
+    {...props}
+  />);
+Pagination.display_name = 'Pagination';
+;
+const PaginationContent = React.forward_ref<;
+  HTMLUListElement,
+  React.ComponentProps<'ul'>;
+>(({ class_name, ...props }, ref) => (
+  <ul;
+    ref={ref}
+    className={cn ('flex flex - row items - center gap - 1', class_name)}
+    {...props}
   />));
 PaginationContent.display_name = 'PaginationContent';
 ;
@@ -67,6 +104,34 @@ type PaginationLinkProps = {
 
 >(({ className, ...props }, ref) => (
 
+  <ul
+    ref={ref}
+    className={cn('flex flex-row items-center gap-1', className)}
+    {...props}
+  />
+
+))
+PaginationContent.displayName = "PaginationContent"
+
+const PaginationItem = React.forwardRef<
+  HTMLLIElement,
+  React.ComponentProps<"li">
+>(({ className, ...props }, ref) => (
+  <li ref={ref} className={cn("", className)} {...props} />
+))
+PaginationItem.displayName = "PaginationItem"
+
+type PaginationLinkProps = {
+  isActive?: boolean
+} & Pick<ButtonProps "size"> &
+  React.ComponentProps<"a">
+
+const PaginationLink = ({
+  className,
+  isActive,
+  size = "icon",
+  ...props
+}: PaginationLinkProps) => (
 PaginationContent && PaginationContent.displayName = 'PaginationContent';
 
 const PaginationItem = React && React.forwardRef<;
@@ -76,6 +141,7 @@ const PaginationItem = React && React.forwardRef<;
   <li ref={ref} className={cn('', className)} {...props} />;
 ));
 PaginationItem && PaginationItem.displayName = 'PaginationItem';
+type PaginationLinkProps = {
 type PaginationLinkProps = {
   isActive?: boolean;
 } & Pick<ButtonProps, 'size'> &;
@@ -276,6 +342,7 @@ const PaginationEllipsis = ({;
     aria-hidden
 
 
+PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
@@ -340,6 +407,7 @@ const PaginationLink = ({
     className={cn (
       button_variants ({
         variant: is_active ? 'outline' : 'ghost',
+        size
         size
       }),
       class_name)}
@@ -536,3 +604,6 @@ PaginationEllipsis.displayName = "PaginationEllipsis";
 ;
 
 
+  PaginationPrevious
+}
+;

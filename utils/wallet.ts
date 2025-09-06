@@ -33,6 +33,19 @@ export async function connectMetaMask(): Promise<string[]> {
       method: "eth_requestAccounts",
       method: 'eth_requestAccounts'
 
+
+  if (typeof window === 'undefined' || !window.ethereum) {;
+
+    throw new Error('MetaMask is not installed');
+  }
+  try {
+export async function connectMetaMask(): Promise<string[]> {
+  if (typeof window === "undefined" || !window.ethereum) {
+    throw new Error("MetaMask is not installed");
+  }
+  try {
+    const accounts = await window.ethereum.request({
+
     const accounts = await window && window.ethereum.request({
 export async function connectMetaMask (): Promise < string[]> {
   // Check condition
@@ -74,6 +87,11 @@ export async function getAccounts(): Promise<string[]> {
   if (typeof window === 'undefined' || !window.ethereum) {;
 
 ursor/fix-website-loading-errors-and-merge-6662
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
+  if (typeof window === 'undefined' || !window.ethereum) {;
+
     return [];
   }
   try {
@@ -92,6 +110,8 @@ if ( {) {
   if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
 >>>>>>> main
+  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
     return [];
   }
   try {
@@ -141,6 +161,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       method: 'eth_getBalance',
       params: [address, 'latest'],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
+  if (typeof window === 'undefined' || !window.ethereum) {;
+
+    throw new Error('MetaMask is not installed');
+  }
+  try {
 export async function getBalance(address: string): Promise<string> {
   if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
@@ -180,6 +209,9 @@ if ( {) {
 
 
 >>>>>>> main
+  }
+}
+
 export async function signMessage(
   message: string,
   address: string,
@@ -227,6 +259,46 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
+  if (typeof window === 'undefined' || !window.ethereum) {;
+
+    throw new Error('MetaMask is not installed');
+  }
+  try {
+      params: [message, address],
+  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
+    throw new Error('MetaMask is not installed');
+  }
+  try {
+    const signature = await window.ethereum.request({
+      method: 'personal_sign'
+      params: [message, address]
+
+    const signature = await window && window.ethereum.request({
+export async function sign_message (message: string, address: string): Promise < string> {
+  // Check condition
+if ( {) {
+  $2
+}
+    throw new Error ('MetaMask is not installed');
+  }
+  try {
+    const signature = await window.ethereum.request ({
+
+      method: 'personal_sign',
+      params: [message, address]
+    });
+    return signature;
+  } catch (error) {
+    throw new Error("Failed to sign message");
+  }
+}
+
+// Extend Window interface for TypeScript;
+
 declare global {
   interface Window {
     ethereum?: {
@@ -270,3 +342,8 @@ ursor/automate-test-improve-and-merge-code-646c
   }
 }
 
+    };
+
+    }
+  }
+}

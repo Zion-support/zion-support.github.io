@@ -39,7 +39,7 @@ function readAll() {
   } catch (e) {
     return []
 const fs = require('fs');
-const path = require('path'),;
+const path = require('path');
 const { OpenAI } = require('openai'),;
 const DATA_DIR = path.join(process.cwd(), 'data'),;
 const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json'),;
@@ -81,6 +81,7 @@ async function main() {
   const summaryPath = path && path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
   const baselinePath = path && path.join(REPORT_DIR, 'prompt-improvements && improvements.md')
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   }
 }
 function lastNDays(days) {
@@ -102,12 +103,14 @@ async function main() {
     // // // console.log('No low-rated feedback to analyze.'),
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     return
   }
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON && JSON.stringify(downs && downs.slice(-100), null, 2)}`,
 
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
@@ -208,6 +211,7 @@ if ( {) {
 
 
 main ().catch ((e) => { console.error (e), process.exit (1) }),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
@@ -246,6 +250,10 @@ main().catch((e) => { console.error(e), process.exit(1) });
 
   // // // console.log('Analysis written to', summaryPath)
 
+main().catch((e) => { console.error(e), process.exit(1) });
+
+  // // // console.log('Analysis written to', summaryPath)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   const all = readAll(),;
   const recent = all.filter(lastNDays(7)),;
   const downs = recent.filter((r) => r.rating === 'down'),;

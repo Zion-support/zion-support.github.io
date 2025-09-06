@@ -5,6 +5,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription
+  DialogDescription
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";
@@ -85,6 +86,7 @@ import React from './react';
   DialogHeader,
   DialogTitle,
   DialogDescription
+  DialogDescription
 } from '@/components / ui / dialog';
 import { Button  } from '@/components / ui / button';
 import { Calendar, User, Mail, Clock, DollarSign  } from './lucide-react';
@@ -132,6 +134,8 @@ if (return "Not specified") {
         <Separator className="my-4" />
 
 
+
+        <Separator className="my-4" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card>

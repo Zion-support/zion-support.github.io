@@ -7,6 +7,13 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
   return (
 
 
+  return (
+
+}) => {
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
+  severity,;
+}) => {;
+  return (
     <SeverityIndicator;
       severity={severity as "safe" | "suspicious" | "dangerous"}
       show_icon={true}
@@ -31,6 +38,8 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
 
 
 
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
+  return (
     <SeverityIndicator
       severity={severity as "safe" | "suspicious" | "dangerous"}
       showIcon={true}

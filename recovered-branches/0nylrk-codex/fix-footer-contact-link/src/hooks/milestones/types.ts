@@ -19,6 +19,8 @@ export interface Milestone {;
 
 
 
+export interface Milestone {;
+export interface Milestone {
   id: string;
   project_id: string;
   title: string;
@@ -32,6 +34,8 @@ export interface Milestone {;
   created_by: string;
   deliverables?: any[];
 
+  created_by: string;
+  deliverables?: any[];
 }
 
 
@@ -41,6 +45,14 @@ export interface MilestoneActivity {;
 
 export interface MilestoneActivity {;
 
+  created_by: string
+  deliverables?: any[]
+}
+export interface MilestoneActivity {
+
+export interface MilestoneActivity {;
+}
+export interface MilestoneActivity {
   id: string;
   milestone_id: string;
   user_id: string;

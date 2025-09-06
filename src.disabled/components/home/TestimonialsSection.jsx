@@ -41,6 +41,8 @@ interface TestimonialsSectionProps {
 ursor/automate-test-improve-and-merge-code-646c
 export default function TestimonialsSection({}: TestimonialsSectionProps) {
 export default function TestimonialsSection({}: TestimonialsSectionProps) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+export default function TestimonialsSection({}: TestimonialsSectionProps) {
   return (
     <div>
       <h1>TestimonialsSection</h1>
@@ -50,6 +52,7 @@ export default function TestimonialsSection({}: TestimonialsSectionProps) {
 ursor/automate-test-improve-and-merge-code-646c
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 :src.disabled/components/home/TestimonialsSection.jsx
 }
@@ -67,3 +70,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 }
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/home/TestimonialsSection.jsx
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

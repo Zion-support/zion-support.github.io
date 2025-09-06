@@ -7,3 +7,4 @@ const React from "react"; export: function Avatar({ children,className = "" }) {
 import React from \'react\'; \"export\": function Avatar({ children,className = \'' }) {\'; \"return\": ( <div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`} >{children} </div> )} export function AvatarImage({ src,alt = \'',className = \'' }) {\'; \"return\": ( 
 import _React from 'react'; "export": function Avatar({ children,className = '' }) {'; "return": ( <div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`} >{children} </div> )} export function AvatarImage({ src,alt = '',className = '' }) {'; "return": ( 
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

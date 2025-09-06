@@ -5,6 +5,7 @@
     // Fix double commas in import statements;
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
 

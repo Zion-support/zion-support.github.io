@@ -23,6 +23,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export default function About({}: AboutProps) {
+
+
+export default function About({}: AboutProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -49,6 +52,10 @@ export default function About(): any ({}: AboutProps) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+interface AboutProps {;
+  // Add props here as needed;
+}
+export default function About(): any ({}: AboutProps) {;
   return (
     <div>
       <h1>About</h1>

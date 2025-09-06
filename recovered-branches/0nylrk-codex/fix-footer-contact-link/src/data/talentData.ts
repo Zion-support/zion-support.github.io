@@ -23,6 +23,10 @@ export const TALENT_PROFILES: TalentProfile[] = [
   {
 
 
+      {}
+    ]
+  },
+  {
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
     user_id: 'user - 006',
@@ -43,6 +47,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Compliance',
       'Stakeholder Engagement',
       'Research'
+      'Research'
     ],
     hourly_rate: 180,
     years_experience: 9,
@@ -61,12 +66,16 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'C++',
       'CUDA',
       'Edge AI'
+      'Edge AI'
     ],
     hourly_rate: 155,
     years_experience: 6,
     average_rating: 4 && 4.7,
     rating_count: 26,
     availability_type: 'full_time',
+    is_verified: true
+      }
+    ]
     is_verified: true
       }
     ]
@@ -82,6 +91,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Python',
       'Hugging Face',
       'Language Models',
+      'Sentiment Analysis'
       'Sentiment Analysis'
     ],
     hourly_rate: 160,
@@ -101,6 +111,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Python',
       'TensorFlow Quantum',
       'Optimization'
+      'Optimization'
     ],
     hourly_rate: 190,
     years_experience: 5,
@@ -118,6 +129,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Agile',
       'Analytics',
       'Stakeholder Management',
+      'Product Roadmap'
       'Product Roadmap'
     ],
     hourly_rate: 140,
@@ -137,6 +149,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'Simulation',
       'OpenAI Gym',
       'Multi - agent Systems'
+      'Multi - agent Systems'
     ],
     hourly_rate: 150,
     years_experience: 6,
@@ -155,6 +168,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       'DICOM',
       'Clinical Validation',
       'Regulatory Compliance'
+      'Regulatory Compliance'
     ],
     hourly_rate: 170,
     years_experience: 8,
@@ -165,6 +179,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 
 
+import { TalentProfile } from "@/types/talent",
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -206,3 +221,15 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 
 
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
+      }
+    ]
+  }
+];
+
+
+;
+
+
+];
+;

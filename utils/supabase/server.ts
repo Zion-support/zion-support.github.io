@@ -50,6 +50,13 @@ export function getServerSupabase() {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
+
+
+
 
 export function getClientSupabase() {
   return createClient(supabaseUrl, process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key');
@@ -72,6 +79,8 @@ function getServerSupabase() {
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+
+
 export function getServerSupabase() {;
   return createClient(supabaseUrl, supabaseKey);
 }
@@ -83,3 +92,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+

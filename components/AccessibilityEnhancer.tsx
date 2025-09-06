@@ -102,6 +102,7 @@ export default function AccessibilityEnhancer() {
     reducedMotion: false,
     focusVisible: false,
     screenReader: false
+    screenReader: false
   });
 
   useEffect(() => {
@@ -128,6 +129,7 @@ export default function AccessibilityEnhancer() {
       ...settings,
       reducedMotion: mediaQuery.matches,
       highContrast: highContrastQuery.matches,
+      screenReader: screenReaderDetected
       screenReader: screenReaderDetected
     });
   }, []);
@@ -174,6 +176,7 @@ export default function AccessibilityEnhancer() {
   const toggleSetting = (setting: keyof AccessibilitySettings) => {
     const newSettings = {
       ...settings,
+      [setting]: !settings[setting]
       [setting]: !settings[setting]
     };
     setSettings(newSettings);

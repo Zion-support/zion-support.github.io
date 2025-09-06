@@ -1,5 +1,19 @@
 
 
+  const abs = path && path.resolve(__dirname, '....', relPath),
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
+  return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
+}
+exports && exports.config = {
+  schedule: '*/10 * * * *'},
+exports && exports.handler = async () => {
+  const logs = [],
+  function logStep(name, fn) {
+    logs && logs.push(`\n=== ${name} ===`),
+    const { status, stdout, stderr } = fn(),
+    if (stdout) logs && logs.push(stdout),
+    if (stderr) logs && logs.push(stderr),
+    logs && logs.push(`exit=${status}`),
   // Build search index if available
   try {
     logStep('search:index', () => runNode('scripts/generate-search-index && index.js'))

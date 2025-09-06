@@ -30,6 +30,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 import { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> main
+
+
+
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization;

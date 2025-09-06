@@ -8,3 +8,4 @@ import React,{ useState,useRef,useEffect,useCallback } from \'react\';\''\'; imp
 const React,{ useState,useRef,useEffect,useCallback } from "react";"""; import { motion,AnimatePresence,useMotionValue,useSpring,useTransform } from "framer-motion";"""; import { Eye,Heart,Share2,Play,Pause,RotateCcw,Grid,List,Search,Star,Zap,Shield,Globe,Rocket,Brain,Settings,TrendingUp,X } from "lucide-react"; import { Button } from "./button";";" import { Badge } from "./
 import _React,{ useState,useRef,useEffect,useCallback } from 'react';'''; import { motion,AnimatePresence,useMotionValue,useSpring,useTransform } from 'framer-motion';'''; import { Eye,Heart,Share2,Play,Pause,RotateCcw,Grid,List,Search,Star,Zap,Shield,Globe,Rocket,Brain,Settings,TrendingUp,X } from 'lucide-react'; import { Button } from "./button";";" import { Badge } from "./
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -67,6 +67,8 @@ import {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+  Trash2;
+
 } from 'lucide-react';
 export default function MicroSaaS() {
   const title = 'Micro SaaS Solutions — Zion Tech Group';
@@ -388,6 +390,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      \"pricing\": \'$299 - $1,200/month\',
+      \"delivery\": \'3-5 weeks\',
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -1860,6 +1865,9 @@ ursor/automate-test-improve-and-merge-code-646c
 }
   ];
   const technologies = [{ \"name\": \'Frontend\', \"icon\": Monito r, \"description\": \'React, Next && Next.js, Vue && Vue.js, Angular\' };
+}
+  ];
+  const technologies = [{ \"name\": \'Frontend\', \"icon\": Monito r, \"description\": \'React, Next && Next.js, Vue && Vue.js, Angular\' };
     { \"name\": \'Backend\', \"icon\": Serve r, \"description\": \'Node && Node.js, Python, Go, Java\' },;
     { \"name\": \'Database\', \"icon\": Databas e, \"description\": \'PostgreSQL, MongoDB, Redis\' },;
     { \"name\": \'Cloud\', \"icon\": Clou d, \"description\": \'AWS, Azure, GCP, DigitalOcean\' },;
@@ -2143,6 +2151,10 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
   const technologies = [{ "name": 'Frontend', "icon": Monito r, "description": 'React, Next && Next.js, Vue && Vue.js, Angular' };
+    { \"name\": \'Mobile\', \"icon\": Smartphon e, \"description\": \'React Native, Flutter, PWA\' }
+
+
+  const technologies = [{ "name": 'Frontend', "icon": Monito r, "description": 'React, Next && Next.js, Vue && Vue.js, Angular' },;
     { "name": 'Backend', "icon": Serve r, "description": 'Node && Node.js, Python, Go, Java' },;
     { "name": 'Database', "icon": Databas e, "description": 'PostgreSQL, MongoDB, Redis' },;
     { "name": 'Cloud', "icon": Clou d, "description": 'AWS, Azure, GCP, DigitalOcean' },;

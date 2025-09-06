@@ -15,6 +15,15 @@ export type ForumCategory =
 }
 
 
+}
+
+
+export interface ForumPost {;
+
+export interface ForumPost {
+
+export interface ForumPost {;
+export interface ForumPost {
   id: string;
   title: string;
   content: string;
@@ -42,6 +51,11 @@ export interface ForumReply {;
 
 
 
+export interface ForumReply {
+
+export interface ForumReply {;
+}
+export interface ForumReply {
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -86,6 +100,40 @@ export interface UserBadge {;
 
 
 
+export interface UserBadge {
+
+
+export interface UserBadge {;
+  userId: string;
+  badgeId: string;
+  awardedAt: string;
+}
+
+
+export interface CommunityUser {;
+
+export interface CommunityUser {
+
+export interface CommunityUser {;
+}
+export interface Badge {
+  id: string;
+  name: string;
+  description: string;
+}
+export interface CommunityUser {
+  id: string;
+  name: string;
+  avatar?: string;
+  role: string;
+  reputation: number;
+}
+export interface Badge {
+  id: string;
+  name: string;
+  description: string;
+}
+export interface CommunityUser {
   id: string;
   name: string;
   avatar?: string;

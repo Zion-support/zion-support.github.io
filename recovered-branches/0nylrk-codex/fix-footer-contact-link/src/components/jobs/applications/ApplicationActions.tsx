@@ -16,6 +16,7 @@ import { Link } from "react-router-dom",
 
 
 
+
 import { 
   DropdownMenu;
   DropdownMenuContent;
@@ -54,6 +55,47 @@ export function ApplicationActions(): any ({;
 
 
 
+export function ApplicationActions({;
+  application;
+  processingId;
+  onViewApplication;
+export function ApplicationActions({
+  application,
+  processingId,
+  onViewApplication,
+  application;
+  processingId;
+  onViewApplication;
+  onStatusChange;
+}: ApplicationActionsProps) {;
+
+
+
+  onStatusChange
+}: ApplicationActionsProps) {
+  return (
+
+  return (
+
+  return (
+    <div className="flex items-center justify-end gap-2">;
+      <Button
+        variant="outline" 
+        size="sm" 
+        onClick={() => onViewApplication(application && application.id)}
+        disabled={!!application && application.viewed_at}
+      >;
+        <Eye className="h-4 w-4" />;
+      </Button>;
+      <DropdownMenu>;
+        <DropdownMenuTrigger asChild>;
+          <Button
+            variant="outline" 
+  onStatusChange;
+}: ApplicationActionsProps) {;
+  onStatusChange
+}: ApplicationActionsProps) {
+  return (
             size="sm"
             disabled={processingId === application && application.id}>;
             {processingId === application && application.id ? (;
@@ -170,6 +212,10 @@ export function ApplicationActions({;
 
       <Button
         variant="default"
+              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+            )}
+
+
       <Button 
         variant="default" 
 
@@ -196,6 +242,35 @@ interface ApplicationActionsProps {
   onViewApplication: (application_id: string) => Promise < void>,
   onStatusChange: (application_id: string, new_status: ApplicationStatus) => Promise < void>;
 
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger;
+} from "@/components/ui/dropdown-menu",;
+interface ApplicationActionsProps {;
+  application: JobApplication,;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+          </Button>;
+        </DropdownMenuTrigger>;
+        <DropdownMenuContent align="end">;
+          <DropdownMenuItem;
+          >;
+            Shortlist;
+          </DropdownMenuItem>;
+          <DropdownMenuItem;
+          >;
+            Schedule Interview;
+          </DropdownMenuItem>;
+          <DropdownMenuItem;
+          >;
+            Hire;
+          </DropdownMenuItem>;
+          <DropdownMenuItem;
+            onClick={() => onStatusChange(application.id, "rejected")}
+            className="text-red-600";
           >;
             Reject;
           </DropdownMenuItem>;
@@ -208,3 +283,22 @@ interface ApplicationActionsProps {
 
 
 
+;
+
+      ;
+      <Button ;
+        variant="default" ;
+        size="sm";
+      <Button;
+        variant="default";
+        size="sm";
+        asChild;
+      >;
+        <Link to={`/messages?talentId=${application.talent_id}`}>;
+          Contact;
+        </Link>;
+      </Button>;
+    </div>;
+  );
+}
+;

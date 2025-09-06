@@ -1,9 +1,10 @@
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-import React, { Component, ReactNode } from 'react';
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
+import React, { Component, ReactNode } from 'react';
 ursor/integrate-build-improve-and-re-verify-9d47
 ursor/automate-test-improve-and-merge-code-646c
 

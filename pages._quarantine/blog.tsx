@@ -25,6 +25,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
+interface BlogProps {
+  // Add props here as needed
+interface BlogProps {
+  // Add props here as needed
+
+
+
 
 interface BlogProps {
   // Add props here as needed
@@ -49,6 +56,7 @@ interface BlogProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function Blog({}: BlogProps) {
+export default function Blog({}: BlogProps) {
   return (
     <div>
       <h1>Blog</h1>
@@ -71,6 +79,8 @@ export default function Blog({}: BlogProps) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
+
+}
 }
 }
 }
@@ -86,3 +96,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

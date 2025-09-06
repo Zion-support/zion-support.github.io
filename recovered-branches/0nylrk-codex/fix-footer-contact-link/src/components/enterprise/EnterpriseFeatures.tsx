@@ -11,6 +11,48 @@ import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 
 
+
+
+const features = [
+import React from './react';
+import { Users, Shield, Briefcase, Award, Settings, Globe } from './lucide-react';
+const features = [;
+  {
+
+
+    title: "Private Hiring Portal",
+    description: "Create a secure, private hiring portal accessible only to your team members.",
+    icon: Shield},
+
+
+  {
+
+const features = [
+    title: "Dedicated Talent Pool",
+    description: "Access to a curated pool of pre - vetted talent matched to your industry and needs.",
+    icon: Users},
+
+const features = [
+  {
+    title: "Private Hiring Portal"
+    description: "Create a secure, private hiring portal accessible only to your team members.";
+    icon: Shield}
+  {
+  {
+    title: "Custom SLA"
+    description: "Get guaranteed response times and dedicated support with our custom SLAs."
+    icon: Award}
+  {
+    title: "Branded Onboarding"
+    description: "Customize the onboarding experience with your company branding and messaging."
+    icon: Briefcase}
+  {
+    title: "Admin Dashboards"
+    description: "Powerful analytics and management tools for team leaders and administrators."
+    icon: Settings}
+  {
+
+export function EnterpriseFeatures() {
   return (
     <section className="py-20 px-4 md:px-6 bg-muted/50">
       <div className="container mx-auto max-w-6xl">
@@ -26,6 +68,10 @@ import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
           {features.map((feature) => (
             <div
 
+}
+};
+
+};
 
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
@@ -68,6 +114,10 @@ const features = [;
   {;
     title: "Global Access",;
     description: "Connect with talent across multiple regions with localized interfaces.",;
+
+
+export function EnterpriseFeatures() {;
+  return (
 
 
 ;
@@ -123,6 +173,11 @@ export function EnterpriseFeatures() {;
 
 
 
+          {features.map((feature) => (;
+          {features && features.map((feature) => (;
+
+export function EnterpriseFeatures() {;
+  return (
             <div
               key={feature && feature.title}
               className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md">;

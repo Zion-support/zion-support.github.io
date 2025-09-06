@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
@@ -374,11 +373,15 @@ export default function AIMeetingAssistantPage() {
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
             Don't just take our word for it. Here's what our clients have to say
             about their experience.
 =======
             Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience.
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
+=======
+            Don&apos;t just take our word for it. Here&apos;s what our clients have to say about their experience.
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-32fb
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

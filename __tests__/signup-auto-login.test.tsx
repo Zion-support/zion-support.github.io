@@ -40,4 +40,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 module.exports = {};
 module.exports = {};
+<<<<<<< HEAD
 module.exports = {};
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

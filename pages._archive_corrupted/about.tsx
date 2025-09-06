@@ -300,6 +300,10 @@ ursor/automate-test-improve-and-merge-code-646c
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' };
+  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
+    { \"number\": \'50+\', \"label\": \'Happy Clients\' },
+    { \"number\": \'5+\', \"label\": \'Years Experience\' },
+  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' };
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },;
     { \"number\": \'5+\', \"label\": \'Years Experience\' },;
     { \"number\": \'24/7\', \"label\": \'Support Available\' }
@@ -307,6 +311,7 @@ ursor/automate-test-improve-and-merge-code-646c
 export default function AboutPage() {;
   return (
   const stats = [{ "number": '150+', "label": 'Projects Completed' };
+  const stats = [{ "number": '150+', "label": 'Projects Completed' },;
     { "number": '50+', "label": 'Happy Clients' },;
     { "number": '5+', "label": 'Years Experience' },;
     { "number": '24/7', "label": 'Support Available' }
@@ -673,6 +678,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member) => (
               <div key={member.name} className=\"bg-white rounded-lg shadow-lg overflow-hidden\">
                 <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\">
@@ -903,6 +910,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 }
 ursor/automate-test-improve-and-merge-code-646c
+}
       <section className=\"py-20 bg-gray-50\" id=\"team\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -1211,3 +1219,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

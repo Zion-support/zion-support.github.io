@@ -8,6 +8,85 @@ export function useTalentDirectory() {
   const { ;
     isAuthenticated;
 
+import { useAuthStatus } from "./talent/useAuthStatus",
+import { useTalentData } from "./talent/useTalentData",
+import { useFilterTalents } from "./talent/useFilterTalents";
+import { useUIState } from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+import { useAuthStatus } from './talent / useAuthStatus';
+import { useTalentData } from './talent / useTalentData';
+import { useFilterTalents } from './talent / useFilterTalents';
+import { useUIState } from './talent / useUIState';
+export /**
+ * useTalentDirectory - Function description
+ */
+function useTalentDirectory() {
+  // Fetch auth status and saved talents;
+
+  const {
+    is_authenticated;
+    user_details,
+    saved_talents,
+    handleToggleSave;
+  } = useAuthStatus ();
+;
+  // Fetch talent data;
+  const {
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
+
+    expanded_sections;
+
+
+  // Manage UI state
+  const {
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
+    toggleSection
+
+  } = useUIState(),
+
+  return {
+    // Talents and loading state
+    talents,
+    filteredTalents,
+    isLoading,
+    
+    // Search and filter state
+    searchTerm,
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
+    
+    // UI state
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
+    
+    // Auth and user state
+    isAuthenticated,
+    userDetails,
+    savedTalents,
+    
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
@@ -121,3 +200,6 @@ export function useTalentDirectory() {;
 ;
 
 
+  }
+}
+;

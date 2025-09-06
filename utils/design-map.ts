@@ -83,6 +83,7 @@ export async function buildTokenSet(): Promise<TokenSet> {
 
   const typography = {
     fontSizes: tailwindConfig?.theme?.extend?.fontSize || {}
+    fontSizes: tailwindConfig?.theme?.extend?.fontSize || {}
   };
 
   return { colors, typography };
@@ -111,12 +112,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         "import { extendTheme } from '@chakra-ui/react'; export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}});",
       'components/Button && Button.tsx':
         'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }'
+        'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }'
     };
   }
   return {
     'README && README.md':
       '# Zion OS React UI Kit\n\nFramework-agnostic React components.',
     'components/Button && Button.tsx':
+      "export function Button({ children }: { children: React && React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }"
       "export function Button({ children }: { children: React && React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }"
   };
 
@@ -210,6 +213,8 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
   const tokens = await buildTokenSet(fileId);
   return {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  const tokens = await buildTokenSet(fileId);
+  return {
 
     designSystem.components.push(component);
     designSystem.lastUpdated = new Date();
@@ -397,12 +402,14 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
       success: "#34C759",
       warning: "#FF9500",
       error: "#FF3B30"
+      error: "#FF3B30"
     },
     typography: {
       heading1: { fontSize: 32, fontWeight: "bold" },
       heading2: { fontSize: 24, fontWeight: "bold" },
       body: { fontSize: 16, fontWeight: "normal" }
 
+      body: { fontSize: 16, fontWeight: "normal" }
     },
     spacing: {
       xs: 4,
@@ -432,6 +439,7 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
     }
+    }
   };
 }
 
@@ -456,3 +464,10 @@ export async function buildUIKit(
 
 
 
+          padding: tokens.spacing.md
+        }
+      }
+    },
+    tokens
+  };
+}

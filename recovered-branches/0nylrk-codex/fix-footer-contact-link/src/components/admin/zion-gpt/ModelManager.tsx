@@ -178,6 +178,10 @@ interface ModelVersionData extends ModelConfig {
 
 
 
+  };
+interface ModelVersionData extends ModelConfig {
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
+  errorMessage?: string
 import { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -385,6 +389,14 @@ export function ZionGPTModelManager() {;
       fetchModels();
     } catch (error) {;
 
+    }
+
+  },
+
+
+
+
+  return (
 
 
 
@@ -411,6 +423,13 @@ export function ZionGPTModelManager() {;
   return (;
 
 
+    }
+
+  }
+    }
+  }
+
+  return (
     <Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;
         <div>;
@@ -432,6 +451,7 @@ export function ZionGPTModelManager() {;
         ) :(;
 
 
+        ) : (;
           <Table>;
             <TableHeader>;
               <TableRow>;
@@ -641,6 +661,7 @@ export function ZionGPTModelManager() {;
                     ) : (
 
 
+                    ) : (;
                       <Button
                         variant="ghost"
                         size="sm"
@@ -663,6 +684,8 @@ export function ZionGPTModelManager() {;
                   </TableCell>;
                 </TableRow>;
 
+                  </TableCell>;
+                </TableRow>;
                     )}
 
                   </TableCell>;
@@ -684,6 +707,10 @@ export function ZionGPTModelManager() {;
 ;
 ;
 
+      </CardContent>;
+    </Card>;
+;
+;
   const toggleModelActive = async (model_id: string, current_active: boolean, purpose: string) => {
     try {
       // If activating, deactivate all other models with the same purpose;

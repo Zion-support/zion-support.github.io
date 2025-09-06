@@ -22,12 +22,14 @@ const SAMPLE_LISTINGS: ListingItem[] = [
     category: "Services",
     image:
       "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format"
+      "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format"
   },
   {
     id: "service-2",
     title: "Cloud Migration",
     category: "Services",
     image:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format"
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format"
   },
   {
@@ -36,6 +38,7 @@ const SAMPLE_LISTINGS: ListingItem[] = [
     category: "Talents",
     image:
       "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format"
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format"
   },
   {
     id: "talent-2",
@@ -43,12 +46,14 @@ const SAMPLE_LISTINGS: ListingItem[] = [
     category: "Talents",
     image:
       "https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format"
+      "https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format"
   },
   {
     id: "equipment-1",
     title: "Workstation",
     category: "Equipment",
     image:
+      "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format"
       "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format"
   },
   {
@@ -58,10 +63,13 @@ const SAMPLE_LISTINGS: ListingItem[] = [
     image:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format"
   }
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format"
+  }
 ];
 
 export function ServiceTypeStep({
   formData,
+  updateFormData
   updateFormData
 }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -76,6 +84,7 @@ export function ServiceTypeStep({
       specificItem: item,
       serviceCategory: item.category,
 
+      serviceType: item.category.toLowerCase() as ServiceType
       serviceType: item.category.toLowerCase() as ServiceType
     });
   };
@@ -120,6 +129,7 @@ export function ServiceTypeStep({
 
           <Card
 
+          <Card
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -164,6 +174,9 @@ export function ServiceTypeStep({
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
 
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
+            <Input
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -210,6 +223,7 @@ export function ServiceTypeStep({
 
   );
 
+  );
             on_click={() => handleTypeSelect ("service")}
           >;
             <h4 className="font - medium text - white">Services</h4>;
@@ -279,6 +293,7 @@ export function ServiceTypeStep({
                     review_count={Math.floor (Math.random () * 50) + 10}
                     image={item.image}
 
+}
                     description="Sample listing description"
                   />
                 </div>

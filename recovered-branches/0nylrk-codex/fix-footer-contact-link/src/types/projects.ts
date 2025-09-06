@@ -16,6 +16,7 @@ export interface Project {
 export interface Project {;
 
 
+export interface Project {
   id: string;
   client_id: string;
   talent_id: string;
@@ -46,6 +47,10 @@ export interface Project {;
 
 
 
+export interface ProjectNote {;
+
+
+export interface ProjectNote {
   id: string;
   project_id: string;
   user_id: string;

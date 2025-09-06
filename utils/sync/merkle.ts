@@ -5,6 +5,8 @@ import crypto from "crypto";
 // Merkle tree utilities;
 export const merkle = {
 
+// Merkle tree utilities;
+export const merkle = {
   // Add merkle tree functionality here;
   create_tree: (leaves: string[]) => null,
   get_proof: (tree: any, leaf: string) => [],
@@ -27,6 +29,7 @@ export class MerkleTree {
     this.leaves = data.map((item) => ({
       hash: this.hashData(JSON.stringify(item)),
       data: item
+      data: item
     }));
 
     // Build tree bottom-up
@@ -43,6 +46,7 @@ export class MerkleTree {
         const parent: MerkleNode = {
           hash: this.hashData(combinedHash),
           left,
+          right
           right
         };
 
@@ -93,6 +97,7 @@ export class MerkleTree {
         const parent: MerkleNode = {
           hash: this.hashData(combinedHash),
           left,
+          right
           right
         };
 

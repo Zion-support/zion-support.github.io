@@ -24,10 +24,14 @@ export {;
   EnterpriseRoutes;
   CommunityRoutes;
 
+
   DeveloperRoutes;
 }
 ;
 
+
+  DeveloperRoutes
+};
 
 import AuthRoutes from "./AuthRoutes",
 import DashboardRoutes from "./DashboardRoutes",
@@ -46,6 +50,10 @@ import DeveloperRoutes from "./DeveloperRoutes",
 }
 ;
 
+
+  DeveloperRoutes;
+}
+;
 export {
   AuthRoutes,
   DashboardRoutes,

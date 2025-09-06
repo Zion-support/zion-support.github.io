@@ -49,6 +49,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/main
 ursor/fix-website-loading-errors-and-merge-6662
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -73,6 +74,19 @@ describe('Navigation', () => {
 
 
   });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
+
+
+
+  test('displays correct content', () => {
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+  });
+});
+});
+
+origin/main
+
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -87,7 +101,6 @@ ursor/automate-test-improve-and-merge-code-646c
 
   test('displays correct content', () => {
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-  });
 });
 });
 
@@ -103,6 +116,7 @@ origin/main
 >>>>>>> origin/main
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 describe('Navigation'
   test('renders without crashing'
     expect(screen.getByRole('main'

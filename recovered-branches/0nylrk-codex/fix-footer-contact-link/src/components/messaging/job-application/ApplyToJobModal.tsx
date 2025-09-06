@@ -16,6 +16,10 @@ import {
 
 
 
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
@@ -57,6 +61,8 @@ import {;
 
   DialogTitle,;
 } from "@/components/ui/dialog";
+  DialogTitle,;
+} from "@/components/ui/dialog";
 export function ApplyToJobModal(): any ({;
   job,;
   isOpen,;
@@ -78,6 +84,7 @@ import React from './react';
   DialogContent,
   DialogDescription,
   DialogHeader,
+  DialogTitle
   DialogTitle
 } from '@/components / ui / dialog';
 import { ApplyForm  } from './ApplyForm';
@@ -130,3 +137,39 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
 }
 
 
+    </Dialog>;
+
+
+  );
+    </Dialog>);
+}
+    </Dialog>;
+  );
+    </Dialog>);
+}
+    </Dialog>;
+  ),;}
+ <DialogHeader> <DialogTitle>Apply to Job: {
+  job.title 
+}</DialogTitle> <DialogDescription> Complete your application for this position </DialogDescription> </DialogHeader> <ApplyForm job= {
+  job 
+}onClose= {
+  onClose 
+}onApplySuccess= {
+  onApplySuccess 
+}/> </DialogContent> </Dialog>) 
+}
+<ApplyForm
+          job={job}
+          onClose={onClose}
+          onApplySuccess={onApplySuccess}
+        />
+      </DialogContent>
+</Dialog>
+    </Dialog>;
+
+  );
+}
+  );
+    </Dialog>);
+}

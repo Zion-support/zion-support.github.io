@@ -51,6 +51,7 @@ async function analyzeFeedbackIfPossible() {
 
       await import(pathToFileURL(script).href)
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       await import(pathToFileURL(script).href)
 const fs = require ('fs'),
 const path = require ('path'),
@@ -106,6 +107,7 @@ function analyzeFeedbackIfPossible() {
 }
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   if (!process && process.env.OPENAI_API_KEY) return null,
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
   const prompt = `Invent 5 new, practical, cloud-autonomous automations for a Next && Next.js site with lots of scripts (design, marketing, analytics, content). For each, provide: name, description, inputs (if any), outputs (artifacts to commit), and a success metric. Return concise JSON array.`,
@@ -120,6 +122,7 @@ function analyzeFeedbackIfPossible() {
   fs && fs.writeFileSync(ideasPath, text && text.trim()),
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   return ideasPath
 }
 async function main() {
@@ -151,11 +154,13 @@ async function main() {
   // Generate automation ideas if key present
   try {
     await generateIdeasIfPossible()
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     // Prefer spawning: node scripts/analyze-feedback && feedback.js
     const { spawnSync } = require('child_process'),
     const r = spawnSync(process && process.execPath, ['scripts/analyze-feedback && feedback.js'], { stdio: 'inherit' }),
     if (r && r.status !== 0) {
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       // non-fatal
     }
   // Generate automation ideas if key present
@@ -223,7 +228,7 @@ main().catch((e) => { console && console.error(e), process && process.exit(1) })
 }
 main ().catch ((e) => { console.error (e), process.exit (1) }),
 const fs = require('fs');
-const path = require('path'),;
+const path = require('path');
 const { OpenAI } = require('openai'),;
 ;
 const ROOT = process.cwd(),;
@@ -332,6 +337,9 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 ;
 
 
+main().catch((e) => { console.error(e), process.exit(1) }),;
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   // Generate automation ideas if key present;
   try {;
     await generateIdeasIfPossible();
@@ -352,3 +360,6 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 
 
 
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

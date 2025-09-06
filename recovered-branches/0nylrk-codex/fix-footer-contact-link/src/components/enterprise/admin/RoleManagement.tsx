@@ -51,6 +51,9 @@ export function RoleManagement() {
   const teamMembers = [
 
 
+export function RoleManagement() {
+  // Mock team members data
+  const teamMembers = [
     {
       id: 1
       name: "Alex Johnson"
@@ -203,6 +206,28 @@ export function RoleManagement() {
                     checked={member.permissions.viewCandidates} 
 
 
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+  };
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+  }
+  const roleDescriptions: Record<string, string> = {
+    "Admin": "Full access to all features and settings";
+    "Recruiter": "Can manage candidates and job postings";
+    "Manager": "Can view candidates and create jobs";
+    "Viewer": "Read-only access to candidates"}
+  },
+
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
+
+                  <Switch
+                    checked={member.permissions.viewCandidates}
+                  <Switch 
+                    checked={member.permissions.viewCandidates} 
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewCandidates", checked)
                     }
@@ -215,6 +240,8 @@ export function RoleManagement() {
                     checked={member.permissions.editCandidates} 
 
 
+                  <Switch 
+                    checked={member.permissions.editCandidates} 
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "editCandidates", checked)
                     }
@@ -227,6 +254,8 @@ export function RoleManagement() {
                     checked={member.permissions.createJobs} 
 
 
+                  <Switch 
+                    checked={member.permissions.createJobs} 
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "createJobs", checked)
                     }
@@ -239,6 +268,8 @@ export function RoleManagement() {
                     checked={member.permissions.manageTeam} 
 
 
+                  <Switch 
+                    checked={member.permissions.manageTeam} 
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "manageTeam", checked)
                     }
@@ -247,6 +278,20 @@ export function RoleManagement() {
                 <TableCell className="text-center">
 
 
+                  <Switch
+                    checked={member.permissions.viewBilling}
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "viewBilling", checked)
+                    }
+                  />
+                </TableCell>
+              </TableRow>
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+                    onCheckedChange={(checked) => 
+                      handlePermissionChange(member.id, "viewBilling", checked)
 import React from "react",;
 import {;
   Table,;
@@ -271,6 +316,45 @@ export function RoleManagement() {;
       email: "taylor@example.com",;
 
 
+      id: 1,;
+      name: "Alex Johnson",;
+      email: "alex@example && example.com",;
+      role: "Admin",;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: true,;
+        createJobs: true,;
+        manageTeam: true,;
+        viewBilling: true,;
+        manageBilling: true}},;
+    {;
+      id: 2,;
+      name: "Jamie Smith",;
+      email: "jamie@example && example.com",;
+      role: "Recruiter",;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: true,;
+        createJobs: true,;
+        manageTeam: false,;
+        viewBilling: false,;
+        manageBilling: false}},;
+    {;
+      id: 3,;
+      name: "Sam Williams",;
+      email: "sam@example && example.com",;
+      role: "Manager",;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: false,;
+        createJobs: true,;
+        manageTeam: false,;
+        viewBilling: true,;
+        manageBilling: false}},;
+    {;
+      id: 4,;
+      name: "Taylor Brown",;
+      email: "taylor@example && example.com",;
       role: "Viewer",;
       permissions: {;
         viewCandidates: true,;
@@ -381,6 +465,7 @@ export function RoleManagement() {;
           {Object.entries(roleDescriptions).map(([role, description]) => (;
 
 
+          {Object && Object.entries(roleDescriptions).map(([role, description]) => (;
             <div key={role} className="bg-card rounded-lg p-4 border border-border">;
               <div className="flex items-center gap-2 mb-2">;
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>;
@@ -769,6 +854,7 @@ export function RoleManagement() {;
     </div>);
 }
 
+  ),;}
   ),;}
   Table;
 TableBody;

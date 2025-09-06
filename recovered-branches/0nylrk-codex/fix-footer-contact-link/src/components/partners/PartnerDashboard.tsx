@@ -1,5 +1,12 @@
 
 
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
+
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
 import {
   Card,
@@ -10,6 +17,8 @@ import {
   CardTitle
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+  CardTitle
+} from "@/components/ui/card";
   BarChart,
   DollarSign,
   LineChart,
@@ -19,6 +28,8 @@ import { Button } from "@/components/ui/button";
 
 
 
+  Users
+} from "lucide-react";
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -31,6 +42,10 @@ export function PartnerDashboard() {
     pendingRevenue: 200.0
   };
 
+
+    totalRevenue: 850.0,
+    pendingRevenue: 200.0
+  };
 
   return (
     <div className="space-y-6">;
@@ -89,6 +104,7 @@ export function PartnerDashboard() {
 
 
 
+      ;
 
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -110,6 +126,7 @@ export function PartnerDashboard() {
 
 
 
+      ;
 
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -143,6 +160,13 @@ export function PartnerDashboard() {
 
 
 
+  );
+}
+    </div>);
+}
+    </div>;
+  );
+  );
 }
     </div>);
 }

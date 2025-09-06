@@ -32,11 +32,52 @@ export default function VideoCall() {
       isVideoEnabled: true,
       isMuted: false
     }
+      isMuted: false
+    }
   ]);
 
   const navigate = useNavigate();
   const [isJoining, setIsJoining] = useState(false);
   const [hasJoined, setHasJoined] = useState(false);
+  const [participants, setParticipants] = useState<Array<{
+    id: string
+    name: string
+    avatar?: string;
+    isMuted?: boolean;
+    isVideoEnabled?: boolean;
+    isScreenSharing?: boolean;
+    isHost?: boolean
+  }>>([
+    {
+      id: 'user-1'
+      name: 'You'
+      isVideoEnabled: true
+      isMuted: false
+    }
+  ]);
+import { useState, useEffect } from 'react',;
+import { useParams, useNavigate } from 'react-router-dom',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { SEO } from '@/components/SEO',;
+import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
+import { Button } from '@/components/ui/button',;
+import { toast } from 'sonner',;
+export default function VideoCall() {;
+  // useParams is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const { roomId } = useParams(),;
+  const navigate = useNavigate();
+  const [isJoining, setIsJoining] = useState(false),;
+  const [hasJoined, setHasJoined] = useState(false),;
+  const [participants, setParticipants] = useState<Array<{;
+    id: string,;
+    name: string,;
+    avatar?: string,;
+    isMuted?: boolean,;
+    isVideoEnabled?: boolean,;
+    isScreenSharing?: boolean,;
+    isHost?: boolean;
 
     id: string,
     name: string,
@@ -67,11 +108,28 @@ export default function VideoCall() {
       })
     }, 1500)
 
+  const handleJoinCall = () => {;
+    setIsJoining(true);
+    // Simulate connection delay;
+    setTimeout(() => {;
+      setHasJoined(true);
+      setIsJoining(false);
+      toast.success("Call joined", {
+        description: `You have joined meeting room ${roomId}`
+      });
+    }, 1500);
+  };
+    setHasJoined(false);
+    toast && toast.info("Call ended", {;
+      description: "You have left the meeting";
+    });
+  }
   },
 
   const handleLeaveCall = () => {
     setHasJoined(false),
     toast.info("Call ended", {
+      description: "You have left the meeting"
       description: "You have left the meeting"
     });
 
@@ -90,12 +148,15 @@ export default function VideoCall() {
         name: "Taylor Kim",
         isVideoEnabled: false,
         isMuted: true
+        isMuted: true
       },
       {
         id: "user-4",
         name: "Jordan Smith",
         isVideoEnabled: true,
         isMuted: false,
+        isScreenSharing: true
+      }
         isScreenSharing: true
       }
     ];
@@ -171,3 +232,5 @@ export default function VideoCall() {
 
 
 
+;
+;

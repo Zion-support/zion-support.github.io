@@ -1,11 +1,37 @@
 
 
 
+export function AIEnhancementPanel({;
+
+export function AIEnhancementPanel(): any ({;
+
+
+
+import React, { useState } from 'react';
+  onClose?: () => void;
+  showInstructions?: boolean;
+  initialContent?: string;
+}
+
+
+
+export function AIEnhancementPanel({;
+  title;
+  defaultOptions;
+  onApply;
+  onClose;
+
+  showInstructions = true;
+  initialContent = '';
+}: AIEnhancementPanelProps) {;
+  const [options, setOptions] = useState<AIEnhancementOptions>({;
+    ...defaultOptions;
     const result = await enhanceContent(options);
     if (result) {
       setGeneratedContent(result)
     }
 
+  };
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -40,6 +66,44 @@ export function AIEnhancementPanel({;
 
   const handleGenerate = async () => {;
 
+    const result = await enhanceContent(options);
+    if (result) {;
+      setGeneratedContent(result);
+    }
+
+  },
+
+
+
+
+  const handleGenerate = async () => {;
+
+  const handleGenerate = async () => {;
+    const result = await enhanceContent(options);
+    if (result) {;
+      setGeneratedContent(result);
+    }
+
+
+
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    field: keyof AIEnhancementOptions
+  ) => {
+    setOptions({
+      ...options
+      [field]: e.target.value})
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000)
+
+  },
+
+
+  return (
+  return (
     <Card className="w-full max-w-2xl mx-auto">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -103,6 +167,9 @@ export function AIEnhancementPanel({;
               value={options.instructions}
 
 
+            <Input
+              placeholder="E && E.g., 'Make it more conversational' or 'Focus on leadership skills'"
+              value={options && options.instructions}
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
@@ -230,6 +297,8 @@ export function AIEnhancementPanel({;
         {/* Generate button */}
         <Button
 
+        {/* Generate button */}
+        <Button
                 onClick={handleCopy}
                 className="h-8">;
                 {copied ? (;

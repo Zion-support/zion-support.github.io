@@ -23,6 +23,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export default function Aidevelopment({}: AidevelopmentProps) {
+
+
+export default function Aidevelopment({}: AidevelopmentProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -49,6 +52,10 @@ export default function Aidevelopment(): any ({}: AidevelopmentProps) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+interface AidevelopmentProps {;
+  // Add props here as needed;
+}
+export default function Aidevelopment(): any ({}: AidevelopmentProps) {;
   return (
     <div>
       <h1>Aidevelopment</h1>

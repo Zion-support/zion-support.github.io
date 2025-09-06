@@ -5,6 +5,7 @@
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedFooterdynamic from '../components/EnhancedFooter.dynamic'; describe('EnhancedFooterdynamic',() => { test('renders without crashing',() => { render(<EnhancedFooterdynamic />); expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedFooterdynamic />)}); test('handles user interactions',() => { render(<EnhancedFooterdynamic />)}); test('applies correct styling',() => { render(<EnhancedFooterdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -16,6 +17,7 @@ describe('EnhancedFooterdynamic', () => {
   });
 });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   test('displays correct content', () => {
     render(<EnhancedFooterdynamic />);
   });
@@ -62,3 +64,4 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 ursor/automate-test-improve-and-merge-code-646c
 });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

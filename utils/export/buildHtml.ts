@@ -5,6 +5,17 @@ export function buildPrintableHtml(project: BookProject): string {;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n'),;
+import type { BookProject } from '../book/bookTypes';
+export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
+export function buildPrintableHtml(project: BookProject): string {;
+  const { meta, chapters, visuals } = project;
+  const quotesHtml = visuals.quoteCallouts;
+    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
+    .join('\n');
+
+
+
+
 
   const chapterHtml = chapters;
     .map(;
@@ -30,6 +41,14 @@ export function buildPrintableHtml (project: BookProject): string {
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n'),;
+    .join('\n\n');
+  const visualsHtml = [;
+    ...visuals.timelineImages;
+    ...visuals.daoVoteCharts;
+    ...visuals.uiScreens];
+    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .join('\n');
+
 
 
 
@@ -38,6 +57,15 @@ export function buildPrintableHtml (project: BookProject): string {
 
 
 
+    .join ('\n\n'),
+  const visuals_html = [;
+    ...visuals.timeline_images,
+    ...visuals.daoVoteCharts,
+    ...visuals.ui_screens];
+    .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .join ('\n'),
+  const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
+  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
   return `<!doctype html>;
 <html>;
 <head>;
@@ -349,3 +377,5 @@ function escape_html (string: string): string {
 
 
 
+}
+}

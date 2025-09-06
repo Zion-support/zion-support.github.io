@@ -21,6 +21,12 @@ interface ListingCardProps {
 
   tags?: string[];
   author?: string;
+
+
+export function ListingCard(): any ({ ;
+  id;
+  tags?: string[];
+  author?: string;
 export function ListingCard(): any ({ ;
   id;
 
@@ -88,6 +94,8 @@ export function ListingCard({
   const profileId = id |(profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
 
+  tags?: string[];
+  author?: string;
   return (
     <Link
       to={`/profile/${profileId}`}
@@ -129,6 +137,56 @@ export function ListingCard({ ;
   return (
     <Link 
 
+interface ListingCardProps {;
+  id?: string,;
+  title: string,;
+  description: string,;
+  image?: string,;
+  category: string,;
+  tags?: string[],;
+  author?: string,;
+  authorImage?: string,;
+  className?: string,;
+  profileType?: 'service' | 'talent';
+}
+;
+export function ListingCard({;
+  id,;
+  title,;
+  description,;
+  image,;
+  category,;
+  tags,;
+  author,;
+  authorImage,;
+  className,;
+  profileType = 'service';
+}: ListingCardProps) {;
+  // Generate a profile ID based on the listing data;
+  // In a real app, this would be a proper ID from the database;
+  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
+  return (;
+    <Link;
+
+      to={`/profile/${profileId}`}
+      className={cn(
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer",
+        className
+
+        className
+
+        className
+      )}>;
+      {image && (;
+        <div className="h-48 w-full overflow-hidden">;
+          <img
+            src={image} 
+            alt={title} 
+      to={`/profile/${profileId}`}
+      className={cn(
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer",
+        className
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />;
         </div>;
       )}
@@ -138,6 +196,7 @@ export function ListingCard({ ;
 
 
 
+            {category}
                 {tag}
               </Badge>;
             ))}

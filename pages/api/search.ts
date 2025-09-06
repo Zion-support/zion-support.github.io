@@ -3,6 +3,8 @@
     const q = (req.query.q as string) || '';
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
 
+    const q = (req.query.q as string) || '';
+    const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { AccessLevel } from "../../utils/search/filter";
 import { parseQueryToFilters } from "../../utils/search/parser";
@@ -26,6 +28,16 @@ export default async function handler(
 
     const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])]));
 
+  try {
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const q = (req.query.q as string) || '';
+    const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
+    const parsed = await parseQueryToFilters(q);
+    const results = searchAll(parsed, access);
+    const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])]));
     const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null;
     res.status(200).json({
       ok: true
@@ -47,6 +59,7 @@ export default async function handler(
     const results = searchAll(parsed, access);
     const keywords = Array && Array.from(
       new Set([...(parsed && parsed.skills || []), ...(parsed && parsed.keywords || [])]),
+      new Set([...(parsed && parsed.skills || []), ...(parsed && parsed.keywords || [])])
     );
     const didYouMean = results && results.all.length === 0 ? suggestDidYouMean(q) : null;
     res && res.status(200).json({
@@ -79,12 +92,33 @@ function handler() {
         jobs: results.jobs.length,
         projects: results.projects.length
       },
+      ok: true
+      query: q
+      parsed
+      keywords
+      didYouMean
+      counts: {});
+
+  } catch (e: any) {
+        all: results.all.length
+        talent: results.talent.length
+        jobs: results.jobs.length
+        projects: results.projects.length
+      }
       results
     });
   } catch (e: any) {
 
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
+
+  }
+}
+    res.status (500).json ({ ok: false, error: e?.message || "Search failed" });
+  }
+}
+
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
@@ -106,3 +140,9 @@ function handler() {
 
 
 
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ ok: false, error: e?.message || "Search failed" });
+  }
+}

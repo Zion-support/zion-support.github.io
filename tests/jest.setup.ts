@@ -35,6 +35,7 @@ global.TextEncoder = TextEncoder,
 // @ts - expect - error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Set up a mock for Vite environment variables accessed via import.meta.env;
 // This assumes that Babel (via babel - plugin - transform - import - meta or similar);
 // will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;
@@ -369,6 +370,7 @@ global.ResizeObserver = jest.fn ().mock_implementation (() => ({
 // Polyfill for URL.revokeObjectURL;
 if (typeof URL.revokeObjectURL === 'undefined') {;
   URL.revokeObjectURL = jest.fn(),;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 // Polyfill for BroadcastChannel;
 // Check condition
@@ -424,6 +426,7 @@ import axios from 'axios',;
 // @ts-ignore;
 axios.create = jest.fn(() => axios),;
 ;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // -----------------------------;
 // Vitest Compatibility Layer for Jest;
 // -----------------------------;
@@ -619,7 +622,7 @@ jest.mock('@/context/auth/AuthProvider', () => {;
     logout:jest.fn(),;
     signUp:jest.fn()}),;
 ;
-  const AuthProvider = ({ children } any) => children,;
+  const AuthProvider = ({ children } any) => children;
 ;
   return {;
     __esModule:true,;
@@ -628,6 +631,7 @@ jest.mock('@/context/auth/AuthProvider', () => {;
 
 
   global.IntersectionObserver = MockIntersectionObserver;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 // Ensure all code paths use the mock implementation;
 // Some services import the global fetch reference before jest - fetch - mock is enabled.;
@@ -925,3 +929,4 @@ getItem: jest.fn ()
 //@ts-ignore if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind (jest);
 // @ts-ignore 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

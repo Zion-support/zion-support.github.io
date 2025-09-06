@@ -51,6 +51,7 @@ class PerformanceOptimizer {
   }
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 #!/usr/bin/env node
@@ -183,6 +184,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/automate-test-improve-and-merge-code-646c
 module && module.exports = PerformanceOptimizer;
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 const fs = // // require('fs');
 const path = // // require('path');
 const glob = // // require('glob');
@@ -204,6 +206,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/automate-test-improve-and-merge-code-646c
 
     this.ensureDirectories();
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     this.ensureDirectories();
@@ -256,6 +259,14 @@ ursor/automate-test-improve-and-merge-code-646c
 
     console.log(`[${timestamp}] ${message}`);
   }
+
+
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+    console.log(`[${timestamp}] ${message}`);
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     console.log(`[${timestamp}] ${message}`);
   }
     console.log(`[${timestamp}] ${message}`);
@@ -317,6 +328,7 @@ ursor/automate-test-improve-and-merge-code-646c
           }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     
@@ -336,6 +348,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
             fileOptimizations++;
           }
             fileOptimizations++;
@@ -407,6 +420,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/automate-test-improve-and-merge-code-646c
 
           this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
           this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
@@ -460,6 +474,7 @@ ursor/automate-test-improve-and-merge-code-646c
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     this.log(`📊 Report generated: ${reportPath}`);
@@ -496,6 +511,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     this && this.metrics = {
 
 
@@ -522,6 +538,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -589,6 +606,14 @@ ursor/automate-test-improve-and-merge-code-646c
 
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
+
+
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
+      }
+
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
+      }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
@@ -618,6 +643,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       console.log('Performance Metrics:', this.metrics);
     }
       console.log('Performance Metrics:', this.metrics);
@@ -648,6 +674,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
           event_category: 'Performance',
           value: Math.round(value),
           non_interaction: true
@@ -668,6 +695,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -681,6 +709,7 @@ export default PerformanceMonitor;";
     const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js');
     const utilsDir = path.dirname(scriptPath);
     if (!fs.existsSync(utilsDir)) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       fs.mkdirSync(utilsDir, { "recursive": true })}
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}
@@ -697,6 +726,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/automate-test-improve-and-merge-code-646c
 
       fs.mkdirSync(utilsDir, { recursive: true });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
       fs.mkdirSync(utilsDir, { recursive: true });
@@ -748,6 +778,7 @@ module.exports = PerformanceOptimizer;
       process.exit(1);
     });
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       console.error('❌ Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
@@ -787,6 +818,7 @@ module.exports = PerformanceOptimizer;
       console.error(' Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;

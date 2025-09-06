@@ -5,6 +5,8 @@ import React from 'react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+ursor/fix-lint-push-and-merge-to-main-32fb
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import AppMinimal from './AppMinimal';

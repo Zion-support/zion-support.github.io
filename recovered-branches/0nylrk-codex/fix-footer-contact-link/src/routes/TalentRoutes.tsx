@@ -12,6 +12,8 @@ import ProfilePage from "../pages/ProfilePage";
 
 const TalentRoutes = () => {
 
+const TalentRoutes = () => {
+const TalentRoutes = () => {;
   return (
     <Routes>;
       {/* Talent Routes */}
@@ -41,6 +43,7 @@ const TalentRoutes = () => {
 };
 
 
+};
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
 import TalentDirectory from "../pages / TalentDirectory";

@@ -30,6 +30,7 @@ const contact = {
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
 "export": const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum: Computing Services{
     id,:

@@ -94,6 +94,7 @@ interface ProfileBadgeProps {;
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
 
 
+export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
   const badgeConfig = {;
     verified: {;
       icon: BadgeCheck,;
@@ -119,6 +120,9 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
 
 
 
+
+  const { icon: Icon, text, colors } = badgeConfig[type];
+  return (
 
     <divclassName={cn(
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium"

@@ -87,6 +87,12 @@ serve(async (req) => {
     const { content, enhancementType, context } = await req.json(),;
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
 
+    if (!openAiKey) {
+      throw new Error("OPENAI_API_KEY is not defined")
+;
+  try {;
+    const { content, enhancementType, context } = await req.json(),;
+    const openAiKey = Deno.env.get("OPENAI_API_KEY");
 
 
 ;
@@ -101,6 +107,42 @@ serve(async (req) => {
 
 
 
+    if (!openAiKey) {;
+      throw new Error("OPENAI_API_KEY is not defined");
+    }
+    if (!content) {
+      throw new Error("Content is required")
+    }
+        break;
+      case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
+        user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
+        break;
+      case "skill - categorization": system_prompt = "You are an expert at categorizing technical and professional skills. Organize skills into logical categories.";
+        user_prompt = `Categorize these skills into logical groups: ${content}. Return a JSON object with skill categories as keys and arrays of skills as values. Common categories might include: Programming, DevOps, Cloud, Soft Skills, etc. ${context ? `Professional context: ${context}` : ''}`;
+        break;
+
+    // Determine the system prompt based on enhancement type
+    let systemPrompt = "",
+    let userPrompt = "",
+
+    switch (enhancementType) {
+      case "summary":
+        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",
+        userPrompt = `Create a professional summary for someone with the following background: ${content}. Include key strengths and career objectives. Keep it under 200 words. ${context ? `Additional context: ${context}` : ''}`,
+        break,
+      case "work-description": systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.",
+        userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`,
+        break,
+      case "skill-categorization": systemPrompt = "You are an expert at categorizing technical and professional skills. Organize skills into logical categories.",
+        userPrompt = `Categorize these skills into logical groups: ${content}. Return a JSON object with skill categories as keys and arrays of skills as values. Common categories might include: Programming, DevOps, Cloud, Soft Skills, etc. ${context ? `Professional context: ${context}` : ''}`,
+        break,
+      default: systemPrompt = "You are a professional resume enhancement assistant. Improve the given text to be more impactful and professional.",
+    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${openAiKey}`;
+        "Content-Type": "application/json"};
+      body: JSON && JSON.stringify({
         model: "gpt-4o-mini";
         messages: [
           {
@@ -320,6 +362,7 @@ if ( {) {
     ),;  }
 }),;
  serve (async (req) => {
+  //Handle CORS preflight requests if (req.method === "OPTIONS") {}//Call OpenAI API const response = await fetch ("https://api.openai.com/v1/chat/completions", {
   //Handle CORS preflight requests if (req.method === "OPTIONS") {}//Call OpenAI API const response = await fetch ("https://api.openai.com/v1/chat/completions", {
   method: "POST";
 headers: {

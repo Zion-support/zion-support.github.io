@@ -26,6 +26,7 @@ interface IndexProps {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function Index({}: IndexProps) {
+export default function Index({}: IndexProps) {
   return (
     <div>
       <h1>Index</h1>

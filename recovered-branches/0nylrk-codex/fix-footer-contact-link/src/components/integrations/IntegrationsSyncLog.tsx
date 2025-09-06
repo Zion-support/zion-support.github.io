@@ -1,11 +1,30 @@
-
-
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 
+import { Card } from "@/components/ui/card";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
 
 
+
+
+
+import React from "react",
+import { Card } from "@/components/ui/card",
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
 // Sample data for integration sync logs
 
 const syncLogs = [
@@ -89,6 +108,8 @@ export function IntegrationsSyncLog() {
       case "success": return <Badge className="bg-green-500">Success</Badge>,
 
 
+      case "error":
+        return <Badge variant="destructive">Error</Badge>,
       case "warning":
         return <Badge className="bg-amber-500">Warning</Badge>
       default:
@@ -192,6 +213,13 @@ const syncLogs = [;
 
 
 
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </Card>
+  )
+}
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import {;
@@ -253,6 +281,44 @@ export function IntegrationsSyncLog() {;
       case "success":return <Badge className="bg-green-500">Success</Badge>,;
       case "error":;
         return <Badge variant="destructive">Error</Badge>,;
+// Sample data for integration sync logs;
+const syncLogs = [;
+  {;
+    id: "1",;
+    integration: "Salesforce",;
+    event: "contact_synced",;
+    status: "success",;
+    timestamp: "2024-05-20T12:30:45Z",;
+    details: "Successfully synced contact data for Job #1234";
+  {;
+    id: "2",;
+    integration: "Greenhouse",;
+    event: "applicant_created",;
+  {;
+    id: "3",;
+    integration: "HubSpot",;
+    event: "deal_updated",;
+    status: "error",;
+    timestamp: "2024-05-19T16:45:12Z",;
+    details: "Failed to update deal - API rate limit exceeded";
+  {;
+    id: "4",;
+    integration: "Zoho CRM",;
+    event: "job_synced",;
+    status: "warning",;
+    timestamp: "2024-05-19T14:22:33Z",;
+    details: "Job synced but some fields were skipped due to mapping issues";
+  {;
+    id: "5",;
+    integration: "Lever",;
+    event: "candidate_status_changed",;
+    status: "success",;
+    timestamp: "2024-05-18T09:10:05Z",;
+    details: "Updated candidate status to 'Interview Scheduled'";
+  }
+      case "success": return <Badge className="bg-green-500">Success</Badge>;
+      case "error":;
+        return <Badge variant="destructive">Error</Badge>;
 
       case "warning":;
         return <Badge className="bg-amber-500">Warning</Badge>,;
@@ -300,6 +366,7 @@ export function IntegrationsSyncLog() {;
 }
 
 
+            ))}
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';

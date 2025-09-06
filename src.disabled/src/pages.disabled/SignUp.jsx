@@ -41,6 +41,8 @@ interface SignUpProps {
 ursor/automate-test-improve-and-merge-code-646c
 export default function SignUp({}: SignUpProps) {
 export default function SignUp({}: SignUpProps) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+export default function SignUp({}: SignUpProps) {
   return (
     <div>
       <h1>SignUp</h1>
@@ -50,6 +52,7 @@ export default function SignUp({}: SignUpProps) {
 ursor/automate-test-improve-and-merge-code-646c
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 :src.disabled/src/pages.disabled/SignUp.jsx
 }
@@ -67,3 +70,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 }
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/src/pages.disabled/SignUp.jsx
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -5,6 +5,66 @@ import {Check, X} from "lucide-react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 
+import React from "react",
+import { Button } from "@/components/ui/button";
+import { Check, X } from "lucide-react";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button",
+import { Check, X } from "lucide-react",
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+export function EnterprisePricingTable() {
+
+  const plans = [
+    {
+      name: "Teams"
+      price: "$599"
+      billing: "/month"
+      description: "Perfect for small teams"
+      users: "Up to 10 users"
+      popular: false
+      features: [
+        { name: "Private hiring portal", included: true }
+        { name: "Dedicated talent pool", included: true }
+        { name: "Standard SLA (24h)", included: true }
+        { name: "Basic branding", included: true }
+        { name: "Admin dashboard", included: true }
+        { name: "Team collaboration", included: true }
+        { name: "API access", included: false }
+        { name: "Custom integrations", included: false }
+        { name: "Dedicated success manager", included: false }]}
+    {
+      name: "Business"
+      price: "$1,999";
+      billing: "/month"
+      description: "Ideal for growing companies"
+      users: "Up to 50 users"
+      popular: true
+      name: "Business",;
+      price: "$1,999";
+
+
+      name: "Business",;
+      price: "$1,999";
+
+      name: "Business",
+      price: "$1,999",
+      billing: "/month",
+      description: "Ideal for growing companies",
+      users: "Up to 50 users",
+      popular: true,
       features: [
         { name: "Private hiring portal", included: true }
         { name: "Dedicated talent pool", included: true }
@@ -230,6 +290,23 @@ export function EnterprisePricingTable() {;
                         {plan && plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
 
 
+                {plans.map((plan) => (;
+                  <TableHead key={plan.name} className="text-center">;
+                    <div className="flex flex-col items-center">;
+                      {plan.popular && (;
+              {plans[0].features.map((feature, index) => (;
+                <TableRow key={feature.name}>;
+                  <TableCell className="font-medium">{feature.name}</TableCell>;
+                  {plans.map((plan) => (;
+                    <TableCell key={`${plan.name}-${feature.name}`} className="text-center">;
+                      {plan.features[index].included ? (;
+                        <Check className="h-5 w-5 text-green-500 mx-auto" />;
+                      ) :(;
+                        <X className="h-5 w-5 text-muted-foreground mx-auto" />;                      )}
+                    </TableCell>;
+                  ))}
+                </TableRow>;
+              ))}
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from './lucide-react';
@@ -347,7 +424,6 @@ function EnterprisePricingTable() {
       </div>;
     </section>;
   ),;}
- import {
   Table;
 TableBody;
 TableCell;

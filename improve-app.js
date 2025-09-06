@@ -195,7 +195,10 @@ class PerformanceOptimizer {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 if() { const optimizer = new PerformanceOptimizer;(;);
   optimizer.analyzeBundle();
   optimizer.generateReport() }
@@ -246,7 +249,10 @@ class SecurityAuditor {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 if() { const auditor = new SecurityAuditor;(;);
   auditor.runAudit();
   auditor.fixIssues();
@@ -290,7 +296,10 @@ module.exports = SecurityAuditor";
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 if() { const improver = new AppImprover;(;);
   improver.run().catch(error => {
     console.error('App improvement "failed":  ,', error);

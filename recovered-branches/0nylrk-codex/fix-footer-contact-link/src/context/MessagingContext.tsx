@@ -70,6 +70,17 @@ const MessagingContext = createContext(
 ),
 
 
+// Hook for using the messaging context
+export function useMessaging(): MessagingContextType {
+
+  // Cast to avoid type errors when React type definitions are missing
+  const context = useContext(MessagingContext) as MessagingContextType,
+
+  if (context === undefined) {
+    throw new Error('useMessaging must be used within a MessagingProvider')
+  }
+  return context;
+}
 
 import React, { create_context, useContext, useEffect, ReactNode } from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -121,6 +132,123 @@ function MessagingProvider() {
 // Provider component;
 export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
 
+
+// Provider component
+export function MessagingProvider({ children }: { children: ReactNode }) {;
+  const { user } = useAuth();
+
+  const {;
+    messages;
+    active_messages;
+    setActiveMessages;
+    conversations;
+    set_conversations;
+    unread_count;
+    setUnreadCount;
+    active_conversation;
+    setActiveConversation;
+    is_loading;
+    send_message;
+    create_conversation;
+    markAsRead;
+
+
+
+  const { user } = useAuth();
+  const {;
+    messages;
+    active_messages;
+    setActiveMessages;
+    conversations;
+    set_conversations;
+    unread_count;
+    setUnreadCount;
+    active_conversation;
+    setActiveConversation;
+    is_loading;
+    send_message;
+    create_conversation;
+    markAsRead;
+);
+),
+
+// Hook for using the messaging context
+export function useMessaging(): MessagingContextType {
+  // Cast to avoid type errors when React type definitions are missing;
+
+  const context = useContext(MessagingContext) as MessagingContextType;
+  if (context === undefined) {;
+    throw new Error('useMessaging must be used within a MessagingProvider');
+  }
+  return context;
+}
+  const {
+
+
+
+// Provider component
+export function MessagingProvider({ children }: { children: ReactNode }) {;
+  const { user } = useAuth();
+  const {;
+    messages;
+    active_messages;
+    setActiveMessages;
+    conversations;
+    set_conversations;
+    unread_count;
+    setUnreadCount;
+    active_conversation;
+    setActiveConversation;
+    is_loading;
+    send_message;
+    create_conversation;
+    markAsRead;
+      {children}
+    </MessagingContext.Provider>
+  )
+}
+;
+// Provider component;
+export function MessagingProvider({ children }: { children: ReactNode }) {;
+  const { user } = useAuth(),;
+  const {;
+    messages,;
+    activeMessages,;
+    setActiveMessages,;
+    conversations,;
+    setConversations,;
+    unreadCount,;
+    setUnreadCount,;
+    activeConversation,;
+    setActiveConversation,;
+    isLoading,;
+    sendMessage,;
+    createConversation,;
+    markAsRead,;
+    fetchConversations,;
+    loadMessages;
+  } = useMessagingOperations(user),;
+  // Setup real-time subscription;
+  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
+  // Calculate unread count from conversations;
+  useEffect(() => {;
+    if (conversations.length > 0) {;
+      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0);
+      setUnreadCount(count);
+    }
+  }, [conversations, setUnreadCount]),;
+  // Fetch conversations when user changes;
+  useEffect(() => {;
+    if (user) {;
+      fetchConversations();
+    } else {;
+      setConversations([]),;
+
+
+      setConversations([]);
+      setUnreadCount(0);
+    }
+  }, [user, fetchConversations, setConversations, setUnreadCount]);
     fetch_conversations;
     load_messages;
   } = useMessagingOperations (user);
@@ -175,6 +303,9 @@ if ( {) {
 
 
 
+  return (
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+      {children}
     fetch_conversations,
     load_messages;
   }
@@ -186,6 +317,7 @@ if ( {) {
 export function useMessaging():MessagingContextType {;
   // Cast to avoid type errors when React type definitions are missing;
   const context = useContext(MessagingContext) as MessagingContextType;
+  const context = useContext(MessagingContext) as MessagingContextType,;
   if (context === undefined) {;
     throw new Error('useMessaging must be used within a MessagingProvider'),;
   }

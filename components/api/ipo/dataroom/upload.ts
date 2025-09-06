@@ -15,6 +15,47 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
+  const form = formidable({ multiples: false });
+  form.parse(req, (err, fields, files) => {
+    if (err) return res.status(400).json({ error: 'Invalid form data' });
+    const section = String(fields.section |'General');
+    const file = files.file as formidable.File | undefined;
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+
+  const form = formidable({ multiples: false });
+  form && form.parse(req, (err, fields, files) => {
+    if (err) return res && res.status(400).json({ error: 'Invalid form data' });
+    const section = String(fields && fields.section || 'General');
+    const file = files && files.file as formidable && formidable.File | undefined;
+    if (!file || !file && file.filepath)
+      return res && res.status(400).json({ error: 'File missing' });
+
+    const targetDir = resolveDataPath(path && path.join('dataroom', section));
+    if (!fs && fs.existsSync(targetDir)) fs && fs.mkdirSync(targetDir, { recursive: true });
+    const targetPath = path && path.join(
+      targetDir,
+      file && file.originalFilename || path && path.basename(file && file.filepath)
+    );
+    fs && fs.copyFileSync(file && file.filepath, targetPath);
+    appendAuditLog({
+
+    res.status(200).json({ ok: true })
+      type: 'file_upload',
+      section,
+      name: path && path.basename(targetPath)
+    });
+    res && res.status(200).json({ ok: true });
+  });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
+    res && res.status(200).json({ ok: true })
+  })
+
+}
+
+}
+
+  })
+  })
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 export const config = { api: { body_parser: false } }
@@ -52,6 +93,7 @@ function handler() {
       type: 'file_upload',
       section,
       name: path.basename (target_path)
+      name: path.basename (target_path)
     });
     res.status (200).json ({ ok: true });
   });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) });
@@ -63,3 +105,5 @@ function handler() {
 
 
 
+}
+}

@@ -6,6 +6,9 @@ export interface SmartContractInfo {;
 
 
 
+export interface SmartContractInfo {;
+
+
   id: string;
   transactionHash?: string;
   networkName?: BlockchainNetwork;
@@ -82,3 +85,4 @@ export interface DeploymentOptions {;
 ;
 
 
+}

@@ -18,6 +18,9 @@ interface DocsProps {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/automate-test-improve-and-merge-code-646c
 export default function Docs({}: DocsProps) {
+interface DocsProps {
+  // Add props here as needed
+export default function Docs({}: DocsProps) {
   return (
     <div>
       <h1>Docs</h1>
@@ -39,3 +42,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

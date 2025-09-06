@@ -6,6 +6,8 @@
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) {} return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) {} return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 #!/usr/bin/env node
 const sharp = // // require('sharp')
 const fs = // // require('fs')
@@ -29,6 +31,7 @@ async function optimizeImages() {
   }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     console.log('No images directory found')}
     return}
   const files = fs.readdirSync(imagesDir;);

@@ -32,6 +32,12 @@ import { X } from "lucide-react",
 
 
 
+  // Use our custom hook to manage state;
+  const {;
+
+  const navigate = useNavigate();
+  // Use our custom hook to manage state
+  const {
     filteredTalents;
     isLoading;
     searchTerm;
@@ -159,6 +165,8 @@ export default function TalentDirectory() {
 
 
 
+    selected_talent;
+    setSelectedTalent;
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -210,6 +218,7 @@ import { X } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { TalentProfile } from "@/types/talent",;
 export default function TalentDirectory() {;
+  const navigate = useNavigate();
   const navigate = useNavigate();
   // Use our custom hook to manage state;
   const {;
@@ -407,6 +416,25 @@ export default function TalentDirectory() {;
                 className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
 
 
+                variant="outline";
+                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
+                clear_filters={clear_filters}
+              />;
+            </div>;
+            {/* Mobile filter button */}
+            <div className="lg:hidden mb - 4">;
+              <Button;
+                on_click={() => setIsMobileFilterOpen (true)}
+                variant="outline";
+                className="w - full border - zion - blue - light text - zion - purple hover:bg - zion - blue - light";
+            {/* Mobile filter button */}
+            <div className="lg:hidden mb-4">;
+              <Button
+                onClick={() => setIsMobileFilterOpen(true)}
+              >;
+                Filter & Sort;
+              </Button>;
+            </div>;
             {/* Results */}
             <TalentResults;
               filtered_talents={filtered_talents}
@@ -442,6 +470,51 @@ export default function TalentDirectory() {;
               isAuthenticated={isAuthenticated}
 
 
+              activeFiltersProps={{;
+                selectedSkills,;
+                toggleSkill,;
+                selectedAvailability,;
+                toggleAvailability,;
+                selectedRegions,;
+                toggleRegion,;
+                priceRange,;
+                setPriceRange,;
+                experienceRange;
+                setExperienceRange;
+
+                setPriceRange;
+                experience_range;
+                setExperienceRange;
+                selectedSkills
+                toggleSkill
+                selectedAvailability
+                toggleAvailability
+                selectedRegions
+                toggleRegion
+                priceRange
+                setPriceRange
+                experienceRange
+                setExperienceRange
+                clearFilters}}
+            />;
+              handleRequestHire={handleRequestHire}
+              saved_talents={saved_talents}
+              handleToggleSave={handleToggleSave}
+              activeFiltersProps={{;
+                selectedSkills,;
+                toggleSkill,;
+                selectedAvailability,;
+                toggleAvailability,;
+                selectedRegions,;
+                toggleRegion,;
+                priceRange,;
+                setPriceRange,;
+                experienceRange;
+              is_authenticated={is_authenticated}
+              activeFiltersProps={{
+                setPriceRange;
+                experience_range;
+                setExperienceRange;
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (;
               <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
@@ -454,6 +527,9 @@ export default function TalentDirectory() {;
                       size="sm";
 
 
+                    <Button
+                      variant="ghost"
+                      size="sm"
                       onClick={() => setIsMobileFilterOpen(false)}
                       className="text-zion-slate-light h-8 w-8 p-0";
                     >;
@@ -512,6 +588,31 @@ export default function TalentDirectory() {;
 
                     setSearchTerm={setSearchTerm}
 
+                    searchTerm={searchTerm}
+                clear_filters}}
+            />;
+            {/* Mobile filter sidebar */}
+            {isMobileFilterOpen && (
+              <div className="fixed inset - 0 bg - black bg - opacity - 50 z - 50 lg:hidden flex">;
+                <div className="w - 80 h - full bg - zion - blue - dark overflow - y-auto p - 4 ml - auto">;
+                  <div className="flex justify - between items - center mb - 4">;
+                    <h3 className="font - bold text - white">Filter & Sort</h3>;
+                    <Button;
+                      variant="ghost";
+                      size="sm";
+                      on_click={() => setIsMobileFilterOpen (false)}
+                      className="text - zion - slate - light h - 8 w - 8 p - 0";
+                    >;
+                      <X className="h - 4 w - 4" />;
+                      <span className="sr - only">Close</span>;
+                    </Button>;
+                  </div>;
+                  <FilterSidebar;
+                    search_term={search_term}
+                    setSearchTerm={setSearchTerm}
+                  <FilterSidebar
+                    searchTerm={searchTerm}
+                    setSearchTerm={setSearchTerm}
                     selected_skills={selected_skills}
                     toggle_skill={toggle_skill}
                     selected_availability={selected_availability}

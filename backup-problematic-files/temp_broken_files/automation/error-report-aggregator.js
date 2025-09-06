@@ -76,6 +76,7 @@ ursor/automate-test-improve-and-merge-code-646c
         'dependency-health.json',
         'error-fixer-report.json',
         'real-time-validation.json'
+        'real-time-validation.json'
       ];
       for (const file of reportFiles) {
         const filePath = path.join(this.reportsDir, file);
@@ -146,6 +147,7 @@ ursor/automate-test-improve-and-merge-code-646c
       // Calculate overall score
       const scores = [summary.overallHealth.buildHealth,
         summary.overallHealth.codeQuality,
+        summary.overallHealth.dependencyHealth
         summary.overallHealth.dependencyHealth
       ].filter(score => score > 0);
       if (scores.length > 0) {

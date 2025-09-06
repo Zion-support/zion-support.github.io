@@ -34,6 +34,7 @@ import React from 'react',;
 import SEO from '../components/SEO',;
 import SEO from '../components/SEO';
 export default function WebinarsPage() {
+export default function WebinarsPage() {
 ursor/integrate-build-improve-and-re-verify-8f7d
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -61,6 +62,10 @@ export default function WebinarsPage() {
 origin/main
 origin/automation-improvements-final
 ursor/automate-test-improve-and-merge-code-646c
+export default function WebinarsPage() {
+export default function WebinarsPage() {
+origin/main
+origin/automation-improvements-final
 	return (
 		<>
 			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />
@@ -92,6 +97,7 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ursor/automate-test-improve-and-merge-code-646c
+}
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**

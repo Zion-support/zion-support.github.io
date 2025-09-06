@@ -1,5 +1,6 @@
 
 
+export interface WhitelabelTenant {
 
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -11,6 +12,9 @@ export interface WhitelabelTenant {
 export interface WhitelabelTenant {;
 
 
+export interface WhitelabelTenant {
+export interface WhitelabelTenant {;
+export interface WhitelabelTenant {
   id: string;
   brand_name: string;
   subdomain: string;
@@ -54,6 +58,9 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
 export function useWhitelabelTenant(externalSubdomain?: string) {;
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
 
+export function useWhitelabelTenant(externalSubdomain?: string) {;
+  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
+
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -67,6 +74,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
       if (typeof navigator !== 'undefined' && !navigator.onLine) {
 
 
+      if (typeof navigator !== 'undefined' && !navigator && navigator.onLine) {
         setError('No internet connection');
         setTenant(null);
         setIsLoading(false);
@@ -126,6 +134,9 @@ export interface WhitelabelTenant {;
 
           `${functionName}${params}`;
 
+          `${functionName}${params}`;
+  dns_verified: boolean,
+  email_template_override: Record < string, any> | null;
 }
 export /**
  * useWhitelabelTenant - Function description
@@ -182,7 +193,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
       try {;
         // Get the current hostname, fallback to localhost if not available;
         const hostname = window.location.hostname || 'localhost';
-        const functionName = 'tenant-detector',;
+        const functionName = 'tenant-detector';
         // Build the query parameters;
         const params = externalSubdomain;
           ? `?subdomain=${encodeURIComponent(externalSubdomain)}`;
@@ -250,6 +261,7 @@ if ( {) {
           message.includes('No internet connection')
 
 
+      } catch (err: any) {
         ) {
           message = 'Unable to reach the server. Please check your internet connection and try again.'
         }
@@ -268,6 +280,7 @@ if ( {) {
 export function useTenantAdminStatus(tenantId?: string) {;
 
 
+export function useTenantAdminStatus(tenantId?: string) {;
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {

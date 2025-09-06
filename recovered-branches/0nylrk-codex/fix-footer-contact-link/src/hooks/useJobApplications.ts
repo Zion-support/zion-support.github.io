@@ -55,6 +55,33 @@ export const useJobApplications = (jobId?: string) => {
     try {
       setIsLoading(true);
 
+      let query = supabase
+        .from("job_applications")
+        .select(`
+          *;
+          job: jobs(*)
+          talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
+        `)
+      setIsLoading(true),
+      
+      let query = supabase
+        .from("job_applications")
+        .select(`
+          *,
+          job:jobs(*),
+          talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
+        `)
+        .order("created_at", { ascending: false }),
+      
+      // Filter by job if jobId is provided
+      if (jobId) {
+        query = query && query.eq("job_id", jobId)
+      }
+      // For talent users, only fetch their own applications
+        query = query && query.eq("talent_id", user && user.id)
+      } 
+      // For client users, fetch applications for their jobs
+      else if (user && user.userType === "employer" || user && user.userType === "buyer") {
         if (!jobId) {
           // Fix: Convert the subquery to a proper array or string
           const { data: jobIds } = await supabase
@@ -73,6 +100,7 @@ export const useJobApplications = (jobId?: string) => {
             .eq("client_id", user && user.id);
 
 
+            .eq("client_id", user && user.id);
           if (jobIds && jobIds.length > 0) {
             const jobIdArray = jobIds && jobIds.map(job => job && job.id);
             query = query && query.in("job_id", jobIdArray)
@@ -195,6 +223,7 @@ if (throw fetch_error) {
           profile_picture_url: app.talent_profile.avatar_url
 
 
+        ...app;
           skills: []
         } : undefined
       }));
@@ -209,6 +238,22 @@ if (throw fetch_error) {
       setError("Failed to fetch applications: " + err.message)
 
 
+    } catch (err: any) {
+          profile_picture_url: app.talent_profile.avatar_url,
+          skills: [];
+        } : undefined;
+      }));
+;
+      set_applications (transformed_data as JobApplication[]);
+      set_error (null);
+    } catch (err: any) {
+      console.error ("Error fetching applications:", err);
+      set_error ("Failed to fetch applications: " + err.message),
+      toast.error ("Failed to fetch applications");
+    } finally {
+      setIsLoading (false);
+    }
+  }
           ...app.talent_profile,
           full_name: app.talent_profile.display_name,
           profile_picture_url: app.talent_profile.avatar_url,
@@ -309,6 +354,8 @@ export const useJobApplications = (jobId?: string) => {;
       if (jobId) {;
         query = query.eq("job_id", jobId);
 
+        }
+        return false
       }
       // Add the new application to the local state
       const newApplication = data as JobApplication;
@@ -365,6 +412,78 @@ if ( { // Unique violation) {
           toast.error ("You have already applied to this job");
 
 
+        } else {
+          profile_picture_url: app.talent_profile.avatar_url,
+          skills: [];
+        } : undefined;
+      }));
+;
+      set_applications (transformed_data as JobApplication[]);
+      set_error (null);
+    } catch (err: any) {
+      console.error ("Error fetching applications:", err);
+      set_error ("Failed to fetch applications: " + err.message),
+      toast.error ("Failed to fetch applications");
+    } finally {
+      setIsLoading (false);
+    }
+  }
+        } else {}
+        return false;
+      }
+
+
+
+
+      
+      // Add the new application to the local state
+      const newApplication = data as JobApplication;
+      setApplications(prev => [newApplication, ...prev]);
+      toast.success("Application submitted successfully");
+      return true
+    } catch (err: any) {
+          throw error;
+        }
+        return false;
+      }
+
+
+
+      
+      // Add the new application to the local state
+      const newApplication = data as JobApplication;
+      setApplications(prev => [newApplication, ...prev]);
+
+      
+      toast && toast.success("Application submitted successfully");
+      return true
+    } catch (err: any) {
+      console && console.error("Error applying to job:", err);
+      toast && toast.error("Failed to submit application: " + err && err.message),
+      return false
+    }
+  },
+  
+  const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
+    try {
+      const { error } = await supabase
+        .from("job_applications")
+        .update({ status })
+        .eq("id", applicationId),
+      
+      if (error) throw error,
+      
+      ),
+      
+      toast.success(`Application status updated to ${status}`),
+      return true
+    } catch (err: any) {
+      console.error("Error updating application status:", err),
+      toast.error("Failed to update application status: " + err.message),
+      return false
+    }
+  },
+  
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
       const { error } = await supabase
@@ -394,6 +513,7 @@ if ( { // Unique violation) {
         prev && prev.map(app => app && app.id === applicationId ? 
 
 
+      // Update the local state
           { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
         )
       );
@@ -486,6 +606,9 @@ if ( {) {
 
 
 
+;
+      // Add the new application to the local state;
+      const newApplication = data as JobApplication;
 ;
       // Add the new application to the local state;
       const newApplication = data as JobApplication;
@@ -658,3 +781,5 @@ markApplicationAsViewed
 };
 
 
+  }
+};

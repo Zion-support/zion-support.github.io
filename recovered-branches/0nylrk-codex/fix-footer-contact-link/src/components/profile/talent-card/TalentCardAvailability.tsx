@@ -12,6 +12,7 @@ interface TalentCardAvailabilityProps {;
 }
 
 
+export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
 
 
   };
@@ -41,6 +42,40 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'part-time':;
         return 'bg-yellow-500/20 text-yellow-400',;
 
+      case 'project-based':;
+        return 'bg-blue-500/20 text-blue-400',;
+      default:;
+        return 'bg-gray-500/20 text-gray-400';
+    }
+  // Format availability label;
+  const getAvailabilityLabel = (status: string) => {;
+    switch (status) {;
+      case 'full-time':;
+        return 'Full-time';
+      case 'part-time':;
+        return 'Part-time';
+
+  },;
+  ;
+  // Format availability label;
+  const getAvailabilityLabel = (status:string) => {;
+    switch (status) {;
+      case 'full-time':;
+        return 'Full-time',;
+      case 'part-time':;
+        return 'Part-time',;
+      case 'project-based':;
+        return 'Project',;
+      default:;
+        return status;
+  },
+
+      case 'part-time':;
+        return 'bg-yellow-500/20 text-yellow-400';
+        return 'Full-time';
+      case 'part-time':;
+        return 'Part-time';
+    }
 
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
@@ -55,6 +90,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
 
 
 
+}
 export /**
  * TalentCardAvailability - Function description
  */

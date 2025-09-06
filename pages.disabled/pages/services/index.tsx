@@ -34,6 +34,9 @@ import Link from 'next/link';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
 const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
 
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -149,6 +152,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
             {services.map((service, index) => (
               <div key={index} className=\"bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6\">
                 <div className=\"flex items-center mb-4\">
@@ -346,6 +352,7 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
           </div>;
           <div className=\"text-center mt-16\">;
@@ -367,6 +374,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                 href=\"/contact\"
                 className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors\">;
                 Get Free Consultation;
@@ -400,3 +408,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

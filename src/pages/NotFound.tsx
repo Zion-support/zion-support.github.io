@@ -17,6 +17,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 const NotFound = () => {
 >>>>>>> main
+import Button from '../components/Button';
+
+const NotFound: React.FC = () => {
   return (
     <>
       <SEO
@@ -94,3 +97,4 @@ export default NotFound;
 export default NotFound;
 ursor/integrate-build-improve-and-re-verify-9d47
 ursor/automate-test-improve-and-merge-code-646c
+export default NotFound;

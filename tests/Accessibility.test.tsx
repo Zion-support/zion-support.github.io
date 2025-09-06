@@ -13,4 +13,7 @@ ursor/automate-test-improve-and-merge-code-646c
 </ModeToggle>'
 </ModeToggle>'
 </ModeToggle>'
+<<<<<<< HEAD
 </ModeToggle>'
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

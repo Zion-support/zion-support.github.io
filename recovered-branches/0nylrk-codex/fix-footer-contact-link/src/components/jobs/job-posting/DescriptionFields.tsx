@@ -23,16 +23,22 @@ import {;
   FormControl,
   FormDescription,
   FormMessage,;
+} from "@/components/ui/form";
+
+import { Textarea } from "@/components/ui/textarea";
+
+import { JobSchemaType } from "./validation";
+interface DescriptionFieldsProps {;
 
 } from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
-import { JobSchemaType } from "./validation";
 interface DescriptionFieldsProps {;
 } from "@/components/ui/form";
 
 import { JobSchemaType } from './validation';
 interface DescriptionFieldsProps {
 
+
+interface DescriptionFieldsProps {} from "@/components/ui/form";
 
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
@@ -99,6 +105,9 @@ export function DescriptionFields({
 
 
 
+              <Textarea
+
+
 import React from 'react',
 import { Control } from 'react-hook-form',
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
@@ -131,6 +140,22 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
             <FormControl>
 
 
+              <Textarea
+              <Textarea 
+
+                value={editorContent}
+                onChange={(e) => {;
+                  handleEditorChange(e && e.target.value);
+                  field && field.onChange(e && e.target.value);
+                }}
+                className="min-h-[200px]";
+                }}
+                className="min-h-[200px]";
+
+                value={editorContent}
+                onChange={(e) => {;
+                }}
+                className="min-h-[200px]";
 import React from './react';
 import { Control  } from './react - hook - form';
 import {
@@ -139,6 +164,7 @@ import {
   FormLabel,
   FormControl,
   FormDescription,
+  FormMessage
   FormMessage
 } from '@/components / ui / form';
 import { Textarea  } from '@/components / ui / textarea';
@@ -214,6 +240,9 @@ function DescriptionFields() {
 
 
 
+              <Textarea;
+                placeholder="List the main responsibilities of this job";
+                className="resize-none min-h-[100px]";
                 {...field}
               />;
             </FormControl>;
@@ -250,6 +279,9 @@ function DescriptionFields() {
 
 
 
+              <Textarea;
+                placeholder="List the required qualifications for this job";
+                className="resize-none min-h-[100px]";
                 {...field}
               />;
             </FormControl>;
@@ -286,6 +318,9 @@ function DescriptionFields() {
 
 
 
+              <Textarea;
+                placeholder="List the benefits offered for this job";
+                className="resize-none min-h-[100px]";
                 {...field}
               />;
             </FormControl>;
@@ -440,6 +475,12 @@ function DescriptionFields() {
 
 }
 
+  );
+          </FormItem>)}
+      />;
+    </>);
+}
+  );
           </FormItem>)}
       />;
     </>);

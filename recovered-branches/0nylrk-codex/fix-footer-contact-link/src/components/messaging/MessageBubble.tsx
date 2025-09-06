@@ -7,6 +7,9 @@
 
 
 
+  message: Message,
+  isUserMessage: boolean
+
 import React from 'react',;
 import { format } from 'date-fns',;
 import { PaperclipIcon } from 'lucide-react',;
@@ -23,6 +26,10 @@ interface MessageBubbleProps {;
 }
 
 
+}
+}
+}
+}
 
   message: Message
 
@@ -39,6 +46,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
       "flex";
     <div className={cn(
       "flex",
+
 
 
       isUserMessage ? "justify-end" : "justify-start"

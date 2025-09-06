@@ -2,6 +2,36 @@
 
 
 
+export function AIMilestoneGenerator({;
+
+
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Accordion;
+  AccordionContent;
+  AccordionItem;
+  AccordionTrigger } from '@/components/ui/accordion';
+import { Loader2, Sparkles, Plus, Calendar  } from 'lucide-react';
+import { format, parseISO  } from 'date-fns';
+import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Badge } from '@/components/ui/badge';
+interface AIMilestoneGeneratorProps {
+
+  scope: string
+  startDate: string
+  endDate: string | null
+  projectType: string
+  onAddMilestones: (milestones: GeneratedMilestone[]) => void
+
+  onAddMilestone: (milestone: GeneratedMilestone) => void
+}
+export function AIMilestoneGenerator({
+
+export function AIMilestoneGenerator({;
+
+
+export function AIMilestoneGenerator({;
   scope;
   startDate;
   endDate;
@@ -61,6 +91,9 @@
   };
 
 
+  onAddMilestone;
+}: AIMilestoneGeneratorProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
 
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -150,12 +183,15 @@ export function AIMilestoneGenerator({;
     }
 
 
+    }
+
   },
 
 
 
 
 
+  return (
 
 
 
@@ -200,7 +236,7 @@ export function AIMilestoneGenerator({;
 ;
     await generateMilestones(input),;
     // Initially select all milestones;
-    const initialSelection = {},;
+    const initialSelection = {};
     generatedMilestones.forEach((_, index) => {;
       initialSelection[index] = true,;
     }),;
@@ -239,6 +275,9 @@ export function AIMilestoneGenerator({;
   return (;
 
 
+    }
+  }
+  return (
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <h3 className="text-lg font-medium flex items-center">;
@@ -435,6 +474,17 @@ if ( {) {
 
 
 
+                          <span className="font-medium">{milestone.title}</span>;
+                          <Badge variant="secondary" className="ml-2 flex items-center">;
+                            <Sparkles className="w-3 h-3 mr-1" />;
+        <Button
+          variant="outline"
+          onClick={handleGenerateMilestones}
+                      <input
+                        type="checkbox"
+                        id={`milestone-${index}`}
+                        checked={selectedMilestones[index] |false}
+                        onChange={() => toggleMilestoneSelection(index)}
                             AI Suggested;
                           </Badge>;
                         </div>;
@@ -453,6 +503,16 @@ if ( {) {
 
 
 
+                      onClick={(e) => {
+
+                        e.stopPropagation(),
+                        handleAddSingleMilestone(milestone)
+                    <Button;
+                      variant="ghost";
+                      size="sm";
+                      onClick={(e) => {;
+                        e.stopPropagation(),;
+                        handleAddSingleMilestone(milestone),;
                       }}
                       className="mr-2";
                     >;
@@ -532,6 +592,7 @@ if ( {) {
   const selectedMilestonesList = generatedMilestones.filter ( (, index) => selectedMilestones[index]);
 onAddMilestones (selectedMilestonesList);
 clearGeneratedMilestones ();
+setSelectedMilestones ({}) 
 setSelectedMilestones ({}) 
 };
 return (<div className="space-y-4" > <div className="flex items-center justify-between" > <h3 className="text-lg font-medium flex items-center" > <Sparkles className="w-5 h-5 mr-2 text-primary" /> AI Milestone Generator </h3> <Button > {

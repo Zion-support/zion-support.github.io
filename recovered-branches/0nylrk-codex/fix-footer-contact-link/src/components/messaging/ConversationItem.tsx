@@ -25,6 +25,10 @@ interface ConversationItemProps {;
 }
 
 
+}
+}
+}
+}
 
   conversation: Conversation
   isActive: boolean
@@ -111,6 +115,7 @@ function ConversationItem() {
         </div>;
 
 
+import React from 'react';
         {conversation.context_data?.title && (
           <div className="text - xs mt - 1 text - zion - cyan truncate">;
             Re: {conversation.context_data.title}
@@ -170,3 +175,70 @@ export function ConversationItem({ conversation, isActive, onClick } Conversatio
 
 
 
+        </div>)}
+    </div>);
+}
+        <AvatarImage src={conversation.other_user.avatar_url} alt={conversation.other_user.name} />;
+        <AvatarFallback className="bg-zion-blue-dark text-white">;
+          {conversation.other_user.name.charAt(0).toUpperCase()}
+        </AvatarFallback>;
+      </Avatar>;
+      ;
+      <div className="flex-1 min-w-0">;
+        <div className="flex justify-between items-start">;
+          <div className="font-medium text-white truncate">{conversation.other_user.name}</div>;
+          <div className="text-xs text-zion-slate whitespace-nowrap">;
+            {format(new Date(conversation.updated_at), 'MMM d')}
+          </div>;
+        </div>;
+        ;
+        <div className="text-sm text-zion-slate truncate">;
+          {conversation.last_message?.content || '(No messages yet)'}
+        </div>;
+        ;
+        {conversation.context_data?.title && (;
+          <div className="text-xs mt-1 text-zion-cyan truncate">;
+            Re:{conversation.context_data.title}
+          </div>;
+        )}
+      </div>;
+      ;
+      {conversation.unread_count > 0 && (;
+        <div className="bg-zion-purple text-white rounded-full h-5 min-w-5 flex items-center justify-center text-xs">;
+          {conversation.unread_count}
+        </div>;
+      )}
+    </div>;
+  ),;}
+ export function ConversationItem ({
+  conversation, isActive, onClick 
+}: ConversationItemProps) {
+  return (<div className= {
+  cn () 
+}onClick= {
+  onClick 
+}> Re: {
+  conversation.context data.title 
+}</div>) 
+}</div> {
+  conversation.unread count 
+}</div>) 
+}</div>) 
+}
+        {conversation.context_data?.title && (
+          <div className="text-xs mt-1 text-zion-cyan truncate">
+            Re: {conversation.context_data.title}
+          </div>
+        )}
+      </div>
+      {conversation.unread_count > 0 && (
+        <div className="bg-zion-purple text-white rounded-full h-5 min-w-5 flex items-center justify-center text-xs">
+          {conversation.unread_count}
+        </div>
+      )}
+    </div>
+  )
+}
+        </div>)}
+    </div>);
+}

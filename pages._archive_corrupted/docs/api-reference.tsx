@@ -30,6 +30,7 @@ export default function Apireference({}: ApireferenceProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 export default function Apireference({}: ApireferenceProps) {
+export default function Apireference({}: ApireferenceProps) {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -63,6 +64,12 @@ export default function Apireference(): any ({}: ApireferenceProps) {;
 export default function Apireference({}: ApireferenceProps) {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+interface ApireferenceProps {;
+  // Add props here as needed;
+}
+export default function Apireference(): any ({}: ApireferenceProps) {;
+}
+export default function Apireference({}: ApireferenceProps) {
   return (
     <div>
       <h1>Apireference</h1>

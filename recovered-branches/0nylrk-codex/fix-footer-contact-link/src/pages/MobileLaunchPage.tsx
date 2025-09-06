@@ -38,6 +38,7 @@ const MobileLaunchPage: React.FC = () => {
   );
 };
 
+export default MobileLaunchPage;
 
 import React from './react';
 import { SEO } from '@/components / SEO';

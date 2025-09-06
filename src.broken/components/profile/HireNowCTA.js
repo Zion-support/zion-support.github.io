@@ -91,3 +91,5 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
 
 }
 
+}
+}

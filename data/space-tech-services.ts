@@ -30,6 +30,15 @@
 
 
 
+      'API for integration'
+    ],
+    popular: true,
+    icon: '🛰️',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+;
     realImplementation: true
     implementationDetails:
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'
@@ -306,12 +315,20 @@
 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
     realImplementation: true
     implementationDetails:
 
+    implementationDetails: 'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.';
+    launchDate: '2024-03-10';
+    customers: 500;
+    rating: 4.9
+
+    reviews: 250
   id: string,;
   name: string,;
   tagline: string,;
@@ -402,3 +419,5 @@ export const spaceTechServices: SpaceTechService[] = [;
 
 
 
+  }
+];

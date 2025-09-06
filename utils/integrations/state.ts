@@ -40,6 +40,11 @@ export function write_state (updater: (state: IntegrationState) => void): Integr
   updater (state);
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
 >>>>>>> main
+}
+;
+export function get_state (): IntegrationState {
+  return { ...state }
+}
 };
 
 export function getState(): IntegrationState {;
@@ -57,6 +62,7 @@ export function writeState(updater: (state: IntegrationState) => void): Integrat
   updater(state);
 
 
+  updater(state);
   return { ...state }
 }
 export function resetState(): void {
@@ -101,3 +107,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+  state = {}
+}
+
+
+    connections: [],
+    logs: [],
+    overrides: []
+  };

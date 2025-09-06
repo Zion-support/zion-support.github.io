@@ -14,3 +14,4 @@ export: function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] =
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 "export": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;")"}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -462,6 +462,7 @@ const "CloudDevOpsPage": React.FC = () => {;
     }
   ];
   const technologies = [{ "name": "AWS", "description": "Amazon Web Services" };
+  const technologies = [{ "name": "AWS", "description": "Amazon Web Services" };
     { "name": "Azure", "description": "Microsoft Azure" },;
     { "name": "GCP", "description": "Google Cloud Platform" },;
     { "name": "Kubernetes", "description": "Container Orchestration" },;
@@ -659,6 +660,8 @@ export default CloudDevOpsPage
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default CloudDevOpsPage
+;
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ "scale": 0 && 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;

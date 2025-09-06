@@ -19,8 +19,12 @@ function resolveMergeConflicts(filePath) {
         
         content = content.replace(/        
         // Remove any remaining conflict markers
+<<<<<<< HEAD
         content = content.replace(/        content = content.replace(/\n/g, '');
         content = content.replace(/        
+=======
+        content = content.replace(/        content = content.replace(/        content = content.replace(/        
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');
         

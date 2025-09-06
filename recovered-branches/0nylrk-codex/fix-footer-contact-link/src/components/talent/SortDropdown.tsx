@@ -8,6 +8,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
+  DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 
 
@@ -18,6 +19,14 @@ import {
   DropdownMenuItem,
 
 
+
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { SORT_OPTIONS  } from '@/data / sort_options';
+import { SortDesc, ChevronDown  } from './lucide-react';
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
       <DropdownMenuContent
         align="start"
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
@@ -45,7 +54,9 @@ import {
 
 
 
-            }`}
+            key={option.value}
+            onClick={() => setSortOption(option.value)}
+            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${}`}
           >
             {option.label}
           </DropdownMenuItem>
@@ -73,3 +84,5 @@ interface SortDropdownProps {;
 ;
 
 
+}
+;

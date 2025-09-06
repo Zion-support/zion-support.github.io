@@ -65,6 +65,12 @@ const contact = {
 
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services
+    name: 'AI Content Generation Platform';
+    tagline: 'Create high - quality content at scale with AI';
+    price: '$299';
+
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-content-generation';
+    marketPosition: 'Leading AI content generation platform with enterprise features',
 
     targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses';
     trialDays: 14;
@@ -679,3 +685,4 @@ export default comprehensiveInnovativeServices;
 
 
 
+export default comprehensiveInnovativeServices;

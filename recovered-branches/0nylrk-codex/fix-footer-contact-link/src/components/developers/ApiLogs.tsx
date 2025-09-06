@@ -10,6 +10,31 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Badge} from "@/components/ui/badge";
 
+export function ApiLogs() {
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+  // Load logs on mount and when pagination changes
+  useEffect(() => {
+    fetchApiLogs(pageSize, currentPage * pageSize)
+  }, [pageSize, currentPage]);
+
+  const handleRefresh = () => {
+    fetchApiLogs(pageSize, currentPage * pageSize)
+  }
+  // Helper to format the timestamp
+  const formatTimestamp = (timestamp: string) => {
+    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
+  }
+export function ApiLogs() {;
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+
+export function ApiLogs() {;
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
 
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
@@ -29,6 +54,7 @@ export function ApiLogs() {
   
 
 
+  
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
@@ -44,6 +70,7 @@ export function ApiLogs() {
   
 
 
+  
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -123,6 +150,31 @@ export function ApiLogs() {;
 
 
 
+  },
+  
+  // Calculate pagination info
+  const totalPages = Math.ceil(totalLogs / pageSize),
+  const hasNextPage = currentPage < totalPages - 1,
+  const hasPrevPage = currentPage > 0,
+
+
+  return (
+
+            <Select
+
+  return (
+
+            <Select
+
+  const hasNextPage = currentPage < totalPages - 1;
+  const hasPrevPage = currentPage > 0;
+  return (
+
+              value={pageSize.toString()}
+              onValueChange={(value) => {
+                setPageSize(Number(value));
+
+                setCurrentPage(0), // Reset to first page when changing page size
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { List, RefreshCw } from "lucide-react",;
@@ -167,6 +219,7 @@ export function ApiLogs() {;
     }
   },;
   // Calculate pagination info;
+  const totalPages = Math.ceil(totalLogs / pageSize);
   const totalPages = Math.ceil(totalLogs / pageSize);
   const hasNextPage = currentPage < totalPages - 1,;
   const hasPrevPage = currentPage > 0;
@@ -230,6 +283,9 @@ export function ApiLogs() {;
   const hasPrevPage = currentPage > 0;
   return (
 
+  const hasNextPage = currentPage < totalPages - 1;
+  const hasPrevPage = currentPage > 0;
+  return (
             <Select
               value={pageSize && pageSize.toString()}
               onValueChange={(value) => {;
@@ -449,6 +505,9 @@ export function ApiLogs() {;
                 size="sm";
 
 
+              <Button
+                variant="outline"
+                size="sm"
                 disabled={!hasPrevPage}
                 onClick={() => setCurrentPage(currentPage - 1)}
               >;
@@ -460,6 +519,9 @@ export function ApiLogs() {;
                 size="sm";
 
 
+              <Button
+                variant="outline"
+                size="sm"
                 disabled={!hasNextPage}
                 onClick={() => setCurrentPage(currentPage + 1)}
               >;
@@ -470,3 +532,8 @@ export function ApiLogs() {;
         )}
 
 
+import { useState, useEffect } from './react';
+import { format } from './date - fns';
+import { List, RefreshCw } from './lucide-react';
+import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
+;

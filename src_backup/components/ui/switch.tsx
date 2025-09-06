@@ -17,6 +17,7 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
 
 export function ServicesPage() {
 
+export function ServicesPage() {;
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,6 +26,32 @@ export function ServicesPage() {
 
 
 
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl font-bold mb-6">
+              Zion Tech Group Services
+            </h1>
+            <p className="text-xl mb-8 text-blue-100">
+              Comprehensive IT, AI, and Micro SAAS solutions to transform your business. 
+              From cutting-edge artificial intelligence to robust infrastructure support.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a 
+                href="tel:+13024640950"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              >
+                📞 Call Now: +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
+              >
+
+import React, { useState } from 'react',;
 import {;
   SERVICE_CATEGORIES,;
   ALL_SERVICES,;
@@ -192,6 +219,15 @@ function ServicesPage() {
                 className='bg - blue - 500 text - white px - 6 py - 3 rounded - lg font - semibold hover:bg - blue - 600 transition - colors'              >    }
   }
 
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
+      {/* Hero Section */}
+                ✉️ Email Us;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
             <div className="flex items-center gap-2">
@@ -303,6 +339,8 @@ function ServicesPage() {
 
               Why Choose Zion Tech Group?
             </h2>
+              Why Choose Zion Tech Group?
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver innovative, reliable, and cost-effective solutions that drive real business results
             </p>
@@ -372,6 +410,7 @@ function ServicesPage() {
 
             </h2>
 
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver innovative, reliable, and cost-effective solutions that drive real business results
             </p>
@@ -435,6 +474,26 @@ function ServicesPage() {
 
 
 
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+            Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="tel: +13024640950"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
+            >
+              📞 Call +1 302 464 0950
+            </Link>
+            <a 
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
+            >
+              ✉️ Get Free Consultation
+            </Link>
+            </Link>
+            <a 
               href="https://ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
@@ -448,6 +507,11 @@ function ServicesPage() {
 
 
 
+  )
+      <div className="bg-white py-16">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">;
               Why Choose Zion Tech Group?;
             </h2>;
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
@@ -704,6 +768,23 @@ function ServicesPage() {
             <a 
 
 
+          </h2>
+          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+            Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="tel: +13024640950"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
+            >
+              📞 Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
+            >
+              ✉️ Get Free Consultation
+            <a 
               href="https://ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
@@ -759,6 +840,60 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
 
+    if (service.pricing.basic.popular) return service.pricing.basic;
+    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
+    return service.pricing.professional
+  };
+
+
+  const getPopularPlan = () => {;
+    if (service && service.pricing.professional && professional.popular);
+      return service && service.pricing.professional;
+    if (service && service.pricing.basic && basic.popular) return service && service.pricing.basic;
+    if (service && service.pricing.enterprise && enterprise.popular) return service && service.pricing.enterprise;
+    return service && service.pricing.professional;  };    if (service && service.pricing.professional && professional.popular) return service && service.pricing.professional;
+    if (service && service.pricing.basic && basic.popular) return service && service.pricing.basic;
+    if (service && service.pricing.enterprise && enterprise.popular) return service && service.pricing.enterprise;
+    return service && service.pricing.professional;
+            </span>;
+          </div>;
+          <div>          </div>;
+        </div>;
+      {/* Service Image */}
+      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+        <img 
+          src={service.images[0]} 
+          alt={service.title}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute top-4 right-4">
+          <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
+            {service.category}
+          </span>
+        </div>
+        {service.aiScore && (
+            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              AI Score: {service.aiScore}
+            </span>
+          </div>
+          <div className="absolute bottom-4 left-4">
+            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              AI Score: {service.aiScore}
+            </span>;
+          </div>;
+        )}
+      </div>
+      {/* Service Content */}
+
+
+      {/* Service Image */}
+      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+        <img 
+          src={service.images[0]} 
+          alt={service.title}
+          className="w-full h-full object-cover"
+        />
+
         <div className="absolute top-4 right-4">
           <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
             {service.category}
@@ -772,6 +907,11 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             </span>
           </div>
 
+          <div className="absolute bottom-4 left-4">
+            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              AI Score: {service.aiScore}
+            </span>;
+          </div>;
         )}
       </div>
       {/* Service Content */}
@@ -810,6 +950,93 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
             <p className="font-medium text-gray-900">{service.provider.name}</p>
 
+            <p className='font-medium text-gray-900'>{service.provider.name}</p>
+            <p className='text-sm text-gray-500'>{service.provider.location}</p>
+          </div>
+          {service.provider.verified && (
+            <span className='text-blue-600 text-sm'>✓ Verified</span>          )}
+        </div>
+        {/* Pricing */}            <p className="font-medium text-gray-900">{service.provider.name}</p>
+            <p className="text-sm text-gray-500">{service.provider.location}</p>
+          </div>
+          {service.provider.verified && (
+            <span className="text-blue-600 text-sm">✓ Verified</span>
+        </div>
+        {/* Pricing */}
+              <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>              <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+            <p className="font-medium text-gray-900">{service.provider.name}</p>
+            <p className="text-sm text-gray-500">{service.provider.location}</p>
+          </div>
+          {service.provider.verified && (
+            <span className="text-blue-600 text-sm">✓ Verified</span>
+        {/* Pricing */}            <p className="font-medium text-gray-900">{service && service.provider.name}</p>;
+            <p className="text-sm text-gray-500">{service && service.provider.location}</p>;
+          </div>;
+          {service && service.provider.verified && (;
+            <span className="text-blue-600 text-sm">✓ Verified</span>;
+        </div>;
+              </span>
+            ))}
+            {service.features.length > 3 && (
+              <span className='text-gray-500 text-xs'>                +{service.features.length - 3} more              <span className="text-gray-500 text-xs">
+                +{service.features.length - 3} more
+              </span>
+                className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
+              >
+                {feature}
+
+
+              </span>;
+            </div>;
+            {popular_plan.popular && (
+              <span className='bg - blue - 600 text - white px - 2 py - 1 rounded - full text - xs font - medium'>                Most Popular        <div className="bg - gray - 50 rounded - lg p - 4 mb - 4">;
+          <div className="text - center">;
+            <div className="text - 2xl font - bold text - gray - 900">;
+              {popular_plan.currency}{popular_plan.price}
+              <span className="text - sm font - normal text - gray - 500">;
+              </span>;
+            </div>;
+            {popular_plan.popular && (
+              <span className='bg - blue - 600 text - white px - 2 py - 1 rounded - full text - xs font - medium'>              <span className="bg - blue - 600 text - white px - 2 py - 1 rounded - full text - xs font - medium">;
+                Most Popular;
+              </span>)}
+          </div>;
+        </div>;
+        {/* Features Preview */}
+        <div className='mb - 4'>;
+          <h4 className='font - semibold text - gray - 900 mb - 2'>Key Features:</h4>;
+          <div className='flex flex - wrap gap - 2'>;
+            {service.features.slice (0, 3).map ((feature, index) => (
+              <span;
+        <div className='mb-4'>;
+          <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>;
+          <div className='flex flex-wrap gap-2'>;
+            {service && service.features.slice(0, 3).map((feature, index) => (;
+              <span
+                key={index}
+                key={index}
+                className="bg - blue - 100 text - blue - 800 px - 2 py - 1 rounded text - xs";
+              >;
+                {feature}
+              </span>))}
+            {service.features.length > 3 && (
+            )}
+
+          </div>;
+        </div>;
+
+
+        {/* Action Buttons */}
+          <button
+            onClick={() => setShowDetails(!showDetails)}
+            className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'          >        <div className="flex gap-2">;
+          <button
+            onClick={() => setShowDetails(!showDetails)}
+            className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors";
+            {showDetails ? 'Hide Details' : 'View Details'}
+          </button>;
+          <a
+            href={`tel:+13024640950`}
           >
             Call Now
           </a>
@@ -844,6 +1071,52 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
                 <div>
 
+        {/* Detailed Information */}
+        {showDetails && (
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <div className="space-y-4">
+              {/* Benefits */}
+              <div>
+
+                    <li key={index}>{benefit}</li>
+                  ))}
+
+                </ul>;
+              </div>;
+
+
+              {/* Use Cases */}
+
+
+                      className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
+                    >
+                      {useCase}
+                    </span>;
+                  ))}
+
+                </div>;
+              </div>;
+
+
+              {/* Technologies */}
+
+
+                      className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
+                    >
+                      {tech}
+                    </span>;
+                  ))}
+
+
+              <div className="grid grid-cols-2 gap-4 text-sm">
+
+
+                <div>
+                  <span className='font-medium text-gray-900'>Deployment:</span>
+                  <p className='text-gray-600'>{service.deploymentTime}</p>
+                </div>
+                <div>
+                <div>
 
                   <span className="font-medium text-gray-900">Deployment:</span>
                   <p className="text-gray-600">{service.deploymentTime}</p>
@@ -877,6 +1150,13 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
               </div>;
 
               {/* All Pricing Plans */}
+                  Ready to get started with {service.title}?
+                </p>
+                <div className="flex gap-2 justify-center">
+                  <a
+                    href={`tel:+13024640950`}
+
+
 
 
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
@@ -950,5 +1230,131 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
 
+
+
+      </div>;
+    </div>;
+  );  );
+}
+        {/* Detailed Information */}
+        {show_details && (
+          <div className='mt - 6 pt - 6 border - t border - gray - 200'>;
+            <div className='space - y-4'>;
+              {/* Benefits */}
+              <div>;
+                <h4 className='font - semibold text - gray - 900 mb - 2'>Benefits:</h4>;
+                <ul className='list - disc list - inside text - sm text - gray - 600 space - y-1'>                  {service.benefits.slice (0, 3).map ((benefit, index) => (          <div className="mt - 6 pt - 6 border - t border - gray - 200">;
+            <div className="space - y-4">;
+              {/* Benefits */}
+              <div>;
+                <h4 className="font - semibold text - gray - 900 mb - 2">Benefits:</h4>;
+                <ul className="list - disc list - inside text - sm text - gray - 600 space - y-1">;
+                    <li key={index}>{benefit}</li>))}
+                </ul>;
+              </div>;
+              {/* Use Cases */}
+              <div>;
+                <h4 className='font - semibold text - gray - 900 mb - 2'>Use Cases:</h4>;
+                <div className='flex flex - wrap gap - 2'>;
+                  {service.use_cases.slice (0, 3).map ((use_case, index) => (
+                    <span;
+                      key={index}
+                      className='bg - green - 100 text - green - 800 px - 2 py - 1 rounded text - xs'                    >                  {service.use_cases.slice (0, 3).map ((use_case, index) => (
+                    <span;
+                      key={index}
+                      className="bg - green - 100 text - green - 800 px - 2 py - 1 rounded text - xs";
+                    >;
+                      {use_case}
+                    </span>))}
+                </div>;
+              </div>;
+              {/* Technologies */}
+              <div>;
+                <h4 className='font - semibold text - gray - 900 mb - 2'>;
+                  Technologies:;
+                </h4>;
+                <div className='flex flex - wrap gap - 2'>;
+                  {service.technologies.slice (0, 4).map ((tech, index) => (
+                    <span;
+                      key={index}
+                      className='bg - purple - 100 text - purple - 800 px - 2 py - 1 rounded text - xs'                    >                  {service.technologies.slice (0, 4).map ((tech, index) => (
+                    <span;
+                      key={index}
+                      className="bg - purple - 100 text - purple - 800 px - 2 py - 1 rounded text - xs";
+                    >;
+                      {tech}
+                    </span>))}
+                </div>;
+              </div>;
+              {/* Deployment & Support */}
+              <div className='grid grid - cols - 2 gap - 4 text - sm'>;
+                <div>;
+                  <span className='font - medium text - gray - 900'>Deployment:</span>;
+                  <p className='text - gray - 600'>{service.deployment_time}</p>;
+                </div>;
+                <div>;
+                  <span className='font - medium text - gray - 900'>Support:</span>;
+                  <p className='text - gray - 600'>;
+                    {service.support.slice (0, 2).join (', ')}
+                  </p>                </div>                <div>;
+                  <span className="font - medium text - gray - 900">Deployment:</span>;
+                  <p className="text - gray - 600">{service.deployment_time}</p>;
+                </div>;
+                <div>;
+                  <span className="font - medium text - gray - 900">Support:</span>;
+                  <p className="text - gray - 600">{service.support.slice (0, 2).join (', ')}</p>;
+                </div>;
+              </div>;
+              {/* All Pricing Plans */}
+              <div>;
+                <h4 className='font - semibold text - gray - 900 mb - 2'>;
+                  Pricing Plans:;
+                </h4>;
+                <div className='space - y-2'>;
+                  {Object.entries (service.pricing).map (([plan, details]) => (
+                    <div;
+                      key={plan}
+                      className='flex justify - between items - center text - sm';
+                    >;
+                      <span className='capitalize font - medium'>{plan}</span>;
+                      <span className='text - gray - 600'>;
+                        {details.currency}
+                        {details.price}/{details.period}                      </span>                    <div key={plan} className="flex justify - between items - center text - sm">;
+                      <span className="capitalize font - medium">{plan}</span>;
+                      <span className="text - gray - 600">;
+                        {details.currency}{details.price}/{details.period}
+                    </div>))}
+                </div>;
+              </div>;
+              {/* Contact CTA */}
+              <div className='bg - blue - 50 rounded - lg p - 4 text - center'>;
+                <p className='text - sm text - blue - 800 mb - 2'>;
+                  Ready to get started with {service.title}?;
+                </p>;
+                <div className='flex gap - 2 justify - center'>;
+                  <a;
+                    href={`tel:+13024640950`}
+                    className='bg - blue - 600 text - white px - 4 py - 2 rounded text - sm font - medium hover:bg - blue - 700 transition - colors'                  >                  Ready to get started with {service.title}?;
+                </p>;
+                <div className="flex gap - 2 justify - center">;
+                  <a;
+                    href={`tel:+13024640950`}
+                    className="bg - blue - 600 text - white px - 4 py - 2 rounded text - sm font - medium hover:bg - blue - 700 transition - colors";
+                  >;
+                    📞 Call +1 302 464 0950;
+                  </a>;
+                  <a;
+                    href={`mailto:kleber@ziontechgroup.com?subject = Inquiry about ${service.title}`}
+                    className='bg - green - 600 text - white px - 4 py - 2 rounded text - sm font - medium hover:bg - green - 700 transition - colors'                  >                    className="bg - green - 600 text - white px - 4 py - 2 rounded text - sm font - medium hover:bg - green - 700 transition - colors";
+                  >;
+                    ✉️ Email Inquiry;
+                  </a>;
+                </div>;
+              </div>;
+            </div>;
+          </div>)}
+      </div>;
+    </div>));
+}
 
 

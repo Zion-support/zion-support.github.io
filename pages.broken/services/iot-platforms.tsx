@@ -23,6 +23,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export default function Iotplatforms({}: IotplatformsProps) {
+
+
+export default function Iotplatforms({}: IotplatformsProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -49,6 +52,10 @@ export default function Iotplatforms(): any ({}: IotplatformsProps) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+interface IotplatformsProps {;
+  // Add props here as needed;
+}
+export default function Iotplatforms(): any ({}: IotplatformsProps) {;
   return (
     <div>
       <h1>Iotplatforms</h1>

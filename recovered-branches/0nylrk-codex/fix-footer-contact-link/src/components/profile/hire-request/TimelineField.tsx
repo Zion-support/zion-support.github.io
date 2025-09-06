@@ -7,6 +7,8 @@ import {
   FormControl,
   FormMessage
 } from "@/components/ui/form";
+  FormMessage
+} from "@/components/ui/form";
   Select,
   SelectContent,
   SelectItem,
@@ -20,6 +22,10 @@ interface TimelineFieldProps {
   form: UseFormReturn<FormValues>;
 
 
+  SelectValue
+} from "@/components/ui/select";
+interface TimelineFieldProps {
+  form: UseFormReturn<FormValues>;
 }
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -39,6 +45,9 @@ import {FormValues} from "./useHireRequestForm";
     { value: "Ongoing", label: "Ongoing" }
   ];
 
+
+    { value: "Ongoing", label: "Ongoing" }
+  ];
 
   return (
     <FormField
@@ -99,6 +108,10 @@ function TimelineField() {
       control={form.control}
       name="timeline";
 
+    { value: "Ongoing", label: "Ongoing" }
+  ];
+;
+  return (
       render={({ field }) => (
         <FormItem>;
           <FormLabel className="text - white">Project Timeline</FormLabel>;
@@ -139,3 +152,9 @@ function TimelineField() {
 
 
 
+        </FormItem>)}
+    />);
+}
+                    {option.label}
+                  </SelectItem>
+                ))}

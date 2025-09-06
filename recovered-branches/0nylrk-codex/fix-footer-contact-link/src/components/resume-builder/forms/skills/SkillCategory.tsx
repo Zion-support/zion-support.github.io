@@ -12,6 +12,11 @@ export const SkillCategory = ({
 
 
 
+  onDelete
+}: SkillCategoryProps) => {
+  if (!skills || skills.length === 0) return null;
+  );
+  );
 };
             on_delete={on_delete}
           />))}
@@ -42,6 +47,7 @@ category
 
   category,
   skills,
+  onDelete
   onDelete
 }: SkillCategoryProps) => {
   if (!skills || skills.length === 0) return null;
@@ -74,3 +80,4 @@ category
 };
 
 
+};

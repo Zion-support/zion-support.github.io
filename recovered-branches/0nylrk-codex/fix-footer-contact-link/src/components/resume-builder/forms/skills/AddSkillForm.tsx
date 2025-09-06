@@ -1,5 +1,19 @@
 
 
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Label  } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
+import { Skill  } from '@/types/resume';
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Label} from '@/components/ui/label';
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
+import {Skill} from '@/types/resume';
+import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
 interface AddSkillFormProps {
 
   resumeId: string
@@ -29,9 +43,20 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       proficiency: proficiency}
 
 import React from 'react';
-import {useState} from 'react';
 
 
+  }
+  const handleEnhanceSkill = (enhancedCategory: string) => {
+    setSkillCategory(enhancedCategory)
+  }
+  };
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Label } from '@/components/ui/label',;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',;
+import { Skill } from '@/types/resume',;
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
 interface AddSkillFormProps {;
   resumeId: string,;
   onAddSkill: (skill: Skill) => Promise<boolean>;
@@ -57,6 +82,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 
     const success = await onAddSkill(newSkill);
 
+    const success = await onAddSkill(newSkill);
     if (success) {;
       setSkillName('');
       setProficiency(3);
@@ -73,18 +99,17 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
   }
   
 
+  
+  const handleEnhanceSkill = (enhancedCategory: string) => {
+    setSkillCategory(enhancedCategory)
+  },
+  
+  return (
   };
   const handleEnhanceSkill = (enhancedCategory: string) => {;
     setSkillCategory(enhancedCategory);
   };
   return (
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Label } from '@/components/ui/label',;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',;
-import { Skill } from '@/types/resume',;
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
 ;
 interface AddSkillFormProps {;
   resumeId:string,;
@@ -120,6 +145,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
   return (;
 
 
+  return (
     <form onSubmit={handleSubmit} className="space-y-4">;
       <div className="flex flex-col gap-4 md:flex-row">;
         <div className="flex-1">;
@@ -156,6 +182,77 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
             onValueChange={setSkillCategory}>;
             <SelectTrigger id="skill-category">;
 
+import {Button} from '@/components / ui / button';
+import {Input} from '@/components / ui / input';
+import {Label} from '@/components / ui / label';
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components / ui / select';
+import {Skill} from '@/types / resume';
+import {AIEnhancementButton} from '@/components / resume - builder / forms / AIEnhancementButton';
+interface AddSkillFormProps {
+  resume_id: string,
+  onAddSkill: (skill: Skill) => Promise < boolean>;
+}
+export const AddSkillForm = ({ resume_id, onAddSkill }: AddSkillFormProps) =>: any {
+  const [skill_name, setSkillName] = useState ('');
+  const [skill_category, setSkillCategory] = useState ('');
+  const [proficiency, set_proficiency] = useState < number>(3);
+;
+  const handle_submit = async (e: React.FormEvent) => {
+    e.prevent_default ();
+;
+    if () return, ) {
+  $2
+}
+    const new_skill: Skill = {
+      name: skill_name.trim (),
+      category: skill_category || 'Other',
+      proficiency: proficiency},
+    const success = await onAddSkill (new_skill);
+    // Check condition
+if ( {) {
+  $2
+}
+      setSkillName ('');
+      set_proficiency (3);
+    }
+  }
+;
+  const handleEnhanceSkill = (enhanced_category: string) =>: any {
+    setSkillCategory (enhanced_category);
+  }
+;
+  return (
+    <form on_submit={handle_submit} className="space - y-4">;
+      <div className="flex flex - col gap - 4 md:flex - row">;
+        <div className="flex - 1">;
+          <Label html_for="skill - name">Skill Name</Label>;
+          <Input;
+            id="skill - name";
+            value={skill_name}
+            on_change={(e) => setSkillName (e.target.value)}
+            placeholder="Enter a skill (e.g., React)";
+          />;
+        </div>;
+        <div className="w - full md:w - 44">;
+          <div className="flex justify - between items - center">;
+            <Label html_for="skill - category">Category</Label>;
+            {skill_name && (
+              <AIEnhancementButton;
+                current_content={skill_name}
+                enhancement_type="general";
+                on_enhanced={handleEnhanceSkill}
+                button_text="Suggest";
+                className="h - 4";
+              />)}
+          </div>;
+          <Select;
+            value={skill_category}
+            onValueChange={setSkillCategory}
+          >;
+            <SelectTrigger id="skill - category">;
+                currentContent={skillName}
+                enhancementType="general";
+                onEnhanced={handleEnhanceSkill}
               <SelectValue placeholder="Select category" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -175,6 +272,41 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
         </div>;
 
 
+},
+
+
+              min={1}
+              max={5}
+              value={proficiency}
+              onChange={(e) => setProficiency(Number(e.target.value))}
+              className="w-20"
+            />
+            <Button type="submit">Add</Button>
+          </div>
+        </div>
+      </div>
+    </form>
+  )
+              on_change={(e) => set_proficiency (Number (e.target.value))}
+              className="w - 20";
+        ;
+        <div>;
+          <Label htmlFor="skill-proficiency">Proficiency (1-5)</Label>;
+          <div className="flex gap-4">;
+            <Input;
+              id="skill-proficiency";
+              type="number";              min={1}
+              max={5}
+              value={proficiency}
+              onChange={(e) => setProficiency(Number(e.target.value))}
+              className="w-20";
+}
+
+}
+};
+},
+              on_change={(e) => set_proficiency (Number (e.target.value))}
+              className="w - 20";
             />;
             <Button type="submit">Add</Button>;
           </div>;
@@ -198,6 +330,8 @@ const newSkill: Skill = {
 
 }
 };
-},
+}
 
+
+}
 

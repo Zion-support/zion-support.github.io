@@ -74,7 +74,7 @@ if (process.env.NODE_ENV !== 'production') {;
   }));
 }
 ;
-const fs = require('fs'),;
+const fs = require('fs');
 const path = require('path'),;
 const { glob } = require('glob'),;
 class AggressiveSyntaxFixer {;
@@ -189,6 +189,7 @@ class AggressiveSyntaxFixer {;
         } catch (error) {
             this && this.log(`❌ Error fixing syntax: ${error && error.message}`)
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
             })
             this.log(`📁 Found ${files.length} files to check`)
@@ -308,6 +309,7 @@ const ${validFileName} = {
 
         }
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
             timestamp: new Date().toISOString(),
             fixedFiles: this && this.fixedFiles,
             errors: this && this.errors,
@@ -365,6 +367,7 @@ const ${validFileName} = {}`
         fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         return report
     }
 }
@@ -399,6 +402,8 @@ process.on('SIGTERM', () => {
 ;
 module.exports = AggressiveSyntaxFixer,;
 
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
 
   // Add cleanup logic here
@@ -486,6 +491,7 @@ process.on('SIGINT', () => {;
 }),
 ;
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 const winston = require('winston'),;
 ;

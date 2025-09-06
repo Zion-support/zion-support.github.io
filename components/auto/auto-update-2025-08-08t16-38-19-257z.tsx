@@ -60,6 +60,10 @@ function AutoUpdatePage5() {
 
 
 
+  )
+}
+
+
 export default function AutoUpdatePage5() {
   return (
     <div className='container mx-auto px-4 py-10'>

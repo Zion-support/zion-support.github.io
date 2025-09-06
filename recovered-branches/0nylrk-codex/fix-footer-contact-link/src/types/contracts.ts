@@ -2,6 +2,7 @@
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 export interface ContractTemplate {
 
+export interface ContractTemplate {
   id: string;
   title: string;
   template_data: ContractFormValues;
@@ -22,3 +23,6 @@ export interface ContractTemplate {
 
 
 
+}
+;
+}

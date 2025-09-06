@@ -17,6 +17,10 @@ const LoadingSpinner = () =>
   );
 
 
+      className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary"
+    }),
+  );
+
 const LoadingSkeleton = () =>
   React.createElement(
     "div",
@@ -168,3 +172,6 @@ ursor/automate-test-improve-and-merge-code-646c
 
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
 
+// Usage examples: // Replace: import Chart from '../components/charts/Chart';
+
+// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';

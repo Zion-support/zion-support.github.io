@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -501,6 +502,8 @@ export default function ManufacturingPage() {;
         </section>;
       </div>;
     </Layout>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7:corrupted_backup/manufacturing.tsx
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?

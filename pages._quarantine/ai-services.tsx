@@ -747,6 +747,8 @@ import {;
 ursor/automate-test-improve-and-merge-code-646c
   Sprout;
 } from 'lucide-react';
+  Sprout;
+} from 'lucide-react';
 export default function AIServices() {;
   const title = 'AI Services — Zion Tech Group';
   const description = 'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
@@ -1164,6 +1166,7 @@ export default function AIServices() {;
       "category": 'Mental Health AI';
     }
   ];
+  const aiTechnologies = [{ "name": 'Machine Learning', "icon": Brai n, "description": 'Custom ML models and algorithms' };
   const aiTechnologies = [{ "name": 'Machine Learning', "icon": Brai n, "description": 'Custom ML models and algorithms' };
     { "name": 'Natural Language Processing', "icon": MessageSquar e, "description": 'Text analysis and generation' },;
     { "name": 'Computer Vision', "icon": Ey e, "description": 'Image and video processing' },;

@@ -17,6 +17,8 @@ import {
 } from "@/components/ui/card";
 
 import { Badge } from "@/components/ui/badge";
+  CardTitle
+} from "@/components/ui/card";
   MapPin,
   Clock,
   Link,
@@ -28,6 +30,7 @@ import { Badge } from "@/components/ui/badge";
   CheckCircle2,
   Mail,
   Phone,
+  Globe
   Globe
 } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
@@ -62,6 +65,9 @@ export default function ProfileDetail() {
 
 
 
+          .single();
+          .single(),
+
         if (error) {
           throw new Error(error.message);
         }
@@ -80,6 +86,7 @@ export default function ProfileDetail() {
             title: "Error",
             description: err.message || "Failed to fetch profile.",
             variant: "destructive"
+            variant: "destructive"
           }));
       } finally {
         setIsLoading(false);
@@ -89,8 +96,17 @@ export default function ProfileDetail() {
 
 
 
-    },
+    }
 
+
+    }
+    fetchProfile()
+  }, [profileId]);
+      } finally {
+        setIsLoading(false)
+      }
+    }
+    },
 
     fetchProfile();
   }, [profileId]);
@@ -124,6 +140,21 @@ export default function ProfileDetail() {
 
   if (error) {;
 
+    );
+  }
+    return (
+;
+  if (error) {;
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <p>Error: {error}</p>;
+      </div>;
+    );
+  }
+    return (
+;
+  if (!profileData) {;
+    return (;
       <div className="min-h-screen flex items-center justify-center">;
         <p>Profile not found.</p>;
       </div>;
@@ -155,6 +186,16 @@ export default function ProfileDetail() {
           <div className="col-span-12 lg:col-span-8">;
             {/* Profile Header */}
 
+  return (
+    <>;
+      <SEO
+      />;
+      <Header />;
+      <div className="container mx-auto px-4 py-8">;
+        <div className="grid grid-cols-12 gap-6">;
+          {/* Main Content */}
+          <div className="col-span-12 lg:col-span-8">;
+            {/* Profile Header */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <div className="flex items-center space-x-4">
@@ -212,6 +253,11 @@ export default function ProfileDetail() {
                 </div>
               </CardContent>
             </Card>
+
+
+                </div>;
+              </CardContent>;
+            </Card>;
 
 
                 </div>
@@ -291,6 +337,45 @@ export default function ProfileDetail() {
             {/* Portfolio Section */}
 
 
+            {/* About Section */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
+              <CardHeader>;
+                <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+            {/* Skills Section */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
+              <CardHeader>;
+                <CardTitle className="text-xl font-bold text-white">Skills</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <div className="flex flex-wrap gap-2">;
+                    <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
+                  )) || <p className="text-zion-slate-light">No skills provided.</p>}
+                </div>;
+              </CardContent>;
+            </Card>;
+            {/* Experience Section */}
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
+              <CardHeader>;
+                <CardTitle className="text-xl font-bold text-white">Experience</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                {profileData.experience ? (;
+                  profileData.experience.map((exp:any, index:number) => (;
+                    <div key={index} className="mb-4">;
+                      <h4 className="font-bold text-white">{exp.title}</h4>;
+                      <p className="text-zion-cyan">{exp.company}</p>;
+                      <p className="text-sm text-zion-slate-light">{exp.start_date} - {exp.end_date || "Present"}</p>;
+                      <p className="text-zion-slate-light">{exp.description}</p>;
+                    </div>;
+                  ));
+                ) :(;
+                  <p className="text-zion-slate-light">No experience provided.</p>;                )}
+              </CardContent>;
+            </Card>;
+;
+            {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">
@@ -330,11 +415,16 @@ export default function ProfileDetail() {
           </div>;
 
 
+                )}
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">;
             <HireNowCTA
               talentProfile={{
 
+                id: profileData?.id || "",
+                full_name: profileData?.full_name || "",
+                professional_title: profileData?.professional_title || "",
+                hourly_rate: profileData?.hourly_rate || 0
                 id: profileData?.id || "",
                 full_name: profileData?.full_name || "",
                 professional_title: profileData?.professional_title || "",
@@ -661,3 +751,65 @@ export default function ProfileDetail() {
 
 
 
+    </>;
+  ),; import {
+  MapPin;
+Clock;
+Link as LinkIcon;
+Github;
+Twitter;
+Linkedin;
+CheckCircle2;
+Mail;
+Phone;
+Globe export default function ProfileDetail () {
+  //useParams is typed as `any` in this environment due to missing type //definitions, so avoid passing a type argument to prevent TS2347. const {
+  profileId 
+}= useParams ();
+const [profileData, setProfileData] = useState<any> (null);
+const [isLoading, setIsLoading] = useState (true);
+const [error, setError] = useState<string | null> (null);
+useEffect ( () => {
+  const fetchProfile = async () => {
+  setIsLoading (true);
+setError (null);
+try {
+  if (!profileId) {
+  const {
+  data, error 
+}= await supabase .from ("talent profiles") .select ("*") .eq ("id", profileId) if (error) {
+  throw new Error (error.message) 
+}if (!data) {}setProfileData (data) 
+}catch (err: any) {}finally {
+  setIsLoading (false) 
+}
+;
+
+};
+}, [profileId]);
+<p>Error: {
+  error 
+}</p> </div>) 
+}return (<> <SEO) : (<AvatarFallback> {
+  profileData.full name?.charAt (0) 
+}</AvatarFallback>) 
+}</Avatar> <div> </div> </div> </CardHeader> <CardContent> $ {
+  profileData.hourly rate 
+}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) 
+}</div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Skills</CardTitle> </CardHeader> <CardContent> </div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Experience</CardTitle> </CardHeader> <CardContent> </div>) ) ) : (<p className="text-zion-slate-light" >No experience provided.</p>) 
+}</CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Portfolio</CardTitle> </CardHeader> <CardContent>) ) 
+}</div>) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) 
+}</CardContent> </Card> </div> <HireNowCTA talentProfile= {
+  {
+  id: profileData?.id || '', full name: profileData?.full name || '', professional title: profileData?.professional title || '', hourly rate: profileData?.hourly rate || 0 
+}
+}/> Website </Link> </div>) 
+}</div> </div> GitHub </Link>) 
+}Twitter </Link>) 
+}LinkedIn </Link>) 
+}</div> </div> </div> </div> </div> <Footer /> </>) 
+}
+    </>;
+  );
+}
+;

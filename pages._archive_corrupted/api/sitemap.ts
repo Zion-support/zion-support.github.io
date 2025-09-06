@@ -173,3 +173,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   res && res.end()}
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+  res && res.setHeader('Content-Type', 'text/xml');
+  res && res.write(sitemap);
+  res && res.end()}
+  res && res.setHeader('Content-Type', 'text/xml');
+  res && res.write(sitemap);
+  res && res.end()}

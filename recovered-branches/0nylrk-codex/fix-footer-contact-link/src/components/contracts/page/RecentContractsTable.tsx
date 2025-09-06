@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 interface Contract {
 
 
+interface Contract {
+
   id: string;
   title: string;
   client: string;
@@ -22,6 +24,7 @@ interface Contract {
 
 
 
+interface RecentContractsTableProps {
 
 import { Button } from "@/components/ui/button",
 interface Contract {
@@ -84,6 +87,7 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
   return (;
 
 
+  return (
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
       <div className="overflow-x-auto rounded-md border">;
@@ -267,6 +271,10 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
             ))}
 
 
+                  <Button
+                    variant="ghost"
+                    size="sm"
+    </>
                     onClick={() => onViewContract(contract && contract.id)}
 interface RecentContractsTableProps {
   contracts: Contract[];
@@ -379,6 +387,7 @@ function RecentContractsTable() {
 
 }
 
+}
               </tr>))}
           </tbody>;
         </table>;

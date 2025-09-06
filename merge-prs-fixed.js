@@ -70,6 +70,7 @@ const fs = require('fs');
 
 
 #!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 #!/usr/bin/env node;
 
 
@@ -98,7 +99,7 @@ try {;
 
             // Resolve conflicts by accepting our version;
             const files = conflictFiles.trim().split('\n');
-            const files = conflictFiles.trim().split('\n'),;
+            const files = conflictFiles.trim().split('\n');
             const files = conflictFiles.trim().split('\n');
             for (const file of files) {;
                 if (file.trim()) {;
@@ -114,6 +115,7 @@ try {;
                     console.log(`Resolving conflicts in: ${file}`);
                     try {execSync(`git checkout --ours "${file}"`);
                     } catch (e) {execSync(`git checkout --theirs "${file}"`);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
                     console.log(`Resolving conflicts in: ${file}`),;
                     try {;
@@ -216,6 +218,7 @@ try {;
         .map(branch => branch.trim());
 
         .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
         .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
 
@@ -277,5 +280,16 @@ try {;
 
     process.exit(1);
 }
+    console.log ('📤 Pushing all changes to main...'),
+    exec_sync ('git push origin main'),
+    console.log ('🎉 All merge operations completed successfully!'),
+    console.log ('✅ All PRs have been merged into main branch'),
+    console.log ('✅ All merge conflicts have been resolved'),
+    console.log ('✅ Repository is now clean and up to date');
+} catch (error) {
+    console.error ('❌ Error during merge process:', error.message),
+    process.exit (1);
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     process.exit(1);
 }

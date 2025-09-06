@@ -24,6 +24,7 @@ interface EnterpriseProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 export default function Enterprise({}: EnterpriseProps) {
+export default function Enterprise({}: EnterpriseProps) {
   return (
     <div>;
       <h1>Enterprise</h1>;

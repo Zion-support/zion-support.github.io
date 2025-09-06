@@ -85,7 +85,12 @@ exports.handler = async function() {
       points: (u.certifications?.length || 0) * 100 + Object.values (u.progress || {}).reduce ((acc, p) => acc + (p.percent || 0), 0);
 
 
-    })),
+        content,
+        message: 'chore (automation): daily rankings update',
+        token
+      });
+    }
+    return {})),
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
@@ -147,3 +152,6 @@ if ( {) {
   }
 
 
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }

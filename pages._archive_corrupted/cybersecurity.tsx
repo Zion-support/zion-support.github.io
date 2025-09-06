@@ -460,6 +460,7 @@ const "CybersecurityPage": React.FC = () => {;
     }
   ];
   const complianceStandards = [{ "name": "SOC 2", "description": "Service Organization Control 2" };
+  const complianceStandards = [{ "name": "SOC 2", "description": "Service Organization Control 2" };
     { "name": "ISO 27001", "description": "Information Security Management" },;
     { "name": "HIPAA", "description": "Health Insurance Portability" },;
     { "name": "PCI DSS", "description": "Payment Card Industry" },;
@@ -655,6 +656,8 @@ export default CybersecurityPage
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default CybersecurityPage
+;
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ "scale": 0 && 0.95 }}
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">;

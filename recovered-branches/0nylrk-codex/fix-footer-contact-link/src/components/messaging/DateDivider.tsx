@@ -54,6 +54,7 @@ function DateDivider() {
     </div>);
 
 }
+}
 
 import React from 'react',;
 import { format } from 'date-fns',;
@@ -77,6 +78,10 @@ export function DateDivider({ date } DateDividerProps) {;
 interface DateDividerProps {
 
 
+  date: Date;
+}
+
+interface DateDividerProps {
   date: Date;
 }
 

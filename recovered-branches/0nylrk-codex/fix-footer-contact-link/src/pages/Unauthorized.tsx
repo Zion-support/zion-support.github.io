@@ -43,6 +43,7 @@ export default function Unauthorized() {
 
   );
 
+  );
 }
 
 ;
@@ -62,3 +63,7 @@ export default function Unauthorized() {
 
 
 
+}
+;
+    </>);
+}

@@ -20,6 +20,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 class LintingAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();,
@@ -134,6 +135,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/automate-test-improve-and-merge-code-646c
 
 
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 #!/usr/bin/env node;
 /**
  * Linting Automation - PM2 Automation Script;
@@ -208,6 +214,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/automate-test-improve-and-merge-code-646c
 
 
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async runLinting() {
     try {
@@ -263,6 +274,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/automate-test-improve-and-merge-code-646c
 
 
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 60000
@@ -324,6 +340,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/automate-test-improve-and-merge-code-646c
 
 
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Parse linting output to count errors and warnings
       const output = error.stdout || error.stderr || '';
       const errorCount = (output.match(/error/g) || []).length;
@@ -448,6 +469,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/automate-test-improve-and-merge-code-646c
 
 
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 60000
@@ -541,6 +567,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/automate-test-improve-and-merge-code-646c
 
 
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         return {}
           "exists": true;
           path: configPath;
@@ -608,6 +639,7 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     return { "exists": false }}
   async reportLintingFailure(error) {
     const failureReport = {
@@ -726,6 +758,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/automate-test-improve-and-merge-code-646c
 
 
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Check for recently modified files that might need linting
       const filesToCheck = this.getRecentFiles();
       if (filesToCheck.length > 0) {
@@ -759,6 +796,7 @@ ursor/automate-test-improve-and-merge-code-646c
     const recentFiles = [];
     const recentFiles = [];
     const recentFiles = [];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     const recentFiles = [;];
     const cutoffTime = Date.now() - 600;0;0; // 1 minute ago
     try {
@@ -1071,6 +1109,7 @@ ursor/automate-test-improve-and-merge-code-646c
     
     return fileList}}
     
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     return fileList) {
     ) {
           this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
@@ -1127,6 +1166,7 @@ ursor/automate-test-improve-and-merge-code-646c
     
     return fileList}}
     
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   async start() {}
     this.isRunning = true;,
     this.log('Linting Automation started');';,
@@ -1198,6 +1238,7 @@ ursor/automate-test-improve-and-merge-code-646c
         await this.checkFileChanges()}
     }, this.lintInterval);
   }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     // Handle graceful shutdown;}
     process.on('SIGTERM', () => {'}
       this.log('Received SIGTERM, shutting down gracefully');',

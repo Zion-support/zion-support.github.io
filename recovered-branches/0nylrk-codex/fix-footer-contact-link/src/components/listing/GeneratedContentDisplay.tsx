@@ -28,6 +28,7 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 
+
   Card
   CardContent
   CardFooter
@@ -49,6 +50,7 @@ interface GeneratedContent {
     min: number;
   key_points: string[];
 
+    min: number;
 
 }
 interface GeneratedContentDisplayProps {
@@ -60,6 +62,14 @@ import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
 
+
+
+  CardTitle,;
+
+} from "@/components/ui/card";
+
+  CardTitle,;
+} from "@/components/ui/card";
 
 
 interface GeneratedContent {
@@ -97,6 +107,31 @@ interface GeneratedContent {;
 }
 ;
 interface GeneratedContentDisplayProps {;
+  content: GeneratedContent;
+
+
+
+export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+
+
+  content: GeneratedContent;
+  onApply: () => void
+}
+export function GeneratedContentDisplay({
+  content
+  onApply
+}: GeneratedContentDisplayProps) {
+
+export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+  return (
+    <Card className="border border-zion-blue-light bg-zion-blue-dark">
+      <CardHeader>
+        <CardTitle className="text-white">Generated Content</CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div>
+
+        
 
 
         <div>
@@ -143,6 +178,12 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
 
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
 
+                {tag}
+              </Badge>;
+            ))}
+              <Badge
+                key={index}
+                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
 
 
                 {tag}
@@ -152,6 +193,8 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
 
 
 
+          </div>
+        </div>
         
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
@@ -192,6 +235,13 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
               <li key={index}>{point}</li>;
 
 
+  content: GeneratedContent;
+              <Badge
+                key={index}
+                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
+                {tag}
+              </Badge>;
+            ))}
             ))}
   on_apply: () => void;
 }
@@ -329,3 +379,48 @@ function GeneratedContentDisplay() {
 }
 
 
+  )
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml-2 h-4 w-4" />;
+        </Button>;
+      </CardFooter>;
+    </Card>
+
+
+    </Card>;
+  );
+}
+        <Button;
+}
+          onClick={onApply}
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml-2 h-4 w-4" />;
+        </Button>;
+      </CardFooter>;
+    </Card>;
+  );}
+ interface GeneratedContent {
+  description: string;
+tags: string[];
+suggestedPrice: {
+  min: number;
+max: number 
+};
+keyPoints: string[] 
+}interface GeneratedContentDisplayProps {
+  content: GeneratedContent;
+onApply: () => void 
+}export function GeneratedContentDisplay ({
+  content, onApply 
+}: GeneratedContentDisplayProps) {
+  return (<Card className="border border-zion-blue-light bg-zion-blue-dark" > text-white">Generated Content</CardTitle> </CardHeader> <CardContent className=" space-y-4"> <div> <h3 className=" text-sm font-medium text-zion-slate-light mb-2">Description</h3> <p className=" text-white"> {
+  content.description 
+}</p> </div> <div> </Badge>) ) 
+}</div> </div> <div> </p> </div> <div>) ) 
+}</ul> </div> </CardContent> <CardFooter> <Button ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>) 
+}
+}

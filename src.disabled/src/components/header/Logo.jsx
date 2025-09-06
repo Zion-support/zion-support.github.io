@@ -7,6 +7,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 >>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from \'react\'; import { Link } from \'react-router-dom\'; import { Zap } from \'lucide-react\'; export function Logo({ customLogo,customColor,className = \'' }) {; if(customLogo) {; return(; <Link to=\"/\" className={`flex-shrink-0 group ${className}`}>;\";\" <img;\" src={customLogo} \";\" alt=\"Logo\";\" className=\"h-8 w-auto\"; / / / / / />; </Link>;\" );\";\" };\";\" const logoColor = customColor || \'#3b82f6\'}
 const React from "react"; import { Link } from "react-router-dom"; import { Zap } from "lucide-react"; export function Logo({ customLogo,customColor,className = "" }) {; if(customLogo) {; return(; <Link to="/" className={`flex-shrink-0 group ${className}`}>;";" <img;" src={customLogo} ";" alt="Logo";" className="h-8 w-auto"; / / / / / />; </Link>;" );";" };";" const logoColor = customColor | "#3b82f6"}'"`'"`
 >>>>>>> main

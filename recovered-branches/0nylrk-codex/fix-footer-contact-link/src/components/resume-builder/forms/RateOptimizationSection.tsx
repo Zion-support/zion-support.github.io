@@ -15,6 +15,7 @@ import { Control } from "react-hook-form",
 
 
 
+
 import { 
   FormField;
   FormItem;
@@ -40,6 +41,32 @@ interface RateOptimizationSectionProps {
 
 
 
+  rateType: "hourly" | "fixed"
+}
+
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
+  control;
+  setValue;
+  skills;
+  yearsExperience;
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+  control;
+  setValue;
+  skills;
+  yearsExperience;
+
+
+
+  location
+  control,
+  setValue,
+  skills,
+  yearsExperience,
+  location,
+  rateType
+}) => {
+  const handleSuggestionApplied = (rate: number) => {
+    setValue("hourlyRate", rate)
   return (
     <div className="space-y-4">
       <FormField
@@ -80,6 +107,17 @@ interface RateOptimizationSectionProps {;
   yearsExperience: number,;
 
 
+  location?: string;
+  rateType: "hourly" | "fixed";
+}
+
+
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
+
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
+  location?: string;
+  rateType: "hourly" | "fixed";
+}
 import React, { useState } from './react';
 import { Control } from './react - hook - form';
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '@/components / ui / form';
@@ -141,6 +179,8 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
                 placeholder={rateType === "hourly" ? "e.g. 45" :"e.g. 1000"}
 
 
+                placeholder={rateType === "hourly" ? "e.g. 45" :"e.g. 1000"}
+                placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}
                 {...field}
               />;
             </FormControl>;
@@ -150,6 +190,7 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
             <FormMessage />;
 
 
+          <TalentRateRecommender
           </FormItem>)}
       />;
       <Card>;

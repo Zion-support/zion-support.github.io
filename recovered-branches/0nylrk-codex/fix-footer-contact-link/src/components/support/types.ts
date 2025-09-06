@@ -5,6 +5,11 @@ export interface HelpArticle {
   id: string;
   title: string;
   content: string;
+  lastUpdated: string;
+  tags: string[];
+}
+
+export interface HelpCategory {;
 
   lastUpdated: string;
   tags: string[];
@@ -12,6 +17,10 @@ export interface HelpArticle {
 
 
 
+export interface HelpCategory {;
+}
+
+export interface HelpCategory {;
   id: string;
   name: string;
   description: string;
@@ -36,3 +45,4 @@ export interface SupportTicket {;
 
   createdAt: string;
 
+  createdAt: string;

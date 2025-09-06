@@ -12,6 +12,7 @@ const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false)
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
 >>>>>>> main
@@ -25,3 +26,6 @@ const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false)
 :temp_exclude/src.disabled/components/unused/EnhancedAccessibility.jsx
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
+const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
+const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -48,6 +48,14 @@ type UserRole = "talent" | "client" | null,
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium">What brings you to Zion?</h2>
 
+
+  const handleSelect = (role: UserRole) => {
+    (setSelectedRole(role), onSelect(role));
+  };
+
+  return (
+    <div className="space-y-4 px-4">
+      <h2 className="text-xl font-medium">What brings you to Zion?</h2>
       <p className="text-muted-foreground">
         Choose how you want to use our platform
       </p>
@@ -130,6 +138,16 @@ export function RolePicker({ onSelect } RolePickerProps) {;
 
           }`}
           onClick={() => handleSelect("client")}
+            </div>;
+          </CardContent>;
+        </Card>;
+        <Card;
+          className={`cursor-pointer transition-all ${;
+            selectedRole === 'client';
+              ? "border-primary bg-primary/5";
+              : "border-border hover:border-primary/40";
+          }`}
+          onClick={() => handleSelect('client')}
         >
           <CardContent className="p-5">
             <div className="flex items-center">
@@ -155,3 +173,14 @@ export function RolePicker({ onSelect } RolePickerProps) {;
 
 
 
+                <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
+              </div>
+              {selectedRole === 'client' && (
+                <Check className="h-5 w-5 text-primary" />
+              )}
+            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
+}
+;

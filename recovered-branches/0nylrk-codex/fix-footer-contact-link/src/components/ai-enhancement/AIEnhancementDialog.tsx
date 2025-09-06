@@ -77,6 +77,17 @@ export function AIEnhancementDialog(): any ({;
   defaultOptions;
 
 
+  title,
+  isOpen,
+  onClose,
+  onApply,
+  defaultOptions,
+  initialContent
+}: AIEnhancementDialogProps) {
+
+  const handleApply = (content: string) => {
+    onApply(content)
+    onClose()
   initialContent;
 }: AIEnhancementDialogProps) {;
   const handleApply = (content: string) => {;
@@ -121,6 +132,9 @@ export function AIEnhancementDialog({;
   return (;
 
 
+  },
+
+  return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
       <DialogContent className="max-w-3xl">;
         <DialogHeader>;

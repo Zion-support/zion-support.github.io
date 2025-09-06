@@ -1,6 +1,7 @@
 
 export interface JobData {
 
+export interface JobData {
   id: string;
   title: string;
   description: string;
@@ -10,6 +11,7 @@ export interface JobData {
 
     min: number;
 
+    min: number;
     max: number;
   };
   deadline: string;
@@ -25,6 +27,7 @@ export interface TalentProfile {
 export interface TalentProfile {;
 
 
+export interface TalentProfile {
   id: string;
   full_name: string;
   professional_title: string;
@@ -42,6 +45,9 @@ export interface TalentProfile {;
   job_id: string;
   match_score: number;
 
+  talent_id: string;
+  job_id: string;
+  match_score: number;
   matched_skills: string[];
   created_at: string;
 }
@@ -56,6 +62,18 @@ export interface MatchResult {
   matched_skills: string[]
 
 
+  matched_skills: string[]
+
+  created_at: string
+}
+export interface MatchResult {
+
+export interface MatchResult {;
+  talentId: string;
+  talent_id: string;
+  job_id: string;
+  match_score: number;
+}
   score: number;
   id: string,;
   title: string,;
@@ -94,6 +112,11 @@ export interface MatchResult {;
   matchedSkills: string[];
 
 
+export interface MatchResult {
+  talent_id: string;
+  score: number;
+
+  matched_skills: string[],
   reason?: string;
 
 }
@@ -108,3 +131,7 @@ export interface JobData {;
 ;
 
 
+  reason?: string;
+}
+;
+}

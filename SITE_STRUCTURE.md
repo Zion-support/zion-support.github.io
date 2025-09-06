@@ -7,6 +7,7 @@ The Zion Tech Group website is a modern, responsive web application built with R
 # Zion Tech Group - Site Structure Documentation
 
 ## 🌐 Overview
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 ## Technology Stack
 
@@ -825,6 +826,7 @@ Solutions
 
 ### **Scripts**
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ```json
 {
   "dev": "vite",
@@ -1215,3 +1217,4 @@ npm run preview     # Preview production build
 **Status**: Production Ready ✅*Last Updated: December 2024*  
 _Version: 2.0 - Enhanced Futuristic Design_  
 _Maintained by: Zion Tech Group Development Team_
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

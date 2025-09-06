@@ -5,6 +5,8 @@ import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
+const usersPath = path.join(process.cwd(), 'datalearnusers.json')
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
@@ -17,6 +19,7 @@ function writeJson(p: string, data: any) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
+    res.setHeader('AllowPOST')
     return res.status(405).end('Method Not Allowed')
   }
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
@@ -48,6 +51,11 @@ import fs from 'fs',
 import path from 'path',
 const users_path = path.join (process.cwd (), 'datalearnusers.json'),
 const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
+const users_path = path.join (process.cwd (), 'datalearnusers.json')
+const courses_path = path.join (process.cwd (), 'datalearncourses.json')
 /**
  * read_json - Function description
  */
@@ -75,3 +83,7 @@ res.set_header ('AllowPOST'),
 
 };
 
+res.set_header ('AllowPOST')
+    return res.status (405).end ('Method Not Allowed');
+  }
+};

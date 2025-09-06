@@ -48,6 +48,8 @@ import type { UserProfile } from "@/types/auth",;
 }
 
 
+  }
+}
 /**;
  * Custom hook to manage auth state;
  */;

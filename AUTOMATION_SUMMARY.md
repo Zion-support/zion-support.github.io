@@ -146,6 +146,7 @@ chmod +x git-workflow.sh
 
 ### Available NPM Scripts
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 > > > > > > > 22585ea456adf6ad6cf7b3256318e997f8ac668b
 > > > > > > > This document summarizes the automation scripts that have been created and improved to enhance the Zion Tech Group application.
@@ -404,6 +405,7 @@ All scripts are designed to be run independently or as part of the complete auto
 
 
 All scripts are designed to be run independently or as part of the complete automation workflow.
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 All scripts are designed to be run independently or as part of the complete automation workflow.
 

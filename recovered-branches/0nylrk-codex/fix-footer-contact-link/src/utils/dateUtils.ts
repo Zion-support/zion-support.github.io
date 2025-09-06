@@ -28,3 +28,6 @@ export const format_date = (date_string: string): string => {
 };
 
 
+    return dateString;
+  }
+};

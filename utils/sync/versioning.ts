@@ -20,6 +20,10 @@ export function parseVersion(versionString: string): Version {
 }
 
 >>>>>>> main
+    build: parts[3]
+  };
+}
+
 }
 export function nextVersionFor(
   state: MultiverseState,
@@ -43,6 +47,7 @@ export function nextVersionFor(
         major: version.major,
         minor: version.minor + 1,
         patch: 0
+        patch: 0
       });
     case "patch":
     default:
@@ -53,6 +58,9 @@ export function nextVersionFor(
       });
   }
 
+        patch: version.patch + 1
+      });
+  }
 }
 
 export function isVersionGreater(a: string, b: string): boolean {
@@ -65,3 +73,18 @@ export function isVersionEqual(a: string, b: string): boolean {
 
 
 
+export interface Version {
+  major: number;
+  minor: number;
+  patch: number;
+  build?: number;
+}
+
+
+}
+  getVersion: () => '1.0.0',
+  compareVersions: (v1: string, v2: string) => 0,
+  incrementVersion: (version: string) => version;
+};
+
+}

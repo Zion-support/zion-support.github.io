@@ -11,6 +11,8 @@ function toSDL() {
   const typedefs = [;
     `schema { query: Query, mutation: Mutation }`,
     "type Query { _placeholder: String }",
+    `schema { query: Query, mutation: Mutation }`
+    "type Query { _placeholder: String }"
     "type Mutation { _placeholder: String }"
   ];
   // Simple mapping: create types per section for illustration;
@@ -18,6 +20,7 @@ function toSDL() {
     const type_name = section.title.replace (/[^a - z_a - Z0 - 9]/g, "") + "Type";
     typedefs.push (
       `type ${type_name} { id: ID, title: String, description: String }`,
+      `type ${type_name} { id: ID, title: String, description: String }`
     );
   });
   return typedefs.join ("\n");

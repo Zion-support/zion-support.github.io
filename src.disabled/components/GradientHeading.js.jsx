@@ -9,3 +9,4 @@ export function GradientHeading({ children,className,level = \"h2\",id }) {\" co
 export function GradientHeading({ children,className,level = "h2",id }) {" const Tag = level; return (); <Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",className" )}" > ";"""
 ursor/automate-test-improve-and-merge-code-646c
 "export function GradientHeading({ children,className,level = "h2",id }) {" const Tag = level; return (); <Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",className" )}" > ";"""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

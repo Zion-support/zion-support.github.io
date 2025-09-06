@@ -9,6 +9,11 @@ type ContentType = 'job' | 'profile' | 'service' | 'general';
 
 
 
+import {supabase} from '@/integrations / supabase / client';
+import {use_language, SupportedLanguage} from '@/context / LanguageContext';
+;
+type ContentType = 'job' | 'profile' | 'service' | 'general';
+;
 interface TranslationResponse {
   translations: Record < SupportedLanguage, string>;
   error?: string;
@@ -39,6 +44,7 @@ export function useTranslationService() {;
       const { data, error } = await supabase.functions.invoke('translate-content', {
 
 
+      const { data, error } = await supabase && supabase.functions.invoke('translate-content', {
         body: {
           content;
           sourceLanguage;
@@ -52,6 +58,7 @@ export function useTranslationService() {;
         console.error('Translation error:', error);
 
 
+        console && console.error('Translation error:', error);
         const initialTranslations: Record<SupportedLanguage, string> = {
           en: content;
           es: '';
@@ -69,6 +76,50 @@ export function useTranslationService() {;
 
 
 
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
+type ContentType = 'job' | 'profile' | 'service' | 'general',;
+interface TranslationResponse {;
+  translations: Record<SupportedLanguage string>,;
+  error?: string;
+}
+;
+export function useTranslationService() {;
+  const [isTranslating, setIsTranslating] = useState(false),;
+  const { currentLanguage } = useLanguage(),;
+  const translateContent = async (;
+    content: string,;
+    contentType: ContentType = 'general',;
+    sourceLanguage: SupportedLanguage = 'en',;
+    targetLanguages: SupportedLanguage[] = ['enesptar'];
+  ): Promise<TranslationResponse> => {;
+    setIsTranslating(true),;
+    try {;
+      const { data, error } = await supabase.functions.invoke('translate-content', {;
+        body: {;
+          content,;
+          sourceLanguage,;
+          targetLanguages,;
+          contentType;
+        }
+      }),;
+      setIsTranslating(false),;
+      if (error) {;
+        console.error('Translation error:', error),;
+        const initialTranslations: Record<SupportedLanguage string> = {;
+          en: content,;
+          es: '',;
+          pt: '',;
+          ar: '';
+        },;
+        initialTranslations[sourceLanguage] = content,;
+        return { translations: initialTranslations, error: error.message }
+      }
+      return { translations: data.translations }
+    } catch (err) {
+      setIsTranslating(false);
+      console.error('Translation service error:', err);
       const initialTranslations: Record<SupportedLanguage, string> = {
         en: content;
         es: '';
@@ -83,9 +134,6 @@ export function useTranslationService() {;
         error: err instanceof Error ? err && err.message : 'Unknown translation error' 
 
 
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
 ;
 type ContentType = 'job' | 'profile' | 'service' | 'general',;
 ;
@@ -137,6 +185,12 @@ export function useTranslationService() {;
   };
 
 
+      }
+    }
+      }
+    }
+  }
+  const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
   return {
     translateContent;
     isTranslating;
@@ -199,3 +253,141 @@ if ( {) {
         pt: '',
 
 
+type ContentType = 'job' | 'profile' | 'service' | 'general',;
+interface TranslationResponse {;
+  translations: Record<SupportedLanguage string>,;
+  error?: string;
+}
+;
+export function useTranslationService() {;
+  const [isTranslating, setIsTranslating] = useState(false),;
+  const { currentLanguage } = useLanguage(),;
+  const translateContent = async (;
+    content: string,;
+    contentType: ContentType = 'general',;
+    sourceLanguage: SupportedLanguage = 'en',;
+    targetLanguages: SupportedLanguage[] = ['enesptar'];
+  ): Promise<TranslationResponse> => {;
+    setIsTranslating(true),;
+    try {;
+      const { data, error } = await supabase.functions.invoke('translate-content', {;
+        body: {;
+          content,;
+          sourceLanguage,;
+          targetLanguages,;
+          contentType;
+        }
+      }),;
+      setIsTranslating(false),;
+      if (error) {;
+        console.error('Translation error:', error),;
+        const initialTranslations: Record<SupportedLanguage string> = {;
+          en: content,;
+          es: '',;
+          pt: '',;
+          ar: '';
+        },;
+        initialTranslations[sourceLanguage] = content,;
+
+        return { translations: initialTranslations, error: error.message }
+      }
+      return { translations: data.translations }
+
+        return { translations: initialTranslations, error: error.message }
+      }
+      return { translations: data.translations }
+
+        return { translations: initialTranslations, error: error.message }
+      }
+      return { translations: data.translations }
+    } catch (err) {
+      setIsTranslating(false);
+      console.error('Translation service error:', err);
+      const initialTranslations: Record<SupportedLanguage, string> = {
+        en: content;
+        es: '';
+        pt: ''
+        ar: ''
+      }
+      initialTranslations[sourceLanguage] = content;
+      return {
+        translations: initialTranslations
+        error: err instanceof Error ? err.message : 'Unknown translation error'
+      }
+    }
+  }
+  const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
+    if (!translations) return fallback
+    return translations[currentLanguage] |translations.en |fallback
+  }
+  return {
+    translateContent;
+    isTranslating;
+
+    getTranslation
+    } catch (err) {;
+      setIsTranslating(false),;
+      console.error('Translation service error:', err),;
+      const initialTranslations: Record<SupportedLanguage string> = {;
+        en: content,;
+        es: '',;
+        pt: '',;
+        ar: '';
+      }
+      initial_translations[source_language] = content;
+;
+      return {
+        translations: initial_translations,
+        error: err instanceof Error ? err.message : 'Unknown translation error';
+      }
+    }
+
+        ar: '';
+      },;
+      initialTranslations[sourceLanguage] = content,;
+      return {;
+        translations: initialTranslations,;
+        error: err instanceof Error ? err.message : 'Unknown translation error';
+      }
+    }
+  },;
+  const getTranslation = (translations: Record<SupportedLanguage string>, fallback: string = '') => {;
+    if (!translations) return fallback,;
+    return translations[currentLanguage] || translations.en || fallback;
+  },;
+  return {;
+    translateContent;
+    isTranslating;
+    getTranslation;
+  }
+;
+  const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {
+    // Check condition
+if (return fallback, ) {
+  $2
+}
+}
+  },;
+  ;
+  const getTranslation = (translations:Record<SupportedLanguage string>, fallback:string = '') => {;
+    if (!translations) return fallback,;
+    return translations[currentLanguage] || translations.en || fallback;
+  },;
+  ;
+  return {;
+    translateContent,;
+    isTranslating,;
+    getTranslation;
+  },;
+} type ContentType = 'job' | 'profile' | 'service' | 'general';
+const translateContent = async (content: string;
+contentType: ContentType = 'general';
+sourceLanguage: SupportedLanguage = 'en';
+setIsTranslating (false);
+}
+};
+}
+  }
+}
+  }
+}

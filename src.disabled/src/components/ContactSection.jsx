@@ -7,3 +7,4 @@ const React from "react"; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRi
 import React from \'react\'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from \'react-router-dom\'
 const React from "react"; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from "react-router-dom"; return null} ,; {}; export {};''
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

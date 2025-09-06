@@ -195,6 +195,7 @@ if (import.meta.url === `file: //${process.argv[1]}`) {const fixer = new SyntaxF
 export default SyntaxFixer;
     })
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
           modified = true
         },
 ,
@@ -203,11 +204,7 @@ export default SyntaxFixer;
           this.fixesApplied++,
           this.log(`Fixed export issues in ${file}`)
         }
-      } catch (error) {
-
-
-
-      }
+      } catch (error) {}
     })
   },
 ,
@@ -239,6 +236,7 @@ export default SyntaxFixer;
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
 
 this.log("=" * 50),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
     } catch (error) {
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
@@ -251,6 +249,7 @@ ursor/fix-lint-push-and-merge-to-main-28da
 
 ;
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ;
     });
   },;
@@ -282,7 +281,7 @@ ursor/fix-lint-push-and-merge-to-main-28da
   },;
 ,;
   async fixExportIssues() {,;
-    const files = this.getSourceFiles(),;
+    const files = this.getSourceFiles();
     files.forEach(file => {,;
       try {,;
         let content = fs.readFileSync(file, "utf8"),;

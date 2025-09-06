@@ -7,6 +7,21 @@ import {Badge} from "@/components/ui/badge";
 import {ForumReply} from "@/types/community";
 import {cn} from "@/lib/utils";
 
+  onMarkAnswer?: () => void;
+  canMarkAnswer?: boolean;
+  className?: string;
+}
+import { formatDistanceToNow } from "date-fns",
+import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { ForumReply } from "@/types/community";
+import { cn } from "@/lib/utils";
+interface ReplyCardProps {
+
+  reply: ForumReply
 
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
@@ -14,6 +29,19 @@ import {cn} from "@/lib/utils";
 }
 
 
+interface ReplyCardProps {
+  reply: ForumReply,
+  onMarkAnswer?: () => void,
+  canMarkAnswer?: boolean,
+  className?: string
+}
+
+export const ReplyCard = ({ ;
+  reply;
+export const ReplyCard = ({ 
+  reply,
+  onMarkAnswer, 
+  canMarkAnswer = false,
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
@@ -74,6 +102,10 @@ export const ReplyCard = ({;
   className;
 }: ReplyCardProps) => {;
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true });
+      className
+  className;
+}: ReplyCardProps) => {;
+  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true });
   return (;
     <Card className={cn(;
       "transition-shadow",;
@@ -81,6 +113,7 @@ export const ReplyCard = ({;
       className;
 
 
+      className
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
@@ -161,6 +194,8 @@ export default ReplyCard;
 
 export default ReplyCard;
 
+
+export default ReplyCard;
 
 import { formatDistanceToNow } from './date - fns';
 import { ThumbsUp, ThumbsDown, CheckCircle } from '@/components / icons';
@@ -277,6 +312,7 @@ export const ReplyCard = ({ ;
 
                 {reply && reply.authorRole}
 
+                {reply && reply.authorRole}
               </Badge>;
             )}
             {reply && reply.isAnswer && (;

@@ -21,6 +21,10 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 }
 
 
+export function MobileThemeProvider(): any ({ children }: MobileThemeProviderProps) {;
+  const { theme } = useTheme();
+
+  return (
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
 
 
@@ -90,3 +94,7 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 
 
 
+      {children}
+    </div>
+  )
+}

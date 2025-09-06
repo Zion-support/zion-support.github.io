@@ -422,6 +422,9 @@ ursor/automate-test-improve-and-merge-code-646c
       </section>
     </div>
 
+        </Button>
+      </section>
+    </div>
   )
 
                   </div>;
@@ -449,5 +452,6 @@ ursor/automate-test-improve-and-merge-code-646c
     </div>);
 }
 
-},
+}
 
+},

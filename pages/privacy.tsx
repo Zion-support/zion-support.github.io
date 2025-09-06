@@ -88,6 +88,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
 ursor/fix-lint-push-and-merge-to-main-ae4e
+} from "lucide-react";
+ursor/fix-lint-push-and-merge-to-main-ae4e
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
 } from 'lucide-react';
@@ -136,30 +138,36 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
       icon: <Eye className='w-6 h-6' />
+      icon: <Eye className='w-6 h-6' />
     },
     {
       title: 'Correction',
       description: 'Request correction of inaccurate information',
+      icon: <CheckCircle className='w-6 h-6' />
       icon: <CheckCircle className='w-6 h-6' />
     },
     {
       title: 'Deletion',
       description: 'Request deletion of your personal information',
       icon: <AlertTriangle className='w-6 h-6' />
+      icon: <AlertTriangle className='w-6 h-6' />
     },
     {
       title: 'Portability',
       description: 'Request transfer of your data to another service',
+      icon: <Database className='w-6 h-6' />
       icon: <Database className='w-6 h-6' />
     },
     {
       title: 'Objection',
       description: 'Object to processing of your personal information',
       icon: <User className='w-6 h-6' />
+      icon: <User className='w-6 h-6' />
     },
     {
       title: 'Restriction',
       description: 'Request restriction of processing activities',
+      icon: <Settings className='w-6 h-6' />
       icon: <Settings className='w-6 h-6' />
     },
       icon: <Eye className="w-6 h-6" />
@@ -196,6 +204,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
+
 
   Shield
   Lock
@@ -991,6 +1000,9 @@ origin/automation-improvements-final
                 </p>
                 
 
+                  If you have any questions about this Privacy Policy, please contact us at:
+                </p>
+                
 origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
@@ -1059,6 +1071,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-sm text-gray-600 mt-8">
 >>>>>>> origin/automation-improvements-final
 >>>>>>> main
+<p className="text-sm text-gray-600 mt-8">
+                <p className="text-sm text-gray-600 mt-8">
                   Last updated: January 2024
                 </p>
               </div>
@@ -1186,6 +1200,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           </section>
     </MainLayout>
 
+  );
+}
+
               transition={{ duration: 0 && 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
               <div className="prose prose-lg max-w-none">;
@@ -1203,6 +1220,7 @@ import { motion  } from './framer-motion';
   Database,
   Mail,
   Phone,
+  MapPin
   MapPin
 } from './lucide-react';
 import MainLayout from "../components / layout / MainLayout";
@@ -1481,6 +1499,10 @@ ursor/automate-test-improve-and-merge-code-646c
   );
 }
 
+
+    </MainLayout>;
+  );
+}
 
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a

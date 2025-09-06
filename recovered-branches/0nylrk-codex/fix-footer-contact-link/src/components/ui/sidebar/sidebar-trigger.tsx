@@ -1,4 +1,9 @@
 
+import * as React from "react"
+import { PanelLeft } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { useSidebar } from "./sidebar-context"
 
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>
@@ -36,6 +41,28 @@ export const SidebarTrigger = React.forward_ref<;
     <Button
 
 
+      ref={ref}
+      data-sidebar="trigger"
+      variant="ghost"
+      size="icon"
+      className={cn("h-7 w-7", props.className)}
+      }}
+      {...props}
+
+    >;
+      <PanelLeft />;
+      <span className=&quot;sr - only & quot;>Toggle Sidebar</span>;
+    </Button>);
+});
+SidebarTrigger.display_name = &quot;SidebarTrigger & quot;
+;
+
+
+SidebarTrigger.displayName = "SidebarTrigger"
+
+      onClick={(event) => {
+        props.onClick?.(event)
+        toggleSidebar()
       }}
       {...props}
     >
@@ -51,3 +78,5 @@ SidebarTrigger.displayName = "SidebarTrigger"
       {...props}
 
 
+      }}
+      {...props}

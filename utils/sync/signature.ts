@@ -38,6 +38,7 @@ export function signPayload(
     signature,
     timestamp,
     nonce
+    nonce
   };
 }
 
@@ -74,6 +75,9 @@ import crypto from 'crypto';
   sign: (message: string, private_key: string) => '',
   recover: (signature: string, message: string) => '';
 >>>>>>> main
+  verify: (signature: string, message: string, address: string) => false,
+  sign: (message: string, private_key: string) => '',
+  recover: (signature: string, message: string) => '';
 }
 
 export function hashData(data: string): string {
@@ -84,3 +88,6 @@ export function hashData(data: string): string {
 
 
 
+};
+
+}

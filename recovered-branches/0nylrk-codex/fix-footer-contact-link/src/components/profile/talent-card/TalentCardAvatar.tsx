@@ -14,6 +14,9 @@ interface TalentCardAvatarProps {;
 export function TalentCardAvatar({
   profilePicture,
   fullName
+export function TalentCardAvatar({
+  profilePicture,
+  fullName
 }: TalentCardAvatarProps) {
   // Get initials for avatar fallback
   const getInitials = (name: string) => {
@@ -31,6 +34,11 @@ export function TalentCardAvatar({
 
 
 
+      .split(" ")
+      .map((part) => part[0])
+      .join("")
+      .toUpperCase();
+}
 import React from './react';
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
 interface TalentCardAvatarProps {

@@ -40,6 +40,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -75,6 +77,7 @@ ursor/automate-test-improve-and-merge-code-646c
 import {Card} from '../components/ui/Card';
 import {Home,, ArrowLeft,, Phone,, Mail,, FileText,, Briefcase,, Users,, BookOpen,, DollarSign,, Calendar,, Award,, Shield} from 'lucide-react';
 const "NotFound": React.FC = () => {;
+  const quickLinks = [{ name: 'Home', "url": '/', "icon": Home };
   const quickLinks = [{ name: 'Home', "url": '/', "icon": Home };
     { "name": 'Services', "url": '/services', "icon": Briefcase },;
     { "name": 'About', "url": '/about', "icon": Users },;
@@ -195,6 +198,9 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+    { "name": 'Privacy Policy', "url": '/privacy', "icon": Shield }
+  ];
+  return (
     <>;
       <Head>;
         <title>Page Not Found - Zion Tech Group</title>;

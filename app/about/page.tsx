@@ -6,6 +6,10 @@ export const metadata = {
   description:
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
 ursor/automate-test-improve-and-merge-code-646c
+  description:
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+  description: "Learn about Zion Tech Group&apos;s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 };
 
 export default function AboutPage() {
@@ -44,6 +48,8 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
             <p className="text-gray-300 text-lg mb-6">
               To be the world&apos;s most trusted technology partner, known for our
+              To be the world&apos;s most trusted technology partner, known for our 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
               innovation, reliability, and commitment to client success.
             </p>
             <p className="text-gray-300 text-lg">

@@ -34,6 +34,31 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+#!/usr/bin/env node
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 function createValidReactComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName
@@ -117,6 +142,7 @@ function processDirectory(dirPath) {
         item.endsWith(".ts") ||
         item.endsWith(".js") ||
         item.endsWith(".jsx")
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       ) {
         if (fixFile(fullPath)) {
           fixedCount++;
@@ -165,6 +191,7 @@ export default function ${componentName}() {}`;
 function processDirectory(dirPath) {
   try {
         fixedCount += fixFile(fullPath);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       }
     }
     return fixedCount;
@@ -204,6 +231,7 @@ const fixedCount = processDirectory(path.join(__dirname, "src"));
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -216,7 +244,9 @@ function createValidReactComponent(filePath) {
     .replace(/[^a-zA-Z0-9]/g, "");
   return `import React from "react";
 export default function ${componentName}() {}`;
+export default function ${componentName}() {}`;
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }`;
 }
 
@@ -283,6 +313,7 @@ function process_directory() {
       // If file is empty or has syntax errors, create a valid component
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         const newContent = createValidReactComponent(filePath);
         fs.writeFileSync(filePath, newContent);
         console.log(`Fixed: ${filePath}`);

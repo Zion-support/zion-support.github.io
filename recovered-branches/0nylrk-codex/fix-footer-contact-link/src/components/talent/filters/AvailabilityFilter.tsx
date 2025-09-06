@@ -9,6 +9,9 @@ const AVAILABILITY_OPTIONS = [
 ];
 
 
+  { id: "project", label: "Project-based" }
+];
+
 export function AvailabilityFilter({
   selectedAvailability,
   toggleAvailability,
@@ -18,6 +21,8 @@ export function AvailabilityFilter({
 }: AvailabilityFilterProps) {
 
 
+  isMobileFilterOpen
+}: AvailabilityFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -189,3 +194,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
   );
 
 
+  { id: "project", label: "Project - based" }
+];
+;

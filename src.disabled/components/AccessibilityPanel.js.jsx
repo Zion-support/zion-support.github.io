@@ -1,5 +1,7 @@
-
 import React from\';react\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \'none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'general\') useEffect(() => {\''\';
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 const React from";react" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: "none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("general") useEffect(() => {""";"""
 const React from";react" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: "none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("general") useEffect(() => {""";"""
@@ -19,3 +21,6 @@ ursor/automate-test-improve-and-merge-code-646c
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 :temp_exclude/src.disabled/components/AccessibilityPanel.js.jsx
 const React from";react" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: "none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("general") useEffect(() => {""";"""
+const React from";react" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: "none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("general") useEffect(() => {""";"""
+const React from";react" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: "none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("general") useEffect(() => {""";"""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

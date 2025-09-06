@@ -1,6 +1,28 @@
-
-
 import {;
+  Form,;
+  FormControl,;
+  FormDescription,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage,;
+
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
+import { AppMetadataValues } from "./MetadataManager";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+  Form
+  FormControl
+  FormDescription
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+
+
   Form,;
   FormControl,;
   FormDescription,;
@@ -13,6 +35,45 @@ import {;
 
 
 
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,;
+} from "@/components/ui/form";
+
+import { Badge } from "@/components/ui/badge";
+import { X } from "lucide-react";
+
+
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
+
+  const { control, register, watch, setValue } = form;
+
+  const keywords = watch("keywords");
+  const platform = watch("platform");
+
+} from "@/components/ui/form";
+
+} from "@/components/ui/form";
+  const { control, register, watch, setValue } = form;
+  const keywords = watch("keywords");
+  const platform = watch("platform");
+
+
+
+
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { AppMetadataValues } from "./MetadataManager",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Badge } from "@/components/ui/badge",
+import { X } from "lucide-react",
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
@@ -24,6 +85,26 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const keywords = watch("keywords");
   const platform = watch("platform");
 
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+  const { control, register, watch, setValue } = form;
+
+  const keywords = watch("keywords");
+  const platform = watch("platform");
+  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" |e.key === ",") {
+      e.preventDefault();
+      const value = e.currentTarget.value.trim();
+  const { control, register, watch, setValue } = form,
+  const keywords = watch("keywords"),
+  const platform = watch("platform"),
+  
+  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" || e.key === ",") {
+      e.preventDefault(),
+      const value = e.currentTarget.value.trim(),
+      
+
+      if (value && !keywords.includes(value)) {
 
   const addKeyword = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
     if (e && e.key === "Enter" || e && e.key === ",") {;
@@ -54,6 +135,86 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const longDescription = watch("longDescription");
 
 
+  },
+  
+  const removeKeyword = (keyword: string) => {
+    setValue(
+      "keywords",
+      keywords.filter((k) => k !== keyword)
+    )
+  },
+  
+  const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
+  const longDescription = watch("longDescription"),
+
+  return (
+    <Card className="bg-zion-blue border-zion-purple/30">
+      <CardHeader>
+        <CardTitle>App Metadata</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Form {...form}>
+          <div className="space-y-4">
+            <FormField
+              control={control}
+              name="appTitle"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>App Title</FormLabel>
+                  <FormControl>
+                    <Input 
+                      placeholder="Enter app title"
+                      maxLength={platform === "ios" ? 30 : 50}
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    Max {platform === "ios" ? "30" : "50"} characters
+                  </FormDescription>
+                </FormItem>
+import React from "react",;
+import { UseFormReturn } from "react-hook-form",;
+import { AppMetadataValues } from "./MetadataManager",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
+import { Badge } from "@/components/ui/badge",;
+import { X } from "lucide-react",;
+;
+interface MetadataFormProps {;
+  form:UseFormReturn<AppMetadataValues>;
+}
+;
+export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
+  const { control, register, watch, setValue } = form,;
+  const keywords = watch("keywords");
+  const platform = watch("platform"),;
+  ;
+  const addKeyword = (e:React.KeyboardEvent<HTMLInputElement>) => {;
+    if (e.key === "Enter" || e.key === ",") {;
+      e.preventDefault(),;
+      const value = e.currentTarget.value.trim(),;
+      ;
+      if (value && !keywords.includes(value)) {;
+        setValue("keywords", [...keywords, value]),;
+        e.currentTarget.value = "",;
+      }
+    }
+  },;
+  ;
+  const removeKeyword = (keyword:string) => {;
+    setValue(;
+      "keywords",;
+      keywords.filter((k) => k !== keyword);
+    ),;
+  },;
+  ;
+  const maxDescriptionLength = platform === "ios" ? 4000 :4000,;
+  const longDescription = watch("longDescription"),;
+;
+  return (;
+  return (
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>App Metadata</CardTitle>;
@@ -67,6 +228,9 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
               name="appTitle";
 
 
+            <FormField
+              control={control}
+              name="appTitle"
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>App Title</FormLabel>;
@@ -82,13 +246,13 @@ import { AppMetadataValues  } from './MetadataManager';
 import { Input  } from '@/components / ui / input';
 import { Textarea  } from '@/components / ui / textarea';
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
-import {
   Form,
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormLabel,
+  FormMessage
   FormMessage
 } from '@/components / ui / form';
 import { Badge  } from '@/components / ui / badge';
@@ -144,6 +308,9 @@ if ( {) {
                       maxLength={platform === "ios" ? 30 :50}
 
 
+                    <Input ;
+                      placeholder="Enter app title";
+                      maxLength={platform === "ios" ? 30 :50}
                       {...field}
                     />;
                   </FormControl>;
@@ -169,6 +336,22 @@ if ( {) {
               control={control}
               name="longDescription";
 
+            <FormField
+              control={control}
+              name="shortDescription"
+                    Max {platform === "ios" ? "30" :"50"} characters;
+                  </FormDescription>;
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Short Description</FormLabel>;
+                  <FormControl>;
+                    <Input ;
+                      placeholder="Brief description of your app";
+                      maxLength={platform === "ios" ? 170 :80}
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormDescription>;
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Long Description</FormLabel>;
@@ -180,6 +363,7 @@ if ( {) {
 
                       maxLength={maxDescriptionLength}
 
+                      maxLength={maxDescriptionLength}
                 </FormItem>)}
             />;
             <FormField;
@@ -263,6 +447,13 @@ if ( {) {
             />
 
 
+            <div>
+              <FormLabel htmlFor="keywords">Keywords</FormLabel>
+            />;
+
+            <div>;
+              <FormLabel htmlFor="keywords">Keywords</FormLabel>;
+              <Input
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown={addKeyword}
@@ -309,6 +500,8 @@ if ( {) {
                       type="button";
 
 
+                    {keyword}
+                      type="button"
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
                     >;
@@ -348,6 +541,10 @@ if ( {) {
               <FormDescription className="mt - 2">;
 
 
+                Add keywords to improve discoverability (max 100 characters;
+                total);
+              </FormDescription>;
+            </div>;
             <FormField
               control={control}
               name="version"
@@ -357,6 +554,18 @@ if ( {) {
                   <FormControl>
 
 
+);
+                    <Input 
+                      placeholder="e.g., 1.0.0"
+                      {...field}
+                    />;
+                  </FormControl>;
+                </FormItem>;
+              )}
+                Add keywords to improve discoverability (max 100 characters;
+                total);
+              </FormDescription>;
+            </div>;
             <FormField;
               control={control}
               name="version";
@@ -410,6 +619,7 @@ if ( {) {
   e.preventDefault ();
 const value = e.currentTarget.value.trim ();
 if (value && !keywords.includes (value) ) {}
+if (value && !keywords.includes (value) ) {}
 };
 }/> <FormField <FormItem> <FormLabel>Short Description</FormLabel> <FormControl> <Input </FormDescription> </FormItem>) 
 }/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> {
@@ -429,6 +639,10 @@ if (value && !keywords.includes (value) ) {}
 };
 
 
+}
+
+};
+}
 
 );
                     <Input 

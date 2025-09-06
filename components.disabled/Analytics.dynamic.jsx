@@ -27,11 +27,14 @@ const Analytics = dynamic(() => import("./Analytics"),{'; "loading": () => <p>Lo
 ursor/integrate-build-improve-and-re-verify-8f7d
 </p>'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 </p>'
 
 
 </p>'
 
+</p>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 </p>'
 </p>'
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -55,6 +58,8 @@ const Analytics = dynamic(() => import("./Analytics"),{'; "loading": () => <p>Lo
 </p>'
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 </p>'
 </p>'
 </p>'

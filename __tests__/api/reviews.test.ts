@@ -18,6 +18,7 @@ import type {
   Session,
   AuthError
 } from '@supabase/supabase-js'; // Supabase types
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import reviewsHandler from '@/pages/api/reviews'
 import productReviewsHandler from '@/pages/api/reviews/[productId]'
 } from '@prisma/client'
@@ -108,6 +109,8 @@ describe('/api/reviews API Endpoint'
         "error"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   PrismaClient,
   ProductReview,
   User as PrismaUser,
@@ -489,6 +492,9 @@ import { createMocks,RequestMethod } from 'node-mocks-http' import type { NextAp
 ursor/fix-website-loading-errors-and-merge-6662
         "error"
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+        "error"
+
 ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
         "error"
@@ -500,3 +506,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+        "error"
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

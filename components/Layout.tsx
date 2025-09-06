@@ -59,6 +59,7 @@ const Layout: React.FC < LayoutProps> = ({
   og_description,
   og_image = "https://ziontechgroup.com / og - image.jpg",
   no_index = false
+  no_index = false
 }) => {
   const json_ld = {
     "@context": "https://schema.org",
@@ -74,11 +75,14 @@ const Layout: React.FC < LayoutProps> = ({
       address_region: "DE",
       postal_code: "19709",
       address_country: "US"
+      address_country: "US"
     },
     contact_point: {
       "@type": "ContactPoint",
       telephone: "+1 - 302 - 464 - 0950",
       contact_type: "customer service",
+      email: "kleber@ziontechgroup.com"
+    }
       email: "kleber@ziontechgroup.com"
     }
   }
@@ -116,6 +120,7 @@ const Layout: React.FC < LayoutProps> = ({
 };
 
 interface LayoutProps {
+  children: ReactNode
   children: ReactNode
 }
 const Layout: React.FC<LayoutProps> = ({ children }) => {

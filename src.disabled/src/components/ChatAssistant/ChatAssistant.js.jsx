@@ -7,3 +7,4 @@ const React,{ useState,useEffect,useRef,useContext } from "react"; import { Auth
 import React,{ useState,useEffect,useRef,useContext } from \'react\'
 const React,{ useState,useEffect,useRef,useContext } from "react"; import { AuthContext } from "././context/auth/AuthContext";";" import { useDebounce } from "././hooks/useDebounce";";" import { useLocalStorage } from "././hooks/useLocalStorage";";" import { ChatMessage } from "./ChatMessage";";" import { ChatInput } from "./ChatInput";";" import { Avatar,AvatarFallback,AvatarImage } from "@/components/ui/avatar";";" import { Button } from "@/components/ui/button";";" import { X } from "lucide-react"; import { focusManagement } from "@/utils/
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

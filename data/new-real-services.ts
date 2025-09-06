@@ -19,6 +19,10 @@
     marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
 
 
+      'Grafana and Datadog exporters'
+    ],
+    popular: true,
+    icon: '📈',
     targetAudience: 'AI product teams, platform engineers, data teams';
     trialDays: 21;
     setupTime: '1 day';
@@ -1155,6 +1159,675 @@
     trial_days: 21,
     setup_time: '1 day',
     category: 'AI & Machine Learning',
+      'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
+    launch_date: '2025 - 01 - 10',
+    customers: 32,
+    rating: 4 && 4.8,
+    reviews: 22
+  },
+  {
+      'Prospect enrichment via public sources',
+      'Personalized email generation',
+      'Sequence and follow - up scheduling',
+      'A / B testing and analytics',
+      'SPF / DKIM / DMARC checks',
+      'Inbox rotation support'
+    ],
+    popular: false,
+    variant: 'holographic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Sequencer, enrichment adapters, and warm - up utilities.',
+    launch_date: '2024 - 12 - 20',
+    customers: 120,
+    rating: 4 && 4.7,
+    reviews: 58
+  },
+  {
+
+      'Policy packs for CIS/NIST',
+    id: 'security - posture - as - code',
+    name: 'Security Posture as Code',
+    tagline: 'CIS / NIST / Kyverno policy packs with drift remediation',
+    price: '$399',
+    period: '/month',
+    description:;
+      'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.',
+    features: [;
+      'Policy packs for CIS / NIST',
+
+      'Kubernetes and cloud posture',
+      'Auto - remediation PRs',
+      'Evidence collection and reports',
+      'SOC2 / ISO 27001 export'
+    ],
+    popular: true,
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 400',
+    link: 'https://ziontechgroup.com / security - posture - as - code',
+    market_position:;
+      'Brings policy - as - code and compliance automation into one product.',
+    target_audience: 'Platform teams, security engineers, compliance leads',
+    trial_days: 21,
+    setup_time: '1–3 days',
+    category: 'Cybersecurity',
+    real_service: true,
+    technology: ['OPA', 'Kyverno', 'Terraform', 'GitHub Actions'],
+    integrations: ['AWS', 'Azure', 'GCP', 'GitHub', 'GitLab'],
+    use_cases: ['Baseline enforcement', 'Audit readiness', 'Drift detection'],
+    roi: 'Reduce audit prep time by 70%',
+    competitors: ['Wiz', 'Prisma Cloud', 'Snyk'],
+    market_size: '$30B Cloud Security',
+    growth_rate: 'High growth',
+    variant: 'neural - quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Policy engine plus cloud / K8s scanners and fix generators.',
+    launch_date: '2025 - 01 - 05',
+
+    customers: 18,
+    rating: 4 && 4.6,
+    reviews: 14
+  },
+  {
+      'Freshness and volume checks',
+      'Schema drift detection',
+      'SLA and SLO tracking',
+      'Incident routing to Slack / Teams'
+    ],
+    popular: false,
+      'Light agents and metadata collectors with warehouse connectors.',
+    launch_date: '2025 - 01 - 12',
+    customers: 25,
+    rating: 4 && 4.5,
+    reviews: 12
+  },
+  {
+      'Global CDN edge caching',
+      'Dynamic rate limiting',
+      'Anomaly and abuse detection',
+      'Zero - downtime deploys with shadow traffic'
+    ],
+    popular: true,
+    category: 'DevOps & Automation',
+    real_service: true,
+    technology: ['Workers', 'Rust', 'Redis'],
+    integrations: ['Cloudflare', 'Fastly', 'Akamai'],
+    use_cases: ['API acceleration', 'Abuse protection', 'Cost control'],
+    roi: 'Reduce p99 latency up to 60%',
+    competitors: ['Cloudflare Enterprise', 'Akamai API Acceleration'],
+    market_size: '$10B API Security',
+    growth_rate: 'Strong',
+    variant: 'quantum - matrix',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Managed edge configs and anomaly ML with safe rollout tools.',
+    launch_date: '2025 - 01 - 15',
+    customers: 14,
+    rating: 4 && 4.7,
+    reviews: 9
+  },
+  {
+
+      'Auto-segmentation and cohorts',
+    id: 'ai - product - analytics',
+    name: 'AI Product Analytics',
+    tagline:;
+      'Session insights, funnel auto - segmentation, and LLM - based insights',
+    price: '$129',
+    period: '/month',
+    description:;
+      'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.',
+    features: [;
+      'Auto - segmentation and cohorts',
+
+      'LLM query interface',
+      'Retention and churn signals',
+      'Anomaly alerts to Slack / Teams'
+    ],
+    popular: false,
+    integrations: ['Segment', 'RudderStack', 'Snowplow'],
+    use_cases: ['Growth analytics', 'Retention', 'Experimentation'],
+    roi: 'Find growth levers 2x faster',
+    competitors: ['Amplitude', 'Mixpanel'],
+    market_size: '$8B Product Analytics',
+    growth_rate: 'Growing',
+    variant: 'holographic - advanced',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Event capture SDKs and warehouse - first analytics.',
+    launch_date: '2025 - 01 - 02',
+    customers: 41,
+    rating: 4 && 4.6,
+    reviews: 20
+  },
+  {
+
+      'Multi-channel widgets',
+    id: 'ai - support - deflection',
+    name: 'AI Support Deflection',
+    tagline: 'Self - serve answers with RAG, forms, and secure handoff',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.',
+    features: [;
+      'Multi - channel widgets',
+
+      'Grounded answers with citations',
+      'Secure human handoff',
+      'Analytics and CSAT tracking'
+    ],
+    popular: true,
+    integrations: ['Zendesk', 'Intercom', 'Freshdesk'],
+    use_cases: ['Self - serve support', 'Ticket reduction', 'CSAT improvement'],
+    roi: 'Reduce tickets 30–50%',
+    competitors: ['Intercom Fin', 'Ada'],
+    market_size: '$10B Support Tech',
+    growth_rate: 'Strong',
+    variant: 'quantum - cyberpunk',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Embeddable widget and handoff connectors.',
+    launch_date: '2024 - 12 - 15',
+    customers: 75,
+    rating: 4 && 4.7,
+    reviews: 48
+  },
+  {
+      'Rightsizing recommendations',
+      'Anomaly detection',
+      'Savings plan / RIs planning',
+      'Tag hygiene and showback'
+    ],
+    popular: true,
+    category: 'Cloud & Infrastructure',
+    real_service: true,
+    technology: ['AWS Cost Explorer', 'Azure Cost', 'GCP Billing'],
+    integrations: ['AWS', 'Azure', 'GCP'],
+    use_cases: ['Cost control', 'Anomaly response', 'Budgeting'],
+    roi: 'Save 15–35% on cloud spend',
+    competitors: ['CloudZero', 'Kubecost'],
+    market_size: '$6B FinOps',
+    growth_rate: 'Growing',
+    variant: 'quantum - neural',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Read - only billing analysis with PR - based changes.',
+    launch_date: '2025 - 01 - 03',
+    customers: 19,
+    rating: 4 && 4.5,
+    reviews: 11
+  },
+  {
+
+      'Field-level encryption',
+    id: 'privacy - vault',
+    name: 'Privacy Vault',
+    tagline: 'Tokenize PII and control access with audit trails',
+    price: '$179',
+    period: '/month',
+    description:;
+      'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
+    features: [;
+      'Field - level encryption',
+
+      'Tokenization APIs',
+      'Consent enforcement',
+      'Audit trail and reporting'
+    ],
+    popular: false,
+    category: 'Security & Compliance',
+    real_service: true,
+    technology: ['KMS', 'HSM', 'PostgreSQL'],
+    integrations: ['AWS KMS', 'HashiCorp Vault'],
+    use_cases: ['PCI / PII protection', 'Consent management', 'Data sharing'],
+    roi: 'Reduce breach risk and compliance effort',
+    competitors: ['Skyflow', 'Very Good Security'],
+    market_size: '$4B Privacy Tech',
+    growth_rate: 'Growing',
+    variant: 'holographic - neural',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Drop - in SDKs and proxy - based tokenization.',
+    launch_date: '2025 - 01 - 07',
+    customers: 9,
+    rating: 4 && 4.6,
+    reviews: 7
+  },
+  {
+
+      'Graph-based anomaly detection',
+    id: 'ai - fraud - detection - lite',
+    name: 'AI Fraud Detection Lite',
+    tagline: 'Graph - based anomalies with explainability for SMBs',
+    price: '$159',
+    period: '/month',
+    description:;
+      'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
+    features: [;
+      'Graph - based anomaly detection',
+
+      'Explainability reports',
+      'Risk scoring API',
+      'Workflow actions and webhooks'
+    ],
+    popular: false,
+    category: 'Financial Technology',
+    real_service: true,
+    technology: ['Graph DB', 'Python', 'Kafka'],
+    integrations: ['Stripe', 'Adyen', 'Plaid'],
+    use_cases: ['Chargeback reduction', 'Account takeover', 'Abuse prevention'],
+    roi: 'Lower chargebacks by 30–60%',
+    competitors: ['Sift', 'SEON'],
+    market_size: '$10B Fraud Prevention',
+    growth_rate: 'High',
+    variant: 'quantum - financial',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Streaming and batch detectors with human - in - the - loop review.',
+    launch_date: '2025 - 01 - 09',
+    customers: 11,
+    rating: 4 && 4.5,
+    reviews: 8
+  },
+  {
+      'HA with automatic failover',
+      'Continuous backups and PITR',
+      'Slow query insights and indexing',
+      'Encryption and access controls'
+    ],
+    popular: true,
+    category: 'Observability',
+    real_service: true,
+    technology: ['PostgreSQL', 'Patroni', 'Wal - G'],
+    integrations: ['Grafana', 'Datadog'],
+    use_cases: ['Reliable databases', 'Compliance', 'Scaling'],
+    roi: 'Avoid outages and accelerate teams',
+    competitors: ['CrunchyData', 'Aiven'],
+    market_size: '$12B DBaaS',
+    growth_rate: 'High',
+    variant: 'quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Managed cluster with observability and runbooks.',
+    launch_date: '2025 - 01 - 16',
+    customers: 8,
+    rating: 4 && 4.6,
+    reviews: 5
+  },
+  {
+      'Core Web Vitals dashboards',
+      'Session replay and heatmaps',
+      'Error tracking and sourcemaps',
+      'A / B test impact analysis'
+    ],
+    popular: true,
+    category: 'Quality & Monitoring',
+    real_service: true,
+    technology: ['JS SDK', 'ClickHouse'],
+    integrations: ['PostHog', 'Segment'],
+    use_cases: ['UX improvements', 'Conversion lift'],
+    roi: 'Lift conversion 2–10% by fixing performance',
+    competitors: ['Sentry', 'New Relic Browser'],
+    market_size: '$5B APM',
+    growth_rate: 'Growing',
+    variant: 'holographic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Agent + dashboards + anomaly alerts.',
+    launch_date: '2025 - 01 - 17',
+    customers: 12,
+    rating: 4 && 4.5,
+    reviews: 6
+  },
+  {
+      'Site audits and fixes',
+      'Schema and sitemaps',
+      'Programmatic pages',
+      'Internal linking graph'
+    ],
+    popular: false,
+    integrations: ['Search Console'],
+    use_cases: ['Traffic growth', 'Tech SEO'],
+    roi: 'Increase organic traffic 20–100%',
+    competitors: ['Ahrefs', 'Semrush'],
+    market_size: '$6B SEO Tools',
+    growth_rate: 'Stable',
+    variant: 'neural',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Crawlers, fixers, programmatic builder.',
+    launch_date: '2025 - 01 - 18',
+    customers: 10,
+    rating: 4 && 4.4,
+    reviews: 4
+  },
+  {
+      'DLQ and retry policies',
+      'Inspector and redaction',
+      'Signature verification',
+      'Fan - out and transformations'
+    ],
+    popular: true,
+    integrations: ['Stripe', 'Shopify', 'GitHub'],
+    use_cases: ['Webhook reliability', 'Debugging'],
+    roi: 'Reduce integration incidents 50%+',
+    competitors: ['Svix', 'Hookdeck'],
+    market_size: '$1B Integration Tools',
+    growth_rate: 'Growing',
+    variant: 'quantum - matrix',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Broker + storage + replayer UI.',
+    launch_date: '2025 - 01 - 19',
+    customers: 7,
+    rating: 4 && 4.6,
+    reviews: 3
+  },
+  {
+      'Serverless scale',
+      'Template gallery',
+      'Brand - safe fonts',
+      'Webhook on completion'
+    ],
+    popular: true,
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Workers', 'Headless Chrome'],
+    integrations: ['Zapier', 'Make'],
+    use_cases: ['Invoices', 'Reports'],
+    roi: 'Save days of maintenance yearly',
+    competitors: ['PDFShift', 'DocRaptor'],
+    market_size: '$1B Doc Gen',
+    growth_rate: 'Stable',
+    variant: 'holographic - advanced',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Isolated renderer pool, signed URLs.',
+    launch_date: '2025 - 01 - 18',
+    customers: 22,
+    rating: 4 && 4.6,
+    reviews: 10
+  },
+  {
+
+      'Auto-instrumentation',
+    id: 'api - observability - starter - pro',
+    name: 'API Observability Starter Pro',
+    tagline: 'Traces, metrics, logs for APIs without the bloat',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.',
+    features: [;
+      'Auto - instrumentation',
+
+      'RED dashboards',
+      'Error analytics',
+      'Exporters to APMs'
+    ],
+    popular: false,
+    category: 'Observability',
+    real_service: true,
+    technology: ['OpenTelemetry', 'Grafana'],
+    integrations: ['Datadog', 'New Relic'],
+    use_cases: ['API reliability', 'Performance'],
+    roi: 'Reduce MTTR by 30–50%',
+    competitors: ['Honeycomb', 'Lightstep'],
+    market_size: '$10B Observability',
+    growth_rate: 'High',
+    variant: 'quantum - holographic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'SDKs, collectors, quick dashboards.',
+    launch_date: '2025 - 01 - 17',
+    customers: 9,
+    rating: 4 && 4.5,
+    reviews: 4
+  },
+  {
+      'SAML and OIDC',
+      'SCIM and JIT provisioning',
+      'Branding and mapping',
+      'Customer sandbox'
+    ],
+    popular: true,
+    category: 'Security & Compliance',
+    real_service: true,
+    technology: ['Keycloak', 'Auth gateways'],
+    integrations: ['Okta', 'Azure AD', 'Google'],
+    use_cases: ['Enterprise deals', 'User management'],
+    roi: 'Unlock enterprise revenue faster',
+    competitors: ['Workos', 'Auth0', 'Stytch'],
+    market_size: '$8B Identity',
+    growth_rate: 'High',
+    variant: 'neural - quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Hosted broker + mappings UI.',
+    launch_date: '2025 - 01 - 17',
+    customers: 6,
+    rating: 4 && 4.7,
+    reviews: 3
+  },
+  {
+      'Network scans and SNMP',
+      'Software inventory',
+      'Change tracking',
+      'CMDB integrations'
+    ],
+    popular: false,
+    category: 'IT Operations',
+    real_service: true,
+    technology: ['nmap', 'SNMP', 'Go'],
+    integrations: ['ServiceNow', 'Jira'],
+    use_cases: ['Inventory', 'Security'],
+    roi: 'Reduce unknown assets and risk',
+    competitors: ['Lansweeper'],
+    market_size: '$2B ITAM',
+    growth_rate: 'Growing',
+    variant: 'holographic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Scanners, parsers, CMDB sync.',
+    launch_date: '2025 - 01 - 16',
+    customers: 5,
+    rating: 4 && 4.4,
+    reviews: 2
+  },
+  {
+      'Questionnaire templates',
+      'Evidence collection portal',
+      'Continuous monitoring',
+      'Risk scoring'
+    ],
+    popular: true,
+    integrations: ['SecurityScorecard'],
+    use_cases: ['Vendor due diligence'],
+    roi: 'Cut cycle time by 50%+',
+    competitors: ['Whistic', 'OneTrust'],
+    market_size: '$4B Third - party Risk',
+    growth_rate: 'High',
+    variant: 'quantum - cyberpunk',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Portal + integrations + reports.',
+    launch_date: '2025 - 01 - 19',
+    customers: 6,
+    rating: 4 && 4.5,
+    reviews: 3
+  },
+    id: 'llm-observability-suite', name: 'LLM Observability Suite',
+    tagline: 'Track latency, cost, quality and drift across all prompts',
+    price: '$199', period: '/month',
+    description: 'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.',
+    features: [
+      'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
+    ];
+    popular: true, icon: '📈',
+    color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup.com/llm-observability-suite', marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
+    targetAudience: 'AI product teams, platform engineers, data teams',
+    trialDays: 21, setupTime: '1 day',
+    category: 'AI & Machine Learning', realService: true,
+    technology: ['Next.jsOpenTelemetryPostgreSQLClickHouse'], integrations: ['OpenAI-compatibleLangChainLlamaIndexDatadogGrafana'],
+    useCases: ['LLM app monitoringCost controlPolicy compliance'], roi: 'Cut LLM cost 20–45% while improving reliability',
+    competitors: ['LangfuseArizeWeights & Biases'], marketSize: '$5B+ AI Ops and Observability',
+    growthRate: 'Rapid growth with LLM adoption', variant: 'quantum-holographic',
+    contactInfo: contact, realImplementation: true,
+    implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
+    launchDate: '2025-01-10', customers: 32,
+    rating: 4.8,
+    reviews: 22
+  }
+  {
+    id: 'ai-sales-email-copilot'
+    name: 'AI Sales Email Copilot'
+    tagline: 'Personalized multi-touch outbound with real-time enrichment'
+    price: '$129'
+    period: '/month'
+    description:
+      'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.'
+    features: [
+    reviews: 58
+  }
+  {
+    id: 'security-posture-as-code'
+    name: 'Security Posture as Code'
+    tagline: 'CIS/NIST/Kyverno policy packs with drift remediation'
+    price: '$399'
+    period: '/month'
+    description:
+      'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.'
+    features: [
+    reviews: 14
+  }
+  {
+    id: 'etl-observability-starter'
+    name: 'ETL Observability Starter'
+    tagline: 'Data pipeline health with schema change and freshness alerts'
+    price: '$99'
+    period: '/month'
+    description:
+      'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.'
+    features: [
+    reviews: 12
+  }
+  {
+    id: 'api-performance-shield'
+    name: 'API Performance Shield'
+    tagline: 'Global edge caching, rate limiting, and anomaly detection'
+    price: '$149'
+    period: '/month'
+    description:
+      'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.'
+    features: [
+    reviews: 9
+  }
+  {
+    id: 'ai-product-analytics'
+    name: 'AI Product Analytics'
+    tagline:
+      'Session insights, funnel auto-segmentation, and LLM-based insights'
+    price: '$129'
+    period: '/month'
+    description:
+      'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.'
+    features: [
+    reviews: 20
+  }
+  {
+    id: 'ai-support-deflection'
+    name: 'AI Support Deflection'
+    tagline: 'Self-serve answers with RAG, forms, and secure handoff'
+    price: '$99'
+    period: '/month'
+    description:
+      'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.'
+    features: [
+    reviews: 48
+  }
+  {
+    id: 'cloud-cost-autopilot'
+    name: 'Cloud Cost Autopilot'
+    tagline: 'Automated rightsizing, anomaly alerts, and commitment planning'
+    price: '$249'
+    period: '/month'
+    description:
+      'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.'
+    features: [
+    reviews: 11
+  }
+  {
+    id: 'privacy-vault'
+    name: 'Privacy Vault'
+    tagline: 'Tokenize PII and control access with audit trails'
+    price: '$179'
+    period: '/month'
+    description:
+      'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.'
+    features: [
+    reviews: 7
+  }
+  {
+    id: 'ai-fraud-detection-lite'
+    name: 'AI Fraud Detection Lite'
+    tagline: 'Graph-based anomalies with explainability for SMBs'
+    price: '$159'
+    period: '/month'
+    description:
+      'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.'
+    features: [
+    reviews: 8
+  }
+  {
+    id: 'managed-postgres-ha-pro'
+    name: 'Managed Postgres HA Pro'
+    tagline: 'Turnkey HA, backups, PITR, and query tuning'
+    price: '$199'
+    period: '/month'
+    description:
+      'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.'
+    features: [
+    reviews: 5
+  }
+  {
+    id: 'browser-performance-monitor-pro'
+    name: 'Browser Performance Monitor Pro'
+    tagline: 'RUM, Core Web Vitals, and session replay'
+    price: '$79'
+    period: '/month'
+    description:
+      'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.'
+    features: [
+    reviews: 6
+  }
+  {
+    id: 'seo-automation-studio'
+    name: 'SEO Automation Studio'
+    tagline: 'Programmatic SEO, audits, and internal linking automation'
+    price: '$99'
+    period: '/month'
+    description:
+      'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.'
+    features: [
+    reviews: 4
+  }
+  {
+    id: 'webhook-relay-replay-pro'
+    name: 'Webhook Relay & Replay Pro'
+    tagline: 'Reliable webhooks with DLQ and replays'
+    price: '$59'
+    period: '/month'
+    description:
+      'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.'
+    features: [
+];
 
 
 

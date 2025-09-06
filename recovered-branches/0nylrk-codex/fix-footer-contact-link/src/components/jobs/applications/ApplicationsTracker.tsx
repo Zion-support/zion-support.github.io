@@ -13,6 +13,32 @@ import { LoadingState } from "./LoadingState";
 import { EmptyState } from "./EmptyState";
 import { ErrorState } from "./ErrorState";
 
+import { Button } from "@/components/ui/button",
+import { ApplicationStatus } from "@/types/jobs",
+export function ApplicationsTracker() {
+  const { applications, isLoading, error } = useJobApplications(),
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
+  
+  if (isLoading) {
+    return <LoadingState />
+import { useState } from "react",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { ApplicationCard } from "./ApplicationCard",;
+import { LoadingState } from "./LoadingState",;
+import { EmptyState } from "./EmptyState",;
+import { ErrorState } from "./ErrorState",;
+import { Button } from "@/components/ui/button",;
+import { ApplicationStatus } from "@/types/jobs",;
+export function ApplicationsTracker() {;
+  const { applications, isLoading, error } = useJobApplications(),;
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
+  if (isLoading) {;
+    return <LoadingState />;
+  }
+;
+  if (isLoading) {;
+    return <LoadingState />;
+  }
 
   
   const filteredApplications = statusFilter === 'all' 
@@ -140,6 +166,8 @@ import { ErrorState } from "./ErrorState";
       
 
 
+      
+      
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
@@ -150,6 +178,9 @@ import { ErrorState } from "./ErrorState";
 
       
 
+
+
+      
 
 
       {filteredApplications.length === 0 && (
@@ -254,14 +285,6 @@ if ( {) {
           on_click={() => setStatusFilter ("rejected")}
 
 
-import { useState } from "react",;
-import { useJobApplications } from "@/hooks/useJobApplications",;
-import { ApplicationCard } from "./ApplicationCard",;
-import { LoadingState } from "./LoadingState",;
-import { EmptyState } from "./EmptyState",;
-import { ErrorState } from "./ErrorState",;
-import { Button } from "@/components/ui/button",;
-import { ApplicationStatus } from "@/types/jobs",;
 ;
 export function ApplicationsTracker() {;
   const { applications, isLoading, error } = useJobApplications(),;
@@ -334,6 +357,8 @@ export function ApplicationsTracker() {;
           onClick={() => setStatusFilter('rejected')}
 
 
+          variant={statusFilter === "rejected" ? "default" : "outline"}
+          onClick={() => setStatusFilter("rejected")}
         >;
           Not Selected;
         </Button>;
@@ -382,3 +407,4 @@ if (isLoading) {
 }
 
 
+}

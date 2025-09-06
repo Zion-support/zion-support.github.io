@@ -3,6 +3,41 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
 
 
+      supabase
+        .from('profile_views')
+        .select('id, talent_id')
+        .eq('talent_id', talentId)
+      supabase
+        .from('quotes')
+        .select('id, talent_id, status')
+        .eq('talent_id', talentId)
+      supabase
+        .from('applications')
+        .select('id, talent_id, status')
+        .eq('talent_id', talentId)
+      supabase
+        .from('search_matches')
+        .select('talent_id, tag')
+        .eq('talent_id', talentId)
+    ]);
+    const views =
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 5)
+        .map(([label, value]) => ({ label, value }))
+    });
+  } catch (e) {
+      topTags: [
+        { label: 'react', value: 2 }
+        { label: 'node', value: 1 }
+        { label: 'ai', value: 1 }
+      ]
+
+    });
+
+
+  }
+
+}
 
 
   }
@@ -41,6 +76,7 @@ function handler() {
       supabase;
         .from ('search_matches');
         .select ('talent_id, tag');
+        .eq ('talent_id', talent_id)
         .eq ('talent_id', talent_id)
     ]);
     const views =;
@@ -84,6 +120,7 @@ function handler() {
         .sort ((a, b) => b[1] - a[1]);
         .slice (0, 5);
         .map (([label, value]) => ({ label, value }))
+        .map (([label, value]) => ({ label, value }))
     });
   } catch (e) {
     res.status (200).json ({
@@ -94,6 +131,8 @@ function handler() {
       top_tags: [;
         { label: 'react', value: 2 },
         { label: 'node', value: 1 },
+        { label: 'ai', value: 1 }
+      ]
         { label: 'ai', value: 1 }
       ]
     });

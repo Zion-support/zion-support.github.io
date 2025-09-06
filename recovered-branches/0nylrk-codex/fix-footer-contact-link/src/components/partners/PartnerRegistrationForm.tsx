@@ -45,6 +45,13 @@ const partnerFormSchema = z.object({
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
 
+export function PartnerRegistrationForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { user } = useAuth(),
+
+export function PartnerRegistrationForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { user } = useAuth(),
 
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema)
@@ -82,12 +89,74 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
       return
 
 
+          }
+        ])
+        .select();
+      if (error) throw error;
+
+
+import { useState } from "react",;
+import { z } from "zod",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Textarea } from "@/components/ui/textarea",;
+import { toast } from "@/hooks/use-toast",;
+import { useAuth } from "@/hooks/useAuth",;
+import { supabase } from "@/integrations/supabase/client",;
+const partnerFormSchema = z.object({;
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),;
+  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),;
+  twitter: z.string().optional(),;
+  instagram: z.string().optional(),;
+  youtube: z.string().optional(),;
+  linkedin: z.string().optional(),;
+  niche: z.string().min(2, { message: "Please specify your niche." }),;
+  audience_size: z.string(),;
+  payout_method: z.string(),;
+  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),;
+type PartnerFormValues = z.infer<typeof partnerFormSchema>,;
+type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
+export function PartnerRegistrationForm() {;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth();
+  const form = useForm<PartnerFormValues>({;
+    resolver: zodResolver(partnerFormSchema),;
+    defaultValues: {;
+      name: "",;
+      website: "",;
+      twitter: "",;
+      instagram: "",;
+      youtube: "",;
+      linkedin: "",;
+      niche: "",;
+      audience_size: "",;
+      payout_method: "paypal",;
+      bio: ""}}),;
+  const checkExistingPartner = async () => {;
+    const { data: existingPartner } = await supabase;
+      .from('partner_profiles');
+      .select('id');
     if (existingPartner) {;
       toast({;
         title: "Already registered",;
         description: "You have already registered as a partner.",;
         variant: "destructive"}),;
 
+    return false;
+  };
+      setIsSubmitting(false);
+      return true;
+    }
+
+    return false;
+  };
+
+  async function onSubmit(): any (data: PartnerFormValues) {;
     return false;
   };
   async function onSubmit(): any (data: PartnerFormValues) {;
@@ -107,6 +176,9 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 
 
 
+      setIsSubmitting(false);
+      return true;
+    }
     }
     setIsSubmitting(true);
     try {;
@@ -224,6 +296,7 @@ if (return) {
       if (hasExistingPartner) return,;
 
 
+            social_media: {
       // Insert new partner profile;
       const { data: newPartner, error } = await supabase;
         .from('partner_profiles');
@@ -353,6 +426,11 @@ if (return) {
     }
 
 
+        variant: "destructive"});
+    } finally {;
+      setIsSubmitting(false);
+    }
+
               twitter: data.twitter || null,
               instagram: data.instagram || null,
               youtube: data.youtube || null,
@@ -444,6 +522,7 @@ if ( {) {
                 name="website";
 
 
+                name="website"
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Website (Optional)</FormLabel>;
@@ -452,6 +531,7 @@ if ( {) {
                       <Input placeholder="https://yourwebsite.com" {...field} />;
 
 
+                      <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
@@ -779,6 +859,9 @@ if ( {) {
                         rows={4}
                         {...field}
 
+              <FormField
+                control={form && form.control}
+                name="bio"
                       />;
                     </FormControl>;
                     <FormDescription>;
@@ -788,6 +871,9 @@ if ( {) {
 
 
 
+              className="w-full bg-zion-purple hover:bg-zion-purple-dark"
+              disabled={isSubmitting}>;
+              {isSubmitting ? "Submitting..." : "Submit Application"}
                   </FormItem>)}
               />;
             </div>;
@@ -827,3 +913,92 @@ if ( {) {
       </CardContent>;
 
 
+            </Button>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+  )
+            <Button
+              type="submit"
+            <Button 
+              type="submit" 
+              className="w-full bg-zion-purple hover:bg-zion-purple-dark"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Submitting..." : "Submit Application"}
+            </Button>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+  )
+
+    </Card>;
+  ),; const partnerFormSchema = z.object ({
+  name: z.string () .min (2, {
+  message: "Name must be at least 2 characters." 
+});
+website: z.string () .url ({
+  message: "Please enter a valid URL." 
+}) .optional () .or (z.literal ("") );
+instagram: z.string () .optional ();
+youtube: z.string () .optional ();
+linkedin: z.string () .optional ();
+const {
+  data: existingPartner 
+}= await supabase .from ('partner profiles') .select ('id') .eq ('user id', user.id) .single ();
+setIsSubmitting (false);
+return true;
+}return false;
+};
+async function onSubmit (data: PartnerFormValues) {
+  if (!user) {
+  toast ({
+  return;
+}//Insert new partner profile const {
+  data: newPartner, error 
+}= await supabase .from ('partner profiles') .insert ([ {
+  user id: user.id, name: data.name, website: data.website || null, social media: {
+  twitter: data.twitter || null, instagram: data.instagram || null, youtube: data.youtube || null, linkedin: data.linkedin || null 
+};
+niche: data.niche;
+audience size: data.audience size;
+payout method: data.payout method;
+bio: data.bio;
+status: 'pending', //Partners need approval 
+}]) .select ();
+if (error) throw error;
+data: existingCode 
+}= await supabase .from ('referral codes') .select ('code') .eq ('user id', user.id) .single ();
+}finally {
+  setIsSubmitting (false) 
+}
+}return (<Card className=" bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Partner Registration</CardTitle> <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription> </CardHeader> <CardContent> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> <div className=" grid sm:grid-cols-2 gap-4"> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> <div className=" grid sm:grid-cols-2 gap-4"> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> <FormField </FormControl> <FormDescription> What topics do you focus on in your content? </FormDescription> <FormMessage /> </FormItem>) 
+}/> <div className=" grid sm:grid-cols-2 gap-4"> <FormField <FormItem> <FormLabel>Audience Size</FormLabel> <Select onValueChange= {
+  field.onChange 
+}defaultValue= {
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder=" Select audience size"/> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value=" under1k">Under 1, 000</SelectItem> <SelectItem value=" 1k-10k">1, 000 - 10, 000</SelectItem> <SelectItem value=" 10k-50k">10, 000 - 50, 000</SelectItem> <SelectItem value=" 50k-100k">50, 000 - 100, 000</SelectItem> <SelectItem value=" over100k">Over 100, 000</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Preferred Payout Method</FormLabel> <Select onValueChange= {
+  field.onChange 
+}defaultValue= {
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder=" Select payout method" /> </SelectTrigger> </FormControl> <SelectContent> </SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> </div> <FormField <FormItem> <FormLabel>Bio</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Limit: 500 characters </FormDescription> <FormMessage /> </FormItem>) 
+}/> </div> <Button </Button> </form> </Form> </CardContent> </Card>) 
+}
+}
+};
+}
+};
+}
+
+
+}

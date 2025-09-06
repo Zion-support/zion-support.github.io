@@ -6,6 +6,9 @@ const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; "loading": () =>
 </p>'
 </p>'
 ursor/automate-test-improve-and-merge-code-646c
+const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SEOOptimizer' ,'
+</p>'
+</p>'
 
 
 
@@ -25,6 +28,8 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/integrate-build-improve-and-re-verify-8f7d
 </p>'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+</p>'
+</p>'
 </p>'
 </p>'
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -48,3 +53,6 @@ const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; "loading": () =>
 </p>'
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+</p>'
+</p>'
+</p>'

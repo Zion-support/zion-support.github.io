@@ -62,6 +62,45 @@ interface ReviewsModerationTableProps {
 
 
 
+export function ReviewsModerationTable({;
+  reviews;
+  isLoading;
+export function ReviewsModerationTable({
+  reviews,
+  isLoading,
+
+
+
+
+  onRefresh}: ReviewsModerationTableProps) {
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
+
+  const { mutate: updateReviewStatus, isPending } = useMutation({
+    mutationFn: async ({
+
+      reviewId
+      status}: {
+      reviewId: string
+
+      status: ReviewStatus
+    }) => {
+      const { error } = await supabase
+        .from("reviews")
+        .update({ status })
+        .eq("id", reviewId),
+
+      if (error) throw error,
+      return { reviewId, status }
+    },
+    onSuccess: (data) => {
+      toast({
+        title: "Review updated",
+        description: `Review has been ${data.status}.`}),
+      onRefresh(),
+      setViewDetailsOpen(false)
+    },
     onError: (error: Error) => {
       toast({
 
@@ -77,6 +116,9 @@ interface ReviewsModerationTableProps {
     switch (status) {
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
 
+  const getStatusColor = (status: ReviewStatus) => {
+    switch (status) {
+      case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
       case "rejected":
         return "bg-red-100 text-red-800 hover:bg-red-200"
       default:
@@ -151,6 +193,8 @@ interface ReviewsModerationTableProps {
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
 
+                        src={review.reviewer_profile.avatar_url}
+                        alt={review.reviewer_profile.display_name |""}
 
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
@@ -246,6 +290,9 @@ export function ReviewsModerationTable({;
         .from("reviews");
         .update({ status });
 
+        .eq("id", reviewId);
+      if (error) throw error;
+      return { reviewId, status }
 
     };
     onSuccess: (data) => {;
@@ -337,6 +384,10 @@ export function ReviewsModerationTable({;
     return (;
 
 
+        .eq("id", reviewId);
+      if (error) throw error;
+      return { reviewId, status }
+    return (
       <div className="space-y-4">;
         <div className="h-12 w-full bg-muted rounded animate-pulse" />;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
@@ -363,6 +414,9 @@ export function ReviewsModerationTable({;
     return (;
 
 
+    );
+  }
+    return (
       <div className="py-10 text-center">;
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
         <p className="text-muted-foreground">;
@@ -394,6 +448,8 @@ export function ReviewsModerationTable({;
   const renderStars = (rating: number) => {;
 
 
+    );
+  }
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
@@ -555,6 +611,35 @@ if ( {) {
 
 
 
+                        src={review && review.reviewer_profile.avatar_url}
+                        alt={review && review.reviewer_profile.display_name || ""}
+            <TableHead>Reviewer</TableHead>;
+            <TableHead>Rating</TableHead>;
+            <TableHead>Date</TableHead>;
+            <TableHead>Status</TableHead>;
+            <TableHead>Reports</TableHead>;
+            <TableHead className="text-right">Actions</TableHead>;
+          </TableRow>;
+        </TableHeader>;
+        <TableBody>;
+          {reviews.map((review) => (;
+            <TableRow key={review.id}>;
+              <TableCell>;
+                <div className="flex items-center gap-2">;
+                  <Avatar className="h-8 w-8">;
+                    {review.reviewer_profile?.avatar_url ? (;
+                      <AvatarImage;
+                  </Avatar>;
+                  <div>;
+                    {review.is_anonymous ? (;
+                      <span className="text-sm font-medium">Anonymous</span>;
+                    ) :(;
+                      <span className="text-sm font-medium">;
+                        {review.reviewer_profile?.display_name || "User"}
+                      </span>;
+                          : <User className="h-4 w-4" />}
+                      </AvatarFallback>;
+                    )}
                     )}
                   </div>;
                 </div>;
@@ -648,6 +733,8 @@ if ( {) {
                     <>
 
 
+                  {review && review.status === "pending" && (;
+                    <>;
                       <Button
                         size="sm"
                         variant="outline"
@@ -810,6 +897,20 @@ if ( {) {
 
 
 
+                      {review.status === "approved" && (;
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"rejected" })}>;
+                          Mark as rejected;
+                        </DropdownMenuItem>;
+                      )}
+                      {review.status === "rejected" && (;
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"approved" })}>;
+                          Mark as approved;
+                        </DropdownMenuItem>;                      )}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+              </TableCell>
+            </TableRow>
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
@@ -972,6 +1073,11 @@ if ( {) {
                     onClick={() => handleReject(selectedReview.id)}
 
 
+                    </Badge>;
+                  )}
+                  <Button
+                    variant="destructive"
+                    onClick={() => handleReject(selectedReview && selectedReview.id)}
                     disabled={isPending}
                   >;
                     Reject;
@@ -981,6 +1087,9 @@ if ( {) {
                     onClick={() => handleApprove(selectedReview.id)}                    disabled={isPending}
 
 
+                  <Button
+                    onClick={() => handleApprove(selectedReview && selectedReview.id)}
+                    disabled={isPending}
                   >;
                     Approve;
                   </Button>;

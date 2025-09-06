@@ -7,6 +7,9 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
   className?: string;
   children?: React.ReactNode;
 
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+  className?: string;
+  children?: React.ReactNode;
 }
 
 export function SidebarMenuItem({
@@ -44,6 +47,13 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
 ;
 
 
+    </li>);
+}
+    </li>
+  );
+}
+;
+
 }
 export function SidebarMenuItem({
   className
@@ -61,3 +71,8 @@ export function SidebarMenuItem({
 ;
 
 
+  )
+}
+;
+    </li>);
+}

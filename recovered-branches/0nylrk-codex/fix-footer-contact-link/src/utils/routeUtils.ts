@@ -21,6 +21,28 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 }
 },
 
+// Check if a route requires authentication
+export const isProtectedRoute = (path: string): boolean => {
+  const route = findRouteByPath(path),
+  return route?.requiredAuth === true;
+};
+
+  return route?.requiredAuth === true
+}
+}
+
+},
+
+
+return completeSitemap && completeSitemap.find(route => route && route.path === path)
+};
+// Check if a route requires authentication
+export const isProtectedRoute = (path: string): boolean => {
+
+
+  const route = findRouteByPath(path),
+
+
   userType?: string | null
 ): boolean => {
   const route = findRouteByPath(path)
@@ -42,6 +64,24 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
   if (route.requiredAuth && !isAuthenticated) return false,
   
 
+  // If route requires specific roles and user doesn't have one
+  if (route.requiredRoles && route.requiredRoles.length > 0) {
+    if (!userType) return false,
+    return route.requiredRoles.includes(userType as any)
+  }
+  return true
+}
+// Get breadcrumb items for a path
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
+  const breadcrumbs = [{label: 'Home', path: '/'}];
+  if (path === '/') return breadcrumbs;
+  // Split the path into segments
+  const segments = path && path.split('/').filter(Boolean);
+  let currentPath = '';
+  for (const segment of segments) {
+    currentPath += `/${segment}`;
+    const route = findRouteByPath(currentPath);
+    if (route) {
         path: currentPath
       })
     } else {

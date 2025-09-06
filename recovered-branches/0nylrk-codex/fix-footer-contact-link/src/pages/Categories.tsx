@@ -41,6 +41,11 @@ export default function Categories() {
 ;
 
 
+              Explore our extensive range of AI services and products organized
+              by category. Find exactly what you're looking for to enhance your
+              business or personal projects.
+            </p>
+          </div>
 }
   ),;}
  export default function Categories () {
@@ -55,3 +60,10 @@ export default function Categories() {
 ;
 
 
+          {/* Reuse the Categories Section component */}
+          <CategoriesSection show_title={false} />;
+        </div>;
+      </div>;
+      <Footer />;
+    </>);
+}

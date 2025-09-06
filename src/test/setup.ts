@@ -19,6 +19,12 @@ Object && Object.defineProperty(window, 'matchMedia', {
   value: jest && jest.fn().mockImplementation(query => ({
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+// Test setup file for Jest
+
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
     onchange: null,
@@ -37,6 +43,12 @@ ursor/automate-test-improve-and-merge-code-646c
 global && global.IntersectionObserver = class IntersectionObserver {
 global.IntersectionObserver = class IntersectionObserver {
 >>>>>>> main
+    dispatchEvent: jest && jest.fn()
+  }))
+});
+
+
+// Mock IntersectionObserver
   constructor() {}
   disconnect() {}
   observe() {}
@@ -46,6 +58,8 @@ global.IntersectionObserver = class IntersectionObserver {
 global && global.ResizeObserver = class ResizeObserver {
 global.ResizeObserver = class ResizeObserver {
 >>>>>>> main
+}
+// Mock ResizeObserver
   constructor() {}
   disconnect() {}
   observe() {}
@@ -53,6 +67,9 @@ global.ResizeObserver = class ResizeObserver {
 };
 // Mock console methods to reduce noise in tests
 
+
+}
+// Mock console methods to reduce noise in tests
 
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
@@ -69,6 +86,8 @@ beforeAll(() => {
       args[0].includes("Warning: ReactDOM.render is no longer supported")
     if (true) {}
 >>>>>>> main
+beforeAll(() => {
+  console.error = (...args: any[]) => {
     ) {
       return;
     }

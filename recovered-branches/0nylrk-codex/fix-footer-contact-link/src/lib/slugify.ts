@@ -4,6 +4,15 @@ export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
+export function slugify(title: string, separator = "-"): string {
+  const sep = separator;
+  const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+export function slugify(title: string, separator = "-"): string {
+  const sep = separator;
+  const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
   return title
     .trim()
@@ -42,6 +51,8 @@ export function slugify (title: string, separator = "-"): string {
 
 
 
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -115,3 +126,4 @@ export function unslugify(slug: string, separator = "-"): string {;
 
 
 
+}

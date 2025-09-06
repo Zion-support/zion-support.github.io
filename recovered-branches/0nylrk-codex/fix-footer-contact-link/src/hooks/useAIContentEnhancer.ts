@@ -14,6 +14,12 @@ type EnhancementType =
 
 
 
+  enhancementType: EnhancementType;
+  content?: string;
+  context?: string
+  instructions?: string
+}
+
 import {supabase} from '@/integrations / supabase / client';
 import {toast} from '@/hooks / use - toast';
 type EnhancementType =;
@@ -53,6 +59,7 @@ export function useAIContentEnhancer() {
 export function useAIContentEnhancer() {;
 
 
+  enhancement_type: EnhancementType;
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async ({
@@ -184,6 +191,7 @@ function useAIContentEnhancer() {
   const [error, set_error] = useState < string | null>(null);
 
 
+
 ;
   const enhance_content = async ({
     enhancement_type;
@@ -307,7 +315,7 @@ error
 ;
       return data.enhancedContent;
     } catch (err: any) {;
-      const errorMessage = err.message || 'Failed to enhance content',;
+      const errorMessage = err.message || 'Failed to enhance content';
       setError(errorMessage),;
       toast({;
         title: "AI Enhancement Failed",;
@@ -329,3 +337,4 @@ error
 ;
 
 
+  }

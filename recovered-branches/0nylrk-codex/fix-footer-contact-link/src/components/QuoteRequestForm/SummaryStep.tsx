@@ -19,6 +19,24 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   const [isMatching, setIsMatching] = useState(false);
   const [matches, setMatches] = useState<MatchResult[]>([]);
   
+import { useEffect, useState } from "react",
+import { QuoteFormData } from "@/types/quotes",
+import { Card, CardContent } from "@/components/ui/card",
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
+import { AIMatchingResults } from "@/components/AIMatchingResults",
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
+import { toast } from "@/hooks/use-toast";
+interface SummaryStepProps {
+
+  formData: QuoteFormData
+
+  updateFormData: (data: Partial<QuoteFormData>) => void
+}
+export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
   // Run AI matching when the component mounts
   useEffect(() => {
     const runMatching = async () => {
@@ -34,6 +52,18 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `;
+      setIsMatching(true);
+interface SummaryStepProps {;
+  formData: QuoteFormData,;
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+}
+
+export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepProps) {;
+
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+
 
   // Run AI matching when the component mounts;
   useEffect(() => {;
@@ -98,6 +128,73 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           3
 
 
+        );
+
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+          queryString;
+          formData && formData.serviceType;
+          3;
+        );
+import { useEffect, useState } from './react';
+import { QuoteFormData } from '@/types / quotes';
+import { Card, CardContent } from '@/components / ui / card';
+import { Label } from '@/components / ui / label';
+import { Textarea } from '@/components / ui / textarea';
+import { AIMatchingResults } from '@/components / AIMatchingResults';
+import { find_matches, MatchResult } from '@/lib / ai - matchmaking';
+import { toast } from '@/hooks / use - toast';
+interface SummaryStepProps {
+  form_data: QuoteFormData,
+  updateFormData: (data: Partial < QuoteFormData>) => void;
+}
+export /**
+ * SummaryStep - Function description
+ */
+function SummaryStep() {
+  const [is_matching, setIsMatching] = useState (false);
+  const [matches, set_matches] = useState < MatchResult[]>([]);
+;
+  // Run AI matching when the component mounts;
+  useEffect (() => {
+    const run_matching = async () => {
+      // Check condition
+if (return) {
+  $2
+}
+      setIsMatching (true);
+      try {
+        // Create a query string from the form data;
+        const query_string = `;
+          ${form_data.project_name}
+          ${form_data.project_description}
+          ${form_data.service_type}
+          ${form_data.budget.type === 'fixed' ? `budget ${form_data.budget.amount}` : ''}
+          ${form_data.timeline}
+        `;
+;
+        // Get AI matches;
+        const results = await find_matches (
+          query_string;
+          form_data.service_type;
+          3);
+;
+        set_matches (results);
+      } catch (error) {
+        console.error ("Error during AI matching:", error);
+        toast ({
+          title: "Matching Error",
+          description: "We couldn't find matches for your request. Please try again.",
+          variant: "destructive"});
+
+    }
+    
+
+
+      } finally {
+        setIsMatching (false);
+      }
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -175,6 +272,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   },;
   // Extract just the items from each MatchResult for the AIMatchingResults component;
   const matchItems = matches.map(match => match.item);
+  const matchItems = matches.map(match => match.item);
   // Map the onSelectMatch handler to work with the item directly;
   const handleItemSelect = (item: any) => {;
     // Find the original MatchResult that contains this item;
@@ -187,6 +285,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
     <div className="space-y-6">;
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
 
+  }
 
       {/* AI Matching Results */}
       <AIMatchingResults
@@ -582,6 +681,9 @@ serviceType={formData.serviceType}
                 </div>;
               )}
 
+                </div>;
+              )}
+              </div>;
             </div>;
           </CardContent>;
         </Card>;
@@ -656,6 +758,7 @@ if ( {) {
                   <Label className="text - zion - slate - light">Selected Item</Label>;
                   <div className="text - white">{form_data.specific_item.title}</div>;
                 </div>)}
+              </div>;
             </div>;
           </CardContent>;
         </Card>;
@@ -675,3 +778,61 @@ if ( {) {
                 <div className="text - white whitespace - pre - wrap">{form_data.project_description}</div>;
 
 
+            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
+                </div>;
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
+
+
+    </div>;
+  ),;};
+  /* AI Matching Results */ 
+}<AIMatchingResults serviceType= {
+  formData.serviceType 
+}projectDescription= {
+  formData.projectDescription 
+}matches= {
+  matchItems 
+}onSelectMatch= {
+  handleItemSelect 
+}isLoading= {
+  isMatching 
+}/> {
+  /* Service Information */ 
+}<div> <h4 className="text-lg font-medium text-white mb-2" >Service Information</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> {
+  formData.specificItem && (<div> <Label className="text-zion-slate-light" >Selected Item</Label> <div className="text-white" > {
+  formData.specificItem.title 
+}</div> </div>) 
+}</div> </CardContent> </Card> </div> {
+  /* Project Details */ 
+}<div> <h4 className="text-lg font-medium text-white mb-2" >Project Details</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="space-y-4" > <div> </div> </div> </CardContent> </Card> </div> {
+  /* Timeline */ 
+}<div> <h4 className="text-lg font-medium text-white mb-2" >Timeline</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> {
+  formData.startDate && (<div> <Label className="text-zion-slate-light" >Start Date</Label> <div className="text-white" > {
+  formData.startDate.toLocaleDateString () 
+}</div> </div>) 
+}{
+  formData.endDate && (<div> <Label className="text-zion-slate-light" >End Date</Label> <div className="text-white" > {
+  formData.endDate.toLocaleDateString () 
+}</div> </div>) 
+}</div> </CardContent> </Card> </div> {
+  /* Budget */ 
+}<div> <h4 className="text-lg font-medium text-white mb-2" >Budget</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </div> </CardContent> </Card> </div> {
+  /* Contact Information */ 
+}<div> <h4 className="text-lg font-medium text-white mb-2" >Contact Information</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </CardContent> </Card> </div> </div>) 
+}
+}
+};
+}
+}

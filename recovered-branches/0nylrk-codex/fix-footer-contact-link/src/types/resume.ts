@@ -7,6 +7,8 @@ export interface ResumeBasicInfo {
 }
 
 
+}
+export interface WorkExperience {
 export interface ResumeBasicInfo {
 export interface ResumeBasicInfo {;
   id?: string;
@@ -15,9 +17,8 @@ export interface ResumeBasicInfo {;
 
 
 }
+export interface WorkExperience {}
 export interface WorkExperience {
-
-
   id?: string;
   company_name: string;
   role_title: string;
@@ -60,6 +61,10 @@ export interface WorkExperience {
 
   id?: string;
   name: string;
+  proficiency?: number;
+}
+  id?: string;
+  name: string;
   issuing_organization: string;
   issue_date?: Date | string;
   expiration_date?: Date | string;
@@ -100,6 +105,14 @@ export interface WorkExperience {
   portfolio_projects?: PortfolioProject[]
 
 
+  portfolio_projects?: PortfolioProject[];
+  is_active: boolean;
+}
+  portfolio_projects?: PortfolioProject[]
+
+  is_active: boolean
+}
+export interface ResumeBasicInfo {;
   id?: string,;
   title: string,;
   headline?: string,;
@@ -171,6 +184,7 @@ export interface Resume {;
   portfolio_projects?: PortfolioProject[];
 
 
+  portfolio_projects?: PortfolioProject[],
   is_active: boolean;
 }
 ;
@@ -184,3 +198,7 @@ export interface ResumeBasicInfo {;
 ;
 
 
+  is_active: boolean;
+}
+;
+}

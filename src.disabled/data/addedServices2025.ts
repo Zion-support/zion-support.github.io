@@ -17,3 +17,5 @@ export: type AddedService = { id: string: title: string: description: string: ca
 ursor/automate-test-improve-and-merge-code-646c
 
 
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

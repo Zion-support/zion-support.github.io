@@ -49,10 +49,14 @@ import { useState,useEffect,useCallback } from 'react'; import { supabase } from
 >>>>>>> main
 >>>>>>> origin/main
     fetchResumes
+    fetchResumes}}
+    fetchResumes
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); .order('created_at',{ ascending: 'false' }); ; if(resumeError) throw resumeError; ; if(!resumeData || resumeData.length === 0) {; setResumes([]); return [];} ; const transformedResumes: Resume[] = resumeData.map(resume => ({; id: resume.id,; user_id: 'resume.user_id',; basic_info: {; id: resume.id,; title: 'resume.title',; headline: 'resume.headline',; summary: 'resume.summary;'},; work_experience: '[]',; education: '[]',; skills: '[]',; certifications: '[]',; is_active: 'resume.is_active;'})); ; setResumes(transformedResumes); return transformedResumes;} catch(e: any) {; console.error('Error fetching resumes:',e); setError(e.message); setResumes([]); return [];} finally {; setIsLoading(false);} },[user]); ; useEffect(() => {},[]); if(user) {; fetchResumes();} else {; setResumes([]); setError(null)} },[user,fetchResumes]); ; return {; isLoading,; error,; resumes,; fetchResumes;};}
     fetchResumes}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); .order('created_at',{ ascending: false }); ; if(resumeError) throw resumeError; ; if(!resumeData || resumeData.length === 0) {; setResumes([]); return []} ; const transformedResumes: Resume[] = resumeData.map(resume => ({; id: resume.id,user_id: resume.user_id,basic_info: {; id: resume.id,title: resume.title,headline: resume.headline,summary: resume.summary},work_experience: [],education: [],skills: [],certifications: [],is_active: resume.is_active})); ; setResumes(transformedResumes); return transformedResumes} catch(e: any) {; console.error('Error fetching resumes:',e); setError(e.message); setResumes([]); return []} finally {; setIsLoading(false)} },[user]); ; useEffect(() => {},[]); if(user) {; fetchResumes()} else {; setResumes([]); setError(null)} },[user,fetchResumes]); ; return {; isLoading,error,resumes,fetchResumes}}
     fetchResumes
+}
 }
 }
 }
@@ -78,3 +82,6 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 
+
+    fetchResumes}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

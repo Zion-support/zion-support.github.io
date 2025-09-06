@@ -14,6 +14,27 @@ export interface RealMarketService {
 
 ;
 const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'};
+
+export const realMarketServices: RealMarketService[] = [;
+
+
+
+  {  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'};
+export const realMarketServices: RealMarketService[] = [
+  {
+
 
       'Unified API for multiple LLM providers',
       'Spend caps, rate limits, and usage alerts',
@@ -21,6 +42,7 @@ const contact = {
       'Prompt templates and versioning',
 
 
+      'Export to data warehouse'
       'Export to data warehouse'
     ],
     popular: true,
@@ -167,6 +189,173 @@ const contact = {
       'Embeddings and chunking best practices',
       'Latency and cost tuning',
       'Sample RAG app integration'
+      'Service map and dependency view'
+    ],
+    popular: true,
+    customers: 120,
+    rating: 4 && 4.7,
+    reviews: 73
+  },
+  {
+      'Automated sending warmup schedules',
+      'Blocklist and reputation monitoring',
+      'BIMI and TLS validation',
+      'Alerts to Slack / Email with remediation steps'
+    ],
+    popular: true,
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'DNS checks, seed - list tests, blacklist APIs, and scheduled warmup orchestration.',
+    launch_date: '2025 - 02 - 01',
+    customers: 120,
+    rating: 4 && 4.6,
+    reviews: 44
+  },
+  {
+      'UTM, ref, and coupon tracking',
+      'Attribution windows and LTV credit',
+      'Fraud detection heuristics',
+      'Stripe / PayPal payout workflows',
+      'Partner portal and analytics',
+      'Webhooks and API access'
+    ],
+    popular: false,
+      'Lightweight alternative to enterprise affiliate suites; integrates with modern stacks.',
+    target_audience: 'SaaS and e_commerce teams',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'Growth & Monetization',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Attribution pipelines, event deduplication, and payout batch jobs.',
+    launch_date: '2025 - 01 - 15',
+    customers: 65,
+    rating: 4 && 4.5,
+    reviews: 29
+  },
+  {
+      'AI chat and email drafting',
+      'RAG over product docs and tickets',
+      'Macros and action tools',
+      'Sentiment and CSAT analytics',
+      'Zendesk / Intercom sync',
+      'Escalation and SLA policies'
+    ],
+    popular: true,
+      'Augments existing helpdesks with agent copilots and automation.',
+    target_audience: 'Support and success teams',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'AI & Data',
+    integrations: ['Zendesk, Intercom, Freshdesk'],
+    use_cases: ['Faster resolution, Deflection via chat, Higher CSAT'],
+    roi: 'Reduce handle time 20–40% and raise CSAT 10–20%.',
+    competitors: ['Forethought, Cohere Assist, Zendesk AI'],
+    market_size: '$10B+ AI support',
+    growth_rate: '30% YoY',
+    variant: 'ai - futuristic' as any,
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Knowledge sync, embeddings, intent detection, and action tools.',
+    launch_date: '2025 - 02 - 05',
+    customers: 42,
+    rating: 4 && 4.7,
+    reviews: 21
+  },
+  {
+      'Traffic and conversion funnels',
+      'Source / medium and campaigns',
+      'Goals and events tracking',
+      'Email / Slack anomaly alerts',
+      'CSV / BigQuery export',
+      'GDPR - friendly, IP anonymization'
+    ],
+    popular: false,
+    integrations: ['Google Ads, Meta Ads'],
+    use_cases: ['Track campaigns, Monitor conversions, Detect anomalies'],
+    roi: 'Save setup time and make faster decisions; reduce tooling complexity.',
+    competitors: ['Plausible, Fathom, Simple Analytics'],
+    market_size: '$1B SMB analytics',
+    growth_rate: '14% YoY',
+    variant: 'analytics - futuristic' as any,
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Snippet - based analytics with server - side aggregation and privacy safeguards.',
+    launch_date: '2025 - 02 - 10',
+    customers: 33,
+    rating: 4 && 4.5,
+    reviews: 17
+  },
+  {
+      'Idle resource detection',
+      'Rightsizing and reservations',
+      'Anomaly detection and alerts',
+      'Tag hygiene and compliance',
+      'Weekly savings reports',
+      'Auto - created tickets',
+      'RBAC and multi - account'
+    ],
+    popular: true,
+    customers: 65,
+    rating: 4 && 4.6,
+    reviews: 48
+  },
+  {
+      'Automated evidence collectors',
+      'Control mapping (AICPA)',
+      'Auditor export packs',
+      'Exception workflows',
+      'Risk register and ownership',
+      'Change management checks',
+      'Continuous monitoring'
+    ],
+    popular: true,
+    customers: 42,
+    rating: 4 && 4.7,
+    reviews: 37
+  },
+  {
+
+    id: 'vector - search - starter',
+    name: 'Vector Search Starter',
+    tagline: 'Production vector DB setup with ingestion pipelines in a day',
+    price: '$249',
+    period: '/month',
+    description:;
+      'Ready - to - run vector database setup (Pinecone / Weaviate / Elastic) with embeddings pipelines, schema, and example retrieval for your data.',
+    features: [;
+
+      'Provider selection guide',
+      'Schema and index templates',
+      'ETL / ingestion pipelines',
+      'Provider selection guide',
+      'Schema and index templates',
+      'ETL/ingestion pipelines',
+      'Embeddings and chunking best practices',
+      'Latency and cost tuning',
+      'Sample RAG app integration'
     ],
     popular: false,
     icon: '🧭',
@@ -200,6 +389,9 @@ const contact = {
   {
       'Public status pages',
       'Weekly compliance reports'
+  {
+      'Public status pages',
+      'Weekly compliance reports'
     ],
     popular: false,
     integrations: ['Slack, Email'],
@@ -217,6 +409,7 @@ const contact = {
     customers: 90,
     rating: 4 && 4.5,
     reviews: 52
+    reviews: 52
   },
   {
       'Auth and permission testing',
@@ -228,6 +421,400 @@ const contact = {
     popular: true,
 
     icon: '🛡️',
+      'Jira tickets and Slack alerts'
+    ],
+    popular: true,
+      'Schema crawler, auth probes, mutational fuzzing, reporters and CI gates.',
+    launch_date: '2024 - 12 - 05',
+    customers: 54,
+    rating: 4 && 4.7,
+    reviews: 33
+  },
+  {
+      'Seed inbox placement tests',
+      'Blocklist monitoring',
+      'DMARC aggregate reports (RUA / RUF)',
+      'Alerts and weekly scorecards'
+    ],
+    popular: false,
+    competitors: ['GlockApps, MailGenius, Postmark Monitoring'],
+    market_size: '$3B email tools',
+    growth_rate: '10% YoY',
+    variant: 'monitoring - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'DNS validators, seed inbox network, blocklist checkers and alerting.',
+    launch_date: '2024 - 09 - 22',
+    customers: 77,
+    rating: 4 && 4.6,
+    reviews: 44
+  },
+  {
+      'DNS record drift detection',
+      'TLS and chain changes',
+      'Audit log and diffs',
+      'Slack / Email alerts',
+      'Exportable reports'
+    ],
+    popular: false,
+    integrations: ['Slack, Opsgenie, PagerDuty'],
+    use_cases: ['Prevent hijacks, Change control, Compliance evidence'],
+    roi: 'Avoid costly outages and reputational damage',
+    competitors: ['DNS Spy, UptimeRobot DNS, Detectify DNS'],
+    market_size: '$2B monitoring',
+    growth_rate: '12% YoY',
+    variant: 'monitoring - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Authoritative resolvers polling, diffs store, TLS probing and alerting.',
+    launch_date: '2024 - 08 - 18',
+    customers: 61,
+    rating: 4 && 4.5,
+    reviews: 36
+  },
+  {
+      'Latency and availability SLIs',
+      'SLOs and error budgets',
+      'Burn - rate alerts',
+      'Public status pages'
+    ],
+    popular: true,
+    integrations: ['PagerDuty, Opsgenie, Slack'],
+    use_cases: ['SLO rollout, SLA reporting, Incident readiness'],
+    roi: 'Reduce alert fatigue and align on product reliability',
+    competitors: ['Better Uptime, UptimeRobot, Statuspage'],
+    market_size: '$18B observability',
+    growth_rate: '25% YoY',
+    variant: 'monitoring - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Probers, SLI calculators, error - budget math and alerting integrations.',
+    launch_date: '2024 - 07 - 28',
+    customers: 112,
+    rating: 4 && 4.6,
+    reviews: 58
+  },
+  {
+      'Custom components and groups',
+      'Incident timelines',
+      'SLO and uptime widgets',
+      'Subscriptions and webhooks'
+    ],
+    popular: false,
+    integrations: ['PagerDuty, Opsgenie, Slack'],
+    use_cases: ['Transparent comms, SLA evidence, Trust building'],
+    roi: 'Fewer support tickets and faster comms during incidents',
+    competitors: ['Atlassian Statuspage, Better Stack'],
+    market_size: '$1B status',
+    growth_rate: '15% YoY',
+    variant: 'monitoring - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Static + API hybrid pages, component health, subscriptions.',
+    launch_date: '2024 - 06 - 30',
+    customers: 49,
+    rating: 4 && 4.5,
+    reviews: 27
+  },
+  {
+      'Cron syntax and UI',
+      'Retries with jitter',
+      'Dead - letter queues',
+      'Slack alerts'
+    ],
+    popular: false,
+      'Comparable to EasyCron and CloudWatch Events; adds portable templates and alerts.',
+    target_audience: 'Developers, data engineers, SREs',
+    trial_days: 14,
+    setup_time: '1 hour',
+    category: 'Developer Tools',
+    integrations: ['Slack, Webhook'],
+    use_cases: ['ETL scheduling, Report generation, Cleanup jobs'],
+    roi: 'Reduce ops toil; no servers to manage',
+    competitors: ['EasyCron, AWS EventBridge'],
+    market_size: '$2B dev tooling',
+    growth_rate: '9% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Job store, scheduler, runners and alerting.',
+    launch_date: '2024 - 05 - 12',
+    customers: 73,
+    rating: 4 && 4.5,
+    reviews: 39
+  },
+  {
+      'Custom fonts and CSS',
+      'Headers / footers, page numbers',
+      'Webhook delivery'
+    ],
+    popular: true,
+    integrations: ['Zapier, Webhook'],
+    use_cases: ['Invoices, Reports, Statements'],
+    roi: 'Save engineering time; consistent documents',
+    competitors: ['PDFMonkey, DocRaptor, Gotenberg'],
+    market_size: '$1B doc gen',
+    growth_rate: '8% YoY',
+    variant: 'data - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Headless Chrome workers, queueing and asset sandboxing.',
+    launch_date: '2024 - 04 - 08',
+    customers: 140,
+    rating: 4 && 4.7,
+    reviews: 91
+  },
+  {
+      'Request intake portal',
+      'Identity verification',
+      'Connectors to data stores',
+      'Evidence packs and exports'
+    ],
+    popular: true,
+    integrations: ['Snowflake, BigQuery, S3, Postgres'],
+    use_cases: ['Compliance at scale, Reduced manual effort'],
+    roi: 'Cut DSAR handling cost by 60–80%',
+    competitors: ['Transcend, OneTrust, Segment Privacy'],
+    market_size: '$8B privacy ops',
+    growth_rate: '18% YoY',
+    variant: 'security - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Ticketing workflows, connectors, redaction and audit logs.',
+    launch_date: '2024 - 11 - 01',
+    customers: 31,
+    rating: 4 && 4.6,
+    reviews: 21
+  },
+  {
+      'Evidence collection links',
+      'Risk scoring and tracking',
+      'Renewal reminders'
+    ],
+    popular: false,
+    integrations: ['Slack, Jira, Email'],
+    use_cases: ['Faster reviews, Evidence reuse, Audit readiness'],
+    roi: 'Shorten vendor onboarding by 30–50%',
+    competitors: ['Whistic, OneTrust VRM'],
+    market_size: '$6B VRM',
+    growth_rate: '16% YoY',
+    variant: 'neural - quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Questionnaire engine, evidence vault, risk scoring and reminders.',
+    launch_date: '2024 - 10 - 15',
+    customers: 26,
+    rating: 4 && 4.5,
+    reviews: 18
+  },
+  {
+      'RUM collection script',
+      'Core Web Vitals (LCP / CLS / INP)',
+      'Regression detection',
+      'Dashboards and alerts'
+    ],
+    popular: false,
+      'Lightweight RUM SDK, vitals aggregation and alerting.',
+    launch_date: '2024 - 09 - 08',
+    customers: 52,
+    rating: 4 && 4.5,
+    reviews: 29
+  },
+  {
+      'Slow query detection',
+      'Lock contention analysis',
+      'Connection pool saturation',
+      'Advisor recommendations'
+    ],
+    popular: true,
+    category: 'Observability',
+    real_service: true,
+    technology: ['Postgres, MySQL, Agents'],
+    integrations: ['Grafana, Slack'],
+    use_cases: ['Improve DB latency, Reduce deadlocks, Capacity planning'],
+    roi: 'Reduce query latency 20–50% in weeks',
+    competitors: ['pganalyze, Percona PMM'],
+    market_size: '$4B DB tooling',
+    growth_rate: '13% YoY',
+    variant: 'monitoring - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Extension - based metrics collectors and advisors.',
+    launch_date: '2024 - 08 - 01',
+    customers: 39,
+    rating: 4 && 4.6,
+    reviews: 23
+  },
+  {
+      'IaC blueprints and GitOps',
+      'SSO and RBAC policies',
+      'Cost controls and quotas',
+      'Backup and restore runbooks'
+    ],
+    popular: true,
+      'Blueprints, policies, GitOps pipelines and SRE runbooks.',
+    launch_date: '2025 - 01 - 10',
+    customers: 17,
+    rating: 4 && 4.7,
+    reviews: 12
+  },
+  {
+      'Core Web Vitals (LCP, INP, CLS)',
+      'Conversion impact analysis',
+      'Geo / device breakdowns',
+      'Anomaly alerts to Slack / Email',
+      'Privacy - friendly, cookie - lite'
+    ],
+    popular: false,
+    customers: 26,
+    rating: 4 && 4.6,
+    reviews: 14
+  },
+  {
+      'CI gate on severity thresholds',
+      'Page template scanning',
+      'Issue tracker export',
+      'Auditor - ready PDF reports'
+    ],
+    popular: true,
+    competitors: ['Deque axe Monitor, Siteimprove'],
+    market_size: '$1B+ accessibility services',
+    growth_rate: '18% YoY',
+    variant: 'monitoring - futuristic' as any,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Headless scans with rulesets, diffing, and gated pipelines.',
+    launch_date: '2025 - 02 - 12',
+    customers: 31,
+    rating: 4 && 4.7,
+    reviews: 19
+  },
+  {
+      'Error budget tracking',
+      'Auto - ticket creation',
+      'Slack / PagerDuty alerts',
+      'Weekly drift reports'
+    ],
+    popular: false,
+      'SLO definitions, budget math, and actionable ownership routes.',
+    launch_date: '2025 - 02 - 18',
+    customers: 18,
+    rating: 4 && 4.5,
+    reviews: 11
+  },
+  {
+      'Lightweight alternative to manual scans; complements Mozilla Observatory and SSL Labs checks.',
+    target_audience: 'Security and platform teams',
+    trial_days: 7,
+    setup_time: '20 minutes',
+    category: 'Security & Compliance',
+    integrations: ['Slack, Webhooks'],
+    use_cases: [;
+      'Prevent misconfigurations, Detect regressions, Improve posture'
+    ],
+    roi: 'Reduce security regressions and audit time.',
+    competitors: ['Mozilla Observatory, SSL Labs'],
+    market_size: '$3B security testing',
+    growth_rate: '16% YoY',
+    variant: 'security - futuristic' as any,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Scheduled scans with diffs and playbooks.',
+    launch_date: '2025 - 02 - 20',
+    customers: 44,
+    rating: 4 && 4.6,
+    reviews: 22
+  },
+  {
+      'Policy page generator',
+      'Audit log export',
+      'Analytics / script blocking',
+      'A / B banner testing'
+    ],
+    popular: false,
+      'Simple alternative to complex CMPs; transparent pricing for SMBs.',
+    target_audience: 'Marketing, legal, and web teams',
+    trial_days: 7,
+    setup_time: '30 minutes',
+    category: 'Security & Compliance',
+    integrations: ['Google Tag, GTM, Segment'],
+    use_cases: ['Compliance, User trust, Region - based rules'],
+    roi: 'Accelerate compliance readiness; reduce legal risk.',
+    competitors: ['Cookiebot, OneTrust CMP'],
+    market_size: '$2B privacy tooling',
+    growth_rate: '15% YoY',
+    variant: 'compliance - futuristic' as any,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Client + middleware rules with storage & audit.',
+    launch_date: '2025 - 02 - 22',
+    customers: 21,
+    rating: 4 && 4.5,
+    reviews: 10
+  },
+  {
+      'Drift detection',
+      'Weekly compliance reports',
+      'Auto - ticket workflows'
+    ],
+    popular: false,
+    customers: 12,
+    rating: 4 && 4.5,
+    reviews: 7
+  },
+  {
+      'Consent receipts and log exports',
+      'Cookie inventory and auto - blocking',
+      'Policy pages and versioning',
+      'CMP integrations and tag manager hooks'
+    ],
+    popular: false,
+      'Practical, affordable alternative to heavyweight CMPs for SMBs and startups.',
+    target_audience: 'Marketing ops, legal / compliance, web teams',
+    trial_days: 7,
+    setup_time: '1 day',
+    category: 'Privacy & Compliance',
+    integrations: ['Google Tag Manager, Segment, Cookiebot, OneTrust'],
+    use_cases: ['GDPR / CPRA consent management, Audit exports, Region policies'],
+    roi: 'Reduce compliance risk and legal exposure with verifiable consent logs.',
+    competitors: ['OneTrust, Cookiebot, TrustArc'],
+    market_size: '$2B+ privacy tooling',
+    growth_rate: '18% YoY',
+    variant: 'security - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Embeddable banner, policy config UI, consent log store, export jobs.',
+    launch_date: '2025 - 08 - 22',
+    customers: 22,
+    rating: 4 && 4.6,
+    reviews: 11
+  },
+  {
+      'Bridges the gap between brittle webhook flows and reliable data pipelines.',
+    targetAudience: 'Data engineers, platform teams, RevOps',
+    trialDays: 14,
+    setupTime: '2 days',
+    category: 'Integration',
+    realService: true,
+    technology: ['Node.js, Postgres, Redis, Airflow'],
+    integrations: ['Salesforce, HubSpot, Stripe, Shopify'],
+    useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust'],;
+    roi: 'Save weeks of manual cleanup; maintain accurate reporting and billing.',
+    competitors: ['Fivetran (log-based), custom scripts'],
+    marketSize: '$4B data integration',
+    growthRate: '20% YoY',
+    variant: 'integration-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
 
 
     implementationDetails:
@@ -238,6 +825,69 @@ const contact = {
     reviews: 9
   }
 
+    id: 'api - backfill - reconciliation',
+    name: 'API Backfill & Reconciliation',
+    tagline:;
+      'Recover missed events, dedupe, and reconcile systems with confidence',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Detect and repair data gaps between SaaS APIs and your warehouse / CRM. Provides replay - safe backfills, idempotency, and reconciliation reports.',
+    features: [;
+      'Gap detection and backfill plans',
+      'Idempotent replay and deduplication',
+      'Hash - based reconciliation reports',
+      'Rate - limit aware workers',
+      'Alerting and failure retries',
+      'Warehouse and CRM syncs'
+    ],
+    popular: false,
+      'Bridges the gap between brittle webhook flows and reliable data pipelines.',
+    target_audience: 'Data engineers, platform teams, RevOps',
+    trial_days: 14,
+    setup_time: '2 days',
+    category: 'Integration',
+    integrations: ['Salesforce, HubSpot, Stripe, Shopify'],
+    use_cases: ['Fix data gaps, Ensure CRM / Warehouse parity, Improve trust'],
+    roi: 'Save weeks of manual cleanup; maintain accurate reporting and billing.',
+    competitors: ['Fivetran (log - based), custom scripts'],
+    market_size: '$4B data integration',
+    growth_rate: '20% YoY',
+    variant: 'integration - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Replay - safe pullers, checksum compare, and reconciliation dashboards.',
+    launch_date: '2025 - 08 - 22',
+    customers: 15,
+    rating: 4 && 4.7,
+    reviews: 9
+  },
+  {
+
+      'Bridges the gap between brittle webhook flows and reliable data pipelines.',
+    targetAudience: 'Data engineers, platform teams, RevOps',
+    trialDays: 14,
+    setupTime: '2 days',
+    category: 'Integration',
+    realService: true,
+    technology: ['Node.js, Postgres, Redis, Airflow'],
+    integrations: ['Salesforce, HubSpot, Stripe, Shopify'],
+    useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust'],;
+    roi: 'Save weeks of manual cleanup; maintain accurate reporting and billing.',
+    competitors: ['Fivetran (log-based), custom scripts'],
+    marketSize: '$4B data integration',
+    growthRate: '20% YoY',
+    variant: 'integration-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Replay-safe pullers, checksum compare, and reconciliation dashboards.'
+    launchDate: '2025-08-22'
+    customers: 15
+    rating: 4.7
+    reviews: 9
+  }
   {
     id: 'data - quality - sla - monitor',
     name: 'Data Quality & Freshness SLAs',
@@ -261,6 +911,250 @@ const contact = {
     icon: '📊',
 
 
+      'Slack / Jira alerts and reports'
+    ],
+    popular: true,
+      'Prevent stale dashboards, Catch pipeline regressions, Improve trust'
+    ],
+    roi: 'Reduce dashboard breaks; improve data - dependent feature velocity.',
+    competitors: ['Monte Carlo, Bigeye, Great Expectations'],
+      'Metadata collectors, rules engine, SLA store, and alert webhooks.',
+    launch_date: '2025 - 08 - 22',
+    customers: 28,
+    rating: 4 && 4.6,
+    reviews: 13
+  },
+  {
+      'EXPLAIN plan analysis',
+      'Missing / unused index detection',
+      'Autovacuum and bloat tuning',
+      'Safe change windows',
+      'Rollback and impact reports',
+      'Alerts on regressions'
+    ],
+    popular: false,
+    category: 'Databases',
+    real_service: true,
+    technology: ['PostgreSQL, pg_stat_statements, Timescale'],
+    integrations: ['RDS / Aurora, Cloud SQL, Self - hosted Postgres'],
+    use_cases: ['Lower latency, Reduce CPU / IO, Avoid outages'],
+    competitors: ['pganalyze, OtterTune'],
+    market_size: '$3B database tooling',
+    growth_rate: '12% YoY',
+    variant: 'data - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Read - only plan capture, advisor engine, change scripts, and dashboards.',
+    launch_date: '2025 - 08 - 22',
+    customers: 18,
+    rating: 4 && 4.5,
+    reviews: 8
+  },
+  {
+      'Desired vs live diffing',
+      'OPA / Conftest policy gates',
+      'Auto - PR remediation',
+      'Slack / Jira alerts',
+      'Change history and approvals',
+      'Multi - cluster support'
+    ],
+    popular: false,
+      'Cluster collectors, policy engine, reconciler workers, and PR bots.',
+    launch_date: '2025 - 08 - 22',
+    customers: 14,
+    rating: 4 && 4.6,
+    reviews: 7
+  },
+  {
+      'Control mapping templates',
+      'Evidence collectors and checks',
+      'Policy and process coverage',
+      'Gap analysis and tasks',
+      'Exportable auditor reports'
+    ],
+    popular: true,
+      'Faster SOC 2 preparation for startups; complements evidence automation.',
+    target_audience: 'Founders, security leads, compliance managers',
+    trial_days: 7,
+    setup_time: '1 day',
+    category: 'Security & Compliance',
+    competitors: ['Vanta, Drata (prep workflows)'],
+    market_size: '$3B compliance automation',
+    growth_rate: '22% YoY',
+    variant: 'security - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Connector checks, control mapping DB, gap scoring and exports.',
+    launch_date: '2025 - 08 - 22',
+    customers: 24,
+    rating: 4 && 4.7,
+    reviews: 12
+  },
+  {
+      'Public exposure detection',
+      'Ownership and tagging',
+      'Risk scoring and SLAs',
+      'Auto - ticket creation'
+    ],
+    popular: true,
+    category: 'Security',
+    real_service: true,
+    technology: ['AWS Config, Azure Resource Graph, GCP Asset Inventory'],
+    integrations: ['Jira, ServiceNow, Slack'],
+      'API collectors, exposure heuristics, ticket routing, dashboards.',
+    launch_date: '2025 - 08 - 22',
+    customers: 19,
+    rating: 4 && 4.5,
+    reviews: 9
+  },
+  {
+      'Prompt injection libraries',
+      'PII / redaction checks',
+      'Safety regression tests',
+      'Model / provider matrix',
+      'CI gates and reports'
+    ],
+    popular: false,
+      'Scenario libraries, orchestrator, CI integration, dashboards.',
+    launch_date: '2025 - 08 - 22',
+    customers: 17,
+    rating: 4 && 4.6,
+    reviews: 8
+  },
+  {
+      'Device and IP risk signals',
+      'Velocity and cohort heuristics',
+      'Payout hold workflows',
+      'Appeal and review portal'
+    ],
+    popular: false,
+      'Data connectors, identity resolution, MMM fitting, and optimizer UI.',
+    launch_date: '2025 - 01 - 21',
+    customers: 48,
+    rating: 4 && 4.7,
+    reviews: 29
+  },
+  {
+      'PII tagging and masking policies',
+      'Glossary and ownership workflows',
+      'dbt / Snowflake / BigQuery integrations'
+    ],
+    popular: true,
+    customers: 34,
+    rating: 4 && 4.7,
+    reviews: 18
+  },
+  {
+      'Bundle and upsell optimizer',
+      'A / B testing and holdouts',
+      'Shopify / BigCommerce apps',
+      'Audience segments and API'
+    ],
+    popular: true,
+    competitors: ['Optimizely', 'VWO', 'Nosto'],
+    market_size: '$8B+ CRO & personalization',
+    growth_rate: '14% YoY',
+    variant: 'micro - saas',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'SDK snippet, event collectors, and real - time model serving.',
+    launch_date: '2025 - 01 - 21',
+    customers: 120,
+    rating: 4 && 4.6,
+    reviews: 77
+  },
+  {
+      'Rules engine and alerting',
+      'Anomaly detection and forecasting',
+      'Geofencing and trip analytics',
+      'APIs and dashboards'
+    ],
+    popular: false,
+      'Device registry, stream processors, and feature store for ML.',
+    launch_date: '2025 - 01 - 21',
+    customers: 21,
+    rating: 4 && 4.5,
+    reviews: 12
+  },
+  {
+      'OWASP API Top 10 checks',
+      'Secrets and token leakage detection',
+      'CI / CD and PR annotations',
+      'SBOM and dependency risk',
+      'Reports and Jira tickets'
+    ],
+    popular: false,
+      'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',
+    launch_date: '2025 - 08 - 22',
+    customers: 13,
+    rating: 4 && 4.5,
+    reviews: 7
+  },
+  {
+      'Turnstile token verification',
+      'Reputation and ASN heuristics',
+      'IP / device fingerprinting',
+      'Adaptive challenges',
+      'Block / allow lists and webhooks'
+    ],
+    popular: false,
+    roi: 'Reduce fake signups and abuse by 90%+',
+    competitors: ['h_captcha Enterprise, PerimeterX'],
+    market_size: '$2B bot mitigation',
+    growth_rate: '16% YoY',
+    variant: 'security - futuristic' as any,
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Edge verify and adaptive challenge, policy config UI, analytics.',
+    launch_date: '2025 - 02 - 25',
+    customers: 19,
+    rating: 4 && 4.6,
+    reviews: 8
+  },
+  {
+      'Warehouse connectors',
+      'Field mapping UI',
+      'Schedules and retries',
+      'Dry - run and diffs',
+      'Row - level filters'
+    ],
+    popular: true,
+      'Affordable, focused alternative to heavy Reverse ETL suites.',
+    target_audience: 'Growth, data engineering, RevOps',
+    trial_days: 14,
+    setup_time: '1 hour',
+    category: 'Data & Analytics',
+    integrations: ['Snowflake, BigQuery, Postgres, HubSpot, Salesforce'],
+    use_cases: ['Activation, Lead scoring, Audiences'],
+    roi: 'Ship activation in days; lift campaign ROI 10–20%',
+    competitors: ['Hightouch, Census'],
+    market_size: '$1B reverse ETL',
+    growth_rate: '30% YoY',
+    variant: 'data - futuristic' as any,
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Connectors, incremental keys, idempotent upserts, error DLQ.',
+    launch_date: '2025 - 02 - 26',
+    customers: 12,
+    rating: 4 && 4.5,
+    reviews: 6
+  },
+  {
       'RAG over proposals & policies',
       'Section templates and styles',
       'Evidence citations',
@@ -293,6 +1187,16 @@ const contact = {
 
     contactInfo: {
 
+  {
+
+    id: 'gpt - eval - harness',
+    name: 'LLM Evaluation Harness',
+    tagline: 'Automated evals with golden sets, judges, and regression gates',
+    price: '$79',
+    period: '/month',
+    description:;
+      'Define tasks and datasets, run multi - model evaluations with judge prompts, track metrics and drift, and block risky deployments with CI gates.',
+    features: [;
 
       'Golden sets and prompts',
       'Judge model scoring',
@@ -313,6 +1217,9 @@ const contact = {
     setup_time: '2 hours',
 
 
+      'CI quality gates'
+    ],
+    popular: false,
     category: 'AI & Data',
     real_service: true,
     technology: ['OpenAI / Anthropic APIs, Vector DB'],
@@ -327,6 +1234,7 @@ const contact = {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
       website: 'https://ziontechgroup && ziontechgroup.com'
     },
     real_implementation: true,
@@ -363,11 +1271,264 @@ const contact = {
     icon: '🍪',
 
 
+    reviews: 7
+  },
+  {
+      'Consent receipts & exports',
+      'Auto - blocking for tags',
+      'Policy page generator',
+      'A / B banner tests'
+    ],
+    popular: true,
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Banner + middleware policy, receipts store, export jobs.',
+    launch_date: '2025 - 02 - 18',
+    customers: 27,
+    rating: 4 && 4.6,
+    reviews: 12
+  },
+  {
+      'Headless rendering & queues',
+      'IP rotation and backoff',
+      'Robots / politeness guards',
+      'Deduplication and diffs',
+      'Warehouse exports'
+    ],
+    popular: false,
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Playwright, Queues, Proxies'],
+    integrations: ['S3, BigQuery, Postgres'],
+    use_cases: ['Competitive intel, Price tracking, Research datasets'],
+    roi: 'Automate scraping while reducing ban rate and toil',
+    competitors: ['ScraperAPI, Bright Data'],
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Worker pools, proxy rotation, rate - limiters, extractors, exporters.',
+    launch_date: '2025 - 02 - 22',
+    customers: 10,
+    rating: 4 && 4.4,
+    reviews: 5
+  },
+  {
+      'Label generation and tracking',
+      'Exchange / repair workflows',
+      'Return reasons and defect analytics',
+      'Email / SMS notifications',
+      'Warehouse and RMA integrations'
+    ],
+    popular: true,
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Embedded portal, label API wiring, policy engine and analytics.',
+    launch_date: '2025 - 02 - 08',
+    customers: 52,
+    rating: 4 && 4.6,
+    reviews: 24
+  },
+  {
+      'Sequence builder and templates',
+      'Reply / booking detection and stops',
+      'Inbox rotation and throttling',
+      'A / B testing for subject lines',
+      'Warmup and reputation checks',
+      'CRM sync and webhooks'
+    ],
+    popular: true,
+      'Simpler and more compliant than heavy sales engagement suites for SMBs.',
+    target_audience: 'SMB sales and success teams',
+    trial_days: 7,
+    setup_time: '1 day',
+    category: 'Growth & Marketing',
+    competitors: ['Mailshake', 'Lemlist', 'Apollo'],
+    market_size: '$6B sales engagement',
+    growth_rate: '20% YoY',
+    variant: 'growth - futuristic' as any,
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Sequence engine, deliverability checks, reply webhooks.',
+    launch_date: '2025 - 02 - 06',
+    customers: 78,
+    rating: 4 && 4.5,
+    reviews: 33
+  },
+  {
+      'Speaker diarization',
+      'Summaries and chaptering',
+      'Topic and keyword extraction',
+      'Clip generator for social',
+      'Embeds and RSS sync'
+    ],
+    popular: true,
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Batch ASR, diarization, topic modeling, clip renderers.',
+    launch_date: '2025 - 02 - 02',
+    customers: 140,
+    rating: 4 && 4.7,
+    reviews: 58
+  },
+  {
+      'Case study generator',
+      'Contact and booking forms',
+      'Testimonials and logos',
+      'Basic SEO and analytics',
+      'Custom domains'
+    ],
+    popular: false,
+    integrations: ['Calendly', 'HubSpot', 'GA4'],
+    use_cases: ['Showcase work', 'Capture leads', 'Book meetings'],
+    roi: 'Increase inbound leads by 10–25% with polished case studies.',
+    competitors: ['Webflow', 'Squarespace', 'Wix'],
+    market_size: '$4B creator sites',
+    growth_rate: '11% YoY',
+    variant: 'growth - futuristic' as any,
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Template presets, CMS‑like editing, lead capture widgets.',
+    launch_date: '2025 - 02 - 04',
+    customers: 210,
+    rating: 4 && 4.6,
+    reviews: 64
+  },
+  {
+      'Mobile‑friendly UI'
+    ],
+    popular: true,
+    icon: '📇',
+    contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails:
+      'Minimal CRM with reminders and basic pipeline views.'
+    launchDate: '2025-02-03'
+    customers: 320
+    rating: 4.5
+    reviews: 77
+  }
+      'Contacts and notes',
+      'Reminders and tasks',
+      'Simple pipeline stages',
+      'Email/SMS nudges',
+      'Import/export and tags',
+      'Mobile‑friendly UI'
+    ],
+    popular: true,
+    icon: '📇',
+
+    color: 'from - amber - 600 to - orange - 700',
+    text_color: 'text - amber - 300',
+    link: 'https://ziontechgroup.com / local - micro - crm',
+    market_position:;
+
+      'Tooled for simplicity; avoids enterprise CRM bloat and costs.',
+    target_audience: 'Local service businesses',
+    trial_days: 14,
+    setup_time: 'Same day',
+    category: 'CRM',
+    competitors: ['HubSpot Starter', 'Pipedrive Essentials'],
+    market_size: '$20B SMB CRM',
+    growth_rate: '10% YoY',
+    variant: 'analytics - futuristic' as any,
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Minimal CRM with reminders and basic pipeline views.',
+    launch_date: '2025 - 02 - 03',
+    customers: 320,
+    rating: 4 && 4.5,
+    reviews: 77
+  },
+  {
+      'AI suggestions and variants',
+      'Tone and length tuning',
+      'Performance benchmarks',
+      'ESP export and A/B tests',
+      'Spam words and preview',
+      'Team review workflow'
+    ],
+    popular: false,
+    icon: '🧪',
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-300',
+    link: 'https://ziontechgroup.com/subjectline-optimizer-ai',
+    marketPosition:;
+      'Focused assistant vs. general copy tools; fast iteration for marketers.',
+    targetAudience: 'Growth and lifecycle marketers',
+    trialDays: 7,
+    setupTime: 'Same day',
+    category: 'AI & Marketing',
+    realService: true,
+    technology: ['NLP/LLM', 'ESP APIs'],
+    integrations: ['Mailchimp', 'Klaviyo', 'SendGrid'],
+    useCases: ['Boost open rates', 'Faster copy iteration'],
+    roi: 'Improve opens by 5–15% and reduce time‑to‑send.',
+    competitors: ['Copy.ai', 'Jasper', 'Headline analyzers'],
+    marketSize: '$3B marketing AI',
+    growthRate: '24% YoY',
+    variant: 'ai-futuristic' as any,
+    contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails:
+      'Prompting templates, scoring heuristics, and ESP exports.'
+    launchDate: '2025-02-07'
+    customers: 95
+    rating: 4.4
+    reviews: 28
+  }
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
       'ESP export and A / B tests',
       'Spam words and preview',
+      'Team review workflow'
       'Team review workflow'
     ],
     popular: false,
@@ -386,6 +1547,7 @@ const contact = {
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     },
     real_implementation: true,
     implementation_details:;
@@ -399,6 +1561,65 @@ const contact = {
   {
 
 
+    reviews: 28
+  },
+  {
+      'Cycle time and WIP analysis',
+      'Review depth and latency',
+      'Flaky test detection',
+      'Repo hotspots and ownership',
+      'Team scorecards and alerts',
+      'Jira / Linear linkage'
+    ],
+    popular: true,
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Ingestion workers, metrics engine, dashboard and alerts.',
+    launch_date: '2025 - 02 - 09',
+    customers: 44,
+    rating: 4 && 4.6,
+    reviews: 19
+  },
+  {
+      'Preference center',
+      'DSAR intake and workflows',
+      'Cookie catalog and scans',
+      'Consent logs and exports',
+      'Multi‑site management'
+    ],
+    popular: true,
+    integrations: ['GTM', 'Segment', 'Tag managers'],
+    use_cases: ['Cookie compliance', 'Consent records', 'DSAR intake'],
+    roi: 'Faster compliance and fewer legal risks.',
+    competitors: ['OneTrust', 'CookieYes', 'Didomi'],
+    market_size: '$3B privacy tech',
+    growth_rate: '16% YoY',
+    variant: 'security - futuristic' as any,
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Region rules, consent logging, banner / prefs widgets.',
+    launch_date: '2025 - 02 - 01',
+    customers: 88,
+    rating: 4 && 4.6,
+    reviews: 36
+  }
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
+    reviews: 36
 
 
       website: 'https://ziontechgroup.com';
@@ -409,6 +1630,11 @@ const contact = {
     customers: 88;
 
 
+  }
+];
+;
+    rating: 4.6
+    reviews: 36
 import { ServiceVariant } from '../types/service-variants',;
 export interface RealMarketService {;
   id: string,;
@@ -2591,3 +3817,5 @@ export const realMarketServices: RealMarketService[] = [;
 ];
 
 
+  }
+];

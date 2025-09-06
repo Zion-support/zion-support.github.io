@@ -5,6 +5,7 @@
 import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityManagerdynamic from '../components/AccessibilityManager.dynamic'; describe('AccessibilityManagerdynamic',() => { test('renders without crashing',() => { render(<AccessibilityManagerdynamic />); expect( screen.getByTestId('accessibilitymanager.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityManagerdynamic />)}); test('handles user interactions',() => { render(<AccessibilityManagerdynamic />)}); test('applies correct styling',() => { render(<AccessibilityManagerdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -18,6 +19,7 @@ describe('AccessibilityManagerdynamic', () => {
   });
 });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   test('displays correct content', () => {
     render(<AccessibilityManagerdynamic />);
   });
@@ -64,3 +66,4 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 ursor/automate-test-improve-and-merge-code-646c
 });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -22,6 +22,9 @@ Location: ${opts.location || 'Remote'}
 }
 
 
+type OpenAIClient = OpenAI,;
+export function createOpenAIClient(apiKey: string): OpenAIClient {;
+  return new OpenAI({ apiKey });
 }
 ;
 export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
@@ -30,6 +33,12 @@ Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 
 
+Key skills: ${(opts.tags || []).join() || 'N/A'};
+Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai.responses.create({
+    model: 'gpt-4o-mini',
+    input: prompt
+});
 Key skills: ${(opts.tags || []).join() || 'N/A'}
 Add responsibilities, requirements, and benefits in bullet points.`,;
   const completion = await openai.responses.create({;
@@ -44,4 +53,7 @@ Add responsibilities, requirements, and benefits in bullet points.`,;
 
 
 
+
+  return completion.output_text;
+}
 

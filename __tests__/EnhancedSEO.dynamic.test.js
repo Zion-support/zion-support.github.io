@@ -5,6 +5,7 @@
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedSEOdynamic from '../components/EnhancedSEO.dynamic'; describe('EnhancedSEOdynamic',() => { test('renders without crashing',() => { render(<EnhancedSEOdynamic />); expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedSEOdynamic />)}); test('handles user interactions',() => { render(<EnhancedSEOdynamic />)}); test('applies correct styling',() => { render(<EnhancedSEOdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -16,6 +17,7 @@ describe('EnhancedSEOdynamic', () => {
   });
 });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   test('displays correct content', () => {
     render(<EnhancedSEOdynamic />);
   });
@@ -62,3 +64,4 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 ursor/automate-test-improve-and-merge-code-646c
 });
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

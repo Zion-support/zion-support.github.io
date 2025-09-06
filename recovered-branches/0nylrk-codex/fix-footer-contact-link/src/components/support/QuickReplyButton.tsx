@@ -42,6 +42,7 @@ interface QuickReplyButtonProps {
 
     </Button>
 
+    </Button>
   );
 }
 ;
@@ -123,3 +124,7 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 
 
 
+}
+  )
+}
+;

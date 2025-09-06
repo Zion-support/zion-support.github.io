@@ -7,6 +7,10 @@
   pricePerIncident: number;
 
 
+export interface CountryPricing {
+  country: string;
+  pricePerIncident: number;
+
 export const onsiteServicePricing: CountryPricing[] = [
   { country: 'Afghanistan', pricePerIncident: 131.04 }
   { country: 'Albania', pricePerIncident: 110.41 }
@@ -241,6 +245,7 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: 'Zimbabwe', pricePerIncident: 60.5 }];  { country: "Afghanistan", pricePerIncident: 131.04 }
 
 
+  { country: 'Zimbabwe', pricePerIncident: 60.5 }];  { country: "Afghanistan", pricePerIncident: 131.04 }
   { country: "Albania", pricePerIncident: 110.41 }
   { country: "Algeria", pricePerIncident: 92.26 }
   { country: "American Samoa", pricePerIncident: 193.60 }

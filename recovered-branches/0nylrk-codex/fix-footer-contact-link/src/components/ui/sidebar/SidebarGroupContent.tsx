@@ -30,6 +30,10 @@ export function SidebarGroupContent({ className, children, ...props }: SidebarGr
     <div className={cn("space-y-1", className)} {...props}>;
       {children}
 
+    <div className={cn("space-y-1", className)} {...props}>;
+      {children}
+
+}
 
 ;
 

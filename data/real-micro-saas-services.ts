@@ -1341,6 +1341,23 @@ export const getServicesByCategory = (category: string) => {} ];
 export const getServicesByCategory = (category: string) =>: any {
   return realMicroSaasServices.filter (service => service.category === category);    id: 'data - contracts - hub';
 
+  }];
+// Helper functions
+    name: 'Data Contracts Hub';
+    tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
+    description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
+    category: 'Data & Platform',
+    price: { monthly: 129, yearly: 1290, currency: 'USD', trial_days: 14, setup_time: '2 hours' }
+    features: ['Schema registry_diff viewerCI gates_backfill helpers'];
+    benefits: ['Fewer incidents_faster changes'];
+    target_audience: ['Data platform_analytics engineers'];
+    market_position: 'Complements dbt and warehouse - native governance.';
+    competitors: ['OpenMetadataGreat Expectations'];
+    tech_stack: ['TypeScriptPostgreSQLdbt'];
+    real_implementation: true,
+    implementation_details: 'Contracts as code, PR checks, lineage view.';
+
+    roi: 'Reduce data breakage incidents by 50–70%.';
     use_cases: ['Warehouse governance_analytics contracts'];
     integrations: ['dbtGitHubBigQuery'];
     support: 'Email support';
@@ -1442,6 +1459,56 @@ reviews: 14
 
 export const serviceCategories = [
 
+  'Legal Technology'
+  'Customer Service & Support'
+  'Digital Marketing & SEO'
+  'Creative & Media'
+  'Data & Analytics'
+  'Human Resources'
+  'Sales & CRM'
+  'Market Research'
+  'Blockchain & Cryptocurrency'
+  'Cloud & DevOps'
+  'Database & Performance'
+  'Design & UI/UX'
+  'Development & DevOps'
+  'Business Intelligence'
+  'Quantum Computing'
+  'Cybersecurity'
+  'Metaverse & Virtual Reality'
+  'Web3 & DeFi'
+  'IoT & Edge Computing'
+  'Autonomous Vehicles & Robotics'
+  'Climate & Environmental'
+  'Biotechnology & Healthcare'
+  'Financial Technology'
+  'Education Technology'
+  'Enterprise IT'
+  'Legal Technology',
+  'Customer Service & Support',
+  'Digital Marketing & SEO',
+  'Creative & Media',
+  'Data & Analytics',
+  'Human Resources',
+  'Sales & CRM',
+  'Market Research',
+  'Blockchain & Cryptocurrency',
+  'Cloud & DevOps',
+  'Database & Performance',
+  'Design & UI/UX',
+  'Development & DevOps',
+  'Business Intelligence',
+  'Quantum Computing',
+  'Cybersecurity',
+  'Metaverse & Virtual Reality',
+  'Web3 & DeFi',
+  'IoT & Edge Computing',
+  'Autonomous Vehicles & Robotics',
+  'Climate & Environmental',
+  'Biotechnology & Healthcare',
+  'Financial Technology',
+  'Education Technology',
+  'Enterprise IT',;
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   return realMicroSaasServices.filter(service => service.category === category)
 };
@@ -1492,6 +1559,7 @@ export const service_categories = [;
   'Financial Technology',
   'Education Technology',
   'Enterprise IT'
+  'Enterprise IT'
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
@@ -1502,4 +1570,39 @@ export const service_categories = [;
 
 
 
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  }
+}
+;
+
+export interface RealMicroSaasService {;
 

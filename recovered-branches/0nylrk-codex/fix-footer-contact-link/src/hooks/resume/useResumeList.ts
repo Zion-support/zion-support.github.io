@@ -1,5 +1,15 @@
 
 
+import { useState, useEffect  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Resume  } from '@/types/resume';
+import { useAuth } from '@/hooks/useAuth';
+export function useResumeList() {
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Resume} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+export function useResumeList() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -36,7 +46,6 @@
       }
       // Transform data to match Resume type
 
-import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Resume} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -51,6 +60,16 @@ function useResumeList() {
 ;
   const fetch_resumes = async () => {
 
+    // Check condition
+if ( {) {
+  $2
+}
+        basic_info: {
+          id: resume && resume.id;
+          title: resume && resume.title;
+          headline: resume && resume.headline,
+          summary: resume && resume.summary
+        };
         work_experience: [];
         education: [];
         skills: [];
@@ -92,6 +111,8 @@ if ( {) {
     error;
     resumes;
 
+  }
+}
       const transformedResumes: Resume[] = resumeData.map(resume => ({
         id: resume.id;
         user_id: resume.user_id;
@@ -109,6 +130,9 @@ if ( {) {
 
 
       }));
+      setResumes(transformedResumes);
+      return transformedResumes
+    } catch (e: any) {} finally {}));
       setResumes(transformedResumes);
       return transformedResumes
     } catch (e: any) {} finally {

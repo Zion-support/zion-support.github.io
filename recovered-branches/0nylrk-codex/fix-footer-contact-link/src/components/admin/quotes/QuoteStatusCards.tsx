@@ -100,6 +100,24 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 
+import React from "react",
+interface QuoteStatusCardsProps {
+  status_counts: {
+
+    new: number;
+    in_review: number;
+    responded: number;
+    accepted: number;
+
+    closed: number;
+
+  }
+}
+export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
+  statusCounts
+}) => {
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 interface QuoteStatusCardsProps {
   statusCounts: {
     new: number,
@@ -157,6 +175,30 @@ interface QuoteStatusCardsProps {
       </Card>
 
 
+  )
+},
+interface QuoteStatusCardsProps {;
+  statusCounts: {;
+    new: number,;
+    in_review: number,;
+    responded: number,;
+    accepted: number,;
+    closed: number;
+  }
+}
+;
+export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {;
+  return (;
+
+export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
+  statusCounts,;
+}) => {;
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">;
+      <Card className="bg-zion-blue-dark border border-zion-blue-light">;
+        <CardHeader className="pb-2">;
+          <CardTitle className="text-lg font-medium text-white flex justify-between items-center">;
+            New Requests;
             Unreviewed quote requests;
           </p>;
         </CardContent>;
@@ -254,6 +296,7 @@ export default QuoteStatusCards;
 
 
 
+  );
 };
 
 

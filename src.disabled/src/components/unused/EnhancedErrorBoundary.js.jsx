@@ -7,6 +7,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 >>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React,{ Component } from \'react\'; import { motion } from \'framer-motion\'; import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from \'@heroicons/react/24/outline\'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; \"hasError\": \'false\',; \"error\": \'null\',; \"errorInfo\": \'null\',; \"errorId\": \'null\',; \"showStackTrace\": \'false;\' }}; static getDerivedStateFromError(error) {; return {; \"hasError\": \'true\',; error,; \"errorId\": this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }); render() { return <div>Component></div> } } }}
 const React,{ Component } from "react"; import { motion } from "framer-motion"; import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from "@heroicons/react/24/outline"; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; hasError: "false",; error: "null",; errorInfo: "null",; errorId: "null",; showStackTrace: "false;" }}; static getDerivedStateFromError(error) {; return {; hasError: "true",; error,; errorId: this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }); render() { return <div>Component></div> } } }}'"'"
 >>>>>>> main

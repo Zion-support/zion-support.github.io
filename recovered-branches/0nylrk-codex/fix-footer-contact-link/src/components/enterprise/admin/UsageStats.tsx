@@ -13,6 +13,36 @@ import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import {
 
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader
+} from "@/components/ui/card";
+import { Sparkles } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+export function UsageStats() {
+  const handleSaveChanges = () => {
+    toast({
+
+import React from "react",;
+import { Slider } from "@/components/ui/slider",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { toast } from "@/hooks/use-toast",;
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
 
       title: "Limits updated",
       description: "The new usage limits have been saved successfully.",;
@@ -40,14 +70,12 @@ import { toast } from "@/hooks/use-toast",
   CardHeader
 
 
+  CardHeader
 } from "@/components/ui/card";
-import { Sparkles } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
 
-import {;
   Card,;
   CardContent,;
   CardDescription,;
@@ -135,6 +163,7 @@ export function UsageStats() {
                 <div className="text-sm font-medium">Monthly contact credits</div>
 
 
+                <div className="text-sm font-medium">Monthly contact credits</div>
                 <Badge variant="outline">178 / 500</Badge>
               </div>
               <Progress value={35.6} className="h-2" />
@@ -154,6 +183,9 @@ export function UsageStats() {
 
         
 
+
+
+        
 
 
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
@@ -192,6 +224,9 @@ export function UsageStats() {
 
         
 
+
+
+        
 
 
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
@@ -250,6 +285,10 @@ export function UsageStats() {
       
 
 
+            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
+          </CardFooter>
+        </Card>
+      </div>
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -262,6 +301,7 @@ export function UsageStats() {
               Contact your account manager to discuss custom limits for your enterprise.
 
 
+              Contact your account manager to discuss custom limits for your enterprise.
             </p>
           </div>
         </div>
@@ -271,6 +311,22 @@ export function UsageStats() {
 
 
 
+  )
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle} from "@/components/ui/card",;
+import { Sparkles } from "lucide-react",;
+import { Progress } from "@/components/ui/progress",;
+export function UsageStats() {;
+  const handleSaveChanges = () => {;
+    toast({;
+      title: "Limits updated";
+      description: "The new usage limits have been saved successfully."});
+  };
+  return (;
 
     <div className="space-y-8">;
       <div>;
@@ -299,8 +355,19 @@ function UsageStats() {
   const handleSaveChanges = () =>: any {
     toast ({
       title: "Limits updated",
-      description: "The new usage limits have been saved successfully.",
+      description: "The new usage limits have been saved successfully."
 
+    });
+  }
+
+          Configure usage limits for your team to manage your subscription;
+          resources.;
+        </p>;
+      </div>;
+      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;
+        <Card>;
+          <CardHeader>;
+            <CardTitle > Job Postings</CardTitle>;
             <CardDescription>;
               Set monthly limits for job postings across your organization;
             </CardDescription>;
@@ -522,3 +589,47 @@ function UsageStats() {
 
 
 
+
+
+
+  );
+        <Button > Contact Us</Button>;
+      </div>;
+    </div>);
+}
+  );
+        <Button > Contact Us</Button>;
+      </div>;
+    </div>);
+}
+        <Button > Contact Us</Button>;
+      </div>;
+    </div>);
+}
+            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>;
+          </CardFooter>;
+        </Card>;
+      </div>;
+      ;
+      <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">;
+        <div className="flex items-center gap-4">;
+          <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">;
+            <Sparkles className="h-5 w-5 text-primary" />;
+          </div>;
+          <div>;
+            <h3 className="font-medium">Need higher limits?</h3>;
+            <p className="text-sm text-muted-foreground">;
+              Contact your account manager to discuss custom limits for your enterprise.;
+            </p>;
+          </div>;
+        </div>;
+        <Button>Contact Us</Button>;
+      </div>;
+    </div>;
+  );
+}
+;
+  );
+}
+;
+}

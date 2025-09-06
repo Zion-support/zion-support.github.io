@@ -1,4 +1,10 @@
 
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>
+export type TextareaProps = React.ComponentProps<"textarea">
 
 const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
   ({ className, ...props }, ref) => {
@@ -15,6 +21,8 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
         )}
 
 
+          className
+        )}
 import * as React from &quot;react & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
@@ -46,6 +54,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(;
         )}
 
 
+        )}
         ref={ref}
         {...props}
       />);
@@ -55,3 +64,17 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(;
 
 
 
+export { Textarea };
+
+Textarea.displayName = "Textarea"
+
+export { Textarea }
+;
+export { Textarea }
+export { Textarea }
+export { Textarea };
+Textarea.displayName = "Textarea"
+
+export { Textarea }
+;
+;

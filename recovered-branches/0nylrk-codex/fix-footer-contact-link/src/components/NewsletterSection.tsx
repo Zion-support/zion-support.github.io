@@ -29,6 +29,13 @@ export function NewsletterSection() {
 
 
 
+  )
+  )
+
+    </section>;
+  );
+  );
+  );
 }
 ;
 

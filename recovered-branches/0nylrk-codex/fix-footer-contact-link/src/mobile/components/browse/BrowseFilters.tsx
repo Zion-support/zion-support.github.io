@@ -13,11 +13,14 @@ import {
   SelectValue
 } from "@/components/ui/select";
 import { X, Filter } from "lucide-react";
+  SelectValue
+} from "@/components/ui/select";
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetFooter,
+  SheetTrigger
   SheetTrigger
 } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
@@ -29,6 +32,7 @@ interface BrowseFiltersProps {
 
 export function BrowseFilters({ type }: BrowseFiltersProps) {
 
+export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
   const addFilter = (filter: string) => {
@@ -556,6 +560,17 @@ if (!activeFilters.includes (filter) ) {
                 </div>
 
 
+                <div className="space-y-2">
+                  <Label>Skills</Label>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Python</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Figma</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">UI/UX</Badge>
+                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js</Badge>
+                  </div>
+                </div>
                 <div className="flex items-center justify-between">
                   <Label>Only show verified profiles</Label>
                   <Switch />
@@ -578,6 +593,12 @@ if (!activeFilters.includes (filter) ) {
           </Sheet>
 
 
+              <SheetFooter>
+                <Button variant="outline" className="w-full">Reset</Button>
+                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
+              </SheetFooter>
+            </SheetContent>
+          </Sheet>
           <Select>
             <SelectTrigger className="w-[120px] h-8">
               <SelectValue placeholder="Sort By" />
@@ -612,3 +633,5 @@ if (!activeFilters.includes (filter) ) {
 
 
 
+  )
+}

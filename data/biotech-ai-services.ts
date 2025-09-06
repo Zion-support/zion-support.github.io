@@ -4,6 +4,24 @@
   {
 
 
+      'AI gene editing algorithms',
+      'Synthetic biology design',
+      'CRISPR optimization',
+      'Genetic circuit design',
+      'Metabolic pathway optimization',
+      'Safety assessment tools',
+      'Regulatory compliance',
+      'Research collaboration',
+      'Mobile app',
+      'API for lab integration'
+    ],
+    popular: true,
+    icon: '🔬',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+;
     realImplementation: true
     implementationDetails:
       'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
@@ -280,12 +298,20 @@
 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
     realImplementation: true
     implementationDetails:
 
+    implementationDetails: 'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.';
+    launchDate: '2024-03-10';
+    customers: 90;
+    rating: 4.9
+
+    reviews: 45
   id: string,;
   name: string,;
   tagline: string,;
@@ -376,3 +402,5 @@ export const biotechAIServices: BiotechAIService[] = [;
 
 
 
+  }
+];

@@ -13,6 +13,8 @@ import React from 'react';
   is_preview: false;
 
 
+});
+export const createMockProps = (overrides = {}) => ({;
   ...overrides;
 
 

@@ -67,6 +67,14 @@ exports.handler = async function() {
     }
       status_code: 200,
       body: JSON.stringify ({ ok: true, updated_at: data.updated_at })
+        content,
+        message: 'chore (automation): weekly DAO metrics update',
+        token
+      });
+    }
+    return {}
+      status_code: 200,
+      body: JSON.stringify ({ ok: true, updated_at: data.updated_at })
     }
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }

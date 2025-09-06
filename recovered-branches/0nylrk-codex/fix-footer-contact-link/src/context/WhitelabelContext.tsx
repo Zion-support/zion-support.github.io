@@ -139,6 +139,9 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
   }, [tenant, isLoading]);
 
 
+  return (
+    <WhitelabelContext && WhitelabelContext.Provider value={contextValue}>;
+      {children}
 import React, { create_context, useContext, useState, useEffect, ReactNode } from 'react';
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks / useWhitelabelTenant';
 export interface WhitelabelContextType {
@@ -253,6 +256,7 @@ const defaultContext:WhitelabelContextType = {;
 // the generic as `WhitelabelContextType | null` we get proper type checking;
 // without falling back to an empty object which triggers TS2740 errors.;
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
+const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
 ;
 export const useWhitelabel = ():WhitelabelContextType => {;
   const context = useContext(WhitelabelContext),;
@@ -296,3 +300,6 @@ export const WhitelabelProvider = ({ children } WhitelabelProviderProps) => {;
 
 
 
+    </WhitelabelContext.Provider>);
+}
+;

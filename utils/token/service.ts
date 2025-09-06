@@ -58,6 +58,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
+    timestamp: Date.now()
+  };
   transactions.push(transaction);
   return transaction;
 }
@@ -120,6 +122,15 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   return transaction;
 
 
+    type: 'redeem',
+    reason,
+    timestamp: Date.now()
+  };
+  transactions.push(transaction);
+  return transaction;
+
+  transactions.push(transaction);
+  return transaction;
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -242,3 +253,4 @@ export function set_config (
 
 
 
+}

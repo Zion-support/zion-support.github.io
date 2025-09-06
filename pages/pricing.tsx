@@ -37,6 +37,11 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 import Head from 'next / head';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+
+
 import {
   Check
   Star
@@ -610,6 +615,7 @@ function PricingPage() {
     ...nextGenerationAIServices,
     ...cuttingEdgeITServices,
     ...innovativeMicroSaasV2Services  ];
+    ...innovativeMicroSaasV2Services  ];
 
   // Enhanced service categories with pricing
   const serviceCategories = [
@@ -619,6 +625,10 @@ function PricingPage() {
       services: [
         'AI Multimodal Fusion',
         'AI Autonomous Decision Engine',
+        'AI Emotional Intelligence'
+      ],
+      avgPrice: '$3,199/month',
+      savings: 'Save 60-80% vs. competitors'
         'AI Emotional Intelligence'
       ],
       avgPrice: '$3,199/month',
@@ -760,6 +770,12 @@ ursor/automate-test-improve-and-merge-code-646c
       ],
       avgPrice: '$4,999/month',
       savings: 'Save 50-70% vs. competitors'
+        'Zero Trust Architecture',
+        'Edge Computing Orchestration',
+        '5G Private Networks'
+      ],
+      avgPrice: '$4,999/month',
+      savings: 'Save 50-70% vs. competitors'
     },
     {
       name: 'Innovative Micro SaaS',
@@ -771,6 +787,10 @@ ursor/automate-test-improve-and-merge-code-646c
       ],
       avgPrice: '$199/month',
       savings: 'Save 40-60% vs. competitors'
+        'AI Meeting Transcriber'
+      ],
+      avgPrice: '$199/month',
+      savings: 'Save 40-60% vs. competitors'
     },
     {
       name: 'Quantum & Space Technology',
@@ -778,6 +798,10 @@ ursor/automate-test-improve-and-merge-code-646c
       services: [
         'Quantum AI Hybrid',
         'Space Technology Platform',
+        'Quantum Cybersecurity'
+      ],
+      avgPrice: '$5,999/month',
+      savings: 'Save 70-85% vs. competitors'
         'Quantum Cybersecurity'
       ],
       avgPrice: '$5,999/month',
@@ -818,6 +842,9 @@ ursor/automate-test-improve-and-merge-code-646c
 }
   ]
 
+      savings: 'Save 45-65% vs. competitors'
+    }  ];
+
     },;
     {;
       name: 'Cutting-Edge IT Infrastructure',;
@@ -855,6 +882,7 @@ ursor/automate-test-improve-and-merge-code-646c
       popular: false,
       cta: 'Start Free Trial',
       cta_variant: 'secondary' as const
+      cta_variant: 'secondary' as const
     },    {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
@@ -874,11 +902,13 @@ ursor/automate-test-improve-and-merge-code-646c
         'Team Collaboration Tools',
         'API Access',
         'White - label Options'
+        'White - label Options'
       ],
       icon: <Crown className='w - 8 h - 8' />,
       variant: 'holographic' as const,
       popular: true,
       cta: 'Start Free Trial',
+      cta_variant: 'primary' as const
       cta_variant: 'primary' as const
     },    {
       name: 'Enterprise',
@@ -903,11 +933,14 @@ ursor/automate-test-improve-and-merge-code-646c
         'Advanced AI Training & Customization',
         'Priority Feature Development',
         'Global Infrastructure Access'
+        'Global Infrastructure Access'
       ],
       icon: <Rocket className='w - 8 h - 8' />,
       variant: 'neural' as const,
       popular: false,
       cta: 'Contact Sales',
+      cta_variant: 'primary' as const
+    }  ];
       cta_variant: 'primary' as const
     }  ];
 ;
@@ -922,12 +955,20 @@ ursor/automate-test-improve-and-merge-code-646c
       ],
       starting_price: '$99 / month',
       icon: <Brain className='w - 6 h - 6' />
+        'Quantum Optimization'
+      ],
+      starting_price: '$99 / month',
+      icon: <Brain className='w - 6 h - 6' />
     },
     {
       category: 'Autonomous Systems',
       services: [;
         'AI Factory Management',
         'Robotic Process Automation',
+        'Smart Manufacturing'
+      ],
+      starting_price: '$149 / month',
+      icon: <Factory className='w - 6 h - 6' />
         'Smart Manufacturing'
       ],
       starting_price: '$149 / month',
@@ -942,6 +983,10 @@ ursor/automate-test-improve-and-merge-code-646c
       ],
       starting_price: '$199 / month',
       icon: <FlaskConical className='w - 6 h - 6' />
+        'Genomic Research Platform'
+      ],
+      starting_price: '$199 / month',
+      icon: <FlaskConical className='w - 6 h - 6' />
     },
     {
       category: 'Cybersecurity',
@@ -952,12 +997,20 @@ ursor/automate-test-improve-and-merge-code-646c
       ],
       starting_price: '$129 / month',
       icon: <Shield className='w - 6 h - 6' />
+        'Zero - Trust Security'
+      ],
+      starting_price: '$129 / month',
+      icon: <Shield className='w - 6 h - 6' />
     },
     {
       category: 'Financial Technology',
       services: [;
         'AI Trading Platform',
         'Risk Management',
+        'Portfolio Optimization'
+      ],
+      starting_price: '$179 / month',
+      icon: <DollarSign className='w - 6 h - 6' />
         'Portfolio Optimization'
       ],
       starting_price: '$179 / month',
@@ -973,6 +1026,11 @@ ursor/automate-test-improve-and-merge-code-646c
       starting_price: '$299 / month',
       icon: <Rocket className='w - 6 h - 6' />
     }  ];
+        'Mission Planning AI'
+      ],
+      starting_price: '$299 / month',
+      icon: <Rocket className='w - 6 h - 6' />
+    }  ];
 ;
   // Value propositions;
   const value_propositions = [;
@@ -982,6 +1040,7 @@ ursor/automate-test-improve-and-merge-code-646c
       icon: <TrendingUp className='w - 8 h - 8' />,
       metric: '300%',
       detail: 'Average ROI'
+      detail: 'Average ROI'
     },
     {
       title: 'Time to Value',
@@ -989,6 +1048,7 @@ ursor/automate-test-improve-and-merge-code-646c
       icon: <Clock className='w - 8 h - 8' />,
 
       metric: '<24h',
+      detail: 'Setup Time'
       detail: 'Setup Time'
     },
     {
@@ -998,6 +1058,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 ursor/automate-test-improve-and-merge-code-646c
+      icon: <Globe className='w - 8 h - 8' />,
+      metric: '150+',
+      detail: 'Countries'
       icon: <Globe className='w - 8 h - 8' />,
       metric: '150+',
       detail: 'Countries'
@@ -1058,6 +1121,8 @@ ursor/automate-test-improve-and-merge-code-646c
         />
 
 
+          content='https://ziontechgroup.com/og-image.jpg'
+        />
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -1255,6 +1320,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 ursor/automate-test-improve-and-merge-code-646c
+
             Choose the perfect plan for your business. All plans include;
             generous free trials and access to our revolutionary AI & quantum;
             computing services.;
@@ -1316,6 +1382,12 @@ ursor/automate-test-improve-and-merge-code-646c
             </Button>
           </div>
 ursor/automate-test-improve-and-merge-code-646c
+              </span>
+            </Button>
+          </div>
+              </span>
+            </Button>
+          </div>
 
 
               Monthly
@@ -1343,6 +1415,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+              <span
+                className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
             >
               <span
@@ -1406,6 +1480,13 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {pricingTiers.map((tier, index) => (
 ursor/automate-test-improve-and-merge-code-646c
+                  billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
+                }`}
+                  billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
+                }`}
+            </span>
+          </div>
+        </div>
               <UltraFuturisticCard
                 key={tier && tier.name}
                 variant={tier && tier.variant}
@@ -1424,6 +1505,12 @@ ursor/automate-test-improve-and-merge-code-646c
                 )}
 
 ursor/automate-test-improve-and-merge-code-646c
+              <UltraFuturisticCard
+                key={tier && tier.name}
+                variant={tier && tier.variant}
+                interactive={true}
+                )}
+
           {/* New 2026 Pricing Link */}
           <div className='mb - 8 p - 6 bg - gradient - to - r from - purple - 800 / 60 to - pink - 800 / 60 border border - purple - 700 / 50 rounded - 2xl max - w-4xl mx - auto'>;
             <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1538,6 +1625,8 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 
 
+                glowIntensity={tier.popular ? "high" : "medium"}
+                className={`relative h-full ${tier.popular ? "scale-105" : ""}`}
               >
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1806,6 +1895,9 @@ ursor/automate-test-improve-and-merge-code-646c
             ))}
 
 ursor/automate-test-improve-and-merge-code-646c
+              <UltraFuturisticCard
+            ))}
+
                 key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2000,6 +2092,15 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+                <Button
+                  href='/services'
+                  variant='secondary'
+                  size='sm'
+                  className='w-full'>;
+                  Explore Services;
+                  <ChevronRight className='ml-2 w-4 h-4' />                </Button>;
+              </UltraFuturisticCard>;
+
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -2127,6 +2228,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
             ))}
 ursor/automate-test-improve-and-merge-code-646c
+            ))}
           </div>
         </div>
         {/* Popular Services Pricing */}
@@ -2199,6 +2301,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
               <UltraFuturisticCard
 ursor/automate-test-improve-and-merge-code-646c
+              <UltraFuturisticCard
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2304,6 +2407,9 @@ ursor/automate-test-improve-and-merge-code-646c
                   </ul>;
                 </div>;
 ursor/automate-test-improve-and-merge-code-646c
+                    ))}
+                  </ul>;
+                </div>;
                 <Button
                   href={service && service.link}
                   variant='primary'
@@ -2354,6 +2460,8 @@ ursor/automate-test-improve-and-merge-code-646c
                 </Button>
               </UltraFuturisticCard>
 ursor/automate-test-improve-and-merge-code-646c
+                </Button>
+              </UltraFuturisticCard>
             ))}
           </div>
         </div>
@@ -2967,6 +3075,11 @@ ursor/automate-test-improve-and-merge-code-646c
 
     </UltraFuturisticBackground>
 
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
+  );
+
+    </UltraFuturisticBackground>
+  )
   )
         <div className="mb-20">;
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>;
@@ -3070,6 +3183,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 ursor/automate-test-improve-and-merge-code-646c
+
               </p>            </div>;
           </UltraFuturisticCard>;
         </div>;
@@ -3093,6 +3207,7 @@ ursor/automate-test-improve-and-merge-code-646c
   }
   );
 >>>>>>> main
+  );
   );
 }
 
@@ -3120,6 +3235,9 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+
+
+    </UltraFuturisticBackground>
   );
 }
   )
@@ -3128,6 +3246,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </UltraFuturisticBackground>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    </UltraFuturisticBackground>);
+}
   )
 
   )

@@ -98,6 +98,7 @@ export const useMilestones = (projectId?: string) => {;
   const { uploadDeliverable, isSubmitting: isUploading } = useUploadDeliverable(),;
   // Combine all loading states;
   const isSubmitting = isCreating || isUpdating || isDeleting || isUploading;
+  const isSubmitting = isCreating || isUpdating || isDeleting || isUploading;
   // Function to upload deliverable with project_id;
   const handleUploadDeliverable = async (milestoneId: string, file: File) => {;
     if (!projectId) return null,;
@@ -154,3 +155,5 @@ export const useMilestones = (projectId?:string) => {;
 };
 
 
+  }
+};

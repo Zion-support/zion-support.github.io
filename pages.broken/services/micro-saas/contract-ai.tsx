@@ -23,6 +23,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export default function Contractai({}: ContractaiProps) {
+
+
+export default function Contractai({}: ContractaiProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -50,6 +53,10 @@ export default function Contractai(): any ({}: ContractaiProps) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+interface ContractaiProps {;
+  // Add props here as needed;
+}
+export default function Contractai(): any ({}: ContractaiProps) {;
   return (
     <div>
       <h1>Contractai</h1>

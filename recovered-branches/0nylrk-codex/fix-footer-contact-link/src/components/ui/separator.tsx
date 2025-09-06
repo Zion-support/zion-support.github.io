@@ -25,6 +25,9 @@ const Separator = React.forwardRef<
 
 
 
+    { className, orientation = "horizontal", decorative = true, ...props },
+
+
     ref
   ) => (
     <SeparatorPrimitive.Root
@@ -62,6 +65,25 @@ const Separator = React.forwardRef<;
 
         className
 
+
+      className={cn(;
+        "shrink-0 bg-border",;
+        orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
+        className;
+      )}
+      {...props}
+    />;
+  );
+);
+export { Separator }
+export { Separator }
+;
+
+
+Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
+
+export { Separator }
+;
 
 export { Separator };
 import * as SeparatorPrimitive from '@radix - ui / react - separator';

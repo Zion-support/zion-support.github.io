@@ -21,6 +21,7 @@ export default function Health.test({}: Health.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
 
 
@@ -32,3 +33,9 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 }
+=======
+
+
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

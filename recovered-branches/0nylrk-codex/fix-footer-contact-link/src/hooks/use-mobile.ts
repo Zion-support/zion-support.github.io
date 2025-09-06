@@ -8,6 +8,7 @@ export function useIsMobile() {
 
     typeof window !== "undefined" ? window.innerWidth < 768 : false,
 
+    typeof window !== "undefined" ? window.innerWidth < 768 : false,
   );
   useEffect(() => {
 
@@ -59,6 +60,12 @@ export function useIsMobile() {;
 
 }
 
+}
+;
+  return is_mobile;
+}
+}
+
 ;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
@@ -89,3 +96,5 @@ return isMobile
 
 
 
+}
+;

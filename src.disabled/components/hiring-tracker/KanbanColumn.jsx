@@ -1,4 +1,5 @@
 '\"export\": function KanbanColumn({ id,title,description,applications,count }) {\''\'";\";
+
 "export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"
 ursor/automate-test-improve-and-merge-code-646c
 
@@ -6,6 +7,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 "export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"
 
 '\"export\": function KanbanColumn({ id,title,description,applications,count }) {\''\'";\";
@@ -17,3 +19,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+'\"export\": function KanbanColumn({ id,title,description,applications,count }) {\''\'";\";
+"export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

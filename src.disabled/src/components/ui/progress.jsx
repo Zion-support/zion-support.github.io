@@ -7,6 +7,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 >>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from \'react\';\''\'; import { cn } from \'../../lib/utils\'; const Progress = React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); \'; Progress.displayName = \'Progress\'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
 const React from "react";"""; import { cn } from "././lib/utils"; const Progress = React.forwardRef(); ({ className,value,max = 100,.props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); "; Progress.displayName = "Progress"; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };''"
 >>>>>>> main

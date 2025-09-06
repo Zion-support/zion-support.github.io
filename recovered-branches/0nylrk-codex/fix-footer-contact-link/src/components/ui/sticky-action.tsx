@@ -29,6 +29,29 @@ interface StickyActionProps {
 
   showAfterScroll?: number;
 
+  position?: "bottom" | "top"
+}
+
+import { cn } from "@/lib/utils",
+import { motion, AnimatePresence } from "framer-motion",
+
+interface StickyActionProps {
+  className?: string,
+  children: React.ReactNode,
+  showAfterScroll?: number,
+
+  position?: "bottom" | "top"
+}
+export function StickyAction({
+  position?: "bottom" | "top";
+}
+  className;
+  children;
+
+  showAfterScroll = 300;
+  position = "bottom";
+}: StickyActionProps) {;
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
@@ -58,12 +81,20 @@ function StickyAction() {
     window.addEventListener ("scroll", handle_scroll);
 
 
+    }
     return () => {
       window.removeEventListener ("scroll", handle_scroll);
     }
   }, [showAfterScroll]);
 
 
+    },
+
+    window.addEventListener("scroll", handleScroll),
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [showAfterScroll]),
 
   return (
     <AnimatePresence>
@@ -105,6 +136,9 @@ export function StickyAction({;
       if (window.scrollY > showAfterScroll) {;
 
 
+  useEffect(() => {;
+    const handleScroll = () => {;
+      if (window && window.scrollY > showAfterScroll) {;
         setIsVisible(true);
       } else {;
         setIsVisible(false);
@@ -119,6 +153,8 @@ export function StickyAction({;
 
 
 
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
+            positionClasses[position]
 
 
 

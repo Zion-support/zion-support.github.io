@@ -21,6 +21,10 @@ export interface JobBudget {;
   max: number;
   currency: string;
 
+export interface JobBudget {;
+  min: number;
+  max: number;
+  currency: string;
 }
 
 
@@ -32,6 +36,11 @@ export interface Job {
 export interface Job {;
 
 
+export interface Job {
+
+export interface Job {;
+}
+export interface Job {
   id: string;
   client_id: string;
   title: string;
@@ -50,6 +59,7 @@ export interface Job {;
 
 
 
+export interface JobFormData {;
 
   created_at: string
   updated_at: string
@@ -59,8 +69,8 @@ export interface JobFormData {
 export interface JobFormData {;
 
 }
+export interface JobFormData {}
 export interface JobFormData {
-
   title: string;
   description: string;
   category: JobCategory;
@@ -80,6 +90,12 @@ export interface JobMatch {
 
 
 
+  budgetMin: number;
+  budgetMax: number
+  deadline: Date
+}
+// Add JobMatch interface to be shared across components
+export interface JobMatch {;
   id: string;
   job_id: string;
   talent_id: string;
@@ -124,6 +140,10 @@ export interface ResumeAttachment {
 export interface ResumeAttachment {;
 
 
+export interface ResumeAttachment {;
+
+
+export interface ResumeAttachment {
   id: string;
   title: string;
   type: "ai_resume" | "custom_upload";
@@ -144,6 +164,12 @@ export type ApplicationStatus =
 
 
 
+export interface JobApplication {
+;
+
+export interface JobApplication {
+
+export interface JobApplication {
 
 
 export interface JobApplication {;
@@ -158,6 +184,7 @@ export interface JobApplication {
 export interface JobApplication {;
 
 
+export interface JobApplication {
   id: string;
   job_id: string;
   talent_id: string;
@@ -182,6 +209,14 @@ export interface JobApplication {;
   // New fields for resume scoring;
 
 
+    bio: string
+    skills: string[]
+  }
+  resume?: ResumeAttachment;
+  // New fields for resume scoring
+  }
+  resume?: ResumeAttachment;
+  // New fields for resume scoring;
   match_score?: number;
   match_summary?: string;
   match_breakdown?: {
@@ -207,6 +242,8 @@ export interface JobApplication {;
 }
 ;
 
+}
+;
       missing: string[];
     },;
     experience_match?: {;
@@ -225,3 +262,7 @@ export interface JobApplication {;
 ;
 
 
+
+}
+;
+}

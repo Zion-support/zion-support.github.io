@@ -18,6 +18,9 @@ interface CareersProps {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/automate-test-improve-and-merge-code-646c
 export default function Careers({}: CareersProps) {
+interface CareersProps {
+  // Add props here as needed
+export default function Careers({}: CareersProps) {
   return (
     <div>
       <h1>Careers</h1>
@@ -39,3 +42,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}

@@ -19,6 +19,44 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
 
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers":
+
+
+    "authorization, x-client-info, apikey, content-type"},
+
+
+
+serve(async (req: Request) => {
+  // Handle CORS
+  if (req && req.method === "OPTIONS") {
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type"}
+serve(async (req: Request) => {
+  // Handle CORS
+  if (req && req.method === "OPTIONS") {
+    return new Response(null, {
+      status: 204
+      headers: corsHeaders})
+  }
+  try {
+    const supabase = createClient(
+    const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
+    
+
+
+    ),
+    
+    // Run the database function to create scheduled reminders
+    const { data, error } = await supabase.rpc("create_scheduled_reminders"),
+    
+    );
+    // Run the database function to create scheduled reminders
+    const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
     if (error) {
       console && console.error("Failed to create scheduled reminders:", error);
       return new Response(
@@ -88,6 +126,12 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
         const reminderResponse = await fetch(
 
 
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${supabaseServiceKey}`};
+            body: JSON && JSON.stringify(job && job.payload)}
+        );
+        
+        if (reminderResponse.ok) {
           // Update job status to completed
           const { error: updateError } = await supabase
             .from("scheduled_jobs")
@@ -107,6 +151,7 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
             .eq("id", job && job.id);
 
 
+            .eq("id", job && job.id);
           if (updateError) {
             console && console.error("Failed to update job status:", updateError)
           } else {
@@ -135,6 +180,7 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
             .eq("id", job.id)
 
 
+            .eq("id", job && job.id)
         }
       }
     }
@@ -196,6 +242,7 @@ serve (async (req: Request) => {
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
 const corsHeaders = {;
@@ -329,6 +376,9 @@ if ( {) {
   }
 });
 
+
+  }
+});
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1",;

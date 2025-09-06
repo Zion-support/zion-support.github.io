@@ -1,5 +1,25 @@
 
 
+import { useState  } from 'react';
+import { Resume  } from '@/types/resume';
+import { useFetchResume  } from './useFetchResume';
+import { useResumeActions  } from './useResumeActions';
+import { useWorkExperience  } from './useWorkExperience';
+import { useEducation  } from './useEducation';
+import { useSkills  } from './useSkills';
+import { useCertifications  } from './useCertifications';
+import { useResumeList  } from './useResumeList';
+export function useResume() {
+import {useState} from 'react';
+import {Resume} from '@/types/resume';
+import {useFetchResume} from './useFetchResume';
+import {useResumeActions} from './useResumeActions';
+import {useWorkExperience} from './useWorkExperience';
+import {useEducation} from './useEducation';
+import {useSkills} from './useSkills';
+import {useCertifications} from './useCertifications';
+import {useResumeList} from './useResumeList';
+export function useResume() {;
   const [resume, setResume] = useState<Resume | null>(null);
 
   const fetchResumeOperations = useFetchResume();
@@ -36,21 +56,19 @@
     const result = await fetchResumeOperations.fetchResume(resumeId);
 
 
+  // Override the fetch resume function to update local state
+  const fetchResume = async (resumeId?: string) => {
+    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
     if (result) {
       setResume(result)
     }
     return result
   }
 
-import {useState} from 'react';
 import {Resume} from '@/types / resume';
-import {useFetchResume} from './useFetchResume';
-import {useResumeActions} from './useResumeActions';
-import {useWorkExperience} from './useWorkExperience';
 import {use_education} from './use_education';
 import {use_skills} from './use_skills';
 import {use_certifications} from './use_certifications';
-import {useResumeList} from './useResumeList';
 export /**
  * use_resume - Function description
  */
@@ -169,6 +187,13 @@ if ( {) {
 export * from './useFetchResume';
 
 
+export * from './useResumeActions';
+export * from './useWorkExperience';
+export * from './use_education';
+export * from './use_skills';
+export * from './use_certifications';
+export * from './useResumeList';
+export * from './useResumeUtils';
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
@@ -183,7 +208,7 @@ export function useResume() {;
   const [resume, setResume] = useState<Resume | null>(null),;
   ;
   const fetchResumeOperations = useFetchResume();
-  const resumeActions = useResumeActions(),;
+  const resumeActions = useResumeActions();
   const workOperations = useWorkExperience(),;
   const educationOperations = useEducation(),;
   const skillsOperations = useSkills(),;
@@ -353,3 +378,4 @@ export * from './useResumeUtils';
 ;
 
 
+;

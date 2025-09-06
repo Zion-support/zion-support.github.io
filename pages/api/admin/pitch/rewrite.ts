@@ -14,6 +14,19 @@ Title: ${slide.title}\nContent:\n${slide.content}`,
     let title = slide.title,
     let content = slide.content,
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY })
+
+
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY })
+
+
+  try {
+    const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
+Title: ${slide.title}\nContent:\n${slide.content}`
+
+    let title = slide.title
+    let content = slide.content
     try {
       const chat = await client.chat.completions.create({
         model: 'gpt-4o-mini'
@@ -28,6 +41,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`,
       title = parsed.title || title,
       content = parsed.content || content
 
+      content = parsed.content || content
     } catch (err) {
       // keep original if AI fails;
     }
@@ -39,3 +53,4 @@ Title: ${slide.title}\nContent:\n${slide.content}`,
   }
 };
 
+};

@@ -28,6 +28,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/automate-test-improve-and-merge-code-646c
 export default function Bundleanalyzer({}: BundleanalyzerProps) {
 export default function Bundleanalyzer({}: BundleanalyzerProps) {
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+export default function Bundleanalyzer({}: BundleanalyzerProps) {
   return (
     <div>
       <h1>Bundleanalyzer</h1>
@@ -42,6 +45,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -50,3 +54,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

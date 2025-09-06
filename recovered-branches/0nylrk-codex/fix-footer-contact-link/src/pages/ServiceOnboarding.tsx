@@ -42,6 +42,7 @@ export default function ServiceOnboarding() {
 
   );
 
+  );
 }
     return <Navigate to="/login" replace />;
   }
@@ -56,6 +57,8 @@ export default function ServiceOnboarding() {
 
 
 
+  }
+  return (
               Showcase your services to potential clients. Create a professional profile;
               to get discovered on the Zion Marketplace.;
             </p>;
@@ -76,3 +79,16 @@ export default function ServiceOnboarding() {
 
 
 
+    </>;
+  ); export default function ServiceOnboarding () {
+  const {
+  user, isLoading 
+}= useAuth ();
+// If not authenticated, redirect to login if (!isLoading && !user) {}
+;
+
+}
+    </>;
+  );
+}
+;

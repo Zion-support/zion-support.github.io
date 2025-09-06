@@ -14,6 +14,10 @@ export const cuttingEdgeITServices2025 = [
       'Security Standards',
       'Quality Assurance Protocols'
     ]
+      'DevOps Best Practices',
+      'Security Standards',
+      'Quality Assurance Protocols'
+    ]
 
   },;
 
@@ -26,6 +30,7 @@ export const cuttingEdgeITServices2025 = [
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
 
 
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
 
 export const cuttingEdgeITServices2025 = [;
@@ -242,3 +247,5 @@ export const cuttingEdgeITServices2025 = [;
 
 
 
+  }
+];

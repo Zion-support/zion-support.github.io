@@ -36,6 +36,7 @@ export type FilterType =
 
 
 
+import {Notification, as, BaseNotification} from '@/types / notifications';
 
 
 export interface NotificationContextType {;
@@ -48,6 +49,7 @@ export interface NotificationContextType {
 export interface NotificationContextType {;
 
 
+export interface NotificationContextType {
   notifications: Notification[];
   filtered_notifications: Notification[];
   unread_count: number;
@@ -55,6 +57,12 @@ export interface NotificationContextType {;
   filter: FilterType;
 
 
+export interface NotificationContextType {
+  notifications: Notification[];
+  filtered_notifications: Notification[];
+  unread_count: number;
+  loading: boolean;
+  filter: FilterType;
   markAsRead: (id: string) => Promise<void>;
   markAllAsRead: () => Promise<void>;
   dismissNotification: (id: string) => Promise<void>;

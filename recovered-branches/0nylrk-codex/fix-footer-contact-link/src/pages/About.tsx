@@ -50,6 +50,9 @@ export default function About() {
                 implementation, we're creating a global community where the
                 future of technology is being built today.
 
+                By connecting talent with opportunity and innovation with
+                implementation, we're creating a global community where the
+                future of technology is being built today.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden">
@@ -72,6 +75,9 @@ export default function About() {
                 all, regardless of geographical or financial constraints. A
                 world where the best minds can collaborate to solve the most
 
+                We envision a world where AI and technology are accessible to
+                all, regardless of geographical or financial constraints. A
+                world where the best minds can collaborate to solve the most
                 challenging problems.
               </p>
               <p className="text-zion-slate-light text-lg mb-6">
@@ -85,6 +91,9 @@ export default function About() {
                 innovation, fostering a community that shapes the future of how
                 we live, work, and interact with technology.
 
+                Our goal is to become the premier destination for AI and tech
+                innovation, fostering a community that shapes the future of how
+                we live, work, and interact with technology.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden lg:order-first">
@@ -187,6 +196,7 @@ export default function About() {
 
   );
 
+  );
 }
 ;
 }

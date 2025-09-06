@@ -8,6 +8,19 @@
 export interface TokenConfig {
 
 export interface TokenConfig {
+export interface TokenConfig {;
+  tokenName: string;
+  tokenSymbol: string;
+  decimals: number;
+  totalSupply: number;
+  issueRate: number;
+  redeemRate: number;
+  minIssueAmount: number;
+  maxIssueAmount: number;
+}
+
+const DATA_DIR = path && path.join(process && process.cwd(), 'data');
+const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
 
 
 class TokenStore {
@@ -40,9 +53,33 @@ class TokenStore {
     maxIssueAmount: 10000
 
   }
+export interface TokenStoreData {}
+export interface TokenStoreData {};
+
+export interface TokenStoreData {;
+  }
+}
+export const tokenStore = new TokenStore();
+
+// Token storage utilities
+import { TokenConfig, TokenBalance } from './service';
+
+export interface TokenStorage {
+  configs: TokenConfig[];
+  balances: TokenBalance[];
+  lastUpdated: Date;
+}
+
+export class TokenStorageManager {
+  private storage: TokenStorage = {
+    configs: [],
+    balances: [],
+    lastUpdated: new Date()
+  };
+
+
+  }
 export interface TokenStoreData {
-
-
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -52,6 +89,40 @@ function readFromDisk(): TokenStoreData | null {
     ensureDataDir();
 
 
+}
+
+
+}
+
+
+  async loadConfigs(): Promise<TokenConfig[]> {
+    return this.storage.configs;
+  }
+
+  async saveBalances(balances: TokenBalance[]): Promise<void> {
+    this.storage.balances = balances;
+    this.storage.lastUpdated = new Date();
+  }
+
+  async loadBalances(): Promise<TokenBalance[]> {
+    return this.storage.balances;
+  }
+
+  async getStorage(): Promise<TokenStorage> {
+    return this.storage;
+  }
+
+  async clearStorage(): Promise<void> {
+    this.storage = {
+      configs: [],
+      balances: [],
+      lastUpdated: new Date()
+    };
+  }
+}
+
+// Singleton instance
+export const tokenStorage = new TokenStorageManager();
 
   set_config (new_config: Partial < TokenConfig>): void {
     this.config = { ...this.config, ...new_config }
@@ -66,6 +137,20 @@ export const token_store = new TokenStore ();
 
 
 
+    if (!fs.existsSync(STORE_FILE)) return null;
+    const raw = fs.readFileSync(STORE_FILE, 'utf8');
+    const parsed = JSON.parse(raw) as TokenStoreData;
+    return parsed;
+  } catch {
+    return null;
+  }
+  setConfig(newConfig: Partial<TokenConfig>): void {
+    this.config = { ...this.config, ...newConfig }
+  }
+}
+export const tokenStore = new TokenStore();
+
+}
 
 
 

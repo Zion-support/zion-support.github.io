@@ -32,6 +32,8 @@
 }
 
 
+
+
 }
     return null;
   }
@@ -81,3 +83,7 @@ if ( {) {
 
 
 
+    throw new Error ('Authentication required')
+  }
+  return user;
+}

@@ -10,6 +10,8 @@ import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -33,6 +35,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const event = {
 
 
+    eventId: uuidv4()
+    type: "talent_mobility" as const
+    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate }
+    originInstanceId: state.config.instanceId
+    version
+    timestamp: Date.now()}
+  upsertEvent(state, event)
+  writeState(state)
+  const body = { ...event, propagate: false }
+  const headers: Record<string, string> = {}
+  const sig = signPayload(body)
+  if (sig) headers["x-zion-signature"] = sig
+    eventId: uuidv4()
+    type: "talent_mobility" as const
+    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate }
+    originInstanceId: state.config.instanceId
+    version
+    timestamp: Date.now()}
 
 
 
@@ -62,3 +82,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };
 
+
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+};

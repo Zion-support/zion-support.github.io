@@ -990,3 +990,6 @@ export default Training,
 ;
 export default Training;
 ursor/automate-test-improve-and-merge-code-646c
+      </div>
+    </MainLayout>
+  );

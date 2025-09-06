@@ -750,6 +750,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
   "Client success focus"
 ];
 export default function TalentPage() {
@@ -784,6 +786,8 @@ export default function TalentPage() {;
   return (
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+    <MainLayout,
+    title="Careers - Zion Tech Group"
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Join Our Team - Zion Tech Group</title>
@@ -901,6 +905,7 @@ ursor/automate-test-improve-and-merge-code-646c
             <motion.div,
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+            <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
               animate={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -926,6 +931,7 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+              transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -1081,6 +1087,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
@@ -1154,6 +1162,7 @@ ursor/automate-test-improve-and-merge-code-646c
             <motion.div,
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+            <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -1279,6 +1288,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -1374,6 +1385,7 @@ ursor/automate-test-improve-and-merge-code-646c
             <motion.div,
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+            <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -1525,6 +1537,8 @@ ursor/automate-test-improve-and-merge-code-646c
               viewport={{ once: true }}
 >>>>>>> origin/main
 >>>>>>> main
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
@@ -1660,6 +1674,7 @@ ursor/automate-test-improve-and-merge-code-646c
             <motion.div,
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+            <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -1687,6 +1702,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See the Right Role?

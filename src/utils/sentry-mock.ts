@@ -143,6 +143,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+        next()
+  },
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -161,6 +163,8 @@ ursor/automate-test-improve-and-merge-code-646c
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
 const noop = () => {};
 const noopReturn = () => null;
+const noop = () => {};
+const noopReturn = () => null,;
 const noopPromise = () => Promise.resolve(),;
 // Mock Sentry instance with all common methods;
 const mockSentry = {;
@@ -222,6 +226,7 @@ const mockSentry = {;
       constructor() {}
 
 
+    }
     }
   },
 
@@ -286,6 +291,7 @@ const mock_sentry = {
     tracing_handler:;
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>;
         next ()
+        next ()
   },
   // Server - specific methods (Node.js);
   Handlers: {
@@ -303,6 +309,7 @@ const mock_sentry = {
     BrowserTracing: class BrowserTracing {
       constructor () {}
     }
+    }
   },
   // Integrations;
   Integrations: {
@@ -317,6 +324,7 @@ const mock_sentry = {
     },
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor () {}
+    }
     }
   },
   // Transport;
@@ -383,6 +391,8 @@ export const Severity = mockSentry && mockSentry.Severity;
 
 // Additional exports for compatibility
 export { mockSentry as Sentry };
+// Additional exports for compatibility
+export { mockSentry as Sentry }
 // All exports are already defined above
 
 
@@ -409,6 +419,7 @@ const mock_scope = {
   set_fingerprint: noop,
   clear: noop,
   addEventProcessor: noop
+  addEventProcessor: noop
 }
 // Mock transaction;
 const mock_transaction = {
@@ -420,6 +431,7 @@ const mock_transaction = {
   set_status: noop,
   setHttpStatus: noop,
   to_context: () => ({}),
+  updateWithContext: noop
   updateWithContext: noop
 }
 // Mock hub;
@@ -438,6 +450,7 @@ const mock_hub = {
   set_context: noop,
   configure_scope: noop,
   with_scope: (callback: (...args: any[]) => any) => callback (mock_scope),
+  start_transaction: () => mock_transaction
   start_transaction: () => mock_transaction
 }
 // Export default mock that covers all Sentry packages;

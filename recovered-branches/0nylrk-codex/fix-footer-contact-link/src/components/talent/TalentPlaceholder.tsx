@@ -47,6 +47,13 @@ function TalentPlaceholder() {
 
 
 
+  );
+
+  )
+  )
+
+  );
+  );
 }
 ;
 

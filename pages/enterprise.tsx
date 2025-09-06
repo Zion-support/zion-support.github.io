@@ -11,6 +11,14 @@ export default function EnterpriseRedirect() { return null }
 
 
 
+      destination: '/plans/enterprise',
+      permanent: false}}
+}
+export default function EnterpriseRedirect() { return null }
+import type { GetServerSideProps } from 'next',
+import type { GetServerSideProps } from 'next';
+
+import type { GetServerSideProps } from 'next',;
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -22,7 +30,6 @@ export default function EnterpriseRedirect() { return null }
 },
 ;
 export default function EnterpriseRedirect() { return null };
-import type { GetServerSideProps } from 'next';
 export const getServerSideProps: GetServerSideProps = async () => {;
   return {;
     redirect: {;
@@ -268,9 +275,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       permanent: false}}
 }
 export default function EnterpriseRedirect() { return null }
-import type { GetServerSideProps } from 'next',
 
-import type { GetServerSideProps } from 'next',;
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {

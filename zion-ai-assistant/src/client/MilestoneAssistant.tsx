@@ -120,7 +120,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
         const t = await res.text();
         throw new Error(t || "Failed to generate");
       }
-      const data = await res.json(),;
+      const data = await res.json();
       setItems(Array.isArray(data?.milestones) ? data.milestones : []);
       setExpandedIdx(0);
     } catch (e: any) {;
@@ -237,6 +237,10 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 
 
 
+                <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
+              <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
+                <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
+                <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", border_radius: 4, font_size: 12 }}>;
                   AI Suggested;
                 </span>;
               </div>;
@@ -483,3 +487,8 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
       </div>;
     </div>;
 
+;
+
+
+export default MilestoneAssistant;
+export default MilestoneAssistant;

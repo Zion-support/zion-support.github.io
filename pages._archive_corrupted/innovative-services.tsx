@@ -707,6 +707,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+;
                   href="mailto: klebe r@ziontechgroup && ziontechgroup.com"
                   className="inline-flex items-center px-8 py-3 border border-blue-600 text-blue-600 hover: b g-blue-50 font-medium rounded-lg transition-colors">;
                   <Mail className="w-5 h-5 mr-2"  />;

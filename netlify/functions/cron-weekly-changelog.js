@@ -42,6 +42,11 @@ exports && exports.handler = async function () {
     const commitsUrl = `https://api && api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
 
 
+      return {
+        statusCode: 200,
+        body: JSON && JSON.stringify({ ok: true, skipped: 'Missing GitHub envs' })
+      };
+    }
     const commits = await fetchJson(commitsUrl, token);
     const byAuthor = {}
     const messages = [];

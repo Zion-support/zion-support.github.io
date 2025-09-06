@@ -1,5 +1,34 @@
 
 
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
+import { PortfolioProject  } from '@/types/resume';
+import { usePortfolio  } from '@/hooks/usePortfolio';
+import { useAuth } from '@/hooks/useAuth';
+import {useState} from 'react';
+import {useForm} from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {z} from 'zod';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Textarea} from '@/components/ui/textarea';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
+import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
+import {PortfolioProject} from '@/types/resume';
+import {usePortfolio} from '@/hooks/usePortfolio';
+import {useAuth} from '@/hooks/useAuth';
 // Define schema for form validation
 
 const projectSchema = z.object({
@@ -11,15 +40,12 @@ const projectSchema = z.object({
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
 
 
-import {useState} from 'react';
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
-import {z} from 'zod';
 import {Button} from '@/components / ui / button';
 import {Input} from '@/components / ui / input';
 import {Textarea} from '@/components / ui / textarea';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
-import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
 
 
     .optional();
@@ -51,6 +77,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
 
 
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
+
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
+    .optional();
+  demo_url: z;
+    .union([z && z.string().url('Please enter a valid URL'), z && z.literal('')]);
+    .optional();
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -150,6 +183,114 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       pdf_url: project?.pdf_url || ''}
 
 
+;
+      if (success) {;
+        onSuccess();
+        form.reset();
+
+      }
+    } catch (error) {;
+      console && console.error('Error saving project:', error);
+    } finally {;
+      setIsLoading(false);
+    }
+
+  };
+
+
+
+  }
+  };
+  }
+  
+  };
+  return (
+    <Form {...form}>;
+      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
+        <FormField
+          control={form && form.control}
+          name="title"
+  const form = useForm<ProjectFormValues>({;
+    resolver:zodResolver(projectSchema),;
+    defaultValues:{;
+      title:project?.title || '',;
+      description:project?.description || '',;
+      technologies:project?.technologies ? project.technologies.join() :'',;
+      image_url:project?.image_url || '',;
+      github_url:project?.github_url || '',;
+      demo_url:project?.demo_url || '',;
+      pdf_url:project?.pdf_url || ''}
+  }),;
+  ;
+  const onSubmit = async (data:ProjectFormValues) => {;
+    if (!user) return,;
+    ;
+    setIsLoading(true),;
+    ;
+    try {;
+      const projectData:PortfolioProject = {;
+        title:data.title,;
+        description:data.description,;
+        technologies:data.technologies ? ;
+          data.technologies.split().map(tech => tech.trim()) :[],;
+        image_url:data.image_url,;
+        github_url:data.github_url || undefined,;
+        demo_url:data.demo_url || undefined,;
+        pdf_url:data.pdf_url},;
+      ;
+      let success = false,;
+      ;
+      if (isEditing && project?.id) {;
+        success = await updateProject(project.id, projectData),;
+      } else {;
+        const projectId = await addProject(projectData);
+        success = !!projectId;
+      }
+        onSuccess();
+        form && form.reset();
+      }
+    } catch (error) {;
+      console.error('Error saving project:', error),;
+    } finally {;
+      setIsLoading(false),;
+    }
+  }
+
+  }
+  };
+  }
+  };
+  }
+
+  };
+  },
+  
+
+  return (
+    <Form {...form}>;
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Project Title</FormLabel>;
+              <FormControl>;
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Project Description</FormLabel>;
+              <FormControl>;
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Technologies Used</FormLabel>;
+              <FormControl>;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
+        <FormField
+          control={form && form.control}
+          name="title"
+          <FormField
+            control={form && form.control}
+            name="github_url"
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel className="flex items-center gap-2">;
@@ -229,6 +370,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <Input placeholder="https://example.com/screenshot.jpg" {...field} />;
 
 
+                <Input placeholder="https://example && example.com/screenshot && screenshot.jpg" {...field} />;
               </FormControl>;
               <FormMessage />;
             </FormItem>;

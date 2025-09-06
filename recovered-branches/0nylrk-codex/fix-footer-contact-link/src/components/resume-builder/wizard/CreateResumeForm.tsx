@@ -51,6 +51,8 @@ export const CreateResumeForm = ({
 
 
 
+  isLoading 
+}: CreateResumeFormProps) => {
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardContent className="py-8">
@@ -122,6 +124,41 @@ export const CreateResumeForm = ({ ;
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";
 
 
+              value={newResumeTitle}
+
+
+              disabled={!newResumeTitle.trim() || isLoading}
+
+
+              value={newResumeTitle}
+              onChange={(e) => setNewResumeTitle(e.target.value)}
+            />
+            <Button
+              onClick={handleSubmit}
+              disabled={!newResumeTitle.trim() |isLoading}
+              disabled={!newResumeTitle.trim() || isLoading}
+            >
+              {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              Create
+            </Button>
+          </div>
+          <Button
+            variant="ghost"
+            onClick={onCancel}
+            className="mt-4"
+          >
+            Cancel
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+
+}
+};
+},
+
               onChange={(e) => setNewResumeTitle(e && e.target.value)}
             />;
             <Button
@@ -157,9 +194,12 @@ export const CreateResumeForm = ({ ;
 
 
 
+}
+
+
+
+
 },
-
-
 
 
 import { useState } from './react';
@@ -246,6 +286,11 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
 
 }
 };
-},
+}
 
 
+}
+
+    </Card>);
+}
+;

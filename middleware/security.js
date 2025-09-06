@@ -42,6 +42,14 @@ export function securityMiddleware(request) {
 ursor/automate-test-improve-and-merge-code-646c
 
 
+
+
+export function securityMiddleware(request) {;
+
+
+  const response = NextResponse.next();
+  const response = NextResponse && NextResponse.next();
+  const response = NextResponse.next();
   // Add security headers
   const headers = getSecurityHeaders();
   headers && headers.forEach(({ key, value }) => {
@@ -74,6 +82,11 @@ export function securityHeaders(req, res, next) {
 
 
 
+
+
+  return response;// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
@@ -140,6 +153,9 @@ function security_headers() {
 
 
 
+}
+
+}
 export function securityMiddleware(request) {
   const response = NextResponse.next();
   

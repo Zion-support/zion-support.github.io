@@ -67,6 +67,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Zap, Target, CheckCircle } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
+import Card from '../components/Card';
+import Button from '../components/Button';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
@@ -156,3 +158,4 @@ const AIServices: React.FC = () => {
 export default AIServices;
 ursor/integrate-build-improve-and-re-verify-9d47
 ursor/automate-test-improve-and-merge-code-646c
+export default AIServices;

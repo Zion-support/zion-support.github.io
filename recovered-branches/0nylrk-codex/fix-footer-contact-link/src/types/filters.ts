@@ -16,6 +16,11 @@ export interface FilterSidebarProps {
   experience_range: [number, number];
 
 
+  toggleRegion: (region: string) => void;
+  priceRange: [number, number];
+  setPriceRange: (range: [number, number]) => void;
+  experience_range: [number, number];
+
   setExperienceRange: (range: [number, number]) => void;
   expanded_sections: {
     skills: boolean;
@@ -67,6 +72,7 @@ export interface SkillsFilterProps extends FilterComponentProps {
 
   selectedSkills: string[];
 
+  selectedSkills: string[];
   toggleSkill: (skill: string) => void;
 }
 export interface AvailabilityFilterProps extends FilterComponentProps {
@@ -83,6 +89,9 @@ export interface RegionFilterProps extends FilterComponentProps {
 export interface ExperienceFilterProps extends FilterComponentProps {
   experienceRange: [number, number];
 
+}
+export interface ExperienceFilterProps extends FilterComponentProps {
+  experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void;
 }
 export interface PriceFilterProps extends FilterComponentProps {
@@ -93,6 +102,7 @@ export interface PriceFilterProps extends FilterComponentProps {
 
 
 
+  searchTerm: string
 
 }
 export interface SearchFilterProps {
@@ -112,6 +122,14 @@ export interface SortFilterProps {
   setSortOption: (option: string) => void;
 
 
+  search_term: string,
+  setSearchTerm: (term: string) => void;
+}
+export interface SortFilterProps {
+
+  sortOption: string
+
+  setSortOption: (option: string) => void
 }
 ;
 export interface SortFilterProps {;
@@ -127,3 +145,6 @@ export interface SearchFilterProps {}
 
 
 
+export interface SearchFilterProps {}
+;
+;

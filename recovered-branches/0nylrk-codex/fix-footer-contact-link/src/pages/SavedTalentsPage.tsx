@@ -78,6 +78,11 @@ if ( {) {
             talent_profile (;
 
 
+            talent_profile (
+
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
@@ -190,6 +195,7 @@ if ( {) {
             item => item.talent_profile as unknown as TalentProfile);
           setSavedTalents (talent_profiles);
         }
+      } catch (error) {
 
           .eq("user_id", user && user.id);
 
@@ -253,6 +259,33 @@ if ( {) {
       }
     }
 
+    fetchSavedTalents()
+  }, [user]);
+  const handleViewProfile = (talentId: string) => {
+    navigate(`/talent/${talentId}`)
+    },
+
+    fetchSavedTalents()
+  }, [user]),
+
+  const handleViewProfile = (talentId: string) => {
+    navigate(`/talent/${talentId}`)
+  },
+
+    toast({
+      title: "Hire Request Sent"
+      description: `A hire request has been sent to ${talent.full_name}.`})
+
+
+  },
+
+
+
+  const handleRequestHire = (talent: TalentProfile) => {
+    // // // console.log("Request to hire:", talent),
+    toast({
+      title: "Hire Request Sent"
+      description: `A hire request has been sent to ${talent.full_name}.`})
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
       if (!user) {
@@ -298,12 +331,44 @@ if ( {) {
         if (error) {;
           throw error;
 
+        setSavedTalents(prevTalents =>
+          prevTalents.filter(talent => talent.id !== talentId)
+        );
         }
   
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         );
 
+        }
+  
+        setSavedTalents(prevTalents =>
+          prevTalents.filter(talent => talent.id !== talentId)
+        ),
+        toast({
+          title: "Talent Removed"
+          description: "Talent removed from saved list."})
+      } else {
+        // Add to saved talents
+        const { error } = await supabase
+          .from('saved_talents')
+          .insert([{ user_id: user.id, talent_id: talentId }])
+        if (error) {
+          throw error
+        }
+        // Fetch the updated talent profile and add it to the list
+        const { data: talentData, error: talentError } = await supabase
+          .from('talent_profiles')
+          .select('*')
+          .eq('id', talentId)
+          .single(),
+  
+
+
+        if (talentError) {
+          console.error("Error fetching talent profile:", talentError);
+        if (talentError) {
+          console.error("Error fetching talent profile:", talentError),
           toast({
             title: "Error"
             description: "Failed to update saved talents. Please try again later."
@@ -315,6 +380,7 @@ if ( {) {
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
 
 
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
           toast({
             title: "Talent Saved"
             description: "Talent saved to your list."})
@@ -325,11 +391,101 @@ if ( {) {
       console.error("Error toggling saved talent:", error),
 
 
+      console.error("Error toggling saved talent:", error),
       toast({
         title: "Error"
         description: "Failed to update saved talents. Please try again later."
         variant: "destructive"})
 
+  return (
+    <>;
+      <SEO
+        title="Saved Talents | Zion AI Marketplace"
+        description="View and manage your saved talents in the Zion AI Marketplace"
+
+    },;
+;
+    fetchSavedTalents(),;
+  }, [user]),;
+;
+  const handleViewProfile = (talentId:string) => {;
+    navigate(`/talent/${talentId}`),;
+  },;
+;
+  const handleRequestHire = (talent:TalentProfile) => {;
+    // // // console.log("Request to hire:", talent),;
+    toast({;
+      title:"Hire Request Sent",;
+      description:`A hire request has been sent to ${talent.full_name}.`}),;
+  },;
+;
+  const handleToggleSave = async (talentId:string, isCurrentlySaved:boolean) => {;
+    try {;
+      if (!user) {;
+        console.warn("User not authenticated."),;
+        return;
+      }
+  ;
+      if (isCurrentlySaved) {;
+        // Remove from saved talents;
+        const { error } = await supabase;
+          .from('saved_talents');
+          .delete();
+          .eq('user_id', user.id);
+          .eq('talent_id', talentId),;
+  ;
+        if (error) {;
+          throw error,;
+        }
+  ;
+        setSavedTalents(prevTalents =>;
+          prevTalents.filter(talent => talent.id !== talentId);
+        ),;
+        toast({;
+          title:"Talent Removed",;
+          description:"Talent removed from saved list."}),;
+      } else {;
+        // Add to saved talents;
+        const { error } = await supabase;
+          .from('saved_talents');
+          .insert([{ user_id:user.id, talent_id:talentId }]),;
+  ;
+        if (error) {;
+          throw error,;
+        }
+  ;
+        // Fetch the updated talent profile and add it to the list;
+        const { data:talentData, error:talentError } = await supabase;
+          .from('talent_profiles');
+          .select('*');
+          .eq('id', talentId);
+          .single(),;
+  ;
+        if (talentError) {;
+          console.error("Error fetching talent profile:", talentError),;
+          toast({;
+            title:"Error",;
+            description:"Failed to update saved talents. Please try again later.",;
+            variant:"destructive"}),;
+          return,;
+        }
+  ;
+        if (talentData) {;
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),;
+          toast({;
+            title:"Talent Saved",;
+            description:"Talent saved to your list."}),;
+        }
+      }
+    } catch (error) {;
+      console.error("Error toggling saved talent:", error),;
+      toast({;
+        title:"Error",;
+        description:"Failed to update saved talents. Please try again later.",;
+        variant:"destructive"}),;
+    }
+    }
+  }
     }
 
   },
@@ -353,6 +509,54 @@ if ( {) {
   },;
 ;
 
+              <TalentCard
+
+;
+        setSavedTalents(prevTalents =>;
+          prevTalents.filter(talent => talent.id !== talentId);
+        ),;
+        toast({;
+          title: "Talent Removed",;
+          description: "Talent removed from saved list."});
+      } else {;
+        // Add to saved talents;
+        const { error } = await supabase;
+          .from('saved_talents');
+          .insert([{ user_id: user.id, talent_id: talentId }]),;
+        if (error) {;
+          throw error;
+        }
+;
+        // Fetch the updated talent profile and add it to the list;
+        const { data: talentData, error: talentError } = await supabase;
+          .from('talent_profiles');
+          .select('*');
+          .eq('id', talentId);
+          .single(),;
+        if (talentError) {;
+          console.error("Error fetching talent profile:", talentError),;
+          toast({;
+            title: "Error",;
+            description: "Failed to update saved talents. Please try again later.",;
+            variant: "destructive"}),;
+          return;
+        }
+;
+        if (talentData) {;
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),;
+          toast({;
+            title: "Talent Saved",;
+            description: "Talent saved to your list."});
+        }
+      }
+    } catch (error) {;
+      console.error("Error toggling saved talent:", error),;
+      toast({;
+        title: "Error",;
+        description: "Failed to update saved talents. Please try again later.";
+        variant: "destructive"});
+    }
+  };
   return (;
     <>;
       <SEO;
@@ -509,6 +713,40 @@ if ( {) {
 
 
 
+        {isLoading ? (;
+          <div className="text-center py-8">Loading saved talents...</div>;
+        ) : savedTalents.length === 0 ? (;
+          <div className="text-center py-8">No talents saved yet.</div>;
+        ) : (;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">;
+            {savedTalents.map((talent) => (;
+              <TalentCard;
+                key={talent.id}
+                talent={talent}
+                onViewProfile={handleViewProfile}
+                onRequestHire={handleRequestHire}
+                isSaved={true}
+                onToggleSave={handleToggleSave}
+                isAuthenticated={!!user}
+              />
+            ))}
+          </div>
+        )}
+
+      </div>
+      <Footer />
+    </>
+  )
+}
+      </div>;
+      <Footer />;
+    </>;
+  );
+}
+                isAuthenticated={!!user}
+              />;            ))}
+          </div>;
+        )}
       </div>;
       <Footer />;
     </>;
@@ -523,6 +761,7 @@ useEffect ( () => {
   const fetchSavedTalents = async () => {
   setIsLoading (true);
 try {
+  if (!user) {}const {
   if (!user) {}const {
   data, error 
 }= await supabase .from ("saved talents") user id;

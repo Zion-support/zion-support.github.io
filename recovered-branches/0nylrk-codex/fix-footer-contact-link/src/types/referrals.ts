@@ -15,6 +15,15 @@ export interface ReferralCode {;
 
 
 
+export interface Referral {;
+
+export interface Referral {
+
+export interface Referral {;
+export interface Referral {
+
+export interface Referral {;
+export interface Referral {
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -30,6 +39,8 @@ export interface ReferralCode {;
   reward_issued: boolean;
   reward_issued_at: string | null;
 
+  reward_issued: boolean;
+  reward_issued_at: string | null;
 }
 
 
@@ -45,8 +56,8 @@ export interface ReferralReward {
 export interface ReferralReward {;
 
 }
+export interface ReferralReward {}
 export interface ReferralReward {
-
   id: string;
   user_id: string;
   referral_id: string;
@@ -71,6 +82,18 @@ export interface ReferralReward {
 }
 
 
+export interface ReferralStats {;
+
+
+  totalReferrals: number;
+  pendingReferrals: number;
+  completedReferrals: number;
+  totalRewards: number;
+}
+
+  expires_at: string | null;
+}
+
 ;
 export interface ReferralStats {;
   totalReferrals: number,;
@@ -82,3 +105,4 @@ export interface ReferralStats {;
 
 
 
+}

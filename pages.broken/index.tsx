@@ -23,6 +23,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export default function Index({}: IndexProps) {
+
+
+export default function Index({}: IndexProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -50,6 +53,10 @@ export default function Index(): any ({}: IndexProps) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+interface IndexProps {;
+  // Add props here as needed;
+}
+export default function Index(): any ({}: IndexProps) {;
   return (
     <div>
       <h1>Index</h1>

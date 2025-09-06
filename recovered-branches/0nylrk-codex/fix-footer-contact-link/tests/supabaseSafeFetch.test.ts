@@ -36,3 +36,4 @@ it('safeFetch throws when fetch rejects', async () => {;
 
 
 
+;

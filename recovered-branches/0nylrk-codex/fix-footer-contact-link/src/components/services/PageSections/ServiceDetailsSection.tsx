@@ -10,6 +10,7 @@ interface ServiceDetailsSectionProps {
 export function ServiceDetailsSection({
   selectedCountry,
   setSelectedCountry
+  setSelectedCountry
 }: ServiceDetailsSectionProps) {
   return (
     <div id="service-details" className="mt-12">

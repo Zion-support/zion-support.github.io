@@ -12,6 +12,10 @@ import ServiceOnboarding from "@/pages/ServiceOnboarding";
 const AuthRoutes = () => {
 
 
+const AuthRoutes = () => {;
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import Login from "@/pages/Login",
@@ -87,6 +91,9 @@ const AuthRoutes = () => {;
     <Routes>;
       {/* Auth Routes */}
 
+  return (
+    <Routes>;
+      {/* Auth Routes */}
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -124,6 +131,9 @@ const AuthRoutes = () => {;
 };
 
 
+};
+};
+
 
 
 },
@@ -134,6 +144,19 @@ const AuthRoutes = () => {;
 export default AuthRoutes;
 
 
+export default AuthRoutes;
+
+import { Fragment } from './react';
+import { Route, Routes } from './react-router-dom';
+import Login from "@/pages / Login";
+import Signup from "@/pages / Signup";
+import ForgotPassword from "@/pages / ForgotPassword";
+import UpdatePassword from "@/pages / UpdatePassword";
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import Onboarding from "@/pages / Onboarding";
+import TalentOnboarding from "@/pages / TalentOnboarding";
+import ServiceOnboarding from "@/pages / ServiceOnboarding";
+const AuthRoutes = () =>: any {
   return (
     <Routes>;
       {/* Auth Routes */}

@@ -23,6 +23,9 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
       {topSkills.map((skill) => (
 
 
+  return (
+    <div className="flex flex-wrap gap-1 mb-5">
+      {topSkills.map((skill) => (
         <Badge
           key={skill}
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
@@ -67,6 +70,9 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
   );
 }
 
+
+  );
+}
 
 import React from './react';
 import { Badge  } from '@/components / ui / badge';

@@ -485,6 +485,8 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default LoginPage
+;
                       href="mailto: klebe r@ziontechgroup && ziontechgroup.com"
                       className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold hover: b g-blue-50 transition-colors text-center">;
                       Email Support;

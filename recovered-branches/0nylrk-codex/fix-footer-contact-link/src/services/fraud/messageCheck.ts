@@ -50,6 +50,9 @@ if ( {) {
 
 
 
+    severity
+
+
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -58,6 +61,7 @@ import { MessageAnalysisResult } from './types',;
  * Check message for suspicious content;
  */;
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
+  const analysis = analyzeContent(messageContent);
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues;
   let severity: FraudSeverity = 'safe',;
@@ -72,6 +76,8 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     ...analysis;
     severity;
 
+  }
+};
   }
 };
 ;
@@ -101,3 +107,8 @@ export const checkMessage = (messageContent:string):MessageAnalysisResult => {;
 
 }
 
+  }
+};
+    severity;
+  }
+}

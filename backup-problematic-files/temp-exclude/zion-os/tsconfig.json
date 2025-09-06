@@ -41,4 +41,6 @@
   "exclude": ["node_modules"]
 >>>>>>> main:clean-build/tsconfig.json
 ursor/automate-test-improve-and-merge-code-646c
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

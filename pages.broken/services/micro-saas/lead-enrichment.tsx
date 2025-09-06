@@ -23,6 +23,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export default function Leadenrichment({}: LeadenrichmentProps) {
+
+
+export default function Leadenrichment({}: LeadenrichmentProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -50,6 +53,10 @@ export default function Leadenrichment(): any ({}: LeadenrichmentProps) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+interface LeadenrichmentProps {;
+  // Add props here as needed;
+}
+export default function Leadenrichment(): any ({}: LeadenrichmentProps) {;
   return (
     <div>
       <h1>Leadenrichment</h1>

@@ -37,6 +37,7 @@ import { z } from "zod",;
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse } from "../shared/types.js",;
 import { generateMilestones } from "./milestoneGenerator.js",;
 const app = express();
+const app = express();
 app.use(cors()),;
 app.use(express.json({ limit: "1mb" })),;
 const inputSchema = z.object({;
@@ -115,3 +116,7 @@ app.listen(port, () => {;
 
 
 
+});
+
+
+});

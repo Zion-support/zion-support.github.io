@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import type { BlogPost as BlogPostType } from "@/types/blog";
 
+  Linkedin
+} from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { AppLayout } from "@/layout/AppLayout";
 // Importing the sample blog posts - in a real app, you would fetch this from an API
@@ -24,6 +26,7 @@ export default function BlogPost() {
 
   const { slug } = useParams() as { slug: string };
 
+  const { slug } = useParams() as { slug: string };
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
@@ -90,6 +93,9 @@ export default function BlogPost() {
   if (!post) {
     return (
 
+
+    return (
+    return (
 
       <AppLayout>
         <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -241,6 +247,66 @@ export default function BlogPost() {
                     </div>
 
 
+    );
+  }
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">;
+              <div className="flex items-center mb-4 sm:mb-0">;
+                <img;
+                  src={post.author.avatarUrl} ;
+                  alt={post.author.name} ;
+                  className="w-12 h-12 rounded-full mr-3";
+                  onError={(e) => {;
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";
+                  }}
+                />;
+                <div>;
+                  <p className="text-white font-medium">{post && post.author.name}</p>;
+                  <p className="text-sm text-zion-slate-light">{post && post.author.title}</p>;
+                </div>;
+              </div>;
+
+              <div className="flex items-center space-x-4">;
+                <div className="flex items-center text-zion-slate-light">;
+                  <Calendar className="h-4 w-4 mr-1" />;
+                  <span className="text-sm">{post && post.publishedDate}</span>;
+                </div>;
+                <div className="flex items-center text-zion-slate-light">;
+                  <Clock className="h-4 w-4 mr-1" />;
+                  <span className="text-sm">{post && post.readTime}</span>;
+                </div>;
+                <div className="relative">;
+                  <Button
+                    variant="ghost" 
+                    size="sm"
+                    className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
+                    onClick={() => setShowShareMenu(!showShareMenu)}
+                  >;
+                    <Share2 className="h-4 w-4 mr-1" />;
+                    <span className="text-sm">Share</span>;
+                  </Button>;
+                        <Facebook className="h-4 w-4 mr-2" />;
+                        <span>Facebook</span>;
+                      </a>;
+                      <a;
+                        href={getShareUrl('twitter')} ;
+                        target="_blank";
+                        rel="noopener noreferrer";
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white";
+                      >;
+                        <Twitter className="h-4 w-4 mr-2" />;
+                        <span>Twitter</span>;
+                      </a>;
+                        rel="noopener noreferrer"
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
+                      <a;
+                        href={getShareUrl('linkedin')} ;
+                        target="_blank";
+                        rel="noopener noreferrer";
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white";
+                      >;
+                        rel="noopener noreferrer"
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
                         <Linkedin className="h-4 w-4 mr-2" />;
                         <span>LinkedIn</span>;
                       </a>;
@@ -261,6 +327,9 @@ export default function BlogPost() {
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
 
+          {/* Featured image */}
+          <div className="mb-12 max-w-5xl mx-auto">
+            <div className="aspect-[21/9] rounded-lg overflow-hidden">
               <img
                 src={post.featuredImage}
                 alt={post.title}
@@ -404,6 +473,9 @@ export default function BlogPost() {
                             target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
 
 
+                  #{tag}
+                </span>;
+              ))}
                           }}
                         />;
                       </div>;
@@ -660,6 +732,15 @@ if ( {) {
 
 
 
+              <Button;
+                variant="outline";
+                className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";
+                asChild;
+              >;
+                <Link to="/blog">;
+                  <ChevronLeft className="mr-2 h-4 w-4" />;
+                <Link to="/blog">;
+                  <ChevronLeft className="mr-2 h-4 w-4" />;
                   All Articles;
                 </Link>;
               </Button>;
@@ -675,3 +756,63 @@ if ( {) {
 
 
 
+    </AppLayout>;
+  ); export default function BlogPost () {
+  const {
+  slug 
+}= useParams () as {
+  slug: string 
+};
+const navigate = useNavigate ();
+const [post, setPost] = useState<BlogPostType | null> (null);
+const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]> ([]);
+const [showShareMenu, setShowShareMenu] = useState (false);
+useEffect ( () => {
+  //Find the current post by slug const currentPost = BLOG POSTS.find (p => p.slug === slug);
+setPost (currentPost);
+//Find related posts (same category, excluding current post) const related = BLOG POSTS.filter (p => p.id !== currentPost.id && (p.category === currentPost.category || p.tags.some (tag => currentPost.tags.includes (tag) ) ) 
+}//Scroll to top when post changes window.scrollTo (0, 0) 
+}, [slug, navigate]);
+if (!post) {
+  return (<AppLayout> <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center" > <div className="animate-pulse" >Loading article...</div> </div> </AppLayout> switch (platform) {
+  case 'facebook': return `https://www.facebook.com/sharer/sharer.php?u=$ {
+  url 
+}`;
+case 'twitter': 
+}
+;
+
+};
+return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" asChild > <Link to="/blog" > <ArrowLeft className="mr-2 h-4 w-4" /> Back to all articles </Link> </Button> </div> 
+}
+}/> <div> <p className="text-white font-medium" > {
+  post.author.name 
+}</p> <p className="text-sm text-zion-slate-light" > {
+  post.author.title 
+}</p> </div> </div> <div className="flex items-center space-x-4" > <div className="flex items-center text-zion-slate-light" > <Calendar className="h-4 w-4 mr-1" /> <span className="text-sm" > {
+  post.publishedDate 
+}</span> </div> <div className="flex items-center text-zion-slate-light" > <Clock className="h-4 w-4 mr-1" /> <span className="text-sm" > {
+  post.readTime 
+}</span> relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {
+  getShareUrl ('facebook') 
+}target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>) 
+}</div> </div> </div> </div> 
+}
+}tag 
+}className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {
+  tag 
+}</span>) ) 
+}</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <img 
+}
+}/> </div> <div className=" p-4"> <span className=" text-xs text-zion-cyan"> {
+  relatedPost.category 
+}</span> <h4 className=" text-white font-bold mt-1 line-clamp-2"> {
+  relatedPost.title 
+}</h4> 
+}</div> </div>) 
+}<Button asChild > <Link to=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </AppLayout>) 
+}
+    </AppLayout>;
+  );
+}
+;

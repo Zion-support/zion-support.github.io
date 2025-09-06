@@ -5,6 +5,10 @@ import { SearchSuggestion } from '@/types/search';
 
 
 
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion } from "@/types/search";
+// Shared data source for marketplace listings
+export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
 
     id: 'ai-model-1'
@@ -23,10 +27,12 @@ import { SearchSuggestion } from '@/types/search';
     location: 'Global',
     availability: 'Immediate',
     ai_score: 98
+    ai_score: 98
   },
   {
     location: 'North America',
     availability: '4 - 6 Weeks',
+    ai_score: 92
     ai_score: 92
   },
   {
@@ -34,21 +40,26 @@ import { SearchSuggestion } from '@/types/search';
     location: 'Global',
     availability: '2 - 3 Weeks',
     ai_score: 95
+    ai_score: 95
   },
   {
     location: 'Global',
     availability: 'Immediate',
+    ai_score: 88
     ai_score: 88
   },
   {
     location: 'North America',
     availability: '1 - 2 Weeks',
     ai_score: 90
+    ai_score: 90
   },
   {
     featured: true,
     location: 'Global',
     availability: 'Immediate',
+    ai_score: 94
+  } ];      name: "VisionTech AI";
     ai_score: 94
   } ];      name: "VisionTech AI";
       id: "visiontech";
@@ -254,15 +265,28 @@ export const generateFilterOptions = () => {
     ...new Set(
       MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.location).filter(Boolean)
     )
+    )
   ].sort();
   const availability = [
     ...new Set(
       MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.availability).filter(Boolean)
     )
+    )
   ].sort();
 
     productTypes: productTypes && productTypes.map(type => ({
       label: type,
+      value: type
+    })),
+    locations: locations && locations.map(location => ({
+      label: location,
+      value: location
+    })),
+    availabilityOptions: availability && availability.map(item => ({
+      label: item,
+      value: item
+    })),
+    ratingOptions: [1, 2, 3, 4, 5]
       value: type
     })),
     locations: locations && locations.map(location => ({
@@ -315,6 +339,9 @@ export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
 
 
+// Generate filter options for sidebar
+export const generateFilterOptions = () => {
+  // Extract unique categories, locations, and availability options from listings
       avatar_url: "https://images.unsplash.com / photo - 1600180758890 - 6b94519a8ba6?auto = format & fit = crop & w=100 & h=100"}
     images: ["https://images.unsplash.com / photo - 1624355834900 - 99cd2071585b?auto = format & fit = crop & w=800 & h=500"];
     created_at: "2023 - 12 - 10T16:45:00.000Z";
@@ -339,6 +366,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Content generation',
     'Code assistant',
     'Virtual assistant',
+    'Enterprise AI solutions'
     'Enterprise AI solutions'
   ];
 ;
@@ -416,12 +444,40 @@ export const MIN_PRICE = Math.min(
 );
 reviewCount: 58;
 
+    ...new Set (MARKETPLACE_LISTINGS.map (listing => listing.category))
+  ].sort ();
+  const locations = [;
+    ...new Set (
+      MARKETPLACE_LISTINGS.map (listing => listing.location).filter (Boolean))
+  ].sort ();
+  const availability = [;
+    ...new Set (
+      MARKETPLACE_LISTINGS.map (listing => listing.availability).filter (Boolean))
+  ].sort ();
+;
+    product_types: product_types.map (type => ({
+      label: type,
+      value: type
+    })),
+    locations: locations.map (location => ({
+      label: location,
+      value: location
+    })),
+    availability_options: availability.map (item => ({
+      label: item,
+      value: item
+    })),
 featured: true;
 location: "Global";
 availability: "Immediate";
 aiScore: 98 
 };
 
+featured: true;
+location: "Global";
+availability: "Immediate";
+ai_score: 98;
+}
 rating: 4.8;
 review_count: 32;
 location: "North America";
@@ -477,6 +533,10 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 
 
 
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+ratingOptions: [1, 2, 3, 4, 5] 
+
+};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
     ratingOptions: [1, 2, 3, 4, 5]
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion } from "@/types/search",;
@@ -626,6 +686,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {;
 // Generate filter options for sidebar;
 export const generateFilterOptions = () => {;
   // Extract unique categories, locations, and availability options from listings;
+  const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort();
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort();
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),;
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),;

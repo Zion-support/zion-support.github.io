@@ -35,6 +35,14 @@ import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 
 
 
+id: "match"
+      id: "match"
+      label: "Receive your first job match"
+      completed: onboardingStatus.matchReceived
+      link: "/talent-dashboard"
+      action: "View Matches"
+    }
+  ];
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
@@ -44,6 +52,10 @@ import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
     }
   ];
 
+
+      action: "View Matches"
+    }
+  ];
 
   return <OnboardingTracker steps={steps} />;
 }
@@ -69,12 +81,14 @@ function TalentOnboardingSteps() {
       completed: onboarding_status.profile_completed,
       link: "/profile",
       action: "Update"
+      action: "Update"
     },
     {
       id: "skills",
       label: "Add your top skills",
       completed: onboarding_status.skills_added,
       link: "/profile / skills",
+      action: "Add Skills"
       action: "Add Skills"
     },
     {
@@ -83,12 +97,15 @@ function TalentOnboardingSteps() {
       completed: onboarding_status.availability_set,
       link: "/profile / availability",
       action: "Set"
+      action: "Set"
     },
     {
       id: "match",
       label: "Receive your first job match",
       completed: onboarding_status.match_received,
       link: "/talent - dashboard",
+      action: "View Matches"
+    }
       action: "View Matches"
     }
   ];
@@ -105,6 +122,7 @@ import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",;
 ;
 export function TalentOnboardingSteps() {;
   const { user } = useAuth(),;
+  const onboardingStatus = useOnboardingStatus();
   const onboardingStatus = useOnboardingStatus();
   ;
   const steps:OnboardingStep[] = [;
@@ -168,6 +186,8 @@ return <OnboardingTracker steps= {
   steps 
 }/> 
 }
+      action: "View Matches"
+    }
       action: "View Matches"
     }
   ];

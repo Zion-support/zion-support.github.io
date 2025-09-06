@@ -15,6 +15,31 @@
 
 
   link: string;
+  marketPosition?: string;
+  targetAudience?: string;
+  trialDays?: number;
+  setupTime?: string;
+  roi?: string;
+  competitors?: string[],
+  marketSize?: string;
+  growthRate?: string;
+  text_color: string;
+  link: string;  market_position?: string;
+  target_audience?: string;
+  trial_days?: number;
+  setup_time?: string;
+  category: string;
+  real_service: boolean;  technology?: string[];  integrations?: string[];
+  use_cases?: string[];
+  roi?: string;
+  competitors?: string[];
+  market_size?: string;
+  growth_rate?: string;
+  variant?: ServiceVariant;
+  customers?: number;
+  rating?: number;
+
+};
 
 export const realServicesQ32025: Q3Service[] = [
   {
@@ -35,6 +60,96 @@ export const realServicesQ32025: Q3Service[] = [
 ];
 
 
+      'Weekly executive summaries',
+    tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
+    price: '$599',
+    period: '/month',
+    description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
+    features: [
+      'Churn and retention analysisCohort and funnel dashboards',
+      'Price testing and packaging experimentsRevenue leakage detection',
+      'Revenue forecasting modelsWeekly executive summaries'
+    targetAudience: 'SaaS startups, PLG companies, finance and growth teams';
+    trialDays: 14;
+    setupTime: '1–2 weeks';
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / services / subscription - analytics - revenue - optimization',
+    market_position:;
+      'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.',    features: [;
+      'Churn and retention analysis_cohort and funnel dashboards_price testing and packaging experiments_revenue leakage detection_revenue forecasting models_weekly executive summaries';
+    ];
+    popular: true;
+    icon: '📊';
+    color: 'from - emerald - 600 to - teal - 700';
+    text_color: 'text - emerald - 300';
+    link: 'https://ziontechgroup.com / services / subscription - analytics - revenue - optimization';
+    market_position: 'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.',
+    target_audience: 'SaaS startups, PLG companies, finance and growth teams';
+    trial_days: 14;
+    setup_time: '1–2 weeks';
+    category: 'AI & Data';
+    real_service: true;
+    technology: ['dbt_snowflake / BigQuerySegment / GA4Python'];
+    integrations: ['StripePaddleChargebeeLemon Squeezy'];
+    use_cases: ['Reduce churn_price optimization_board - ready revenue KPIs'];
+    roi: '3–10% ARR lift from churn reduction and pricing wins.';
+    competitors: ['ProfitWell MetricsChartMogulBaremetrics'];
+    market_size: '$30B+ subscription economy tooling';
+    growth_rate: '30% YoY';
+    variant: 'ai - futuristic';
+    customers: 24;
+    // @ts - expect - error augment common shape for UI components that expect contact_info;
+    contact_info: contact;
+  }
+  {
+    name: 'WordPress Internal Linking Automation';
+    tagline: 'AI - guided internal links that improve SEO structure and topical authority';
+    price: '$299';
+    period: '/month'
+    description: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.';
+    features: [;
+      'Automatic link suggestions and anchors_orphan page and pillar clustering_click - through rate experiments_reporting and recommendations_sitemap and crawl improvements';
+    ];
+    color: 'from - purple - 600 to - pink - 600';
+    text_color: 'text - purple - 200';
+    link: 'https://ziontechgroup.com / services / wordpress - internal - linking - automation';
+    market_position: 'Comparable to Link Whisper with managed tuning and reporting.',
+    target_audience: 'Content sites, ecommerce, publishers on WordPress';
+    trial_days: 7;
+    setup_time: '2–4 days';
+    category: 'Growth & Marketing';
+    real_service: true;
+    technology: ['WordPressGA4Looker Studio'];
+    integrations: ['Link WhisperYoast / RankMathSearch Console'];
+    use_cases: ['Boost organic traffic_fix site structure_improve crawl and CTR'];
+    roi: '5–25% organic uplift in 8–12 weeks on content libraries.';
+    competitors: ['Link WhisperInternal Link Juicer'];
+    customers: 30;
+    // @ts - expect - error augment common shape for UI components that expect contact_info;
+    contact_info: contact;
+  }
+  {
+    name: 'Ecommerce Reviews & UGC Activation';
+    tagline: 'Deploy reviews and UGC workflows that increase trust and conversion';
+    price: '$999';
+      'Reviews widget integration',
+      'Email / SMS post - purchase triggers',
+      'Photo / video UGC capture',
+      'Moderation and syndication',
+      'Conversion impact reporting'
+    ],
+    icon: '⭐',
+    features: [
+
+    // @ts-expect-error augment common shape for UI components that expect contactInfo
+    contactInfo: contact
+  }];    contactInfo: contact
+  }
+];
+    contactInfo: contact
+  },
+    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
@@ -50,6 +165,7 @@ export const realServicesQ32025: Q3Service[] = [
   },
   {
     id: 'digital-product-commerce-stack',
+    name: 'Digital Product Commerce Stack'
     name: 'Digital Product Commerce Stack'
     ],
     icon: '🛒',
@@ -68,6 +184,7 @@ export const realServicesQ32025: Q3Service[] = [
   {
     id: 'wordpress-internal-linking-automation',
     name: 'WordPress Internal Linking Automation'
+    name: 'WordPress Internal Linking Automation'
     ],
     icon: '🔗',
     color: 'from-purple-600 to-pink-600',
@@ -85,6 +202,7 @@ export const realServicesQ32025: Q3Service[] = [
   },
   {
     id: 'reviews-ugc-activation',
+    name: 'Ecommerce Reviews & UGC Activation'
     name: 'Ecommerce Reviews & UGC Activation'
     ],
     icon: '⭐',
@@ -131,6 +249,9 @@ export const realServicesQ32025: Q3Service[] = [
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
 
 
+    contactInfo: contact
+  },
+    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
@@ -299,3 +420,5 @@ export const realServicesQ32025: Q3Service[] = [
 ];
 
 
+  }
+];

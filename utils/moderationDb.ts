@@ -5,6 +5,8 @@
   id: string;
   contentId: string;
 
+  id: string;
+  contentId: string;
   contentType: "post" | "comment" | "user";
   reason: string;
   userEmail: string;
@@ -104,6 +106,10 @@ export async function createFlag(
 ;
   flags.push (flag);
 >>>>>>> main
+    ...data
+  };
+
+  flags.push(flag);
   return flag;
 }
 

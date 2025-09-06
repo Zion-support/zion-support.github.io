@@ -13,6 +13,8 @@ export async function createJob(jobData: any) {
       .select()
       .single();
 
+    console && console.error("Error creating job:", error);
+    throw new Error(error && error.message || "Failed to create job")
 
 
       .select()
@@ -34,6 +36,7 @@ export async function updateJob(jobId: string, jobData: any) {
 
       .eq("id", jobId)
 
+      .eq("id", jobId)
       .select()
       .single();
 
@@ -44,6 +47,8 @@ export async function updateJob(jobId: string, jobData: any) {
     console.error("Error updating job:", error);
     throw new Error(error.message || "Failed to update job");
 
+    console.error("Error updating job:", error);
+    throw new Error(error.message || "Failed to update job");
   }
 }
 export async function getJobById(jobId: string) {
@@ -107,6 +112,7 @@ if (throw error) {
     toast.error ("Failed to load job details");
     return null;
 
+  }
   const {
   data, error 
 }= await supabase 
@@ -136,3 +142,5 @@ if (throw error) {
 
 
 
+  }
+}

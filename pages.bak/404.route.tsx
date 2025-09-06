@@ -13,6 +13,8 @@ export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'
 module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/automate-test-improve-and-merge-code-646c
+export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
+module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
 import React from 'react';
 interface 404.routeProps {
   // Add props here as needed
@@ -23,6 +25,7 @@ export default function 404.route({}: 404.routeProps) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+export default function 404.route({}: 404.routeProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -57,6 +60,10 @@ interface 404 && 404.routeProps {;
   // Add props here as needed;
 }
 export default function 404 && 404.route({}: 404 && 404.routeProps) {;
+interface 404 && 404.routeProps {;
+  // Add props here as needed;
+}
+export default function 404 && 404.route({}: 404 && 404.routeProps) {;
   return (
     <div>;
       <h1>404 && 404.route</h1>;
@@ -85,6 +92,11 @@ module.exports = default function NotFound(){return (<main style={{ padding: ""4
 >>>>>>> main
 
 ursor/automate-test-improve-and-merge-code-646c
+interface 404.routeProps {
+  // Add props here as needed
+}
+export default function 404.route({}: 404.routeProps) {
+
 interface 404.routeProps {
   // Add props here as needed
 }
@@ -153,3 +165,5 @@ export default function 404 && 404.route({}: 404 && 404.routeProps) {;
   );
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
+}

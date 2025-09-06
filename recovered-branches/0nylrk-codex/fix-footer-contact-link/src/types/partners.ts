@@ -8,6 +8,10 @@ export interface PartnerProfile {
 export interface PartnerProfile {;
 
 
+export interface PartnerProfile {
+
+export interface PartnerProfile {;
+export interface PartnerProfile {
   id: string;
   user_id: string;
   name: string;
@@ -21,6 +25,9 @@ export interface PartnerProfile {;
     [key: string]: string | undefined;
   };
 
+    linkedin?: string;
+    [key: string]: string | undefined;
+  };
   niche: string;
   audience_size: string;
   payout_method: string;
@@ -31,6 +38,8 @@ export interface PartnerProfile {;
   updated_at: string;
   commission_rate?: number;
 
+  updated_at: string;
+  commission_rate?: number;
 }
 
 
@@ -49,6 +58,10 @@ export interface PartnerSettings {;
 export interface PartnerReferralLink {;
 
 
+  updated_at: string
+
+  commission_rate?: number
+}
 export interface PartnerSettings {
 
 export interface PartnerSettings {;
@@ -62,6 +75,7 @@ export interface PartnerReferralLink {;
 
 export interface PartnerReferralLink {
 
+export interface PartnerReferralLink {
   id: string;
   name: string;
   url: string;
@@ -86,6 +100,10 @@ export interface PartnerPayout {;
 
 
 
+export interface PartnerPayout {
+
+export interface PartnerPayout {;
+export interface PartnerPayout {
   id: string;
   partner_id: string;
   amount: number;
@@ -96,3 +114,6 @@ export interface PartnerPayout {;
   completed_at?: string;
 }
 
+  created_at: string;
+  completed_at?: string;
+}

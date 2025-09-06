@@ -15,6 +15,7 @@ import {
   FileText,
   Inbox,
   Video
+  Video
 } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
@@ -23,6 +24,7 @@ import { useAuth } from "@/hooks/useAuth";
   CardContent,
   CardDescription,
   CardHeader,
+  CardTitle
   CardTitle
 } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
@@ -487,3 +489,15 @@ export default function TalentDashboard() {
 }
 
 
+  )
+}
+;
+export default function TalentDashboard() {;
+  return (;
+    <ProtectedRoute>;
+      <TalentDashboardContent />;
+    </ProtectedRoute>;
+  );
+}
+;
+;

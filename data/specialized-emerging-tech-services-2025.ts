@@ -71,6 +71,9 @@ const contact = {
 ];
 ;
 
+  }
+];
+;
     marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth'
     variant: 'ai-futuristic', contactInfo: contact
     realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'
@@ -439,3 +442,5 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
 ];
 
 
+  }
+];

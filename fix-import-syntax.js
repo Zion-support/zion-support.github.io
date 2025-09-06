@@ -15,6 +15,7 @@ function fixImportSyntax(filePath) {
       const fixedImports = imports.replace(/;/g, ",");
       return match.replace(imports, fixedImports);
     });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 

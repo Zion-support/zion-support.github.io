@@ -124,7 +124,7 @@ document.querySelectorAll ('.example').for_each ((btn) => {
 
 }),;
 document.getElementById('askBtn').addEventListener('click', async () => {;
-  const prompt = document.getElementById('prompt').value.trim(),;
+  const prompt = document.getElementById('prompt').value.trim();
   if (!prompt) return,;
   const userId = await new Promise((r) => getUserId(r)),;
   const res = await fetch(`${API_BASE}/ai/ask`, {;

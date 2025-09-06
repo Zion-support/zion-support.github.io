@@ -7,3 +7,4 @@ const React from";react" export: const UIEnhancer = ({ showFloatingActions = tru
 import React from\';react\'
 import _React from';react'
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -14,6 +14,59 @@ import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
 
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Checkbox } from "@/components/ui/checkbox",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+// Form validation schema
+const signupSchema = z
+  .object({
+
+
+
+
+
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+
+
+    displayName: z.string().min(2, "Name must be at least 2 characters"),
+    email: z.string().email("Please enter a valid email"),
+
+
+    displayName: z.string().min(2, "Name must be at least 2 characters");
+    email: z.string().email("Please enter a valid email")
+    displayName: z.string().min(2, "Name must be at least 2 characters"),
+    email: z.string().email("Please enter a valid email"),
+    password: z.string()
+      .min(8, "Password must be at least 8 characters")
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+      .regex(/[0-9]/, "Password must contain at least one number"),
+    confirmPassword: z.string(),
+    termsAccepted: z.boolean().refine(val => val === true, {
+      message: "You must accept the terms and conditions"})})
+  .refine(data => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"]}),
 
   // Initialize react-hook-form
   const form = useForm({
@@ -36,6 +89,63 @@ import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
     setIsSubmitting(true);
     try {;
 
+    try {
+      await signup(data.email, data.password, data.displayName)
+    } finally {
+      setIsSubmitting(false)
+    }
+
+  },
+
+
+  // Redirect if user is already logged in and has completed profile
+  if (isAuthenticated && user?.profileComplete) {
+    return <Navigate to="/" />
+  }
+  // Redirect to onboarding if user is authenticated but hasn't completed profile
+  if (isAuthenticated && !user?.profileComplete) {
+    return <Navigate to="/onboarding" />
+  }
+  return (
+    <>
+      <Header />
+      <div className="flex min-h-screen bg-zion-blue">
+        <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+          <div className="mx-auto w-full max-w-sm lg:w-96">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold tracking-tight text-white">
+                Create your account
+              </h2>
+              <p className="mt-2 text-sm text-zion-slate-light">
+                Already have an account?{" "}
+                <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+                  Sign in
+                </Link>
+              </p>
+            </div>
+            <div className="bg-zion-blue-dark rounded-lg p-6">
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>
+                  <FormField
+                    control={form.control}
+                    name="displayName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
+                        <FormControl>
+                          <div className="relative">
+                            <Input
+                              placeholder="John Doe"
+                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              {...field}
+                              aria-autocomplete="none"
+                              autoComplete="off"
+                            />
+                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                          </div>
+                        </FormControl>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
 
 import { useState } from "react",;
 import { Link, Navigate } from "react-router-dom",;
@@ -64,6 +174,12 @@ const signupSchema = z;
     displayName:z.string().min(2, "Name must be at least 2 characters"),;
     email:z.string().email("Please enter a valid email"),;
     password:z.string();
+// Form validation schema;
+const signupSchema = z;
+  .object({;
+    displayName: z.string().min(2, "Name must be at least 2 characters"),;
+    email: z.string().email("Please enter a valid email"),;
+    password: z.string();
       .min(8, "Password must be at least 8 characters");
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter");
       .regex(/[a-z]/, "Password must contain at least one lowercase letter");
@@ -77,6 +193,13 @@ const signupSchema = z;
 ;
 type SignupFormValues = z.infer<typeof signupSchema>,;
 ;
+    confirmPassword: z.string(),;
+    termsAccepted: z.boolean().refine(val => val === true, {;
+      message: "You must accept the terms and conditions"})});
+  .refine(data => data.password === data.confirmPassword, {;
+    message: "Passwords do not match",;
+    path: ["confirmPassword"]}),;
+type SignupFormValues = z.infer<typeof signupSchema>,;
 export default function Signup() {;
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),;
   const [showPassword, setShowPassword] = useState(false),;
@@ -112,12 +235,37 @@ export default function Signup() {;
     }
   };
 
+  // Initialize react-hook-form;
+  const form = useForm({;
+    resolver: zodResolver(signupSchema),;
+    defaultValues: {;
+      displayName: "",;
+      email: "",;
+      password: "",;
+      confirmPassword: "",;
+      termsAccepted: false}}) as UseFormReturn<SignupFormValues>,;
+
+  // Form submission handler;
+  const onSubmit = async (data: SignupFormValues) => {;
+    if (isSubmitting) return, // Prevent multiple submissions;
+
+    setIsSubmitting(true);
+    try {;
+    }
+  }
   // Redirect if user is already logged in and has completed profile;
   if (isAuthenticated && user?.profileComplete) {;
     return <Navigate to="/" />;
   }
 
 
+    setIsSubmitting(true);
+    try {;
+      await signup(data && data.email, data && data.password, data && data.displayName);
+    } finally {;
+      setIsSubmitting(false);
+    }
+  }
 import { useState } from './react';
 import { Link, Navigate } from './react-router-dom';
 import { use_form, type, UseFormReturn } from './react - hook - form';
@@ -203,6 +351,17 @@ if ( {) {
 
                 <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
 
+                <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
+      <div className="flex min - h-screen bg - zion - blue">;
+        <div className="flex - 1 flex flex - col justify - center px - 4 py - 12 sm:px - 6 lg:flex - none lg:px - 20 xl:px - 24">;
+          <div className="mx - auto w - full max - w-sm lg:w - 96">;
+            <div className="text - center mb - 10">;
+              <h2 className="text - 3xl font - bold tracking - tight text - white">;
+                Create your account;
+              </h2>;
+              <p className="mt - 2 text - sm text - zion - slate - light">;
+                Already have an account?{" "}
+                <Link to="/login" className="font - medium text - zion - cyan hover:text - zion - cyan - light">;
                   Sign in;
                 </Link>;
               </p>;
@@ -302,6 +461,9 @@ if ( {) {
                     name="password";
 
 
+                  <FormField
+                    control={form && form.control}
+                    name="password"
                     render={({ field }) => (;
                       <FormItem>;
                         <FormLabel className="text-zion-slate-light">Password</FormLabel>;
@@ -337,6 +499,8 @@ if ( {) {
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
 
 
+                            />;
+                            <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                             <Button
                               type="button"
                               variant="ghost"
@@ -344,6 +508,47 @@ if ( {) {
                               className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
 
 
+                            <Input;
+                              type={showPassword ? "text" :"password"}
+                              placeholder="••••••••";
+                              className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple";
+                              {...field}
+                              autoComplete="new-password";
+                            />;
+                            <Button;
+                              type="button";
+                              variant="ghost";
+                              size="sm";
+                              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";
+                              onClick={() => setShowPassword(!showPassword)}
+                            >;
+                              {showPassword ? (;
+                                <EyeOff className="h-4 w-4" />;
+                        <FormMessage className="text - red - 400" />;
+                      </FormItem>)}
+                  />;
+                  <FormField;
+                    control={form.control}
+                              placeholder="••••••••";
+                              className="bg - zion - blue pl - 10 text - white border - zion - blue - light focus:border - zion - purple";
+                              {...field}
+                              auto_complete="new - password";
+                            />;
+                            <Lock className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
+                            <Button;
+                              type="button";
+                              variant="ghost";
+                              size="sm";
+                              className="absolute right - 1 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 8 hover:text - zion - cyan";
+                              on_click={() => setShowConfirmPassword (!showConfirmPassword)}
+                            >;
+                              {showConfirmPassword ? (
+                                <EyeOff className="h - 4 w - 4" />) : (
+                                <Eye className="h - 4 w - 4" />)}
+                              <span className="sr - only">;
+                                {showConfirmPassword ? "Hide password" : "Show password"}
+                              onClick={() => setShowPassword(!showPassword)}
+                            >;
                               </span>;
                             </Button>;
                           </div>;
@@ -609,3 +814,45 @@ if ( {) {
                 </div>
                 <div className="mt-6 grid grid-cols-3 gap-3">
 
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+;
+                <div className="mt-6 grid grid-cols-3 gap-3">;
+                  <Button;
+                    type="button";
+                    variant="outline";
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
+                    onClick={() => loginWithGoogle()}
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+                    onClick={() => loginWithTwitter()}
+                    disabled={isLoading || isSubmitting}
+                  >;
+                    <span className="sr-only">Sign in with Twitter</span>;
+                    <Twitter className="h-5 w-5" />;
+                  </Button>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+                  Create your profile, showcase your AI services, find jobs, and connect with professionals worldwide.;
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+
+}
+}
+;

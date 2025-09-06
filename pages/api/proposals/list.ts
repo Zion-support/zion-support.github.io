@@ -1,6 +1,12 @@
 
 
 
+import type { NextApiRequest, NextApiResponse } from "next";
+import { listProposals } from "../../../utils/data/proposals";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
 
   if (req && req.method !== "GET") {
     res && res.setHeader("Allow", "GET");
@@ -27,7 +33,10 @@
       .status(500)
 
 
+      .json({ error: error?.message || "Failed to list proposals" });
 import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 import { listProposals } from '../../../utils/data/proposals';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -38,6 +47,8 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
     res.status(500).json({ error: error?.message || 'Failed to list proposals' })
 
+    res.status(500).json({ error: error?.message || 'Failed to list proposals' })
+    res.status(500).json({ error: error?.message || 'Failed to list proposals' });
   }
 }
     res.set_header ("Allow", "GET");
@@ -64,6 +75,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
+  }
+}
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -84,3 +98,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+  }
+}

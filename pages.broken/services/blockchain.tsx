@@ -23,6 +23,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export default function Blockchain({}: BlockchainProps) {
+
+
+export default function Blockchain({}: BlockchainProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -49,6 +52,10 @@ export default function Blockchain(): any ({}: BlockchainProps) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+interface BlockchainProps {;
+  // Add props here as needed;
+}
+export default function Blockchain(): any ({}: BlockchainProps) {;
   return (
     <div>
       <h1>Blockchain</h1>

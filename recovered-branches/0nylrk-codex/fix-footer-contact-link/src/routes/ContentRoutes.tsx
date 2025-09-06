@@ -22,6 +22,11 @@ const ContentRoutes = () => {
     <Routes>;
       {/* Content Routes */}
 
+const ContentRoutes = () => {
+const ContentRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Content Routes */}
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -61,6 +66,7 @@ const ContentRoutes = () => {
 };
 
 
+export default ContentRoutes;
 
 import { Fragment } from './react';
 import { Route, Routes, Navigate } from './react-router-dom';

@@ -36,6 +36,89 @@ export default function GrantsPage() {;
           <Link href='/incubator'>;
             <a className='px - 3 py - 2 bg - purple - 600 text - white rounded'>;
 
+  useEffect(() => {
+
+    const params = new URLSearchParams();
+    if (filters.sector) params.set('sector', filters.sector);
+    if (filters.status) params.set('status', filters.status);
+    if (filters.region) params.set('region', filters.region);
+    if (filters.program) params.set('program', filters.program);
+    fetch(`/api/grants?${params.toString()}`)
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;
+export default function GrantsPage() {;
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+
+  useEffect(() => {;
+    const params = new URLSearchParams();
+    if (filters && filters.sector) params && params.set('sector', filters && filters.sector);
+    if (filters && filters.status) params && params.set('status', filters && filters.status);
+    if (filters && filters.region) params && params.set('region', filters && filters.region);
+    if (filters && filters.program) params && params.set('program', filters && filters.program);
+    fetch(`/api/grants?${params && params.toString()}`);
+      .then(r => r && r.json());
+      .then(d => setItems(d && d.items || []));
+      .catch(() => setItems([]));  }, [filters]);
+  return (
+      .catch(() => setItems([]))
+
+    <EnhancedLayout>      .then((r) => r && r.json());
+      .then((d) => setItems(d && d.items || []));
+      .catch(() => setItems([]));
+  }, [filters]);
+    <EnhancedLayout>
+      <div className='flex items-center justify-between mb-6'>
+        <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
+        <div className='flex gap-2'>
+          <Link href='/grants/apply'>
+            <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>
+          </Link>
+          <Link href='/incubator'>
+            <a className='px-3 py-2 bg-purple-600 text-white rounded'>
+              Incubator
+            </a>
+          </Link>
+      </div>
+      <div className='grid md:grid-cols-4 gap-4 mb-6'>
+        <select
+          className='border rounded p-2'
+          value={filters.sector |''}
+          onChange={e =>
+            setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+export default /**
+ * GrantsPage - Function description
+ */
+function GrantsPage() {
+  const [items, set_items] = useState < GrantApplication[]>([]);
+  const [filters, set_filters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+;
+  useEffect (() => {
+    const params = new URLSearchParams ();
+    if (params.set ('sector', filters.sector)) {
+  $2
+}
+    if (params.set ('status', filters.status)) {
+  $2
+}
+    if (params.set ('region', filters.region)) {
+  $2
+}
+    if (params.set ('program', filters.program)) {
+  $2
+}
+    fetch (`/api / grants?${params.to_string ()}`);
+      .then (r => r.json ());
+      .then (d => set_items (d.items || []));
+      .catch (() => set_items ([]));  }, [filters]);
+;
+  return (
+    <EnhancedLayout>      .then ((r) => r.json ());
+      .then ((d) => set_items (d.items || []));
+      .catch (() => set_items ([]));
+  }, [filters]);
+;
+  return (
               Incubator;
             </a>;
           </Link>;
@@ -46,6 +129,18 @@ export default function GrantsPage() {;
             setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
 
 
+          }
+        >
+          <option value=''>All Stages</option>
+          {statuses.map(s => (
+            <option key={s} value={s}>
+              {s}
+            </option>
+          ))}
+        </select>
+        <input
+          className='border rounded p-2'
+          placeholder='Region'
           }
         />
         <select
@@ -105,11 +200,20 @@ export default function GrantsPage() {;
                   {g.sector |'General'} • {g.region |'Global'} •{' '}
 
 
+        <select
+          className='border rounded p-2'
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
               <div className='flex gap - 2 items - center'>;
                 {g.program === 'incubator' && (
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
+        <div className="flex gap-2">
+          <Link href="/grants/apply"><a className="px-3 py-2 bg-blue-600 text-white rounded">Apply</a></Link>
+          <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>
+        </div>
+      </div>
 
 
       <div className='grid gap-4'>;
@@ -139,6 +243,9 @@ export default function GrantsPage() {;
                   </span>
 
 
+                  <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
+                    Incubated by Zion
+                  </span>
                 )}
                 {g && g.status === 'Approved' && (;
                   <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
@@ -169,6 +276,15 @@ export default function GrantsPage() {;
 
 }
 
+
+
+      </div>
+    </EnhancedLayout>
+);
+      </div>;
+    </EnhancedLayout>;
+  );
+}
 
 
                   <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;

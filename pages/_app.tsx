@@ -9,10 +9,24 @@ export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 import React from 'react';
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
 
 
 
 import '../src/styles/globals.css';
+
+export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
+return <Component {...pageProps} />;
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+
+
+
+}
+
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -56,6 +70,15 @@ export default function App({ Component, pageProps }: AppProps) {;
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 import Layout from '../components/layout/Layout';
+    <header style={{
+      position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
+      backdropFilter: 'blur(10px)', color: 'white',
+      borderBottom: '1px solid rgba(255,255,255,0.1)'
+export default function App({ Component, pageProps }: AppProps) {
+return <Component {...pageProps} />;
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import EnhancedFooter from '../components/layout/EnhancedFooter';
+
     <header style={{
       position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
       backdropFilter: 'blur(10px)', color: 'white',
@@ -221,6 +244,10 @@ export default function App({ Component, pageProps }: AppProps) {}
 }
 
 ursor/fix-website-loading-errors-and-merge-6662
+
+export default function App({ Component, pageProps }: AppProps) {}
+}
+
 import type { AppProps } from 'next / app';
 import '../src / styles / globals.css';
 ;
@@ -238,6 +265,11 @@ function App() {
   return <Component {...page_props} />;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  );
+ursor/fix-lint-push-and-merge-to-main-e10e
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
   );
 ursor/fix-lint-push-and-merge-to-main-e10e
 
@@ -263,6 +295,7 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 >>>>>>> main
+}
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

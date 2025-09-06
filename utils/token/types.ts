@@ -11,6 +11,10 @@ export type TokenSymbol = "ZION$";
 export type TokenSymbol = "ZION$",;
 export type TokenSymbol = "ZION$";
 
+export type TokenSymbol = "ZION$";
+export type TokenSymbol = "ZION$",;
+export type TokenSymbol = "ZION$";
+export type TokenSymbol = "ZION$",
 
 
 
@@ -24,6 +28,21 @@ export type TokenTransactionType =;
 export interface TokenTransaction {id: string;
   userId: string;
   type: TokenTransactionType;
+  | "redeem",;
+export interface TokenTransaction {;
+  id: string,;
+  userId: string,;
+  type: TokenTransactionType,;
+  amount: number, // positive integer tokens;
+  reason: string;
+  metadata?: Record<string, any>;
+  createdAt: string, // ISO timestamp;
+}
+export interface Wallet {userId: string;
+  balance: number, // current token balance;
+}
+export interface TokenConfig {symbol: TokenSymbol;
+
 
   | "redeem",
 export interface TokenTransaction {

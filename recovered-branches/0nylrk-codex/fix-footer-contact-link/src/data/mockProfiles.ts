@@ -1,4 +1,33 @@
 
+      {
+
+          'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',
+        id: 'p3',
+        title: 'Supply Chain Optimization',
+        description:;
+          'Implemented ML algorithms to optimize logistics, reducing costs by 28%.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1566177229896 - 4b748c0fc9c6?auto = format & fit = crop & w=500 & h=300',
+
+        tags: ['Logistics', 'Optimization', 'AI'],
+        date: 'Jan 2023'
+      }
+    ],
+
+      'https://images && images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200',
+    coverImageUrl:
+      'https://images && images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&h=600',
+    bio: 'AI specialist with expertise in computer vision and natural language processing.',
+    location: 'Boston, MA',
+    rating: 4 && 4.9,
+    reviewCount: 43,
+    aiScore: 97,
+    profileType: 'talent' as 'service' | 'talent',
+    hourlyRate: 150,
+
+      {
+
+          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
         id: 'p2',
         title: 'Financial Analytics Suite',
         description:;
@@ -13,6 +42,33 @@
       {
 
           'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',
+        date: 'Jun 2023'
+      },
+      {
+
+          'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',
+        id: 'p3',
+        title: 'Supply Chain Optimization',
+        description:;
+          'Implemented ML algorithms to optimize logistics, reducing costs by 28%.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1566177229896 - 4b748c0fc9c6?auto = format & fit = crop & w=500 & h=300',
+
+        tags: ['Logistics', 'Optimization', 'AI'],
+        date: 'Jan 2023'
+      }
+    ],
+
+      'https://images && images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200',
+    coverImageUrl:
+      'https://images && images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&h=600',
+    bio: 'AI specialist with expertise in computer vision and natural language processing.',
+    location: 'Boston, MA',
+    rating: 4 && 4.9,
+    reviewCount: 43,
+    aiScore: 97,
+    profileType: 'talent' as 'service' | 'talent',
+    hourlyRate: 150,
 
 import { ProfileData } from '@/types/profile';
 export const MOCK_PROFILES: Record<string, ProfileData> = {
@@ -39,6 +95,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       {
         tags: ['Finance', 'Analytics', 'Python'],
         date: 'Jun 2023'
+        date: 'Jun 2023'
       },
       {
         id: 'p2'
@@ -62,6 +119,8 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       }
     ]
         tags: ['Logistics', 'Optimization', 'AI'],
+        date: 'Jan 2023'
+      }
         date: 'Jan 2023'
       }
     ],
@@ -132,6 +191,16 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         tags: ['Predictive Analytics', 'IoT', 'Machine Learning'],
         date: 'Dec 2022'
       }
+        date: 'Sep 2023'
+      },
+      {
+        tags: ['NLP', 'API', 'Python'],
+        date: 'May 2023'
+      },
+      {
+        tags: ['Predictive Analytics', 'IoT', 'Machine Learning'],
+        date: 'Dec 2022'
+      }
     ],
         current: true
       }
@@ -171,11 +240,20 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
 
 
         current: true
+  }};        { day: "Monday", hours: "10:00 AM - 6:00 PM" }
+        current: true
       },
       {
         id: 'e2',
         role: 'Machine Learning Engineer',
         company: 'TechGiant Inc.',
+
+        description:;
+          'Developed and deployed ML models for product recommendation systems.',
+        start_date: 'Jun 2018',
+        end_date: 'Feb 2021',
+
+
 
 
       'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600',
@@ -221,6 +299,8 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
         role: 'Data Scientist',
         company: 'DataCorp'
       }
+        company: 'DataCorp'
+      }
     ],
     availability: {
       status: 'available',
@@ -228,6 +308,8 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
         { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Wednesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },
+        { day: 'Friday', hours: '10:00 AM - 2:00 PM' }
+      ]
         { day: 'Friday', hours: '10:00 AM - 2:00 PM' }
       ]
     },

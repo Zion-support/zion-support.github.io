@@ -25,6 +25,9 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {'}
 >>>>>>> main
 origin/main
 #!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) || []).length; const closeBraces = (fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8");  fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++} } ; } ; main().catch(console.error)
+origin/main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+#!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) || []).length; const closeBraces = (fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8");  fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++} } ; } ; main().catch(console.error)
 }
 
 // Function to fix common syntax errors;
@@ -36,6 +39,7 @@ function fixSyntaxErrors(content) {}
 // Skip nodemodules, .git, and other common directories}; if (!['nodemodules.gitdistbuild.next'].includes(item)) {'}; files = files.concat(findFiles(fullPath, extensions)) }} else if (extensions.some(ext = > item.endsWith(ext))) {}; files.push(fullPath) }}};// Function to fix common syntax errors;
 function fixSyntaxErrors(content) {}; let fixed = content // Fix missing semicolons at end of lines (basic, cases) fixed = fixed.replace(/([^,{}])\n/g, (match, p1) = > {}; if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{_') && !p1.trim().endsWith('}')) {_'}; return p1 + ',\n }}
 // Function to fix undefined variables (add basic, imports);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 ursor/automate-test-improve-and-merge-code-646c
 
@@ -201,6 +205,7 @@ if (&&) {
       files && files.push(fullPath);,
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import { exec_sync } from 'child_process';,
 // Function to recursively find all files;
 /**
@@ -254,12 +259,14 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {'}
 // Function to fix merge conflict markers;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     }
   }
   return files;
 }
 // Function to fix merge conflict markers;
   let fixed = content;,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 /**
  * fixMergeConflicts - Function description
  */
@@ -285,6 +292,9 @@ function fixSyntaxErrors() {}
 
   let fixed = content;,
 
+  let fixed = content;,
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
       // Skip node_modules, .git, and other common directories};
@@ -406,6 +416,7 @@ function fixUndefinedVariables(content, filePath) {}
 }
 
 // Function to remove unused variables;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   return fixed;
 }
 // Function to fix undefined variables (add basic, imports),
@@ -439,6 +450,11 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+// Skip node_modules, .git, and other common directories}; if (!['node_modules.gitdistbuild.next'].includes(item)) {'}; files = files.concat(findFiles(fullPath, extensions)) }} else if (extensions.some(ext = > item.endsWith(ext))) {}; files.push(fullPath) }}};
+// Function to fix common syntax errors;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Function to remove unused variables;
 function removeUnusedVariables(content) {_; // Remove common unused variable patterns}};
 // Main function;
@@ -529,6 +545,11 @@ origin/main
   fixed = fixed.replace(/([^;{}])\n/g, (match, p1) => {}
     if (p1.trim() && !p1.trim().endsWith(';') && !p1.trim().endsWith(',') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'}
       return p1 + ';\n';'
+
+  fixed = fixed.replace(/([^;{}])\n/g, (match, p1) => {}
+    if (p1.trim() && !p1.trim().endsWith(';') && !p1.trim().endsWith(',') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'}
+      return p1 + ';\n';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   // Fix missing semicolons at end of lines (basic, cases),
   let fixed = content;
   // Fix missing semicolons at end of lines (basic, cases)
@@ -545,6 +566,18 @@ origin/main
   $2
 }') && !p1.trim ().ends_with (', ') && !p1.trim ().ends_with ('{') && !p1.trim ().ends_with ('}')) {'}
       return p1 + ';\n';'
+      return p1 + ';\n';',
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+  // Fix missing semicolons at end of lines (basic, cases),
+  let fixed = content;
+  // Fix missing semicolons at end of lines (basic, cases)
+origin/main
+  fixed = fixed.replace(/([^;{}])\n/g, (match, p1) => {}
+    if (p1.trim() && !p1.trim().endsWith(';') && !p1.trim().endsWith(',') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'}
+      return p1 + ';\n';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     }
     return match;
   });
@@ -562,6 +595,8 @@ origin/main
 
   fixed = fixed.replace (/(\w+):\s*([^ }\n]+)(\n\s*[a - z_a - Z_$][a - z_a - Z0 - 9_$]*\s*:)/g, '$1: $2, $3');',
   fixed = fixed.replace (/(\w+):\s*([^ }\n]+)(\n\s*[a - z_a - Z_$][a - z_a - Z0 - 9_$]*\s*:)/g, '$1: $2, $3');',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+  fixed = fixed.replace (/(\w+):\s*([^ }\n]+)(\n\s*[a - z_a - Z_$][a - z_a - Z0 - 9_$]*\s*:)/g, '$1: $2, $3');',
   // Fix missing commas in arrays;
   fixed = fixed.replace (/([^ }\]])(\n\s*[^ }\]]+)/g, (match, p1, p2) => {}
     if (&& !p1.trim ().ends_with (', ') && !p1.trim ().ends_with ('[') && !p1.trim ().ends_with ('{')) {'}
@@ -578,6 +613,12 @@ origin/main
 
 
 
+  fixed = fixed.replace(/(\w+):\s*([^}\n]+)(\n\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1: $2,$3');'
+  // Fix missing commas in arrays;
+  fixed = fixed.replace(/([^}\]])(\n\s*[^}\]]+)/g, (match, p1, p2) => {}
+    if (p1.trim() && !p1.trim().endsWith(',') && !p1.trim().endsWith('[') && !p1.trim().endsWith('{')) {'}
+      return p1 + ',' + p2;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     }
     return match;
   });
@@ -650,6 +691,7 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Function to fix undefined variables (add basic, imports)
 function fixUndefinedVariables(content, filePath) {}
   let fixed = content;
@@ -671,6 +713,7 @@ function fixUndefinedVariables(content, filePath) {}
     fixed = "import { useEffect } from 'react';\n" + fixed;",
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 /**
  * fixUndefinedVariables - Function description
  */
@@ -707,6 +750,7 @@ origin/main
 origin/automation-improvements-final
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Function to fix undefined variables (add basic, imports)
 function fixUndefinedVariables(content, filePath) {}
   let fixed = content;
@@ -762,6 +806,7 @@ if ( {}) {
 
 function removeUnusedVariables(content) {_; // Remove common unused variable patterns}};
 function removeUnusedVariables(content) {_; // Remove common unused variable patterns}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Main function;
 function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file, content, 'utf8'),' fixedCount++ _ }} catch (error) {}; errorCount++ _ }}; try {}; execSync('npm run lint', {stdio: 'pipe'}),' _,' } catch (error) {}; _,' }}; return match.replace(imports, cleanImports)}; return match; fixed = fixed.replace(/import\s*{_\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) = > {_; // Check if imports have proper commas; if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports, cleanImports)}; ); // Fix missing semicolons after variable declarations; fixed = fixed.replace(/(const|let|var)\s+\w+\s* = \s*[^]+$/gm, match = > {_; if (!match.endsWith(", _")) {return match + ", _"}; fixed + = "\n}".repeat(openBraces - closeBraces)}; return fixed}
 // Main function;
@@ -942,7 +987,7 @@ async function $1() {,;
   let errorCount = 0,;
   for (const file of files) {,;
   try {,;
-  const content = fs.readFileSync(file, "utf8"),;
+  const content = fs.readFileSync(file, "utf8");
       const fixed = fixLintErrors(content),;
       if (content !== fixed) {,;
   fs.writeFileSync(file, fixed, "utf8"),;
@@ -973,6 +1018,7 @@ async function $1() {,;
 #!/usr/bin/env node;
         return match.replace(imports, cleanImports)};#!/usr/bin/env node;
 ursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 function removeUnusedVariables(content) {
   // Remove common unused variable patterns}
   return content,
@@ -995,17 +1041,20 @@ function main() {}
   const files = findFiles('/workspace/src');';
   let fixedCount = 0;
   let errorCount = 0;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   for (const file of, files) {}
     try {}
       let content = fs.readFileSync(file, 'utf8');',
       let originalContent = content;,
       
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       // Apply fixes;
       content = fixMergeConflicts(content);
       content = fixSyntaxErrors(content);
       content = fixUndefinedVariables(content, file);,
       content = removeUnusedVariables(content);,
       
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       // Only write if content changed;
       if (content !== originalContent) {}
         fs.writeFileSync(file, content, 'utf8');',
@@ -1018,11 +1067,13 @@ function main() {}
     }
   }
   
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   _console.log(`\n📊 Summary:`);
   _console.log(`   Files processed: ${files.length}`);,
   _console.log(`   Files fixed: ${fixedCount}`);,
   _console.log(`   Errors: ${errorCount}`);,
   
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   // Run linter again to check progress;
   _console.log('\n🔍 Running linter to check progress...');';
   try {}
@@ -1044,6 +1095,10 @@ main();
 ursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) || []).length; const closeBraces = (fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8");  fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++} } ; } ; main().catch(console.error)
 #!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) || []).length; const closeBraces = (fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8");  fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++} } ; } ; main().catch(console.error)
+#!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) || []).length; const closeBraces = (fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8");  fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++} } ; } ; main().catch(console.error)
+#!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) || []).length; const closeBraces = (fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8");  fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++} } ; } ; main().catch(console.error)
+#!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) || []).length; const closeBraces = (fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8");  fixedCount++} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++} } ; } ; main().catch(console.error)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 #!/usr/bin/env node;
 function removeUnusedVariables(content) {
   // Remove common unused variable patterns}
@@ -1118,6 +1173,9 @@ ursor/automate-test-improve-and-merge-code-646c
 origin/automation-improvements-final
 #!/usr/bin/env node;
 origin/automation-improvements-final
+
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Function to fix common lint errors;
 function fixLintErrors(content) {
   let fixed = content;
@@ -1151,6 +1209,7 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     (match, imports) => {
   // Check if imports have proper commas;
       if (;
@@ -1165,6 +1224,7 @@ ursor/automate-test-improve-and-merge-code-646c
   const cleanImports = imports.trim().split(/\s+/).join(", ");
         return match.replace(imports, cleanImports)}
       return match;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         !imports && imports.includes(",") &&;
         imports && imports.trim().split(/\s+/).length > 1;
       ) {
@@ -1199,6 +1259,16 @@ ursor/automate-test-improve-and-merge-code-646c
   fixed += "\n}".repeat(openBraces - closeBraces)}
   return fixed}
 
+  fixed = fixed && fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {;
+  // Check if imports have proper commas;
+    if (imports && !imports && imports.includes() && imports && imports.trim().split(/\s+/).length > 1) {;
+  const cleanImports = imports && imports.trim().split(/\s+/).join();
+      return match && match.replace(imports, cleanImports)};
+  );
+  // Fix missing semicolons after variable declarations;
+  fixed = fixed && fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {;
+  if (!match && match.endsWith(",")) {;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {;
   if (!match.endsWith(",")) {;
   return match + ","};
@@ -1206,6 +1276,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
   return fixed};
 ;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Main function;
 async function $1() {// Get all TypeScript/JavaScript files;
   const files = await glob("src/**/*.{ts, tsx, js, jsx}", {_;
@@ -1236,6 +1308,10 @@ async function $1() {// Get all TypeScript/JavaScript files;
         fixedCount++}
     } catch (error) {_;
       errorCount++}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+        fixedCount++}
+    } catch (error) {_;
+      errorCount++}
 
 };
 ;
@@ -1261,6 +1337,7 @@ async function $1() {// Get all TypeScript/JavaScript files;
 
   // console && console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)}
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   };
 };
         return match && match.replace(imports, cleanImports)};
@@ -1307,6 +1384,7 @@ async function $1() {,
         imports.trim().split(/\s+/).length > 1;
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       ) {
   const cleanImports = imports.trim().split(/\s+/).join(", ");
         return match.replace(imports, cleanImports)}
@@ -1377,6 +1455,7 @@ function main() {},;
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {,;
   // Check if imports have proper commas,;
     if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {,;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   // Check if imports have proper commas;
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {// Check if imports have proper commas;
     if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {;
@@ -1580,6 +1659,10 @@ if (&&) {
 
 
 ursor/automate-test-improve-and-merge-code-646c
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   return fixed}
 // Main function;
 async function $1() {// Get all TypeScript/JavaScript files;
@@ -1600,6 +1683,7 @@ async function $1() {// Get all TypeScript/JavaScript files;
         fixedCount++}
     } catch (error) {_;
       errorCount++}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   }
 ;
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
@@ -1622,6 +1706,10 @@ function fixUndefinedVariables(content, filePath) {};
   if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"};
     fixed = "import { useEffect } from 'react',\n" + fixed,";
   };
+ursor/integrate-build-improve-and-re-verify-8f7d
+};
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
   // console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)}
@@ -1874,6 +1962,7 @@ function fixUndefinedVariables(content, filePath) {};
 }
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
   // console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   const cleanImports = imports.trim().split(/\s+/).join();
       return match.replace(imports, cleanImports)}
   );
@@ -1920,6 +2009,10 @@ main().catch(console.error)
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   }
 ;
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
@@ -2131,6 +2224,7 @@ if ( {, ) {
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     } catch (error) {,
   console.error (`Error processing ${file}:`, error.message),
       error_count++}
@@ -2156,6 +2250,7 @@ if ( {, ) {
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
 

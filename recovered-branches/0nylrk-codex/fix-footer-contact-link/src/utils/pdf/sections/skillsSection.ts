@@ -1,5 +1,13 @@
 
 
+import { jsPDF  } from 'jspdf';
+import { Skill  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addSkillsSection(
+import {jsPDF} from 'jspdf';
+import {Skill} from '@/types/resume';
+import {PdfThemeColors} from '../themeConfig';
+export function addSkillsSection(;
   doc: jsPDF;
   skills: Skill[];
   colors: PdfThemeColors;
@@ -25,6 +33,8 @@
     const category = skill.category |'Other';
 
 
+  yPos += 8;
+  // Group skills by category
     if (!acc[category]) {
       acc[category] = []
     }
@@ -64,6 +74,7 @@ export function addSkillsSection(;
   // Group skills by category;
   const skillsByCategory = skills.reduce((acc, skill) => {;
     const category = skill.category || 'Other';
+    const category = skill.category || 'Other';
     if (!acc[category]) {;
       acc[category] = [];
     }
@@ -95,7 +106,6 @@ export function addSkillsSection(;
 
   }
   return yPos + 5
-import {jsPDF} from 'jspdf';
 import {Skill} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
 export function addSkillsSection (
@@ -147,6 +157,9 @@ if ( {) {
   }
   return y_pos + 5;
 
+}
+
+}
 }
 
 ;
@@ -204,3 +217,4 @@ return yPos + 5
 }
 
 
+}

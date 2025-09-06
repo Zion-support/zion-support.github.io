@@ -6,6 +6,12 @@ export interface EducationFormProps {
   onComplete: () => void;
   onBack: () => void;
 }
+export interface EducationFormProps {
+  resumeId: string;
+  educationEntries: Education[];
+  onComplete: () => void;
+  onBack: () => void;
+}
 
 
   resumeId: string;

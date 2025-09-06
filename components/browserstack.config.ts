@@ -52,6 +52,12 @@ default define_config ({
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 
+    }
+    {
+      name: Mobile Safari',      use: {
+        browserName: webkit',        ...devices['iPhone 12']}
+    }
+  ];
 
 });
   reporter: [;
@@ -64,3 +70,5 @@ default define_config ({
 });
 
 
+});
+});

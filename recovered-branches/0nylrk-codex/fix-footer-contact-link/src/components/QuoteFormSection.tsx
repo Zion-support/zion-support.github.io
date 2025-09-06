@@ -227,12 +227,86 @@ import { useState } from "react",
                     <div key={index} className="flex items-center">
 
 
+                    "Recycling Services"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center">
                       <input
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
 
 
+                  <Input
+                    id="name"
+                    type="text"
+                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+                    Company
+                  </label>
+                  <Input
+                    id="company"
+                    type="text"
+                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+                    Email
+                  </label>
+                  <Input
+                    id="email"
+                    type="email"
+                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+                    Phone
+                  </label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                  />
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <label
+                  htmlFor="interest"
+                  className="block text-sm font-medium text-zion-slate-light mb-1"
+                >
+                  I'm interested in (select all that apply)
+                </label>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">
+                  {[
+                    "AI Products/Services",
+                    "IT Equipment",
+                    "Server Solutions",
+                    "Storage Solutions",
+                    "Networking",
+                    "24/7 Support",
+                    "Recycling Services"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center">
+                      <input
+                        id={`interest-${index}`}
+                        type="checkbox"
+                        className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
                       <label
                         htmlFor={`interest-${index}`}
@@ -247,6 +321,9 @@ import { useState } from "react",
                 </div>
               </div>
 
+
+                </div>
+              </div>
 
               <div className="mt-6">
                 <label
@@ -423,6 +500,7 @@ function QuoteFormSection() {
                     "Storage Solutions",
                     "Networking",
                     "24 / 7 Support",
+                    "Recycling Services"
                     "Recycling Services"
                   ].map ((item, index) => (
                     <div key={index} className="flex items - center">;

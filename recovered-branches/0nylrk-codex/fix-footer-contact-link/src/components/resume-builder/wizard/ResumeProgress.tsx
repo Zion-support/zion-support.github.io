@@ -20,6 +20,9 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
 };
 
   );
+};
+
+  );
 }
 
 };

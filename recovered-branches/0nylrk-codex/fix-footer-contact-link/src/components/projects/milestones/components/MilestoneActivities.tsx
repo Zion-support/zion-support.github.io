@@ -3,6 +3,8 @@ import React from "react";
 interface MilestoneActivitiesProps {
   projectId: string;
 
+interface MilestoneActivitiesProps {
+  projectId: string;
 }
 export /**
  * MilestoneActivities - Function description
@@ -53,6 +55,9 @@ interface MilestoneActivitiesProps {
 interface MilestoneActivitiesProps {
   projectId: string;
 
+
+interface MilestoneActivitiesProps {
+  projectId: string;
 
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {

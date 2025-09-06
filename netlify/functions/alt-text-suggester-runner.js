@@ -1,5 +1,15 @@
 
 
+const path = require ('path');
+const { spawn_sync } = require ('child_process');
+;
+/**
+ * run_node - Function description
+ */
+function run_node() {
+  const abs = path.resolve (__dirname, '..', '..', rel_path);
+  return spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+;
 exports.config = {
   schedule: '*/15 * * * *'
 }
@@ -7,9 +17,10 @@ exports.config = {
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 
 exports && exports.config = {
-  schedule: '*/15 * * * *',
+  schedule: '*/15 * * * *'
 
 
+}
     if (res && res.stdout) logs && logs.push(res && res.stdout);
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
@@ -25,6 +36,7 @@ exports && exports.config = {
 }
 
 
+}
 }
 ;
 exports.handler = async () => {

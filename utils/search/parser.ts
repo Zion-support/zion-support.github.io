@@ -19,6 +19,9 @@ export const parseSearchQuery = (query: string) =>: any {
   if (!query || query.trim().length === 0) {
     return filters;
 
+
+  if (!query || query.trim().length === 0) {
+    return filters;
   }
 
   const words = query && query.toLowerCase().split(/\s+/);
@@ -96,6 +99,7 @@ export const parseSearchQuery = (query: string) =>: any {
     "adobe",
     "photoshop",
     "illustrator"
+    "illustrator"
   ];
 
   for (const word of words) {
@@ -113,6 +117,7 @@ export const parseSearchQuery = (query: string) =>: any {
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
     keywords: [],
     skills: [],
     location: null,
@@ -153,3 +158,4 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
+}

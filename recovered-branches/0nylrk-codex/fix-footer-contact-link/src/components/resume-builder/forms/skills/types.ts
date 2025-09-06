@@ -15,6 +15,7 @@ export interface SkillsFormProps {
   on_back: () => void;
 
 
+import { Skill  } from '@/types / resume';
 
 export interface SkillsFormProps {
   resume_id: string;
@@ -36,6 +37,11 @@ export interface SkillItemProps {
 
   onDelete: (id: string, category: string) => Promise<void>;
 
+}
+export interface SkillItemProps {
+  skill: Skill;
+  category: string;
+  onDelete: (id: string, category: string) => Promise<void>;
 }
 
 export interface SkillCategoryProps {
@@ -60,6 +66,9 @@ export interface AddSkillFormProps {;
   defaultCategory?: string;
 }
 
+
+  defaultCategory?: string;
+}
 
 export interface BulkAddSkillsProps {
   resumeId: string;
@@ -87,3 +96,5 @@ export interface BulkAddSkillsProps {
 ;
 
 
+;
+;

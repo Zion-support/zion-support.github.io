@@ -1,5 +1,22 @@
 
 
+import { DynamicListingPage } from "@/components/DynamicListingPage";
+import { ProductListing } from "@/types/listings";
+// Sample talent listings
+const TALENT_LISTINGS: ProductListing[] = [
+  {
+
+    id: "talent-1"
+    title: "Senior AI Engineer"
+    description: "Expert in machine learning algorithms and neural networks with 8+ years of experience building production-ready AI systems."
+    category: "Engineering"
+    price: 150
+    currency: "$"
+    tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
+import {DynamicListingPage} from "@/components/DynamicListingPage";
+import {ProductListing} from "@/types/listings";
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
@@ -106,6 +123,17 @@ const TALENT_LISTINGS: ProductListing[] = [;
     currency: "$"
     tags: ["Statistical Analysis", "Python", "R", "Tableau"];
 
+    id: "talent-3",
+    title: "Data Scientist",
+    description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.",
+    category: "Data Science",
+    price: 145,
+    currency: "$",
+    tags: ["Statistical Analysis", "Python", "R", "Tableau"],
+    author: {
+
+    author: {
+    author: {
 
       name: "Priya Sharma",
       id: "priya - sharma"},
@@ -134,9 +162,57 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 165
     currency: "$"
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];
+    id: "talent-4",
+    title: "Cybersecurity Expert",
+    description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.",
+    category: "Security",
+    price: 165,
+    currency: "$",
+    tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"],
+    author: {
+
+
+    author: {
+      name: "James Wilson"
+      id: "james-wilson"
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100"}
+    images: ["https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&h=500"]
+    createdAt: "2023-12-05T16:20:00.000Z"
+    aiScore: 91
+    rating: 4.7
+    reviewCount: 31}
+  {
+    id: "talent - 4",
+    title: "Cybersecurity Expert",
+
+    id: "talent - 4",
+    title: "Cybersecurity Expert",
+    description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.";
+    category: "Security"
+    price: 165
+    currency: "$"
+    tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];
 
 
 
+    id: "talent-4",
+    title: "Cybersecurity Expert",
+    description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.",
+    category: "Security",
+    price: 165,
+    currency: "$",
+    tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"],
+
+    author: {
+
+
+    id: "talent-5"
+    title: "Full-Stack Developer"
+    description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications."
+    category: "Development"
+    price: 125
+    currency: "$"
+    tags: ["React", "Node.js", "TypeScript", "MongoDB"];
     id: "talent-5",
     title: "Full-Stack Developer",
     description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications.",
@@ -168,6 +244,33 @@ const TALENT_LISTINGS: ProductListing[] = [;
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"];
 
 
+      name: "James Wilson",
+      id: "james - wilson",
+      avatar_url: "https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?auto = format & fit = crop & w=100 & h=100"},
+    images: ["https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?auto = format & fit = crop & w=800 & h=500"],
+    created_at: "2023 - 12 - 05T16:20:00.000Z",
+    ai_score: 91,
+    rating: 4.7,
+    review_count: 31},
+  {
+    id: "talent - 5",
+    title: "Full - Stack Developer",
+    description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications.",
+    category: "Development",
+    price: 125,
+    currency: "$",
+    tags: ["React", "Node.js", "TypeScript", "MongoDB"];
+    author: {
+      name: "David Martinez",
+      id: "david - martinez"},
+    images: ["https://images.unsplash.com / photo - 1573496359142 - b8d87734a5a2?auto = format & fit = crop & w=800 & h=500"],
+    created_at: "2024 - 02 - 01T11:30:00.000Z",
+    ai_score: 89,
+    rating: 4.8,
+    review_count: 42},
+  {
+    id: "talent - 6",
+    title: "AI Ethics Consultant",
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.";
     category: "Consulting"
     price: 180
@@ -219,8 +322,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-import {DynamicListingPage} from "@/components/DynamicListingPage";
-import {ProductListing} from "@/types/listings";
 
 export default function TalentsPage() {
   return (

@@ -25,6 +25,7 @@ const AppMetadataManager: React.FC = () => {
   );
 };
 
+export default AppMetadataManager;
 
 import React from './react';
 import { AppLayout } from '@/layout / AppLayout';

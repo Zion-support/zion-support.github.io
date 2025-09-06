@@ -50,6 +50,7 @@ const next_config = {
 module.exports = next_config;
 ;
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   trailingSlash: false,
   distDir: '.next'
 };
@@ -57,12 +58,14 @@ module.exports = next_config;
 module.exports = nextConfig;
 module.exports = nextConfig;
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   images: {
     domains: ["localhost", "ziontechgroup.com"]
   },
   output: "standalone",
   trailingSlash: false,
+  distDir: '.next'
   distDir: '.next'
   distDir: '.next'
 };
@@ -85,6 +88,8 @@ module.exports = nextConfig;};
 ;
 export default nextConfig;
 const nextConfig = {,
+const nextConfig = {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   reactStrictMode: true,
 const nextConfig = {
   reactStrictMode: true,

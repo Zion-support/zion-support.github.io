@@ -37,6 +37,11 @@ interface NewsletterSubscription.testProps {
 }
 
 >interface NewsletterSubscription.testProps {
+
+interface NewsletterSubscription.testProps {
+  // Add props here as needed
+interface NewsletterSubscription.testProps {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   // Add props here as needed
 }
 export default function NewsletterSubscription.test({}: NewsletterSubscription.testProps) {
@@ -74,3 +79,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >}
 >
+}
+
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -10,6 +10,8 @@ import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -32,6 +34,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const event = {
 
 
+    eventId: uuidv4()
+    type: "dao_endorsement" as const
+    payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() }
+    originInstanceId: state.config.instanceId
+    version
+    timestamp: Date.now()}
 
 
 
@@ -61,3 +69,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };
 
+
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+};

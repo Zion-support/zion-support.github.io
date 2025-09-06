@@ -59,6 +59,19 @@ interface PrivacyProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function Privacy({}: PrivacyProps) {
+interface PrivacyProps {
+  // Add props here as needed
+
+interface PrivacyProps {
+  // Add props here as needed
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+interface PrivacyProps {
+  // Add props here as needed
+export default function Privacy({}: PrivacyProps) {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -83,6 +96,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <metaname=\'description\' content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
+interface PrivacyProps {;
+  // Add props here as needed;
+}
+export default function Privacy(): any ({}: PrivacyProps) {;
 interface PrivacyProps {;
   // Add props here as needed;
 }
@@ -112,3 +129,5 @@ export default function Privacy(): any ({}: PrivacyProps) {;
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
+}

@@ -25,6 +25,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 _console.log('Git workflow automation initialized');
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
 
@@ -50,7 +51,7 @@ _console.log('Git workflow automation initialized');
 ,;
   log(message, level = 'INFO') {,;
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`,;
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
 ,;
     try {,;
       fs.appendFileSync(this.logFile, logMessage),;
@@ -1016,6 +1017,8 @@ async function main() {const automator = new GitWorkflowAutomator();
     process.exit(0);
   } catch (error) {automator.log(`Git workflow automation:failed:${error.message}`, 'ERROR');
     process.exit(1);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   }
 }
 if (require.main === module) {main();
@@ -1023,6 +1026,7 @@ if (require.main === module) {main();
 module.exports = GitWorkflowAutomator;#!/usr/bin/env node;
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
 
@@ -1047,6 +1051,8 @@ const fs = require('fs');
 const path = require('path');
 
 
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ;
 
 
@@ -1190,7 +1196,7 @@ class GitWorkflowAutomator {;
       return {;
         workingDirectoryClean: status.trim() === '', currentBranch: branch,
         lastCommit;
-        uncommittedFiles: status.trim().split('\n').filter(line => line.trim()), 
+        uncommittedFiles: status.trim().split('\n').filter(line => line.trim()) 
     } catch (error) {;
       this.log(`Git status check failed: ${error.message}`, 'ERROR');
       return { error: error.message 
@@ -1816,6 +1822,7 @@ if (require.main = = = module) {main()}
 module.exports = GitWorkflowAutomator;
 ;
 module.exports = GitWorkflowAutomator;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 class GitWorkflowAutomator {;
   constructor() {;
     this.logFile = './logs/pm2/git-workflow.log';
@@ -2086,3 +2093,6 @@ ursor/automate-test-improve-and-merge-code-646c
 },;
 ,;
 module.exports = GitWorkflowAutomator,;
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

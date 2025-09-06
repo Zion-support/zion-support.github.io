@@ -41,6 +41,11 @@ export default function Featured() {
 ;
 
 
+              Discover our handpicked selection of premium AI products and
+              services. These featured listings represent the best that the Zion
+              Marketplace has to offer.
+            </p>
+          </div>
 }
   ),;}
  export default function Featured () {
@@ -55,3 +60,10 @@ export default function Featured() {
 ;
 
 
+          {/* Reuse the FeaturedListings component */}
+          <FeaturedListingsSection show_title={false} />;
+        </div>;
+      </div>;
+      <Footer />;
+    </>);
+}

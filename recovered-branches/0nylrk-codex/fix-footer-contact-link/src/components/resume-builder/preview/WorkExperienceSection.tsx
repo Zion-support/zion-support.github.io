@@ -1,5 +1,39 @@
 
 
+import {WorkExperience} from '@/types/resume';
+import {format} from 'date-fns';
+
+interface WorkExperienceSectionProps {
+  work_experience: WorkExperience[];
+}
+
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
+
+
+import { WorkExperience  } from '@/types/resume';
+import { format } from 'date-fns';
+interface WorkExperienceSectionProps {
+  workExperience: WorkExperience[]
+}
+export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
+  // Sort work experience by date (newest first)
+interface WorkExperienceSectionProps {
+  work_experience: WorkExperience[];
+}
+
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
+
+
+    if (a.is_current && !b.is_current) return -1;
+    if (!a.is_current && b.is_current) return 1;
+    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
+    return dateB.getTime() - dateA.getTime()
+  });
+  const formatDate = (date: Date | string | undefined) => {
+    if (!date) return ''
+    if (typeof date === 'string') {
+      return format(new Date(date), 'MMM yyyy')
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface WorkExperienceSectionProps {;
@@ -11,6 +45,7 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
     if (a.is_current && !b.is_current) return -1,;
     if (!a.is_current && b.is_current) return 1,;
+    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
     return dateB.getTime() - dateA.getTime();
@@ -31,6 +66,7 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
   
 
 
+  
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>
@@ -48,11 +84,17 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
               {work.location && (
                 <span className="text-sm">{work.location}</span>
 
-import {WorkExperience} from '@/types/resume';
-import {format} from 'date-fns';
 interface WorkExperienceSectionProps {;
   workExperience: WorkExperience[];
 
+}
+              )}
+            </div>;
+            {work && work.description && (;
+              <p className="text-sm mt-2 whitespace-pre-line">{work && work.description}</p>;
+            )}
+          </div>;
+        ))}
 export /**
  * WorkExperienceSection - Function description
  */

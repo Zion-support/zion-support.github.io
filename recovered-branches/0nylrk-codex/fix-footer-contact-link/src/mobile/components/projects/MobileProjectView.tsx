@@ -10,6 +10,7 @@ import {
   FileText,
   MessageSquare,
   Video
+  Video
 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { SeverityIndicator } from "../common/SeverityIndicator";
@@ -48,6 +49,7 @@ interface ProjectViewProps {
     const roomId = `project-${project.id}`,
     toast.success("Starting project call", {
       description: "Initializing video connection..."
+      description: "Initializing video connection..."
     });
 
     navigate(`/call/${roomId}`);
@@ -56,10 +58,17 @@ interface ProjectViewProps {
   const messageClient = () => {
     toast.info("Opening message thread with client", {
       description: `Messaging ${project.client.name}...`
+      description: `Messaging ${project.client.name}...`
     });
     // Navigate to messaging with this client
   };
 
+  const messageClient = () => {
+    toast.info("Opening message thread with client", {
+      description: `Messaging ${project.client.name}...`
+    }),
+    // Navigate to messaging with this client
+  }
 
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -243,3 +252,167 @@ interface ProjectViewProps {
 
 
 
+  );
+}
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {CheckCircle, ChevronRight, FileText, MessageSquare, Video} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+import {SeverityIndicator} from "../common/SeverityIndicator";
+import {useNavigate} from "react-router-dom";
+import {toast} from "sonner";
+interface Milestone {;
+  id: string,;
+  title: string,;
+  dueDate: string,;
+  status: "completed" | "in_progress" | "pending",;
+  paymentStatus: "paid" | "pending" | "overdue",;
+  amount: string;
+}
+
+interface ProjectViewProps {;
+  project: {;
+    id: string,;
+    title: string,;
+    client: {;
+      name: string,;
+      avatar?: string;
+    };
+    startDate: string,;
+    endDate?: string;
+    status: string,;
+    totalAmount: string,;
+    progress: number,;
+    description: string;
+  };
+  milestones: Milestone[];
+}
+
+export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {;
+  const navigate = useNavigate();
+
+  const startProjectCall = () => {;
+    const roomId = `project-${project && project.id}`;
+    toast && toast.success("Starting project call", {;
+      description: "Initializing video connection...";
+    });
+
+    navigate(`/call/${roomId}`);
+  };
+
+  const messageClient = () => {;
+    toast && toast.info("Opening message thread with client", {;
+      description: `Messaging ${project && project.client.name}...`;
+    });
+    // Navigate to messaging with this client;
+  };
+    <div className="space-y-6 px-4 pb-24">;
+      <Card>;
+        <CardContent className="p-4">;
+          <div className="space-y-4">;
+            <div className="flex items-center justify-between">;
+              <div>;
+            <div className="flex gap-2">;
+              <Button size="sm" variant="outline" className="gap-1 flex-1">;
+                <FileText className="h-4 w-4" /> Contract;
+              </Button>;
+                <Video className="h-4 w-4" /> Call;
+              </Button>;
+            </div>;
+          </div>;
+        </CardContent>;
+      </Card>;
+                    View Details <ChevronRight className="h-4 w-4" />;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          ))}
+        </div>;
+      </section>;
+    </div>;
+      name: string,
+      avatar?: string;
+    }
+    start_date: string,
+    end_date?: string;
+    status: string,
+    total_amount: string,
+    progress: number,
+    description: string;
+  }
+  milestones: Milestone[];
+}
+export /**
+ * MobileProjectView - Function description
+ */
+function MobileProjectView() {
+  const navigate = use_navigate ();
+;
+  const startProjectCall = () =>: any {
+    const room_id = `project-${project.id}`;
+    toast.success ("Starting project call", {
+      description: "Initializing video connection...";
+    });
+;
+    navigate (`/call/${room_id}`);
+  }
+;
+  const message_client = () =>: any {
+    toast.info ("Opening message thread with client", {
+      description: `Messaging ${project.client.name}...`;
+    });
+    // Navigate to messaging with this client;
+  }
+;
+  return (
+    <div className="space - y-6 px - 4 pb - 24">;
+      <Card>;
+        <CardContent className="p - 4">;
+          <div className="space - y-4">;
+            <div className="flex items - center justify - between">;
+              <div>;
+                <h2 className="text - lg font - medium">{project.title}</h2>;
+                <div className="flex items - center gap - 2 mt - 1">;
+                  <Avatar className="h - 6 w - 6">;
+                    <AvatarImage src={project.client.avatar} />;
+                    <AvatarFallback>{project.client.name[0]}</AvatarFallback>;
+                  </Avatar>;
+                  <span className="text - sm">{project.client.name}</span>;
+                </div>;
+              </div>;
+              <Badge>{project.status}</Badge>;
+            </div>;
+              </Button>;
+            </div>;
+          </div>;
+        </CardContent>;
+      </Card>;
+}
+  ),;}
+ interface Milestone {
+  id: string;
+title: string;
+dueDate: string;
+navigate (`/call/$ {
+  roomId 
+}`) 
+};
+const messageClient = () => {
+  toast.info ("Opening message thread with client", {
+  project.client.name 
+}...` 
+});
+//Navigate to messaging with this client 
+};
+<Card> <CardContent className="p-4" > <div className="space-y-4" > <div className="flex items-center justify-between" > <div> </div> </div> <Badge> {
+  project.status 
+}</Badge> </div> <div className="space-y-1" > <div className="flex justify-between items-center text-sm" > <span>Progress</span> </div> <div className="grid grid-cols-2 gap-3 text-sm" > <div> </div> </div> <div> </div> <div className="flex gap-2" > <Button size="sm" variant="outline" className="gap-1 flex-1" > <FileText className="h-4 w-4" /> Contract </Button> <Button > <MessageSquare className="h-4 w-4" /> Message </Button> <Button > <Video className="h-4 w-4" /> Call </Button> </div> </div> </CardContent> </Card> <section>) : (<div className="h-5 w-5 rounded-full border-2 border-muted-foreground" ></div>) 
+}> {
+  milestone.paymentStatus 
+}</Badge> </div> </div> sm"variant=" outline"className=" w-full mt-3 gap-1"> View Details <ChevronRight className=" h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) 
+}</div> </section> </div>) 
+}
+}

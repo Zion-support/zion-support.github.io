@@ -2,6 +2,7 @@
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import { describe, it, expect } from 'vitest';
 
 
@@ -28,6 +29,10 @@ import { describe,it,expect } from 'vitest'; describe('Trust Score User API',() 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { describe, it, expect } from 'vitest'
+describe('Trust Score User API'
+  it('should work'
+const { describe,it,expect } from "vitest"; describe('Trust Score User API', () => { it("should work"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 describe('Trust Score User API'
   it('should work'
 const { describe,it,expect } from "vitest"; describe('Trust Score User API', () => { it("should work"

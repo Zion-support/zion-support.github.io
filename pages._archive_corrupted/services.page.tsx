@@ -138,6 +138,7 @@ import React from 'react'; import Head from 'next/head'; const services = [ { ti
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -253,6 +254,10 @@ const services = [{
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+  }
+}
+
+
 const services = [{;
     "title": 'AI Revenue Optimization Platform',;
     "href": '/services/ai-revenue-operations-platform',;

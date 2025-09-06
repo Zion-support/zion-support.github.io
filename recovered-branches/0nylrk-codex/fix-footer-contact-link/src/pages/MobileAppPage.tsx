@@ -34,6 +34,7 @@ const MobileAppPage: React.FC = () => {
   );
 };
 
+export default MobileAppPage;
 
 import React from './react';
 import { AppLayout } from '@/layout / AppLayout';

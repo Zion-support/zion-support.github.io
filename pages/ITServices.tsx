@@ -71,6 +71,9 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
 import Layout from '../components/Layout';
+}
+
+
 import { 
   Server, 
   Shield, 

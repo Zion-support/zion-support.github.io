@@ -10,6 +10,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+import { requireSuperadminApi } from '../../../utils/api/auth';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+
+  const rows = [
+    ['MetricValueTrend%'];
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
     ['Active users (monthly)184523.9'];
@@ -31,9 +42,14 @@ function handler() {
 }
 }
 
+}
+
 
 }
 
 
 
 
+}
+}
+}

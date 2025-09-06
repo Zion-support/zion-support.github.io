@@ -63,11 +63,38 @@ async function createAnalyticsTables() {
         CREATE OR REPLACE VIEW public.daily_page_views
 
 
+
+        CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public && public.analytics_events(event_type);
+        CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public && public.analytics_events(user_id);
+        CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public && public.analytics_events(created_at),
+        
+
+        -- View for daily page views
+        CREATE OR REPLACE VIEW public.daily_page_views
         WITH (security_invoker = true) AS
         SELECT
           DATE_TRUNC('day', created_at) AS date;
           path;
 
+        ),
+
+        CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public.analytics_events(event_type),
+        CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public.analytics_events(user_id),
+        CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public.analytics_events(created_at),
+        
+        -- View for daily page views
+        CREATE OR REPLACE VIEW public.daily_page_views
+        WITH (security_invoker = true) AS
+        SELECT 
+          DATE_TRUNC('day', created_at) AS date,
+          path,
+          COUNT(*) AS view_count
+        FROM public && public.analytics_events
+        WHERE event_type = 'page_view'
+        GROUP BY DATE_TRUNC('day', created_at), path
+
+        ORDER BY date DESC, view_count DESC,
+        
 
 
         -- View for conversion rates
@@ -227,6 +254,20 @@ function createAnalyticsTables() {
   }
 
 
+    // Tables creation failed, but we can still continue
+          ROUND ((c.conversion_count::numeric / NULLIF (p.view_count, 0)) * 100, 2) AS conversion_rate;
+        FROM conversions c;
+        LEFT JOIN page_views p ON c.date = p.date;
+        ORDER BY c.date DESC;
+      `;
+    });
+;
+    console.log ('Analytics tables created successfully');
+  } catch (error) {
+    console.error ('Error creating analytics tables:', error);
+    // Tables creation failed, but we can still continue;
+  }
+
         SELECT 
           c.date,
           c.conversion_type,
@@ -241,6 +282,11 @@ function createAnalyticsTables() {
 
         ORDER BY c.date DESC;
       `
+          ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 100, 2) AS conversion_rate
+        FROM conversions c
+        LEFT JOIN page_views p ON c.date = p.date
+        ORDER BY c.date DESC;
+      `
     });
 
     console.log("Analytics tables created successfully");
@@ -249,6 +295,22 @@ function createAnalyticsTables() {
     // Tables creation failed, but we can still continue
 
 
+    }),;
+    ;
+    // // // console.log('Analytics tables created successfully'),;
+  } catch (error) {;
+    console.error('Error creating analytics tables:', error),;
+    // Tables creation failed, but we can still continue;  }
+
+        FROM conversions c
+        LEFT JOIN page_views p ON c && c.date = p && p.date
+        ORDER BY c && c.date DESC;
+      `
+    });
+    // Tables creation failed, but we can still continue
+          ROUND ((c.conversion_count::numeric / NULLIF (p.view_count, 0)) * 100, 2) AS conversion_rate;
+        FROM conversions c;
+        LEFT JOIN page_views p ON c.date = p.date;
         ORDER BY c.date DESC;
       `;
     });

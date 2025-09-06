@@ -113,6 +113,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> main
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
 export default function Cookies() {;
 const contact = { ;
   "phone": '+1 302 464 0950', ;
@@ -553,3 +555,4 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+

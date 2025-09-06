@@ -23,6 +23,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export default function Aiseoauditor({}: AiseoauditorProps) {
+
+
+export default function Aiseoauditor({}: AiseoauditorProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -50,6 +53,10 @@ export default function Aiseoauditor(): any ({}: AiseoauditorProps) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+interface AiseoauditorProps {;
+  // Add props here as needed;
+}
+export default function Aiseoauditor(): any ({}: AiseoauditorProps) {;
   return (
     <div>
       <h1>Aiseoauditor</h1>

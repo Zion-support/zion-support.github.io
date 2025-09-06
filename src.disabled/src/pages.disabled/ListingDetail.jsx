@@ -41,6 +41,8 @@ interface ListingDetailProps {
 ursor/automate-test-improve-and-merge-code-646c
 export default function ListingDetail({}: ListingDetailProps) {
 export default function ListingDetail({}: ListingDetailProps) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+export default function ListingDetail({}: ListingDetailProps) {
   return (
     <div>
       <h1>ListingDetail</h1>
@@ -50,6 +52,7 @@ export default function ListingDetail({}: ListingDetailProps) {
 ursor/automate-test-improve-and-merge-code-646c
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 :src.disabled/src/pages.disabled/ListingDetail.jsx
 }
@@ -67,3 +70,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 }
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/src/pages.disabled/ListingDetail.jsx
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

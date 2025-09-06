@@ -41,12 +41,66 @@ interface ActionButtonsProps {
 
 
 
+  return (
+
+    <div className="flex space-x-2">
+
+  return (
+
+    <div className="flex space-x-2">
+
+interface ActionButtonsProps {
+  flag_id: string;
+  status: string;
+interface ActionButtonsProps {;
+  flagId: string;
+  status: string;
+  onAction: (;
+    flagId: string,;
+    action: "warning" | "suspension" | "ban" | "ignore",;
+  ) => void;
+}
+export const ActionButtons: React.FC<ActionButtonsProps> = ({;
+  flagId,;
+  status,;
+  onAction,;
+}) => {;
+  return (
+    <div className="flex space-x-2">;
+  return (
+
+    <div className="flex space-x-2">
       <Button
         variant="ghost"
         size="icon"
         title="View Details"
 
 
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
+;
+interface ActionButtonsProps {;
+  flagId:string,;
+  status:string,;
+  onAction:(flagId:string, action:'warning' | 'suspension' | 'ban' | 'ignore') => void;
+}
+;
+export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {;
+  return (;
+    <div className="flex space-x-2">;
+      <Button;
+        variant="ghost";
+        size="icon";
+        title="View Details";
+        onClick={() => alert("View details (would open a detailed view)")}
+      >;
+        <Eye className="h-4 w-4" />;
+      </Button>;
+        onClick={() => alert("View details (would open a detailed view)")}
+      >;
+        <Eye className="h-4 w-4" />;
+      </Button>;
       <Button
         variant="ghost"
         size="icon"
@@ -67,6 +121,9 @@ interface ActionButtonsProps {
       </Button>
 
 
+      >
+        <Info className="h-4 w-4" />
+      </Button>
         disabled={status === "actioned" || status === "ignored"}
       >;
         <Info className="h-4 w-4" />;
@@ -99,6 +156,9 @@ onClick={() => onAction(flagId, "warning")}
       </Button>
 
 
+      >
+        <AlertTriangle className="h-4 w-4" />
+      </Button>
         disabled={status === "actioned" || status === "ignored"}
       >;
         <AlertTriangle className="h-4 w-4" />;
@@ -126,6 +186,37 @@ onClick={() => onAction(flagId, "suspension")}
           size="sm"
           onClick={() => onAction(flagId, "ignore")}
 
+        onClick={() => onAction(flagId, 'ban')}
+        disabled={status === 'actioned' || status === 'ignored'}
+
+      >
+        <Ban className="h-4 w-4" />
+      </Button>
+      {status === 'pending' && (
+        <Button
+          variant="ghost"
+          size="sm"
+
+    </div>;
+);
+
+interface ActionButtonsProps {;
+  flagId: string,;
+  status: string,;
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
+}
+;
+export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {;
+  return (;
+    <div className="flex space-x-2">;
+      <Button;
+        variant="ghost";
+        size="icon";
+        title="View Details";
+        onClick={() => alert("View details (would open a detailed view)")}
+      >;
+        <Eye className="h-4 w-4" />;
+      </Button>;
       <Button;
         variant="ghost";
         size="icon";
@@ -160,6 +251,15 @@ onClick={() => onAction(flagId, "suspension")}
           onClick={() => onAction(flagId, 'ignore')}
 
 
+
+      >;
+        <Ban className="h-4 w-4" />;
+      </Button>;
+      {status === "pending" && (;
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => onAction(flagId, "ignore")}
         >;
           Ignore;
         </Button>;
@@ -175,6 +275,7 @@ onClick={() => onAction(flagId, "suspension")}
 
 
 
+};
     </div>
   );
 };

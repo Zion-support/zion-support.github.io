@@ -1,5 +1,44 @@
 
 
+import { useState } from "react";
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardDescription
+  CardFooter
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,;
+
+
+import {;
+  Card,;
+  CardContent,;
+  CardHeader,;
+  CardTitle,;
+  CardDescription,;
+  CardFooter,;
+
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react";
+interface JobMatchCardProps {;
+
+import { format } from "date-fns";
+import { JobMatch } from "@/types/jobs";
+  match: JobMatch;
+  onApply: (matchId: string, jobId: string) => void;
+  onDecline: (matchId: string) => void;
+  showApplied?: boolean
+}
+
+  if (!job) return null;
 
 interface JobMatchCardProps {
   match: JobMatch,
@@ -28,6 +67,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   if (!job) return null,
   
 
+  return (
   if (!job) return null;
   return (
 
@@ -48,12 +88,14 @@ interface JobMatchCardProps {;
 ;
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false } JobMatchCardProps) {;
   const job = match.job;
+  const job = match.job;
   ;
   if (!job) return null,;
   ;
   return (;
 
 
+  return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">;
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
@@ -156,6 +198,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             {match.match_score}% Match;
 
 
+            </CardDescription>;
+          </div>;
+          <Badge variant="outline" className="flex items-center">;
           </Badge>;
         </div>;
       </CardHeader>;
@@ -228,6 +273,11 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             {job.budget.min} - ${job.budget.max}
 
         
+        <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
+          <div className="flex items-center text-sm">
+            <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
+            ${job.budget.min} - ${job.budget.max}
+
 
           </div>
           <div className="flex items-center text-sm">
@@ -253,6 +303,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         ) : match.status === 'declined' ? (
 
 
+        ) : match.status === 'declined' ? (
           <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">
             <XCircle className="h-4 w-4 mr-2" />
             Declined
@@ -357,6 +408,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               onClick={() => onDecline(match.id)}
 
 
+              className="flex-1"
+              onClick={() => onDecline(match && match.id)}
             >;
               Decline;
             </Button>;
@@ -368,12 +421,12 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
   );
 import { useState  } from './react';
-import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
   CardDescription,
+  CardFooter
   CardFooter
 } from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';

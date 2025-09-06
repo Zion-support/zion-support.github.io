@@ -11,3 +11,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'})
 };
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { allowed } = await ensureAdminFromApi(req)
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' })
+
+
+  return res.status(200).json({
+    content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'})
+};

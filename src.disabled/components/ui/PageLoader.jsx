@@ -2,6 +2,7 @@ import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Load
 import { cn } from\';@/lib/utils\'; \"export\": const PageLoader = ({ text =\';\';Loading...\',\"className\": \''}) => {} return() <div\''; className={cn(\'';\"flex\": flex-col items-center justify-center min-h-screen\',className )} > <div className=\'animate-spin rounded-full h-32 w-32 border-b-2 border-white\'></div>\''\'' <p className=\'mt-4 text-white text-lg font-medium\'>{text}</p> </div>\' )\'}\''\';\'';\''\''\'';\'';
 const { cn } from";@/lib/utils"; export: const PageLoader = ({ text =";";Loading.",className: ""}) => {} return() <div""; className={cn("";flex: flex-col items-center justify-center min-h-screen",className )} > <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>"""" <p className="mt-4 text-white text-lg font-medium">{text}</p> </div>" )"}""";"";"""""";"";"""
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 import { cn } from\';@/lib/utils\'; \"export\": const PageLoader = ({ text =\';\';Loading...\',\"className\": \''}) => {} return () <div\'' className={cn(\''\"flex\": flex-col items-center justify-center min-h-screen\',className )}> <div className=\'animate-spin rounded-full h-32 w-32 border-b-2 border-white\'></div>\''\'' <p className=\'mt-4 text-white text-lg font-medium\'>{text}</p> </div>\' )\'}\''\';\'';\''\''\'';\'';
@@ -19,3 +20,4 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 const { cn } from";@/lib/utils"; export: const PageLoader = ({ text =";";Loading.",className: ""}) => {} return () <div"" className={cn(""flex: flex-col items-center justify-center min-h-screen",className )}> <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>"""" <p className="mt-4 text-white text-lg font-medium">{text}</p> </div>" )"}""";"";"""""";"";"""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

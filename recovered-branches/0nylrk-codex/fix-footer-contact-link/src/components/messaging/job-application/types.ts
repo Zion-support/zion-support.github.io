@@ -1,4 +1,15 @@
 
+export interface Job {;
+
+
+export interface Job {
+  id: string;
+  title: string;
+  description: string;
+  company_name?: string;
+  budget?: string;
+  client_id: string
+}
 
 
 export interface ApplyToJobModalProps {;
@@ -37,3 +48,9 @@ export interface ApplyToJobModalProps {;
 
 
 
+;
+
+;
+;
+export interface ApplyToJobModalProps {
+  job: Job;

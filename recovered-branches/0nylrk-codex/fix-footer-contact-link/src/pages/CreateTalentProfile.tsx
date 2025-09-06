@@ -32,3 +32,24 @@ export default function CreateTalentProfile() {
 
 
 
+  );
+}
+
+;
+
+
+    </div>);
+}
+
+;
+
+
+        ;
+        <TalentRegistrationForm />;
+      </div>;
+    </div>;
+  );
+}
+;
+}
+;

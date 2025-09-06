@@ -43,6 +43,7 @@ export default function TalentOnboarding() {
 
   );
 
+  );
 }
     return <Navigate to="/login" replace />;
   }
@@ -57,6 +58,8 @@ export default function TalentOnboarding() {
 
 
 
+  }
+  return (
               Showcase your skills to top clients and employers. Create a professional profile;
               to get discovered for AI and tech projects on the Zion Marketplace.;
             </p>;
@@ -77,3 +80,16 @@ export default function TalentOnboarding() {
 
 
 
+    </>;
+  ); export default function TalentOnboarding () {
+  const {
+  user, isLoading 
+}= useAuth ();
+// If not authenticated, redirect to login if (!isLoading && !user) {}
+;
+
+}
+    </>;
+  );
+}
+;

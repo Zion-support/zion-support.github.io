@@ -5,6 +5,9 @@ export interface Wallet {
 
   balance: number;
 
+export interface Wallet {
+  user_id: string;
+  balance: number;
   updated_at: string;
 }
 
@@ -18,6 +21,7 @@ export interface TokenTransaction {
 export interface TokenTransaction {;
 
 
+export interface TokenTransaction {
   id: string;
   user_id: string;
   amount: number;
@@ -31,3 +35,9 @@ export interface TokenTransaction {;
 
 
 
+export interface Wallet {;
+
+  created_at: string;
+}
+;
+}

@@ -82,6 +82,9 @@
 
 
 
+            
+
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -127,6 +130,9 @@
               
               
 
+
+
+              
 
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -226,6 +232,9 @@
               
               
 
+
+
+              
 
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -479,3 +488,19 @@
 
 
 
+  );
+};
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import EquipmentPage from './EquipmentPage';
+describe('EquipmentPage', () => {
+  it('renders equipment page correctly', () => {
+    render(
+      <MemoryRouter>
+        <EquipmentPage />
+      </MemoryRouter>
+    );
+    expect(screen.getByText('Equipment')).toBeInTheDocument();
+  });
+});

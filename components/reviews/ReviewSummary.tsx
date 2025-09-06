@@ -46,6 +46,7 @@ import {Star} from 'lucide-react';
         </div>
       </div>
     </div>
+export default ReviewSummary;
 
 
 };

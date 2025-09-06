@@ -44,11 +44,15 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
   uploaded_at: string
 
 }
+export interface CreateMilestoneRequest {;
 
   title: string;
   description?: string;
 }
 export interface UpdateMilestoneRequest {
+
+
+export interface UpdateMilestoneRequest {;
 
   title?: string;
   description?: string;
@@ -61,3 +65,16 @@ export interface UpdateMilestoneRequest {
 
 
 
+}
+
+
+export function getDaysUntilDue(milestone: Milestone): number | null {
+  if (!milestone.dueDate) return null;
+  const dueDate = new Date(milestone.dueDate);
+  const now = new Date();
+  const diffTime = dueDate.getTime() - now.getTime();
+  return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+}
+
+}
+}

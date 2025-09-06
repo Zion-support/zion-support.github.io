@@ -3,11 +3,15 @@
 
 
 
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
+  ensureDisputeUploadDir
+  getDisputeById
+  upsertDispute,;
+} from "../../../../utils/fsdb";
+
+
 
 
 
@@ -16,6 +20,11 @@ import {
   upsertDispute,;
 } from "../../../../utils/fsdb";
   parseUserFromRequest,
+  ensureDisputeUploadDir
+  getDisputeById
+  upsertDispute,;
+} from "../../../../utils/fsdb";
+  parseUserFromRequest
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
 export const config = {
@@ -29,6 +38,10 @@ export default async function handler(
 
 
 
+  req: NextApiRequest
+  res: NextApiResponse
+) {;
+  const { id } = req.query;
 
   if (typeof id !== "string")
 
@@ -65,6 +78,11 @@ import path from './path';
   upsert_dispute
 } from '../../../../utils / fsdb';
   parseUserFromRequest,
+  ensureDisputeUploadDir
+  getDisputeById
+  upsert_dispute
+} from '../../../../utils / fsdb';
+  parseUserFromRequest
   ensureInvolvedOrAdmin
 } from '../../../../utils / auth';
 export const config = {
@@ -120,6 +138,7 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
 
 
       { recursive: true },
+      { recursive: true }
       (err: any) => {
         if (return reject (err)) {
   $2
@@ -127,15 +146,28 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
         fs.write_file (file_path, data, (err2: any) =>;
           err2 ? reject (err2) : resolve (),
 
+          err2 ? reject (err2) : resolve ()
         );
       }
     );
   });
+}
 
 }
 
 
 
+}
+
+    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
+      if (err) return reject(err);
+      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
+    })
+  })
+}
+}
+
+}
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -165,6 +197,7 @@ export default async function handler(req, res) {
 }
 
 
+}
 
   } catch (error) {
     console.error("Error:", error);
@@ -178,6 +211,7 @@ export default async function handler(req, res) {
     const dir = await ensureDisputeUploadDir(dispute.id);
     for (const f of files) {;
       const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
+      const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64');
       const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64');
       const filePath = path.join(dir, safeName);
       await fsPromisesWrite(filePath, buffer);

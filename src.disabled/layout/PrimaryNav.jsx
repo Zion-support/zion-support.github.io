@@ -20,6 +20,7 @@ export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useSt
 "export": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {'''";";""}
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -30,3 +31,4 @@ export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useSt
 "export": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging && messaging.unreadCount} catch {'''";";""}
 "export": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging && messaging.unreadCount} catch {'''";";""}
 "export": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging && messaging.unreadCount} catch {'''";";""}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

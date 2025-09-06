@@ -47,3 +47,7 @@ export default Contact
 ;
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+export default Contact
+;
+}
+export default Contact

@@ -77,6 +77,7 @@ export default Sidebar;
         { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' },
         { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' };
       ]
+      ]
     },
     {,
       id: 'solutions',
@@ -90,6 +91,7 @@ export default Sidebar;
         { name: 'Digital Transformation', href: '/digital-transformation', icon: Network, description: 'Complete digital transformation' },
         { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' };
       ]
+      ]
     },
     {,
       id: 'company',
@@ -102,6 +104,7 @@ export default Sidebar;
         { name: 'Case Studies', href: '/case-studies', icon: CheckCircle, description: 'Success stories' },
         { name: 'News & Updates', href: '/news', icon: ArrowRight, description: 'Latest news' },
         { name: 'Partners', href: '/partners', icon: Users, description: 'Our partners' };
+      ]
       ]
     };
   ],
@@ -117,10 +120,12 @@ export default Sidebar;
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709'
+    address: '364 E Main St STE 1008, Middletown DE 19709'
   };
 ,
   const handleLinkClick = (href: string) => {,
     if (onClose) onClose(),
+    router.push(href)
     router.push(href)
   };
 ,
@@ -163,11 +168,13 @@ export default Sidebar;
                     link.highlight,
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: shadow-lg',
                       : 'text-gray-700 hover: bg-gray-100'
+                      : 'text-gray-700 hover: bg-gray-100'
                   }`};
                 >,
                   <IconComponent className="w-5 h-5" />,
                   <span className="font-medium">{link.name}</span>,
                 </button>,
+              )
               )
             })};
           </div>,
@@ -216,10 +223,12 @@ export default Sidebar;
                           </div>,
                         </button>,
                       )
+                      )
                     })};
                   </motion.div>,
                 )};
               </div>,
+            )
             )
           })};
         </div>,
@@ -264,6 +273,7 @@ export default Sidebar;
         </div>,
       </div>,
     </motion.aside>,
+  )
   )
 };
   );

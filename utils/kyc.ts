@@ -3,6 +3,18 @@
 export interface KycProfile {
   user_id: string;
 
+  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+  url: string;
+  uploaded_at: string;
+  status: 'pending' | 'approved' | 'rejected';
+}
+export interface KycProfile {
+  user_id: string;
+
+
+export interface KycProfile {;
+
+  userId: string;
   role: KycRole;
   fullLegalName?: string;
   business_name?: string;
@@ -66,6 +78,15 @@ export interface KycProfile {
   }
 
 
+    missing && missing.push('name')
+  }
+  if (!profile && profile.country) {
+    missing && missing.push('country');
+  }
+  
+  if (!profile && profile.country) {
+    missing && missing.push('country');
+  }
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
   if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
@@ -86,6 +107,7 @@ export interface KycProfile {
 
 }
 
+export interface KycDocumentMeta {;
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploadedAt: string;
@@ -95,6 +117,7 @@ export interface KycProfile {
 }
 
 
+}
   userId: string;
   role: KycRole;
   fullLegalName?: string;
@@ -105,6 +128,8 @@ export interface KycProfile {
   documents: KycDocumentMeta[];
   status: "in_progress" | "submitted" | "approved" | "rejected";
   amlStatus: "unknown" | "clear" | "match" | "review";
+  status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
+  amlStatus: 'unknown' | 'clear' | 'match' | 'review';
   flags?: string[];
   riskScore?: number;
   createdAt: string;
@@ -123,5 +148,42 @@ export interface KycProfile {
 
 
 
+
+
+    details?: any
+  }>;
+}
+export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
+  const missing: string[] = [];
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('name');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('country');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('dateOfBirth');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('businessRegistrationNumber');
+  }
+  return {
+    ok: missing.length === 0,
+    missing;
+  }
+}
 
 

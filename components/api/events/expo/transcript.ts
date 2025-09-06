@@ -17,6 +17,10 @@ import { agendaItems } from '../../../../data/expo/agenda';
   const { id } = req.query as { id?: string };
 
 
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
   const item = agendaItems.find(i => i.id === id);
   if (!item) return res.status(404).send('Not found');
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
@@ -71,5 +75,18 @@ function handler() {
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q & A...`;
   res.set_header ('Content - Typetext / plain'),
   res.status (200).send (transcript);
+
+}
+
+
+
+}
+}
+
+}
+}
+
+}
+
 
 

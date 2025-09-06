@@ -28,10 +28,19 @@ export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
           select: (columns: string = "*") => ({
             single: () => Promise.resolve({ data: data, error: null })
           })
+            callback({ data: [], error: null })
+        }),
+        insert: (data: any) => ({
+          select: (columns: string = "*") => ({
+            single: () => Promise.resolve({ data: data, error: null })
+          })
         }),
         update: (data: any) => ({
           eq: (column: string, value: any) => ({
             select: (columns: string = "*") => ({
+              single: () => Promise.resolve({ data: data, error: null })
+            })
+          })
               single: () => Promise.resolve({ data: data, error: null })
             })
           })
@@ -43,11 +52,17 @@ export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
           })
         })
       })
+              callback({ data: null, error: null })
+          })
+        })
+      })
     }),
     auth: {
       getUser: () => Promise.resolve({ data: { user: null }, error: null }),
       signIn: (credentials: any) =>
         Promise.resolve({ data: { user: null }, error: null }),
+      signOut: () => Promise.resolve({ error: null })
+    }
       signOut: () => Promise.resolve({ error: null })
     }
   };
@@ -101,6 +116,10 @@ const supabaseConfig: SupabaseConfig = {
 export const supabase = createSupabaseClient(supabaseConfig);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  anonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "your-anon-key"
+};
+
+export const supabase = createSupabaseClient(supabaseConfig);
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;

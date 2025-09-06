@@ -4,6 +4,34 @@
   {
 
 
+      'Distributed edge nodes',
+      'Real - time data processing',
+      'Low - latency computing',
+      'Edge AI capabilities',
+      'Automatic scaling',
+      'Geographic distribution',
+      'Load balancing',
+      'Edge analytics',
+      'IoT integration',
+      '5G optimization'
+    ],
+    popular: true,
+    icon: '🌐',
+      'Edge Computing',
+      'IoT',
+      '5G',
+      'Kubernetes',
+      'Docker',
+      'React',
+      'Node && Node.js',
+      'Python',
+      'AWS'
+    ],
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+;
     realImplementation: true
     implementationDetails:
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
@@ -206,12 +234,20 @@
 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
     realImplementation: true
     implementationDetails:
 
+    implementationDetails: 'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.';
+    launchDate: '2024-01-20';
+    customers: 2500;
+    rating: 4.7
+
+    reviews: 1250
   id: string,;
   name: string,;
   tagline: string,;
@@ -302,3 +338,5 @@ export const innovativeITServices: InnovativeITService[] = [;
 
 
 
+  }
+];

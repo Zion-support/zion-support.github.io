@@ -73,6 +73,7 @@ if ( {) {
     message,
     contact_email,
     created_at: new Date ().toISOString ()
+    created_at: new Date ().toISOString ()
   }
 ;
   try {
@@ -105,3 +106,8 @@ return res.status (200).json ({ ok: true, appeal });
 
 
 
+return res.status(200).json({ ok: true, appeal });
+}
+
+  return res.status(200).json({ ok: true, appeal });
+}

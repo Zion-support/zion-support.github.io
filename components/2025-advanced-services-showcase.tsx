@@ -376,6 +376,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571
         
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+        
         <div className="flex items-center justify-between">
           <a
             href={service.link}
@@ -392,6 +393,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571
           
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+          
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -709,6 +711,7 @@ import { motion, AnimatePresence  } from './framer-motion';
   Phone,
   Mail,
   MapPin
+  MapPin
 } from 'lucide-react';
 ;
 // Mock service data;
@@ -722,6 +725,8 @@ const advancedEnterpriseServices2025 = [;
     rating: 4.9,
     tags: ["AI", "Machine Learning", "Enterprise"],
     color: "from - blue - 500 to - purple - 500",
+    icon: "🤖"
+  }
     icon: "🤖"
   }
 ];
@@ -738,6 +743,8 @@ const innovativeMicroSaasExpansion2025 = [;
     color: "from - green - 500 to - teal - 500",
     icon: "⚡"
   }
+    icon: "⚡"
+  }
 ];
 ;
 const cuttingEdgeITInfrastructureServices = [;
@@ -752,6 +759,8 @@ const cuttingEdgeITInfrastructureServices = [;
     color: "from - orange - 500 to - red - 500",
     icon: "☁️"
   }
+    icon: "☁️"
+  }
 ];// Import our new service data;
 import { advancedEnterpriseServices2025 } from '../data / 2025 - advanced - enterprise - services - expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data / 2025 - innovative - micro - saas - expansion';
@@ -760,11 +769,13 @@ import { cuttingEdgeITInfrastructureServices } from '../data / 2025 - cutting - 
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com'
 }
 ;
 const all_services = [;
   ...advancedEnterpriseServices2025,
   ...innovativeMicroSaasExpansion2025,
+  ...cuttingEdgeITInfrastructureServices ];  website: 'https://ziontechgroup.com';
   ...cuttingEdgeITInfrastructureServices ];  website: 'https://ziontechgroup.com';
 }
 ;
@@ -815,12 +826,14 @@ const categories = [;
     icon: <Atom className="w - 6 h - 6" />,
     color: 'from - violet - 500 to - indigo - 500',
     description: 'Quantum computing solutions'
+    description: 'Quantum computing solutions'
   },
   {
     id: 'enterprise',
     name: 'Enterprise Solutions',
     icon: <Building className='w - 6 h - 6' />,
     color: 'from - blue - 500 to - purple - 500',
+    description: 'Enterprise - grade AI and IT solutions'
     description: 'Enterprise - grade AI and IT solutions'
   },
   {
@@ -829,12 +842,14 @@ const categories = [;
     icon: <Globe className='w - 6 h - 6' />,
     color: 'from - green - 500 to - emerald - 500',
     description: 'Innovative micro SAAS solutions'
+    description: 'Innovative micro SAAS solutions'
   },
   {
     id: 'infrastructure',
     name: 'IT Infrastructure',
     icon: <Shield className='w - 6 h - 6' />,
     color: 'from - orange - 500 to - red - 500',
+    description: 'Cutting - edge infrastructure services'
     description: 'Cutting - edge infrastructure services'
   },
   {
@@ -843,12 +858,15 @@ const categories = [;
     icon: <Brain className='w - 6 h - 6' />,
     color: 'from - purple - 500 to - pink - 500',
     description: 'Advanced AI and ML platforms'
+    description: 'Advanced AI and ML platforms'
   },
   {
     id: 'quantum',
     name: 'Quantum Computing',
     icon: <Atom className='w - 6 h - 6' />,
     color: 'from - violet - 500 to - indigo - 500',
+    description: 'Quantum computing solutions'
+  } ];
     description: 'Quantum computing solutions'
   } ];
 ;
@@ -1612,6 +1630,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571
               
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+              
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />

@@ -13,6 +13,8 @@ export const real2036AIServices = [
       'Traffic optimization',
       'Safety systems'
     ]
+      'Safety systems'
+    ]
 
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
@@ -21,6 +23,12 @@ export const real2036AIServices = [
 
 
 
+  }
+];
+;
+  },;
+];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
+    ]
 export const real2036AIServices = [;
   {;
     id: 'ai-emotion-intelligence-platform',;
@@ -238,3 +246,5 @@ export const real2036AIServices = [;
 ];
 
 
+  }
+];

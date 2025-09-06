@@ -6,6 +6,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle
+  DialogTitle
 } from "@/components/ui/dialog";
 import { HireRequestForm } from "./HireRequestForm";
 import { TalentProfile } from "@/types/talent";
@@ -19,6 +20,7 @@ interface HireRequestModalProps {
 
   userDetails?: UserProfile;
 
+  userDetails?: UserProfile;
 }
 
 export function HireRequestModal({
@@ -29,6 +31,9 @@ export function HireRequestModal({
 }: HireRequestModalProps) {
   const handleClose = () => {
 
+  userDetails
+}: HireRequestModalProps) {
+  const handleClose = () => {
     onClose();
   };
 
@@ -41,4 +46,34 @@ export function HireRequestModal({
           <DialogTitle className="text-xl font-bold text-white">;
 
 
+            Hire {talent.full_name}
+          </DialogTitle>
+        </DialogHeader>
+
+        <HireRequestForm
+          talent={talent}
+          onClose={handleClose}
+          userDetails={userDetails}
+        />
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+            Hire {talent.full_name}
+          </DialogTitle>
+        </DialogHeader>
+        <HireRequestForm
+          talent={talent}
+          onClose={handleClose}
+          userDetails={userDetails}
+          </DialogTitle>;
+        </DialogHeader>;
+        <HireRequestForm;
+          talent={talent}
+          on_close={handle_close}
+          user_details={user_details}
+        />;
+      </DialogContent>;
+    </Dialog>);
 }

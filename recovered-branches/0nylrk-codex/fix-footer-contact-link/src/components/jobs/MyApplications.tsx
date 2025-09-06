@@ -10,6 +10,7 @@ import {ApplicationStatus} from "@/types/jobs";
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
 
+    switch (status) {
 import { useState } from './react';
 import { useJobApplications } from '@/hooks / useJobApplications';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -28,6 +29,8 @@ function MyApplications() {
   const getStatusBadge = (status: ApplicationStatus) =>: any {
 
 
+  const getStatusBadge = (status: ApplicationStatus) => {
+    switch (status) {
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -106,6 +109,25 @@ export function MyApplications() {
   }
 
 
+      case "new": return <Badge variant="secondary">New</Badge>;
+      case "viewed":;
+        return <Badge variant="outline">Viewed</Badge>;
+      case "shortlisted":;
+
+
+  },
+  
+
+
+  if (isLoading) {
+      case "rejected":;
+        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,;
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  };
+
+  if (isLoading) {;
     return (
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -350,6 +372,9 @@ export function MyApplications() {;
 
 
 
+                <Button 
+                  variant="default" 
+
                   size="sm"
                   className="text-xs"
                   asChild>;
@@ -392,3 +417,15 @@ export function MyApplications() {;
       ))}
 
 
+        return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;
+      case "interview":;
+        return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;
+      case "hired":;
+        return <Badge className="bg - green - 100 text - green - 800">Hired</Badge>;
+      case "rejected":;
+        return <Badge className="bg - red - 100 text - red - 800">Rejected</Badge>,
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  }
+;

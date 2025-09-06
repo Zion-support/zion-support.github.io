@@ -12,6 +12,7 @@ export default function ProductActions.test({}: ProductActions.testProps) {
   );
 }
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 function setup() {
   const addToCart = vi.fn().mockResolvedValue(undefined);
@@ -48,6 +49,10 @@ interface ProductActions.testProps {
   // Add props here as needed
 }
 export default function ProductActions.test({}: ProductActions.testProps) {
+interface ProductActions.testProps {
+  // Add props here as needed
+}
+export default function ProductActions.test({}: ProductActions.testProps) {
   return (
     <div>
       <h1>ProductActions.test</h1>
@@ -59,3 +64,4 @@ export default function ProductActions.test({}: ProductActions.testProps) {
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -94,9 +94,9 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
   }
   return new Response(JSON.stringify({ error: 'Invalid action' }), { status: 400 })
 });
+async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {});
 async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
-
-
+  try {
   const { data: wallet, error: walletError } = await supabase
     .from('wallets')
     .select('*')
@@ -107,6 +107,7 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     return new Response(JSON.stringify({ error: walletError.message }), { status: 500 })
 
 
+    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
   }
   let balance = wallet?.balance |0;
   balance += delta;
@@ -120,6 +121,7 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     if (error) return new Response(JSON.stringify({ error: error.message }), { status: 500 })
 
 
+    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
   } else {
     const { error } = await supabase
       .from('wallets')
@@ -211,7 +213,7 @@ if ( {) {
 }
 ;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
-const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,;
+const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 const supabase = createClient(supabaseUrl, serviceKey),;
 serve(async (req) => {;
   if (req.method === 'OPTIONS') {;
@@ -376,3 +378,4 @@ if (wallet) {
 ;
 
 
+;

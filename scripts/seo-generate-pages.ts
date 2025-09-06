@@ -7,6 +7,7 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 /* eslint - disable no - console */;
 import fs from 'fs';
 import path from 'path';
@@ -78,7 +79,7 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }],;
 async function postJson(url: string, body: any): Promise<any> {;
   return new Promise((resolve, reject) => {;
-    const u = new URL(url),;
+    const u = new URL(url);
     const data = JSON.stringify(body),;
     const opts: any = {;
       method: 'POST',;
@@ -129,6 +130,7 @@ main ().catch ((e) => {
 
 
 ;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 

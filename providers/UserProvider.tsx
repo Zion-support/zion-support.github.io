@@ -120,4 +120,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 
 
 export default UserProvider;
+<<<<<<< HEAD
 export default UserProvider;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -1,6 +1,7 @@
 
 export interface TalentProfile {
 
+export interface TalentProfile {
   id: string;
   user_id: string;
   full_name: string;
@@ -48,6 +49,9 @@ export interface HireRequest {
     currency: string;
   };
 
+    max: number;
+    currency: string;
+  };
   timeline: {
     startDate: string;
     endDate?: string;
@@ -123,3 +127,4 @@ export interface HireRequest {;
 ;
 
 
+}

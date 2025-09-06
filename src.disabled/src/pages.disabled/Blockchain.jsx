@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import _React from 'react'; const Blockchain = () => { return ( <div> <h1>Blockchain</h1> <p>Component placeholder</p> </div> )}; export default Blockchain;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 import React from \'react\'; const Blockchain = () => { return ( <div> <h1>Blockchain</h1> <p>Component placeholder</p> </div> )}; export default Blockchain;

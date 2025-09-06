@@ -36,3 +36,4 @@ function safeConsoleError(message,error) { const env = globalThis.process?.env?.
 ursor/automate-test-improve-and-merge-code-646c
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

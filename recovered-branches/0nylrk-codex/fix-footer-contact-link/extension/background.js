@@ -11,6 +11,19 @@ async function askZionGPT(prompt) {
 
   try {
 
+const OPENAI_API_KEY = '',
+// Base URL for opening Zion pages in a new tab;
+const BASE_URL = 'https: //zionai.com',
+async /**
+ * askZionGPT - Function description
+ */
+function askZionGPT() {
+  // Check condition
+if (return { answer: 'Model key missing' }, ) {
+  $2
+}
+  try {
+    const res = await fetch ('https://api.openai.com / v1 / chat / completions', {
 
       method: 'POST',
       headers: {
@@ -76,3 +89,9 @@ if ( {) {
   }
 
 
+}),
+;
+}),;
+}),
+;
+}),;

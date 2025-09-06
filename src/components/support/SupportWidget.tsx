@@ -84,6 +84,8 @@ const [isOpen, setIsOpen] = useState(false)
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+                  "font-semibold",
+                  theme === "dark" ? "text-white" : "text-gray-800",
                 )}
               >
 

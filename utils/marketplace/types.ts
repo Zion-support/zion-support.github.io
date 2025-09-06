@@ -10,6 +10,14 @@ export interface Offer {;
 
 
 
+// Marketplace types
+export interface Offer {
+
+export interface Offer {;
+
+export interface Offer {;
+
+
   id: string;
   createdAtIso: string;
   client_id: string;
@@ -75,6 +83,9 @@ export interface PaymentTerms {;
 }
 
 export interface Project {;
+  scopeSummary: string;
+  paymentTerms: PaymentTerms;
+
 
 
 
@@ -119,3 +130,6 @@ export interface ProjectNote {
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+
+

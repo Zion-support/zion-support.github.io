@@ -8,6 +8,7 @@ import {
   FormControl,
   FormMessage
 
+  FormMessage
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
@@ -19,6 +20,10 @@ interface ProjectDetailsFieldProps {
 
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
 
+  return (
+    <FormField
+      control={form && form.control}
+      name="projectOverview"
 
 export /**
  * ProjectDetailsField - Function description
@@ -53,6 +58,12 @@ function ProjectDetailsField() {
 }
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
 
+} from "@/components/ui/form";
+interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues>;
+  form: UseFormReturn<FormValues>;
+}
+export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
   return (
     <FormField
       control={form && form.control}

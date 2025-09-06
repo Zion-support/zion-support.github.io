@@ -919,6 +919,12 @@ function CookiesPage() {
 
 
 
+          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+}
 }
 }
       </div>

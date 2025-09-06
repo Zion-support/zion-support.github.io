@@ -39,6 +39,7 @@ export default ${validName};`;
 ursor/automate-test-improve-and-merge-code-646c
 }
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Fix blog pages
 const blogDir = 'pages/blog';
 if (fs.existsSync(blogDir)) {
@@ -63,6 +64,7 @@ if (fs.existsSync(servicesDir)) {
 ursor/automate-test-improve-and-merge-code-646c
   serviceFiles.forEach(file => {}
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // // // // // // // console.log('Variable name fixing completed!');
     fixFile(path.join(servicesDir, file))})}
 console.log('Variable name fixing completed!');

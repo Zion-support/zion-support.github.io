@@ -124,6 +124,7 @@ function ProjectDetailsContent() {
         
 
 
+        
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
@@ -333,7 +334,7 @@ if ( {) {
     async function loadProject() {;
       if (!projectId) return,;
       setIsLoading(true),;
-      const projectData = await getProjectById(projectId),;
+      const projectData = await getProjectById(projectId);
       if (projectData) {;
         setProject(projectData),;
 
@@ -502,6 +503,46 @@ if ( {) {
   if (isLoading) {
 
 
+      case "canceled":;
+        return <Badge variant="destructive">Canceled</Badge>,;
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+
+    loadProject();
+  }, [projectId]);
+
+  const fetchProjectNotes = async (projectId: string) => {;
+    try {;
+      const { data, error } = await supabase;
+        .from("project_notes");
+        .select(`;
+          *;
+          created_by_profile:profiles!user_id(display_name, avatar_url);
+        `);
+        .eq("project_id", projectId);
+        .order("created_at", { ascending: false }),;
+
+      if (error) throw error;
+
+      setNotes(data || []);
+    } catch (err) {;
+      console && console.error("Error fetching project notes:", err);
+    }
+  };
+
+      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>;
+      case "offer_accepted":;
+    return (
+      <div className="container mx-auto py-8">;
+        <div className="flex justify-center items-center h-64">;
+          <div className="text-center">;
+            <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>;
+            <p>Loading project details...</p>;
+          </div>;
+        </div>;
+      </div>;
+    );
+  }
     return (
       <div className="container mx-auto py-8">;
         <Card>;
@@ -608,6 +649,8 @@ if ( {) {
     }
   }
 
+    }
+  }
               Return to Dashboard;
             </Button>;
           </CardContent>;
@@ -672,6 +715,15 @@ if ( {) {
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
 
 
+  // Check if user is either the client or the talent;
+  const isClient = user?.id === project && project.client_id;
+  const isTalent = user?.id === project && project.talent_id;
+
+  if (!isClient && !isTalent) {;
+    navigate("/unauthorized");
+    return null;
+  }
+  }
 
   
   const isOfferPending = project.status === "offer_sent",
@@ -881,6 +933,7 @@ if ( {) {
                           </Link>
 
 
+                          </Link>
                         </Button>
                       </div>
                     ) : (
@@ -1458,6 +1511,8 @@ if ( {) {
 
 
 
+                                    <User className="h-4 w-4" />;
+                                  )}
                           <Textarea
                             placeholder="Add a note or update to the project..."
                             value={newNote}
@@ -2104,6 +2159,13 @@ if ( {) {
                   </p>
 
 
+                    </div>;
+                  </div>;
+                </div>;
+              </CardContent>;
+            </Card>;
+                    </div>;
+                  </div>;
             {/* Project Status Card */}
             <Card className="mt-6">;
               <CardHeader>;
@@ -2150,6 +2212,31 @@ if ( {) {
                     onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
 
 
+                  <Button
+                    variant="outline"
+                    onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
+                  <Button ;
+                    variant="outline";
+                    onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
+                        <img
+                          src={project && project.client_profile.avatar_url}
+                          alt={project && project.client_profile.display_name}
+                        />;
+                      ) : (;
+                        <User className="h-6 w-6" />;
+                      )}
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
+                          onClick={() => navigate(`/messages?clientId=${project && project.client_id}`)}
+                        >;
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message;
+                        </Button>;
+                      )}
+                  <Button
+                    variant="outline"
+                    onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
                     className="w-full";
                   >;
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes;
@@ -2193,3 +2280,27 @@ function ProjectDetails() {
 
 
 
+;
+
+    </>;
+  ),;
+    </>;
+  );
+}
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+    </>;
+  );
+}
+;
+export default function ProjectDetails() {;
+  return (;
+    <ProtectedRoute>;
+      <ProjectDetailsContent />;
+    </ProtectedRoute>;
+  );
+}
+;

@@ -29,6 +29,7 @@ interface CustomerexperienceProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
 export default function Customerexperience({}: CustomerexperienceProps) {
+export default function Customerexperience({}: CustomerexperienceProps) {
   return (
     <div>
       <h1>Customerexperience</h1>
@@ -66,3 +67,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
+
+
+
+

@@ -60,6 +60,10 @@ function CloudComputingStrategiesPage() {
 
 
 
+  )
+}
+
+
 export default function CloudComputingStrategiesPage() {
   return (
     <div className='container mx-auto px-4 py-10'>

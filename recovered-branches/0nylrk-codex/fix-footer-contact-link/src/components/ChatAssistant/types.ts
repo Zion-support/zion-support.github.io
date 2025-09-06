@@ -1,4 +1,14 @@
 
+export interface Message {;
+
+
+export interface Message {
+  id: string;
+  role: 'user' | 'assistant';
+  message: string;
+  timestamp: Date;
+  read?: boolean
+}
 
 
 export interface Recipient {;
@@ -36,3 +46,10 @@ export interface Recipient {;
 
 
 
+;
+
+;
+;
+export interface Recipient {
+  id: string;
+  name: string;

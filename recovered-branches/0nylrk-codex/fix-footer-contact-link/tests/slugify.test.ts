@@ -37,3 +37,4 @@ it('handles custom separator when unslugifying', () => {;
 
 
 
+  expect(unslugify('multi_word_title_')).toBe('Multi Word Title')

@@ -52,6 +52,9 @@ ursor/automate-test-improve-and-merge-code-646c
     return this.props.children;
   }
 }
+    return this.props.children;
+  }
+}
 export default function AIServices() {;
   return (
     <Layout
@@ -518,6 +521,10 @@ export default function AIServicesPage() {
     </MainLayout>
 origin/main
 ursor/automate-test-improve-and-merge-code-646c
+];
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+
 export default function AIServices() {
   return (
     <Layout
@@ -1485,6 +1492,9 @@ origin/automation-improvements-final
               Transform your business with cutting-edge AI solutions and services.
             </p>
 ursor/automate-test-improve-and-merge-code-646c
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI solutions and services.
+            </p>
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1509,6 +1519,8 @@ ursor/automate-test-improve-and-merge-code-646c
 
 }
 ursor/automate-test-improve-and-merge-code-646c
+}
+
   Brain, 
   Eye, 
   MessageSquare, 
@@ -1631,6 +1643,12 @@ ursor/automate-test-improve-and-merge-code-646c
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ursor/automate-test-improve-and-merge-code-646c
+      </div>
+    </Layout>
+  );
+}
+    </Layout>);
+}
 }
 }
     </Layout>);
@@ -1647,3 +1665,5 @@ origin/automation-improvements-final
 }
 }
 ursor/automate-test-improve-and-merge-code-646c
+}
+}

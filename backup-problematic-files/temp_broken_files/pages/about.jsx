@@ -13,6 +13,9 @@ const About = ({ className }) => {
   return (
     <Layout 
 ursor/automate-test-improve-and-merge-code-646c
+const About = ({ className }) => {
+  return (
+    <Layout 
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group's mission, vision, and team of expert technology professionals dedicated to transforming businesses through innovative solutions."
     >
@@ -30,6 +33,8 @@ ursor/automate-test-improve-and-merge-code-646c
               We are a leading technology solutions provider dedicated to transforming businesses 
               through innovative AI, cloud architecture, and cutting-edge development services.
 ursor/automate-test-improve-and-merge-code-646c
+              We are a leading technology solutions provider dedicated to transforming businesses 
+              through innovative AI, cloud architecture, and cutting-edge development services.
             </p>
           </div>
 
@@ -159,6 +164,9 @@ ursor/automate-test-improve-and-merge-code-646c
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
 :backup-problematic-files/temp_broken_files/pages/about.jsx
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Core Values</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
                 <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Innovation</h3>
                 <p className="text-gray-600">
@@ -223,6 +231,9 @@ ursor/automate-test-improve-and-merge-code-646c
                   We maintain the highest standards in everything we do, from project planning 
                   to final delivery, ensuring exceptional results every time.
 ursor/automate-test-improve-and-merge-code-646c
+                <p className="text-gray-600">
+                  We maintain the highest standards in everything we do, from project planning 
+                  to final delivery, ensuring exceptional results every time.
                 </p>
               </div>
             </div>
@@ -235,6 +246,7 @@ ursor/automate-test-improve-and-merge-code-646c
             </h2>
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Meet Our Team</h2>
 ursor/automate-test-improve-and-merge-code-646c
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Meet Our Team</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -318,6 +330,9 @@ ursor/automate-test-improve-and-merge-code-646c
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
 ursor/automate-test-improve-and-merge-code-646c
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <a 
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
@@ -326,6 +341,7 @@ ursor/automate-test-improve-and-merge-code-646c
               <a
               <a 
 ursor/automate-test-improve-and-merge-code-646c
+              <a 
                 href="/services"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
@@ -342,3 +358,4 @@ ursor/automate-test-improve-and-merge-code-646c
 export default About;
 export default About;
 ursor/automate-test-improve-and-merge-code-646c
+export default About;

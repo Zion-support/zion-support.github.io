@@ -71,6 +71,9 @@ interface NoJobsCardProps {
   onUpdateProfile?: () => void;
 }
 
+interface NoJobsCardProps {
+  onUpdateProfile?: () => void
+}
 export /**
  * NoJobsCard - Function description
  */

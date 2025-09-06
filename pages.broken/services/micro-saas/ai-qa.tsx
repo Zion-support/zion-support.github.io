@@ -23,6 +23,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 export default function Aiqa({}: AiqaProps) {
+
+
+export default function Aiqa({}: AiqaProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -50,6 +53,10 @@ export default function Aiqa(): any ({}: AiqaProps) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/automate-test-improve-and-merge-code-646c
+interface AiqaProps {;
+  // Add props here as needed;
+}
+export default function Aiqa(): any ({}: AiqaProps) {;
   return (
     <div>
       <h1>Aiqa</h1>

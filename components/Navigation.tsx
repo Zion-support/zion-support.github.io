@@ -895,6 +895,8 @@ export default function Navigation() {;
 ursor/automate-test-improve-and-merge-code-646c
   Menu, 
   X 
+  Menu, 
+  X 
 } from 'lucide-react';
 
 const Navigation = () => {

@@ -7,6 +7,13 @@ import {
   FormControl,
   FormMessage
 
+  FormField,
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { UseFormReturn } from "react-hook-form";
@@ -64,6 +71,8 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 
 
 
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>;
   FormField,
   FormItem,
   FormLabel,
@@ -71,6 +80,8 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
   FormMessage
 } from "@/components/ui/form";
 
+  FormMessage
+} from "@/components/ui/form";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
 }

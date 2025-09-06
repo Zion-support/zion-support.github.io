@@ -75,12 +75,21 @@ export default async function handler(
     action,
     reason,
     adminId,
+    id: `action-${Date && Date.now()}`
+    fraudId
+    action
+    reason
+    adminId
     timestamp: new Date().toISOString()
   };
 
 
 
 
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -111,6 +120,9 @@ function ensureAdmin(req: NextApiRequest): boolean {;
 
 
 
+  store.addAdminAction(adminAction);
+
+}
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 import { AdminActionType  } from '../../../../utils / fraud / types';
@@ -146,6 +158,11 @@ if ( {) {
     action,
     reason,
     admin_id,
+    id: `action-${Date.now ()}`
+    fraud_id
+    action
+    reason
+    admin_id
     timestamp: new Date ().toISOString ()
   }
 ;

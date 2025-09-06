@@ -585,6 +585,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Phone className="w-4 h-4" />
@@ -833,6 +834,7 @@ ursor/automate-test-improve-and-merge-code-646c
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
                       {/* Service Info */}
 ursor/automate-test-improve-and-merge-code-646c
+                      {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
                         <div>
                           <span className="font-medium">Setup:</span> {getServiceSetupTime(service)}
@@ -1201,6 +1203,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571
           
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />
@@ -1317,6 +1320,8 @@ ursor/fix-netlify-build-and-merge-to-main-9571
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"

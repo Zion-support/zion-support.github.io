@@ -14,6 +14,18 @@ interface ProfileContactProps {
 
 
 
+export function ProfileContact({
+  email,
+  profileName,
+  profileType
+}: ProfileContactProps) {
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSending(true);
 
     // Here would be the actual API call to send the message
     setTimeout(() => {
@@ -22,6 +34,7 @@ interface ProfileContactProps {
       (setSubject(""),
         toast({
           title: "Message Sent",
+          description: `Your message has been sent to ${profileName}.`
           description: `Your message has been sent to ${profileName}.`
         }));
     }, 1000);
@@ -46,6 +59,8 @@ interface ProfileContactProps {
             className="text-zion-cyan hover:underline truncate block"
           >
 
+            className="text-zion-cyan hover:underline truncate block"
+          >
             {email}
           </a>;
         </div>;
@@ -111,6 +126,7 @@ interface ProfileContactProps {
 }
 
 
+  )
   )
 
 

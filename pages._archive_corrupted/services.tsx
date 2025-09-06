@@ -90,6 +90,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 // Minimal, readable Services page. Preserves existing offerings concept and adds more without removing.;
 type Service = {
+type Service = {
   "title": string;
   href: string;
   price: string;
@@ -192,6 +193,7 @@ import React from 'react' import Head from 'next/head' import Link from 'next/li
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+;
           <div className="mt-12 border-t pt-6">;
             <h2 className="text-xl font-semibold mb-2">Contact</h2>;
             <p className="text-gray-700 mb-1">;

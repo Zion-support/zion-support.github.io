@@ -71,6 +71,7 @@ interface LeadenrichmentProps {
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 export default function Leadenrichment({}: LeadenrichmentProps) {
+export default function Leadenrichment({}: LeadenrichmentProps) {
   return (
     <div>
       <h1>Leadenrichment</h1>
@@ -107,3 +108,5 @@ export default function Leadenrichment({}: LeadenrichmentProps) {
 }
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+}
+}

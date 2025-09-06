@@ -6,6 +6,7 @@
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
 ursor/automate-test-improve-and-merge-code-646c
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 :src && src.disabled/components/analytics/AnalyticsContainer && AnalyticsContainer.js.jsx
 
@@ -13,6 +14,9 @@ ursor/automate-test-improve-and-merge-code-646c
 :src.disabled/components/analytics/AnalyticsContainer.js.jsx
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
 
+:src.disabled/components/analytics/AnalyticsContainer.js.jsx
+" " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 :src && src.disabled/components/analytics/AnalyticsContainer && AnalyticsContainer.js.jsx
 
 :src.disabled/components/analytics/AnalyticsContainer.jsx
@@ -36,6 +40,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
+' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 :src.disabled/components/analytics/AnalyticsContainer.js.jsx
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""

@@ -25,3 +25,5 @@ import type { AppProps } from 'next/app'; import '../styles/globals.css'; export
 </Component>'
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+</Component>'
+</Component>'

@@ -13,6 +13,7 @@ export default function Setup({}: SetupProps) {
     </div>
   );
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {
   observe () { /* do nothing */ }
@@ -50,6 +51,7 @@ interface SetupProps {
 }
 
 export default function Setup({}: SetupProps) {
+export default function Setup({}: SetupProps) {
   return (
     <div>
       <h1>Setup</h1>
@@ -60,3 +62,4 @@ export default function Setup({}: SetupProps) {
 
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

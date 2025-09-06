@@ -17,6 +17,7 @@ export interface ModerationResult {
 
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ;
 export interface ModerationAction {
   id: string;
@@ -28,6 +29,7 @@ export interface ModerationAction {
   createdAt: string;
   created_at: string
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 }
 export interface ModerationFlag {
@@ -73,3 +75,4 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

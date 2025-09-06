@@ -249,6 +249,7 @@ export default function CommunityPage() {
     <AppLayout>
 
 
+  return (
       <SEO
         title="Community Forum | Zion AI Marketplace"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
@@ -597,6 +598,11 @@ function CommunityPage() {
 
 
 
+          ;
+          <Button asChild>;
+            <Link to={user ? "/community/create" :"/login?next=/community/create"}>;
+          <Button asChild>;
+            <Link to={user ? "/community/create" : "/login?next=/community/create"}>;
               Create New Post;
             </Link>;
           </Button>;
@@ -653,3 +659,24 @@ function CommunityPage() {
 
 
 
+}
+    </AppLayout>);
+}
+}
+    </AppLayout>);
+}
+    </AppLayout>);
+}
+    </AppLayout>;
+  ),;}
+ }</div> </TabsContent>) ) 
+}</div> </TabsContent> </Tabs> </div> </AppLayout>) 
+}
+    </AppLayout>;
+  );
+}
+;
+}
+;
+    </AppLayout>);
+}

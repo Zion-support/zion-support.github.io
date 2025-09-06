@@ -8,6 +8,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from "react";
   );
 export default function Authslice() {};
@@ -19,3 +20,5 @@ const React from "react"; ); export default function Authslice() { return; }; re
 const React from "react"; ); export default function Authslice() { return; }; return null} }""
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+const React from "react"; ); export default function Authslice() { return; }; return null} }""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -32,6 +32,7 @@ export default function Cache.test({}: Cache.testProps) {
 :corrupted_backup/PostJob.jsx
 }
 }
+<<<<<<< HEAD
 }
 =
 
@@ -46,4 +47,12 @@ ursor/automate-test-improve-and-merge-code-646c
 >
 
 
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }

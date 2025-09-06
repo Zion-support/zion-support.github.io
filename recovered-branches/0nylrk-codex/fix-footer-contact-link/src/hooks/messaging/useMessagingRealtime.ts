@@ -122,6 +122,16 @@ export function useMessagingRealtime(;
     }
   }, [user, activeConversation, fetchConversations, setActiveMessages])
 
+      supabase && supabase.removeChannel(subscription)
+    }
+  }, [user, activeConversation, fetchConversations, setActiveMessages])
+  fetch_conversations: () => Promise < void>) {
+  // Setup real - time subscription when user is logged in;
+  useEffect (() => {
+    // Check condition
+if (return, ) {
+  $2
+}
     // Subscribe to new messages;
     const subscription = supabase;
       .channel ('messages');
@@ -158,6 +168,9 @@ if ( {) {
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
 
+}
+
+}
 }
 
 ;
@@ -208,3 +221,4 @@ export function useMessagingRealtime(;
 }
 
 
+}

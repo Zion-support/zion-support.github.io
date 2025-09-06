@@ -1,6 +1,7 @@
 
 export interface TenantInfo {
 
+export interface TenantInfo {
   id: string;
   brand_name: string;
   subdomain: string;
@@ -13,6 +14,7 @@ export interface TenantInfo {
 
     subtitle: string;
 
+    subtitle: string;
     cta: string;
   };
   is_active: boolean;
@@ -44,3 +46,11 @@ export interface TenantResponse {
 ;
 
 
+}
+
+export interface TenantResponse {
+  tenant: TenantInfo | null,
+  error?: string
+}
+;
+}
