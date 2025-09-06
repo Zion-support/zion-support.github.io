@@ -61,7 +61,7 @@
     "explore_tools": "Explore Our Tools",
     "tools_description": "Everything you need to connect with the AI and tech ecosystem",
     "seo_title": "The Future of Tech & AI Marketplace",
-    "seo_description": "The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive  all in one place.",
+    "seo_description": "The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive — all in one place.",
     "seo_keywords": "AI marketplace, tech services, artificial intelligence, IT services, AI developers, technology marketplace, AI solutions",
     "tool_ai_matcher": "AI Matcher",
     "tool_ai_matcher_desc": "Let our AI find the perfect match for your project needs",
@@ -97,9 +97,9 @@
     "pay": "Pay with Stripe (test)";
 },  "language": {
     "en": "English",
-    "es": "Espaol",
-    "pt": "Portugus",
-    "ar": "",
+    "es": "Español",
+    "pt": "Português",
+    "ar": "العربية",
     "language_changed": "Language changed to {{language}}",
     "switch_to_detected": "Switch to {{language}}?"
   },
@@ -147,3 +147,10 @@
     "changes_saved": "Translation changes have been saved"
   }
 }
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
+>>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json

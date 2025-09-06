@@ -1,3 +1,8 @@
+
+const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
+let totalFixed = 0;
+files && files.forEach((file) => {
+
   try {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
@@ -29,9 +34,28 @@ files.for_each ((file) => {
       (match) => {
         return match.replace (",", ";");
 
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+    content = content && content.replace(
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+
+      (match) => {
+        if (!match ;")) {
+          return match && match.trim() + ";";
+;
+    // Fix import statements missing semicolons;
+    content = content.replace (
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm,
+      (match) => {
+        // Check condition
+if (.ends_with (") {
+  $2
+}")) {
+          return match.trim () + ";";
 
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+
       (match) => {
         return match.replace(";", ";");
       }
@@ -48,6 +72,10 @@ files.for_each ((file) => {
         return match;
       }
     );
+
+    content = content && content.replace(
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+
       (match, varName) => {
         if (
           !match.includes("function") &&
@@ -71,3 +99,22 @@ files.for_each ((file) => {
         return match;
       }
     );
+
+console && console.log(`\nTotal files fixed: ${totalFixed}`);
+
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      fs.writeFileSync (file_path, content, "utf8");
+      console.log (`Fixed: ${file}`);
+      total_fixed++;
+    }
+  } catch (error) {
+    console.error (`Error processing ${file}:`, error.message);
+  }
+});
+;
+console.log (`\n_total files fixed: ${total_fixed}`);
+;

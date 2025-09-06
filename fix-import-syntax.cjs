@@ -8,7 +8,7 @@ console.log('🔧 Fixing import syntax errors...');
 function fixImportSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     let changesMade = false;
 
     // Fix import statements with extra commas

@@ -1,3 +1,6 @@
+
+
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -19,6 +22,10 @@ async function checkAutomationStatus() {
     console.log('📋 Checking PM2 processes...');
     try {
       const pm2List = execSync('pm2 jlist', { encoding: 'utf8' });
+
+
+
+
   
   const statusReport = {
     "timestamp": new Date().toISOString(),
@@ -26,15 +33,20 @@ async function checkAutomationStatus() {
     "automationScripts": [],
     "systemHealth": {},
     "overallStatus": 'unknown'};
+
   try {
     // Check PM2 processes
+    
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
+
       const runningProcesses = pm2Data.filter(
         proc => proc.pm2_env && proc.pm2_env.status === 'online'
       );
+
+
     } catch (error) {
       
     } catch (error) {
@@ -42,10 +54,36 @@ async function checkAutomationStatus() {
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
     } catch (error) {
       console.log('⚠️  PM2 not available or no processes running');
+
+      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
+    } catch (error) {
+      console.log('⚠️  PM2 not available or no processes running');
+      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
+    } catch (error) {
+      console.log('⚠️  PM2 not available or no processes running');
+      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
+    } catch (error) {
+      console.log('⚠️  PM2 not available or no processes running');
+    } catch (error) {
+      
+    } catch (error) {
+
+    } catch (error) {
+      
+
       statusReport.pm2Processes = [];
     }
 
     // Check automation scripts
+    console.log('📋 Checking automation scripts...');
+    const automationScripts = [
+      'automation/master-orchestrator.cjs',
+    console.log('📋 Checking automation scripts...');
+    const automationScripts = [
+      'automation/master-orchestrator.cjs',
+    console.log('📋 Checking automation scripts...');
+    const automationScripts = [
+      'scripts/comprehensive-automation-suite.cjs',
     
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
@@ -55,6 +93,7 @@ async function checkAutomationStatus() {
       'automation/master-orchestrator.cjs',
     console.log('📋 Checking automation scripts...');
     const automationScripts = [
+      'automation/master-orchestrator.cjs',
       'automation/master-orchestrator.cjs',
       'automation/master-orchestrator.cjs',
       'automation/health-check.cjs',
@@ -67,7 +106,96 @@ async function checkAutomationStatus() {
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
+
+
+
+
+
+
+
+
+
+
+
+
         name: script,
+        exists,
+        path: scriptPath
+      });
+      
+      if (exists) {
+        console.log(`✅ ${script} - Available`);
+      } else {
+        console.log(`❌ ${script} - Missing`);
+      }
+    }
+    // Check system health
+    try {
+      const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
+      statusReport.systemHealth.healthCheck = 'passed';
+      console.log('✅ Health check passed');
+    } catch (error) {
+      statusReport.systemHealth.healthCheck = 'failed';
+      console.log('❌ Health check failed');
+    const systemHealth = {
+      memoryUsage: process.memoryUsage(),
+      uptime: process.uptime(),
+      nodeVersion: process.version,
+      platform: process.platform,
+    };
+
+
+
+
+
+
+        "name": script,
+        exists,
+        isExecutable,
+        "status": exists
+          ? isExecutable
+            ? 'ready'
+            : 'not_executable'
+          : 'missing'});
+    try {
+      const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
+      statusReport.systemHealth.healthCheck = 'passed';
+      console.log('✅ Health check passed');
+    } catch (error) {
+      statusReport.systemHealth.healthCheck = 'failed';
+      console.log('❌ Health check failed');
+    }
+
+    return statusReport;
+  } catch (error) {
+    console.error('❌ Error checking automation "status": ', error.message);
+    // Check system health
+    
+    const systemHealth = {
+      "memoryUsage": process.memoryUsage(),
+      "uptime": process.uptime(),
+      "nodeVersion": process.version,
+      "platform": process.platform};
+    statusReport.systemHealth = systemHealth;
+
+    // Determine overall status
+    const runningProcesses = statusReport.pm2Processes.filter(
+      proc => proc.pm2_env && proc.pm2_env.status === 'online'
+    );
+    const availableScripts = statusReport.automationScripts.filter(
+      script => script.exists && script.isExecutable
+    );
+
+    if (runningProcesses.length > 0 && availableScripts.length > 0) {
+      statusReport.overallStatus = 'healthy';
+    } else if (availableScripts.length > 0) {
+      statusReport.overallStatus = 'ready';
+    } else {
+      statusReport.overallStatus = 'needs_attention';
+    }
+
+    // Save report
+name: script,
         exists,
         path: scriptPath
       });
@@ -91,19 +219,19 @@ async function checkAutomationStatus() {
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
+
+
+
+
+
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
-    
-    
-    
-    
-    
-
     return statusReport;
+
     console.log('📋 Checking system health...');
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
@@ -147,11 +275,68 @@ async function checkAutomationStatus() {
 
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
+
+
+
+
+    const reportPath = path.join(
+      process.cwd(),
+      'automation-status-report.json'
+    );
+    fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
+    console.log('📊 Status Report:');
+    console.log(`   Overall Status: ${statusReport.overallStatus}`);
+    console.log(`   PM2 Processes: ${runningProcesses.length} running`);
+    console.log(
+      `   Available Scripts: ${availableScripts.length}/${automationScripts.length}`
+    );
+    console.log(`   Report saved to: ${reportPath}`);
+    return statusReport;
+  } catch (error) {
+    console.error('❌ Error checking automation status:', error.message);
+
+    return statusReport;
+  } catch (error) {
+    console.error('❌ Error checking automation "status": ', error.message);
+    const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
+    try {
+      fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+      fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
+      console.log(`\n💾 Report saved to: ${reportPath}`);
+    } catch (error) {
+      console.log('⚠️  Could not save report file');
+    }
+  } catch (error) {
+    console.error('❌ Error checking automation status:', error.message);
+
+
+
+
+
+
     statusReport.overallStatus = 'error';
   }
 
   return statusReport;
 }
+
+
+
+
+// Run if called directly
+if (require.main === module) {
+
+
+
+  checkAutomationStatus().then(report => {
+    process.exit(report.overallStatus === 'healthy' ? 0 : 1);
+  });
+}
+
+module.exports = checkAutomationStatus;
+
+
+
   checkAutomationStatus()
     .then(() => {
       process.exit(0);
@@ -161,7 +346,21 @@ async function checkAutomationStatus() {
       process.exit(1);
     });
 }
+
 module.exports = { checkAutomationStatus };
+
+
+
+
+
+
+
+
+
+
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -173,6 +372,9 @@ const { execSync } = require('child_process')
     console.error(' Error checking automation "status")
       console.error('Fatal "error")
 
+
+
+
 if (require.main === module) {
   checkAutomationStatus().then(report => {
     process.exit(report.overallStatus === 'healthy' ? 0 : 1);
@@ -181,3 +383,14 @@ if (require.main === module) {
 module.exports = checkAutomationStatus;
 
 module.exports = checkAutomationStatus;
+
+module.exports = checkAutomationStatus;
+
+
+
+
+
+
+
+module.exports = checkAutomationStatus;
+

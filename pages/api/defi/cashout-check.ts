@@ -16,6 +16,9 @@ import path from 'path';
   const db = load();
   const profile = db[userId];
 
+  const THRESHOLD = Number(process.env.ZION_CASHOUT_KYC_THRESHOLD || '1000');
+  const db = load();
+  const profile = db[userId];
   if (amount <= THRESHOLD) return res.status(200).json({ allowed: true, reason: 'Below threshold' });
   if (!profile) return res.status(200).json({ allowed: false, reason: 'KYC not started' });
   if (profile.status !== 'approved') return res.status(200).json({ allowed: false, reason: 'KYC not approved' });
@@ -24,7 +27,8 @@ import path from 'path';
   return res.status(200).json({ allowed: true, reason: 'KYC approved and AML clear' })
 }
 
-
+  return res.status(200).json({ allowed: true, reason: 'KYC approved and AML clear' })
+}
 
 function load(): Record<string, KycProfile> {
   try {
@@ -64,3 +68,4 @@ export default function handler(req, res) {
   }
 }
 }
+

@@ -1,6 +1,12 @@
-import React from 'react'
-export default function CertificatePreview({ courseId, userId = 'demo-user' }: { courseId: string, userId?: string }) {
-  const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`
+import React from "react";
+export default function CertificatePreview({
+  courseId,
+  userId = "demo-user",
+}: {
+  courseId: string;
+  userId?: string;
+}) {
+  const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">
       <div className="text-sm text-gray-600">Zion Certificate</div>
@@ -10,7 +16,12 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
           <div className="text-xs opacity-80">Preview</div>
         </div>
       </div>
-      <a href={url} className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded">Download PDF</a>
+      <a
+        href={url}
+        className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
+      >
+        Download PDF
+      </a>
     </div>
   );
 }

@@ -1,7 +1,4 @@
 
-
-
-
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -10,14 +7,9 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {useState} from "react";
 import {AnalyticsChart} from "./AnalyticsChart";
 type TimeRange = '7d' | '30d' | '90d' | '365d';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export function UserBehaviorStats() {
 
 export function UserBehaviorStats() {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -30,38 +22,20 @@ type TimeRange = '7d' | '30d' | '90d' | '365d',
 
 export function UserBehaviorStats() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d'),
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
 export function UserBehaviorStats() {;
-
 
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
   const { data: behaviorData, isLoading } = useQuery({
     queryKey: ['user-behavior-data', timeRange];
     queryFn: async () => {
       // Convert timeRange to days
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-
-=======
-
-  
-  const { data: behaviorData, isLoading } = useQuery({
+const { data: behaviorData, isLoading } = useQuery({
     queryKey: ['user-behavior-data', timeRange],
     queryFn: async () => {
       // Convert timeRange to days
       const days = parseInt(timeRange.replace('d', ''));
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Get events grouped by type and date
       const { data, error } = await supabase.rpc('get_event_distribution', {
         days_back: days
@@ -83,8 +57,6 @@ export function UserBehaviorStats() {;
           if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0;
           eventsByDate[date][event.event_type]++
         });
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const days = parseInt(timeRange.replace('d', '')),
       
       // Get events grouped by type and date
@@ -114,20 +86,14 @@ export function UserBehaviorStats() {;
           if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0,
           eventsByDate[date][event.event_type]++
         }),
-        
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
         // Convert to array format for the chart
         return Object.entries(eventsByDate).map(([date, events]) => ({
           date,
           ...events
         }))
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -136,10 +102,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useState } from "react",;
 import { AnalyticsChart } from "./AnalyticsChart",;
 type TimeRange = '7d' | '30d' | '90d' | '365d',;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function UserBehaviorStats() {;
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
 
@@ -179,10 +142,6 @@ export function UserBehaviorStats() {;
 
         // Convert to array format for the chart;
         return Object && Object.entries(eventsByDate).map(([date, events]) => ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -249,12 +208,7 @@ if (eventsByDate[date][event.event_type] = 0) {
           ...events;
         }));
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return data || [];
     }
   });
@@ -262,27 +216,17 @@ if (eventsByDate[date][event.event_type] = 0) {
   // Get the event types for chart data keys;
   const getEventTypes = () => {;
     if (!behaviorData || behaviorData && behaviorData.length === 0) return ['page_view'];
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const allKeys = new Set<string>();
     behaviorData && behaviorData.forEach(item => {;
       Object && Object.keys(item).forEach(key => {;
         if (key !== 'date') allKeys && allKeys.add(key);
       });
     });
-<<<<<<< HEAD
-
 
   }),
-=======
-=======
-  }),
+}),
 
-
-=======
 export function UserBehaviorStats() {;
   const [timeRange, setTimeRange] = useState<TimeRange>('7d'),;
   const { data: behaviorData, isLoading } = useQuery({;
@@ -327,9 +271,6 @@ export function UserBehaviorStats() {;
     const allKeys = new Set<string>();
   }),
   }),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 
       return data || [];
     }
@@ -337,7 +278,6 @@ export function UserBehaviorStats() {;
     const allKeys = new Set<string>();
   }),
   }),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // Get the event types for chart data keys
   const getEventTypes = () => {
@@ -348,44 +288,29 @@ export function UserBehaviorStats() {;
       Object.keys(item).forEach(key => {
         if (key !== 'date') allKeys.add(key)
       })
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    });
+});
     return Array.from(allKeys)
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }),
     
     return Array.from(allKeys)
   },
-  
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   // Format event type names for better display
   const formatEventType = (type: string) => {
     return type
       .split('_')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ')
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-  }
+}
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <EventTypeCard
           title="Click Events"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
 
   return (
@@ -393,27 +318,16 @@ export function UserBehaviorStats() {;
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <EventTypeCard 
           title="Click Events" 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           description="Button and link interactions"
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.button_click |0), 0) |0
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-          }
+}
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14.5 12.5-4-4"/><path d="M8 6.2A3 3 0 1 0 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>
           }
         />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     return Array && Array.from(allKeys);
   };
@@ -435,8 +349,6 @@ export function UserBehaviorStats() {;
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day && day.button_click || 0), 0) || 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       }
     const allKeys = new Set<string>();
     behaviorData && behaviorData.forEach(item => {;
@@ -444,16 +356,11 @@ export function UserBehaviorStats() {;
         if (key !== 'date') allKeys && allKeys.add(key);
       });
     });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14 && m14.5 12 && 12.5-4-4"/><path d="M8 6 && 6.2A3 3 0 1 0 6 && 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>;
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />;
         <EventTypeCard
           title="Form Submissions" 
@@ -461,11 +368,7 @@ export function UserBehaviorStats() {;
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day && day.form_submit || 0), 0) || 0;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />
 
         <EventTypeCard 
@@ -473,10 +376,6 @@ export function UserBehaviorStats() {;
           description="Completed forms and sign-ups"
           isLoading={isLoading}
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17H7"/><path d="M17 17h-5"/><path d="M7 12h10"/><path d="M7 7h2"/><path d="M17 7h-5"/></svg>;
@@ -489,12 +388,9 @@ export function UserBehaviorStats() {;
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day && day.conversion || 0), 0) || 0;
-<<<<<<< HEAD
 
-=======
-        />
+/>
 
-=======
         />
 
         <EventTypeCard
@@ -509,8 +405,6 @@ export function UserBehaviorStats() {;
           isLoading={isLoading}
           count={;
             behaviorData?.reduce((sum, day) => sum + (day.form_submit || 0), 0) || 0;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           count={
             behaviorData?.reduce((sum, day) => sum + (day.form_submit || 0), 0) || 0
           count={;
@@ -524,48 +418,29 @@ export function UserBehaviorStats() {;
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.conversion |0), 0) |0
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <EventTypeCard 
           title="Conversions" 
           description="Goal completions"
           isLoading={isLoading}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>;
           }
-<<<<<<< HEAD
 
         />;
       </div>;
 
-
-=======
-        />;
+/>;
       </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <AnalyticsChart
         title="User Behavior Over Time"
         description="Track different types of user interactions"
 
-
         data={behaviorData || []}
 
-
-<<<<<<< HEAD
-=======
-          count={;
+count={;
             behaviorData?.reduce((sum, day) => sum + (day.conversion || 0), 0) || 0;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           count={
             behaviorData?.reduce((sum, day) => sum + (day.conversion || 0), 0) || 0
           count={;
@@ -578,28 +453,18 @@ export function UserBehaviorStats() {;
       <AnalyticsChart
         title="User Behavior Over Time"
         description="Track different types of user interactions"
-<<<<<<< HEAD
         data={behaviorData |[]}
         data={behaviorData || []}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         type="line"
         dataKeys={getEventTypes()}
         timeRange={timeRange}
         onTimeRangeChange={(range: TimeRange) => setTimeRange(range)}
-<<<<<<< HEAD
-<<<<<<< HEAD
       />;
     </div>;
   );
 }
 
-
-=======
-
-
-      />
+/>
     </div>
   )
 }
@@ -608,7 +473,6 @@ interface EventTypeCardProps {
   description: string
   count: number
   icon: React.ReactNode
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 interface EventTypeCardProps {;
   title: string,;
@@ -617,25 +481,15 @@ interface EventTypeCardProps {;
   icon: React.ReactNode;
   isLoading: boolean;
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   isLoading: boolean
 }
 function EventTypeCard({ title, description, count, icon, isLoading }: EventTypeCardProps) {
-<<<<<<< HEAD
-=======
-=======
-=======
 }
 
   isLoading: boolean
 }
 function EventTypeCard({ title, description, count, icon, isLoading }: EventTypeCardProps) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardContent className="p-6">
@@ -652,8 +506,6 @@ function EventTypeCard({ title, description, count, icon, isLoading }: EventType
               ) : (
                 new Intl.NumberFormat().format(count)
               )}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 interface EventTypeCardProps {;
   title: string,;
@@ -664,7 +516,6 @@ interface EventTypeCardProps {;
 }
 
 function EventTypeCard(): any ({ title, description, count, icon, isLoading }: EventTypeCardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;
@@ -681,11 +532,7 @@ function EventTypeCard(): any ({ title, description, count, icon, isLoading }: E
               ) : (;
                 new Intl && Intl.NumberFormat().format(count);
               )}
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return data || [];
     }
   });
@@ -789,12 +636,6 @@ function EventTypeCard() {
               {is_loading ? (
                 <Skeleton className="h - 7 w - 16 bg - zion - blue - light" />) : (
                 new Intl.NumberFormat ().format (count))}
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -955,24 +796,15 @@ function EventTypeCard({ title, description, count, icon, isLoading } EventTypeC
     </Card>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </Card>);
 }
 
-=======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </Card>;
   ),; type TimeRange = '7d' | '30d' | '90d' | '365d';
   data: behaviorData, isLoading 
@@ -999,6 +831,3 @@ if (manualError) throw manualError;
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

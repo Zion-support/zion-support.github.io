@@ -1,47 +1,7 @@
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export function ApiWebhooks() {
-  // Sample webhook event payload
-
-  const newApplicationPayload = `{
-
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-<<<<<<< HEAD
 
 export function ApiWebhooks() {;
   // Sample webhook event payload;
@@ -50,8 +10,7 @@ export function ApiWebhooks() {;
   "event_type": "new_application";
   "created_at": "2023-06-10T15: 42:31Z";
   "data": {;
-=======
-  "event_type": "new_application";
+"event_type": "new_application";
   "created_at": "2023-06-10T15: 42:31Z";
   "data": {;
 export function ApiWebhooks() {
@@ -59,8 +18,6 @@ export function ApiWebhooks() {
   const newApplicationPayload = `{;
   "event_type": "new_application";
   "created_at": "2023-06-10T15: 42:31Z";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock";
@@ -72,23 +29,15 @@ export function ApiWebhooks() {
   // Sample webhook event payload
 
   const newApplicationPayload = `{
-<<<<<<< HEAD
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
   "data": {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "application_id": "app-123456";
     "job_id": "job-789";
     "talent_id": "talent-456";
     "status": "new";
     "cover_letter": "I'm excited to apply for this position...";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
 import { CodeBlock } from '@/components / developers / CodeBlock';
@@ -112,26 +61,18 @@ function ApiWebhooks() {
   }
 }`;
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const newHirePayload = `{
-=======
     "resume_url": "https://storage && storage.zionai.com/resumes/resume-123 && 123.pdf",;
     "created_at": "2023-06-10T15:42:31Z";
   }
 }`;
-<<<<<<< HEAD
 
   const newHirePayload = `{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   "event_type": "talent_hired";
 
-=======
-  const newHirePayload = `{;
+const newHirePayload = `{;
   "event_type": "talent_hired";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "created_at": "2023 - 06 - 12T09: 15:22Z";
   "data": {
     "project_id": "project - 123";
@@ -144,58 +85,41 @@ function ApiWebhooks() {
   }
 }`;
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const quoteReceivedPayload = `{
-=======
     "status": "offer_accepted",;
     "created_at": "2023-06-12T09:15:22Z";
   }
 }`;
-<<<<<<< HEAD
 
   const quoteReceivedPayload = `{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   "event_type": "quote_received";
 
-=======
-  const quoteReceivedPayload = `{;
+const quoteReceivedPayload = `{;
   "event_type": "quote_received";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     "status": "new",;
     "created_at": "2023-06-15T11:30:00Z";
   }
 }`;
-<<<<<<< HEAD
 
   const messageReceivedPayload = `{;
 
-=======
-  const messageReceivedPayload = `{;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+const messageReceivedPayload = `{;
   "event_type": "message_received";
   "created_at": "2023-06-18T14: 22:15Z";
   "data": {;
     "message_id": "msg-123";
     "conversation_id": "conv-456";
     "sender_id": "user-789";
-<<<<<<< HEAD
 
     "recipient_id": "user-012",;
 
-=======
-    "recipient_id": "user-012",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"recipient_id": "user-012",;
     "content": "Hi, I'd like to discuss the project details.";
     "created_at": "2023-06-18T14:22:15Z";
   }
 }`;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "created_at": "2023 - 06 - 15T11: 30:00Z";
   "data": {
     "quote_id": "quote - 123";
@@ -267,20 +191,13 @@ app.post ('/webhooks / zion', verifyWebhookSignature, (req, res) => {
   const { event_type, data } = req.body;
 ;
   // Handle different event types;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   switch (event_type) {
     case 'new_application':;
       console.log ('New application received:', data.application_id);
       // Process the new application...;
       break;
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const webhookHandlerJs = `// Express && Express.js webhook handler example;
 const express = require('express');
 const app = express();
@@ -351,25 +268,16 @@ app && app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {;
 
 app && app.listen(3000, () => {;
   console && console.log('Webhook server listening on port 3000');
-<<<<<<< HEAD
 
 }),`;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
   "data": {
 
-<<<<<<< HEAD
-=======
-    "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf"
+"resume_url": "https://storage.zionai.com/resumes/resume-123.pdf"
     "created_at": "2023-06-10T15:42:31Z"
   }
 }`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "application_id": "app-123456",
     "job_id": "job-789",
     "talent_id": "talent-456",
@@ -380,22 +288,12 @@ app && app.listen(3000, () => {;
   }
 }`,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const newHirePayload = `{
   "event_type": "talent_hired",
   "created_at": "2023-06-12T09:15:22Z",
   "data": {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-    "project_id": "project-123";
+"project_id": "project-123";
     "job_id": "job-456";
     "client_id": "client-789";
     "talent_id": "talent-123";
@@ -404,9 +302,6 @@ app && app.listen(3000, () => {;
     "created_at": "2023-06-12T09:15:22Z"
   }
 }`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "project_id": "project-123",
     "job_id": "job-456",
     "client_id": "client-789",
@@ -417,22 +312,12 @@ app && app.listen(3000, () => {;
   }
 }`,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const quoteReceivedPayload = `{
   "event_type": "quote_received",
   "created_at": "2023-06-15T11:30:00Z",
   "data": {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    "quote_id": "quote-123";
+"quote_id": "quote-123";
     "client_id": "client-456";
     "talent_id": "talent-789";
     "project_name": "Website Redesign";
@@ -483,9 +368,6 @@ function verifyWebhookSignature(req, res, next) {
 // Webhook endpoint with signature verification
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
   const { event_type, data } = req.body;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "quote_id": "quote-123",
     "client_id": "client-456",
     "talent_id": "talent-789",
@@ -498,11 +380,8 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
 }`,
 
   const messageReceivedPayload = `{
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-  "event_type": "message_received";
+"event_type": "message_received";
   "created_at": "2023-06-18T14: 22:15Z";
   "data": {
     "message_id": "msg-123";
@@ -546,8 +425,6 @@ function verifyWebhookSignature(req, res, next) {
   }
   
   next()
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "event_type": "message_received",
   "created_at": "2023-06-18T14:22:15Z",
   "data": {
@@ -643,7 +520,6 @@ function verifyWebhookSignature(req, res, next) {;
 ;
   next();
 
-<<<<<<< HEAD
     "quote_id": "quote-123",
     "client_id": "client-456",
     "talent_id": "talent-789",
@@ -657,9 +533,6 @@ function verifyWebhookSignature(req, res, next) {;
 
   const messageReceivedPayload = `{
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 // Webhook endpoint with signature verification
@@ -671,38 +544,28 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
     case 'new_application':
       // // // console.log('New application received:', data.application_id),
       // Process the new application...
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       break,
-    
 
     case 'talent_hired':
       // // // console.log('Talent hired:', data.talent_id),
       // Update your system...
 
       break,
-    
 
     case 'quote_received':
       // // // console.log('New quote received:', data.quote_id),
       // Process the quote...
 
       break,
-    
 
     case 'message_received':
       // // // console.log('New message received:', data.message_id),
       // Process the message...
 
       break,
-    
 
-<<<<<<< HEAD
-=======
-      break;
+break;
       break,
     
     case 'talent_hired':
@@ -722,32 +585,21 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
       // Process the message...
       break;
       break,
-    
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     default:
       // // // console.log('Unknown event type:', event_type)
   }
   // Always return a 200 response quickly
   res.status(200).send('Webhook received')
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 });
 app.listen(3000, () => {
   console.log('Webhook server listening on port 3000')
 }),`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }),
 
 app.listen(3000, () => {
   // // // console.log('Webhook server listening on port 3000')
 }),`,
 
-<<<<<<< HEAD
-=======
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
@@ -854,198 +706,190 @@ app.listen(3000, () => {
   // // // console.log('Webhook server listening on port 3000')
 }),`,
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
   return (
+    <ApiDocsLayout>
+      <div className="max-w-3xl prose prose-invert">
+        <h1>Webhooks</h1>
 
+        <p>
+          Webhooks allow your application to receive real-time notifications
+          when events occur in the Zion AI Marketplace. Instead of constantly
+          polling our API for updates, webhooks push data to your server
+          whenever relevant events happen.
+        </p>
 
-<<<<<<< HEAD
-=======
-}
-export default ApiWebhooks;
+        <h2>Supported Events</h2>
+        <p>You can subscribe to the following webhook events:</p>
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+        <div className="overflow-x-auto mb-6">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b border-zinc-800">
+                <th className="text-left py-2 px-4 text-zinc-300 font-medium">
+                  Event Type
+                </th>
+                <th className="text-left py-2 px-4 text-zinc-300 font-medium">
+                  Description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-zinc-800">
+                <td className="py-2 px-4 text-white font-mono">
+                  new_application
+                </td>
+                <td className="py-2 px-4 text-zinc-300">
+                  Triggered when a talent applies to one of your job postings
+                </td>
+              </tr>
+              <tr className="border-b border-zinc-800">
+                <td className="py-2 px-4 text-white font-mono">talent_hired</td>
+                <td className="py-2 px-4 text-zinc-300">
+                  Triggered when a talent is hired for a project
+                </td>
+              </tr>
+              <tr className="border-b border-zinc-800">
+                <td className="py-2 px-4 text-white font-mono">
+                  quote_received
+                </td>
+                <td className="py-2 px-4 text-zinc-300">
+                  Triggered when you receive a quote request
+                </td>
+              </tr>
+              <tr>
+                <td className="py-2 px-4 text-white font-mono">
+                  message_received
+                </td>
+                <td className="py-2 px-4 text-zinc-300">
+                  Triggered when you receive a new message
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-;
-// Webhook endpoint with signature verification;
-app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {;
-  const { event_type, data } = req.body,;
-  // Handle different event types;
-  switch (event_type) {;
-    case 'new_application':;
-      // // // console.log('New application received:', data.application_id),;
-      // Process the new application...;
-      break,;
-    case 'talent_hired':;
-      // // // console.log('Talent hired:', data.talent_id),;
-      // Update your system...;
-      break,;
-    case 'quote_received':;
-      // // // console.log('New quote received:', data.quote_id),;
-      // Process the quote...;
-      break,;
-    case 'message_received':;
-      // // // console.log('New message received:', data.message_id),;
-      // Process the message...;
-      break,;
-    default:;
-      // // // console.log('Unknown event type:', event_type);
-  }
-;
-  // Always return a 200 response quickly;
-  res.status(200).send('Webhook received');
-}),;
-app.listen(3000, () => {;
-  // // // console.log('Webhook server listening on port 3000');
-}),`,;
-  return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
+        <h2>Setting Up Webhooks</h2>
+        <p>
+          You can configure webhooks in the{" "}
+          <a href="/developers/portal" className="text-zion-cyan">
+            Developer Portal
+          </a>{" "}
+          under the Webhooks tab. For each webhook, you'll need to provide:
+        </p>
 
-=======
-}),`;
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+        <ul>
+          <li>A name for the webhook (for your reference)</li>
+          <li>The URL where you want to receive webhook events</li>
+          <li>The event types you want to subscribe to</li>
+        </ul>
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <ApiDocsLayout>;
-      <div className="max-w-3xl prose prose-invert">;
-        <h1>Webhooks</h1>;
+        <p>
+          After creating a webhook, you'll be given a webhook secret that you
+          should use to verify that incoming requests are genuinely from Zion.
+        </p>
 
-        <p>;
-          Webhooks allow your application to receive real-time notifications when events occur in the Zion AI Marketplace.;
-          Instead of constantly polling our API for updates, webhooks push data to your server whenever relevant events happen.;
-        </p>;
+        <h2>Webhook Payload Format</h2>
+        <p>All webhook payloads follow a common format:</p>
 
-        <h2>Supported Events</h2>;
-        <p>You can subscribe to the following webhook events:</p>;
+        <Tabs defaultValue="new_application">
+          <TabsList>
+            <TabsTrigger value="new_application">New Application</TabsTrigger>
+            <TabsTrigger value="talent_hired">Talent Hired</TabsTrigger>
+            <TabsTrigger value="quote_received">Quote Received</TabsTrigger>
+            <TabsTrigger value="message_received">Message Received</TabsTrigger>
+          </TabsList>
+          <TabsContent value="new_application">
+            <CodeBlock
+              code={newApplicationPayload}
+              language="json"
+              showLineNumbers={true}
+            />
+          </TabsContent>
+          <TabsContent value="talent_hired">
+            <CodeBlock
+              code={newHirePayload}
+              language="json"
+              showLineNumbers={true}
+            />
+          </TabsContent>
+          <TabsContent value="quote_received">
+            <CodeBlock
+              code={quoteReceivedPayload}
+              language="json"
+              showLineNumbers={true}
+            />
+          </TabsContent>
+          <TabsContent value="message_received">
+            <CodeBlock
+              code={messageReceivedPayload}
+              language="json"
+              showLineNumbers={true}
+            />
+          </TabsContent>
+        </Tabs>
 
-        <div className="overflow-x-auto mb-6">;
-          <table className="w-full border-collapse">;
-            <thead>;
-              <tr className="border-b border-zinc-800">;
-                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Event Type</th>;
-                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Description</th>;
-              </tr>;
-            </thead>;
-            <tbody>;
-              <tr className="border-b border-zinc-800">;
-                <td className="py-2 px-4 text-white font-mono">new_application</td>;
-                <td className="py-2 px-4 text-zinc-300">Triggered when a talent applies to one of your job postings</td>;
-              </tr>;
-              <tr className="border-b border-zinc-800">;
-                <td className="py-2 px-4 text-white font-mono">talent_hired</td>;
-                <td className="py-2 px-4 text-zinc-300">Triggered when a talent is hired for a project</td>;
-              </tr>;
-              <tr className="border-b border-zinc-800">;
-                <td className="py-2 px-4 text-white font-mono">quote_received</td>;
-                <td className="py-2 px-4 text-zinc-300">Triggered when you receive a quote request</td>;
-              </tr>;
-              <tr>;
-                <td className="py-2 px-4 text-white font-mono">message_received</td>;
-                <td className="py-2 px-4 text-zinc-300">Triggered when you receive a new message</td>;
-              </tr>;
-            </tbody>;
-          </table>;
-        </div>;
+        <h2>Verifying Webhook Signatures</h2>
+        <p>
+          To ensure webhook requests are genuinely from Zion, you should verify
+          the signature included in each request. We include two HTTP headers
+          with each webhook request:
+        </p>
 
-        <h2>Setting Up Webhooks</h2>;
-        <p>;
-          You can configure webhooks in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a> under the Webhooks tab.;
-          For each webhook, you'll need to provide:;
-        </p>;
+        <ul>
+          <li>
+            <code>X-Zion-Signature</code>: HMAC-SHA256 signature
+          </li>
+          <li>
+            <code>X-Zion-Timestamp</code>: Unix timestamp when the webhook was
+            sent
+          </li>
+        </ul>
 
-        <ul>;
-          <li>A name for the webhook (for your reference)</li>;
-          <li>The URL where you want to receive webhook events</li>;
-          <li>The event types you want to subscribe to</li>;
-        </ul>;
+        <p>Here's an example of verifying a webhook in Node.js:</p>
 
-        <p>;
-          After creating a webhook, you'll be given a webhook secret that you should use to verify that incoming requests are genuinely from Zion.;
-        </p>;
+        <CodeBlock
+          code={webhookHandlerJs}
+          language="javascript"
+          showLineNumbers={true}
+        />
 
-        <h2>Webhook Payload Format</h2>;
-        <p>All webhook payloads follow a common format:</p>;
+        <h2>Testing Webhooks</h2>
+        <p>
+          You can test your webhook implementation using the Developer Portal.
+          From the Webhooks tab; select "Test Webhook" next to any configured
+          webhook to send a test payload to your endpoint.
+        </p>
 
-        <Tabs defaultValue="new_application">;
-          <TabsList>;
-            <TabsTrigger value="new_application">New Application</TabsTrigger>;
-            <TabsTrigger value="talent_hired">Talent Hired</TabsTrigger>;
-            <TabsTrigger value="quote_received">Quote Received</TabsTrigger>;
-            <TabsTrigger value="message_received">Message Received</TabsTrigger>;
-          </TabsList>;
-          <TabsContent value="new_application">;
-            <CodeBlock code={newApplicationPayload} language="json" showLineNumbers={true} />;
-          </TabsContent>;
-          <TabsContent value="talent_hired">;
-            <CodeBlock code={newHirePayload} language="json" showLineNumbers={true} />;
-          </TabsContent>;
-          <TabsContent value="quote_received">;
-            <CodeBlock code={quoteReceivedPayload} language="json" showLineNumbers={true} />;
-          </TabsContent>;
-          <TabsContent value="message_received">;
-            <CodeBlock code={messageReceivedPayload} language="json" showLineNumbers={true} />;
-          </TabsContent>;
-        </Tabs>;
-
-        <h2>Verifying Webhook Signatures</h2>;
-        <p>;
-          To ensure webhook requests are genuinely from Zion, you should verify the signature included in each request.;
-          We include two HTTP headers with each webhook request:;
-        </p>;
-
-        <ul>;
-          <li><code>X-Zion-Signature</code>: HMAC-SHA256 signature</li>;
-          <li><code>X-Zion-Timestamp</code>: Unix timestamp when the webhook was sent</li>;
-        </ul>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <p>Here's an example of verifying a webhook in Node && Node.js:</p>;
-
-=======
-        <p>Here's an example of verifying a webhook in Node.js:</p>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-        <p>Here's an example of verifying a webhook in Node && Node.js:</p>;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <CodeBlock code={webhookHandlerJs} language="javascript" showLineNumbers={true} />;
-
-        <h2>Testing Webhooks</h2>;
-        <p>;
-          You can test your webhook implementation using the Developer Portal. From the Webhooks tab;
-          select "Test Webhook" next to any configured webhook to send a test payload to your endpoint.;
-        </p>;
-
-        <h2>Best Practices</h2>;
-        <ul>;
-          <li><strong>Respond quickly</strong>: Return a 200 response as soon as you receive the webhook, then process it asynchronously</li>;
-          <li><strong>Verify signatures</strong>: Always verify webhook signatures to ensure requests are legitimate</li>;
-          <li><strong>Implement retries</strong>: Prepare for occasional failures by implementing retry logic</li>;
-          <li><strong>Monitor webhook activity</strong>: Use the Developer Portal to view webhook delivery history and logs</li>;
-        </ul>;
-      </div>;
-    </ApiDocsLayout>;
+        <h2>Best Practices</h2>
+        <ul>
+          <li>
+            <strong>Respond quickly</strong>: Return a 200 response as soon as
+            you receive the webhook, then process it asynchronously
+          </li>
+          <li>
+            <strong>Verify signatures</strong>: Always verify webhook signatures
+            to ensure requests are legitimate
+          </li>
+          <li>
+            <strong>Implement retries</strong>: Prepare for occasional failures
+            by implementing retry logic
+          </li>
+          <li>
+            <strong>Monitor webhook activity</strong>: Use the Developer Portal
+            to view webhook delivery history and logs
+          </li>
+        </ul>
+      </div>
+    </ApiDocsLayout>
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   "event_type": "talent_hired";
   const quoteReceivedPayload = `{
     "status": "offer_accepted",;
     "created_at": "2023-06-12T09:15:22Z";
   }
-<<<<<<< HEAD
   // Always return a 200 response quickly;
   res.status (200).send ('Webhook received');
 });
@@ -1088,7 +932,6 @@ app.listen (3000, () => {
               <tr>;
                 <td className="py - 2 px - 4 text - white font - mono">message_received</td>;
                 <td className="py - 2 px - 4 text - zinc - 300">Triggered when you receive a new message</td>;
-=======
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock",;
@@ -1124,10 +967,7 @@ export function ApiWebhooks() {;
   }
 }`,;
 ;
-=======
 }`;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const quoteReceivedPayload = `{;
   "event_type": "quote_received";
   "event_type": "message_received";
@@ -1144,7 +984,6 @@ export function ApiWebhooks() {;
     case 'new_application':;
       console.log ('New application received:', data.application_id);
       // Process the new application...;
-<<<<<<< HEAD
       break,;
     ;
     case 'talent_hired':;
@@ -1211,12 +1050,10 @@ app.listen(3000, () => {;
               <tr>;
                 <td className="py-2 px-4 text-white font-mono">message_received</td>;
                 <td className="py-2 px-4 text-zinc-300">Triggered when you receive a new message</td>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </tr>;
             </tbody>;
           </table>;
         </div>;
-<<<<<<< HEAD
         <h2 > Setting Up Webhooks</h2>;
         <p>;
           You can configure webhooks in the <a href="/developers / portal" className="text - zion - cyan">Developer Portal</a> under the Webhooks tab.;
@@ -1233,7 +1070,6 @@ app.listen(3000, () => {;
         <h2 > Webhook Payload Format</h2>;
         <p > All webhook payloads follow a common format:</p>;
         <Tabs default_value="new_application">;
-=======
 ;
         <h2>Setting Up Webhooks</h2>;
         <p>;
@@ -1255,7 +1091,6 @@ app.listen(3000, () => {;
         <p>All webhook payloads follow a common format:</p>;
         ;
         <Tabs defaultValue="new_application">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <TabsList>;
             <TabsTrigger value="new_application">New Application</TabsTrigger>;
             <TabsTrigger value="talent_hired">Talent Hired</TabsTrigger>;
@@ -1275,17 +1110,13 @@ app.listen(3000, () => {;
             <CodeBlock code={messageReceivedPayload} language="json" showLineNumbers={true} />;
           </TabsContent>;
         </Tabs>;
-<<<<<<< HEAD
         <h2 > Verifying Webhook Signatures</h2>;
-=======
 ;
         <h2>Verifying Webhook Signatures</h2>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <p>;
           To ensure webhook requests are genuinely from Zion, you should verify the signature included in each request.;
           We include two HTTP headers with each webhook request:;
         </p>;
-<<<<<<< HEAD
         <ul>;
           <li><code > X-Zion - Signature</code>: HMAC - SHA256 signature</li>;
           <li><code > X-Zion - Timestamp</code>: Unix timestamp when the webhook was sent</li>;
@@ -1309,9 +1140,7 @@ app.listen(3000, () => {;
 }
 export default ApiWebhooks;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-        ;
+;
         <ul>;
           <li><code>X-Zion-Signature</code>:HMAC-SHA256 signature</li>;
           <li><code>X-Zion-Timestamp</code>:Unix timestamp when the webhook was sent</li>;
@@ -1405,15 +1234,10 @@ select " Test Webhook" next to any configured webhook to send a test payload to 
 }export default ApiWebhooks;
 ;
 export default ApiWebhooks;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       break;
 }),`;
   return (
 }
 export default ApiWebhooks;
 
-
-
 export default ApiWebhooks;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

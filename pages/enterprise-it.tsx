@@ -2,6 +2,17 @@
 
   return (
     <Layout>
+export default function EnterpriseITPage() {
+  const features = [
+    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
+  const solutions = [
+    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
+    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
+    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
+    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
+
+  return (
+    <Layout>
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
@@ -11,7 +22,6 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
-
 
 export default function EnterpriseITPage() {
   const features = [
@@ -28,7 +38,6 @@ export default function EnterpriseITPage() {_const _features = [
     {_name: 'Cloud Cost Optimizer', _href: '/cloud-cost-optimizer'},
     {_name: 'Data Pipeline Observability', _href: '/data-pipeline-observability'},
     {_name: 'Uptime & SLO Monitor', _href: '/uptime-slo-monitor'}];
-ursor/fix-lint-push-and-merge-to-main-ce13
   return (_<Layout>
       <Head>
         <title>Enterprise IT | Zion Tech Group</title>
@@ -44,6 +53,10 @@ ursor/fix-lint-push-and-merge-to-main-ce13
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Enterprise IT</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Ship secure, reliable platforms with measurable business outcomes.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+
+              <a href="/contact" className="px-8 py-4">Get a Roadmap</Link>
+              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
+
             </div>
           </header>
           <section>
@@ -57,7 +70,22 @@ ursor/fix-lint-push-and-merge-to-main-ce13
               ))}
             </div>
           </section>
-
+                </div>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>
+          </section>
+<section>
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {solutions.map((s) => (
+                <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
+                  <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
+                  <p className="text-gray-300 text-sm">Learn more</p>
 
   );
 };
@@ -67,6 +95,11 @@ ursor/fix-lint-push-and-merge-to-main-ce13
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+}
+
+}
+
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -121,13 +154,25 @@ function EnterpriseITPage() {
                   <div className="text - gray - 200 font - semibold mb - 2">{s.name}</div>;
                   <p className="text - gray - 300 text - sm">Learn more</p>;
                 </a>))}
+  );
+};
+                </Link>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </section>;
         </div>;
       </div>;
+
     </Layout>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+}
+

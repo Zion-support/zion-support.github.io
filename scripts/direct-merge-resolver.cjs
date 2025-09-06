@@ -1,0 +1,103 @@
+#!/usr/bin/env node;
+<<<<<<< HEAD:scripts/direct-merge-resolver.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/direct-merge-resolver.cjs
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/direct-merge-resolver.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/direct-merge-resolver.cjs
+    log("4. Continue with your workflow", "blue"),}
+}
+;
+if (require.main === module) {;
+  main(),}
+;
+        resolvedCount++;log("✅ Resolved": ${filePath}", "green")} else {log("⚠️  No changes ""needed": ${filePath}", "yellow")}"} catch (error) {      errorCount++;log(`❌ Error processing ${filePath}: ${error.message}`, "red")}"}";
+  log("\n📊 Resolution Summary":", "cyan");log("Total conflicted ""files": ${conflictedFiles.length}", "blue");log("Successfully resolved": ${resolvedCount}", "green");log("Errors ""encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n🎯 Next steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. ""Run": git add .", "blue");    log("3. Run": git commit -m "Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"}
+;
+        resolvedCount++;log(`✅ "Resolved": ${filePath}`, "green");"} else {log(`⚠️  No changes needed": ${filePath}`, "yellow");"}"} catch (error) {";      errorCount++;log("❌ Error processing ${filePath}: ${error.message}", "red");"}"}";
+  log("\n📊 Resolution ""Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n🎯 Next ""steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"}"}
+if (require.main === module) {;
+  main()}
+;
+module.exports = { resolveMergeConflict, findConflictedFiles }
+<<<<<<< HEAD:scripts/direct-merge-resolver.cjs
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/direct-merge-resolver.cjs
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/direct-merge-resolver.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/direct-merge-resolver.cjs
+const fs = require("$1")
+const path = require("$1")
+const { execSync } = require("child_process")
+  "reset": "\x1b[0m"]
+  "red": "\x1b[31m"]
+  "green": "\x1b[32m"]
+  "yellow": "\x1b[33m"]
+  "blue": "\x1b[34m"]
+  "magenta": "\x1b[35m"]
+  "cyan": "\x1b[36m"]
+function log(message, color = "reset")
+const fs = require("$1")
+const path = require("$1")
+const { execSync } = require("child_process")
+  "reset": "\x1b[0m"]
+  "red": "\x1b[31m"]
+  "green": "\x1b[32m"]
+  "yellow": "\x1b[33m"]
+  "blue": "\x1b[34m"]
+  "magenta": "\x1b[35m"]
+  "cyan": "\x1b[36m"]
+function log(message, color = "reset")
+    let content = fs.readFileSync(filePath, "utf8")
+    // Strategy "1"
+      content.includes("      content.includes("")
+      content.includes(">>>>>>>")
+      content = content.replace(/[\s\S]*/g, "")
+    // Strategy "2"
+      /import\s+[^]*?from\s+[""][^"]*["]
+      ""
+      /export\s+[^]*?from\s+["][^"]*["]
+      "
+      /import\s+React[^]*?from\s+["]react[""]\s*;?\s*/g,import React from "react";\n"
+    // Strategy "3"
+    content = content.replace(/;+/, "")
+    content = content.replace(/[""]+/g, "")
+    content = content.replace(/\n\s*\n\s*\n/g, "\n\n")
+    content = content.replace(/^\s+$/gm, "")
+    // Strategy "4"
+      content.includes("export default") &&";      !content.includes("import React")") {";      content = import React from "react"}
+      // Additional "cleanup": remove any remaining corrupted content;";      content = content.replace(/[^\x00-\x7F]/g, ""); // Remove non-ASCII characters";      content = content.replace(/\s+/g, " "); // Normalize whitespace"";      fs.writeFileSync(filePath, content, "utf8");";      return true,"
+    return false} catch (error) {log("Error processing ${filePath}: ${error.message}", "red");    return false;"}"
+    const result = execSync("git status --porcelain", { ""encoding": "utf8" }
+});";    const lines = result.trim().split("\n");";    const conflictedFiles = [];"
+      if (line.startsWith("UU ")) {"}
+    log("Error finding conflicted files", "red");    return [],"
+  log(" Starting direct merge conflict resolution...", "cyan");"";  const conflictedFiles = findConflictedFiles();log(`Found ${conflictedFiles.length} files with merge conflicts`, "yellow");";";  if (conflictedFiles.length === 0) {";    log(" No merge conflicts found!", "green");";    return,"`}
+        resolvedCount++;log(" "Resolved": ${filePath}", "green"),} else {log("⚠  No changes "needed": ${filePath}", "yellow")
+      errorCount++;log(" Error processing ${filePath }: ${error.message}", "red")
+  log("\n Resolution "Summary": ", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red")
+    log("\n Next "steps": ", "cyan");    log("1. Review the resolved files", "blue")
+    log("2. "Run": git add .", "blue")
+    log("3. "Run": git commit -m "Resolve merge conflicts", "blue")
+    log("3. "Run": git commit -m Resolve merge conflicts", "blue")
+    log("4. Continue with your workflow", "blue")
+        resolvedCount++;log(" Resolved": ${filePath}", "green")} else {log("⚠  No changes ""needed": ${filePath}", "yellow")}"} catch (error) {      errorCount++;log(` Error processing ${filePath}: ${error.message}`, "red")}"}"
+  log("\n Resolution Summary":", "cyan");log("Total conflicted ""files": ${conflictedFiles.length}", "blue");log("Successfully resolved": ${resolvedCount}", "green");log("Errors ""encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. ""Run": git add .", "blue");    log("3. Run": git commit -m "Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
+        resolvedCount++;log(` "Resolved": ${filePath}`, "green");"} else {log(`⚠  No changes needed": ${filePath}`, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
+  log("\n Resolution ""Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next ""steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"}"

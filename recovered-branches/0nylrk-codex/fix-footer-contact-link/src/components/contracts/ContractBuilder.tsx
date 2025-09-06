@@ -7,13 +7,6 @@ interface ContractBuilderProps {
 
   onContractGenerated?: (contractContent: string) => void
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -24,9 +17,6 @@ import {ContractForm, ContractFormValues} from "./components/ContractForm";
 import {ContractPreview} from "./components/ContractPreview";
 import {TemplateManager} from "./templates/TemplateManager";
 import {SmartContractBuilder} from "./SmartContractBuilder";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { useState } from "react",
 import { Dialog, DialogContent } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -77,7 +67,6 @@ interface ContractBuilderProps {
 
   onContractGenerated?: (contractContent: string) => void
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ContractBuilderProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -88,8 +77,6 @@ interface ContractBuilderProps {;
 
 export function ContractBuilder(): any ({;
 
-<<<<<<< HEAD
-=======
 import { useState } from "react",
 import { Dialog, DialogContent } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -113,31 +100,21 @@ interface ContractBuilderProps {
 }
 
 export function ContractBuilder({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export function ContractBuilder({;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isOpen;
   onClose;
   talent;
   clientName;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export function ContractBuilder({
   isOpen,
   onClose,
   talent,
   clientName,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onContractGenerated;
 }: ContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
     undefined;
   );
@@ -150,9 +127,6 @@ export function ContractBuilder({
 
   const handleContractGenerated = (contract: string) => {;
     setGeneratedContract(contract);
-<<<<<<< HEAD
-=======
-
 import { useState } from "react",;
 import { Dialog, DialogContent } from "@/components/ui/dialog",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
@@ -193,36 +167,23 @@ export function ContractBuilder({;
 ;
   const handleContractGenerated = (contract:string) => {;
     setGeneratedContract(contract),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setActiveTab("preview"),;
     if (onContractGenerated) {;
       onContractGenerated(contract);
     }
-<<<<<<< HEAD
   };
 
   if (showSmartContractBuilder) {;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <SmartContractBuilder
         isOpen={isOpen}
         onClose={() => {;
           setShowSmartContractBuilder(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           onClose();
 
-=======
-=======
-          onClose();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+onClose();
 import { useState } from './react';
 import { Dialog, DialogContent } from '@/components / ui / dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components / ui / tabs';
@@ -276,29 +237,13 @@ if ( {) {
         on_close={() => {
           setShowSmartContractBuilder (false);
           on_close ();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export function ContractBuilder({
   isOpen,
   onClose,
   talent,
   clientName,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onContractGenerated
 }: ContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -306,11 +251,8 @@ export function ContractBuilder({
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-  },;
+},;
 ;
   if (showSmartContractBuilder) {;
     return (;
@@ -338,12 +280,8 @@ export function ContractBuilder({
           setShowSmartContractBuilder(false);
 
           onClose()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false),
 
@@ -356,39 +294,25 @@ export function ContractBuilder({
     setActiveTab("preview"),
     if (onContractGenerated) {
       onContractGenerated(contract)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-          setShowSmartContractBuilder(false),;
+setShowSmartContractBuilder(false),;
           onClose(),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         }}
         talent={talent}
         client_name={client_name}
         onContractGenerated={onContractGenerated}
 
-<<<<<<< HEAD
       />
     )
   }
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
   return (
 
-<<<<<<< HEAD
-=======
-      />;
+/>;
     ),;
   }
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
@@ -397,30 +321,24 @@ export function ContractBuilder({
               <TabsTrigger value="form">Contract Details</TabsTrigger>;
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
             </TabsList>;
-<<<<<<< HEAD
 
             <div className="flex gap-2">;
               <Button
                 variant="outline" 
                 size="sm"
-=======
-            ;
+;
             <div className="flex gap-2">;
               <Button ;
                 variant="outline" ;
                 size="sm";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
                 Templates;
               </Button>;
-<<<<<<< HEAD
 
-
-=======
-    }
+}
   };
 
   if (showSmartContractBuilder) {
@@ -430,8 +348,6 @@ export function ContractBuilder({
         onClose={() => {
           setShowSmartContractBuilder(false);
           onClose()
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { Dialog, DialogContent } from "@/components/ui/dialog",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
@@ -485,7 +401,6 @@ export function ContractBuilder({;
         talent={talent}
         client_name={client_name}
         onContractGenerated={onContractGenerated}
-<<<<<<< HEAD
       />
     )
   }
@@ -509,26 +424,17 @@ export function ContractBuilder({;
                 <Save className="h-4 w-4" />
                 Templates
               </Button>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 variant="secondary"
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-              >
+>
                 Smart Contract Builder
               </Button>
             </div>
           </div>
           <TabsContent value="form" className="pt-4">
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />);
   }
   return (
@@ -554,38 +460,27 @@ export function ContractBuilder({;
                 variant="secondary";
                 size="sm";
                 on_click={() => setShowSmartContractBuilder (true)}
-<<<<<<< HEAD
 
-=======
-              ;
+;
               <Button;
                 variant="secondary";
                 size="sm";
                 onClick={() => setShowSmartContractBuilder(true)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               >;
                 Smart Contract Builder;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
 
           <TabsContent value="form" className="pt - 4">;
             <ContractForm;
 
-=======
-
-            <ContractForm 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<ContractForm
               talent={talent}
               client_name={client_name}
               initial_values={form_values}
               onFormValuesChange={setFormValues}
               onContractGenerated={handleContractGenerated}
-<<<<<<< HEAD
 
             />;
           </TabsContent>;
@@ -593,9 +488,7 @@ export function ContractBuilder({;
           <TabsContent value="preview" className="pt-4">;
             {generatedContract && (;
 
-=======
-
-            <ContractForm 
+<ContractForm 
 
           ;
           <TabsContent value="form" className="pt-4">;
@@ -617,25 +510,18 @@ export function ContractBuilder({;
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <ContractPreview
                 contractContent={generatedContract}
                 talent={talent}
                 onClose={onClose}
                 status="ready"
-<<<<<<< HEAD
-<<<<<<< HEAD
               />;
             )}
 
           </TabsContent>;
         </Tabs>;
 
-
-=======
-          ;
+;
           <TabsContent value="preview" className="pt-4">;
             {generatedContract && (;
               <ContractPreview ;
@@ -653,16 +539,11 @@ export function ContractBuilder({;
             )}
           </TabsContent>
         </Tabs>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         />;
       </DialogContent>;
@@ -670,13 +551,9 @@ export function ContractBuilder({;
   );
 }
 
-=======
-        />;
+/>;
       </DialogContent>;
     </Dialog>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
@@ -697,17 +574,9 @@ export function ContractBuilder({;
         />;
       </DialogContent>;
     </Dialog>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-=======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),; interface ContractBuilderProps {
   isOpen: boolean;
 onClose: () => void;
@@ -731,7 +600,6 @@ const handleContractGenerated = (contract: string) => {
   if (onContractGenerated) {
   onContractGenerated (contract) 
 }
-<<<<<<< HEAD
 ;
 
 };
@@ -770,6 +638,3 @@ return (<SmartContractBuilder isOpen= {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
-=======
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {useForm, type, UseFormReturn} from "react-hook-form";
@@ -17,8 +10,6 @@ import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -48,16 +39,10 @@ import {
   FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Form validation schema
 
 const forgotPasswordSchema = z.object({
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Form validation schema
 
 const forgotPasswordSchema = z.object({
@@ -66,21 +51,10 @@ type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
 export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth();
   const [submitted, setSubmitted] = useState(false);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   email: z.string().email("Please enter a valid email")}),
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ForgotPassword() {;
   const { resetPassword, isLoading } = useAuth();
   const [submitted, setSubmitted] = useState(false);
@@ -88,10 +62,6 @@ export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth(),
   const [submitted, setSubmitted] = useState(false),
   
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(forgotPasswordSchema)
@@ -102,19 +72,10 @@ export default function ForgotPassword() {
     await resetPassword(data.email)
     setSubmitted(true)
 
-<<<<<<< HEAD
-
   },
 
-
-<<<<<<< HEAD
-=======
-  }
+}
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Header />
@@ -140,9 +101,6 @@ export default function ForgotPassword() {
                     We've sent a password reset link to your email address.
                   </p>
                   <div className="mt-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {useForm, type, UseFormReturn} from "react-hook-form";
@@ -178,7 +136,6 @@ export default function ForgotPassword() {;
   };
 
   return (
-=======
 
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
@@ -223,9 +180,6 @@ export default function ForgotPassword() {;
   },;
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Header />;
       <div className="flex min-h-screen bg-zion-blue">;
@@ -239,14 +193,8 @@ export default function ForgotPassword() {;
                 Enter your email and we'll send you a link to reset your password.;
               </p>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               {submitted ? (;
                 <div className="text-center py-8">;
@@ -258,62 +206,43 @@ export default function ForgotPassword() {;
                     We've sent a password reset link to your email address.;
                   </p>;
                   <div className="mt-6">;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Link
                       to="/login"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
-=======
-                    <Link;
+<Link;
                       to="/login";
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center";
                     >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                     <Link
                       to="/login"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       Back to login;
                     </Link>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               ) : (;
                 <Form {...form}>;
                   <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField
                       control={form && form.control}
                       name="email"
-=======
-              ) :(;
+) :(;
                 <Form {...form}>;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField;
                       control={form.control}
                       name="email";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Email address</FormLabel>;
                           <FormControl>;
                             <div className="relative">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                               <Input
                                 placeholder="you@example && example.com"
                                 className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-=======
-                              <Input;
+<Input;
                                 placeholder="you@example.com";
                                 className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                 {...field}
                               />;
                               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
@@ -322,11 +251,8 @@ export default function ForgotPassword() {;
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     />;
-
 
                     <Button
                       type="submit"
@@ -334,24 +260,17 @@ export default function ForgotPassword() {;
                       disabled={isLoading}>;
                       {isLoading ? "Sending..." : "Reset Password"}
 
-=======
-                    />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+/>;
                     </Button>;
 
                     <div className="text-center">;
-<<<<<<< HEAD
 
                       <Link
                         to="/login"
 
-=======
-                      <Link
+<Link
                         to="/login"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from './react';
 import { Link } from './react-router-dom';
 import { use_form, type, UseFormReturn } from './react - hook - form';
@@ -452,13 +371,8 @@ function ForgotPassword() {
                       <Link;
                         to="/login";
                         className="text - sm font - medium text - zion - cyan hover:text - zion - cyan - light";
-<<<<<<< HEAD
-<<<<<<< HEAD
                       >;
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
                     <Button;
                       type="submit";
@@ -473,36 +387,26 @@ function ForgotPassword() {
                         to="/login";
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light";
                       >;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         Back to login;
                       </Link>;
                     </div>;
                   </form>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             </div>;
           </div>;
         </div>;
         <div className="hidden lg: block relative w-0 flex-1">;
-=======
-                </Form>;              )}
+</Form>;              )}
             </div>;
           </div>;
         </div>;
         <div className="hidden lg:block relative w-0 flex-1">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
             <div className="flex flex-col justify-center items-center h-full px-8">;
               <div className="max-w-md text-center">;
                 <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3>;
                 <p className="text-lg text-white/80">;
-<<<<<<< HEAD
-=======
-                </Form>)}
+</Form>)}
             </div>;
           </div>;
         </div>;
@@ -512,11 +416,6 @@ function ForgotPassword() {
               <div className="max - w-md text - center">;
                 <h3 className="text - 3xl font - bold text - white mb - 4">Account Recovery</h3>;
                 <p className="text - lg text - white / 80">;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   We'll help you get back into your account so you can continue your journey in the Zion marketplace.;
                 </p>;
               </div>;
@@ -525,15 +424,11 @@ function ForgotPassword() {
         </div>;
       </div>;
       <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </>);
 }
 
-=======
-=======
-                    <Link
+<Link
                       to="/login"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
                     >
@@ -574,9 +469,6 @@ function ForgotPassword() {
                     <div className="text-center">
                       <Link
                         to="/login"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
                       >
                         Back to login
@@ -584,16 +476,12 @@ function ForgotPassword() {
                     </div>
                   </form>
                 </Form>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 
-=======
-=======
 ;
 
-              )}
+)}
             </div>
           </div>
         </div>
@@ -615,12 +503,8 @@ function ForgotPassword() {
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 ;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -692,14 +576,8 @@ export default function ForgotPassword() {;
               ) : (;
                 <Form {...form}>;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
-                    <FormField;
-<<<<<<< HEAD
+<FormField;
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>;
   );
 }
@@ -718,6 +596,3 @@ return (<> <Header /> <div className="flex min-h-screen bg-zion-blue"> <div clas
 }/> <Button </Button> <div className="text-center" > <Link to="/login" className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light" > Back to login </Link> </div> </form> </Form>) 
 }</div> </div> </div> <div className="hidden lg: block relative w-0 flex-1"> <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80"> <div className="flex flex-col justify-center items-center h-full px-8"> <div className="max-w-md text-center"> <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3> <p className="text-lg text-white/80"> We'll help you get back into your account so you can continue your journey in the Zion marketplace. </p> </div> </div> </div> </div> </div> <Footer /> </>) 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

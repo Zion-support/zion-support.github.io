@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 class QualityAssuranceMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -25,6 +26,7 @@ class QualityAssuranceMonitor {}
   };
   async checkCodeQuality() {}
     this.log('Running quality assurance checks...');
+    
     // Check TypeScript errors;
     const tsResult = await this.runCommand('npx tsc --noEmit', { "silent": true }
 });
@@ -59,8 +61,10 @@ class QualityAssuranceMonitor {}
     return this.issuesFound};
   async run() {}
     this.log('Starting Quality Assurance Monitor...');
+    
     try {}
       const issues = await this.checkCodeQuality();
+      
       if (issues.length > 0) {}
         this.log(`Found ${issues.length} quality issues that need attention`, 'warn');
         for (const issue of issues) {}
@@ -75,3 +79,7 @@ class QualityAssuranceMonitor {}
 if (require.main === module) {}
   const monitor = new QualityAssuranceMonitor();
   monitor.run().catch(console.error)};
+
+
+module.exports = QualityAssuranceMonitor;
+

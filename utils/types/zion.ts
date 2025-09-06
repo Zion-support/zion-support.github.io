@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
 
 export interface Branding {;
-
-=======
 
 export interface Branding {;
 
@@ -14,47 +9,80 @@ export interface Branding {;
   primaryColor?: string,;
   secondaryColor?: string,;
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+
+
+
+
+
 export interface Branding {logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
 }
 export interface DeployModules {marketplace: boolean;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export interface Branding {;
   logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
 <<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+export interface Branding {;
+
+
+
+
+
+
+export interface Branding {;
+
+
   logoUrl?: string,;
   primaryColor?: string,;
   secondaryColor?: string,;
   subdomain?: string;
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
+
+
+
+
+
+
+
+
+
 
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface DeployModules {;
   marketplace: boolean;
 <<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+
+
+
+
+
+
+
+
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -69,11 +97,14 @@ export interface DeployModules {;
 <<<<<<< HEAD
 
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+
+
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -85,16 +116,23 @@ export interface DeployModules {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
+
 =======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   globalMap?: boolean;
   franchiseOnboarding?: boolean;
   referralAmbassadors?: boolean;
   grantPortal?: boolean;
   trailer?: boolean;
   bookStore?: boolean;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+
+
+
+
+
+
+
 }
 export interface DeployInput {instanceName: string;
   defaultLanguage: string;
@@ -125,8 +163,8 @@ export interface DeployResult {success: boolean;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface DeployInput {;
@@ -136,9 +174,10 @@ export interface DeployInput {;
   tokenActivation: boolean;
 <<<<<<< HEAD
 
-
+governanceMode: GovernanceMode;
 =======
   governanceMode: GovernanceMode;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   branding: Branding;
   modules: DeployModules;
   requestedRoutes?: string[];
@@ -155,10 +194,9 @@ export interface GeneratedAsset {;
   kind: "file" | "page" | "config" | "job" | "event";
   path: string;
   description?: string;
-=======
 }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -188,22 +226,31 @@ export interface GeneratedAsset {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export interface DeployResult {;
   success: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+;
+export interface DeployResult {;
+  success: boolean;
+
+
+
+
+
+
+;
+export interface DeployResult {;
+  success: boolean;
+
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface DeployResult {;
+  success: boolean;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
@@ -211,13 +258,19 @@ export interface DeployResult {;
   summary: string;
   version: string;
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+
+
+
+
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
 export interface Branding {
   logo_url?: string,
@@ -226,10 +279,13 @@ export interface Branding {
   subdomain?: string;
 
 
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 
 
@@ -287,7 +343,6 @@ export interface DeployResult {
 export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean;
-<<<<<<< HEAD
 
 }
 export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
@@ -300,29 +355,33 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
 
 }
 
-<<<<<<< HEAD
+
+
+}
 =======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface AccessControlConfig {;
   allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+
+
+
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
 =======
-
-
-
 }
-
-  adminKeyConfigured: boolean;
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

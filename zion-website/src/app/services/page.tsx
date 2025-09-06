@@ -1,36 +1,165 @@
-import {
+<<<<<<< HEAD
+import React from 'react';
+=======
+import { 
+  UserGroupIcon,
+  LightBulbIcon, 
+  CogIcon, 
+  ShieldCheckIcon,
+  ChartBarIcon,
+  RocketLaunchIcon,
+  AcademicCapIcon,
+  GlobeAltIcon
+} from '@heroicons/react/24/outline'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+
+const services = [
   {
-    step: '01'
-    title: 'Discovery & Assessment'
-    description: 'We begin by understanding your business challenges, current technology stack, and AI objectives.'
-    icon: LightBulbIcon}
+<<<<<<< HEAD
+    title: 'AI Development',
+    description: 'Custom AI solutions tailored to your business needs',
+    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+  },
   {
-    step: '02'
-    title: 'Solution Design'
-    description: 'Our experts design a comprehensive solution that addresses your specific needs and goals.'
-    icon: CogIcon}
+    title: 'Quantum Computing',
+    description: 'Next-generation quantum solutions for complex problems',
+    features: ['Quantum Algorithms', 'Quantum Simulation', 'Optimization', 'Cryptography']
+  },
   {
-    step: '03'
-    title: 'Development & Testing'
-    description: 'We develop and rigorously test your solution to ensure optimal performance and reliability.'
-    icon: RocketLaunchIcon}
+    title: 'Autonomous Systems',
+    description: 'Self-managing systems that adapt and optimize',
+    features: ['Process Automation', 'Intelligent Monitoring', 'Self-Healing', 'Adaptive Learning']
+  },
   {
-    step: '04'
-    title: 'Deployment & Training'
-    description: 'Seamless deployment with comprehensive training to maximize adoption and value.'
-    icon: AcademicCapIcon}
+    title: 'Digital Transformation',
+    description: 'Complete business transformation through technology',
+    features: ['Cloud Migration', 'Data Strategy', 'Process Optimization', 'Change Management']
+  }
+];
+
+export default function ServicesPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to transform your business and drive growth.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+              <p className="text-gray-600 mb-6">{service.description}</p>
+              <ul className="space-y-2">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center">
+                    <span className="text-blue-600 mr-3">✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+=======
+    name: 'AI Strategy & Consulting',
+    description: 'Comprehensive assessment and strategic planning for AI transformation initiatives.',
+    icon: LightBulbIcon,
+    features: [
+      'Technology AssessmentROI AnalysisImplementation RoadmapChange Management Planning'
+    ],
+    duration: '4-8 weeks'},
   {
+    name: 'Custom AI Development',
+    description: 'Tailored AI solutions built specifically for your business needs and objectives.',
+    icon: CogIcon,
+    features: [
+      'Custom Algorithm DevelopmentIntegration ServicesTesting & ValidationDocumentation & Training'
+    ],
+    duration: '8-24 weeks'},
   {
-    name: 'Proven Track Record'
-    description: 'Successfully delivered 500+ AI solutions across diverse industries worldwide.'
-    icon: ChartBarIcon}
+    name: 'AI Integration & Deployment',
+    description: 'Seamless integration of AI solutions into your existing infrastructure and workflows.',
+    icon: RocketLaunchIcon,
+    features: [
+      'System IntegrationAPI DevelopmentPerformance OptimizationGo-live Support'
+    ],
+    duration: '4-12 weeks'},
   {
-      {/* Hero section */}
-      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
-          <div className=&quot;text - center & quot;>;
-            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
-              Professional{' '}
+    name: 'AI Training & Education',
+    description: 'Comprehensive training programs to ensure your team maximizes AI solution value.',
+    icon: AcademicCapIcon,
+    features: [
+      'Technical TrainingBest PracticesOngoing SupportCertification Programs'
+    ],
+    duration: '2-4 weeks'},
+  {
+    name: 'AI Maintenance & Support',
+    description: 'Continuous monitoring, optimization, and support for your AI solutions.',
+    icon: ShieldCheckIcon,
+    features: [
+      '24/7 MonitoringPerformance OptimizationSecurity UpdatesTechnical Support'
+    ],
+    duration: 'Ongoing'},
+  {
+    name: 'AI Audit & Compliance',
+    description: 'Comprehensive audits to ensure your AI systems meet regulatory and ethical standards.',
+    icon: ChartBarIcon,
+    features: [
+      'Compliance AssessmentEthical AI ReviewSecurity AuditsRisk Mitigation'
+    ],
+    duration: '2-6 weeks'}]
+
+const serviceProcess = [
+  {
+    step: '01',
+    title: 'Discovery & Assessment',
+    description: 'We begin by understanding your business challenges, current technology stack, and AI objectives.',
+    icon: LightBulbIcon},
+  {
+    step: '02',
+    title: 'Solution Design',
+    description: 'Our experts design a comprehensive solution that addresses your specific needs and goals.',
+    icon: CogIcon},
+  {
+    step: '03',
+    title: 'Development & Testing',
+    description: 'We develop and rigorously test your solution to ensure optimal performance and reliability.',
+    icon: RocketLaunchIcon},
+  {
+    step: '04',
+    title: 'Deployment & Training',
+    description: 'Seamless deployment with comprehensive training to maximize adoption and value.',
+    icon: AcademicCapIcon},
+  {
+    step: '05',
+    title: 'Ongoing Support',
+    description: 'Continuous monitoring, optimization, and support to ensure lasting success.',
+    icon: ShieldCheckIcon}]
+
+const reasonsToChoose = [
+  {
+    name: 'Expert Team',
+    description: 'World-class AI researchers and engineers with decades of combined experience.',
+    icon: UserGroupIcon},
+  {
+    name: 'Proven Track Record',
+    description: 'Successfully delivered 500+ AI solutions across diverse industries worldwide.',
+    icon: ChartBarIcon},
+  {
+    name: 'Cutting-Edge Technology',
+    description: 'Access to the latest AI research and technology innovations.',
+    icon: LightBulbIcon},
+  {
+    name: 'Global Support',
+    description: '24/7 support and maintenance services across multiple time zones.',
+    icon: GlobeAltIcon}]
+
+export default function ServicesPage() {
   return (
     <div className="bg-black">
       {/* Hero section */}
@@ -43,11 +172,14 @@ import {
                 AI Services
               </span>
             </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              From strategy to implementation, our comprehensive AI services help you navigate 
               the complexities of artificial intelligence and achieve transformative results.
             </p>
           </div>
         </div>
       </div>
+
       {/* Professional Services */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -55,6 +187,8 @@ import {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Comprehensive AI Solutions
           </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            We offer end-to-end AI services designed to accelerate your digital transformation 
             and drive measurable business outcomes.
           </p>
         </div>
@@ -81,6 +215,7 @@ import {
                     href="/contact"
                     className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                   >
+                    Learn more <span aria-hidden="true">→</span>
                   </Link>
                 </div>
               </div>
@@ -89,64 +224,6 @@ import {
         </div>;
       </div>;
       {/* Service Process */}
-            How We Deliver Results
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our proven methodology ensures successful project delivery and maximum value
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            How We Deliver Results
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our proven methodology ensures successful project delivery and maximum value 
-            from your AI investment.
-          </p>
-        </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5&quot;>
-            {serviceProcess.map((step, index) => (
-              <div key={step.step} className=&quot;relative&quot;>
-                {index < serviceProcess.length - 1 && (
-                  <div className=&quot;hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700&quot;></div>
-                )}
-                <div className=&quot;bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                  <div className=&quot;mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4&quot;>
-                    <step.icon className=&quot;h-8 w-8 text-blue-400&quot; />
-                  </div>
-                  <div className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>{step.step}</div>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{step.title}</h3>
-                  <p className=&quot;text-sm text-gray-300&quot;>{step.description}</p>
-                </div>
-              </div>
-            ))}
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Process</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            How We Deliver Results;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            Our proven methodology ensures successful project delivery and maximum value;
-            from your AI investment.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 5&quot;>;
-            {service_process.map ((step, index) => (
-              <div key={step.step} className=&quot;relative & quot;>;
-                {index < service_process.length - 1 && (
-                  <div className=&quot;hidden lg:block absolute top - 8 left - 8 w - full h - 0.5 bg - gray - 700 & quot;></div>)}
-                <div className=&quot;bg - white / 5 p - 6 rounded - 2xl backdrop - blur - sm text - center hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
-                  <div className=&quot;mx - auto flex h - 16 w - 16 items - center justify - center rounded - full bg - blue - 600 / 20 mb - 4&quot;>;
-                    <step.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
-                  </div>;
-                  <div className=&quot;text - sm font - semibold text - blue - 400 mb - 2&quot;>{step.step}</div>;
-                  <h3 className=&quot;text - lg font - semibold text - white mb - 2&quot;>{step.title}</h3>;
-                  <p className=&quot;text - sm text - gray - 300 & quot;>{step.description}</p>;
-                </div>;
-              </div>))}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
@@ -196,15 +273,19 @@ import {
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {reason.name}
-                </dt>;
-                <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
-                  <p className=&quot;flex - auto & quot;>{reason.description}</p>;
-                </dd>;
-              </div>))}
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                  <p className="flex-auto">{reason.description}</p>
+                </dd>
+              </div>
+            ))}
           </dl>;
         </div>;
       </div>;
       {/* CTA section */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -221,10 +302,9 @@ import {
               View Solutions <span aria-hidden="true">→</span>
             </Link>
           </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         </div>
       </div>
     </div>
   );
-};
-
-export default Page;
+}

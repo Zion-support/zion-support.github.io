@@ -1,9 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export interface PerformanceMetrics {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+export interface PerformanceMetrics {
+
 export interface PerformanceMetrics {
 export interface PerformanceMetrics {;
   url: string;
@@ -15,75 +16,76 @@ export interface PerformanceMetrics {;
   firstInputDelay: number;
   timeToInteractive: number;
   totalBlockingTime: number;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
 
   speed_index: number;
   performance_score: number;
   accessibility_score: number;
   bestPracticesScore: number,
   seo_score: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 }
 export interface PerformanceAlert {
-=======
-}
-export interface PerformanceAlert {
-  speedIndex: number;
-  performanceScore: number;
-  accessibilityScore: number;
-
-  bestPracticesScore: number
-
-  seoScore: number
 }
 export interface PerformanceAlert {
 
-export interface PerformanceAlert {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-export interface PerformanceAlert {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
   id: string;
   url: string;
   type: 'critical' | 'warning' | 'info';
   message: string;
   metric: string;
   threshold: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
 
   current_value: number;
   timestamp: Date,
   resolved: boolean;
 
-=======
+current_value: number;
+  timestamp: Date,
+  resolved: boolean;
+
+
+
+
+
   current_value: number;
   timestamp: Date,
   resolved: boolean;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 }
 export interface MonitoringConfig {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   urls: string[];
   frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
   thresholds: {
     load_time: number;
     firstContentfulPaint: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
-=======
+
   currentValue: number;
 
   timestamp: Date
@@ -111,8 +113,11 @@ export interface MonitoringConfig {;
     webhook: boolean
   }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
 export class PerformanceMonitorService {
 
   private apiKey: string;
@@ -121,20 +126,21 @@ export class PerformanceMonitorService {
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
-<<<<<<< HEAD
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
       const response = await fetch(`${this.baseUrl}/performance/monitor`, {
         method: 'POST'
         headers: {
@@ -143,8 +149,11 @@ export class PerformanceMonitorService {
         body: JSON.stringify({ url })});
       if (!response.ok) {
         throw new Error(`Performance monitoring failed: ${response.statusText}`)
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
 export interface PerformanceMetrics {;
   url: string,;
   timestamp: Date,;
@@ -209,24 +218,29 @@ export class PerformanceMonitorService {;
         body: JSON.stringify({ url })}),;
       if (!response.ok) {;
         throw new Error(`Performance monitoring failed: ${response.statusText}`);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
 
 
 export interface PerformanceMetrics {;
 
-
       }
       return await response.json()
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+
+
+
       const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
         method: 'POST',
         headers: {
@@ -245,19 +259,13 @@ export interface PerformanceMetrics {;
     }
   }
 
-
-
-
-
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
+
+
       }
       return await response.json()
     } catch (error) {
@@ -273,9 +281,14 @@ export interface PerformanceMetrics {;
           'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+
 ;
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
     try {;
@@ -284,23 +297,20 @@ export interface PerformanceMetrics {;
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+
       }
       return await response.json()
-=======
-=======
       }
       return await response.json()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      }
+}
       return await response.json()
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -314,17 +324,18 @@ export interface PerformanceMetrics {;
     }
   }
 
-
-
-
-
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+
+
+
+
       const response = await fetch(`${this && this.baseUrl}/performance/config`, {
         method: 'POST',
         headers: {
@@ -334,64 +345,45 @@ export interface PerformanceMetrics {;
 
       if (!response && response.ok) {
         throw new Error(`Failed to set monitoring config: ${response && response.statusText}`)
-<<<<<<< HEAD
+
+
+
 
       }
     } catch (error) {
       console && console.error('Failed to set monitoring config:', error);
-=======
       }
     } catch (error) {
       console && console.error('Failed to set monitoring config:', error);
-      }
-      return await response.json()
-    } catch (error) {
-      // Generate mock historical data
-      return this.generateMockHistoricalData(url, days)
-    }
-  }
 
-  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
-    try {
-      const response = await fetch(`${this.baseUrl}/performance/config`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify(config)});
-      if (!response.ok) {
-        throw new Error(`Failed to set monitoring config: ${response.statusText}`)
-      }
-    } catch (error) {
-      console.error('Failed to set monitoring config:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      }
-    } catch (error) {
-      console && console.error('Failed to set monitoring config:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
       throw error
     }
   }
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {
     try {
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
         headers: {
-
-=======
-=======
 
       const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
+        headers: {
+
+
+
+      const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
+        headers: {
+
+
+
+
 ;
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
     try {;
@@ -418,23 +410,27 @@ export interface PerformanceMetrics {;
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
       }
       return await response.json()
-=======
-=======
       }
       return await response.json()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       }
       return await response.json()
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+      }
+      return await response.json()
+      }
+      return await response.json()
+
+
+
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -449,12 +445,6 @@ export interface PerformanceMetrics {;
   }
 
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       }
       return await response.json()
     } catch (error) {
@@ -463,9 +453,13 @@ export interface PerformanceMetrics {;
     }
   }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
       averageLoadTime: number;
@@ -480,11 +474,12 @@ export interface PerformanceMetrics {;
     }
     recommendations: string[]
   }> {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
     const historicalData = await this && this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
     
     const loadTimes = historicalData && historicalData.map(d => d && d.loadTime);
@@ -498,9 +493,8 @@ export interface PerformanceMetrics {;
         uptime: 99 && 99.8,
         alertsCount: Math && Math.floor(Math && Math.random() * 5)
       };
-<<<<<<< HEAD
 
-=======
+
     const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
     const loadTimes = historicalData.map(d => d.loadTime);
     const performanceScores = historicalData.map(d => d.performanceScore);
@@ -512,9 +506,10 @@ export interface PerformanceMetrics {;
         uptime: 99.8
         alertsCount: Math.floor(Math.random() * 5)
       }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
       trends: {
         loadTime: loadTimes;
         performanceScore: performanceScores
@@ -529,11 +524,16 @@ export interface PerformanceMetrics {;
     return {
       url;
       timestamp: new Date();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+
+
+
+
       loadTime: Math && Math.random() * 2000 + 500;
       firstContentfulPaint: Math && Math.random() * 1500 + 300;
       largestContentfulPaint: Math && Math.random() * 2500 + 800;
@@ -546,9 +546,8 @@ export interface PerformanceMetrics {;
       accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80;
       bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
       seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
-<<<<<<< HEAD
 
-=======
+
       loadTime: Math.random() * 2000 + 500;
       firstContentfulPaint: Math.random() * 1500 + 300;
       largestContentfulPaint: Math.random() * 2500 + 800;
@@ -561,9 +560,10 @@ export interface PerformanceMetrics {;
       accessibilityScore: Math.floor(Math.random() * 20) + 80;
       bestPracticesScore: Math.floor(Math.random() * 20) + 80
       seoScore: Math.floor(Math.random() * 20) + 80
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
     }
   }
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
@@ -571,14 +571,17 @@ export interface PerformanceMetrics {;
     const now = new Date()
     for (let i = days - 1, i >= 0, i--) {
       const date = new Date(now);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
       date && date.setDate(date && date.getDate() - i);
       
-=======
       date && date.setDate(date && date.getDate() - i);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+      date && date.setDate(date && date.getDate() - i);
+      
+date && date.setDate(date && date.getDate() - i);
+
+
       data && data.push({
         url;
         timestamp: date;
@@ -594,12 +597,12 @@ export interface PerformanceMetrics {;
         accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80;
         bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
         seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
-<<<<<<< HEAD
+
+
+
 
       })
 
-=======
-=======
       })
 
       date.setDate(date.getDate() - i);
@@ -619,7 +622,14 @@ export interface PerformanceMetrics {;
         bestPracticesScore: Math.floor(Math.random() * 20) + 80
         seoScore: Math.floor(Math.random() * 20) + 80
       })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+      })
+
+
+
+
 ;
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{;
     summary: {;
@@ -698,17 +708,24 @@ export interface PerformanceMetrics {;
         bestPracticesScore: Math.floor(Math.random() * 20) + 80,;
         seoScore: Math.floor(Math.random() * 20) + 80;
       });
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+
+
+
+
+
     }
     return data
   }
+
 
 
 
@@ -897,22 +914,24 @@ if ( {) {
     const alerts: PerformanceAlert[] = [;
       {
         id: '1';
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
         url: url || 'https://example && example.com';
 
-=======
         url: url || 'https://example && example.com';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+        url: url || 'https://example && example.com';
+
+url: url || 'https://example && example.com';
+
+
         type: 'warning';
         message: 'Load time exceeded threshold';
         metric: 'load_time';
         threshold: 2000;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
         current_value: 2500;
         timestamp: new Date (),
@@ -924,24 +943,27 @@ if ( {) {
 
         url: url || 'https://example && example.com';
 
-=======
+
+
+
         current_value: 2500;
         timestamp: new Date (),
         resolved: false;
+
       }
       {
         id: '2';
+
         url: url || 'https://example && example.com';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
         type: 'info';
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
     }
     return data
   }
@@ -970,17 +992,17 @@ if ( {) {
         timestamp: new Date()
         resolved: true
       }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+    return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
+
+
 
 
     return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
   }
 }
 // Pricing tiers for the Performance Monitor
@@ -988,9 +1010,7 @@ if ( {) {
         timestamp: new Date (),
         resolved: true;
       }
-<<<<<<< HEAD
-=======
-    return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
+return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
 export interface PerformanceMetrics {;
   url:string,;
   timestamp:Date,;
@@ -1007,15 +1027,12 @@ export interface PerformanceMetrics {;
   bestPracticesScore:number,;
   seoScore:number;
 }
-=======
     ];
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     return url ? alerts.filter (array => a.url === url) : alerts;
   }
 }
 // Pricing tiers for the Performance Monitor;
-<<<<<<< HEAD
 export const PERFORMANCE_MONITOR_PRICING = {;
   starter:{;
     name:'Starter',;
@@ -1083,78 +1100,93 @@ trends: {
 };
 recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources' ] 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ];
     return url ? alerts.filter(a => a.url === url) : alerts
   }
 }
-<<<<<<< HEAD
 // Pricing tiers for the Performance Monitor;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+
 // Pricing tiers for the Performance Monitor
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  }
+}
+// Pricing tiers for the Performance Monitor
+        current_value: 85;
+        timestamp: new Date (),
+        resolved: true;
+      }
+    ];
+;
+    return url ? alerts.filter (array => a.url === url) : alerts;
+  }
+}
+// Pricing tiers for the Performance Monitor;
+
+
+
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
     price: 19;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+
+
+
+
     period: '/month',
     features: [;
       'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting';
     ];
-<<<<<<< HEAD
 
-=======
+
     period: '/month'
     features: [
       'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
     ]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
   }
   professional: {
     name: 'Professional';
     price: 49;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+
+
+
+
     period: '/month',
     features: [;
       'Monitor up to 25 URLs1 - minute monitoring frequency_advanced performance metrics_email, Slack, and webhook alerts30 - day data retention_advanced reporting and analytics_custom thresholdsAPI access';
     ];
-<<<<<<< HEAD
 
-=======
+
     period: '/month'
     features: [
       'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
     ]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
   }
   enterprise: {
     name: 'Enterprise';
     price: 149;
     period: '/month';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
-=======
-=======
+
 
     features: [
       'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support'
@@ -1163,9 +1195,17 @@ export const PERFORMANCE_MONITOR_PRICING = {
   }
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+
+
+
+
 ;
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
@@ -1224,8 +1264,11 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
     ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
     features: [;
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee';
@@ -1233,18 +1276,12 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     ];
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
     ];
   }
 }
 
-<<<<<<< HEAD
 // Pricing tiers for the Performance Monitor
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {;
@@ -1271,13 +1308,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
       'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
       'SLA guarantee'
     ]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 };
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+

@@ -1,4 +1,5 @@
-import React from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
 import React, { ReactNode } from 'react';
 
 import Header from '../Header';
@@ -9,11 +10,6 @@ import Header from './Header';
 import Footer from './Footer';
 import Header from '../Header';
 import Footer from '../Footer';
-
-
-
-
-
 
 ;
 import React from 'react';
@@ -46,11 +42,9 @@ function Layout() {
       <Header />;
       <main>;
 
-
   "./Footer"import Footer  from "react./Footer,;
 export default function Layout({ children }: LayoutProps) {;
   return (;
-
 
 <div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
     </div>;
@@ -95,3 +89,71 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
  */
 function Layout() { return <div>{children}</div> } " ;
 }}
+
+
+
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+}
+
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        {children}
+      </div>
+    </>
+  );
+}
+  keywords?: string;
+}
+
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group", 
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS"
+}: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {children}
+    </div>
+  );
+}
+import React, { ReactNode } from 'react';
+import Header from '../Header';
+import Footer from './Footer';
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default Layout;
+
+
+
+
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

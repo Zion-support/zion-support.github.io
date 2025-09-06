@@ -1,7 +1,4 @@
 
-
-
-
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {Job, JobStatus} from "@/types/jobs";
@@ -9,39 +6,18 @@ import {toast} from "sonner";
 import {useAuth} from "./useAuth";
 import {createJob, updateJob, getJobById} from "@/services/jobService";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 export const useJobs = (userId?: string, status?: JobStatus) => {;
 
-
-<<<<<<< HEAD
-=======
 export const useJobs = (userId?: string, status?: JobStatus) => {;
-
 
 export const useJobs = (userId?: string, status?: JobStatus) => {
 export const useJobs = (userId?: string, status?: JobStatus) => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
-=======
-  const clientId = userId |user?.id;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+const clientId = userId |user?.id;
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { Job, JobStatus } from "@/types/jobs",
@@ -54,14 +30,9 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  
   const clientId = userId || user?.id,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false);
@@ -69,45 +40,24 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
     }
     try {
 
-=======
-  
-  const clientId = userId || user?.id,
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
+const clientId = userId || user?.id,
       setIsLoading(true),
-      
 
-
-<<<<<<< HEAD
-=======
-  
-  const clientId = userId || user?.id,
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+const clientId = userId || user?.id,
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false),
       return
     }
     try {
-<<<<<<< HEAD
       setIsLoading(true);
       setIsLoading(true),
       
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       let query = supabase
         .from("jobs")
         .select("*")
         .eq("client_id", clientId)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { Job, JobStatus } from '@/types / jobs';
@@ -163,17 +113,13 @@ if (throw fetch_error) {
     }
   }
 
-
-<<<<<<< HEAD
-=======
-        .order("created_at", { ascending: false });
+.order("created_at", { ascending: false });
       if (status) {
         query = query.eq("status", status)
       }
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
       setJobs(data as Job[]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         .order("created_at", { ascending: false }),
       
       if (status) {
@@ -185,10 +131,7 @@ if (throw fetch_error) {
       if (fetchError) throw fetchError,
       
       setJobs(data as Job[]),
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       setError(null)
     } catch (err: any) {
       console.error("Error fetching jobs:", err),
@@ -197,22 +140,11 @@ if (throw fetch_error) {
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
-  
 
-
-<<<<<<< HEAD
-=======
-  }
+}
   },
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
     try {
       const { error: updateError } = await supabase
@@ -220,19 +152,10 @@ if (throw fetch_error) {
         .update({ status: newStatus })
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only update their own jobs
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-      
       if (updateError) throw updateError,
-      
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Update local state
       setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));
       toast && toast.success("Job status updated successfully");
@@ -242,16 +165,10 @@ if (throw fetch_error) {
       toast && toast.error("Failed to update job status");
       return false
     }
-<<<<<<< HEAD
-
 
   },
-  
 
-
-<<<<<<< HEAD
-=======
-      if (updateError) throw updateError;
+if (updateError) throw updateError;
       
       if (updateError) throw updateError,
       
@@ -266,10 +183,6 @@ if (throw fetch_error) {
     }
   }
   },
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const deleteJob = async (jobId: string) => {
     try {
       const { error: deleteError } = await supabase
@@ -277,19 +190,10 @@ if (throw fetch_error) {
         .delete()
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only delete their own jobs
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-        
       if (deleteError) throw deleteError,
-      
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Update local state
       setJobs(jobs && jobs.filter(job => job && job.id !== jobId));
       toast && toast.success("Job deleted successfully");
@@ -312,12 +216,7 @@ if (throw fetch_error) {
     update_job,
     getJobById;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-      if (deleteError) throw deleteError;
+if (deleteError) throw deleteError;
         
       if (deleteError) throw deleteError,
       
@@ -347,10 +246,6 @@ if (throw fetch_error) {
     getJobById
   }
 }
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
@@ -442,21 +337,13 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     createJob,;
     updateJob;
     getJobById;
-<<<<<<< HEAD
-
 
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   }
 };
   }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

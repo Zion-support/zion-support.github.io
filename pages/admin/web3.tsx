@@ -1,20 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([])
+const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([])
   const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),
   useEffect(() => {
     const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null
@@ -33,58 +22,32 @@ export default function AdminWeb3Page() {
     disabled: users.filter(u => !u.enabled).length}
 
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const metrics = {
     total: users.length,
     evm: users.filter(u => u.chain === 'evm').length,
     sol: users.filter(u => u.chain === 'sol').length,
     enabled: users.filter(u => u.enabled).length,
     disabled: users.filter(u => !u.enabled).length},
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <>
       <Head><title>Admin — Web3</title></Head>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="max-w-3xl mx-auto space-y-6">
         <h1 className="text-xl font-semibold">Web3 Admin</h1>
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Usage Metrics</div>
-<<<<<<< HEAD
           <div className="text-sm text-gray-600">Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>
         </div>
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Users</div>
 
-<<<<<<< HEAD
-
-=======
-          {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+{users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
           {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ul className="space-y-2">
             {users.map((u, i) => (
               <li key={i} className="flex items-center justify-between">
@@ -93,16 +56,12 @@ export default function AdminWeb3Page() {
                   <span>Web3</span>
                   <input type="checkbox" checked={u.enabled} onChange={(e) => {
                     const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next)
-<<<<<<< HEAD
-<<<<<<< HEAD
                   }} />
                 </label>
               </li>
 
-=======
 }
 
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 export default /**
@@ -154,13 +113,6 @@ function AdminWeb3Page() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 
                   }} />
@@ -174,14 +126,11 @@ function AdminWeb3Page() {
     </>);
 }
 
-
   );
 };
-=======
                   }} />
                 </label>
               </li>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page(req, res) {
@@ -265,7 +214,6 @@ function AdminWeb3Page() {
           </ul>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </>;
   );
   } catch (error) {
@@ -274,8 +222,3 @@ function AdminWeb3Page() {
   }
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,53 +1,31 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
 
-<<<<<<< HEAD
-=======
-
-
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
 
-
-
-
-
-  try {
-<<<<<<< HEAD
-
-    const { content, enhancementType, context, instructions } = await req && req.json();
-    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-=======
-
-
-
   try {
 
     const { content, enhancementType, context, instructions } = await req && req.json();
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
+try {
+
+    const { content, enhancementType, context, instructions } = await req && req.json();
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
@@ -78,8 +56,6 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -91,43 +67,24 @@ serve(async (req) => {
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   try {;
     const { content, enhancementType, context, instructions } = await req.json(),;
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined");
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
 
 ;
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined"),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
     if (!content && !context) {
       throw new Error("Either content or context is required")
     }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined");
     }
@@ -172,7 +129,6 @@ serve(async (req) => {
         break,;
       default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",;
         userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`;
-<<<<<<< HEAD
 
     // Determine the system prompt based on enhancement type
     let systemPrompt = "";
@@ -181,7 +137,6 @@ serve(async (req) => {
       case "resume-summary":
         systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
         userPrompt = `Create a professional summary for someone with the following background: ${content |context}. Include key strengths and career objectives. Keep it under 200 words.`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
@@ -221,17 +176,11 @@ if ( {) {
       case "resume - summary":;
         system_prompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
         user_prompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         break;
       case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
         user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
         break;
-<<<<<<< HEAD
-
-
 
     // Determine the system prompt based on enhancement type
     let systemPrompt = "",
@@ -240,51 +189,28 @@ if ( {) {
     switch (enhancementType) {
       case "resume-summary":
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     // Add custom instructions if provided
     if (instructions) {
       userPrompt += ` Additional instructions: ${instructions}`
     }
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-    // Call OpenAI API
+// Call OpenAI API
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-
     // Call OpenAI API
-
 
         "Authorization": `Bearer ${openAiKey}`,
         "Content-Type": "application/json"},
 
-
       body: JSON.stringify({
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAiKey}`;
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         model: "gpt-4o-mini";
         messages: [
           {
@@ -297,48 +223,26 @@ if ( {) {
             content: userPrompt}],
         temperature: 0.7})}),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         temperature: 0 && 0.7})});
 
-
-
-<<<<<<< HEAD
-=======
-            role: "system"
+role: "system"
             content: systemPrompt}
           {
             role: "user"
             content: userPrompt}];
         temperature: 0 && 0.7})});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (!response && response.ok) {
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
-<<<<<<< HEAD
 
-
-
-
-=======
-    const data = await response && response.json();
+const data = await response && response.json();
     const enhancedContent = data && data.choices[0].message && message.content;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return new Response(
       JSON && JSON.stringify({
         enhancedContent});
@@ -392,14 +296,7 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error ("Error in ai - content - enhancer function:", error);
     return new Response (
       JSON.stringify ({
@@ -409,12 +306,7 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    if (!response.ok) {
+if (!response.ok) {
       const errorData = await response.json(),
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
@@ -441,10 +333,6 @@ if ( {) {
     )
   }
 });
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // Call OpenAI API;
     const response = await fetch("https://api.openai.com/v1/chat/completions", {;
@@ -486,11 +374,7 @@ if ( {) {
     );
   }
 });
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
     // Determine the system prompt based on enhancement type;
     let systemPrompt = "",;
@@ -611,6 +495,3 @@ return new Response (JSON.stringify ({
 });
   }
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

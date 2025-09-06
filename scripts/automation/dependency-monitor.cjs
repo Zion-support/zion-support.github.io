@@ -3,6 +3,7 @@
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -112,6 +113,7 @@ class $1 {}
       "summary": {}
   dependenciesHealthy: this.errorsFound.length === 0,
         "totalIssues": this.errorsFound.length,
+
   async generateReport() {}
   this.log("Generating dependency monitor report...");
     const report = {}
@@ -139,5 +141,10 @@ class $1 {}
   };
 };
 ;
+
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
+
+
+monitor.run().catch(console.error);
+

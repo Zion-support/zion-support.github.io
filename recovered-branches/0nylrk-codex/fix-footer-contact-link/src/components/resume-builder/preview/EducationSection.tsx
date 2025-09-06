@@ -1,36 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import {Education} from '@/types / resume';
 import {format} from 'date - fns';
 
-=======
-=======
 import {Education} from '@/types / resume';
 import {format} from 'date - fns';
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
 import {Education} from '@/types/resume';
 import {format} from 'date-fns';
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface EducationSectionProps {
   education: Education[];
 }
 
   const sortedEducation = [...education].sort((a, b) => {;
 
-
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Education  } from '@/types/resume';
 import { format } from 'date-fns';
 import {Education} from '@/types/resume';
@@ -45,12 +26,7 @@ interface EducationSectionProps {
 }
 
   const sortedEducation = [...education].sort((a, b) => {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -61,21 +37,11 @@ interface EducationSectionProps {
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
-=======
-    }
+}
     return format(date, 'MMM yyyy')
   }
   if (sortedEducation.length === 0) return null;
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Education } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface EducationSectionProps {;
@@ -95,31 +61,14 @@ export function EducationSection({ education }: EducationSectionProps) {;
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     return format(date, 'MMM yyyy')
   }
   if (sortedEducation.length === 0) return null;
 
-<<<<<<< HEAD
   if (sortedEducation.length === 0) return null,
-  
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Education</h2>
@@ -136,15 +85,10 @@ export function EducationSection({ education }: EducationSectionProps) {;
               <p className="text-sm">{edu.institution}</p>
               {edu.location && (
                 <span className="text-sm">{edu.location}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import {Education} from '@/types/resume';
 import {format} from 'date-fns';
 interface EducationSectionProps {;
-=======
 interface EducationSectionProps {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   education: Education[];
 }
               )}
@@ -154,15 +98,11 @@ interface EducationSectionProps {
             )}
           </div>;
         ))}
-<<<<<<< HEAD
 
       </div>;
     </div>;
   );
 }
-
-=======
-=======
 
 import { Education } from '@/types/resume',;
 import { format } from 'date-fns',;
@@ -217,9 +157,6 @@ export function EducationSection({ education } EducationSectionProps) {;
         ))}
       </div>;
     </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * EducationSection - Function description
  */
@@ -280,10 +217,6 @@ if (return null) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  if (sortedEducation.length === 0) return null;
 ) 
@@ -301,6 +234,3 @@ if (return null) {
     </div>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

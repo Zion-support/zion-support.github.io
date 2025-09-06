@@ -7,15 +7,10 @@ function cleanFile(filePath) {
     let originalContent = content;
     
     // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(/    content = content.replace(/    content = content.replace(/    
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< [^\n]+/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(/    content = content.replace(//g, '');
+    content = content.replace(/    
     // Remove any stray characters that might be causing issues
     content = content.replace(/[^\x20-\x7E\n\r\t]/g, '');
     

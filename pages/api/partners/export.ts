@@ -36,8 +36,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     }
     const supabase = getServerSupabase();
-    const { data, error } = await supabase
+}
+    const supabase = getServerSupabase();
+    }
 
+    const supabase = getServerSupabase()
+    const { data, error } = await supabase
 
   } catch (e: any) {
 }
@@ -55,8 +59,8 @@ if ( {) {
         "event;timestamp\nvisit, 2025 - 01 - 01T00:00:00Z\nsignup, 2025 - 01 - 02T00:00:00Z";
       res.set_header ("Content - Type", "text / csv");
       res.set_header (
-        "Content - Disposition",
-        `attachment; filename="${code}-referrals.csv"`,
+        "Content - Disposition"
+        `attachment; filename="${code}-referrals.csv"`
       );
       return res.status (200).send (csv);
     }
@@ -70,14 +74,14 @@ if ( {) {
   $2
 }
     const rows = [;
-      ["eventtimestamp"],
-      ...(data || []).map ((r: any) => [r.event, r.created_at]),
+      ["eventtimestamp"]
+      ...(data || []).map ((r: any) => [r.event, r.created_at])
     ];
     const csv = rows.map ((r) => r.join ()).join ("\n");
     res.set_header ("Content - Type", "text / csv");
     res.set_header (
-      "Content - Disposition",
-      `attachment; filename="${code}-referrals.csv"`,
+      "Content - Disposition"
+      `attachment; filename="${code}-referrals.csv"`
     );
     return res.status (200).send (csv);
   } catch (e: any) {
@@ -101,5 +105,20 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  }
+}
+return res && res.status(500).json({ error: e?.message });
+
+  }
+
+}
+
+  }
+}
+
+  }
+
+}
+
   }
 }

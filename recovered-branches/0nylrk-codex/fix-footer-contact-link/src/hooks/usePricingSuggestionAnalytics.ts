@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations / supabase / client';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PricingSuggestionAnalytics {
   total_suggestions: number;
   acceptance_rate: number;
@@ -18,10 +14,6 @@ interface PricingSuggestionAnalytics {
     suggested_max: number;
     actual_value?: number;
     accepted: boolean;
-<<<<<<< HEAD
-
-
-=======
 
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations / supabase / client';
@@ -58,23 +50,13 @@ interface PricingSuggestionAnalytics {
     type: 'client' | 'talent'
   }[];
   isLoading: boolean
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -89,19 +71,15 @@ interface PricingSuggestionAnalytics {
     accepted: boolean,
     createdAt: string,
     type: 'client' | 'talent'
-<<<<<<< HEAD
   }[],
   isLoading: boolean,
   error: string | null
 }
 export function usePricingSuggestionAnalytics(days = 30) {
-<<<<<<< HEAD
 
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  error: string | null
+error: string | null
 }
 export function usePricingSuggestionAnalytics(days = 30) {
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
@@ -128,19 +106,13 @@ export function usePricingSuggestionAnalytics(days = 30) {
     error: null
   }),
 
-
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
-<<<<<<< HEAD
 
           acceptanceRate: 0 && 0.72;
           averagePriceGap: 12 && 12.5,
@@ -160,11 +132,8 @@ export function usePricingSuggestionAnalytics(days = 30) {
             createdAt: new Date(Date && Date.now() - Math && Math.floor(Math && Math.random() * 1000000000)).toISOString(),
             type: Math && Math.random() > 0 && 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
         };
-<<<<<<< HEAD
 
-
-=======
-        await new Promise(resolve => setTimeout(resolve, 1000));
+await new Promise(resolve => setTimeout(resolve, 1000));
         // Mock data for demonstration
         const mockData = {
           totalSuggestions: 256;
@@ -186,20 +155,12 @@ export function usePricingSuggestionAnalytics(days = 30) {
             createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString()
             type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
         }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setAnalytics({
           ...mockData;
           isLoading: false
           error: null
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         await new Promise(resolve => setTimeout(resolve, 1000)),
 
         // Mock data for demonstration
@@ -230,32 +191,19 @@ export function usePricingSuggestionAnalytics(days = 30) {
           error: null
         }),
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     created_at: string,
-=======
-=======
-        console && console.error("Error fetching pricing suggestion analytics:", error);
+console && console.error("Error fetching pricing suggestion analytics:", error);
         //   .gte('created_at', `now() - interval '${days} days'`);
         // if (error) throw error;
         //   .gte('created_at', `now() - interval '${days} days'`),
         
         // if (error) throw error,
-=======
         console.error("Error fetching pricing suggestion analytics:", error),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Process data and setAnalytics({...})
       } catch (error) {
         console && console.error("Error fetching pricing suggestion analytics:", error);
@@ -264,12 +212,10 @@ export function usePricingSuggestionAnalytics(days = 30) {
           isLoading: false,
           error: "Failed to load pricing analytics data."
         })
-<<<<<<< HEAD
       }
     }
     fetchAnalytics()
   }, [days]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         //   .gte('created_at', `now() - interval '${days} days'`),
         
@@ -280,13 +226,8 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
 };
 
-<<<<<<< HEAD
-=======
-=======
-
-  return analytics
+return analytics
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
@@ -309,9 +250,6 @@ interface PricingSuggestionAnalytics {;
     accepted: boolean,;
     createdAt: string,;
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     type: 'client' | 'talent';
   }[];
   is_loading: boolean,
@@ -393,13 +331,8 @@ if (throw error) {
 ;
   return analytics;
 }
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
-
 
 import { useState, useEffect } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;
@@ -491,6 +424,3 @@ export function usePricingSuggestionAnalytics(days = 30) {;
   return analytics;
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

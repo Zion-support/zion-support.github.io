@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
-
-=======
-
-			implementationWeeks="1-2 weeks"
+implementationWeeks="1-2 weeks"
 			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
 			features={[
 				"Driver-based planning and what-if scenarios",
@@ -19,7 +9,6 @@
 				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake",
 				"Executive dashboards and board-ready reports",
 				"Headcount planning and hiring plans"
-
 
 }
 import React from 'react',
@@ -62,8 +51,6 @@ export default function AiFinancialPlanningPlatform() {
 			title="AI Financial Planning Platform"
 			description="Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence."
 			subtitle="Smarter, faster financial decisions"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			pricePerMonthUSD={349}
 			implementationWeeks="1-2 weeks"
 			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
@@ -88,11 +75,7 @@ export default function AiFinancialPlanningPlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			implementationWeeks="1-2 weeks"
 			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
 			features={[
@@ -104,20 +87,13 @@ export default function AiFinancialPlanningPlatform() {
 				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake",
 				"Executive dashboards and board-ready reports",
 				"Headcount planning and hiring plans"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-			]}
+]}
 			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
 			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
 		/>
 	)
 };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -140,7 +116,3 @@ export default function AiFinancialPlanningPlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,16 +22,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
 
-
-=======
-=======
 export default function GitHubRedirect() {;
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace('https: //github && github.com/Zion-Holdings'),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import Head from 'next / head';
 export default /**
  * GitHubRedirect - Function description
@@ -44,7 +38,6 @@ if ( {) {
   $2
 }
       window.location.replace ('https: //github.com / Zion - Holdings'),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
 
       window.location.replace('https: //github.com/Zion-Holdings'),
@@ -54,20 +47,9 @@ if ( {) {
   return (
     <>;
       <Head>;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
 }
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function GitHubRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
@@ -90,10 +72,7 @@ export default function GitHubRedirect() {
 		</>
 	)
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <title > GitHub | Zion Tech Group</title>;
         <link rel='canonical' href='https: //github.com / Zion - Holdings' />;
         <meta;
@@ -113,15 +92,6 @@ export default function GitHubRedirect() {
     </>);
 ;
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
 					Continue to GitHub
 				</Link>
 			</div>
@@ -130,11 +100,9 @@ export default function GitHubRedirect() {
 }
 
 import React, { useEffect } from 'react';
-=======
   }
 }
 import React, { useEffect } from 'react';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 export default function GitHubRedirect() {
 
@@ -200,7 +168,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect } from 'react';
 
-
 import Head from 'next / head';
 export default /**
  * GitHubRedirect - Function description
@@ -221,10 +188,7 @@ if ( {) {
     <>;
       <Head>;
 
-
-
 }
-
 
 export default function GitHubRedirect() {
 	useEffect(() => {
@@ -248,10 +212,3 @@ export default function GitHubRedirect() {
 		</>
 	)
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

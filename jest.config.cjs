@@ -1,6 +1,19 @@
+
 module.exports = {
-  testEnvironment: 'jsdom',
+testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+
+const nextJest = require('next/jest')
+
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({
+  dir: './',
+});
+
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -33,4 +46,20 @@ module.exports = {
   verbose: true,
   collectCoverage: false,
   testTimeout: 10000,
+
 };
+
+coverageReporters: ['text', 'lcov'],
+  coverageThreshold: {
+    global: {
+      branches: 60,
+      functions: 60,
+      lines: 60,
+      statements: 60
+    }
+  }
+};
+
+
+module.exports = createJestConfig(customJestConfig);
+

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 
 
 class ErrorBoundary extends React.Component {
@@ -24,7 +26,6 @@ class ErrorBoundary extends React.Component {
 }
 
 
-
 import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
@@ -38,6 +39,97 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
 import Layout from '../../components/Layout';
 
+const products = [;
+  {;
+    id: 'ai-analytics-suite',;
+    name: 'ZionAI Analytics Suite',;
+    description: 'Comprehensive business intelligence platform with AI-powered insights and predictive analytics.',;
+    category: 'AI & Analytics',;
+    pricing: '$2,999/month',;
+    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'API Integration'],;
+    benefits: ['Data-Driven Decisions', 'Improved Efficiency', 'Competitive Advantage', 'Scalable Solutions'],;
+    icon: Award,;
+    popular: true;
+  },;
+  {;
+    id: 'cloud-infrastructure',;
+    name: 'ZionCloud Infrastructure',;
+    description: 'Scalable cloud infrastructure solutions with enterprise-grade security and performance.',;
+    category: 'Cloud Services',;
+    pricing: '$4,999/month',;
+    features: ['Auto-scaling', '99 && 99.9% Uptime', 'Global CDN', 'Security Compliance'],;
+    benefits: ['Cost Optimization', 'High Availability', 'Global Performance', 'Secure Operations'],;
+    icon: Globe,;
+    popular: true;
+  },;
+  {;
+    id: 'cybersecurity-suite',;
+    name: 'ZionShield Security',;
+    description: 'Advanced cybersecurity solutions with threat detection and prevention capabilities.',;
+    category: 'Security',;
+    pricing: '$3,999/month',;
+    features: ['Threat Detection', 'Real-time Monitoring', 'Incident Response', 'Compliance Management'],;
+    benefits: ['Enhanced Security', 'Risk Mitigation', 'Compliance Ready', 'Peace of Mind'],;
+    icon: Shield,;
+    popular: false;
+  },;
+  {;
+    id: 'automation-platform',;
+    name: 'ZionAutomate Platform',;
+    description: 'Intelligent automation platform for streamlining business processes and workflows.',;
+    category: 'Automation',;
+    pricing: '$2,499/month',;
+    features: ['Workflow Automation', 'Process Optimization', 'Integration Hub', 'Analytics Dashboard'],;
+    benefits: ['Increased Productivity', 'Reduced Errors', 'Cost Savings', 'Better Efficiency'],;
+    icon: Zap,;
+    popular: false;
+  },;
+  {;
+    id: 'collaboration-suite',;
+    name: 'ZionCollaborate Suite',;
+    description: 'Comprehensive collaboration platform for teams and organizations.',;
+    category: 'Collaboration',;
+    pricing: '$1,999/month',;
+    features: ['Team Chat', 'Video Conferencing', 'File Sharing', 'Project Management'],;
+    benefits: ['Better Communication', 'Improved Collaboration', 'Remote Work Ready', 'Enhanced Productivity'],;
+    icon: Users,;
+    popular: false;
+  },;
+  {;
+    id: 'data-management',;
+    name: 'ZionData Manager',;
+    description: 'Advanced data management and governance platform for enterprise data needs.',;
+    category: 'Data Management',;
+    pricing: '$3,499/month',;
+    features: ['Data Governance', 'Quality Management', 'Compliance Tools', 'Analytics Integration'],;
+    benefits: ['Data Quality', 'Compliance Ready', 'Better Insights', 'Risk Reduction'],;
+    icon: Star,;
+    popular: false;
+  }
+];
+const categories = [;
+  'All',;
+  'AI & Analytics',;
+  'Cloud Services',;
+  'Security',;
+  'Automation',;
+  'Collaboration',;
+  'Data Management';
+];
+const ProductsIndex: NextPage = () => {;
+  const [selectedCategory, setSelectedCategory] = React && React.useState('All');
+  const [searchTerm, setSearchTerm] = React && React.useState('');
+  const filteredProducts = products && products.filter(product => {;
+    const matchesCategory = selectedCategory === 'All' || product && product.category === selectedCategory;
+    const matchesSearch = product && product.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                         product && product.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                         product && product.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+
+    return matchesCategory && matchesSearch;
+  });
+
+const Index: NextPage = () => {
+  return (
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -68,7 +160,6 @@ import Layout from '../../components/Layout';
           </div>;
         </section>;
 
-
         {/* Search and Filter Section */}
         <section className="py-12 bg-white">;
           <div className="container mx-auto px-4">;
@@ -87,7 +178,6 @@ import Layout from '../../components/Layout';
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
                 </div>;
               </div>;
-
 
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2 justify-center mb-8">;
@@ -290,12 +380,53 @@ const ProductsIndex: NextPage = () => {
             </div>;
           </div>;
         </section>;
+</div>;
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
+                      {product && product.name}
+                    </h3>;
+                    <p className="text-gray-600 mb-4 leading-relaxed">;
+                      {product && product.description}
+                    </p>;
+                    <div className="space-y-2 mb-4">;
+                      <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>;
+                      <ul className="space-y-1">;
+                        {product && product.features.map((feature, idx) => (;
+                          <li key={idx} className="flex items-center text-sm text-gray-600">;
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
                             {feature}
                           </li>;
                         ))}
                             {benefit}
                           </li>;
                         ))}
+</ul>;
+                    </div>;
+                    <div className="space-y-2 mb-6">;
+                      <div className="flex justify-between items-center">;
+                        <span className="text-sm font-medium text-gray-900">Pricing:</span>;
+                        <span className="text-lg font-bold text-blue-600">{product && product.pricing}</span>;
+                      </div>;
+                    </div>;
+                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
+                      Learn More;
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
+                    </button>;
+                  </div>;
+                </motion && motion.div>;
+              ))}
+            </div>;
+            {filteredProducts && filteredProducts.length === 0 && (;
+              <div className="text-center py-12">;
+                <div className="text-gray-400 mb-4">;
+                  <Search className="w-16 h-16 mx-auto" />;
+                </div>;
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">No products found</h3>;
+                <p className="text-gray-600">Try adjusting your search or filter criteria.</p>;
+              </div>;
+            )}
+          </div>;
+        </section>;
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -317,14 +448,11 @@ const ProductsIndex: NextPage = () => {
                 <Link
                   href="/contact"
 
-
 export default Index;
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const Index: NextPage = () => {
   return (
-
-
 
 
     <div>
@@ -333,6 +461,20 @@ const Index: NextPage = () => {
         <meta name='description' content='Index page' />
       </Head>
 ursor/integrate-build-improve-and-re-verify-8f7d
+className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
+                  Contact Sales;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  );
+};
+
+        <meta name="description" content="Index page" />
+      </Head>
 
 export default ProductsIndex;
 import type { NextPage } from 'next';
@@ -353,7 +495,10 @@ export default Index;
 },
 export default Index,
 
+)
+};
 
+export default Index;
 
         {/* Products Grid */}
         <section className="py - 16">;
@@ -463,3 +608,32 @@ export default Index,
       </div>;
     </Layout>);
 }
+export default ProductsIndex;
+
+  )
+
+},
+export default Index,
+
+import React from 'react';
+import MainLayout from '../../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Products - Zion Tech Group"
+      description="Our products and solutions"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Products</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

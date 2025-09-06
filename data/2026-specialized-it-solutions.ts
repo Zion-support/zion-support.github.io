@@ -47,7 +47,6 @@
     email: string;
     address: string;
 
-
 };
 
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
@@ -77,18 +76,23 @@ export const getPopularSpecializedITSolutions2026 = () => {
 export const getPopularSpecializedITSolutions2026 = () => {;
   return specializedITSolutions2026.filter(solution => solution.popular);
 }
-
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps
+  {
 
 ];
 
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => solution && solution.popular);
 };
 
-
 export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => {
+    const price = parseInt(solution && solution.price.replace('$', ''));
+  return specializedITSolutions2026.filter(solution => {;
+    const price = parseInt(solution.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
@@ -310,6 +314,44 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     reviews: 33
     website: string;
   }
+  }
+];
+export const getSpecializedITSolutions2026ByCategory = (category: string) => {
+  return specializedITSolutions2026.filter(solution => solution.category === category)
+};
+export const getPopularSpecializedITSolutions2026 = () => {
+  return specializedITSolutions2026.filter(solution => solution.popular)
+};
+export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxPrice: number) => {
+  return specializedITSolutions2026.filter(solution => {
+    const price = parseInt(solution.price.replace('$', ''));
+    return price >= minPrice && price <= maxPrice
+
+  })
+};
+;
+export const getSpecializedITSolutions2026ByCategory = (category: string) =>: any {
+  return specializedITSolutions2026.filter (
+    solution => solution.category === category);
+}
+;
+export const getPopularSpecializedITSolutions2026 = () =>: any {
+  return specializedITSolutions2026.filter (solution => solution.popular);
+}
+;
+export const getSpecializedITSolutions2026ByPriceRange = (
+  min_price: number,
+  max_price: number) =>: any {
+  return specializedITSolutions2026.filter (solution => {
+    const price = parse_int (solution.price.replace ('$', ''));
+    return price >= min_price && price <= max_price;
+  });
+}    return price >= min_price && price <= max_price;
+  });
+}
+;
+
+export interface SpecializedITSolution2026 {;
 
   })
 };

@@ -1,8 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
 // Fix Next.js configuration;
@@ -13,17 +14,19 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
   images: {
-<<<<<<< HEAD
-=======
 
-=======
 
-=======
+
 
 
 const fs = require('fs');
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+const fs = require('fs');
+
 console.log('🔧 Fixing site loading issues...');
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
@@ -52,9 +55,7 @@ emptyFiles.forEach(file => {if (fs.existsSync(file) && fs.statSync(file).size ==
 console.log('🎉 Site fixes completed!');
 const fs = require('fs'),;
 const fs = require('fs');
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
@@ -66,34 +67,43 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
   images: {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
 console.log('🔧 Fixing site loading issues...'),;
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
   reactStrictMode: true;
   reactStrictMode: true,;
   reactStrictMode: true;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   reactStrictMode: true,;
   reactStrictMode: true;
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+  reactStrictMode: true,;
+  reactStrictMode: true;
+
+
+
+
   eslint: { ignoreDuringBuilds: true },;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
   images: {;
-<<<<<<< HEAD
 
     domains: ["localhost", "ziontechgroup.com"];
-<<<<<<< HEAD
+
+
+
+
+
   },
   output: 'standalone',
   trailing_slash: false,
@@ -108,7 +118,6 @@ const emptyFiles = [;
   'components/BundleAnalyzer.jscomponents/PerformanceMonitor.jscomponents/SEO.js';
 
 
-=======
   },;
   output: 'standalone',;
   trailingSlash: false,;
@@ -123,25 +132,28 @@ const emptyFiles = [;
 ];
 ],;
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ],;
 ];
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+],;
+];
+
+
+
+
 emptyFiles.forEach(file => {;
   if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
     fs.unlinkSync(file),;
     console.log(`✅ Removed empty file: ${file}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
   }
 }),
 console.log ('🎉 Site fixes completed!'),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }),
 console.log ('🎉 Site fixes completed!'),
 const fs = require('fs');
@@ -186,6 +198,14 @@ console.log('🎉 Site fixes completed!');
   }
 }),;
 console.log('🎉 Site fixes completed!'),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+  }
+}),
+console.log ('🎉 Site fixes completed!'),
+
+
+

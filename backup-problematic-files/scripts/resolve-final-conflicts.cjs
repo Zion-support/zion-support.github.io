@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 #!/usr/bin/env node
 
 const fs = require('fs');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD:backup-problematic-files/scripts/resolve-final-conflicts.cjs
 console.log('🔧 Resolving Final Conflicts');
 console.log('');
 
@@ -10,6 +18,10 @@ console.log('');
 function resolveMergeConflicts(content) {
   return content
     .replace(/}
+=======
+console.log('🔧 Final Syntax Cleanup');
+console.log('======================');
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/complete-syntax-fix.cjs
 
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
@@ -91,4 +103,9 @@ for (const file of filesToFix) {
     let content = fs.readFileSync(file, 'utf8');
     let modified = false;
 
+<<<<<<< HEAD:backup-problematic-files/scripts/resolve-final-conflicts.cjs
     // Check for merge conflict markers
+=======
+console.log(`\n✅ Fixed ${totalFixed} files`);
+console.log('🎉 Final syntax cleanup completed!');
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/complete-syntax-fix.cjs

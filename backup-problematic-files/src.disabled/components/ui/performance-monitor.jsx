@@ -1,0 +1,60 @@
+<<<<<<< HEAD:src.disabled/components/ui/performance-monitor.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/performance-monitor.jsx.backup
+:backup-merge-conflicts/performance-monitor.jsx.backup
+' \' \' \"export\": function PerformanceMonitor({ enabled = true,\"showDetails\": \'_showDetails: = fals\',e,autoRefresh = true,refreshInterval = 1000,onAlert,className = \' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} \"fps\": \'6\',0,\"memory\": { used: 0,\"total\": \'0\',\"percentage\": \'0\'},\"renderTime\": \'0\',\"networkLatency\": \'0\',\"cpuUsage\": \'0\',\"diskUsage\": \'0\',\"timestamp\": Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} \"fps\": \'3\',0,\"memory\": \'8\',0,\"renderTime\": \'1\',6,\"networkLatency\": \'10\',0,\"cpuUsage\": \'7\',0,\"diskUsage\": \'85\'})\';\";\";' ' ' "export": function PerformanceMonitor({ enabled = true,"showDetails": '_showDetails: = fals,e,autoRefresh = true,refreshInterval = 1000,onAlert,className = ' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} "fps": '6',0,"memory": { used: 0,"total": '0',"percentage": '0'},"renderTime": '0',"networkLatency": '0',"cpuUsage": '0',"diskUsage": '0',"timestamp": Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} "fps": '3',0,"memory": '8',0,"renderTime": '1',6,"networkLatency": '10',0,"cpuUsage": '7',0,"diskUsage": '85'})';";";
+
+' ' ' "export": function PerformanceMonitor({ enabled = true,"showDetails": '_showDetails: = fals,e,autoRefresh = true,refreshInterval = 1000,onAlert,className = ' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} "fps": '6',0,"memory": { used: 0,"total": '0',"percentage": '0'},"renderTime": '0',"networkLatency": '0',"cpuUsage": '0',"diskUsage": '0',"timestamp": Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} "fps": '3',0,"memory": '8',0,"renderTime": '1',6,"networkLatency": '10',0,"cpuUsage": '7',0,"diskUsage": '85'})';";";
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/src.disabled/components/ui/performance-monitor.jsx
+<<<<<<< HEAD
+' ' ' "export": function PerformanceMonitor({ enabled = true,"showDetails": '_showDetails: = fals,e,autoRefresh = true,refreshInterval = 1000,onAlert,className = ' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} "fps": '6',0,"memory": { used: 0,"total": '0',"percentage": '0'},"renderTime": '0',"networkLatency": '0',"cpuUsage": '0',"diskUsage": '0',"timestamp": Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} "fps": '3',0,"memory": '8',0,"renderTime": '1',6,"networkLatency": '10',0,"cpuUsage": '7',0,"diskUsage": '85'})';";";
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+' \' \' \"export\": function PerformanceMonitor({ enabled = true,\"showDetails\": \'_showDetails: = fals\',e,autoRefresh = true,refreshInterval = 1000,onAlert,className = \' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} \"fps\": \'6\',0,\"memory\": { used: 0,\"total\": \'0\',\"percentage\": \'0\'},\"renderTime\": \'0\',\"networkLatency\": \'0\',\"cpuUsage\": \'0\',\"diskUsage\": \'0\',\"timestamp\": Date && Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} \"fps\": \'3\',0,\"memory\": \'8\',0,\"renderTime\": \'1\',6,\"networkLatency\": \'10\',0,\"cpuUsage\": \'7\',0,\"diskUsage\": \'85\'})\';\";\";
+" " " export: function PerformanceMonitor({ enabled = true,showDetails: "_showDetails: = fals",e,autoRefresh = true,refreshInterval = 1000,onAlert,className = " }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} fps: "6",0,memory: { used: 0,total: "0",percentage: "0"},renderTime: "0",networkLatency: "0",cpuUsage: "0",diskUsage: "0",timestamp: Date && Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} fps: "3",0,memory: "8",0,renderTime: "1",6,networkLatency: "10",0,cpuUsage: "7",0,diskUsage: "85"})";";";"""
+
+' ' ' "export": function PerformanceMonitor({ enabled = true,"showDetails": '_showDetails: = fals,e,autoRefresh = true,refreshInterval = 1000,onAlert,className = ' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} "fps": '6',0,"memory": { used: 0,"total": '0',"percentage": '0'},"renderTime": '0',"networkLatency": '0',"cpuUsage": '0',"diskUsage": '0',"timestamp": Date && Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} "fps": '3',0,"memory": '8',0,"renderTime": '1',6,"networkLatency": '10',0,"cpuUsage": '7',0,"diskUsage": '85'})';";";
+
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+' ' ' "export": function PerformanceMonitor({ enabled = true,"showDetails": '_showDetails: = fals,e,autoRefresh = true,refreshInterval = 1000,onAlert,className = ' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} "fps": '6',0,"memory": { used: 0,"total": '0',"percentage": '0'},"renderTime": '0',"networkLatency": '0',"cpuUsage": '0',"diskUsage": '0',"timestamp": Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} "fps": '3',0,"memory": '8',0,"renderTime": '1',6,"networkLatency": '10',0,"cpuUsage": '7',0,"diskUsage": '85'})';";";
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+' \' \' \"export\": function PerformanceMonitor({ enabled = true,\"showDetails\": \'_showDetails: = fals\',e,autoRefresh = true,refreshInterval = 1000,onAlert,className = \' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} \"fps\": \'6\',0,\"memory\": { used: 0,\"total\": \'0\',\"percentage\": \'0\'},\"renderTime\": \'0\',\"networkLatency\": \'0\',\"cpuUsage\": \'0\',\"diskUsage\": \'0\',\"timestamp\": Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} \"fps\": \'3\',0,\"memory\": \'8\',0,\"renderTime\": \'1\',6,\"networkLatency\": \'10\',0,\"cpuUsage\": \'7\',0,\"diskUsage\": \'85\'})\';\";\";
+" " " export: function PerformanceMonitor({ enabled = true,showDetails: "_showDetails: = fals",e,autoRefresh = true,refreshInterval = 1000,onAlert,className = " }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} fps: "6",0,memory: { used: 0,total: "0",percentage: "0"},renderTime: "0",networkLatency: "0",cpuUsage: "0",diskUsage: "0",timestamp: Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} fps: "3",0,memory: "8",0,renderTime: "1",6,networkLatency: "10",0,cpuUsage: "7",0,diskUsage: "85"})";";";"""
+' ' ' "export": function PerformanceMonitor({ enabled = true,"showDetails": '_showDetails: = fals,e,autoRefresh = true,refreshInterval = 1000,onAlert,className = ' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} "fps": '6',0,"memory": { used: 0,"total": '0',"percentage": '0'},"renderTime": '0',"networkLatency": '0',"cpuUsage": '0',"diskUsage": '0',"timestamp": Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} "fps": '3',0,"memory": '8',0,"renderTime": '1',6,"networkLatency": '10',0,"cpuUsage": '7',0,"diskUsage": '85'})';";";
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+<<<<<<< HEAD:src.disabled/components/ui/performance-monitor.jsx
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+' \' \' \"export\": function PerformanceMonitor({ enabled = true,\"showDetails\": \'_showDetails: = fals\',e,autoRefresh = true,refreshInterval = 1000,onAlert,className = \' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} \"fps\": \'6\',0,\"memory\": { used: 0,\"total\": \'0\',\"percentage\": \'0\'},\"renderTime\": \'0\',\"networkLatency\": \'0\',\"cpuUsage\": \'0\',\"diskUsage\": \'0\',\"timestamp\": Date && Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} \"fps\": \'3\',0,\"memory\": \'8\',0,\"renderTime\": \'1\',6,\"networkLatency\": \'10\',0,\"cpuUsage\": \'7\',0,\"diskUsage\": \'85\'})\';\";\";
+" " " export: function PerformanceMonitor({ enabled = true,showDetails: "_showDetails: = fals",e,autoRefresh = true,refreshInterval = 1000,onAlert,className = " }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} fps: "6",0,memory: { used: 0,total: "0",percentage: "0"},renderTime: "0",networkLatency: "0",cpuUsage: "0",diskUsage: "0",timestamp: Date && Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} fps: "3",0,memory: "8",0,renderTime: "1",6,networkLatency: "10",0,cpuUsage: "7",0,diskUsage: "85"})";";";"""
+
+' ' ' "export": function PerformanceMonitor({ enabled = true,"showDetails": '_showDetails: = fals,e,autoRefresh = true,refreshInterval = 1000,onAlert,className = ' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} "fps": '6',0,"memory": { used: 0,"total": '0',"percentage": '0'},"renderTime": '0',"networkLatency": '0',"cpuUsage": '0',"diskUsage": '0',"timestamp": Date && Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} "fps": '3',0,"memory": '8',0,"renderTime": '1',6,"networkLatency": '10',0,"cpuUsage": '7',0,"diskUsage": '85'})';";";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/components/ui/performance-monitor.jsx
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/src.disabled/components/ui/performance-monitor.jsx

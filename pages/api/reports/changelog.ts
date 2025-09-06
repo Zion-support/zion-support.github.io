@@ -1,5 +1,66 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+export default async function handler(_req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  if (_req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');
+    res.status(405).end('Method Not Allowed');
+    return;
+  }
+
+  try {
+    const { version, limit = '50' } = _req.query;
+    
+    // Mock changelog data
+    const changelog = [
+      {
+        version: '1.2.0',
+        date: '2024-01-20',
+        changes: [
+          'Added new dashboard features',
+          'Improved performance',
+          'Fixed security vulnerabilities'
+        ],
+        type: 'major'
+      },
+      {
+        version: '1.1.5',
+        date: '2024-01-15',
+        changes: [
+          'Bug fixes',
+          'Minor UI improvements'
+        ],
+        type: 'patch'
+      },
+      {
+        version: '1.1.0',
+        date: '2024-01-10',
+        changes: [
+          'New API endpoints',
+          'Enhanced user experience'
+        ],
+        type: 'minor'
+      }
+    ];
+
+    let filteredChangelog = changelog;
+    if (version) {
+      filteredChangelog = changelog.filter(entry => entry.version === version);
+    }
+
+    const limitNum = parseInt(limit as string, 10);
+    filteredChangelog = filteredChangelog.slice(0, limitNum);
+
+    res.status(200).json({
+      success: true,
+      changelog: filteredChangelog,
+      total: changelog.length
+    });
+    return;
+  } catch (_error) {
+    res.status(500).json({ error: 'Failed to retrieve changelog' });
+    return;
+  }
+}
 const p = path.join(
   process.cwd()
   'data'
@@ -26,10 +87,21 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: e?.message || 'Failed to read changelog' });
   }
 if (req.method === 'POST') {
+
+    try {
+      const data = fs.readFileSync (p, 'utf8');
+      const changelog = JSON.parse (data);
+      return res.status (200).json (changelog);
+    } catch (error) {
+      return res.status (500).json ({ error: 'Failed to read changelog' });
+    }
+
+  if (req && req.method === 'POST') {
     try {
       const { version, changes, date } = req && req.body;
       if (!version || !changes || !Array && Array.isArray(changes)) {
         return res && res.status(400).json({ error: 'Missing required fields' });
+
       }
       let changelog = [];
       try {
@@ -48,11 +120,19 @@ if (req.method === 'POST') {
       } catch {
         // File doesn't exist, start with empty array;
       }
+
+        version,
+        changes,
+        date: date || new Date().toISOString()
+      };
+      changelog && changelog.unshift(newEntry);
+      fs && fs.writeFileSync(p, JSON && JSON.stringify(changelog, null, 2));
+      return res && res.status(201).json(newEntry);
+
     } catch (error) {
       return res && res.status(500).json({ error: 'Failed to update changelog' });
     }
   }
-
 
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
@@ -65,5 +145,4 @@ if (req.method === 'POST') {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 import React, { useEffect, useState } from 'react',;
 import type { NextPage } from 'next',;
 import type { Review } from '../../types/reviews',;
@@ -20,8 +15,6 @@ const AdminReviewsPage: NextPage = () => {
       setAll(data.reviews),
       setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
     }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import type { Review } from '../../types/reviews';
@@ -44,21 +37,15 @@ const AdminReviewsPage: NextPage = () => {
     const res = await fetch('/api/reviews/moderate', {
       method: 'POST'
       headers: {
-<<<<<<< HEAD
         'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'
     },
     body: JSON.stringify({ action, reviewId })});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (res.ok) refresh()
   }
-<<<<<<< HEAD
-=======
-=======
-        'Content-Type': 'application/jsonx-admin-key': adminKey |'dev-admin-key'}
+'Content-Type': 'application/jsonx-admin-key': adminKey |'dev-admin-key'}
       body: JSON.stringify({ action, reviewId })})
     if (res.ok) refresh()
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
 const AdminReviewsPage: NextPage = () => {;
   const [pending, setPending] = useState<Review[]>([]);
@@ -73,7 +60,6 @@ const AdminReviewsPage: NextPage = () => {;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
 
     if (res.ok) refresh()
   }
@@ -97,15 +83,10 @@ const AdminReviewsPage: NextPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
     if (res.ok) refresh()
 
-
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -129,14 +110,7 @@ const AdminReviewsPage: NextPage = () => {;
           {!pending.length && <div>No pending reviews.</div>}
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className="enhanced-card">
         <h2 className="text-xl font-semibold mb-2">All Reviews</h2>
         <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
@@ -144,35 +118,19 @@ const AdminReviewsPage: NextPage = () => {;
     </main>
   )
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
 },
 export default AdminReviewsPage,
 },
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 },
 export default AdminReviewsPage,
 
-<<<<<<< HEAD
-=======
-=======
 },
 export default AdminReviewsPage,
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 },
 
 export default AdminReviewsPage,
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 export default AdminReviewsPage;
 import React, { useEffect, useState } from 'react',
@@ -246,17 +204,9 @@ export default AdminReviewsPage,
           {_!pending.length && <div>No pending reviews.</div>}
         </div>
       </section>
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 export default AdminReviewsPage,
 },
 
 export default AdminReviewsPage,;
 export default AdminReviewsPage,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

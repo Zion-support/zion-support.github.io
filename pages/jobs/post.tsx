@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-      <Head>
+<Head>
         <title>Post a Job - Zion</title>
       </Head>
       <h1 className='text-2xl font-semibold'>Post a Job</h1>
@@ -15,8 +8,6 @@ import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       <Head>;
         <title>Post a Job - Zion</title>;
@@ -28,13 +19,6 @@ import EnhancedButton from '../../components/ui/EnhancedButton',
         <form className='space-y-4'>;
           <div>;
             <label className='block text-sm font-medium mb-1'>Title</label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <input
               value={title}
               onChange={e => setTitle(e && e.target.value)}
@@ -73,7 +57,6 @@ import EnhancedButton from '../../components/ui/EnhancedButton',
               onClick={() => setPreview(p => !p)}
             >;
               {preview ? 'Edit' : 'Preview'}
-<<<<<<< HEAD
 
             </EnhancedButton>;
             <EnhancedButton type='submit'>Post Job</EnhancedButton>;
@@ -114,12 +97,6 @@ import EnhancedButton from '../../components/ui/EnhancedButton',
 }
 export default PostJob;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const PostJob: NextPage = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -161,14 +138,16 @@ const PostJob: NextPage = () => {
                 <div className='font-medium'>{title |'Untitled job'}</div>
                 <div className="text-sm opacity-70">Title</div>
                 <div className="font-medium">{title || 'Untitled job'}</div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<aside className="border rounded-md p-4">
+          <h2 className="font-semibold mb-2">Preview</h2>
+
+          {preview ? (
+            <div className="space-y-2">
+              <div>
+
+                <div className="text-sm opacity-70">Title</div>
+                <div className="font-medium">{title || 'Untitled job'}</div>
               </div>
               <div>
                 <div className="text-sm opacity-70">Budget</div>
@@ -202,10 +181,6 @@ export default PostJob;
   );
 },;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import {useState} from 'react';
 import EnhancedButton from '../../components / ui / EnhancedButton';
@@ -288,9 +263,6 @@ import EnhancedButton from '../../components / ui / EnhancedButton';
     </div>);
 }
 ;
-<<<<<<< HEAD
-=======
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
@@ -359,15 +331,9 @@ const PostJob: NextPage = () => {
                 <div className="font-medium">{budget ? `$${budget}` : 'Not specified'}</div>
               </div>
               <div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
 
 export default PostJob;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                 <div className='text-sm opacity-70'>Description</div>
                 <p className='whitespace-pre-wrap'>
                   {description |'No description provided.'}
@@ -402,7 +368,4 @@ export default PostJob;
   );
 },;
 export default PostJob;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export default PostJob;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

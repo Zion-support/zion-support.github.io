@@ -1,3 +1,5 @@
+
+
 }},
 #!/usr/bin/env node
 const fs = require('fs');
@@ -13,35 +15,64 @@ const qualityChecks = [{
       }
     },
   },
+
+
+
+
     }},
   {
     "name": 'ESLint Code Analysis',
     "action": () => {
+      
       try {
         execSync('npx eslint . --ext .ts,.tsx,.js,.jsx', { "stdio": 'pipe' });
+        
       } catch (error) {
+        
       }
+    },
+  },
+    },
+  },
+    },
+  },
     }},
   {
     "name": 'Prettier Code Formatting',
     "action": () => {
+      
       try {
         execSync('npx prettier --check .', { "stdio": 'pipe' });
+        
       } catch (error) {
+        
       }
+    },
+  },
+    },
+  },
+    },
+  },
     }},
   {
     "name": 'Code Complexity Analysis',
     "action": () => {
+      
       const pagesDir = path.join(process.cwd(), 'pages');
       const componentsDir = path.join(process.cwd(), 'components');
+
       let totalLines = 0;
       let totalFiles = 0;
+
       [pagesDir, componentsDir].forEach(dir => {
         if (fs.existsSync(dir)) {
           const files = fs
+            .readdirSync(dir, { recursive: true })
+            .readdirSync(dir, { recursive: true })
+            .readdirSync(dir, { recursive: true })
             .readdirSync(dir, { "recursive": true })
             .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
+
           files.forEach(file => {
             const filePath = path.join(dir, file);
             const content = fs.readFileSync(filePath, 'utf8');
@@ -51,18 +82,42 @@ const qualityChecks = [{
           });
         }
       });
+
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
+
+
+
+
+
+
+
+
+
+
+
       console.log(`Average lines per file: ${avgLinesPerFile}`);
       console.log(`Total files analyzed: ${totalFiles}`);
     },
   },
+
       
       
+
+
+
+
+      
+      
+
+
+
+
     }},
   {
     "name": 'Import/Export Analysis',
     "action": () => {
+      
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
         const pages = fs
@@ -70,34 +125,48 @@ const qualityChecks = [{
           .filter(file => file.endsWith('.tsx'));
         let importCount = 0;
         let exportCount = 0;
+
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           importCount += (content.match(/^import\s+/gm) || []).length;
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
+
+
+
+
+
+
+
+
+
+
+
         console.log(`Total imports: ${importCount}`);
         console.log(`Total exports: ${exportCount}`);
       }
     },
   },
 
-        
-        
+
       }
     }},
   {
     "name": 'Dead Code Detection',
     "action": () => {
+      
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
         const pages = fs
           .readdirSync(pagesDir)
           .filter(file => file.endsWith('.tsx'));
         let unusedImports = 0;
+
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           const imports =
             content.match(/^import\s+.*from\s+['"][^'"]+['"]/gm) || [];
+
           imports.forEach(importLine => {
             const importName = importLine.match(/import\s+{([^}]+)}/);
             if (importName) {
@@ -113,25 +182,42 @@ const qualityChecks = [{
             }
           });
         });
+
+
+
+
+
+
+
+
+
+
+
         console.log(`Potential unused imports: ${unusedImports}`);
       }
     },
   },
 
-        
+
       }
     }},
 ];
+
 // Run quality checks
 let successCount = 0;
 let totalCount = qualityChecks.length;
+
 for (const check of qualityChecks) {
   try {
+    
     check.action();
+    
     successCount++;
   } catch (error) {
+    
   }
 }
+
 // Generate quality report
 const report = {
   "timestamp": new Date().toISOString(),
@@ -154,13 +240,65 @@ const report = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
 }
+
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD:automation/code-quality.cjs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/code-quality.cjs
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/code-quality.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/code-quality.cjs
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -177,6 +315,22 @@ console.log(' Code Quality Checker Starting...\n')
     "name"
             content.match(/^import\s+.*from\s+['"][^'')]
     "status"
+
+
+
+
+
+
+
     "status"
     "status"
     "status"
+
+
+
+
+
+
+
+    "status"
+

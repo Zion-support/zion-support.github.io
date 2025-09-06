@@ -1,24 +1,8 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // These would be replaced with actual screenshots
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 import React, { useRef } from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {Button} from "@/components/ui/button";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useRef } from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -38,18 +22,12 @@ export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null),
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount
         behavior: "smooth"})
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useRef } from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
@@ -73,8 +51,7 @@ export const AppScreenshots: React.FC = () => {;
         behavior: "smooth"});
 
     }
-=======
-    }
+}
   }
   },
 
@@ -96,29 +73,17 @@ export const AppScreenshots: React.FC = () => {;
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
     }
 
   },
 
-
   return (
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
           <div 
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+<div
           <div
-          <div 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -131,41 +96,22 @@ export const AppScreenshots: React.FC = () => {;
                 <img
                   src={screenshot.src}
                   alt={screenshot.alt}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="w-full h-full object-cover"
                 />
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-          <Button
+<Button
             variant="ghost"
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button 
             variant="ghost" 
             size="icon" 
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick={() => scroll("right")}
           >
             <ChevronRight className="h-6 w-6" />
@@ -174,17 +120,8 @@ export const AppScreenshots: React.FC = () => {;
       </div>
     </section>
   )
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-=======
 }
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
@@ -207,11 +144,8 @@ export const AppScreenshots: React.FC = () => {;
     }
   };
   return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    }
+}
   }
   return (
 
@@ -240,9 +174,6 @@ export const AppScreenshots:React.FC = () => {;
   },;
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-16 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -251,16 +182,13 @@ export const AppScreenshots:React.FC = () => {;
             Take a visual tour through the Zion app's intuitive interface.;
           </p>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <div className="relative">;
           <Button
             variant="ghost" 
             size="icon" 
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
-=======
-        ;
+;
         <div className="relative">;
           <Button ;
             variant="ghost" ;
@@ -271,15 +199,10 @@ export const AppScreenshots:React.FC = () => {;
             variant="ghost";
             size="icon";
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick={() => scroll("left")}
           >;
             <ChevronLeft className="h-6 w-6" />;
           </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           <div
             ref={scrollContainerRef}
@@ -292,33 +215,22 @@ export const AppScreenshots:React.FC = () => {;
                 <img
                   src={screenshot && screenshot.src} 
                   alt={screenshot && screenshot.alt}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    }
+}
   }
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="w-full h-full object-cover"
                 />;
               </div>;
             ))}
-<<<<<<< HEAD
 
           </div>;
 
-=======
-          </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+</div>;
           <Button
             variant="ghost" 
             size="icon" 
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          <div;
+<div;
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory";
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -340,9 +252,6 @@ export const AppScreenshots:React.FC = () => {;
             variant="ghost";
             size="icon";
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick={() => scroll("right")}
           >;
             <ChevronRight className="h-6 w-6" />;
@@ -351,14 +260,8 @@ export const AppScreenshots:React.FC = () => {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useRef } from './react';
 import { ChevronLeft, ChevronRight } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -432,10 +335,7 @@ if ( {) {
     </section>);
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-          ;
+;
           <div ;
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory";
@@ -484,8 +384,5 @@ Take a visual tour through the Zion app's intuitive interface. </p> </div> <div 
 };
 };
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

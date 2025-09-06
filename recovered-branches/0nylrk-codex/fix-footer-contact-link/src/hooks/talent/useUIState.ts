@@ -1,16 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
 
-
-<<<<<<< HEAD
-=======
 import { useState  } from 'react';
 import { TalentProfile } from '@/types/talent';
 export function useUIState() {
@@ -20,16 +12,10 @@ export function useUIState() {;
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
   const [expandedSections, setExpandedSections] = useState({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import {useState} from 'react';
 import {TalentProfile} from '@/types / talent';
 export /**
@@ -40,19 +26,13 @@ function useUIState() {
   const [isHireModalOpen, setIsHireModalOpen] = useState (false);
   const [selected_talent, setSelectedTalent] = useState < TalentProfile | null>(null);
   const [expanded_sections, setExpandedSections] = useState ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     skills: true;
     availability: true;
     region: true;
 
     experience: true
     price: true});
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   // Toggle expanded sections in the sidebar;
   const toggle_section = (section_name: keyof typeof expanded_sections) =>: any {
@@ -69,10 +49,8 @@ function useUIState() {
 ;
   // Effect to listen for the custom event to close mobile filter;
   // This would typically be in a useEffect hook, but we'll handle it via the button's on_click;
-<<<<<<< HEAD
 
-=======
-    skills: true;
+skills: true;
     availability: true;
     region: true;
 
@@ -91,28 +69,18 @@ function useUIState() {
   }
   // Effect to listen for the custom event to close mobile filter
   // This would typically be in a useEffect hook, but we'll handle it via the button's onClick
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return {
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
-<<<<<<< HEAD
-<<<<<<< HEAD
     selected_talent;
     setSelectedTalent;
 
-=======
-=======
-    selectedTalent;
+selectedTalent;
     setSelectedTalent;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     selected_talent;
     setSelectedTalent;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { TalentProfile } from '@/types/talent',;
 export function useUIState() {;
@@ -145,28 +113,17 @@ export function useUIState() {;
     setIsHireModalOpen,;
     selectedTalent,;
     setSelectedTalent,;
-<<<<<<< HEAD
 
+expandedSections;
+    toggleSection;
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     expandedSections;
     toggleSection;
 
-=======
-=======
-    expandedSections;
-    toggleSection;
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     expanded_sections;
     toggle_section;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     closeMobileFilter}
-<<<<<<< HEAD
 }
-=======
 }
 
 import { useState } from 'react',;
@@ -216,8 +173,6 @@ export function useUIState() {;
 
     closeMobileFilter}
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     expandedSections;
     toggleSection;
 
@@ -225,4 +180,4 @@ export function useUIState() {;
     toggle_section;
     closeMobileFilter}
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+

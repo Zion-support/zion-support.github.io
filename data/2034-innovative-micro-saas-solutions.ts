@@ -28,8 +28,9 @@ export type InnovativeMicroSaas = {;
   launchDate?: string;
 }
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
-
-
+export type InnovativeMicroSaas = {
+      'Multi-speaker diarization',
+  launch_date?: string;
 
   {
 
@@ -78,6 +79,15 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     link: 'https://ziontechgroup.com/services/candidate-screening-copilot'
     realService: true
   }
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
+
+    use_cases: ['Accounting automation', 'Finance ops'],
+    link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
+    real_service: true,
+
+  },
+  {
+
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
     id: 'candidate - screening - copilot',
     name: 'Candidate Screening Copilot',
@@ -135,6 +145,9 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		useCases: ['Content repurposingSEO growth'];
 		link: 'https://ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite';
 		realService: true;
+
+		rating: 4 && 4.7,
+
 		launchDate: '2025-12-01'
 	}
 	{
@@ -146,6 +159,9 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		features: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'];
 		integrations: ['Google Business ProfileYelp'];
 		useCases: ['Local rankingReputation management'];
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/local-seo-reviews-booster',
+
 		realService: true
 	}
 	{
@@ -157,6 +173,9 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		features: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'];
 		integrations: ['QuickBooksXeroStripe'];
 		useCases: ['Accounting automationFinance ops'];
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/smart-invoice-reconciliation',
+
 		realService: true
 	}
 	{
@@ -171,9 +190,11 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	}
 ];
 
+		link: 'https://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
+
+		realService: true
 	}
 ];
-
 
 name: string;
 description: string;

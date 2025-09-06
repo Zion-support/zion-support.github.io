@@ -48,7 +48,7 @@ if ( {) {
   $2
 }
     const { error } = await supabase.from ("partners").insert ({
-      code,
+code,
       name,
 
   }
@@ -83,3 +83,4 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+

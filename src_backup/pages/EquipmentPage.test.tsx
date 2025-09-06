@@ -1,5 +1,7 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 import React from 'react';
 import { render, screen } from '@testing - library / react';
@@ -15,11 +17,16 @@ describe ('EquipmentPage', () => {
 
   });
   const [selectedService, setSelectedService] = useState('');
-=======
-<<<<<<< HEAD
+
+
 import React, { useState } from 'react',;
 import { Link } from 'react-router-dom',;
 import { SERVICE_CATEGORIES } from '@/data/servicesData',;
+=======
+import React, { useState } from 'react',
+import { Link } from 'react-router-dom',
+import { SERVICE_CATEGORIES } from '@/data/servicesData',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -34,13 +41,35 @@ export function ContactPage() {
 
   const [selectedService, setSelectedService] = useState(''),
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+
+
+
+
+
+
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
+=======
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target,
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  },
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(),
+    // Here you would typically send the form data to your backend
+    const mailtoLink = `mailto:kleber@ziontechgroup.com?subject=Service Inquiry from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ACompany: ${formData.company}%0D%0APhone: ${formData.phone}%0D%0AService: ${formData.service}%0D%0ABudget: ${formData.budget}%0D%0ATimeline: ${formData.timeline}%0D%0AMessage: ${formData.message}`,
+    window.location.href = mailtoLink
+  },
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
@@ -59,13 +88,21 @@ export function ContactPage() {
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 📞 Call Now: +1 302 464 0950
+<<<<<<< HEAD
               </a>
+=======
+              </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
               >
                 ✉️ Email Us
+<<<<<<< HEAD
               </a>
+=======
+              </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>
           </div>
         </div>
@@ -91,7 +128,11 @@ export function ContactPage() {
               <span className="text-blue-600">🌐</span>
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
                 ziontechgroup.com
+<<<<<<< HEAD
               </a>
+=======
+              </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             </div>
           </div>
         </div>
@@ -107,18 +148,28 @@ export function ContactPage() {
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
             </p>
 <<<<<<< HEAD
-<<<<<<< HEAD
+
 
 
             
+
+
+
+
+
+
+
+
+
+            
+
+
+
 
 
 =======
             
-            
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -154,18 +205,28 @@ export function ContactPage() {
                 </div>
               </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
+
 
 
               
+
+
+
+
+
+
+
+
+
+              
+
+
+
 
 
 =======
               
-              
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -248,23 +309,37 @@ export function ContactPage() {
                           <option value="devops-automation">DevOps Automation & CI/CD Pipeline</option>
                         </>
                       )}
+<<<<<<< HEAD
                     </optgroup>
                   ))}
                 </select>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 
               
+
+
+
+
+
+
+
+
+
+              
+
+
+
 
 
 =======
+                    </optgroup>;
+                  ))}
+                </select>
+              </div>
               
-              
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
@@ -333,7 +408,11 @@ export function ContactPage() {
           </div>
 
           {/* Contact Information */}
+<<<<<<< HEAD
           <div className="space-y-8">
+=======
+          <div className="space-y-8">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             {/* Direct Contact */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Direct Contact</h3>
@@ -346,7 +425,11 @@ export function ContactPage() {
                     <p className="font-semibold text-gray-900">Phone</p>
                     <a href="tel:+13024640950" className="text-blue-600 hover:underline text-lg">
                       +1 302 464 0950
+<<<<<<< HEAD
                     </a>
+=======
+                    </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>
                 </div>
                 
@@ -358,7 +441,11 @@ export function ContactPage() {
                     <p className="font-semibold text-gray-900">Email</p>
                     <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline text-lg">
                       kleber@ziontechgroup.com
+<<<<<<< HEAD
                     </a>
+=======
+                    </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>
                 </div>
                 
@@ -383,7 +470,11 @@ export function ContactPage() {
                     <p className="font-semibold text-gray-900">Website</p>
                     <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline text-lg">
                       ziontechgroup.com
+<<<<<<< HEAD
                     </a>
+=======
+                    </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   </div>
                 </div>
               </div>
@@ -391,10 +482,8 @@ export function ContactPage() {
 
             {/* Business Hours */}
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>
               <div className="space-y-3">
@@ -417,7 +506,12 @@ export function ContactPage() {
                 </div>
               </div>
             </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <div className="bg-white rounded-xl shadow-lg p-8">;
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>;
               <div className="space-y-3">;
@@ -443,10 +537,19 @@ export function ContactPage() {
 <<<<<<< HEAD
 
 
+
+
+
+
+
+
+
+
+
+
+
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
@@ -456,13 +559,21 @@ export function ContactPage() {
                   className="block w-full bg-blue-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors"
                 >
                   📞 Call Now
+<<<<<<< HEAD
                 </a>
+=======
+                </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="block w-full bg-green-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-green-700 transition-colors"
                 >
                   ✉️ Send Email
+<<<<<<< HEAD
                 </a>
+=======
+                </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <Link
                   to="/services"
                   className="block w-full bg-purple-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-purple-700 transition-colors"
@@ -474,7 +585,11 @@ export function ContactPage() {
                   className="block w-full bg-gray-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-gray-700 transition-colors"
                 >
                   🌐 Visit Website
+<<<<<<< HEAD
                 </a>
+=======
+                </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
               </div>
             </div>
           </div>
@@ -496,31 +611,38 @@ export function ContactPage() {
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
             >
               📞 Call +1 302 464 0950
+<<<<<<< HEAD
             </a>
+=======
+            </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <a 
               href="mailto:kleber@ziontechgroup.com"
               className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
             >
               ✉️ Get Free Consultation
+<<<<<<< HEAD
             </a>
+=======
+            </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>
         </div>
       </div>
     </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 
   );
 };
 
-
-=======
   )
 }
   );
 };
-=======
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
@@ -535,7 +657,17 @@ describe('EquipmentPage', () => {
     expect(screen.getByText('Equipment')).toBeInTheDocument();
   });
 });
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+  );
+};
+
+
+
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  )
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

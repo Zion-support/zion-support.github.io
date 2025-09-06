@@ -1,22 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
 
   // Build context with top matched articles as brief references
-
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
@@ -45,20 +39,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         intentMatched: intent && intent.intentMatched,
         matchedArticleIds: intent && intent.matchedArticleIds,
         links: matchedArticles && matchedArticles.map((a) => ({ title: a && a.title, href: `/help/${a && a.slug}` }))}})
-
-=======
-  const matchedArticles = articles.filter((a) => intent.matchedArticleIds.includes(a.id));
+const matchedArticles = articles.filter((a) => intent.matchedArticleIds.includes(a.id));
   const context = matchedArticles
     .map((a) => `- ${a.title}: /help/${a.slug}`)
     .join('\n');
 
   const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') };
 
-=======
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 import { readJson } from "../../../utils/fsDb";
@@ -72,9 +61,6 @@ export default async function handler(
 ) {
   if (req.method !== "POST")
     return res.status(405).json({ error: "Method not allowed" });
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const { sessionId, messages } = req.body as {
     sessionId?: string;
@@ -93,28 +79,30 @@ export default async function handler(
 
   // Build context with top matched articles as brief references
   const matchedArticles = articles.filter((a) =>
-    intent.matchedArticleIds.includes(a.id),
+    intent.matchedArticleIds.includes(a.id)
   );
   const context = matchedArticles
     .map((a) => `- ${a.title}: /help/${a.slug}`)
     .join("\n");
 
   const sysMessage = {
-    role: "system" as const,
+    role: "system" as const
     content:
-      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : ""),
+      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
   };
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini"
+      messages: [sysMessage, ...messages]
+
+
+
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [sysMessage, ...messages],
-<<<<<<< HEAD
-<<<<<<< HEAD
       temperature: 0.2
     });
 
@@ -124,7 +112,6 @@ export default async function handler(
 
     return res.status(200).json({
       assistantMessage,
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import OpenAI from './openai';
 import { read_json  } from '../../../utils / fs_db';
@@ -143,12 +130,8 @@ function handler() {
   const { session_id, messages } = req.body as {
     session_id?: string;
     messages: Array<{ role: "user" | "assistant" | "system"; content: string }>;
-=======
 
     return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   if ()) {
   $2
@@ -165,27 +148,31 @@ function handler() {
 ;
   // Build context with top matched articles as brief references;
   const matched_articles = articles.filter ((a) =>;
-    intent.matchedArticleIds.includes (a.id),
+    intent.matchedArticleIds.includes (a.id)
   );
   const context = matched_articles;
     .map ((a) => `- ${a.title}: /help/${a.slug}`);
     .join ("\n");
 ;
   const sys_message = {
-    role: "system" as const,
+    role: "system" as const
     content:;
-      SYSTEM_PROMPT + (context ? `\n_relevant help links:\n${context}` : ""),
+      SYSTEM_PROMPT + (context ? `\n_relevant help links:\n${context}` : "")
   }
 ;
   try {
     const completion = await openai.chat.completions.create ({
+
+
+
+      temperature: 0.2
+
+
+
       model: "gpt - 4o - mini",
       messages: [sys_message, ...messages],
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       temperature: 0.2,
+
     });
 
     const assistantMessage =
@@ -193,61 +180,67 @@ function handler() {
       "Let me know how I can help.";
 
     await logSupportEventToOperator({
-      type: "chat_completion",
-      sessionId: sessionId ?? "unknown",
-      payload: { intent },
+      type: "chat_completion"
+      sessionId: sessionId ?? "unknown"
+      payload: { intent }
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
     return res.status (200).json ({
       assistant_message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+;
+    return res.status (200).json ({
+      assistant_message,
+
       meta: {
-        intent_matched: intent.intent_matched,
-        matchedArticleIds: intent.matchedArticleIds,
+        intent_matched: intent.intent_matched
+        matchedArticleIds: intent.matchedArticleIds
 
         links: matched_articles.map ((a) => ({
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     return res.status(200).json({
-      assistantMessage,
+      assistantMessage
       meta: {
-        intentMatched: intent.intentMatched,
-        matchedArticleIds: intent.matchedArticleIds,
+        intentMatched: intent.intentMatched
+        matchedArticleIds: intent.matchedArticleIds
         links: matchedArticles.map((a) => ({
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+          title: a.title
+          href: `/help/${a.slug}`
+        }))
+      }
+
+
+
+
           title: a.title,
           href: `/help/${a.slug}`,
         })),
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   } catch (e: any) {
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
   } catch (e: any) {
+});
+  } catch (e: any) {
+    return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(200).json({
       assistantMessage:
-        "I could not reach the assistant right now. Please try again in a moment.",
+        "I could not reach the assistant right now. Please try again in a moment."
     });
   }
+
+
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+}
+  }
+}
+

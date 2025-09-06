@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -12,12 +6,10 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-
 const SecurityAuditingChat: NextPage = () => {
   return (
     <div>
       <Head>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -28,26 +20,16 @@ const SecurityAuditingChat: NextPage = () => {;
       <Head>;
         <title>SecurityAuditingChat - Zion Tech Solutions</title>;
         <meta name="description" content="SecurityAuditingChat service" />{" "}
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
 const SecurityAuditingChat: NextPage = () => {
   return (
     <div>
       <Head>
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       </Head>;
 
-
-<<<<<<< HEAD
-=======
-        <meta name="description" content="SecurityAuditingChat service" />
+<meta name="description" content="SecurityAuditingChat service" />
       </Head>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <main>
         <h1>SecurityAuditingChat</h1>
         <p>Service details coming soon...</p>
@@ -55,11 +37,7 @@ const SecurityAuditingChat: NextPage = () => {
       </main>
     </div>
       </Head>;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <main>;
         <h1>SecurityAuditingChat</h1>;
         <p>Service details coming soon...</p>;
@@ -69,23 +47,10 @@ const SecurityAuditingChat: NextPage = () => {
   );
 }
 export default SecurityAuditingChat;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-
-        <title>SecurityAuditingChat - Zion Tech Solutions</title>
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<title>SecurityAuditingChat - Zion Tech Solutions</title>
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -106,10 +71,6 @@ const SecurityAuditingChat: NextPage = () => {
 ;
 export default SecurityAuditingChat;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     <div>
       <Head>
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
@@ -126,7 +87,6 @@ export default SecurityAuditingChat;
 },
 
 export default SecurityAuditingChat
-
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -154,6 +114,3 @@ export default SecurityAuditingChat;
 
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

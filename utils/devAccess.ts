@@ -3,10 +3,13 @@ export interface DevIdentity {
 export interface DevIdentity {;
   isAuthenticated: boolean;
 
-
   roles: DevRole[];
   userId?: string;
 }
+
+    const gitDir = path && path.join(process && process.cwd(), '.git');
+    if (!fs && fs.existsSync(gitDir)) return { connected: false };
+
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
@@ -18,10 +21,7 @@ export interface DevIdentity {;
   }
 }
 
-
-
 export function getDevIdentity(req: NextApiRequest): DevIdentity {;
-
 
   // TODO: integrate real auth; for now, check a header and env var for dev
 
@@ -34,7 +34,16 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 }
   if (token && adminToken && token === adminToken) {
 
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+
+  if (token && adminToken && token === adminToken) {
+
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+
   }
   return { isAuthenticated: false, roles: [] }
 }
@@ -55,6 +64,8 @@ export function requireRoles(
     return undefined;
   }
   return identity;
+
+}
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -223,5 +234,4 @@ if ( {) {
   }
   return identity;
 }
-
 

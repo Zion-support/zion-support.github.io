@@ -2,28 +2,14 @@ import {ChevronDown, ChevronUp} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {SkillsFilterProps} from "@/types/filters";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 import { Checkbox } from "@/components/ui/checkbox",
 import { SkillsFilterProps } from "@/types/filters",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Common skills in AI and tech
 
 const POPULAR_SKILLS = [
@@ -73,22 +59,11 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 htmlFor={`skill-${skill}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { SkillsFilterProps } from "@/types/filters",;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Common skills in AI and tech;
 const POPULAR_SKILLS = [;
 import { ChevronDown, ChevronUp } from './lucide-react';
@@ -114,20 +89,14 @@ const POPULAR_SKILLS = [;
   "DevOps";
   "Security";
 ];
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </button>;
 
       {expanded && (;
         <div className="mt-4 space-y-2">;
           {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
             <div key={skill} className="flex items-center">;
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
@@ -140,7 +109,6 @@ const POPULAR_SKILLS = [;
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 
-
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer">;
                 {skill}
               </label>;
@@ -148,9 +116,7 @@ const POPULAR_SKILLS = [;
           ))}
         </div>;
       )}
-<<<<<<< HEAD
-=======
-              <Checkbox
+<Checkbox
 
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -195,24 +161,14 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           {POPULAR_SKILLS.map(skill => (;
             <div key={skill} className="flex items-center">;
               <Checkbox;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     </div>;
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    </div>;
+</div>;
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export /**
  * SkillsFilter - Function description
@@ -249,19 +205,9 @@ function SkillsFilter() {
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 };
 ;
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 };
 ;
@@ -324,6 +270,3 @@ toggleSection
 }
 };
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

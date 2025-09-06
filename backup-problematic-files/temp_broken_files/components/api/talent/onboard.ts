@@ -29,7 +29,7 @@ async function summarizeAndTag(input: {
   )),
 
   if (!openaiApiKey) {
-    const summary = `${input.fullName}  ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '' : ''}`,
+    const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`,
     return { summary, tags: basicTags.slice(0, 24) }
   }
 
@@ -53,7 +53,7 @@ async function summarizeAndTag(input: {
     } catch (_) {_// fall through to heuristic}
   } catch (err) {_// ignore and fallback}
 
-  const fallbackSummary = `${input.fullName}  ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '' : ''}`,
+  const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`,
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
 }
 
@@ -114,42 +114,42 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 ;
     const { summary, tags } = await summarizeAndTag({;
-      fullName,;
-      professionalTitle,;
-      bio,;
-      projects,;
-      skills,;
-      tools}),;
+      fullName;
+      professionalTitle;
+      bio;
+      projects;
+      skills;
+      tools});
 ;
     const record = {;
-      id,;
-      createdAt:new Date().toISOString(),;
-      fullName,;
-      professionalTitle,;
-      bio,;
-      projects,;
-      yearsOfExperience:Number(yearsOfExperience) || 0,;
-      skills,;
-      tools,;
-      availability,;
-      timezone,;
-      hourlyRate:hourlyRate ? Number(hourlyRate) :null,;
-      portfolioLinks,;
+      id;
+      createdAt:new Date().toISOString();
+      fullName;
+      professionalTitle;
+      bio;
+      projects;
+      yearsOfExperience:Number(yearsOfExperience) || 0;
+      skills;
+      tools;
+      availability;
+      timezone;
+      hourlyRate:hourlyRate ? Number(hourlyRate) :null;
+      portfolioLinks;
       assets:{;
-        profileImage:savedProfileImagePath,;
-        cv:savedCvPath},;
+        profileImage:savedProfileImagePath;
+        cv:savedCvPath};
       ai:{;
-        summary,;
-        tags}},;
+        summary;
+        tags}};
 ;
-    const perRecordPath = path.join(dataDir, `${id}.json`),;
-    await fse.writeJSON(perRecordPath, record, { spaces:2 }),;
+    const perRecordPath = path.join(dataDir, `${id}.json`);
+    await fse.writeJSON(perRecordPath, record, { spaces:2 });
 ;
-    const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json'),;
-    let aggregate:any[] = [],;
+    const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
+    let aggregate:any[] = [];
     if (fs.existsSync(aggregatePath)) {;
       try {;
-        const content = await fse.readJSON(aggregatePath),;
+        const content = await fse.readJSON(aggregatePath);
         if (Array.isArray(content)) aggregate = content;
       } catch (_) {;
         // ignore;

@@ -1,6 +1,16 @@
 module.exports = {
   apps: [
     {
+
+
+
+
+
+
+
+
+
+
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
@@ -31,9 +41,35 @@ module.exports = {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
+name: 'bolt-zion-app',
+      name: 'ci-cd-pipeline',
+      name: 'ci-cd-pipeline',
+
+
+
+
+
+
+
+
+
       name: 'bolt-zion-app',
       name: 'ci-cd-pipeline',
       name: 'ci-cd-pipeline',
+
+      name: 'bolt-zion-app',
+module.exports = {
+  apps: [
+    {
+      name: 'ci-cd-pipeline',
+name: 'bolt-zion-app',
+      name: 'ci-cd-pipeline',
+      name: 'ci-cd-pipeline',
+
+
+
+
+
       script: 'npm',
       args: 'run build',
       cwd: '/workspace',
@@ -42,10 +78,25 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
+
+
+
+
+
+
+
+
+
+
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
+NODE_ENV: 'production'
+
+
+        NODE_ENV: 'production'
+
       },
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
@@ -54,7 +105,9 @@ module.exports = {
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
+
         NODE_ENV: 'production',
+
       },
       cron_restart: '0 0 * * *', // Daily restart
       error_file: './logs/ci-cd-error.log',
@@ -62,7 +115,27 @@ module.exports = {
       log_file: './logs/ci-cd-combined.log',
       time: true,    },
     {
+
+
+
+
+
+
+
+        NODE_ENV: 'production',
+      },
+      log_file: 'logs/pm2/preview.log',
+      error_file: 'logs/pm2/preview-error.log',
+      out_file: 'logs/pm2/preview-out.log',
+    },
+    {
+      name: 'auto-fix',
+
       name: 'continuous-automation',
+
+
+      name: 'continuous-automation',
+
       script: 'node',
       args: 'scripts/automation/automation-orchestrator.cjs',
       cwd: '/workspace',
@@ -71,10 +144,17 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
+
+
+
+
+
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
+NODE_ENV: 'production'
+
       },
       log_file: 'logs/pm2/auto-commit-fixes.log',
       error_file: 'logs/pm2/auto-commit-fixes-error.log',
@@ -92,6 +172,7 @@ module.exports = {
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
         NODE_ENV: 'production',
+
       },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/automation-error.log',
@@ -100,7 +181,7 @@ module.exports = {
       time: true,
     },
     {
-      name: 'comprehensive-automation',
+name: 'comprehensive-automation',
       script: 'node',
       args: 'scripts/automation/comprehensive-continuous-automation.cjs',
       cwd: '/workspace',
@@ -229,12 +310,189 @@ module.exports = {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.cjs',
+      name: 'continuous-automation',
+      script: 'node',
+      args: 'scripts/automation/automation-orchestrator.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'auto-commit-fixes',
+        COMMIT_FREQUENCY: 'hourly',
+        AUTO_PUSH: 'false',
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/automation-error.log',
+      out_file: './logs/automation-out.log',
+      log_file: './logs/automation-combined.log',
+      time: true
+    },
+    {
+
+      name: 'dependency-monitor',
+      script: 'scripts/pm2/dependency-monitor.js',
+        NODE_ENV: 'development',
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'code-quality-monitor',
+        QUALITY_THRESHOLD: '80',
+        AUTO_FIX_CRITICAL: 'true',
+      },
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      log_file: 'logs/pm2/code-quality-monitor.log',
+      error_file: 'logs/pm2/code-quality-monitor-error.log',
+      out_file: 'logs/pm2/code-quality-monitor-out.log',
+    }
+  ]
+    },
+    {
+      name: 'auto-commit-fixes',
+      script: 'scripts/pm2/auto-commit-fixes.js',
+
+      name: 'comprehensive-automation',
+      script: 'node',
+      args: 'scripts/automation/comprehensive-continuous-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/comprehensive-automation-error.log',
+      out_file: './logs/comprehensive-automation-out.log',
+      log_file: './logs/comprehensive-automation-combined.log',
+      time: true,
+    },
+    {
+        NODE_ENV: 'production',      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/automation-error.log',
+      out_file: './logs/automation-out.log',
+      log_file: './logs/automation-combined.log',
+      time: true,    },
+    {
+      name: 'comprehensive-automation',
+      script: 'node',
+      args: 'scripts/automation/comprehensive-continuous-automation.cjs',
+      cwd: '/workspace',
+
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+NODE_ENV: 'production',      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/comprehensive-automation-error.log',
+      out_file: './logs/comprehensive-automation-out.log',
+      log_file: './logs/comprehensive-automation-combined.log',
+time: true,    },
+    {
+      name: 'marketing-automation',
+      script: 'node',
+      args: 'scripts/linkedin_automation.js',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+NODE_ENV: 'production',      },
+      cron_restart: '0 */12 * * *', // Every 12 hours
+      error_file: './logs/marketing-automation-error.log',
+      out_file: './logs/marketing-automation-out.log',
+      log_file: './logs/marketing-automation-combined.log',
+time: true,    },
+    {
+      name: 'security-audit',
+      name: 'bolt-zion-app',
+      script: 'npm',
+      args: 'audit',
+      cwd: '/workspace',
+
+
+
+
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production',      },
+NODE_ENV: 'production',      },
+      cron_restart: '0 2 * * *', // Daily at 2 AM
+      error_file: './logs/security-audit-error.log',
+      out_file: './logs/security-audit-out.log',
+      log_file: './logs/security-audit-combined.log',
+time: true,    },
+    {
+      name: 'test-runner',
+      script: 'npm',
+      args: 'test',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+NODE_ENV: 'production',      },
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      error_file: './logs/test-runner-error.log',
+      out_file: './logs/test-runner-out.log',
+      log_file: './logs/test-runner-combined.log',
+time: true,    },
+    {
+      name: 'lint-checker',
+      script: 'npm',
+      args: 'run lint',
+      cwd: '/workspace',
+NODE_ENV: 'production',
+      },
+      log_file: 'logs/pm2/preview.log',
+      error_file: 'logs/pm2/preview-error.log',
+      out_file: 'logs/pm2/preview-out.log',
+    },
+    {
+      name: 'auto-fix',
+      script: 'node',
+      args: 'scripts/pm2/auto-fix.cjs',
+      cron_restart: '0 */6 * * *',
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: { NODE_ENV: 'production' },
+      log_file: 'logs/pm2/auto-fix.log',
+      error_file: 'logs/pm2/auto-fix-error.log',
+      out_file: 'logs/pm2/auto-fix-out.log',
+    },
+    {
+      name: 'healthcheck',
+      script: 'node',
+      args: 'scripts/pm2/healthcheck.cjs',
+      cron_restart: '*/5 * * * *',
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '128M',
+      env: { NODE_ENV: 'production' },
+      log_file: 'logs/pm2/health.log',
+      error_file: 'logs/pm2/health-error.log',
+      out_file: 'logs/pm2/health-out.log',
+    },
+    {
+      name: 'code-quality-monitor',
+      script: 'scripts/pm2/code-quality-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '500M',
+      env: {
+NODE_ENV: 'production',      },
       cron_restart: '0 */2 * * *', // Every 2 hours
       error_file: './logs/lint-checker-error.log',
       out_file: './logs/lint-checker-out.log',
@@ -247,7 +505,7 @@ module.exports = {
       args: "start",
       interpreter: "none",
       cwd: __dirname,
-        NODE_ENV: 'production',
+NODE_ENV: 'production',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -308,5 +566,11 @@ module.exports = {
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
       time: true
-    }
+}
   ];};
+
+
+  ];};
+  ]
+};
+

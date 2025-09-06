@@ -8,8 +8,8 @@ function isSupabaseConfigured() {
 }
 
 function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
-  const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string string>,
-  const filters: Record<string any> = {},
+  const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string>,
+  const filters: Record<string, any> = {},
   Object.keys(rest).forEach((k) => {
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k]
   }),
@@ -100,7 +100,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   if (req.method === 'PATCH') {
-    const { id, updates } = req.body as { id: string, updates: Record<string any> },
+    const { id, updates } = req.body as { id: string, updates: Record<string, any> },
     if (!id) return res.status(400).json({ error: 'Missing id' }),
     if (useSupabase) {
       const { data, error } = await client.from(type).update({ ...updates, updated_at: new Date().toISOString() }).eq('id', id).select('*').single(),

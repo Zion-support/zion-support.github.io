@@ -81,7 +81,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
   }
 }
 
-
   ],
   const categories = [;
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from - purple - 500 to - pink - 500', count: allInnovativeServices.length },
@@ -110,7 +109,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     { number: "24 / 7", label: "AI Support Available", icon: Brain },
     { number: "200+", label: "Countries Served", icon: Globe }
   ],
-
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -146,16 +144,44 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
         <link rel="canonical" href="https://ziontechgroup.com/innovative-2025-services-showcase" />
       </Head>
       <div className="min-h-screen bg-black text-white overflow-hidden">
+
+        {/* Animated Background */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
         <div className="fixed inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]"></div>
+
+  },
+  return (
+    <>;
+      <Head>;
+        <title > Innovative 2025 Services Showcase - Zion Tech Group</title>;
+        <meta name="description" content="Discover Zion Tech Group's innovative 2025 services including AI - powered solutions, advanced IT infrastructure, and cutting - edge micro SAAS platforms. Transform your business with our revolutionary technology solutions." />;
+        <meta name="keywords" content="innovative services 2025, AI services, IT infrastructure, micro SAAS, cybersecurity, cloud solutions, Zion Tech Group" />;
+        <meta name="viewport" content="width = device - width, initial - scale = 1" />;
+        <link rel="canonical" href="https://ziontechgroup.com / innovative - 2025 - services - showcase" />;
+      </Head>;
+      <div className="min - h-screen bg - black text - white overflow - hidden">;
+        {/* Animated Background */}
+        <div className="fixed inset - 0 z - 0">;
+          <div className="absolute inset - 0 bg - gradient - to - br from - black via - gray - 900 to - black"></div>;
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_20%_50%, rgba (120, 119, 198, 0.3), transparent_50%)]"></div>;
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (255, 119, 198, 0.3), transparent_50%)]"></div>;
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_40%_80%, rgba (120, 219, 255, 0.3), transparent_50%)]"></div>;
+
           {/* Floating Particles */}
           <div className="absolute inset - 0 overflow - hidden">;
             {[...Array (20)].map ((_, i) => (
               <div;
                 key={i}
+                className="absolute w - 1 h - 1 bg - white rounded - full opacity - 20 animate - pulse";
+
           {/* Floating Particles */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -169,6 +195,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                 className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
                 style={{
                   left: `${Math.random() * 100}%`
@@ -188,6 +215,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+
   ],;
   const filteredServices = allInnovativeServices.filter(service => {;
     const matchesCategory = selectedCategory === 'all' ||;
@@ -316,6 +344,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Innovative 2025
@@ -325,6 +354,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -346,15 +376,67 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+
+          <motion.header;
+            className="relative z - 20 py - 8 px - 4 sm:px - 6 lg:px - 8";
+            initial={{ opacity: 0, coordinate_y: -20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+          >;
+            <span className="bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;
+              Innovative 2025;
+            </span>;
+            <br />;
+            <span className="text - white">Services Showcase</span>;
+          </motion.h1>;
+          <motion.p;
+            className="text - xl md:text - 2xl text - gray - 300 mb - 12 max - w-4xl mx - auto leading - relaxed";
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >;
+            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
+            autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.;
+          </motion.p>;
+          <motion.div;
+            className="flex flex - col sm:flex - row gap - 4 justify - center items - center";
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+
             transition={{ duration: 0.8, delay: 0.4 }}
           >;
             <div className="max - w-7xl mx - auto">;
               {/* Search Bar */}
+
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <div className="max-w-7xl mx-auto">
+              {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
               <div className="mb-8">
                 <div className="relative max-w-2xl mx-auto">
                   <input
                     type="text"
                     placeholder="Search innovative services..."
+
                     value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -365,11 +447,49 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                     className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 </div>
               </div>
+
+              <div className="mb - 8">;
+                <div className="relative max - w-2xl mx - auto">;
+                  <input;
+                    type="text";
+                    placeholder="Search innovative services...";
+                    value={search_term}
+                    on_change={(e) => setSearchTerm (e.target.value)}
+                    className="w - full px - 6 py - 4 bg - gray - 900 / 50 border border - gray - 700 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent";
+                  />;
+                  <Search className="absolute right - 4 top - 1/2 transform -translate - y-1 / 2 w - 6 h - 6 text - gray - 400" />;
+                </div>;
+              </div>;
+
+              {/* Category Filters */}
+              <div className="flex flex - wrap justify - center gap - 4 mb - 8">;
+                {categories.map ((category) => (
+                  <button;
+                    key={category.id}
+                    on_click={() => setSelectedCategory (category.id)}
+                    className={`flex items - center space - x-2 px - 6 py - 3 rounded - xl border transition - all duration - 300 ${
+                      selected_category === category.id;
+                        ? 'border - purple - 500 bg - purple - 500 / 20 text - purple - 300';
+                        : 'border - gray - 700 text - gray - 300 hover:border - gray - 600 hover:text - white';
+                    }`}
+                  >;
+                    <category.icon className="w - 5 h - 5" />;
+                    <span>{category.name}</span>;
+                    <span className="bg - gray - 700 px - 2 py - 1 rounded - full text - xs">;
+                      {category.count}
+
+              {/* Category Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
                   <button
@@ -396,6 +516,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                     <category.icon className="w-5 h-5" />
                     <span>{category.name}</span>
                     <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">
+
                       {category.count  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -423,6 +544,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
             initial="initial"
             animate="animate"
           >
@@ -430,6 +552,24 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service) => (
                   <motion.div
+
+                    </span>;
+                  </button>))}
+              </div>;
+            </div>;
+          </motion.section>;
+          {/* Services Grid */}
+          <motion.section;
+            className="relative z - 20 py - 16 px - 4 sm:px - 6 lg:px - 8";
+            variants={stagger_container}
+            initial="initial";
+            animate="animate";
+          >;
+            <div className="max - w-7xl mx - auto">;
+              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+                {filtered_services.map ((service) => (
+                  <motion.div;
+
                     key={service.id}
                     className="group relative";
                     variants={fadeInUp}
@@ -438,6 +578,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                   >;
                     <div className="relative overflow - hidden rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 30 border border - gray - 700 / 50 backdrop - blur - sm">;
                       {/* Service Icon and Header */}
+
                     key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -479,6 +620,27 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                               POPULAR
                             </div>
+
+                      <div className="p - 8">;
+                        <div className="flex items - center justify - between mb - 6">;
+                          <div className={`w - 16 h - 16 rounded - xl bg - gradient - to - r ${(service as any).color || 'from - blue - 500 to - purple - 500'} flex items - center justify - center text - 3xl`}>;
+                            {(service as any).icon || '🚀'}
+                          </div>;
+                                                      {(service as any).popular && (
+                            <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full">;
+                              POPULAR;
+                            </div>)}
+                        </div>;
+
+                        {/* Service Name and Tagline */}
+                        <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - purple - 300 transition - colors">;
+                          {service.name}
+
+                        </h3>;
+                        <p className="text - gray - 300 mb - 6 leading - relaxed">;
+                          {(service as any).tagline || service.description?.substring (0, 100) || 'Innovative service solution'}
+                        </p>;
+                        {/* Price */}
                         <div className="flex items - baseline mb - 6">;
                           <span className="text - 3xl font - bold text - white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>;
                           <span className="text - gray - 400 ml - 2">{(service as any).period || ''}</span>;
@@ -491,6 +653,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                               <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 0.5 flex - shrink - 0" />;
                               <span className="text - gray - 300 text - sm">{feature}</span>;
                             </div>))}
+
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -521,6 +684,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                         <div className="flex items-baseline mb-6">
                           <span className="text-3xl font-bold text-white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>
                           <span className="text-gray-400 ml-2">{(service as any).period || ''}</span>
@@ -568,8 +732,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                         <Link;
                           href={`/services/${service.id}`}
 
-
-
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -606,12 +768,20 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>
                           <ArrowRight className="w-5 h-5" />
                         </Link>
                       </div>
+
+                      {/* Hover Overlay */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </motion.div>
@@ -633,9 +803,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
   }
 }
 
-
-
-
                 >
                   <div className="text-6xl mb-6">🔍</div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -646,6 +813,13 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                     onClick={() => {
                       setSearchTerm('')
                       setSelectedCategory('all')
+
+                    }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
                   >
                     Clear Filters
@@ -666,15 +840,13 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-12">
-
-
-
 
                 and how they can revolutionize your operations.
               </p>
@@ -726,6 +898,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
@@ -781,7 +954,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                   © 2025 Zion Tech Group. All rights reserved. |
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
 
-
                   © 2025 Zion Tech Group. All rights reserved. |
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
 
@@ -803,6 +975,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
 export default Innovative2025ServicesShowcase,;
 ;
 export default Innovative2025ServicesShowcase,
+};
+
+export default Innovative2025ServicesShowcase;
                           className="w - full bg - gradient - to - r from - purple - 500 to - pink - 500 text - white py - 3 px - 6 rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center space - x-2";
                         >;
                           <span > Learn More</span>;
@@ -950,6 +1125,8 @@ export default Innovative2025ServicesShowcase,
 },
 export default Innovative2025ServicesShowcase,
 ;
+
+},
 
 },
 

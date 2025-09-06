@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -9,8 +6,6 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Building, MapPin, Clock, DollarSign, Star} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {JobMatch} from "@/types/jobs";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -87,10 +82,6 @@ interface JobMatchProps {
   onViewDetails?: (matchId: string) => void,
   onInvite?: (matchId: string) => void
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function JobMatchCard({ ;
   matchId;
@@ -186,10 +177,6 @@ export function JobMatchCard({;
   const postedDate = new Date(),
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
 
-
-
-
-
 import React from 'react';
 
   return (
@@ -204,16 +191,7 @@ import React from 'react';
           <Badge variant="outline" className="bg-background">
             {formatDistanceToNow(postedDate, { addSuffix: true })}
 
-
-
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-
-  // Generate a formatted date for display
+// Generate a formatted date for display
   const postedDate = new Date(),
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
   return (
@@ -288,32 +266,15 @@ import React from 'react';
     </Card>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
 }
 import React from 'react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -349,7 +310,6 @@ if ( {) {
     }
   }
 ;
-<<<<<<< HEAD
   const handleViewDetails = () =>: any {
     // Check condition
 if ( {) {
@@ -388,8 +348,6 @@ if ( {) {
         <div className="p - 4">;
           <div className="flex justify - between items - start gap - 2 mb - 3">;
             <h3 className="text - lg font - bold line - clamp - 2">{name}</h3>;
-<<<<<<< HEAD
-=======
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -470,12 +428,10 @@ export function JobMatchCard({ ;
         <div className="p-4">;
           <div className="flex justify-between items-start gap-2 mb-3">;
             <h3 className="text-lg font-bold line-clamp-2">{name}</h3>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Badge variant="default">;
               Available;
             </Badge>;
           </div>;
-<<<<<<< HEAD
           <div className="text - lg font - medium mb - 2">{title}</div>;
           <div className="flex flex - wrap gap - 2 mb - 3">;
             <Badge variant="outline">{category}</Badge>;
@@ -520,8 +476,6 @@ export function JobMatchCard({ ;
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           ;
           <div className="text-lg font-medium mb-2">{title}</div>;
           ;
@@ -643,6 +597,3 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 ;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

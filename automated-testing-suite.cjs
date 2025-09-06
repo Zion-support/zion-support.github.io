@@ -2,11 +2,13 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 class AutomatedTestingSuite {}
   constructor() {}
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'test-reports');
     this.logFile = path.join(this.reportsDir, 'testing-suite.log');
+    
     // Ensure reports directory exists;
     if (!fs.existsSync(this.reportsDir)) {}
       fs.mkdirSync(this.reportsDir, { recursive: true }
@@ -27,6 +29,7 @@ class AutomatedTestingSuite {}
         cwd: this.projectRoot;
       }
 });
+      
       this.log('Tests completed successfully');
       return { success: true, result };
     } catch (error) {}
@@ -42,6 +45,7 @@ class AutomatedTestingSuite {}
         cwd: this.projectRoot;
       }
 });
+      
       this.log('Build completed successfully');
       return { success: true, result };
     } catch (error) {}
@@ -60,16 +64,27 @@ class AutomatedTestingSuite {}
         overallStatus: testResults.success && buildResults.success ? 'PASSED' : 'FAILED'
       };
     };
+
     const reportPath = path.join(this.reportsDir, 'test-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Test report generated: ${reportPath}`);
   };
   async run() {}
     this.log('🚀 Starting Automated Testing Suite...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     try {}
       const testResults = await this.runTests();
       const buildResults = await this.runBuild();
+      
       this.generateReport(testResults, buildResults);
+      
       if (testResults.success && buildResults.success) {}
         this.log('✅ Automated Testing Suite completed successfully!');
       } else {}
@@ -87,3 +102,11 @@ if (require.main === module) {}
   const suite = new AutomatedTestingSuite();
   suite.run();
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = AutomatedTestingSuite;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = AutomatedTestingSuite;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

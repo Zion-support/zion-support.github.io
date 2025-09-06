@@ -1,42 +1,22 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { jsPDF  } from 'jspdf';
 import { Certification  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
 export function addCertificationsSection(
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addCertificationsSection(;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   doc: jsPDF;
   certifications: Certification[];
   colors: PdfThemeColors;
   startY: number
 ): number {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (certifications && certifications.length === 0) return startY;
-  
 
   let yPos = startY;
   // Check if we need to add a new page
@@ -54,8 +34,7 @@ export function addCertificationsSection(;
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 80, yPos);
 
-=======
-  if (certifications.length === 0) return startY;
+if (certifications.length === 0) return startY;
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
@@ -68,26 +47,18 @@ export function addCertificationsSection(;
   yPos += 8;
   doc.setDrawColor(colors.accent);
   doc.line(20, yPos, 80, yPos);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   yPos += 8;
   for (const cert of certifications) {
     // Check if we need to add a new page
     if (yPos > 260) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       doc && doc.addPage();
       yPos = 20
     }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      doc.addPage();
+doc.addPage();
       yPos = 20
     }
     doc.setFontSize(12);
@@ -145,20 +116,13 @@ export function addCertificationsSection(;
       const expirationText = cert.expiration_date ? ` - ${formatDate(cert.expiration_date)}` : '';
       doc.setFontSize(10);
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10);
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       doc && doc.addPage();
       yPos = 20
     }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     yPos += 16
   }
   return yPos
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -220,9 +184,7 @@ if ( {) {
     y_pos += 16;
   }
   return y_pos;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
     doc && doc.setFontSize(12);
     doc && doc.setTextColor(colors && colors.subheading);
     doc && doc.text(cert && cert.name, 20, yPos);
@@ -310,7 +272,4 @@ doc.text (cert.issuing organization, 20, yPos + 5);
 }return yPos 
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

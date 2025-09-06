@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-    </EnhancedLayout>);
+</EnhancedLayout>);
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import import data from '../../data/governance-pulse.json';
 export default function GovernancePulsePage() {
@@ -30,8 +25,6 @@ export default function GovernancePulsePage() {
         </ul>
       </div>
     </EnhancedLayout>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
   );
 };
@@ -64,7 +57,3 @@ export default function GovernancePulsePage() {
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

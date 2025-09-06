@@ -1,3 +1,5 @@
+
+
 import Link from 'next / link';
 import EnhancedMarketplaceCard from '../../components / ui / EnhancedMarketplaceCard';
 import EnhancedLoading from '../../components / ui / EnhancedLoading';
@@ -43,6 +45,18 @@ export default function JobsListPage() {
 ;
   return (
 
+;
+  return (
+
+export default function JobsListPage() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []);
+  const jobs = [
+    { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
+    { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
+
+  return (
+
 import EnhancedLoading from '../../components/ui/EnhancedLoading',
 import { useEffect, useState } from 'react',
 import InteractiveSearch from '../../components/ui/InteractiveSearch',
@@ -62,6 +76,14 @@ export default function JobsListPage() {
           {jobs.map((j) => (
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
+                <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
+              </a>
+            </Link>
+
+    </div>;
+  );
+
+    </div>
   )
 }
     <div className='space - y-4'>;
@@ -83,7 +105,6 @@ export default function JobsListPage() {
     </div>);
 ;
 
-
 }
 
           ))  } catch (error) {
@@ -104,3 +125,4 @@ export default function JobsListPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+

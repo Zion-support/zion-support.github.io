@@ -1,3 +1,5 @@
+
+
   id: string;
   name: string;
   tagline: string;
@@ -28,6 +30,11 @@
     mobile: string;
     email: string;
     address: string;
+    website: string;
+  }
+
+  {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -44,11 +51,19 @@
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Cloud - based blockchain platform with multi - chain support and enterprise features.';
     launch_date: '2024 - 09 - 01';
+
+    customers: 123;
+
+    rating: 4 && 4.8,
+
+    reviews: 52
+
 export interface InnovativeITService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -745,6 +760,9 @@ export interface InnovativeITService2025 {
     marketSize: '$19B blockchain market', growthRate: '40% annual growth',
     variant: 'blockchain-enterprise',
     contactInfo: {
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.',
     launchDate: '2024-09-01', customers: 123,
@@ -755,11 +773,7 @@ export interface InnovativeITService2025 {
       website: 'https://ziontechgroup.com'
     }
     reviews: 52;
-
-    realImplementation: true;
-    implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.';
-    launchDate: '2024-09-01';
-    customers: 123;
+    reviews: 52;
 
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeITService2025 {;
@@ -1815,5 +1829,9 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
     customers: 123,;
     rating: 4.8;
     reviews: 52;
+
   }
 ];
+
+;
+

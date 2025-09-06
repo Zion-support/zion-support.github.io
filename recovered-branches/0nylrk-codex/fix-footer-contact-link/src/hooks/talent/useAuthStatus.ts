@@ -1,45 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
-
 
 export function useAuthStatus() {
   // Mock authenticated status
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { useState } from 'react';
 import {useState} from 'react';
 export function useAuthStatus() {
   // Mock authenticated status;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   // Mock user details
   const [userDetails, setUserDetails] = useState({
     id: 'user-123';
     name: 'Demo User';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     email: 'demo@example && example.com',
-=======
-    email: 'demo@example.com'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+email: 'demo@example.com'
 
     avatar: ''
   });
@@ -52,25 +28,16 @@ export function useAuthStatus() {
       if (isSaved) {
         setSavedTalents(prev => [...prev, talentId])
       } else {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setSavedTalents(prev => prev && prev.filter(id => id !== talentId))
       }
     } else {
       // In a real app, we might show a login prompt
       console && console.log('User needs to log in to save talents')
-<<<<<<< HEAD
-=======
-        setSavedTalents(prev => prev.filter(id => id !== talentId))
+setSavedTalents(prev => prev.filter(id => id !== talentId))
       }
     } else {
       // In a real app, we might show a login prompt
       console.log('User needs to log in to save talents')
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   // For demo purposes, let's provide a login/logout toggle
@@ -82,23 +49,15 @@ export function useAuthStatus() {
     userDetails;
     savedTalents;
     handleToggleSave;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     toggleAuth
 
-=======
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
 import {useState} from 'react';
 export /**
  * useAuthStatus - Function description
  */
 function useAuthStatus() {
-
 
 import { useState } from 'react',;
 export function useAuthStatus() {;
@@ -135,12 +94,8 @@ if ( {) {
       // In a real app, we might show a login prompt;
       console.log ('User needs to log in to save talents');
     }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-    toggleAuth
+toggleAuth
   }
 }
 import { useState } from 'react',;
@@ -171,7 +126,6 @@ export function useAuthStatus() {;
       // In a real app, we might show a login prompt;
       // // // console.log('User needs to log in to save talents');
     }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },;
   // For demo purposes, let's provide a login/logout toggle;
   const toggleAuth = () => {;
@@ -183,7 +137,6 @@ export function useAuthStatus() {;
     savedTalents;
     handleToggleSave;
     toggleAuth;
-
 
   }
 ;
@@ -199,10 +152,7 @@ export function useAuthStatus() {;
     handleToggleSave;
     toggle_auth;
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
 
 import { useState } from 'react',;
 ;
@@ -270,8 +220,5 @@ toggleAuth
   }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

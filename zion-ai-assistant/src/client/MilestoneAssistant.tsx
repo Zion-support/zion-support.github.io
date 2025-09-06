@@ -1,8 +1,10 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
 import React, { useMemo, useState } from './react';,
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared / types",
 export interface MilestoneAssistantProps {
@@ -11,10 +13,8 @@ export interface MilestoneAssistantProps {
   endDateIso: string,
   project_type: ProjectType,
   on_accept?: (milestones: SuggestedMilestoneItem[], auto_add: boolean) => void;
-<<<<<<< HEAD
-=======
 
-=======
+
 
 import React, { useMemo, useState } from "react";
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
@@ -65,7 +65,10 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loadi
     <div className="milestone-assistant">;
       <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>;
         <button onClick={generate} disabled={loading |isDisabled}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
 import React, { useMemo, useState } from "react",;
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
 export interface MilestoneAssistantProps {;
@@ -74,7 +77,11 @@ export interface MilestoneAssistantProps {;
   endDateIso: string,;
   projectType: ProjectType,;
   onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
-<<<<<<< HEAD
+
+
+
+
+
 
 }
 export /**
@@ -142,8 +149,19 @@ function accept() {
     props.on_accept?.(items, auto_add);
   }
 
-=======
+
 }
+=======
+import React, { useMemo, useState } from "react",;
+import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
+export interface MilestoneAssistantProps {;
+  scopeOfWork: string,;
+  startDateIso: string,;
+  endDateIso: string,;
+  projectType: ProjectType,;
+  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
 export function MilestoneAssistant(props: MilestoneAssistantProps) {;
   const [loading, setLoading] = useState(false),;
@@ -194,7 +212,14 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
   function accept() {;
     props.onAccept?.(items, autoAdd);
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
+
+
+
+
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 ;
   return (;
     <div className="milestone-assistant">;
@@ -203,14 +228,14 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 <<<<<<< HEAD
 
 
-=======
   return (
     <div className="milestone - assistant">;
       <div className="assistant - header" style={{ display: "flex", gap: 12, align_items: "center" }}>;
         <button on_click={generate} disabled={loading || is_disabled}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
           {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>;
         <label style={{ display: "flex", gap: 6, align_items: "center" }}>;
@@ -218,18 +243,21 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
           Auto - add to Milestone Tracker;
         </label>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
 
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
 
 ;
 
 
-=======
 ;
 
-
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>;
         <label style={{ display: "flex", gap: 6, alignItems: "center" }}>;
@@ -239,9 +267,16 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
       </div>;
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
+
+
+
+
+
+
+
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       <div style={{ marginTop: 12 }}>;
         {items.length === 0 && !loading && (;
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>;
@@ -249,32 +284,51 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
         {items.map((item, idx) => (;
           <div key={idx} className="milestone-item" style={{ border: "1px solid #ddd", borderRadius: 8, marginBottom: 8 }}>;
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+
+
+
+
       {error && <div style={{ color: "#b00", margin_top: 8 }}>{error}</div>}
       <div style={{ margin_top: 12 }}>;
         {items.length === 0 && !loading && (
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>)}
         {items.map ((item, idx) => (
           <div key={idx} className="milestone - item" style={{ border: "1px solid #ddd", border_radius: 8, margin_bottom: 8 }}>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+
+
+
+
             <div;
               className="milestone - summary";
               style={{ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }}
               on_click={() => setExpandedIdx (expanded_idx === idx ? null : idx)}
             >;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
+
+
+
+
 
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
             <div;
               className="milestone-summary";
               style={{ padding: 12, cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}
@@ -283,19 +337,29 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>;
 <<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+
                 <span style={{ fontWeight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
 
+                <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
+
+
+
+
+
+
+
+
+
+                <span style={{ fontWeight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
 
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
                 <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", border_radius: 4, font_size: 12 }}>;
@@ -320,9 +384,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
                   <textarea;
                     value={item.description}
                     on_change={(e) => update_item (idx, { description: e.target.value })}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 import React, { useMemo, useState } from "react",;
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
 ;
@@ -436,6 +498,8 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                     value={item.description}
                     onChange={(e) => updateItem(idx, { description:e.target.value })}
                 <span style={{ fontWeight: 600 }}>{item.title |`Milestone ${idx + 1}`}</span>;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <span style={{ fontWeight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
                   AI Suggested;
@@ -460,18 +524,29 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                   <textarea;
                     value={item.description}
                     onChange={(e) => updateItem(idx, { description: e.target.value })}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
+
+
+
+
+
+
+
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     rows={3}
                     placeholder="Description";
                   />;
                 </div>;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
+<div style={{ display:"grid", gap:6 }}>;
+
+
+
+
+
                 <div style={{ display:"grid", gap:6 }}>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
                 <div style={{ display: "grid", gap: 6 }}>;
                   <label > Suggested due date</label>;
                   <input;
@@ -482,9 +557,10 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                 </div>;
                 <div style={{ display: "grid", gap: 6 }}>;
                   <label > Estimated effort (hours)</label>;
-<<<<<<< HEAD
-=======
+
                 <div style={{ display:"grid", gap:6 }}>;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                 <div style={{ display: "grid", gap: 6 }}>;
                   <label>Suggested due date</label>;
                   <input;
@@ -495,30 +571,46 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                 </div>;
                 <div style={{ display: "grid", gap: 6 }}>;
                   <label>Estimated effort (hours)</label>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
+
+
+
+
+
+
+
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                   <input;
                     type="number";
                     min={1}
                     value={item.estimatedEffortHours}
 <<<<<<< HEAD
-<<<<<<< HEAD
+on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
-
 
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
+
+
+
+
+
+
+
+
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+                    on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
+
+                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
+
+                    on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
+
                   />;
                 </div>;
                 <div style={{ display: "flex", justify_content: "space - between", margin_top: 8 }}>;
@@ -528,17 +620,16 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
               </div>)}
           </div>))}
       </div>;
-<<<<<<< HEAD
     </div>);
-<<<<<<< HEAD
-}
 
+
+
+}
 
 ;
 
-
 export default MilestoneAssistant;
-=======
+
                     onChange={(e) => updateItem(idx, { estimatedEffortHours:Math.max(1, parseInt(e.target.value || "0", 10)) })}
                   />;
                 </div>;
@@ -548,6 +639,8 @@ export default MilestoneAssistant;
                 </div>;
               </div>;            )}
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value |"0", 10)) })}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
                   />;
                 </div>;
@@ -561,9 +654,10 @@ export default MilestoneAssistant;
         ))}
       </div>;
     </div>;
+<<<<<<< HEAD
+}
 
 ;
-
 
 export default MilestoneAssistant;
 }> <button onClick= {
@@ -704,7 +798,14 @@ export default MilestoneAssistant;
 }
 ;
 export default MilestoneAssistant;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export default MilestoneAssistant;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export default MilestoneAssistant;
+export default MilestoneAssistant;
+
+
+=======
+  );
+}
+;
+export default MilestoneAssistant;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

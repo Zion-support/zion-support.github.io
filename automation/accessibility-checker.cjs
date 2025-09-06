@@ -1,3 +1,14 @@
+
+
+
+
+#!/usr/bin/env node
+
+
+
+
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -166,6 +177,123 @@ if (require.main === module) {
     });
 }
 #!/usr/bin/env node
+console.log('♿ Running accessibility check...');
+console.log('✅ Accessibility check completed');
+#!/usr/bin/env node
+        
+      }
+    }},
+  {
+    "name": 'Keyboard Navigation Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let interactiveElements = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          const buttons = (content.match(/<button[^>]*>/g) || []).length;
+          const links = (content.match(/<a[^>]*>/g) || []).length;
+          const inputs = (content.match(/<input[^>]*>/g) || []).length;
+          interactiveElements += buttons + links + inputs;
+        });
+
+      }
+    }},
+  {
+    "name": 'ARIA Labels Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let ariaElements = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          ariaElements += (content.match(/aria-[^=]*=/g) || []).length;
+        });
+
+      }
+    }},
+  {
+    "name": 'Focus Management Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let focusElements = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          focusElements += (content.match(/tabIndex|onFocus|onBlur/g) || [])
+            .length;
+        });
+
+      }
+    }},
+  {
+    "name": 'Screen Reader Support Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let srElements = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          srElements += (
+            content.match(/role=|aria-label=|aria-describedby=/g) || []
+          ).length;
+        });
+
+      }
+    }},
+];
+
+// Run accessibility checks
+let successCount = 0;
+let totalCount = a11yChecks.length;
+
+for (const check of a11yChecks) {
+  try {
+    
+    check.action();
+    
+    successCount++;
+  } catch (error) {
+    
+  }
+}
+
+// Generate accessibility report
+const report = {
+  "timestamp": new Date().toISOString(),
+  "checks": a11yChecks.map(check => ({
+    name: check.name,
+    "status": 'completed'})),
+  "summary": {
+    total: totalCount,
+    "successful": successCount,
+    "failed": totalCount - successCount}};
+
+const reportsDir = path.join(process.cwd(), 'automation-reports');
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { "recursive": true });
+}
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -283,12 +411,41 @@ if (require.main === module) {
     });
 }
 
+<<<<<<< HEAD:automation/accessibility-checker.cjs
 
+
+
+
+
+
+
+
+=======
+<<<<<<< HEAD:backup-problematic-files/automation/accessibility-checker.cjs
+module.exports = AccessibilityChecker;
+=======
+<<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/automation/accessibility-checker.cjs
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
 );
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -302,6 +459,15 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "name"
     "status"
+
+module.exports = AccessibilityChecker;
+<<<<<<< HEAD:automation/accessibility-checker.cjs
+
+
+
+
+
+
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
@@ -322,3 +488,19 @@ module.exports = AccessibilityChecker;
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
+
+
+
+
+module.exports = AccessibilityChecker;
+
+
+
+
+module.exports = AccessibilityChecker;
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/accessibility-checker.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/automation/accessibility-checker.cjs

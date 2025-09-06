@@ -1,31 +1,15 @@
-
-
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
-
 
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues
 
   let severity: FraudSeverity = 'safe',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 let severity: FraudSeverity = 'safe',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (analysis && analysis.reasons.length > 0) {
     severity = analysis && analysis.reasons.length > 2 || 
               analysis && analysis.reasons.some(r => r && r.includes('payment') || r && r.includes('external')) 
       ? 'dangerous' 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       : 'suspicious'
 // Message checking functionality;
 import {FraudSeverity} from '@/types / fraud';
@@ -53,16 +37,9 @@ if ( {) {
 
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     severity
 
-
-=======
-=======
-    severity
-
+severity
 
     severity;
   }
@@ -94,12 +71,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   }
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     severity
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -121,17 +93,10 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   return {;
     ...analysis;
     severity;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  }
+}
 };
 ;
 /**;
@@ -151,15 +116,9 @@ export const checkMessage = (messageContent:string):MessageAnalysisResult => {;
   ;
   return {;
     ...analysis,;
-=======
   }
 };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     severity;
   }
-<<<<<<< HEAD
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

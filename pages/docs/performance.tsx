@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
 }
 import Head from 'next / head',
 export default /**
@@ -10,25 +5,16 @@ export default /**
  */
 function PerformanceDocRedirect() {
   return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Head>;
         <meta http_equiv="refresh" content="0, url=/PERFORMANCE.md" />;
       </Head>;
       <main style={{ padding: 24 }}>;
-<<<<<<< HEAD
         <p > Redirecting to Performance documentation…</p>;
       </main>;
     </>);
 }
-<<<<<<< HEAD
-
-
-
-=======
-    <>
+<>
       <Head>
         <meta httpEquiv="refresh" content="0, url=/PERFORMANCE.md" />
 
@@ -69,12 +55,6 @@ export default function PerformanceDocRedirect(req, res) {
 
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 ;
 ;
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

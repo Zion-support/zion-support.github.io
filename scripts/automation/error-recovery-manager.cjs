@@ -77,3 +77,7 @@ const path = require('path')
         "details"
       return { "success": false, "reason"}
       "ignore"
+
+
+    console.error(' Error recovery manager "failed")
+

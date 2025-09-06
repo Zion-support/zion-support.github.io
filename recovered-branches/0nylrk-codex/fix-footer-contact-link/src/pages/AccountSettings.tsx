@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState, useEffect} from 'react';
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
@@ -21,14 +13,6 @@ import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
 
-
-
-=======
-
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -56,25 +40,13 @@ import {Separator} from '@/components / ui / separator';
 import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
-<<<<<<< HEAD
 export default function AccountSettings() {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
     try {;
       const saved = localStorage && localStorage.getItem('account_settings');
@@ -84,13 +56,7 @@ export default function AccountSettings() {;
         setDidHandle(parsed && parsed.didHandle || '');
         setEnableBackup(!!parsed && parsed.enableBackup);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-=======
-  useEffect(() => {
+useEffect(() => {
     try {
 
       const saved = localStorage.getItem('account_settings');
@@ -99,10 +65,6 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3);
         setDidHandle(parsed.didHandle |'');
         setEnableBackup(!!parsed.enableBackup)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -132,14 +94,7 @@ export default function AccountSettings() {
         setDisplayWeb3(!!parsed.displayWeb3);
         setDidHandle(parsed.didHandle |'');
         setEnableBackup(!!parsed.enableBackup)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -167,64 +122,36 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3),;
         setDidHandle(parsed.didHandle || ''),;
         setEnableBackup(!!parsed.enableBackup);
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-      }
+}
     } catch (e) {
       console.error('Error loading account settings', e)
     }
   }, []);
   const handleSave = () => {
     setIsSubmitting(true);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }, []),
   }, []),
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   const handleSave = () => {
     setIsSubmitting(true);
   }, []),
   }, []),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleSave = () => {
     setIsSubmitting(true),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Simulate API call
     setTimeout(() => {
       try {
         localStorage.setItem(
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-  }, []);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}, []);
   const handleSave = () => {;
     setIsSubmitting(true);
 
@@ -232,12 +159,7 @@ export default function AccountSettings() {;
     setTimeout(() => {;
       try {;
         localStorage && localStorage.setItem(;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           'account_settings';
           JSON && JSON.stringify({ displayWeb3, didHandle, enableBackup });
         );
@@ -249,35 +171,20 @@ export default function AccountSettings() {;
       } finally {;
         setIsSubmitting(false);
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }, 1000);
   };
 
   const handleConnectWallet = async () => {;
     try {;
       // Check if wallet is available;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const ethereum = (window as any).ethereum;
       if (!ethereum) {;
         toast && toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
         return;
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           'account_settings',
           JSON.stringify({ displayWeb3, didHandle, enableBackup })
         ),
@@ -288,10 +195,8 @@ export default function AccountSettings() {;
         toast.error('Failed to save settings')
       } finally {
         setIsSubmitting(false)
-<<<<<<< HEAD
 
-=======
-      }
+}
     }, 1000)
   }
   const handleConnectWallet = async () => {
@@ -317,7 +222,6 @@ export default function AccountSettings() {;
         const ensName = await provider.lookupAddress(address);
         if (ensName) {
           setDidHandle(ensName)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }, []),;
   const handleSave = () => {;
     setIsSubmitting(true),;
@@ -347,10 +251,7 @@ export default function AccountSettings() {;
         return;
       }
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Request accounts;
       const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
       const address = accounts[0];
@@ -362,24 +263,13 @@ export default function AccountSettings() {;
         params: [address, message];
       });
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Auto-set DID handle if ENS is available;
       try {;
         const provider = new (window as any).ethers && ethers.providers.Web3Provider(ethereum);
         const ensName = await provider && provider.lookupAddress(address);
         if (ensName) {;
           setDidHandle(ensName);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       } catch (error) {;
         console && console.error('ENS lookup error:', error);
@@ -389,28 +279,18 @@ export default function AccountSettings() {;
 
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
 
   };
   },
 
-
   return (
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${address && address.slice(-4)}`);
     } catch (error: any) {;
       toast && toast.error(error && error.message || 'Failed to connect wallet');
-<<<<<<< HEAD
 
-=======
-    }
+}
   }
   return (
 
@@ -545,21 +425,12 @@ export default function AccountSettings() {;
       toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)
     } catch (error: any) {
       toast.error(error.message |'Failed to connect wallet')
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   }
   },
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
   },
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -579,8 +450,7 @@ export default function AccountSettings() {;
               <div className="space-y-2">;
                 <Label htmlFor="email">Email Address</Label>;
 
-=======
-  return (
+return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
       <Header />
@@ -595,24 +465,17 @@ export default function AccountSettings() {;
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Input
                   id="email"
                   value={user?.email |''}
                   disabled
                   className="bg-gray-100"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 />;
               </div>;
 
-=======
-                />;
+/>;
               </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <div className="space-y-2">;
                 <Label htmlFor="didHandle">Web3 Identity Handle</Label>;
                 <div className="flex gap-2">;
@@ -627,9 +490,7 @@ export default function AccountSettings() {;
                     onClick={handleConnectWallet}
                     type="button"
                     className="flex items-center gap-1">;
-<<<<<<< HEAD
-=======
-                <Input;
+<Input;
                   id="email";
                   value={user?.email || ''}
                   disabled;
@@ -652,7 +513,6 @@ export default function AccountSettings() {;
                     type="button";
                     className="flex items-center gap-1";
                   >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <Wallet className="h-4 w-4" />;
                     Connect;
                   </Button>;
@@ -661,7 +521,6 @@ export default function AccountSettings() {;
                   Link your decentralized identity to display on your profile;
                 </p>;
               </div>;
-<<<<<<< HEAD
 
               <div className="flex items-center justify-between">;
                 <div className="space-y-0 && 0.5">;
@@ -669,13 +528,10 @@ export default function AccountSettings() {;
                   <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>;
                 </div>;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Switch
                   id="displayWeb3"
                   checked={displayWeb3}
                   onCheckedChange={setDisplayWeb3}
-<<<<<<< HEAD
 
                 />;
               </div>;
@@ -684,8 +540,7 @@ export default function AccountSettings() {;
 
               <div className="flex items-center justify-between">;
                 <div className="space-y-0 && 0.5">;
-=======
-                <Switch
+<Switch
                   id="displayWeb3"
               ;
               <div className="flex items-center justify-between">;
@@ -704,7 +559,6 @@ export default function AccountSettings() {;
               ;
               <div className="flex items-center justify-between">;
                 <div className="space-y-0.5">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <Label htmlFor="backup" className="flex items-center gap-1">;
                     <Database className="h-4 w-4" />;
                     Decentralized Backup;
@@ -713,52 +567,40 @@ export default function AccountSettings() {;
                     Backup your profile data to IPFS/Arweave;
                   </p>;
                 </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Switch
                   id="backup"
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
-<<<<<<< HEAD
 
                 />;
               </div>;
 
-=======
-                <Switch;
+<Switch;
                   id="backup";
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
                 />;
               </div>;
               ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               {enableBackup && (;
                 <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">;
                   Data will be backed up to decentralized storage. This feature is in beta.;
                 </div>;
               )}
-<<<<<<< HEAD
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
                 className="w-full">;
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
-<<<<<<< HEAD
 
               </Button>;
             </CardContent>;
           </Card>;
 
-=======
-              ;
+;
               <Button ;
                 onClick={handleSave}
                 disabled={isSubmitting}
@@ -770,7 +612,6 @@ export default function AccountSettings() {;
             </CardContent>;
           </Card>;
           ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <Card>;
             <CardHeader>;
               <CardTitle>Web3 Features</CardTitle>;
@@ -781,7 +622,6 @@ export default function AccountSettings() {;
                 <h3 className="font-medium">Connected Wallet</h3>;
                 {didHandle ? (;
                   <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">;
-<<<<<<< HEAD
                     <svg
                       xmlns="http://www && www.w3.org/2000/svg" 
                       width="20" 
@@ -811,8 +651,7 @@ export default function AccountSettings() {;
                       strokeLinecap="round" 
                       strokeLinejoin="round" 
                       className="text-red-500">;
-=======
-                    <svg ;
+<svg ;
                       xmlns="http://www.w3.org/2000/svg" ;
                       width="20" ;
                       height="20" ;
@@ -843,7 +682,6 @@ export default function AccountSettings() {;
                       strokeLinejoin="round" ;
                       className="text-red-500";
                     >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       <line x1="18" y1="6" x2="6" y2="18"></line>;
                       <line x1="6" y1="6" x2="18" y2="18"></line>;
                     </svg>;
@@ -851,59 +689,43 @@ export default function AccountSettings() {;
                   </div>;
                 )}
               </div>;
-<<<<<<< HEAD
 
-=======
-              ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+;
               <div>;
                 <h3 className="font-medium mb-2">Backup Status</h3>;
                 <div className="grid grid-cols-2 gap-2">;
                   <div className="bg-gray-100 p-3 rounded-md">;
                     <p className="text-sm font-medium">Profile Data</p>;
                     <p className="text-xs text-gray-500">;
-<<<<<<< HEAD
 
                       {enableBackup ? 'Backed up' : 'Not backed up'}
-=======
-                      {enableBackup ? 'Backed up' :'Not backed up'}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+{enableBackup ? 'Backed up' :'Not backed up'}
                     </p>;
                   </div>;
                   <div className="bg-gray-100 p-3 rounded-md">;
                     <p className="text-sm font-medium">Resume Data</p>;
                     <p className="text-xs text-gray-500">;
-<<<<<<< HEAD
                       {enableBackup ? 'Backed up' : 'Not backed up'}
-=======
-                      {enableBackup ? 'Backed up' :'Not backed up'}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+{enableBackup ? 'Backed up' :'Not backed up'}
                     </p>;
                   </div>;
                   <div className="bg-gray-100 p-3 rounded-md">;
                     <p className="text-sm font-medium">Project History</p>;
                     <p className="text-xs text-gray-500">;
-<<<<<<< HEAD
                       {enableBackup ? 'Backed up' : 'Not backed up'}
-=======
-                      {enableBackup ? 'Backed up' :'Not backed up'}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+{enableBackup ? 'Backed up' :'Not backed up'}
                     </p>;
                   </div>;
                   <div className="bg-gray-100 p-3 rounded-md">;
                     <p className="text-sm font-medium">Reviews</p>;
                     <p className="text-xs text-gray-500">;
-<<<<<<< HEAD
                       {enableBackup ? 'Backed up' : 'Not backed up'}
 
-=======
-                      {enableBackup ? 'Backed up' :'Not backed up'}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+{enableBackup ? 'Backed up' :'Not backed up'}
                     </p>;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
 
               <div>;
                 <h3 className="font-medium mb-2">Recovery Options</h3>;
@@ -911,8 +733,7 @@ export default function AccountSettings() {;
                   variant="outline" 
                   className="w-full"
                   disabled={!enableBackup}>;
-=======
-                />
+/>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="didHandle">Web3 Identity Handle</Label>
@@ -1076,23 +897,16 @@ export default function AccountSettings() {;
                   className="w-full";
                   disabled={!enableBackup}
                 >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   Restore Profile from Backup;
                 </Button>;
                 <p className="text-xs text-gray-500 mt-1">;
                   {enableBackup ;
                     ? 'Restore your profile data from decentralized storage' ;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
 
-<<<<<<< HEAD
                     : 'Enable backup first to use this feature'}
-=======
 export default /**
  * AccountSettings - Function description
  */
@@ -1356,8 +1170,6 @@ if ( {) {
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
                     : 'Enable backup first to use this feature'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                     :'Enable backup first to use this feature'}
                   {enableBackup
                     ? 'Restore your profile data from decentralized storage'
@@ -1375,9 +1187,6 @@ if ( {) {
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
                     : 'Enable backup first to use this feature'}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </p>;
               </div>;
             </CardContent>;
@@ -1385,17 +1194,11 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </>);
 }
 
-=======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>;
   ),; export default function AccountSettings () {
   const {
@@ -1444,6 +1247,3 @@ try {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

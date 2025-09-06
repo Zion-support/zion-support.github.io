@@ -3,7 +3,9 @@ const fs = require('fs').promises;
 const path = require('path');
 const { exec } = require('child_process');
 const util = require('util');
+
 const execAsync = util.promisify(exec);
+
 class SimpleScriptFixer {}
   constructor() {}
     this.projectRoot = path.join(__dirname, '..');
@@ -15,7 +17,9 @@ class SimpleScriptFixer {}
     const scriptDirs = [path.join(this.projectRoot, 'scripts'),]
       path.join(this.projectRoot, 'scripts/automation');
     ];
+
     const scriptFiles = [];
+    
     for (const dir of scriptDirs) {}
       try {}
         const files = await fs.readdir(dir);
@@ -31,6 +35,7 @@ class SimpleScriptFixer {}
     try {}
       const content = await fs.readFile(filePath, 'utf8');
       let fixedContent = content;
+
       // Fix common issues;
       const fixes = [// Fix malformed require statements;]
         { "from": 'require("child_process")', "to": 'require("child_process")' },
@@ -46,6 +51,7 @@ class SimpleScriptFixer {}
         // Fix malformed class definitions;
         { "from": 'this.projectRoot = path.join(__dirname, ".."),\n}', "to": 'this.projectRoot = path.join(__dirname, "..");\n  }' };
       ];
+
       let hasChanges = false;
       for (const fix of fixes) {}
         if (fixedContent.includes(fix.from)) {}
@@ -71,15 +77,21 @@ class SimpleScriptFixer {}
   };
   async run() {}
     await this.log('Starting automation script fixing process...');
+
     const scriptFiles = await this.findScriptFiles();
     await this.log(`Found ${scriptFiles.length} script files to check`);
+
     let testedCount = 0;
+
     for (const scriptFile of scriptFiles) {}
       await this.log(`"Processing": ${path.basename(scriptFile)}`);
+      
       const wasFixed = await this.fixScriptFile(scriptFile);
+
       // Test the script;
       const testResult = await this.testScript(scriptFile);
       testedCount++;
+      
       if (testResult.success) {}
         await this.log(`✓ Syntax "OK": ${path.basename(scriptFile)}`)} else {`}
         await this.log(`✗ Syntax "Error": ${path.basename(scriptFile)} - ${testResult.error}`)};
@@ -91,3 +103,7 @@ class SimpleScriptFixer {}
 if (require.main === module) {}
   const fixer = new SimpleScriptFixer();
   fixer.run().catch(console.error)};
+
+
+module.exports = SimpleScriptFixer;
+

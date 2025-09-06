@@ -9,7 +9,6 @@ export default function ApiPerformanceTestingPage() {
     'Synthetic traffic for staging',;
   ];
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -44,13 +43,8 @@ import {Check, ExternalLink} from 'lucide-react';
                   </span>;
                 </p>;
               </div>;
-<<<<<<< HEAD
 
                 rel='noreferrer'>;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <div className='rounded - 2xl border border - emerald - 400 / 30 p - 6'>;
                 <h3 className='text - xl font - bold'>Enterprise</h3>;
                 <p className='mt - 2 text - gray - 300'>;
@@ -61,8 +55,6 @@ import {Check, ExternalLink} from 'lucide-react';
             </div>;
             <p className='mt - 4 text - sm text - gray - 400'>;
               Market references:{' '}
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -134,8 +126,6 @@ import {Check, ExternalLink} from 'lucide-react';
             </div>;
             <p className='mt - 4 text - sm text - gray - 400'>;
               Market references:{' '}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a;
                 className='underline hover:text - cyan - 300';
                 href='https://k6.io / pricing/';
@@ -240,8 +230,6 @@ export default function ApiPerformanceTestingPage() {
 			</section>
 		</div>
 	)
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <a;
                 className='underline hover:text - cyan - 300';
                 href='https://k6.io / pricing/';
@@ -284,8 +272,6 @@ export default function ApiPerformanceTestingPage() {
     </div>;
   );
 
-<<<<<<< HEAD
-=======
 <div className='mt - 14 flex flex - wrap items - center gap - 4'>;
             <Link;
               href='/contact';
@@ -305,17 +291,6 @@ export default function ApiPerformanceTestingPage() {
       </section>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
@@ -383,9 +358,8 @@ export default function ApiPerformanceTestingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+    </div>;
+  );
 
 <div className='mt - 14 flex flex - wrap items - center gap - 4'>;
             <Link;
@@ -406,6 +380,3 @@ export default function ApiPerformanceTestingPage(req, res) {
       </section>;
     </div>);
 ;
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

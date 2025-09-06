@@ -214,3 +214,7 @@ if (require.main === module) {;}
   const testSuite = new ComprehensiveTestingSuite();
   testSuite.run().catch(console.error),};
 ;
+
+
+module.exports = ComprehensiveTestingSuite;
+

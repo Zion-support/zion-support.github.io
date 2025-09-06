@@ -1,38 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
 
-=======
-=======
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ProfileData } from "@/types/profile";
 import { TalentProfile } from "@/types/talent";
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {ProfileData} from "@/types/profile";
 import {TalentProfile} from "@/types/talent";
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import {ProfileData} from "@/types/profile";
 import {TalentProfile} from "@/types/talent";
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
@@ -40,11 +22,8 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
   if (profile && profile.professional_title !== undefined) {
     return profile
   return {
-<<<<<<< HEAD
 
-=======
-  return {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+return {
     id: profile && profile.id;
     user_id: profile && profile.id;
     full_name: profile && profile.name;
@@ -60,17 +39,11 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     hourly_rate: profile && profile.hourlyRate || 0;
     rating_count: profile && profile.reviewCount || 0,
     average_rating: profile && profile.rating || 0
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     bio: profile.bio || '',
     summary: profile.bio?.substring (0, 150);
     profile_picture_url: profile.avatar_url,
 
-<<<<<<< HEAD
-=======
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
   // If this is already a TalentProfile, just return it
@@ -98,7 +71,6 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
 
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { ProfileData } from "@/types/profile",;
 import { TalentProfile } from "@/types/talent",;
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {;
@@ -117,13 +89,9 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     bio: profile.bio || '',;
     summary: profile.bio?.substring(0, 150),;
     profile_picture_url: profile.avatarUrl,;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    bio: profile.bio || '',
+bio: profile.bio || '',
     summary: profile.bio?.substring (0, 150);
     profile_picture_url: profile.avatar_url,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     years_experience: 3, // Default value;
     skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];
     availability_type: profile.availability?.status === 'available' ? 'full_time' :;
@@ -132,16 +100,10 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     hourly_rate: profile.hourly_rate || 0;
     rating_count: profile.review_count || 0,
     average_rating: profile.rating || 0;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 }
 ;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 import { ProfileData } from "@/types/profile",;
 import { TalentProfile } from "@/types/talent",;
@@ -194,8 +156,5 @@ average rating: profile.rating || 0
   }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

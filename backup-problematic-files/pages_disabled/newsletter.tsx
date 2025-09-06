@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface NewsletterProps {
   className?: string;
@@ -6,7 +6,7 @@ interface NewsletterProps {
 
 const Newsletter: React.FC<NewsletterProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
+    <div className={className || ""}>
       <h1>Newsletter</h1>
       <p>This component is under development.</p>
     </div>

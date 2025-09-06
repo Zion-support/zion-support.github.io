@@ -12,6 +12,7 @@ const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
 const os = require("os");
+
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -93,14 +94,17 @@ class $1 {}
     if (this.autoFixEnabled) {}
   await this.autoFixCriticalIssues(issues)};
 ;
+
     // Store metrics in history;
     this.performanceHistory.push(metrics);
+
     // Keep only last 100 entries;
     if (this.performanceHistory.length > 100) {}
   this.performanceHistory.shift()};
 ;
     // Analyze metrics for issues;
     const issues = await this.analyzeMetrics(metrics);
+
     // Generate alerts for critical issues;
     if (issues.length > 0) {}
   await this.generateAlerts(issues)};
@@ -111,6 +115,7 @@ class $1 {}
 ;
     // Save metrics;
     await this.saveMetrics(metrics);
+
     return metrics};
 ;
   async collectSystemMetrics() {}
@@ -169,6 +174,7 @@ class $1 {}
     } catch (error) {}
   this.log(Failed to collect application "metrics": ${error.message  }",)
         "WARN`;`
+
   async collectApplicationMetrics() {}
   const metrics = {}
   "pm2": {}
@@ -231,6 +237,7 @@ class $1 {}
       // For now, we"ll use placeholder values;
       metrics.responseTime = Math.random() * 1000; // Simulated response time;
       metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {  this.log(`Failed to collect network "metrics": ${error.message  }`, "WARN");
+
     try {}
   // This would typically involve monitoring actual network requests;
       // For now, we"ll use placeholder values;
@@ -246,8 +253,10 @@ class $1 {}
         "encoding": "utf8",
         "stdio": "pipe"}
 });
+
       const lines = result.split("\n");
       const data = lines[1].split(/\s+/);
+
       return {}
   "total": this.parseSize(data[1]),
         "used": this.parseSize(data[2]),
@@ -274,13 +283,16 @@ class $1 {}
         "encoding": "utf8",
         "stdio": "pipe"}
 });
+
       const processes = JSON.parse(result);
       let totalMemory = 0;
       let totalCPU = 0;
+
       processes.forEach(proc => {})
   totalMemory += proc.monit.memory || 0;
         totalCPU += proc.monit.cpu || 0}
 });
+
       return {}
   "processes": processes.length,
         "memory": totalMemory,
@@ -341,17 +353,21 @@ class $1 {}
   async measureBundleSize() {}
   try {}
   const distPath = path.join(this.projectRoot, "dist");
+
   async measureBundleSize() {}
   try {}
   const distPath = path.join(this.projectRoot, "dist");
       if (!fs.existsSync(distPath)) return 0;
+
       let totalSize = 0;
       const files = this.getAllFilesRecursive(distPath);
+
       for (const file of files) {}
   const stats = fs.statSync(file);
         totalSize += stats.size};
 ;
       return totalSize} catch (error) {}
+  
 } catch (error) {}
   return 0} catch (error) {}
   return 0};
@@ -380,9 +396,11 @@ class $1 {}
 ;
   getAllFilesRecursive(dir, files = []) {}
   const items = fs.readdirSync(dir);
+
     for (const item of items) {}
   const fullPath = path.join(dir, "item);
       const stat = fs.statSync(fullPath);
+
       if (stat.isDirectory()) {}
   this.getAllFilesRecursive(fullPath", files)} else {}
   files.push(fullPath)};
@@ -454,6 +472,7 @@ class $1 {}
 ;
       this.alertHistory.push(alert);this.log(`"ALERT": ${issue.type} - ${issue.description}`, issue.severity)};
 ;
+
     // Save alerts;
     await this.saveAlerts()};
 ;
@@ -489,6 +508,7 @@ class $1 {}
   const criticalIssues = issues.filter(;)
       issue => issue.severity === "CRITICAL";
     );
+
     for (const issue of criticalIssues) {}
   try {}
   const result = await this.applyAutoFix(issue);
@@ -541,6 +561,7 @@ class $1 {}
   "cwd": this.projectRoot,
         "stdio": "pipe"}
 });
+
       return { "success": true, "message": "Disk space cleaned up successfully" };
     } catch (error) {}
   return { "success": false, "message": error.message   };
@@ -640,6 +661,7 @@ if (metrics.system.cpu.usage > 95) {}
 ;
   getPerformanceSummary() {}
   const recentMetrics = this.performanceHistory.slice(-10);
+
     if (recentMetrics.length === 0) {}
   return { "message": "No performance data available" };
     };
@@ -653,6 +675,7 @@ if (metrics.system.cpu.usage > 95) {}
     const avgDisk =;
       recentMetrics.reduce((sum, m) => sum + m.system.disk.usage, 0) /;
       recentMetrics.length;
+
     return {}
   "timestamp": new Date().toISOString(),
       "averages": {}
@@ -688,3 +711,7 @@ if (require.main === module) {}
   console.error("Advanced Performance Monitor "failed": ", error);
       process.exit(1)})};
 ;
+
+
+module.exports = AdvancedPerformanceMonitor;
+

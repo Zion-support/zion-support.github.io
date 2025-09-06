@@ -1,41 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
 interface TypingAnimationProps {
-  text: string;
+  text: string;,
   speed?: number;
   delay?: number;
   className?: string;
   showCursor?: boolean;
   onComplete?: () => void;
 }
-
-const TypingAnimation: React.FC<TypingAnimationProps> = ({
+const TypingAnimation: React.FC<TypingAnimationProps> = ({,
   text,
   speed = 100,
   delay = 0,
-  className = '',
+  className = '','
   showCursor = true,
-  onComplete
+  onComplete,
 }) => {
-  const [displayedText, setDisplayedText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState('');,
+  const [currentIndex, setCurrentIndex] = useState(0);,
   const [isComplete, setIsComplete] = useState(false);
-
   useEffect(() => {
     if (currentIndex < text.length) {
       const timeout = setTimeout(() => {
-        setDisplayedText(prev => prev + text[currentIndex]);
+        setDisplayedText(prev => prev + text[currentIndex]);,
         setCurrentIndex(prev => prev + 1);
       }, speed);
-
       return () => clearTimeout(timeout);
     } else if (!isComplete) {
       setIsComplete(true);
       onComplete?.();
     }
   }, [currentIndex, text, speed, isComplete, onComplete]);
-
   useEffect(() => {
     if (delay > 0) {
       const timeout = setTimeout(() => {
@@ -43,8 +38,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
       }, delay);
       return () => clearTimeout(timeout);
     }
-  }, [delay]);
-
+  }, [delay]);,
   return (
     <motion.span
       className={className}
@@ -54,10 +48,10 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
     >
       {displayedText}
       {showCursor && (
-        <motion.span
+        <motion.span,
           animate={{ opacity: [1, 0, 1] }}
           transition={{ duration: 0.8, repeat: Infinity }}
-          className="ml-1"
+          className="ml-1""
         >
           |
         </motion.span>

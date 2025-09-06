@@ -1,9 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
+
+
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {if (req.method !== 'POST') {;
     res.status(405).json({ error: 'Method not allowed' });
@@ -13,8 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!screenName) {res.status(400).json({ error: 'screenName is required' });
     return;
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   try {const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role |'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({model: 'gpt-4o-mini';
       messages: [;
@@ -26,18 +24,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({ suggestion });
   } catch (e: any) {const message = process.env.OPENAI_API_KEY ? (e?.message |'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 ;
   try {;
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini',;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
@@ -83,15 +79,15 @@ export default async function handler(req, res) {
   try {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
+      model: 'gpt-4o-mini'
       messages: [{
-        role: 'system',
+        role: 'system'
         content: 'You are a senior product designer. Respond with a compact wireframe outline.'
       }, {
-        role: 'user',
+        role: 'user'
         content: prompt
-      }],
-      temperature: 0.4,
+      }]
+      temperature: 0.4
       max_tokens: 400
     });
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
@@ -157,10 +153,7 @@ export default async function handler(req, res) {
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini';
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 }
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
 export default async /**
@@ -177,8 +170,11 @@ if ( {) {
     res.status(200).json({ suggestion });
   } catch (e: any) {const message = process.env.OPENAI_API_KEY ? (e?.message |'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
 ;
   try {;
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
@@ -229,15 +225,15 @@ export default async function handler(req, res) {
   try {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
+      model: 'gpt-4o-mini'
       messages: [{
-        role: 'system',
+        role: 'system'
         content: 'You are a senior product designer. Respond with a compact wireframe outline.'
       }, {
-        role: 'user',
+        role: 'user'
         content: prompt
-      }],
-      temperature: 0.4,
+      }]
+      temperature: 0.4
       max_tokens: 400
     });
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
@@ -302,34 +298,37 @@ export default async function handler(req, res) {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
       messages: [;
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },;
         { role: 'user', content: prompt }];
       temperature: 0.4;
       max_tokens: 400});
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
     res.status(200).json({ suggestion });
 
-
   }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
     res.status(200).json({ suggestion });
   } catch (e: any) {;
     const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+    const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
+    res.status(200).json({ suggestion });
+
+  }
+
+
+
+
   } catch (error) {
     const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
@@ -359,12 +358,12 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+}
+
+
+}
 
   }
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

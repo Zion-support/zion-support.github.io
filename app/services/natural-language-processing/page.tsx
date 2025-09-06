@@ -1,83 +1,116 @@
-export const metadata = { 
-  title: 'Natural Language Processing | Zion Tech Group',
-  description: 'Unlock the power of text with advanced NLP solutions including sentiment analysis, text classification, and language understanding.'
+export const metadata = {
+  title: "Natural Language Processing | Zion Tech Group",
+  description:
+    "Unlock the power of text with advanced NLP solutions including sentiment analysis, text classification, and language understanding.",
 };
 
 export default function NaturalLanguageProcessingPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">Natural Language Processing</h1>
-      <p className="text-xl text-gray-600 mb-12">Unlock the power of text with advanced NLP solutions including sentiment analysis, text classification, and language understanding.</p>
-      
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">
+        Natural Language Processing
+      </h1>
+      <p className="text-xl text-gray-600 mb-12">
+        Unlock the power of text with advanced NLP solutions including sentiment
+        analysis, text classification, and language understanding.
+      </p>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="Text Analysis & Understanding" 
+        <FeatureCard
+          title="Text Analysis & Understanding"
           features={[
             "Sentiment analysis",
             "Text classification",
             "Named entity recognition",
-            "Language detection"
-          ]} 
+            "Language detection",
+          ]}
         />
-        <FeatureCard 
-          title="Content Processing" 
+        <FeatureCard
+          title="Content Processing"
           features={[
             "Document summarization",
             "Keyword extraction",
             "Topic modeling",
-            "Content moderation"
-          ]} 
+            "Content moderation",
+          ]}
         />
-        <FeatureCard 
-          title="Language Generation" 
+        <FeatureCard
+          title="Language Generation"
           features={[
             "Text generation",
             "Translation services",
             "Content creation",
-            "Chatbot responses"
-          ]} 
+            "Chatbot responses",
+          ]}
         />
       </div>
-      
+
       <div className="bg-gradient-to-r from-teal-50 to-green-50 border border-teal-200 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our NLP Solutions?</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Why Choose Our NLP Solutions?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex items-start">
             <span className="text-teal-500 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">Multi-Language Support</h3>
-              <p className="text-gray-600">Process text in 100+ languages with high accuracy and cultural context</p>
+              <h3 className="font-semibold text-gray-900">
+                Multi-Language Support
+              </h3>
+              <p className="text-gray-600">
+                Process text in 100+ languages with high accuracy and cultural
+                context
+              </p>
             </div>
           </div>
           <div className="flex items-start">
             <span className="text-teal-500 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">Industry-Specific Models</h3>
-              <p className="text-gray-600">Custom-trained models for healthcare, finance, legal, and other industries</p>
+              <h3 className="font-semibold text-gray-900">
+                Industry-Specific Models
+              </h3>
+              <p className="text-gray-600">
+                Custom-trained models for healthcare, finance, legal, and other
+                industries
+              </p>
             </div>
           </div>
           <div className="flex items-start">
             <span className="text-teal-500 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">Real-Time Processing</h3>
-              <p className="text-gray-600">Low-latency text analysis for live applications and streaming data</p>
+              <h3 className="font-semibold text-gray-900">
+                Real-Time Processing
+              </h3>
+              <p className="text-gray-600">
+                Low-latency text analysis for live applications and streaming
+                data
+              </p>
             </div>
           </div>
           <div className="flex items-start">
             <span className="text-teal-500 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">Privacy & Security</h3>
-              <p className="text-gray-600">GDPR compliant with on-premise deployment options for sensitive data</p>
+              <h3 className="font-semibold text-gray-900">
+                Privacy & Security
+              </h3>
+              <p className="text-gray-600">
+                GDPR compliant with on-premise deployment options for sensitive
+                data
+              </p>
             </div>
           </div>
         </div>
       </div>
-      
+
       <Pricing />
-      
+
       <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Understand Your Text Data?</h2>
-        <p className="text-gray-600 mb-6">Start with a free analysis of your text data and discover hidden insights.</p>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Ready to Understand Your Text Data?
+        </h2>
+        <p className="text-gray-600 mb-6">
+          Start with a free analysis of your text data and discover hidden
+          insights.
+        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="tel:+13024640950"
@@ -97,12 +130,18 @@ export default function NaturalLanguageProcessingPage() {
   );
 }
 
-function FeatureCard({ title, features }: { title: string; features: string[] }) {
+function FeatureCard({
+  title,
+  features,
+}: {
+  title: string;
+  features: string[];
+}) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
       <ul className="space-y-2 text-gray-600">
-        {features.map(f => (
+        {features.map((f) => (
           <li key={f} className="flex items-center">
             <span className="text-teal-500 mr-2">•</span> {f}
           </li>
@@ -115,49 +154,63 @@ function FeatureCard({ title, features }: { title: string; features: string[] })
 function Pricing() {
   return (
     <div className="mt-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Pricing Plans
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Starter" 
-          price="$1,999/mo" 
+        <Plan
+          name="Starter"
+          price="$1,999/mo"
           features={[
             "Basic text analysis",
             "Up to 50,000 documents/month",
             "Standard support",
-            "Cloud deployment"
-          ]} 
+            "Cloud deployment",
+          ]}
         />
-        <Plan 
-          name="Professional" 
-          price="$4,999/mo" 
+        <Plan
+          name="Professional"
+          price="$4,999/mo"
           features={[
             "Advanced NLP models",
             "Up to 500,000 documents/month",
             "Custom model training",
             "Priority support",
-            "API access"
-          ]} 
+            "API access",
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Enterprise" 
-          price="$12,999/mo" 
+        <Plan
+          name="Enterprise"
+          price="$12,999/mo"
           features={[
             "Unlimited processing",
             "Custom model development",
             "On-premise deployment",
             "Dedicated support",
-            "White-label solution"
-          ]} 
+            "White-label solution",
+          ]}
         />
       </div>
     </div>
   );
 }
 
-function Plan({ name, price, features, popular = false }: { name: string; price: string; features: string[]; popular?: boolean }) {
+function Plan({
+  name,
+  price,
+  features,
+  popular = false,
+}: {
+  name: string;
+  price: string;
+  features: string[];
+  popular?: boolean;
+}) {
   return (
-    <div className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? 'border-teal-500 ring-2 ring-teal-200' : 'border-gray-200'}`}>
+    <div
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-teal-500 ring-2 ring-teal-200" : "border-gray-200"}`}
+    >
       {popular && (
         <div className="bg-teal-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
@@ -166,18 +219,18 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-teal-600 mb-4">{price}</div>
       <ul className="space-y-2 text-gray-600 mb-6">
-        {features.map(f => (
+        {features.map((f) => (
           <li key={f} className="flex items-center">
             <span className="text-green-500 mr-2">✓</span> {f}
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-teal-600 text-white hover:bg-teal-700' 
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+          popular
+            ? "bg-teal-600 text-white hover:bg-teal-700"
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
         }`}
       >
         Get Started

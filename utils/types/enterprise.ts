@@ -1,14 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
 
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
+<<<<<<< HEAD
 
 export interface CompanyUsageLimits {;
   monthlyJobPosts: number;
   budgetCapUsd: number;
 
 
-=======
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
 export interface CompanyUsageLimits {monthlyJobPosts: number;
   budgetCapUsd: number;
@@ -36,6 +39,8 @@ export interface InvoiceRecord {id: string;
 export interface CompanyUsageLimits {;
   monthlyJobPosts: number;
   budgetCapUsd: number;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export interface CompanyUsageLimits {;
   monthlyJobPosts: number;
   budgetCapUsd: number;
@@ -46,6 +51,7 @@ export interface CompanyPlan {;
   seatsPurchased: number;
   seatsUsed: number;
   usageLimits: CompanyUsageLimits;
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -61,6 +67,8 @@ export interface CompanyPlan {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface CompanyMember {;
@@ -68,10 +76,13 @@ export interface CompanyMember {;
   email: string;
   name: string;
   role: EnterpriseRole;
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface CompanyActivityEvent {;
@@ -80,18 +91,28 @@ export interface CompanyActivityEvent {;
   actorEmail: string;
   action: string;
   meta?: Record<string unknown>;
+<<<<<<< HEAD
   meta?: Record<string, unknown>;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface InvoiceRecord {;
   id: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
+
+
+
+
+
+
+
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   companyId: string;
   number: string;
   amountUsd: number;
@@ -99,11 +120,10 @@ export interface InvoiceRecord {;
   periodEndIso: string;
   status: 'paid' | 'open' | 'void' | 'past_due';
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
+
 }
 export interface CompanyRecord {id: string;
   name: string;
@@ -115,32 +135,41 @@ export interface CompanyRecord {id: string;
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
 export interface CompanyUsageLimits {
   monthlyJobPosts: number,
   budgetCapUsd: number;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+
+
+
 }
 export interface CompanyPlan {
   tier: 'teams' | 'business' | 'enterprise - custom',
@@ -174,8 +203,6 @@ export interface CompanyRecord {
   id: string,
   name: string,
   slug: string, // e.g. acme;
-<<<<<<< HEAD
-
 
   logoUrl?: string,;
   brandColor?: string,;
@@ -183,8 +210,7 @@ export interface CompanyRecord {
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
-<<<<<<< HEAD
-=======
+
 }
 export interface CompanyRecord {id: string;
   name: string;
@@ -195,17 +221,23 @@ export interface CompanyRecord {id: string;
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
+
+
+
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 ;
 export interface CompanyRecord {;
@@ -218,8 +250,14 @@ export interface CompanyRecord {;
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+
+
+
+}
+
+
+
   logoUrl?: string,;
   brandColor?: string,;
   plan: CompanyPlan,;
@@ -233,8 +271,15 @@ export interface CompanyRecord {;
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
 }
-<<<<<<< HEAD
+
+
+
+
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+}
+
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

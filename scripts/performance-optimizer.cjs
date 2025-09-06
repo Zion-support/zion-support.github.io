@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 ;
 const fs = require('fs');
@@ -113,6 +114,252 @@ class PerformanceOptimizer {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+
+
+    this.projectRoot = process.cwd();
+    this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json');
+  }
+
+  async optimizePerformance() {
+
+    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx']);
+    const optimizations = [];
+
+    for (const file of files) {
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        const optimized = this.optimizeFile(content);
+        
+        if (content !== optimized) {
+          fs.writeFileSync(file, optimized);
+          optimizations.push({
+            file: path.relative(this.projectRoot, file),
+            optimizations: this.getOptimizations(content, optimized)
+          });
+        }
+      } catch (error) {
+        console.error(`Error processing ${file}: ${error.message}`);
+      }
+    }
+
+    this.saveReport(optimizations);
+    
+  }
+
+  optimizeFile(content) {
+    let optimized = content;
+    
+    // Optimize imports
+    optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'"]+)['"]/g, 
+      (match, imports, module) => {
+        const cleanImports = imports.split(',').map(imp => imp.trim()).join(', ');
+        return `import { ${cleanImports} } from '${module}'`;
+      });
+    
+    // Optimize arrow functions
+    optimized = optimized.replace(/functions+(w+)s*([^)]*)s*{/g, 'const $1 = ($2) => {');
+    
+    // Remove console.logs in production
+    if (process.env.NODE_ENV === 'production') {
+      optimized = optimized.replace(/console.(log|warn|error)([^)]*);?/g, '');
+    }
+    
+    return optimized;
+  }
+
+  getOptimizations(original, optimized) {
+    const optimizations = [];
+    if (original !== optimized) {
+      optimizations.push('Imports optimized');
+      optimizations.push('Arrow functions optimized');
+      if (process.env.NODE_ENV === 'production') {
+        optimizations.push('Console statements removed');
+      }
+    }
+    return optimizations;
+  }
+
+  getAllFiles(dir, extensions) {
+    const files = [];
+    try {
+      const items = fs.readdirSync(dir);
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          files.push(...this.getAllFiles(fullPath, extensions));
+        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath);
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be read
+    }
+    return files;
+  }
+
+  saveReport(optimizations) {
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalFiles: optimizations.length,
+      optimizations: optimizations
+    };
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+  }
+}
+
+if (require.main === module) {
+  const optimizer = new PerformanceOptimizer();
+  optimizer.optimizePerformance().catch(console.error);
+}
+
+module.exports = PerformanceOptimizer;
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json')
+    console.log('⚡ Optimizing performance...')
+    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
+        const content = fs.readFileSync(file, 'utf8')
+    optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+console.log('⚡ Starting Performance Optimization...');
+
+class PerformanceOptimizer {
+  constructor() {
+    this.reportFile = path.join(__dirname, '..', 'performance-optimization-report.json');
+    this.results = {
+      timestamp: new Date().toISOString(),
+      bundleAnalysis: null,
+      imageOptimization: null,
+      codeSplitting: null,
+      caching: null,
+      overall: { status: 'unknown', score: 0 }
+    };
+#!/usr/bin/env node;
+;
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class PerformanceOptimizer {
+  constructor() {
+    this.optimizations = [];
+    this.logFile = path.join(__dirname, '..', 'logs', 'performance-optimizer.log');
+    this.ensureLogDirectory();
+  }
+
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+
+  async optimizePerformance() {
+    try {
+      this.log('Starting performance optimization...');
+      
+      // Analyze bundle size
+      const bundleAnalysis = this.analyzeBundleSize();
+      
+      // Optimize images
+      const imageOptimization = this.optimizeImages();
+      
+      // Check for unused dependencies
+      const dependencyAnalysis = this.analyzeDependencies();
+      
+      // Generate optimization report
+      const report = {
+        timestamp: new Date().toISOString(),
+        bundleSize: bundleAnalysis,
+        imageOptimization: imageOptimization,
+        dependencies: dependencyAnalysis,
+        recommendations: this.generateRecommendations()
+      };
+      
+      this.saveReport(report);
+      this.log('Performance optimization completed');
+      return report;
+    } catch (error) {
+      this.log(`Performance optimization failed: ${error.message}`, 'ERROR');
+      return null;
+    }
+  }
+
+  analyzeBundleSize() {
+    try {
+      // Check if dist directory exists
+      const distPath = path.join(__dirname, '..', 'dist');
+      if (!fs.existsSync(distPath)) {
+        return { error: 'Build directory not found. Run npm run build first.' };
+      }
+
+      const files = this.getFilesRecursively(distPath);
+      let totalSize = 0;
+      let gzippedSize = 0;
+      
+      files.forEach(file => {
+        const stats = fs.statSync(file);
+        totalSize += stats.size;
+        
+        // Estimate gzipped size (roughly 30% of original)
+        gzippedSize += Math.floor(stats.size * 0.3);
+      });
+
+      return {
+        totalSize: this.formatBytes(totalSize),
+        gzippedSize: this.formatBytes(gzippedSize),
+        fileCount: files.length,
+        recommendations: this.getBundleRecommendations(totalSize, files.length)
+      };
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+
+  getFilesRecursively(dir) {
+    let files = [];
+    const items = fs.readdirSync(dir);
+    
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        files = files.concat(this.getFilesRecursively(fullPath));
+      } else {
+        files.push(fullPath);
+      }
+    });
+    
+    return files;
+  }
+
+  formatBytes(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+
+
+
+
   }
 
   getBundleRecommendations(totalSize, fileCount) {
@@ -299,6 +546,7 @@ class PerformanceOptimizer {
 
 // Run the optimizer
 const optimizer = new PerformanceOptimizer();
+
 optimizer.optimizePerformance().then(report => {
   if (report) {
     console.log('\n📊 Performance Optimization Report');
@@ -614,3 +862,10 @@ monitor.runBundleAnalysis()
 }
 const optimizer = new PerformanceOptimizer()
 optimizer.run().catch(console.error)
+
+optimizer.run().catch(console.error);
+
+
+
+optimizer.run().catch(console.error);
+

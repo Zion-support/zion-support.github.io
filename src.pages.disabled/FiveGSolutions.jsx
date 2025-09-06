@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,17 +23,9 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface FiveGSolutionsProps {
   // Add props here as needed
-<<<<<<< HEAD
-
 
 }
 
-<<<<<<< HEAD
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function FiveGSolutions({ }: FiveGSolutionsProps) {
   return (
     <div>
@@ -42,50 +33,13 @@ export default function FiveGSolutions({ }: FiveGSolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 
-
-
-<<<<<<< HEAD
 }
 
-=======
-
-
-=======
-
-
-:src.pages.disabled/FiveGSolutions.jsx
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 :src.pages.disabled/FiveGSolutions.jsx
 }
 }
 }
 }
 }
-<<<<<<< HEAD
 :temp_exclude/src.pages.disabled/FiveGSolutions.jsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-
-
-
-
-
-
-:src.pages.disabled/FiveGSolutions.jsx
-}
-}
-}
-}
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

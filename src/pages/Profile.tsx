@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 ;
 const Profile = () =>: any {
   return (
@@ -15,6 +14,4 @@ const Profile = () =>: any {
     </div>);
 }
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default Profile;

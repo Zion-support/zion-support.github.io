@@ -1,4 +1,9 @@
 
+import NextHead from 'next/head';
+import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+
     <UltraAdvancedFuturisticBackground>;
       <NextHead>;
         <title>;
@@ -186,13 +191,11 @@ export default function AIFinancialRiskPage() {
                 </div>;
               </div>;
 
-
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-
 
                 className='w-full'>;
                 Discuss Controls;
@@ -210,7 +213,31 @@ export default function AIFinancialRiskPage() {
                   <MapPin className='w-4 h-4 text-green-400' />;
                   <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
 
+}
+}
 
+              <Button;
+                href='/contact';
+                variant='quantum';
+                size='lg';
+                className='w - full';
+              >;
+                Discuss Controls;
+              </Button>;
+              <div className='mt - 6 space - y-3 text - sm text - slate - 300'>;
+                <div className='flex items - center space - x-2'>;
+                  <Phone className='w - 4 h - 4 text - cyan - 400' />;
+                  <span>{contact_info.mobile}</span>;
+                </div>;
+                <div className='flex items - center space - x-2'>;
+                  <Mail className='w - 4 h - 4 text - purple - 400' />;
+                  <span>{contact_info.email}</span>;
+                </div>;
+                <div className='flex items - center space - x-2'>;
+                  <MapPin className='w - 4 h - 4 text - green - 400' />;
+                  <span className='text - xs'>{contact_info.address}</span>;
+                </div>              </div>;
+);
 
 }
 }
@@ -274,13 +301,24 @@ export default function AIFinancialRiskPage(req, res) {
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{contact_info.address}</span>;
                 </div>              </div>;
+              </div>;
+              <Button href="/contact" variant="quantum" size="lg" className="w-full">Discuss Controls</Button>;
+              <div className="mt-6 space-y-3 text-sm text-slate-300">;
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo.mobile}</span></div>;
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>;
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>;
+              </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+
+    </UltraAdvancedFuturisticBackground>);
+;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+

@@ -1,35 +1,19 @@
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from "react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface EmptyStateProps {
 
   icon: React.ReactNode
   title: string
   description: string
   action?: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react";
 import {cn} from "@/lib/utils";
@@ -54,23 +38,13 @@ interface EmptyStateProps {;
 
 export function EmptyState(): any ({;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   icon;
   title;
   description;
   action;
   secondaryAction;
   className}: EmptyStateProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-
-    text: string
+text: string
 
     href?: string;
     onClick?: () => void
@@ -82,9 +56,6 @@ export function EmptyState(): any ({;
     href?: string;
     onClick?: () => void
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     text: string,
     href?: string,
     onClick?: () => void
@@ -94,18 +65,12 @@ export function EmptyState(): any ({;
     href?: string,
     onClick?: () => void
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   className?: string
 }
 
-
-
   className}: EmptyStateProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  className?: string
+className?: string
 }
 
 export function EmptyState({;
@@ -114,9 +79,6 @@ export function EmptyState({;
   description;
   action;
   secondaryAction;
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function EmptyState({
   icon,
   title,
@@ -124,22 +86,12 @@ export function EmptyState({
   action,
   secondaryAction,
 
-
   className}: EmptyStateProps) {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div
 
       className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 
         className
@@ -179,18 +131,12 @@ export function EmptyState({;
       )}
     >
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
 
-
         className
       )}>;
-<<<<<<< HEAD
-=======
-      )}>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+)}>;
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
         {icon}
 
@@ -205,12 +151,10 @@ export function EmptyState({;
               <Link to={action && action.href}>{action && action.text}</Link>;
             </Button>;
           ) : (;
-<<<<<<< HEAD
             <Button
               size="lg" 
 
-=======
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
+<div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
         {icon}
 
   secondaryAction,;
@@ -228,26 +172,18 @@ export function EmptyState({;
       <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
       <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
             <Button
-              size="lg" 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+              size="lg"
               className="bg-zion-purple hover:bg-zion-purple-light"
               onClick={action && action.onClick}>;
               {action && action.text}
             </Button>;
           );
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
             <Button 
               size="lg" 
               className="bg-zion-purple hover:bg-zion-purple-light"
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClick={action.onClick}
             >
               {action.text}
@@ -255,25 +191,12 @@ export function EmptyState({;
           )
         )}
 
-<<<<<<< HEAD
-
-
-
-=======
-
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {secondaryAction && (
           secondaryAction.href ? (
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
               <Link to={secondaryAction.href}>{secondaryAction.text}</Link>
             </Button>
           ) : (
-<<<<<<< HEAD
-
 
         {secondaryAction && (;
           secondaryAction && secondaryAction.href ? (;
@@ -283,27 +206,14 @@ export function EmptyState({;
           ) : (;
             <Button
               variant="outline" 
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             <Button 
               variant="outline" 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               size="lg"
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;
               {secondaryAction && secondaryAction.text}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </Button>;
           );
         )}
@@ -313,8 +223,6 @@ export function EmptyState({;
   );
 }
 
-=======
-=======
 ;
         {icon}
       </div>;
@@ -328,9 +236,6 @@ export function EmptyState({;
             </Button>;
       </div>;
     </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { cn } from '@/lib / utils';
 import { Button } from '@/components / ui / button';
@@ -395,10 +300,6 @@ function EmptyState() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  interface EmptyStateProps {
   icon: React.ReactNode;
@@ -461,6 +362,3 @@ className?: string
     </div>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

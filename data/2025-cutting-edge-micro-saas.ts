@@ -1,7 +1,5 @@
 
 
-
-
 export const cuttingEdgeMicroSaasServices2025 = [
   {
     id: 'customer-success-ai-pro'
@@ -437,7 +435,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
 export const cuttingEdgeMicroSaasServices2025 = [
   {
 
-
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     id: 'customer-success-ai-pro', name: 'Customer Success AI Pro',
     description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',
@@ -475,10 +472,8 @@ export const cuttingEdgeMicroSaasServices2025 = [
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
 
-
 ;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
-
 
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
@@ -694,3 +689,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   }
 ];
 ;
+
+  }
+];

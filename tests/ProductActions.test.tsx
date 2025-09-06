@@ -1,4 +1,23 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+import { render, screen, fireEvent, waitFor } from '@testing-library/react',;
+import '@testing-library/jest-dom',;
+import { describe, it, expect, vi } from 'vitest',;
+import { ProductActions } from '@/components/ProductActions',;
+function setup() {;
+  const addToCart = vi.fn().mockResolvedValue(undefined),;
+  render(<ProductActions productId="1" addToCart={addToCart} />),;
+  const button = screen.getByRole('button', { name: /add to cart/i }),;
+  return { addToCart, button }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+}
+
+
+
+
+
 
 function setup() {
   const addToCart = vi.fn().mockResolvedValue(undefined);
@@ -30,3 +49,28 @@ describe('ProductActions', () => {
     vi.useRealTimers();
   });
 });
+<<<<<<< HEAD
+
+
+=======
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+interface ProductActions.testProps {
+  // Add props here as needed
+}
+export default function ProductActions.test({ }: ProductActions.testProps) {
+  return (
+    <div>
+      <h1>ProductActions.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

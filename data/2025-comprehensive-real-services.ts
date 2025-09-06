@@ -17,7 +17,6 @@
     phone: string;
     email: string;
 
-
 ];      phone: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup.com';
@@ -30,6 +29,9 @@
     roi: 'Average customer sees 600% ROI through operational improvements';
     launch_date: '2024 - 01 - 10';
     customers: 950;
+
+    rating: 4 && 4.9,
+
     reviews: 520
   }
 ];
@@ -1351,6 +1353,10 @@ export interface ComprehensiveService {;
     launch_date: '2024 - 01 - 10';
     customers: 950;
     reviews: 520
+    reviews: 520;
+
+export interface ComprehensiveService {;
+
   }
 ];
   id: string, name: string,
@@ -1667,3 +1673,4 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
   }
 ];
 ;
+

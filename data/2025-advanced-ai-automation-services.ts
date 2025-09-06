@@ -1,4 +1,28 @@
   contactInfo: {
+
+import { ServiceVariant } from '../types / service - variants';
+
+export interface AdvancedAIAutomationService {
+
+  {
+
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string[],
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: string,
+  contactInfo: {
+    mobile: string, email: string,
+    address: string,
+    website: string
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -18,6 +42,8 @@
     rating: 4.8,
     reviews: 38;
   }
+
+];
 ;
     realImplementation: true
     implementationDetails:
@@ -203,6 +229,16 @@
     }
     realImplementation: true
     implementationDetails:
+      'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.'
+    launchDate: '2024-10-01'
+    customers: 89
+    rating: 4.8
+    reviews: 38
+      'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.',
+    launchDate: '2024-10-01',
+    customers: 89,
+    rating: 4.8,
+    reviews: 38,;
   },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -216,6 +252,8 @@
     rating: 4.8
 
     reviews: 38
+  }
+];
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;

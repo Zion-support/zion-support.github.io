@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 
 }
 
@@ -20,8 +22,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <meta name="description" content={description || 'Leading technology solutions provider'} />
         {keywords && <meta name="keywords" content={keywords} />}
 import Layout from './Layout';
-
-
 
 ;
 interface MainLayoutProps {
@@ -46,6 +46,31 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   type = 'website'
   image = '/og-image.jpg'
   url
+
+
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+
+interface MainLayoutProps {
+  children: React.ReactNode;
+}
+
+<<<<<<< HEAD
+export default function MainLayout({ 
+  title, 
+  description, 
+  children, 
+  keywords = "AI solutions, IT services, micro SaaS, technology consulting",
+  canonical 
+}: MainLayoutProps) {
+
+
+
+
   return (
     <>
       <Head>
@@ -70,8 +95,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   image = '/og - image.jpg',
   url;
   return (
-
-
 
         {image && <meta property="og:image" content={image} />}
         {url && <meta property="og:url" content={url} />}
@@ -157,3 +180,57 @@ import React from 'react'; import Head from 'next/head'; import Header from './H
     </>);
 }
 export default MainLayout;
+
+
+
+        <meta name="keywords" content={keywords} />
+        {canonical && <link rel="canonical" href={canonical} />}
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      
+
+import React, { ReactNode } from 'react';
+import Header from '../Header';
+import Footer from './Footer';
+import SEOHead from '../SEOHead';
+
+interface MainLayoutProps {
+  children: ReactNode;
+  title?: string;
+  description?: string;
+}
+
+const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description }) => {
+  return (
+    <>
+      <SEOHead title={title} description={description} />
+
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+=======
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+  return (
+    <>
+      <Header />
+      <div className="min-h-screen">
+        {children}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+<<<<<<< HEAD
+export default MainLayout;
+
+
+
+
+
+=======
+export default MainLayout;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

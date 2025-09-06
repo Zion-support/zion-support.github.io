@@ -5,11 +5,11 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
   try {;
     const base = getZionDesignMap();
     const [localTokens, cmsTokens] = await Promise.all([;
-      buildTokenSet(),;
+      buildTokenSet();
       fetchLovableTokens()]);
 ;
     const tokens = {;
-      colors:{ ...localTokens.colors, ...(cmsTokens?.colors || {}) },;
+      colors:{ ...localTokens.colors, ...(cmsTokens?.colors || {}) };
       typography:{;
         fontSizes:{ ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes || {}) }}}
 ;

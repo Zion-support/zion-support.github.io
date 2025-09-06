@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface TalentProps {
   className?: string;
@@ -6,7 +6,7 @@ interface TalentProps {
 
 const Talent: React.FC<TalentProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
+    <div className={className || ""}>
       <h1>Talent</h1>
       <p>This component is under development.</p>
     </div>

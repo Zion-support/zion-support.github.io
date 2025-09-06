@@ -1,7 +1,5 @@
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,19 +14,16 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-=======
-  static getDerivedStateFromError(error) {
+static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
     
     return this.props.children;
   }
@@ -39,8 +34,7 @@ import Layout from "../components/Layout";
 
 import React from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
     return this.props.children;
   }
 }
@@ -124,17 +118,43 @@ import {
   Shield,
   ArrowRight,
   CheckCircle,
+import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import MainLayout from '../src/components/layout/MainLayout';
+import { 
+  Brain, 
+  Bot, 
+  Eye, 
+  MessageSquare, 
+  CheckCircle, 
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+
   Star,
   Clock,
   Users,
   TrendingUp,
   Database,
+<<<<<<< HEAD
+
   Network,
   Target,
   Rocket
+=======
+  Shield,
+  Zap
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 } from 'lucide-react';
 const aiServices = [
   {
+<<<<<<< HEAD
+
     title: "Machine Learning Models",
     description: "Custom ML models tailored to your business needs with advanced algorithms and real-time processing",
     icon: Brain,
@@ -200,6 +220,8 @@ const aiServices = [
     id: 6,
     name: 'Conversational AI & Chatbots',
     description: 'Intelligent virtual assistants and customer service automation',
+title: 'Natural Language Processing',
+    description: 'Advanced text analysis and language understanding for your business.',
     icon: MessageSquare,
     features: [
       'Natural language understanding',
@@ -218,6 +240,14 @@ const aiServices = [
     marketPrice: '$2,500 - $8,000/month',
     setupTime: '2-4 weeks',
     targetUsers: 'E-commerce, SaaS, Customer Service, Healthcare'
+=======
+    title: 'Natural Language Processing',
+    description: 'Advanced text analysis and language understanding capabilities.',
+    icon: Brain,
+    features: ['Text analysis', 'Sentiment analysis', 'Language translation', 'Content generation'],
+    price: '$1,500/month',
+    benefits: ['Better customer insights', 'Automated content', 'Multilingual support', 'Cost efficiency']
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   },
   {
     id: 7,
@@ -247,6 +277,7 @@ const aiServices = [
     name: 'AI Drug Discovery & Development',
     description: 'Accelerated pharmaceutical research using AI and machine learning',
     icon: Brain,
+<<<<<<< HEAD
     features: [
       'Molecular property prediction',
       'Drug-target interaction modeling',
@@ -316,6 +347,14 @@ const aiServices = [
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+features: ['Predictive analytics', 'Custom algorithms', 'Data training', 'Model optimization'],
+    price: '$3,000/month',
+    benefits: ['Data-driven decisions', 'Predictive insights', 'Competitive advantage', 'Scalable intelligence']
+=======
+    features: ['Predictive analytics', 'Pattern recognition', 'Data insights', 'Custom algorithms'],
+    price: '$2,500/month',
+    benefits: ['Data-driven decisions', 'Process optimization', 'Competitive advantage', 'Scalable solutions']
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   }
 }
   } catch (error) {
@@ -324,11 +363,12 @@ const aiServices = [
   }
 }
 ];
+
 const stats = [
   { number: "500+", label: "AI Models Deployed" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24/7", label: "AI Monitoring" },
-  { number: "48hrs", label: "Average Response Time"   } catch (error) {
+{ number: "48hrs", label: "Average Response Time"   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -354,22 +394,21 @@ origin/automation-improvements-final
 import React from "react";
 import Layout from "../components/Layout";
 origin/main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+import React from "react";
+import Layout from "../components/Layout";
+origin/main
+
 export default function AIServices() {
   return (
     <Layout
       title="AI Services - Zion Tech Group"
-<<<<<<< HEAD
-<<<<<<< HEAD
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
     >
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -379,11 +418,6 @@ export default function AIServices() {
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -553,10 +587,6 @@ export default function AIServices() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function AIServices() {;
   return (
     <Layout
@@ -575,10 +605,6 @@ export default function AIServices() {;
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -604,20 +630,13 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               AI Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
 
-
-<<<<<<< HEAD
-=======
-      description="Comprehensive AI solutions for modern businesses"
+description="Comprehensive AI solutions for modern businesses"
       description="Comprehensive AI services including machine learning, computer vision, NLP, and cutting-edge quantum AI solutions."
     >
       <div className="min-h-screen bg-gray-50 py-20">
@@ -1318,12 +1337,9 @@ origin/automation-improvements-final
       </div>
     </Layout>;
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
             </p>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1336,21 +1352,12 @@ origin/automation-improvements-final
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
 }
 
-<<<<<<< HEAD
-=======
-=======
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+}
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -1403,6 +1410,7 @@ const stats = [
   { number: "48hrs", label: "Average Response Time" }
 ];
 
+<<<<<<< HEAD
 export default function AIServices() {
   
     >
@@ -1436,31 +1444,151 @@ export default function AIServices() {
                 >
                   Schedule Demo
                 </motion.button>
-              </div>
-            </motion.div>
+export default function AIServicesPage() {
+  return (
+    <MainLayout
+      title="AI Services - Zion Tech Group"
+      description="Cutting-edge AI solutions including natural language processing, computer vision, chatbots, and machine learning models."
+      keywords="AI services, machine learning, natural language processing, computer vision, chatbots, artificial intelligence"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-5xl font-bold text-white mb-6">
+=======
+export default function AIServicesPage() {
+  return (
+    <MainLayout>
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI services and solutions for your business" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4 py-12">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Harness the power of artificial intelligence to transform your business
+            </p>
+<<<<<<< HEAD
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </motion.div>
+            ))}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>
-        </section>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {aiServices.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+              >
+                <div className="flex items-center mb-4">
+                  <service.icon className="h-8 w-8 text-blue-600 mr-3" />
+                  <h3 className="text-2xl font-semibold text-gray-800">{service.title}</h3>
+                </div>
+                <p className="text-gray-600 mb-6">{service.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">Benefits:</h4>
+                  <ul className="space-y-2">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <Star className="h-4 w-4 text-yellow-500 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex justify-between items-center">
+                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                  <Link
+                    href="/contact"
+                    className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
+                  >
+                    Get Started
+                    <ArrowRight className="h-4 w-4 ml-2" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+<<<<<<< HEAD
+=======
+          {/* Contact Information */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gray-800 rounded-lg p-6 mt-8"
+          >
+            <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+            <div className="space-y-3">
+              <div className="flex items-center text-white">
+                <Phone className="h-5 w-5 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center text-white">
+                <Mail className="h-5 w-5 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center text-white">
+                <MapPin className="h-5 w-5 mr-2" />
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </Layout>
+
   );
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
 
 }
 
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
 }
     </Layout>);
@@ -1471,8 +1599,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

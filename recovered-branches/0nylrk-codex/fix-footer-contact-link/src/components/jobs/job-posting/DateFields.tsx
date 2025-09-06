@@ -4,37 +4,19 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import {
 
-
 import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
   Popover,
   PopoverContent,
   PopoverTrigger,;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
-
-
-
 
 import React from "react";
 import { format } from "date-fns";
@@ -47,24 +29,12 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-=======
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface DateFieldsProps {
   startDate: Date | undefined;
   setStartDate: (date: Date | undefined) => void;
@@ -77,13 +47,6 @@ export function DateFields({
   endDate
   setEndDate
 }: DateFieldsProps) {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from 'react',
 import { format } from 'date-fns',
@@ -93,31 +56,15 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",
 import { FormControl } from "@/components/ui/form",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
   endDate: Date | undefined,
   setEndDate: (date: Date | undefined) => void
 }
-<<<<<<< HEAD
 
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -129,12 +76,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               <Button
                 variant={"outline"}
                 className={cn(
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function DateFields(): any ({;
   startDate,;
   setStartDate,;
@@ -143,16 +85,11 @@ export function DateFields(): any ({;
 }: DateFieldsProps) {;
   return (
 
-<<<<<<< HEAD
                   "w-full md:w-[240px] pl-3 text-left font-normal",
 
-=======
-                  "w-full md: w-[240px] pl-3 text-left font-normal"
+"w-full md: w-[240px] pl-3 text-left font-normal"
                   "w-full md:w-[240px] pl-3 text-left font-normal",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   !startDate && "text-muted-foreground"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 )}
               >
                 {startDate ? (
@@ -166,14 +103,10 @@ export function DateFields(): any ({;
           <PopoverContent className="w-auto p-0" align="start">
             <Calendar
               mode="single"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-              selected={startDate}
+selected={startDate}
               onSelect={setStartDate}
               disabled={(date) => date > new Date()}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react',;
 import { format } from 'date-fns',;
 import { Label } from "@/components/ui/label",;
@@ -182,23 +115,18 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",;
 import { FormControl } from "@/components/ui/form",;
 import { cn } from "@/lib/utils",;
-=======
               selected={startDate}
               onSelect={setStartDate}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface DateFieldsProps {;
   startDate: Date | undefined;
   setStartDate: (date: Date | undefined) => void;
   endDate: Date | undefined;
   setEndDate: (date: Date | undefined) => void
 }
-<<<<<<< HEAD
 ;
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {;
   return (;
-<<<<<<< HEAD
 
-=======
 ;
 interface DateFieldsProps {;
   startDate:Date | undefined,;
@@ -209,22 +137,19 @@ interface DateFieldsProps {;
 ;
 export function DateFields({ startDate, setStartDate, endDate, setEndDate } DateFieldsProps) {;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       <div>;
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>;
         <Popover>;
           <PopoverTrigger asChild>;
             <FormControl>;
-<<<<<<< HEAD
               <Button
                 variant={"outline"}
                 className={cn(
                   "w-full md: w-[240px] pl-3 text-left font-normal",
                   !startDate && "text-muted-foreground",
                 )}>;
-=======
-              <Button;
+<Button;
                 variant={"outline"}
                 className={cn(;
                   "w-full md:w-[240px] pl-3 text-left font-normal",;
@@ -235,53 +160,32 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
                   !startDate && "text-muted-foreground";
                 )}
               >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {startDate ? (;
                   format(startDate, "PPP");
                 ) : (;
                   <span>Pick a date</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
-<<<<<<< HEAD
-=======
-                )}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+)}
               </Button>;
             </FormControl>;
           </PopoverTrigger>;
           <PopoverContent className="w-auto p-0" align="start">;
-<<<<<<< HEAD
-=======
-              </Button>
+</Button>
             </FormControl>
           </PopoverTrigger>
           <PopoverContent className="w-auto p-0" align="start">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Calendar
               mode="single"
               selected={startDate}
               onSelect={setStartDate}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               disabled={(date) =>;
                 date > new Date();
               }
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-              disabled={(date) =>;
+disabled={(date) =>;
                 date > new Date();
               }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initialFocus
             />
           </PopoverContent>
@@ -295,22 +199,14 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
               <Button
                 variant={"outline"}
                 className={cn(
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
+"w-full md:w-[240px] pl-3 text-left font-normal",
 
-                  "w-full md:w-[240px] pl-3 text-left font-normal",
-
-=======
                   "w-full md:w-[240px] pl-3 text-left font-normal",
 
                   "w-full md: w-[240px] pl-3 text-left font-normal"
 
                   "w-full md:w-[240px] pl-3 text-left font-normal",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   !endDate && "text-muted-foreground"
                 )}
               >
@@ -337,10 +233,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
                 date < new Date();
               }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              disabled={(date) => date > new Date()}
+disabled={(date) => date > new Date()}
             <Calendar;
               mode="single";
               selected={startDate}
@@ -348,16 +241,11 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
               disabled={(date) =>;
                 date > new Date();
               }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initialFocus;
             />;
           </PopoverContent>;
         </Popover>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from './react';
 import { format  } from './date - fns';
@@ -408,7 +296,6 @@ function DateFields() {
               on_select={setStartDate}
               disabled={(date) => date > new Date ()}
               initial_focus;
-=======
 ;
       <div>;
         <Label htmlFor="expiryDate">Expiry Date (Optional)</Label>;
@@ -431,16 +318,12 @@ function DateFields() {
             </FormControl>;
           </PopoverTrigger>;
           <PopoverContent className="w-auto p-0" align="start">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             />;
           </PopoverContent>;
         </Popover>;
       </div>;
-<<<<<<< HEAD
-=======
-  );
+);
     </div>);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div>;
         <Label html_for="expiry_date">Expiry Date (Optional)</Label>;
         <Popover>;
@@ -469,8 +352,6 @@ function DateFields() {
         </Popover>;
       </div>;
 }
-<<<<<<< HEAD
-=======
     </div>);
 }
             <Calendar;
@@ -495,6 +376,3 @@ function DateFields() {
     </div>;
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -4,12 +4,25 @@ const { execSync } = require('child_process')
 #!/usr/bin/env node
 const { execSync } = require('child_process')
 
+#!/usr/bin/env node
+const { execSync } = require('child_process')
+
+
+
+
+
+#!/usr/bin/env node
+const { execSync } = require('child_process')
+
+
 function run(cmd) {
   return execSync(cmd, { stdio: 'inherit' })
 }
+
 function currentBranch() {
   return execSync('git rev-parse --abbrev-ref HEAD').toString().trim()
 }
+
 function ensureUpstream() {
   try {
     execSync('git remote get-url origin', { stdio: 'ignore' })
@@ -17,6 +30,7 @@ function ensureUpstream() {
     throw new Error('No git remote named origin is configured')
   }
 }
+
 function commitAll(message) {
   run('git add -A')
   try {
@@ -25,10 +39,12 @@ function commitAll(message) {
     // no changes to commit
   }
 }
+
 function push(branch) {
   ensureUpstream()
   run(`git push -u origin ${branch}`)
 }
+
 function mergeIntoMain(fromBranch) {
   ensureUpstream()
   const original = currentBranch()
@@ -38,6 +54,7 @@ function mergeIntoMain(fromBranch) {
   run('git push origin main')
   if (currentBranch() !== original) run(`git checkout ${original}`)
 }
+
 if (require.main === module) {
   const action = process.argv[2]
   switch (action) {

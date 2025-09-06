@@ -3,49 +3,98 @@ function fixSyntaxErrors(content) {
   // Fix extra commas in JSX attributes
   content = content.replace(/className="[^"]*"\s*,\s*>/g, (match) => {
     return match.replace(/,\s*$/, '')});
+  
   // Fix malformed function "declarations": {, -> {
   content = content.replace(/\{\s*,/g, '{');
+  
   // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*$/gm, '>');
+  
   // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*</g, '><');
+  
   // Fix malformed function "declarations": ) {, -> ) {
   content = content.replace(/\)\s*\{\s*,/g, ') {');
+  
   // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*$/gm, '>');
+  
   // Fix missing closing braces in for loops
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
     return match.replace(/\}\);/g, '}\n      });')});
+  
   // Fix missing closing braces in for loops (alternative pattern)
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
     return match.replace(/\}\);/g, '}\n      });')});
+  
   // Fix malformed JSON "objects": {, -> {
   content = content.replace(/JSON\.stringify\(\{\s*,/g, 'JSON.stringify({');
+  
   // Fix missing closing braces in for loops (CLS pattern)
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\s*console\.log\('"CLS": ', clsValue\);\s*\}\);/g, (match) => {
     return match.replace(/\}\);/g, '}\n      });')});
+  
   return content}
+
 // Function to process a file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8';);
     const fixedContent = fixSyntaxErrors(conten;t;);
+    
     if ( {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
       fs.writeFileSync(filePath, fixedContent, 'utf8')}
+      
       return true}
     return false} catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
     return false}
 }
 console.log('🔧 Applying final comprehensive fixes...');
+
 // Fix SEO.tsx - remove everything after the return statement
 const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
 const seoFixed = seoContent.split('  );')[0] + '  );';
 fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
 console.log('✅ Fixed SEO.tsx');
+<<<<<<< HEAD:final-comprehensive-fix.cjs
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+<<<<<<< HEAD:backup-problematic-files/final-comprehensive-fix.cjs
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:final-comprehensive-fix.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/final-comprehensive-fix.cjs
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
 const talentFixed = talentContent
@@ -71,6 +120,12 @@ fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
 
 
 
+
+
+
+
+
+
 const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
@@ -82,7 +137,42 @@ const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
 const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
 fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
 console.log('✅ Fixed use-toast.ts');
+<<<<<<< HEAD:final-comprehensive-fix.cjs
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+<<<<<<< HEAD:backup-problematic-files/final-comprehensive-fix.cjs
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:final-comprehensive-fix.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/final-comprehensive-fix.cjs
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
 const servicesFixed = servicesContent
@@ -97,6 +187,14 @@ const servicesFixed = servicesContent
   .replace(/reviewCount: 156/g, '"reviewCount": 156');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
 
+
+
+
+
+
+
+
+
 // Fix useAuth.tsx - fix malformed function
 const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
 const authFixed = authContent
@@ -108,13 +206,29 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 
 
 
+
+
+
+
+
+
 ) {
     ) {
     if (processFile(file)) {
       totalFixed++}
   }
 }
+
 }
+
+
+
+
+
+
+
+
+
 
 if ( {
   ) {
@@ -122,9 +236,38 @@ if ( {
 console.log('✨ Final comprehensive fixes completed!');
   }} else {
   }
+<<<<<<< HEAD:final-comprehensive-fix.cjs
 console.log('✨ Final comprehensive fixes completed!');
   }} else {
   }
+
+
+
+
+console.log('✨ Final comprehensive fixes completed!');
+  }} else {
+  }
+
+
+
+
+console.log('✨ Final comprehensive fixes completed!');
+  }} else {
+  }
+
+=======
+<<<<<<< HEAD:backup-problematic-files/final-comprehensive-fix.cjs
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:final-comprehensive-fix.cjs
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/final-comprehensive-fix.cjs
 #!/usr/bin/env node;
 const fs = require('fs')
     return match.replace(/,\s*$/, '')
@@ -166,4 +309,12 @@ const fs = require('fs')
   .replace(/reviewCount: 156/g, '"reviewCount")
   .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated")
   .replace(/"isLoading": fals e/g, '"isLoading")
+.replace(/"isLoading": fals e/g, '"isLoading")
+
   .replace(/"isLoading": fals e/g, '"isLoading")
+
+
+
+
+  .replace(/"isLoading": fals e/g, '"isLoading")
+

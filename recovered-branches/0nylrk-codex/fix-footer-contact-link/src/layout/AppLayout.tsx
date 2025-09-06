@@ -1,72 +1,19 @@
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from "react";
-import {AppHeader} from "./AppHeader";
-import {Footer} from "@/components/Footer";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from "react",
 import { AppHeader } from "./AppHeader";
 import { Footer } from "@/components/Footer";
-import { AppHeader } from "./AppHeader",
-import { Footer } from "@/components/Footer",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AppLayoutProps {
-
-  children: React.ReactNode
-
-  hideFooter?: boolean
+  children: React.ReactNode;
+  hideFooter?: boolean;
 }
-export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from "react";
-import {AppHeader} from "./AppHeader";
-import {Footer} from "@/components/Footer";
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
-      <main className="flex-grow">
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-import React from "react",;
-import { AppHeader } from "./AppHeader",;
-import { Footer } from "@/components/Footer",;
-
-interface AppLayoutProps {;
-  children: React && React.ReactNode,;
-  hideFooter?: boolean;
-}
-  return (
-<<<<<<< HEAD
-=======
-import React from "react",;
-import { AppHeader } from "./AppHeader",;
-import { Footer } from "@/components/Footer",;
-
-interface AppLayoutProps {;
-  children: React && React.ReactNode,;
-  hideFooter?: boolean;
+      <main className="flex-grow">{children}</main>
+      {!hideFooter && <Footer />}
+    </div>
+  );
 }
 export function AppLayout(): any ({ children, hideFooter = false }: AppLayoutProps) {;
   return (
@@ -98,15 +45,10 @@ interface AppLayoutProps {;
 ;
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="flex flex-col min-h-screen bg-background">;
       <AppHeader />;
       <main className="flex-grow">;
         {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
       </main>;
       {!hideFooter && <Footer />}
 
@@ -114,20 +56,12 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
   );
 }
 
-=======
-
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>;
 }
 
-
 ;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { AppHeader } from './AppHeader';
 import { Footer } from '@/components / Footer';
@@ -148,7 +82,6 @@ function AppLayout() {
       {!hide_footer && <Footer />}
     </div>);
 }
-<<<<<<< HEAD
   ),;}
  interface AppLayoutProps {
   children: React.ReactNode;
@@ -169,6 +102,3 @@ hideFooter?: boolean
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

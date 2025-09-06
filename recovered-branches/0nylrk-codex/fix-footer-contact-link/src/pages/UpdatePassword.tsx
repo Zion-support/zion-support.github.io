@@ -12,8 +12,6 @@ import {toast} from "@/hooks/use-toast";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {cleanupAuthState} from "@/utils/authUtils";
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Form validation schema;
 const updatePasswordSchema = z;
   .object({;
@@ -30,22 +28,13 @@ type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
 
 export default function UpdatePassword() {;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-<<<<<<< HEAD
 
-
-
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { useNavigate, useLocation } from "react-router-dom",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -79,9 +68,6 @@ import { toast } from "@/hooks/use-toast",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { cleanupAuthState } from "@/utils/authUtils",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 // Form validation schema;
 const updatePasswordSchema = z;
   .object({;
@@ -104,11 +90,6 @@ export default function UpdatePassword() {;
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Form validation schema
 
 const updatePasswordSchema = z
@@ -119,11 +100,8 @@ const updatePasswordSchema = z
       .max(64, "Password must be less than 64 characters");
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-    message: "Passwords do not match"
+message: "Passwords do not match"
     path: ["confirmPassword"]})
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
 export default function UpdatePassword() {
@@ -133,16 +111,11 @@ export default function UpdatePassword() {
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default function UpdatePassword() {;
   const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState<string | null>(null);
@@ -157,10 +130,6 @@ export default function UpdatePassword() {
   const [success, setSuccess] = useState(false),
   const navigate = useNavigate(),
   const location = useLocation(),
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema)
@@ -169,11 +138,7 @@ export default function UpdatePassword() {
       confirmPassword: ""}})
   useEffect(() => {
     // Extract access token from URL hash
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    const hashParams = new URLSearchParams(location.hash.substring(1));
+const hashParams = new URLSearchParams(location.hash.substring(1));
     const token = hashParams.get("access_token");
     const hashParams = new URLSearchParams(location.hash.substring(1)),
     const token = hashParams.get("access_token"),
@@ -185,19 +150,12 @@ export default function UpdatePassword() {
     }
     // Clean up auth state to prevent issues
     cleanupAuthState()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     const hashParams = new URLSearchParams(location.hash.substring(1)),
     const token = hashParams.get("access_token"),
-    
-
 
     if (token) {
       setAccessToken(token)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState, useEffect } from './react';
 import { use_navigate, use_location } from './react-router-dom';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -252,69 +210,46 @@ if ( {) {
   $2
 }
       setAccessToken (token);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
       set_error ("No access token found. Please request a new password reset link.");
     }
-<<<<<<< HEAD
-
 
   }, [location]),
 
-
-
-=======
-  }, [location]);
+}, [location]);
   }, [location]),
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     } else {
       setError("No access token found. Please request a new password reset link.")
     }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
       setError("No access token found. Please request a new password reset link.")
       return
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Initialize react-hook-form;
   const form = useForm<UpdatePasswordFormValues>({;
     resolver: zodResolver(updatePasswordSchema),;
     defaultValues: {;
       password: "",;
       confirmPassword: ""}}),;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     // Extract access token from URL hash;
     const hashParams = new URLSearchParams(location && location.hash.substring(1));
     const token = hashParams && hashParams.get("access_token");
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (token) {;
       setAccessToken(token);
     } else {;
       setError("No access token found. Please request a new password reset link.");
     }
-<<<<<<< HEAD
 
     // Clean up auth state to prevent issues;
     cleanupAuthState();
   }, [location]);
 
-=======
-    // Clean up auth state to prevent issues;
+// Clean up auth state to prevent issues;
     cleanupAuthState();
   }, [location]);
   // Form submission handler;
@@ -395,16 +330,12 @@ export default function UpdatePassword() {;
 
     }
 
-
     setIsLoading(true),
-
 
     }
     setIsLoading(true);
 
     setIsLoading(true),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
@@ -495,38 +426,26 @@ export default function UpdatePassword() {;
     // Clean up auth state to prevent issues;
     cleanupAuthState();
   }, [location]),;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Form submission handler;
   const onSubmit = async (data: UpdatePasswordFormValues) => {;
     if (!accessToken) {;
       setError("No access token found. Please request a new password reset link."),;
       return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    }
+}
 ;
     setIsLoading(true),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     }
     }
 
   },
 
-
   return (
-
-<<<<<<< HEAD
 
           title: "Password update failed",
           description: error.message,
           variant: "destructive"}),
         setError(error.message),
-
 
         return
       }
@@ -550,11 +469,9 @@ export default function UpdatePassword() {;
     } finally {
       setIsLoading(false)
 
-=======
-    }
+}
 ;
     setIsLoading(true),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {;
       // Set the session with the access token;
       await supabase && supabase.auth.setSession({;
@@ -582,9 +499,7 @@ export default function UpdatePassword() {;
 
       // Clean auth state and redirect after a delay;
       cleanupAuthState();
-<<<<<<< HEAD
-=======
-    }
+}
   }
   return (
 ;
@@ -630,17 +545,10 @@ export default function UpdatePassword() {;
         description: "You can now log in with your new password."}),;
       // Clean auth state and redirect after a delay;
       cleanupAuthState(),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setTimeout(() => {;
         navigate("/login");
       }, 3000);
     } catch (error: any) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       console && console.error("Password update error:", error);
       toast({;
         title: "Password update failed",;
@@ -655,9 +563,7 @@ export default function UpdatePassword() {;
 
   return (
 
-<<<<<<< HEAD
-=======
-      console.error("Password update error:", error),;
+console.error("Password update error:", error),;
       toast({;
         title: "Password update failed",;
         description: error.message || "An unexpected error occurred",;
@@ -668,9 +574,6 @@ export default function UpdatePassword() {;
     }
   };
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Header />;
       <div className="flex min-h-screen bg-zion-blue">;
@@ -684,57 +587,31 @@ export default function UpdatePassword() {;
                 Enter your new password below.;
               </p>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               {error && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
                   <p className="text-sm">{error}</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  <Button;
+<Button;
                     className="mt-3 text-xs";
                     variant="outline";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     onClick={() => navigate('/forgot-password')}
                   >
                     Request new reset link
                   </Button>
                 </div>
               )}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   <Button
                     className="mt-3 text-xs"
                     variant="outline"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-                  <Button 
+<Button 
                     className="mt-3 text-xs"
                     variant="outline"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                   <Button ;
                     className="mt-3 text-xs";
                     variant="outline";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     onClick={() => navigate('/forgot-password')}
                   >;
                     Request new reset link;
@@ -742,19 +619,6 @@ export default function UpdatePassword() {;
                 </div>;
               )}
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
@@ -771,15 +635,7 @@ export default function UpdatePassword() {;
               ) : (
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {success ? (;
                 <div className="text-center py-8">;
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;
@@ -793,44 +649,32 @@ export default function UpdatePassword() {;
                     Redirecting you to login...;
                   </p>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               ) : (;
                 <Form {...form}>;
                   <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <FormField
                       control={form && form.control}
                       name="password"
-=======
-              ) :(;
+) :(;
                 <Form {...form}>;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField;
                       control={form.control}
                       name="password";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                     <FormField
                       control={form && form.control}
                       name="password"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>;
                           <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                    <FormField
+<FormField
                       control={form.control}
                       name="password"
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>
                           <FormControl>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             <Input
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
@@ -841,7 +685,6 @@ export default function UpdatePassword() {;
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
-<<<<<<< HEAD
                     />;
 ;
                     <FormField;
@@ -866,18 +709,14 @@ export default function UpdatePassword() {;
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
                           <FormControl>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                             <Input
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               placeholder="••••••••"
-<<<<<<< HEAD
-=======
-                            <Input;
+<Input;
                               type="password";
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
                               placeholder="••••••••";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                               disabled={isLoading}
                               {...field}
                             />;
@@ -885,13 +724,9 @@ export default function UpdatePassword() {;
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
-<<<<<<< HEAD
 
                     />;
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <FormField
                       control={form && form.control}
                       name="confirmPassword"
@@ -909,7 +744,6 @@ export default function UpdatePassword() {;
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
-<<<<<<< HEAD
 
                     />;
 
@@ -922,8 +756,7 @@ export default function UpdatePassword() {;
 
                     <div className="text-center">;
 
-=======
-                    />;
+/>;
                               disabled={isLoading}
                               {...field}
                             />
@@ -940,18 +773,11 @@ export default function UpdatePassword() {;
                       {isLoading ? "Updating..." : "Update Password"}
                     </Button>
                     <div className="text-center">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         variant="link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
                         onClick={() => navigate("/login")}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-                        type="button"
+type="button"
                       >
                         Back to login
                       </Button>
@@ -978,9 +804,6 @@ export default function UpdatePassword() {;
       <Footer />
     </>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Clean up auth state to prevent issues;
     cleanupAuthState ();
   }, [location]);
@@ -1125,10 +948,6 @@ if ( {) {
                         variant="link";
                         className="text - sm font - medium text - zion - cyan hover:text - zion - cyan - light p - 0";
                         on_click={() => navigate ("/login")}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
                     <Button;
                       type="submit";
@@ -1143,29 +962,14 @@ if ( {) {
                         variant="link";
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0";
                         onClick={() => navigate("/login")}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         type="button";
                       >;
                         Back to login;
                       </Button>;
                     </div>;
                   </form>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-
-=======
-=======
-
 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       name="confirmPassword";
                       render={({ field }) => (;
                         <FormItem>;
@@ -1184,32 +988,23 @@ if ( {) {
                   </form>
                 </Form>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </div>;
           </div>;
         </div>;
         <div className="hidden lg: block relative w-0 flex-1">;
-<<<<<<< HEAD
-=======
-                </Form>;
+</Form>;
               )}
             </div>;
           </div>;
         </div>;
         <div className="hidden lg:block relative w-0 flex-1">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
             <div className="flex flex-col justify-center items-center h-full px-8">;
               <div className="max-w-md text-center">;
                 <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;
                 <p className="text-lg text-white/80">;
-<<<<<<< HEAD
-=======
-                </Form>)}
+</Form>)}
             </div>;
           </div>;
         </div>;
@@ -1219,11 +1014,6 @@ if ( {) {
               <div className="max - w-md text - center">;
                 <h3 className="text - 3xl font - bold text - white mb - 4">Password Recovery</h3>;
                 <p className="text - lg text - white / 80">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Set a strong password to secure your account and continue your journey in the Zion marketplace.;
                 </p>;
               </div>;
@@ -1233,19 +1023,9 @@ if ( {) {
       </div>;
       <Footer />;
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </>);
+</>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
     </>);
     </>;
@@ -1298,10 +1078,7 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
     </>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

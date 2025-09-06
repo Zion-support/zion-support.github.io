@@ -1,17 +1,22 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -19,22 +24,44 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 module.exports = type EnhancedRealMicroSaasService = {; id: string; name: string; category?: string; description?: string; tagline?: string; price?: string | number; period?: string; features?: string[]; popular?: boolean; icon?: string; color?: string; textColor?: string; link?: string; marketPosition?: string; targetAudience?: string; trialDays?: number; setupTime?: string; realService?: boolean; technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; variant?: string; contactInfo?: { mobile: string; email: string; address: string; website: string}; realImplementation?: boolean; implementationDetails?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number}; import { additionalEnhancedServices } from "./additional-real-services"; import { realMarketServices } from "./real-market-services"; const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] => (items | []).map((s) => ({ .s })); export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [.mapToEnhanced(realMarketServices as unknown as []),.mapToEnhanced(additionalEnhancedServices as unknown as []),]; export const serviceCategories: string[] = Array.from( new Set( enhancedRealMicroSaasServices .map((s) => s.category) .filter((v): v is string = > Boolean(v)); ); ).sort(); export const getServicesByCategory = (category: string) => {; if (!category | category === "All") return enhancedRealMicroSaasServices; return enhancedRealMicroSaasServices.filter((s) => s.category === category)}; export const getPopularServices = () => enhancedRealMicroSaasServices .filter((s) => !s.popular);.sort((a,b) => (b.rating | 0) - (a.rating | 0));'"'"
 import React from 'react';
 interface EnhancedrealmicrosaasservicesProps {
   // Add props here as needed
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+
 }
 }
 
@@ -42,9 +69,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+
+
 export default function Enhancedrealmicrosaasservices({ }: EnhancedrealmicrosaasservicesProps) {
   return (
     <div>
@@ -53,37 +86,28 @@ export default function Enhancedrealmicrosaasservices({ }: Enhancedrealmicrosaas
     </div>
   );
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
+
+}
+
+
+
+
+
+
+
+
+
 }
 }
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 
 
 }
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-
-=======
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-
-
-
 
 }
 ursor/add-new-services-and-deploy-updates-0462
@@ -92,9 +116,61 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 =======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+}
+}
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+}
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

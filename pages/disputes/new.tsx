@@ -27,14 +27,32 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
-
-
 import {useCurrentUser} from '../../utils/auth';
+
+const REASONS = [;
+  'Scope Disagreement',;
+  'Quality Issues',;
+  'Delivery Delay',;
+  'Payment Issue',;
+  'Communication Breakdown',;
+  'Other',;
+
+] as const;
+type ReasonType = (typeof REASONS)[number];
+
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useCurrentUser} from '../../utils/auth';
 
+const REASONS = [
+  'Scope Disagreement',
+  'Quality Issues',
+  'Delivery Delay',
+  'Payment Issue',
+  'Communication Breakdown',
+  'Other',
+] as const;
 
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -46,7 +64,6 @@ const REASONS = [
 
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
-
 
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
@@ -170,6 +187,8 @@ import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import {useCurrentUser} from '../../utils / auth';
 ;
 const REASONS = [;
+
+const REASONS = [
   'Scope Disagreement',
   'Quality Issues',
   'Delivery Delay',
@@ -220,7 +239,6 @@ function handle_submit() {
     try {
       const res = await fetch ('/api / disputes', {
         method: 'POST',
-
 
   return (
 
@@ -363,10 +381,8 @@ if ( {) {
         </form>;
       </div>;
 
-
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
-
 
 function toBase64(): any (file: File): Promise<string> {;
   return new Promise((resolve, reject) => {;
@@ -375,9 +391,7 @@ function toBase64(): any (file: File): Promise<string> {;
     reader && reader.onerror = reject;
     reader && reader.readAsDataURL(file);
 
-
   });
-
 
     reader.readAsDataURL(file)
   })
@@ -412,3 +426,4 @@ const reader = new FileReader ();
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+

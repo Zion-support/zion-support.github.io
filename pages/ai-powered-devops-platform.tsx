@@ -92,6 +92,18 @@ export default function AIPoweredDevOpsPlatformPage() {
 	)
 }
 
+import Head from 'next / head';
+import Layout from '../components / layout / Layout';
+export default /**
+ * AIPoweredDevOpsPlatformPage - Function description
+ */
+function AIPoweredDevOpsPlatformPage() {
+import React from 'react',
+import React from 'react';
+import Head from 'next/head';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIPoweredDevOpsPlatformPage() {
+
   return (
     <>;
       <Head>;
@@ -125,5 +137,4 @@ export default function AIPoweredDevOpsPlatformPage() {
       />;
     </>);
 ;
-
 

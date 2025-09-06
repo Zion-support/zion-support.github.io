@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Upload, Trash2, Plus } from "lucide-react",
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -64,10 +58,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.target.files));
     }
   },
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useRef } from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -83,26 +73,15 @@ type Screenshot = {
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files")
       return
     }
     // Limit the number of screenshots
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-    const maxScreenshots = platform === "ios" ? 10 : 8;
+const maxScreenshots = platform === "ios" ? 10 : 8;
     const availableSlots = maxScreenshots - screenshots.length;
     if (availableSlots <= 0) {
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
@@ -144,18 +123,12 @@ type Screenshot = {
       addScreenshots(Array.from(e.dataTransfer.files))
     }
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
     
     if (availableSlots <= 0) {
-<<<<<<< HEAD
 
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
+toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
       return
     }
     
@@ -205,8 +178,6 @@ type Screenshot = {
       addScreenshots(Array.from(e.dataTransfer.files))
     }
   };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return
   },;
@@ -263,27 +234,13 @@ type Screenshot = {
       addScreenshots(Array.from(e.dataTransfer.files));
     }
   },
-  
-<<<<<<< HEAD
 
-  
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -337,12 +294,9 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array && Array.from(e && e.dataTransfer.files));
     }
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
-=======
-  return (
+return (
 
 import React, { useState, useRef } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -437,61 +391,37 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
   },;
   ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging
               ? "border-zion-cyan bg-zion-cyan/10"
-<<<<<<< HEAD
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
-<<<<<<< HEAD
-<<<<<<< HEAD
           onDrop={handleDrop}>;
           <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
           <p className="text-sm mb-2">Drag & drop screenshots here</p>;
-=======
-          onDrop={handleDrop}
+onDrop={handleDrop}
         >
           <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           onDrop={handleDrop}>;
           <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
           <p className="text-sm mb-2">Drag & drop screenshots here</p>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <input
             ref={fileInputRef}
             type="file"
@@ -499,15 +429,12 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           />;
           <Button
             variant="outline" 
             onClick={() => fileInputRef && fileInputRef.current?.click()}
-=======
-        <div ;
+<div ;
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${;
             isDragging ;
               ? "border-zion-cyan bg-zion-cyan/10" ;
@@ -530,14 +457,12 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
           <Button ;
             variant="outline" ;
             onClick={() => fileInputRef.current?.click()}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             className="mt-2";
           >;
             <Plus className="mr-2 h-4 w-4" />;
             Select Files;
           </Button>;
         </div>;
-<<<<<<< HEAD
 
         <div className="text-xs text-gray-400 mb-4">;
           {platform === "ios" ;
@@ -552,19 +477,12 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
               <img
                 src={screenshot && screenshot.url}
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
               />;
               <button
                 onClick={() => removeScreenshot(screenshot && screenshot.id)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        ;
+;
         <div className="text-xs text-gray-400 mb-4">;
           {platform === "ios" ;
             ? "Recommended size:1290x2796 pixels for iPhone. Max 10 screenshots.";
@@ -582,9 +500,6 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
               />;
               <button;
                 onClick={() => removeScreenshot(screenshot.id)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity";
               >;
                 <Trash2 className="h-3 w-3" />;
@@ -592,28 +507,13 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
             </div>;
           ))}
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
         </div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
-        </div>;
+</div>;
       </CardContent>;
     </Card>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
 };
   id: string,
@@ -772,10 +672,6 @@ if ( {) {
     </Card>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;
 },; interface ScreenshotManagerProps {
   platform: AppPlatform 
@@ -846,6 +742,3 @@ return filtered;
     </Card>;
   );
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GetServerSideProps, GetServerSidePropsContext } from 'next / types';
 import { createServerSideClient } from '../src / utils / supabase / server';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import { User, Mail, Calendar, Shield } from 'lucide-react';
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import Link from 'next / link';
 import Head from 'next / head';
@@ -15,14 +11,8 @@ import type { User as SupabaseUser } from '@supabase / supabase - js';
 interface PrivatePageProps {
   user: SupabaseUser;
 
-<<<<<<< HEAD
-=======
-
 interface PrivatePageProps {;
   user: SupabaseUser;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 interface PrivatePageProps {;
   user: SupabaseUser;
 
@@ -38,22 +28,19 @@ import type { User as SupabaseUser } from '@supabase/supabase-js';
 interface PrivatePageProps {user: SupabaseUser;
 interface PrivatePageProps {;
   user: SupabaseUser;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default /**
  * PrivatePage - Function description
  */
 function PrivatePage() {
   return (
+<title>Private Profile - Zion Tech Marketplace</title>
+        <meta name="description" content="Private user profile page" />
+      </Head>
         <Card>
           <CardHeader>
             <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -94,6 +81,7 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
+
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
               <div className="grid gap-2 text-sm">
@@ -112,6 +100,7 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
+<div className="flex gap-2">
               <Button asChild>
                 <Link href=&quot;/dashboard&quot;>
                   Go to Dashboard
@@ -138,10 +127,7 @@ if ( {) {
     return {
       redirect: {
         destination: '/auth / login';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <>
+<>
       <Head>
         <title>Private Profile - Zion Tech Marketplace</title>;
         <meta name=&quot;description&quot; content=&quot;Private user profile page&quot; />
@@ -259,31 +245,16 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
   if (error |!data?.user) {return {;
       redirect: {;
         destination: '/auth/login';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         permanent: false}}
   }
   return {
     props: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       user: data.user}}
 }
-=======
 
-
-=======
-=======
-
-
-      user: data.user}}
+user: data.user}}
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -301,7 +272,6 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
     } catch (error) {
     console.error("Error:", error);
@@ -316,17 +286,9 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
 
 } ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 } ;
 } ;
 } ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,19 +1,14 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 console.log('🧹 Starting Final Cleanup...');
 
 // Function to clean merge conflict markers
 function cleanMergeConflicts(content) {
   return content
-    .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-    .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-    .replace(/^<<<<<<< [^\n]+$/gm, '')
-    .replace(/^=======$/gm, '')
-    .replace(/^>>>>>>> [^\n]+$/gm, '');
-}
+    .replace(/    .replace(/    .replace(/^    .replace(/^$/gm, '')
+    .replace(/^}
 
 // Function to clean common syntax errors
 function cleanSyntaxErrors(content) {
@@ -48,6 +43,18 @@ function processFile(filePath) {
     let cleaned = cleanMergeConflicts(content);
     cleaned = cleanSyntaxErrors(cleaned);
     
+<<<<<<< HEAD
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findConflictedFiles(filePath, conflictedFiles);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      const content = fs.readFileSync(filePath, 'utf8');
+  content = content.replace(/  content = content.replace(/  content = content.replace(/  
+  // Clean up any remaining artifacts
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  
+  // Remove any remaining conflict markers
+=======
     if (cleaned !== content) {
       fs.writeFileSync(filePath, cleaned);
       return true;
@@ -62,10 +69,17 @@ function processFile(filePath) {
 // Function to recursively process directory
 function processDirectory(dirPath) {
   let processedCount = 0;
+=======
+// Function to recursively find all files with merge conflicts
+function findConflictedFiles(dir, conflictedFiles = []) {
+  const files = fs.readdirSync(dir);
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   
-  try {
-    const items = fs.readdirSync(dirPath);
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
+<<<<<<< HEAD
     for (const item of items) {
       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
@@ -100,3 +114,19 @@ const endTime = Date.now();
 console.log(`✅ Final cleanup completed!`);
 console.log(`📁 Processed ${processedFiles} files`);
 console.log(`⏱️  Took ${endTime - startTime}ms`);
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findConflictedFiles(filePath, conflictedFiles);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      const content = fs.readFileSync(filePath, 'utf8');
+  content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
+  content = content.replace(/>>>>>>> origin\/[^\n]+\n?/g, '');
+  content = content.replace(/>>>>>>> cursor\/[^\n]+\n?/g, '');
+  
+  // Clean up any remaining artifacts
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  
+  // Remove any remaining conflict markers
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

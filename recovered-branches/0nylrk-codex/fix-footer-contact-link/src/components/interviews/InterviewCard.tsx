@@ -11,8 +11,6 @@ import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/
 import {Clock, ExternalLink, MessageSquare, Video, X} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {InterviewResponseForm} from "./InterviewResponseForm";
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface InterviewCardProps {;
   interview: Interview,;
   onRefresh: () => Promise<void>;
@@ -20,23 +18,17 @@ interface InterviewCardProps {;
 
 export function InterviewCard(): any ({ interview, onRefresh }: InterviewCardProps) {;
 
-=======
 interface InterviewCardProps {
   interview: Interview,
   onRefresh: () => Promise<void>
 }
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const { user } = useAuth();
   const { respondToInterview, cancelInterview } = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -84,18 +76,11 @@ function InterviewCard() {
   $2
 }
       return `Took place ${formatDistanceToNow (interview_date)} ago`;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } else {
       return `Starts in ${formatDistanceToNow (interview_date)}`;
     }
   }
-<<<<<<< HEAD
-
-
-
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
@@ -103,18 +88,12 @@ function InterviewCard() {
       interview_id: interview.id, 
       status 
     }),
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    
+
 
     if (success) {
       toast({
         title: `Interview ${status}`
         description: `You have successfully ${status} the interview request.`
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading (true),
@@ -130,34 +109,26 @@ if ( {) {
       toast ({
         title: `Interview ${status}`,
         description: `You have successfully ${status} the interview request.`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       setIsResponseDialogOpen (false);
       await on_refresh ();
     } else {
-<<<<<<< HEAD
-
 
   },
 
   const handleCancelInterview = async () => {
     setIsLoading(true),
     const success = await cancelInterview(interview.id),
-    
 
 
     if (success) {
       toast({
         title: "Interview cancelled"
         description: "The interview has been cancelled successfully."
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       toast ({
         title: "Error",
         description: "Failed to respond to the interview request. Please try again.",
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
     }
     setIsLoading (false);
@@ -177,12 +148,8 @@ if ( {) {
       });
       await on_refresh ();
     } else {
-<<<<<<< HEAD
-
 
   },
-
-
 
   const getStatusBadge = () => {
     switch (interview.status) {
@@ -190,8 +157,6 @@ if ( {) {
         return <Badge className="bg-amber-500">Pending</Badge>;
       case 'confirmed':
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const isClient = user?.id === interview && interview.client_id;
   const isTalent = user?.id === interview && interview.talent_id;
 
@@ -217,11 +182,6 @@ if ( {) {
       return `Starts in ${formatDistanceToNow(interviewDate)}`;
     }
   };
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         return isInterviewLive ? 
           <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : 
@@ -293,7 +253,6 @@ if ( {) {
       case 'confirmed':;
         return isInterviewLive ? ;
           <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Badge className="bg-green-600">Confirmed</Badge>;
       case 'declined':;
         return <Badge variant="destructive">Declined</Badge>;
@@ -306,10 +265,7 @@ if ( {) {
       default:;
         return <Badge>{interview && interview.status}</Badge>;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
 
   const getOtherPartyName = () => {;
@@ -317,15 +273,10 @@ if ( {) {
       return interview && interview.talent_name || 'Talent';
     } else {;
       return interview && interview.client_name || 'Client';
-<<<<<<< HEAD
 
     }
 
   },
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
@@ -348,12 +299,10 @@ if ( {) {
               <p className="font-medium">{formattedDate}</p>;
               <p className="text-sm text-muted-foreground">;
                 {formattedTime} - {formattedEndTime} ({interview && interview.duration_minutes} minutes);
-=======
-    }
+}
   }
   return (
 
-  
   const isClient = user?.id === interview.client_id;
   const isTalent = user?.id === interview.talent_id;
 
@@ -379,8 +328,6 @@ if ( {) {
       return `Starts in ${formatDistanceToNow(interviewDate)}`
     }
   };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -564,7 +511,6 @@ if ( {) {
         <CardTitle className="text-lg">{interview && interview.title}</CardTitle>;
         <p className="text-sm text-muted-foreground">;
           with {getOtherPartyName()}
-<<<<<<< HEAD
         </p>;
       </CardHeader>;
       ;
@@ -576,14 +522,12 @@ if ( {) {
               <p className="font-medium">{formattedDate}</p>;
               <p className="text-sm text-muted-foreground">;
                 {formattedTime} - {formattedEndTime} ({interview.duration_minutes} minutes);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </p>;
               <p className="text-xs text-muted-foreground mt-1">;
                 {getRelativeTime()}
               </p>;
             </div>;
           </div>;
-<<<<<<< HEAD
 
           {interview && interview.meeting_platform && (;
             <div className="flex items-center gap-3">;
@@ -598,7 +542,6 @@ if ( {) {
             <div className="flex items-start gap-3">;
               <MessageSquare className="h-4 w-4 mt-0 && 0.5 text-muted-foreground" />;
               <p className="text-sm line-clamp-2">{interview && interview.notes}</p>;
-=======
 ;
           {interview.meeting_platform && (;
             <div className="flex items-center gap-3">;
@@ -613,21 +556,12 @@ if ( {) {
             <div className="flex items-start gap-3">;
               <MessageSquare className="h-4 w-4 mt-0.5 text-muted-foreground" />;
               <p className="text-sm line-clamp-2">{interview.notes}</p>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           )}
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+;
       <CardFooter className="pt-2">;
         <div className="grid grid-cols-1 gap-2 w-full">;
           {/* For clients with pending requests */}
@@ -641,10 +575,7 @@ if ( {) {
               <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                 <AlertDialogHeader>;
                   <AlertDialogTitle>Cancel Interview Request</AlertDialogTitle>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      toast ({
+toast ({
         title: "Error",
         description: "Failed to cancel the interview. Please try again.",
         variant: "destructive";
@@ -683,7 +614,6 @@ if ( {) {
     } else {
       return interview.client_name || 'Client';
     }
-=======
         return <Badge>{interview.status}</Badge>;
     }
   };
@@ -694,10 +624,8 @@ if ( {) {
       return interview.client_name || 'Client';
     }
   },
-=======
       return interview.client_name || 'Client';
     }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   }
 ;
@@ -745,7 +673,6 @@ if ( {) {
       <CardFooter className="pt-2">
         <div className="grid grid-cols-1 gap-2 w-full">
           {/* For clients with pending requests */}
-<<<<<<< HEAD
           {isClient && isInterviewPending && (
             <AlertDialog>
               <AlertDialogTrigger asChild>
@@ -773,7 +700,6 @@ if ( {) {
               </AlertDialogContent>
             </AlertDialog>
           )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 ;
   return (
@@ -828,20 +754,13 @@ if ( {) {
               <AlertDialogContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
                 <AlertDialogHeader>;
                   <AlertDialogTitle > Cancel Interview Request</AlertDialogTitle>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <AlertDialogDescription>;
                     Are you sure you want to cancel this interview request? This action cannot be undone.;
                   </AlertDialogDescription>;
                 </AlertDialogHeader>;
                 <AlertDialogFooter>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   <AlertDialogCancel > Go Back</AlertDialogCancel>;
                   <AlertDialogAction;
@@ -850,37 +769,20 @@ if ( {) {
                     className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
                   >;
 
-=======
-                  <AlertDialogCancel>Go Back</AlertDialogCancel>;
+<AlertDialogCancel>Go Back</AlertDialogCancel>;
                   <AlertDialogAction ;
                     onClick={handleCancelInterview} ;
                     disabled={isLoading}
                     className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
                   >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     Cancel Interview;
                   </AlertDialogAction>;
                 </AlertDialogFooter>;
               </AlertDialogContent>;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-=======
 
 ;
 
-=======
-          
-=======
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 
 ;
@@ -889,11 +791,8 @@ if ( {) {
 ;
             </AlertDialog>;          )}
           ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (;
             <div className="grid grid-cols-2 gap-2">;
@@ -903,10 +802,8 @@ if ( {) {
               <Button variant="outline" onClick={() => handleRespondToInterview('declined')} disabled={isLoading}>;
                 Decline;
               </Button>;
-<<<<<<< HEAD
             </div>;
           )}
-<<<<<<< HEAD
 
             </AlertDialog>)}
           {/* For talents with pending requests */}
@@ -920,17 +817,11 @@ if ( {) {
               </Button>;
             </div>)}
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {/* For confirmed interviews */}
           {isInterviewConfirmed && !isInterviewPast && (
             <>;
               {interview.meeting_link ? (
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {/* For confirmed interviews */}
           {isInterviewConfirmed && !isInterviewPast && (;
             <>;
@@ -939,9 +830,7 @@ if ( {) {
                   <a href={interview && interview.meeting_link} target="_blank" rel="noopener noreferrer">;
                     <Video className="h-4 w-4 mr-2" /> ;
                     {isInterviewLive ? 'Join Now' : 'Join Meeting'}
-<<<<<<< HEAD
-=======
-          {/* For talents with pending requests */}
+{/* For talents with pending requests */}
           {isTalent && isInterviewPending && (
             <div className="grid grid-cols-2 gap-2">
               <Button onClick={() => setIsResponseDialogOpen(true)} disabled={isLoading}>
@@ -965,41 +854,23 @@ if ( {) {
                 </Button>
               ) : (
                 <Button className="w-full" disabled={!isInterviewLive}>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <ExternalLink className="h-3 w-3 ml-2" />;
                   </a>;
                 </Button>;
               ) : (;
                 <Button className="w-full" disabled={!isInterviewLive}>;
                   <Video className="h-4 w-4 mr-2" /> ;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                   <Video className="h-4 w-4 mr-2" /> 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
-              
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-                  <Video className="h-4 w-4 mr-2" />
+<Video className="h-4 w-4 mr-2" />
                   <Video className="h-4 w-4 mr-2" /> 
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>
               )}
-              
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <AlertDialog>
                 <AlertDialogTrigger asChild>
                   <Button variant="outline" size="sm" className="w-full mt-2">
@@ -1017,12 +888,7 @@ if ( {) {
                     <AlertDialogCancel>Go Back</AlertDialogCancel>
                     <AlertDialogAction
                       onClick={handleCancelInterview}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-                  {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+{isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
           ;
@@ -1044,7 +910,6 @@ if ( {) {
                 </Button>;
               )}
               ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <AlertDialog>;
                 <AlertDialogTrigger asChild>;
                   <Button variant="outline" size="sm" className="w-full mt-2">;
@@ -1054,9 +919,7 @@ if ( {) {
                 <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                   <AlertDialogHeader>;
                     <AlertDialogTitle>Cancel Confirmed Interview</AlertDialogTitle>;
-<<<<<<< HEAD
-=======
-                <Button className="w - full" as_child disabled={!isInterviewLive}>;
+<Button className="w - full" as_child disabled={!isInterviewLive}>;
                   <a href={interview.meeting_link} target="_blank" rel="noopener noreferrer">;
                     <Video className="h - 4 w - 4 mr - 2" />;
                     {isInterviewLive ? 'Join Now' : 'Join Meeting'}
@@ -1076,21 +939,14 @@ if ( {) {
                 <AlertDialogContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
                   <AlertDialogHeader>;
                     <AlertDialogTitle > Cancel Confirmed Interview</AlertDialogTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <AlertDialogDescription>;
                       Are you sure you want to cancel this interview? This action cannot be undone and the other party will be notified.;
                     </AlertDialogDescription>;
                   </AlertDialogHeader>;
                   <AlertDialogFooter>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     <AlertDialogCancel > Go Back</AlertDialogCancel>;
                     <AlertDialogAction;
@@ -1099,29 +955,22 @@ if ( {) {
                       className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
                     >;
 
-=======
-                    <AlertDialogCancel>Go Back</AlertDialogCancel>;
+<AlertDialogCancel>Go Back</AlertDialogCancel>;
                     <AlertDialogAction ;
                       onClick={handleCancelInterview} ;
                       disabled={isLoading}
                       className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
                     >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       Cancel Interview;
                     </AlertDialogAction>;
                   </AlertDialogFooter>;
                 </AlertDialogContent>;
               </AlertDialog>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         </div>;
       </CardFooter>;
 
-=======
-                      disabled={isLoading}
+disabled={isLoading}
                       className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
                     >
                       Cancel Interview
@@ -1143,58 +992,39 @@ if ( {) {
         </div>;
       </CardFooter>;
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Response dialog for talents */}
       <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>;
         <DialogContent className="sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white">;
           <DialogHeader>;
             <DialogTitle>Respond to Interview Request</DialogTitle>;
           </DialogHeader>;
-<<<<<<< HEAD
 
           <InterviewResponseForm
-=======
 
-          <InterviewResponseForm 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
+<InterviewResponseForm
           <InterviewResponseForm 
 
           <InterviewResponseForm ;
           <InterviewResponseForm
           <InterviewResponseForm 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             interview={interview}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
             isLoading={isLoading}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-          />
+/>
         </DialogContent>
       </Dialog>
     </Card>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           />;
         </DialogContent>;
       </Dialog>;
     </Card>;
-<<<<<<< HEAD
   );
 }
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </>)}
         </div>;
       </CardFooter>;
@@ -1213,17 +1043,9 @@ if ( {) {
         </DialogContent>;
       </Dialog>;
     </Card>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-=======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),; interface InterviewCardProps {
   interview: Interview;
 onRefresh: () => Promise<void> 
@@ -1259,7 +1081,6 @@ const getRelativeTime = () => {
   formatDistanceToNow (interviewDate) 
 }` 
 }
-<<<<<<< HEAD
 ;
 
 };
@@ -1306,6 +1127,3 @@ const getStatusBadge = () => {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,30 +1,15 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect  } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 
 import {useState, useEffect} from 'react';
@@ -37,21 +22,15 @@ import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib / utils';
 
 interface WizardStep {
-<<<<<<< HEAD
 
-=======
 interface WizardStep {
-=======
   title: string,
   description: string,
   icon: React.ReactNode,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title: string
   description: string
   icon: React.ReactNode
   action: {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib/utils';
 interface WizardStep {;
@@ -71,29 +50,19 @@ interface OnboardingWizardProps {;
   onSkip: () => void,;
   className?: string;
 }
-<<<<<<< HEAD
 
 export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
 
-=======
 export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [currentStep, setCurrentStep] = useState(0);
 
   const navigate = useNavigate();
   const { user } = useAuth();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import { FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
 import { cn } from '@/lib/utils';
 interface WizardStep {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   title: string,
   description: string,
   icon: React.ReactNode,
@@ -115,13 +84,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const [currentStep, setCurrentStep] = useState(0);
   const navigate = useNavigate();
   const { user } = useAuth();
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -147,11 +110,6 @@ interface OnboardingWizardProps {;
   onSkip: () => void,;
   className?: string;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
 
@@ -159,11 +117,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const navigate = useNavigate(),
   const { user } = useAuth(),
 
-  
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 
   title: string
@@ -183,9 +136,7 @@ interface OnboardingWizardProps {
   onSkip: () => void
 
   className?: string
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0);
@@ -196,10 +147,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const navigate = useNavigate(),
   const { user } = useAuth(),
   
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -209,28 +156,17 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Post a Job"
         url: "/post-job"
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       },
       skipText: "I'll do this later"
     },
 
-
-<<<<<<< HEAD
-=======
-      }
+}
       skipText: "I'll do this later"
     }
       },
       skipText: "I'll do this later"
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: "View suggested matches"
       description: "Our AI system will find the best talent matches"
@@ -238,28 +174,17 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "View Matches"
         url: "/talent"
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       },
       skipText: "Skip for now"
     },
 
-
-<<<<<<< HEAD
-=======
-      }
+}
       skipText: "Skip for now"
     }
       },
       skipText: "Skip for now"
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: "Contact talent"
       description: "Reach out to the talent that fits your needs"
@@ -269,7 +194,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         url: "/talent"
       }
     }
-<<<<<<< HEAD
 
     text: string,
     url: string;
@@ -324,21 +248,17 @@ function OnboardingWizard() {
   ];
 ;
   const talent_steps: WizardStep[] = [;
-<<<<<<< HEAD
 
     {
       title: "Complete your profile"
       description: "Add your skills, experience, and preferences";
 
-
-=======
-  ];
+];
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile"
       description: "Add your skills, experience, and preferences";
       icon: <FileText className="h-6 w-6 text-zion-purple" />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ],
 
   const talentSteps: WizardStep[] = [
@@ -346,7 +266,6 @@ function OnboardingWizard() {
       title: "Complete your profile",
       description: "Add your skills, experience, and preferences",
       icon: <FileText className="h-6 w-6 text-zion-purple" />,
-<<<<<<< HEAD
 
       action: {
         text: "Edit Profile"
@@ -356,9 +275,7 @@ function OnboardingWizard() {
       skipText: "I'll do this later"
     },
 
-
-=======
-      action: {
+action: {
         text: "Edit Profile"
         url: "/profile"
       }
@@ -370,9 +287,6 @@ function OnboardingWizard() {
       },
       skipText: "I'll do this later"
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: "Define skills & availability"
       description: "Let clients know when you're available and what you can do"
@@ -380,28 +294,17 @@ function OnboardingWizard() {
       action: {
         text: "Set Availability"
         url: "/profile?tab=skills"
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       },
       skipText: "Skip for now"
     },
 
-
-<<<<<<< HEAD
-=======
-      }
+}
       skipText: "Skip for now"
     }
       },
       skipText: "Skip for now"
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: "Preview your profile"
       description: "See how clients will view your profile"
@@ -409,46 +312,30 @@ function OnboardingWizard() {
       action: {
         text: "Preview Profile"
         url: `/talent/${user?.id}`
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      }
+}
       skipText: "Skip for now"
     }
       },
       skipText: "Skip for now"
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       },
       skipText: "Skip for now"
     },
 
-
-<<<<<<< HEAD
-=======
-      },
+},
       skipText: "Skip for now"
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: "Enable AI matchmaking"
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        text: "Enable Matchmaking"
+text: "Enable Matchmaking"
         url: "/talent-dashboard"
       }
     }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
   const steps = type === 'client' ? clientSteps : talentSteps;
   // Navigate to the specified URL
@@ -498,40 +385,18 @@ function OnboardingWizard() {
       onSkip();
     }
   },
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-  
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
         <CardTitle className="text-center text-white">
           {type === 'client' ?
             "Ready to find top IT talent?" :
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
-
-    {
+{
       title: "Complete your profile"
       description: "Add your skills, experience, and preferences";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Define steps based on user type;
   const clientSteps: WizardStep[] = [;
     {;
@@ -625,12 +490,9 @@ function OnboardingWizard() {
       onSkip();
     }
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
-=======
-  return (
+return (
 
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
@@ -763,25 +625,15 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
   },;
   ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>;
       <CardHeader>;
         <CardTitle className="text-center text-white">;
           {type === 'client' ? ;
-<<<<<<< HEAD
-<<<<<<< HEAD
             "Ready to find top IT talent?" : ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-            "Ready to find top IT talent?" :;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+"Ready to find top IT talent?" :;
     {
       title: "Complete your profile"
       description: "Add your skills, experience, and preferences";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             "Let's build your professional profile"}
         </CardTitle>;
       </CardHeader>;
@@ -789,19 +641,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
         <div className="flex items-center mb-6">;
           {/* Step dots */}
           <div className="flex items-center justify-center flex-1">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {steps && steps.map((_, index) => (;
               <div
                 key={index}
                 className={cn(
-<<<<<<< HEAD
-=======
-
-
-                  "h-2 w-2 rounded-full mx-1"
+"h-2 w-2 rounded-full mx-1"
 
                   "h-2 w-2 rounded-full mx-1",
 
@@ -818,24 +662,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
                 key={index}
                 className={cn(
                   "h-2 w-2 rounded-full mx-1";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                   "h-2 w-2 rounded-full mx-1",
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep
                     ? "bg-zion-cyan"
                     : "bg-zion-blue-light"
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
               />;
             ))}
 
@@ -845,8 +679,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
         <div className="flex flex-col items-center text-center p-4">;
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">;
 
-=======
-            {steps.map((_, index) => (;
+{steps.map((_, index) => (;
               <div;
                 key={index}
                 className={cn(;
@@ -863,9 +696,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
 ;
         <div className="flex flex-col items-center text-center p-4">;
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {steps[currentStep].icon}
           </div>;
           <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep].title}</h3>;
@@ -873,8 +703,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
         </div>;
       </CardContent>;
       <CardFooter className="flex flex-col space-y-2">;
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Button
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
 
@@ -884,20 +712,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
 
         {steps[currentStep].skipText && (;
 
-=======
-          onClick={handleAction}>;
+onClick={handleAction}>;
           {steps[currentStep].action && action.text}
         </Button>;
         {steps[currentStep].skipText && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             variant="ghost"
             className="text-zion-slate-light hover:text-white"
             onClick={handleSkip}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
             {steps[currentStep].skipText}
           </Button>;
         )}
@@ -907,9 +729,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
   );
 }
 
-=======
-=======
-        <Button;
+<Button;
           className="w-full bg-zion-purple hover:bg-zion-purple-light";
           onClick={handleAction}
         >;
@@ -927,9 +747,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
         )}
       </CardFooter>;
     </Card>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       icon: <FileText className="h - 6 w - 6 text - zion - purple" />,
       action: {
         text: "Edit Profile",
@@ -1050,10 +867,6 @@ if ( {) {
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  
 }];
@@ -1106,6 +919,3 @@ skipText: "Skip for now"
     </Card>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

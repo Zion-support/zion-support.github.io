@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react';
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -18,10 +12,7 @@ import {Slider} from "@/components/ui/slider";
 import {ProductListing, ListingView} from "@/types/listings";
 import {Search, Filter, LayoutGrid, List, Star} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  categoryFilters;
+categoryFilters;
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {;
   const navigate = useNavigate();
@@ -45,8 +36,6 @@ export function DynamicListingPage({;
   categorySlug;
   listings: allListings,
   categoryFilters;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { useNavigate } from "react-router-dom",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -89,7 +78,6 @@ export function DynamicListingPage({
   title;
   description;
   categorySlug;
-<<<<<<< HEAD
 
   listings: allListings
   categoryFilters;
@@ -119,22 +107,12 @@ import { Slider } from "@/components/ui/slider",;
 import { ProductListing, ListingView } from "@/types/listings",;
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react",;
 import { toast } from "@/hooks/use-toast",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PriceRange {;
   min: number,;
   max: number;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface DynamicListingPageProps {;
   title: string,;
   description: string,;
@@ -143,10 +121,6 @@ interface DynamicListingPageProps {;
   categoryFilters: { label: string, value: string }[],;
   initialPrice?: PriceRange;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function DynamicListingPage(): any ({;
   title;
@@ -164,11 +138,7 @@ export function DynamicListingPage(): any ({;
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-<<<<<<< HEAD
 
-
-
-=======
 ;
 export function DynamicListingPage({;
   title,;
@@ -176,9 +146,6 @@ export function DynamicListingPage({;
   categorySlug,;
   listings: allListings,;
   categoryFilters,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -190,8 +157,6 @@ export function DynamicListingPage({;
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
 
-<<<<<<< HEAD
-
   useEffect(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null),
     if (listingsWithPrice.length > 0) {
@@ -199,19 +164,13 @@ export function DynamicListingPage({;
       const min = Math.min(...listingsWithPrice.map(l => l.price || 0)),
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0)),
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  useEffect(() => {
+useEffect(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null),
     if (listingsWithPrice.length > 0) {
       const min = Math.min(...listingsWithPrice.map(l => l.price |0));
       const max = Math.max(...listingsWithPrice.map(l => l.price |0));
       const min = Math.min(...listingsWithPrice.map(l => l.price || 0)),
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0)),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setPriceRange({ min, max })
     }
   }, [allListings]);
@@ -221,12 +180,8 @@ export function DynamicListingPage({;
   ]);
   const handleSliderChange = (values: number[]) => {
     setCurrentPriceFilter([values[0], values[1]])
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-  }
+}
   const filteredListings = allListings.filter(listing => {
     const matchesSearch = !searchQuery |
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
@@ -235,7 +190,6 @@ export function DynamicListingPage({;
     const matchesCategory = selectedCategory === "all" |listing.category === selectedCategory;
     const matchesPrice = listing.price === null |(
       listing.price >= currentPriceFilter[0] &&
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
 
   const filteredListings = allListings.filter(listing => {
@@ -248,13 +202,7 @@ export function DynamicListingPage({;
     
     const matchesPrice = listing.price === null || (
       listing.price >= currentPriceFilter[0] && 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       listing.price <= currentPriceFilter[1]
     );
     const matchesRating =
@@ -280,14 +228,7 @@ export function DynamicListingPage({;
               title: listing.title
               category: listing.category
               image: listing.images?.[0]
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }: DynamicListingPageProps) {;
   const navigate = useNavigate(),;
   const [searchQuery, setSearchQuery] = useState(""),;
@@ -296,10 +237,7 @@ export function DynamicListingPage({;
   const [isLoading, setIsLoading] = useState(false),;
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice),;
   const [selectedRating, setSelectedRating] = useState<number | null>(null),;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     const listingsWithPrice = allListings && allListings.filter(l => l && l.price !== null);
     if (listingsWithPrice && listingsWithPrice.length > 0) {;
@@ -342,10 +280,8 @@ export function DynamicListingPage({;
     setIsLoading(true);
 
     const listing = allListings && allListings.find(item => item && item.id === listingId);
-<<<<<<< HEAD
 
-=======
-  useEffect(() => {;
+useEffect(() => {;
     const listingsWithPrice = allListings.filter(l => l.price !== null),;
     if (listingsWithPrice.length > 0) {;
       const min = Math.min(...listingsWithPrice.map(l => l.price || 0)),;
@@ -378,13 +314,11 @@ export function DynamicListingPage({;
   const handleRequestQuote = (listingId: string) => {;
     setIsLoading(true),;
     const listing = allListings.find(item => item.id === listingId),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setTimeout(() => {;
       setIsLoading(false),;
       if (listing) {;
         toast({;
           title: "Quote Requested",;
-<<<<<<< HEAD
           description: `Your quote request for ${listing && listing.title} has been sent.`;
         });
 
@@ -393,14 +327,10 @@ export function DynamicListingPage({;
             serviceType: categorySlug, ;
             specificItem: {;
 
-=======
-              id: listing && listing.id,;
+id: listing && listing.id,;
               title: listing && listing.title,;
               category: listing && listing.category,;
               image: listing && listing.images?.[0];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
 import { use_navigate } from './react-router-dom';
 import { GradientHeading } from '@/components / GradientHeading';
@@ -501,49 +431,26 @@ if ( {) {
               title: listing.title,
               category: listing.category,
               image: listing.images?.[0];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-          description: `Your quote request for ${listing.title} has been sent.`;
+description: `Your quote request for ${listing.title} has been sent.`;
         }),;
         navigate("/request-quote", {;
           state: {;
             serviceType: categorySlug,;
             specificItem: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               id: listing.id,;
               title: listing.title,;
               category: listing.category,;
               image: listing.images?.[0];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }
           }
         });
       }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-
-    }, 500);
+}, 500);
   };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-=======
 
     }, 500);
   };
@@ -563,28 +470,16 @@ if ( {) {
     }, 500);
   },;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="min-h-screen bg-zion-blue py-12 px-4">;
       <div className="container mx-auto">;
         <div className="text-center mb-12">;
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
             {description}
 
-<<<<<<< HEAD
-=======
-=======
-            {description}
+{description}
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
@@ -602,9 +497,6 @@ if ( {) {
                   onValueChange={(value: string) => {
                     // // // console.log("Category selected:", value),
                     setSelectedCategory(value)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }}
                 >
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
@@ -614,14 +506,7 @@ if ( {) {
                     <SelectItem value="all" className="text-white">All Categories</SelectItem>
                     {categoryFilters.map((filter) => (
                       <SelectItem key={filter.value} value={filter.value} className="text-white">
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </p>;
         </div>;
 
@@ -636,24 +521,17 @@ if ( {) {
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">;
                   Category;
                 </label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <Select
                   value={selectedCategory} 
                   onValueChange={(value: string) => {;
                     console && console.log("Category selected:", value);
-=======
-                <Select;
+<Select;
                   value={selectedCategory} ;
                   onValueChange={(value: string) => {;
                     // // // console.log("Category selected:", value),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     setSelectedCategory(value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                 <Select
             {description}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }}
                 >;
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
@@ -661,15 +539,10 @@ if ( {) {
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
                     <SelectItem value="all" className="text-white">All Categories</SelectItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     {categoryFilters.map((filter) => (;
                       <SelectItem key={filter.value} value={filter.value} className="text-white">;
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         {filter.label}
                       </SelectItem>
                     {categoryFilters && categoryFilters.map((filter) => (;
@@ -677,27 +550,20 @@ if ( {) {
                         {filter && filter.label}
                       </SelectItem>;
                     ))}
-<<<<<<< HEAD
 
                   </SelectContent>;
                 </Select>;
               </div>;
 
-=======
-                  </SelectContent>;
+</SelectContent>;
                 </Select>;
               </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <div className="mb-6">;
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">;
                   Price Range;
                 </label>;
                 <div className="mt-6 px-2">;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Slider
                     defaultValue={[priceRange && priceRange.min, priceRange && priceRange.max]}
                     min={priceRange && priceRange.min}
@@ -713,7 +579,6 @@ if ( {) {
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
                 </div>
-<<<<<<< HEAD
               </div>
               
               <div className="mb-6">
@@ -721,7 +586,6 @@ if ( {) {
                   Minimum Rating
                 </label>
                 <div className="mt-6 px-2">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <Slider
                     defaultValue={[priceRange.min, priceRange.max]}
                     min={priceRange.min}
@@ -736,10 +600,6 @@ if ( {) {
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="mb-4"
 
   useEffect_(() => {
@@ -848,16 +708,10 @@ value={selectedCategory}
                     ))}
                   </SelectContent>
                 </Select>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
               
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
                   Minimum Rating
                 </label>
                 <div className="mt-6 px-2">
@@ -869,23 +723,17 @@ value={selectedCategory}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
 
-
                     className="mb-4"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
                 </div>
-=======
                   Price Range
                 </label>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                  Price Range
+Price Range
                 </label>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -893,19 +741,11 @@ value={selectedCategory}
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {[null, 3, 4, 5].map((rating) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant="outline"
                       size="sm"
-<<<<<<< HEAD
                       onClick={() => {
                         // // // console.log("Rating selected:", rating),
                         setSelectedRating(rating)
@@ -925,12 +765,10 @@ value={selectedCategory}
                           ))}
                           <span className="ml-1">& Up</span>
                         </div>
-<<<<<<< HEAD
 
                     className="mb-4";
 
-=======
-                    className="mb-4";
+className="mb-4";
 
                 <div className="mt-6 px-2">
                   <Slider,
@@ -942,7 +780,6 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     onValueChange={handleSliderChange}
                     className="mb-4";
                     className="mb-4";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   />;
                   <div className="flex justify-between text-sm text-zion-slate-light">;
                     <span>${currentPriceFilter[0].toLocaleString()}</span>;
@@ -950,21 +787,14 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
 
-=======
-              ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+;
               <div className="mb-6">;
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">;
                   Minimum Rating;
                 </label>;
                 <div className="flex flex-wrap gap-2">;
                   {[null, 3, 4, 5].map((rating) => (;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant="outline"
@@ -1039,21 +869,13 @@ defaultValue={_[priceRange.min, priceRange.max]}
                 </label>;
                 <div className="flex flex - wrap gap - 2">;
                   {[null, 3, 4, 5].map ((rating) => (
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button;
                       key={rating === null ? 'any' : rating}
                       variant="outline";
                       size="sm";
-<<<<<<< HEAD
-<<<<<<< HEAD
                       on_click={() => {
                         console.log ("Rating selected:", rating);
                         setSelectedRating (rating);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       }}
 
                       className={`${;
@@ -1061,8 +883,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                           ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
                           : "border-zion-blue-light text-zion-slate-light";
 
-=======
-                    <Button;
+<Button;
                       key={rating === null ? 'any' :rating}
                       variant="outline";
                       size="sm";
@@ -1082,52 +903,32 @@ defaultValue={_[priceRange.min, priceRange.max]}
                         selectedRating === rating;
                           ? "bg-zion-purple/20 border-zion-purple text-zion-purple";
                           : "border-zion-blue-light text-zion-slate-light";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                       }}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       }`}
                     >;
                       {rating === null ? (;
                         "Any";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                       ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                      ) :(;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+) :(;
                       ) : (;
                         <div className="flex items-center">;
                           {[...Array(rating)].map((_, i) => (;
                             <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
                           ))}
                           <span className="ml-1">& Up</span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                         </div>;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       )}
-=======
-                        </div>;                      )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+</div>;                      )}
                     </Button>;
                   ))}
 
                 </div>;
               </div>;
-<<<<<<< HEAD
 
               <Button
                 variant="outline" 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                       )}
                     </Button>;
                   ))}
@@ -1136,14 +937,10 @@ defaultValue={_[priceRange.min, priceRange.max]}
                       )}
                     </Button>;
                   ))}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {;
                   console && console.log("Resetting filters");
                   setSearchQuery("");
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
               <Button 
                 variant="outline" 
@@ -1151,8 +948,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
 
-=======
-                        </div>;
+</div>;
                       )}
                     </Button>
                   ))}
@@ -1161,32 +957,18 @@ defaultValue={_[priceRange.min, priceRange.max]}
               <Button
                 variant="outline"
               <Button 
-                variant="outline" 
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                variant="outline"
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
                   console.log("Resetting filters");
                   setSearchQuery("");
                   setSelectedCategory("all")
                   setCurrentPriceFilter([priceRange.min, priceRange.max]);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   // // // console.log("Resetting filters"),
                   setSearchQuery(""),
                   setSelectedCategory("all"),
                   setCurrentPriceFilter([priceRange.min, priceRange.max]),
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   setSelectedRating(null)
                 }}
               >
@@ -1199,11 +981,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-                  <Input
+<Input
                     type="text"
                     placeholder="Search listings..."
                     value={searchQuery}
@@ -1215,8 +993,6 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   />
                 </div>
                 <div className="flex items-center gap-2 ml-auto">
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   setSelectedCategory("all"),;
                   setCurrentPriceFilter([priceRange && priceRange.min, priceRange && priceRange.max]);
                   setSelectedRating(null);
@@ -1256,7 +1032,6 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     size="icon"
                     onClick={() => setView("grid")}
                     className={`${view === "grid" ? "bg-zion-purple/20 border-zion-purple text-zion-purple" : "border-zion-blue-light text-zion-slate"}`}
-<<<<<<< HEAD
                   >
                     <LayoutGrid className="h-4 w-4" />
                   </Button>
@@ -1299,13 +1074,11 @@ defaultValue={_[priceRange.min, priceRange.max]}
             ) : filteredListings.length > 0 ? (
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
                 {filteredListings.map((listing) => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   setSelectedCategory("all"),;
                   setCurrentPriceFilter([priceRange && priceRange.min, priceRange && priceRange.max]);
                   setSelectedRating(null);
                 }}
-=======
-                        selected_rating === rating;
+selected_rating === rating;
                           ? "bg - zion - purple / 20 border - zion - purple text - zion - purple";
                           : "border - zion - blue - light text - zion - slate - light";
                       }`}
@@ -1318,16 +1091,12 @@ defaultValue={_[priceRange.min, priceRange.max]}
                           <span className="ml - 1">& Up</span>;
                         </div>)}
                     </Button>))}
-<<<<<<< HEAD
-=======
                   <ProductListingCard
-                  <ProductListingCard 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                  <ProductListingCard
                 </div>;
               </div>;
               <Button;
                 variant="outline";
-<<<<<<< HEAD
                 className="w - full border - zion - purple text - zion - purple hover: bg - zion - purple / 10";
                 on_click={() => {
                   console.log ("Resetting filters");
@@ -1336,9 +1105,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   setCurrentPriceFilter ([price_range.min, price_range.max]);
                   setSelectedRating (null);
                 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-                className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10";
+className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10";
                 onClick={() => {;
                   // // // console.log("Resetting filters"),;
                   setSearchQuery(""),;
@@ -1346,13 +1113,11 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   setCurrentPriceFilter([priceRange.min, priceRange.max]),;
                   setSelectedRating(null);
                 }}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               >;
                 Reset Filters;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
 
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
                   />;
@@ -1374,8 +1139,6 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     onClick={() => setView("list")}
                     className={`${view === "list" ? "bg-zion-purple/20 border-zion-purple text-zion-purple" : "border-zion-blue-light text-zion-slate"}`}
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="lg:col - span - 3">;
             <div className="bg - zion - blue - dark rounded - lg p - 4 mb - 6 border border - zion - blue - light">;
               <div className="flex flex - col md:flex - row gap - 4">;
@@ -1439,12 +1202,9 @@ defaultValue={_[priceRange.min, priceRange.max]}
               <div className={`grid gap - 6 ${view === "grid" ? "grid - cols - 1 md:grid - cols - 2" : "grid - cols - 1"}`}>;
                 {filtered_listings.map ((listing) => (
                   <ProductListingCard;
-<<<<<<< HEAD
 
                     key={listing.id}
-=======
-=======
-                    key={listing.id}
+key={listing.id}
           ;
           <div className="lg:col-span-3">;
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">;
@@ -1476,24 +1236,16 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     size="icon";
                     onClick={() => setView("list")}
                     className={`${view === "list" ? "bg-zion-purple/20 border-zion-purple text-zion-purple" : "border-zion-blue-light text-zion-slate"}`}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >;
                     <List className="h-4 w-4" />;
                   </Button>;
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <div className="mb-6">;
               <p className="text-zion-slate-light">;
                 Showing {filteredListings && filteredListings.length} results;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
             <div className="mb-6">;
               <p className="text-zion-slate-light">;
@@ -1501,27 +1253,17 @@ defaultValue={_[priceRange.min, priceRange.max]}
             <div className="mb-6">;
               <p className="text-zion-slate-light">;
                 Showing {filteredListings.length} results;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {selectedCategory !== "all" && ` in ${selectedCategory}`}
                 {searchQuery && ` for "${searchQuery}"`}
               </p>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 ;
             {isLoading ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
             {isLoading ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {isLoading ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
                 {[1, 2, 3, 4].map((i) => (;
@@ -1540,42 +1282,29 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   </div>;
                 ))}
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
             ) : filteredListings && filteredListings.length > 0 ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
                 {filteredListings && filteredListings.map((listing) => (;
                   <ProductListingCard
                     key={listing && listing.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
-                {filteredListings && filteredListings.map((listing) => (;
+{filteredListings && filteredListings.map((listing) => (;
                   <ProductListingCard
                     key={listing && listing.id}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                   <ProductListingCard 
 
                     key={listing.id}
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
 
-=======
-
-=======
-                    listing={listing}
+listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
             ) : filteredListings.length > 0 ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
                 {filteredListings.map((listing) => (;
                   <ProductListingCard;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     key={listing.id}
                     listing={listing}
                     view={view}
@@ -1595,34 +1324,19 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
 
                     setSelectedRating(null)
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     setSearchQuery(""),
                     setSelectedCategory("all"),
                     setCurrentPriceFilter([priceRange.min, priceRange.max]),
                     setSelectedRating(null)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-                    listing={listing}
+listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             ) : (;
               <div className="text-center py-20">;
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant="outline" 
                   onClick={() => {;
@@ -1630,10 +1344,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange && priceRange.min, priceRange && priceRange.max]);
                     setSelectedRating(null);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-            ) :filteredListings.length > 0 ? (;
+) :filteredListings.length > 0 ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;
                 {filteredListings.map((listing) => (;
                   <ProductListingCard ;
@@ -1654,12 +1365,9 @@ defaultValue={_[priceRange.min, priceRange.max]}
                     setSelectedCategory("all"),;
                     setCurrentPriceFilter([priceRange.min, priceRange.max]),;
                     setSelectedRating(null),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                     listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
                 >;
@@ -1667,15 +1375,12 @@ defaultValue={_[priceRange.min, priceRange.max]}
                 </Button>;
               </div>;
             )}
-<<<<<<< HEAD
           </div>;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
   );
-=======
-                  />))}
+/>))}
               </div>) : (
               <div className="text - center py - 20">;
                 <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>;
@@ -1683,26 +1388,19 @@ defaultValue={_[priceRange.min, priceRange.max]}
                 <Button;
                   variant="outline";
 
-=======
                 <Button;
                   variant="outline";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   onClick={() => {;
                     setSearchQuery(""),;
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
                     setSelectedRating(null);
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-                  on_click={() => {
+on_click={() => {
                     setSearchQuery ("");
                     setSelectedCategory ("all");
                     setCurrentPriceFilter ([price_range.min, price_range.max]);
                     setSelectedRating (null);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
                 >;
@@ -1713,10 +1411,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
         </div>;
       </div>;
     </div>);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  ),;  const [selectedRating, setSelectedRating] = useState<number | null> (null);
+),;  const [selectedRating, setSelectedRating] = useState<number | null> (null);
 useEffect ( () => {
   const listingsWithPrice = allListings.filter (l => l.price !== null);
 if (listingsWithPrice.length > 0) {
@@ -1801,7 +1496,4 @@ return (<div className="min-h-screen bg-zion-blue py-12 px-4"> <div className="c
       </div>
     </div>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

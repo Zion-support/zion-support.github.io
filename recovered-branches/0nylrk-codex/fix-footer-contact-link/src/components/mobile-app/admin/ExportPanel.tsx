@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Download} from "lucide-react";
 import {AppPlatform, AppMetadataValues} from "./MetadataManager";
 import {toast} from "sonner";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -22,10 +12,6 @@ import { AppPlatform, AppMetadataValues } from "./MetadataManager";
 import { toast } from "sonner";
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -36,17 +22,13 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 
   const handleExport = (format: 'json' | 'csv') => {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      let content: string,
+let content: string,
       let fileName: string,
       
       if (format === 'json') {;
         content = JSON.stringify(metadata, null, 2);
       if (format === 'json') {
         content = JSON.stringify(metadata, null, 2),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
@@ -71,11 +53,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       } else {;
         // Convert object to CSV format;
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
         const values = [;
           metadata && metadata.appTitle;
@@ -84,16 +61,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata && metadata.version;
           metadata && metadata.platform;
         ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
       let content: string,
       let fileName: string,
-      
 
-=======
-      let content: string
+let content: string
       let fileName: string
       let content: string,
       let fileName: string,
@@ -102,9 +74,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         content = JSON.stringify(metadata, null, 2);
       if (format === 'json') {
         content = JSON.stringify(metadata, null, 2),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
@@ -115,33 +84,24 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata.longDescription,
           metadata.version,
           metadata.platform
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        ];
+];
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
         // Add keywords as additional rows
         content += '\n\nKeywords: \n' + metadata.keywords.join()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ],
         
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),
         
         // Add keywords as additional rows
-<<<<<<< HEAD
         content += '\n\nKeywords:\n' + metadata.keywords.join(),
-        
-<<<<<<< HEAD
+
 
         fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       // Create download link
 
-=======
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
+fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       // Create download link
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' })
@@ -153,7 +113,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       link.click();
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),
       const url = URL.createObjectURL(blob),
       const link = document.createElement('a'),
@@ -163,16 +122,9 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       link.click(),
       document.body.removeChild(link),
       URL.revokeObjectURL(url),
-      
-<<<<<<< HEAD
 
 
       toast.success(`Exported ${format.toUpperCase()} file successfully`)
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -224,22 +176,15 @@ if ( {) {
 ;
       toast.success (`Exported ${format.toUpperCase ()} file successfully`);
     } catch (error) {
-<<<<<<< HEAD
     }
-
 
   const trackAnalytics = () => {
     console.log("Tracking app installation analytics...");
     toast.success("Analytics tracking enabled")
 
-
   },
-  
 
-
-<<<<<<< HEAD
-=======
-      toast.success(`Exported ${format.toUpperCase()} file successfully`)
+toast.success(`Exported ${format.toUpperCase()} file successfully`)
     } catch (error) {
       console.error("Export failed:", error),
       toast.error(`Failed to export ${format.toUpperCase()} file`)
@@ -254,10 +199,6 @@ if ( {) {
     toast.success("Analytics tracking enabled")
   }
   },
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -294,28 +235,10 @@ if ( {) {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 }
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -327,7 +250,6 @@ interface ExportPanelProps {;
   platform: AppPlatform,;
   metadata: AppMetadataValues;
 }
-<<<<<<< HEAD
 ;
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {;
   const handleExport = (format: 'json' | 'csv') => {;
@@ -348,15 +270,12 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata.platform;
         ],;
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),;
-<<<<<<< HEAD
 
-=======
-      console.error ("Export failed:", error);
+console.error ("Export failed:", error);
       toast.error (`Failed to export ${format.toUpperCase ()} file`);
     }
   }
         content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         // Add keywords as additional rows;
         content += '\n\nKeywords: \n' + metadata && metadata.keywords.join(),;
 
@@ -385,11 +304,9 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
     console && console.log("Tracking app installation analytics...");
     toast && toast.success("Analytics tracking enabled");
   };
-<<<<<<< HEAD
 
   return (
-=======
-  return (
+return (
 
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -459,7 +376,6 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
     toast.success("Analytics tracking enabled");
   };
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle className="text-lg">Export & Analytics</CardTitle>;
@@ -478,8 +394,6 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
               </Button>;
               <Button variant="outline" onClick={() => handleExport('csv')} className="flex-1">;
                 <Download className="mr-2 h-4 w-4" />;
-<<<<<<< HEAD
-=======
 ;
   const track_analytics = () =>: any {
     console.log ("Tracking app installation analytics...");
@@ -505,18 +419,11 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
               </Button>;
               <Button variant="outline" on_click={() => handle_export ('csv')} className="flex - 1">;
                 <Download className="mr - 2 h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 CSV;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           <div className="border - t border - zion - purple / 20 pt - 4">;
             <h4 className="font - medium mb - 2">Installation Analytics</h4>;
@@ -525,17 +432,13 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
             </p>;
             <Button on_click={track_analytics} className="w - full">;
 
-=======
-          ;
+;
           <div className="border-t border-zion-purple/20 pt-4">;
             <h4 className="font-medium mb-2">Installation Analytics</h4>;
             <p className="text-sm text-gray-400 mb-3">;
               Track how many users click "Install" from web;
             </p>;
             <Button onClick={trackAnalytics} className="w-full">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Enable Analytics;
             </Button>;
           </div>;
@@ -543,26 +446,14 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
       </CardContent>;
 
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Card>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
     </Card>);
 }
 ;
-<<<<<<< HEAD
+};
+    </Card>);
+}
+;
     </Card>);
 }
 ;
@@ -586,6 +477,3 @@ return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export &
     </Card>;
   );
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

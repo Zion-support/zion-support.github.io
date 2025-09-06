@@ -1,7 +1,4 @@
 
-
-
-
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
@@ -18,22 +15,13 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-export function WebhooksManager() {
-
-=======
 
 export function WebhooksManager() {
 
 export function WebhooksManager() {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+export function WebhooksManager() {
 export function WebhooksManager() {
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const {;
     webhooks;
     loading;
@@ -43,31 +31,17 @@ export function WebhooksManager() {
     toggleWebhook;
     deleteWebhook;
     testWebhook;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
   const [showCreateDialog, setShowCreateDialog] = useState(false);
-<<<<<<< HEAD
-=======
 const [showCreateDialog, setShowCreateDialog] = useState(false);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
   const [showTestResult, setShowTestResult] = useState(false);
   // Create webhook form state;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
   const [showTestResult, setShowTestResult] = useState(false);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [webhookName, setWebhookName] = useState("");
   const [webhookUrl, setWebhookUrl] = useState("");
   const [webhookSecret, setWebhookSecret] = useState("");
@@ -77,16 +51,7 @@ const [showCreateDialog, setShowCreateDialog] = useState(false);
   useEffect(() => {;
     fetchWebhooks();
   }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",
@@ -115,13 +80,10 @@ export function WebhooksManager() {
     toggleWebhook,
     deleteWebhook,
     testWebhook,
-<<<<<<< HEAD
 
     clearTestResult
-<<<<<<< HEAD
 
-=======
-  } = useWebhooks();
+} = useWebhooks();
   const [showCreateDialog, setShowCreateDialog] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
@@ -133,9 +95,6 @@ export function WebhooksManager() {
 
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]);
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } = useWebhooks(),
   
   const [showCreateDialog, setShowCreateDialog] = useState(false),
@@ -149,13 +108,6 @@ export function WebhooksManager() {
   const [webhookSecret, setWebhookSecret] = useState(""),
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // Load webhooks on mount
   useEffect(() => {
@@ -163,44 +115,26 @@ export function WebhooksManager() {
   }, []),
 
   const handleCreateWebhook = async () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
-    
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
-    
+if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
 
     if (webhookName.trim() === "" |webhookUrl.trim() === "" |selectedEvents.length === 0) return;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
-    
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     await createWebhook(
       webhookName
       webhookUrl
       selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-    );
+);
     setShowCreateDialog(false);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     resetWebhookForm()
   }
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
-<<<<<<< HEAD
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ),
     
     setShowCreateDialog(false),
@@ -211,44 +145,27 @@ export function WebhooksManager() {
     await toggleWebhook(webhookId, !currentStatus)
   },
 
-<<<<<<< HEAD
-
   const handleDeleteWebhook = async (webhookId: string) => {
     await deleteWebhook(webhookId)
     setShowDeleteConfirm(null)
 
   },
 
-
-
   const handleTestWebhook = async (webhookId: string) => {
     await testWebhook(webhookId, testEventType);
     setShowTestResult(true)
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
   },
 
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const resetWebhookForm = () => {
     setWebhookName("");
     setWebhookUrl("");
     setWebhookSecret("");
     setSelectedEvents([])
-<<<<<<< HEAD
-
 
   },
 
-
-
-<<<<<<< HEAD
-=======
-  const handleDeleteWebhook = async (webhookId: string) => {
+const handleDeleteWebhook = async (webhookId: string) => {
     await deleteWebhook(webhookId)
     setShowDeleteConfirm(null)
   }
@@ -267,10 +184,6 @@ export function WebhooksManager() {
     setSelectedEvents([])
   }
   },
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Event type options
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [
     { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' }
@@ -284,21 +197,11 @@ export function WebhooksManager() {
         ? prev.filter(e => e !== event)
         : [...prev, event]
     )
-<<<<<<< HEAD
-
 
   },
 
-
-
-<<<<<<< HEAD
-=======
-  }
+}
   },
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -353,10 +256,7 @@ export function WebhooksManager() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  <Input
+<Input
                     id="webhook-secret"
                     type="password"
                     value={webhookSecret}
@@ -376,9 +276,7 @@ export function WebhooksManager() {
                         <Checkbox
                           id={event.value}
                         <Checkbox 
-                          id={event.value} 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                          id={event.value}
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
@@ -421,17 +319,10 @@ export function WebhooksManager() {;
   useEffect(() => {;
     fetchWebhooks();
   }, []),;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleCreateWebhook = async () => {;
     if (webhookName && webhookName.trim() === "" || webhookUrl && webhookUrl.trim() === "" || selectedEvents && selectedEvents.length === 0) return;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
@@ -483,17 +374,10 @@ export function WebhooksManager() {;
   const handleCreateWebhook = async () => {;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,;
     ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     await createWebhook(;
       webhookName, ;
       webhookUrl, ;
       selectedEvents, ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       webhookSecret && webhookSecret.trim() === "" ? undefined : webhookSecret;
     );
 
@@ -522,9 +406,7 @@ export function WebhooksManager() {;
     setSelectedEvents([]);
   };
 
-<<<<<<< HEAD
-=======
-  const handleCreateWebhook = async () => {;
+const handleCreateWebhook = async () => {;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,;
     await createWebhook(;
       webhookName,;
@@ -552,9 +434,6 @@ export function WebhooksManager() {;
     setWebhookSecret(""),;
     setSelectedEvents([]);
   },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Event type options;
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [;
     { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },;
@@ -564,10 +443,6 @@ export function WebhooksManager() {;
 
   // Toggle an event selection;
   const toggleEvent = (event: WebhookEventType) => {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setSelectedEvents(prev => ;
       prev && prev.includes(event) ;
         ? prev && prev.filter(e => e !== event) ;
@@ -576,9 +451,7 @@ export function WebhooksManager() {;
   };
 
   return (
-<<<<<<< HEAD
-=======
-      webhookSecret.trim() === "" ? undefined :webhookSecret;
+webhookSecret.trim() === "" ? undefined :webhookSecret;
     ),;
     ;
     setShowCreateDialog(false),;
@@ -630,9 +503,6 @@ export function WebhooksManager() {;
     );
   },;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
@@ -642,10 +512,6 @@ export function WebhooksManager() {;
           Set up webhooks to get notified when events happen in your Zion account.;
         </CardDescription>;
       </CardHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       <CardContent>;
         <div className="flex justify-between items-center mb-6">;
@@ -653,9 +519,7 @@ export function WebhooksManager() {;
             You have {webhooks && webhooks.length} {webhooks && webhooks.length === 1 ? 'webhook' : 'webhooks'}
           </p>;
 
-<<<<<<< HEAD
-=======
-      ;
+;
       <CardContent>;
         <div className="flex justify-between items-center mb-6">;
           <p className="text-sm text-zinc-400">;
@@ -667,9 +531,6 @@ export function WebhooksManager() {;
           <p className="text-sm text-zinc-400">;
             You have {webhooks.length} {webhooks.length === 1 ? 'webhook' : 'webhooks'}
           </p>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>;
             <DialogTrigger asChild>;
               <Button variant="default">;
@@ -683,10 +544,6 @@ export function WebhooksManager() {;
                   Add a webhook endpoint to receive event notifications.;
                 </DialogDescription>;
               </DialogHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               <div className="space-y-4 py-4">;
                 <div className="space-y-2">;
@@ -707,9 +564,7 @@ export function WebhooksManager() {;
                     value={webhookUrl}
                     onChange={(e) => setWebhookUrl(e && e.target.value)}
                     placeholder="https://example && example.com/webhook";
-<<<<<<< HEAD
-=======
-              ;
+;
               <div className="space-y-4 py-4">;
                 <div className="space-y-2">;
                   <Label htmlFor="webhook-name">Webhook Name</Label>;
@@ -728,39 +583,20 @@ export function WebhooksManager() {;
                     value={webhookUrl}
                     onChange={(e) => setWebhookUrl(e.target.value)}
                     placeholder="https://example.com/webhook";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="bg-zinc-800 border-zinc-700";
                   />;
                   <p className="text-xs text-zinc-500">;
                     The URL where webhook payloads will be sent when events occur.;
                   </p>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 <div className="space-y-2">;
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>;
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Input
                     id="webhook-secret"
                     type="password"
                     value={webhookSecret}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
                     onChange={(e) => setWebhookSecret(e.target.value)}
                     placeholder="••••••••••••••••"
@@ -777,9 +613,7 @@ export function WebhooksManager() {;
                       <div key={event.value} className="flex items-center space-x-2">
 
                     onChange={(e) => setWebhookSecret(e && e.target.value)}
-<<<<<<< HEAD
-=======
-                    onChange={(e) => setWebhookSecret(e && e.target.value)}
+onChange={(e) => setWebhookSecret(e && e.target.value)}
 ;
                 <div className="space-y-2">;
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>;
@@ -788,9 +622,6 @@ export function WebhooksManager() {;
                     type="password";
                     value={webhookSecret}
                     onChange={(e) => setWebhookSecret(e.target.value)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     placeholder="••••••••••••••••";
                     className="bg-zinc-800 border-zinc-700";
                   />;
@@ -798,11 +629,7 @@ export function WebhooksManager() {;
                     Used to verify webhook payload signatures. Keep it secret and secure.;
                   </p>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <div className="space-y-2">;
                   <Label>Event Types</Label>;
                   <div className="grid gap-2 pt-2">;
@@ -810,8 +637,6 @@ export function WebhooksManager() {;
                       <div key={event.value} className="flex items-center space-x-2">;
                         <Checkbox;
                           id={event.value} ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {eventOptions && eventOptions.map((event) => (;
                       <div key={event && event.value} className="flex items-center space-x-2">;
                         <Checkbox
@@ -819,15 +644,6 @@ export function WebhooksManager() {;
                           checked={selectedEvents && selectedEvents.includes(event && event.value)}
                           onCheckedChange={() => toggleEvent(event && event.value)}
                         />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                         <Checkbox 
                           id={event.value} 
@@ -835,11 +651,7 @@ export function WebhooksManager() {;
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-                        <Label
+<Label
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
@@ -873,7 +685,6 @@ export function WebhooksManager() {;
             </DialogContent>
           </Dialog>
         </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         <Label
                           htmlFor={event && event.value}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">;
@@ -882,16 +693,11 @@ export function WebhooksManager() {;
                         </Label>;
                       </div>;
                     ))}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                         <Label
                         </Label>;
                       </div>;
                     ))}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
 import { format } from './date - fns';
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from './lucide-react';
@@ -1074,7 +880,6 @@ function WebhooksManager() {
                           {event.label}
                           <span className="block text - xs text - zinc - 400 mt - 1">{event.description}</span>;
 
-        
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
 
                         </Label>;
@@ -1093,10 +898,7 @@ function WebhooksManager() {
                   webhook_name.trim () === "" ||;
                   webhook_url.trim () === "" ||;
                   selected_events.length === 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                ;
+;
                 <div className="space-y-2">;
                   <Label>Event Types</Label>;
                   <div className="grid gap-2 pt-2">;
@@ -1132,9 +934,6 @@ function WebhooksManager() {
                   webhookName.trim() === "" ||;
                   webhookUrl.trim() === "" ||;
                   selectedEvents.length === 0;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }>;
                   Create Webhook;
                 </Button>;
@@ -1142,12 +941,7 @@ function WebhooksManager() {
             </DialogContent>;
           </Dialog>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Webhooks List */}
         <div className="space - y-4">;
           {loading ? (
@@ -1172,22 +966,15 @@ function WebhooksManager() {
                     <div className="flex items - center mr - 2">;
                       <Switch;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         {/* Webhooks List */}
         <div className="space - y-4">;
           {loading ? (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         checked={webhook.is_active}
                         onCheckedChange={() => handleToggleStatus (webhook.id, webhook.is_active)}
                       />;
                       <span className="ml - 2 text - sm">;
                         {webhook.is_active ? "Active" : "Inactive"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        {/* Webhooks List */}
+{/* Webhooks List */}
         <div className="space-y-4">
           {loading ? (
             <div className="text-center py-8 text-zinc-500">Loading webhooks...</div>
@@ -1256,12 +1043,10 @@ function WebhooksManager() {
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
                   {webhook.last_triggered_at && (
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>
-=======
                         </DropdownMenuItem>;
                       </DropdownMenuContent>;
                     </DropdownMenu>;
                   </div>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )}
                 </div>
               </div>
@@ -1274,8 +1059,6 @@ function WebhooksManager() {
             if (showTestResult) {
               setShowTestResult(false);
               clearTestResult()
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                   </div>;
                 </div>;
@@ -1335,14 +1118,11 @@ function WebhooksManager() {
 
                     <DropdownMenu>;
                       <DropdownMenuTrigger asChild>;
-=======
-                      </span>;
+</span>;
                     </div>;
                     <DropdownMenu>;
                       <DropdownMenuTrigger as_child>;
-<<<<<<< HEAD
 
-=======
         ;
         {/* Webhooks List */}
         <div className="space-y-4">;
@@ -1379,19 +1159,16 @@ function WebhooksManager() {
                     ;
                     <DropdownMenu>;
                       <DropdownMenuTrigger asChild>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         <Button variant="ghost" size="icon">;
                           <MoreVertical size={16} />;
                         </Button>;
                       </DropdownMenuTrigger>;
-<<<<<<< HEAD
 
                           onClick={() => setShowDeleteConfirm(webhook && webhook.id)}
                           className="cursor-pointer text-red-500";
                         >;
                           <X size={14} className="mr-2" /> Delete;
-=======
-                      <DropdownMenuContent align="end" className="bg - zinc - 900 border - zinc - 800 text - white">;
+<DropdownMenuContent align="end" className="bg - zinc - 900 border - zinc - 800 text - white">;
                         <DropdownMenuItem;
                           on_click={() => setShowTestDialog (webhook.id)}
                           className="cursor - pointer";
@@ -1404,7 +1181,6 @@ function WebhooksManager() {
                         >;
                           <X size={14} className="mr - 2" /> Delete;
 
-=======
                       <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">;
                         <DropdownMenuItem;
                           onClick={() => setShowTestDialog(webhook.id)}
@@ -1417,13 +1193,11 @@ function WebhooksManager() {
                           className="cursor-pointer text-red-500";
                         >;
                           <X size={14} className="mr-2" /> Delete;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         </DropdownMenuItem>;
                       </DropdownMenuContent>;
                     </DropdownMenu>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
 
                 </div>;
 
@@ -1433,8 +1207,7 @@ function WebhooksManager() {
                     <span>Last triggered: {format(new Date(webhook && webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>;
 
                   )}
-=======
-                  )}
+)}
                 ;
                 <div className="mt-3 flex flex-wrap gap-2">;
                   {webhook.event_types.map((event) => (;
@@ -1451,29 +1224,22 @@ function WebhooksManager() {
                   <span>Created:{format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>;
                   {webhook.last_triggered_at && (;
                     <span>Last triggered:{format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>;                  )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </div>;
               </div>;
             ));
           )}
-<<<<<<< HEAD
-
 
       <Dialog 
         open={showTestDialog !== null} 
 
-
         onOpenChange={(open) => {
           if (!open) {
-=======
-        </div>;
+</div>;
       </CardContent>;
 
-=======
         </div>;
       </CardContent>;
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <CardFooter className="justify-between border-t border-zinc-800 py-4">;
         <div className="text-xs text-zinc-500">;
           Webhooks will be sent with HTTPS POST requests to your endpoint.;
@@ -1483,10 +1249,6 @@ function WebhooksManager() {
         </Button>;
       </CardFooter>;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Test Webhook Dialog */}
       <Dialog
         open={showTestDialog !== null} 
@@ -1498,20 +1260,10 @@ function WebhooksManager() {
               setShowTestResult(false);
               clearTestResult();
 
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             }
           }
         }}
 
-<<<<<<< HEAD
       >;
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <DialogHeader>;
@@ -1521,7 +1273,6 @@ function WebhooksManager() {
             </DialogDescription>;
           </DialogHeader>;
 
-=======
 ;
       {/* Test Webhook Dialog */}
       <Dialog ;
@@ -1535,24 +1286,18 @@ function WebhooksManager() {
             if (showTestResult) {;
               setShowTestResult(false),;
           ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {!showTestResult ? (;
             <>;
               <div className="space-y-4 py-4">;
                 <div className="space-y-2">;
                   <Label htmlFor="test-event-type">Event Type</Label>;
-<<<<<<< HEAD
 
                   <Select
-=======
-                  <Select;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+<Select;
             }
           }
         }}
                   <Select
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     value={testEventType}
                     onValueChange={(value) => setTestEventType(value as WebhookEventType)}
                   >;
@@ -1560,22 +1305,16 @@ function WebhooksManager() {
                       <SelectValue placeholder="Select an event type" />;
                     </SelectTrigger>;
                     <SelectContent className="bg-zinc-900 border-zinc-800">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {eventOptions && eventOptions.map((option) => (;
                         <SelectItem key={option && option.value} value={option && option.value}>;
                           {option && option.label}
                         </SelectItem>;
                       ))}
-<<<<<<< HEAD
 
                     </SelectContent>;
                   </Select>;
                   <p className="text-xs text-zinc-500">;
-=======
-                <div className="mt - 3 flex flex - wrap gap - 2">;
+<div className="mt - 3 flex flex - wrap gap - 2">;
                   {webhook.event_types.map ((event) => (
                     <Badge;
                       key={event}
@@ -1649,7 +1388,6 @@ if ( {) {
                   </Select>;
                   <p className="text - xs text - zinc - 500">;
 
-=======
                       {eventOptions.map((option) => (;
                         <SelectItem key={option.value} value={option.value}>;                          {option.label}
                         </SelectItem>;
@@ -1657,19 +1395,12 @@ if ( {) {
                     </SelectContent>;
                   </Select>;
                   <p className="text-xs text-zinc-500">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     The event type will determine the structure of the test payload.;
                   </p>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-              clearTestResult();
+clearTestResult();
             }
           }
         }}
@@ -1743,7 +1474,6 @@ if ( {) {
               </div>
               <DialogFooter>
                 <Button variant="default" onClick={() => {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   setShowTestDialog(null),
                   setShowTestResult(false),
                   clearTestResult()
@@ -1751,31 +1481,21 @@ if ( {) {
                   Close
                 </Button>
                 <Button variant="outline" onClick={() => {
-<<<<<<< HEAD
 
                   setShowTestResult(false),
 
-=======
-                  setShowTestResult(false),
+setShowTestResult(false),
 
                   setShowTestResult(false);
 
                   setShowTestResult(false),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   clearTestResult()
                 }}>
                   Test Another Event
                 </Button>
               </DialogFooter>
             </>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </Badge>;
                   </div>;
 
@@ -1784,9 +1504,7 @@ if ( {) {
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
                         {testResult?.responseBody || "No response body"}
-<<<<<<< HEAD
-=======
-              <DialogFooter>;
+<DialogFooter>;
                 <Button variant="outline" on_click={() => setShowTestDialog (null)}>;
                   Cancel;
                 </Button>;
@@ -1815,8 +1533,6 @@ if ( {) {
                     <ScrollArea className="h-[200px] rounded border border - zinc - 800 bg - black p - 4">;
                       <pre className="text - xs font - mono text - zinc - 300 whitespace - pre - wrap break - all">;
                         {test_result?.response_body || "No response body"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
               ;
               <DialogFooter>;
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>;
@@ -1836,16 +1552,13 @@ if ( {) {
                     <Badge;
                       className={;
                         testResult && testResult.status >= 200 && testResult.status < 300;
-=======
                       className={
                         testResult && testResult.status>= 200 && testResult.status < 300;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           ? "bg-green-700";
                           : "bg-red-700";
                       }
                     >;
                       {testResult?.status} {testResult?.statusText}
-<<<<<<< HEAD
                     </Badge>;
                   </div>;
                   ;
@@ -1854,19 +1567,13 @@ if ( {) {
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
                         {testResult?.responseBody || "No response body"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </pre>;
                     </ScrollArea>;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-              ;
+;
               <DialogFooter>;
                 <Button variant="default" onClick={() => {;
                   setShowTestDialog(null),;
@@ -1885,24 +1592,13 @@ if ( {) {
                 </Button>;
                 <Button variant="outline" onClick={() => {;
                   setShowTestResult(false);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   clearTestResult();
                 }}>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Test Another Event;
                 </Button>;
               </DialogFooter>;
             </>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
         </DialogContent>
       </Dialog>
@@ -1925,16 +1621,12 @@ if ( {) {
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   clearTestResult();
-=======
-                  clearTestResult();
+clearTestResult();
                 <Button variant="outline" onClick={() => {;
                   setShowTestResult(false),;
                   clearTestResult(),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 }}>;
                   Test Another Event;
                 </Button>;
@@ -1943,26 +1635,21 @@ if ( {) {
           )}
         </DialogContent>;
       </Dialog>;
-<<<<<<< HEAD
 
       {/* Delete Webhook Confirmation Dialog */}
       <AlertDialog
         open={showDeleteConfirm !== null} 
-=======
 ;
       {/* Delete Webhook Confirmation Dialog */}
       <AlertDialog ;
         open={showDeleteConfirm !== null} ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Webhook?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
-<<<<<<< HEAD
-=======
-              <DialogFooter>;
+<DialogFooter>;
                 <Button variant="default" on_click={() => {
                   setShowTestDialog (null);
                   setShowTestResult (false);
@@ -1989,35 +1676,23 @@ if ( {) {
           <AlertDialogHeader>;
             <AlertDialogTitle > Delete Webhook?</AlertDialogTitle>;
             <AlertDialogDescription className="text - zinc - 400">;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                   Close;
                 </Button>;
                 <Button variant="outline" onClick={() => {;
                   setShowTestResult(false);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               This action will permanently remove this webhook.;
               You will no longer receive events at this endpoint.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 
               className="bg-red-600 hover: bg-red-700";
-=======
-            <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700">;
+<AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700">;
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
               on_click={() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm)}
               className="bg - red - 600 hover: bg - red - 700";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;
@@ -2035,26 +1710,17 @@ if ( {) {
   )
 }
               className="bg-red-600 hover: bg-red-700";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >;
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </Card>);
 }
 
-=======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </Card>;
   ); export function WebhooksManager () {
   const {
@@ -2200,6 +1866,3 @@ clearTestResult ();
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

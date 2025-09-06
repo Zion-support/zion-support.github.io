@@ -1,7 +1,6 @@
 
 type RoadmapInputs = {
 
-
   const priorityList = priorities
     .split(/,|\n/)
     .map((s) => s.trim())
@@ -82,6 +81,9 @@ function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): 
     return { id, name, theme, objective, highlights, metrics }
   });
 }
+
+function defaultOperatorPrompt(): string {
+  return `You are Zion's Product Operator.
 Inputs you will receive:
 - milestones (string list)
 - keywords (string list)
@@ -93,6 +95,9 @@ Goals:
 4) Include explicit risks and validation signals per stage
 5) Output concise, skimmable, exec-ready text
 Format:
+
+function defaultOperatorPrompt (): string {
+
 type RoadmapInputs = {
   milestones: string;
   keywords: string;
@@ -196,6 +201,31 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+      setTimeout(() => setCopied(false), 1500)
+      await navigator.clipboard.writeText(operatorPrompt)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1500)
+export default function RoadmapPage (): JSX.Element {
+  const [milestones, set_milestones] = useState ('MVP live, First 50 users, First 10 paid engagements'),
+  const [keywords, set_keywords] = useState ('AI - native, trustless, talent - first, sovereign tools'),
+  const [priorities, set_priorities] = useState ('governance, scale, regional expansion'),
+  const [copied, set_copied] = useState (false),
+  const stages = useMemo (
+    () => generate_stages ({ milestones, keywords, priorities }),
+    [milestones, keywords, priorities]),
+  const operator_prompt = useMemo (() => defaultOperatorPrompt (), []),
+  const copy_prompt = async () => {
+    try {
+      await navigator.clipboard.write_text (operator_prompt),
+      set_copied (true),
+      set_timeout (() => set_copied (false), 1500);
+    } catch {
+
+      set_copied (false);
+
+    }
+
   },
   return (
     <>;
@@ -246,6 +276,40 @@ Validation:;
                 <input
                   value={keywords}
                   onChange={(e) => setKeywords(e.target.value)}
+                  on_change={(e) => set_keywords (e.target.value)}
+                  className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
+                  placeholder="e.g., AI - native, trustless, talent - first, sovereign tools";
+                />;
+              </div>;
+              <div>;
+                <label className="block text - sm font - medium text - gray - 700">Upcoming priorities</label>;
+                <input;
+                  value={priorities}
+
+                  value={milestones  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setMilestones(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  rows={3  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
+                  placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Vision keywords</label>
+                <input
+
                   value={keywords  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -256,6 +320,7 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
                 />
@@ -263,6 +328,7 @@ Validation:;
               <div>
                 <label className="block text-sm font-medium text-gray-700">Upcoming priorities</label>
                 <input
+
                   value={priorities  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -273,16 +339,20 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
                 />
               </div>
             </div>
           </section>
+
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
               <button
+
+                onClick={copyPrompt  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -290,6 +360,14 @@ Validation:;
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'}
+
+                className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
+              >
+                {copied ? 'Copied' : 'Copy'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </button>
             </div>
             <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>
@@ -334,6 +412,13 @@ Validation:;
                     </ul>
                   </div>
                 </article>
+
+}
+
+                  on_change={(e) => set_priorities (e.target.value)}
+                  className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
+  );
+};
   };
   return (;
     <>;
@@ -411,9 +496,134 @@ Validation:;
               </div>;
             </div>;
           </section>;
+          <section className="mb - 12">;
+            <div className="mb - 3 flex items - center justify - between gap - 3">;
+              <h2 className="text - xl font - semibold">Operator Prompt</h2>;
+              <button;
+                on_click={copy_prompt}
+                className="rounded - md bg - black px - 3 py - 2 text - sm font - semibold text - white shadow - sm hover:bg - gray - 900";
+              >;
+                {copied ? 'Copied' : 'Copy'}
+              </button>;
+            </div>;
+            <pre className="whitespace - pre - wrap rounded - lg border border - gray - 200 bg - gray - 50 p - 4 text - sm text - gray - 800">{operator_prompt}</pre>;
+          </section>;
+          <section>;
+            <h2 className="mb - 4 text - xl font - semibold">Zion v1 → v10</h2>;
+            <div className="grid gap - 6 md:grid - cols - 2">;
+              {stages.map ((stage) => (
+                <article key={stage.id} className="rounded - lg border border - gray - 200 p - 5 shadow - sm">;
+                  <h3 className="text - lg font - bold">{stage.name} — {stage.theme}</h3>;
+                  <p className="mt - 2 text - gray - 700"><span className="font - semibold">Objective:</span> {stage.objective}</p>;
+                  <div className="mt - 3">;
+                    <p className="font - semibold">Highlights</p>;
+                    <ul className="mt - 1 list - disc space - y-1 pl - 5 text - gray - 800">;
+                      {stage.highlights.map ((h, i) => (
+                        <li key={i}>{h}</li>))}
+                    </ul>;
+                  </div>;
+                  <div className="mt - 3">;
+                    <p className="font - semibold">Metrics</p>;
+                    <ul className="mt - 1 list - disc space - y-1 pl - 5 text - gray - 800">;
+                      {stage.metrics.map ((m, i) => (
+                        <li key={i}>{m}</li>))}
+                    </ul>;
+                  </div>;
+                  <div className="mt - 3">;
+                    <p className="font - semibold">Risks</p>;
+                    <ul className="mt - 1 list - disc space - y-1 pl - 5 text - gray - 800">;
+                      <li > Scope creep, unclear ownership</li>;
+                      <li > Model hallucinations or bias affecting matches</li>;
+                      <li > Regulatory and payment - compliance variability</li>;
+                    </ul>;
+                  </div>;
+                  <div className="mt - 3">;
+                    <p className="font - semibold">Validation</p>;
+                    <ul className="mt - 1 list - disc space - y-1 pl - 5 text - gray - 800">;
+                      <li > Leading indicator movement on activation and retention</li>;
+                      <li > Faster time - to - hire and time - to - pay</li>;
+                      <li > Positive contributor NPS and dispute resolution rates</li>;
+                    </ul>;
+                  </div>;
+                </article>))}
+          <section className="mb-12">;
+            <div className="mb-3 flex items-center justify-between gap-3">;
+              <h2 className="text-xl font-semibold">Operator Prompt</h2>;
+              <button;
+                onClick={copyPrompt  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900";
+              >;
+                {copied ? 'Copied' : 'Copy'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </button>;
+            </div>;
+            <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>;
+          </section>;
+          <section>;
+            <h2 className="mb-4 text-xl font-semibold">Zion v1 → v10</h2>;
+            <div className="grid gap-6 md:grid-cols-2">;
+              {stages.map((stage) => (;
+                <article key={stage.id} className="rounded-lg border border-gray-200 p-5 shadow-sm">;
+                  <h3 className="text-lg font-bold">{stage.name} — {stage.theme}</h3>;
+                  <p className="mt-2 text-gray-700"><span className="font-semibold">Objective:</span> {stage.objective}</p>;
+                  <div className="mt-3">;
+                    <p className="font-semibold">Highlights</p>;
+                    <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">;
+                      {stage.highlights.map((h, i) => (;
+                        <li key={i}>{h}</li>;
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </ul>;
+                  </div>;
+                  <div className="mt-3">;
+                    <p className="font-semibold">Metrics</p>;
+                    <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">;
+                      {stage.metrics.map((m, i) => (;
+                        <li key={i}>{m}</li>;
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </ul>;
+                  </div>;
+                  <div className="mt-3">;
+                    <p className="font-semibold">Risks</p>;
+                    <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">;
+                      <li>Scope creep, unclear ownership</li>;
+                      <li>Model hallucinations or bias affecting matches</li>;
+                      <li>Regulatory and payment-compliance variability</li>;
+                    </ul>;
+                  </div>;
+                  <div className="mt-3">;
+                    <p className="font-semibold">Validation</p>;
+                    <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">;
+                      <li>Leading indicator movement on activation and retention</li>;
+                      <li>Faster time-to-hire and time-to-pay</li>;
+                      <li>Positive contributor NPS and dispute resolution rates</li>;
+                    </ul>;
+                  </div>;
+                </article>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </section>;
         </div>;
       </main>;
 
+    </>);
+}
 

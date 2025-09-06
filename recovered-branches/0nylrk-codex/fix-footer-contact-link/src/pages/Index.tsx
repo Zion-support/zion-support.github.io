@@ -1,7 +1,4 @@
 
-
-
-
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TrustedBySection} from "@/components/TrustedBySection";
@@ -23,16 +20,8 @@ import {useTranslation} from "react-i18next";
 import {useLanguage} from "@/context/LanguageContext";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone} from "lucide-react";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default function Index() {
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Index() {;
-
 
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
@@ -79,124 +68,72 @@ export default function Index() {
       description: t("home.tool_ai_matcher_desc")
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />
       link: "/match"
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
 export default function Index() {;
-
 
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 
-
     },
 
-
-<<<<<<< HEAD
-=======
     }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    }
+}
     },
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: t("home.tool_talent")
       description: t("home.tool_talent_desc")
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
     },
 
-
-=======
-    },
-
+},
 
     }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: t("home.tool_services")
       description: t("home.tool_services_desc")
       icon: <Zap className="h-6 w-6 text-zion-cyan" />
       link: "/services"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
     },
 
-
-=======
-    },
-
+},
 
     }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: t("home.tool_equipment")
       description: t("home.tool_equipment_desc")
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
     },
 
-
-=======
-    },
-
+},
 
     }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: t("home.tool_analytics")
       description: t("home.tool_analytics_desc")
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />
       link: "/analytics"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
     },
 
-
-=======
-    },
-
+},
 
     }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: "Mobile App"
       description: "Take Zion with you on the go with our mobile app for iOS and Android"
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />
       link: "/mobile-launch"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-  // Tools and features showcase;
-=======
+// Tools and features showcase;
     }
   ],
 
@@ -213,7 +150,6 @@ export default function Index() {;
 
   // Tools and features showcase;
 // Tools and features showcase;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const toolsFeatures = [;
     {;
       title: t("home && home.tool_ai_matcher"),;
@@ -250,8 +186,6 @@ export default function Index() {;
       description: "Take Zion with you on the go with our mobile app for iOS and Android",;
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,;
       link: "/mobile-launch";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { TrustedBySection } from '@/components / TrustedBySection';
@@ -317,16 +251,12 @@ function Index() {
       description: "Take Zion with you on the go with our mobile app for iOS and Android",
       icon: <Smartphone className="h - 6 w - 6 text - zion - purple" />,
       link: "/mobile - launch";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 ;
   return (
-<<<<<<< HEAD
 
-
-=======
-      {/* Quick Access Tools Section */}
+{/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -354,9 +284,6 @@ function Index() {
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
                 </div>
               </Link>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { TrustedBySection } from "@/components/TrustedBySection",;
@@ -456,15 +383,7 @@ export default function Index() {;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
                 </div>;
               </Link>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </div>
         </div>
@@ -485,12 +404,7 @@ export default function Index() {;
       <Footer />
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="min-h-screen bg-zion-blue text-white">;
       <SEO
         title={t("home && home.seo_title")} 
@@ -501,8 +415,6 @@ export default function Index() {;
       <Header />;
       <HeroSection />;
 
-<<<<<<< HEAD
-=======
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { TrustedBySection } from "@/components/TrustedBySection",;
@@ -533,7 +445,6 @@ import { ;
   BarChart3,;
   Smartphone;
 } from "lucide-react",;
-=======
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { TrustedBySection } from '@/components / TrustedBySection';
@@ -561,7 +472,6 @@ export default /**
 function Index() {
   const { t } = use_translation ();
   const { isRTL } = use_language ();
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   // Tools and features showcase;
   const tools_features = [;
@@ -603,7 +513,6 @@ function Index() {
     }
   ];
 ;
-<<<<<<< HEAD
   return (;
     <div className="min-h-screen bg-zion-blue text-white">;
       <SEO ;
@@ -615,13 +524,11 @@ function Index() {
       <Header />;
       <HeroSection />;
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">;
           <div className="text-center mb-12">;
             <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">;
-<<<<<<< HEAD
               {t("home && home.explore_tools")}
             </h2>;
             <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">;
@@ -643,8 +550,7 @@ function Index() {
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>;
                   <span>{t("general && general.explore")}</span>;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
-=======
-              {t("home.explore_tools")}
+{t("home.explore_tools")}
             </h2>;
             <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">;
               {t("home.tools_description")}
@@ -666,14 +572,12 @@ function Index() {
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' :''}`}>;
                   <span>{t("general.explore")}</span>;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' :'ml-2'} h-4 w-4`} />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </div>;
               </Link>;
             ))}
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
 
       <CategoriesSection />;
       <BenefitsSection />;
@@ -696,11 +600,7 @@ function Index() {
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
-  return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+return (
     <div className="min - h-screen bg - zion - blue text - white">;
       <SEO;
         title={t ("home.seo_title")}
@@ -710,7 +610,6 @@ function Index() {
       />;
       <Header />;
       <HeroSection />;
-<<<<<<< HEAD
       {/* Quick Access Tools Section */}
       <section className="py - 16 bg - zion - blue - dark">;
         <div className="container mx - auto px - 4">;
@@ -746,24 +645,18 @@ function Index() {
       <BenefitsSection />;
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
-=======
-      ;
+;
       <CategoriesSection />;
       <BenefitsSection />;
       ;
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <HowItWorksSection />;
       <FeaturedListingsSection />;
       <TestimonialCarousel />;
       <TrustedBySection />;
       <BlogSection />;
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />;
       <WaitlistSection />;
@@ -771,9 +664,7 @@ function Index() {
       <Footer />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-      ;
+;
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />;
       ;
@@ -849,7 +740,4 @@ min-h-screen bg-zion-blue text-white" > <SEO /> <Header /> <HeroSection /> </p> 
 }<SocialShareSection /> <WaitlistSection /> <FloatingCTA /> <Footer /> </div>) 
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

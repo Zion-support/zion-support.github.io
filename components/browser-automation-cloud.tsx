@@ -21,14 +21,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-
 import React from 'react';
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 export default function BrowserAutomationCloudPage() {
   const features = [
     'Parallel Playwright/Puppeteer execution',
@@ -37,10 +32,6 @@ export default function BrowserAutomationCloudPage() {
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;
   ];
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-
 
   const features = [
     'Parallel Playwright/Puppeteer execution'
@@ -98,14 +89,8 @@ export default function BrowserAutomationCloudPage() {
               rel='noreferrer'
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
-<<<<<<< HEAD
-=======
-=======
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
+className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -175,15 +160,7 @@ function BrowserAutomationCloudPage() {
           </div>;
         </section>;
       </main>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -212,11 +189,7 @@ function BrowserAutomationCloudPage() {
   </main>;
   </>),
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
-	const features = [
+const features = [
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 	];
 import React from 'react',
@@ -334,18 +307,11 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	)
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 	),
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 	),
 }
 	),
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

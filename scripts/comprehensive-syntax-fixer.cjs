@@ -23,6 +23,15 @@
 
   // Check if file has merge conflicts
   hasMergeConflicts(content) {
+
+
+
+    return content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>');
+
+
+
+    return content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>');
+
   }
 
   // Check if file has syntax errors
@@ -473,6 +482,18 @@ if (require.main === module) {
       process.exit(1);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 #!/usr/bin/env node;
 const fs = require('fs');

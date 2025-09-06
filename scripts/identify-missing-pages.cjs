@@ -21,3 +21,8 @@ const fs = require("fs").promises;const path = require("path")"
           .replace("/", ")
           .replace(/-/g, " ")
           .replace(/\s+/g, ")
+
+
+        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
+    console.error("Error identifying missing "pages")
+

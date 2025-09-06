@@ -1,23 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 const AIAssistant: React.FC = () => {
 import React from 'react',
 import Head from 'next/head';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <Layout>;
       <Head>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-assistant' />;
       </Head>;
@@ -43,23 +32,11 @@ import Head from 'next/head';
             </h1>;
             <p className='text - gray - 300 text - lg'>;
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Automate research, summarization, drafting, scheduling, and inbox;
               triage.;
             </p>;
           </header>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;
           <section className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
             {[;
@@ -82,26 +59,12 @@ import Head from 'next/head';
               href='/contact';
               className='px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 700 text - white';
             >;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Request a Demo;
             </Button>;
           </div>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="bg - blue - 50 rounded - lg p - 8 text - center">;
           <h2 className="text - 2xl font - bold mb - 4">Ready to Get Started?</h2>;
           <p className="text - lg text - gray - 700 mb - 6">;
@@ -112,33 +75,13 @@ import Head from 'next/head';
               Request a Demo;
             </a>;
             <a href="/about" className="border border - blue - 600 text - blue - 600 px - 6 py - 3 rounded - lg hover:bg - blue - 50">;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Learn More;
             </a>;
           </div>;
         </div>;
       </main>;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Head>
@@ -168,15 +111,9 @@ import Head from 'next/head';
           </div>
         </div>
 
-
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import Button from '../components/ui/Button';
-=======
 import Button from '../components/ui/Button';
 import React from 'react';
 import Head from 'next/head';
@@ -191,15 +128,13 @@ const AIAssistant: React.FC = () => {
 
 import Head from 'next/head',
 import Button from '../components/ui/Button',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import Button from '../components/ui/Button';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function AIAssistantPage() {
   return (
     <>
       <Head>
         <title>AI Assistant | Zion Tech Group</title>
+<meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
         <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
         <link rel="canonical" href="https://ziontechgroup.com/ai-assistant" />
       </Head>
@@ -207,9 +142,6 @@ export default function AIAssistantPage() {
         <div className="max-w-6xl mx-auto space-y-10">
           <header className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Assistant</h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -246,22 +178,11 @@ export default function AIAssistantPage() {
     </Layout>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </Layout>);
 ;
 
-
-
     </Layout>);
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -279,11 +200,3 @@ export default function AIAssistantPage() {
     </>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

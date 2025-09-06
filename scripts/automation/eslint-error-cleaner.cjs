@@ -689,3 +689,7 @@ if (require.main === module) {
     console.error('ESLint error cleaner "failed": ', error);
     process.exit(1)})}
 ;
+
+
+module.exports = ESLintErrorCleaner
+

@@ -6,25 +6,14 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ForumReply} from "@/types/community";
 import {cn} from "@/lib/utils";
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ReplyCardProps {;
   reply: ForumReply,;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
 }
-<<<<<<< HEAD
 
-
-
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -42,16 +31,12 @@ interface ReplyCardProps {
   className?: string;
 }
 
-<<<<<<< HEAD
 export const ReplyCard = ({
   reply;
   onMarkAnswer
   canMarkAnswer = false;
 import { ForumReply } from "@/types/community",
 import { cn } from "@/lib/utils",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
@@ -59,36 +44,24 @@ interface ReplyCardProps {
   className?: string
 }
 
-<<<<<<< HEAD
-
 export const ReplyCard = ({ 
   reply,
 
   onMarkAnswer, 
   canMarkAnswer = false,
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export const ReplyCard = ({ ;
   reply;
 export const ReplyCard = ({ 
   reply,
   onMarkAnswer, 
   canMarkAnswer = false,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
     <Card className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export const ReplyCard = ({ ;
   reply;
   onMarkAnswer, ;
@@ -97,13 +70,10 @@ export const ReplyCard = ({ ;
       "transition-shadow",
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
 
-<<<<<<< HEAD
-=======
-      "transition-shadow";
+"transition-shadow";
       reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20"
       "transition-shadow",
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       className
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -118,10 +88,7 @@ export const ReplyCard = ({ ;
             </span>
             {reply.authorRole && (
               <Badge variant="outline" className="ml-2 text-xs">
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { formatDistanceToNow } from "date-fns",;
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -141,7 +108,6 @@ export const ReplyCard = ({;
   reply,;
   onMarkAnswer,;
   canMarkAnswer = false,;
-<<<<<<< HEAD
 
   className;
 }: ReplyCardProps) => {;
@@ -151,10 +117,8 @@ export const ReplyCard = ({;
     <CardclassName={cn(
       "transition-shadow"
       reply && reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       className
-=======
-  className;
+className;
 }: ReplyCardProps) => {;
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),;
   return (;
@@ -162,10 +126,7 @@ export const ReplyCard = ({;
       "transition-shadow",;
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",;
       className;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       className
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
@@ -178,7 +139,6 @@ export const ReplyCard = ({;
               <Badge variant="outline" className="ml-2 text-xs">;
                 {reply.authorRole}
               </Badge>
-<<<<<<< HEAD
             )}
             {reply.isAnswer && (
               <Badge className="ml-2 bg-green-500 text-white">
@@ -189,9 +149,7 @@ export const ReplyCard = ({;
           </div>
           <div className="text-xs text-muted-foreground">
             {timeAgo}
-<<<<<<< HEAD
-=======
-          </div>
+</div>
         </div>
       </CardHeader>
       <CardContent>
@@ -214,7 +172,6 @@ export const ReplyCard = ({;
             Mark as Answer
           </Button>
         )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           </div>;
         </div>;
@@ -243,7 +200,6 @@ export const ReplyCard = ({;
           </Button>;
         )}
 
-
       </CardFooter>
     </Card>
   )
@@ -254,15 +210,9 @@ export default ReplyCard;
     </Card>;
   );
 };
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default ReplyCard;
 
-=======
 import { formatDistanceToNow } from './date - fns';
 import { ThumbsUp, ThumbsDown, CheckCircle } from '@/components / icons';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
@@ -339,10 +289,6 @@ export const ReplyCard = ({
 ;
 export default ReplyCard;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 import { formatDistanceToNow } from "date-fns",;
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -385,9 +331,7 @@ export const ReplyCard = ({ ;
             </span>;
             {reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;                {reply.authorRole}
-=======
                 {reply && reply.authorRole}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Badge>;
             )}
             {reply && reply.isAnswer && (;
@@ -401,12 +345,6 @@ export const ReplyCard = ({ ;
   );
 };
 
-
-
-export default ReplyCard;
-<<<<<<< HEAD
 export default ReplyCard;
 export default ReplyCard;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export default ReplyCard;

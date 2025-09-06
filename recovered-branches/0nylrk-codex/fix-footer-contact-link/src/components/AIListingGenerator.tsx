@@ -1,14 +1,4 @@
-<<<<<<< HEAD
 
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -19,8 +9,6 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
 import {Badge} from "@/components/ui/badge";
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface GeneratedContent {;
   description: string,;
   tags: string[],;
@@ -35,24 +23,18 @@ interface AIListingGeneratorProps {;
   onApplyGenerated?: (content: GeneratedContent) => void,;
   initialValues?: {;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     title?: string;
     category?: string;
     keyFeatures?: string;
     targetAudience?: string;
   }
 }
-<<<<<<< HEAD
 
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
 
-=======
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -90,19 +72,15 @@ interface AIListingGeneratorProps {;
     title?: string;
     category?: string;
     keyFeatures?: string;
-<<<<<<< HEAD
     targetAudience?: string
 import { supabase } from "@/integrations/supabase/client",
 import { Badge } from "@/components/ui/badge",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    targetAudience?: string;
+targetAudience?: string;
   }
 }
 
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -111,10 +89,7 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 }
 
 interface AIListingGeneratorProps {
@@ -135,8 +110,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -183,7 +156,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [isLoading, setIsLoading] = useState(false),
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
 
-<<<<<<< HEAD
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
       case 'title':
@@ -199,20 +171,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         setTargetAudience(e.target.value)
         break
     }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
       case 'title':
-<<<<<<< HEAD
         setTitle(e.target.value);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [title, setTitle] = useState(initialValues && initialValues.title || "");
   const [category, setCategory] = useState(initialValues && initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
@@ -224,8 +187,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     switch(field) {;
       case 'title':;
         setTitle(e && e.target.value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
@@ -233,7 +194,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "Please provide at least a title and category."
         variant: "destructive"
       });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         break;
       case 'category':;
         setCategory(e && e.target.value);
@@ -244,19 +204,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       case 'targetAudience':;
         setTargetAudience(e && e.target.value),;
         break;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
   },
 
-
-
-=======
-  }
+}
   },
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
@@ -264,12 +216,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "Please provide at least a title and category."
         variant: "destructive"
 
-<<<<<<< HEAD
-=======
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       return;
     }
@@ -277,10 +223,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
         body: { title, category, key_features, target_audience }
       });
-<<<<<<< HEAD
       if (error) {
         throw new Error(error.message)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }),
       return
 ;
@@ -306,32 +250,25 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       case 'targetAudience':;
         setTargetAudience(e.target.value),;
         break;
-<<<<<<< HEAD
 
     }
   };
 
-=======
-    }
+}
   };
     }
   },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleGenerate = async () => {;
     if (!title || !category) {;
       toast({;
         title: "Missing required fields",;
         description: "Please provide at least a title and category.",;
         variant: "destructive";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
 
-=======
-    setIsLoading(true);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+setIsLoading(true);
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -403,9 +340,7 @@ if ( {) {
     }
     setIsLoading (true);
 ;
-<<<<<<< HEAD
 
-=======
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -472,9 +407,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
       }),;
       return,;
     }
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     setIsLoading(true),;
     ;
@@ -488,7 +420,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
       if (data.error) {;
         throw new Error(data.error),;
       }
-<<<<<<< HEAD
 ;
       setGeneratedContent(data.generated),;
       toast({;
@@ -612,18 +543,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
     setIsLoading(true),
     
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     try {
       const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
         body: { title, category, key_features, target_audience }
       });
-<<<<<<< HEAD
 
-=======
-      }),;
+}),;
       return;
     }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
     setIsLoading(true),;
     try {;
@@ -632,47 +559,30 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }
       if (data.error) {
         throw new Error(data.error)
       }
 
-
-
       setGeneratedContent(data.generated),
 
-
-<<<<<<< HEAD
-=======
-      setGeneratedContent(data.generated);
+setGeneratedContent(data.generated);
 
       setGeneratedContent(data.generated),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
       })
     } catch (error) {
-<<<<<<< HEAD
       console.error("Error generating content:", error);
-=======
-      console.error("Error generating content:", error),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+console.error("Error generating content:", error),
       toast({
         title: "Generation Failed"
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
       // Check condition
 if ( {) {
@@ -698,51 +608,35 @@ if ( {) {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive";
       });
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } finally {
       setIsLoading(false)
     }
 
   },
 
-
-
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent);
-<<<<<<< HEAD
-=======
-  }
+}
   },
 
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
 
-
     try {;
       const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
         body: { title, category, keyFeatures, targetAudience }
-<<<<<<< HEAD
       });
 
       if (error) {;
@@ -754,20 +648,13 @@ if ( {) {
       }
 
       setGeneratedContent(data && data.generated);
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
 
   },
 
-<<<<<<< HEAD
-=======
-    }
+}
   }
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -822,15 +709,12 @@ if ( {) {
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups"
               className="bg-zion-blue border border-zion-blue-light text-white"
-<<<<<<< HEAD
 
           <Button 
 
-=======
 ;
       setGeneratedContent(data.generated),;
 
-=======
           <Button 
 
 ;
@@ -839,8 +723,6 @@ if ( {) {
               disabled={isLoading}
             />
           </div>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
@@ -850,42 +732,25 @@ if ( {) {
 
 ;
       setGeneratedContent(data.generated),;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({;
         title: "Content Generated",;
         description: "AI has created optimized listing content for you.";
       });
     } catch (error) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       console && console.error("Error generating content:", error);
       toast({;
         title: "Generation Failed",;
         description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
-<<<<<<< HEAD
-=======
-      console.error("Error generating content:", error),;
+console.error("Error generating content:", error),;
       toast({;
         title: "Generation Failed",;
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
 
   const handleApply = () => {;
@@ -899,9 +764,7 @@ if ( {) {
   }
 
   return (
-<<<<<<< HEAD
-=======
-  },;
+},;
   const handleApply = () => {;
     if (generatedContent && onApplyGenerated) {;
       onApplyGenerated(generatedContent),;
@@ -912,9 +775,6 @@ if ( {) {
     }
   };
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -929,10 +789,7 @@ if ( {) {
         <CardContent className="space-y-4">;
           <div className="space-y-2">;
             <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      }),
+}),
 
       if (error) {
         throw new Error(error.message)
@@ -998,23 +855,14 @@ if ( {) {
         <CardContent className=&quot;space-y-4&quot;>
           <div className=&quot;space-y-2&quot;>
             <label htmlFor=&quot;title&quot; className=&quot;text-sm font-medium text-zion-slate-light&quot;>Title</label>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Input
               id="title"
               value={title}
               onChange={(e) => handleInputChange(e, 'title')}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            <Input;
+<Input;
               id="title";
               value={title}
               onChange={(e) => handleInputChange(e, 'title')}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               placeholder="Enter your product or service title";
               className="bg-zion-blue border border-zion-blue-light text-white";
               disabled={isLoading}
@@ -1022,67 +870,43 @@ if ( {) {
           </div>;
           <div className="space-y-2">;
             <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              placeholder=&quot;Enter your product or service title&quot;
+placeholder=&quot;Enter your product or service title&quot;
               className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
               disabled={isLoading}            />
           </div>
           <div className=&quot;space-y-2&quot;>
             <label htmlFor=&quot;category&quot; className=&quot;text-sm font-medium text-zion-slate-light&quot;>Category</label>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Input
               id="category"
               value={category}
               onChange={(e) => handleInputChange(e, 'category')}
-<<<<<<< HEAD
-<<<<<<< HEAD
               placeholder="e && e.g. AI Tool, Digital Product, Service";
-=======
-            <Input;
+<Input;
               id="category";
               value={category}
               onChange={(e) => handleInputChange(e, 'category')}
               placeholder="e.g. AI Tool, Digital Product, Service";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
               placeholder="e && e.g. AI Tool, Digital Product, Service";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="bg-zion-blue border border-zion-blue-light text-white";
               disabled={isLoading}
             />;
           </div>;
           <div className="space-y-2">;
             <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              placeholder=&quot;e.g. AI Tool, Digital Product, Service&quot;
+placeholder=&quot;e.g. AI Tool, Digital Product, Service&quot;
               className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
               disabled={isLoading}            />
           </div>
           <div className=&quot;space-y-2&quot;>
             <label htmlFor=&quot;keyFeatures&quot; className=&quot;text-sm font-medium text-zion-slate-light&quot;>Key Features (Optional)</label>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Textarea
               id="keyFeatures"
               value={keyFeatures}
               onChange={(e) => handleInputChange(e, 'keyFeatures')}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            <Textarea;
+<Textarea;
               id="keyFeatures";
               value={keyFeatures}
               onChange={(e) => handleInputChange(e, 'keyFeatures')}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               placeholder="Briefly describe the main features or benefits";
               className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
               disabled={isLoading}
@@ -1090,19 +914,13 @@ if ( {) {
           </div>;
           <div className="space-y-2">;
             <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Input
               id="targetAudience"
               value={targetAudience}
               onChange={(e) => handleInputChange(e, 'targetAudience')}
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
-<<<<<<< HEAD
-=======
-              placeholder=&quot;Briefly describe the main features or benefits&quot;
+placeholder=&quot;Briefly describe the main features or benefits&quot;
               className=&quot;bg-zion-blue border border-zion-blue-light text-white min-h-20&quot;
               disabled={isLoading}            />
           </div>
@@ -1112,7 +930,6 @@ if ( {) {
               id=&quot;targetAudience&quot;
               value={targetAudience}
               onChange={(e) => handleInputChange(e, 'targetAudience')}
-
 
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
@@ -1128,9 +945,6 @@ if ( {) {
           <Button;
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
             {isLoading ? (
@@ -1154,11 +968,7 @@ if ( {) {
             <div className="flex flex-wrap gap-2">
               {[...Array(5)].map((_, i) => (
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-              ))}
+))}
             </div>
             <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />
             <div className="space-y-2">
@@ -1169,7 +979,6 @@ if ( {) {
           </CardContent>
         </Card>
       )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             />;
           </div>;
           <Button
@@ -1179,9 +988,7 @@ if ( {) {
             {isLoading ? (;
               <>Generating Optimized Content...</>;
             ) : (;
-<<<<<<< HEAD
-=======
-              placeholder=&quot;e.g. Developers, Marketers, Startups&quot;
+placeholder=&quot;e.g. Developers, Marketers, Startups&quot;
               className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
               disabled={isLoading}
             />;
@@ -1194,7 +1001,6 @@ if ( {) {
             {isLoading ? (;
               <>Generating Optimized Content...</>;
             ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <>;
                 <Sparkles className="h-4 w-4 mr-2" />;
                 Generate Optimized Content;
@@ -1203,11 +1009,8 @@ if ( {) {
           </Button>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {isLoading && (;
         <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">;
           <CardHeader>;
@@ -1218,9 +1021,6 @@ if ( {) {
             <div className="flex flex-wrap gap-2">;
               {[...Array(5)].map((_, i) => (;
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
             </div>;
             <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;
@@ -1233,16 +1033,6 @@ if ( {) {
         </Card>;
       )}
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
           <CardHeader>
@@ -1270,15 +1060,7 @@ if ( {) {
               <ul className="list-disc pl-5 text-white space-y-1">
                 {generatedContent.keyPoints.map((point, index) => (
                   <li key={index}>{point}</li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {generatedContent && !isLoading && (;
         <Card className="border border-zion-blue-light bg-zion-blue-dark">;
           <CardHeader>;
@@ -1287,8 +1069,6 @@ if ( {) {
           <CardContent className="space-y-4">;
             <div>;
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <p className="text-white">{generatedContent && generatedContent.description}</p>;
             </div>;
 
@@ -1296,20 +1076,17 @@ if ( {) {
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
               <div className="flex flex-wrap gap-2">;
                 {generatedContent && generatedContent.tags.map((tag, index) => (;
-=======
-              <p className="text-white">{generatedContent.description}</p>;
+<p className="text-white">{generatedContent.description}</p>;
             </div>;
             ;
             <div>;
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
               <div className="flex flex-wrap gap-2">;
                 {generatedContent.tags.map((tag, index) => (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">{tag}</Badge>;
                 ))}
               </div>;
             </div>;
-<<<<<<< HEAD
 
             <div>;
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
@@ -1321,12 +1098,8 @@ if ( {) {
               <ul className="list-disc pl-5 text-white space-y-1">;
                 {generatedContent && generatedContent.keyPoints.map((point, index) => (;
                   <li key={index}>{point}</li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 ))}
-=======
-=======
-                ))}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+))}
 ;
   const handle_apply = () =>: any {
     // Check condition
@@ -1456,10 +1229,7 @@ if ( {) {
               <ul className="list - disc pl - 5 text - white space - y-1">;
                 {generated_content.key_points.map ((point, index) => (
                   <li key={index}>{point}</li>))}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-            ;
+;
             <div>;
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
               <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>;
@@ -1471,15 +1241,10 @@ if ( {) {
                 {generatedContent.keyPoints.map((point, index) => (;
                   <li key={index}>{point}</li>;
                 ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>;
             </div>;
           </CardContent>;
           <CardFooter>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <Button;
               on_click={handle_apply}
@@ -1492,8 +1257,7 @@ if ( {) {
         </Card>)}
     </div>);
 
-=======
-            <Button;
+<Button;
               onClick={handleApply}
               className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white";
             >;
@@ -1561,7 +1325,4 @@ toast ({
       )}
     </div>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

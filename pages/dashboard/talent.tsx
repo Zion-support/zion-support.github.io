@@ -5,6 +5,7 @@ const STEPS = [
   { key: 'skills', label: 'Skills added' }
   { key: 'availability', label: 'Availability set' }
   { key: 'match', label: 'First match received' }
+
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -26,6 +27,7 @@ export default function TalentDashboard() {
     availability: false,
     match: false,;
   });
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
@@ -35,7 +37,31 @@ export default function TalentDashboard() {
   }, []);
   useEffect(() => {
 
-
+import EnhancedCard from '../../components/ui/EnhancedCard';
+import EnhancedButton from '../../components/ui/EnhancedButton';
+import { useEffect, useState } from 'react';
+const STEPS = [;
+  { key: 'profile', label: 'Profile completed' },;
+  { key: 'skills', label: 'Skills added' },;
+  { key: 'availability', label: 'Availability set' },;
+  { key: 'match', label: 'First match received' },;
+] as const;
+type StepKey = (typeof STEPS)[number]['key'];
+const STEPS = [
+  { key: 'profile', label: 'Profile completed' },
+  { key: 'skills', label: 'Skills added' },
+  { key: 'availability', label: 'Availability set' },
+  { key: 'match', label: 'First match received' }] as const,
+type StepKey = typeof STEPS[number]['key'];
+export default function TalentDashboard() {
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem('onboarding.talent');
+      if (raw) setCompleted(JSON.parse(raw))
+    } catch {}
+  }, []);
+  useEffect(() => {
 export default function TalentDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
     profile: false,;
@@ -128,9 +154,6 @@ const STEPS = [;
 
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
-
-
-
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -159,9 +182,9 @@ const STEPS = [;
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
 
-
 }
 
+}
 
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
@@ -179,7 +202,6 @@ const STEPS = [;
       </EnhancedCard>;
     </div>;
   );
-
 
   )
 }
@@ -283,3 +305,4 @@ function TalentDashboard() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+

@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-} from "../../../utils/auth";
-export default async function handler(
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
@@ -16,18 +8,42 @@ import {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
-  parseUserFromRequest,
+  parseUserFromRequest
   ensureInvolvedOrAdmin,;
 } from "../../../utils/auth";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {;
 
+  parseUserFromRequest
+
+
+} from "../../../utils/auth";
+export default async function handler(
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getDisputeById } from "../../../utils/fsdb";
+import {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getDisputeById } from "../../../utils/fsdb";
+import {
+
   parseUserFromRequest,
+
+  ensureInvolvedOrAdmin,;
+
+} from "../../../utils/auth";
+export default async function handler(
+
+  req: NextApiRequest
+  res: NextApiResponse
+) {;
+
+parseUserFromRequest,
   ensureInvolvedOrAdmin,;
 
 } from "../../../utils/auth";
@@ -36,7 +52,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-
   const { id } = req.query;
 
   if (typeof id !== "string")
@@ -44,9 +59,9 @@ export default async function handler(
     return res && res.status(400).json({ error: "Invalid id" });
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
+
 return res && res.status(400).json({ error: "Invalid id" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getDisputeById } from '../../../utils/fsdb';
@@ -54,43 +69,38 @@ import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../utils/auth
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "GET") {
     const dispute = await getDisputeById(id);
     if (!dispute) return res.status(404).json({ error: "Dispute not found" });
     try {
-<<<<<<< HEAD
+res.setHeader("Allow", "GET");
+  return res.status(405).end("Method Not Allowed");
+}
+
+
+
+
+
+
+
+
 
 
     }
     return res && res.status(200).json({ dispute });
   }
 
-<<<<<<< HEAD
-
   res && res.setHeader("Allow", "GET");
   return res && res.status(405).end("Method Not Allowed");
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+res.setHeader("Allow", "GET");
+  return res.status(405).end("Method Not Allowed");
   res.setHeader("Allow", "GET");
   return res.status(405).end("Method Not Allowed");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
     } catch (e: any) {
@@ -101,12 +111,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res && res.setHeader("Allow", "GET");
   return res && res.status(405).end("Method Not Allowed");
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById  } from '../../../utils / fsdb';
 import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,
+  parseUserFromRequest
+  ensureInvolvedOrAdmin
 } from '../../../utils / auth';
 ;
 export default async /**
@@ -126,11 +135,6 @@ if ( {) {
 }
 
 
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     const dispute = await getDisputeById (id);
     if (return res.status (404).json ({ error: "Dispute not found" })) {
   $2
@@ -146,11 +150,11 @@ if ( {) {
   return res.status (405).end ("Method Not Allowed");
 }
 
-
-=======
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET']);
@@ -165,14 +169,12 @@ export default async function handler(req, res) {
 
     return res && res.status(400).json({ error: "Invalid id" });
 
-
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "GET") {
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
     try {
-
 
     }
     return res && res.status(200).json({ dispute });
@@ -212,12 +214,11 @@ function handler() {
   // Check condition
 if ( {) {
   $2
+
+
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
+}
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

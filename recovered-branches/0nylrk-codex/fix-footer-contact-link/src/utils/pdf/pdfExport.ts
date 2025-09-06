@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';
@@ -17,10 +11,6 @@ import { addEducationSection  } from './sections/educationSection';
 import { addCertificationsSection  } from './sections/certificationsSection';
 import { addPortfolioSection } from './sections/portfolioSection';
 export interface ExportOptions {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf-autotable';
@@ -33,14 +23,7 @@ import {addEducationSection} from './sections/educationSection';
 import {addCertificationsSection} from './sections/certificationsSection';
 import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   theme: 'light' | 'dark';
   includePortfolio?: boolean;
 
@@ -57,28 +40,13 @@ export async function exportResumeToPDF(
   resume: Resume
   options: Partial<ExportOptions> = {}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ): Promise<Blob> {
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options }
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({
@@ -91,8 +59,6 @@ export async function exportResumeToPDF(
   // Set up colors based on theme
   const colors = getPdfThemeColors(theme);
   // Set background color
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   doc && doc.setFillColor(colors && colors.background);
   doc && doc.rect(0, 0, 210, 297, 'F'), // Fill entire page
@@ -106,20 +72,16 @@ export async function exportResumeToPDF(
   currentY = addWorkExperienceSection(doc, resume && resume.work_experience, colors, currentY);
   currentY = addEducationSection(doc, resume && resume.education, colors, currentY);
   currentY = addCertificationsSection(doc, resume && resume.certifications, colors, currentY);
-  
 
   // Add portfolio projects if needed
   if (includePortfolio && resume && resume.portfolio_projects && resume && resume.portfolio_projects.length > 0) {
     currentY = addPortfolioSection(doc, resume && resume.portfolio_projects, colors, currentY, maxProjects)
   }
 
-  
   return doc && doc.output('blob')
 }
 
-=======
-=======
-  // Add portfolio projects if needed
+// Add portfolio projects if needed
   doc.setFillColor(colors.background);
   doc.rect(0, 0, 210, 297, 'F'), // Fill entire page
   // Set text color based on theme
@@ -155,7 +117,6 @@ export interface ExportOptions {;
   }
   return doc && doc.output('blob')
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {Resume} from '@/types / resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf - autotable';
@@ -178,8 +139,6 @@ const default_options: ExportOptions = {
   include_portfolio: true;
   max_projects: 2,
   font_family: 'default';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export async function exportResumeToPDF (
@@ -224,10 +183,6 @@ if ( {) {
   }
   return doc.output ('blob');
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import { Resume } from '@/types/resume',;
 import { jsPDF } from 'jspdf',;
@@ -323,6 +278,3 @@ export async function exportResumeToPDF(;
   }
   return doc.output('blob')
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

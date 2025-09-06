@@ -7,15 +7,43 @@ status: {
 import React, { useEffect, useState } from 'react';
 import Tree, { TreeNode } from '../../components/ui/Tree';
 
-
 import React, { useEffect, useState } from 'react';
-
-
-
-
 
 import Tree, { TreeNode } from '../../components / ui / Tree';
 interface ApiResponse {
+  nodes: TreeNode[],
+status: {
+  git_connected: boolean, git_branch?: string;
+export default /**
+ * DevTreePage - Function description
+ */
+function DevTreePage() {
+  const [nodes, set_nodes] = useState < TreeNode[] | null>(null);
+  const [error, set_error] = useState < string | null>(null);
+  const [git, set_git] = useState < ApiResponse['status'] | null>(null);
+  const [admin_token, setAdminToken] = useState < string>('');
+;
+  const fetch_tree = async (token?: string) => {
+    try {
+      const resp = await fetch ('/api / dev / source - map', {
+        headers: token ? { 'x - admin - token': token } : undefined,
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        const inner_index = await resp.json ().catch (() => ({}));
+        throw new Error (j.error || `HTTP ${resp.status}`);
+
+      }
+      const data: ApiResponse = await resp.json();
+      setNodes(data.nodes);
+      setGit(data.status);
+    } catch (e: any) {
+
+import React, { useEffect, useState } from "react";
+import Tree, { TreeNode } from "../../components/ui/Tree";
+
 interface ApiResponse {
   nodes: TreeNode[],
   status: { gitConnected: boolean, gitBranch?: string }
@@ -46,6 +74,14 @@ export default function DevTreePage() {
   const [git, setGit] = useState<ApiResponse["status"] | null>(null),
   const [adminToken, setAdminToken] = useState<string>(""),
   const fetchTree = async (token?: string) => {
+export default function DevTreePage() {
+  const [nodes, setNodes] = useState<TreeNode[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [git, setGit] = useState<ApiResponse["status"] | null>(null);
+  const [adminToken, setAdminToken] = useState<string>("");
+
+  const fetchTree = async (token?: string) => {
+
     try {
       const resp = await fetch('/api/dev/source-map', {
         method: 'POST'
@@ -118,13 +154,12 @@ export default function DevTreePage() {
       ) : (
         <div>Loading...</div>
 
-
             onClick={handleSaveToken}>            Save Token;
 
+}
+}
+}
 
-}
-}
-}
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {;
@@ -243,6 +278,10 @@ export default function DevTreePage(req, res) {
 
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
 
+          </button>;
+        </div>;
+      </div>;
+      {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
       {nodes ? (;
         <div className='rounded border p-3 bg-white'>          <Tree nodes={nodes} onDeploy={onDeploy} />;
         </div>;
@@ -252,7 +291,8 @@ export default function DevTreePage(req, res) {
     </div>;
   );
 
-
+  )
+}
       set_error (e.message || 'Failed to load');    }
   }
 ;
@@ -325,3 +365,4 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+

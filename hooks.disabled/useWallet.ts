@@ -1,4 +1,7 @@
 
+
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,17 +27,28 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface UseWalletProps {
   // Add props here as needed
-<<<<<<< HEAD
 
 
-}
-
-<<<<<<< HEAD
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+
+interface UseWalletProps {
+  // Add props here as needed
+}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+
+
+
+
+
 export default function UseWallet({ }: UseWalletProps) {
   return (
     <div>
@@ -43,24 +57,74 @@ export default function UseWallet({ }: UseWalletProps) {
     </div>
   );
 <<<<<<< HEAD
-<<<<<<< HEAD
+
+}
+
+}
+
+
+
+}
+
+
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 }
 
 
+
+}
 <<<<<<< HEAD
+
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+}
+
+}
+ursor/add-new-services-and-deploy-updates-0462
+
+
+
+}
+
+
+
 }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
 
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+}
+<<<<<<< HEAD
+
+
+
+}
+
+
+
+
+
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

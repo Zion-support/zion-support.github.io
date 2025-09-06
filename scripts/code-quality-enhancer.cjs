@@ -15,3 +15,7 @@ s*(w+)/g, '
       improvements.push('Arrow functions optimized')
       improvements.push('Semicolons added')
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
+
+
+      // Skip directories that can'
+

@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import { useRouter  } from 'next/router';
 import { useEffect, useState } from 'react';
 export default function WhitepaperPreview() {
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
 
+import {useRouter} from 'next/router';
+import {useEffect, useState} from 'react';
 export default function WhitepaperPreview() {;
-
 
 import { useRouter } from 'next/router',
 import { useEffect, useState } from 'react',
@@ -50,36 +44,24 @@ export default function WhitepaperPreview() {
       .then(d => setMarkdown(d && d.markdown || ''));
       .catch(() => setNotFound(true));
   }, [id]);
-<<<<<<< HEAD
   if (notFound);
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className='container mx-auto px-4 py-6'>;
         Preview not available or expired.;
       </div>;
     );
   if (!markdown);
-<<<<<<< HEAD
     return <div className='container mx-auto px-4 py-6'>Loading…</div>;
   return (
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className='container mx-auto px-4 py-6'>;
       <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>;
       <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>;
     </div>;
   );
-<<<<<<< HEAD
 
-=======
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
+.then((r) => (r.ok ? r.json() : Promise.reject()))
       .then((d) => setMarkdown(d.markdown || ''))
       .catch(() => setNotFound(true))
   }, [id]);
@@ -108,9 +90,6 @@ function WhitepaperPreview() {
   $2
 }
     // Simple client fetch from a volatile in - memory store endpoint (for demo we echo in query);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // In a production app, this would fetch from a real DB.;
     fetch (`/api / whitepaper / get?id=${id}`);
       .then (r => (r.ok ? r.json () : Promise.reject ()));
@@ -124,13 +103,6 @@ if (
   $2
 }
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       <div className='container mx - auto px - 4 py - 6'>;
         Preview not available or expired.;
       </div>);
@@ -226,7 +198,3 @@ export default function WhitepaperPreview(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

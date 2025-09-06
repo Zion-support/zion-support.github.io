@@ -1,7 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React, { useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,43 +5,25 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
-<<<<<<< HEAD
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
 
 interface ChangelogManagerProps {
   platform: AppPlatform
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 type ChangelogEntry = {;
-=======
-=======
 }
 
 import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
 import { Plus, Trash2 } from "lucide-react",
 import { AppPlatform } from "./MetadataManager",
-
-
-
 
 interface ChangelogManagerProps {
   platform: AppPlatform
@@ -70,7 +48,6 @@ type ChangelogEntry = {
 }) => {
   const [entries, setEntries] = useState<ChangelogEntry[]>([
     {
-<<<<<<< HEAD
       id: "1"
       version: "1.0.0"
       date: "2025-05-15"
@@ -156,7 +133,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     setNewEntry(prev => ({ ...prev, [name]: value }))
   },
 type ChangelogEntry = {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from './react';
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -168,29 +144,23 @@ interface ChangelogManagerProps {
   platform: AppPlatform;
 }
 type ChangelogEntry = {
-<<<<<<< HEAD
 
-=======
-  id: string;
+id: string;
   version: string;
   date: string;
   changes: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
 export const ChangelogManager: React.FC < ChangelogManagerProps> = ({
   platform,
-<<<<<<< HEAD
 
 }) => {
   const [entries, set_entries] = useState < ChangelogEntry[]>([;
     {
 
-=======
 }) => {
   const [entries, set_entries] = useState < ChangelogEntry[]>([;
     {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({;
@@ -210,7 +180,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       version: "1.0.0",
       date: "2025-05-15",
 
-  
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -230,20 +199,13 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 type="date"
                 name="date"
 
-<<<<<<< HEAD
-
-=======
-=======
-                value={newEntry.date}
+value={newEntry.date}
                 onChange={handleInputChange}
               />
             </div>
             <Button
               onClick={handleAddEntry}
               disabled={!newEntry.version |!newEntry.changes}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -305,10 +267,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     setNewEntry((prev) => ({ ...prev, [name]: value }));
   }
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -370,9 +328,6 @@ export const ChangelogManager:React.FC<ChangelogManagerProps> = ({ platform }) =
   },;
   ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>Version History</CardTitle>;
@@ -381,15 +336,11 @@ export const ChangelogManager:React.FC<ChangelogManagerProps> = ({ platform }) =
         <div className="space-y-4">;
           <div className="flex flex-col md:flex-row gap-3">;
             <div className="flex-1 grid grid-cols-2 gap-3">;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Input
                 placeholder="Version (e && e.g. 1 && 1.0.1)"
                 name="version"
                 value={newEntry && newEntry.version}
-=======
 value={newEntry.date}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 onChange={handleInputChange}
               />
             </div>
@@ -397,11 +348,9 @@ value={newEntry.date}
 onClick={handleAddEntry}
               disabled={!newEntry.version |!newEntry.changes}
               onClick={handleAddEntry}
-<<<<<<< HEAD
 
               disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
-=======
-              disabled={!newEntry.version || !newEntry.changes}
+disabled={!newEntry.version || !newEntry.changes}
 
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
@@ -410,9 +359,6 @@ onClick={handleAddEntry}
               Add
             </Button>
           </div>
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               onClick={handleAddEntry}
 
@@ -434,25 +380,17 @@ onClick={handleAddEntry}
             </div>;
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
-<<<<<<< HEAD
             >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <Plus className="mr-2 h-4 w-4" />;
               Add;
             </Button>;
           </div>;
-<<<<<<< HEAD
 
-
-=======
-
-=======
-            >
+>
               <Plus className="mr-2 h-4 w-4" />
               Add
             </Button>
           </div>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           
             <Button
               onClick={handleAddEntry}
@@ -462,27 +400,12 @@ onClick={handleAddEntry}
             value={newEntry && newEntry.changes}
             onChange={handleInputChange}
             rows={3}
-<<<<<<< HEAD
-=======
-
-          
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-          
 
 
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />;
 
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">;
@@ -501,10 +424,7 @@ onClick={handleAddEntry}
                     variant="ghost"
                     size="sm"
                     onClick={() => handleRemoveEntry(entry && entry.id)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          ;
+;
           <Textarea;
             placeholder="What's new in this version?";
             name="changes";
@@ -528,29 +448,21 @@ onClick={handleAddEntry}
                     variant="ghost";
                     size="sm";
                     onClick={() => handleRemoveEntry(entry.id)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="text-gray-400 hover:text-red-400 p-1 h-auto";
                   >;
                     <Trash2 className="h-4 w-4" />;
                   </Button>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
               </div>;
             ))}
-
 
             {entries && entries.length === 0 && (;
               <p className="text-center text-gray-400 py-4">;
                 No changelog entries yet;
               </p>;
 
-=======
-          
-          <Textarea
+<Textarea
             placeholder="What's new in this version?"
             name="changes"
             value={newEntry.changes}
@@ -583,12 +495,9 @@ onClick={handleAddEntry}
             ))}
             
             {entries.length === 0 && (
-<<<<<<< HEAD
-=======
                 <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
               </div>;
             ))}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <p className="text-center text-gray-400 py-4">
                 No changelog entries yet
               </p>
@@ -598,29 +507,19 @@ onClick={handleAddEntry}
       </CardContent>
     </Card>
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-            {entries && entries.length === 0 && (;
+{entries && entries.length === 0 && (;
               <p className="text-center text-gray-400 py-4">;
                 No changelog entries yet;
               </p>;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-=======
-      id: "1",
+id: "1",
       version: "1.0.0",
       date: "2025 - 05 - 15",
       changes: "Initial release of the Zion AI Marketplace app.",
@@ -733,20 +632,8 @@ if (return) {
     </Card>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   );
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
   ),;
 },; interface ChangelogManagerProps {
@@ -784,7 +671,3 @@ date: new Date () .toISOString () .split ('T') [0];
 };
 
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

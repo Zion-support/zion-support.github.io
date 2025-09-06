@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-
 }
 
-<<<<<<< HEAD
-=======
-=======
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -28,14 +22,7 @@ return (
   </section>;
   </>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-=======
-
-		<>
+<>
 			<SEO title="Image Optimizer CDN" description="Optimize and deliver images globally with smart caching." canonical="/image-optimizer-cdn" />
 			<section className="relative pt-28 pb-16 md: pt-36 md:pb-24">
 				<div className="container mx-auto px-4 max-w-3xl">
@@ -59,9 +46,6 @@ export default function ImageOptimizerCDNPage() {
 		</>
 	)
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import SEO from '../components/SEO';
 export default function ImageOptimizerCDNPage(req, res) {
@@ -86,11 +70,3 @@ export default function ImageOptimizerCDNPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

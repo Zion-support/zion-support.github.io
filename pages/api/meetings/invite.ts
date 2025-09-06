@@ -2,7 +2,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -32,6 +31,7 @@ if ( {) {
 }
     res.set_header ("Allow", "POST");
     return res.status (405).json ({ error: "Method not allowed" });
+
   }
   try {
     const { projectId, roomName, inviterName } = req.body || {};
@@ -57,3 +57,9 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+    console.error(e);
+    return res.status(200).json({ ok: true, skipped: true });
+  }
+
+}
+

@@ -1,15 +1,17 @@
-<<<<<<< HEAD
+
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-<<<<<<< HEAD
-=======
 import React, {;
   createContext,;
   useContext,;
   useEffect,;
   useMemo,;
   useState,;} from 'react';} from 'react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+
 export type UserRole = 'client' | 'talent';
 
 export type User = {
@@ -117,6 +119,9 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
 };
 
+
 export default UserProvider;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export default UserProvider;
+export default UserProvider;
+
+

@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+);
+};
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   );
 };
 
-=======
-=======
-  );
-};
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {it.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -45,10 +36,6 @@
 
 }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import import data from '../../data/innovation-radar.json';
 export default function InnovationRadarPage() {
@@ -69,8 +56,6 @@ export default function InnovationRadarPage() {
               </a>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
                 {it.source} · {it.author |'unknown'} · {new Date(it.created_at).toLocaleString()}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()}
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Query: {it.query}</div>
@@ -99,9 +84,5 @@ export default function InnovationRadarPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

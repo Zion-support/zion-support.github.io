@@ -47,13 +47,20 @@
     email: string;
     address: string;
 
-
 };
 
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
   {
+export const emergingTechServices2026: EmergingTechService2026[] = [
+  // Quantum Computing Services
+  {
+
+];
+
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
+};
     id: 'ai-digital-twin-platform'
     name: 'AI Digital Twin Platform'
     tagline:
@@ -140,12 +147,10 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
     service => service.category === category;
   );
 
-
 ];
 
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
 };
-
 
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
@@ -567,20 +572,53 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'GE Digital Twin',
       'Autodesk',
     ],
+      'Siemens Digital Twin'
+      'PTC ThingWorx'
+      'GE Digital Twin'
+      'Autodesk'
+    ]
+    marketSize: '$86.1B digital twin market'
+    growthRate: '42% annual growth'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails:
+      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
+    launchDate: '2024-06-25'
+    customers: 56
+    rating: 4.4
+    reviews: 29
+  }
+      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
+    launchDate: '2024-06-25',
     customers: 56,
     rating: 4 && 4.4,
     reviews: 29,
   },
 ];
+  },;
+];
+export const getEmergingTechServices2026ByCategory = (category: string) => {
+  return emergingTechServices2026.filter(
+    service => service.category === category;
+  );
+}
+export const getPopularEmergingTechServices2026 = () => {
+};
+
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => {
+    const price = parseInt(service && service.price.replace('$', ''));
+  return emergingTechServices2026.filter(service => {;
+    const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
 
   })
+}
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -769,10 +807,42 @@ export const getEmergingTechServices2026ByPriceRange = (
     reviews: 29
   }
 ];
+export const getEmergingTechServices2026ByCategory = (category: string) => {
+  return emergingTechServices2026.filter(service => service.category === category)
+};
+export const getPopularEmergingTechServices2026 = () => {
+  return emergingTechServices2026.filter(service => service.popular)
+};
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice
+
+  })
+};
+;
+export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
+  return emergingTechServices2026.filter (
+    service => service.category === category);
+}
+;
+export const getPopularEmergingTechServices2026 = () =>: any {
+  return emergingTechServices2026.filter (service => service.popular);
+}
+;
+export const getEmergingTechServices2026ByPriceRange = (
+  min_price: number,
+  max_price: number) =>: any {
+  return emergingTechServices2026.filter (service => {
+    const price = parse_int (service.price.replace ('$', ''));
+    return price >= min_price && price <= max_price;
+  });
+}    return price >= min_price && price <= max_price;
+  });
+}
+;
+
+export interface EmergingTechService2026 {;
 
   })
 };

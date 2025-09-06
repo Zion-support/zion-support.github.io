@@ -1,3 +1,7 @@
+
+
+#!/usr/bin/env node;
+
 const fs = require("fs")
 const path = require("path")
 const { exec } = require("child_process")
@@ -65,3 +69,7 @@ const { exec } = require("child_process")
   this.log("info", "Syntax Fixer heartbeat - running normally")
   this.log("info", "Syntax Fixer shutting down...")
   fixer.log("info", "Syntax Fixer started in continuous mode")
+
+
+  console.error("Syntax fixer "failed")
+

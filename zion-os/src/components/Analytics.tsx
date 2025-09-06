@@ -1,8 +1,10 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
 "use client",
 import { useEffect  } from './react';,
 interface FirstInputEntry extends PerformanceEntry {
@@ -16,10 +18,8 @@ export /**
 function Analytics() {
   useEffect (() => {
 
-<<<<<<< HEAD
-=======
 
-=======
+
 "use client";
 import { useEffect } from "react";
 interface FirstInputEntry extends PerformanceEntry {processingStart: number;
@@ -27,7 +27,10 @@ interface FirstInputEntry extends PerformanceEntry {processingStart: number;
   target?: Element;
 }
 export function Analytics() {useEffect(() => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
 "use client",;
 import { useEffect } from "react",;
 interface FirstInputEntry extends PerformanceEntry {;
@@ -38,13 +41,19 @@ interface FirstInputEntry extends PerformanceEntry {;
 ;
 export function Analytics() {;
   useEffect(() => {;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+
+
+
+
+
     // Performance monitoring;
     // Check condition
 if ( {) {
@@ -59,36 +68,45 @@ if ( {) {
 }
             // // // console.log ("LCP:", entry.start_time);
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+
+
+
+
           // Check condition
 if ( {) {
   $2
 }
             const firstInputEntry = entry as FirstInputEntry,
             // // // console.log ("FID:", firstInputEntry.processing_start - firstInputEntry.start_time);
-<<<<<<< HEAD
-=======
+
+
+
+
 
           if (entry.entryType === "first-input") {;
             const firstInputEntry = entry as FirstInputEntry,;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
 
-=======
           if (entry.entryType === "first-input") {const firstInputEntry = entry as FirstInputEntry;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
           }
         }
       });
       observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
       // Cumulative Layout Shift monitoring;
-<<<<<<< HEAD
       let cls = 0,
       const observer2 = new PerformanceObserver ((list) => {
         for (const entry of list.get_entries ()) {
@@ -107,15 +125,39 @@ if ( {) {
         // // // console.log ("CLS:", cls);
       }),
       // Cleanup;
-<<<<<<< HEAD
+
+
+
+
+
 
       return () => {;
         observer.disconnect();
 
         observer2.disconnect();
 
-=======
+
       return () => {observer.disconnect();
+=======
+"use client",;
+import { useEffect } from "react",;
+interface FirstInputEntry extends PerformanceEntry {;
+  processingStart: number,;
+  processingEnd: number,;
+  target?: Element;
+}
+;
+export function Analytics() {;
+  useEffect(() => {;
+    // Performance monitoring;
+    if (typeof window !== "undefined") {;
+      // Core Web Vitals monitoring;
+      const observer = new PerformanceObserver((list) => {;
+        for (const entry of list.getEntries()) {;
+          if (entry.entryType === "largest-contentful-paint") {;
+            // // // console.log("LCP:", entry.startTime);
+          }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           if (entry.entryType === "first-input") {;
             const firstInputEntry = entry as FirstInputEntry,;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
@@ -142,9 +184,16 @@ if ( {) {
       return () => {;
         observer.disconnect();
         observer2.disconnect();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<<<<<<< HEAD
+
+
+
+
+
+
+
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       }
     }
   }, []);

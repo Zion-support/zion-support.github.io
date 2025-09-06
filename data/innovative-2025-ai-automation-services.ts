@@ -398,7 +398,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     email: string;
     address: string;
 
-
   }
 
   }
@@ -764,6 +763,14 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 
     reviews: 28
   }
+
+  }
+
+export interface InnovativeAIAutomationService {;
+
+  }
+
+];
 ;
   }
 ];

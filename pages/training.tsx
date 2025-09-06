@@ -1,11 +1,12 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
 import React from 'react';
+
 import Layout from '../components/Layout';
 
 export default function Training() {
-
 
 
 import React from 'react';
@@ -30,6 +31,10 @@ export default function Training() {
         </div>
 export default function Training() {
 
+import React from 'react';
+import Layout from '../components/Layout';
+
+export default function Training() {
 
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
@@ -227,6 +232,58 @@ export default function TrainingPage() {
       title: 'Enterprise AI Integration',
       description: 'Integrate AI solutions into existing enterprise infrastructure and systems.',
       category: 'enterprise-it',
+duration: '10 weeks',
+      level: 'Intermediate',
+      price: '$2,299',
+      rating: 4.7,
+      students: '823',
+      icon: <Building className='w-8 h-8' />,
+    },
+    {
+      id: 14,
+      title: 'Cloud-Native AI Development',
+      description:
+        'Build and deploy AI applications using cloud-native technologies and practices.',      category: 'enterprise-it',
+      duration: '8 weeks',
+      level: 'Intermediate',
+      price: '$1,899',
+      rating: 4.6,
+      students: '1,134',
+      icon: <Server className='w-8 h-8' />,
+    },
+    {
+      id: 15,
+      title: 'DevOps for AI Systems',
+      description:
+        'Implement DevOps practices specifically for AI and machine learning systems.',      category: 'enterprise-it',
+      duration: '6 weeks',
+      level: 'Intermediate',
+      price: '$1,599',
+      rating: 4.8,
+      students: '756',
+      icon: <Zap className='w-8 h-8' />,
+    },
+  ];
+
+  const filteredPrograms = allPrograms.filter(
+    program =>
+      selectedCategory === 'all' || program.category === selectedCategory  );
+
+  const getCategoryIcon = (category: string) => {
+    const icons = {
+      'ai-consciousness': <Brain className='w-6 h-6' />,
+      'quantum-computing': <Atom className='w-6 h-6' />,
+      'autonomous-ops': <Rocket className='w-6 h-6' />,
+      'enterprise-it': <Building className='w-6 h-6' />,
+    };
+    return (
+      icons[category as keyof typeof icons] || (
+        <GraduationCap className='w-6 h-6' />
+      )
+    );  };
+
+  const getCategoryColor = (category: string) => {
+    const colors = {
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
     };
     return colors[category as keyof typeof colors] || 'gray'
@@ -236,6 +293,7 @@ export default function TrainingPage() {
     setExpandedProgram(expandedProgram === id ? null : id)
 
   },
+
   return (
 
     <Layout>
@@ -771,8 +829,9 @@ origin/automation-improvements-final
     </Layout>
   ),
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
       </div>
-    </Layout>
+    </MainLayout>
   );
 }
 };
@@ -782,12 +841,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default Training;
 };export default Training;
 ursor/integrate-build-improve-and-re-verify-8f7d
+
       </div>
     </Layout>
 
 
 
 
+
+
+      </div>
+    </Layout>
   {
   opacity: 0, y: 20 
 
@@ -823,8 +887,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
+}whileInView= {
+  {
+  opacity: 1, y: 0 
+}transition= {
+  {
+  duration: 0.8 
+}viewport= {
+  {
+  once: true 
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
 
-
+  )
+  );
 };export default Training;
 
   )
@@ -857,6 +932,30 @@ export default Training,
                 </a>;
               </div>;
             </motion.div>;
+};export default Training;
+
+  )
+  );
+};
+export default Training;
+import Layout from '../components / Layout';
+;
+export default /**
+ * Training - Function description
+ */
+function Training() {
+  return (
+    <Layout;
+      title="Training & Education - Zion Tech Group";
+      description="Professional training and education services for technology professionals.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">Training & Education</h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Professional training and education services for technology professionals.;
+            </p>;
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">Training page is under construction.</p>;
@@ -870,3 +969,27 @@ export default Training,
 }
 ;
 export default Training;
+}export default Training;
+;
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

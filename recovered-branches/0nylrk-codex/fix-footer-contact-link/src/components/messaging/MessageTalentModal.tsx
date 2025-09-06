@@ -1,27 +1,10 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-
-
-=======
-
-
-
 import React, { useState } from 'react';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Dialog;
   DialogContent;
   DialogHeader;
   DialogTitle;
   DialogDescription;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -30,15 +13,7 @@ import {useMessaging} from "@/context/MessagingContext";
 import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -46,27 +21,17 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Textarea } from "@/components/ui/textarea",
 import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
 
@@ -74,9 +39,6 @@ import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface MessageTalentModalProps {
 
   talent: TalentProfile
@@ -86,11 +48,6 @@ export interface MessageTalentModalProps {
   jobTitle?: string
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function MessageTalentModal({;
   talent;
   isOpen;
@@ -99,9 +56,6 @@ export function MessageTalentModal({
   talent,
   isOpen,
   onClose,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
   jobTitle
 }: MessageTalentModalProps) {
@@ -109,11 +63,6 @@ export function MessageTalentModal({
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   jobTitle
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
@@ -121,45 +70,24 @@ export function MessageTalentModal({
   const navigate = useNavigate();
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [message, setMessage] = useState(
     jobTitle
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
       : `Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ),
   const [isSubmitting, setIsSubmitting] = useState(false),
-  
 
-
-<<<<<<< HEAD
-=======
-  );
+);
   const [isSubmitting, setIsSubmitting] = useState(false);
   ),
   const [isSubmitting, setIsSubmitting] = useState(false),
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSendMessage = async () => {
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before sending."
         variant: "destructive"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 export function MessageTalentModal(): any ({;
   talent;
   isOpen;
@@ -168,7 +96,6 @@ export function MessageTalentModal(): any ({;
 }: MessageTalentModalProps) {;
   const { createConversation } = useMessaging();
   const navigate = useNavigate();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [message, setMessage] = useState(;
     jobTitle ;
       ? `Hi ${talent && talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`;
@@ -182,20 +109,14 @@ export function MessageTalentModal(): any ({;
         title: "Message required",;
         description: "Please enter a message before sending.",;
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      });
-      return;
-    }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       });
       return;
     }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      });
+      return;
+    }
+
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -240,20 +161,14 @@ function MessageTalentModal() {
       const contextData = {
         title: jobTitle || `Discussion with ${talent.full_name}`,
         description: talent.bio || talent.professional_title || "",
-<<<<<<< HEAD
         image_url: talent.profile_picture_url || "";
       }
 ;
       // Create conversation with this talent;
       await create_conversation (
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         image_url: talent.profile_picture_url || ""
       },
-      
 
       // Create conversation with this talent
       await createConversation(
@@ -287,7 +202,6 @@ function MessageTalentModal() {
       });
       return;
     }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         talent.user_id;
 
     try {;
@@ -304,13 +218,10 @@ function MessageTalentModal() {
       await createConversation(;
         talent && talent.user_id;
         message;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     try {
 
-=======
-      }),
+}),
       return
     }
     try {
@@ -321,7 +232,6 @@ function MessageTalentModal() {
         description: talent.bio |talent.professional_title |""
         image_url: talent.profile_picture_url |""
       }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       setIsSubmitting(true),
       
       // Create context data for the conversation
@@ -330,11 +240,8 @@ function MessageTalentModal() {
         description: talent.bio || talent.professional_title || "",
         image_url: talent.profile_picture_url || ""
       },
-      
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
       // Create conversation with this talent
       await createConversation(
         talent.user_id,
@@ -342,15 +249,12 @@ function MessageTalentModal() {
         jobTitle ? 'job' : 'talent',
         talent.id,
         contextData
-<<<<<<< HEAD
 
-=======
-      );
+);
       toast({
         title: "Message sent"
         description: `Your message has been sent to ${talent.full_name}.`})
       onClose();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       ),
       
       toast({
@@ -358,20 +262,16 @@ function MessageTalentModal() {
         description: `Your message has been sent to ${talent.full_name}.`}),
       
       onClose(),
-      
-<<<<<<< HEAD
 
 
       // Navigate to messages inbox
       navigate("/messages")
     } catch (error) {
       console.error("Failed to send message:", error);
-=======
-      // Navigate to messages inbox
+// Navigate to messages inbox
       navigate("/messages")
     } catch (error) {
       console.error("Failed to send message:", error),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       toast({
         title: "Message not sent"
         description: "There was an error sending your message. Please try again."
@@ -380,22 +280,13 @@ function MessageTalentModal() {
     } finally {
       setIsSubmitting(false)
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
 
   },
 
-<<<<<<< HEAD
-=======
-    }
+}
   }
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">
@@ -404,10 +295,7 @@ function MessageTalentModal() {
             <Avatar className="h-8 w-8 border border-zion-purple/20">
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />
               <AvatarFallback className="bg-zion-blue-dark text-white">
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from 'react',;
 import {;
   Dialog,;
@@ -470,10 +358,7 @@ export function MessageTalentModal({;
         talent.id,;
         contextData;
       ),;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       toast({;
         title: "Message sent",;
         description: `Your message has been sent to ${talent && talent.full_name}.`}),;
@@ -487,9 +372,7 @@ export function MessageTalentModal({;
       toast({;
         title: "Message not sent",;
         description: "There was an error sending your message. Please try again.",;
-<<<<<<< HEAD
-=======
-      toast({;
+toast({;
         title: "Message sent",;
         description: `Your message has been sent to ${talent.full_name}.`}),;
       onClose(),;
@@ -500,18 +383,14 @@ export function MessageTalentModal({;
       toast({;
         title: "Message not sent",;
         description: "There was an error sending your message. Please try again.";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         variant: "destructive";
       });
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    }
-<<<<<<< HEAD
+}
   }
 
   return (
-=======
 
 import React, { useState } from 'react',;
 import {;
@@ -603,32 +482,22 @@ export function MessageTalentModal({;
   return (;
   };
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     }
   }
 
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">;
         <DialogHeader>;
           <DialogTitle className="text-white flex items-center gap-3">;
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
 
-
-
-=======
-              <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />;
+<AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
               <AvatarFallback className="bg-zion-blue-dark text-white">;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -638,23 +507,17 @@ export function MessageTalentModal({;
             Send a direct message to start a conversation.
             {talent.professional_title && (
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
           </DialogDescription>;
         </DialogHeader>;
 
-=======
-          </DialogDescription>;
+</DialogDescription>;
         </DialogHeader>;
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
                 {talent.full_name.charAt(0).toUpperCase()}
-=======
                 {talent && talent.full_name.charAt(0).toUpperCase()}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </AvatarFallback>;
             </Avatar>;
             Message {talent && talent.full_name}
@@ -664,29 +527,22 @@ export function MessageTalentModal({;
             {talent && talent.professional_title && (;
               <span className="block mt-1 text-zion-cyan">{talent && talent.professional_title}</span>;
             )}
-<<<<<<< HEAD
           </DialogDescription>;
         </DialogHeader>;
         ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="space-y-4">;
           <div>;
             <label className="block text-sm font-medium text-zion-slate mb-1">;
               Message;
             </label>;
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Textarea
               value={message}
               onChange={(e) => setMessage(e && e.target.value)}
               rows={5}
-<<<<<<< HEAD
 
               className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple";
-=======
-        job_title ? 'job' : 'talent';
+job_title ? 'job' : 'talent';
         talent.id;
         context_data);
 ;
@@ -739,7 +595,6 @@ export function MessageTalentModal({;
               rows={5}
               className="w - full bg - zion - blue - dark / 30 border - zion - purple / 20 text - white focus:ring - zion - purple";
 
-=======
             <Textarea;
               value={message}
               onChange={(e) => setMessage(e && e.target.value)}
@@ -762,8 +617,6 @@ export function MessageTalentModal({;
           </div>
         </div>
         <DialogFooter className="gap-2 sm:gap-0">
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             type="button"
             variant="outline"
@@ -772,18 +625,15 @@ export function MessageTalentModal({;
             type="button"
             onClick={handleSendMessage}
             disabled={isSubmitting}
-<<<<<<< HEAD
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
 
               className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               placeholder="Write your message here...";
             />;
           </div>;
         </div>;
-<<<<<<< HEAD
 
         <DialogFooter className="gap - 2 sm:gap - 0">;
           <Button;
@@ -791,8 +641,7 @@ export function MessageTalentModal({;
             variant="outline";
             on_click={on_close}
             className="border - zion - purple / 30 text - white";
-=======
-          </Button>
+</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
@@ -811,12 +660,10 @@ export function MessageTalentModal({;
             variant="outline";
             onClick={onClose}
             className="border-zion-purple/30 text-white";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           >;
             Cancel;
           </Button>;
           <Button;
-<<<<<<< HEAD
             type="button";
             on_click={handleSendMessage}
             disabled={is_submitting}
@@ -829,19 +676,13 @@ export function MessageTalentModal({;
     </Dialog>);
 }
 
-=======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             type="button" ;
             onClick={handleSendMessage}
             disabled={isSubmitting}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
           >;
             {isSubmitting ? 'Sending...' :'Send Message'}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </Button>;
         </DialogFooter>;
       </DialogContent>;
@@ -885,7 +726,6 @@ contextData);
 }finally {
   setIsSubmitting (false) 
 }
-<<<<<<< HEAD
 ;
 
 };
@@ -906,6 +746,3 @@ return (<Dialog open= {
 }</Button> </DialogFooter> </DialogContent> </Dialog>) 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

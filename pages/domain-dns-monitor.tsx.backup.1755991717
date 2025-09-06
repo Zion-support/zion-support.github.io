@@ -22,26 +22,13 @@ export default function DomainDNSMonitorPage() {
     'Alerts, webhooks and change history'
   ];
 
-<<<<<<<< HEAD:pages/domain-dns-monitor.tsx.backup.1755991717
-  return (
-<<<<<<< HEAD
+<  return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
-=======
-    		<QuantumHolographicMatrixBackground intensity={1.5}>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-42d1
-========
-<<<<<<< HEAD:pages/audit-log-vault.tsx.backup.1755991722
+=
   return (
-<<<<<<< HEAD
     <UltraFuturisticBackground variant="holographic" intensity="high">
-=======
-    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
-=======
   return (_<UltraAdvancedFuturisticBackground>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/components/audit-log-vault.tsx
->>>>>>>> 207d7230e0649fa517bb469b27623282180528c9:backup-problematic-files/components/audit-log-vault.tsx
-      <Head>
+>      <Head>
         <title>Domain & DNS Health Monitor | Zion Tech Group</title>
         <meta name="description" content="Track domain expiry, DNS provider health, NS/DS drift, DNSSEC, and MX/SPF/DMARC correctness. Catch misconfigurations before outages." />
         <link rel="canonical" href="https://ziontechgroup.com/domain-dns-monitor" />
@@ -87,4 +74,3 @@ export default function DomainDNSMonitorPage() {
     </QuantumHolographicMatrixBackground>
   );
 }
-

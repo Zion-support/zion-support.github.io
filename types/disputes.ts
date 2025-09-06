@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
-=======
-
-=======
-
-
-=======
-export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
-
-
-
-export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type DisputeReason =
   | 'Scope Disagreement'
   | 'Quality Issues'
@@ -25,13 +10,16 @@ export type DisputeReason =
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',;
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 <<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
@@ -39,79 +27,41 @@ export type DisputeReason =;
   | 'Payment Issue';
   | 'Communication Breakdown';
 <<<<<<< HEAD
-<<<<<<< HEAD
+
 
   | 'Other',;
 
-=======
-  | 'Other',;
-export type DisputeAttachment = {;
-  id: string,;
-  fileName: string,;
-  fileSize: number,;
-  mimeType: string,;
-  path: string, // server-side storage path;
-  uploadedAt: string,;
-  uploadedByUserId: string;
-},;
-export type DisputeMessage = {;
-  id: string,;
-  authorUserId: string,;
-  authorRole: 'client' | 'talent' | 'admin',;
-  body: string,;
-  createdAt: string;
-},;
-export type DisputeCase = {;
-  id: string, // case id like DSP-YYYYMMDD-XXXX;
-  projectId: string,;
-  entityType?: 'milestone' | 'contract' | 'thread',;
-  entityId?: string,;
-  clientUserId: string,;
-  talentUserId: string,;
-  createdAt: string,;
-  updatedAt: string,;
-  status: DisputeStatus,;
-  reason: DisputeReason,;
-  reasonDetails?: string,;
-  description: string,;
-  attachments: DisputeAttachment[],;
-  messages: DisputeMessage[],;
-  adminNotes?: string,;
-  resolvedAt?: string,;
-  resolutionSummary?: string;
-},;
-export type DisputeListItem = Pick<;
-  DisputeCase,;
-  'id' | 'projectId' | 'createdAt' | 'status';
-> & {;
-  talentName: string,;
-  clientName: string,;
-  projectName?: string;
-},;
-export type UserSummary = {;
-  id: string,;
-  name: string,;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type DisputeAttachment = {
+=======
+  | 'Other';
+export type DisputeAttachment = {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   id: string;
   fileName: string;
   fileSize: number;
   mimeType: string;
+<<<<<<< HEAD
   path: string; // server-side storage path
   uploadedAt: string;
   uploadedByUserId: string;
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   path: string, // server-side storage path;
   uploadedAt: string;
   uploadedByUserId: string;
 };
+<<<<<<< HEAD
 export type DisputeMessage = {
+=======
+export type DisputeMessage = {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   id: string;
   authorUserId: string;
   authorRole: 'client' | 'talent' | 'admin';
   body: string;
   createdAt: string;
+<<<<<<< HEAD
 }
 export type DisputeCase = {
   id: string; // case id like DSP-YYYYMMDD-XXXX
@@ -124,22 +74,64 @@ export type DisputeCase = {
   projectId: string;
   entityType?: 'milestone' | 'contract' | 'thread',;
   entityId?: string,;
+=======
+};
+export type DisputeCase = {;
+  id: string, // case id like DSP-YYYYMMDD-XXXX;
+  projectId: string;
+  entityType?: 'milestone' | 'contract' | 'thread';
+  entityId?: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   clientUserId: string;
   talentUserId: string;
   createdAt: string;
   updatedAt: string;
 <<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+| 'Other',;
+
+
 
   role: 'admin' | 'client' | 'talent';
 
 };
 
 
-<<<<<<< HEAD
+
+
+  status: DisputeStatus;
+  reason: DisputeReason;
+  reasonDetails?: string;
+
+export interface Dispute {
+  id: string;
+  orderId: string;
+  userId: string;
+  reason: string;
+
+  description: string;
+  status: 'open' | 'in_progress' | 'resolved' | 'closed';
+  createdAt: Date;
+  updatedAt: Date;
+  resolution?: string;
+  resolvedAt?: Date;
+}
+
+
+
+
+
+};
+
+
+export interface DisputeResolution {
+  disputeId: string;
+  resolution: string;
+  resolvedBy: string;
+  resolvedAt: Date;
+  refundAmount?: number;
+}
+
 =======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   status: DisputeStatus;
   reason: DisputeReason;
   reasonDetails?: string;
@@ -149,24 +141,6 @@ export type DisputeCase = {
   adminNotes?: string;
   resolvedAt?: string;
   resolutionSummary?: string;
-}
-export type DisputeListItem = Pick<
-  DisputeCase
-  'id' | 'projectId' | 'createdAt' | 'status'
-> & {
-  talentName: string;
-  clientName: string;
-  projectName?: string;
-}
-  status: DisputeStatus,;
-  reason: DisputeReason,;
-  reasonDetails?: string,;
-  description: string;
-  attachments: DisputeAttachment[];
-  messages: DisputeMessage[];
-  adminNotes?: string,;
-  resolvedAt?: string,;
-  resolutionSummary?: string;
 };
 export type DisputeListItem = Pick<;
   DisputeCase;
@@ -175,16 +149,10 @@ export type DisputeListItem = Pick<;
   talentName: string;
   clientName: string;
   projectName?: string;
-},;
-export type UserSummary = {
+};
+export type UserSummary = {;
   id: string;
   name: string;
-
-
   role: 'admin' | 'client' | 'talent';
-}
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

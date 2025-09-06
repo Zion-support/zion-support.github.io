@@ -1,13 +1,10 @@
 
-<<<<<<< HEAD
 import React from './react';
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
 interface QuoteStatusCardsProps {
   status_counts: {
 
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -107,29 +104,16 @@ interface QuoteStatusCardsProps {_statusCounts: {
 import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 interface QuoteStatusCardsProps {
-<<<<<<< HEAD
   statusCounts: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  status_counts: {
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+status_counts: {
     new: number;
     in_review: number;
     responded: number;
     accepted: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     closed: number;
 
@@ -140,8 +124,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
 }) => {
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface QuoteStatusCardsProps {
   statusCounts: {
     new: number,
@@ -197,20 +179,12 @@ interface QuoteStatusCardsProps {
           <p className="text-sm text-zion-slate-light">Finalized or declined quotes</p>
         </CardContent>
       </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
   statusCounts,;
 }) => {;
   return (
-=======
-<<<<<<< HEAD
-=======
-    </div>
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+</div>
   )
 },
 import React from "react",;
@@ -228,29 +202,21 @@ interface QuoteStatusCardsProps {;
 ;
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {;
   return (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
   statusCounts,;
 }) => {;
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">;
       <Card className="bg-zion-blue-dark border border-zion-blue-light">;
         <CardHeader className="pb-2">;
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">;
             New Requests;
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Badge className="bg-blue-500">{statusCounts && statusCounts.new}</Badge>;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
           <p className="text-sm text-zion-slate-light">;
-=======
-    closed: number;
+closed: number;
   }
 }
 export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
@@ -267,20 +233,11 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
         </CardHeader>;
         <CardContent>;
           <p className="text - sm text - zion - slate - light">;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Unreviewed quote requests;
           </p>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <Card className="bg - zion - blue - dark border border - zion - blue - light">;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
@@ -290,21 +247,12 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
         </CardHeader>;
         <CardContent>;
           <p className="text - sm text - zion - slate - light">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Quotes being evaluated;
           </p>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <Card className="bg - zion - blue - dark border border - zion - blue - light">;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
@@ -314,21 +262,12 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
         </CardHeader>;
         <CardContent>;
           <p className="text - sm text - zion - slate - light">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Quotes with responses sent;
           </p>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <Card className="bg - zion - blue - dark border border - zion - blue - light">;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
@@ -338,21 +277,12 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
         </CardHeader>;
         <CardContent>;
           <p className="text - sm text - zion - slate - light">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Successfully converted quotes;
           </p>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <Card className="bg - zion - blue - dark border border - zion - blue - light">;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
@@ -362,52 +292,30 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
         </CardHeader>;
         <CardContent>;
           <p className="text - sm text - zion - slate - light">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Finalized or declined quotes;
           </p>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>);
 }
 ;
 
-<<<<<<< HEAD
-=======
-
     </div>
 
     </div>;
 );
 };
-
 
 export default QuoteStatusCards;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
     </div>
 
     </div>;
 );
-=======
   );
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
-
 
 export default QuoteStatusCards;
 
@@ -417,7 +325,6 @@ export default QuoteStatusCards;
     closed: number;};
 }
 
-<<<<<<< HEAD
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCounts}) => {_return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
@@ -534,6 +441,3 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCount
 };
 
 export default QuoteStatusCards;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

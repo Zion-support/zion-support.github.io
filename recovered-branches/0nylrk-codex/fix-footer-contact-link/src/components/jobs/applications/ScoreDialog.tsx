@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Dialog;
   DialogContent;
@@ -21,10 +11,6 @@ import { JobApplication } from "@/types/jobs";
 import { ApplicationScoreCard } from "../ApplicationScoreCard";
 import { JobApplication } from "@/types/jobs",
 import { ApplicationScoreCard } from "../ApplicationScoreCard",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ScoreDialogProps {
 
   open: boolean
@@ -34,9 +20,6 @@ interface ScoreDialogProps {
   onScoreUpdated: (updatedApplication: JobApplication) => void
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export function ScoreDialog({;
   open;
   onOpenChange;
@@ -64,8 +47,6 @@ import {;
 } from "@/components/ui/dialog",;
 import { JobApplication } from "@/types/jobs",;
 import { ApplicationScoreCard } from "../ApplicationScoreCard",;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
@@ -85,15 +66,10 @@ export function ScoreDialog(): any ({;
 }: ScoreDialogProps) {;
   return (
 
-
-
-
   onScoreUpdated
 }: ScoreDialogProps) {
   return (
 
-<<<<<<< HEAD
-=======
 export function ScoreDialog({;
   open;
   onOpenChange;
@@ -105,20 +81,14 @@ export function ScoreDialog({
   onScoreUpdated
 }: ScoreDialogProps) {
   return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Application Match Score</DialogTitle>
         </DialogHeader>
         {application && (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-          <ApplicationScoreCard
+<ApplicationScoreCard
           <ApplicationScoreCard 
 import {;
   Dialog,;
@@ -167,10 +137,6 @@ export function ScoreDialog({;
 } ScoreDialogProps) {;
   return (;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="sm:max-w-md">;
         <DialogHeader>;
@@ -178,37 +144,23 @@ export function ScoreDialog({;
         </DialogHeader>;
         {application && (;
           <ApplicationScoreCard
-<<<<<<< HEAD
 
           <ApplicationScoreCard 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-          <ApplicationScoreCard
+<ApplicationScoreCard
           <ApplicationScoreCard ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       </DialogContent>;
     </Dialog>;
   );
 }
 
-=======
-=======
-      </DialogContent>;
+</DialogContent>;
     </Dialog>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
 import { JobApplication } from '@/types / jobs';
 import { ApplicationScoreCard } from '../ApplicationScoreCard';
@@ -236,10 +188,6 @@ function ScoreDialog() {
       </DialogContent>;
     </Dialog>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  interface ScoreDialogProps {
   open: boolean;
@@ -272,6 +220,3 @@ onScoreUpdated
     </Dialog>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

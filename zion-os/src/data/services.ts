@@ -1,8 +1,10 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
 export interface Service {
   id: string,
   name: string,
@@ -14,34 +16,60 @@ export interface Service {
     professional: string,
     enterprise: string,
 export interface Service {id: string;
+=======
+export interface Service {;
+  id: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   name: string;
   category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
   description: string;
   features: string[];
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   pricing: {;
     starter: string;
     professional: string;
     enterprise: string;
     custom?: string;
+<<<<<<< HEAD
     address: string;
   }
 }
 export const services: Service[] = [;
   // AI Services;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+
+
+
+
+
   {
     id: 'ai - code - assistant',
     name: 'ZionAI Code Assistant',
     category: 'AI Services',
     description: 'Advanced AI - powered code generation, review, and optimization platform with context - aware suggestions and multi - language support.',
-=======
 
-=======
+
   {id: 'ai-code-assistant';
+=======
+  };
+  technologyStack: string[];
+  benefits: string[];
+  useCases: string[];
+  status: 'active' | 'beta' | 'coming-soon';
+  priority: number;
+  demoUrl?: string;
+  documentationUrl?: string;
+  contactInfo: {;
+    email: string;
+    phone: string;
+    address: string;
+  }
+}
+;
+export const services: Service[] = [;
+  // AI Services;
+  {;
+    id: 'ai-code-assistant';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     name: 'ZionAI Code Assistant';
     category: 'AI Services';
     description: 'Advanced AI-powered code generation, review, and optimization platform with context-aware suggestions and multi-language support.';
@@ -53,7 +81,11 @@ export const services: Service[] = [;
       professional: '$99/month';
       enterprise: '$299/month';
       custom: 'Contact for enterprise pricing';
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     technologyStack: ['OpenAI GPT-4Claude 3PythonReactNode.jsPostgreSQL'];
     benefits: [;
       'Reduce development time by 40-60%Improve code quality and securityLower maintenance costsAccelerate team onboarding24/7 AI assistance';
@@ -65,12 +97,23 @@ export const services: Service[] = [;
     priority: 1;
     demoUrl: 'https://ziontechgroup.com/demo/ai-code-assistant';
     documentationUrl: 'https://ziontechgroup.com/docs/ai-code-assistant';
+<<<<<<< HEAD
     contactInfo: {email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
   {id: 'ai-content-generator';
+=======
+    contactInfo: {;
+      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  };
+  {;
+    id: 'ai-content-generator';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     name: 'ContentForge AI';
     category: 'AI Services';
     description: 'Enterprise-grade AI content generation platform for marketing, documentation, and creative writing with brand voice consistency.';
@@ -81,7 +124,11 @@ export const services: Service[] = [;
       starter: '$49/month';
       professional: '$149/month';
       enterprise: '$399/month';
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     technologyStack: ['GPT-4Claude 3BERTReactFastAPIMongoDB'];
     benefits: [;
       '10x faster content creationConsistent brand messagingImproved SEO performanceCost-effective content marketingScalable content operations';
@@ -92,12 +139,23 @@ export const services: Service[] = [;
     status: 'active';
     priority: 2;
     demoUrl: 'https://ziontechgroup.com/demo/content-forge';
+<<<<<<< HEAD
     contactInfo: {email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
   {id: 'ai-data-analytics';
+=======
+    contactInfo: {;
+      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  };
+  {;
+    id: 'ai-data-analytics';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     name: 'InsightAI Analytics';
     category: 'AI Services';
     description: 'Intelligent data analytics platform with predictive modeling, automated insights, and interactive visualizations powered by machine learning.';
@@ -108,7 +166,11 @@ export const services: Service[] = [;
       starter: '$79/month';
       professional: '$199/month';
       enterprise: '$599/month';
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     technologyStack: ['PythonTensorFlowPyTorchReactFastAPIApache Kafka'];
     benefits: [;
       'Uncover hidden patterns in dataMake data-driven decisions fasterReduce manual analysis time by 80%Predict future trends accuratelyReal-time business intelligence';
@@ -119,6 +181,7 @@ export const services: Service[] = [;
     status: 'active';
     priority: 3;
     demoUrl: 'https://ziontechgroup.com/demo/insight-ai';
+<<<<<<< HEAD
     contactInfo: {email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -126,6 +189,17 @@ export const services: Service[] = [;
   }
   // IT Services;
   {id: 'managed-it-services';
+=======
+    contactInfo: {;
+      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  };
+  // IT Services;
+  {;
+    id: 'managed-it-services';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     name: 'ZionTech Managed IT';
     category: 'IT Services';
     description: 'Comprehensive managed IT services including 24/7 monitoring, cybersecurity, cloud management, and strategic technology consulting.';
@@ -136,7 +210,11 @@ export const services: Service[] = [;
       starter: '$99/month per user';
       professional: '$149/month per user';
       enterprise: '$199/month per user';
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     technologyStack: ['Microsoft 365AWSAzureCiscoFortinetVeeam'];
     benefits: [;
       'Reduce IT costs by 25-40%Improve system uptime to 99.9%Enhanced security posturePredictable monthly costsAccess to enterprise-grade tools';
@@ -147,12 +225,23 @@ export const services: Service[] = [;
     status: 'active';
     priority: 4;
     demoUrl: 'https://ziontechgroup.com/demo/managed-it';
+<<<<<<< HEAD
     contactInfo: {email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
   {id: 'cybersecurity-audit';
+=======
+    contactInfo: {;
+      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  };
+  {;
+    id: 'cybersecurity-audit';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     name: 'SecureShield Audit';
     category: 'IT Services';
     description: 'Comprehensive cybersecurity assessment and penetration testing services to identify vulnerabilities and strengthen your security posture.';
@@ -163,7 +252,11 @@ export const services: Service[] = [;
       starter: '$2,999/assessment';
       professional: '$5,999/comprehensive';
       enterprise: '$12,999/enterprise';
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     technologyStack: ['NessusMetasploitBurp SuiteWiresharkCustom tools'];
     benefits: [;
       'Identify security gaps before attackersMeet compliance requirementsReduce cyber risk exposureImprove incident response capabilitiesProtect brand reputation';
@@ -174,6 +267,7 @@ export const services: Service[] = [;
     status: 'active';
     priority: 5;
     demoUrl: 'https://ziontechgroup.com/demo/secure-shield';
+<<<<<<< HEAD
     contactInfo: {email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -181,6 +275,17 @@ export const services: Service[] = [;
   }
   // Micro SAAS;
   {id: 'invoice-automation';
+=======
+    contactInfo: {;
+      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  };
+  // Micro SAAS;
+  {;
+    id: 'invoice-automation';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     name: 'InvoiceFlow Pro';
     category: 'Micro SAAS';
     description: 'Automated invoice processing and accounts payable solution with AI-powered data extraction and approval workflows.';
@@ -191,7 +296,11 @@ export const services: Service[] = [;
       starter: '$19/month';
       professional: '$49/month';
       enterprise: '$99/month';
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     technologyStack: ['ReactNode.jsPostgreSQLOpenAI APIStripe'];
     benefits: [;
       'Reduce invoice processing time by 90%Eliminate manual data entry errorsImprove cash flow managementEnhance audit trail complianceMobile-first approval process';
@@ -202,12 +311,23 @@ export const services: Service[] = [;
     status: 'active';
     priority: 6;
     demoUrl: 'https://ziontechgroup.com/demo/invoice-flow';
+<<<<<<< HEAD
     contactInfo: {email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
   {id: 'project-management';
+=======
+    contactInfo: {;
+      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  };
+  {;
+    id: 'project-management';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     name: 'TaskMaster Pro';
     category: 'Micro SAAS';
     description: 'Intelligent project management platform with AI-powered task prioritization, resource allocation, and progress tracking.';
@@ -218,7 +338,11 @@ export const services: Service[] = [;
       starter: '$15/month per user';
       professional: '$25/month per user';
       enterprise: '$35/month per user';
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     technologyStack: ['ReactNode.jsPostgreSQLRedisSocket.io'];
     benefits: [;
       'Increase team productivity by 30%Better resource utilizationImproved project delivery timesEnhanced team collaborationData-driven decision making';
@@ -229,6 +353,7 @@ export const services: Service[] = [;
     status: 'active';
     priority: 7;
     demoUrl: 'https://ziontechgroup.com/demo/task-master';
+<<<<<<< HEAD
     contactInfo: {email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -236,6 +361,17 @@ export const services: Service[] = [;
   }
   // Blockchain Services;
   {id: 'smart-contract-audit';
+=======
+    contactInfo: {;
+      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  };
+  // Blockchain Services;
+  {;
+    id: 'smart-contract-audit';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     name: 'BlockAudit Pro';
     category: 'Blockchain';
     description: 'Professional smart contract security auditing and optimization services for DeFi, NFT, and enterprise blockchain projects.';
@@ -246,7 +382,11 @@ export const services: Service[] = [;
       starter: '$5,000/audit';
       professional: '$15,000/audit';
       enterprise: '$50,000/audit';
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     technologyStack: ['SolidityVyperFoundrySlitherMythril'];
     benefits: [;
       'Prevent costly security breachesOptimize gas costs by 20-40%Build investor confidenceMeet regulatory requirementsProtect user funds';
@@ -257,6 +397,7 @@ export const services: Service[] = [;
     status: 'active';
     priority: 8;
     demoUrl: 'https://ziontechgroup.com/demo/block-audit';
+<<<<<<< HEAD
     contactInfo: {email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -264,6 +405,17 @@ export const services: Service[] = [;
   }
   // IoT & Edge Computing;
   {id: 'iot-monitoring';
+=======
+    contactInfo: {;
+      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  };
+  // IoT & Edge Computing;
+  {;
+    id: 'iot-monitoring';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     name: 'IoT Sentinel';
     category: 'IoT & Edge';
     description: 'Comprehensive IoT monitoring and management platform with edge computing capabilities for industrial and commercial applications.';
@@ -274,7 +426,11 @@ export const services: Service[] = [;
       starter: '$10/device/month';
       professional: '$25/device/month';
       enterprise: '$50/device/month';
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     technologyStack: ['PythonMQTTKubernetesInfluxDBGrafana'];
     benefits: [;
       'Reduce equipment downtime by 60%Lower maintenance costsImprove operational efficiencyReal-time operational insightsScalable IoT infrastructure';
@@ -285,6 +441,7 @@ export const services: Service[] = [;
     status: 'active';
     priority: 9;
     demoUrl: 'https://ziontechgroup.com/demo/iot-sentinel';
+<<<<<<< HEAD
     contactInfo: {email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -292,6 +449,17 @@ export const services: Service[] = [;
   }
   // Cloud & DevOps;
   {id: 'devops-automation';
+=======
+    contactInfo: {;
+      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  };
+  // Cloud & DevOps;
+  {;
+    id: 'devops-automation';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     name: 'DevOps Flow';
     category: 'Cloud & DevOps';
     description: 'End-to-end DevOps automation platform with CI/CD pipelines, infrastructure as code, and cloud-native deployment tools.';
@@ -302,7 +470,11 @@ export const services: Service[] = [;
       starter: '$99/month';
       professional: '$299/month';
       enterprise: '$799/month';
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     technologyStack: ['DockerKubernetesTerraformJenkinsPrometheus'];
     benefits: [;
       'Deploy 10x fasterReduce deployment errors by 90%Lower infrastructure costsImprove team productivityEnhanced security posture';
@@ -313,6 +485,7 @@ export const services: Service[] = [;
     status: 'active';
     priority: 10;
     demoUrl: 'https://ziontechgroup.com/demo/devops-flow';
+<<<<<<< HEAD
     contactInfo: {email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -320,6 +493,17 @@ export const services: Service[] = [;
   }
   // Data & Analytics;
   {id: 'data-warehouse';
+=======
+    contactInfo: {;
+      email: 'kleber@ziontechgroup.com';
+      phone: '+1 302 464 0950';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+    }
+  };
+  // Data & Analytics;
+  {;
+    id: 'data-warehouse';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     name: 'DataVault Enterprise';
     category: 'Data & Analytics';
     description: 'Modern cloud data warehouse solution with real-time analytics, data governance, and AI-powered insights.';
@@ -330,7 +514,11 @@ export const services: Service[] = [;
       starter: '$199/month';
       professional: '$499/month';
       enterprise: '$1,299/month';
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     technologyStack: ['SnowflakeApache AirflowdbtTableauPython'];
     benefits: [;
       'Unified data platformReal-time analyticsScalable architectureCost-effective storageEnhanced data security';
@@ -341,19 +529,29 @@ export const services: Service[] = [;
     status: 'active';
     priority: 11;
     demoUrl: 'https://ziontechgroup.com/demo/data-vault';
+<<<<<<< HEAD
     contactInfo: {email: 'kleber@ziontechgroup.com';
+=======
+    contactInfo: {;
+      email: 'kleber@ziontechgroup.com';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       phone: '+1 302 464 0950';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
 ];
+<<<<<<< HEAD
 export const getServicesByCategory = (category: Service['category']) => {return services.filter(service => service.category === category);
 }
 export const getServiceById = (id: string) => {return services.find(service => service.id === id);
 }
 export const getCategories = () => {return Array.from(new Set(services.map(service => service.category)));
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
 export interface Service {;
   id: string,;
   name: string,;
@@ -720,11 +918,26 @@ export const getServiceById = (id: string) => {;
 },;
 export const getCategories = () => {;
   return Array.from(new Set(services.map(service => service.category)));
+
+
+
+
+
+
+
+
 };
-<<<<<<< HEAD
+
 
 
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export const getServicesByCategory = (category: Service['category']) => {;
+  return services.filter(service => service.category === category);
+};
+export const getServiceById = (id: string) => {;
+  return services.find(service => service.id === id);
+};
+export const getCategories = () => {;
+  return Array.from(new Set(services.map(service => service.category)));
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

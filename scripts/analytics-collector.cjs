@@ -1,3 +1,9 @@
+
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
 console.log(' Starting Analytics Collection...')
   fs.writeFileSync('analytics-report.json')
   console.log(' Analytics collected and saved to analytics-report.json')
@@ -7,3 +13,7 @@ console.log(' Starting Analytics Collection...')
     'yarn.lock'
     '.env.local'
     '.env.example'
+
+
+    'next.config.js'
+

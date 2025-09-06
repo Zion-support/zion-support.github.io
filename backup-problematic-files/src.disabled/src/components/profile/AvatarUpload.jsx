@@ -1,3 +1,27 @@
+<<<<<<< HEAD:src.disabled/src/components/profile/AvatarUpload.jsx
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:backup-merge-conflicts/AvatarUpload.jsx.backup
+
+
+const React,{ useState } from "react"; import { useState } from "react"; export default function Page() { return; }; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} """""
+
+import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
+
+import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
+
+import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/src.disabled/src/components/profile/AvatarUpload.jsx
+<<<<<<< HEAD
+import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
+=======
+import React,{ useState } from \'react\'; import { useState } from \'react\'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset=\"avatar_preset\" onUpload={handleUpload}> Upload Avatar; ></div> ) : (\"; <p className=\"text-sm text-gray-500\"> Image upload feature is currently unavailable.></div> )} ></div> );} \'"
+const React,{ useState } from "react"; import { useState } from "react"; export default function Page() { return; }; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} """""
+import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+<<<<<<< HEAD:src.disabled/src/components/profile/AvatarUpload.jsx
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,3 +48,7 @@ class ErrorBoundary extends React.Component {
 import React,{ useState } from \'react\'; import { useState } from \'react\'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset=\"avatar_preset\" onUpload={handleUpload}> Upload Avatar; ></div> ) : (\"; <p className=\"text-sm text-gray-500\"> Image upload feature is currently unavailable.></div> )} ></div> );} \'"
 const React,{ useState } from "react"; import { useState } from "react"; export default function Page() { return; }; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} """""
 import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/src/components/profile/AvatarUpload.jsx
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/src.disabled/src/components/profile/AvatarUpload.jsx

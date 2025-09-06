@@ -1,7 +1,31 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';
+
+export interface TrackEventPayload {
+  event: string;
+  properties?: Record<string, any>;
+  userId?: string;
+  userType?: UserType;
+}
+
+export async function trackEvent(payload: TrackEventPayload) {
+  try {
+    await fetch('/api/analytics/events/track', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+  } catch (error) {
+    console.error('Failed to track event:', error);
+  }
+}
+
+
+
 
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 export type TrackEventPayload = {
@@ -26,9 +50,8 @@ function track_event() {
 
   }
 }
-<<<<<<< HEAD
-=======
-=======
+
+
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',;
 export type TrackEventPayload = {;
   name: string,;
@@ -41,11 +64,16 @@ export async function trackEvent(payload: TrackEventPayload) {;
   try {;
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
 export type TrackEventPayload = {
+=======
+export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
+export type TrackEventPayload = {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   name: string;
   page?: string;
   userType?: UserType;
   properties?: Record<string, any>;
   at?: string;
+<<<<<<< HEAD
 }
 export async function trackEvent(payload: TrackEventPayload) {
   try {
@@ -60,36 +88,48 @@ export async function trackEvent(payload: TrackEventPayload) {
   userType?: UserType,;
   properties?: Record<string, any>,;
   at?: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload);
       keepalive: true as any});
-<<<<<<< HEAD
-
 
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
 };
 export async function trackEvent(payload: TrackEventPayload) {;
   try {
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
+=======
+};
+export async function trackEvent(payload: TrackEventPayload) {;
+  try {;
+    await fetch('/api/analytics/events/track', {;
+      method: 'POST';
+      headers: { 'Content-Type': 'application/json' };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       body: JSON.stringify(payload);
       keepalive: true as any});
   } catch (e) {;
     // swallow;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+
+
+
+
+
   } catch (error) {
     // swallow;
     } catch (error) {
@@ -101,14 +141,14 @@ export async function trackEvent(payload: TrackEventPayload) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
+
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
 =======
-
-
   }
 }
-  }
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -152,4 +152,3 @@ function QuantumBioComputingPlatformPage() {
     </UltraFuturisticBackground>);
 ;
 
-

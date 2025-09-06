@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface HelpProps {
   className?: string;
@@ -6,7 +6,7 @@ interface HelpProps {
 
 const Help: React.FC<HelpProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
+    <div className={className || ""}>
       <h1>Help</h1>
       <p>This component is under development.</p>
     </div>

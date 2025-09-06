@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import {useState} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
 import {cleanupAuthState} from "@/utils/authUtils";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
@@ -22,22 +12,14 @@ import {cleanupAuthState} from "@/utils/authUtils";
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
 import { cleanupAuthState } from "@/utils/authUtils",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
 ) => {
   const login = async ({ email, password }: { email: string, password: string }) => {
-<<<<<<< HEAD
 
-      
       const { data, error } = await supabase && supabase.auth.signInWithPassword({
 
-<<<<<<< HEAD
-=======
 const { data, error } = await supabase && supabase.auth.signInWithPassword({
     try {;
       setIsLoading(true);
@@ -46,16 +28,10 @@ const { data, error } = await supabase && supabase.auth.signInWithPassword({
       // Clean up any stale auth state before login
       cleanupAuthState();
       const { data, error } = await supabase.auth.signInWithPassword({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         email;
         password});
       if (error) {
         toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { useState } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
@@ -79,14 +55,11 @@ if ( {) {
   $2
 }
         toast ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           title: "Login failed";
 
           description: error && error.message,
 
-=======
           description: error && error.message,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           variant: "destructive"});
 
     try {
@@ -94,16 +67,11 @@ if ( {) {
 
       // Clean up any stale auth state before login
 
-<<<<<<< HEAD
-=======
-          title: "Login failed";
+title: "Login failed";
           description: error.message
           variant: "destructive"});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           title: "Login failed";
           variant: "destructive"});
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       cleanupAuthState(),
       
       const { data, error } = await supabase.auth.signInWithPassword({
@@ -114,40 +82,25 @@ if ( {) {
         toast({
           title: "Login failed",
           description: error.message,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          variant: "destructive"});
+variant: "destructive"});
           variant: "destructive"}),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         return { error }
       }
       return { data }
     } catch (error: any) {
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       console.error ("Login error:", error);
       toast ({
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title: "Login failed";
 
         description: error && error.message || "An unexpected error occurred",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      console.error ("Login error:", error);
+console.error ("Login error:", error);
       toast ({
         title: "Login failed";
         description: error && error.message || "An unexpected error occurred",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         variant: "destructive"});
         title: "Login failed",
         description: error.message || "An unexpected error occurred",
@@ -189,13 +142,8 @@ if ( {) {
         description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
       return { error }
-<<<<<<< HEAD
       const { data, error } = await supabase && supabase.auth.signUp({
-<<<<<<< HEAD
-=======
-=======
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
 ;
   const signup = async (email: string, password: string, user_data?: any) => {
     try {
@@ -212,25 +160,20 @@ if ( {) {
       }
       // Create a proper options object;
       const { data, error } = await supabase.auth.sign_up ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         email;
         password;
         options: {
           // Only store a simple display name in the profile data;
           data: {
-<<<<<<< HEAD
 
-=======
-            display_name: user_data?.display_name ?? user_data?.name ?? "";
+display_name: user_data?.display_name ?? user_data?.name ?? "";
           }}});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
       // Check condition
 if ( {) {
   $2
 }
         toast ({
-<<<<<<< HEAD
 
           title: "Signup failed";
 
@@ -248,8 +191,6 @@ if ( {) {
         toast({
           title: "Signup failed",
           description: error.message,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           variant: "destructive"});
         return { error };
@@ -262,15 +203,12 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Signup error:", error);
       toast({
-<<<<<<< HEAD
 
-=======
-          title: "Signup failed";
+title: "Signup failed";
           description: error && error.message,
           variant: "destructive"});
         return { error }
       }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       toast ({
         title: "Signup successful",
         description: "Check your email for verification instructions."});
@@ -278,36 +216,26 @@ if ( {) {
     } catch (error: any) {
       console.error ("Signup error:", error);
       toast ({
-<<<<<<< HEAD
 
         title: "Signup failed";
 
         description: error && error.message || "An unexpected error occurred",
 
-=======
         title: "Signup failed";
-        description: error && error.message || "An unexpected error occurred",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+description: error && error.message || "An unexpected error occurred",
         title: "Signup failed";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         variant: "destructive"});
       return { error }
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
         title: "Signup failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
 
-=======
-=======
-      return { error }
+return { error }
       return { error };
 
         email;
@@ -318,7 +246,6 @@ if ( {) {
             display_name: user_data?.display_name ?? user_data?.name ?? "";
           }}});
           title: "Signup failed";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           variant: "destructive"});
         return { error }
       }
@@ -328,7 +255,6 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-<<<<<<< HEAD
   }
         title: "Signup failed",
         description: error.message || "An unexpected error occurred",
@@ -336,15 +262,12 @@ if ( {) {
       return { error };
       return { error }
       return { error };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } finally {
       setIsLoading(false)
     }
   },
 
-<<<<<<< HEAD
-=======
-  const resetPassword = async (email: string) => {
+const resetPassword = async (email: string) => {
     try {
       setIsLoading(true)
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
@@ -353,8 +276,6 @@ if ( {) {
         toast({
           title: "Password reset failed";
           description: error.message
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         redirectTo: `${window.location.origin}/update-password`}),
 
       if (error) {
@@ -376,8 +297,6 @@ if ( {) {
         description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
       return { error }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   const resetPassword = async (email: string) => {
     try {
@@ -388,7 +307,6 @@ if ( {) {
 
       if (error) {
         toast({
-=======
 ;
   const reset_password = async (email: string) => {
     try {
@@ -401,18 +319,11 @@ if ( {) {
   $2
 }
         toast ({
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           title: "Password reset failed";
           description: error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           variant: "destructive"});
         return { error }
       }
-
-<<<<<<< HEAD
 
         redirectTo: `${window.location.origin}/update-password`}),
 
@@ -420,8 +331,6 @@ if ( {) {
         toast({
           title: "Password reset failed",
           description: error.message,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           variant: "destructive"});
         return { error };
@@ -434,10 +343,7 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Password reset error:", error);
       toast({
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       toast ({
         title: "Password reset email sent",
         description: "Check your email for password reset instructions."});
@@ -445,21 +351,17 @@ if ( {) {
     } catch (error: any) {
       console.error ("Password reset error:", error);
       toast ({
-<<<<<<< HEAD
 
         title: "Password reset failed";
 
         description: error && error.message || "An unexpected error occurred",
 
-=======
-        title: "Password reset failed";
+title: "Password reset failed";
         description: error && error.message || "An unexpected error occurred",
-=======
           variant: "destructive"});
         return { error }
       }
         title: "Password reset failed";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         variant: "destructive"});
       return { error };
       return { error }
@@ -467,7 +369,6 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-<<<<<<< HEAD
   }
 ;
   return { login, signup, reset_password }
@@ -490,52 +391,36 @@ if ( {) {
       toast({
         title: "Password reset failed";
         description: error.message |"An unexpected error occurred"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         variant: "destructive"});
       return { error }
     } finally {
       setIsLoading(false)
     }
   }
-<<<<<<< HEAD
 
 ;
   return { login, signup, reset_password }
 }
 ;
 
-=======
-=======
-  return { login, signup, resetPassword }
+return { login, signup, resetPassword }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
         title: "Password reset failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
-<<<<<<< HEAD
 
-=======
-      return { error };
+return { error };
       return { error }
       return { error };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } finally {
       setIsLoading(false)
     }
   };
 
-<<<<<<< HEAD
-
   return { login, signup, resetPassword }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  return { login, signup, resetPassword }
+return { login, signup, resetPassword }
 };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -567,7 +452,3 @@ export const useEmailAuth = (;
 
   return { login, signup, resetPassword }
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

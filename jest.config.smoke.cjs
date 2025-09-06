@@ -5,8 +5,13 @@ const createJestConfig = nextJest({
 });
 
 const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+
+
+
+const customJestConfig = {
   testEnvironment: 'jsdom',
+
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -36,10 +41,37 @@ const customJestConfig = {
     '<rootDir>/temp_conflicts/',
     '<rootDir>/temp_working/',
   ],
+
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   verbose: true,
   collectCoverage: false,
   testTimeout: 30000,
 };
 
+
+  coverageThreshold: {
+    global: {
+      branches: 70,
+      functions: 70,
+      lines: 70,
+      statements: 70,
+    },
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
+};
+
+module.exports = createJestConfig(config);
+moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  verbose: true,
+  collectCoverage: false,
+  testTimeout: 30000,
+};
+
 module.exports = createJestConfig(customJestConfig);
+
+
+
+
+module.exports = createJestConfig(customJestConfig);
+

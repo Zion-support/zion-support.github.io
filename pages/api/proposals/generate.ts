@@ -1,4 +1,23 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { OpenAI } from 'openai';
+import { createProposal } from '../../../utils/data/proposals';
+const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`;
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+import type { NextApiRequest, NextApiResponse } from "next";
+import { OpenAI } from "openai";
+import { createProposal } from "../../../utils/data/proposals";
+const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`;
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method not allowed" });
+
   try {
     const {
       target_institution,
@@ -6,6 +25,10 @@
       regional_scope,
       budgetOrResolution,
       language = 'en'
+      supportingMultiverses = [],
+      title = "Zion DAO Proposal",
+      promptAssist,
+      language = "en",
     } = req.body || {};
 
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -13,19 +36,30 @@
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
 
     const completion = await openai.chat.completions.create({
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
+      model: process.env.OPENAI_MODEL || 'gpt-4o-mini'
       messages: [
-      ],
+],
       temperature: 0.3
     });
-      title,
+        { role: "system", content: SYSTEM_PROMPT },
+        { role: "user", content: userPrompt },
+      ],
+      temperature: 0.3,
+    });
+
+
+title,
       target_institution,
       type,
       regional_scope,
       budgetOrResolution,
 
+      supportingMultiverses,
+      contentMarkdown,
+      language,
+    });
 
-    return res.status(200).json({ meta, markdown: contentMarkdown })
+    return res.status(200).json({ meta, markdown: contentMarkdown });
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -33,7 +67,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 }
-      supporting_multiverses,
+supporting_multiverses,
       content_markdown,
       language,
     });
@@ -50,6 +84,27 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
+    return res
+      .status(500)
+      .json({ error: error?.message || "Failed to generate proposal" });
+  }
+}
+} catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
     return res
       .status(500)
       .json({ error: error?.message || "Failed to generate proposal" });

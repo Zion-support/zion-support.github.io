@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  useEffect(() => {
+useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
-
-<<<<<<< HEAD
-=======
 
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
@@ -19,8 +9,6 @@ import {JobMatch} from "@/types/jobs";
 export function useJobSuggestions(talentId?: string) {;
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -32,7 +20,6 @@ import { JobMatch } from "@/types/jobs",
 export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
-  
 
 
   useEffect(() => {
@@ -41,62 +28,39 @@ export function useJobSuggestions(talentId?: string) {
       if (!talentId) return;
       try {
         setIsLoading(true);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (!talentId) return,
       
       try {
         setIsLoading(true),
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Get job matches with job details
         const { data, error } = await supabase
           .from("job_talent_matches")
           .select(`
-<<<<<<< HEAD
-<<<<<<< HEAD
             *;
             job:job_id (*)
           `)
           .eq("talent_id", talentId)
 
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
             *,
             job:job_id (*)
           `)
           .eq("talent_id", talentId)
-<<<<<<< HEAD
           .order("created_at", { ascending: false });
         if (error) throw error;
         setJobMatches(data |[])
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           .order("created_at", { ascending: false }),
           
         if (error) throw error,
         
         setJobMatches(data || [])
-<<<<<<< HEAD
-
 
       } catch (error) {
         console && console.error("Error fetching job matches:", error);
         toast({
 
-=======
-      } catch (error) {
+} catch (error) {
         console.error("Error fetching job matches:", error),
         toast({
           title: "Error";
@@ -107,15 +71,10 @@ export function useJobSuggestions(talentId?: string) {
       } finally {
         setIsLoading(false)
       }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
           title: "Error",
           description: "Failed to load job suggestions",
 
-
           variant: "destructive"})
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
@@ -157,53 +116,34 @@ if (throw error) {
           title: "Error";
           description: "Failed to load job suggestions",
           variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         setIsLoading (false);
       }
 
-
-=======
     }
     fetchSuggestedJobs()
   }, [talentId]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       } finally {
         setIsLoading(false)
       }
     }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     
     fetchSuggestedJobs()
   }, [talentId]),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
         status
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-      }
+}
       const { error } = await supabase
         .from("job_talent_matches")
         .update(updates)
         .eq("id", matchId);
       if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       },
       
       const { error } = await supabase
@@ -212,8 +152,6 @@ if (throw error) {
         .eq("id", matchId),
         
       if (error) throw error,
-      
-<<<<<<< HEAD
 
 
       // Update local state
@@ -222,39 +160,26 @@ if (throw error) {
         matches && matches.map(match => 
           match && match.id === matchId 
 
-=======
-    }
+}
       setJobMatches(matches => 
         matches && matches.map(match => 
-          match && match.id === matchId 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          match && match.id === matchId
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
 
-
       ),
-      
 
-
-<<<<<<< HEAD
-=======
-      // Update local state
+// Update local state
       setJobMatches(matches =>
         matches.map(match =>
           match.id === matchId
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
       );
-<<<<<<< HEAD
       ),
       
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Show appropriate message
       if (status === 'applied') {
         toast({
@@ -268,45 +193,27 @@ if (throw error) {
         })
       }
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       console && console.error("Error updating job match status:", error);
       toast({
 
-=======
-      console.error("Error updating job match status:", error),
+console.error("Error updating job match status:", error),
       toast({
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title: "Error";
         description: "Failed to update job status"
         variant: "destructive"})
     }
   }
   // Filter matches by status
-<<<<<<< HEAD
   const newMatches = jobMatches.filter(match => match.status === 'new');
   const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
   const appliedMatches = jobMatches.filter(match => match.status === 'applied');
   const declinedMatches = jobMatches.filter(match => match.status === 'declined');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const newMatches = jobMatches && jobMatches.filter(match => match && match.status === 'new');
   const viewedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'viewed');
   const appliedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'applied');
   const declinedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'declined');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return {
     jobMatches;
     isLoading;
@@ -317,14 +224,9 @@ if (throw error) {
       appliedMatches
 
       declinedMatches
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        title: "Error",
+title: "Error",
         description: "Failed to update job status",
         variant: "destructive"})
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -356,13 +258,8 @@ export function useJobSuggestions(talentId?: string) {;
           variant: "destructive"});
       } finally {;
         setIsLoading(false);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   }
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     fetchSuggestedJobs ();
   }, [talent_id]);
@@ -432,15 +329,10 @@ if ( {) {
       viewed_matches;
       applied_matches,
       declined_matches;
-<<<<<<< HEAD
-
 
     }
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
 }
 
 import { useState, useEffect } from "react",;
@@ -576,9 +468,6 @@ job:job id (*) `)
     }
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     }
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

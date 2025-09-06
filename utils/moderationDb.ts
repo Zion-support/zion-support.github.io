@@ -1,32 +1,51 @@
+<<<<<<< HEAD
 export interface ModerationFlag {
 export interface ModerationFlag {;
 
-
 export interface ModerationFlag {
+
   id: string;
   contentId: string;
-  contentType: string;
+  contentType: "post" | "comment" | "user";
   reason: string;
-  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-  reportedBy: string;
+  userEmail: string;
+  status: "pending" | "approved" | "removed" | "warned" | "banned";
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+}
+
+
+
+;
+export async function getFlagById (id: string): Promise < ModerationFlag | null> {
+  return flags.find (flag => flag.id === id) || null;
+
+}
+export async function readAllFlags (): Promise < ModerationFlag[]> {
+  return [...flags];
+
+  flag && flag.status = status;
+  flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
+  flag && flag.updatedAt = new Date().toISOString();
+
+  await upsertFlag(flag);
+  return flag;
+
+}
+
+
+// Moderation database utilities
 export interface ModerationFlag {
-  id: string;
-  content_id: string;
-  content_type: 'post' | 'comment' | 'user';
-  reason: string;
-  user_email: string;
-  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-  created_at: string;
-  admin_notes?: string;
+  id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
+  content: string, reporterId: string,
+  reportedUserId?: string;
+  status: 'pending' | 'reviewed' | 'resolved' | 'dismissed', createdAt: Date,
+  updatedAt: Date, moderatorId?: string,
+  notes?: string;
 }
-// Mock data storage - replace with actual database;
-let flags: ModerationFlag[] = [];
-}
-export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
-  const flag: ModerationFlag = {
+
+
 
 
 
@@ -36,42 +55,158 @@ let flags: ModerationFlag[] = [];
 
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
   return flags.find(flag => flag.id === id) || null;
+
+
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find((flag) => flag.id === id) || null;
+
 }
 
 export async function readAllFlags(): Promise<ModerationFlag[]> {;
   return [...flags];
 }
 
-export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag> {
+export async function createFlag(
+  data: Partial<ModerationFlag>,
+): Promise<ModerationFlag> {
   const flag: ModerationFlag = {
     id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    contentId: data.contentId || '',
+
+    contentId: data.contentId || "",
+    contentType: data.contentType || "post",
+    reason: data.reason || "",
+    userEmail: data.userEmail || "",
+    status: "pending",
+    createdAt: new Date().toISOString(),
+    ...data,
+  };
+
+  flags.push(flag);
+contentId: data.contentId || '',
     contentType: data.contentType || 'post',
-    id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    content_id: data.content_id || '',
-    content_type: data.content_type || 'post',
-    reason: data.reason || '',
-    user_email: data.user_email || '',
-    status: 'pending',
-    created_at: new Date ().toISOString (),
-    ...data;
-  }
-;
-  flags.push (flag);
+
   return flag;
 }
-export async function updateFlagStatus (
+
+export async function updateFlagStatus(
   id: string,
-  status: ModerationFlag['status'],
+
+  status: ModerationFlag["status"],
+  adminNotes?: string,
+): Promise<FlaggedContent | undefined> {
+  const flag = await getFlagById(id);
+  if (!flag) return undefined;
+status: ModerationFlag['status'],
   admin_notes?: string): Promise < FlaggedContent | undefined> {
   const flag = await getFlagById (id);
   // Check condition
 if (return undefined) {
   $2
 }
-  flag.status = status;
-  flag.admin_notes = admin_notes || flag.admin_notes;
-  flag.updated_at = new Date ().toISOString ();
-  await upsert_flag (flag);
+
+    reason: data.reason || '',
+    userEmail: data.userEmail || '',
+    status: 'pending',
+    createdAt: new Date().toISOString(),
+    ...data;
+  };
+  
+  flags.push(flag);
   return flag;
 }
+
+export async function updateFlagStatus(
+  id: string, 
+  status: ModerationFlag['status'], 
+  adminNotes?: string
+): Promise<FlaggedContent | undefined> {;
+  const flag = await getFlagById(id);
+  if (!flag) return undefined;
+
+
+
+
+
+=======
+import fs from 'fs';
+import path from 'path';
+import { promisify } from 'util';
+import crypto from 'crypto';
+import { FlaggedContent, ModerationStatus, AiScores } from '../types/moderation';
+const mkdir = promisify(fs.mkdir);
+const readFile = promisify(fs.readFile);
+const writeFile = promisify(fs.writeFile);
+const ROOT = path.join(process.cwd(), 'data');
+const MODERATION_FILE = path.join(ROOT, 'moderation.json');
+async function ensureBaseFiles() {;
+  await mkdir(ROOT, { recursive: true });
+  try {;
+    await readFile(MODERATION_FILE, 'utf8');
+  } catch {;
+    await writeFile(MODERATION_FILE, JSON.stringify({ flags: [] }, null, 2), 'utf8');
+  }
+}
+;
+export async function readAllFlags(): Promise<FlaggedContent[]> {;
+  await ensureBaseFiles();
+  const raw = await readFile(MODERATION_FILE, 'utf8');
+  const data = JSON.parse(raw) as { flags: FlaggedContent[] };
+  return data.flags || [];
+}
+;
+export async function writeAllFlags(flags: FlaggedContent[]): Promise<void> {;
+  await ensureBaseFiles();
+  await writeFile(MODERATION_FILE, JSON.stringify({ flags }, null, 2), 'utf8');
+}
+;
+export function generateFlagId(): string {;
+  return `FLG-${crypto.randomBytes(4).toString('hex').toUpperCase()}`;
+}
+;
+export function generateAiScores(seed?: string): AiScores {;
+  const buf = crypto.createHash('sha256').update(seed || String(Date.now())).digest();
+  const v = (i: number) => Number((buf[i] / 255).toFixed(2));
+  return { toxicity: v(0), nsfw: v(1), scam: v(2) }
+}
+;
+export async function getFlagById(id: string): Promise<FlaggedContent | undefined> {;
+  const all = await readAllFlags();
+  return all.find(f => f.id === id);
+}
+;
+export async function upsertFlag(flag: FlaggedContent): Promise<void> {;
+  const all = await readAllFlags();
+  const idx = all.findIndex(f => f.id === flag.id);
+  if (idx >= 0) all[idx] = flag, else all.push(flag);
+  await writeAllFlags(all);
+}
+;
+export async function createFlag(init: Omit<FlaggedContent 'id' | 'createdAt' | 'updatedAt' | 'aiScores' | 'status'> & { status?: ModerationStatus, aiScores?: AiScores }): Promise<FlaggedContent> {;
+  const now = new Date().toISOString();
+  const flag: FlaggedContent = {;
+    id: generateFlagId();
+    createdAt: now;
+    updatedAt: now;
+    status: init.status || 'pending';
+    aiScores: init.aiScores || generateAiScores(init.contentId + init.userId);
+    ...init};
+  const all = await readAllFlags();
+  all.push(flag);
+  await writeAllFlags(all);
+  return flag;
+}
+;
+export async function updateFlagStatus(id: string, status: ModerationStatus, adminNotes?: string): Promise<FlaggedContent | undefined> {;
+  const flag = await getFlagById(id);
+  if (!flag) return undefined;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+  flag.status = status;
+  flag.adminNotes = adminNotes || flag.adminNotes;
+  flag.updatedAt = new Date().toISOString();
+  await upsertFlag(flag);
+  return flag;
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

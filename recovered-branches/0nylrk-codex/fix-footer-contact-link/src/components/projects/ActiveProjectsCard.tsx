@@ -7,23 +7,15 @@ import {Badge} from "@/components/ui/badge";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ActiveProjectsCard() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const { projects, isLoading } = useProjects();
 
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 
-
-
-
-=======
-  const { projects, isLoading } = useProjects();
+const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from "react",
 import { Link } from "react-router-dom",
 import { BriefcaseIcon, Clock } from "lucide-react",
@@ -42,10 +34,6 @@ export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     if (projects && !isLoading) {
       const active = projects.filter(p =>
@@ -55,23 +43,11 @@ export function ActiveProjectsCard() {
     }
   const { projects, isLoading } = useProjects();
 
-<<<<<<< HEAD
+  }, [projects, isLoading]),
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}, [projects, isLoading]);
 
   }, [projects, isLoading]),
-  
-
-<<<<<<< HEAD
-=======
-  }, [projects, isLoading]);
-
-  }, [projects, isLoading]),
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (isLoading) {
     return (
       <Card>
@@ -86,10 +62,7 @@ export function ActiveProjectsCard() {
           <div className="space-y-2">
             {[1, 2].map(idx => (
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useEffect, useState } from "react",;
 import { Link } from "react-router-dom",;
 import { BriefcaseIcon, Clock } from "lucide-react",;
@@ -101,32 +74,23 @@ import { Project } from "@/types/projects",;
 export function ActiveProjectsCard() {;
   const { projects, isLoading } = useProjects(),;
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     if (projects && !isLoading) {;
       const active = projects && projects.filter(p => ;
         ['offer_acceptedin_progress'].includes(p && p.status);
-<<<<<<< HEAD
-=======
-  useEffect(() => {;
+useEffect(() => {;
     if (projects && !isLoading) {;
       const active = projects.filter(p =>;
         ['offer_acceptedin_progress'].includes(p.status);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       ).slice(0, 3), // Limit to 3 most recent projects;
       setActiveProjects(active);
     }
   }, [projects, isLoading]);
-<<<<<<< HEAD
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-=======
-  if (isLoading) {;
+if (isLoading) {;
 
 import { useEffect, useState } from "react",;
 import { Link } from "react-router-dom",;
@@ -153,11 +117,8 @@ export function ActiveProjectsCard() {;
   if (isLoading) {;
     return (;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
     return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -170,24 +131,15 @@ export function ActiveProjectsCard() {;
           <div className="space-y-2">;
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </div>;
         </CardContent>;
       </Card>;
     );
   }
-<<<<<<< HEAD
 
-=======
-            ))}
+))}
           </div>
         </CardContent>
       </Card>
@@ -251,16 +203,10 @@ export function ActiveProjectsCard() {;
           </Button>
         </CardFooter>
       )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-  
-
 
   if (activeProjects.length === 0) {
 
   if (activeProjects && activeProjects.length === 0) {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <Card>;
         <CardHeader>;
@@ -303,7 +249,6 @@ function ActiveProjectsCard() {
   const { projects, is_loading } = use_projects ();
   const [active_projects, setActiveProjects] = useState < Project[]>([]);
 ;
-<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -408,11 +353,3 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
   );
 }
 ;
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

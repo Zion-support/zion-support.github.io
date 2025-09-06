@@ -4,18 +4,11 @@ import Head from 'next / head';
 import {useMemo, useState} from 'react';
 import Pagination from '../../components / ui / Pagination';
 import {TrustBadge, MicroTestimonial} from '../../components / ui / Badges';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface Talent {
 import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
 
 interface Talent {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
 
 interface Talent {;
@@ -28,19 +21,17 @@ import Pagination from '../../components/ui/Pagination';
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
 import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
 interface Talent {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+interface Talent {
+import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
+
+interface Talent {;
   id: string;
   name: string;
   title: string;
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  testimonial?: { quote: string; author: string }
+testimonial?: { quote: string; author: string }
 const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
   id: String (i + 1),
   name: `Talent ${i + 1}`,
@@ -60,7 +51,6 @@ const TalentDirectory: NextPage = () => {
   const [page, setPage] = useState(1);
   const pageSize = 10;
   testimonial?: { quote: string; author: string };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
 interface Talent {;
   id: string;
@@ -91,8 +81,6 @@ const TalentDirectory: NextPage = () => {
     const start = (page - 1) * pageSize,
     return mockTalent.slice(start, start + pageSize)
   }, [page]),
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   testimonial?: { quote: string; author: string }
 const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
   id: String (i + 1),
@@ -108,10 +96,6 @@ const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
 
       ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
       : undefined
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   testimonial?: { quote: string; author: string };
 const mockTalent: Talent[] = Array && Array.from({ length: 47 }).map((_, i) => ({;
   id: String(i + 1),;
@@ -126,47 +110,27 @@ const mockTalent: Talent[] = Array && Array.from({ length: 47 }).map((_, i) => (
     i % 5 === 0;
       ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
       : undefined,;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }));
 const TalentDirectory: NextPage = () => {;
 
   const [page, setPage] = useState(1);
   const pageSize = 10;
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         page={page}
         page_size={page_size}
         total={total}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+return (
     <div className="space-y-6 pb-16">
       <Head>
         <title>Talent - Zion</title>
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
 
       <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-4">
-<<<<<<< HEAD
-=======
-      <h1 className="text-2xl font-semibold">Explore Talent</h1>
+<h1 className="text-2xl font-semibold">Explore Talent</h1>
       <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-4">
       <h1 className='text-2xl font-semibold'>Explore Talent</h1>
       <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -179,19 +143,14 @@ const TalentDirectory: NextPage = () => {;
                 ))}
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
 
       <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-4">
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {pageItems.map((t) => (
           <article key={t.id} className="border rounded-md p-4 space-y-2">
             <div className="flex items-center justify-between">
               <h3 className="font-semibold">{t.name}</h3>
               <div className="flex gap-1">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 {t.badges.map((b) => (
                   <TrustBadge key={b} type={b} />
 
@@ -201,10 +160,6 @@ const TalentDirectory: NextPage = () => {;
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </div>
             <div className="text-sm opacity-80">{t.title}</div>
@@ -213,38 +168,22 @@ const TalentDirectory: NextPage = () => {;
   )
 
 };
-<<<<<<< HEAD
 
 export default TalentDirectory;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
-
-      <Pagination page={page} pageSize={pageSize} total={total} onChange={setPage} />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+<Pagination page={page} pageSize={pageSize} total={total} onChange={setPage} />
 
 export default TalentDirectory;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         on_change={set_page}
       />;
     </div>);
 }
-<<<<<<< HEAD
 ;
 export default TalentDirectory;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default TalentDirectory;
 
 }
-<<<<<<< HEAD
 
                 {t.badges.map((b) => (
                   <TrustBadge key={b} type={b} />
@@ -274,18 +213,11 @@ export default TalentDirectory;
   );
 }
 export default TalentDirectory;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export default TalentDirectory;
 
 }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <MicroTestimonial quote={t.testimonial.quote} author={t.testimonial.author} />
             )  } catch (error) {
     console.error("Error:", error);
@@ -304,13 +236,3 @@ export default TalentDirectory;
   );
 },;
 export default TalentDirectory;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

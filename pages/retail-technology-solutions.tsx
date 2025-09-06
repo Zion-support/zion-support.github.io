@@ -1,5 +1,4 @@
-
-			title="Retail Technology Solutions"
+title="Retail Technology Solutions"
 			slug="retail-technology-solutions"
 			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."
 			subtitle="Higher margins and better experiences powered by AI."
@@ -12,16 +11,13 @@
 				"Store ops: labor planning and task automation"
 				"Omni-channel journey orchestration"
 
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
-=======
-=======
-				"Integrations: POS, eCom, WMS, ESP, CDP"
+"Integrations: POS, eCom, WMS, ESP, CDP"
 			]}
 			industries={["Retail", "CPG", "E‑commerce"]}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+}
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -50,12 +46,6 @@ return (
   />);
 }
 
-
-<<<<<<< HEAD
-=======
-=======
-
-
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function RetailTechnologySolutions() {
@@ -79,23 +69,12 @@ export default function RetailTechnologySolutions() {
 				"Integrations: POS, eCom, WMS, ESP, CDP"
 			]}
 			industries={["Retail", "CPG", "E‑commerce"]}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			pricePerMonthUSD={1999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
 			features={[
@@ -105,20 +84,13 @@ export default function RetailTechnologySolutions() {
 				"Store ops: labor planning and task automation",
 				"Omni-channel journey orchestration",
 				"Integrations: POS, eCom, WMS, ESP, CDP"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-			]}
+]}
 			industries={["Retail", "CPG", "E‑commerce"]}
 			canonical="https: //ziontechgroup.com/retail-technology-solutions"
 		/>
 	)
 };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -140,9 +112,3 @@ export default function RetailTechnologySolutions() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

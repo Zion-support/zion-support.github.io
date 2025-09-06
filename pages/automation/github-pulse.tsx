@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/github-pulse.json';
@@ -19,8 +12,6 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/github-pulse.json',
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function GithubPulsePage() {
 
   const repo = data?.repo |{}
@@ -55,11 +46,6 @@ function Metric({ label, value }: { label: string, value: any }) {
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
 import data from '../../data / github - pulse.json',
@@ -94,15 +80,8 @@ function Metric() {
       <div className="text - xs text - gray - 500 dark:text - gray - 400">{label}</div>;
       <div className="text - lg font - semibold">{value ?? '—'}</div>;
     </div>);
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/github-pulse.json';
@@ -140,7 +119,6 @@ export default function GithubPulsePage() {
   }
 }
 
-
 function Metric({ label, value }: { label: string, value: any }) {
   return (
     <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
@@ -156,9 +134,4 @@ function Metric({ label, value }: { label: string, value: any }) {
   }
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,9 +1,9 @@
 
+
 import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
 import ReviewForm from "../../components/reviews/ReviewForm";
 import { findProjectById } from "../../utils/dataStore";
-
 
 type Props = {;
 
@@ -19,6 +19,8 @@ type Props = {
   valid: boolean,
   reason?: string
 };
+
+const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
 
   if (!valid) {
     return (
@@ -86,8 +88,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { projectId } = ctx.query as { projectId: string },
   const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },
   if (!projectId || !role || !fromId) {
-};
 
+};
 
   }
   if (project && project.status !== "Completed") {;
@@ -101,12 +103,22 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       },;
     } as any;
   }
+  const expectedFromId =;
+    role === "client" ? project && project.clientId : project && project.talentSlug;
+  const valid = expectedFromId === fromId;
+  return {;
+    props: {;
+      projectId,;
+      fromRole: role,;
+      fromId,;
+      valid,;
+      reason: valid ? null : "Invalid reviewer for this project",;
+    },;
   } as any;
 
 }
 
 export default ReviewSubmitPage;
-
 
         project_id,
         from_role: role,
@@ -116,16 +128,29 @@ export default ReviewSubmitPage;
       },
     } as any;
   }
+  const expectedFromId =;
+    role === "client" ? project.client_id : project.talent_slug;
+  const valid = expectedFromId === from_id;
+;
+  return {
+    props: {
+      project_id,
+      from_role: role,
+      from_id,
       valid,
       reason: valid ? null : "Invalid reviewer for this project",
     },
   } as any;
+
+};
+
   )
 },
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { projectId } = ctx.query as { projectId: string },
   const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },
   if (!projectId || !role || !fromId) {
+
     return { props: { projectId: projectId || '', fromRole: role || 'client', fromId: fromId || '', valid: false, reason: 'Missing parameters' }   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -158,3 +183,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
 export default ReviewSubmitPage;
+
+export default ReviewSubmitPage;
+;

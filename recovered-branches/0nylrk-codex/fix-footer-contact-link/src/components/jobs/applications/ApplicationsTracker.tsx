@@ -1,28 +1,20 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { ApplicationCard } from "./ApplicationCard",
 import { LoadingState } from "./LoadingState",
 import { EmptyState } from "./EmptyState",
 import { ErrorState } from "./ErrorState",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { ApplicationCard } from "./ApplicationCard";
 import { LoadingState } from "./LoadingState";
 import { EmptyState } from "./EmptyState";
 import { ErrorState } from "./ErrorState";
-<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
 
 export function ApplicationsTracker() {
-
 
   const { applications, isLoading, error } = useJobApplications();
 
@@ -31,10 +23,6 @@ export function ApplicationsTracker() {
 
   );
 
-
-
-=======
-=======
 import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
 export function ApplicationsTracker() {;
@@ -44,8 +32,6 @@ export function ApplicationsTracker() {
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(
     "all"
   );
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { ApplicationCard } from "./ApplicationCard",
@@ -59,10 +45,8 @@ export function ApplicationsTracker() {
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
   
   if (isLoading) {
-<<<<<<< HEAD
 
-=======
-    return <LoadingState />;
+return <LoadingState />;
   }
   if (error) {
 
@@ -75,8 +59,6 @@ export function ApplicationsTracker() {
     statusFilter === "all"
       ? applications
       : applications.filter((app) => app.status === statusFilter);
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return <LoadingState />
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -93,7 +75,6 @@ export function ApplicationsTracker() {;
     return <LoadingState />;
   }
 ;
-<<<<<<< HEAD
 
   if (error) {;
     return <ErrorState error={error} />;
@@ -103,39 +84,25 @@ export function ApplicationsTracker() {;
     return <EmptyState />;
   }
 
-=======
-  if (error) {;
+if (error) {;
     return <ErrorState error={error} />;
   }
 ;
   if (applications.length === 0) {;
     return <EmptyState />;
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   if (isLoading) {;
     return <LoadingState />;
   }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  
-  const filteredApplications = statusFilter === 'all' 
+const filteredApplications = statusFilter === 'all' 
     ? applications
     : applications.filter(app => app.status === statusFilter),
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   const filteredApplications =;
     statusFilter === "all";
       ? applications;
       : applications && applications.filter((app) => app && app.status === statusFilter);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6">;
       <div className="flex flex-wrap gap-2">;
@@ -183,10 +150,7 @@ export function ApplicationsTracker() {;
         </Button>;
         <Button
           size="sm"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  return (
+return (
     <div className="space-y-6">
       <div className="flex flex-wrap gap-2">
         <Button 
@@ -239,38 +203,15 @@ export function ApplicationsTracker() {;
           Not Selected
         </Button>
       </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           variant={statusFilter === "rejected" ? "default" : "outline"}
           onClick={() => setStatusFilter("rejected")}
-
-
-      
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-      
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">
@@ -278,15 +219,8 @@ export function ApplicationsTracker() {;
           </p>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-          variant={statusFilter === "rejected" ? "default" : "outline"}
+variant={statusFilter === "rejected" ? "default" : "outline"}
           onClick={() => setStatusFilter("rejected")}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from './react';
 import { useJobApplications  } from '@/hooks / useJobApplications';
 import { ApplicationCard  } from './ApplicationCard';
@@ -302,7 +236,6 @@ function ApplicationsTracker() {
   const { applications, is_loading, error } = useJobApplications ();
   const [status_filter, setStatusFilter] = useState < ApplicationStatus | "all">(
     "all",
-
 
   );
 ;
@@ -378,11 +311,6 @@ if ( {) {
           size="sm";
           variant={status_filter === "rejected" ? "default" : "outline"}
           on_click={() => setStatusFilter ("rejected")}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { ApplicationCard } from "./ApplicationCard",;
@@ -461,17 +389,12 @@ export function ApplicationsTracker() {;
           size="sm";
           variant={statusFilter === 'rejected' ? 'default' :'outline'}
           onClick={() => setStatusFilter('rejected')}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           variant={statusFilter === "rejected" ? "default" : "outline"}
           onClick={() => setStatusFilter("rejected")}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >;
           Not Selected;
         </Button>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <div className="grid gap - 4 md:grid - cols - 1 lg:grid - cols - 2">;
         {filtered_applications.map ((application) => (
@@ -486,7 +409,6 @@ export function ApplicationsTracker() {;
     </div>);
 
 }
-=======
 }
       ;
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">;
@@ -528,7 +450,4 @@ if (isLoading) {
     </div>;
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -23,5 +23,9 @@ export default async function handler(
   // TODO: Replace with real data sources (e && e.g., Supabase, GA4, internal DB)
   const data = {
 
+}
+    ],
+
+  }
 
 }

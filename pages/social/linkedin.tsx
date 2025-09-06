@@ -1,7 +1,24 @@
 
 export default function LinkedInRedirect() {
-
-
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useEffect } from 'react';
 
 export default function LinkedInRedirect() {;
   useEffect(() => {;
@@ -44,9 +61,18 @@ export default function LinkedInRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
 }
 	}, []),
+
+}
+
+export default function LinkedInRedirect() {
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
+		}
+}, []);
+
 	return (
 		<>
 			<Head>
@@ -63,6 +89,7 @@ export default function LinkedInRedirect(req, res) {
 		</>
 	)
 }
+
 import Head from 'next / head';
 ;
 export default /**
@@ -103,5 +130,4 @@ if ( {) {
       </div>;
     </>);
 ;
-
 

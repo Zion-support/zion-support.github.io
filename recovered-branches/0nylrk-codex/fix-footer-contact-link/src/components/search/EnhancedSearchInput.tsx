@@ -1,21 +1,9 @@
-<<<<<<< HEAD
 
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
 import {SearchSuggestion} from "@/types/search";
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface EnhancedSearchInputProps {;
   value: string,;
   onChange: (value: string) => void,;
@@ -24,23 +12,16 @@ interface EnhancedSearchInputProps {;
   searchSuggestions: SearchSuggestion[];
 }
 
-
-=======
-  placeholder?: string;
+placeholder?: string;
   searchSuggestions: SearchSuggestion[];
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function EnhancedSearchInput(): any ({ ;
   value;
   onChange, ;
   placeholder = "Search...", ;
   searchSuggestions ;
 }: EnhancedSearchInputProps) {;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
 import { Input } from "@/components/ui/input",
@@ -54,7 +35,6 @@ interface EnhancedSearchInputProps {
   placeholder?: string;
   searchSuggestions: SearchSuggestion[];
 }
-<<<<<<< HEAD
 export function EnhancedSearchInput({
   value;
 
@@ -62,24 +42,15 @@ export function EnhancedSearchInput({
   placeholder = "Search..."
   searchSuggestions
 }: EnhancedSearchInputProps) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
 import { SearchSuggestion } from "@/types/search",
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
 import { SearchSuggestion } from "@/types/search",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -87,20 +58,13 @@ interface EnhancedSearchInputProps {
   searchSuggestions: SearchSuggestion[]
 }
 
-<<<<<<< HEAD
-
 export function EnhancedSearchInput({ 
   value,
 
-<<<<<<< HEAD
-=======
 export function EnhancedSearchInput({ ;
   value;
 export function EnhancedSearchInput({ 
   value,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onChange, 
   placeholder = "Search...", 
   searchSuggestions 
@@ -110,30 +74,12 @@ export function EnhancedSearchInput({
   const inputRef = useRef<HTMLInputElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Filter suggestions based on input value
   useEffect(() => {
     if (!value) {
       // Show recent searches when input is empty
-<<<<<<< HEAD
-<<<<<<< HEAD
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
       return
-
-
-
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
       return
@@ -148,10 +94,6 @@ export function EnhancedSearchInput({
     inputRef.current?.blur()
   }
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -198,15 +140,7 @@ export function EnhancedSearchInput({;
     function handleClickOutside(event: MouseEvent) {;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -216,28 +150,14 @@ export function EnhancedSearchInput({;
     onChange(suggestion);
     setIsFocused(false)
     inputRef.current?.blur()
-<<<<<<< HEAD
   },
-  
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   return (
     <div className="relative w-full" ref={containerRef}>
       <div className="relative">
         <Search
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
 
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
@@ -263,16 +183,10 @@ export function EnhancedSearchInput({ ;
   const inputRef = useRef<HTMLInputElement>(null),;
   const containerRef = useRef<HTMLDivElement>(null),;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Filter suggestions based on input value;
   useEffect(() => {;
     if (!value) {;
       // Show recent searches when input is empty;
-<<<<<<< HEAD
-<<<<<<< HEAD
       setFilteredSuggestions(searchSuggestions && searchSuggestions.filter(s => s && s.type === 'recent'));
       return;
     }
@@ -315,23 +229,16 @@ export function EnhancedSearchInput({ ;
         <Search
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
         />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Input
           ref={inputRef}
           type="text"
 
-
-=======
-
         <Input
           ref={inputRef}
           type="text"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        <Input
+<Input
           ref={inputRef}
           type="text"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -350,25 +257,17 @@ export function EnhancedSearchInput({ ;
         <Input;
           ref={inputRef}
           type="text";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-        <Input
+<Input
           ref={inputRef}
           type="text"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-<<<<<<< HEAD
-=======
-      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),;
+setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),;
       return,;
     }
     ;
@@ -421,22 +320,15 @@ export function EnhancedSearchInput({ ;
         {value && (;
           <button ;
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick={() => onChange('')}
           >;
             <X className="h-4 w-4" />;
           </button>;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       </div>;
 
-
-=======
-      </div>;
+</div>;
       ;
       <AutocompleteSuggestions;
           value={value}
@@ -454,29 +346,19 @@ export function EnhancedSearchInput({ ;
           </button>
         )}
       </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AutocompleteSuggestions
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       />;
     </div>;
   );
 }
 
-=======
-=======
-      />;
+/>;
     </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X } from './lucide-react';
 import { Input } from '@/components / ui / input';
@@ -573,10 +455,6 @@ function handleClickOutside() {
       />;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  interface EnhancedSearchInputProps {
   value: string;
@@ -618,6 +496,3 @@ if (!value) {
     </div>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

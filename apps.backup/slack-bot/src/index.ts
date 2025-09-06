@@ -1,5 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
 
 import fetch from 'node - fetch';
 dotenv.config (),
@@ -14,8 +18,13 @@ function help_text (): string {
   return [;
     '*Zion Assistant Commands*`/zion post - job [role]` – generate a job post`/zion suggest - talent [query]` – AI match talent`/zion track - project [name]` – milestone status`/zion help` – command list';
   ].join ('\n');
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
 }
 app.command ('/zion', async ({ command, ack, respond }) => {
   await ack (),
@@ -90,9 +99,6 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
-=======
-=======
 import { App } from '@slack/bolt';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
@@ -162,12 +168,20 @@ import dotenv from 'dotenv',;
 import fetch from 'node-fetch',;
 dotenv.config(),;
 const apiBase = process.env.API_ORIGIN || 'http: //localhost:4000',;
+=======
+import { App } from '@slack/bolt';
+import dotenv from 'dotenv';
+import fetch from 'node-fetch';
+<<<<<<< HEAD
+dotenv.config();
+const apiBase = process.env.API_ORIGIN || 'http: //localhost:4000';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 const app = new App({;
-  token: process.env.SLACK_BOT_TOKEN,;
-  signingSecret: process.env.SLACK_SIGNING_SECRET,;
-  appToken: process.env.SLACK_APP_LEVEL_TOKEN,;
+  token: process.env.SLACK_BOT_TOKEN;
+  signingSecret: process.env.SLACK_SIGNING_SECRET;
+  appToken: process.env.SLACK_APP_LEVEL_TOKEN;
   socketMode: true;
-}),;
+});
 function helpText(): string {;
   return [;
     '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list';
@@ -175,6 +189,7 @@ function helpText(): string {;
 }
 ;
 app.command('/zion', async ({ command, ack, respond }) => {;
+<<<<<<< HEAD
   await ack(),;
   const text = (command.text || '').trim(),;
   const [sub, ...rest] = text.split(' '),;
@@ -240,7 +255,13 @@ app.command('/zion', async ({ command, ack, respond }) => {;
 })(),
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+
+
 import { App } from '@slack/bolt',;
 import dotenv from 'dotenv',;
 import fetch from 'node-fetch',;
@@ -258,10 +279,13 @@ function helpText(): string {;
   ].join('\n');
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+
+
 }
 ;
 app.command('/zion', async ({ command, ack, respond }) => {;
@@ -317,8 +341,7 @@ app.command('/zion', async ({ command, ack, respond }) => {;
 })
 (async () => {
 
-<<<<<<< HEAD
-=======
+
 }),;
 (async () => {;
   const port = Number(process.env.SLACK_PORT || 3001),;
@@ -326,16 +349,24 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   // eslint-disable-next-line no-console;
   // // // console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+
+
+
+
+
   const port = Number(process.env.SLACK_PORT || 3001),
   await app.start(port),
   // eslint-disable-next-line no-console
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
+
+
+
+
 import { App } from '@slack/bolt',;
 import dotenv from 'dotenv',;
 import fetch from 'node-fetch',;
@@ -352,6 +383,7 @@ function helpText(): string {;
     '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list';
   ].join('\n');
 }
+<<<<<<< HEAD
 ;
 app.command('/zion', async ({ command, ack, respond }) => {;
   await ack(),;
@@ -361,6 +393,79 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   try {;
     if (!sub || sub.toLowerCase() === 'help') {;
       await respond({ response_type: 'ephemeral', text: helpText() }),;
+=======
+
+app.command('/zion', async ({ command, ack, respond }) => {
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+  await ack();
+  const text = (command.text || '').trim();
+  const [sub, ...rest] = text.split(' ');
+  const userId = command.user_id;
+<<<<<<< HEAD
+  try {;
+    if (!sub || sub.toLowerCase() === 'help') {;
+      await respond({ response_type: 'ephemeral', text: helpText() });
+      return;
+    }
+    if (sub === 'post-job') {;
+      const role = rest.join(' ') || 'Cloud Engineer';
+      const res = await fetch(`${apiBase}/jobs/generate`, {;
+        method: 'POST';
+        headers: { 'content-type': 'application/jsonx-user-id': userId };
+        body: JSON.stringify({ role });
+      });
+      const data = (await res.json()) as any;
+      await respond({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
+      return;
+    }
+    if (sub === 'suggest-talent') {;
+      const q = rest.join(' ') || 'AI researcher in Brazil';
+      const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`, {;
+        headers: { 'x-user-id': userId }
+      });
+      const data = (await res.json()) as any;
+      const lines = (data.results || []).slice(0, 5).map((t: any) => `• ${t.full_name} – ${t.country} – ${t.skills?.slice(0,3).join() || ''}`);
+      await respond({ response_type: 'ephemeral', text: lines.length ? lines.join('\n') : 'No matches yet.' });
+      return;
+    }
+    if (sub === 'track-project') {;
+      const name = rest.join(' ') || 'Kleber';
+      const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {;
+        headers: { 'x-user-id': userId }
+      });
+      const data = (await res.json()) as any;
+      if (!data.project) {;
+        await respond({ response_type: 'ephemeral', text: 'Project not found.' });
+        return;
+      }
+      await respond({ response_type: 'ephemeral', text: `*${data.project.name}* – status: ${data.project.status}\nMilestones: ${JSON.stringify(data.project.milestones)}` });
+      return;
+    }
+;
+    await respond({ response_type: 'ephemeral', text: helpText() });
+  } catch (err: any) {;
+    await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
+  }
+}),
+
+(async () => {
+  const port = Number(process.env.SLACK_PORT || 3001),
+  await app.start(port),
+  // eslint-disable-next-line no-console
+  // // // console.log(`⚡️ Zion Slack bot running on port ${port}`)
+})(),
+});
+(async () => {;
+  const port = Number(process.env.SLACK_PORT || 3001);
+  await app.start(port);
+  // eslint-disable-next-line no-console;
+  // // // console.log(`⚡️ Zion Slack bot running on port ${port}`);
+=======
+
+  try {
+    if (!sub || sub.toLowerCase() === 'help') {
+      await respond({ response_type: 'ephemeral', text: helpText() });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       return;
     }
     if (sub === 'post-job') {;
@@ -404,6 +509,20 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   }
 })
 (async () => {
+<<<<<<< HEAD
 import { App } from '@slack / bolt';
+
+
+
 import dotenv from 'dotenv';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+=======
+  const port = Number(process.env.SLACK_PORT || 3001);
+  await app.start(port);
+  // eslint-disable-next-line no-console
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+})();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 // Marketplace data store utilities
 
 export interface Project {
+
+// Marketplace data store utilitiesexport interface Project {;
 
   id: string;
   title: string;
@@ -15,17 +18,35 @@ export interface Project {
     id: string;
     title: string;
     description: string;
+
+    status: 'pending' | 'in_progress' | 'completed' | 'overdue'
+
+    due_date: string;
+    status: 'pending' | 'in_progress' | 'completed' | 'overdue',
   }>;
   documents: Array<{
     id: string;
     name: string;
     url: string;
+
+    uploadedAtIso: string
+
   }>;
   budget?: {
     total: number;
     currency: string;
+
+    type: 'fixed' | 'hourly' | 'milestone'
+  }
+  createdAt: string;
+  updatedAt: string
+
 }
 export interface Offer {
+}
+
+export interface Offer {;
+
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -39,6 +60,9 @@ export interface Offer {
     milestones?: Array<{
       title: string;
       amount: number;
+
+      dueDate: string
+
     }>;
   }
   agreementUrl?: string;
@@ -56,11 +80,19 @@ export interface Offer {
   notes?: string,
 }
 export interface Application {
+  notes?: string
+}
+
+export interface Application {;
+
   id: string;
   projectId: string;
   talentSlug: string;
   appliedAtIso: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
+
+  notes?: string
+
   cover_letter?: string;
   proposed_rate?: number;
   proposed_timeline?: string;
@@ -68,6 +100,11 @@ export interface Application {
   notes?: string,
 }
 export interface Message {
+  notes?: string
+}
+
+export interface Message {;
+
   id: string;
   conversationId: string;
   senderId: string;
@@ -80,12 +117,24 @@ export interface Message {
   sentAtIso: string;
   readAtIso?: string;
   is_read: boolean,
+
+  isRead: boolean
+
+  is_read: boolean,
 }
 export interface Conversation {
+  isRead: boolean
+}
+
+export interface Conversation {;
+
   id: string;
   participants: string[];
   lastMessageAtIso: string;
   lastMessageId?: string;
+
+  createdAtIso: string
+
 }
 class MarketplaceStore {
   private projects: Map<string, Project> = new Map();
@@ -95,11 +144,49 @@ class MarketplaceStore {
   private conversations: Map<string, Conversation> = new Map();
   // Project methods
   async createProject(project: Project): Promise<Project> {
+    this.projects.set(project.id, project);
+    return project;
+  }
+  async getProject(id: string): Promise<Project | null> {
+
+    return this.projects.get(id) |null
+
+    return this && this.projects.get(id) || null,
+  }
+  async updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
+
+    const project = this && this.projects.get(id);
+    if (!project) return null,
+
     if (!project) return null
     const updatedProject = {
       ...project
       ...updates
       updatedAt: new Date().toISOString()
+
+    };
+
+    this && this.projects.set(id, updatedProject);
+
+    return updatedProject;
+  }
+  async deleteProject(id: string): Promise<boolean> {
+
+    return this.projects.delete(id)
+
+    return this && this.projects.delete(id),
+  }
+  async getProjectsByClient(clientId: string): Promise<Project[]> {
+
+    return Array.from(this.projects.values()).filter(p => p.clientId === clientId)
+
+    return Array && Array.from(this && this.projects.values()).filter(p => p && p.clientId === clientId),
+  }
+  async getProjectsByTalent(talentSlug: string): Promise<Project[]> {
+
+    return Array.from(this.projects.values()).filter(p => p.talentSlug === talentSlug)
+
+    return Array && Array.from(this && this.projects.values()).filter(p => p && p.talentSlug === talentSlug),
   }
   async getAllProjects(): Promise<Project[]> {
     return Array && Array.from(this && this.projects.values());
@@ -110,6 +197,16 @@ class MarketplaceStore {
     return offer;
   }
   async getOffer(id: string): Promise<Offer | null> {
+
+    return this.offers.get(id) |null
+
+    return this && this.offers.get(id) || null,
+  }
+  async updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
+
+    if (!offer) return null
+    const updatedOffer = { ...offer, ...updates }
+
     this.offers.set(id, updatedOffer);
     const offer = this && this.offers.get(id);
     if (!offer) return null,
@@ -119,6 +216,22 @@ class MarketplaceStore {
     return updatedOffer;
   }
   async deleteOffer(id: string): Promise<boolean> {
+
+    return this.offers.delete(id)
+
+    return this && this.offers.delete(id),
+  }
+  async getOffersByClient(clientId: string): Promise<Offer[]> {
+
+    return Array.from(this.offers.values()).filter(o => o.clientId === clientId)
+
+    return Array && Array.from(this && this.offers.values()).filter(o => o && o.clientId === clientId),
+  }
+  async getOffersByTalent(talentSlug: string): Promise<Offer[]> {
+
+    return Array.from(this.offers.values()).filter(o => o.talentSlug === talentSlug)
+
+    return Array && Array.from(this && this.offers.values()).filter(o => o && o.talentSlug === talentSlug),
   }
   async getAllOffers(): Promise<Offer[]> {
     return Array && Array.from(this && this.offers.values());
@@ -129,6 +242,16 @@ class MarketplaceStore {
     return application;
   }
   async getApplication(id: string): Promise<Application | null> {
+
+    return this.applications.get(id) |null
+
+    return this && this.applications.get(id) || null,
+  }
+  async updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
+
+    if (!application) return null
+    const updatedApplication = { ...application, ...updates }
+
     this.applications.set(id, updatedApplication);
     const application = this && this.applications.get(id);
     if (!application) return null,
@@ -138,6 +261,22 @@ class MarketplaceStore {
     return updatedApplication;
   }
   async deleteApplication(id: string): Promise<boolean> {
+
+    return this.applications.delete(id)
+
+    return this && this.applications.delete(id),
+  }
+  async getApplicationsByProject(projectId: string): Promise<Application[]> {
+
+    return Array.from(this.applications.values()).filter(a => a.projectId === projectId)
+
+    return Array && Array.from(this && this.applications.values()).filter(a => a && a.projectId === projectId),
+  }
+  async getApplicationsByTalent(talentSlug: string): Promise<Application[]> {
+
+    return Array.from(this.applications.values()).filter(a => a.talentSlug === talentSlug)
+
+    return Array && Array.from(this && this.applications.values()).filter(a => a && a.talentSlug === talentSlug),
   }
   async getAllApplications(): Promise<Application[]> {
     return Array && Array.from(this && this.applications.values());
@@ -148,6 +287,16 @@ class MarketplaceStore {
     return message;
   }
   async getMessage(id: string): Promise<Message | null> {
+
+    return this.messages.get(id) |null
+
+    return this && this.messages.get(id) || null,
+  }
+  async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+
+    if (!message) return null
+    const updatedMessage = { ...message, ...updates }
+
     this.messages.set(id, updatedMessage);
     const message = this && this.messages.get(id);
     if (!message) return null,
@@ -158,6 +307,10 @@ class MarketplaceStore {
   }
   async deleteMessage(id: string): Promise<boolean> {
     return this && this.messages.delete(id),
+
+    return this.messages.delete(id)
+
+    return this && this.messages.delete(id),
   }
   async getMessagesByConversation(conversationId: string): Promise<Message[]> {
     return Array && Array.from(this && this.messages.values())
@@ -165,6 +318,11 @@ class MarketplaceStore {
       .sort((a, b) => new Date(a && a.sentAtIso).getTime() - new Date(b && b.sentAtIso).getTime());
   }
   async getMessagesByUser(userId: string): Promise<Message[]> {
+
+    return Array && Array.from(this && this.messages.values())
+      .filter(m => m && m.senderId === userId || m && m.recipientId === userId)
+      .sort((a, b) => new Date(b && b.sentAtIso).getTime() - new Date(a && a.sentAtIso).getTime());
+
   }
   async getAllMessages(): Promise<Message[]> {
     return Array && Array.from(this && this.messages.values());
@@ -175,6 +333,16 @@ class MarketplaceStore {
     return conversation;
   }
   async getConversation(id: string): Promise<Conversation | null> {
+
+    return this.conversations.get(id) |null
+
+    return this && this.conversations.get(id) || null,
+  }
+  async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
+
+    if (!conversation) return null
+    const updatedConversation = { ...conversation, ...updates }
+
     this.conversations.set(id, updatedConversation);
     const conversation = this && this.conversations.get(id);
     if (!conversation) return null,
@@ -184,6 +352,10 @@ class MarketplaceStore {
     return updatedConversation;
   }
   async deleteConversation(id: string): Promise<boolean> {
+    return this && this.conversations.delete(id),
+
+    return this.conversations.delete(id)
+
     return this && this.conversations.delete(id),
   }
   async getConversationsByUser(userId: string): Promise<Conversation[]> {
@@ -197,6 +369,11 @@ class MarketplaceStore {
   // Utility methods
   async getOrCreateConversation(userId1: string, userId2: string): Promise<Conversation> {
     // Find existing conversation between these two users
+
+        return conversation
+
+    for (const conversation of this && this.conversations.values()) {
+      if (conversation && conversation.participants.includes(userId1) && conversation && conversation.participants.includes(userId2)) {
   is_archived: boolean;
   createdAtIso: string,
 }
@@ -375,10 +552,23 @@ if (return null, ) {
         return conversation,
       }
     }
+
+      id: `conv_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
+      participants: [userId1, userId2],
+      lastMessageAtIso: new Date().toISOString(),
+      isArchived: false,
+      createdAtIso: new Date().toISOString()
+    };
+
+    return this && this.createConversation(conversation);
+
   }
   async markMessageAsRead(messageId: string): Promise<boolean> {
     const message = this && this.messages.get(messageId);
     if (!message) return false;
+
+    message.readAtIso = new Date().toISOString()
+
     this.messages.set(messageId, message);
 
     message && message.isRead = true;
@@ -387,6 +577,9 @@ if (return null, ) {
     return true;
   }
   async getUnreadMessageCount(userId: string): Promise<number> {
+
+      .length
+
     return Array && Array.from(this && this.messages.values())
       .filter(m => m && m.recipientId === userId && !m && m.isRead)
     // Create new conversation;
@@ -416,6 +609,9 @@ if (return false) {
       .filter (m => m.recipient_id === user_id && !m.is_read);
       .length,
   }
+
+    )
+
     const lowercaseQuery = query && query.toLowerCase();
     return Array && Array.from(this && this.projects.values()).filter(project =>
       project && project.title.toLowerCase().includes(lowercaseQuery) ||
@@ -423,6 +619,9 @@ if (return false) {
     ),
   }
   async searchOffers(query: string): Promise<Offer[]> {
+
+    )
+
     const lowercaseQuery = query && query.toLowerCase();
     return Array && Array.from(this && this.offers.values()).filter(offer =>
       offer && offer.scopeSummary.toLowerCase().includes(lowercaseQuery)
@@ -442,28 +641,54 @@ if (return false) {
     totalOffers: number;
     totalApplications: number;
     totalMessages: number;
+
+    totalConversations: number
+
+  }> {
+    return {
+
+      totalProjects: this && this.projects.size,
+      totalOffers: this && this.offers.size,
+      totalApplications: this && this.applications.size,
+      totalMessages: this && this.messages.size,
+      totalConversations: this && this.conversations.size
+    };
+
   }
 }
 // Singleton instance
 export const marketplaceStore = new MarketplaceStore();
 // Main functions for external use
 export async function createProject(project: Project): Promise<Project> {
+
+  return marketplaceStore.createProject(project)
+
+  return marketplaceStore && marketplaceStore.createProject(project),
 }
 export async function getProject(id: string): Promise<Project | null> {
   return marketplaceStore.getProject(id)
 
   return marketplaceStore && marketplaceStore.getProject(id),
 }
-
+export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
+  return marketplaceStore && marketplaceStore.updateProject(id, updates);
+  return marketplaceStore.getProject(id)
+}
 
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
 
   return marketplaceStore.updateProject(id, updates);
 }
 export async function deleteProject(id: string): Promise<boolean> {
+
+  return marketplaceStore.deleteProject(id)
+
   return marketplaceStore && marketplaceStore.deleteProject(id),
 }
 export async function createOffer(offer: Offer): Promise<Offer> {
+
+  return marketplaceStore.createOffer(offer)
+
   return marketplaceStore && marketplaceStore.createOffer(offer),
 }
 export async function getOffer(id: string): Promise<Offer | null> {
@@ -475,16 +700,25 @@ export async function updateOffer(id: string, updates: Partial<Offer>): Promise<
 
   return marketplaceStore && marketplaceStore.getOffer(id),
 }
-
+export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
+  return marketplaceStore && marketplaceStore.updateOffer(id, updates);
+  return marketplaceStore.getOffer(id)
+}
 
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
 
   return marketplaceStore.updateOffer(id, updates);
 }
 export async function deleteOffer(id: string): Promise<boolean> {
+
+  return marketplaceStore.deleteOffer(id)
+
   return marketplaceStore && marketplaceStore.deleteOffer(id),
 }
 export async function createApplication(application: Application): Promise<Application> {
+
+  return marketplaceStore.createApplication(application)
+
   return marketplaceStore && marketplaceStore.createApplication(application),
 }
 export async function getApplication(id: string): Promise<Application | null> {
@@ -496,16 +730,25 @@ export async function updateApplication(id: string, updates: Partial<Application
 
   return marketplaceStore && marketplaceStore.getApplication(id),
 }
-
+export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
+  return marketplaceStore && marketplaceStore.updateApplication(id, updates);
+  return marketplaceStore.getApplication(id)
+}
 
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
 
   return marketplaceStore.updateApplication(id, updates);
 }
 export async function deleteApplication(id: string): Promise<boolean> {
+
+  return marketplaceStore.deleteApplication(id)
+
   return marketplaceStore && marketplaceStore.deleteApplication(id),
 }
 export async function createMessage(message: Message): Promise<Message> {
+
+  return marketplaceStore.createMessage(message)
+
   return marketplaceStore && marketplaceStore.createMessage(message),
 }
 export async function getMessage(id: string): Promise<Message | null> {
@@ -517,7 +760,6 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 
   return marketplaceStore && marketplaceStore.getMessage(id),
 }
-
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
 
@@ -599,8 +841,21 @@ export function createMessageData(
   }
 }
 export function generateId(prefix: string = 'item'): string {
+}
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+  return marketplaceStore && marketplaceStore.updateMessage(id, updates);
+  return marketplaceStore.getMessage(id)
+}
 
+  return marketplaceStore.updateMessage(id, updates);
+}
+export async function deleteMessage(id: string): Promise<boolean> {
 
+  return marketplaceStore.deleteMessage(id)
+
+  return marketplaceStore && marketplaceStore.deleteMessage(id),
+}
+// Utility functions
 
     conversationId,
     senderId,
@@ -759,3 +1014,83 @@ export function createMessageData (
 export function generate_id (prefix: string = 'item'): string {
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
+export function generate_id (prefix: string = 'item'): string {
+  return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+}
+=======
+import fs from "fs";
+import path from "path";
+import { MarketplaceDb, Offer, Project } from "./types";
+const DATA_DIR = path.join(process.cwd(), "data", "runtime");
+const DB_PATH = path.join(DATA_DIR, "marketplace.json");
+function ensureDataFile(): void {;
+  if (!fs.existsSync(DATA_DIR)) {;
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  }
+  if (!fs.existsSync(DB_PATH)) {;
+    const initial: MarketplaceDb = { offers: [], projects: [] };
+    fs.writeFileSync(DB_PATH, JSON.stringify(initial, null, 2), "utf-8");
+  }
+}
+;
+export function readDb(): MarketplaceDb {;
+  ensureDataFile();
+  try {;
+    const raw = fs.readFileSync(DB_PATH, "utf-8");
+    const data = JSON.parse(raw) as MarketplaceDb;
+    if (!data.offers) data.offers = [];
+    if (!data.projects) data.projects = [];
+    return data;
+  } catch (err) {;
+    return { offers: [], projects: [] }
+  }
+}
+;
+export function writeDb(db: MarketplaceDb): void {;
+  ensureDataFile();
+  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), "utf-8");
+}
+;
+export function saveOffer(offer: Offer): Offer {;
+  const db = readDb();
+  const index = db.offers.findIndex((o) => o.id === offer.id);
+  if (index >= 0) {;
+    db.offers[index] = offer;
+  } else {;
+    db.offers.push(offer);
+  }
+  writeDb(db);
+  return offer;
+}
+;
+export function getOfferById(id: string): Offer | undefined {;
+  const db = readDb();
+  return db.offers.find((o) => o.id === id);
+}
+;
+export function listOffers(params?: { talentSlug?: string, clientId?: string, status?: string }): Offer[] {;
+  const db = readDb();
+  let list = db.offers;
+  if (params?.talentSlug) list = list.filter((o) => o.talentSlug === params.talentSlug);
+  if (params?.clientId) list = list.filter((o) => o.clientId === params.clientId);
+  if (params?.status) list = list.filter((o) => o.status === params.status);
+  return list.sort((a, b) => b.createdAtIso.localeCompare(a.createdAtIso));
+}
+;
+export function saveProject(project: Project): Project {;
+  const db = readDb();
+  const index = db.projects.findIndex((p) => p.id === project.id);
+  if (index >= 0) {;
+    db.projects[index] = project;
+  } else {;
+    db.projects.push(project);
+  }
+  writeDb(db);
+  return project;
+}
+;
+export function getProjectById(id: string): Project | undefined {;
+  const db = readDb();
+  return db.projects.find((p) => p.id === id);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

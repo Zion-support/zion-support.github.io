@@ -1,28 +1,14 @@
-
 <<<<<<< HEAD
-
 =======
+
+
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
 module.exports = type ServiceItem = { id: string; title: string; description: string; category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "Cloud & DevOps" | "Quantum Computing" | "Blockchain & Web3" | "IoT & Edge" | "Green Tech" | "Space Tech" | "BioTech & Health" | "FinTech & DeFi" | "Metaverse & AR/VR" | "Autonomous Systems" | "Sustainability" | "Digital Transformation" | "Enterprise Solutions"; price: string;'"'"
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-module && module.exports = type ServiceItem = { id: string; title: string; description: string; category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "Cloud & DevOps" | "Quantum Computing" | "Blockchain & Web3" | "IoT & Edge" | "Green Tech" | "Space Tech" | "BioTech & Health" | "FinTech & DeFi" | "Metaverse & AR/VR" | "Autonomous Systems" | "Sustainability" | "Digital Transformation" | "Enterprise Solutions"; price: string;'"'"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import React from 'react';
 interface NewInnovativeServices2025Props {
   // Add props here as needed
@@ -33,17 +19,18 @@ export default function NewInnovativeServices2025({ }: NewInnovativeServices2025
       <h1>NewInnovativeServices2025</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
   );
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+
+  );
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

@@ -9,37 +9,11 @@ import {Link} from "react-router-dom";
 import {ApplicationStatus} from "@/types/jobs";
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
 
-=======
-import { useState } from './react';
-import { useJobApplications } from '@/hooks / useJobApplications';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Loader2, MessageSquare, ExternalLink } from './lucide-react';
-import { formatDistanceToNow } from './date - fns';
-import { Link } from './react-router-dom';
-import { ApplicationStatus } from '@/types / jobs';
-export /**
- * MyApplications - Function description
- */
-function MyApplications() {
-  const { applications, is_loading, error } = useJobApplications ();
-;
-  const getStatusBadge = (status: ApplicationStatus) =>: any {
-=======
 
-
-  const getStatusBadge = (status: ApplicationStatus) => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    switch (status) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 import { useState } from './react';
 import { useJobApplications } from '@/hooks / useJobApplications';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -57,11 +31,26 @@ function MyApplications() {
 ;
   const getStatusBadge = (status: ApplicationStatus) =>: any {
 
-
+const getStatusBadge = (status: ApplicationStatus) => {
+    switch (status) {
+import { useState } from './react';
+import { useJobApplications } from '@/hooks / useJobApplications';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { Loader2, MessageSquare, ExternalLink } from './lucide-react';
+import { formatDistanceToNow } from './date - fns';
+import { Link } from './react-router-dom';
+import { ApplicationStatus } from '@/types / jobs';
+export /**
+ * MyApplications - Function description
+ */
+function MyApplications() {
+  const { applications, is_loading, error } = useJobApplications ();
+;
+  const getStatusBadge = (status: ApplicationStatus) =>: any {
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -147,7 +136,6 @@ export function MyApplications() {
       </Card>
     )
   }
-<<<<<<< HEAD
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {applications.map((application) => (
@@ -167,22 +155,15 @@ export function MyApplications() {
             <div className="space-y-3">
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       case "new": return <Badge variant="secondary">New</Badge>;
       case "viewed":;
         return <Badge variant="outline">Viewed</Badge>;
       case "shortlisted":;
 
-
   },
-  
 
 
   if (isLoading) {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       case "rejected":;
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,;
       default:;
@@ -191,14 +172,12 @@ export function MyApplications() {
   };
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
     );
   }
-
 
   if (error) {;
 
@@ -208,7 +187,6 @@ export function MyApplications() {
       </div>;
     );
   }
-
 
   if (applications && applications.length === 0) {;
 
@@ -226,17 +204,9 @@ export function MyApplications() {
     );
   }
 
-
-
-<<<<<<< HEAD
-=======
-=======
-                  {application.cover_letter}
+{application.cover_letter}
                 </p>
               )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -300,7 +270,6 @@ export function MyApplications() {;
             </div>
             <p className="text-sm text-muted-foreground">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
-<<<<<<< HEAD
             </p>;
           </CardHeader>;
           <CardContent>;
@@ -308,25 +277,10 @@ export function MyApplications() {;
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {application.cover_letter}
                 </p>
               )}
               
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
@@ -339,14 +293,6 @@ export function MyApplications() {;
                   </Link>
                 </Button>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="grid gap-4 md:grid-cols-2">;
       {applications && applications.map((application) => (;
@@ -360,10 +306,6 @@ export function MyApplications() {;
             </div>;
             <p className="text-sm text-muted-foreground">;
               Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true })}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -439,17 +381,10 @@ export function MyApplications() {;
             </div>;
             <p className="text-sm text-muted-foreground">;
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix:true })}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </p>;
           </CardHeader>;
           <CardContent>;
             <div className="space-y-3">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {application && application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
                   {application && application.cover_letter}
@@ -470,31 +405,14 @@ export function MyApplications() {;
                 <Button
                   variant="default" 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
                 <Button 
                   variant="default" 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   size="sm"
                   className="text-xs"
                   asChild>;
                   <Link to={`/messages?jobId=${application && application.job_id}`}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              {application.cover_letter && (;
+{application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
                   {application.cover_letter}
                 </p>;
@@ -519,9 +437,6 @@ export function MyApplications() {;
                   asChild;
                 >;
                   <Link to={`/messages?jobId=${application.job_id}`}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <MessageSquare className="h-3 w-3 mr-1" /> Contact Client;
                   </Link>;
                 </Button>;
@@ -530,16 +445,10 @@ export function MyApplications() {;
           </CardContent>;
         </Card>;
       ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;
       case "interview":;
         return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;
@@ -552,11 +461,7 @@ export function MyApplications() {;
     }
   }
 ;
-<<<<<<< HEAD
 
-
-
-=======
     </div>;
   // Check condition
 if ( {) {
@@ -690,6 +595,3 @@ default: return <Badge variant="outline"> {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

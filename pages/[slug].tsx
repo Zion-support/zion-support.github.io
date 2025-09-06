@@ -47,7 +47,6 @@ const service = useMemo(() => {
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
       } catch {
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -84,6 +83,32 @@ if (return by_link) {
   }, [slug]);
 import React, { useMemo } from 'react';
 import Head from 'next/head';
+
+type Service = typeof enhancedRealMicroSaasServices[number];
+
+function getAllServices(): Service[] {
+  return enhancedRealMicroSaasServices
+    .concat(extraServices as Service[], additionalEnhancedServices as Service[])
+    .concat(newlyAddedServices as unknown as Service[])
+    .concat(curatedMarketServices as Service[])
+    .concat(new2025Services as unknown as Service[])
+
+function getAllServices(): any (): Service[] {;
+  return enhancedRealMicroSaasServices;
+    .concat(extraServices as Service[], additionalEnhancedServices as Service[]);
+    .concat(newlyAddedServices as unknown as Service[]);
+    .concat(curatedMarketServices as Service[]);
+    .concat(new2025Services as unknown as Service[]);
+		.concat(marketValidatedServices as unknown as Service[]);
+		.concat(moreRealServices2025 as unknown as Service[]);
+		.concat(verified2025Additions as unknown as Service[]);
+		.concat(realServicesQ12025 as unknown as Service[]);
+		.concat(realEnterpriseServices2025 as unknown as Service[]);
+    if (byLink) return byLink;
+  }, [slug]);
+import React, { useMemo } from 'react';
+import Head from 'next/head';
+
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -113,6 +138,10 @@ function getAllServices(): Service[] {
 		.concat(verified2025Additions as unknown as Service[]);
 		.concat(realServicesQ12025 as unknown as Service[]);
 		.concat(realEnterpriseServices2025 as unknown as Service[]);
+		.concat(moreRealServices2025 as unknown as Service[])
+		.concat(verified2025Additions as unknown as Service[])
+		.concat(realServicesQ12025 as unknown as Service[])
+		.concat(realEnterpriseServices2025 as unknown as Service[])
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[]);
 		.concat(realMarketAugmentations2025 as unknown as Service[]);
 		.concat(additionalLiveServices2025 as unknown as Service[]);
@@ -122,12 +151,12 @@ function getAllServices(): Service[] {
 		.concat(realServicesQ32025 as unknown as Service[]);
 		.concat(realQ4Services2025 as unknown as Service[]);
 		.concat(real2025Q4Additions as unknown as Service[]);
-
+		.concat(realMarketServicesExtended as unknown as Service[]);
+		.concat(real2026Q1Additions as unknown as Service[]);
 
 	const services = getAllServices(),
 	const slugs = new Set<string>(),
 	 })),;
-
 
 		fallback: false;
 	}
@@ -356,13 +385,40 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
 	return (
 
+function toSlug(): any (value: string): string {;
+	return value && value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+function getExistingRootPageSlugs(): any (): Set<string> {;
+	const pagesDir = path && path.join(process && process.cwd(), 'pages'),;
+	const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
+	const reserved = new Set<string>(['apireportsservices']),;
+	const slugs = new Set<string>(),;
+		}
+		// Directories at root (folder routes);
+		if (entry && entry.isDirectory()) {;
+			slugs && slugs.add(entry && entry.name);
+	}
+	return slugs;
+export async function getStaticPaths() {;
+	const services = getAllServices(),;
+	const slugs = new Set<string>(),;
+	 })),;
+		fallback: false;
+	}
+export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
+	const services = getAllServices(),;
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),;
+	let service: Service | undefined = services && services.find((s) => toSlug(s && s.id || '') === incomingSlug || toSlug(s && s.name || '') === incomingSlug),;
+	if (!service) {;
+		return { notFound: true }
+	}
+	return {props: { service }
+	}
 
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline |service.description} />
 				<link rel="canonical" href={canonical} />
-
 
 export default function RootServiceDetailPage(): any ({ service }: { service: Service }) {;
 	const canonical = `https://ziontechgroup && ziontechgroup.com/${toSlug(service && service.id || service && service.name || '')}`,	return (
@@ -371,6 +427,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				<title>{service && service.name} | Zion Tech Group</title>;
 				<meta name="description" content={service && service.tagline || service && service.description} />;
 				<link rel="canonical" href={canonical} />;
+
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
@@ -499,6 +556,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
 								{(service.features || []).slice(0, 12).map((f: string) => (
+
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
@@ -517,6 +575,15 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+							</ul>
+						</Card>
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
+							<div className="flex flex-wrap gap-2">
+
+								{(service.integrations || []).slice(0, 12).map((i: string) => (
+									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
+
 							</div>
 						</Card>
 					</div>
@@ -530,6 +597,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 
 								</a>
 
+								</a>
 
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
@@ -542,6 +610,12 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
+
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
+
+							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
+
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -549,6 +623,113 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+
+								"@context": "https://schema && schema.org",
+								"@type": "Service",								name: service && service.name,
+								description: service && service.tagline || service && service.description,
+								url: canonical,
+								provider: {
+									"@type": "Organization",
+									name: "Zion Tech Group",
+									url: "https://ziontechgroup && ziontechgroup.com"
+								},
+								offers: {
+									"@type": "Offer",
+									price: (service && service.price || '').replace(/[^0-9.]/g, ''),									priceCurrency: "USD",
+									availability: "https://schema && schema.org/InStock"
+								}
+							}
+							null
+							2
+							)}
+				/>;			</Head>;
+          {/* Service Details */}
+          <div className="grid md:grid-cols-2 gap-12 mb-16">;
+            <Card className="p-8">;
+              <h2 className="text-2xl font-bold text-white mb-6">Service Details</h2>;
+              <div className="space-y-4">;
+                <div>;
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Category</h3>;
+                  <p className="text-slate-300">{service && service.category}</p>;
+                </div>;
+                <div>;
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Price</h3>;
+                  <p className="text-slate-300">{service && service.price} {service && service.period}</p>;
+                </div>;
+                <div>;
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Trial Period</h3>;
+                  <p className="text-slate-300">{service && service.trialDays} days free trial</p>;
+                </div>;
+                <div>;
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Setup Time</h3>;
+                  <p className="text-slate-300">{service && service.setupTime}</p>;
+                </div>;
+              </div>;
+            </Card>;
+            <Card className="p-8">;
+              <h2 className="text-2xl font-bold text-white mb-6">Features</h2>;
+              <ul className="space-y-3">;
+                {service && service.features.map((feature, index) => (;
+                  <li key={index} className="flex items-start gap-3">;
+                    <Check className="w-5 h-5 text-cyan-400 mt-0 && 0.5 flex-shrink-0" />;
+                    <span className="text-slate-300">{feature}</span>;
+                  </li>;
+                ))}
+              </ul>;
+            </Card>;
+          </div>;
+						<Card className="p-6 bg-black/40 border border-gray-700/50">;
+							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>;
+							<ul className="space-y-2 text-gray-300">;
+								{(service && service.features || []).slice(0, 12).map((f: string) => (;
+									<li key={f} className="flex items-start gap-2">;
+										<Check className="w-4 h-4 mt-0 && 0.5 text-emerald-400" />;
+										<span>{f}</span>;
+									</li>;
+								))}
+							</ul>;
+						</Card>;
+						<Card className="p-6 bg-black/40 border border-gray-700/50">;
+							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>;
+							<div className="flex flex-wrap gap-2">;
+								{(service && service.integrations || []).slice(0, 12).map((i: string) => (;
+									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>;
+								))}
+							</div>;
+						</Card>;
+					</div>;
+					<div className="space-y-6">;
+						<Card className="p-6 bg-black/40 border border-gray-700/50">;
+							<div className="text-3xl font-bold text-white">{service && service.price} <span className="text-base text-gray-400">{service && service.period}</span></div>;
+							<p className="text-gray-400 text-sm mt-1">Transparent pricing with market references</p>;
+							<div className="mt-4 space-y-3">;
+								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">;
+									<Phone className="w-4 h-4" /> +1 302 464 0950;
+								</Link>;
+								<a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">;
+									<Mail className="w-4 h-4" /> kleber@ziontechgroup && ziontechgroup.com;
+								</Link>								<div className="flex items-start gap-2 text-gray-300">;
+									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709;
+								</div>;
+							</div>;
+							<div className="mt-6">;
+								<Button href="/contact" className="w-full">Talk to Sales</Button>;
+							</div>;
+						</Card>;
+						<Card className="p-6 bg-black/40 border border-gray-700/50">;
+							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>;
+							<a href={service && service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
+								Open canonical page <ExternalLink className="w-4 h-4" />;
+							</a>;
+						</Card>;
+					</div>;
+				</div>;
+			</div>;
+		</UltraFuturisticBackground>;
+	);
+
+	)
+}
 ;
 function getAllServices (): Service[] {
   return enhancedRealMicroSaasServices;
@@ -636,3 +817,6 @@ if ( {) {
 }
   return { not_found: true }
   }
+
+}
+

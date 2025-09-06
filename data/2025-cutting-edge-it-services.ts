@@ -1,7 +1,5 @@
 
 
-
-
 export const cuttingEdgeITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -426,7 +424,6 @@ export const cuttingEdgeITServices2025 = [
 export const cuttingEdgeITServices2025 = [
   {
 
-
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
     description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
@@ -463,16 +460,17 @@ export const cuttingEdgeITServices2025 = [
 
   },;
 
-
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
 
-
 ;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
+;
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
 export const cuttingEdgeITServices2025 = [;
   {;
@@ -688,3 +686,6 @@ export const cuttingEdgeITServices2025 = [;
   }
 ];
 ;
+
+  }
+];

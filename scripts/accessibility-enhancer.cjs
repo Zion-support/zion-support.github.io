@@ -1,3 +1,7 @@
+
+
+#!/usr/bin/env node;
+
 const fs = require("$1")
 const path = require("path")
     this.log("♿ Creating accessibility configuration...")
@@ -64,3 +68,7 @@ const path = require("path")
       this.log(" Accessibility styles created successfully")
       this.log(` Failed to create accessibility "styles"`)
     this.log("♿ Starting accessibility enhancement...")
+
+
+    this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
+

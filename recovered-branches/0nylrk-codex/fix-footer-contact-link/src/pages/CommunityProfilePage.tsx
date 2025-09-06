@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import {useState, useEffect} from "react";
 import {useParams, Link} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -20,8 +12,6 @@ import {CommunityUser, ForumPost, Badge, as, BadgeType} from "@/types/community"
 import PostCard from "@/components/community/PostCard";
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -38,10 +28,6 @@ import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 import UserBadges from "@/components/community/UserBadges",
 import ReputationDisplay from "@/components/community/ReputationDisplay",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock user data
 
 const mockUser: CommunityUser = {
@@ -59,44 +45,26 @@ const mockUser: CommunityUser = {
       description: "Provided 10 accepted answers"
       icon: "Award"
       color: "#10B981"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
     },
 
-
-=======
-    },
-
+},
 
     }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "badge2"
       name: "Top Contributor"
       description: "Among the top 5% of contributors"
       icon: "Trophy"
       color: "#F59E0B"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
     },
 
-
-=======
-    },
-
+},
 
     }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "badge3"
       name: "First Post"
@@ -104,9 +72,7 @@ const mockUser: CommunityUser = {
       icon: "Star"
       color: "#6366F1"
     }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { useState, useEffect } from './react';
 import { use_params, Link } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -177,8 +143,7 @@ const user_posts: ForumPost[] = [;
     is_answered: true,
     is_featured: true;
 
-=======
-  ];
+];
   isVerified: true
   isModerator: false
 }
@@ -201,21 +166,13 @@ const userPosts: ForumPost[] = [
     replyCount: 12
     isAnswered: true
     isFeatured: true
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   {
     id: "11"
     title: "How to structure an AI prompt for best results"
     content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...";
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
-    authorId: "user1"
+authorId: "user1"
     authorName: "Alex Johnson"
     authorAvatar: "https://i.pravatar.cc/150?img=3"
     authorRole: "Verified Talent"
@@ -231,8 +188,6 @@ const userPosts: ForumPost[] = [
     id: "12"
     title: "Setting up effective monitoring for AI systems"
     content: "Here's my approach to monitoring AI systems in production environments..."
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     authorId: "user1"
     authorName: "Alex Johnson"
     authorAvatar: "https://i.pravatar.cc/150?img=3"
@@ -245,14 +200,12 @@ const userPosts: ForumPost[] = [
     downvotes: 0
     replyCount: 6
   }
-<<<<<<< HEAD
 ];
 export default function CommunityProfilePage() {
   const { userId } = useParams();
   const [user, setUser] = useState<CommunityUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState<ForumPost[]>([]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ],
   isVerified: true,
   isModerator: false
@@ -312,9 +265,6 @@ const userPosts: ForumPost[] = [
   }
 ],
 
-<<<<<<< HEAD
-
-=======
 export default function CommunityProfilePage() {;
   const { userId } = useParams();
   const [user, setUser] = useState<CommunityUser | null>(null);
@@ -325,28 +275,20 @@ export default function CommunityProfilePage() {
   const [user, setUser] = useState<CommunityUser | null>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [posts, setPosts] = useState<ForumPost[]>([]),
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {
     // In a real app, we would fetch the user data here
     // For now, we'll just use the mock data
     setUser(mockUser),
     setPosts(userPosts),
     setIsLoading(false)
-<<<<<<< HEAD
 
   }, [userId]),
-  
 
-=======
-  }, [userId]),
-  
+}, [userId]),
 
   }, [userId]);
 
   }, [userId]),
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (isLoading) {
     return (
       <AppLayout>
@@ -369,27 +311,21 @@ export default function CommunityProfilePage() {
         </div>
       </AppLayout>
     )
-<<<<<<< HEAD
 
       <SEO 
 
-=======
-=======
-      <SEO 
+<SEO 
 
   }
   return (
     <AppLayout>
       <SEO
-      <SEO 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+      <SEO
       <SEO
       <SEO 
 
       <SEO 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -404,27 +340,14 @@ import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community"
 import PostCard from "@/components/community/PostCard",;
 import UserBadges from "@/components/community/UserBadges",;
 import ReputationDisplay from "@/components/community/ReputationDisplay",;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock user data;
 const mockUser: CommunityUser = {;
   id: "user1",;
   name: "Alex Johnson",;
-<<<<<<< HEAD
-<<<<<<< HEAD
   avatar: "https://i && i.pravatar.cc/150?img=3",;
-=======
-  avatar: "https://i.pravatar.cc/150?img=3",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+avatar: "https://i.pravatar.cc/150?img=3",;
   avatar: "https://i && i.pravatar.cc/150?img=3",;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   role: "Verified Talent",;
   reputation: 325,;
   postCount: 14,;
@@ -436,30 +359,18 @@ const mockUser: CommunityUser = {;
       description: "Provided 10 accepted answers",;
       icon: "Award",;
       color: "#10B981";
-<<<<<<< HEAD
-<<<<<<< HEAD
     };
-=======
-    },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+},;
     };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "badge2",;
       name: "Top Contributor",;
       description: "Among the top 5% of contributors",;
       icon: "Trophy",;
       color: "#F59E0B";
-<<<<<<< HEAD
-<<<<<<< HEAD
     };
-=======
-    },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+},;
     };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "badge3",;
       name: "First Post",;
@@ -467,24 +378,15 @@ const mockUser: CommunityUser = {;
       icon: "Star",;
       color: "#6366F1";
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
   isVerified: true,;
   isModerator: false;
 };
 
-<<<<<<< HEAD
-=======
-  ],;
+],;
   isVerified: true,;
   isModerator: false;
 },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock posts by this user;
 const userPosts: ForumPost[] = [;
   {;
@@ -493,23 +395,14 @@ const userPosts: ForumPost[] = [;
     content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",;
     authorId: "user1",;
     authorName: "Alex Johnson",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     authorAvatar: "https://i && i.pravatar.cc/150?img=3",;
     authorRole: "Verified Talent",;
     categoryId: "ai-tools",;
     tags: ["machine-learning", "fine-tuning", "gpt"];
-<<<<<<< HEAD
-=======
-    authorAvatar: "https://i.pravatar.cc/150?img=3",;
+authorAvatar: "https://i.pravatar.cc/150?img=3",;
     authorRole: "Verified Talent",;
     categoryId: "ai-tools",;
     tags: ["machine-learning", "fine-tuning", "gpt"],;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     createdAt: "2025-04-01T12:00:00Z",;
     updatedAt: "2025-04-01T12:00:00Z",;
     upvotes: 48,;
@@ -517,10 +410,6 @@ const userPosts: ForumPost[] = [;
     replyCount: 12,;
     isAnswered: true,;
     isFeatured: true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
   {;
     id: "11",;
@@ -532,9 +421,7 @@ const userPosts: ForumPost[] = [;
     authorRole: "Verified Talent",;
     categoryId: "ai-tools",;
     tags: ["prompts", "techniques", "optimization"];
-<<<<<<< HEAD
-=======
-  },;
+},;
   {;
     id: "11",;
     title: "How to structure an AI prompt for best results",;
@@ -545,56 +432,34 @@ const userPosts: ForumPost[] = [;
     authorRole: "Verified Talent",;
     categoryId: "ai-tools",;
     tags: ["prompts", "techniques", "optimization"],;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     createdAt: "2025-03-20T14:25:00Z",;
     updatedAt: "2025-03-20T14:25:00Z",;
     upvotes: 36,;
     downvotes: 1,;
     replyCount: 8;
-<<<<<<< HEAD
-<<<<<<< HEAD
   };
-=======
-  },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+},;
   };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {;
     id: "12",;
     title: "Setting up effective monitoring for AI systems",;
     content: "Here's my approach to monitoring AI systems in production environments...",;
     authorId: "user1",;
     authorName: "Alex Johnson",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     authorAvatar: "https://i && i.pravatar.cc/150?img=3",;
     authorRole: "Verified Talent",;
     categoryId: "project-help",;
     tags: ["monitoring", "production", "devops"];
-<<<<<<< HEAD
-=======
-    authorAvatar: "https://i.pravatar.cc/150?img=3",;
+authorAvatar: "https://i.pravatar.cc/150?img=3",;
     authorRole: "Verified Talent",;
     categoryId: "project-help",;
     tags: ["monitoring", "production", "devops"],;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     createdAt: "2025-03-12T09:30:00Z",;
     updatedAt: "2025-03-12T09:30:00Z",;
     upvotes: 24,;
     downvotes: 0,;
     replyCount: 6;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];
 
 export default function CommunityProfilePage() {;
@@ -602,33 +467,23 @@ export default function CommunityProfilePage() {;
   const [user, setUser] = useState<CommunityUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState<ForumPost[]>([]);
-<<<<<<< HEAD
-
 
   useEffect(() => {;
     // In a real app, we would fetch the user data here;
     // For now, we'll just use the mock data;
 
-=======
-  useEffect(() => {;
+useEffect(() => {;
     // In a real app, we would fetch the user data here;
     // For now, we'll just use the mock data;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setUser(mockUser);
     setPosts(userPosts);
     setIsLoading(false);
   }, [userId]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
   if (isLoading) {;
 
     return (
-=======
-  if (isLoading) {;
+if (isLoading) {;
     return (
 ],;
 export default function CommunityProfilePage() {;
@@ -645,9 +500,6 @@ export default function CommunityProfilePage() {;
   }, [userId]);
   if (isLoading) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AppLayout>;
         <div className="container py-8">;
           <div className="flex justify-center items-center h-64">;
@@ -657,22 +509,15 @@ export default function CommunityProfilePage() {;
       </AppLayout>;
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
   if (!user) {;
 
     return (
-=======
-  if (!user) {;
+if (!user) {;
     return (
 ;
   if (!user) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AppLayout>;
         <div className="container py-8">;
           <h1>User not found</h1>;
@@ -683,24 +528,12 @@ export default function CommunityProfilePage() {;
       </AppLayout>;
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   return (;
     <AppLayout>;
       <SEO;
 
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
@@ -733,28 +566,15 @@ export default function CommunityProfilePage() {;
                         <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
                       </svg>
                     </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
   return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+return (
     <AppLayout>;
       <SEO
         title={`${user && user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user && user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user && user.name}`}
       />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -765,13 +585,7 @@ export default function CommunityProfilePage() {;
           <span className="text-muted-foreground">/</span>;
           <span className="text-sm font-medium">{user && user.name}</span>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
           <div className="md:col-span-1">;
             <Card>;
@@ -790,14 +604,7 @@ export default function CommunityProfilePage() {;
                         <path fillRule="evenodd" d="M8 && M8.603 3 && 3.799A4.49 4 && 4.49 0 0112 2 && 2.25c1.357 0 2 && 2.573.6 3 && 3.397 1 && 1.549a4.49 4 && 4.49 0 013 && 013.498 1 && 1.307 4 && 4.491 4 && 4.491 0 011 && 011.307 3 && 3.497A4.49 4 && 4.49 0 0121 && 0121.75 12a4 && 12a4.49 4 && 4.49 0 01-1 && 1.549 3 && 3.397 4 && 4.491 4 && 4.491 0 01-1 && 1.307 3 && 3.497 4 && 4.491 4 && 4.491 0 01-3 && 3.497 1 && 1.307A4.49 4 && 4.49 0 0112 21 && 21.75a4.49 4 && 4.49 0 01-3 && 3.397-1 && 1.549 4 && 4.49 4 && 4.49 0 01-3 && 3.498-1 && 1.306 4 && 4.491 4 && 4.491 0 01-1 && 1.307-3 && 3.498A4.49 4 && 4.49 0 012 && 012.25 12c0-1 && 1.357.6-2 && 2.573 1 && 1.549-3 && 3.397a4.49 4 && 4.49 0 011 && 011.307-3 && 3.497 4 && 4.49 4 && 4.49 0 013 && 013.497-1 && 1.307zm7.007 6 && 6.387a.75 && 75.75 0 10-1 && 1.22-.872l-3 && 3.236 4 && 4.53L9.53 12 && 12.22a.75 && 75.75 0 00-1 && 1.06 1 && 1.06l2.25 2 && 2.25a.75 && 75.75 0 001 && 001.14-.094l3 && 094l3.75-5 && 5.25z" clipRule="evenodd" />;
                       </svg>;
                     </span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )}
                 </CardTitle>;
                 {user && user.role && (;
@@ -808,12 +615,8 @@ export default function CommunityProfilePage() {;
                 {user && user.isModerator && (;
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-                  )}
+)}
                 </CardTitle>
                 {user.role && (
                   <Badge variant="outline" className="mt-1">
@@ -865,7 +668,6 @@ export default function CommunityProfilePage() {;
                   <div className="space-y-4">
                     {posts.map((post) => (
                       <PostCard key={post.id} post={post} />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     ))}
                   </div>
                 ) : (
@@ -927,77 +729,49 @@ export default function CommunityProfilePage() {;
               </TabsContent>
             </Tabs>
           </div>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       </div>
     </AppLayout>
   )
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {user.isModerator && (;
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
                 )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
                 {user.isModerator && (;
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
                 )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </CardHeader>;
 
               <CardContent className="space-y-6">;
                 <div>;
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Reputation</h3>;
-<<<<<<< HEAD
                   <ReputationDisplay reputation={user && user.reputation} size="lg" />;
                 </div>;
 
                 <div>;
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges</h3>;
                   <UserBadges badges={user && user.badges} />;
-=======
-                  <ReputationDisplay reputation={user.reputation} size="lg" />;
+<ReputationDisplay reputation={user.reputation} size="lg" />;
                 </div>;
                 <div>;
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges</h3>;
                   <UserBadges badges={user.badges} />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </div>;
 
                 <div className="grid grid-cols-2 gap-4">;
                   <Card>;
                     <CardContent className="p-4 text-center">;
-<<<<<<< HEAD
                       <div className="text-2xl font-bold">{user && user.postCount}</div>;
-=======
-                      <div className="text-2xl font-bold">{user.postCount}</div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<div className="text-2xl font-bold">{user.postCount}</div>;
                       <p className="text-sm text-muted-foreground">Posts</p>;
                     </CardContent>;
                   </Card>;
                   <Card>;
                     <CardContent className="p-4 text-center">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <div className="text-2xl font-bold">{user && user.replyCount}</div>;
-=======
-                      <div className="text-2xl font-bold">{user.replyCount}</div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<div className="text-2xl font-bold">{user.replyCount}</div>;
                       <p className="text-sm text-muted-foreground">Replies</p>;
                     </CardContent>;
                   </Card>;
@@ -1014,26 +788,19 @@ export default function CommunityProfilePage() {;
                 <TabsTrigger value="posts">Posts</TabsTrigger>;
                 <TabsTrigger value="activity">Recent Activity</TabsTrigger>;
               </TabsList>;
-<<<<<<< HEAD
 
               <TabsContent value="posts" className="mt-6">;
-<<<<<<< HEAD
                 <h2 className="text-xl font-bold mb-4">Posts by {user && user.name}</h2>;
 
                 {posts && posts.length > 0 ? (;
                   <div className="space-y-4">;
                     {posts && posts.map((post) => (;
                       <PostCard key={post && post.id} post={post} />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-                <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>;
+<h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>;
                 {posts.length > 0 ? (;
                   <div className="space-y-4">;
                     {posts.map((post) => (;
                       <PostCard key={post.id} post={post} />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </div>;
                 ) : (;
@@ -1043,11 +810,7 @@ export default function CommunityProfilePage() {;
                     </CardContent>;
                   </Card>;
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </TabsContent>;
 
               <TabsContent value="activity" className="mt-6">;
@@ -1058,12 +821,7 @@ export default function CommunityProfilePage() {;
                     <ul className="space-y-4">;
                       <li className="flex items-start gap-4">;
                         <div className="min-w-fit text-sm text-muted-foreground">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
                         </div>;
                         <div>;
@@ -1097,15 +855,10 @@ export default function CommunityProfilePage() {;
                       <li className="flex items-start gap-4">;
                         <div className="min-w-fit text-sm text-muted-foreground">;
                           {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         </div>;
                         <div>;
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>;
-=======
     author_id: "user1",
     author_name: "Alex Johnson",
     author_avatar: "https://i.pravatar.cc / 150?img = 3",
@@ -1183,9 +936,6 @@ if ( {) {
   return (
     <AppLayout>;
       <SEO;
-<<<<<<< HEAD
-=======
-
 import { useState, useEffect } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -1333,12 +1083,10 @@ export default function CommunityProfilePage() {;
   return (;
     <AppLayout>;
       <SEO ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
       />;
-<<<<<<< HEAD
       <div className="container py - 8">;
         <div className="flex items - center gap - 3 mb - 6">;
           <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">;
@@ -1400,8 +1148,7 @@ export default function CommunityProfilePage() {;
                 </div>;
                 <div className="text - sm text - muted - foreground">;
                   <p > Member since April 2025</p>;
-=======
-      ;
+;
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -1470,24 +1217,19 @@ export default function CommunityProfilePage() {;
                 ;
                 <div className="text-sm text-muted-foreground">;
                   <p>Member since April 2025</p>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </div>;
               </CardContent>;
             </Card>;
           </div>;
-<<<<<<< HEAD
           <div className="md:col - span - 2">;
             <Tabs default_value="posts">;
-=======
-          ;
+;
           <div className="md:col-span-2">;
             <Tabs defaultValue="posts">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <TabsList>;
                 <TabsTrigger value="posts">Posts</TabsTrigger>;
                 <TabsTrigger value="activity">Recent Activity</TabsTrigger>;
               </TabsList>;
-<<<<<<< HEAD
               <TabsContent value="posts" className="mt - 6">;
                 <h2 className="text - xl font - bold mb - 4">Posts by {user.name}</h2>;
                 {posts.length > 0 ? (
@@ -1545,8 +1287,7 @@ export default function CommunityProfilePage() {;
                         <div>;
                           <p > Answer was accepted in <Link to="/community / post / 15" className="text - zion - purple hover: underline">How to optimize RAG systems for better results</Link></p>;
 
-=======
-              ;
+;
               <TabsContent value="posts" className="mt-6">;
                 <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>;
                 ;
@@ -1612,9 +1353,6 @@ export default function CommunityProfilePage() {;
                         </div>;
                         <div>;
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </div>;
                       </li>;
                     </ul>;
@@ -1626,19 +1364,9 @@ export default function CommunityProfilePage() {;
         </div>;
       </div>;
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </AppLayout>);
+</AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
     </AppLayout>);
 }
@@ -1678,10 +1406,7 @@ isModerator: false
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
     </AppLayout>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
