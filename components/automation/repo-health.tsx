@@ -1,7 +1,19 @@
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface Report {
+  generatedAt: string;
+  commits: { last7d: number, last30d: number },
+  changes: { last7dFiles: string[] },
+  largestFiles: { file: string, bytes: number }[],
+  stalePages: { file: string, lastCommitAt: string }[]
+}
 
-
-};
-type Props = { report: Report | null },
+<<<<<<< HEAD
+type Props = any;
+=======
+}
+type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationrepo-health.json');
@@ -11,10 +23,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   } catch {
     return { props: { report: null }, revalidate: 3600 }
   }
-};
-
+}
 export default function RepoHealth({ report }: Props) {
   if (!report) return <div>No report yet. Check back soon.</div>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -25,7 +37,7 @@ export default function RepoHealth({ report }: Props) {
         <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Commits (7d)</div><div className="text-2xl font-semibold">{report.commits.last7d}</div></div>
         <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Commits (30d)</div><div className="text-2xl font-semibold">{report.commits.last30d}</div></div>
         <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Changed Files (7d)</div><div className="text-2xl font-semibold">{report.changes.last7dFiles.length}</div></div>
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Largest File</div><div className="text-sm font-medium truncate">{report.largestFiles[0]?.file || '—'}</div></div>
+        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Largest File</div><div className="text-sm font-medium truncate">{report.largestFiles[0]?.file |'—'}</div></div>
       </div>
       <section>
         <h2 className="font-semibold mb-2">Largest Files</h2>

@@ -1,26 +1,42 @@
-import { useState } from 'react'
-import { useForm, ControllerRenderProps } from 'react-hook-form'
-import { Button } from '@/components/ui/button'
-import { Textarea } from '@/components/ui/textarea'
+
+import { useState } from "react",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
+<<<<<<< HEAD
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormMessage
+} from "@/components/ui/form",
+import { Card, CardContent } from "@/components/ui/card";
+=======
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
 } from '@/components/ui/form'
 import { Card, CardContent } from '@/components/ui/card'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>
+  onSubmit: (content: string) => Promise<void>;
   parentId?: string
 interface ReplyFormValues {
   content: string
+<<<<<<< HEAD
+}
+
+export const ReplyForm = null;
+=======
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const form = useForm<ReplyFormValues>({
     defaultValues: {
-      content: '',
-    },
+      content: ''
+    }
   })
   const handleSubmit = async (values: ReplyFormValues) => {
     setIsSubmitting(true);    try {
@@ -39,7 +55,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
               control={form.control}
               name='content'
               render={({
-                field,
+                field
               }: {
                 field: ControllerRenderProps<ReplyFormValues, 'content'>
               }) => (                <FormItem>
@@ -62,3 +78,4 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   )
 }
 export default ReplyForm
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

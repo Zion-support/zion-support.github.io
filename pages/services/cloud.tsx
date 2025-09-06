@@ -1,88 +1,96 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { Cloud, Cpu, Database, Zap, Shield, Rocket;
+  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
+ } from 'lucide-react';
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
+export default function CloudServicesPage() {
+  const services = null;
+=======
 import {
-  Cloud,
-  Cpu,
-  Database,
-  Zap,
-  Shield,
-  Rocket,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  TrendingUp,;
+  Cloud
+  Cpu
+  Database
+  Zap
+  Shield
+  Rocket
+  ArrowRight
+  CheckCircle
+  Star
+  Users
+  Clock
+  TrendingUp;
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function CloudServicesPage() {
   const services = [
     {
-      title: 'Cloud Migration & Strategy',
+      title: 'Cloud Migration & Strategy'
       description:
-        'Seamless cloud migration with strategic planning and execution',
+        'Seamless cloud migration with strategic planning and execution'
       features: [
-        'Migration Planning',
-        'Cost Optimization',
-        'Performance Tuning',
-        'Security Implementation',
-      ],
-      price: 'From $10,000',
-      icon: Cloud,
-      color: 'from-emerald-500 to-teal-500',
-    },
+        'Migration Planning'
+        'Cost Optimization'
+        'Performance Tuning'
+        'Security Implementation'
+      ]
+      price: 'From $10,000'
+      icon: Cloud
+      color: 'from-emerald-500 to-teal-500'
+    }
     {
-      title: 'DevOps & CI/CD',
-      description: 'Automated development and deployment pipelines',
+      title: 'DevOps & CI/CD'
+      description: 'Automated development and deployment pipelines'
       features: [
-        'CI/CD Automation',
-        'Infrastructure as Code',
-        'Monitoring & Alerting',
-        'Performance Optimization',
-      ],
-      price: 'From $6,000',
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500',
-    },
+        'CI/CD Automation'
+        'Infrastructure as Code'
+        'Monitoring & Alerting'
+        'Performance Optimization'
+      ]
+      price: 'From $6,000'
+      icon: Zap
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      title: 'Edge Computing Solutions',
+      title: 'Edge Computing Solutions'
       description:
-        'Distributed computing for improved performance and reliability',
+        'Distributed computing for improved performance and reliability'
       features: [
-        'Edge Deployment',
-        'Load Balancing',
-        'Global Distribution',
-        'Low Latency',
-      ],
-      price: 'From $8,000',
-      icon: Cpu,
-      color: 'from-purple-500 to-pink-500',
-    },
+        'Edge Deployment'
+        'Load Balancing'
+        'Global Distribution'
+        'Low Latency'
+      ]
+      price: 'From $8,000'
+      icon: Cpu
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      title: 'Cloud Security & Compliance',
+      title: 'Cloud Security & Compliance'
       description:
-        'Comprehensive security and compliance for cloud environments',
+        'Comprehensive security and compliance for cloud environments'
       features: [
-        'Identity Management',
-        'Data Protection',
-        'Compliance Auditing',
-        'Threat Prevention',
-      ],
-      price: 'From $12,000',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-    },
+        'Identity Management'
+        'Data Protection'
+        'Compliance Auditing'
+        'Threat Prevention'
+      ]
+      price: 'From $12,000'
+      icon: Shield
+      color: 'from-red-500 to-orange-500'
+    }
   ];
-
   const stats = [
-    { number: '99.99%', label: 'Uptime Guarantee', icon: Cloud },
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock },
-    { number: '100+', label: 'Cloud Projects', icon: CheckCircle },
+    { number: '99.99%', label: 'Uptime Guarantee', icon: Cloud }
+    { number: '50%', label: 'Cost Reduction', icon: TrendingUp }
+    { number: '24/7', label: 'Support Available', icon: Clock }
+    { number: '100+', label: 'Cloud Projects', icon: CheckCircle }
   ];
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -100,9 +108,7 @@ export default function CloudServicesPage() {
           content='Scalable cloud infrastructure solutions for modern businesses.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/services/cloud' />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -118,7 +124,6 @@ export default function CloudServicesPage() {
               Scalable cloud solutions that drive efficiency and accelerate
               digital transformation            </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -136,7 +141,6 @@ export default function CloudServicesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -160,7 +164,6 @@ export default function CloudServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -178,7 +181,6 @@ export default function CloudServicesPage() {
               infrastructure and drive innovation
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -219,7 +221,6 @@ export default function CloudServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -245,26 +246,20 @@ export default function CloudServicesPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
-),
-
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cloud Infrastructure Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+)
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cloud Infrastructure Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, y: 30 
-
+  opacity: 0, y: 30
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8 
-
+  duration: 0.8
 }viewport= {
   {
-  once: true 
-
+  once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation. </p> Infrastructure Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)

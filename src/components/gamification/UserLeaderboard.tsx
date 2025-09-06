@@ -1,10 +1,14 @@
+<<<<<<< HEAD
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+=======
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
 } from '@/components/ui/card'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { Trophy } from 'lucide-react'
 export interface LeaderboardEntry {
   name: string
@@ -14,14 +18,16 @@ interface UserLeaderboardProps {
   entries: LeaderboardEntry[]
 }
 export interface LeaderboardEntry {
-  name: string,
+<<<<<<< HEAD
+  name: string;
+=======
+  name: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   points: number
 }
-
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[]
 }
-
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
   return (
     <Card>

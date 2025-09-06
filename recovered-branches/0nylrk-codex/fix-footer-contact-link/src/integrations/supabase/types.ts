@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export type Json = any;
+=======
 export type Json =
   | string
   | number
@@ -5,7 +8,6 @@ export type Json =
   | null
   | { [key: string]: Json | undefined }
   | Json[]
-
 export type Database = {
   public: {
     Tables: {
@@ -167,7 +169,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "api_keys"
             referencedColumns: ["id"]
-          };
+          }
           {
             foreignKeyName: "api_logs_user_id_fkey"
             columns: ["user_id"]
@@ -464,7 +466,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          }
           {
             foreignKeyName: "fraud_flags_user_id_fkey"
             columns: ["user_id"]
@@ -643,14 +645,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
-          };
+          }
           {
             foreignKeyName: "job_applications_resume_id_fkey"
             columns: ["resume_id"]
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-          };
+          }
           {
             foreignKeyName: "job_applications_talent_id_fkey"
             columns: ["talent_id"]
@@ -746,7 +748,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "project_milestones"
             referencedColumns: ["id"]
-          };
+          }
           {
             foreignKeyName: "milestone_activities_user_id_fkey"
             columns: ["user_id"]
@@ -1090,7 +1092,7 @@ export type Database = {
             isOneToOne: true
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          }
           {
             foreignKeyName: "profiles_tenant_id_fkey"
             columns: ["tenant_id"]
@@ -1146,7 +1148,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          }
           {
             foreignKeyName: "project_milestones_project_id_fkey"
             columns: ["project_id"]
@@ -1184,7 +1186,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
-          };
+          }
           {
             foreignKeyName: "project_notes_user_id_fkey"
             columns: ["user_id"]
@@ -1240,14 +1242,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          }
           {
             foreignKeyName: "projects_job_id_fkey"
             columns: ["job_id"]
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
-          };
+          }
           {
             foreignKeyName: "projects_talent_id_fkey"
             columns: ["talent_id"]
@@ -1327,7 +1329,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
-          };
+          }
           {
             foreignKeyName: "quote_requests_talent_id_fkey"
             columns: ["talent_id"]
@@ -1405,14 +1407,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
-          };
+          }
           {
             foreignKeyName: "referral_rewards_referral_id_fkey"
             columns: ["referral_id"]
             isOneToOne: false
             referencedRelation: "referrals"
             referencedColumns: ["id"]
-          };
+          }
           {
             foreignKeyName: "referral_rewards_user_id_fkey"
             columns: ["user_id"]
@@ -1477,21 +1479,21 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
-          };
+          }
           {
             foreignKeyName: "referrals_referral_code_fkey"
             columns: ["referral_code"]
             isOneToOne: false
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
-          };
+          }
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          }
           {
             foreignKeyName: "referrals_referrer_id_fkey"
             columns: ["referrer_id"]
@@ -1612,7 +1614,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          }
           {
             foreignKeyName: "review_reports_review_id_fkey"
             columns: ["review_id"]
@@ -1683,14 +1685,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
-          };
+          }
           {
             foreignKeyName: "reviews_reviewee_id_fkey"
             columns: ["reviewee_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          }
           {
             foreignKeyName: "reviews_reviewer_id_fkey"
             columns: ["reviewer_id"]
@@ -1844,7 +1846,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "whitelabel_tenants"
             referencedColumns: ["id"]
-          };
+          }
           {
             foreignKeyName: "tenant_administrators_user_id_fkey"
             columns: ["user_id"]
@@ -2292,13 +2294,11 @@ export type Database = {
     }
   }
 }
-
 type DefaultSchema = Database[Extract<keyof Database, "public">]
-
 export type Tables<
   DefaultSchemaTableNameOrOptions extends
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
-    | { schema: keyof Database };
+    | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2321,11 +2321,10 @@ export type Tables<
       ? R
       : never
     : never
-
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
-    | { schema: keyof Database };
+    | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2344,11 +2343,10 @@ export type TablesInsert<
       ? I
       : never
     : never
-
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
-    | { schema: keyof Database };
+    | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2367,11 +2365,10 @@ export type TablesUpdate<
       ? U
       : never
     : never
-
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
     | keyof DefaultSchema["Enums"]
-    | { schema: keyof Database };
+    | { schema: keyof Database }
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
   }
@@ -2382,11 +2379,10 @@ export type Enums<
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
     : never
-
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
     | keyof DefaultSchema["CompositeTypes"]
-    | { schema: keyof Database };
+    | { schema: keyof Database }
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database
   }
@@ -2397,7 +2393,6 @@ export type CompositeTypes<
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
     : never
-
 export const Constants = {
   public: {
     Enums: {
@@ -2406,7 +2401,7 @@ export const Constants = {
         "jobs:write";
         "talent:read";
         "quotes:write";
-        "webhooks:manage"],
+        "webhooks:manage"]
       fraud_severity: ["safe", "suspicious", "dangerous"];
       quote_request_status: [
         "new";
@@ -2414,6 +2409,7 @@ export const Constants = {
         "accepted";
         "responded";
         "closed";
-        "archived"],
+        "archived"]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       referral_status: ["pending", "completed", "expired"]}}} as const
 ;

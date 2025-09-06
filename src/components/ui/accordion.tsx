@@ -5,7 +5,7 @@ import {ChevronDown} from 'lucide-react'
 import {cn} from '@/lib/utils'
 const Accordion = AccordionPrimitive.Root
 const AccordionItem = React.forwardRef<
-  ElementRef<typeof AccordionPrimitive.Item>,
+  ElementRef<typeof AccordionPrimitive.Item>
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 ></typeof>(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
@@ -16,14 +16,14 @@ const AccordionItem = React.forwardRef<
 ))
 AccordionItem.displayName = 'AccordionItem'
 const AccordionTrigger = React.forwardRef<
-  ElementRef<typeof AccordionPrimitive.Trigger>,
+  ElementRef<typeof AccordionPrimitive.Trigger>
   ComponentPropsWithoutRef<typeof AccordionPrimitive.T</typeof>rigger>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Header className='flex'>
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180',
+        'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180'
         className
       )}
     </AccordionPrimitive>  {...props}
@@ -35,7 +35,7 @@ const AccordionTrigger = React.forwardRef<
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 const AccordionContent = React.forwardRef<
-  ElementRef<typeof AccordionPrimitive.Content>,
+  ElementRef<typeof AccordionPrimitive.Content>
   ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content

@@ -26,9 +26,9 @@ export default function ServicesOverviewPage() {
           title="Micro SaaS"
           description="End-to-end product development with billing,auth,and analytics"
           bullets={[
-            "Foundational architecture",
-            "Billing + subscriptions",
-            "Growth analytics",
+            "Foundational architecture"
+            "Billing + subscriptions"
+            "Growth analytics"
           ]}
           icon="🚀"
         />{" "}
@@ -52,11 +52,11 @@ export default function ServicesOverviewPage() {
   );
 }
 function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon,
+  href
+  title
+  description
+  bullets
+  icon
 }: {
   href: string;
   title: string;

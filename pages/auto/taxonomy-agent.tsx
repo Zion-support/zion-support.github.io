@@ -1,6 +1,9 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-import Link from 'next/link',;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+<<<<<<< HEAD
+const TaxonomyAgent: NextPage;
+=======
 const TaxonomyAgent: NextPage = () => {
   return (
     <div>
@@ -15,6 +18,6 @@ const TaxonomyAgent: NextPage = () => {
       </main>
     </div>
   )
-},
-
-export default TaxonomyAgent,;
+}
+export default TaxonomyAgent;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

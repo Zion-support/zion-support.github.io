@@ -1,8 +1,7 @@
 import React, { createContext, useCallback, useContext, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 export type ToastVariant = 'default' | 'success' | 'error' | 'info';
-export type Toast = {;
-  id: string;
+export type Toast = {id: string;
   title?: string;
   description?: string;
   variant?: ToastVariant;
@@ -10,26 +9,20 @@ export type Toast = {;
   onAction?: () => void;
   durationMs?: number;
 }
-;
-export type ToastContextValue = {;
-  toasts: Toast[];
+export type ToastContextValue = {toasts: Toast[];
   addToast: (toast: Omit<Toast, 'id'>) => string;
   removeToast: (id: string) => void;
   clearToasts: () => void;
 }
-;
 const ToastContext = createContext<ToastContextValue | undefined>(undefined);
-export function ToastProvider({ children }: { children: React.ReactNode }) {;
-  const [toasts, setToasts] = useState<Toast[]>([]);
+export function ToastProvider({ children }: { children: React.ReactNode }) {const [toasts, setToasts] = useState<Toast[]>([]);
   const removeToast = useCallback((id: string) => {;
     setToasts(prev => prev.filter(t => t.id !== id));
   }, []);
-  const addToast = useCallback((toast: Omit<Toast, 'id'>) => {;
-    const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
+  const addToast = useCallback((toast: Omit<Toast, 'id'>) => {const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
     setToasts(prev => [...prev, item]);
-    if (item.durationMs && item.durationMs > 0) {;
-      setTimeout(() => removeToast(id), item.durationMs);
+    if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
     }
     return id;
   }, [removeToast]);
@@ -47,8 +40,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {;
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 8, scale: 0.98 }}
               transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-              className={`rounded-md border shadow-lg p-3 backdrop-blur bg-white/80 dark:bg-black/60 ${;
-                t.variant === 'success' ? 'border-emerald-400/40' : t.variant === 'error' ? 'border-rose-400/40' : t.variant === 'info' ? 'border-sky-400/40' : 'border-gray-300/40 dark:border-gray-700/40';
+              className={`rounded-md border shadow-lg p-3 backdrop-blur bg-white/80 dark:bg-black/60 ${t.variant === 'success' ? 'border-emerald-400/40' : t.variant === 'error' ? 'border-rose-400/40' : t.variant === 'info' ? 'border-sky-400/40' : 'border-gray-300/40 dark:border-gray-700/40';
               }`}
 >
               <div className=&quot;flex items-start gap-3&quot;>
@@ -73,9 +65,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {;
     </ToastContext.Provider>;
   );
 }
-;
-export function useToast() {;
-  const ctx = useContext(ToastContext);
+export function useToast() {const ctx = useContext(ToastContext);
   if (!ctx) throw new Error('useToast must be used within ToastProvider');
   return ctx;
 }

@@ -1,14 +1,27 @@
-import { Button } from '@/components/ui/button'
-import { ArrowLeft, FileText, Link } from 'lucide-react'; import { PdfExportButton } from '../PdfExportButton'
-import { Resume } from '@/types/resume'
-import { useState } from 'react'
-import { useIsMobile } from '@/hooks/use-mobile'
+
+import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link } from 'lucide-react'
-import { PdfExportButton } from '../PdfExportButton'
+import { PdfExportButton  } from '../PdfExportButton';
+import { Resume  } from '@/types/resume';
+import { useState  } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 interface PreviewHeaderProps {
-  resume: Resume
+  resume: Resume;
   onBack: () => void
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
+<<<<<<< HEAD
+  const [isPrinting, setIsPrinting] = useState(false);
+  const isMobile = null;
+  return (
+    <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>
+      <Button 
+        variant="outline" 
+        onClick={onBack} 
+        className="gap-2 no-print"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        Back
+=======
   const [isPrinting, setIsPrinting] = useState(false)
   const isMobile = useIsMobile()
   const handleBrowserPrint = () => {
@@ -39,9 +52,9 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           visibility: visible
         }
         .print-section {
-          position: absolute,
-          left: 0,
-          top: 0,
+          position: absolute
+          left: 0
+          top: 0
           width: 100%
         }
         .no-print {
@@ -60,13 +73,12 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
     >
       <Button variant='outline' onClick={onBack} className='gap-2 no-print'>
         <ArrowLeft className='h-4 w-4' />        Back
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       </Button>
-
       <div
         className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}
       >
         <PdfExportButton resume={resume} />
-
         <Button
           variant='outline'
           onClick={handleBrowserPrint}
@@ -75,9 +87,8 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           <FileText className='h-4 w-4' />
           Print
         </Button>
-
         <Button variant='outline' className='gap-2'>
-          <Link className='h-4 w-4' />          Add to Profile        
+          <Link className='h-4 w-4' />          Add to Profile
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile

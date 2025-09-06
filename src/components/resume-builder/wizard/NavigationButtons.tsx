@@ -1,5 +1,10 @@
-import { Button } from '@/components/ui/button'
+
+import { Button } from "@/components/ui/button";
 import { Loader2 } from 'lucide-react'
+<<<<<<< HEAD
+import { NavigationButtonsProps } from "./types";
+export const NavigationButtons = null;
+=======
 import { NavigationButtonsProps } from './types'
 import { Button } from "@/components/ui/button"
 import { NavigationButtonsProps } from "./types"
@@ -15,12 +20,12 @@ export const NavigationButtons = ({
       {onBack && (
         <Button variant='outline' onClick={onBack}>
 export const NavigationButtons = ({
-  onBack,
-  onNext,
-  isNextDisabled = false,
-  backLabel = 'Back',
-  nextLabel = 'Next',
-  isLoading = false,
+  onBack
+  onNext
+  isNextDisabled = false
+  backLabel = 'Back'
+  nextLabel = 'Next'
+  isLoading = false
 }: NavigationButtonsProps) => {
   return (
     <div className='flex justify-between'>
@@ -35,7 +40,7 @@ export const NavigationButtons = ({
         </Button>
       )}
       {onNext && (
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+        <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
           {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}          {nextLabel}
         </Button>
       )}
@@ -51,3 +56,4 @@ export const NavigationButtons = ({
 }
 "  )
 }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

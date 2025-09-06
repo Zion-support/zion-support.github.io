@@ -1,109 +1,135 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react',
 import Head from 'next/head';
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Filter, Grid, List, ArrowRight, ExternalLink;
+  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
+  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
+  X, Sliders, SortAsc, SortDesc
+ } from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+export default function SearchPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState<any[]>([]),
+  const [isSearching, setIsSearching] = useState(false);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [filters, setFilters] = useState({
+    category: 'all';
+    status: 'all';
+    priceRange: 'all';
+    technology: 'all'
+  });
+  const [sortBy, setSortBy] = useState('relevance');
+  const [showFilters, setShowFilters] = useState(false);
+  // Mock data for search
+  const allServices = null;
+                      performSearch()
+                    }}
+                    className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
+=======
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
 import {
-  Search,
-  Filter,
-  ArrowRight,
-  Clock,
-  Star,
-  FileText,
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Brain,
-  Users,
-  Settings,
-  Globe,
-  CheckCircle,
-  X,
-  ChevronDown,
+  Search
+  Filter
+  ArrowRight
+  Clock
+  Star
+  FileText
+  Code
+  Database
+  Cloud
+  Shield
+  Brain
+  Users
+  Settings
+  Globe
+  CheckCircle
+  X
+  ChevronDown
   ChevronUp
 } from 'lucide-react';
-
 const searchResults = [
   {
-    id: 1,
-    title: 'AI Development Services',
-    description: 'Comprehensive AI development solutions including machine learning, computer vision, and natural language processing.',
-    url: '/ai-services',
-    category: 'Services',
-    type: 'Page',
-    icon: Brain,
-    rating: 4.9,
+    id: 1
+    title: 'AI Development Services'
+    description: 'Comprehensive AI development solutions including machine learning, computer vision, and natural language processing.'
+    url: '/ai-services'
+    category: 'Services'
+    type: 'Page'
+    icon: Brain
+    rating: 4.9
     lastUpdated: '2024-01-15'
-  },
+  }
   {
-    id: 2,
-    title: 'Cloud Infrastructure Setup',
-    description: 'Complete guide to setting up scalable cloud infrastructure for your applications.',
-    url: '/guides',
-    category: 'Guides',
-    type: 'Article',
-    icon: Cloud,
-    rating: 4.8,
+    id: 2
+    title: 'Cloud Infrastructure Setup'
+    description: 'Complete guide to setting up scalable cloud infrastructure for your applications.'
+    url: '/guides'
+    category: 'Guides'
+    type: 'Article'
+    icon: Cloud
+    rating: 4.8
     lastUpdated: '2024-01-10'
-  },
+  }
   {
-    id: 3,
-    title: 'Cybersecurity Best Practices',
-    description: 'Essential cybersecurity practices to protect your applications and data.',
-    url: '/guides',
-    category: 'Guides',
-    type: 'Article',
-    icon: Shield,
-    rating: 4.7,
+    id: 3
+    title: 'Cybersecurity Best Practices'
+    description: 'Essential cybersecurity practices to protect your applications and data.'
+    url: '/guides'
+    category: 'Guides'
+    type: 'Article'
+    icon: Shield
+    rating: 4.7
     lastUpdated: '2024-01-08'
-  },
+  }
   {
-    id: 4,
-    title: 'Database Optimization',
-    description: 'Learn database design principles and optimization techniques.',
-    url: '/guides',
-    category: 'Guides',
-    type: 'Article',
-    icon: Database,
-    rating: 4.8,
+    id: 4
+    title: 'Database Optimization'
+    description: 'Learn database design principles and optimization techniques.'
+    url: '/guides'
+    category: 'Guides'
+    type: 'Article'
+    icon: Database
+    rating: 4.8
     lastUpdated: '2024-01-05'
-  },
+  }
   {
-    id: 5,
-    title: 'Our Team',
-    description: 'Meet our talented team of experts who are passionate about technology and innovation.',
-    url: '/team',
-    category: 'Company',
-    type: 'Page',
-    icon: Users,
-    rating: 4.9,
+    id: 5
+    title: 'Our Team'
+    description: 'Meet our talented team of experts who are passionate about technology and innovation.'
+    url: '/team'
+    category: 'Company'
+    type: 'Page'
+    icon: Users
+    rating: 4.9
     lastUpdated: '2024-01-12'
-  },
+  }
   {
-    id: 6,
-    title: 'Contact Us',
-    description: 'Get in touch with our team for project inquiries and support.',
-    url: '/contact',
-    category: 'Company',
-    type: 'Page',
-    icon: Settings,
-    rating: 4.9,
+    id: 6
+    title: 'Contact Us'
+    description: 'Get in touch with our team for project inquiries and support.'
+    url: '/contact'
+    category: 'Company'
+    type: 'Page'
+    icon: Settings
+    rating: 4.9
     lastUpdated: '2024-01-14'
   }
 ];
-
 const categories = [
-  { name: 'All', count: searchResults.length },
-  { name: 'Services', count: 1 },
-  { name: 'Guides', count: 3 },
+  { name: 'All', count: searchResults.length }
+  { name: 'Services', count: 1 }
+  { name: 'Guides', count: 3 }
   { name: 'Company', count: 2 }
 ];
-
 const filters = [
-  { name: 'Pages', count: 3 },
-  { name: 'Articles', count: 3 },
-  { name: 'Recent', count: 4 },
+  { name: 'Pages', count: 3 }
+  { name: 'Articles', count: 3 }
+  { name: 'Recent', count: 4 }
   { name: 'Popular', count: 2 }
 ];
 export default function SearchPage() {
@@ -111,23 +137,19 @@ export default function SearchPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [showFilters, setShowFilters] = useState(false);
-
   const filteredResults = searchResults.filter(result => {
-    const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) |
                         result.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || result.category === selectedCategory;
-    const matchesFilter = selectedFilter === 'All' || result.type === selectedFilter;
-    
+    const matchesCategory = selectedCategory === 'All' |result.category === selectedCategory;
+    const matchesFilter = selectedFilter === 'All' |result.type === selectedFilter;
     return matchesQuery && matchesCategory && matchesFilter;
   });
-
   return (
     <Layout>
       <Head>
         <title>Search - Zion Tech Group</title>
         <meta name="description" content="Search our website for information, guides, services, and more." />
       </Head>
-
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -144,7 +166,6 @@ export default function SearchPage() {
               <p className="text-xl mb-8 text-blue-100">
                 Find the information you need quickly and easily.
               </p>
-              
               {/* Search Bar */}
               <div className="max-w-2xl mx-auto">
                 <div className="relative">
@@ -161,7 +182,6 @@ export default function SearchPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Filters Section */}
         <section className="py-8 bg-white border-b">
           <div className="container mx-auto px-4">
@@ -175,7 +195,6 @@ export default function SearchPage() {
                   Filters
                   {showFilters ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
                 </button>
-                
                 {categories.map((category) => (
                   <button
                     key={category.name}
@@ -185,17 +204,23 @@ export default function SearchPage() {
                         ? 'bg-blue-600 text-white'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                   >
-                    {category.name} ({category.count})
+                    {term}
                   </button>
                 ))}
               </div>
-              
+<<<<<<< HEAD
+            </div>
+          )}
+        </div>
+      </section>
+
+=======
               <div className="text-sm text-gray-600">
                 {filteredResults.length} results found
               </div>
             </div>
-
             {showFilters && (
               <motion.div
                 className="mt-4 p-4 bg-gray-50 rounded-lg"
@@ -222,7 +247,6 @@ export default function SearchPage() {
             )}
           </div>
         </section>
-
         {/* Search Results */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -244,7 +268,6 @@ export default function SearchPage() {
                           <span className="mx-2 text-gray-300">•</span>
                           <span className="text-sm text-gray-500">{result.type}</span>
                         </div>
-                        
                         <h3 className="text-xl font-bold text-gray-900 mb-2">
                           <Link
                             href={result.url}
@@ -253,11 +276,9 @@ export default function SearchPage() {
                             {result.title}
                           </Link>
                         </h3>
-                        
                         <p className="text-gray-600 mb-4">
                           {result.description}
                         </p>
-                        
                         <div className="flex items-center text-sm text-gray-500">
                           <Clock className="w-4 h-4 mr-1" />
                           <span className="mr-4">Updated {result.lastUpdated}</span>
@@ -267,7 +288,6 @@ export default function SearchPage() {
                           </div>
                         </div>
                       </div>
-                      
                       <Link
                         href={result.url}
                         className="ml-4 text-blue-600 hover:text-blue-700 transition-colors"
@@ -306,7 +326,6 @@ export default function SearchPage() {
             )}
           </div>
         </section>
-
         {/* Popular Searches */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -323,16 +342,16 @@ export default function SearchPage() {
                 Common searches to help you find what you're looking for.
               </p>
             </motion.div>
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
             <div className="flex flex-wrap gap-3 justify-center">
               {[
-                'AI Development',
-                'Cloud Services',
-                'Cybersecurity',
-                'Database Design',
-                'Mobile Apps',
-                'Web Development',
-                'IT Support',
+                'AI Development'
+                'Cloud Services'
+                'Cybersecurity'
+                'Database Design'
+                'Mobile Apps'
+                'Web Development'
+                'IT Support'
                 'Consulting'
               ].map((term, index) => (
                 <motion.button

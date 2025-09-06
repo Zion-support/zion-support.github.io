@@ -1,31 +1,39 @@
-import React, { useState } from 'react'
-import Image, { type ImageProps } from 'next/image'
-import { cn } from '@/lib/utils'
+import React, { useState } from 'react',
+import Image, { type ImageProps } from 'next/image';
+import { cn } from '@/lib/utils';
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
-  src: string;  alt?: string
+  src: string;
+  alt?: string;
   /** Source to use if the main src fails */
+<<<<<<< HEAD
+  fallbackSrc?: string;
+=======
   fallbackSrc?: string
   /** CSS class for the retry button */
   retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
-  src: string,
+  src: string
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
-  src: string,
+  src: string
   alt?: string
   /** Source to use if the main src fails */
   fallbackSrc?: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   /** CSS class for the retry button */
   retryClassName?: string;  retryClassName?: string
 }
-
 /**
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
-  src,
-  alt = '',
-  fallbackSrc = '/images/image-placeholder.svg',
-  className,
-  retryClassName,
+<<<<<<< HEAD
+  src;
+  alt;
+=======
+  src
+  alt = ''
+  fallbackSrc = '/images/image-placeholder.svg'
+  className
+  retryClassName
 }: ImageWithRetryProps) {
   const [currentSrc, setCurrentSrc] = useState(src)
   const [failed, setFailed] = useState(false)
@@ -56,7 +64,7 @@ export function ImageWithRetry({
           type='button'
           onClick={handleRetry}
           className={cn(
-            'absolute bottom-1 right-1 text-xs underline',
+            'absolute bottom-1 right-1 text-xs underline'
             retryClassName
           )}        >          onClick = {handleRetry,}
           className = {cn('absolute bottom-1 right-1 text-xs underline', retryClassName),}
@@ -70,3 +78,4 @@ export function ImageWithRetry({
     </div>
   )
 export default ImageWithRetry
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

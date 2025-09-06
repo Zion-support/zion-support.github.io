@@ -1,12 +1,15 @@
 import Link from 'next/link';
-import {readJson} from '../../utils/fsDb';
+import { readJson  } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {
+<<<<<<< HEAD
+  const articles = null;
+=======
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  return { props: { articles } };
-
+  return { props: { articles } }
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map(a => a.category)));
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='space-y-8'>
       <h1 className='text-2xl font-semibold'>Help Center</h1>

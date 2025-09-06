@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { AppMetadataValues } from "./MetadataManager",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+=======
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import { AppMetadataValues } from "./MetadataManager";
@@ -5,47 +15,45 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+  Form
+  FormControl
+  FormDescription
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
 } from "@/components/ui/form";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>;
 }
-
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form;
+<<<<<<< HEAD
+  const keywords = null;
+=======
   const keywords = watch("keywords");
   const platform = watch("platform");
-
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" || e.key === ",") {
+    if (e.key === "Enter" |e.key === ",") {
       e.preventDefault();
       const value = e.currentTarget.value.trim();
-
       if (value && !keywords.includes(value)) {
         setValue("keywords", [...keywords, value]);
         e.currentTarget.value = "";
       }
     }
-  };
-
+  }
   const removeKeyword = (keyword: string) => {
     setValue(
-      "keywords",
-      keywords.filter((k) => k !== keyword),
+      "keywords"
+      keywords.filter((k) => k !== keyword)
     );
-  };
-
+  }
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
   const longDescription = watch("longDescription");
-
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -73,7 +81,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 </FormItem>
               )}
             />
-
             <FormField
               control={control}
               name="shortDescription"
@@ -93,7 +100,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 </FormItem>
               )}
             />
-
             <FormField
               control={control}
               name="longDescription"
@@ -114,7 +120,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 </FormItem>
               )}
             />
-
             <div>
               <FormLabel htmlFor="keywords">Keywords</FormLabel>
               <Input
@@ -123,7 +128,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 onKeyDown={addKeyword}
                 className="mb-2"
               />
-
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
                   <Badge
@@ -146,7 +150,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 total)
               </FormDescription>
             </div>
-
             <FormField
               control={control}
               name="version"
@@ -164,4 +167,5 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       </CardContent>
     </Card>
   );
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

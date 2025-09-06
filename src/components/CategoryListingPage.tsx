@@ -4,65 +4,82 @@ import { ListingScoreCard } from '@/components/ListingScoreCard'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import {
-  Select,
-  SelectTrigger,
-  SelectContent,
-  SelectItem,
+  Select
+  SelectTrigger
+  SelectContent
+  SelectItem
 } from '@/components/ui/select'
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
-import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
-import { safeStorage } from '@/utils/safeStorage'
+import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
+import { safeStorage } from "@/utils/safeStorage";
 // Example listing type
 interface Listing {
-  id: string
-  title: string
-  description: string
-  category: string
-  subcategory?: string
-  image?: string
-  tags?: string[]
-  author?: string
-  authorImage?: string
-  aiScore?: number
-  rating?: number
-  reviewCount?: number
-  price?: number | null
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  subcategory?: string;
+  image?: string;
+  tags?: string[];
+  author?: string;
+  authorImage?: string;
+  aiScore?: number;
+  rating?: number;
+  reviewCount?: number;
+  price?: number | null;
   createdAt: string
 interface CategoryListingPageProps {
+<<<<<<< HEAD
+  title: string;
+  description: string;
+  listings: Listing[];
+  sortOptions?: { label: string, value: string }[],
+  filterOptions?: { label: string, value: string }[]
+}
+
+export function CategoryListingPage({ 
+  title;
+  description;
+  listings: initialListings;
+  sortOptions;
+                    setSelectedFilter(filterOptions[0]?.value || 'all')
+                  }}
+                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+=======
   title: string
   description: string
   listings: Listing[]
   sortOptions?: { label: string; value: string }[]
   filterOptions?: { label: string; value: string }[]
 export function CategoryListingPage({
-  title,
-  description,
-  listings: initialListings,
+  title
+  description
+  listings: initialListings
   sortOptions = [
-    { label: 'Newest First', value: 'newest' },
-    { label: 'Oldest First', value: 'oldest' },
-    { label: 'Highest Rating', value: 'rating-high' },
-    { label: 'Highest AI Match', value: 'ai-match' },
-    { label: 'A-Z', value: 'a-z' },
-    { label: 'Z-A', value: 'z-a' },
-  ],
+    { label: 'Newest First', value: 'newest' }
+    { label: 'Oldest First', value: 'oldest' }
+    { label: 'Highest Rating', value: 'rating-high' }
+    { label: 'Highest AI Match', value: 'ai-match' }
+    { label: 'A-Z', value: 'a-z' }
+    { label: 'Z-A', value: 'z-a' }
+  ]
   filterOptions = [
-    { label: 'All', value: 'all' },
-    { label: 'Highly Rated', value: 'high-rating' },
-    { label: 'Best AI Match', value: 'best-match' },
-  ],
+    { label: 'All', value: 'all' }
+    { label: 'Highly Rated', value: 'high-rating' }
+    { label: 'Best AI Match', value: 'best-match' }
+  ]
 }: CategoryListingPageProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedSort, setSelectedSort] = useState(
     () =>
-      safeStorage.getItem('category_selected_sort') ||
-      sortOptions[0]?.value ||
+      safeStorage.getItem('category_selected_sort') |
+      sortOptions[0]?.value |
       'newest'
   )
   const [selectedFilter, setSelectedFilter] = useState(
     () =>
-      safeStorage.getItem('category_selected_filter') ||
-      filterOptions[0]?.value ||
+      safeStorage.getItem('category_selected_filter') |
+      filterOptions[0]?.value |
       'all'
   )
   const [isLoading, setIsLoading] = useState(false)
@@ -87,8 +104,8 @@ export function CategoryListingPage({
     .filter(listing => {
       // Apply search filter
       const matchesSearch =
-        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
         (listing.tags &&
           listing.tags.some(tag =>
             tag.toLowerCase().includes(searchQuery.toLowerCase())
@@ -96,9 +113,9 @@ export function CategoryListingPage({
       // Apply category filters
       if (selectedFilter === 'all') return matchesSearch
       if (selectedFilter === 'high-rating')
-        return matchesSearch && (listing.rating || 0) >= 4
+        return matchesSearch && (listing.rating |0) >= 4
       if (selectedFilter === 'best-match')
-        return matchesSearch && (listing.aiScore || 0) >= 85
+        return matchesSearch && (listing.aiScore |0) >= 85
       return matchesSearch
     })
     .sort((a, b,) => {
@@ -113,9 +130,9 @@ export function CategoryListingPage({
             new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
           )
         case 'rating-high':
-          return (b.rating || 0) - (a.rating || 0)
+          return (b.rating |0) - (a.rating |0)
         case 'ai-match':
-          return (b.aiScore || 0) - (a.aiScore || 0)
+          return (b.aiScore |0) - (a.aiScore |0)
         case 'a-z':
           return a.title.localeCompare(b.title)
         case 'z-a':
@@ -134,7 +151,6 @@ export function CategoryListingPage({
               {description}
             </p>
           </div>
-
           {/* Filters and Search */}
           <div className='bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -149,7 +165,6 @@ export function CategoryListingPage({
                   }
                   className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />
               </div>
-
               <Select value={selectedSort} onValueChange={setSelectedSort}>
                 <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>
                   <div className='flex items-center'>
@@ -160,7 +175,7 @@ export function CategoryListingPage({
                     ) : null}
                     <span>
                       {sortOptions.find(option => option.value === selectedSort)
-                        ?.label || 'Sort By'}
+                        ?.label |'Sort By'}
                     </span>
                   </div>
                 </SelectTrigger>
@@ -175,7 +190,6 @@ export function CategoryListingPage({
                   ))}
                 </SelectContent>
               </Select>
-
               <Select value={selectedFilter} onValueChange={setSelectedFilter}>
                 <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>
                   <div className='flex items-center'>
@@ -183,7 +197,7 @@ export function CategoryListingPage({
                     <span>
                       {filterOptions.find(
                         option => option.value === selectedFilter
-                      )?.label || 'Filter'}
+                      )?.label |'Filter'}
                     </span>
                   </div>
                 </SelectTrigger>
@@ -200,7 +214,6 @@ export function CategoryListingPage({
               </Select>
             </div>
           </div>
-
           {/* Results Count */}
           <div className='mb-6'>
             <p className='text-zion-slate-light'>
@@ -208,7 +221,6 @@ export function CategoryListingPage({
               {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
-
           {/* Listings Grid */}
           <div aria-busy={isLoading}>
             {isLoading ? (
@@ -219,7 +231,7 @@ export function CategoryListingPage({
                     key = {listing.id,}
                     title = {listing.title,}
                     description = {listing.description,}
-                    category = {listing.subcategory || listing.category,}
+                    category = {listing.subcategory |listing.category,}
                     image = {listing.image,}
                     tags = {listing.tags,}
                     author = {listing.author,}
@@ -242,8 +254,9 @@ export function CategoryListingPage({
                   variant='outline'
                   onClick={() => {
                     setSearchQuery('')
-                    setSelectedFilter(filterOptions[0]?.value || 'all') }}
+                    setSelectedFilter(filterOptions[0]?.value |'all') }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                 >
                   Clear all filters
                 </Button>
@@ -254,85 +267,85 @@ export function CategoryListingPage({
       </div>
     </>
   )
-  //Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || (listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) )
+  //Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) |listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) |(listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) )
 //Apply category filters if (selectedFilter === 'all') return matchesSearch;'
-if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4;'
-if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85
+if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating |0) >= 4;'
+if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore |0) >= 85
 switch (selectedSort) {'
   case 'newest': return new Date (b.createdAt) .getTime () - new Date (a.createdAt) .getTime ();'
 case 'oldest': return new Date (a.createdAt) .getTime () - new Date (b.createdAt) .getTime ();'
-case 'rating-high': return (b.rating || 0) - (a.rating || 0);'
-case 'ai-match': return (b.aiScore || 0) - (a.aiScore || 0);'
+case 'rating-high': return (b.rating |0) - (a.rating |0);'
+case 'ai-match': return (b.aiScore |0) - (a.aiScore |0);'
 case 'a-z': return a.title.localeCompare (b.title);'
 case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <div className="container mx-auto"> <div className="text-center mb-12"> <GradientHeading> {
   title "
 }</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> {
-  description 
+  description
 }</p> </div> {
   /* Filters and Search */ "
 }<div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light"> <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" /> <Input className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> <Select value= {
-  selectedSort 
+  selectedSort
 }onValueChange= {
   setSelectedSort "
 }> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white"> <div className="flex items-center"> {'"
-  selectedSort === 'a-z' ? (<ArrowDownAZ className="mr-2 h-4 w-4" />) : selectedSort === 'z-a' ? (<ArrowUpZA className="mr-2 h-4 w-4" />) : null 
+  selectedSort === 'a-z' ? (<ArrowDownAZ className="mr-2 h-4 w-4" />) : selectedSort === 'z-a' ? (<ArrowUpZA className="mr-2 h-4 w-4" />) : null
 }<span> {'
-  sortOptions.find (option => option.value === selectedSort) ?.label || 'Sort By' "
+  sortOptions.find (option => option.value === selectedSort) ?.label |'Sort By' "
 }</span> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"> {
   sortOptions.map ( (option) => (<SelectItem key= {
-  option.value 
+  option.value
 }value= {
   option.value "
 }className="text-white"> {
-  option.label 
-}</SelectItem>) ) 
+  option.label
+}</SelectItem>) )
 }</SelectContent> </Select> <Select value= {
-  selectedFilter 
+  selectedFilter
 }onValueChange= {
   setSelectedFilter "
 }> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white"> <div className="flex items-center"> <Filter className="mr-2 h-4 w-4" /> <span> {'
-  filterOptions.find (option => option.value === selectedFilter) ?.label || 'Filter' "
+  filterOptions.find (option => option.value === selectedFilter) ?.label |'Filter' "
 }</span> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"> {
   filterOptions.map ( (option) => (<SelectItem key= {
-  option.value 
+  option.value
 }value= {
   option.value "
 }className="text-white"> {
-  option.label 
-}</SelectItem>) ) 
+  option.label
+}</SelectItem>) )
 }</SelectContent> </Select> </div> </div> {
   /* Results Count */ "
 }<div className="mb-6"> </p> </div> {
-  /* Listings Grid */ 
+  /* Listings Grid */
 }<div aria-busy= {
-  isLoading 
+  isLoading
 }> {"
   isLoading ? (<ListingGridSkeleton />) : processedListings.length > 0 ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {
   processedListings.map ( (listing) => (<ListingScoreCard key= {
-  listing.id 
+  listing.id
 }title= {
-  listing.title 
+  listing.title
 }description= {
-  listing.description 
+  listing.description
 }category= {
-  listing.subcategory || listing.category 
+  listing.subcategory |listing.category
 }image= {
-  listing.image 
+  listing.image
 }tags= {
-  listing.tags 
+  listing.tags
 }author= {
-  listing.author 
+  listing.author
 }authorImage= {
-  listing.authorImage 
+  listing.authorImage
 }aiScore= {
-  listing.aiScore 
+  listing.aiScore
 }rating= {
-  listing.rating 
+  listing.rating
 }reviewCount= {
-  listing.reviewCount 
+  listing.reviewCount
 }/>) ) "
-}</div>) : (<div className="text-center py-20"> <h3 className="text-xl font-bold text-white mb-2">No listings found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your filters or search query</p> <Button 
+}</div>) : (<div className="text-center py-20"> <h3 className="text-xl font-bold text-white mb-2">No listings found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your filters or search query</p> <Button
 }"
-}className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" 
-}</div> </div> </div> </>) 
+}className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+}</div> </div> </div> </>)
 }'"}

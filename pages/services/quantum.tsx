@@ -1,87 +1,95 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { Atom, Cpu, Shield, Rocket, Zap, Database;
+  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
+ } from 'lucide-react';
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
+export default function QuantumServicesPage() {
+  const services = null;
+=======
 import {
-  Atom,
-  Cpu,
-  Shield,
-  Rocket,
-  Zap,
-  Database,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  TrendingUp,;
+  Atom
+  Cpu
+  Shield
+  Rocket
+  Zap
+  Database
+  ArrowRight
+  CheckCircle
+  Star
+  Users
+  Clock
+  TrendingUp;
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function QuantumServicesPage() {
   const services = [
     {
-      title: 'Quantum Algorithm Development',
+      title: 'Quantum Algorithm Development'
       description:
-        'Custom quantum algorithms designed for specific business problems',
+        'Custom quantum algorithms designed for specific business problems'
       features: [
-        'Optimization Algorithms',
-        'Machine Learning',
-        'Cryptography',
-        'Simulation',
-      ],
-      price: 'From $15,000',
-      icon: Atom,
-      color: 'from-blue-500 to-cyan-500',
-    },
+        'Optimization Algorithms'
+        'Machine Learning'
+        'Cryptography'
+        'Simulation'
+      ]
+      price: 'From $15,000'
+      icon: Atom
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      title: 'Quantum Security Solutions',
-      description: 'Quantum-resistant cryptography and security protocols',
+      title: 'Quantum Security Solutions'
+      description: 'Quantum-resistant cryptography and security protocols'
       features: [
-        'Post-Quantum Cryptography',
-        'Quantum Key Distribution',
-        'Security Auditing',
-        'Compliance',
-      ],
-      price: 'From $12,000',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-    },
+        'Post-Quantum Cryptography'
+        'Quantum Key Distribution'
+        'Security Auditing'
+        'Compliance'
+      ]
+      price: 'From $12,000'
+      icon: Shield
+      color: 'from-red-500 to-orange-500'
+    }
     {
-      title: 'Quantum Computing Infrastructure',
-      description: 'Quantum computing hardware and cloud access solutions',
+      title: 'Quantum Computing Infrastructure'
+      description: 'Quantum computing hardware and cloud access solutions'
       features: [
-        'Cloud Quantum Access',
-        'Hardware Integration',
-        'Performance Optimization',
-        'Scalability',
-      ],
-      price: 'From $8,000',
-      icon: Cpu,
-      color: 'from-indigo-500 to-purple-500',
-    },
+        'Cloud Quantum Access'
+        'Hardware Integration'
+        'Performance Optimization'
+        'Scalability'
+      ]
+      price: 'From $8,000'
+      icon: Cpu
+      color: 'from-indigo-500 to-purple-500'
+    }
     {
-      title: 'Quantum AI Integration',
+      title: 'Quantum AI Integration'
       description:
-        'Hybrid quantum-classical AI systems for enhanced performance',
+        'Hybrid quantum-classical AI systems for enhanced performance'
       features: [
-        'Quantum Neural Networks',
-        'Hybrid Algorithms',
-        'Performance Enhancement',
-        'Future-Proofing',
-      ],
-      price: 'From $20,000',
-      icon: Zap,
-      color: 'from-emerald-500 to-teal-500',
-    },
+        'Quantum Neural Networks'
+        'Hybrid Algorithms'
+        'Performance Enhancement'
+        'Future-Proofing'
+      ]
+      price: 'From $20,000'
+      icon: Zap
+      color: 'from-emerald-500 to-teal-500'
+    }
   ];
-
   const stats = [
-    { number: '100+', label: 'Quantum Algorithms', icon: Atom },
-    { number: '99.99%', label: 'Security Guarantee', icon: Shield },
-    { number: '10x', label: 'Performance Boost', icon: TrendingUp },
-    { number: '24/7', label: 'Quantum Support', icon: Clock },
+    { number: '100+', label: 'Quantum Algorithms', icon: Atom }
+    { number: '99.99%', label: 'Security Guarantee', icon: Shield }
+    { number: '10x', label: 'Performance Boost', icon: TrendingUp }
+    { number: '24/7', label: 'Quantum Support', icon: Clock }
   ];
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -102,9 +110,7 @@ export default function QuantumServicesPage() {
           rel='canonical'
           href='https://ziontechgroup.com/services/quantum'
         />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -120,7 +126,6 @@ export default function QuantumServicesPage() {
               Revolutionary quantum solutions that unlock unprecedented
               computational power            </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -138,7 +143,6 @@ export default function QuantumServicesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -162,7 +166,6 @@ export default function QuantumServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -180,7 +183,6 @@ export default function QuantumServicesPage() {
               and secure the future
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -221,7 +223,6 @@ export default function QuantumServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -247,26 +248,20 @@ export default function QuantumServicesPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
-),
-
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+)
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion.div> Get Started </button> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, y: 30 
-
+  opacity: 0, y: 30
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8 
-
+  duration: 0.8
 }viewport= {
   {
-  once: true 
-
+  once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Experience Quantum Computing? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems. </p> Schedule Quantum Demo </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)

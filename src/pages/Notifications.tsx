@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-return <Badge className="bg-blue-500">Message</Badge>;
-      return <Badge className="bg-orange-500">Order</Badge>;    default:
-      return <Badge variant="outline">Notification</Badge>
-=======
 import React, { useState, useEffect } from 'react';
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -10,8 +5,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface Notification {
   id: string;
   type: 'message' | 'order' | 'system' | 'promotion';
@@ -22,10 +20,12 @@ interface Notification {
   actionUrl?: string;
 }
 <<<<<<< HEAD
-}
-;
-=======
 
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 const getNotificationIcon = (type: string) => {
   switch (type) {
     case 'message':
@@ -39,8 +39,7 @@ const getNotificationIcon = (type: string) => {
     default:
       return <Bell className="h-4 w-4 text-gray-500" />;
   }
-};
-
+}
 const getNotificationBadge = (type: string) => {
   switch (type) {
     case 'message':
@@ -50,74 +49,66 @@ const getNotificationBadge = (type: string) => {
     default:
       return <Badge variant="outline">Notification</Badge>;
   }
-};
-
+}
 export default function Notifications() {
   const { user } = useAuth();
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     // Mock data - replace with actual API call
     const mockNotifications: Notification[] = [
       {
-        id: '1',
-        type: 'message',
-        title: 'New Message',
-        message: 'You have received a new message from John Doe',
+        id: '1'
+        type: 'message'
+        title: 'New Message'
+        message: 'You have received a new message from John Doe'
         timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
-        read: false,
+        read: false
         actionUrl: '/messaging'
-      },
+      }
       {
-        id: '2',
-        type: 'order',
-        title: 'Order Update',
-        message: 'Your order #12345 has been shipped',
+        id: '2'
+        type: 'order'
+        title: 'Order Update'
+        message: 'Your order #12345 has been shipped'
         timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
-        read: true,
+        read: true
         actionUrl: '/orders'
-      },
+      }
       {
-        id: '3',
-        type: 'system',
-        title: 'System Maintenance',
-        message: 'Scheduled maintenance will occur tonight at 2 AM',
+        id: '3'
+        type: 'system'
+        title: 'System Maintenance'
+        message: 'Scheduled maintenance will occur tonight at 2 AM'
         timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24), // 1 day ago
         read: false
       }
     ];
-
     setNotifications(mockNotifications);
     setLoading(false);
   }, []);
-
   const markAsRead = (id: string) => {
-    setNotifications(prev => 
-      prev.map(notification => 
-        notification.id === id 
+    setNotifications(prev =>
+      prev.map(notification =>
+        notification.id === id
           ? { ...notification, read: true }
           : notification
       )
     );
-  };
-
+  }
   const markAllAsRead = () => {
-    setNotifications(prev => 
+    setNotifications(prev =>
       prev.map(notification => ({ ...notification, read: true }))
     );
     toast({
-      title: "Success",
-      description: "All notifications marked as read",
+      title: "Success"
+      description: "All notifications marked as read"
     });
-  };
-
+  }
   const deleteNotification = (id: string) => {
     setNotifications(prev => prev.filter(notification => notification.id !== id));
-  };
-
+  }
   const unreadCount = notifications.filter(n => !n.read).length;
-
   if (loading) {
     return (
       <div className="container mx-auto px-4 py-8">
@@ -132,7 +123,25 @@ export default function Notifications() {
       </div>
     );
   }
+<<<<<<< HEAD
 
+=======
+import React, { useState } from 'react';
+import { useNotifications } from '@/context/notifications/NotificationContext';
+import { NotificationType;
+  NotificationContextType } from '@/context/notifications';
+import { formatDistanceToNow  } from 'date-fns';
+import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings, Package } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { Badge  } from '@/components/ui/badge';
+import Skeleton from '@/components/ui/skeleton';
+import { SEO  } from '@/components/SEO';
+import { useRouter  } from 'next/router';
+import { cn } from '@/lib/utils';
+const getNotificationIcon = null;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-6">
@@ -144,7 +153,6 @@ export default function Notifications() {
           </Button>
         )}
       </div>
-
       {notifications.length === 0 ? (
         <Card>
           <CardContent className="flex flex-col items-center justify-center py-12">
@@ -156,8 +164,8 @@ export default function Notifications() {
       ) : (
         <div className="space-y-4">
           {notifications.map((notification) => (
-            <Card 
-              key={notification.id} 
+            <Card
+              key={notification.id}
               className={`transition-all hover:shadow-md ${
                 !notification.read ? 'border-l-4 border-l-blue-500 bg-blue-50' : ''
               }`}
@@ -211,4 +219,7 @@ export default function Notifications() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

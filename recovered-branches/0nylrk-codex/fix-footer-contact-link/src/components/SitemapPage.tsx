@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+
+import React from 'react';
+import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
+import { Link  } from 'react-router-dom';
+import { ChevronRight  } from 'lucide-react';
+import { SEO  } from './SEO';
+import { AppLayout } from '@/layout/AppLayout';
+export const SitemapPage: React.FC;
+=======
 import React from "react";
 import { completeSitemap, dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
@@ -15,7 +25,6 @@ export const SitemapPage: React.FC = () => {
       />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
@@ -38,7 +47,6 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
-
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -51,8 +59,8 @@ export const SitemapPage: React.FC = () => {
               {completeSitemap
                 .filter(
                   (route) =>
-                    route.requiredRoles?.includes("jobSeeker") ||
-                    route.requiredRoles?.includes("creator"),
+                    route.requiredRoles?.includes("jobSeeker") |
+                    route.requiredRoles?.includes("creator")
                 )
                 .map((route) => (
                   <li key={route.path}>
@@ -67,7 +75,6 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
-
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -80,8 +87,8 @@ export const SitemapPage: React.FC = () => {
               {completeSitemap
                 .filter(
                   (route) =>
-                    route.requiredRoles?.includes("employer") ||
-                    route.requiredRoles?.includes("buyer"),
+                    route.requiredRoles?.includes("employer") |
+                    route.requiredRoles?.includes("buyer")
                 )
                 .map((route) => (
                   <li key={route.path}>
@@ -96,7 +103,6 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
-
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -110,7 +116,7 @@ export const SitemapPage: React.FC = () => {
                 .filter(
                   (route) =>
                     route.requiredAuth &&
-                    (!route.requiredRoles || route.requiredRoles.length === 0),
+                    (!route.requiredRoles |route.requiredRoles.length === 0)
                 )
                 .map((route) => (
                   <li key={route.path}>
@@ -125,7 +131,6 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
-
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -150,7 +155,6 @@ export const SitemapPage: React.FC = () => {
                 ))}
             </ul>
           </div>
-
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -174,4 +178,5 @@ export const SitemapPage: React.FC = () => {
       </div>
     </AppLayout>
   );
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

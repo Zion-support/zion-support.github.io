@@ -1,12 +1,18 @@
 import { SkillCategoryProps } from "./types";
 import { SkillItem } from "./SkillItem";
 export const SkillCategory = ({
-  category,
-  skills,
-  onDelete,
+  category
+  skills
+  onDelete
 }: SkillCategoryProps) => {
+<<<<<<< HEAD
   if (!skills || skills.length === 0) return null;
 
+import { SkillCategoryProps  } from './types';
+import { SkillItem } from './SkillItem';
+export const SkillCategory = null;
+=======
+  if (!skills |skills.length === 0) return null;
   return (
     <div className="space-y-2">
       <h4 className="text-sm font-medium text-muted-foreground">{category}</h4>
@@ -22,4 +28,5 @@ export const SkillCategory = ({
       </div>
     </div>
   );
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

@@ -1,21 +1,18 @@
-import React from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
+
+import React from 'react',
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react'
-import { Resume } from '@/types/resume'
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Resume } from "@/types/resume"
+import { Resume } from "@/types/resume";
 interface ResumePreviewCardProps {
-  resume: Resume
-  onDownload: () => void
+  resume: Resume;
+  onDownload: () => void;
   isLoading: boolean
 export function ResumePreviewCard({
-  resume,
-  onDownload,
-  isLoading,
+  resume
+  onDownload
+  isLoading
 }: ResumePreviewCardProps) {
   return (
     <Card className='mt-3 bg-zion-blue-dark/30 border-zion-purple/20'>
@@ -41,13 +38,11 @@ export function ResumePreviewCard({
             <span className='sr-only'>Download Resume</span>
           </Button>
         </div>
-
         {resume.basic_info.summary && (
           <p className='text-xs text-zion-slate line-clamp-2 mb-2'>
             {resume.basic_info.summary}
           </p>
         )}
-
         {resume.skills && resume.skills.length > 0 && (
           <div className='flex flex-wrap gap-1 mt-2'>
             {resume.skills.slice(0, 5).map((skill, index) => (
@@ -56,7 +51,7 @@ export function ResumePreviewCard({
                 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0, 5).map((skill, index) => (
-              <Badge 
+              <Badge
                 key = {index,}
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
@@ -66,7 +61,7 @@ export function ResumePreviewCard({
             {resume.skills.length > 5 && (
               <Badge
                 variant='outline'
-                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge 
+                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
               >

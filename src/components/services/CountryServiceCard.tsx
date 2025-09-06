@@ -1,15 +1,28 @@
+<<<<<<< HEAD
+
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import Link from 'next/link',
+import { Badge } from "@/components/ui/badge";
+=======
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
+  Card
+  CardContent
+  CardFooter
+  CardHeader
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
-import { CountryPricing } from '@/data/onsiteServicePricing'
+import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {
+<<<<<<< HEAD
+  country: CountryPricing;
+  onSelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
+=======
   country: CountryPricing
   onSelect: (country: CountryPricing) => void
   onQuote?: (country: CountryPricing) => void
@@ -17,61 +30,75 @@ interface CountryServiceCardProps {
 import { Badge } from "@/components/ui/badge"
 import { CountryPricing } from "@/data/onsiteServicePricing"
 interface CountryServiceCardProps {
-  country: CountryPricing,
-  onSelect: (country: CountryPricing,) => void,
-  onQuote?: (country: CountryPricing,) => void,
+  country: CountryPricing
+  onSelect: (country: CountryPricing,) => void
+  onQuote?: (country: CountryPricing,) => void
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isPopular?: boolean
 }
-
 export function CountryServiceCard({
-  country,
-  onSelect,
-  onQuote,
-  isPopular,
+  country
+  onSelect
+  onQuote
+  isPopular
 }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
+<<<<<<< HEAD
+  const getRegionEmoji = null;
+  return (
+    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
+      isPopular 
+        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
+        : "bg-zion-blue-dark border-zion-blue-light"
+    }`}>
+      <CardHeader className="pb-2">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
+            <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
+=======
   const getRegionEmoji = (countryName: string | undefined): string => {
     if (!countryName) return '🌐'
     const emojiMap: Record<string, string> = {
-      'United States': '🇺🇸',
-      'United Kingdom': '🇬🇧',
-      Canada: '🇨🇦',
-      Australia: '🇦🇺',
-      Germany: '🇩🇪',
-      France: '🇫🇷',
-      Japan: '🇯🇵',
-      China: '🇨🇳',
-      Brazil: '🇧🇷',
-      India: '🇮🇳',
-      Russia: '🇷🇺',
-      Singapore: '🇸🇬',
-      'South Korea': '🇰🇷',
-      'South Africa': '🇿🇦',
+      'United States': '🇺🇸'
+      'United Kingdom': '🇬🇧'
+      Canada: '🇨🇦'
+      Australia: '🇦🇺'
+      Germany: '🇩🇪'
+      France: '🇫🇷'
+      Japan: '🇯🇵'
+      China: '🇨🇳'
+      Brazil: '🇧🇷'
+      India: '🇮🇳'
+      Russia: '🇷🇺'
+      Singapore: '🇸🇬'
+      'South Korea': '🇰🇷'
+      'South Africa': '🇿🇦'
       // Default if no flag is found
-      default: '🌐',
+      default: '🌐'
     }
-    return emojiMap[countryName] || '🌐'
+    return emojiMap[countryName] |'🌐'
   }
   // Get response time estimate based on country
   const getResponseTime = (countryName: string | undefined): string => {
     if (!countryName) return '8-24 hours'
     const tier1 = [
-      'United States',
-      'United Kingdom',
-      'Germany',
-      'Japan',
-      'Singapore',
-      'Australia',
-      'Canada',
-      'France',
+      'United States'
+      'United Kingdom'
+      'Germany'
+      'Japan'
+      'Singapore'
+      'Australia'
+      'Canada'
+      'France'
     ]
     const tier2 = [
-      'China',
-      'Brazil',
-      'India',
-      'South Korea',
-      'South Africa',
-      'Russia',
+      'China'
+      'Brazil'
+      'India'
+      'South Korea'
+      'South Africa'
+      'Russia'
     ]
     if (tier1.includes(countryName)) {
       return '4 hours'
@@ -89,8 +116,9 @@ export function CountryServiceCard({
               {getRegionEmoji(country.country)}
             </span>
             <h3 className='text-lg font-semibold text-white truncate'>
-              {country.country || 'Unknown Country'}
+              {country.country |'Unknown Country'}
             </h3>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
           </div>
           {isPopular && (
             <Badge className='bg-zion-purple text-white border-none'>
@@ -103,7 +131,6 @@ export function CountryServiceCard({
         <p className='text-3xl font-bold text-zion-cyan mb-4'>
           ${country.pricePerIncident.toFixed(2)}
         </p>
-
         <div className='space-y-2 text-zion-slate-light'>
           <div className='flex items-start'>
             <Clock className='h-4 w-4 mr-2 text-zion-purple mt-1' />
@@ -153,4 +180,3 @@ export function CountryServiceCard({
     </Card>
   )
 }
-;

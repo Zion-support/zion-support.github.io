@@ -2,216 +2,217 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
+import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react';
+export default function AIContentGeneratorPage() {
+  const features = null;
+=======
 import {
-  Brain,
-  Zap,
-  Shield,
-  BarChart3,
-  Users,
-  Clock,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Play,
-  Download,
-  Code,
-  Globe,
-  Lock,
-  Sparkles,;
+  Brain
+  Zap
+  Shield
+  BarChart3
+  Users
+  Clock
+  CheckCircle
+  Star
+  ArrowRight
+  Play
+  Download
+  Code
+  Globe
+  Lock
+  Sparkles;
 } from 'lucide-react';
-
   const features = [
     {
-      icon: <Brain className='w-8 h-8 text-white' />,
-      title: 'AI-Powered Content Creation',
+      icon: <Brain className='w-8 h-8 text-white' />
+      title: 'AI-Powered Content Creation'
       description:
-        'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500',
-    },
+        'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'
+    }
     {
-      icon: <Zap className='w-8 h-8 text-white' />,
-      title: 'Real-time Generation',
+      icon: <Zap className='w-8 h-8 text-white' />
+      title: 'Real-time Generation'
       description:
-        'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.',
-      color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
-      gradient: 'from-yellow-400 to-orange-500',
-    },
+        'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.'
+      color: 'bg-gradient-to-br from-yellow-500 to-orange-600'
+      gradient: 'from-yellow-400 to-orange-500'
+    }
     {
-      icon: <Shield className='w-8 h-8 text-white' />,
-      title: 'Plagiarism-Free Content',
+      icon: <Shield className='w-8 h-8 text-white' />
+      title: 'Plagiarism-Free Content'
       description:
-        'Every piece of content is unique and original. Our AI ensures 100% plagiarism-free writing.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
-    },
+        'Every piece of content is unique and original. Our AI ensures 100% plagiarism-free writing.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'
+    }
     {
-      icon: <BarChart3 className='w-8 h-8 text-white' />,
-      title: 'SEO Optimization',
+      icon: <BarChart3 className='w-8 h-8 text-white' />
+      title: 'SEO Optimization'
       description:
-        'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500',
-    },
+        'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'
+    }
     {
-      icon: <Users className='w-8 h-8 text-white' />,
-      title: 'Multi-Language Support',
+      icon: <Users className='w-8 h-8 text-white' />
+      title: 'Multi-Language Support'
       description:
-        'Generate content in 50+ languages with native-level fluency and cultural understanding.',
-      color: 'bg-gradient-to-br from-red-500 to-pink-600',
-      gradient: 'from-red-400 to-pink-500',
-    },
+        'Generate content in 50+ languages with native-level fluency and cultural understanding.'
+      color: 'bg-gradient-to-br from-red-500 to-pink-600'
+      gradient: 'from-red-400 to-pink-500'
+    }
     {
-      icon: <Clock className='w-8 h-8 text-white' />,
-      title: '24/7 Availability',
+      icon: <Clock className='w-8 h-8 text-white' />
+      title: '24/7 Availability'
       description:
-        'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.',
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600',
-      gradient: 'from-teal-400 to-blue-500',
-    },
-  ];      gradient: 'from-teal-400 to-blue-500'}],
+        'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.'
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
+      gradient: 'from-teal-400 to-blue-500'
+    }
+  ];      gradient: 'from-teal-400 to-blue-500'}]
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for individuals and small blogs',
+      name: 'Starter'
+      price: '$29'
+      period: '/month'
+      description: 'Perfect for individuals and small blogs'
       features: [
-        '1,000 words per month',
-        '5 content templates',
-        'Basic SEO optimization',
-        'Email support',
-        'API access (100 calls/month)',
-        'Content analytics dashboard',
-      ],
-      popular: false,
-      color: 'border-gray-600',
-      buttonColor: 'bg-gray-600 hover:bg-gray-700',
+        '1,000 words per month'
+        '5 content templates'
+        'Basic SEO optimization'
+        'Email support'
+        'API access (100 calls/month)'
+        'Content analytics dashboard'
+      ]
+      popular: false
+      color: 'border-gray-600'
+      buttonColor: 'bg-gray-600 hover:bg-gray-700'
     },    {        '1,000 words per month5 content templatesBasic SEO optimizationEmail supportAPI access (100 calls/month)Content analytics dashboard'
       ];
-      popular: false,
-      color: 'border-gray-600',
+      popular: false
+      color: 'border-gray-600'
       buttonColor: 'bg-gray-600 hover:bg-gray-700'
-    };
-      name: 'Professional',
-      price: '$99',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+    }
+      name: 'Professional'
+      price: '$99'
+      period: '/month'
+      description: 'Ideal for growing businesses and agencies'
       features: [
-        '10,000 words per month',
-        '25+ content templates',
-        'Advanced SEO tools',
-        'Priority support',
-        'API access (1,000 calls/month)',
-        'Advanced analytics',
-        'Team collaboration',
-        'Custom branding',
-      ],
-      popular: true,
-      color: 'border-blue-500',
-      buttonColor: 'bg-blue-600 hover:bg-blue-700',
+        '10,000 words per month'
+        '25+ content templates'
+        'Advanced SEO tools'
+        'Priority support'
+        'API access (1,000 calls/month)'
+        'Advanced analytics'
+        'Team collaboration'
+        'Custom branding'
+      ]
+      popular: true
+      color: 'border-blue-500'
+      buttonColor: 'bg-blue-600 hover:bg-blue-700'
     },    {        '10,000 words per month25+ content templatesAdvanced SEO toolsPriority supportAPI access (1,000 calls/month)Advanced analyticsTeam collaborationCustom branding'
       ];
-      popular: true,
-      color: 'border-blue-500',
+      popular: true
+      color: 'border-blue-500'
       buttonColor: 'bg-blue-600 hover:bg-blue-700'
-    };
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'For large organizations and enterprises',
+    }
+      name: 'Enterprise'
+      price: '$299'
+      period: '/month'
+      description: 'For large organizations and enterprises'
       features: [
-        'Unlimited words',
-        'All templates + custom',
-        'Full SEO suite',
-        'Dedicated support',
-        'Unlimited API access',
-        'Advanced analytics',
-        'White-label solution',
-        'Custom integrations',
-        'SLA guarantee',
-      ],
-      popular: false,
-      color: 'border-purple-600',
-      buttonColor: 'bg-purple-600 hover:bg-purple-700',
+        'Unlimited words'
+        'All templates + custom'
+        'Full SEO suite'
+        'Dedicated support'
+        'Unlimited API access'
+        'Advanced analytics'
+        'White-label solution'
+        'Custom integrations'
+        'SLA guarantee'
+      ]
+      popular: false
+      color: 'border-purple-600'
+      buttonColor: 'bg-purple-600 hover:bg-purple-700'
     },  ];        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
         'SLA guarantee'
       ];
-      popular: false,
-      color: 'border-purple-600',
+      popular: false
+      color: 'border-purple-600'
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
-
   const useCases = [
     {
-      title: 'Blog Writing',
+      title: 'Blog Writing'
       description:
-        'Generate engaging blog posts, articles, and long-form content in minutes.',
+        'Generate engaging blog posts, articles, and long-form content in minutes.'
       examples: [
-        'Tech reviews',
-        'How-to guides',
-        'Industry insights',
-        'Product comparisons',
-      ],
-    },
+        'Tech reviews'
+        'How-to guides'
+        'Industry insights'
+        'Product comparisons'
+      ]
+    }
     {
-      title: 'Marketing Copy',
+      title: 'Marketing Copy'
       description:
-        'Create compelling ad copy, landing pages, and marketing materials.',
-      icon: '🎯',
+        'Create compelling ad copy, landing pages, and marketing materials.'
+      icon: '🎯'
       examples: [
-        'Facebook ads',
-        'Google ads',
-        'Landing pages',
-        'Email campaigns',
-      ],
-    },
+        'Facebook ads'
+        'Google ads'
+        'Landing pages'
+        'Email campaigns'
+      ]
+    }
     {
-      title: 'Social Media',
+      title: 'Social Media'
       description:
-        'Generate engaging social media posts, captions, and hashtag suggestions.',
-      icon: '📱',
+        'Generate engaging social media posts, captions, and hashtag suggestions.'
+      icon: '📱'
       examples: [
-        'Instagram posts',
-        'Twitter threads',
-        'LinkedIn articles',
-        'TikTok captions',
-      ],
-    },
+        'Instagram posts'
+        'Twitter threads'
+        'LinkedIn articles'
+        'TikTok captions'
+      ]
+    }
     {
-      title: 'E-commerce',
+      title: 'E-commerce'
       description:
-        'Write product descriptions, category pages, and promotional content.',
-      icon: '🛍️',
+        'Write product descriptions, category pages, and promotional content.'
+      icon: '🛍️'
       examples: [
-        'Product descriptions',
-        'Category pages',
-        'Promotional emails',
-        'FAQ sections',
-      ],
+        'Product descriptions'
+        'Category pages'
+        'Promotional emails'
+        'FAQ sections'
+      ]
     },  ];
-
   const integrations = [
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },      examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections']
     }
   ];
-
   const integrations = [
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
     {
-      name: 'Shopify',
-      icon: '🛒',
-      description: 'E-commerce content automation',
-    },
-    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
-    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
-    { name: 'Slack', icon: '💬', description: 'Team collaboration' },
-    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },  ];    { name: 'Shopify', icon: '🛒', description: 'E-commerce content automation' },
-    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
-    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
-    { name: 'Slack', icon: '💬', description: 'Team collaboration' },
+      name: 'Shopify'
+      icon: '🛒'
+      description: 'E-commerce content automation'
+    }
+    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' }
+    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' }
+    { name: 'Slack', icon: '💬', description: 'Team collaboration' }
+    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },  ];    { name: 'Shopify', icon: '🛒', description: 'E-commerce content automation' }
+    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' }
+    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' }
+    { name: 'Slack', icon: '💬', description: 'Team collaboration' }
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <Head>
@@ -233,14 +234,12 @@ import {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         <div className='absolute inset-0'>
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(147,51,234,0.1),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]' />
         </div>
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='mb-8'>
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6'>
@@ -248,7 +247,6 @@ import {
               AI-Powered Content Generation
             </div>
           </div>
-
           <h1 className='text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight'>
             AI Content Generator
           </h1>
@@ -256,7 +254,6 @@ import {
             Create engaging, SEO-optimized content in seconds with the world's
             most advanced AI writing assistant
           </p>
-
           <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
             <Button
               href='#pricing'
@@ -273,14 +270,12 @@ import {
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(147,51,234,0.1),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]" />
         </div>
-        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">
@@ -288,14 +283,12 @@ import {
               AI-Powered Content Generation
             </div>
           </div>
-          
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight">
             AI Content Generator
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">
             Create engaging, SEO-optimized content in seconds with the world's most advanced AI writing assistant
           </p>
-
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
             <Button
               href="#pricing"
@@ -315,7 +308,6 @@ import {
               Watch Demo
             </Button>
           </div>
-
           {/* Stats */}
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto'>
             <div className='text-center'>
@@ -356,7 +348,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -367,7 +358,6 @@ import {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Everything you need to create exceptional content at scale
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -377,7 +367,6 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -417,7 +406,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -428,7 +416,6 @@ import {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -438,7 +425,6 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <Card
@@ -489,7 +475,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -503,7 +488,6 @@ import {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your content creation needs
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -513,7 +497,6 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <Card
@@ -531,7 +514,6 @@ import {
                     </span>
                   </div>
                 )}
-
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -542,7 +524,6 @@ import {
                   </div>
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -552,7 +533,6 @@ import {
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -561,7 +541,6 @@ import {
                     </li>
                   ))}
                 </ul>
-
                 <Button
                   href='/contact'
                   className={`w-full ${plan.buttonColor} text-white`}
@@ -579,7 +558,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -590,7 +568,6 @@ import {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms
             </p>
           </div>
-
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -600,7 +577,6 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
             {integrations.map((integration, index) => (
               <Card
@@ -630,7 +606,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -688,4 +663,3 @@ import {
     </>
   );
 }
-;

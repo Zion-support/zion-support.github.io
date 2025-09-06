@@ -1,51 +1,66 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
+
+=======
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
-  AlertTriangle,
-  CheckCircle,
-  XCircle,
-  Clock,
-  TrendingUp,
-  Activity,
+  AlertTriangle
+  CheckCircle
+  XCircle
+  Clock
+  TrendingUp
+  Activity
 } from 'lucide-react'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface HealthData {
-  status: 'healthy' | 'warning' | 'critical'
-  timestamp: string
-  uptime: number
-  version: string
-  environment: string
+  status: 'healthy' | 'warning' | 'critical';
+  timestamp: string;
+  uptime: number;
+  version: string;
+  environment: string;
   metrics: {
-    errorRate: number
-    criticalErrors: number
-    responseTime: number
+    errorRate: number;
+    criticalErrors: number;
+    responseTime: number;
     memoryUsage: number
   }
   health: {
-    status: string
-    score: number
-    issues: string[]
+    status: string;
+    score: number;
+    issues: string[];
     recommendations: string[]
   }
   errors: {
     summary: {
-      total: number
-      critical: number
-      high: number
-      medium: number
+      total: number;
+      critical: number;
+      high: number;
+      medium: number;
       low: number
     }
     topErrors: Array<{
-      patternId: string
-      description: string
-      occurrences: number
-      severity: string
+      patternId: string;
+      description: string;
+      occurrences: number;
+      severity: string;
       solution?: string
     }>
     byCategory: { [category: string]: number }
   }
+<<<<<<< HEAD
+}
+
+const HealthDashboard: React.FC;
+=======
 const HealthDashboard: React.FC = () => {
   const [healthData, setHealthData] = useState<HealthData | null>(null)
   const [loading, setLoading] = useState(true)
@@ -74,7 +89,6 @@ const HealthDashboard: React.FC = () => {
       const interval = setInterval(fetchHealthData, 30000); // Refresh every 30 seconds
       return () => clearInterval(interval)
     }
-
     return undefined
   }, [autoRefresh])
   const getStatusIcon = (status: string,) => {
@@ -116,7 +130,6 @@ const HealthDashboard: React.FC = () => {
       </div>
     )
   }
-
   if (error) {
     return (
       <Card className='border-red-200 bg-red-50'>
@@ -132,7 +145,6 @@ const HealthDashboard: React.FC = () => {
       </Card>
     )
   }
-
   if (!healthData) return null
   return (
     <div className='space-y-6'>
@@ -154,7 +166,6 @@ const HealthDashboard: React.FC = () => {
           </Button>
         </div>
       </div>
-
       {/* Overview Cards */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
         <Card>
@@ -172,7 +183,6 @@ const HealthDashboard: React.FC = () => {
             </div>
           </CardContent>
         </Card>
-
         <Card>
           <CardContent className='p-6'>
             <div className='flex items-center'>
@@ -186,7 +196,6 @@ const HealthDashboard: React.FC = () => {
             </div>
           </CardContent>
         </Card>
-
         <Card>
           <CardContent className='p-6'>
             <div className='flex items-center'>
@@ -200,7 +209,6 @@ const HealthDashboard: React.FC = () => {
             </div>
           </CardContent>
         </Card>
-
         <Card>
           <CardContent className='p-6'>
             <div className='flex items-center'>
@@ -217,7 +225,6 @@ const HealthDashboard: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-
       {/* Detailed Information */}
       <Tabs defaultValue='overview' className='space-y-4'>
         <TabsList>
@@ -226,7 +233,6 @@ const HealthDashboard: React.FC = () => {
           <TabsTrigger value='metrics'>Metrics</TabsTrigger>
           <TabsTrigger value='recommendations'>Recommendations</TabsTrigger>
         </TabsList>
-
         <TabsContent value='overview' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
             <Card>
@@ -260,7 +266,6 @@ const HealthDashboard: React.FC = () => {
                 </div>
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
                 <CardTitle className='flex items-center'>
@@ -287,7 +292,6 @@ const HealthDashboard: React.FC = () => {
             </Card>
           </div>
         </TabsContent>
-
         <TabsContent value='errors' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
             <Card>
@@ -323,7 +327,6 @@ const HealthDashboard: React.FC = () => {
                 </div>
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
                 <CardTitle>Top Errors</CardTitle>
@@ -353,7 +356,6 @@ const HealthDashboard: React.FC = () => {
             </Card>
           </div>
         </TabsContent>
-
         <TabsContent value='metrics' className='space-y-4'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
             <Card>
@@ -367,7 +369,6 @@ const HealthDashboard: React.FC = () => {
                 <p className='text-xs text-gray-600'>Errors per request</p>
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader className='pb-2'>
                 <CardTitle className='text-sm'>Critical Errors</CardTitle>
@@ -379,7 +380,6 @@ const HealthDashboard: React.FC = () => {
                 <p className='text-xs text-gray-600'>In last hour</p>
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader className='pb-2'>
                 <CardTitle className='text-sm'>Avg Response</CardTitle>
@@ -391,7 +391,6 @@ const HealthDashboard: React.FC = () => {
                 <p className='text-xs text-gray-600'>API response time</p>
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader className='pb-2'>
                 <CardTitle className='text-sm'>Memory Usage</CardTitle>
@@ -405,7 +404,6 @@ const HealthDashboard: React.FC = () => {
             </Card>
           </div>
         </TabsContent>
-
         <TabsContent value='recommendations' className='space-y-4'>
           <Card>
             <CardHeader>
@@ -433,5 +431,6 @@ const HealthDashboard: React.FC = () => {
   )
 }
 export default HealthDashboard
-export default HealthDashboard, 
-export default HealthDashboard,
+export default HealthDashboard
+export default HealthDashboard
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

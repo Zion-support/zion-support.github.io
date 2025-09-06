@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const DataPipelineEngineeringChat: NextPage;
+=======
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,7 +17,6 @@ const DataPipelineEngineeringChat: NextPage = () => {
           content="DataPipelineEngineeringChat service"
         />{" "}
       </Head>
-
       <main>
         <h1>DataPipelineEngineeringChat</h1>
         <p>Service details coming soon...</p>
@@ -19,6 +24,6 @@ const DataPipelineEngineeringChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default DataPipelineEngineeringChat;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

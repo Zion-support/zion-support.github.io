@@ -1,20 +1,34 @@
-import { useState } from 'react'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
-import CodeBlock from './CodeBlock'
+import { useState } from "react",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button";
+import CodeBlock from "./CodeBlock";
 interface Param {
+<<<<<<< HEAD
+  name: string;
+  type: string;
+  required?: boolean
+}
+
+interface ApiPlaygroundProps {
+  method: string;
+  path: string;
+  params?: Param[]
+}
+
+export function ApiPlayground({ method, path, params;
+=======
   name: string
 type: string
-required?: boolean 
+required?: boolean
 }interface ApiPlaygroundProps {
   method: string
   path: string
   params?: Param[]
 export function ApiPlayground({
-  method,
-  path,
-  params = [],
+  method
+  path
+  params = []
 }: ApiPlaygroundProps) {
   const [apiKey, setApiKey] = useState('demo_key_123')
   const [paramValues, setParamValues] = useState<Record<string, string>>({})
@@ -27,26 +41,25 @@ export function ApiPlayground({
   const sendRequest = async () => {
     // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
     const baseUrl =
-      process.env.NEXT_PUBLIC_API_URL ||
+      process.env.NEXT_PUBLIC_API_URL |
       (typeof window !== 'undefined' ? window.location.origin : '')
     let url = `${baseUrl}${path}`
     const searchParams = new URLSearchParams()
-    if (method === 'GET' || method === 'DELETE') {
+    if (method === 'GET' |method === 'DELETE') {
       params.forEach(p => {
         const val = paramValues[p.name]
         if (val) searchParams.append(p.name, val)
       })
       const query = searchParams.toString()
       if (query) url += `?${query}` }
-
     const options: RequestInit = {
-      method,
+      method
       headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
+        Authorization: `Bearer ${apiKey}`
+        'Content-Type': 'application/json'
+      }
       // Add timeout to prevent hanging
-      signal: AbortSignal.timeout(15000),
+      signal: AbortSignal.timeout(15000)
     }
     if (method !== 'GET' && method !== 'DELETE') {
       try {
@@ -55,7 +68,6 @@ export function ApiPlayground({
         options.body = body
       }
     }
-
     setLoading(true)
     setResponse(null)
     try {
@@ -72,7 +84,6 @@ export function ApiPlayground({
       } else {
         responseText = await res.text()
       }
-
       // Format the response with status information
       const statusInfo = `HTTP ${res.status} ${res.statusText}\n\n`
       setResponse(statusInfo + responseText)
@@ -84,9 +95,8 @@ export function ApiPlayground({
         errorMessage =
           'Network error - check CORS configuration or API endpoint'
       } else {
-        errorMessage = err.message || 'Unknown error occurred'
+        errorMessage = err.message |'Unknown error occurred'
       }
-
       setResponse(
         `Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`
       )
@@ -104,7 +114,7 @@ export function ApiPlayground({
       {params.map(p => (
         <Input
           key={p.name}
-          value={paramValues[p.name] || ''}
+          value={paramValues[p.name] |''}
           onChange={e => handleParamChange(p.name, e.target.value)}        />
       ))}
       {method !== 'GET' && method !== 'DELETE' && (
@@ -121,20 +131,20 @@ export function ApiPlayground({
   )
 export default ApiPlayground
   const val = paramValues[p.name]
-if (val) searchParams.append (p.name, val) 
+if (val) searchParams.append (p.name, val)
 })
 const query = searchParams.toString ()
 if (query) url += `?$ {
-  query 
-}` 
+  query
+}`
 }const options: RequestInit = {
   method, headers: {
   Authorization: `Bearer $ {
-  apiKey 
+  apiKey
 }`
-"Content-Type" : "application/json" 
+"Content-Type" : "application/json"
 }
-//Add timeout to prevent hanging signal: AbortSignal.timeout (15000) 
+//Add timeout to prevent hanging signal: AbortSignal.timeout (15000)
 }
 }setLoading (true)
 setResponse (null)
@@ -143,7 +153,8 @@ if (contentType?.includes ('application/json') ) {
   try {
   /> {
   params.map ( (p) => (<Input key= {
-  p.name 
-}</div>) 
+  p.name
+}</div>)
 }export default ApiPlayground
 '"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

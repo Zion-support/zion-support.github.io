@@ -1,10 +1,21 @@
-import React, { useState } from 'react'
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
-import { useRouter } from 'next/router'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { ProductListing } from '@/types/listings'
+import React, { useState } from 'react';
+import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
+import { useRouter  } from 'next/router';
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
+<<<<<<< HEAD
+import { RatingStars } from "@/components/RatingStars",
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { useDispatch  } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem  } from '@/store/cartSlice';
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
+import Image from 'next/image', // Import next/image
+
+=======
 import { RatingStars } from '@/components/RatingStars'
 import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '@/store'
@@ -12,17 +23,22 @@ import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast'
 import { useCurrency } from '@/hooks/useCurrency'
 import Image from 'next/image'; // Import next/image
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface ProductListingCardProps {
-  listing: ProductListing
-  view?: 'grid' | 'list'
-  onRequestQuote?: (id: string) => void
+  listing: ProductListing;
+  view?: 'grid' | 'list';
+  onRequestQuote?: (id: string) => void;
   detailBasePath?: string
+<<<<<<< HEAD
+}
+
+const ProductListingCardComponent = null;
+=======
 const ProductListingCardComponent = ({
-  listing,
-  view = 'grid',
-  onRequestQuote,
-  detailBasePath = '/marketplace/listing',
+  listing
+  view = 'grid'
+  onRequestQuote
+  detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid'
   const router = useRouter()
@@ -64,27 +80,25 @@ const ProductListingCardComponent = ({
     // Debug logging for development
     if (process.env.NODE_ENV === 'development') {
       logDebug('[ProductCard] Navigating to:', {
-        path: `${detailBasePath}/${listing.id}`,
+        path: `${detailBasePath}/${listing.id}`
       })
       logDebug('[ProductCard] Listing ID:', { id: listing.id })
       logDebug('[ProductCard] Listing Title:', { title: listing.title })
     }
-
     // Validate listing ID exists before navigation
     if (!listing.id) {
       logErrorToProduction(
-        '[ProductCard] Missing listing ID, cannot navigate',
-        new Error('Missing listing ID'),
+        '[ProductCard] Missing listing ID, cannot navigate'
+        new Error('Missing listing ID')
         { component: 'ProductListingCard' }
       )
       toast({
-        title: 'Navigation Error',
-        description: 'Product information is incomplete',
-        variant: 'destructive',
+        title: 'Navigation Error'
+        description: 'Product information is incomplete'
+        variant: 'destructive'
       })
       return
     }
-
     router.push(`${detailBasePath}/${listing.id}`)
   }
   const dispatch = useDispatch<AppDispatch>()
@@ -92,16 +106,16 @@ const ProductListingCardComponent = ({
     setLoading(true)
     dispatch(
       addItem({
-        id: listing.id,
-        title: listing.title,
-        price: listing.price ?? 0,
+        id: listing.id
+        title: listing.title
+        price: listing.price ?? 0
       })
     )
     toast.success(`1× ${listing.title} added`, {
       action: {
-        label: 'View Cart',
-        onClick: () => router.push('/cart'),
-      },
+        label: 'View Cart'
+        onClick: () => router.push('/cart')
+      }
     })
     setLoading(false)
   }
@@ -116,7 +130,7 @@ const ProductListingCardComponent = ({
   }
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48'
       onKeyDown={e => {
-        if (e.key === 'Enter' || e.key === ' ') {
+        if (e.key === 'Enter' |e.key === ' ') {
           e.preventDefault()
           handleViewListing()
         }      }}
@@ -128,7 +142,7 @@ const ProductListingCardComponent = ({
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={e => {
-          if (e.key === 'Enter' || e.key === ' ') {
+          if (e.key === 'Enter' |e.key === ' ') {
             e.preventDefault()
             handleViewListing()
           }  return ()
@@ -138,19 +152,18 @@ const ProductListingCardComponent = ({
       onClick={handleViewListing}
       tabIndex={0};"
       onKeyDown={(e) => {
-        if(e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault () 
+        if(e.key === 'Enter' |e.key === ' ') {
+          e.preventDefault ()
           handleViewListing () }
       }}
-
       {/* Image */}
       <div'
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
         onClick={handleViewListing} // Keep existing onClick for navigation;"
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={(e) => {
-          if(e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault () 
+          if(e.key === 'Enter' |e.key === ' ') {
+            e.preventDefault ()
             handleViewListing () }
         }}
       >
@@ -185,7 +198,6 @@ const ProductListingCardComponent = ({
           <FavoriteButton itemId={listing.id} />
         </div>
       </div>
-
       {/* Content */}
       <div
         className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}
@@ -203,7 +215,6 @@ const ProductListingCardComponent = ({
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
           </div>
-
           {/* Title & Description */}
           <div onClick={handleViewListing} className='block'>
             {listing.uspHeadline && (
@@ -218,7 +229,6 @@ const ProductListingCardComponent = ({
           <p className='text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]'>
             {listing.description}
           </p>
-
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className='flex flex-wrap gap-1 mb-4'>
@@ -232,7 +242,6 @@ const ProductListingCardComponent = ({
             </div>
           )}
         </div>
-
         {/* Footer with price and button */}
         <div className='flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20'>
           <div className='text-sm font-medium'>
@@ -245,7 +254,6 @@ const ProductListingCardComponent = ({
               <span className='text-foreground/80'>{getPrice()}</span>
             )}
           </div>
-
           <div className='flex gap-2'>
             <Button
               size='sm'
@@ -283,7 +291,6 @@ const ProductListingCardComponent = ({
                 'Add to Cart'
               )}
             </Button>
-
             <Button
               size='sm'
               variant='default'
@@ -292,9 +299,9 @@ const ProductListingCardComponent = ({
                 e.stopPropagation(); // Prevent card click event                // Add to cart first, then redirect to checkout
                 dispatch(
                   addItem({
-                    id: listing.id,
-                    title: listing.title,
-                    price: listing.price ?? 0,
+                    id: listing.id
+                    title: listing.title
+                    price: listing.price ?? 0
                   })
                 )
                 router.push('/checkout')
@@ -303,7 +310,6 @@ const ProductListingCardComponent = ({
             >
               Buy Now
             </Button>
-
             {onRequestQuote && (
               <Button
                 size='sm'
@@ -322,67 +328,67 @@ const stockVariant = listing.stock === undefined ? 'success' : listing.stock <= 
 const handleImageError = () => {
   if (!imageError) {'
   //Prevent infinite loops if placeholder also fails setImageSrc ('/placeholder.svg')
-setImageError (true) 
+setImageError (true)
 };'
 //Debug logging for development if (process.env.NODE ENV === 'development') {
   return
 }
 }> {
-  /* Image */ 
-}<div 
+  /* Image */
+}<div
 }> <div className= {
   `relative $ {
-  imageContainerClasses 
-}` 
+  imageContainerClasses
+}`
 }> {
-  /* Ensure this container has dimensions */ 
-}<Image Featured </Badge>) 
+  /* Ensure this container has dimensions */
+}<Image Featured </Badge>)
 }{
   stockStatus && (<Badge variant= {
-  stockVariant as any 
+  stockVariant as any
 }className="absolute top-2 left-2" > {
-  stockStatus 
-}</Badge>) 
+  stockStatus
+}</Badge>)
 }<FavoriteButton itemId= {
-  listing.id 
+  listing.id
 }/> </div> </div> {
-  /* Content */ 
+  /* Content */
 }<div className= {
   `flex flex-col justify-between $ {'
-  isGrid ? 'p-4 flex-1' : 'p-4 flex-1' 
-}` 
+  isGrid ? 'p-4 flex-1' : 'p-4 flex-1'
+}`
 }> <div> </Badge> {
   listing.rating && (<RatingStars value= {
-  listing.rating 
+  listing.rating
 }count= {
-  listing.reviewCount 
-}/>) 
+  listing.reviewCount
+}/>)
 }</div> <span key= {
   idx "
 }className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full" > {
-  tag 
-}</span>) ) 
-}</div>) 
+  tag
+}</span>) )
+}</div>)
 }</div> </span>) "
 }</div> <div className="flex gap-2" > <Button onClick={
   (e) => {
-  e.stopPropagation (), //Prevent card click event addToCart () 
+  e.stopPropagation (), //Prevent card click event addToCart ()
 }disabled= {
   loading "
-}loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart") 
+}loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart")
 }</Button> <Button onClick={
   (e) => {
   e.stopPropagation (), //Prevent card click event //Add to cart first, then redirect to checkout dispatch (addItem ({
-  id: listing.id,  title: listing.title, price: listing.price ?? 0 
+  id: listing.id,  title: listing.title, price: listing.price ?? 0
 }) );'
-router.push ('/checkout') 
+router.push ('/checkout')
 }disabled= {
-  loading 
+  loading
 }> Buy Now </Button> {"
   onRequestQuote && (<Button size="sm" variant="outline" onClick={
   handleRequestQuote "
-}className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>) 
-}</div> </div> </div> </div>) 
+}className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>)
+}</div> </div> </div> </div>)
 }
 '"
 export const ProductListingCard = React.memo(ProductListingCardComponent)
@@ -404,3 +410,4 @@ export default ProductListingCard
 '"`
 export const ProductListingCard = React.memo(ProductListingCardComponent)
 ProductListingCard.displayName = 'ProductListingCard'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

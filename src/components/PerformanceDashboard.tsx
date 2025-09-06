@@ -1,94 +1,108 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
+
+=======
 import React, { useState } from 'react'
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-  CheckCircle,
-  AlertCircle,
-  TrendingUp,
-  Zap,
-  Shield,
-  Search,
+  CheckCircle
+  AlertCircle
+  TrendingUp
+  Zap
+  Shield
+  Search
 } from 'lucide-react'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface PerformanceMetrics {
-  buildSize: string
-  pageCount: number
-  loadTime: number
+  buildSize: string;
+  pageCount: number;
+  loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
-  id: string
-  title: string
-  description: string
-  status: 'completed' | 'in-progress' | 'planned'
-  impact: 'high' | 'medium' | 'low'
+  id: string;
+  title: string;
+  description: string;
+  status: 'completed' | 'in-progress' | 'planned';
+  impact: 'high' | 'medium' | 'low';
   category: 'performance' | 'security' | 'ux' | 'build'
+<<<<<<< HEAD
+}
+
+const PerformanceDashboard: React.FC;
+=======
 const PerformanceDashboard: React.FC = () => {
   const [metrics] = useState<PerformanceMetrics>({
-    buildSize: '959 MB',
-    pageCount: 166,
-    loadTime: 1.2,
-    healthStatus: 'healthy',
+    buildSize: '959 MB'
+    pageCount: 166
+    loadTime: 1.2
+    healthStatus: 'healthy'
   })
   const improvements: Improvement[] = [
     {
-      id: '1',
-      title: 'Fixed Search Bar Issues',
+      id: '1'
+      title: 'Fixed Search Bar Issues'
       description:
-        'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',
-      status: 'completed',
-      impact: 'high',
-      category: 'ux',
-    },
+        'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems'
+      status: 'completed'
+      impact: 'high'
+      category: 'ux'
+    }
     {
-      id: '2',
-      title: 'Environment Validation System',
+      id: '2'
+      title: 'Environment Validation System'
       description:
-        'Added comprehensive pre-build checks to prevent deployment with missing environment variables',
-      status: 'completed',
-      impact: 'high',
-      category: 'build',
-    },
+        'Added comprehensive pre-build checks to prevent deployment with missing environment variables'
+      status: 'completed'
+      impact: 'high'
+      category: 'build'
+    }
     {
-      id: '3',
-      title: 'NextAuth Configuration Fix',
+      id: '3'
+      title: 'NextAuth Configuration Fix'
       description:
-        'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',
-      status: 'completed',
-      impact: 'medium',
-      category: 'security',
-    },
+        'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors'
+      status: 'completed'
+      impact: 'medium'
+      category: 'security'
+    }
     {
-      id: '4',
-      title: 'API Client Error Handling',
+      id: '4'
+      title: 'API Client Error Handling'
       description:
-        'Improved global error handling with better retry logic and user feedback',
-      status: 'completed',
-      impact: 'medium',
-      category: 'ux',
-    },
+        'Improved global error handling with better retry logic and user feedback'
+      status: 'completed'
+      impact: 'medium'
+      category: 'ux'
+    }
     {
-      id: '5',
-      title: 'Bundle Analyzer Integration',
+      id: '5'
+      title: 'Bundle Analyzer Integration'
       description:
-        'Added bundle analysis tools to identify and optimize large dependencies',
-      status: 'completed',
-      impact: 'medium',
-      category: 'performance',
-    },
+        'Added bundle analysis tools to identify and optimize large dependencies'
+      status: 'completed'
+      impact: 'medium'
+      category: 'performance'
+    }
     {
-      id: '6',
-      title: 'Health Check Endpoint',
+      id: '6'
+      title: 'Health Check Endpoint'
       description:
-        'Created production monitoring endpoint for environment and service health',
-      status: 'completed',
-      impact: 'medium',
-      category: 'security',
-    },
+        'Created production monitoring endpoint for environment and service health'
+      status: 'completed'
+      impact: 'medium'
+      category: 'security'
+    }
   ]
   const getStatusIcon = (status: string,) => {
     switch (status) {
@@ -141,7 +155,6 @@ const PerformanceDashboard: React.FC = () => {
           {completedImprovements.length} Improvements Completed
         </Badge>
       </div>
-
       {/* Metrics Overview */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
         <Card>
@@ -155,7 +168,6 @@ const PerformanceDashboard: React.FC = () => {
             <p className='text-xs text-gray-500'>Total build output</p>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -167,7 +179,6 @@ const PerformanceDashboard: React.FC = () => {
             <p className='text-xs text-gray-500'>Generated pages</p>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -179,7 +190,6 @@ const PerformanceDashboard: React.FC = () => {
             <p className='text-xs text-gray-500'>Average page load</p>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -196,7 +206,6 @@ const PerformanceDashboard: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-
       {/* Completed Improvements */}
       <Card>
         <CardHeader>
@@ -239,7 +248,6 @@ const PerformanceDashboard: React.FC = () => {
           </div>
         </CardContent>
       </Card>
-
       {/* Action Buttons */}
       <div className='flex space-x-4'>
         <Button
@@ -263,5 +271,6 @@ const PerformanceDashboard: React.FC = () => {
   )
 }
 export default PerformanceDashboard
-export default PerformanceDashboard, 
-export default PerformanceDashboard,
+export default PerformanceDashboard
+export default PerformanceDashboard
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

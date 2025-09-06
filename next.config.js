@@ -1,32 +1,57 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  compress: true,
-  poweredByHeader: false,
+  reactStrictMode: true
+  compress: true
+  poweredByHeader: false
   eslint: {
-    ignoreDuringBuilds: true,
-  },
+    ignoreDuringBuilds: true
+  }
   typescript: {
+<<<<<<< HEAD
     ignoreBuildErrors: true,
   },
-  pageExtensions: ["tsx", "ts", "jsx", "js"],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   images: {
     domains: [
-      "localhost",
-      "ziontechgroup.com",
-      "images.unsplash.com",
-      "via.placeholder.com",
+      'localhost',
+      'ziontechgroup.com',
+      'images.unsplash.com',
+      'via.placeholder.com'
     ],
-    formats: ["image/webp", "image/avif"],
+    formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+<<<<<<< HEAD
     minimumCacheTTL: 31536000,
+    unoptimized: process.env.NODE_ENV === 'development',
+=======
+    minimumCacheTTL: 31536000
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
   },
+=======
+    ignoreBuildErrors: true
+  }
+  pageExtensions: ["tsx", "ts", "jsx", "js"]
+  trailingSlash: true
+  images: {
+    domains: [
+      "localhost"
+      "ziontechgroup.com"
+      "images.unsplash.com"
+      "via.placeholder.com"
+    ]
+    formats: ["image/webp", "image/avif"]
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+    minimumCacheTTL: 31536000
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
         ignored: [
+<<<<<<< HEAD
           "**/node_modules/**",
           "**/.git/**",
           "**/pages_backup*/**",
@@ -62,44 +87,136 @@ const nextConfig = {
           "**/apps/**",
         ],
         poll: 1000,
-        aggregateTimeout: 300,
+        aggregateTimeout: 300
+      };
+=======
+          "**/node_modules/**"
+          "**/.git/**"
+          "**/pages_backup*/**"
+          "**/pages.*/**"
+          "**/pages-*/**"
+          "**/pages_disabled*/**"
+          "**/pages.disabled*/**"
+          "**/pages.broken*/**"
+          "**/pages.corrupted*/**"
+          "**/pages.old*/**"
+          "**/pages._*/**"
+          "**/pages.__*/**"
+          "**/backup-pages/**"
+          "**/src.pages.disabled/**"
+          "**/lib_backup*/**"
+          "**/src_backup*/**"
+          "**/corrupted-files-backup*/**"
+          "**/performance-reports*/**"
+          "**/log-analysis-reports*/**"
+          "**/link-reports*/**"
+          "**/lint-target*/**"
+          "**/monitoring*/**"
+          "**/pm2-automation*/**"
+          "**/automation/logs*/**"
+          "**/automation/backup*/**"
+          "**/performance-*.json"
+          "**/performance-*.js"
+          "**/performance-*.cjs"
+          "**/performance-*.sh"
+          "**/performance-*.html"
+          "**/performance-*.md"
+          "**/performance-*.txt"
+          "**/apps/**"
+        ]
+        poll: 1000
+        aggregateTimeout: 300
+      }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    }
+    // Exclude apps directory from compilation
+    config.module.rules.push({
+      test: /\.(ts|tsx|js|jsx)$/
+      include: /apps\//
+      use: "ignore-loader"
+    });
+<<<<<<< HEAD
+
+    // Optimize bundle size
+    if (!dev && !isServer) {
+      config.optimization.splitChunks.cacheGroups = {
+        ...config.optimization.splitChunks.cacheGroups,
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
       };
     }
 
-    // Exclude apps directory from compilation
-    config.module.rules.push({
-      test: /\.(ts|tsx|js|jsx)$/,
-      include: /apps\//,
-      use: "ignore-loader",
-    });
-
     return config;
   },
+
+  // Experimental features
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+  },
+=======
+    return config;
+  }
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
   async headers() {
     return [
       {
-        source: "/(.*)",
+        source: "/(.*)"
         headers: [
           {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
+            key: "X-Content-Type-Options"
+            value: "nosniff"
+          }
           {
-            key: "X-Frame-Options",
-            value: "DENY",
-          },
+            key: "X-Frame-Options"
+            value: "DENY"
+          }
           {
-            key: "X-XSS-Protection",
-            value: "1; mode=block",
-          },
+            key: "X-XSS-Protection"
+            value: "1; mode=block"
+          }
           {
+<<<<<<< HEAD
             key: "Referrer-Policy",
             value: "origin-when-cross-origin",
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains',
+          },
+        ],
+      },
+      {
+        source: '/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
     ];
   },
-};
 
+  // Redirects
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+=======
+            key: "Referrer-Policy"
+            value: "origin-when-cross-origin"
+          }
+        ]
+      }
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
+    ];
+  }
+}
 export default nextConfig;

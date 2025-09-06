@@ -1,23 +1,26 @@
 
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {Resume} from '@/types/resume';
-import {useAuth} from '@/hooks/useAuth';
+import { useState, useEffect  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Resume  } from '@/types/resume';
+import { useAuth } from '@/hooks/useAuth';
 export function useResumeList() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
+  const [error, setError] = useState<string | null>(null),
+  const [resumes, setResumes] = useState<Resume[]>([]),
+  
+  const fetchResumes = null;
+=======
   const [error, setError] = useState<string | null>(null);
   const [resumes, setResumes] = useState<Resume[]>([]);
-  
   const fetchResumes = async () => {
     if (!user) {
       setError('You must be logged in to access resumes');
       return []
     }
-    
     setIsLoading(true);
     setError(null);
-    
     try {
       // Fetch resume list with basic info for the current user
       const { data: resumeData, error: resumeError } = await supabase
@@ -26,14 +29,11 @@ export function useResumeList() {
         .eq('user_id', user.id)
         .order('is_active', { ascending: false })
         .order('created_at', { ascending: false });
-      
       if (resumeError) throw resumeError;
-      
-      if (!resumeData || resumeData.length === 0) {
+      if (!resumeData |resumeData.length === 0) {
         setResumes([]);
         return []
       }
-      
       // Transform data to match Resume type
       const transformedResumes: Resume[] = resumeData.map(resume => ({
         id: resume.id;
@@ -41,16 +41,15 @@ export function useResumeList() {
         basic_info: {
           id: resume.id;
           title: resume.title;
-          headline: resume.headline,
+          headline: resume.headline
           summary: resume.summary
-        };
+        }
         work_experience: [];
         education: [];
         skills: [];
-        certifications: [],
+        certifications: []
         is_active: resume.is_active
       }));
-      
       setResumes(transformedResumes);
       return transformedResumes
     } catch (e: any) {
@@ -60,20 +59,18 @@ export function useResumeList() {
     } finally {
       setIsLoading(false)
     }
-  };
-  
+  }
   // Fetch resumes when the component mounts
   useEffect(() => {
     if (user) {
       fetchResumes()
     }
   }, [user]);
-  
   return {
     isLoading;
     error;
     resumes;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     fetchResumes
   }
 }
-;

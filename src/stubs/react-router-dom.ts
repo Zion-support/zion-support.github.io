@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+export const BrowserRouter = null;
+=======
 import React from 'react'
 export const BrowserRouter = ({ children }: { children: any }) => children
 export const Routes = ({ children }: { children: any }) => children
@@ -13,18 +17,18 @@ export const useNavigate = () => (url: string) => {}
 export const useLocation = () => ({ pathname: '/' })
 export const useParams = () => ({})
 export const useSearchParams = () => [new URLSearchParams(), () => {}] as any; export default {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  NavLink,
-  Navigate,
-  MemoryRouter,
-  Outlet,
-  useNavigate,
-  useLocation,
-  useParams,
-  useSearchParams,
+  BrowserRouter
+  Routes
+  Route
+  Link
+  NavLink
+  Navigate
+  MemoryRouter
+  Outlet
+  useNavigate
+  useLocation
+  useParams
+  useSearchParams
 }
   BrowserRouter
   Routes
@@ -38,3 +42,4 @@ export const useSearchParams = () => [new URLSearchParams(), () => {}] as any; e
   useLocation
   useParams
   useSearchParams}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

@@ -1,20 +1,19 @@
-import { Education } from "@/types/resume";
-import { EducationItem } from "./EducationItem";
+
+import { Education  } from '@/types/resume';
+import { EducationItem } from './EducationItem';
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
-  onDelete: (id: string) => void;
+  onDelete: (id: string) => void
 }
-
 export function EducationList({
-  educationEntries,
-  onEdit,
-  onDelete,
+  educationEntries
+  onEdit
+  onDelete
 }: EducationListProps) {
-  if (!educationEntries || educationEntries.length === 0) {
+  if (!educationEntries |educationEntries.length === 0) {
     return null;
   }
-
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Education</h3>
