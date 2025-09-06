@@ -245,11 +245,33 @@ export function SocialShareSection() {;
                 <span aria-hidden="true">{link.name}</span>
               </Button>
             ))}
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
       </div>;
     </section>;
   );
+
+  navigator && navigator.clipboard.writeText (window && window.location.href) .then ( () => {;
+  toast ({;
+
+}) .catch ( () => {;
+  toast ({;
+  title: t ('errors && errors.failed to copy');
+});
+};
+}</div> </div> </div> </section>) ;
+}'";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+}
+
+}</div> </div> </div> </section>)
+}'"
 }
 ;
+>>>>>>> 
+;
+
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

@@ -14,8 +14,8 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const router = useRouter(); // Changed from useNavigate to useRouter
 
   return (
-    <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>
-      <div className='flex items-center'>
+    <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>;
+      <div className='flex items-center'>;
         <Button
           variant='ghost'
           size='sm'
@@ -50,4 +50,6 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
   )
 }
 }
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

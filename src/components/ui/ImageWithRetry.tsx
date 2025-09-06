@@ -17,7 +17,11 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   retryClassName?: string;
 >>>>>>> }
 >>>>>>> 
-  fallbackSrc?: string
+ursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+>>>>>>>   fallbackSrc?: string
   /** CSS class for the retry button */
   retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string
@@ -83,4 +87,12 @@ export default ImageWithRetry
 }
 ;
 export default ImageWithRetry;
+>>>>>>> 
+  src,
+  alt = '',
+  fallbackSrc = '/images/image-placeholder.svg',
+  className,
+  retryClassName,
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

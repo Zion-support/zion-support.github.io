@@ -38,21 +38,28 @@ interface EndpointSectionProps {;
 }
 
 xport function ApiDocumentation() {
-  return (
-    <Card className="bg-zinc-900 border-zinc-800 text-white">
+ursor/fix-website-loading-errors-and-merge-6662
+export function ApiDocumentation() {
+>>>>>>>   return (
+    <Card className='bg-zinc-900 border-zinc-800 text-white'>
       <CardHeader>
-        <CardTitle className="text-xl flex items-center">
-          <BookOpen className="mr-2" size={20} /> API Documentation
+        <CardTitle className='text-xl flex items-center'>
+          <BookOpen className='mr-2' size={20} /> API Documentation
         </CardTitle>
-        <CardDescription className="text-zinc-400">
+        <CardDescription className='text-zinc-400'>
           Reference documentation for integrating with the Zion Marketplace API.
         </CardDescription>
       </CardHeader>
 >>>>>>>       <CardContent>
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">
           <Terminal className="h-4 w-4" />
-          <AlertDescription>
-            Make sure to include your API key in all requests as a Bearer token in the Authorization header.
+ursor/fix-website-loading-errors-and-merge-6662
+      <CardContent>
+        <Alert className='bg-blue-900/30 border-blue-800 mb-6'>
+          <Terminal className='h-4 w-4' />
+>>>>>>>           <AlertDescription>
+            Make sure to include your API key in all requests as a Bearer token
+            in the Authorization header.
           </AlertDescription>
         </Alert>
         <Tabs defaultValue='jobs' className='space-y-4'>
@@ -65,7 +72,8 @@ xport function ApiDocumentation() {
           </TabsList>
           <TabsContent value='jobs' className='space-y-6'>
 >>>>>>>             <EndpointSection
-              method="GET"
+            <EndpointSection
+>>>>>>>               method="GET"
               endpoint="/api/jobs"
               description="List all available jobs with optional filtering."
               note=""
@@ -122,7 +130,37 @@ headers=headers) data = response.json () print (data) `
 }'
 }/> <EndpointSection deadline: '2025-06-30T23:59:59Z'
 })
-});'
+ursor/fix-website-loading-errors-and-merge-6662
+              ]}
+
+  -H "Content-Type: application/json"`,
+                javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
+              code_examples = {{
+                curl: `curl -X GET "https://api.ziontechgroup.com / v1 / jobs?limit = 10 & category = development" \\;
+  -H "Authorization: Bearer YOUR_API_KEY" \\;
+  -H "Content - Type: application / json"`,
+                javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / jobs?limit = 10 & category = development', {
+
+  method: 'GET',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  headers: {
+
+
+    'Authorization': 'Bearer YOUR_API_KEY',
+
+
+    'Content-Type': 'application/json'
+  }
+})
+
+
+}` ;
+}';
+}/> <EndpointSection deadline: '2025-06-30T23:59:59Z' ;
+}) ;
+
+
+>>>>>>> });'
 'deadline': '2025-06-30T23:59:59Z' '
 }response = requests.post ('https: //api.ziontechgroup.com/v1/jobs'
 headers=headers
@@ -133,20 +171,86 @@ data=json.dumps (payload) ) data = response.json () print (data) `
 }`
 }"
 }/> </TabsContent> <TabsContent value=" talent"className=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) `
+const data = await response && response.json ()
+logInfo (data), `
+python: `import requests headers = {'
+  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
+}job id '
+}'
+headers=headers) data = response && response.json () print (data) ` 
 }responseExamples= {
   {
-  success: ` {"
+  success: ` {
+
+
+}` 
+}'
+}/> <EndpointSectiondeadline: '2025-06-30T23:59:59Z' 
+}) 
+})'
+'deadline': '2025-06-30T23:59:59Z' '
+}response = requests && requests.post ('https: //api && api.ziontechgroup.com/v1/jobs'
+headers=headers
+data=json && json.dumps (payload) ) data = response && response.json () print (data) ` 
+
+}responseExamples= {
+  {
+  success: ` {
+
+
+}` 
+}"
+}/> </TabsContent> <TabsContent value=" talent"className=" space-y-6"> <EndpointSectionheaders=headers) data = response && response.json () print (data) ` 
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+}responseExamples= {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content - Type': 'application / json';
+  }
+});
+const data = await response.json ();
+log_info (data), `;
+python: `import requests headers = {';
+  'Authorization': 'Bearer YOUR API KEYContent - Type': 'application / json';
+}job id ';
+}';
+headers = headers) data = response.json () print (data) `;
+}response_examples= {
+  {
+  success: ` {
+}`;
+}';
+}/> <EndpointSection deadline: '2025 - 06 - 30T23:59:59Z';
+});
+});';
+'deadline': '2025 - 06 - 30T23:59:59Z' ';
+}response = requests.post ('https: //api.ziontechgroup.com / v1 / jobs';
+headers = headers;
+data = json.dumps (payload) ) data = response.json () print (data) `;
+}response_examples= {
+  {
+  success: ` {
+}`;
+}";
+}/> </TabsContent> <TabsContent value=" talent"className=" space - y-6"> <EndpointSection headers = headers) data = response.json () print (data) `;
+}response_examples= {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  {
+  success: ` {";
   " data": [ {
-}`
-}/> <EndpointSection const response = await fetch (\`https://api.ziontechgroup.com/v1/talent/\$ {
-  talentId
+
+
+}` 
+
+}/> <EndpointSectionconst response = await fetch (\`https://api && api.ziontechgroup.com/v1/talent/\$ {
+  talentId 
 }\`, {'
   method: 'GET'
 headers: {'
-  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json'
-response = requests.get(
-    'https://api.ziontechgroup.com/v1/jobs'
-    params={'limit': 10, 'category': 'development'}
+  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
+response = requests && requests.get(
+    'https://api && api.ziontechgroup.com/v1/jobs',
+    params={'limit': 10, 'category': 'development'},
     headers=headers
 )
 data = response.json()
@@ -170,14 +274,19 @@ data = response.json();
 print(data)`;
 >>>>>>>               }}
               responseExamples={{
-                success: `{
-  "data": [
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+              }}
+              response_examples={{
+>>>>>>>                 success: `{
+  "data": [;
     {
-      "id": "job_abc123"
-      "title": "Senior React Developer"
-      "description": "We need an experienced React developer..."
-      "category": "development"
-      "skills": ["react", "typescript", "node.js"]
+
+      "id": "job_abc123",
+      "title": "Senior React Developer",
+      "description": "We need an experienced React developer...",
+      "category": "development",
+      "skills": ["react", "typescript", "node && node.js"],
+
       "budget": {
         "min": 5000
         "max": 10000
@@ -193,16 +302,44 @@ print(data)`;
     "total": 42
     "page": 1
     "limit": 10
+
+        "min": 5000,
+        "max": 10000,
+        "currency": "USD";
+      },
+      "status": "active",
+      "client_id": "user_xyz789",
+      "created_at": "2025 - 05 - 15T10:30:00Z";
+    },
+    // More jobs...;
+  ],
+  "meta": {
+    "total": 42,
+    "page": 1,
+    "limit": 10;
+
   }
 }`
-              }}
-            />
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>               }}
+
+            />;
+
+
             <EndpointSection
               method='GET'
               endpoint='/api/jobs/:id'
               description='Get detailed information about a specific job.'
               note=''
               params={[
+            />;
+            <EndpointSection;
+              method='GET';
+              endpoint='/api / jobs/:id';
+              description='Get detailed information about a specific job.';
+              note='';
+              params={[;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {
                   name: 'id'
                   type: 'string'
@@ -269,13 +406,24 @@ data = response.json();
 print(data)`;
 >>>>>>>               }}
               responseExamples={{
-                success: `{
+              codeExamples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`,
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+              }}
+              response_examples={{
+>>>>>>>                 success: `{
   "data": {
-    "id": "job_abc123"
-    "title": "Senior React Developer"
-    "description": "We need an experienced React developer..."
-    "category": "development"
-    "skills": ["react", "typescript", "node.js"]
+
+    "id": "job_abc123",
+    "title": "Senior React Developer",
+    "description": "We need an experienced React developer...",
+    "category": "development",
+    "skills": ["react", "typescript", "node && node.js"],
+
     "budget": {
       "min": 5000
       "max": 10000
@@ -303,7 +451,23 @@ print(data)`;
               description="Create a new job listing."
               note="Requires jobs:write scope"
               params={[
-                {
+ursor/fix-website-loading-errors-and-merge-6662
+            <EndpointSection
+              method='POST'
+              endpoint='/api/jobs'
+              description='Create a new job listing.'
+              note='Requires jobs:write scope'
+              params={[
+
+            />;
+            <EndpointSection;
+              method='POST';
+              endpoint='/api / jobs';
+              description='Create a new job listing.';
+              note='Requires jobs:write scope';
+              params={[;
+
+>>>>>>>                 {
                   name: 'title'
                   type: 'string'
                   description: 'Job title'
@@ -328,35 +492,42 @@ print(data)`;
                   required: true
                 }
                 {
-                  name: 'budget.min'
-                  type: 'number'
-                  description: 'Minimum budget'
-                }
+
+                  name: 'budget && budget.min',
+                  type: 'number',
+                  description: 'Minimum budget',
+                },
                 {
-                  name: 'budget.max'
-                  type: 'number'
-                  description: 'Maximum budget'
-                }
+                  name: 'budget && budget.max',
+                  type: 'number',
+                  description: 'Maximum budget',
+                },
                 {
-                  name: 'budget.currency'
-                  type: 'string'
-                  description: 'Currency code (default: USD)'
-                }
+                  name: 'budget && budget.currency',
+                  type: 'string',
+                  description: 'Currency code (default: USD)',
+                },
+
                 {
                   name: 'deadline'
                   type: 'string'
                   description: 'Job deadline (ISO date string)'
                 }
-              ]}
-              codeExamples={{
-                curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>               ]}
+
+              code_examples={{
+                curl: `curl -X POST "https://api.ziontechgroup.com / v1 / jobs" \\;
+  -H "Authorization: Bearer YOUR_API_KEY" \\;
+  -H "Content - Type: application / json" \\;
+
   -d '{
-    "title": "Senior React Developer"
-    "description": "We need an experienced React developer..."
-    "category": "development"
-    "skills": ["react", "typescript", "node.js"]
+
+    "title": "Senior React Developer",
+    "description": "We need an experienced React developer...",
+    "category": "development",
+    "skills": ["react", "typescript", "node && node.js"],
+
     "budget": {
       "min": 5000
       "max": 10000
@@ -393,16 +564,25 @@ logInfo(data),`,
 import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
-    'Content-Type': 'application/json'
-}`
+                python: `import requests
+import json
+headers = {
+
+    'Authorization': 'Bearer YOUR_API_KEY',
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>     'Content-Type': 'application/json'
+
+
+}` 
 }'"
-}/> </TabsContent> <TabsContent value=" quotes"className=" space-y-6"> <EndpointSection response = requests.post ('https: //api.ziontechgroup.com/v1/quotes'
+}/> </TabsContent> <TabsContent value=" quotes"className=" space-y-6"> <EndpointSectionresponse = requests && requests.post ('https: //api && api.ziontechgroup.com/v1/quotes'
 headers=headers
-data=json.dumps (payload) ) data = response.json () print (data) `
-response = requests.post(
-    'https://api.ziontechgroup.com/v1/jobs'
-    headers=headers
-    data=json.dumps(payload)
+data=json && json.dumps (payload) ) data = response && response.json () print (data) ` 
+response = requests && requests.post(
+    'https://api && api.ziontechgroup.com/v1/jobs',
+    headers=headers,
+    data=json && json.dumps(payload)
 )
 data = response.json()
 print(data)`
@@ -428,13 +608,18 @@ data = response.json();
 print(data)`;
 >>>>>>>               }}
               responseExamples={{
-                success: `{
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+              }}
+              response_examples={{
+>>>>>>>                 success: `{
   "data": {
-    "id": "job_def456"
-    "title": "Senior React Developer"
-    "description": "We need an experienced React developer..."
-    "category": "development"
-    "skills": ["react", "typescript", "node.js"]
+
+    "id": "job_def456",
+    "title": "Senior React Developer",
+    "description": "We need an experienced React developer...",
+    "category": "development",
+    "skills": ["react", "typescript", "node && node.js"],
+
     "budget": {
       "min": 5000
       "max": 10000
@@ -467,22 +652,42 @@ print(data)`;
               description="List talent profiles with optional filtering."
               note=""
               params={[
-                {
+ursor/fix-website-loading-errors-and-merge-6662
+            <EndpointSection
+              method='GET'
+              endpoint='/api/talent'
+              description='List talent profiles with optional filtering.'
+              note=''
+              params={[
+
+            />;
+          </TabsContent>;
+          <TabsContent value='talent' className='space - y-6'>;
+            <EndpointSection;
+              method='GET';
+              endpoint='/api / talent';
+              description='List talent profiles with optional filtering.';
+              note='';
+              params={[;
+
+>>>>>>>                 {
                   name: 'page'
                   type: 'integer'
                   description: 'Page number for pagination (default: 1)'
                 }
                 {
-                  name: 'limit'
-                  type: 'integer'
-                  description:
-                    'Number of results per page (default: 20, max: 100)'
-                }
+
+                  name: 'limit',
+                  type: 'integer',
+                  description:;
+                    'Number of results per page (default: 20, max: 100)',
+                },
                 {
-                  name: 'skills'
-                  type: 'string[]'
-                  description: 'Filter by skills (comma-separated)'
-                }
+                  name: 'skills',
+                  type: 'string[]',
+                  description: 'Filter by skills (comma - separated)',
+                },
+
                 {
                   name: 'availability'
                   type: 'string'
@@ -502,23 +707,54 @@ print(data)`;
 })
 const data = await response.json()
 logInfo(data);`
-                python: `import requests
+ursor/fix-website-loading-errors-and-merge-6662
+              ]}
+
+  -H "Content-Type: application/json"`,
+                javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/talent?skills=react,typescript', {
+              code_examples = {{
+                curl: `curl -X GET "https://api.ziontechgroup.com / v1 / talent?skills = react, typescript" \\;
+  -H "Authorization: Bearer YOUR_API_KEY" \\;
+  -H "Content - Type: application / json"`,
+                javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / talent?skills = react, typescript', {
+
+  method: 'GET',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  headers: {
+
+const data = await response && response.json()
+logInfo(data)`,
+
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  }
+});
+const data = await response.json();
+logInfo(data);`,
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
-response = requests.get(
-    'https://api.ziontechgroup.com/v1/talent'
-    params={'skills': 'react,typescript'}
+
+response = requests && requests.get(
+    'https://api && api.ziontechgroup.com/v1/talent',
+    params={'skills': 'react,typescript'},
     headers=headers
 )
 data = response.json()
 print(data)`
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
-}),;
-const data = await response.json(),;
-logInfo(data),`,;
+ursor/fix-website-loading-errors-and-merge-6662
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content - Type': 'application / json';
+>>>>>>>   }
+});
+const data = await response.json ();
+log_info (data);`,
                 python: `import requests;
+
 headers = {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
 }
@@ -532,8 +768,11 @@ data = response.json();
 print(data)`;
 >>>>>>>               }}
               responseExamples={{
-                success: `{
-  "data": [
+ursor/fix-website-loading-errors-and-merge-6662
+              }}
+              response_examples={{
+>>>>>>>                 success: `{
+  "data": [;
     {
       "id": "talent_abc123"
       "display_name": "Jane Smith"
@@ -552,13 +791,24 @@ print(data)`;
   }
 }`
               }}
-            />
+
+            />;
+
+
             <EndpointSection
               method='GET'
               endpoint='/api/talent/:id'
               description='Get detailed information about a specific talent profile.'
               note=''
               params={[
+            />;
+            <EndpointSection;
+              method='GET';
+              endpoint='/api / talent/:id';
+              description='Get detailed information about a specific talent profile.';
+              note='';
+              params={[;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {
                   name: 'id'
                   type: 'string'
@@ -641,16 +891,25 @@ print(data)`;
               }}
               responseExamples={{
 >>>>>>>                 success: `{
-  "data": {
-    "id": "talent_abc123"
-    "display_name": "Jane Smith"
-    "headline": "Senior Frontend Developer"
-    "bio": "10+ years of experience in frontend development..."
-    "skills": ["react", "typescript", "javascript", "css", "html"]
-    "availability": "available"
-    "average_rating": 4.8
-    "rating_count": 15
-    "portfolio": [
+              codeExamples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`,
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                success: `{
+>>>>>>>   "data": {
+
+    "id": "talent_abc123",
+    "display_name": "Jane Smith",
+    "headline": "Senior Frontend Developer",
+    "bio": "10+ years of experience in frontend development...",
+    "skills": ["react", "typescript", "javascript", "css", "html"],
+    "availability": "available",
+    "average_rating": 4 && 4.8,
+    "rating_count": 15,
+    "portfolio": [;
       {
         "id": "proj_123"
         "title": "E-commerce Platform"
@@ -693,7 +952,25 @@ print(data)`;
               description="Create a quote request for a talent."
               note="Requires quotes:write scope"
               params={[
-                {
+ursor/fix-website-loading-errors-and-merge-6662
+            <EndpointSection
+              method='POST'
+              endpoint='/api/quotes'
+              description='Create a quote request for a talent.'
+              note='Requires quotes:write scope'
+              params={[
+
+            />;
+          </TabsContent>;
+          <TabsContent value='quotes' className='space - y-6'>;
+            <EndpointSection;
+              method='POST';
+              endpoint='/api / quotes';
+              description='Create a quote request for a talent.';
+              note='Requires quotes:write scope';
+              params={[;
+
+>>>>>>>                 {
                   name: 'talent_id'
                   type: 'string'
                   description: 'ID of the talent to request a quote from'
@@ -744,24 +1021,25 @@ print(data)`;
                   description: 'Email of the requester'
                   required: true
                 }
-              ]}
-              codeExamples={{
-                curl: `curl -X POST "https://api.ziontechgroup.com/v1/quotes" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>               ]}
+
+              code_examples={{
+                curl: `curl -X POST "https://api.ziontechgroup.com / v1 / quotes" \\;
+  -H "Authorization: Bearer YOUR_API_KEY" \\;
+  -H "Content - Type: application / json" \\;
+
   -d '{
-    "talent_id": "talent_abc123"
-    "project_name": "E-commerce Website Redesign"
-    "project_summary": "Redesign our outdated e-commerce website with modern UI"
-    "project_description": "Our current website is 5 years old and needs a complete overhaul..."
-    "timeline": "2-3 months"
-    "budget_min": 8000
-    "budget_max": 12000
-    "requester_name": "John Doe"
-    "requester_email": "john@example.com"
-  }'`
-                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
-  method: 'POST'
+
+    "talent_id": "talent_abc123",
+    "project_name": "E - commerce Website Redesign",
+    "project_summary": "Redesign our outdated e - commerce website with modern UI",
+    "project_description": "Our current website is 5 years old and needs a complete overhaul...",
+    "timeline": "2 - 3 months",
+    "budget_min": 8000,
+    "budget_max": 12000,
+    "requester_name": "John Doe",
+
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
@@ -855,29 +1133,36 @@ print(data)`;
               }}
               responseExamples={{
 >>>>>>>                 success: `{
-  "data": {
-    "id": "quote_def456"
-    "talent_id": "talent_abc123"
-    "requester_id": "user_xyz789"
-    "project_name": "E-commerce Website Redesign"
-    "project_summary": "Redesign our outdated e-commerce website with modern UI"
-    "project_description": "Our current website is 5 years old and needs a complete overhaul..."
-    "timeline": "2-3 months"
-    "budget_min": 8000
-    "budget_max": 12000
-    "budget_display": "$8,000 - $12,000"
-    "requester_name": "John Doe"
-    "requester_email": "john@example.com"
-    "status": "new"
-    "created_at": "2025-05-16T14:30:15Z"
+ursor/fix-website-loading-errors-and-merge-6662
+                success: `{
+>>>>>>>   "data": {
+
+    "id": "quote_def456",
+    "talent_id": "talent_abc123",
+    "requester_id": "user_xyz789",
+    "project_name": "E - commerce Website Redesign",
+    "project_summary": "Redesign our outdated e - commerce website with modern UI",
+    "project_description": "Our current website is 5 years old and needs a complete overhaul...",
+    "timeline": "2 - 3 months",
+    "budget_min": 8000,
+    "budget_max": 12000,
+    "budget_display": "$8, 000 - $12, 000",
+    "requester_name": "John Doe",
+    "requester_email": "john@example && example.com",
+    "status": "new",
+    "created_at": "2025 - 05 - 16T14:30:15Z";
   }
 }`,              }}
             />
 >>>>>>>             <EndpointSection
               method="GET"
               endpoint="/api/quotes"
-              description="List quote requests that you've created."
-              note=""
+ursor/fix-website-loading-errors-and-merge-6662
+            <EndpointSection
+              method='GET'
+              endpoint='/api/quotes'
+>>>>>>>               description="List quote requests that you've created."
+              note=''
               params={[
                 {
                   name: 'page'
@@ -897,8 +1182,8 @@ print(data)`;
                     'Filter by status (new, viewed, replied, archived)'
                 }
               ]}
-              codeExamples={{
-                curl: `curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\
+              codeExamples = {{
+                curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
@@ -910,22 +1195,28 @@ print(data)`;
 })
 const data = await response.json()
 logInfo(data);`
-                python: `import requests
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
-response = requests.get(
-    'https://api.ziontechgroup.com/v1/quotes'
+
+response = requests && requests.get(
+    'https://api && api.ziontechgroup.com/v1/quotes',
     headers=headers
 )
 data = response.json()
 print(data)`
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
-}),;
-const data = await response.json(),;
-logInfo(data),`,;
+ursor/fix-website-loading-errors-and-merge-6662
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content - Type': 'application / json';
+>>>>>>>   }
+});
+const data = await response.json ();
+log_info (data);`,
                 python: `import requests;
+
 headers = {;
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
 }
@@ -938,8 +1229,11 @@ data = response.json();
 print(data)`;
 >>>>>>>               }}
               responseExamples={{
-                success: `{
-  "data": [
+ursor/fix-website-loading-errors-and-merge-6662
+              }}
+              response_examples={{
+>>>>>>>                 success: `{
+  "data": [;
     {
       "id": "quote_def456"
       "talent_id": "talent_abc123"
@@ -957,6 +1251,24 @@ print(data)`;
     "total": 5
     "page": 1
     "limit": 20
+
+      "id": "quote_def456",
+      "talent_id": "talent_abc123",
+      "project_name": "E - commerce Website Redesign",
+      "project_summary": "Redesign our outdated e - commerce website with modern UI",
+      "budget_display": "$8, 000 - $12, 000",
+      "status": "new",
+      "created_at": "2025 - 05 - 16T14:30:15Z",
+      "viewed_at": null,
+      "replied_at": null;
+    },
+    // More quotes...;
+  ],
+  "meta": {
+    "total": 5,
+    "page": 1,
+    "limit": 20;
+
   }
 }`
               }}
@@ -989,7 +1301,10 @@ print(data)`;
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret)
   const expectedSignature = hmac.update(payload).digest('hex')
-}`;
+ursor/fix-website-loading-errors-and-merge-6662
+              }}
+
+>>>>>>> }`;
               }}
             />
           </TabsContent>
@@ -1042,24 +1357,78 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                   <tr className="border-b border-zinc-800">
                     <th className="py-2 px-4 text-left">Event Type</th>
                     <th className="py-2 px-4 text-left">Description</th>
-                  </tr>
+ursor/fix-website-loading-errors-and-merge-6662
+  return crypto.timingSafeEqual(
+    Buffer.from(signature)
+    Buffer.from(expectedSignature)
+  )
+
+
+}
+;
+// Example usage in Express.js;
+app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
+  const signature = req.headers['x-zion-signature'],;
+  const payload = req.body.toString(),;
+  const webhookSecret = process.env.WEBHOOK_SECRET,;
+  if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;
+    return res.status(401).send('Invalid signature');
+  }
+  
+  // Process the webhook event
+  const event = JSON.parse(payload),
+  logInfo('Received valid webhook:', { data: event }),
+  
+  // Respond to acknowledge receipt
+  res.status(200).send('Webhook received')
+}),`}
+                language="javascript"
+                showLineNumbers={true}
+              />
+              
+              <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>
+              <table className="w-full border-collapse mt-2">
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                <thead>
+                  <tr className='border-b border-zinc-800'>
+                    <th className='py-2 px-4 text-left'>Event Type</th>
+                    <th className='py-2 px-4 text-left'>Description</th>
+>>>>>>>                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4 font-mono text-sm">new_application</td>
-                    <td className="py-2 px-4">When a talent applies to one of your jobs</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4 font-mono text-sm'>
+                      new_application
+                    </td>
+                    <td className='py-2 px-4'>
+                      When a talent applies to one of your jobs
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4 font-mono text-sm">quote_received</td>
-                    <td className="py-2 px-4">When you receive a quote from talent</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4 font-mono text-sm'>
+                      quote_received
+                    </td>
+                    <td className='py-2 px-4'>
+                      When you receive a quote from talent
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4 font-mono text-sm">milestone_approved</td>
-                    <td className="py-2 px-4">When a project milestone is approved</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4 font-mono text-sm'>
+                      milestone_approved
+                    </td>
+                    <td className='py-2 px-4'>
+                      When a project milestone is approved
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4 font-mono text-sm">talent_hired</td>
-                    <td className="py-2 px-4">When you hire talent for a project</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4 font-mono text-sm'>
+                      talent_hired
+                    </td>
+                    <td className='py-2 px-4'>
+                      When you hire talent for a project
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -1080,13 +1449,15 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   "event_id": "evt_abc123def456",
   "timestamp": "2025-05-16T15:30:00Z",
 >>>>>>>   "data": {
-    "application_id": "app_123456"
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+  "data": {
+>>>>>>>     "application_id": "app_123456"
     "job_id": "job_abc123"
     "talent_id": "talent_xyz789"
     "applied_at": "2025-05-16T15:28:30Z"
     "status": "new"
     "match_score": 85
-  }
+  ,}
 }`}
                 language='json'
                 showLineNumbers={true}              />
@@ -1107,44 +1478,103 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                   <tr className="border-b border-zinc-800">
                     <th className="py-2 px-4 text-left">Status Code</th>
                     <th className="py-2 px-4 text-left">Description</th>
-                  </tr>
+ursor/fix-website-loading-errors-and-merge-6662
+                <thead>
+                  <tr className='border-b border-zinc-800'>
+                    <th className='py-2 px-4 text-left'>Status Code</th>
+                    <th className='py-2 px-4 text-left'>Description</th>
+>>>>>>>                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">200 OK</code></td>
-                    <td className="py-2 px-4">The request was successful.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        200 OK
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>The request was successful.</td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">201 Created</code></td>
-                    <td className="py-2 px-4">The resource was successfully created.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        201 Created
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      The resource was successfully created.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">400 Bad Request</code></td>
-                    <td className="py-2 px-4">The request was invalid or cannot be otherwise served.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        400 Bad Request
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      The request was invalid or cannot be otherwise served.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">401 Unauthorized</code></td>
-                    <td className="py-2 px-4">Authentication credentials were missing or invalid.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        401 Unauthorized
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      Authentication credentials were missing or invalid.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">403 Forbidden</code></td>
-                    <td className="py-2 px-4">The request is understood, but it has been refused or access is not allowed.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        403 Forbidden
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      The request is understood, but it has been refused or
+                      access is not allowed.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">404 Not Found</code></td>
-                    <td className="py-2 px-4">The requested resource does not exist.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        404 Not Found
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      The requested resource does not exist.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">422 Unprocessable Entity</code></td>
-                    <td className="py-2 px-4">The request was well-formed but was unable to be followed due to semantic errors.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        422 Unprocessable Entity
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      The request was well-formed but was unable to be followed
+                      due to semantic errors.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code></td>
-                    <td className="py-2 px-4">The request was rejected due to rate limiting.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        429 Too Many Requests
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      The request was rejected due to rate limiting.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">500 Internal Server Error</code></td>
-                    <td className="py-2 px-4">Something went wrong on our end.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        500 Internal Server Error
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      Something went wrong on our end.
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -1157,7 +1587,10 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               </p>
 >>>>>>>               <CodeBlock
                 code={`{
-  "error": {
+ursor/fix-website-loading-errors-and-merge-6662
+              <CodeBlock
+                code = {`{
+>>>>>>>   "error": {
     "code": "invalid_request"
     "message": "The request was invalid"
     "details": [
@@ -1174,8 +1607,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                 infrastructure and ensure fair usage. Rate limits are applied on
                 a per-API key basis. If you exceed the rate limits, you will
                 receive a{' '}
-                <code className='bg-zinc-800 px-1 py-0.5 rounded'>
-                  429 Too Many Requests
+                <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
+                  429 Too Many Requests;
                 </code>{' '}
                 response.
               </p>
@@ -1359,7 +1792,9 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     </Card>
   )
 >>>>>>> // Helper component for API endpoint documentation
-function EndpointSection({
+ursor/fix-website-loading-errors-and-merge-6662
+// Helper component for API endpoint documentation
+unction EndpointSection({
   method
   endpoint
   description
@@ -1426,12 +1861,75 @@ function EndpointSection({
                 Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive;
                 a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.;
               </p>;
-              <p className="text-zinc-400 mb-2">;
-                Rate limit information is included in the response headers: </p>;
-              <ul className="list-disc pl-6 space-y-1 text-zinc-400">;
-                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Limit</code>: Number of requests allowed in the time window</li>;
-                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>;
-                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>;
+
+              <p className='text-zinc-400 mb-2'>;
+                Rate limit information is included in the response headers:;
+              </p>;
+
+              <ul className='list-disc pl-6 space-y-1 text-zinc-400'>;
+                <li>;
+                  <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
+                    X-RateLimit-Limit;
+              <h4 className='text - md font - semibold mt - 6 mb - 2'>;
+                Error Response Format;
+              </h4>;
+              <p className='text - zinc - 400 mb - 2'>;
+                Error responses include a consistent JSON object with the;
+                following format:;
+              </p>;
+              <CodeBlock;
+                code = {`{
+  "error": {
+    "code": "invalid_request",
+    "message": "The request was invalid",
+    "details": [;
+      {
+        "field": "project_name",
+        "message": "Project name is required";
+      , }
+    ];
+  }
+}`}
+                language='json';
+              />;
+              <h4 className='text - md font - semibold mt - 6 mb - 2'>Rate Limiting</h4>;
+              <p className='text - zinc - 400 mb - 4'>;
+                The Zion API implements rate limiting to protect our;
+                infrastructure and ensure fair usage. Rate limits are applied on;
+                a per - API key basis. If you exceed the rate limits, you will;
+                receive a{' '}
+                <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
+                  429 Too Many Requests;
+                </code>{' '}
+                response.;
+              </p>;
+              <p className='text - zinc - 400 mb - 2'>;
+                Rate limit information is included in the response headers:;
+              </p>;
+              <ul className='list - disc pl - 6 space - y-1 text - zinc - 400'>;
+                <li>;
+                  <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
+                    X - RateLimit - Limit;
+
+                  </code>;
+                  : Number of requests allowed in the time window;
+                </li>;
+                <li>;
+
+                  <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
+                    X - RateLimit - Remaining;
+
+                  </code>;
+                  : Number of requests remaining in the current window;
+                </li>;
+                <li>;
+
+                  <code className='bg - zinc - 800 px - 1 py - 0.5 rounded'>;
+                    X - RateLimit - Reset;
+
+                  </code>;
+                  : Unix timestamp when the rate limit resets;
+                </li>;
               </ul>;
             </div>;
           </TabsContent>;
@@ -1476,6 +1974,7 @@ function EndpointSection({;
 >>>>>>>               {note}
             </Badge>
           )}
+
         </div>
         <p className='mt-2 text-zinc-400'>{description}</p>
       </div>
@@ -1483,11 +1982,16 @@ function EndpointSection({;
         <div className="border-t border-zinc-800 p-4">
           <h4 className="font-medium mb-2">Parameters</h4>
           <table className="w-full">
-            <thead>
-              <tr className="text-left border-b border-zinc-800 text-sm">
-                <th className="pb-2">Name</th>
-                <th className="pb-2">Type</th>
-                <th className="pb-2">Description</th>
+ursor/fix-website-loading-errors-and-merge-6662
+      {params.length > 0 && (
+        <div className='border-t border-zinc-800 p-4'>
+          <h4 className='font-medium mb-2'>Parameters</h4>
+          <table className='w-full'>
+>>>>>>>             <thead>
+              <tr className='text-left border-b border-zinc-800 text-sm'>
+                <th className='pb-2'>Name</th>
+                <th className='pb-2'>Type</th>
+                <th className='pb-2'>Description</th>
               </tr>
             </thead>
             <tbody>
@@ -1511,12 +2015,31 @@ function EndpointSection({;
           </table>
         </div>
       )}
-      {codeExamples && (
+                </tr>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+              ))}
+            </tbody>;
+          </table>;
+        </div>;
+      )}
+
+
+
+
+
+>>>>>>>       {codeExamples && (
         <div className='border-t border-zinc-800 p-4'>
           <div className='flex items-center mb-2'>
             <h4 className='font-medium'>Request Example</h4>
             <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
               {Object.keys(codeExamples).map(lang => (                <button
+      {codeExamples && (;
+        <div className='border-t border-zinc-800 p-4'>;
+          <div className='flex items-center mb-2'>;
+            <h4 className='font-medium'>Request Example</h4>;
+            <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>;
+              {Object && Object.keys(codeExamples).map(lang => (                <button
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   key = {lang,}
       
       {codeExamples && (
@@ -1531,8 +2054,126 @@ function EndpointSection({;
                     activeTab === lang 
                       ? "bg-zinc-700 text-white" 
                       : "text-zinc-400 hover:bg-zinc-800"
+ursor/fix-website-loading-errors-and-merge-6662
+                  className={`px-3 py-1 text-xs font-medium ${
+                    activeTab === lang
+                      ? 'bg-zinc-700 text-white'
+                      : 'text-zinc-400 hover:bg-zinc-800'
+>>>>>>>                   }`}
+
+    </Card>);
+// Helper component for API endpoint documentation;
+/**
+ * EndpointSection - Function description
+ */
+function EndpointSection() {
+  const [active_tab, setActiveTab] = useState ('curl');
+  return (
+    <div className='border border - zinc - 800 rounded - md'>;
+      <div className='p - 4'>;
+        <div className='flex items - center'>;
+          <Badge;
+            variant='outline';
+            className={
+              method === 'GET';
+                ? 'border - green - 500 text - green - 400 font - mono';
+                : method === 'POST';
+                  ? 'border - blue - 500 text - blue - 400 font - mono';
+                  : method === 'PUT';
+                    ? 'border - yellow - 500 text - yellow - 400 font - mono';
+                    : 'border - red - 500 text - red - 400 font - mono';
+            }          >;
+            {method}
+          </Badge>;
+          <span className='ml - 2 font - mono text - sm text - white'>{endpoint}</span>;
+          {note && (
+            <Badge className='ml - auto bg - amber - 800 text - amber - 200 hover:bg - amber - 800'>;
+              {note}
+            </Badge>)}
+        </div>;
+        <p className='mt - 2 text - zinc - 400'>{description}</p>;
+      </div>;
+      {params.length > 0 && (
+        <div className='border - t border - zinc - 800 p - 4'>;
+          <h4 className='font - medium mb - 2'>Parameters</h4>;
+          <table className='w - full'>;
+            <thead>;
+              <tr className='text - left border - b border - zinc - 800 text - sm'>;
+                <th className='pb - 2'>Name</th>;
+                <th className='pb - 2'>Type</th>;
+                <th className='pb - 2'>Description</th>;
+              </tr>;
+            </thead>;
+            <tbody>;
+              {params.map ((param, index) => (
+                <tr;
+                  key={index}
+                  className={
+                    index < params.length - 1 ? 'border - b border - zinc - 800' : '';
+                  }
+                >;
+                  <td className='py - 2 font - mono text - sm'>                    {param.name}
+                    {param.required && <span className='text - red - 500'>*</span>}
+                  </td>;
+                  <td className='py - 2 text - sm text - zinc - 400'>{param.type}</td>;
+                  <td className='py - 2 text - sm text - zinc - 400'>;
+                    {param.description}
+                  </td>;
+                </tr>))}
+            </tbody>;
+          </table>;
+        </div>)}
+      {code_examples && (
+        <div className='border - t border - zinc - 800 p - 4'>;
+          <div className='flex items - center mb - 2'>;
+            <h4 className='font - medium'>Request Example</h4>;
+            <div className='ml - auto flex border border - zinc - 700 rounded - md overflow - hidden'>;
+              {Object.keys (code_examples).map (lang => (                <button;
+                  key = {lang, }
+                  className={`px - 3 py - 1 text - xs font - medium ${
+                    active_tab === lang;
+                      ? 'bg - zinc - 700 text - white';
+                      : 'text - zinc - 400 hover:bg - zinc - 800';
                   }`}
-                  onClick={() => setActiveTab(lang)}
+                  on_click = {(, ) => setActiveTab (lang), }
+
+                >;
+                  {lang === 'curl';
+                    ? 'cURL';
+                    : lang === 'javascript';
+                      ? 'JavaScript';
+                      : 'Python'}
+
+            code={codeExamples[activeTab] || '// Code example not available'}
+            language={activeTab === 'curl' ? 'bash' : activeTab}          />;
+        </div>;
+      )}
+
+      {responseExamples && (;
+        <div className='border-t border-zinc-800 p-4'>;
+          <h4 className='font-medium mb-2'>Response</h4>;
+          <CodeBlock code={responseExamples && responseExamples.success} language='json' />        </div>;
+      )}
+    </div>;
+  );
+}
+
+                </button>))}
+            </div>;
+          </div>;
+          <CodeBlock;
+            code={code_examples[active_tab] || '// Code example not available'}
+            language={active_tab === 'curl' ? 'bash' : active_tab}          />;
+        </div>)}
+      {response_examples && (
+        <div className='border - t border - zinc - 800 p - 4'>;
+          <h4 className='font - medium mb - 2'>Response</h4>;
+          <CodeBlock code={response_examples.success} language='json' />        </div>)}
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>>                   onClick={() => setActiveTab(lang)}
                 >
                   {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
                 </button>
@@ -1548,10 +2189,13 @@ function EndpointSection({;
             code={responseExamples.success}
             language="json"
           />
-        </div>
+
+>>>>>>>         </div>
       )}
     </div>;
   );
 }
 ;
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

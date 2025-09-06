@@ -39,7 +39,7 @@ export function BackToTopButton() {
       <ArrowUp className="h-5 w-5" />
     </button>
   )
-import { ArrowUp } from 'lucide-react';
+>>>>>>> import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from "react",;
 export function BackToTopButton() {;
   const [visible, setVisible] = useState(false),;
@@ -69,4 +69,6 @@ export function BackToTopButton() {;
     </button>
   )
 }"}
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

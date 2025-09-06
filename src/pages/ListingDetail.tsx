@@ -4,18 +4,14 @@
   DialogHeader
   DialogTitle
 } from '@/components/ui/dialog';
-
-import { useCurrency } from '@/hooks/useCurrency';
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-
-  const router = useRouter();
-  const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
   const { formatPrice } = useCurrency();
+>>>>>>> 
+
+
+
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
 import { useState } from "react",
@@ -53,7 +49,8 @@ export default function ListingDetail() {
 >>>>>>>   if (!listing) {
     return (
       <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="container mx-auto">
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>         <div className="container mx-auto">
           <div className="text-center py-20">
             <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
               <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
@@ -119,7 +116,12 @@ export default function ListingDetail() {
 >>>>>>>                     {listing.images.map((image, index) => (
                       <div
                         key={index}
-                        onClick={() => setSelectedImageIndex(index)}
+ursor/fix-website-loading-errors-and-merge-6662
+                    {listing.images.map((image, index) => (
+                      <div 
+                        key = {index}
+>>>>>>>                         onClick={() => setSelectedImageIndex(index)}
+
                         className={cn(
                           'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2'
                           index === selectedImageIndex
@@ -132,6 +134,7 @@ export default function ListingDetail() {
                       <div
                         key = {index,}
                         onClick = {(,) => setSelectedImageIndex(index),}
+
                         className = {cn(
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2"
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
@@ -144,19 +147,21 @@ export default function ListingDetail() {
                           fallbackSrc='/placeholder.svg'                        />                          className="object-cover"
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
-                        )}
-                      >;
-                        <ImageWithRetry;
+>>>>>>>                         )}
+                      >
+                        <ImageWithRetry
+
                           src={image}
                           alt={`${listing.title} - image ${index + 1}`}
                           className="object-cover"
 >>>>>>>                           fallbackSrc="/placeholder.svg"
                         />
                       </div>
-                    ))}
+>>>>>>>                     ))}
                   </div>
                 )}
               </div>
+
               {/* Description Section */}
               <div className='mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light'>
                 <h2 className='text-2xl font-bold text-white mb-4'>
@@ -211,21 +216,124 @@ export default function ListingDetail() {
                       </div>
                       <div>
 >>>>>>>                         <h4 className="font-medium text-white">Enterprise Security</h4>
-                        <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
+ursor/fix-website-loading-errors-and-merge-6662
+                {/* Features */}
+                <div className='mt-8'>;
+                  <h3 className='text-xl font-bold text-white mb-4'>;
+                    Key Features;
+                  </h3>;
+                  <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+                    <div className='flex items-start gap-3'>;
+                      <div className='p-2 rounded-full bg-zion-purple/20'>;
+                        <Brain className='h-5 w-5 text-zion-purple' />;
+                      </div>;
+                      <div>;
+                        <h4 className='font-medium text-white'>Advanced AI</h4>;
+                        <p className='text-sm text-zion-slate-light'>;
+                          State-of-the-art machine learning techniques;
+                        </p>;
+                      </div>;
+                    </div>;
+                    <div className='flex items-start gap-3'>;
+                      <div className='p-2 rounded-full bg-zion-cyan/20'>;
+                        <Shield className='h-5 w-5 text-zion-cyan' />;
+                      </div>;
+                      <div>;
+                        <h4 className='font-medium text-white'>;
+                          Enterprise Security;
+                        </h4>;
+                        <p className='text-sm text-zion-slate-light'>;
+                          Built-in data protection and encryption;
+                        on_click={() => setSelectedImageIndex (index)}
+                        className={cn (
+                          'w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2',
+                          index === selectedImageIndex;
+                            ? 'border - zion - purple';
+                            : 'border - transparent'                        )}                          "w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2";
+                          index === selectedImageIndex ? "border - zion - purple" : "border - transparent")}
+                  <div className="flex p - 4 gap - 2 overflow - x-auto">;
+                    {listing.images.map ((image, index, ) => (
+                      <div;
+                        key = {index, }
+                        on_click = {(, ) => setSelectedImageIndex (index), }
+                        class_name = {cn (
+                          "w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2",
+                          index === selectedImageIndex ? "border - zion - purple" : "border - transparent"), }
+                      >;
+                        <ImageWithRetry;
+                          src = {image, }
+                          alt={`${listing.title} - image ${index + 1}`}
+                          className='object - cover';
+                          fallback_src='/placeholder.svg'                        />                          className="object - cover";
+                          fallback_src="/placeholder.svg";
+                        />;
+                      </div>))}
+                  </div>)}
+              </div>;
+              {/* Description Section */}
+              <div className='mt - 8 bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light'>;
+                <h2 className='text - 2xl font - bold text - white mb - 4'>;
+                  Description;
+                </h2>;
+                <p className='text - zion - slate - light whitespace - pre - line'>;
+                  {listing.description}
+                </p>;
+                {/* Features */}
+                <div className='mt - 8'>;
+                  <h3 className='text - xl font - bold text - white mb - 4'>;
+                    Key Features;
+                  </h3>;
+                  <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+                    <div className='flex items - start gap - 3'>;
+                      <div className='p - 2 rounded - full bg - zion - purple / 20'>;
+                        <Brain className='h - 5 w - 5 text - zion - purple' />;
+                      </div>;
+                      <div>;
+                        <h4 className='font - medium text - white'>Advanced AI</h4>;
+                        <p className='text - sm text - zion - slate - light'>;
+                          State - of - the - art machine learning techniques;
+                        </p>;
+                      </div>;
+                    </div>;
+                    <div className='flex items - start gap - 3'>;
+                      <div className='p - 2 rounded - full bg - zion - cyan / 20'>;
+                        <Shield className='h - 5 w - 5 text - zion - cyan' />;
+                      </div>;
+                      <div>;
+                        <h4 className='font - medium text - white'>;
+                          Enterprise Security;
+                        </h4>;
+                        <p className='text - sm text - zion - slate - light'>;
+                          Built - in data protection and encryption;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                        </p>                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
+                {/* Features */}
+
+
+                        <h4 className="font-medium text-white">Enterprise Security</h4>
+>>>>>>>                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                {/* Tags */}
-                <div className='mt-8'>
-                  <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>
-                  <div className='flex flex-wrap gap-2'>
-                    {listing.tags.map((tag, i) => (
+                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
+
+
+>>>>>>>                 {/* Tags */}
+                <div className='mt-8'>;
+                  <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>;
+                  <div className='flex flex-wrap gap-2'>;
+                    {listing && listing.tags.map((tag, i) => (;
                       <Badge
                         key={i}
                         variant='outline'
-                        className='border-zion-slate-dark text-zion-slate-light py-1 px-3'
-                      >                        {tag}                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
+                        className='border-zion-slate-dark text-zion-slate-light py-1 px-3'>                        {tag}                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">;
                 {/* Tags */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
@@ -254,7 +362,50 @@ export default function ListingDetail() {
                     </Badge>
                   )}
                 </div>            {/* Right Column - Details */}
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+
+                </div>;
+
+                <h1 className='text-2xl font-bold text-white mb-4'>;
+                  {listing && listing.title}
+                </h1>;
+
+                  <div className='flex items-center gap-2 mb-6'>;
+                    <div className='flex items-center'>;
+                      {[...Array(5)].map((_, i) => (;
+            
+            {/* Right Column - Details */}
             <div className="lg:col-span-1">
+              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
+                <div className="mb-2">
+                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
+            {/* Right Column - Details */}
+            <div className='lg:col - span - 1'>;
+              <div className='bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6'>;
+                <div className='mb - 2'>;
+                  <Badge;
+                    variant='secondary';
+                    className='bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple / 30';
+                  >;
+                    {listing.category}
+                  </Badge>;
+                  {listing.featured && (
+                    <Badge className='ml - 2 bg - zion - cyan / 20 text - zion - cyan'>                      Featured;
+                    </Badge>)}
+                </div>            {/* Right Column - Details */}
+            <div className="lg:col - span - 1">;
+              <div className="bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6">;
+                <div className="mb - 2">;
+                  <Badge variant="secondary" className="bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple / 30">;
+
+                    {listing.category}
+                  </Badge>;
+                  {listing.featured && (
+
+>>>>>>>             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
                 <div className="mb-2">
                   <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
@@ -276,27 +427,50 @@ export default function ListingDetail() {
                           key={i}
                           className={cn(
                             'h-5 w-5'
-                            i < Math.floor(listing.rating!)
-                              ? 'text-zion-cyan fill-zion-cyan'
-                              : 'text-zion-slate-light'                          )}
-                        />
-                      ))}
-                    </div>
-                    <span className='text-sm text-zion-slate-light'>
-                      {listing.rating.toFixed(1)} ({listing.reviewCount}{' '}
-                      reviews)                            "h-5 w-5";
-                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
-                          )}
+ursor/fix-website-loading-errors-and-merge-6662
+                
+                <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
+                
+                {listing.rating && (
                   <div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
-                      {[...Array(5)].map((_, i,) => (
+
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                      {[...Array(5)].map((_, i) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                        <Star
+                          key={i}
+                          className={cn(
+
+
+                            'h-5 w-5',
+
+>>>>>>>                             i < Math.floor(listing.rating!)
+
+                              ? 'text-zion-cyan fill-zion-cyan'
+                              : 'text-zion-slate-light'                          )}
+                        />;
+                      ))}
+                    </div>;
+                    <span className='text-sm text-zion-slate-light'>;
+                      {listing && listing.rating.toFixed(1)} ({listing && listing.reviewCount}{' '}
+                      reviews)                            "h-5 w-5";
+                            i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light";
+                          )}
+                  <div className="flex items-center gap-2 mb-6">;
+                    <div className="flex items-center">;
+                      {[...Array(5)].map((_, i,) => (;
                         <Star
                           key = {i,}
                           className = {cn(
-                            "h-5 w-5"
-                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+
+                            "h-5 w-5",
+                            i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+
                           ),}
-                        />
+                        />;
                       ))}
                     </div>
                     <span className='text-sm text-zion-slate-light'>
@@ -305,13 +479,16 @@ export default function ListingDetail() {
                             "h-5 w-5",
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
-                        />;
+                        />
                       ))}
                     </div>
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
 >>>>>>>                     </span>
-                  </div>
+ursor/fix-website-loading-errors-and-merge-6662
+                    </span>
+>>>>>>>                   </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 )}
                 {/* Price */}
                 <div className='mb-6'>
@@ -325,10 +502,22 @@ export default function ListingDetail() {
                   )}
                 </div>
                 {/* Action Buttons */}
-                <div className='space-y-3 mb-8'>                  {listing.price !== null ? (                    </span>
-                  </div>
+                <div className='space-y-3 mb-8'>                  {listing && listing.price !== null ? (                    </span>;
+                  </div>;
                 )}
+
+
+
                 {/* Price */}
+                <div className="mb-6">;
+                  {listing && listing.price !== null ? (;
+                    <div className="text-3xl font-bold text-white">;
+                      {formatPrice(listing && listing.price)}
+                    </div>;
+                  ) : (;
+                    <div className="text-2xl font-bold text-white">;
+                      Custom Pricing;
+                    </div>;
                 <div className="mb-6">
                   {listing.price !== null ? (
                     <div className="text-3xl font-bold text-white">
@@ -389,7 +578,32 @@ export default function ListingDetail() {
                   {listing.price !== null ? (;
                     <PaymentButton;
 >>>>>>>                       amount={listing.price}
+                    <div className="text-2xl font-bold text-white">
+                      Custom Pricing
+                    </div>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                  )}
+
+                </div>;
+
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                {/* Action Buttons */}
+                <div className='space-y-3 mb-8'>                ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                {/* Action Buttons */}
+                <div className="space-y-3 mb-8">;
+                  {listing && listing.price !== null ? (;
+                    <PaymentButton
+
+
+                      amount={listing.price}
                       serviceId={listing.id}
+                      providerId={listing.author.id}
+
+                      amount={listing.price}
+>>>>>>>                       serviceId={listing.id}
                       providerId={listing.author.id}
                       buttonText='Buy Now'
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
@@ -398,10 +612,17 @@ export default function ListingDetail() {
                       providerId = {listing.author.id,}
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+
                       onPaymentInitiated={(,) => {
                         toast({
                           title: 'Payment Processing'
                           description: 'Redirecting to secure checkout...'
+
+                      onPaymentInitiated={(,) => {;
+                        toast({;
+                          title: 'Payment Processing',;
+                          description: 'Redirecting to secure checkout...',;
+
                         });
                       }}
                     />
@@ -409,9 +630,9 @@ export default function ListingDetail() {
                     <Button
                       onClick={handleContact}
                       disabled={isLoading}
-                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'                    >
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'>;
                       {isLoading ? 'Processing...' : 'Request Quote'}
-                    </Button>
+                    </Button>;
                   )}
                   <Button
                     variant='outline'
@@ -423,7 +644,9 @@ export default function ListingDetail() {
                   </Button>
                 </div>
 >>>>>>>                 {/* Publisher Info */}
-                <div className="border-t border-zion-blue-light pt-6">
+ursor/fix-website-loading-errors-and-merge-6662
+                {/* Publisher Info */}
+>>>>>>>                 <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
                   <div className="flex items-center gap-3">
                     {listing.author.avatarUrl ? (
@@ -436,7 +659,9 @@ export default function ListingDetail() {
                           onError={(e) => {
                             const target = e.target as HTMLImageElement,
 >>>>>>>                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-                          }}
+ursor/fix-website-loading-errors-and-merge-6662
+                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+>>>>>>>                           }}
                         />
                       </div>
                     ) : (
@@ -470,12 +695,22 @@ export default function ListingDetail() {
                     )}
                     <div>
 >>>>>>>                       <p className="font-medium text-white">{listing.author.name}</p>
-                      <p className="text-xs text-zion-slate-light">Member since 2022</p>
+                    )}
+
+                    <div>
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                      <p className="font-medium text-white">{listing.author.name}</p>
+>>>>>>>                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
                     </div>
                   </div>
                 </div>
 >>>>>>>                 {/* Additional Info */}
-                <div className="border-t border-zion-blue-light mt-6 pt-6">
+ursor/fix-website-loading-errors-and-merge-6662
+                {/* Additional Info */}
+
+>>>>>>>                 <div className="border-t border-zion-blue-light mt-6 pt-6">
                   <div className="flex justify-between mb-2">
                     <span className="text-zion-slate-light">Listed on</span>
                     <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()}</span>
@@ -500,7 +735,8 @@ export default function ListingDetail() {
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>
 >>>>>>>           <DialogHeader>
-            <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
+          <DialogHeader>
+>>>>>>>             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
           <ProfileContact 
             email={listing.author.email} // TypeScript now knows this might be undefined
@@ -513,7 +749,9 @@ export default function ListingDetail() {
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
 >>>>>>>             profileType="service"
-          />
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+            profileType="service"
+>>>>>>>           />
         </DialogContent>
       </Dialog>
     </>
@@ -530,4 +768,10 @@ export default function ListingDetail() {
 }onClose= {() => setIsChatOpen (false) ";
 }/> <DialogHeader> <DialogTitle className=" text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </>) ;
 }'"}
+>>>>>>> 
+  )
+}
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

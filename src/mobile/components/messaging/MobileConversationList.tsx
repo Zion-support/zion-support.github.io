@@ -50,17 +50,15 @@ isTyping?: boolean
 xport function MobileConversationList({
   conversations
   activeConversation
-  onSelectConversation
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>   onSelectConversation
 }: MobileConversationListProps) {
   return (
-    <div className="space-y-4">
-      <div className="px-4 mb-2">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            placeholder="Search messages..."
-            className="pl-9"
-          />
+    <div className='space-y-4'>
+      <div className='px-4 mb-2'>
+        <div className='relative'>
+          <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground' />
+          <Input placeholder='Search messages...' className='pl-9' />
         </div>
       </div>
       <div className='px-4 pb-4 space-y-2'>
@@ -88,9 +86,9 @@ xport function MobileConversationList({
               activeConversation === conversation.id && 'bg-primary/5'
 
             )}
-            onClick={() => onSelectConversation(conversation.id)}          >
-            <div className='flex items-center gap-3 py-3 cursor-pointer'>
-              <Avatar>
+            onClick={() => onSelectConversation(conversation && conversation.id)}          >;
+            <div className='flex items-center gap-3 py-3 cursor-pointer'>;
+              <Avatar>;
                 <AvatarImage
                   src={conversation.avatar}
                   alt={conversation.name}
@@ -132,4 +130,108 @@ xport function MobileConversationList({
   );
 };
 }
+>>>>>>> 
+                  )}
+                </div>;
+              </div>;
+            </div>;
+            <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;
+          </div>;
+
+
+              
+              <div className="flex-1 min-w-0">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="font-medium truncate">{conversation.name}</h3>
+                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
+                    {conversation.timestamp}
+                  </span>
+                </div>
+                
+                <div className="flex justify-between items-center">
+                  <p className="text-sm text-muted-foreground truncate">
+                    {conversation.isTyping 
+                      ? <em>Typing...</em> 
+                      : conversation.lastMessage}
+
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                  </p>
+                  
+                  {conversation.unreadCount > 0 && (
+
+
+                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
+                      {conversation.unreadCount}
+                    </Badge>;
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                  )}
+                </div>
+              </div>
+            </div>
+
+
+
+            <div className="border-t border-border ml-12"></div>
+          </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>>         ))}
+
+      </div>;
+    </div>;
+  );
+}
+
+      <div className='space - y-2 pb - 24'>;
+        {conversations.map (conversation => (
+          <div;
+            key={conversation.id}
+            className={cn (
+              'px - 4',
+              active_conversation === conversation.id && 'bg - primary / 5')}
+            on_click={() => onSelectConversation (conversation.id)}          >;
+            <div className='flex items - center gap - 3 py - 3 cursor - pointer'>;
+              <Avatar>;
+                <AvatarImage;
+                  src={conversation.avatar}
+                  alt={conversation.name}
+                />                <AvatarFallback>;
+                  {conversation.name.char_at (0).toUpperCase ()}
+                </AvatarFallback>;
+              </Avatar>                <AvatarImage src={conversation.avatar} alt={conversation.name} />;
+                <AvatarFallback>;
+                  {conversation.name.char_at (0).toUpperCase ()}
+                </AvatarFallback>;
+              </Avatar>;
+              <div className='flex - 1 min - w-0'>;
+                <div className='flex justify - between items - baseline'>;
+                  <h3 className='font - medium truncate'>{conversation.name}</h3>;
+                  <span className='text - xs text - muted - foreground whitespace - nowrap ml - 2'>;
+                  </span>;
+                </div>;
+                <div className='flex justify - between items - center'>;
+                  <p className='text - sm text - muted - foreground truncate'>;
+                    {conversation.is_typing ? (
+                      <em > Typing...</em>) : (
+                      conversation.last_message)}
+                  </p>;
+                  {conversation.unread_count > 0 && (
+                    <Badge className='ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full'>                      {conversation.unread_count}                    <Badge className="ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full">;
+                      {conversation.unread_count}
+                    </Badge>)}
+                </div>;
+              </div>;
+            </div>;
+            <div className='border - t border - border ml - 12'></div>          </div>            <div className="border - t border - border ml - 12"></div>;
+          </div>))}
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

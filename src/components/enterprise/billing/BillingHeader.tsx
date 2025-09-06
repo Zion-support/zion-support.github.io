@@ -46,14 +46,18 @@ export function BillingHeader() {
             Contact Billing Support
           </Button>
 >>>>>>>           <Button variant="outline" size="sm" className="gap-1" asChild>
-            <Link href="/dashboard/client/analytics">
+ursor/fix-website-loading-errors-and-merge-6662
+          <Button variant="outline" size="sm" className="gap-1" asChild>
+>>>>>>>             <Link href="/dashboard/client/analytics">
               <BarChart3 className="h-4 w-4" />
               Analytics
             </Link>
           </Button>
         </div>
       </div>
+
       <p className="text-muted-foreground">
+
         Manage your subscription, view invoice history, and update payment methods.
       </p>
     </div>
@@ -64,4 +68,6 @@ export function BillingHeader() {
   );
 };
 }
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

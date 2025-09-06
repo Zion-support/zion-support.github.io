@@ -7,17 +7,6 @@ import { Input } from "@/components/ui/input";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
 
-  Select
-  SelectValue
-  SelectTrigger
-  SelectContent
-  SelectItem
-} from '@/components/ui/select'
-import { Checkbox } from '@/components/ui/checkbox'
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
-import { Slider } from '@/components/ui/slider'
-import { ProductListing, ListingView } from '@/types/listings'
 
 import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
 import { toast } from "@/hooks/use-toast";
@@ -161,8 +150,23 @@ xport function DynamicListingPage({
   const [view, setView] = useState<ListingView>('grid')
   const isGrid = view === 'grid'
 >>>>>>>   // Swap icons to match action
-  const ToggleViewIcon = isGrid ? (
-    <List className="h-4 w-4" />
+ursor/fix-website-loading-errors-and-merge-6662
+      prev.includes(category)
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    )
+
+
+  },
+  const clearCategories = () => setSelectedCategories([]),
+  const [view, setView] = useState<ListingView>("grid"),
+  const isGrid = view === "grid",
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+  // Swap icons to match action
+>>>>>>>   const ToggleViewIcon = isGrid ? (
+    <List className='h-4 w-4' />
   ) : (
     if (min == null |max == null |isNaN(min) |isNaN(max)) return
     setCurrentPriceFilter([min, max])
@@ -254,9 +258,6 @@ xport function DynamicListingPage({
       const matchesRating = null;
             tag.toLowerCase().includes(searchQuery.toLowerCase()))),
 
-      const matchesBrand =
-        selectedBrand === "all" ||
-        (listing.brand && listing.brand === selectedBrand),
 
 >>>>>>>       const matchesSpecs =
         !specQuery |
@@ -285,7 +286,9 @@ xport function DynamicListingPage({
         (listing.rating !== undefined && listing.rating >= selectedRating),
 
 >>>>>>>       return (
-        matchesSearch &&
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+      return (
+>>>>>>>         matchesSearch &&
         matchesCategory &&
         matchesPrice &&
         matchesRating &&
@@ -324,90 +327,104 @@ export function DynamicListingPage({;
   listings: allListings,;
   categoryFilters,;
   initialPrice = { min: 0, max: 10000 },;
-  detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {;
-  const router = useRouter(),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]),;
-  const toggleCategory = (category: string) => {;
-    setSelectedCategories(prev =>;
-      prev.includes(category);
-        ? prev.filter(c => c !== category);
+  detailBasePath = '/marketplace/listing',;
+}: DynamicListingPageProps) {;
+  const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const toggleCategory = (category: string) => {    setSelectedCategories(prev =>;
+      prev && prev.includes(category);
+        ? prev && prev.filter(c => c !== category);
         : [...prev, category];
     );
-  },;
-  const clearCategories = () => setSelectedCategories([]),;
-  const [view, setView] = useState<ListingView>("grid"),;
-  const isGrid = view === "grid",;
+  };
+  const clearCategories = () => setSelectedCategories([]);
+  const [view, setView] = useState<ListingView>('grid');
+  const isGrid = view === 'grid';
   // Swap icons to match action;
   const ToggleViewIcon = isGrid ? (;
-    <List className="h-4 w-4" />;
+    <List className='h-4 w-4' />;
   ) : (;
-    <LayoutGrid className="h-4 w-4" />;
-  ),;
-  const [isLoading, setIsLoading] = useState(false),;
+    <LayoutGrid className='h-4 w-4' />;
+  );
+  const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>({;
     min: 0,;
-    max: 10000}),;
-  const [selectedRating, setSelectedRating] = useState<number | null>(null),;
-  const [selectedBrand, setSelectedBrand] = useState("all"),;
-  const [specQuery, setSpecQuery] = useState(""),;
-  const [selectedAvailability, setSelectedAvailability] = useState("all"),;
-  const [sortOption, setSortOption] = useState("newest"),;
-  const brandOptions = Array.from(;
-    new Set(allListings.map((l) => l.brand).filter(Boolean))),;
-  const availabilityOptions = Array.from(;
-    new Set(allListings.map((l) => l.availability).filter(Boolean))),;
+    max: 10000,;
+  });
+
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  const [selectedBrand, setSelectedBrand] = useState('all');
+  const [specQuery, setSpecQuery] = useState('');
+  const [selectedAvailability, setSelectedAvailability] = useState('all');
+  const [sortOption, setSortOption] = useState('newest');
+
+  const brandOptions = Array && Array.from(;
+    new Set(allListings && allListings.map(l => l && l.brand).filter(Boolean));
+  );
+  const availabilityOptions = Array && Array.from(;
+    new Set(allListings && allListings.map(l => l && l.availability).filter(Boolean));
+  );
+
   useEffect(() => {;
-    const listingsWithPrice = allListings.filter((l) => l.price !== null),;
-    if (listingsWithPrice.length > 0) {;
-      const max = Math.max(...listingsWithPrice.map((l) => l.price || 0)),;
-      setPriceRange({ min: 0, max }),;
-      setCurrentPriceFilter([0, max]);
-    }
-  }, [allListings]),;
+    const listingsWithPrice = allListings && allListings.filter(l => l && l.price !== null);
+    if (listingsWithPrice && listingsWithPrice.length > 0) {;
+      const max = Math && Math.max(...listingsWithPrice && listingsWithPrice.map(l => l && l.price || 0));
+      setPriceRange({ min: 0, max });
+      setCurrentPriceFilter([0, max]);    }
+  }, [allListings]);
+
   const [currentPriceFilter, setCurrentPriceFilter] = useState<;
     [number, number];
-  >([0, initialPrice.max]),;
+  >([0, initialPrice && initialPrice.max]);
+
   const handleSliderChange = (values: number[]) => {;
-    const [min, max] = values.map(Number),;
-    if (min == null || max == null || isNaN(min) || isNaN(max)) return,;
+    const [min, max] = values && values.map(Number);
+    if (min == null || max == null || isNaN(min) || isNaN(max)) return;
     setCurrentPriceFilter([min, max]);
-  },;
-  let filteredListings: ProductListing[] = [],;
+  };
+  let filteredListings: ProductListing[] = [];
   try {;
-    filteredListings = allListings.filter((listing) => {;
-      const matchesSearch =;
+    filteredListings = allListings && allListings.filter(listing => {      const matchesSearch =;
         !searchQuery ||;
-        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        (listing.tags &&;
-          listing.tags.some((tag: string) =>;
-            tag.toLowerCase().includes(searchQuery.toLowerCase()))),;
+        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        (listing && listing.tags &&;
+          listing && listing.tags.some((tag: string) =>;
+            tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+          ));
       const matchesBrand =;
-        selectedBrand === "all" ||;
-        (listing.brand && listing.brand === selectedBrand),;
+        selectedBrand === 'all' ||;
+        (listing && listing.brand && listing && listing.brand === selectedBrand);
+
       const matchesSpecs =;
         !specQuery ||;
-        (listing.specifications &&;
-          listing.specifications.some((s) =>;
-            s.toLowerCase().includes(specQuery.toLowerCase()))) ||;
-        (listing.tags &&;
-          listing.tags.some((tag) =>;
-            tag.toLowerCase().includes(specQuery.toLowerCase()))),;
+        (listing && listing.specifications &&;
+          listing && listing.specifications.some(s =>;
+            s && s.toLowerCase().includes(specQuery && specQuery.toLowerCase());
+          )) ||;
+        (listing && listing.tags &&;
+          listing && listing.tags.some(tag =>;
+            tag && tag.toLowerCase().includes(specQuery && specQuery.toLowerCase());
+          ));
       const matchesAvailability =;
-        selectedAvailability === "all" ||;
-        (listing.availability && listing.availability === selectedAvailability),;
+        selectedAvailability === 'all' ||;
+        (listing && listing.availability && listing && listing.availability === selectedAvailability);
+
       const matchesCategory =;
-        selectedCategories.length === 0 ||;
-        selectedCategories.includes(listing.category),;
+        selectedCategories && selectedCategories.length === 0 ||;
+        selectedCategories && selectedCategories.includes(listing && listing.category);
+
       const matchesPrice =;
-        listing.price === null ||;
-        (listing.price >= currentPriceFilter[0] &&;
-          listing.price <= currentPriceFilter[1]),;
+        listing && listing.price === null ||;
+        (listing && listing.price >= currentPriceFilter[0] &&;
+          listing && listing.price <= currentPriceFilter[1]);
+
       const matchesRating =;
         selectedRating === null ||;
-        (listing.rating !== undefined && listing.rating >= selectedRating),;
-      return (;
+        (listing && listing.rating !== undefined && listing && listing.rating >= selectedRating),;
+
+      return (
         matchesSearch &&;
         matchesCategory &&;
         matchesPrice &&;
@@ -416,38 +433,37 @@ export function DynamicListingPage({;
         matchesSpecs &&;
         matchesAvailability;
       );
-    }),;
-    filteredListings.sort((a, b) => {;
-      switch (sortOption) {;
-        case "price-asc": return (a.price || 0) - (b.price || 0),;
-        case "price-desc":;
-          return (b.price || 0) - (a.price || 0),;
-        case "rating":;
-          return (b.rating || 0) - (a.rating || 0),;
-        case "newest":;
+    });
+    filteredListings && filteredListings.sort((a, b) => {      switch (sortOption) {;
+        case 'price-asc':;
+          return (a && a.price || 0) - (b && b.price || 0);
+        case 'price-desc':;
+          return (b && b.price || 0) - (a && a.price || 0);
+        case 'rating':;
+          return (b && b.rating || 0) - (a && a.rating || 0);
+        case 'newest':;
         default:;
-          return (;
-            new Date(b.createdAt).getTime() -;
-            new Date(a.createdAt).getTime();
+          return (
+            new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime();
           );
       }
     });
   } catch (error) {;
-    captureException(error),;
+    captureException(error);
     logErrorToProduction('Listing filter error:', { data: error });
   }
 
-  const handleRequestQuote = (listingId: string) => {
-    setIsLoading(true),
+  const handleRequestQuote = (listingId: string) => {;
+    setIsLoading(true);
 
-    const listing = allListings.find((item) => item.id === listingId),
+    const listing = allListings && allListings.find(item => item && item.id === listingId);
 
-    setTimeout(() => {
-      setIsLoading(false),
-      if (listing) {
-        toast({
-          title: "Quote Requested",
-          description: `Your quote request for ${listing.title} has been sent.`}),
+    setTimeout(() => {;
+      setIsLoading(false);      if (listing) {;
+        toast({;
+          title: 'Quote Requested',;
+          description: `Your quote request for ${listing && listing.title} has been sent.`,;
+        });
 
 >>>>>>>         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
@@ -505,9 +521,37 @@ export function DynamicListingPage({;
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
 >>>>>>>                   Categories
-                </label>
-                <div className="space-y-2">
+        // Store quote data in sessionStorage for the request-quote page
+        const quoteData = {
+          serviceType: categorySlug
+          specificItem: {
+
+            id: listing.id,
+            title: listing.title,
+            category: listing.category,
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+
+
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          <div className="lg:col-span-1">
+            <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
+              <h3 className="text-lg font-medium text-white mb-4 flex items-center">
+                <Filter className="mr-2 h-5 w-5" /> Filters
+              </h3>
+
+              <div className="mb-6">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2">
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                  Categories
+>>>>>>>                 </label>
+                <div className='space-y-2'>
                   {categoryFilters.map(filter => (
+
                     <div key={filter.value} className="flex items-center">
                       <Checkbox
                         id={`cat-${filter.value}`}
@@ -519,16 +563,52 @@ export function DynamicListingPage({;
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                       >
 >>>>>>>                         {filter.label}
-                      </label>
+ursor/fix-website-loading-errors-and-merge-6662
+          </p>;
+        </div>;
+
+        <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>;
+          <div className='lg:col-span-1'>;
+            <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6'>;
+              <h3 className='text-lg font-medium text-white mb-4 flex items-center'>;
+                <Filter className='mr-2 h-5 w-5' /> Filters;
+              </h3>;
+
+              <div className='mb-6'>;
+                <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
+                  Categories;
+                </label>;
+
+                <div className="space-y-2">;
+                  {categoryFilters.map(filter => (;
+                    <div key={filter.value} className="flex items-center">;
+                      <Checkbox;
+                        id={`cat-${filter.value}`}
+                        checked={selectedCategories.includes(filter.value)}
+                        onCheckedChange={() => toggleCategory(filter.value)}
+                        className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
+                      />;
+                      <label;
+                        htmlFor={`cat-${filter.value}`}
+                        className="ml-2 text-sm text-zion-slate-light cursor-pointer";
+                      >;
+
+
+                        {filter.label}
+>>>>>>>                       </label>
                     </div>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
                   ))}
-                </div>
-              </div>
-              {brandOptions.length > 0 && (
-                <div className="mb-6">
-                  <label className="text-sm font-medium text-zion-slate-light block mb-2">
-                    Brand
-                  </label>
+
+                </div>;
+              </div>;
+
+              {brandOptions && brandOptions.length > 0 && (;
+                <div className='mb-6'>;
+                  <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
+                    Brand;
+                  </label>;
+
                   <Select
                     value = {selectedBrand,}
                     onValueChange = {(value: string,) => setSelectedBrand(value),}
@@ -569,9 +649,39 @@ export function DynamicListingPage({;
                   }
                   className='bg-zion-blue border border-zion-blue-light text-white'                />
 >>>>>>>               </div>
-              {availabilityOptions.length > 0 && (
-                <div className="mb-6">
-                  <label className="text-sm font-medium text-zion-slate-light block mb-2">
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                      ))}
+                    </SelectContent>;
+                  </Select>;
+                </div>;
+              )}
+
+
+
+              <div className='mb-6'>;
+                <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
+                  Specifications;
+                </label>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                <Input
+
+
+
+                  value={specQuery}
+                  onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
+                    setSpecQuery(e && e.target.value);
+                  }
+
+
+                  className="bg-zion-blue border border-zion-blue-light text-white"
+                />
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+              </div>
+>>>>>>>               {availabilityOptions.length > 0 && (
+                <div className='mb-6'>
+                  <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                     Availability
                   </label>
                   <Select
@@ -580,7 +690,8 @@ export function DynamicListingPage({;
                       setSelectedAvailability(value)
                     ,}
 >>>>>>>                   >
-                    <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
+                  >
+>>>>>>>                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                       <SelectValue placeholder="Select Availability" />
                     </SelectTrigger>
                     <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
@@ -601,21 +712,43 @@ export function DynamicListingPage({;
               )}
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
-                  Price Range
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                      ))}
+                    </SelectContent>;
+                  </Select>;
+                </div>;
+              )}
+
+
+
+              <div className="mb-6">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2">
+
+
+>>>>>>>                   Price Range
                 </label>
-                <div className="mt-6 px-2">
+                <div className='mt-6 px-2'>
+              <div className='mb-6'>;
+                <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
+                  Price Range;
+                </label>;
+                <div className='mt-6 px-2'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Slider
                     aria-label='Price range'
 >>>>>>>                     defaultValue={[0, priceRange.max]}
-                    min={0}
-                    max={priceRange.max}
-                    step={priceRange.max / 100}
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>                     min={0}
+                    max={priceRange && priceRange.max}
+                    step={priceRange && priceRange.max / 100}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
                     className='mb-4'                  />
                   <div className='flex justify-between text-sm text-zion-slate-light'>
 >>>>>>>                     <span>${currentPriceFilter[0].toLocaleString()}</span>
-                    <span>${currentPriceFilter[1].toLocaleString()}</span>
+ursor/fix-website-loading-errors-and-merge-6662
+                    <span>${currentPriceFilter[0].toLocaleString()}</span>
+>>>>>>>                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
                 </div>
               </div>
@@ -629,12 +762,15 @@ export function DynamicListingPage({;
                       key={rating === null ? 'any' : rating}
                       variant='outline'
                       size='sm'
-                      onClick={() => {
-                        logInfo('Rating selected:', { data: rating })
-                        setSelectedRating(rating) }}
+
+                      onClick={() => {;
+                        logInfo('Rating selected:', { data: rating });
+                        setSelectedRating(rating);                      }}
+
                       aria-pressed = {selectedRating === rating,}
 >>>>>>>                       className={`{
-                        selectedRating === rating
+                      className={`{
+>>>>>>>                         selectedRating === rating
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
                           : "border-zion-blue-light text-zion-slate-light"
                       } focus-visible:ring-zion-purple`}
@@ -650,8 +786,12 @@ export function DynamicListingPage({;
 >>>>>>>                           ))}
                           <span className="ml-1">& Up</span>
                         </div>
-                      )}
-                    </Button>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                          ))}
+                          <span className='ml-1'>& Up</span>;
+                        </div>;
+>>>>>>>                       )}
+                    </Button>;
                   ))}
                 </div>
               </div>
@@ -668,7 +808,9 @@ export function DynamicListingPage({;
                   setSpecQuery('')
                   setSelectedAvailability('all')
 >>>>>>>                 }}
-              >
+ursor/fix-website-loading-errors-and-merge-6662
+                }}
+>>>>>>>               >
                 Clear All
               </Button>
             </div>
@@ -692,12 +834,51 @@ export function DynamicListingPage({;
 >>>>>>>                   <Select value={sortOption} onValueChange={setSortOption}>
                     <SelectTrigger className="w-[150px] bg-zion-blue border border-zion-blue-light text-white">
                       <SelectValue placeholder="Sort" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                      <SelectItem value="newest" className="text-white">Newest</SelectItem>
-                      <SelectItem value="price-asc" className="text-white">Price: Low to High</SelectItem>
-                      <SelectItem value="price-desc" className="text-white">Price: High to Low</SelectItem>
-                      <SelectItem value="rating" className="text-white">Highest Rating</SelectItem>
+ursor/fix-website-loading-errors-and-merge-6662
+              >;
+                Clear All;
+              </Button>;
+            </div>;
+          </div>;
+
+          <div className="lg:col-span-3">;
+            <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">;
+              <div className="flex flex-col md:flex-row gap-4">;
+                <div className="relative flex-grow">;
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                  <Input;
+                    type="text";
+                    placeholder="Search listings...";
+                    value={searchQuery}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {;
+                      logInfo('Search query:', { data: e.target.value }),;
+                      setSearchQuery(e.target.value);
+                    }}
+                    className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
+                  />
+                </div>
+
+                <div className="flex items-center gap-2 ml-auto">
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                  <Select value={sortOption} onValueChange={setSortOption}>
+                    <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>
+                      <SelectValue placeholder='Sort' />
+>>>>>>>                     </SelectTrigger>
+                    <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
+                      <SelectItem value='newest' className='text-white'>
+                        Newest
+                      </SelectItem>
+                      <SelectItem value='price-asc' className='text-white'>
+                        Price: Low to High
+                      </SelectItem>
+                      <SelectItem value='price-desc' className='text-white'>
+                        Price: High to Low
+                      </SelectItem>
+                      <SelectItem value='rating' className='text-white'>
+                        Highest Rating
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                   <Button
@@ -718,7 +899,20 @@ export function DynamicListingPage({;
             <div className='mb-6'>
               <p className='text-zion-slate-light'>
 >>>>>>>                 Showing {filteredListings.length} results
-                {selectedCategories.length > 0 &&
+ursor/fix-website-loading-errors-and-merge-6662
+                    {ToggleViewIcon}
+                    <span className='sr-only'>;
+                      {isGrid ? 'List view' : 'Grid view'}
+
+
+
+            <div className="mb-6">
+              <p className="text-zion-slate-light">
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                Showing {filteredListings.length} results
+>>>>>>>                 {selectedCategories.length > 0 &&
                   ` in ${selectedCategories.join(', ')}`}
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
@@ -745,11 +939,13 @@ export function DynamicListingPage({;
                         <Skeleton height={24} width='25%' />
                         <Skeleton height={32} width='25%' />
 >>>>>>>                       </div>
-                    </div>
+                      </div>
+>>>>>>>                     </div>
                   </div>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
                 ))}
-              </div>
-            ) : filteredListings.length > 0 ? (
+              </div>;
+            ) : filteredListings && filteredListings.length > 0 ? (;
               <div
                 className={
                   view === 'grid'
@@ -776,7 +972,22 @@ export function DynamicListingPage({;
                 </p>
                 <Button
 
-                  variant="outline"
+ursor/fix-website-loading-errors-and-merge-6662
+                ))}
+              </div>;
+            ) : (;
+              <div className='text-center py-20'>;
+                <h3 className='text-xl font-bold text-white mb-2'>;
+                  No listings found;
+                </h3>;
+                <p className='text-zion-slate-light mb-6'>;
+                  Try adjusting your filters or search query;
+                </p>;
+                <Button
+
+
+
+>>>>>>>                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),
                     clearCategories(),
@@ -812,7 +1023,22 @@ export function DynamicListingPage({;
                     setSelectedAvailability("all");
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-                >;
+ursor/fix-website-loading-errors-and-merge-6662
+                >
+                  Clear All
+                </Button>
+              </div>
+
+                  onClick={() => {;
+                    setSearchQuery('');
+                    clearCategories();
+                    setCurrentPriceFilter([0, priceRange && priceRange.max]);
+                    setSelectedRating(null);
+                    setSelectedBrand('all');
+                    setSpecQuery('');
+                    setSelectedAvailability('all');                  }}
+                  className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
+>>>>>>>                 >;
                   Clear All;
                 </Button>;
               </div>;
@@ -822,6 +1048,18 @@ export function DynamicListingPage({;
       </div>;
     </div>;
   );
-}
+ursor/fix-website-loading-errors-and-merge-6662
+  detailBasePath;
+}/>) ) ";
+}</div> No listings found </h3> <p className="text - zion - slate - light mb - 6" > Try adjusting your filters or search query </p> <Button clear_categories ();
+setCurrentPriceFilter ([0, price_range.max]);
+setSelectedRating (null);
+> Clear All </Button> </div>);
+}</div> </div> </div> </div>);
+}'"  );
+>>>>>>> }
+
 ;
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

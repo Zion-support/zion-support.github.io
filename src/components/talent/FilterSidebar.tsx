@@ -60,61 +60,104 @@ export function FilterSidebar({
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
 >>>>>>>           Filters
-        </h3>
+          Filters
+>>>>>>>         </h3>
         <Button 
           variant="ghost" 
           size="sm" 
 >>>>>>>           onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+          onClick={clearFilters}
+>>>>>>>           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
         >
           Clear All
         </Button>
       </div>
 >>>>>>>       {/* Search */}
-      <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+ursor/fix-website-loading-errors-and-merge-6662
+      {/* Search */}
+>>>>>>>       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
+          className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
+          Clear All;
+        </Button>;
+      </div>;
+          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";
+          Filters;
+        </h3>;
+        <Button
+          variant="ghost" 
+          size="sm" 
+          onClick={clearFilters}
+          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent">;
+          Clear All;
+        </Button>;
+      </div>;
+
+      {/* Search */}
+      <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
+
+      {/* Sorting */}
+      <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Skills */}
       <SkillsFilter
         selectedSkills={selectedSkills}
         toggleSkill={toggleSkill}
-        expanded={expandedSections.skills}
+        expanded={expandedSections && expandedSections.skills}
         toggleSection={() => toggleSection('skills')}
-        isMobileFilterOpen={isMobileFilterOpen}      />
+
+        isMobileFilterOpen={isMobileFilterOpen}      />;
+
+
       {/* Availability */}
       <AvailabilityFilter
         selectedAvailability={selectedAvailability}
         toggleAvailability={toggleAvailability}
-        expanded={expandedSections.availability}
+        expanded={expandedSections && expandedSections.availability}
         toggleSection={() => toggleSection('availability')}
-        isMobileFilterOpen={isMobileFilterOpen}      />
+
+        isMobileFilterOpen={isMobileFilterOpen}      />;
+
+
       {/* Region */}
       <RegionFilter
         selectedRegions={selectedRegions}
         toggleRegion={toggleRegion}
-        expanded={expandedSections.region}
+        expanded={expandedSections && expandedSections.region}
         toggleSection={() => toggleSection('region')}
-        isMobileFilterOpen={isMobileFilterOpen}      />
+
+        isMobileFilterOpen={isMobileFilterOpen}      />;
+
+
       {/* Years of Experience */}
       <ExperienceFilter
         experienceRange={experienceRange}
         setExperienceRange={setExperienceRange}
-        expanded={expandedSections.experience}
+        expanded={expandedSections && expandedSections.experience}
         toggleSection={() => toggleSection('experience')}
-        isMobileFilterOpen={isMobileFilterOpen}      />
+
+        isMobileFilterOpen={isMobileFilterOpen}      />;
+
+
       {/* Price Range */}
       <PriceFilter
         priceRange={priceRange}
         setPriceRange={setPriceRange}
-        expanded={expandedSections.price}
+        expanded={expandedSections && expandedSections.price}
         toggleSection={() => toggleSection('price')}
         <Button
         isMobileFilterOpen={isMobileFilterOpen}
       />;
+
       {isMobileFilterOpen && (;
         <Button;
 >>>>>>>           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
-          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
+ursor/fix-website-loading-errors-and-merge-6662
+          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+>>>>>>>           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
         </Button>
@@ -126,4 +169,6 @@ export function FilterSidebar({
   );
 };
 }
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

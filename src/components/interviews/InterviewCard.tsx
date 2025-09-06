@@ -13,7 +13,7 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'impor
 import { InterviewResponseForm } from "./InterviewResponseForm"
 interface InterviewCardProps {
   interview: Interview,
-  onRefresh: () => Promise<void>
+  on_refresh: () => Promise < void>;
 }
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
@@ -73,4 +73,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
 
   )
 }
+>>>>>>> 
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

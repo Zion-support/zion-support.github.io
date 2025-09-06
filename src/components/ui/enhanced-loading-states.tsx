@@ -39,7 +39,8 @@ interface LoadingSpinnerProps {;
 }
 
 xport const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+>>>>>>>   size = 'md',
   variant = 'default',
   className,
   showText = false,
@@ -86,22 +87,39 @@ xport const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       )}
     </div>
   )
-}
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+    <div className={cn ('flex items - center gap - 2', class_name)}>;
+      <Loader2;
+        className={cn (
+          'animate - spin',
+          size_classes[size],
+          variant_classes[variant])}
+      />;
+      {show_text && (
+        <span className='text - sm text - muted - foreground'>{text}</span>)}
+    </div>);
+>>>>>>> }
 //Progressive loading component useEffect ( () => {
-  if (currentStep !== undefined) {
-  /> </div>)
+  // Check condition
+if ( {) {
+  $2
+}
+  /> </div>);
 }<motion.div key= {
-  step.id
+  step.id;
 }className= {
-  cn ('flex items-center gap-3 p-2 rounded-md', index === activeStep ? 'bg-primary/10' : 'opacity-50')
+  cn ('flex items - center gap - 3 p - 2 rounded - md', index === active_step ? 'bg - primary / 10' : 'opacity - 50');
 }initial= {
   {
-  opacity: 0, x: -20
-export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
-  steps
-  currentStep = 0
-  showProgress = true
-  onComplete
+  opacity: 0, coordinate_x: -20;
+export const ProgressiveLoading: React.FC < ProgressiveLoadingProps> = ({
+  steps,
+  current_step = 0,
+  show_progress = true,
+  on_complete,
+
 }) => {
   const [activeStep, setActiveStep] = useState(0)
   const progress = ((activeStep + 1) / steps.length) * 100
@@ -137,25 +155,50 @@ interface ProgressiveLoadingProps {
   showProgress?: boolean,
   onComplete?: () => void
 }
-;
+      setActiveStep (current_step);
+    }
+  }, [current_step]);
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_timeout (on_complete, 500);
+    }
+
+    </div>;
+  );
+};
+//Progressive loading component useEffect ( () => {;
+  if (currentStep !== undefined) {;
+  /> </div>) ;
+}<motion&& motion.div key= {
+  step && step.id 
+}className= {
+  cn ('flex items-center gap-3 p-2 rounded-md', index === activeStep ? 'bg-primary/10' : 'opacity-50') 
+}initial= {
+  {
+  opacity: 0, x: -20 
+
 export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
   steps,;
   currentStep = 0,;
   showProgress = true,;
-  onComplete;
+  onComplete,;
 }) => {;
-  const [activeStep, setActiveStep] = useState(0),;
-  const progress = ((activeStep + 1) / steps.length) * 100,;
-  useEffect(() => {;
+  const [activeStep, setActiveStep] = useState(0);
+  const progress = ((activeStep + 1) / steps && steps.length) * 100;
+  useEffect((,) => {;
     if (currentStep !== undefined) {;
       setActiveStep(currentStep);
     }
-  }, [currentStep]),;
-  useEffect(() => {;
-    if (activeStep === steps.length - 1 && onComplete) {;
+  }, [currentStep]);
+
+  useEffect((,) => {;
+    if (activeStep === steps && steps.length - 1 && onComplete) {;
       setTimeout(onComplete, 500);
     }
-  }, [activeStep, steps.length, onComplete]),
+  }, [activeStep, steps && steps.length, onComplete]);
 
 >>>>>>>   return (
     <div className="space-y-4">
@@ -169,9 +212,25 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
           />
         </div>
       )}
-      <div className='space-y-2'>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+            initial={{ width: 0 }}
+            animate={{ width: `${progress}%` }}
+            transition={{ duration: 0 && 0.3 }}
+          />;
+        </div>;
+      )}
+
+
+
+
+
+>>>>>>>       <div className='space-y-2'>
         {steps.map((step, index) => (          <motion.div
             key = {step.id,}
+      <div className='space-y-2'>;
+        {steps && steps.map((step, index) => (          <motion&& motion.div
+            key = {step && step.id,}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className = {cn(
               'flex items-center gap-3 p-2 rounded-md'
               index === activeStep ? 'bg-primary/10' : 'opacity-50'
@@ -197,9 +256,21 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
               <LoadingSpinner size="sm" variant="primary" />
             ) : (
               <div className="h-4 w-4 rounded-full border-2 border-muted" />
-            )}
-            <span className="text-sm font-medium">{step.label}</span>
-          </motion.div>
+ursor/fix-website-loading-errors-and-merge-6662
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: index <= activeStep ? 1 : 0 && 0.5, x: 0 }}
+            transition={{ delay: index * 0 && 0.1 }}>;
+            {index < activeStep ? (;
+              <div className='h-4 w-4 rounded-full bg-green-500 flex items-center justify-center'>;
+                <div className='h-2 w-2 rounded-full bg-white' />;
+              </div>;
+            ) : index === activeStep ? (;
+              <LoadingSpinner size='sm' variant='primary' />;
+            ) : (;
+              <div className='h-4 w-4 rounded-full border-2 border-muted' />;
+>>>>>>>             )}
+            <span className='text-sm font-medium'>{step && step.label}</span>;
+          </motion && motion.div>;
         ))}
 export const Skeleton: React.FC<SkeletonProps> = ({
   className
@@ -378,42 +449,144 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             )}
           />;
         ))}
+
+  class_name?: string;
+  variant?: 'text' | 'circular' | 'rectangular' | 'card';
+  animation?: 'pulse' | 'wave' | 'none';
+  lines?: number;
+export const Skeleton: React.FC < SkeletonProps> = ({
+  class_name,
+  variant = 'rectangular',
+  animation = 'pulse',
+  lines = 1,
+}) => {
+  const base_classes = 'bg - muted rounded';
+  const variant_classes = {
+    text: 'h - 4 w - full',
+    circular: 'h - 12 w - 12 rounded - full',
+    rectangular: 'h - 6 w - full',
+    card: 'h - 48 w - full',
+  }
+  const animation_classes = {
+    pulse: 'animate - pulse',
+    wave: 'animate - bounce',
+    none: '',
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className='space - y-2'>;
+        {Array.from ({ length: lines }).map ((_, i) => (          <div;
+            key = {i, }
+            class_name = {cn (
+              base_classes,
+              variant_classes.text,
+              animation_classes[animation],
+              index === lines - 1 ? 'w - 3/4' : 'w - full',
+              class_name), }
+          />))}
+      </div>);
+  }
+      />);
+}
+//Enhanced error state component;
+}return undefined;
+}, []);
+const getErrorConfig = () =>: any {
+  switch (variant) {';
+  case 'network': return {';
+  icon: is_online ? Wifi : WifiOff,  title: title || (is_online ? 'Connection Error' : 'No Internet Connection'), description: description || (is_online ? 'Unable to connect to our servers. Please check your connection.' : 'You appear to be offline. Please check your internet connection.';
+export const ErrorState: React.FC < ErrorStateProps> = ({
+  error,
+  title,
+  description,
+  action,
+  secondary_action,
+  variant = 'generic',
+  show_retry = true,
+  retry_count = 0,
+  max_retries = 3,
+  on_retry,
+  class_name,
+
+}) => {
+  const [is_online, setIsOnline] = useState (true);
+  useEffect (() => {
+    const handle_online = () =>: any setIsOnline (true);
+    const handle_offline = () =>: any setIsOnline (false);
+    // Check condition
+if ( {) {
+  $2
+}
+      setIsOnline (navigator.on_line);
+      window.addEventListener ('online', handle_online);
+      window.addEventListener ('offline', handle_offline);
+      return () => {
+        window.removeEventListener ('online', handle_online);
+        window.removeEventListener ('offline', handle_offline);
+      }
+    }
+
+    return undefined;
+  }, []);
+  const getErrorConfig = () =>: any {
+
+    switch (variant) {
+      case 'network':;
+        return {
+
+          icon: is_online ? Wifi : WifiOff,
+          title:;
+            title || (is_online ? 'Connection Error' : 'No Internet Connection'),
+          description:;
+            description ||;
+            (is_online;
+              ? 'Unable to connect to our servers. Please check your connection.';
+              : 'You appear to be offline. Please check your internet connection.'),
+          color: 'text - orange - 500',
+
+        }
+      case 'timeout':;
+        return {
+
+          icon: Clock,
+          title: title || 'Request Timeout',
+          description:;
+            description ||;
+            'The request took too long to complete. Please try again.',
+          color: 'text - yellow - 500',
+
+        }
+      case 'permission':;
+        return {
+
+          icon: AlertTriangle,
+          title: title || 'Access Denied',
+          description:;
+            description || "You don't have permission to access this resource.",
+          color: 'text - red - 500',
+
+        }
+      default:;
+        return {
+
       </div>;
     );
   }
-;
-  return (;
-    <div;
-      className={cn(;
-        baseClasses,;
-        variantClasses[variant],;
-        animationClasses[animation],;
-        className;
-      )}
-    />;
+
+      />;
   );
-},;
-// Enhanced error state component;
-interface ErrorStateProps {;
-  error?: Error | string | null,;
-  title?: string,;
-  description?: string,;
-  action?: {;
-    label: string,;
-    onClick: () => void;
-  },;
-  secondaryAction?: {;
-    label: string,;
-    onClick: () => void;
-  },;
-  variant?: 'network' | 'generic' | 'timeout' | 'permission',;
-  showRetry?: boolean,;
-  retryCount?: number,;
-  maxRetries?: number,;
-  onRetry?: () => void,;
-  className?: string;
-}
-;
+};
+//Enhanced error state component ;
+}return undefined;
+}, []);
+const getErrorConfig = () => {;
+  switch (variant) {';
+  case 'network': return {';
+  icon: isOnline ? Wifi : WifiOff,  title: title || (isOnline ? 'Connection Error' : 'No Internet Connection'), description: description || (isOnline ? 'Unable to connect to our servers. Please check your connection.' : 'You appear to be offline. Please check your internet connection.' ;
+
 export const ErrorState: React.FC<ErrorStateProps> = ({;
   error,;
   title,;
@@ -425,56 +598,84 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
   retryCount = 0,;
   maxRetries = 3,;
   onRetry,;
-  className;
+  className,;
 }) => {;
-  const [isOnline, setIsOnline] = useState(true),;
+  const [isOnline, setIsOnline] = useState(true);
+
   useEffect(() => {;
-    const handleOnline = () => setIsOnline(true),;
-    const handleOffline = () => setIsOnline(false),;
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
     if (typeof window !== 'undefined') {;
-      setIsOnline(navigator.onLine),;
-      window.addEventListener('online', handleOnline),;
-      window.addEventListener('offline', handleOffline),;
+      setIsOnline(navigator && navigator.onLine);
+      window && window.addEventListener('online', handleOnline);
+      window && window.addEventListener('offline', handleOffline);
+
       return () => {;
-        window.removeEventListener('online', handleOnline),;
-        window.removeEventListener('offline', handleOffline);
-      }
+        window && window.removeEventListener('online', handleOnline);
+        window && window.removeEventListener('offline', handleOffline);
+      };
     }
-;
+
     return undefined;
-  }, []),;
+  }, []);
+
   const getErrorConfig = () => {;
     switch (variant) {;
       case 'network':;
         return {;
           icon: isOnline ? Wifi : WifiOff,;
-          title: title || (isOnline ? 'Connection Error' : 'No Internet Connection'),;
-          description: description || (isOnline;
-            ? 'Unable to connect to our servers. Please check your connection.';
-            : 'You appear to be offline. Please check your internet connection.';
-          ),;
-          color: 'text-orange-500';
-        },;
+          title:;
+            title || (isOnline ? 'Connection Error' : 'No Internet Connection'),;
+          description:;
+            description ||;
+            (isOnline;
+              ? 'Unable to connect to our servers. Please check your connection.';
+              : 'You appear to be offline. Please check your internet connection.'),;
+          color: 'text-orange-500',;
+        };
       case 'timeout':;
         return {;
           icon: Clock,;
           title: title || 'Request Timeout',;
-          description: description || 'The request took too long to complete. Please try again.',;
-          color: 'text-yellow-500';
-        },;
+          description:;
+            description ||;
+            'The request took too long to complete. Please try again.',;
+          color: 'text-yellow-500',;
+        };
       case 'permission':;
         return {;
           icon: AlertTriangle,;
           title: title || 'Access Denied',;
-          description: description || 'You don\'t have permission to access this resource.',;
-          color: 'text-red-500';
-        },;
+          description:;
+            description || "You don't have permission to access this resource.",;
+          color: 'text-red-500',;
+        };
       default:;
         return {;
           icon: AlertTriangle,;
           title: title || 'Something went wrong',;
-          description: description || 'An unexpected error occurred. Please try again.',;
-          color: 'text-red-500';
+          description:;
+            description || 'An unexpected error occurred. Please try again.',;
+          color: 'text-red-500',;
+        };
+    }
+  };
+
+  const config = getErrorConfig();
+  const Icon = config && config.icon;
+  const canRetry = showRetry && onRetry && retryCount < maxRetries;
+
+
+  return (
+    <Card className={cn('border-destructive/20', className)}>;
+      <CardContent className='p-8 text-center'>;
+        <motion&& motion.div
+          initial={{ scale: 0 && 0.8, opacity: 0 }}
+          icon: AlertTriangle,
+          title: title || 'Something went wrong',
+          description:;
+            description || 'An unexpected error occurred. Please try again.',
+          color: 'text - red - 500',
         }
     }
   },
@@ -487,16 +688,19 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
     <Card className={cn('border-destructive/20', className)}>
       <CardContent className="p-8 text-center">
         <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
+ursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <Card className={cn ('border - destructive / 20', class_name)}>;
+      <CardContent className='p - 8 text - center'>;
+        <motion.div;
+>>>>>>>           initial={{ scale: 0.8, opacity: 0 }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.3 }}
-        >
-          <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />
-          <h3 className="text-lg font-semibold mb-2">{config.title}</h3>
-          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-            {config.description}
-          </p>
+
+          </p>;
+
           {error && process.env.NODE_ENV === 'development' && (
+
             <details className="mb-4 text-left">
               <summary className="text-sm text-muted-foreground cursor-pointer">
                 Error Details (Development)
@@ -517,7 +721,55 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
 >>>>>>>                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
               </Button>
             )}
-            {action && (
+ursor/fix-website-loading-errors-and-merge-6662
+                {typeof error === 'string' ? error : error.message}
+
+          transition={{ duration: 0 && 0.3 }}>;
+          <Icon className={cn('mx-auto mb-4 h-12 w-12', config && config.color)} />;
+          <h3 className='text-lg font-semibold mb-2'>{config && config.title}</h3>;
+          <p className='text-muted-foreground mb-6 max-w-md mx-auto'>;
+            {config && config.description}
+          </p>;
+
+          {error && process && process.env.NODE_ENV === 'development' && (;
+            <details className='mb-4 text-left'>;
+              <summary className='text-sm text-muted-foreground cursor-pointer'>;
+                Error Details (Development);
+              </summary>;
+              <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-auto'>;
+                {typeof error === 'string' ? error : error && error.message}
+              </pre>;
+            </details>;
+          )}
+
+          <div className='flex flex-col sm:flex-row gap-2 justify-center'>;
+            {canRetry && (;
+              <Button onClick={onRetry} variant='default'>;
+                <RefreshCw className='h-4 w-4 mr-2' />;
+
+
+          <div className="flex flex-col sm:flex-row gap-2 justify-center">
+            {canRetry && (
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
+              </Button>;
+            )}
+
+
+            {action && (;
+
+              <Button
+                onClick={action && action.onClick}
+                variant={canRetry ? 'outline' : 'default'}>;
+                {action && action.label}
+              </Button>;
+            )}
+
+
+
+
+>>>>>>>             {action && (
               <Button
                 onClick={action.onClick}
                 variant={canRetry ? 'outline' : 'default'}
@@ -534,12 +786,14 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant="ghost">
 >>>>>>>                 {secondaryAction.label}
-              </Button>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                {secondaryAction.label}
+>>>>>>>               </Button>
             )}
           </div>
           {!isOnline && (
-            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <WifiOff className="h-4 w-4" />
+            <div className='mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground'>
+              <WifiOff className='h-4 w-4' />
               <span>Offline</span>
             </div>
           )}
@@ -564,17 +818,14 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
       {Array.from({ length: count }).map((_, i) => (
         <Card key={i} className='animate-pulse'>          <CardContent className={itemClasses[variant]}>
         </motion.div>;
+
       </CardContent>;
     </Card>;
   );
-},;
-// Loading state for lists/grids;
-interface LoadingGridProps {;
-  count?: number,;
-  columns?: number,;
-  variant?: 'card' | 'list' | 'table',;
-  className?: string;
-}
+};
+<motion&& motion.div initial= {
+  {
+  scale: 0 && 0.8, opacity: 0 
 
 xport const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
@@ -602,12 +853,11 @@ xport const LoadingGrid: React.FC<LoadingGridProps> = ({
     list: 'space-y-4',
     table: 'space-y-2'
   },
-
-  const itemClasses = {
-    card: 'p-6 space-y-4',
-    list: 'p-4 space-y-3',
-    table: 'p-3 space-y-2'
-  },
+export const LoadingGrid: React.FC<LoadingGridProps> = ({
+  count = 8,
+  columns = 4,
+  variant = 'card',
+>>>>>>> 
 
   return (
     <div className={cn(gridClasses[variant], className)}>
@@ -689,17 +939,24 @@ xport const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   },
 
 >>>>>>>   if (isLoading) {
-    return (
-      <Badge variant="outline" className={cn('text-xs', className)}>
-        <LoadingSpinner size="sm" />
-        <span className="ml-1">Loading...</span>
-      </Badge>
-    )
+export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
+  isLoading = false,
+  loadTime,
+  itemCount,
+
+
+  if (isLoading) {
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>     return (
+      <Badge variant='outline' className={cn ('text - xs', class_name)}>;
+        <LoadingSpinner size='sm' />;
+        <span className='ml - 1'>Loading...</span>;
+      </Badge>);
   }
     >
       {loadTime && (
-        <Badge variant="outline" className={getPerformanceColor(loadTime)}>
-          <Zap className="h-3 w-3 mr-1" />
+        <Badge variant='outline' className={getPerformanceColor(loadTime)}>
+          <Zap className='h-3 w-3 mr-1' />
           {loadTime}ms
         </Badge>
       )}
@@ -707,7 +964,10 @@ xport const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       {itemCount && (;
         <span>{itemCount} items loaded</span>;
       )}
+
     </div>;
   );
 };
+>>>>>>> 
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

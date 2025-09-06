@@ -177,6 +177,7 @@ export const: OptimizedImage: React.FC<{,;
 >>>>>>> }
 }
 }
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 // Debounced search hook
 export const useDebouncedSearch = (value: string, delay: number = 300) => {
   const [debouncedValue, setDebouncedValue] = React.useState(value)
@@ -204,4 +205,27 @@ export const usePerformanceMetrics = () => {
 }
   return { metrics, recordRender }
 }
+>>>>>>> 
+  return { metrics, recordRender };
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+// Performance metrics collection;
+export const usePerformanceMetrics = () =>: any {
+  const [metrics, set_metrics] = React.useState ({
+    render_count: 0, lastRenderTime: 0,
+    averageRenderTime: 0,
+  });
+  const record_render = useCallback ((render_time: number) => {, set_metrics (prev => ({,
+      render_count: prev.render_count + 1, lastRenderTime: render_time,
+      averageRenderTime: (prev.averageRenderTime * prev.render_count + render_time) / (prev.render_count + 1),
+    }));
+  }, []); return { metrics, record_render }
+}
+  return { metrics, record_render }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+},
+
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

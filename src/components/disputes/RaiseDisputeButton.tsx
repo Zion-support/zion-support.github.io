@@ -49,19 +49,6 @@ Dialog,
   DialogHeader,
   DialogTitle,
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { 
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription} from "@/components/ui/dialog",
-import { DisputeForm } from "./DisputeForm",
-import { useRouter } from 'next/router',
-import { ShieldAlert } from 'lucide-react'
-
-interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
@@ -114,10 +101,14 @@ export function RaiseDisputeButton({
       
 >>>>>>>       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="sm:max-w-[550px]">
-          <DialogHeader>
+ursor/fix-website-loading-errors-and-merge-6662
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className='sm:max-w-[550px]'>
+>>>>>>>           <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
-              Please provide details about the issue you're experiencing with this project.
+              Please provide details about the issue you're experiencing with
+              this project.
             </DialogDescription>
           </DialogHeader>
             projectId={projectId}
@@ -129,7 +120,8 @@ export function RaiseDisputeButton({
     </>
   )
 }
-          
+
+>>>>>>>           
           <DisputeForm 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -192,4 +184,6 @@ export function RaiseDisputeButton({;
     </>;
   );
 };
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

@@ -44,10 +44,13 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
           <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
             <Loader2 className='h-8 w-8 animate-spin text-white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
 >>>>>>>           <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-            <Loader2 className="h-8 w-8 animate-spin text-white" />
+ursor/fix-website-loading-errors-and-merge-6662
+          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+>>>>>>>             <Loader2 className="h-8 w-8 animate-spin text-white" />
           </div>
         </>
-      )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>>       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
         loading='lazy'
@@ -75,11 +78,15 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
   )
         loading="lazy";
         onLoad={() => setLoaded(true)}
+
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         allowFullScreen;
       />;
     </div>;
   );
+
 }
 ;
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

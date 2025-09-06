@@ -77,8 +77,10 @@ export function ChatAssistantTrigger() {;
     }
   },
 
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <>
+    <>;
       <Button
         onClick = {(,) => setIsOpen(true),}
         size="icon"
@@ -99,7 +101,18 @@ export function ChatAssistantTrigger() {;
 
             role: 'Virtual Assistant'
 >>>>>>>           }}
-          onSendMessage = {handleSendMessage,}
-        />
+ursor/fix-website-loading-errors-and-merge-6662
+          }}
+>>>>>>>           onSendMessage = {handleSendMessage,}
+        />;
       )}
+>>>>>>> 
+    </>;
+  );
+}
+;
+
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

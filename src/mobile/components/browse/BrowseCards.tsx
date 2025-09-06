@@ -4,16 +4,16 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import {
-  Bookmark
-  BookmarkCheck
-  ChevronRight
-  MapPin
-  Clock
-  DollarSign
-} from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
-
+  Bookmark,
+  BookmarkCheck,
+  ChevronRight,
+  MapPin,
+  Clock,
+  DollarSign,
+} from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 interface BrowseItem {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   subtitle: string;
@@ -23,15 +23,24 @@ interface BrowseItem {
   price?: string;
   image?: string;
   match?: number;
-  timePosted?: string
-interface BrowseCardsProps {
+
+  timePosted?: string;
+
+interface BrowseCardsProps {;
   items: BrowseItem[];
-  type: "jobs" | "talents";
-  onViewDetails: (id: string) => void
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-  const [savedItems, setSavedItems] = useState<string[]>([]),
-  
-  const toggleSaved = null;
+  type: 'jobs' | 'talents';
+  onViewDetails: (id: string) => void;
+
+export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsProps) {;
+  const [savedItems, setSavedItems] = useState<string[]>([]);
+
+  const toggleSaved = (id: string) => {;
+    setSavedItems(prev =>;
+      prev && prev.includes(id) ? prev && prev.filter(itemId => itemId !== id) : [...prev, id];
+    );
+  };
+
+
   return (
     <div className='space-y-4 pb-24'>
       {items.map(item => (
@@ -47,18 +56,18 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface BrowseItem {
   id: string,
   title: string,
   subtitle: string,
   description: string,
-  location?: string,
+  location?: string;
   badges: string[],
-  price?: string,
-  image?: string,
-  match?: number,
+  price?: string;
+  image?: string;
+  match?: number;
   timePosted?: string
 }
 
@@ -69,7 +78,9 @@ interface BrowseCardsProps {
 }
 
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-  const [savedItems, setSavedItems] = useState<string[]>([]),
+
+  const [ savedItems, setSavedItems ] = useState<string[]>([]),
+
   
   const toggleSaved = (id: string) => {
     setSavedItems(prev => 
@@ -77,8 +88,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
         ? prev.filter(itemId => itemId !== id)
         : [...prev, id]
     )
-  },
-  
+  };
+
+
   return (
     <div className="space-y-4 pb-24">
       {items.map((item) => (
@@ -96,7 +108,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
                       <span className="text-primary font-semibold">JOB</span>
                     </div>
-                  )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>>                   )}
                   <div>
                     <h3 className="font-medium">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
@@ -211,7 +224,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
               
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
 >>>>>>>                 {item.location && (
-                  <div className="flex items-center gap-1">
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
                     <span>{item.location}</span>
                   </div>
@@ -261,7 +275,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 View Details <ChevronRight className='h-4 w-4' />              </Button>
                 View Details <ChevronRight className="h-4 w-4" />
 >>>>>>>                 onClick={() => onViewDetails(item.id)}
-                className="gap-1"
+ursor/fix-website-loading-errors-and-merge-6662
+                onClick={() => onViewDetails(item.id)}
+>>>>>>>                 className="gap-1"
               >
                 View Details <ChevronRight className="h-4 w-4" />
               </Button>
@@ -279,4 +295,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 }
 }
 }
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

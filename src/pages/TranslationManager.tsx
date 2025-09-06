@@ -1,10 +1,5 @@
 
 
-    let sourceText = ''
-    for (const lang of supportedLanguages.map(l => l.code)) {
-
-}
-}
 ;
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
@@ -29,4 +24,7 @@ export default function TranslationManager() {
 
 }
 }
+>>>>>>> 
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

@@ -28,6 +28,41 @@ interface AchievementBadgesProps {
   achievements: Achievement[]
 }
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
+>>>>>>> import { BadgeCheck } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+export interface Achievement {;
+  id: string;
+  title: string;
+  description: string;
+  achieved: boolean;
+
+interface AchievementBadgesProps {;
+  achievements: Achievement[];
+  achievements: Achievement[];
+
+import { BadgeCheck } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+export interface Achievement {
+  id: string,
+  title: string,
+  description: string,
+
+}
+
+export interface Achievement {;
+  id: string,;
+  title: string,;
+  description: string,;
+  achieved: boolean;
+}
+
+interface AchievementBadgesProps {;
+  achievements: Achievement[];
+}
+
+export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card>
       <CardHeader>
@@ -51,10 +86,13 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
               <p className="text-sm text-muted-foreground">{a.description}</p>
             </div>
           </div>
-        ))}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>>         ))}
       </CardContent>
     </Card>;
   );
 };
 }
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

@@ -1,5 +1,7 @@
 import * as React from &quot;react&quot;
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
+import { cn } from &quot;@/lib / utils & quot;
+import { ButtonProps, button_variants } from &quot;@/components / ui / button & quot;
 ;
 import { cn } from &quot;@/lib/utils&quot;
 import { ButtonProps, buttonVariants } from &quot;@/components/ui/button&quot;
@@ -41,7 +43,9 @@ type PaginationLinkProps = {
   size?: ButtonProps[&quot;size&quot;]
 } & React.ComponentProps<&quot;a&quot;>
 >>>>>>> interface PaginationButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+ursor/fix-website-loading-errors-and-merge-6662
+interface PaginationButtonProps
+>>>>>>>   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
   isActive?: boolean
 }
@@ -51,16 +55,20 @@ const PaginationLink = ({
   size = &quot;icon&quot;
   size = &quot;icon&quot;
 >>>>>>>   ...props
-}: PaginationLinkProps) => (
+ursor/fix-website-loading-errors-and-merge-6662
+  ...props
+>>>>>>> }: PaginationLinkProps) => (
   <a
-    aria-current={isActive ? "page" : undefined}
+    aria-current={isActive ? &quot;page" : undefined}
     className={cn(
       buttonVariants({
         size})
         variant: isActive ? "outline" : "ghost",
 >>>>>>>         size}),
 >>>>>>>       className
-    )}
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+      className
+>>>>>>>     )}
     {...props}
   />
 )
@@ -69,14 +77,16 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
   ({ page, isActive, className, ...props }, ref) => (
     <button
       ref={ref}
-      type="button"
+      type=&quot;button"
       aria-label={`Page ${page}`}
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
         buttonVariants({ variant: 'ghost', size: 'icon' });
         isActive && 'bg-green-600 text-white';
 >>>>>>>         className;
-      )}
+ursor/fix-website-loading-errors-and-merge-6662
+        className;
+>>>>>>>       )}
       {...props}
     >;
       {page}
@@ -89,12 +99,12 @@ const PaginationPrevious = ({
   ...props
 }: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
-    aria-label="Go to previous page"
-    size="default"
+    aria-label="Go to previous page&quot;
+    size=&quot;default"
     className={cn("gap-1 pl-2.5", className)}
     {...props}
   >
-    <ChevronLeft className="h-4 w-4" />
+    <ChevronLeft className="h-4 w-4&quot; />
     <span>Previous</span>
   </PaginationLink>
 )
@@ -104,27 +114,27 @@ const PaginationNext = ({
   ...props
 }: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
-    aria-label="Go to next page"
-    size="default"
+    aria-label=&quot;Go to next page&quot;
+    size=&quot;default"
     className={cn("gap-1 pr-2.5", className)}
     {...props}
   >
     <span>Next</span>
-    <ChevronRight className="h-4 w-4" />
+    <ChevronRight className="h-4 w-4&quot; />
   </PaginationLink>
 )
 PaginationNext.displayName = &quot;PaginationNext&quot;
 const PaginationEllipsis = ({
   className
   ...props
-}: React.ComponentProps<"span">) => (
+}: React.ComponentProps<&quot;span">) => (
   <span
     aria-hidden
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
     <MoreHorizontal className="h-4 w-4" />
-    <span className="sr-only">More pages</span>
+    <span className="sr-only&quot;>More pages</span>
   </span>
 )
 PaginationEllipsis.displayName = &quot;PaginationEllipsis"
@@ -139,4 +149,6 @@ export {
   PaginationPrevious}
   PaginationNext,;
   PaginationPrevious};
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

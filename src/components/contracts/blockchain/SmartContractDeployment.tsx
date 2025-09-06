@@ -49,14 +49,17 @@ export function SmartContractDeployment({
     walletAddress: ''
   })
   const handleDeployContract = async () => {
-    if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
-      toast.error("Please enter a wallet address for blockchain deployment")
+    // Check condition
+if ( {) {
+  $2
+}
+      toast.error ("Please enter a wallet address for blockchain deployment");
       return;
     }
     try {
-      await onDeploy(deploymentOptions)
+      await on_deploy (deployment_options);
     } catch (error) {
-      logErrorToProduction('Deployment error:', { data: error })
+      logErrorToProduction ('Deployment error:', { data: error });
     }
   }
   const handleDownloadSolidity = () => {
@@ -75,7 +78,9 @@ export function SmartContractDeployment({
     toast.success("Solidity contract downloaded")
   }
 >>>>>>>   return (
-    <Card className="w-full">
+ursor/fix-website-loading-errors-and-merge-6662
+  return (
+>>>>>>>     <Card className="w-full">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <ShieldCheck className="h-5 w-5 text-primary" />
@@ -101,23 +106,48 @@ export function SmartContractDeployment({
   const handleDownloadSolidity = () => {;
     // Create a blob from the Solidity code;
     const blob = new Blob([solidityCode], { type: 'text/plain' }),;
-    const url = URL.createObjectURL(blob),;
+    const url = URL && URL.createObjectURL(blob);
+
     // Create a temporary anchor to trigger download;
-    const a = document.createElement('a'),;
-    a.href = url,;
-    a.download = 'ZionContract.sol',;
-    document.body.appendChild(a),;
-    a.click(),;
+    const a = document && document.createElement('a');
+    a && a.href = url;
+    a && a.download = 'ZionContract && ZionContract.sol';
+    document && document.body.appendChild(a);
+    a && a.click();
+
     // Clean up;
-    URL.revokeObjectURL(url),;
-    document.body.removeChild(a),;
-    toast.success("Solidity contract downloaded");
-  },;
-  return (;
+    URL && URL.revokeObjectURL(url);
+    document && document.body.removeChild(a);
+
+    toast && toast.success("Solidity contract downloaded");
+  };
+
+  return (
     <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
+  const handleDownloadSolidity = () =>: any {
+    // Create a blob from the Solidity code;
+    const blob = new Blob ([solidity_code], { type: 'text / plain' }),
+    const url = URL.createObjectURL (blob);
+    // Create a temporary anchor to trigger download;
+    const array = document.create_element ('a');
+    a.href = url;
+    a.download = 'ZionContract.sol';
+    document.body.append_child (a);
+    a.click ();
+    // Clean up;
+    URL.revokeObjectURL (url);
+    document.body.remove_child (a);
+    toast.success ("Solidity contract downloaded");
+  }
+  return (
+    <Card className="w - full">;
+      <CardHeader>;
+        <CardTitle className="flex items - center gap - 2">;
+          <ShieldCheck className="h - 5 w - 5 text - primary" />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
@@ -147,7 +177,34 @@ export function SmartContractDeployment({
                   onValueChange={(value) => setDeploymentOptions({
                     ...deploymentOptions;                    network: value as BlockchainNetwork
 >>>>>>>                   })}
-                  className="flex flex-col space-y-1"
+ursor/fix-website-loading-errors-and-merge-6662
+              })}
+
+
+          
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+          {deploymentOptions.deployToChain && (
+            <>
+              <div className="space-y-2">
+                <Label>Select blockchain network</Label>
+
+
+                <RadioGroup 
+                  defaultValue={deploymentOptions.network}
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                  })}
+>>>>>>>                   className="flex flex-col space-y-1"
                 >
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="ethereum" id="ethereum" />
@@ -190,7 +247,9 @@ export function SmartContractDeployment({
               </div>
               
 >>>>>>>               <div className="flex items-center space-x-2">
-                <Switch
+ursor/fix-website-loading-errors-and-merge-6662
+              <div className="flex items-center space-x-2">
+>>>>>>>                 <Switch
                   id="use-escrow"
                   aria-label="Use escrow"
                   checked={deploymentOptions.useEscrow}
@@ -204,7 +263,53 @@ export function SmartContractDeployment({
               </div>
             </>
           )}
-          <div className="rounded-md bg-muted p-4">
+ursor/fix-website-loading-errors-and-merge-6662
+                  })}
+                  className="flex flex-col space-y-1";
+                >;
+                  <div className="flex items-center space-x-2">;
+                    <RadioGroupItem value="ethereum" id="ethereum" />;
+                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>;
+                  </div>;
+                  <div className="flex items-center space-x-2">;
+                    <RadioGroupItem value="polygon" id="polygon" />;
+                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>;
+                  </div>;
+                </RadioGroup>;
+              </div>;
+
+              <div className="space-y-2">;
+                <Label htmlFor="wallet-address">Wallet address for transactions</Label>;
+                <Input
+                  id="wallet-address" 
+                  placeholder="0x..." 
+                  value={deploymentOptions && deploymentOptions.walletAddress || ''}
+                  onChange={(e) => setDeploymentOptions({;
+                    ...deploymentOptions;                    walletAddress: e && e.target.value;
+                  })}
+                />;
+              </div>;
+
+              <div className="flex items-center space-x-2">;
+                <Switch
+                  id="use-escrow"
+                  aria-label="Use escrow"
+                  checked={deploymentOptions && deploymentOptions.useEscrow}
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;                    useEscrow: checked;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  })}
+                />;
+                <Label htmlFor="use-escrow">Use escrow for payments</Label>;
+              </div>;
+            </>;
+          )}
+
+
+          
+
+
+>>>>>>>           <div className="rounded-md bg-muted p-4">
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
               <pre>{solidityCode.slice(0, 500)}...</pre>
@@ -213,12 +318,16 @@ export function SmartContractDeployment({
         </div>
       </CardContent>
 >>>>>>>       <CardFooter className="flex justify-between">
-        <Button variant="outline" onClick={handleDownloadSolidity}>
+ursor/fix-website-loading-errors-and-merge-6662
+      <CardFooter className="flex justify-between">
+>>>>>>>         <Button variant="outline" onClick={handleDownloadSolidity}>
           <Download className="mr-2 h-4 w-4" />
           Download .sol File
         </Button>
 >>>>>>>         <Button onClick={handleDeployContract} disabled={isDeploying}>
-          {isDeploying ? (
+ursor/fix-website-loading-errors-and-merge-6662
+        <Button onClick={handleDeployContract} disabled={isDeploying}>
+>>>>>>>           {isDeploying ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Deploying...
@@ -240,4 +349,9 @@ export function SmartContractDeployment({
   isDeploying ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract')
 }</Button> </CardFooter> </Card>)
 }'"}
+>>>>>>> 
+}
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

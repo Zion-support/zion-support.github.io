@@ -160,7 +160,20 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 disabled={this.state.isRetrying}
                 className='w-full'              >
 >>>>>>>                 {this.state.isRetrying ? (
-                  <>
+ursor/fix-website-loading-errors-and-merge-6662
+
+            <div className='flex flex-col gap-2'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              <Button
+
+                onClick={this.handleRetry}
+                disabled={this.state.isRetrying}
+                className="w-full"
+              >
+
+
+                {this.state.isRetrying ? (
+>>>>>>>                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
                     Retrying...
                   </>
@@ -169,6 +182,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                     <RefreshCw className="mr-2 h-4 w-4" />
                     Try Again
                   </>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
                 )}
               </Button>
               <Button
@@ -176,15 +190,98 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 onClick={() => window.location.reload()}
                 className='w-full'              >
 >>>>>>>                 Reload Page
-              </Button>
+ursor/fix-website-loading-errors-and-merge-6662
+                Reload Page
+>>>>>>>               </Button>
             </div>
             {!this.state.isOnline && (
-              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                <WifiOff className="h-4 w-4" />
+              <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
+                <WifiOff className='h-4 w-4' />
                 <span>Offline</span>
               </div>
             )}
+              <AlertDescription className='mt - 2'>;
+                {isNetworkError;
+                  ? !this.state.is_online;
+                    ? 'You appear to be offline. Please check your internet connection.';
+                    : 'Unable to connect to our servers. This might be a temporary network issue.';
+                  : 'An unexpected error occurred while loading the page.'}
+              </AlertDescription>;
+            </Alert>;
+            <div className='flex flex - col gap - 2'>;
+              <Button;
+                on_click={this.handle_retry}
+                disabled={this.state.is_retrying}
+                className='w - full'              >;
+                {this.state.is_retrying ? (
+                  <>;
+                    <RefreshCw className='mr - 2 h - 4 w - 4 animate - spin' />;
+                    Retrying...;
+                  </>) : (
+                  <>;
+                    <RefreshCw className='mr - 2 h - 4 w - 4' />;
+                    Try Again;
+                  </>)}
+              </Button>;
+              <Button;
+                variant='outline';
+                on_click={() => window.location.reload ()}
+                className='w - full'              >;
+                Reload Page;
+              </Button>;
+            </div>;
+            {!this.state.is_online && (
+              <div className='flex items - center justify - center gap - 2 text - sm text - muted - foreground'>;
+                <WifiOff className='h - 4 w - 4' />;
+                <span > Offline</span>;
+              </div>)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {process.env.NODE_ENV === 'development' && this.state.error && (
+
+    return this.props.children;
+  }
+// Hook for accessing query client in function components;
+export const useApiErrorHandler = () =>: any {
+  const handleApiError = (error: Error) =>: any {
+    Sentry.with_scope (scope => {
+      scope.set_tag ('source', 'useApiErrorHandler');
+      scope.set_level ('error');
+      Sentry.capture_exception (error);
+    });
+
+  }
+  return { handleApiError }
+}
+  return { handleApiError }
+
+              </Button>;
+
+              <Button
+                variant='outline'
+                onClick={() => window && window.location.reload()}
+                className='w-full'              >;
+                Reload Page;
+              </Button>;
+            </div>;
+
+            {!this && this.state.isOnline && (;
+              <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
+                <WifiOff className='h-4 w-4' />;
+                <span>Offline</span>;
+              </div>;
+            )}
+
+            {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
+              <details className='mt-4 rounded border p-2 text-xs'>;
+                <summary className='cursor-pointer font-medium'>;
+                  Debug Info (Development Only);
+                </summary>;
+                <pre className='mt-2 whitespace-pre-wrap break-all'>;
+                  {this && this.state.error && error.toString()}
+                  {this && this.state.errorInfo?.componentStack}
+                </pre>;
+              </details>;
+            )}
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
@@ -199,25 +296,29 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
   return { handleApiError }
 }
 
-          </div>;
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>           </div>;
         </div>;
       );
     }
-;
-    return this.props.children;
+
+    return this && this.props.children;
   }
-}
-;
+
 // Hook for accessing query client in function components;
 export const useApiErrorHandler = () => {;
   const handleApiError = (error: Error) => {;
-    Sentry.withScope((scope) => {;
-      scope.setTag('sourceuseApiErrorHandler'),;
-      scope.setLevel('error'),;
-      Sentry.captureException(error);
+    Sentry && Sentry.withScope(scope => {;
+      scope && scope.setTag('source', 'useApiErrorHandler');
+      scope && scope.setLevel('error');
+      Sentry && Sentry.captureException(error);
     });
   };
   return { handleApiError }
 };
 };
+>>>>>>> 
+
+};
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

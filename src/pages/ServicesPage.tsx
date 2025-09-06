@@ -131,7 +131,7 @@ const ServicesPage: React.FC = () => {
 }
 export default ServicesPage
 }
-import React from 'react';
+>>>>>>> import React from 'react';
 
 const ServicesPage: React.FC = () => {
   return (
@@ -164,3 +164,5 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 

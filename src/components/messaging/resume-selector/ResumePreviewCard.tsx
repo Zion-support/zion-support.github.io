@@ -58,9 +58,26 @@ export function ResumePreviewCard({
 >>>>>>>             {resume.basic_info.summary}
           </p>
         )}
-        {resume.skills && resume.skills.length > 0 && (
-          <div className='flex flex-wrap gap-1 mt-2'>
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>         {resume.skills && resume.skills.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {resume.skills.slice(0, 5).map((skill, index) => (
+            className='h-8 w-8 p-0'>;
+            <Download className='h-4 w-4 text-zion-cyan' />;
+            <span className='sr-only'>Download Resume</span>;
+          </Button>;
+        </div>;
+
+        {resume && resume.basic_info.summary && (;
+          <p className='text-xs text-zion-slate line-clamp-2 mb-2'>;
+            {resume && resume.basic_info.summary}
+          </p>;
+        )}
+
+        {resume && resume.skills && resume && resume.skills.length > 0 && (;
+          <div className='flex flex-wrap gap-1 mt-2'>;
+            {resume && resume.skills.slice(0, 5).map((skill, index) => (;
               <Badge
                 key={index}
                 variant='outline'
@@ -99,8 +116,28 @@ export function ResumePreviewCard({
 }
       </CardContent>;
 >>>>>>>     </Card>;
-  );
-};
+ursor/fix-website-loading-errors-and-merge-6662
+              >
+                variant='outline';
+                className='bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs'              >          <div className="flex flex - wrap gap - 1 mt - 2">;
+            {resume.skills.slice (0, 5).map ((skill, index) => (
+              <Badge;
+                key = {index, }
+                variant="outline";
+                className="bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                {skill.name}
+              </Badge>))}
+            {resume.skills.length > 5 && (
+
+
+
+
+      </CardContent>;
+    </Card>;
+>>>>>>>   );
 }
 }
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

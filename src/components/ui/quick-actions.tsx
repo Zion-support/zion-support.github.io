@@ -6,16 +6,15 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { logErrorToProduction } from '@/utils/productionLogger'
 import {
-  Zap
-  Download
-  Trash2
-  RefreshCw
-  Settings
-  Activity
-  Package
-  Monitor
-} from 'lucide-react'
-
+  Zap,
+  Download,
+  Trash2,
+  RefreshCw,
+  Settings,
+  Activity,
+  Package,
+  Monitor,
+} from 'lucide-react';
 interface QuickAction {
   id: string;
   label: string;
@@ -23,14 +22,19 @@ interface QuickAction {
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
-  dangerous?: boolean
-export function QuickActions() {
-
-  const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
-  if (!isAllowed) {
-    return null
+  dangerous?: boolean;
+export /**
+ * QuickActions - Function description
+ */
+function QuickActions() {
+  const { user } = use_auth ();
+  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
+  const is_allowed = process.env.NODE_ENV !== 'production' || is_admin;
+  // Check condition
+if ( {) {
+  $2
+}
+    return null;
   }
   const [isVisible, setIsVisible] = useState(false)
   const [isProcessing, setIsProcessing] = useState<string | null>(null)
@@ -38,11 +42,12 @@ export function QuickActions() {
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
-      logErrorToProduction(`Failed to execute action ${actionId}:`, {
-        data: error
-      })
+      logErrorToProduction (`Failed to execute action ${action_id}:`, {
+        data: error,
+      });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-      setIsProcessing(null)
+      setIsProcessing (null);
     }
   }
   const actions: QuickAction[] = [
@@ -118,9 +123,10 @@ export function QuickActions() {;
     // Performance Actions
     {
       id: 'enable-performance-monitor',
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
       label: 'Enable Performance Monitor',
-      description: 'Show real-time performance metrics',
-      icon: <Activity className="w-4 h-4" />,
+      description: 'Show real - time performance metrics',
+      icon: <Activity className='w - 4 h - 4' />,
       category: 'performance',
       action: () => {
         localStorage.setItem('performance-monitoringtrue'),
@@ -134,7 +140,7 @@ export function QuickActions() {;
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
       description: 'Monitor bundle size and chunks',
-      icon: <Package className="w-4 h-4" />,
+      icon: <Package className='w - 4 h - 4' />,
       category: 'performance',
       action: () => {
         localStorage.setItem('bundle-analyzertrue'),
@@ -148,7 +154,7 @@ export function QuickActions() {;
       id: 'clear-cache',
       label: 'Clear Cache',
       description: 'Clear browser cache and storage',
-      icon: <Trash2 className="w-4 h-4" />,
+      icon: <Trash2 className='w - 4 h - 4' />,
       category: 'maintenance',
       dangerous: true,
 >>>>>>>       action: () => {
@@ -160,7 +166,9 @@ export function QuickActions() {;
       }
     }
 >>>>>>>     {
-      id: 'preload-critical-resources'
+ursor/fix-website-loading-errors-and-merge-6662
+    {
+>>>>>>>       id: 'preload-critical-resources'
       label: 'Preload Critical Resources'
       description: 'Preload fonts, images, and critical assets'
       icon: <Zap className='w-4 h-4' />
@@ -357,10 +365,6 @@ export function QuickActions() {;
   }
       }}],
 
-  const categorizedActions = {
-    performance: actions.filter(a => a.category === 'performance'),
-    development: actions.filter(a => a.category === 'development'),
-    maintenance: actions.filter(a => a.category === 'maintenance')},
 
   const categoryColors = {
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
@@ -368,8 +372,10 @@ export function QuickActions() {;
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
 >>>>>>> 
 >>>>>>>   if (!isVisible) {
-    return (
-      <div className="fixed bottom-4 left-4 z-50">
+  if (!isVisible) {
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>     return (
+      <div className='fixed bottom-4 left-4 z-50'>;
         <Button
           variant='outline'
           size='sm'
@@ -377,19 +383,28 @@ export function QuickActions() {;
           className='bg-background/80 backdrop-blur-sm'        >
           <Settings className='w-4 h-4 mr-2' />
 >>>>>>>           Quick Actions
-        </Button>
+ursor/fix-website-loading-errors-and-merge-6662
+          Quick Actions
+>>>>>>>         </Button>
       </div>
     )
+          className='bg-background/80 backdrop-blur-sm'        >;
+          <Settings className='w-4 h-4 mr-2' />;
+          Quick Actions;
+        </Button>;
+      </div>;
+    );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
-    <div className="fixed bottom-4 left-4 z-50 w-80">
-      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">
-        <CardHeader className="pb-2">
-          <div className="flex items-center justify-between">
-            <CardTitle className="text-sm flex items-center">
-              <Settings className="w-4 h-4 mr-2" />
-              Quick Actions
-            </CardTitle>
+    <div className='fixed bottom-4 left-4 z-50 w-80'>;
+      <Card className='bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto'>;
+        <CardHeader className='pb-2'>;
+          <div className='flex items-center justify-between'>;
+            <CardTitle className='text-sm flex items-center'>;
+              <Settings className='w-4 h-4 mr-2' />;
+              Quick Actions;
+            </CardTitle>;
             <Button
               variant='ghost'
               size='sm'
@@ -440,9 +455,13 @@ export function QuickActions() {;
               </div>;
             </div>;
           ))}
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
+>>>>>>> 
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

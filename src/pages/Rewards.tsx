@@ -4,7 +4,8 @@ import { Gift } from 'lucide-react'
 }
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
-  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],
+
+  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }];
 
 export default function RewardsPage() {
   return (
@@ -19,10 +20,14 @@ export default function RewardsPage() {
             </div>
             <Gift className="h-5 w-5" />
           </li>
-        ))}
+
+>>>>>>>         ))}
+
       </ul>;
     </div>;
   );
 }
 ;
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

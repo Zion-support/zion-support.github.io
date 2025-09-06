@@ -127,9 +127,14 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
 >>>>>>>           {editingId ? 'Update Certification' : 'Add Certification'}
-        </h3>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+          {editingId ? 'Update Certification' : 'Add Certification'}
+>>>>>>>         </h3>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+          <form
+            onSubmit={form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'
+          >
             <CertificationFormFields form={form} />
             <div className='flex justify-between pt-2'>
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
@@ -150,7 +155,20 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                     })
 
 >>>>>>>                     form.reset({
-                      name: '',
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+              <Button
+                type='button'
+                variant='outline'
+                onClick={() => {
+                  if (editingId) {
+
+
+                    setEditingId(null),
+                    setEditingId(null),
+
+
+                    form.reset({
+>>>>>>>                       name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
@@ -159,11 +177,49 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       credential_url: '',
                     })
 >>>>>>>                   } else {
-                    onBack()
+ursor/fix-website-loading-errors-and-merge-6662
+                  } else {
+>>>>>>>                     onBack()
+      <div className='bg-muted/40 p-6 rounded-lg'>;
+        <h3 className='text-md font-medium mb-4'>;
+          {editingId ? 'Update Certification' : 'Add Certification'}
+        </h3>;
+
+        <Form {...form}>;
+          <form
+            onSubmit={form && form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'>;
+            <CertificationFormFields form={form} />;
+
+            {error && (;
+              <Alert variant='destructive'>;
+                <AlertDescription>{error}</AlertDescription>;
+              </Alert>;
+            )}
+
+            <div className='flex justify-between pt-2'>;
+              <Button
+                type='button'
+                variant='outline'
+                onClick={() => {;
+                  if (editingId) {;
+                    setEditingId(null);
+                    form && form.reset({;
+                      name: '',;
+                      issuing_organization: '',;
+                      issue_date: '',;
+                      expiration_date: '',;
+                      credential_id: '',;
+                      credential_url: '',;
+                    });
+                  } else {;
+                    onBack();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }
                 }}
-              >
+              >;
                 {editingId ? 'Cancel' : 'Back'}
+
               </Button>
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
@@ -174,7 +230,9 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                 </Button>
                 <Button type='button' onClick={onComplete}>
 >>>>>>>                   Next
-                </Button>
+ursor/fix-website-loading-errors-and-merge-6662
+                  Next
+>>>>>>>                 </Button>
               </div>
             </div>
           </form>
@@ -186,4 +244,9 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   editingId ? 'Cancel' : 'Back'
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)
 }'"}
+>>>>>>> 
+}
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

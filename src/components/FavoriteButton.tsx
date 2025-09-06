@@ -81,27 +81,37 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
         <Tooltip>;
           <TooltipTrigger asChild>;
             <button;
-              className={cn(;
-                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors';
-                className;
-              )}
-              onClick={handleClick}
-              aria-label={active ? 'Remove from favorites' : 'Save to favorites'}
-            >;
+              class_name = {cn (
+                'absolute top - 2 right - 2 z - 10 p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - blue - light / 30 transition - colors',
+                class_name)}
+              on_click={handle_click}
+              aria - label={
+                active ? 'Remove from favorites' : 'Save to favorites';
+              }            >;
               <Heart;
-                className={cn(;
-                  'h-4 w-4 transition-transform duration-200';
-                  active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate';
-                )}
-              />;
+                class_name = {cn (
+                  'h - 4 w - 4 transition - transform duration - 200',
+                  active;
+                    ? 'fill - red - 500 text - red - 500 scale - 110';
+                    : 'text - zion - slate')}              />;
             </button>;
           </TooltipTrigger>;
-          {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
+          {!is_authenticated && <TooltipContent > Login required</TooltipContent>}
         </Tooltip>;
       </TooltipProvider>;
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
-    </>;
-  );
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+    </>);
 }
 ;
+>>>>>>> 
+
+  return (
+    <>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <button
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

@@ -25,7 +25,8 @@ export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
 >>>>>>>     unreadCount, 
-    markAsRead, 
+    unreadCount, 
+>>>>>>>     markAsRead, 
     markAllAsRead,
     dismissNotification, 
     loading,
@@ -107,15 +108,6 @@ export const NotificationCenter: React.FC = () => {;
     }
   }, [open, loadedOnce, fetchNotifications]),
 
-  const handleMarkAllAsRead = async () => {
-    try {
-      await markAllAsRead(),
-      enqueueSnackbar("All notifications marked as read", { variant: 'success' })
-    } catch (err) {
-      logErrorToProduction('Failed to mark notifications as read:', { data: err }),
-      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
-    }
-  },
 
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
@@ -134,14 +126,32 @@ export const NotificationCenter: React.FC = () => {;
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
-        <NotificationHeader
+ursor/fix-website-loading-errors-and-merge-6662
+    setFilter(newFilter as any);
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+          )}
+
+        </Button>;
+      </PopoverTrigger>;
+      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
+>>>>>>>         <NotificationHeader
           unreadCount = {unreadCount,}
           onMarkAllAsRead = {handleMarkAllAsRead,}
-        />
+        />;
+
         <NotificationFilter
           filter = {filter as FilterType,}
           onFilterChange = {handleFilterChange,}
-        />
+        />;
+
+
         <NotificationList
 }
 
@@ -162,9 +172,14 @@ export const NotificationCenter: React.FC = () => {;
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
         />;
+
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
 };
+>>>>>>> 
+        <NotificationHeader 
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

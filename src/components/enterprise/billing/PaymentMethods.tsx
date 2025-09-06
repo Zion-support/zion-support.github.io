@@ -16,7 +16,9 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 xport function PaymentMethods() {
-  // Mock payment methods
+ursor/fix-website-loading-errors-and-merge-6662
+export function PaymentMethods() {
+>>>>>>>   // Mock payment methods
 
   const paymentMethods = [
     {
@@ -43,7 +45,9 @@ xport function PaymentMethods() {
       last4: "4242",
       expMonth: 12,
 >>>>>>>       expYear: 2025,
-      isDefault: true},
+ursor/fix-website-loading-errors-and-merge-6662
+      expYear: 2025,
+>>>>>>>       isDefault: true},
     {
       id: "pm-2",
       type: "credit_card",
@@ -64,17 +68,87 @@ xport function PaymentMethods() {
         <CardDescription>
           Manage your payment methods for automatic billing
         </CardDescription>
-      </CardHeader>
-      <CardContent className='space-y-4'>
-        {paymentMethods.map(method => (
-          <div            key={method.id}
+ursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Payment Methods</CardTitle>
+
+        <CardDescription>Manage your payment methods for automatic billing</CardDescription>
+>>>>>>>       </CardHeader>
+
       <CardContent className="space-y-4">
         {paymentMethods.map((method,) => (
           <div
             key = {method.id,}
 >>>>>>>             className={`flex items-center justify-between p-4 rounded-lg border ${
               method.isDefault ? "bg-muted border-primary" : "border-border"
-            }`}
+import React from 'react';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { CreditCard, Plus, Trash } from 'lucide-react';
+import React from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { CreditCard, Plus, Trash } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { CreditCard, Plus, Trash } from 'lucide-react';
+export function PaymentMethods() {;
+  // Mock payment methods;
+  const paymentMethods = [;
+    {;
+      id: 'pm-1',;
+      type: 'credit_card',;
+      brand: 'Visa',;
+      last4: '4242',;
+      expYear: 2025,;
+      isDefault: true,;
+    },;
+    {;
+      id: 'pm-2',;
+      type: 'credit_card',;
+      brand: 'Mastercard',;
+      last4: '8888',;
+      expMonth: 4,;
+      expYear: 2026,;
+      isDefault: false,;
+    },;
+  ];
+  return (
+    <Card>;
+      <CardHeader>;
+        <CardTitle>Payment Methods</CardTitle>;
+        <CardDescription>;
+          Manage your payment methods for automatic billing;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent className='space-y-4'>;
+        {paymentMethods && paymentMethods.map(method => (;
+          <div            key={method && method.id}
+      <CardContent className="space-y-4">;
+        {paymentMethods && paymentMethods.map((method,) => (;
+          <div
+            key = {method && method.id,}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        <CardDescription>Manage your payment methods for automatic billing</CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        {paymentMethods.map((method) => (
+          <div 
+            key={method.id}
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+            className={`flex items-center justify-between p-4 rounded-lg border ${
+
+              method.isDefault ? "bg-muted border-primary" : "border-border";
+>>>>>>>             }`}
           >
             <div className="flex items-center space-x-4">
               <div className="h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background">
@@ -111,12 +185,26 @@ xport function PaymentMethods() {
               <Button size='sm' variant='ghost' className='text-destructive'>
                 <Trash className='h-4 w-4' />              </Button>              {!method.isDefault && (
 >>>>>>>                 <Button size="sm" variant="ghost">Set Default</Button>
-              )}
+ursor/fix-website-loading-errors-and-merge-6662
+                  Expires {method.expMonth}/{method.expYear}
+                </p>
+              </div>
+            </div>
+
+
+            <div className="flex gap-2">
+              {!method.isDefault && (
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                <Button size="sm" variant="ghost">Set Default</Button>
+>>>>>>>               )}
               <Button size="sm" variant="ghost" className="text-destructive">
                 <Trash className="h-4 w-4" />
               </Button>
             </div>
           </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         ))}
       </CardContent>
       <CardFooter>
@@ -129,7 +217,9 @@ xport function PaymentMethods() {
 };
         <Button className="gap-1">
 >>>>>>>           <Plus className="h-4 w-4" />
-          Add Payment Method
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+          <Plus className="h-4 w-4" />
+>>>>>>>           Add Payment Method
         </Button>
       </CardFooter>
     </Card>
@@ -206,9 +296,11 @@ export function PaymentMethods() {;
             </div>
           </div>
         ))}
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
       </CardContent>;
       <CardFooter>;
-        <Button className="gap-1">;
+        <Button className='gap-1'>;
+          <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">;
           <Plus className="h-4 w-4" />;
           Add Payment Method;
         </Button>;
@@ -217,4 +309,6 @@ export function PaymentMethods() {;
   );
 }
 ;
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

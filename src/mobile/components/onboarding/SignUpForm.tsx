@@ -5,11 +5,18 @@ import Link from 'next/link'
 import { useAuth } from "@/context/auth/AuthProvider"
 import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router'
 
-import { AlertCircle } from 'lucide-react'
-import { Alert, AlertDescription } from "@/components/ui/alert",
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useAuth } from "@/context/auth/AuthProvider";
+import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useAuth } from "@/context/auth/AuthProvider";
+import { AlertCircle } from 'lucide-react';
+import { Alert, AlertDescription } from "@/components/ui/alert";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
-export function SignUpForm() {
+export function SignUpForm() {;
 
   const router = useRouter()
   const { signUp, login, loginWithGoogle } = useAuth()
@@ -27,11 +34,12 @@ export function SignUpForm() {
     setFormData(prev => ({ ...prev, [name]: value }))
     setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }))
   }
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setError("")
-    setFieldErrors({})
-    setIsLoading(true)
+  const handle_submit = async (e: React.FormEvent) => {
+    e.prevent_default ();
+    set_error (""),
+    setFieldErrors ({});
+    setIsLoading (true);
+
     const errors: { email?: string, password?: string, name?: string } = {}
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/
@@ -96,10 +104,11 @@ export function SignUpForm() {
     setError(""),
     setFieldErrors({}),
     setIsLoading(true),
-
-    const errors: { email?: string, password?: string, name?: string } = {},
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    name: ""}),
+>>>>>>> 
 
     if (signupMode && !formData.name.trim()) {
       errors.name = 'Full name is required'
@@ -154,10 +163,17 @@ export function SignUpForm() {;
     } else if (!strongPasswordRegex.test(formData.password)) {
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
     }
-    if (Object.keys(errors).length > 0) {
+ursor/fix-website-loading-errors-and-merge-6662
+    }
+
+
+
+
+
+>>>>>>>     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)
-      return;
+      return
     }
     try {
       setShowVerificationMessage(false), // Reset verification message
@@ -184,8 +200,58 @@ export function SignUpForm() {;
 >>>>>>>         }
 
 >>>>>>>         if (result?.emailVerificationRequired) {
-          setShowVerificationMessage(true)
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+        if (result?.emailVerificationRequired) {
+>>>>>>>           setShowVerificationMessage(true)
+    if () {) {
+  $2
+}
+      errors.email = 'Email is required';
+    } else if () {) {
+  $2
+}
+      errors.email = 'Invalid email address';
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      errors.password = 'Password is required';
+    } else if () {) {
+  $2
+}
+      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.';
+    }
+    // Check condition
+if (.length > 0) {) {
+  $2
+}
+      setFieldErrors (errors);
+      setIsLoading (false);
+      return;
+    }
+    try {
+      setShowVerificationMessage (false), // Reset verification message;
+      // Check condition
+if ( {) {
+  $2
+}
+        const result = await sign_up (form_data.email, form_data.password, {
+          name: form_data.name}),
+        // Check condition
+if ( {) {
+  $2
+}
+          throw new Error (result.error as any), // Cast to any if type is AuthError;
+        }
+        // Check condition
+if ( {) {
+  $2
+}
+          setShowVerificationMessage (true);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
+
           // Only navigate if email verification is not required
           router.push("/mobile")
         }
@@ -203,13 +269,111 @@ export function SignUpForm() {;
       setIsLoading(false)
     }
 
+ursor/fix-website-loading-errors-and-merge-6662
+      }
+    } catch (err: any) {
+      logErrorToProduction('Signup/Login error:', { data: err })
+      setError(err.message |'An unexpected error occurred. Please try again.')
+        router.push ("/mobile");
+      }
+    } catch (err: any) {
+      logErrorToProduction ('Signup / Login error:', { data: err }),
+      set_error (err.message || 'An unexpected error occurred. Please try again.');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+      setIsLoading (false);
+    }
+
+  const router = useRouter();
+  const { signUp, login, loginWithGoogle } = useAuth();
+
+  const [formData, setFormData] = useState({;
+    email: "",;
+    password: "",;
+    name: ""}),;
+  const [isLoading, setIsLoading] = useState(false);
+  const [signupMode, setSignupMode] = useState(true);
+  const [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({});
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
+
+  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e && e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }));
+
+>>>>>>>   };
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setError(""),;
+    setFieldErrors({});
+    setIsLoading(true);
+    const errors: { email?: string, password?: string, name?: string } = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/;
+
+    if (signupMode && !formData && formData.name.trim()) {;
+      errors && errors.name = 'Full name is required';
+    }
+
+    if (!formData && formData.email.trim()) {;
+      errors && errors.email = 'Email is required';
+    } else if (!emailRegex && emailRegex.test(formData && formData.email)) {;
+      errors && errors.email = 'Invalid email address';
+    }
+
+    if (!formData && formData.password) {;
+      errors && errors.password = 'Password is required';
+    } else if (!strongPasswordRegex && strongPasswordRegex.test(formData && formData.password)) {;
+      errors && errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.';
+    }
+
+    if (Object && Object.keys(errors).length > 0) {;
+      setFieldErrors(errors);
+      setIsLoading(false);
+      return;
+    }
+
+    try {;
+      setShowVerificationMessage(false), // Reset verification message;
+      if (signupMode) {;
+        const result = await signUp(formData && formData.email, formData && formData.password, {;
+          name: formData && formData.name}),;
+        if (result?.error) {;
+          throw new Error(result && result.error as any), // Cast to any if type is AuthError;
+        }
+
+        if (result?.emailVerificationRequired) {;
+          setShowVerificationMessage(true);
+        } else {;
+          // Only navigate if email verification is not required;
+          router && router.push("/mobile");
+        };
+      } else {;
+        const { error } = await login(formData && formData.email, formData && formData.password);
+
+        if (error) {;
+          throw new Error(error);
+        }
+
+        router && router.push("/mobile");
+      }
+    } catch (err: any) {;
+      logErrorToProduction('Signup/Login error:', { data: err }),;
+      setError(err && err.message || 'An unexpected error occurred. Please try again.');
+    } finally {;
+      setIsLoading(false);
+    }
   };
+
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
-      setError(err.message);
+      setError(err && err.message);
     }
+
   },
   
 >>>>>>>   return (
@@ -218,10 +382,19 @@ export function SignUpForm() {;
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
 >>>>>>>       <div className="space-y-2">
-        <Button
+ursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+
+      
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+      <div className="space-y-2">
+>>>>>>>         <Button
           variant="outline"
           className="w-full py-6 relative"
-          onClick={handleGoogleLogin}
+          onClick = {handleGoogleLogin,}
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
@@ -254,10 +427,16 @@ export function SignUpForm() {;
         </Alert>
       )}
 >>>>>>>       )}
-      <form onSubmit={handleSubmit} className="space-y-4">
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
+      <form onSubmit={handleSubmit} className="space-y-4">;
+        {signupMode && (;
+          <div className="space-y-2">;
+            <Label htmlFor="name">Full name</Label>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Input
               id="name"
               name="name"
@@ -272,8 +451,24 @@ export function SignUpForm() {;
             )}
           </div>
         )}
-        <div className="space-y-2">
+ursor/fix-website-loading-errors-and-merge-6662
+              placeholder="Enter your full name"
+            />;
+            {fieldErrors && fieldErrors.name && (;
+              <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.name}</p>;
+            )}
+          </div>;
+        )}
+
+
+
+
+
+>>>>>>>         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
+        <div className="space-y-2">;
+          <Label htmlFor="email">Email address</Label>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Input
             id="email"
             name="email"
@@ -286,10 +481,18 @@ export function SignUpForm() {;
           />
           {fieldErrors.email && (
             <p className="text-red-500 text-sm">{fieldErrors.email}</p>
-          )}
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="password">Password</Label>
+ursor/fix-website-loading-errors-and-merge-6662
+            placeholder="Enter your email"
+          />;
+          {fieldErrors && fieldErrors.email && (;
+            <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.email}</p>;
+>>>>>>>           )}
+
+        </div>;
+
+        <div className="space-y-2">;
+          <Label htmlFor="password">Password</Label>;
+
           <Input
             id="password"
             name="password"
@@ -306,24 +509,133 @@ export function SignUpForm() {;
           )}
         </div>
 >>>>>>>         <Button
-          type="submit"
+ursor/fix-website-loading-errors-and-merge-6662
+            placeholder="Create a password"
+          />;
+          <PasswordStrengthMeter password={formData && formData.password} />;
+          {fieldErrors && fieldErrors.password && (;
+            <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.password}</p>;
+          )}
+
+        </div>;
+
+
+        
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+        <Button
+>>>>>>>           type="submit"
           className="w-full py-6"
-          disabled={isLoading}
-        >
-          {isLoading ? (
-            <>
-              <LoadingSpinner size="sm" className="mr-2" />
-              Please wait...
-            </>
-          ) : (
-            signupMode ? "Create Account" : "Sign In"
+          disabled = {isLoading,}>;
+          {isLoading ? (;
+            <>;
+              <LoadingSpinner size="sm" className="mr-2" />;
+              Please wait...;
+            </>;
+          ) : (;
+            signupMode ? "Create Account" : "Sign In";
           )}
         </Button>
       </form>
 >>>>>>>       <p className="text-center text-sm">
-        {signupMode
+ursor/fix-website-loading-errors-and-merge-6662
+      <p className="text-center text-sm">
+>>>>>>>         {signupMode
           ? "Already have an account? "
           : "Don't have an account? "
+      <div className="relative flex items - center">;
+        <div className="flex - grow border - t border - border"></div>;
+        <span className="mx - 2 text - xs text - muted - foreground">OR</span>;
+        <div className="flex - grow border - t border - border"></div>;
+      </div>;
+      {/* Error Alert */}
+      {error && (
+        <Alert variant="destructive" className="mb - 4">;
+          <AlertCircle className="h - 4 w - 4" />;
+          <AlertDescription>{error}</AlertDescription>;
+        </Alert>)}
+      {/* Verification Message */}
+      {showVerificationMessage && (
+        <Alert className="mb - 4 border - blue - 500 bg - blue - 50">;
+          <AlertCircle className="h - 4 w - 4" />;
+          <AlertDescription>;
+            Please check your email and click the verification link before signing in.;
+          </AlertDescription>;
+        </Alert>)}
+      <form on_submit={handle_submit} className="space - y-4">;
+        {signup_mode && (
+          <div className="space - y-2">;
+            <Label html_for="name">Full name</Label>;
+            <Input;
+              id="name";
+              name="name";
+              value = {form_data.name, }
+              on_change = {handleInputChange, }
+              required;
+              aria - invalid = {!!field_errors.name, }
+              placeholder="Enter your full name";
+            />;
+            {field_errors.name && (
+              <p className="text - red - 500 text - sm">{field_errors.name}</p>)}
+          </div>)}
+        <div className="space - y-2">;
+          <Label html_for="email">Email address</Label>;
+          <Input;
+            id="email";
+            name="email";
+            type="email";
+            value = {form_data.email, }
+            on_change = {handleInputChange, }
+            required;
+            aria - invalid = {!!field_errors.email, }
+            placeholder="Enter your email";
+          />;
+          {field_errors.email && (
+            <p className="text - red - 500 text - sm">{field_errors.email}</p>)}
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="password">Password</Label>;
+          <Input;
+            id="password";
+            name="password";
+            type="password";
+            value = {form_data.password, }
+            on_change = {handleInputChange, }
+            required;
+            aria - invalid = {!!field_errors.password, }
+            placeholder="Create a password";
+          />;
+          <PasswordStrengthMeter password={form_data.password} />;
+          {field_errors.password && (
+            <p className="text - red - 500 text - sm">{field_errors.password}</p>)}
+        </div>;
+        <Button;
+          type="submit";
+          className="w - full py - 6";
+          disabled = {is_loading, }
+        >;
+          {is_loading ? (
+            <>;
+              <LoadingSpinner size="sm" className="mr - 2" />;
+              Please wait...;
+            </>) : (
+            signup_mode ? "Create Account" : "Sign In")}
+        </Button>;
+      </form>;
+      <p className="text - center text - sm">;
+        {signup_mode;
+          ? "Already have an account? ";
+          : "Don't have an account? ";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        }
+
+        </Button>;
+      </form>;
+
+      <p className="text-center text-sm">;
+        {signupMode;
+          ? "Already have an account? ";
+          : "Don't have an account? ";
         }
         <Link
           href="/login"
@@ -365,4 +677,9 @@ if (error) {
   isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") "
 }</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>)
 }"}
+>>>>>>> 
+}
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

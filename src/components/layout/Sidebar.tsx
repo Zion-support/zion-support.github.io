@@ -9,14 +9,11 @@ import {
   Menu
 } from 'lucide-react'
 
-const Sidebar = () => {
-  const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign },
-    { name: 'Contact', href: '/contact', icon: Phone }
-  ]
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Sidebar: React.FC = () => {;
   return (
     <aside className="hidden lg:block w-64 bg-white shadow-lg min-h-screen">
       <div className="p-6">
@@ -43,3 +40,4 @@ const Sidebar = () => {
   )
 }
 export default Sidebar
+>>>>>>> 

@@ -50,11 +50,13 @@ import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
 import { cn } from "@/lib/utils",
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 
+
 interface ProfileBadgeProps {
   type: BadgeType,
 >>>>>>>   className?: string
-}
-
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {
@@ -75,25 +77,24 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     "top-rated": {
       icon: Award,
       text: 'Top Rated',
-      colors: 'bg-purple-500/20 text-purple-400',
+      colors: 'bg - purple - 500 / 20 text - purple - 400',
     },
   }
-  const { icon: Icon, text, colors } = badgeConfig[type]
-    >
-      <Icon className='w-3 h-3' />
-      <span>{text}</span>
-    </div>
-  )
-  type, className 
+  const { icon: Icon, text, colors } = badge_config[type];
+    >;
+      <Icon className='w - 3 h - 3' />;
+      <span>{text}</span>;
+    </div>);
+  type, class_name;
 }: ProfileBadgeProps) {
-  const badgeConfig = {
+  const badge_config = {
   verified: {
   const {
-  icon: Icon,  text, colors 
-}= badgeConfig[type]
-}> <Icon className="w-3 h-3" /> <span> {
-  text 
-}</span>
+  icon: Icon,  text, colors;
+}= badge_config[type];
+}> <Icon className="w - 3 h - 3" /> <span> {
+  text;
+}</span>;
 }'"  );
 };
       text: "Top Rated",
@@ -151,4 +152,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
   );
 }
 ;
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

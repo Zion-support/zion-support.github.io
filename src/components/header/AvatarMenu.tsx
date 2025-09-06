@@ -14,3 +14,6 @@ import { LogOut } from 'lucide-react', // Assuming lucide-react is used
 
 export const AvatarMenu: React.FC;
 >>>>>>> 
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 

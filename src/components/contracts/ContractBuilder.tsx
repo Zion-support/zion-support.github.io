@@ -1,11 +1,4 @@
 
-interface ContractBuilderProps {
-  isOpen: boolean,
-  onClose: () => void,
-  talent: TalentProfile,
-  clientName: string,
-  onContractGenerated?: (contractContent: string,) => void
-}
 
 export function ContractBuilder({
   isOpen
@@ -66,23 +59,41 @@ export function ContractBuilder({
   onClose;
   talent;
   clientName;
-  onContractGenerated
-}: ContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form")
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null)
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
-    undefined
-  ),
+
+  onContractGenerated;
+}: ContractBuilderProps) {;
+  const [activeTab, setActiveTab] = useState<string>("form");
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
+    undefined;
+  );
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-  const handleLoadTemplate = null;
-          onClose()
+
+  const handleLoadTemplate = (templateData: ContractFormValues,) => {;
+    setFormValues(templateData);
+  };
+
+  const handleContractGenerated = (contract: string) => {;
+    setGeneratedContract(contract);
+    setActiveTab("preview");    if (onContractGenerated) {;
+      onContractGenerated(contract);
+    }
+  };
+
+  if (showSmartContractBuilder) {;
+    return (
+      <SmartContractBuilder
+        isOpen={isOpen}
+        onClose={() => {;
+          setShowSmartContractBuilder(false);          onClose();
+
         }}
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
-      />
-    )
+      />;
+    );
   }
 >>>>>>>   }
 
@@ -99,10 +110,19 @@ export function ContractBuilder({
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
 >>>>>>>             <div className="flex gap-2">
-              <Button
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+
+            
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+            <div className="flex gap-2">
+>>>>>>>               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => setTemplateManagerOpen(true)}
+                onClick = {(,) => setTemplateManagerOpen(true),}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
@@ -118,7 +138,25 @@ export function ContractBuilder({
             </div>
           </div>
             <ContractForm
-              talent = {talent,}
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick = {() => setShowSmartContractBuilder(true),}
+
+              >;
+                Smart Contract Builder;
+              </Button>;
+            </div>;
+          </div>;
+
+          <TabsContent value="form" className="pt-4">;
+
+            <ContractForm
+            <ContractForm 
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>               talent = {talent,}
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
@@ -128,14 +166,18 @@ export function ContractBuilder({
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <ContractPreview
-                contractContent = {generatedContract,}
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>                 contractContent = {generatedContract,}
                 talent = {talent,}
                 onClose = {onClose,}
                 status="ready"
-              />
+              />;
             )}
-          </TabsContent>
-        </Tabs>
+
+          </TabsContent>;
+        </Tabs>;
+
+
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
@@ -199,6 +241,22 @@ export function ContractBuilder({
       </DialogContent>;
     </Dialog>;
   );
-}
+
+  handleContractGenerated;
+}/> </TabsContent> />);
+}</TabsContent> </Tabs> <TemplateManager is_open= {
+  templateManagerOpen;
+}on_close= {
+  () => setTemplateManagerOpen (false);
+}onSelectTemplate= {
+  handleLoadTemplate;
+}current_values= {
+  form_values;
+}/> </DialogContent> </Dialog>);
+}"}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> }
 ;
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

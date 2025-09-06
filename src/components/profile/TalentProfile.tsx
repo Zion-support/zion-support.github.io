@@ -17,12 +17,12 @@ interface TalentProfileProps {
   onRequestHire: () => void;
   onMessageTalent?: () => void
 
-export function TalentProfile({
-  profile
-  onRequestHire
 
-  onMessageTalent
-}: TalentProfileProps) {
+export function TalentProfile(): any ({;
+  profile,;
+  onRequestHire,;
+  onMessageTalent,;
+}: TalentProfileProps) {;
   const { isAuthenticated } = useAuth();
 >>>>>>>   profile,
   onRequestHire,
@@ -179,7 +179,8 @@ export function TalentProfile({;
               ratingCount={profile.rating_count}            />
           </div>
 >>>>>>>           {/* Hire Now CTA */}
-          {isAuthenticated && (
+          {/* Hire Now CTA */}
+>>>>>>>           {isAuthenticated && (
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
               <div className="flex flex-col items-center text-center">
                 <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>
@@ -203,11 +204,13 @@ export function TalentProfile({;
                       onClick={onMessageTalent}                    >
                       <MessageSquare className='mr-2 h-5 w-5' />
 >>>>>>>                       Message
-                    </Button>
+                      Message
+>>>>>>>                     </Button>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
                   )}
-                </div>
-              </div>
-            </div>
+                </div>;
+              </div>;
+            </div>;
           )}
         </div>
       </div>;
@@ -215,4 +218,8 @@ export function TalentProfile({;
   );
 };
 }
+>>>>>>> 
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

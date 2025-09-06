@@ -20,7 +20,8 @@ xport function SocialShareButtons({ title }: SocialShareButtonsProps) {
     )
   const copyLink = () => {
     if (typeof window === 'undefined') return
-  },
+
+>>>>>>>   },
 
   const shareToFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, '_blank')
@@ -93,4 +94,6 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
   );
 }
 ;
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

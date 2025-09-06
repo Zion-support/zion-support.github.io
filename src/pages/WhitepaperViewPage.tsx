@@ -53,7 +53,9 @@ interface SharedWhitepaper {;
 >>>>>>> }
 
 onst WhitepaperViewPage: React.FC = () => {
-  const router = useRouter()
+ursor/fix-website-loading-errors-and-merge-6662
+const WhitepaperViewPage: React.FC = () => {
+>>>>>>>   const router = useRouter()
   const { id: rawId } = router.query
   const id = typeof rawId === 'string' ? rawId : undefined
   const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null)
@@ -142,12 +144,14 @@ export default WhitepaperViewPage;
     },;
     fetchWhitepaper();
   }, [id]),;
+
   if (loading) {;
     return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>;
   }
-;
+
   if (error) {;
-    return (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
       <div className="flex flex-col justify-center items-center h-screen text-red-600">;
         <p>Error: {error}</p>;
         <Button asChild variant="link" className="mt-4">;
@@ -156,9 +160,11 @@ export default WhitepaperViewPage;
       </div>;
     );
   }
-;
+
+
   if (!sharedData) { // Check sharedData which includes the is_public flag;
-    return (;
+
+    return (
          <div className="flex flex-col justify-center items-center h-screen">;
             <p>Whitepaper not found.</p> {/* This can be a generic message */}
             <Button asChild variant="link" className="mt-4">;
@@ -167,10 +173,12 @@ export default WhitepaperViewPage;
         </div>;
     );
   }
-;
+
+
   // Access control based on is_public and admin role;
-  if (!sharedData.is_public && !isAdmin) {;
-    return (;
+  if (!sharedData && sharedData.is_public && !isAdmin) {;
+
+    return (
       <div className="flex flex-col justify-center items-center h-screen">;
         <h2 className="text-2xl font-semibold mb-4">Access Denied</h2>;
         <p className="mb-4">This whitepaper is not public and you do not have permission to view it.</p>;
@@ -180,9 +188,12 @@ export default WhitepaperViewPage;
       </div>;
     );
   }
-;
+
+
   const { whitepaper_data: whitepaper } = sharedData,;
-  return (;
+
+
+  return (
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">;
         <div className="mb-6 flex justify-between items-center">;
             <Button asChild variant="outline">;
@@ -190,21 +201,27 @@ export default WhitepaperViewPage;
                     <ArrowLeft className="mr-2 h-4 w-4" /> Back;
                  </Link>;
             </Button>;
-            {!sharedData.is_public && isAdmin && (;
+            {!sharedData && sharedData.is_public && isAdmin && (;
                 <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">;
                     Private (Admin View);
                 </span>;
             )}
         </div>;
-      <WhitepaperPreviewPanel;
-        sections={whitepaper.sections}
-        distributionChartData={whitepaper.distributionChartData}
-        tokenName={whitepaper.tokenName}
-        tokenSupply={whitepaper.tokenSupply}
+      <WhitepaperPreviewPanel
+
+        sections = {whitepaper && whitepaper.sections,}
+        distributionChartData = {whitepaper && whitepaper.distributionChartData,}
+        tokenName = {whitepaper && whitepaper.tokenName,}
+        tokenSupply = {whitepaper && whitepaper.tokenSupply,}
       />;
     </div>;
   );
 },;
 export default WhitepaperViewPage;
 export default WhitepaperViewPage;
+>>>>>>> 
+        setError("No whitepaper ID provided."),
+        setLoading(false),
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

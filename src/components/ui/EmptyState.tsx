@@ -15,7 +15,14 @@ export function EmptyState({
   onRetry,
   showRetry = false,
 >>>>>>>   icon
-}: EmptyStateProps) {
+  text?: string;
+  description?: string;
+  onRetry?: () => void;
+  showRetry?: boolean;
+
+
+  icon
+>>>>>>> }: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
       <div className="mb-4 text-gray-400">
@@ -57,7 +64,59 @@ export function EmptyState({
       {showRetry && onRetry && (
         <Button
 >>>>>>>           onClick={onRetry}
-          variant="outline"
+ursor/fix-website-loading-errors-and-merge-6662
+  description,;
+  onRetry,;
+export function EmptyState(): any ({ ;
+  text = "No items available";
+  description;
+  onRetry;
+  showRetry = false;
+  icon;
+}: EmptyStateProps) {;
+  return (
+    <div className="flex flex-col items-center justify-center py-16 px-4 text-center">;
+      <div className="mb-4 text-gray-400">;
+        {icon || <Package className="h-16 w-16" />}
+      </div>;
+      <h3 className="text-xl font-semibold text-white mb-2">;
+        {text}
+      </h3>;
+      {description && (;
+        <p className='text-gray-400 mb-6 max-w-md'>{description}</p>;
+  showRetry = false,;
+  icon,;
+}: EmptyStateProps) {;
+  return (
+    <div className='flex flex-col items-center justify-center py-16 px-4 text-center'>;
+      <div className='mb-4 text-gray-400'>;
+        {icon || <Package className='h-16 w-16' />}
+      </div>;
+      <h3 className='text-xl font-semibold text-white mb-2'>{text}</h3>;
+      {description && (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        <p className='text-gray-400 mb-6 max-w-md'>{description}</p>      )}
+      {showRetry && onRetry && (;
+        <Button
+          onClick={onRetry}
+          variant='outline'
+          className='flex items-center gap-2'>;
+          <RefreshCw className='h-4 w-4' />          Try Again      )}
+      {showRetry && onRetry && (;
+        <Button
+          onClick={onRetry}
+          variant='outline'
+          className='flex items-center gap-2'>;
+          <RefreshCw className='h-4 w-4' />        <p className="text-gray-400 mb-6 max-w-md">;
+          {description}
+        </p>;
+
+      )}
+      {showRetry && onRetry && (;
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+          onClick={onRetry}
+>>>>>>>           variant="outline"
           className="flex items-center gap-2"
         >
           <RefreshCw className="h-4 w-4" />
@@ -70,9 +129,13 @@ export function EmptyState({
 >>>>>>>         </Button>
       )}
     </div>;
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
   );
 } ;
 }
 }
 }
+>>>>>>> 
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

@@ -52,7 +52,11 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
   )
 }
 >>>>>>>     confirmPassword: z.string()})
-  .refine((data) => data.password === data.confirmPassword, {
+      .max(64, "Password must be less than 64 characters"),
+      .max(64, "Password must be less than 64 characters"),
+
+>>>>>>>     confirmPassword: z.string()})
+>>>>>>>   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
@@ -62,12 +66,6 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 };
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
-export default function UpdatePassword() {
-  const [isLoading, setIsLoading] = useState(false),
-  const [accessToken, setAccessToken] = useState<string | null>(null),
-  const [error, setError] = useState<string | null>(null),
-  const [success, setSuccess] = useState(false),
-  const router = useRouter(),
 
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
@@ -414,4 +412,6 @@ export default function UpdatePassword() {;
   );
 }
 ;
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

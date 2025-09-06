@@ -16,7 +16,21 @@ export function MobileFilterBar({
   setSearchTerm
   setIsMobileFilterOpen
 
-}: MobileFilterBarProps) {
+
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Search, Sliders } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+interface MobileFilterBarProps {;
+  searchTerm: string;
+  setSearchTerm: (value: string) => void;
+  setIsMobileFilterOpen: (isOpen: boolean) => void;
+export function MobileFilterBar(): any ({;
+  searchTerm,;
+  setSearchTerm,;
+  setIsMobileFilterOpen,;
+}: MobileFilterBarProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 export function MobileFilterBar({
   searchTerm,
@@ -109,6 +123,7 @@ export function MobileFilterBar({;
           className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate";
         />;
         <p id="mobile-talent-search-help" className="sr-only">;
+
           Search by name or skill;
         </p>;
       </div>;
@@ -116,4 +131,9 @@ export function MobileFilterBar({;
   );
 }
 ;
+>>>>>>> 
+;
+
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

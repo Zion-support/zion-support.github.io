@@ -46,7 +46,20 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
             <span className='text-sm text-muted-foreground'>
               {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}            <span className="text-sm text-muted-foreground">
 >>>>>>>               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
-            </span>
+ursor/fix-website-loading-errors-and-merge-6662
+                  }`}
+                />
+              ))}
+            </div>
+
+
+            <span className="text-sm text-muted-foreground">
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+              {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>>             </span>
           </div>
         </div>
       </div>
@@ -57,11 +70,20 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 value = {getPercentage(ratingDistribution[rating] |0),}
                 className="h-2"
               />
-              <div className='w-8 text-xs text-muted-foreground'>                {ratingDistribution[rating] |0}              <div className="w-8 text-xs text-muted-foreground">
-                {ratingDistribution[rating] |0}
+
+              <div className="w-8 text-xs text-muted-foreground">
+                {ratingDistribution[rating] || 0}
+
               </div>
             </div>
-      
+            </span>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+>>>>>>>       
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
@@ -89,8 +111,59 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
 }</div>)
 }</div>)
 }"}
+            <div key={rating} className="flex items-center gap-2">
+              <div className="w-6 text-sm text-right">{rating}</div>
+              <Star className="h-3 w-3 text-yellow-400" />
+              <Progress 
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+          ))}
+        </div>;
+      )}
+
     </div>;
+  );
+
+}</div>) ;
+}</div>) ;
+}"}
+
+      {rating_distribution && (
+        <div className='space - y-2'>;
+          {[5, 4, 3, 2, 1].map (rating => (
+            <div key={rating} className='flex items - center gap - 2'>;
+              <div className='w - 6 text - sm text - right'>{rating}</div>;
+              <Star className='h - 3 w - 3 text - yellow - 400' />;
+              <Progress;
+                value={get_percentage (rating_distribution[rating] || 0)}
+                className='h - 2'        <div className="space - y-2">;
+          {[5, 4, 3, 2, 1].map ((rating, ) => (
+            <div key={rating} className="flex items - center gap - 2">;
+              <div className="w - 6 text - sm text - right">{rating}</div>;
+              <Star className="h - 3 w - 3 text - yellow - 400" />;
+              <Progress;
+                value = {get_percentage (rating_distribution[rating] || 0), }
+                className="h - 2";
+              />;
+              <div className='w - 8 text - xs text - muted - foreground'>                {rating_distribution[rating] || 0}              <div className="w - 8 text - xs text - muted - foreground">;
+                {rating_distribution[rating] || 0}
+              </div>;
+            </div>))}
+        </div>)}
+    </div>);
+}</div>);
+}</div>);
+}"}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> }</div>) ;
+}</div>) ;
+}"};
+
+>>>>>>>     </div>;
   );
 }
 ;
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

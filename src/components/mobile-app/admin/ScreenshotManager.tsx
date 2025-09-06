@@ -232,7 +232,9 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
             onClick={() => fileInputRef.current?.click()}
             onClick = {(,) => fileInputRef.current?.click(),}
 >>>>>>>             className="mt-2"
-          >
+ursor/fix-website-loading-errors-and-merge-6662
+            className="mt-2"
+>>>>>>>           >
             <Plus className="mr-2 h-4 w-4" />
             Select Files
           </Button>
@@ -252,9 +254,48 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               <img
                 src = {screenshot.url,}
 >>>>>>>                 alt="App screenshot"
-                className="w-full h-auto rounded border border-zion-purple/20"
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
+          }
+        </div>
+
+          />;
+          <Button
+            variant="outline" 
+            onClick = {(,) => fileInputRef && fileInputRef.current?.click(),}
+            className="mt-2";
+          >;
+            <Plus className="mr-2 h-4 w-4" />;
+            Select Files;
+          </Button>;
+        </div>;
+
+        <div className="text-xs text-gray-300 mb-4">;
+          {platform === "ios" ;
+            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.";
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
+          }
+        </div>;
+
+        <div className="grid grid-cols-2 gap-3">;
+          {screenshots && screenshots.map((screenshot,) => (;
+            <div key={screenshot && screenshot.id} className="relative group">;
+
+              <img
+                src = {screenshot && screenshot.url,}
+        
+        <div className="grid grid-cols-2 gap-3">
+          {screenshots.map((screenshot) => (
+            <div key={screenshot.id} className="relative group">
+              <img
+                src={screenshot.url}
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+                alt="App screenshot"
+>>>>>>>                 className="w-full h-auto rounded border border-zion-purple/20"
                 loading="lazy"
-              />
+              />;
               <button
                 onClick = {(,) => removeScreenshot(screenshot.id),}
 >>>>>>>                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
@@ -266,9 +307,15 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           ))}
 }
 
-        </div>;
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>         </div>;
       </CardContent>;
     </Card>;
   );
 };
+>>>>>>> 
+};
+
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

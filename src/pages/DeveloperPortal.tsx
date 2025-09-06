@@ -24,13 +24,24 @@ export function DeveloperPortal() {
   const { user } = useAuth();
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
-import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
+ursor/fix-website-loading-errors-and-merge-6662
+          Developer Portal
+        </h1>
+        <p className='text-zinc-400 mt-2'>
+          Access the Zion API, manage your API keys, and set up webhooks.
+        </p>
+      </div>
 
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
-import { WebhooksManager } from "@/components/developers/WebhooksManager",
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
-import { ApiLogs } from "@/components/developers/ApiLogs",
+
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+>>>>>>> import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
+
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
+import { WebhooksManager } from "@/components/developers/WebhooksManager";
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
+import { ApiLogs } from "@/components/developers/ApiLogs";
 interface TabDefinition {
   id: string,
   label: string,
@@ -113,7 +124,18 @@ export function DeveloperPortal() {
     </div>
   )
 }
-export default function ProtectedDeveloperPortal() {
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+        {activeTab === "documentation" && <ApiDocumentation />}
+        {activeTab === "api-keys" && <ApiKeysManager />}
+        {activeTab === "webhooks" && <WebhooksManager />}
+        {activeTab === "logs" && <ApiLogs />}
+
+
+
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+xport default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
       <DeveloperPortal />
@@ -124,12 +146,16 @@ export default function ProtectedDeveloperPortal() {
   )
 }
 ;
+
 export default function ProtectedDeveloperPortal() {;
-  return (;
+  return (
     <ProtectedRoute>;
       <DeveloperPortal />;
     </ProtectedRoute>;
   );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 ;
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

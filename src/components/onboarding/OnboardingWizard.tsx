@@ -135,7 +135,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const { user } = useAuth(),
   
 >>>>>>>   // Define steps based on user type
-  const clientSteps: WizardStep[] = [
+  // Define steps based on user type
+>>>>>>>   const clientSteps: WizardStep[] = [
     {
       title: "Post your first job",
       description: "Describe the talent you need for your project",
@@ -315,9 +316,82 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 >>>>>>>             {steps[currentStep]?.skipText}
           </Button>
         )}
-      </CardFooter>;
+            {steps.map((_, index) => (
+              <div
+                key={index}
+                className={cn(
+
+                  "h-2 w-2 rounded-full mx-1",
+                  index === currentStep
+                    ? "bg-zion-purple scale-125"
+                    : index < currentStep
+                    ? "bg-zion-cyan"
+                    : "bg-zion-blue-light"
+                )}
+              />;
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center text-center p-4">
+          <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+            {steps[currentStep]?.icon}
+          </div>;
+          <h3 className='text-xl font-bold text-white mb-2'>;
+            {steps[currentStep]?.title}
+          </h3>;
+          <p className='text-zion-slate-light mb-6'>;
+            {steps[currentStep]?.description}
+          </p>;
+        </div>;
+      </CardContent>;
+      <CardFooter className='flex flex-col space-y-2'>;
+        <Button
+
+          onClick={handleAction}>;
+          {steps[currentStep]?.action && action.text}
+        </Button>;
+
+        {steps[currentStep]?.skipText && (;
+
+          <Button
+            variant='ghost'
+            className='text-zion-slate-light hover:text-white'
+            onClick={handleSkip}>;
+          className="w-full bg-zion-purple hover:bg-zion-purple-light"
+          onClick={handleAction}
+        >;
+          {steps[currentStep]?.action.text}
+        </Button>
+        
+        {steps[currentStep]?.skipText && (
+          <Button
+            variant="ghost"
+            className="text-zion-slate-light hover:text-white"
+            onClick={handleSkip}
+          >;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+            {steps[currentStep]?.skipText}
+          </Button>;
+        )}
+
+
+;
+}
+
+
+>>>>>>>       </CardFooter>;
     </Card>;
   );
+
 }
 ;
+>>>>>>> 
+;
+
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

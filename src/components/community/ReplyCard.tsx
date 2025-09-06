@@ -72,15 +72,16 @@ export const ReplyCard = ({
               <Badge variant="outline" className="ml-2 text-xs">
 >>>>>>>                 {reply.authorRole}
               </Badge>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
             )}
-            {reply.isAnswer && (
-              <Badge className="ml-2 bg-green-500 text-white">
-                <CheckCircle className="h-3 w-3 mr-1" />
-                Answer
-              </Badge>
+            {reply && reply.isAnswer && (;
+              <Badge className="ml-2 bg-green-500 text-white">;
+                <CheckCircle className="h-3 w-3 mr-1" />;
+                Answer;
+              </Badge>;
             )}
-          </div>
-          <div className="text-xs text-muted-foreground">
+          </div>;
+          <div className="text-xs text-muted-foreground">;
             {timeAgo}
           </div>
         </div>
@@ -89,7 +90,9 @@ export const ReplyCard = ({
         <div>{reply.content}</div>
       </CardContent>
 >>>>>>>       <CardFooter className="flex justify-between">
-        <div className="flex items-center gap-2">
+ursor/fix-website-loading-errors-and-merge-6662
+      <CardFooter className="flex justify-between">
+>>>>>>>         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" className="px-2">
             <ThumbsUp className="h-4 w-4 mr-1" />
             <span>{reply.upvotes}</span>
@@ -114,4 +117,6 @@ export default ReplyCard
     </Card>;
   );
 };
+>>>>>>> 
+ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

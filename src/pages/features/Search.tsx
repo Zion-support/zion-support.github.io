@@ -31,6 +31,7 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function SearchFeature() {
+  const schema = {
 
   const schema = {
     '@context': 'https://schema.org'
@@ -53,9 +54,56 @@ export default function SearchFeature() {
         keywords='search engine, filtering, tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
 >>>>>>>       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  return (
+    <>;
+
+
+            <li>;
+              Sort by rating, price, or recency to surface the best options.;
+            </li>;
+          </ul>;
+
+          <h2 className='text - 2xl font - bold mb - 4'>;
+            Frequently Asked Questions;
+          </h2>;
+          <div className='space - y-4 mb - 12'>;
+            <div>;
+              <p className='font - semibold'>;
+                Can I search in multiple languages?;
+              </p>;
+              <p className='text - zion - slate - light'>;
+
+                Yes, the search engine supports queries in all interface;
+                languages.;
+              </p>;
+            </div>;
+            <div>;
+
+              <p className='font - semibold'>How are results ranked?</p>;
+              <p className='text - zion - slate - light'>;
+
+                A combination of relevance scoring and community ratings;
+                determines the order.;
+              </p>;
+            </div>;
+          </div>;
+
+        title="Advanced Search"
+        description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
+        keywords="search engine, filtering, tech marketplace search"
+        canonical="https://app.ziontechgroup.com/features/search"
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+      />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> >>>>>>>       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
+
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -164,6 +212,7 @@ export default function SearchFeature() {;
         type="application/ld+json";
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md:px-6">;
@@ -172,31 +221,12 @@ export default function SearchFeature() {;
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
-            <img;
-              src="https: //placehold.co/800x400";
-              alt="Screenshot of search results";
-              className="object-cover";
-            />;
-          </div>;
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;
-            <li>Find the right expert or product without endless scrolling.</li>;
-            <li>Save favorite searches and get notified of new matches.</li>;
-            <li>Sort by rating, price, or recency to surface the best options.</li>;
-          </ul>;
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>;
-          <div className="space-y-4 mb-12">;
-            <div>;
-              <p className="font-semibold">Can I search in multiple languages?</p>;
-              <p className="text-zion-slate-light">Yes, the search engine supports queries in all interface languages.</p>;
-            </div>;
-            <div>;
-              <p className="font-semibold">How are results ranked?</p>;
-              <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>;
-            </div>;
-          </div>;
-          <div className="text-center">;
-            <Button size="lg" className="bg-zion-purple text-white" asChild>;
+            <img
+              src="https: //placehold && placehold.co/800x400"
+              alt="Screenshot of search results"
+              className="object-cover"
+
+
               <Link href="/search">Try Search</Link>;
             </Button>;
           </div>;
@@ -206,4 +236,6 @@ export default function SearchFeature() {;
   );
 }
 ;
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

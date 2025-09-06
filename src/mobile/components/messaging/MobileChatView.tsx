@@ -15,16 +15,18 @@ import { cn } from '@/lib/utils'
 import { useRouter } from 'next/router'
 import { toast } from 'sonner'
 
-interface Message {
   id: string;
   content: string;
   timestamp: string;
   isMe: boolean;
   sender?: string;
   avatar?: string;
-  status?: 'sent' | 'delivered' | 'read'
-interface MobileChatViewProps {
-  contact: {
+
+  status?: 'sent' | 'delivered' | 'read';
+
+interface MobileChatViewProps {;
+  contact: {;
+
     id: string;
     name: string;
     avatar?: string;
@@ -55,55 +57,76 @@ import { cn } from "@/lib/utils",
 import { useRouter } from 'next/router',
 import { toast } from "sonner",
 interface Message {
-  id: string,
-  content: string,
-  timestamp: string,
-  isMe: boolean,
-  sender?: string,
-  avatar?: string,
-  status?: 'sent' | 'delivered' | 'read'
-import React, { useState } from "react",;
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react';
-import { cn } from "@/lib/utils",;
-import { useRouter } from 'next/router',;
-import { toast } from "sonner",;
-interface Message {;
-  id: string,;
-  content: string,;
-  timestamp: string,;
-  isMe: boolean,;
-  sender?: string,;
-  avatar?: string,;
+  id: string;
+  content: string;
+  timestamp: string;
+  is_me: boolean;
+  sender?: string;
+  avatar?: string;
   status?: 'sent' | 'delivered' | 'read';
-}
-;
-interface MobileChatViewProps {;
-  contact: {;
-    id: string,;
-    name: string,;
-    avatar?: string,;
+interface MobileChatViewProps {
+  contact: {
+    id: string;
+    name: string;
+    avatar?: string;
     status?: string;
-  },;
-  messages: Message[],;
-  onBack: () => void,;
+  }
+  messages: Message[];
+  on_back: () => void;
   onSendMessage: (content: string) => void;
+export /**
+ * MobileChatView - Function description
+ */
+function MobileChatView() {
+  const [new_message, setNewMessage] = useState ('');
+  const router = use_router ();
+  const handle_send = () =>: any {
+    // Check condition
+if (!== '') {) {
+  $2
 }
+      onSendMessage (new_message);
+      setNewMessage ('');
 
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState(""),
-  const router = useRouter(),
-  
-  const handleSend = () => {
-    if (newMessage.trim() !== "") {
-      onSendMessage(newMessage),
-      setNewMessage("")
-;
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
-  const [newMessage, setNewMessage] = useState(""),;
-  const router = useRouter(),;
+
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+    }
+  }
+  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {    // Check condition
+if ( {) {
+  $2
+}
+      e.prevent_default ();
+      handle_send ();
+    }
+
+  const startVideoCall = () =>: any {
+    const room_id = `mobile-${contact.id}`;
+    toast.success ('Starting video call', {
+      description: `Connecting with ${contact.name}...`,
+    });
+    // Navigate to video call page;
+    router.push (`/call/${room_id}`);
+  }
+  const startAudioCall = () =>: any {
+    const room_id = `mobile - audio-${contact.id}`;
+    toast.success ('Starting audio call', {
+      description: `Connecting with ${contact.name}...`,
+    });
+    // Navigate to video call page with audio - only flag;
+    router.push (`/call/${room_id}?audio_only = true`);
+
+  }
+export function MobileChatView(): any ({;
+  contact,;
+  messages,;
+  onBack,;
+  onSendMessage,;
+}: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState('');
+  const router = useRouter();
   const handleSend = () => {;
     if (newMessage.trim() !== "") {;
       onSendMessage(newMessage),;
@@ -144,8 +167,12 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </Button>
           <div className='flex items-center flex-1 gap-3 mx-2'>
 >>>>>>>             <Avatar>
-              <AvatarImage src={contact.avatar} alt={contact.name} />
-              <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+            <Avatar>
+>>>>>>>               <AvatarImage src={contact.avatar} alt={contact.name} />
+              <AvatarFallback>
+                {contact.name.charAt(0).toUpperCase()}
+              </AvatarFallback>
             </Avatar>
             <div>
               <h3 className='font-medium'>{contact.name}</h3>
@@ -159,9 +186,12 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               variant='ghost'
               size='icon'
               onClick={startAudioCall}
-              aria-label='Start audio call'            >
-              <Phone className='h-5 w-5' />
-            </Button>
+
+              aria-label='Start audio call'>;
+              <Phone className='h-5 w-5' />;
+            </Button>;
+
+
             <Button
               variant='ghost'
               size='icon'
@@ -205,20 +235,28 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           >
             <div
               className={cn(
-                'max-w-[80%] rounded-2xl px-4 py-2'
-                message.isMe
+                'max-w-[80%] rounded-2xl px-4 py-2',
+                message && message.isMe
+
                   ? 'bg-primary text-primary-foreground rounded-tr-none'
                   : 'bg-muted rounded-tl-none'
-              )}            >
-              <p>{message.content}</p>
+              )}>;
+              <p>{message && message.content}</p>;
               <div
                 className={cn(
-                  'text-xs mt-1 flex justify-end'
-                  message.isMe
+
+                  'text-xs mt-1 flex justify-end',
+                  message && message.isMe
+
                     ? 'text-primary-foreground/80'
                     : 'text-muted-foreground'
+                )}>;
+                {message && message.timestamp}
+                {message && message.isMe && message && message.status && (;
+                  <span className='ml-1'>;
+                    {message && message.status === 'read' ? '✓✓' : '✓'}
+                  </span>;
                 )}
-              >
 
                 {message.timestamp}
                 {message.isMe && message.status && (
@@ -248,16 +286,54 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </Button>
           <Input
             value={newMessage}
-            onChange={(e) => setNewMessage(e.target.value)}
+ursor/fix-website-loading-errors-and-merge-6662
+                    {message.status === 'read' ? '✓✓' : '✓'}
+
+              </div>;
+            </div>;
+          </div>;
+        ))}
+      
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" aria-label="Attach file">
+            <PaperclipIcon className="h-5 w-5" />
+          </Button>
+          <Input
+            value={newMessage}
+
+            onChange={e => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Type a message..."
-            className="flex-1"
-          />
-          
+            placeholder='Type a message...'
+            className='flex-1'          />
+
           <Button
-            size="icon"
+            size='icon'
             onClick={handleSend}
             disabled={!newMessage.trim()}
+            className={!newMessage.trim() ? 'opacity-50' : ''}
+            aria-label='Send message'          >
+            <Send className='h-5 w-5' />
+          </Button>
+        </div>
+
+      </div>;
+
+      <div className='sticky bottom-0 bg-background border-t border-border p-2'>;
+        <div className='flex items-center gap-2'>;
+          <Button variant='ghost' size='icon' aria-label='Attach file'>;
+            <PaperclipIcon className='h-5 w-5' />;
+          </Button>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          <Input
+            value={newMessage}
+
+
+>>>>>>>             onChange={(e) => setNewMessage(e.target.value)}
+
+            onKeyDown={handleKeyDown}
+
             className={!newMessage.trim() ? "opacity-50" : ""}
             aria-label="Send message"
           >
@@ -268,4 +344,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     </div>
   )
 }
+>>>>>>> 
+}
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

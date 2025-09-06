@@ -157,10 +157,6 @@ export default function TalentDirectory() {;
     currentPage,
     initialized]), // Fixed dependencies
 
-  const handleRequestHire = (talent: TalentProfile) => {
-    setSelectedTalent(talent),
-    setIsHireModalOpen(true)
-  },
 
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
@@ -327,7 +323,7 @@ export default function TalentDirectory() {;
               )}
             </ErrorBoundary>
           </div>
-
+>>>>>>> 
           {/* Mobile filter sidebar */}
           {isMobileFilterOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
@@ -372,6 +368,15 @@ export default function TalentDirectory() {;
     </div>
   )
 }
-  )
+  );
 }
+>>>>>>> 
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

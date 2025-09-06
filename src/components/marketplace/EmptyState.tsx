@@ -1,18 +1,17 @@
 
 import * as React from 'react'
 import {
-  RefreshCw
-  Wifi
-  Server
-  ShoppingCart
-  Users
-  Wrench
-  Lightbulb
-} from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
-
+  RefreshCw,
+  Wifi,
+  Server,
+  ShoppingCart,
+  Users,
+  Wrench,
+  Lightbulb,
+} from 'lucide-react';
+import { Button } from '@/components / ui / button';
+import Link from 'next / link';
+import { use_translation } from 'react - i18next';
 export interface EmptyStateProps {
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
   title?: string;
@@ -111,10 +110,6 @@ export interface EmptyStateProps {;
   description?: string,;
   action?: {;
     label: string,;
-    onClick: () => void;
-  },;
-  icon?: React.ReactNode;
-}
 
 onst defaultContent = {
   products: {
@@ -181,18 +176,6 @@ export function EmptyState({
           <RefreshCw className='w-4 h-4' />
     description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
 
-export function EmptyState({
-  type,
-  title,
-  description,
-  action,
-  icon
-}: EmptyStateProps) {
-  const { t } = useTranslation(),
-  const content = defaultContent[type],
-  const displayTitle = title || content.title,
-  const displayDescription = description || content.description,
-  const displayIcon = icon || content.icon,
 
   return (
     <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
@@ -223,13 +206,25 @@ export function EmptyState({
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
-      {type === 'network' && (
-        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+      {type === 'error' && (
+        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
+          <p>If this issue continues, please contact our support team.</p>
+        </div>
+      )}
+
+
+      
+
+
+>>>>>>>       {type === 'network' && (
+        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
           <p>
             {t('general.check_status_page')}
             {" "}
             <Link href="https://status.zion.ai" className="underline">
               {t('general.status_page')}
+
             </Link>;
             .;
           </p>;
@@ -237,26 +232,24 @@ export function EmptyState({
       )}
     </div>;
   );
-}
-;
+
 // Specific empty state variants for quick use;
-export function ProductsEmptyState({;
+export function ProductsEmptyState(): any ({;
   onRetry,;
   onAddProduct,;
-  isAuthenticated = false;
+  isAuthenticated = false,;
 }: {;
-  onRetry?: () => void,;
-  onAddProduct?: () => void,;
-  isAuthenticated?: boolean;
-}) {;
+  onRetry?: () => void;
+  onAddProduct?: () => void;
+  isAuthenticated?: boolean;}) {;
   const action = onAddProduct;
     ? {;
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
-        onClick: onAddProduct;
+        onClick: onAddProduct,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     : onRetry;
-    ? { label: 'Try Again', onClick: onRetry }
-    : undefined,
+      ? { label: 'Try Again', onClick: onRetry }
 
   const customDescription = isAuthenticated 
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
@@ -299,4 +292,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
   )
 }
 }
+>>>>>>> 
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

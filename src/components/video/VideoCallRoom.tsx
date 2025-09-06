@@ -27,19 +27,8 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
 
-import './video-call.css';interface Participant {
-  id: string
-  name: string
-  avatar?: string
-  isMuted?: boolean
-  isVideoEnabled?: boolean
-  isScreenSharing?: boolean
 
-  isHost?: boolean
-}
-interface VideoCallRoomProps {
 
   roomId: string
   participants?: Participant[]
@@ -57,7 +46,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   onToggleVideo
   onToggleScreenShare
   className
-},) => {
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> },) => {
   const [isMuted, setIsMuted] = useState(false)
   const [isVideoEnabled, setIsVideoEnabled] = useState(true)
   const [isScreenSharing, setIsScreenSharing] = useState(false)
@@ -138,25 +128,42 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           {participants.length > 0 ? (
             participants.map((participant,) => (
 >>>>>>>               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
-                {participant.isVideoEnabled && !participant.isScreenSharing ? (
-                  <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
+              <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
+
+          </Badge>;
+          <Badge variant="outline" className="text-white">;
+            {participants && participants.length} participant{participants && participants.length !== 1 ? 's' : ''}
+          </Badge>;
+        </div>;
+      </CardHeader>;
+
+      <CardContent className="p-0">;
+        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
+          {participants && participants.length > 0 ? (;
+            participants && participants.map((participant,) => (;
+              <div key={participant && participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">;
+                {participant && participant.isVideoEnabled && !participant && participant.isScreenSharing ? (;
+                  <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">;
+
                     {/* Placeholder for actual video stream */}
-                    <Video className="h-12 w-12 opacity-50" />
-                  </div>
-                ) : participant.isScreenSharing ? (
-                  <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">
+                    <Video className="h-12 w-12 opacity-50" />;
+                  </div>;
+                ) : participant && participant.isScreenSharing ? (;
+                  <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">;
                     {/* Placeholder for screen share */}
-                    <ScreenShare className="h-12 w-12 opacity-50" />
-                  </div>
-                ) : (
-                  <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">
-                    <Avatar className="h-20 w-20">
-                      <AvatarImage src={participant.avatar} alt={participant.name} />
-                      <AvatarFallback className="bg-zion-purple text-white text-2xl">
-                        {participant.name.charAt(0).toUpperCase()}
-                      </AvatarFallback>
-                    </Avatar>
-                  </div>
+                    <ScreenShare className="h-12 w-12 opacity-50" />;
+                  </div>;
+                ) : (;
+                  <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">;
+                    <Avatar className="h-20 w-20">;
+                      <AvatarImage src={participant && participant.avatar} alt={participant && participant.name} />;
+                      <AvatarFallback className="bg-zion-purple text-white text-2xl">;
+                        {participant && participant.name.charAt(0).toUpperCase()}
+                      </AvatarFallback>;
+                    </Avatar>;
+                  </div>;
                 )}
                 <div className="video-metadata flex items-center space-x-2">
                   <span>{participant.name}</span>
@@ -176,7 +183,29 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           )}
         </div>
 >>>>>>>         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
-          <Button
+ursor/fix-website-loading-errors-and-merge-6662
+        <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
+                <div className="video-metadata flex items-center space-x-2">;
+                  <span>{participant && participant.name}</span>;
+                  {participant && participant.isMuted && <MicOff className="h-4 w-4" />}
+                  {participant && participant.isHost && <Badge variant="secondary" className="text-xs">Host</Badge>}
+                </div>;
+              </div>;
+            ));
+          ) : (;
+            <div className="col-span-full flex flex-col items-center justify-center py-12 text-white">;
+              <Video className="h-16 w-16 mb-4 opacity-30" />;
+              <p className="text-center text-lg mb-2">No participants yet</p>;
+              <p className="text-center text-sm text-gray-300">;
+                Share the meeting link to invite others;
+              </p>;
+            </div>;
+          )}
+        </div>;
+
+        <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>>           <Button
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
@@ -185,7 +214,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           >
             {isMuted ? <MicOff /> : <Mic />}
           </Button>
-          <Button
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>           <Button
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
@@ -194,7 +224,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           >
             {isVideoEnabled ? <Video /> : <VideoOff />}
           </Button>
-          <Button
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>           <Button
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
@@ -203,7 +234,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           >
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
           </Button>
-          <Button
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>           <Button
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
@@ -212,7 +244,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           >
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
           </Button>
-          <Button
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>           <Button
             variant="destructive"
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
@@ -220,7 +253,9 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             aria-label="Leave call"
           >
 >>>>>>>             <Phone className="rotate-135" />
-          </Button>
+ursor/fix-website-loading-errors-and-merge-6662
+            <Phone className="rotate-135" />
+>>>>>>>           </Button>
         </div>
       </CardContent>
     </Card>
@@ -230,3 +265,4 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
 };
 },
 >>>>>>> >>>>>>> 
+>>>>>>> 

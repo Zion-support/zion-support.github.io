@@ -157,3 +157,8 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
   )
 }
 >>>>>>> 
+}
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 

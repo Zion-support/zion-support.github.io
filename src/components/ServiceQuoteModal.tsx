@@ -1,12 +1,15 @@
 
 ...formData;            startDate: startDate?.toISOString()
-            endDate: endDate?.toISOString()}
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>             endDate: endDate?.toISOString()}
         }
       })
 
 }
 }
-import { useState } from 'react',
+;
+
+>>>>>>> import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -484,4 +487,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   );
 }
 ;
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

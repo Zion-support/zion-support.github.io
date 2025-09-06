@@ -41,7 +41,84 @@ xport const SitemapPage: React.FC = () => {
             </ul>
           </div>
 >>>>>>>           {/* Talent Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+export const SitemapPage: React.FC = () => {
+import { ChevronRight } from 'lucide-react';
+import React from 'react';
+import { completeSitemap, dynamicPaths } from '@/config/sitemap';
+import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
+import { SEO } from './SEO';
+// Map sitemap paths to their actual routes in the application;
+// Note: This pathMap might need to be updated based on Next && Next.js page structure;
+const pathMap: Record<string, string> = {;
+  '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'};
+
+const resolvePath = (path: string): string => pathMap[path] ?? path,;
+export const SitemapPage: React.FC = () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <>;
+
+
+        
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        canonical="https://app && app.ziontechgroup.com/content/sitemap-page"
+      />;
+      <div className="container mx-auto px-4 py-12">;
+        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>;
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          {/* Public Pages */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">;
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>;
+            <ul className="space-y-2">;
+              {completeSitemap;
+                .filter(route => !route && route.requiredAuth);
+                .map(route => (;
+                  <li key={route && route.path}>;
+                    <Link
+
+      <SEO;
+        title="Sitemap | Zion AI Marketplace";
+        description="Complete sitemap of the Zion AI Marketplace";
+        keywords="sitemap, zion, ai marketplace, navigation";
+        canonical="https://app.ziontechgroup.com / content / sitemap - page";
+      />;
+      <div className="container mx - auto px - 4 py - 12">;
+        <h1 className="text - 3xl font - bold mb - 8">Sitemap</h1>;
+        <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+          {/* Public Pages */}
+          <div className="bg - zion - blue - dark p - 6 rounded - lg">;
+            <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Public Pages</h2>;
+            <ul className="space - y-2">;
+              {complete_sitemap;
+                .filter (route => !route.required_auth);
+                .map (route => (
+                  <li key={route.path}>;
+                    <Link;
+                      href = {resolve_path (route.path), }
+                      className="flex items - center hover:text - zion - purple";
+                    >;
+                      <ChevronRight className="h - 4 w - 4 mr - 2" />;
+
+                      {route.label}
+                    </Link>;
+                  </li>));
+              }
+
+
+            </ul>;
+          </div>;
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+          {/* Talent Routes */}
+>>>>>>>           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>
             <ul className="space-y-2">
@@ -53,7 +130,7 @@ xport const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -65,7 +142,9 @@ xport const SitemapPage: React.FC = () => {
             </ul>
           </div>
 >>>>>>>           {/* Client Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
+ursor/fix-website-loading-errors-and-merge-6662
+          {/* Client Routes */}
+>>>>>>>           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires employer or buyer account</p>
             <ul className="space-y-2">
@@ -77,7 +156,7 @@ xport const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -89,7 +168,9 @@ xport const SitemapPage: React.FC = () => {
             </ul>
           </div>
 >>>>>>>           {/* Shared Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
+ursor/fix-website-loading-errors-and-merge-6662
+          {/* Shared Routes */}
+>>>>>>>           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires any account type</p>
             <ul className="space-y-2">
@@ -101,7 +182,7 @@ xport const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -113,7 +194,9 @@ xport const SitemapPage: React.FC = () => {
             </ul>
           </div>
 >>>>>>>           {/* Admin Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
+ursor/fix-website-loading-errors-and-merge-6662
+          {/* Admin Routes */}
+>>>>>>>           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires admin account</p>
             <ul className="space-y-2">
@@ -124,7 +207,7 @@ xport const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -142,18 +225,23 @@ xport const SitemapPage: React.FC = () => {
             <ul className="space-y-2">
               {Object.entries(dynamicPaths).map(([key, path],) => (
 >>>>>>>                 <li key={key}>
-                  <div className="flex items-center text-zion-slate">
+                <li key={key}>
+>>>>>>>                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
                     {path} <span className="ml-2 text-xs italic">({key})</span>
                   </div>
                 </li>
               ))}
 
-            </ul>;
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>             </ul>;
           </div>;
         </div>;
       </div>;
     </>;
   );
 };
+>>>>>>> 
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

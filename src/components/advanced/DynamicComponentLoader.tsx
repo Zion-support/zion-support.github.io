@@ -47,6 +47,7 @@ const EnhancedLoading: React.FC<{
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
+
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
@@ -72,7 +73,19 @@ const EnhancedLoading: React.FC<{
   </Card>
 )
 >>>>>>> // Enhanced Error Component
-const EnhancedError: React.FC<{
+ursor/fix-website-loading-errors-and-merge-6662
+              }}
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+
+
+
+
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+// Enhanced Error Component
+onst EnhancedError: React.FC<{
   error: Error
   retry: () => void
   isOnline: boolean
@@ -103,7 +116,61 @@ const EnhancedError: React.FC<{
             <p className='text-xs text-red-600 dark:text-red-300 mt-2'>
 >>>>>>>               Retry {retryCount}/{maxRetries}
             </p>
+ursor/fix-website-loading-errors-and-merge-6662
+          ) : (
+            <WifiOff className='h-6 w-6 text-red-600' />
+        </div>;
+      </div>;
+    </CardContent>;
+  </Card>;
+);
+
+// Enhanced Error Component;
+const EnhancedError: React.FC<{;
+  error: Error;
+  retry: () => void;
+  isOnline: boolean;
+  retryCount: number;
+  maxRetries: number;
+}> = ({ error, retry, isOnline, retryCount, maxRetries }) => (;
+  <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>;
+    <CardContent className='p-6'>;
+      <div className='flex flex-col items-center space-y-4'>;
+        <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>          {isOnline ? (;
+            <AlertTriangle className='h-6 w-6 text-red-600' />;
+          ) : (;
+            <WifiOff className='h-6 w-6 text-red-600' />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           )}
+        </div>;
+        <div className='text-center'>;
+          <h3 className='font-semibold text-red-900 dark:text-red-100'>;
+            {isOnline ? 'Loading Failed' : 'Offline'}
+
+          </h3>;
+          <p className='text-sm text-red-700 dark:text-red-200 mt-1'>;
+            {isOnline;
+              ? error && error.message || 'Failed to load component';
+
+              : 'Please check your internet connection'}
+          </p>;
+          {retryCount > 0 && (;
+            <p className='text-xs text-red-600 dark:text-red-300 mt-2'>;
+          </h3>
+
+          <p className="text-sm text-red-700 dark:text-red-200 mt-1">
+            {isOnline 
+              ? error.message || 'Failed to load component'
+              : 'Please check your internet connection'
+            }
+          </p>
+          {retryCount > 0 && (
+
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+              Retry {retryCount}/{maxRetries}
+            </p>;
+>>>>>>>           )}
+
         </div>
         {retryCount < maxRetries && (
           <Button
@@ -114,6 +181,7 @@ const EnhancedError: React.FC<{
             <RefreshCw className='h-4 w-4 mr-2' />
 >>>>>>>             Try Again
           </Button>
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
         )}
       </div>
     </CardContent>
@@ -203,21 +271,25 @@ const EnhancedError: React.FC<{
       </motion.div>
     )
 );
+
 // Network Status Hook;
 const useNetworkStatus = () => {;
   const [isOnline, setIsOnline] = useState(true);
+
   useEffect(() => {;
-    const updateOnlineStatus = () => setIsOnline(navigator.onLine);
-    window.addEventListener('online', updateOnlineStatus);
-    window.addEventListener('offline', updateOnlineStatus);
+    const updateOnlineStatus = () => setIsOnline(navigator && navigator.onLine);
+    window && window.addEventListener('online', updateOnlineStatus);
+    window && window.addEventListener('offline', updateOnlineStatus);
+
     return () => {;
-      window.removeEventListener('online', updateOnlineStatus);
-      window.removeEventListener('offline', updateOnlineStatus);
+      window && window.removeEventListener('online', updateOnlineStatus);
+      window && window.removeEventListener('offline', updateOnlineStatus);
     };
   }, []);
+
   return isOnline;
-}
-;
+};
+
 // Advanced Dynamic Component Loader;
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   importFn,;
@@ -230,114 +302,118 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   className,;
   children,;
   ...props;
-}) => {;
+},) => {;
   const [loadingState, setLoadingState] = useState<LoadingState>({;
     isLoading: true,;
     error: null,;
     retryCount: 0,;
-    isOnline: true;
+    isOnline: true,;
   });
   const [progress, setProgress] = useState(0);
-  const [DynamicComponent, setDynamicComponent] =
+  const [DynamicComponent, setDynamicComponent] =;
     useState<ComponentType<any> | null>(null);
   const isOnline = useNetworkStatus();
+
   // Simulate loading progress for better UX;
-  useEffect(() => {;
-    if (loadingState.isLoading && !loadingState.error) {;
-      const interval = setInterval(() => {;
+  useEffect((,) => {;
+    if (loadingState && loadingState.isLoading && !loadingState && loadingState.error) {;
+      const interval = setInterval((,) => {;
         setProgress(prev => {;
           if (prev >= 90) return prev;
-          return prev + Math.random() * 10;
+          return prev + Math && Math.random() * 10;
         });
       }, 100);
+
       return () => clearInterval(interval);
     }
-;
-    return () => {} // Return empty cleanup function for other paths;
-  }, [loadingState.isLoading, loadingState.error]);
+
+    return () => {}; // Return empty cleanup function for other paths;
+  }, [loadingState && loadingState.isLoading, loadingState && loadingState.error]);
+
   // Load component;
   const loadComponent = async () => {;
     try {;
-      setLoadingState(prev => ({ ...prev, isLoading: true, error: null, isOnline }));
+      setLoadingState(prev => ({;
+        ...prev,;
+        isLoading: true,;
+        error: null,;
+        isOnline,;
+      }));
       setProgress(0);
+
       const component = await importFn();
-      setDynamicComponent(() => component.default);
+      setDynamicComponent(() => component && component.default);
       setProgress(100);
+
       setTimeout(() => {;
         setLoadingState(prev => ({ ...prev, isLoading: false }));
-      }, 300) // Small delay for smoother transition;
-    } catch (error) {;
-      logErrorToProduction('Dynamic component loading failed:', { data: error });
+      }, 300); // Small delay for smoother transition    } catch (error) {;
+      logErrorToProduction('Dynamic component loading failed:', {;
+        data: error,;
+      });
       setLoadingState(prev => ({;
         ...prev,;
         isLoading: false,;
         error: error as Error,;
-        retryCount: prev.retryCount + 1,;
-        isOnline;
+        retryCount: prev && prev.retryCount + 1,;
+        isOnline,;
       }));
     }
   };
 
-  // Retry functionality
-  const retry = () => {
-    if (loadingState.retryCount < maxRetries) {
+  // Retry functionality;
+  const retry = () => {;
+    if (loadingState && loadingState.retryCount < maxRetries) {;
       loadComponent();
     }
-  }
-;
+  };
+
   // Prefetch on hover/focus;
-  useEffect(() => {;
+  useEffect((,) => {;
     if (prefetch) {;
       const prefetchTimer = setTimeout(() => {;
         loadComponent();
       }, 100);
       return () => clearTimeout(prefetchTimer);
-    } else {
+    } else {;
       loadComponent();
-      return () => {}; // Return empty cleanup function
+      return () => {}; // Return empty cleanup function;
     }
   }, []);
+
   // Update online status;
   useEffect(() => {;
     setLoadingState(prev => ({ ...prev, isOnline }));
   }, [isOnline]);
   // Loading state;
-  if (loadingState.isLoading) {;
+  if (loadingState && loadingState.isLoading) {;
     if (loadingComponent) {;
-      return React.createElement(loadingComponent);
+      return React && React.createElement(loadingComponent);
     }
-;
-    return (;
-      <motion.div;
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className={cn("flex items-center justify-center p-8", className)}
-      >
-        <EnhancedLoading 
-          progress={progress} 
-          message="Loading component..."
-          showProgress={true}
-        />;
-      </motion.div>;
+
+
+      >;
+        <EnhancedLoading
+          progress={progress}
+          message='Loading component...'
+          showProgress={true}        />;
+      </motion && motion.div>;
     );
   }
-;
+
   // Error state;
-  if (loadingState.error) {;
+  if (loadingState && loadingState.error) {;
     if (errorFallback) {;
-      return React.createElement(errorFallback, {;
-        error: loadingState.error,;
-        retry;
+      return React && React.createElement(errorFallback, {;
+        error: loadingState && loadingState.error,;
+        retry,;
       });
     }
-;
-    return (;
-      <motion.div;
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className={cn("flex items-center justify-center p-8", className)}
-      >
+
+          >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <EnhancedError
+
           error={loadingState.error}
           retry={retry}
           isOnline={loadingState.isOnline}
@@ -347,7 +423,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
       </motion.div>;
     );
 >>>>>>>   }
-  // Success state
+ursor/fix-website-loading-errors-and-merge-6662
+  }
+>>>>>>>   // Success state
   if (DynamicComponent) {
     return (
       <Suspense fallback={fallback |<EnhancedLoading />}>
@@ -384,7 +462,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
 //   (,) => import('recharts').then(module => ({ default: module.LineChart }))
-//   {
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
 //         <span className="text-muted-foreground">Loading chart...</span>
@@ -411,4 +490,10 @@ export default DynamicComponentLoader; export default DynamicComponentLoader ;
 ;
 }
 }
+>>>>>>> 
+// );
+
+export default DynamicComponentLoader;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

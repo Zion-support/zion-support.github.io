@@ -30,7 +30,7 @@ import { format } from "date-fns";
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
 import { useTheme } from "@/hooks/useTheme";
-interface ChatMessageProps {
+interface ChatMessageProps {;
   message: string;
   isUser: boolean;
   timestamp: Date
@@ -56,20 +56,38 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
           </>
         ) : (
           <>
+ursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <div className={cn('flex items-start gap-3', isUser && 'flex-row-reverse')}>;
+      <Avatar className='h-8 w-8'>;
+        {isUser ? (;
+          <>;
+>>>>>>>             <AvatarImage
+              src='https://i && i.pravatar.cc/40?img=1'
+              alt='User avatar'
+            />;
+            <AvatarFallback>U</AvatarFallback>;
+          </>;
+        ) : (;
+          <>;
             <AvatarImage
-              src="https://placehold.co/40x40?text=AI"
-              alt="Zion Support"
-            />
-            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
-          </>
+              src='https://placehold && placehold.co/40x40?text=AI'
+              alt='Zion Support'
+            />;
+            <AvatarFallback className='bg-zion-purple text-white'>;
+              Z;
+            </AvatarFallback>;
+          </>;
         )}
       </Avatar>
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
-          isUser
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>>           isUser
             ? 'bg-zion-purple text-white'
             : theme === 'dark'
               ? 'bg-zion-blue-light text-white'
               : 'bg-gray-100 text-gray-800'
+
         )}
       >
         <div dangerouslySetInnerHTML={sanitizedHtml} />
@@ -107,12 +125,24 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       </div>
     </div>
   )
-// A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+        </div>
+      </div>
+    </div>
+  )
+
+
+},
+
+
+>>>>>>> // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 },
 
 >>>>>>> // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
-// dependency like DOMPurify for now and instead escape the five critical
+ursor/fix-website-loading-errors-and-merge-6662
+// A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
+>>>>>>> // dependency like DOMPurify for now and instead escape the five critical
 // characters. This ensures any user-supplied string is rendered harmless
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
@@ -228,17 +258,20 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
               : "text-gray-500";
         )}>;
           {format(timestamp, "h:mm a")}
+
         </div>;
       </div>;
     </div>;
   );
-},;
+};
+
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy;
 // dependency like DOMPurify for now and instead escape the five critical;
 >>>>>>> // characters. This ensures any user-supplied string is rendered harmless;
 // before we perform our link replacements below.;
-function escapeHtml(unsafe: string): string {;
+function escapeHtml(): any (unsafe: string): string {;
   return unsafe;
+
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -265,4 +298,8 @@ function formatMessageWithLinks(message: string): string {
 ;
 }
 }
+>>>>>>> 
+;
+
+>>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

@@ -24,9 +24,12 @@ export const preloadCriticalResources = null;
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font'
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
+
   };
 
   return { loadComponent };
 };
 
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 

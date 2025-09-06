@@ -56,7 +56,15 @@ export function ClickableBadge({
     </div>
   )
 }
-import React from "react",;
+export function ClickableBadge({
+
+
+        >
+          <X className="h-3 w-3" />
+        </button>
+
+
+>>>>>>> import React from "react",;
 import { X } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 import { badgeVariants } from "@/components/ui/badge-variants",;
@@ -70,6 +78,7 @@ export function ClickableBadge({;
   className,;
   variant = "default",;
   onRemove,;
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
   ...props;
 }: ClickableBadgeProps) {;
   return (;
@@ -97,4 +106,6 @@ export function ClickableBadge({;
   );
 };
 }
+>>>>>>> 
+>>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
