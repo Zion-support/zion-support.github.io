@@ -1,8 +1,5 @@
-
-
+require("@testing-library/jest-dom");
 import "@testing-library/jest-dom";
-
-
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -19,29 +16,14 @@ jest.mock("next/router", () => ({
       prefetch: jest.fn().mockResolvedValue(undefined)
       beforePopState: jest.fn()
       events: {
-
-import "@testing-library/jest-dom";
-
-// Mock Next && Next.js router
-jest && jest.mock("next/router", () => ({
-  useRouter() {
-    return {
-      route: "/",
-      pathname: "/",
-      query: {},
-      asPath: "/",
-      push: jest && jest.fn(),
-      pop: jest && jest.fn(),
-      reload: jest && jest.fn(),
-      back: jest && jest.fn(),
-      prefetch: jest && jest.fn().mockResolvedValue(undefined),
-      beforePopState: jest && jest.fn(),
-      events: {
-        on: jest && jest.fn(),
-        off: jest && jest.fn(),
-        emit: jest && jest.fn(),
-=======
-
+        on: jest.fn()
+        off: jest.fn()
+        emit: jest.fn()
+      }
+      isFallback: false
+    }
+  }
+}));
         on: jest.fn(),
         off: jest.fn(),
         emit: jest.fn(),
@@ -52,29 +34,18 @@ jest && jest.mock("next/router", () => ({
   },
 }));
 
-
-=======
-
-
 // Mock Next.js Image component
 jest.mock("next/image", () => {
   const React = require("react");
   return function MockImage({ src, alt, ...props }) {
-
-
-// Mock Next && Next.js Link component
-jest && jest.mock("next/link", () => {
-  return function MockedLink({ children, href, ...props }) {
-    return (
-      <a href={href} {...props}>
-        {children}
-      </a>
-    );
-=======
-    return React.createElement("a", { href, ...props }, children);
-
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return <img src={src} alt={alt} {...props} />;
+  }
+});
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  return function MockLink({ children, href, ...props }) {
+    return <a href={href} {...props}>{children}</a>;
+  }
 });
 
 
@@ -108,29 +79,37 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-
-    return <img src={src} alt={alt} {...props} />;
-
-
-
+};
 
 // Global test setup,
-=======
 }
 // Global test setup
-
-
-=======
-
-=======
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+origin/main
 beforeEach(() => {
   jest.clearAllMocks();
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+});
+ursor/integrate-build-improve-and-re-verify-8f7d
+beforeEach(() => {
+  jest.clearAllMocks();
+ursor/fix-lint-push-and-merge-to-main-ae4e
+});
+// Mock matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+ursor/fix-syntax-push-and-merge-to-main-40de
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
     "media": query,
     "onchange": null,
     "addListener": jest.fn(), // deprecated
@@ -138,14 +117,11 @@ beforeEach(() => {
     "addEventListener": jest.fn(),
     "removeEventListener": jest.fn(),
     "dispatchEvent": jest.fn()}))});
-
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
 // Global test setup
 beforeEach(() => {
@@ -155,19 +131,25 @@ beforeEach(() => {
 
 
 });
-
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 });
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
+origin/main
+origin/automation-improvements-final
+});
+  };
 });
 
 
 // Mock Next.js Link component
-
+jest.mock("next/link", () => {
+  return function MockedLink({ children, href, ...props }) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  };
 jest.mock('next/link', () => ({
   _esModule: true,
   default: ({ children, href, ...props }) => {
@@ -208,7 +190,5 @@ jest.clearAllMocks()
 beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
-
+ursor/fix-lint-push-and-merge-to-main-ae4e
 });
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

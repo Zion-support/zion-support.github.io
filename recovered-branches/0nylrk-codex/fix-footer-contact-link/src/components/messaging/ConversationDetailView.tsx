@@ -1,6 +1,15 @@
 
-
-
+import React, { useState, useEffect, useRef } from 'react';
+import { format  } from 'date-fns';
+import { MessageSquare  } from 'lucide-react';
+import { useMessaging  } from '@/context/MessagingContext';
+import { Button  } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
+import { AspectRatio  } from '@/components/ui/aspect-ratio';
+import { useAuth  } from '@/hooks/useAuth';
+import { MessageBubble  } from './MessageBubble';
+import { DateDivider } from './DateDivider';
+export function ConversationDetailView() {
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
@@ -11,8 +20,6 @@ import {useAuth} from '@/hooks/useAuth';
 import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {;
-
-
   const { user } = useAuth();
   const {
     activeConversation;
@@ -28,52 +35,62 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id)
     }
   }, [activeConversation?.id, loadMessages]);
-
-import {format} from 'date-fns';
-=======
-
-
-
-=======
-import {format} from 'date - fns';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-import {MessageSquare} from 'lucide-react';
-import {use_messaging} from '@/context / MessagingContext';
-import {Button} from '@/components / ui / button';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
-import {AspectRatio} from '@/components / ui / aspect - ratio';
-import {use_auth} from '@/hooks / use_auth';
-import {MessageBubble} from './MessageBubble';
-import {DateDivider} from './DateDivider';
-
+  useEffect(() => {
+    scrollToBottom()
+  }, [activeMessages]);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!messageText.trim() |!activeConversation) return
+    await sendMessage(activeConversation.id, messageText);
+    setMessageText('')
+  }
+import React, { useState, useEffect, useRef } from 'react',;
+import { format } from 'date-fns',;
+import { MessageSquare } from 'lucide-react',;
+import { useMessaging } from '@/context/MessagingContext',;
+import { Button } from '@/components/ui/button',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+import { AspectRatio } from '@/components/ui/aspect-ratio',;
+import { useAuth } from '@/hooks/useAuth',;
+import { MessageBubble } from './MessageBubble',;
+import { DateDivider } from './DateDivider',;
+export function ConversationDetailView() {;
+  const { user } = useAuth(),;
+  const {;
+    activeConversation,;
+    activeMessages,;
+    sendMessage,;
+    loadMessages;
+  } = useMessaging(),;
+  const [messageText, setMessageText] = useState(''),;
+  const messagesEndRef = useRef<HTMLDivElement>(null),;
+  useEffect(() => {;
+    if (activeConversation) {;
+      loadMessages(activeConversation.id);
+    }
   }, [activeConversation?.id, loadMessages]),
-
-
-
   
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]),
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-  useEffect(() => {;
-    scrollToBottom();
-  }, [activeMessages]);
-
-  const scrollToBottom = () => {;
-    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleSendMessage = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    if (!messageText && messageText.trim() || !activeConversation) return,;
-
-    await sendMessage(activeConversation && activeConversation.id, messageText);
-    setMessageText('');
-  };
-
-  if (!activeConversation) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  },
+  
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    if (!messageText.trim() || !activeConversation) return,
+    
+    await sendMessage(activeConversation.id, messageText),
+    setMessageText('')
+  },
+  
+  if (!activeConversation) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">;
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;
@@ -84,11 +101,7 @@ import {DateDivider} from './DateDivider';
       </div>;
     );
   }
-
-
   
-
-
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {
@@ -103,12 +116,8 @@ import {DateDivider} from './DateDivider';
       })
     }
   });
-
-
-=======
-
-
-=======
+  const hasContextData = activeConversation.context_data &&
+    (activeConversation.context_data.title |activeConversation.context_data.description);
 ;
 
   // Group messages by date;
@@ -128,24 +137,33 @@ import {DateDivider} from './DateDivider';
     }
 
   }),
-
-
-
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
-
-
+      <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
+        <div className="flex items-center gap-3">
+          <Avatar className="h-10 w-10 border border-zion-purple/20">
+            <AvatarImage
+              src={activeConversation.other_user.avatar_url}
+              alt={activeConversation.other_user.name}
+            />
+            <AvatarFallback className="bg-zion-blue-dark text-white">
+              {activeConversation.other_user.name.charAt(0).toUpperCase()}
+            </AvatarFallback>
+          </Avatar>
+          <div>
+            <div className="font-medium text-white">
+              {activeConversation.other_user.name}
+            </div>
+            <div className="text-xs text-zion-slate">
+              {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
+               activeConversation.other_user.user_type === 'employer' ? 'Employer' :
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
-
-
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
@@ -336,12 +354,21 @@ if ( {) {
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea
             value={messageText}
-
-            onChange={(e) => setMessageText(e && e.target.value)}
-=======
-
-
-=======
+            onChange={(e) => setMessageText(e.target.value)}
+            placeholder="Type a message..."
+            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+          />
+          <Button
+            type="submit"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+          >
+            Send
+          </Button>
+        </form>
+      </div>
+    </div>
+  )
+}
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
@@ -423,14 +450,7 @@ if ( {) {
           </Button>;
         </form>;
       </div>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </div>;
+  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

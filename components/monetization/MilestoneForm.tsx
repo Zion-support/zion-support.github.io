@@ -23,19 +23,18 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-
-};
-
-export default function MilestoneForm(): any ({ onSubmit }: Props) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+type Props = {
+  onSubmit: (payload: {
+    title: string;
+    description?: string;
+    dueDate: string;
+    amountUsd: number;
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-
+}
+export default function MilestoneForm({ onSubmit }: Props) {
 };
 
 export default function MilestoneForm({ onSubmit }: Props) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -61,19 +60,28 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       setDescription('');
       setDueDate('');
       setAmountUsd('');
-    } catch (err: any) {;
-      setError(err?.message || 'Failed to create milestone');
-    } finally {;
-      setLoading(false);
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    } catch (err: any) {
+      setError(err?.message |'Failed to create milestone');
+    } finally {
+      setLoading(false);    }
+  }
+  return (
+    <form onSubmit={handleSubmit} className='space-y-4'>
+      {error && <div className='text-red-600 text-sm'>{error}</div>}    }
+    setLoading(true);
+    try {
+      await onSubmit({ title, description: description |undefined, dueDate, amountUsd: parsedAmount })
+      setTitle('');
+      setDescription('');
+      setDueDate('');
+      setAmountUsd('')
+    } catch (err: any) {
+      setError(err?.message |'Failed to create milestone')
+    } finally {
+      setLoading(false)
     }
   }
-=======
-
   };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -190,32 +198,11 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {loading ? 'Adding...' : 'Add Milestone'}
-
-      </button>;
-    </form>;
-  );
-=======
-
-  );
-
-}
-=======
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+      </button>
+    </form>
+);
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-      <button;
-        type='submit';
-        className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
-        className="bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50";
-        disabled={loading}
-      >;
-        {loading ? 'Adding...' : 'Add Milestone'}
-      </button>;
-    </form>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  );
+}

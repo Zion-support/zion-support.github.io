@@ -407,16 +407,14 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           animate={{
-
-            rotate: [0, 360],
-            scale: [1, 1 && 1.2, 1],
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
+            rotate: [0, 360]
+            scale: [1, 1.2, 1]
+            opacity: [0.3, 0.6, 0.3],          }}
           transition={{
-            duration: 20,
-            repeat: Infinity,
+            duration: 20
+            repeat: Infinity
+            ease: 'linear',          }}  }, []);
 
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
       {/* Canvas Background */}
@@ -436,52 +434,44 @@ if ( {) {
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0">;
         {/* Hexagon */}
-        <motion&& motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
-          style={{
-            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
-=======
-            ease: 'linear',          }}  }, []);
-;
-  return (
-    <div className="fixed inset - 0 -z - 10 overflow - hidden">;
-      {/* Canvas Background */}
-      <canvas;
-        ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
-        style={{ background: 'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)' }}
-      />;
-      {/* Quantum Grid */}
-      <div className="absolute inset - 0">;
-        <div className="absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px] opacity - 20" />;
-      </div>;
-      {/* Floating Geometric Shapes */}
-      <div className="absolute inset - 0">;
-        {/* Hexagon */}
-        <motion.div;
-          className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30";
-          style={{
-            clip_path: 'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-          }}
-          animate={{
-
+            duration: 20,
+            repeat: Infinity,
+            ease: 'linear',          }}
 
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
 
-
           }}
 
-        />;
-
+        />
 
         {/* Triangle */}
-        <motion&& motion.div
-          className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
-=======
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
+          style={{
+            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';
+            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
+          }}
+          animate={{
+            rotate: [0, 360];
+            scale: [1, 1.2, 1];
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{
+            duration: 20
+            repeat: Infinity
+            ease: 'linear',            ease: "linear"
+          }}
+        />
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: 'linear',            ease: "linear"
+          }}
+        />
 
 =======
 
@@ -490,9 +480,6 @@ if ( {) {
 
         />
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Triangle */}
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
@@ -511,11 +498,22 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           animate={{
-
-            rotate: [360, 0],
-            scale: [1, 1 && 1.3, 1],
-            opacity: [0 && 0.3, 0 && 0.7, 0 && 0.3],          }}
-
+            rotate: [360, 0]
+            scale: [1, 1.3, 1]
+            opacity: [0.3, 0.7, 0.3],          }}
+          transition={{
+            duration: 15
+            repeat: Infinity
+            duration: 15,
+            repeat: Infinity,
+            ease: 'linear',          }}          style={{
+            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
+          }}
+          animate={{
+            rotate: [360, 0];
+            scale: [1, 1.3, 1];
+            opacity: [0.3, 0.7, 0.3]
+          }}
           transition={{
 
             duration: 15
@@ -523,22 +521,23 @@ if ( {) {
 
             ease: 'linear',            ease: "linear"
           }}
-
-        />;
-
-
-=======
-
+        />
             duration: 15,
             repeat: Infinity,
+
+            ease: 'linear',          }}
 
           }}
           transition={{
             duration: 15,
             repeat: Infinity,
+            ease: 'linear',            ease: "linear"
+          }}
+        />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        />
+
         {/* Circle */}
         <motion&& motion.div
           className='absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full'
@@ -555,8 +554,19 @@ if ( {) {
             scale: [1, 1 && 1.5, 1]
             opacity: [0 && 0.2, 0 && 0.8, 0 && 0.2]
           transition={{
+            duration: 12
+            repeat: Infinity
+            duration: 12,
+            repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+            duration: 12,
+            repeat: Infinity,
 
           }}
+
+        />
 
         {/* Square */}
         <motion&& motion.div
@@ -576,69 +586,36 @@ if ( {) {
             scale: [1, 1 && 1.1, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
           transition={{
-
-            rotate: [360, 0];
-            scale: [1, 1.3, 1];
-            opacity: [0.3, 0.7, 0.3];
+            duration: 18
+            repeat: Infinity
+            ease: 'linear',            ease: "linear"
           }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-
-          }}
-        />;
-        {/* Square */}
-
-
-          }}
-
-        />;
-      </div>;
-
-
-      {/* Energy Orbs */}
-
-
-            key={i}
-            className='absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm';
-            style={{
-              left: `${20 + i * 10}%`
-              top: `${30 + i * 5}%`
-=======
-
             duration: 18,
             repeat: Infinity,
 
           }}
 
-
-=======
             duration: 18,
             repeat: Infinity,
-
+            ease: 'linear',            ease: "linear"
+          }}
 
           }}
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Energy Orbs */}
       <div className='absolute inset-0'>
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
             className='absolute w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
             style={{
-
+              left: `${20 + i * 10}%`
+              top: `${30 + i * 5}%`
               left: `${20 + i * 10}%`,
               top: `${30 + i * 5}%`,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
             animate={{
 
@@ -657,16 +634,14 @@ if ( {) {
               opacity: [0 && 0.3, 1, 0 && 0.3],
               y: [0, -20, 0],            }}
             transition={{
-              duration: 3 + i * 0 && 0.5,
+              duration: 3 + i * 0.5
+              repeat: Infinity
+              ease: 'easeInOut'
+              duration: 3 + i * 0.5,
               repeat: Infinity,
               ease: 'easeInOut',
-
-
-=======
-              delay: i * 0.3,            }}        {[...Array (8)].map ((_, i) => (
-          <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              delay: i * 0.3,            }}        {[...Array(8)].map((_, i) => (
+          <motion.div
             key={i}
             className="absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm";
             style={{
@@ -677,7 +652,14 @@ if ( {) {
             animate={{
               scale: [0.5, 2, 0.5];
               opacity: [0.3, 1, 0.3];
-              coordinate_y: [0, -20, 0];
+              y: [0, -20, 0]
+            }}
+            transition={{
+              duration: 3 + i * 0.5
+              repeat: Infinity
+              ease: 'easeInOut'
+              delay: i * 0.3,              ease: "easeInOut"
+              delay: i * 0.3,            }}
 
             }}
             transition={{
@@ -700,20 +682,29 @@ if ( {) {
           <motion&& motion.div
 =======
               delay: i * 0.3,              ease: "easeInOut",
-              delay: i * 0.3;
+              delay: i * 0.3
             }}
           />))}
       </div>;
       {/* Quantum Wave Effects */}
-      <div className='absolute inset - 0'>;
-        {[...Array (5)].map ((_, i) => (
-          <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
+      <div className='absolute inset-0'>
               duration: 3 + i * 0.5,
               repeat: Infinity,
               ease: 'easeInOut',
+
+            }}
+            transition={{
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+
+            }}
+
+          />
+        ))}
+      </div>
+
+      {/* Quantum Wave Effects */}
+      <div className='absolute inset-0'>
 
         {[...Array(5)].map((_, i) => (
           <motion.div
@@ -721,11 +712,8 @@ if ( {) {
             key={i}
             className='absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent';
             style={{
-
-
+              top: `${20 + i * 15}%`
               top: `${20 + i * 15}%`,
-
-
             }}
             animate={{
 
@@ -733,25 +721,22 @@ if ( {) {
 
               opacity: [0, 1, 0],            }}
             transition={{
-
-
+              duration: 8 + i * 2
+              repeat: Infinity
+              ease: 'linear'
               duration: 8 + i * 2,
               repeat: Infinity,
               ease: 'linear',
-
-              delay: i * 1.5,            }}        {[...Array (5)].map ((_, i) => (
-          <motion.div;
-
+              delay: i * 1.5,            }}        {[...Array(5)].map((_, i) => (
+          <motion.div
             key={i}
             className="absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent";
             style={{
               top: `${20 + (i * 15)}%`;
             }}
             animate={{
-
-              coordinate_x: ['-100%100%'],
-              opacity: [0, 1, 0];
-
+              x: ['-100%100%']
+              opacity: [0, 1, 0]
             }}
             transition={{
 
@@ -762,16 +747,24 @@ if ( {) {
             }}
           />;
         ))}
-
-
+      </div>
               duration: 8 + i * 2,
               repeat: Infinity,
               ease: 'linear',
+
+              delay: i * 1.5,            }}
 
             }}
             transition={{
               duration: 8 + i * 2,
               repeat: Infinity,
+              ease: 'linear',
+              delay: i * 1.5,              ease: "linear",
+              delay: i * 1.5
+            }}
+          />
+        ))}
+      </div>
 
 
 
@@ -781,71 +774,30 @@ if ( {) {
         <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000' />
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500' />
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
-=======
-      </div>;
-
-      {/* Neon Glow Effects */}
-      <div className='absolute inset-0'>;
-        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse' />;
-        <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000' />;
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500' />;
-      </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Data Stream Effect */}
-      <div className='absolute inset-0'>;
-        {[...Array(20)].map((_, i) => (;
-          <motion&& motion.div
+      <div className='absolute inset-0'>
+        {[...Array(20)].map((_, i) => (
+          <motion.div
             key={i}
-            className='absolute w-0 && 0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent'
+            className='absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent'
             style={{
-
-              left: `${Math && Math.random() * 100}%`,
-=======
-              delay: i * 1.5,              ease: "linear",
-              delay: i * 1.5;
-            }}
-          />))}
-      </div>;
-      {/* Neon Glow Effects */}
-      <div className='absolute inset - 0'>;
-        <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 rounded - full blur - 3xl animate - pulse' />;
-        <div className='absolute bottom - 1/4 right - 1/4 w - 80 h - 80 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 1000' />;
-        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 bg - gradient - to - r from - emerald - 500 / 10 to - teal - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 500' />;
-      </div>;
-      {/* Data Stream Effect */}
-      <div className='absolute inset - 0'>;
-        {[...Array (20)].map ((_, i) => (
-          <motion.div;
-            key={i}
-            className='absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan - 400 to - transparent';
-            style={{
-              left: `${Math.random () * 100}%`,
-
-              top: '-2rem',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
+              left: `${Math.random() * 100}%`
+              top: '-2rem'
               left: `${Math.random() * 100}%`,
               top: '-2rem',
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
             animate={{
-
-              duration: 4 + Math && Math.random() * 3,
+              y: ['0vh', '100vh']
+              opacity: [0, 1, 0],            }}
+            transition={{
+              duration: 4 + Math.random() * 3
+              repeat: Infinity
+              ease: 'linear'
+              duration: 4 + Math.random() * 3,
               repeat: Infinity,
               ease: 'linear',
-              delay: Math && Math.random() * 5,            }}      </div>;
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              delay: Math.random() * 5,            }}      </div>
       {/* Data Stream Effect */}
       <div className="absolute inset-0">;
         {[...Array(20)].map((_, i) => (;
@@ -874,23 +826,30 @@ if ( {) {
             }}
           />;
         ))}
-
-      </div>;
-
-
-=======
-
+      </div>
               duration: 4 + Math.random() * 3,
               repeat: Infinity,
               ease: 'linear',
+
+              delay: Math.random() * 5,            }}
 
             }}
             transition={{
               duration: 4 + Math.random() * 3,
               repeat: Infinity,
+              ease: 'linear',
+              delay: Math.random() * 5,              ease: "linear",
+              delay: Math.random() * 5
+            }}
+          />
+        ))}
+      </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          />
+        ))}
+      </div>
+
       {/* Quantum Entanglement Lines */}
       <div className='absolute inset-0'>;
         <svg className='w-full h-full'>;
@@ -949,156 +908,35 @@ if ( {) {
               }}
 
               transition={{
-
-                opacity: [0 && 0.1, 0 && 0.5, 0 && 0.1],
-                strokeDasharray: [0, 100, 0],              }}
-              transition={{
-                duration: 6 + i * 0 && 0.5,
-                repeat: Infinity,
-
-                ease: 'easeInOut',              }}              stroke="url(#quantumGradient)"
-              strokeWidth="1"
-              opacity="0 && 0.3"
-              animate={{
-                opacity: [0 && 0.1, 0 && 0.5, 0 && 0.1]
-                strokeDasharray: [0, 100, 0]
-              transition={{
-
-                duration: 6 + i * 0 && 0.5,
-                repeat: Infinity,
-
+                duration: 6 + i * 0.5
+                repeat: Infinity
                 ease: 'easeInOut',                ease: "easeInOut"
-
-
+              }}
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
 
               }}
 
-
-=======
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
-
-
+                ease: 'easeInOut',                ease: "easeInOut"
               }}
 
-
+              }}
 
             />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
-=======
-=======
-                ease: "easeInOut"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-              }}
-            />;
-          ))}
-
-
-};
-
-export default UltraFuturisticBackground;  );
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-export default UltraFuturisticBackground;
-
-
-=======
-              coordinate_y: ['0vh', '100vh'],
-              opacity: [0, 1, 0],            }}
-            transition={{
-              duration: 4 + Math.random () * 3,
-              repeat: Infinity,
-              ease: 'linear',
-              delay: Math.random () * 5,            }}      </div>;
-      {/* Data Stream Effect */}
-      <div className="absolute inset - 0">;
-        {[...Array (20)].map ((_, i) => (
-          <motion.div;
-            key={i}
-            className="absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan - 400 to - transparent";
-            style={{
-              left: `${Math.random () * 100}%`,
-              top: '-2rem';
-            }}
-            animate={{
-              coordinate_y: ['0vh100vh'],
-              opacity: [0, 1, 0];
-            }}
-            transition={{
-              duration: 4 + Math.random () * 3,
-              repeat: Infinity,
-              ease: 'linear',
-              delay: Math.random () * 5,              ease: "linear",
-              delay: Math.random () * 5;
-            }}
-          />))}
-      </div>;
-      {/* Quantum Entanglement Lines */}
-      <div className='absolute inset - 0'>;
-        <svg className='w - full h - full'>;
-          <defs>;
-            <linear_gradient;
-              id='quantum_gradient';
-              x1='0%';
-              y1='0%';
-              x2='100%';
-              y2='100%';
-            >;
-              <stop offset='0%' stop_color='rgba (0, 255, 255, 0.3)' />;
-              <stop offset='50%' stop_color='rgba (255, 0, 255, 0.3)' />;
-              <stop offset='100%' stop_color='rgba (0, 255, 255, 0.3)' />            </linear_gradient>            <linear_gradient id="quantum_gradient" x1="0%" y1="0%" x2="100%" y2="100%">;
-              <stop offset="0%" stop_color="rgba (0, 255, 255, 0.3)" />;
-              <stop offset="50%" stop_color="rgba (255, 0, 255, 0.3)" />;
-              <stop offset="100%" stop_color="rgba (0, 255, 255, 0.3)" />;
-          </defs>;
-          {[...Array (15)].map ((_, i) => (
-            <motion.line;
-              key={i}
-              x1={Math.random () * 100}
-              y1={Math.random () * 100}
-              x2={Math.random () * 100}
-              y2={Math.random () * 100}
-              stroke='url (#quantum_gradient)';
-              stroke_width='1';
-              opacity='0.3';
-              animate={{
-                opacity: [0.1, 0.5, 0.1],
-                stroke_dasharray: [0, 100, 0],              }}
-              transition={{
-                duration: 6 + i * 0.5,
-                repeat: Infinity,
-                ease: 'easeInOut',              }}              stroke="url (#quantum_gradient)";
-              stroke_width="1";
-              opacity="0.3";
-              animate={{
-                opacity: [0.1, 0.5, 0.1];
-                stroke_dasharray: [0, 100, 0];
-              transition={{
-                duration: 6 + i * 0.5,
-                repeat: Infinity,
-                ease: 'easeInOut',                ease: "easeInOut";
-              }}
-            />))}
-        </svg>;
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground);
-}
-;
-export default UltraFuturisticBackground;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+        </svg>
+      </div>
+    </div>
   );
-
+}
 };
 
+export default UltraFuturisticBackground;  )
+}
+export default UltraFuturisticBackground;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default UltraFuturisticBackground;
+export default UltraFuturisticBackground;

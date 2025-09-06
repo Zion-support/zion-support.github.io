@@ -1,17 +1,11 @@
 
-
-
+import React from "react";
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
-
-=======
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
-=======
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function CreateServiceProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -27,12 +21,7 @@ export default function CreateServiceProfile() {
       </div>
     </div>
   )
-
-import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
-=======
-
-
-=======
+}
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 
@@ -73,10 +62,8 @@ function CreateServiceProfile() {
         </div>;
         <ServiceProviderRegistrationForm />;
       </div>;
-    </div>);
+    </div>;
+  );
 }
 
 ;
-
-
-

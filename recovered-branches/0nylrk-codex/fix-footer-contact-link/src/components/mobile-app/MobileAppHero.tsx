@@ -1,8 +1,17 @@
 
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, Phone} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {AppStoreButtons} from "./AppStoreButtons";
+import React from "react",
+import { Link } from "react-router-dom",
+import { ArrowRight, Phone } from "lucide-react",
+import { Button } from "@/components/ui/button";
+import { AppStoreButtons } from "./AppStoreButtons";
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { Button } from "@/components/ui/button",
+import { AppStoreButtons } from "./AppStoreButtons",
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
@@ -36,26 +45,20 @@ export const MobileAppHero: React.FC = () => {
               </Button>
             </Link>
           </div>
-
-
           
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+              {/* This would be replaced with an actual phone mockup image in production */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-import React from "react";
-import {Link} from "react-router-dom";
-import {ArrowRight, Phone} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {AppStoreButtons} from "./AppStoreButtons";
-=======
-
-
-=======
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, Phone } from "lucide-react",;
@@ -148,8 +151,6 @@ export const MobileAppHero: React.FC = () => {
           </div>;
         </div>;
       </div>;
-
-    </section>);
-}
-;
-
+    </section>;
+  );
+};

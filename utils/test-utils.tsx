@@ -8,8 +8,8 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
   return (
     <ThemeProvider attribute="class" default_theme="light">;
       {children}
-
-    </ThemeProvider>);
+    </ThemeProvider>
+  );
 }
 ;
 const custom_render = (
@@ -26,18 +26,16 @@ export const mockNextRouter = () =>: any ({
   back: jest.fn (),
   beforePopState: jest.fn (),
   events: {
-    on: jest.fn (),
-    off: jest.fn (),
-    emit: jest.fn ();
-  },
-  is_fallback: false,
-  is_locale: false,
-  is_ready: true,
-  default_locale: 'en',
-  domain_locales: [],
-  is_preview: false;
-=======
-
+    on: jest.fn()
+    off: jest.fn()
+    emit: jest.fn()
+  }
+  isFallback: false
+  isLocale: false
+  isReady: true
+  defaultLocale: 'en'
+  domainLocales: []
+  isPreview: false
   },
   isFallback: false,
   isLocale: false,
@@ -45,12 +43,9 @@ export const mockNextRouter = () =>: any ({
   defaultLocale: 'en',
   domainLocales: [],
   isPreview: false;
-
 });
 export const createMockProps = (overrides = {}) => ({
-
-
-=======
+  ...overrides
     </ThemeProvider>;
   );
 },;
@@ -79,11 +74,6 @@ export const mockNextRouter = () => ({;
   isPreview: false;
 
 });
-;
-export const createMockProps = (overrides = {}) =>: any ({
+export const createMockProps = (overrides = {}) => ({;
   ...overrides;
-
-
-
-
 });

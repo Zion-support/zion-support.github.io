@@ -1,58 +1,28 @@
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  Search,;
-  User,;
-  Settings,;
-  LogOut,;
-  Bell,;
-  Globe,;
-  Zap,;
-  Brain,;
-  Rocket,;
-  Dna,;
-  DollarSign,;
-  Lock,;
-  Wifi,;
-  Truck,;
-  Gamepad2,;
-  Bot,;
-  Factory,;
-  Car,;
-
-=======
-
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-
+  Menu
+  X
+  ChevronDown
+  Search
+  User
+  Settings
+  LogOut
+  Bell
+  Globe
+  Zap
+  Brain
+  Rocket
+  Dna
+  DollarSign
+  Lock
+  Wifi
+  Truck
+  Gamepad2
+  Bot
+  Factory
+  Car
   Menu,
   X,
   ChevronDown,
@@ -74,17 +44,11 @@ import {
   Bot,
   Factory,
   Car,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
   className?: string;
 }
-
-
-
-
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
@@ -168,8 +132,17 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       ]
       hasDropdown: true
       dropdownItems: [
-
-
+        { name: "AI & Machine Learning", href: "/services?category=ai-ml" }
+        { name: "Quantum Computing", href: "/services?category=quantum" }
+        { name: "Space Technology", href: "/services?category=space" }
+        { name: "Biotech & Healthcare", href: "/services?category=biotech" }
+        { name: "Financial Services", href: "/services?category=finance" }
+        { name: "Cybersecurity", href: "/services?category=security" }
+        { name: "Edge Computing", href: "/services?category=edge" }
+        { name: "Blockchain", href: "/services?category=blockchain" }
+        { name: "View All Services", href: "/services" }
+      ]
+    }
         { name: "AI & Machine Learning", href: "/services?category=ai-ml" },
         { name: "Quantum Computing", href: "/services?category=quantum" },
         { name: "Space Technology", href: "/services?category=space" },
@@ -181,8 +154,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         { name: "View All Services", href: "/services" },
       ],
     },
-
-
     {
       name: "Solutions"
       href: "/solutions"
@@ -200,10 +171,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     { name: "Blog", href: "/blog" }
     { name: "Contact", href: "/contact" }
   ];
-
-
-
-
 
   const contactInfo = {
     mobile: "+1 302 464 0950"
@@ -382,19 +349,12 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
               initial={{ opacity: 0, scale: 0.8 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
+            >
+              <Search className="w-5 h-5" />
+            </motion.button>
 
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
-              <Search className="w-5 h-5" />;
-            </motion && motion.button>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -408,20 +368,13 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
               initial={{ opacity: 0, scale: 0.8 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative"
+            >
+              <Bell className="w-5 h-5" />
+              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+            </motion.button>
 
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative">;
-              <Bell className="w-5 h-5" />;
-              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />;
-            </motion && motion.button>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -443,18 +396,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
             className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </motion.button>
+        </div>
+      </div>
 
-          </motion && motion.button>;
-        </div>;
-      </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -521,9 +466,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                 </div>
               ))}
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Contact Info */}
 
               <div className="pt-4 border-t border-cyan-500/20">;
@@ -545,129 +487,26 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
-=======
-              className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative";
-            >;
-              <Bell className="w - 5 h - 5" />;
-              <div className="absolute top - 1 right - 1 w - 2 h - 2 bg - red - 500 rounded - full animate - pulse" />;
-            </motion.button>;
-            {/* CTA Button */}
-            <motion.div;
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >;
-              <Link;
-                href="/contact";
-                className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white px - 6 py - 2 rounded - full font - medium transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25";
-              >;
-                Get Started;
-              </Link>;
-            </motion.div>;
-          </div>;
-          {/* Mobile menu button */}
-          <motion.button;
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.9 }}
-            on_click={() => setIsOpen (!is_open)}
-            className="lg:hidden p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300";
-          >;
-            {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
-          </motion.button>;
-        </div>;
-      </div>;
-      {/* Mobile Navigation */}
-      <AnimatePresence>;
-        {is_open && (
-          <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20";
-          >;
-            <div className="px - 4 py - 6 space - y-4">;
-              {/* Search */}
-              <div className="relative">;
-                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
-                <input;
-                  type="text";
-                  placeholder="Search services...";
-                  className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - cyan - 500 / 30 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - cyan - 500";
-                />;
-              </div>;
-              {/* Navigation Items */}
-              {navigation_items.map ((item) => (
-                <div key={item.name} className="space - y-2">;
-                  <Link;
-                    href={item.href}
-                    on_click={() => setIsOpen (false)}
-                    className="block text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 py - 2";
-                  >;
-                    {item.name}
-                  </Link>;
-                  {item.has_dropdown && item.dropdown_items && (
-                    <div className="ml - 4 space - y-1">;
-                      {item.dropdown_items.map ((dropdown_item) => (
-                        <Link;
-                          key={dropdown_item.name}
-                          href={dropdown_item.href}
-                          on_click={() => setIsOpen (false)}
-                          className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 py - 1 text - sm";
-                        >;
-                          {dropdown_item.name}
-                        </Link>))}
-                    </div>)}
-                </div>))}
-              {/* Contact Info */}
-              <div className="pt - 4 border - t border - cyan - 500 / 20">;
-                <div className="space - y-2 text - sm text - gray - 400">;
-                  <div className="flex items - center space - x-2">;
-                    <Globe className="w - 4 h - 4" />;
-                    <span>{contact_info.website}</span>;
-                  </div>;
-                  <div className="flex items - center space - x-2">;
-                    <User className="w - 4 h - 4" />;
-                    <span>{contact_info.email}</span>;
-                  </div>;
-                </div>;
-              </div>;
-              {/* Mobile CTA */}
-              <div className="pt - 4">;
-                <Link;
-                  href="/contact";
-                  on_click={() => setIsOpen (false)}
-                  className="block w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - center px - 6 py - 3 rounded - lg font - medium transition - all duration - 300";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                >;
-                  Get Started Today;
-                </Link>;
-              </div>;
-            </div>;
-
-          </motion.div>)}
-      </AnimatePresence>;
-    </nav>);
+                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300"
+                >
+                  Get Started Today
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
 }
 export default EnhancedNavigation;
 ;
 
-=======
-      </AnimatePresence>
-    </nav>
-
 };
 
 export default EnhancedNavigation;
-
-=======
 );
 };
-
-
 export default EnhancedNavigation;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default EnhancedNavigation;

@@ -1,17 +1,13 @@
-
 import React from 'react';
 }
 import React, { Suspense, lazy } from 'react';
 ;
 
-=======
-
 import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 interface LazyComponentProps {
   component: ComponentType < Record < string, unknown>>;
   fallback?: ReactNode;
@@ -64,38 +60,12 @@ const LazyComponent: React.FC<LazyComponentProps> = ({ ;
 }
 export default LazyComponent;
 
-
-
-=======
+import React from 'react';
+};
 import React from 'react',;
 },
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import React from 'react';
 }
 
-
-
-=======
-const LazyComponent: React.FC < LazyComponentProps> = ({
-  component: Component,
-  fallback = <div className="animate - pulse bg - gray - 200 h - 32 rounded" />,
-  ...props;
-  return (
-    <Suspense fallback={fallback}>;
-      <Component {...props} />;
-    </Suspense>);
-}
-;
-export default LazyComponent;
-import React from 'react',
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

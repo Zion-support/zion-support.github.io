@@ -1,12 +1,6 @@
-
-
-=======
-
  
 }else {
   console.warn ('Missing artifact for', name) 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 }else {
@@ -45,11 +39,6 @@ function main() {
   }
 }
 
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+}main ();main()
 
 }main ();main(),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

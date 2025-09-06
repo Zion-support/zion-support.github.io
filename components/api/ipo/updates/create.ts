@@ -51,34 +51,8 @@ function handler() {
   res && res.status(200).json(update)
 }
 
+  res.status(200).json(update)
+}
+}
 
-=======
-  }
-  updates.unshift (update);
-  writeJsonFile ('updates.json', updates);
-  res.status (200).json (update);export default /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
 }
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}
-  const { title, date, summary, kpis } = req.body || {}
-  if (return res.status (400).json ({ error: 'Missing title' })) {
-  $2
-}
-  const updates = readJsonFile ('updates.json', [] as any[]);
-  const update = { id: uuidv4 (), title, date: date || new Date ().toISOString ().slice (0, 10), summary: summary || '', kpis: kpis || '', opens: 0 }
-  updates.unshift (update);
-  writeJsonFile ('updates.json', updates);
-  res.status (200).json (update);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,10 +1,8 @@
 
 import { ReactNode } from "react";
-
+export default function AdminLayout({ children }: { children: ReactNode }) {return (;
 export default function AdminLayout({ children }: { children: ReactNode }) {;
   return (;
-
-
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
 =======
 import { ReactNode  } from './react';
@@ -55,10 +53,7 @@ function AdminLayout() {
 
     </div>;
   );
-
+}
 };
 
 export default Layout;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

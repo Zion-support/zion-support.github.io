@@ -229,34 +229,20 @@ if ( {) {
 
       <script;
         dangerouslySetInnerHTML={{
-          __html: `;
-            // Performance monitoring;
-            // Check condition
-if ( {) {
-  $2
-}
-              window.addEventListener ('load', function () {
-                set_timeout (function () {
-                  const perf_data = performance.getEntriesByType ('navigation')[0];
-                  // Check condition
-if ( {) {
-  $2
-}
-                    const load_time = perf_data.loadEventEnd - perf_data.loadEventStart;
-                    // Check condition
-if ( {) {
-  $2
-}
-                      window.gtag ('event', 'timing_complete', {
-                        name: 'load',
-                        value: Math.round (load_time),
-
-=======
-
+          __html: `
+            // Performance monitoring
+            if ('performance' in window) {
+              window.addEventListener('load', function() {
+                setTimeout(function() {
+                  const perfData = performance.getEntriesByType('navigation')[0];
+                  if (perfData) {
+                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                    if (window.gtag) {
+                      window.gtag('event', 'timing_complete', {
+                        name: 'load'
+                        value: Math.round(loadTime)
                         name: 'load',
                         value: Math.round(loadTime),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       });
 =======
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
@@ -271,22 +257,13 @@ if ( {) {
                 }, 0)
               })
             }
-
-    </Head>);
-}
-;
-
-=======
-
+          `
           `,
-
         }}
       />
     </Head>
   );
-
+}
 };
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Analytics;

@@ -1,10 +1,9 @@
-
-
+import Fastify from 'fastify',
+import cors from '@fastify/cors',
+import rateLimit from '@fastify/rate-limit',
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
-
-
 import dotenv from 'dotenv';
 
 import { createOpenAIClient, generateJobPost } from './openai ;
@@ -261,21 +260,6 @@ app.get('/notifications', async (req, reply) => {
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
-
-  return { items }
-});
-
-
-const port = Number(process && process.env.API_PORT || 4000);
-app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch(err => {
-  app && app.log.error(err);
-  process && process.exit(1);
-});  });
-  return { items }
-});
-
-=======
-
     );
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -363,5 +347,6 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
   app.log.error (err);
   process.exit (1);
 });
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+    );
+    );

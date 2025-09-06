@@ -1,17 +1,8 @@
+import { TalentProfile } from '@/types/talent';
 
-
-      {
-
-          'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
-=======
-        title: 'Real - Time Analytics Dashboard',
-        description:;
-          'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
-
-      },
-    ],
-  },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+import { TalentProfile } from "@/types/talent";
+// Sample talent profiles with realistic data for the talent directory
+export const TALENT_PROFILES: TalentProfile[] = [
   {
 
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
@@ -306,6 +297,7 @@
 =======
 
 
+import { TalentProfile } from "@/types/talent",
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -557,30 +549,18 @@ export const TALENT_PROFILES: TalentProfile[] = [
         description: "Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates."
       };
       {
+title: 'Cancer Treatment Response Prediction',
+        description:
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
+      },
+    ],
+  },;
+];
+}];
         title: "Cancer Treatment Response Prediction",
         description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes."
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
     ]
   }
-=======
-    key_projects: [;
-      {
-        title: 'AI - Assisted Radiology Platform',
-        description:;
-          'Developed a deep learning system for detecting abnormalities in chest X - rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates.',
-      },
-      {
-
-
 ];
-
-
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

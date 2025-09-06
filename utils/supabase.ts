@@ -66,15 +66,10 @@ export const supabase = createSupabaseClient(supabaseConfig);
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
-        single: () => null;
-      });
-    });
-  });
+        single: () => null
+      })
+    })
+  })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
   });
 };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

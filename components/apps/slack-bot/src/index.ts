@@ -1,8 +1,5 @@
-
-
+import { App  } from '@slack/bolt';
 import { App } from '@slack/bolt';
-
-
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
@@ -254,79 +251,16 @@ if ( {) {
   }
 });
 
-
-
-
-
 (async () => {
 
   const port = Number(process && process.env.SLACK_PORT || 3001);
   await app && app.start(port);
   // eslint-disable-next-line no-console
-  console && console.log(`⚡️ Zion Slack bot running on port ${port}`);
-})();  console && console.log(`⚡️ Zion Slack bot running on port ${port}`)
-
+console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();  console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })();
-
-=======
-  console.log(`⚡️ Zion Slack bot running on port ${port}`)
-})();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      const data = (await res.json ()) as any;
-      await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
-      return;
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      const q = rest.join (' ') || 'AI researcher in Brazil';
-      const res = await fetch (`${api_base}/talent / search?q=${encodeURIComponent (q)}`, {
-        headers: { 'x - user - id': user_id }
-      });
-      const data = (await res.json ()) as any;
-      const lines = (data.results || []).slice (0, 5).map ((t: any) => `• ${t.full_name} – ${t.country} – ${t.skills?.slice (0, 3).join () || ''}`);
-      await respond ({ response_type: 'ephemeral', text: lines.length ? lines.join ('\n') : 'No matches yet.' });
-      return;
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      const name = rest.join (' ') || 'Kleber';
-      const res = await fetch (`${api_base}/projects/${encodeURIComponent (name)}/track`, {
-        headers: { 'x - user - id': user_id }
-      });
-      const data = (await res.json ()) as any;
-      // Check condition
-if ( {) {
-  $2
-}
-        await respond ({ response_type: 'ephemeral', text: 'Project not found.' });
-        return;
-      }
-      await respond ({ response_type: 'ephemeral', text: `*${data.project.name}* – status: ${data.project.status}\n_milestones: ${JSON.stringify (data.project.milestones)}` });
-      return;
-    }
-    await respond ({ response_type: 'ephemeral', text: help_text () });
-  } catch (err: any) {
-    await respond ({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
-  }
-});
-;
-(async () => {
-  const port = Number (process.env.SLACK_PORT || 3001);
-  await app.start (port);
-  // eslint - disable - next - line no - console;
-console.log (`⚡️ Zion Slack bot running on port ${port}`);
-})();  console.log (`⚡️ Zion Slack bot running on port ${port}`);
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

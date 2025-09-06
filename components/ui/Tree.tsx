@@ -1,24 +1,22 @@
-
-
-=======
-
+import React, { useState } from "react";
 import React, { useState } from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export interface TreeNode {;
+
+export interface TreeNode {
   name: string;
   path: string;
 
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
-
-
-
 interface TreeProps {
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
 
-
+interface TreeProps {
+  nodes: TreeNode[];
+  onDeploy?: (path: string) => void;
 
 function NodeItem({
   node
@@ -55,25 +53,13 @@ import React, { useState } from "react";
 
 
 export interface TreeNode {
-
-
-  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
-  const toggle = () => setOpen(v => !v);
-
-  const copyPath = async () => {;
-    await navigator && navigator.clipboard.writeText(node && node.path);  };
-export interface TreeNode {;
-  name: string,;
-  path: string,;
-  type: "folder" | "file",;
-
-=======
+  name: string
+  path: string
+  type: "folder" | "file"
 
   name: string,
   path: string,
   type: "folder" | "file",;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -149,26 +135,50 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
               depth={depth + 1}
               on_deploy={on_deploy}
             />          ))}
-
+        </div>
+      )}
+    </div>        {hasChildren ? (
+          <button className="text-sm" onClick={toggle} aria-label="Toggle">
+            {open ? "▾" : "▸"}
+          </button>
+        ) : (
+          <span className="inline-block w-4" />
+        )}
+        <span className={`font-mono text-sm ${node.exists ? "text-green-600" : "text-gray-500"}`}>
+          {node.path}
+        </span>
+        <div className="ml-auto flex gap-2">
+          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={copyPath} title="Copy path">Copy</button>
+          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={clonePath} title="Create template">Template</button>
+          <button className="px-2 py-0.5 text-xs bg-emerald-100 rounded" onClick={deploy} title="Auto-deploy">Deploy</button>
+        </div>
+      </div>
+      {hasChildren && open && (
+        <div className="ml-4 border-l pl-2">
+          {node.children!.map((child) => (
+            <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
+    </div>
 
           ))}
         </div>
       )}
     </div>
-
-
-export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
-
+  );
+export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
     <div className="w-full">;
       {nodes && nodes.map((n) => (;
       ))}
     </div>;
-=======
-
+  );  )
+}
+export function Tree({ nodes, onDeploy }: TreeProps) {
+  return (
+    <div className="w-full">
+      {nodes.map((n) => (
+      ))}
+    </div>
     </div>;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 
 =======
@@ -236,57 +246,19 @@ export default Tree;
 }depth= {
   0
 }onDeploy= {
-
+  onDeploy
+}/>) )
+}</div>)
   onDeploy 
 }/>) ) ;
 }</div>) ;
-
-export default Tree;
-
-=======
-    <div className="w-full">
-      {nodes.map((n) => (
-=======
-
 }export default Tree;}
 export default Tree;
-
 
 
         <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
       ))}
     </div>
   );
-
-
-
-=======
-  child.path;
-}node= {
-  child;
-}depth= {
-  depth + 1;
-}on_deploy= {
-  on_deploy;
-}/>) );
-}</div>);
-}</div>);
-}export /**
- * Tree - Function description
- */
-function Tree() {
-  return (<div className="w - full"> {
-  nodes.map ( (n) => (<NodeItem key= {
-  n.path;
-}node= {
-  n;
-}depth= {
-  0;
-}on_deploy= {
-  on_deploy;
-}/>) );
-}</div>);
-}export default Tree;}
-export default Tree;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    </div>
+  );

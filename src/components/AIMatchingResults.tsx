@@ -1,5 +1,23 @@
-
-
+import { useState } from 'react'
+import { MatchResultItem } from '@/lib/ai-matchmaking'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+import Skeleton from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+import Skeleton from '@/components/ui/skeleton'
+import { cn } from '@/lib/utils'
+import { useState } from "react",
+import { MatchResultItem } from "@/lib/ai-matchmaking",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+import Skeleton from "@/components/ui/skeleton",
+import { cn } from "@/lib/utils",
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
@@ -15,33 +33,16 @@ interface AIMatchingResultsProps {
   serviceType?: string
 }
 
-import { useState } from 'react';
-import { MatchResultItem } from '@/lib / ai - matchmaking';
-import { Card, CardContent } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
-import Skeleton from '@/components / ui / skeleton';
-import { cn } from '@/lib / utils';
-interface AIMatchingResultsProps {
-  matches: MatchResultItem[];
-  onSelectMatch?: (match: MatchResultItem) => void;
-  is_loading?: boolean;
-  project_description?: string;
-  service_type?: string;interface AIMatchingResultsProps {
-  matches: MatchResultItem[],
-  onSelectMatch?: (match: MatchResultItem, ) => void,
-  is_loading?: boolean,
-  project_description?: string,
-  service_type?: string;
-}
-export /**
- * AIMatchingResults - Function description
- */
-function AIMatchingResults() {
-  const [active_tab, setActiveTab] = useState ('all');
-  // Group matches by category;
+export function AIMatchingResults({
+
+  matches
+  onSelectMatch
+  isLoading = false
+  projectDescription = ''
+  serviceType: _serviceType = ''
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState('all')
+  // Group matches by category
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
@@ -312,67 +313,60 @@ if ( {) {
                               <AvatarImage;
                                 src={match.image}
                                 alt={match.title}
-                              />) : (
-                              <AvatarFallback className='bg - zion - purple / 20'>;
-                                <CategoryIcon className='h - 6 w - 6 text - zion - purple' />;
-                              </AvatarFallback>)}
-                          </Avatar>;
-                          <div className='flex - 1'>;
-                            <div className='flex justify - between'>;
-                              <div>;
-                                <h3 className='font - medium text - white'>;
-
+                              />
+                            ) : (
+                              <AvatarFallback className='bg-zion-purple/20'>
+                                <CategoryIcon className='h-6 w-6 text-zion-purple' />
+                              </AvatarFallback>
+                            )}
+                          </Avatar>
+                          <div className='flex-1'>
+                            <div className='flex justify-between'>
+                              <div>
+                                <h3 className='font-medium text-white'>
                                   {match.title}
-                                </h3>;
-                                <p className='text - zion - slate - light text - sm'>;
+                                </h3>
+                                <p className='text-zion-slate-light text-sm'>
                                   {match.description}
-                                </p>;
-                              </div>;
+                                </p>
+                              </div>
                               {match.price && (
-                                <div className='text - right ml - 2'>;
-                                  <div className='font - medium text - white'>;
+                                <div className='text-right ml-2'>
+                                  <div className='font-medium text-white'>
                                     ${match.price}
-
-                          </Avatar>;
-
-                          <div className='flex-1'>;
-                            <div className='flex justify-between'>;
-                              <div>;
-                                <h3 className='font-medium text-white'>;
-                                  {match && match.title}
-                                </h3>;
-                                <p className='text-zion-slate-light text-sm'>;
-                                  {match && match.description}
-                                </p>;
-                              </div>;
-                              {match && match.price && (;
-                                <div className='text-right ml-2'>;
-                                  <div className='font-medium text-white'>;
-                                    ${match && match.price}
-                                  </div>;
-                                  <div className='text-xs text-zion-slate-light'>;
-                                    {match && match.category;
-                                      .toLowerCase();
-                                      .includes('talent');
-                                      ? '/hour';
-
+                                  </div>
+                                  <div className='text-xs text-zion-slate-light'>
+                                    {match.category
+                                      .toLowerCase()
+                                      .includes('talent')
+                                      ? '/hour'
                                       : ''}
-                                  </div>;
-                                </div>;
-                              )}
-
-=======
-
-
-
-
-
 
                                   </div>
                                 </div>
                               )}
                             </div>
-
+                            <div className='mt-2 flex flex-wrap gap-1'>
+                              <Badge variant='outline'>{match.category}</Badge>
+                              {match.skills &&
+                                match.skills
+                                  .slice(0, 3)
+                                  .map((skill: string, i: number) => (
+                                    <Badge key={i} variant='outline'>
+                                      {skill}
+                                    </Badge>
+                                  ))}                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                )
+              })
+            ) : (
+              <div className='text-center py-8 text-zion-slate-light'>
+                No {tab} matches found.
+              </div>
                             
                             <div className="mt-2 flex flex-wrap gap-1">
                               <Badge variant="outline">
@@ -421,44 +415,23 @@ if ( {) {
                         </div>;
                       </div>;
                     </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  </Card>;
+                );
+              });
+            ) : (;
+              <div className="text-center py-8 text-zion-slate-light">;
+                No {tab} matches found.;
+              </div>;
             )}
           </TabsContent>;
         ))}
-
-
+      </Tabs>
+    </div>
+  )
 };
 ;
-
-
 }
-=======
       </Tabs>;
     </div>;
   );
 }
-
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-                  </Card>);
-              })) : (
-              <div className='text - center py - 8 text - zion - slate - light'>;
-                No {tab} matches found.;
-              </div>)}
-          </TabsContent>))}
-      </Tabs>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -101,6 +101,8 @@ function handler() {
     return res.status(200).json({ summary: text.trim() });
   } catch (err) {
     return fallback();
+  }
+    const text = completion.choices?.[0]?.message?.content ?? '';
 
   }
 
@@ -111,4 +113,5 @@ function handler() {
     return fallback ();
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+  }

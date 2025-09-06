@@ -20,28 +20,26 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
-
-
-export default function LazyImage(): any ({;
-  src,;
-  alt,;
-  width,;
-  height,;
-  className = "",;
-  priority = false,;
-  placeholder = "empty",;
-  blurDataURL,;
-  sizes,;
-  quality = 75,;
-  fill = false,;
-  style,;
-  onLoad,;
-  onError,;
-}: LazyImageProps) {;
-
-=======
+  style?: React.CSSProperties;
+  onLoad?: () => void;
+  onError?: () => void;
+}
 export default function LazyImage({
-
+  src
+  alt
+  width
+  height
+  className = ""
+  priority = false
+  placeholder = "empty"
+  blurDataURL
+  sizes
+  quality = 75
+  fill = false
+  style
+  onLoad
+  onError
+}: LazyImageProps) {
   src,
   alt,
   width,
@@ -57,8 +55,6 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);

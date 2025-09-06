@@ -1,5 +1,5 @@
-
-
+export interface ExtraService {;
+export interface ExtraService {
   id: string;
   name: string;
   tagline: string;
@@ -12,20 +12,36 @@
   contact_info: {
     mobile: string;
     email: string;
-
-
     address: string;
   };
-
-
+}
+}
 
     address: string;
   }
 export const extraServices: ExtraService[] = [
   {
-
-=======
-    address: string;
+    id: 'cloud-migration-expert'
+    name: 'Cloud Migration Expert'
+    tagline: 'Seamless cloud migration and optimization'
+    price: '$99/hour'
+    description:
+      'Professional cloud migration services for businesses looking to modernize their infrastructure.'
+    features: [
+      'AWS/Azure/GCP migration'
+      'Performance optimization'
+      'Cost analysis'
+      'Security implementation'
+      '24/7 support'
+    ]
+    link: '/services/cloud-migration-expert'
+    category: 'Cloud Services'
+    realImplementation: true
+    contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
   }
 ;
 export const extra_services: ExtraService[] = [;
@@ -65,9 +81,11 @@ export const extra_services: ExtraService[] = [;
   },
 ];      mobile: "+1 302 464 0950";
 
-
-=======
-
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
     id: "cloud-migration-expert",
     name: "Cloud Migration Expert",
     tagline: "Seamless cloud migration and optimization",
@@ -106,8 +124,17 @@ export const extra_services: ExtraService[] = [;
     category: "Security",
     realImplementation: true,
     contactInfo: {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
 =======
       email: "kleber@ziontechgroup.com";
@@ -117,7 +144,3 @@ export const extra_services: ExtraService[] = [;
   }
 
 ];
-
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

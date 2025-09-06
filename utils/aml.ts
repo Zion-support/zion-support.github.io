@@ -1,31 +1,25 @@
-
-
+export type WatchlistMatch = {
+export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
-
-  score: number; // 0 - 1 match confidence;
-  reference_id?: string;
-  details_url?: string;
+  score: number; // 0-1 match confidence
+  referenceId?: string;
+  detailsUrl?: string;
 }
 ;
 
 export type AmlCheckResult = {
-=======
-
 };
 
 export type AmlCheckResult = {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checked_at: string; // ISO;
   provider: 'mock' | 'remote';
-
-
+}
+export interface AmlProvider {
 };
 export interface AmlProvider {;
-
   checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
 
@@ -114,8 +108,10 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     return { status: 'clear' }
   }
 }
-export function getAmlProvider (): AmlProvider {
-  return new MockAmlProvider ();
+export function getAmlProvider(): AmlProvider {
+  return new MockAmlProvider();
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+export function getAmlProvider(): AmlProvider {;
+  return new MockAmlProvider();
+}

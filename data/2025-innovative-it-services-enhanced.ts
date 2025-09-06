@@ -1,3 +1,4 @@
+import { ServiceVariant } from '../types/service-variants';
 
 
   id: string;
@@ -956,16 +957,37 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    
-    },
-    realImplementation: true, implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.',
-    launchDate: '2024-09-01', customers: 123,
+    }
+    realImplementation: true
+    implementationDetails:
+      'Cloud-based blockchain platform with multi-chain support and enterprise features.'
+    launchDate: '2024-09-01'
+    customers: 123
+    rating: 4.8
+    reviews: 52
+  }
+      'Cloud-based blockchain platform with multi-chain support and enterprise features.',
+    launchDate: '2024-09-01',
+    customers: 123,
     rating: 4.8,
-    reviews: 52;
-=======
+    reviews: 52,
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
 
+    realImplementation: true;
+    implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.';
+    launchDate: '2024-09-01';
+    customers: 123;
 
-=======
+    rating: 4.8
+
+    reviews: 52
+  }
+];
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeITService2025 {;
   id: string,;
@@ -2020,12 +2042,5 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
     customers: 123,;
     rating: 4.8;
     reviews: 52;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
-
-;
-

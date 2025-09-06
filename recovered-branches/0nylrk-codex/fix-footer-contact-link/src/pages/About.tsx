@@ -1,8 +1,14 @@
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
 export default function About() {
   return (
     <>
@@ -113,15 +119,7 @@ export default function About() {
       <Footer />
     </>
   )
-
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
-=======
-
-
-=======
+}
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -349,11 +347,9 @@ function About() {
         </div>;
       </main>;
       <Footer />;
-
-    </>);
-=======
-
-
-
+    </>;
+  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;
+}
+;

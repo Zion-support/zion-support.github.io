@@ -1,7 +1,4 @@
 
-
-
-
 export const advancedMicroSaasExpansion2025V2 = [
   {
 
@@ -221,22 +218,28 @@ export const advancedMicroSaasExpansion2025V2 = [
     ],
   },
   {
-    name: 'AI Threat Detection',
-    description: 'Advanced AI threat detection system',
-    category: 'Cybersecurity',
-    pricing: '$549 / month',
-    features: [;
-      'Real - time monitoring',
+    name: 'AI Threat Detection'
+    description: 'Advanced AI threat detection system'
+    category: 'Cybersecurity'
+    pricing: '$549/month'
+    features: [
+      'Real-time monitoring'
+      'Threat intelligence'
+      'Automated response'
+      'Incident management'
+    ]
+  }
+      'Real-time monitoring',
       'Threat intelligence',
       'Automated response',
       'Incident management',
     ],
-  },
+  },;
+];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
+    ]
+  }
+];
 
-];      'Real - time monitoring_threat intelligence_automated response_incident management';
-    ];
-
-=======
 export const advancedMicroSaasExpansion2025V2 = [;
   {;
     name: 'AI Content Factory Pro',;
@@ -408,11 +411,5 @@ export const advancedMicroSaasExpansion2025V2 = [;
     features: [;
       'Real-time monitoringThreat intelligenceAutomated responseIncident management';
     ];
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

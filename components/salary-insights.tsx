@@ -23,17 +23,13 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useMemo, useState } from 'react';
 
-
-type InsightResponse = {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import {;
-  LineChart,;
+import {
+  LineChart
+  BarChart
+  DonutChart;
+  LineChart,
   BarChart,;
   DonutChart,;
-
-
-
 } from '../components/salary/InsightCharts';
 
 type InsightResponse = {;
@@ -47,42 +43,19 @@ type InsightResponse = {;
   trend_monthly: { label: string; value: number }[];
   regional_comparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
-
-import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
-
-type InsightResponse = {
-  recommendedHourlyUsd: number,
-=======
-  gpt_recommendation?: string;}  recommendedHourlyUsd: number,
-
-  recommendedMonthlyUsd: number,
-  medianHourlyUsd: number,
-  minHourlyUsd: number,
-  maxHourlyUsd: number,
-  confidence: number,
-  trend_monthly: { label: string, value: number }[],
-  regional_comparison: { region: string, medianHourlyUsd: number }[],
-  tags: string[],
-
-  gptRecommendation?: string;};  recommendedHourlyUsd: number,;
-  recommendedMonthlyUsd: number,;
-  medianHourlyUsd: number,;
-  minHourlyUsd: number,;
-  maxHourlyUsd: number,;
-  confidence: number,;
-  trendMonthly: { label: string, value: number }[],;
-  regionalComparison: { region: string, medianHourlyUsd: number }[],;
-  tags: string[],;
-  gptRecommendation?: string;
+  gptRecommendation?: string;};  recommendedHourlyUsd: number
+  recommendedMonthlyUsd: number
+  medianHourlyUsd: number
+  minHourlyUsd: number
+  maxHourlyUsd: number
+  confidence: number
+  trendMonthly: { label: string, value: number }[]
+  regionalComparison: { region: string, medianHourlyUsd: number }[]
+  tags: string[]
+  gptRecommendation?: string
+export default function SalaryInsightsPage() {
 
 export default function SalaryInsightsPage() {;
-
-=======
-
-
-export default function SalaryInsightsPage() {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -175,48 +148,20 @@ function SalaryInsightsPage() {
       if (!res && res.ok) throw new Error('Failed to fetch insights');
       const json = (await res && res.json()) as InsightResponse;
       setData(json);
-
-          roleTitle;
-          skills: skills.split().map((s) => s.trim()).filter(Boolean),
-          region;
-          experienceLevel;
-          remote;
-          employmentType})});
-      if (!res.ok) throw new Error('Failed to fetch insights');
-
+    } catch (e: any) {
+      setError(e.message |'Unexpected error');
+    } finally {
+      setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
       setData(json)
     } catch (e: any) {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
-
-    } catch (e: any) {;
-      setError(e && e.message || 'Unexpected error');
-    } finally {;
-      setLoading(false);    }      if (!res && res.ok) throw new Error('Failed to fetch insights');
-      const json = (await res && res.json()) as InsightResponse;
-      setData(json);
-    } catch (e: any) {;
-      setError(e && e.message || 'Unexpected error');
-    } finally {;
-      setLoading(false);
-
-    }
-  }
-
-  useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
       setLoading(false);    }
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
-
-
 
   useEffect(() => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -372,20 +317,15 @@ if ( {) {
 
 
         alert('Insight saved locally');
-
-
-
-=======
-=======
-
+      } catch {}
+    })();
+  }
 
 
       } catch {}
     })();
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
 =======
@@ -908,8 +848,6 @@ if (return [] as { label: string, value: number }[], ) {
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}
-
-=======
               {data && (
                 <table className="w-full mt-3 text-sm">
                   <thead>
@@ -1037,22 +975,20 @@ if (return [] as { label: string, value: number }[], ) {
                   </div>
                 </div>
               ) : (
-                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
           {data?.gptRecommendation && (
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+              <h3 className='font-medium mb-2'>GPT Recommendation</h3>
+              <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'>
+                {data.gptRecommendation}
+              </p>            </div>
+          )}
 
-            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-
+          {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
@@ -1118,77 +1054,9 @@ if (return [] as { label: string, value: number }[], ) {
   );
 }
 
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-                      donut_data.map ((d, i) => ({
-                        label: d.label,
-                        value: d.value,
-                      })) as any;
-                    }
-                  />;
-                  <div className='flex gap - 2 flex - wrap justify - center text - xs'>;
-                    {donut_data.map (d => (
-                      <span;
-                        key={d.label}
-                        className='rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5';
-                      >;
-                        {d.label}
-                      </span>                    ))}
-                  </div>;
-                </div>) : (
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />              )}                <div className="flex flex - col items - center gap - 3">;
-                  <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label, value: d.value })) as any} />;
-                  <div className="flex gap - 2 flex - wrap justify - center text - xs">;
-                    {donut_data.map ((d) => (
-                      <span key={d.label} className="rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5">{d.label}</span>;
-                  </div>;
-                </div>) : (
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded" />)}
-            </div>;
-          </div>;
-          {data?.gpt_recommendation && (
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <h3 className='font - medium mb - 2'>GPT Recommendation</h3>;
-              <p className='text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap'>;
-                {data.gpt_recommendation}
-              </p>            </div>)}
-          {data && (            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
-              <h3 className="font - medium mb - 2">GPT Recommendation</h3>;
-              <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap">{data.gpt_recommendation}</p>;
-            </div>)}
           {data && (
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <h3 className='font - medium mb - 3'>Signals</h3>;
-              <div className='flex gap - 2 flex - wrap'>;
-                <span className='rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs'>;
-                  Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr;
-                </span>;
-                {data.tags.map (t => (
-                  <span;
-                    key={t}
-                    className='rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs';
-                  >;
-                    {t}
-                  </span>                ))}            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
-              <h3 className="font - medium mb - 3">Signals</h3>;
-              <div className="flex gap - 2 flex - wrap">;
-                <span className="rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>;
-                {data.tags.map ((t) => (
-                  <span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs">{t}</span>;
-              </div>;
-            </div>)}
-        </div>;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
+            </div>
+          )}
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {data && (

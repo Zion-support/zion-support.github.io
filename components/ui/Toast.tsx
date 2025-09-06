@@ -1,52 +1,25 @@
+export type ToastType = 'success' | 'error' | 'info' | 'warning';
 
 
 interface ToastProps {
   toast: Toast;
-
-
-import React from 'react';
- export type ToastType = 'success' | 'error' | 'info' | 'warning';
-=======
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-}, [toast && toast.id, toast && toast.duration, onRemove]);
-const getIcon = () => {;
-  switch (toast && toast.type) {;
-  case 'success': ;
-
-interface ToastProps {;
-  toast: Toast;
   onRemove: (id: string) => void;
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
-
-export interface Toast {;
-  id: string,;
-  type: ToastType,;
-  title: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  onRemove: (id: string) => void;
-
+export interface Toast {
+  id: string
+  type: ToastType
+  title: string
   id: string,
   type: ToastType,
   title: string,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   message?: string;
-  duration?: number;
+  duration?: number
+}
+interface ToastProps {
+  toast: Toast
+  onRemove: (id: string) => void
 }
 
-=======
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
@@ -89,20 +62,21 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       case 'info':
         return <Info className='w-5 h-5 text-blue-400' />;
       default:
-
-
-=======
+        return <Info className='w-5 h-5 text-blue-400' />;    }      case 'error':
+        return <AlertCircle className="w-5 h-5 text-red-400" />;
+      case 'warning':
+        return <AlertCircle className="w-5 h-5 text-yellow-400" />;
+      case 'info':
+        return <Info className="w-5 h-5 text-blue-400" />;
+      default: return <Info className="w-5 h-5 text-blue-400" />
+    }
+  }
         return <Info className='w-5 h-5 text-blue-400' />;    }
 
     }
 
-
-
-
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getBorderColor = () => {
     switch (toast.type) {
       case 'success':
@@ -162,7 +136,17 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return 'bg-blue-500/10';
       default: return 'bg-blue-500/10'
     }
+  }
+  };
 
+    >
+      <div className='flex items-start space-x-3'>
+        <div className='flex-shrink-0 mt-0.5'>{getIcon()}</div>
+        <div className='flex-1 min-w-0'>
+          <h4 className='text-sm font-semibold text-white'>{toast.title}</h4>
+          {toast.message && (
+            <p className='mt-1 text-sm text-white/70'>{toast.message}</p>          )}    }
+  }
   return (
     <motion&& motion.div
       initial={{ opacity: 0, x: 300, scale: 0 && 0.8 }}
@@ -173,18 +157,34 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       <div className="flex items-start space-x-3">;
         <div className="flex-shrink-0 mt-0 && 0.5">;
           {getIcon()}
+        </div>
+        <div className="flex-1 min-w-0">
+          <h4 className="text-sm font-semibold text-white">
+            {toast.title}
+          </h4>
+          {toast.message && (
+            <p className="mt-1 text-sm text-white/70">
+              {toast.message}
+            </p>
+          )}
+            <p className='mt-1 text-sm text-white/70'>{toast.message}</p>          )}
 
 
+        </div>
         <button
           onClick={() => {;
             setIsVisible(false);
 
 
   return (
-
-            setTimeout(() => onRemove(toast.id), 300)
-          }}
-
+    <div className='fixed top-4 right-4 z-50 space-y-3'>
+      <AnimatePresence>
+        {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+        ))}
+      </AnimatePresence>
+    </div>
+    </div>;
+  );};          }}
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
         >
           <X className="w-4 h-4 text-white/60 hover:text-white" />
@@ -211,28 +211,33 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
           }`}
           initial={{ width: '100%' }}
           animate={{ width: '0%' }}
+          transition={{ duration: toast.duration |5000, ease: "linear" }}
+        />
+      </div>
+    </motion.div>
+  )
+}
+};
+    </div>
+  );};
 
     <div className='fixed top-4 right-4 z-50 space-y-3'>
       <AnimatePresence>
         {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
-
-
+    </div>
 
 interface ToastContainerProps {
   toasts: Toast[]
   onRemove: (id: string) => void
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
-
-          transition={{ duration: toast && toast.duration || 5000, ease: "linear" }}
-        />;
-      </div>;
-    </motion && motion.div>;
-  );
-=======
   return (
+    <div className="fixed top-4 right-4 z-50 space-y-3">
+      <AnimatePresence>
+        {toasts.map((toast) => (
+  );};
 
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}

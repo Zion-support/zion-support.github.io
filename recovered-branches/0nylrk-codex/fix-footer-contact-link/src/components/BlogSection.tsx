@@ -1,34 +1,35 @@
 
-
+import { GradientHeading } from "./GradientHeading",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Button } from "./ui/button",
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button";
-
-
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
 // Get the 3 most recent blog posts
 
 const recentPosts = [...BLOG_POSTS]
   .sort((a, b) => {
-=======
-import React from 'react';
-import { GradientHeading } from "./GradientHeading";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "./ui/button";
-import { Link } from "react-router-dom";
-import { BLOG_POSTS } from "@/data/blog-posts";
-// Get the 3 most recent blog posts;
-const recentPosts = [...BLOG_POSTS];
-  .sort((a, b) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-      new Date(b && b.publishedDate).getTime() - new Date(a && a.publishedDate).getTime();
+      new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
     );
-  });
+  })
   .slice(0, 3);
-
-
+export function BlogSection() {
+  return (
+    <section className="py-20 bg-zion-blue-dark" id="blog">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+          <div>
+            <GradientHeading>Latest Insights</GradientHeading>
+            <p className="mt-2 text-zion-slate-light text-xl max-w-2xl">
+              Stay updated with trends in AI technology, marketplace strategies
+              and IT services
+            </p>
+          </div>
+          <Button
+            variant="outline"
 
 import { GradientHeading } from "./GradientHeading",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
@@ -39,8 +40,6 @@ import { BLOG_POSTS } from "@/data/blog-posts",
 const recentPosts = [...BLOG_POSTS].sort((a, b) => {
   return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
 }).slice(0, 3),
-
-
 
             className="mt-4 md:mt-0 border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
             asChild
@@ -60,19 +59,18 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                   alt={post.title}
                   className="object-cover w-full h-full opacity-60 hover: opacity-80 transition-opacity duration-300"
                   loading="lazy"
+                  onError={(
+                    e: React.SyntheticEvent<HTMLImageElement, Event>
+                  ) => {
+                    const target = e.currentTarget as HTMLImageElement;
 
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
-
-=======
                     e: React.SyntheticEvent<HTMLImageElement, Event>,
                   ) => {;
                     const target = e.currentTarget as HTMLImageElement;
-=======
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     target.src =
                       "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                   }}
@@ -97,7 +95,12 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                 </Button>
               </CardFooter>
             </Card>
-
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 import { GradientHeading } from "./GradientHeading",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 import { Button } from "./ui/button",;
@@ -279,6 +282,3 @@ function BlogSection() {
 =======
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

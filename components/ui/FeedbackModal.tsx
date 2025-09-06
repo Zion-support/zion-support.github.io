@@ -1,6 +1,19 @@
 import { useState } from 'react';
 
-
+export type FeedbackContext = { actionType?: string; metadata?: any }
+export default function FeedbackModal({
+  isOpen
+  onClose
+  defaultContext
+  defaultKind = 'general'
+  userHeaders
+}: {
+  isOpen,
+  onClose,
+  defaultContext,
+  defaultKind = 'general',
+  userHeaders,
+}: {;
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
@@ -49,6 +62,8 @@ export default function FeedbackModal({
         }),;
 
       });
+    setLoading(false);
+    onClose(true);
 
 
 
@@ -59,12 +74,11 @@ export default function FeedbackModal({
         body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
     } catch {}
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    } catch {}
     setLoading(false);
-    onClose(true)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    onClose(true);
+  }
+
   }
   return (
 
@@ -75,14 +89,9 @@ export default function FeedbackModal({
         <div className="flex gap-2">
           {[1,2,3,4,5].map(n => (
 
-=======
-
 
             <button
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -292,47 +301,9 @@ function submit() {
         </div>
       </div>
     </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+);
+}
   );
+
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-        <div className='flex justify - end gap - 2'>;
-          <button;
-            on_click={() => on_close (false)}
-            className='px - 3 py - 2 rounded border';
-          >;
-            Later;
-          </button>;
-          <button;
-            on_click={submit}
-            disabled={loading || rating < 1}
-            className='px - 3 py - 2 rounded bg - gray - 900 text - white';
-          >;
-            {loading ? 'Submitting…' : 'Submit'}
-          </button>        </div>;
-      </div>;
-    </div>);
-}              aria - label={`${n} stars`}
-            >★</button>))}
-        </div>;
-        <div className="text - sm">;
-          <label className="block mb - 1" html_for="input - Optional comment">Optional comment</label>;
-          <textarea value={comment} on_change={(e)=>set_comment (e.target.value)} className="w - full border rounded p - 2" rows={3} />;
-        </div>;
-        <div className="text - sm">;
-          <label className="block mb - 1" html_for="input - Also">Also</label>;
-          <div className="flex gap - 3">;
-            <label className="inline - flex items - center gap - 1"><input type="radio" checked={kind==='general'} on_change={()=>set_kind ('general')} />General</label>;
-            <label className="inline - flex items - center gap - 1"><input type="radio" checked={kind==='bug'} on_change={()=>set_kind ('bug')} />Report a bug</label>;
-            <label className="inline - flex items - center gap - 1"><input type="radio" checked={kind==='feature'} on_change={()=>set_kind ('feature')} />Suggest a feature</label>;
-          </div>;
-        </div>;
-        <div className="flex justify - end gap - 2">;
-          <button on_click={()=>on_close (false)} className="px - 3 py - 2 rounded border">Later</button>;
-          <button on_click={submit} disabled={loading || rating < 1} className="px - 3 py - 2 rounded bg - gray - 900 text - white">{loading? 'Submitting…' : 'Submit'}</button>;
-        </div>;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  );

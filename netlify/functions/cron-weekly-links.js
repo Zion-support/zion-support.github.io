@@ -136,30 +136,7 @@ if ( {) {
       body: JSON.stringify ({ ok: true, broken: broken.length }),
     }
   } catch (e) {
-
-    }
-
-    const report = { updated_at: Date.now (), checked: checked.length, broken },
-    const owner = process.env.GITHUB_OWNER,
-    const repo = process.env.GITHUB_REPO,
-    const token = process.env.GITHUB_TOKEN,
-    // Check condition
-if ( {) {
-  $2
-}
-      await upsert_file ({ owner, repo, path: 'data / reports / links / weekly - links.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly link check', token });
-    }
-    return { status_code: 200, body: JSON.stringify ({ ok: true, broken: broken.length }) }
-
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-
-      statusCode: 200,
-      body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }),
-    };
-  } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 };async function fetchHtml(url) {
   const resp = await fetch(url),
@@ -227,14 +204,6 @@ exports && exports.handler = async function() {
 
 }
 
-=======
-},
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };async function fetchHtml(url) {
@@ -291,5 +260,3 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

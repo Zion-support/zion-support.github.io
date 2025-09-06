@@ -10,21 +10,20 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
       <main>
         <h1>5gTechnologyAndItsImpactOnIotChat</h1>
         <p>Blog content coming soon...</p>
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+        <Link href="/blog"><a>Back to Blog</a></Link>
+      </main>
+    </div>
+  )
+}
+export default Chat5gTechnologyAndItsImpactOnIotChat;
 
         <Link href="/blog"><a>Back to Blog</Link></Link>
-=======
-=======
         <Link href="/blog"><a>Back to Blog</Link></Link>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </main>
     </div>
   )
 },
+export default Chat5gTechnologyAndItsImpactOnIotChat,
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default Chat5gTechnologyAndItsImpactOnIotChat,;
+export default Chat5gTechnologyAndItsImpactOnIotChat,

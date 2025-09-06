@@ -1,5 +1,36 @@
+import React, { useEffect, useState } from 'react';
 
+export default InstallPrompt; import React, { useEffect, useState } from 'react'
+import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
 
+import { Button } from '@/components/ui/button'
+import { safeSessionStorage } from '@/utils/safeStorage'
+const SHOWN_KEY = 'pwaInstallShown'
+const DISMISS_KEY = 'pwaInstallDismissUntil'
+const DISMISS_MS = 24 * 60 * 60 * 1000, // 24 hours
+// Define BeforeInstallPromptEvent interface
+interface BeforeInstallPromptEvent extends Event {
+  readonly platforms: string[]
+  readonly userChoice: Promise<{
+    outcome: 'accepted' | 'dismissed'
+    platform: string
+  }>
+  prompt(): Promise<void>
+import React, { useEffect, useState } from 'react',;
+import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.;
+import { Button } from '@/components/ui/button',;
+import { safeSessionStorage } from '@/utils/safeStorage',;
+const SHOWN_KEY = 'pwaInstallShown',;
+const DISMISS_KEY = 'pwaInstallDismissUntil',;
+const DISMISS_MS = 24 * 60 * 60 * 1000, // 24 hours;
+// Define BeforeInstallPromptEvent interface;
+interface BeforeInstallPromptEvent extends Event {;
+  readonly platforms: string[],;
+  readonly userChoice: Promise<{;
+    outcome: 'accepted' | 'dismissed',;
+    platform: string;
+  }>,;
+  prompt(): Promise<void>;
 }
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
@@ -18,12 +49,10 @@ export const InstallPrompt: React.FC = () => {
     const isDismissed = dismissUntil && Date.now() < Number(dismissUntil)
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
-
-
+    if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
+      return
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
-
-
     }
     const handler = (e: BeforeInstallPromptEvent,) => {
       e.preventDefault()
@@ -311,41 +340,26 @@ if (return null, ) {
             }
           }
         `}
-      </style>;
-
-        <div className="bg-zion-blue-dark text-white p-3 rounded-lg shadow-lg flex items-center space-x-3">;
-          <p className="text-sm">Install our app for a better experience!</p>;
-          <Button onClick={install} aria-label="Install PWA" size="sm">Install</Button>;
-          <Button variant="ghost" size="sm" onClick={close} aria-label="Dismiss install prompt">;
-            <X className="h-4 w-4" />;
-          </Button>;
-        </div>;
-      </div>;
+      </style>
+      <div className="fixed bottom-4 right-4 z-[1000] pwa-install-button-container"> {/* Added a container for styling */}
+        <div className="bg-zion-blue-dark text-white p-3 rounded-lg shadow-lg flex items-center space-x-3">
+          <p className="text-sm">Install our app for a better experience!</p>
+          <Button onClick={install} aria-label="Install PWA" size="sm">Install</Button>
+          <Button variant="ghost" size="sm" onClick={close} aria-label="Dismiss install prompt">
+            <X className="h-4 w-4" />
+          </Button>
+        </div>
+      </div>
     </>;
   );
-},;
-
-export default InstallPrompt,;
-
-=======
-      <div className="fixed bottom - 4 right - 4 z-[1000] pwa - install - button - container"> {/* Added a container for styling */}
-        <div className="bg - zion - blue - dark text - white p - 3 rounded - lg shadow - lg flex items - center space - x-3">;
-          <p className="text - sm">Install our app for a better experience!</p>;
-          <Button on_click={install} aria - label="Install PWA" size="sm">Install</Button>;
-          <Button variant="ghost" size="sm" on_click={close} aria - label="Dismiss install prompt">;
-            <X className="h - 4 w - 4" />;
-          </Button>;
-        </div>;
-      </div>;
-    </>);
-},
-export default InstallPrompt,
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
+};
+export default InstallPrompt;
     </>
   )
+}
+export default InstallPrompt;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+},
+
+export default InstallPrompt,
+main

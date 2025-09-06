@@ -1,6 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
+import { supabase } from '../../../utils/supabase/client';
+import {
+  NotificationItem
+  NotificationType;
+  NotificationItem,;
+  NotificationType,;
 } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
 
@@ -125,65 +129,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const fallback: NotificationItem[] = [
         {
 
-
-          type: 'onboarding',
-          title: 'Welcome to Zion AI Marketplace',
-          body: 'Complete your profile to get personalized matches.',
-          created_at: new Date ().toISOString (),
-          read_status: false,
-          related_action: '/profile',
-        },
-          id: 'seed - 2',
-          user_id: user_id,
-          type: 'system',
-          title: 'System maintenance scheduled',
-          body: 'We will be undergoing maintenance this weekend.',
-
-          created_at: new Date (Date.now () - 1000 * 60 * 60).toISOString (),
-
-          read_status: false,
-          related_action: '/status',
-        },
-      ];
-
-  };
-}
-
-=======
-          id: 'seed-1', user_id: userId,
-          type: 'onboarding', title: 'Welcome to Zion AI Marketplace',
-          body: 'Complete your profile to get personalized matches.', created_at: new Date().toISOString(),
-          read_status: false,
-          related_action: '/profile'};
-        {
-          id: 'seed-2', user_id: userId,
-          type: 'system', title: 'System maintenance scheduled',
-          body: 'We will be undergoing maintenance this weekend.', created_at: new Date(Date.now() - 1000 * 60 * 60).toISOString(),
-          read_status: false,
-          related_action: '/status'}];
-      return res.status(200).json({ notifications: fallback })
     }
-
-    return res.status(200).json({ notifications: data as NotificationItem[] })
+    return res.status(200).json({ notifications: data as NotificationItem[] });
   } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  };
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-      return res.status (200).json ({ notifications: fallback });
-    }
-    return res.status (200).json ({ notifications: data as NotificationItem[] });
-  } catch (e) {
-return res.status (500).json ({ error: 'Unexpected error' });
-  }    return res.status (500).json ({ error: 'Unexpected error' });
+return res.status(500).json({ error: 'Unexpected error' });
+  }    return res.status(500).json({ error: 'Unexpected error' })
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
   };
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

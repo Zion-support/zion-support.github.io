@@ -1,13 +1,12 @@
 
-
-}
- canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
-canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
-if (ctx) {;
-
-export default function UltraFuturisticBackground2035(): any ({;
+canvas.width = window.innerWidth * (window.devicePixelRatio |1);
+canvas.height = window.innerHeight * (window.devicePixelRatio |1);
+canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
+canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+if (ctx) {
+export default function UltraFuturisticBackground2035({
+  children
   children,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -774,11 +773,8 @@ if ( {) {
             className='h-full w-full'
             style={{
               backgroundImage: `
-
-
+              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px)
               linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
-
-
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
             `
               backgroundSize: '50px 50px'
@@ -806,8 +802,14 @@ if ( {) {
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
-
-
+          }} />
+        </div>
+        {/* Canvas for animated particles */}
+        <canvas
+          ref={canvasRef}
+          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}          className="absolute inset-0 w-full h-full"
+          style={{ filter: 'blur(0.5px)' }}
+        />
 
         {/* Canvas for animated particles */}
         <canvas
@@ -823,9 +825,6 @@ if ( {) {
 
         />
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Floating neon orbs */}
 
         />;
@@ -861,16 +860,10 @@ if ( {) {
           className='absolute top - 1/4 left - 1/4 w - 32 h - 32 rounded - full bg - gradient - to - r from - cyan - 400 to - blue - 500 opacity - 20';
 
           animate={{
-
-            scale: [1, 1 && 1.2, 1],
-            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
-
-=======
-
+            scale: [1, 1.2, 1]
+            opacity: [0.2, 0.4, 0.2]
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2],
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             rotate: [0, 180, 360],          }}
           transition={{
 
@@ -898,7 +891,13 @@ if ( {) {
 
             rotate: [360, 180, 0],          }}
           transition={{
-
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+        />
+        {/* Quantum energy waves */}
+        <div className='absolute inset-0 overflow-hidden'>          }}
+        />
         <motion.div
           className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20"
           animate={{
@@ -912,10 +911,10 @@ if ( {) {
             rotate: [360, 180, 0]
           }}
           transition={{
-
             duration: 8
             repeat: Infinity
-
+            duration: 8,
+            repeat: Infinity,
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
 
@@ -943,14 +942,10 @@ if ( {) {
               duration: 4
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
-=======
-              y: [-100, 100, -100],
-              opacity: [0, 0 && 0.3, 0],            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-
-=======
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+            animate={{
+              y: [-100, 100, -100];
+              opacity: [0, 0.3, 0]
 
             duration: 8,
             repeat: Infinity,
@@ -979,13 +974,43 @@ if ( {) {
 
               ease: 'easeInOut'
             }}
+          />
+          <motion.div
+            className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent'
+            animate={{
+              y: [100, -100, 100]
+              opacity: [0, 0.3, 0],            }}
+            transition={{
+              duration: 6
+              repeat: Infinity
+              ease: 'easeInOut',            }}
+          />
+        </div>
+      </div>            }}
+          />
+          <motion.div
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent"
+            animate={{
+              y: [100, -100, 100];
+              opacity: [0, 0.3, 0]
+            duration: 8,
+            repeat: Infinity,
 
-=======
-              ease: 'easeInOut',              ease: 'easeInOut';
+          }}
+        />
+
+        {/* Quantum energy waves */}
+
             }}
-          />;
-        </div>;
-      </div>;
+            transition={{
+              duration: 6
+              repeat: Infinity
+              ease: 'easeInOut',              ease: 'easeInOut'
+
+            }}
+          />
+        </div>
+      </div>
       {/* Render children */}
       {children}
     </>); ;
@@ -993,10 +1018,4 @@ if ( {) {
       {children}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
       </div>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

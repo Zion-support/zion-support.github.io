@@ -1,12 +1,6 @@
 
 
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-=======
+export default ActiveFiltersBar; import React from 'react'
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -17,8 +11,6 @@ interface SearchFilters {
   maxPrice: number,
   minRating: number,
   sort: string
-
-=======
 import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -30,9 +22,6 @@ interface SearchFilters {;
   maxPrice: number,;
   minRating: number,;
   sort: string;
-
-
-
 }
 ;
 interface ActiveFiltersBarProps {;
@@ -195,25 +184,23 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
   if (activeFilters && activeFilters.length === 0) {;
     return null;
+  }
 
   }
   return (
-
-
+    <div className={`flex items-center gap-2 flex-wrap ${className}`}>
+      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
+      {activeFilters.map(filter => (
+        <Badge
+          key = {filter.key,}
+          variant="secondary"
         <Badge 
           key = {filter.key,}
-
-=======
       
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
-
-
-
           variant="secondary" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className="flex items-center gap-1 pl-2 pr-1"
         >
           <span className="text-xs">
@@ -236,11 +223,8 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
             variant="ghost"
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
-
-
+            onClick = {(,) => removeFilter(filter.key),}
             onClick={() => removeFilter(filter.key)}
-
-
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
@@ -251,31 +235,23 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       <Button
         variant="ghost"
         size="sm"
-
-
+        onClick = {onClearAll,}
         onClick={onClearAll}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className="text-xs h-6 px-2"
       >
         Clear all
       </Button>
     </div>
   )
+}
+export default ActiveFiltersBar
+},
 
-;
-export default ActiveFiltersBar; import React from 'react';
-import { X } from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-interface SearchFilters {
-  types: string[],
-  category: string,
-  min_price: number,
-  max_price: number,
-  min_rating: number,
-  sort: string;
+export default ActiveFiltersBar,
+interface Filter {
+  key: string
+  value: string
+  label: string
 }
 interface ActiveFiltersBarProps {
   filters: SearchFilters,
@@ -454,22 +430,7 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
   )}
 '"
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-  filters: Filter[];
-  onRemoveFilter: key: string void;
-  onClearAll: : unknown void}
-        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
-      >;
-        Clear all;
+export default ActiveFiltersBar,
       </button>;
     </div>)}
 '";
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,12 +1,15 @@
 
+export async function rewardOnboarding(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+
+    method: 'POST'
+    headers: { 'Content-Type': 'application/json' }
 
 
 export async function rewardOnboarding(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
-
-
     body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
 =======
     method: 'POST',
@@ -21,8 +24,6 @@ export async function rewardReferral(userId: string) {
 
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
-
-
     body: JSON.stringify({ userId, amount: 20, reason: 'Referral' })})
 =======
     method: 'POST',
@@ -39,14 +40,9 @@ export async function rewardFiveStarReview(userId: string) {
     headers: { 'Content-Type': 'application/json' };
     body: JSON && JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
 }
-
-=======
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 export async /**
  * reward_onboarding - Function description
@@ -73,9 +69,5 @@ export async function rewardFiveStarReview(userId: string) {;
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })});
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

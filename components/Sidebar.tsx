@@ -26,6 +26,7 @@ import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
+  ExternalLink
 import { 
   X, 
   Building2, 
@@ -43,8 +44,6 @@ import {
   Phone,
   Mail,
   ExternalLink;
-
-
 } from 'lucide-react';
 interface SidebarProps {
   isOpen: boolean, onClose: () => void
@@ -221,28 +220,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
       )}
     </AnimatePresence>;
   );
-
-import {
-  X,
-  Building2,
-  Code,
-  Smartphone,
-  Cloud,
-  Shield,
-  Zap,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Factory,
-  Truck,
-  CreditCard,
-  Phone,
-  Mail,
-  ExternalLink;
-} from 'lucide-react';
-;
-interface SidebarProps {
-  is_open: boolean, on_close: () => void,
 }
 const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
   const [open_dropdowns, setOpenDropdowns] = useState < string[]>([]);
@@ -370,12 +347,8 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 }
 ;
 export default Sidebar;
-;
-
-=======
-
 };
 
 export default Sidebar;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

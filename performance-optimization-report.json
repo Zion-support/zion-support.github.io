@@ -1,7 +1,6 @@
 {
-
-  "timestamp": "2025-09-06T10:56:47.356Z",
-  "totalDuration": 7910,
+  "timestamp": "2025-09-06T04:57:30.817Z",
+  "issues": [],
   "optimizations": [
     {
       "type": "bundle-analysis",
@@ -17285,9 +17284,13 @@
         "Consider implementing cache invalidation strategy"
       ]
     }
-  ]
-=======
-
+  },
+  "summary": {
+    "bundleOptimized": false,
+    "imagesOptimized": true,
+    "codeSplittingImplemented": true,
+    "cachingConfigured": true,
+    "compressionSetup": true
   "timestamp": "2025-09-06T01:32:26.433Z",
   "optimizations": [
     "Use WebP format for images",
@@ -17322,7 +17325,6 @@
       "Use CDN for static assets",
       "Enable gzip compression"
     ]
-
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

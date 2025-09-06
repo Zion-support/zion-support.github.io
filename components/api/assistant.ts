@@ -47,42 +47,13 @@ Style: - Use bullets and short paragraphs
     };
     return res && res.status(200).json({ message });
   } catch (error: any) {
-    console && console.error('Assistant API error:', error?.message || error);
-    return res && res.status(500).json({ error: 'Assistant request failed' });
-  }    return res && res.status(500).json({ error: 'Assistant request failed' })
+console.error('Assistant API error:', error?.message |error);
+    return res.status(500).json({ error: 'Assistant request failed' });
+  }    return res.status(500).json({ error: 'Assistant request failed' })
+  }
+}
 
+  }
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-
-
-=======
-
   }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
-    const prepared_messages = [;
-      { role: 'system' as const, content: SYSTEM_PROMPT },
-      ...(messages || []).slice (-20),
-    ];
-;
-    const completion = await openai.chat.completions.create ({
-      model: 'gpt - 4o',
-      temperature: 0.3,
-      messages: prepared_messages,
-    });
-;
-    const message = completion.choices?.[0]?.message || {
-      role: 'assistant',
-      content: 'Sorry, I could not respond.',
-    }
-    return res.status (200).json ({ message });
-  } catch (error: any) {
-console.error ('Assistant API error:', error?.message || error);
-    return res.status (500).json ({ error: 'Assistant request failed' });
-  }    return res.status (500).json ({ error: 'Assistant request failed' });
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

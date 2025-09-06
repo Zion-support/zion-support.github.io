@@ -1,11 +1,7 @@
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export function RoleManagement() {
-  // Mock team members data
-  const teamMembers = [
-=======
-import React from 'react';
+import React from "react";
+import {
+import React from 'react'
 import {
   Table,
   TableBody,
@@ -21,25 +17,58 @@ import { toast } from '@/hooks / use - toast'; import { InfoIcon } from 'lucide-
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components / ui / tooltip';
-export /**
- * RoleManagement - Function description
- */
-function RoleManagement() {
-  // Mock team members data;
-  const team_members = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+} from '@/components/ui/tooltip'
+
+import React from "react",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Switch } from "@/components/ui/switch",
+import { toast } from "@/hooks/use-toast",
+import { InfoIcon } from 'lucide-react'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from "@/components/ui/tooltip",
+
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from '@/components/ui/table'
+import { Badge } from '@/components/ui/badge'
+import { Switch } from '@/components/ui/switch'
+import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-react'
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
+} from '@/components/ui/tooltip'
+export function RoleManagement() {
+  // Mock team members data
+  const teamMembers = [
     {
-
-        view_candidates: true,
-        edit_candidates: true,
-        create_jobs: true,
-        manage_team: true,
-        view_billing: true,
-        manage_billing: true,
-      },
-    },
-
+      id: 1
+      name: 'Alex Johnson'
+      email: 'alex@example.com'
+      role: 'Admin'
+      permissions: {
+        viewCandidates: true
+        editCandidates: true
+        createJobs: true
+        manageTeam: true
+        viewBilling: true
+        manageBilling: true
+      }
+    }
     {
       id: 2
       name: 'Jamie Smith'
@@ -104,110 +133,6 @@ function RoleManagement() {
     Viewer: 'Read - only access to candidates',
 
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import React from 'react';
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import { Switch } from '@/components/ui/switch';
-import { toast } from '@/hooks/use-toast';import { InfoIcon } from 'lucide-react';
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-
-export function RoleManagement() {;
-  // Mock team members data;
-  const teamMembers = [;
-    {;
-      id: 1,;
-      name: 'Alex Johnson',;
-      email: 'alex@example && example.com',;
-      role: 'Admin',;
-      permissions: {;
-        viewCandidates: true,;
-        editCandidates: true,;
-        createJobs: true,;
-        manageTeam: true,;
-        viewBilling: true,;
-        manageBilling: true,;
-      },;
-    },;
-    {;
-      id: 2,;
-      name: 'Jamie Smith',;
-      email: 'jamie@example && example.com',;
-      role: 'Recruiter',;
-      permissions: {;
-        viewCandidates: true,;
-        editCandidates: true,;
-        createJobs: true,;
-        manageTeam: false,;
-        viewBilling: false,;
-        manageBilling: false,;
-      },;
-    },;
-    {;
-      id: 3,;
-      name: 'Sam Williams',;
-      email: 'sam@example && example.com',;
-      role: 'Manager',;
-      permissions: {;
-        viewCandidates: true,;
-        editCandidates: false,;
-        createJobs: true,;
-        manageTeam: false,;
-        viewBilling: true,;
-        manageBilling: false,;
-      },;
-    },;
-    {;
-      id: 4,;
-      name: 'Taylor Brown',;
-      email: 'taylor@example && example.com',;
-      role: 'Viewer',;
-      permissions: {;
-        viewCandidates: true,;
-        editCandidates: false,;
-        createJobs: false,;
-        manageTeam: false,;
-        viewBilling: false,;
-        manageBilling: false,;
-      },;
-    },;
-  ];
-
-  const handlePermissionChange = (;
-    _memberId: number,;
-    permission: string,;
-    value: boolean;
-  ) => {    // In a real app, this would make an API call to update permissions;
-    toast({;
-      title: 'Permission updated',;
-      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,;
-    });
-  };
-
-  const roleDescriptions: Record<string, string> = {;
-    Admin: 'Full access to all features and settings',;
-    Recruiter: 'Can manage candidates and job postings',;
-    Manager: 'Can view candidates and create jobs',;
-    Viewer: 'Read-only access to candidates',;
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-  return (
-
-
       id: 1,
       name: "Alex Johnson",
       email: "alex@example.com",
@@ -254,15 +179,50 @@ export function RoleManagement() {;
         createJobs: false,
         manageTeam: false,
         viewBilling: false,
+        manageBilling: false,
+      },
+    },
+  ]
+  const handlePermissionChange = (
+    _memberId: number,
+    permission: string,
+    value: boolean
+  ) => {    // In a real app, this would make an API call to update permissions
+    toast({
+      title: 'Permission updated',
+      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,
+    })
+  }
+  const roleDescriptions: Record<string, string> = {
+    Admin: 'Full access to all features and settings',
+    Recruiter: 'Can manage candidates and job postings',
+    Manager: 'Can view candidates and create jobs',
+    Viewer: 'Read-only access to candidates',
+  }
+        manageBilling: false}}],
 
 
-
-
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
 
   return (
     <div className="space-y-6">
       <div>
-
+        <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
+          {Object.entries(roleDescriptions).map(([role, description]) => (
+            <div
+              key={role}
+              className='bg-card rounded-lg p-4 border border-border'
+            >
+              <div className='flex items-center gap-2 mb-2'>
+                <Badge variant={role === 'Admin' ? 'default' : 'outline'}>
+                  {role}
+                </Badge>              </div>
+              <p className='text-sm text-muted-foreground'>{description}</p>
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => (
@@ -271,18 +231,14 @@ export function RoleManagement() {;
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
-
-
+        </div>
+      </div>
+      <div className='rounded-md border'>
 
       <div className="rounded-md border">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Table>
           <TableHeader>
             <TableRow>
@@ -366,13 +322,9 @@ export function RoleManagement() {;
             </TableRow>
           </TableHeader>
           <TableBody>
-
-
+            {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <TableCell>
                   <div className='font-medium'>{member.name}</div>
                   <div className='text-sm text-muted-foreground'>
@@ -380,9 +332,13 @@ export function RoleManagement() {;
                   </div>
                 </TableCell>
                 <TableCell>
-
-=======
-
+                  <select
+                    className='w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
+                    defaultValue={member.role}                  >
+                    <option value='Admin'>Admin</option>
+                    <option value='Recruiter'>Recruiter</option>
+                    <option value='Manager'>Manager</option>
+                    <option value='Viewer'>Viewer</option>
                   <select 
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member.role}
@@ -391,13 +347,11 @@ export function RoleManagement() {;
                     <option value="Recruiter">Recruiter</option>
                     <option value="Manager">Manager</option>
                     <option value="Viewer">Viewer</option>
-
-
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
-
+                    aria-label='View candidates'
                     aria-label="View candidates"
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>
@@ -754,9 +708,6 @@ export function RoleManagement() {;
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View candidates";
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
                       handlePermissionChange(
@@ -821,16 +772,23 @@ export function RoleManagement() {;
                 <TableCell className='text-center'>;
                   <Switch
                     aria-label='View billing'
-
-=======
                     checked={member.permissions.viewBilling}
-
+                    onCheckedChange={checked =>
+                      handlePermissionChange(member.id, 'viewBilling', checked)
+                    }                  />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  )
+}
       </div>;
     </div>;
   );
 };
-
-=======
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
@@ -846,70 +804,4 @@ export function RoleManagement() {;
   );
 
 }
-
-
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-                <TableCell className='text - center'>;
-                  <Switch;
-                    aria - label='View candidates';
-                    checked={member.permissions.view_candidates}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange (
-                        member.id,
-                        'view_candidates',
-                        checked);
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text - center'>;
-                  <Switch;
-                    aria - label='Edit candidates';
-                    checked={member.permissions.edit_candidates}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange (
-                        member.id,
-                        'edit_candidates',
-                        checked);
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text - center'>;
-                  <Switch;
-                    aria - label='Create jobs';
-                    checked={member.permissions.create_jobs}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange (member.id, 'create_jobs', checked);
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text - center'>;
-                  <Switch;
-                    aria - label='Manage team';
-                    checked={member.permissions.manage_team}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange (member.id, 'manage_team', checked);
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text - center'>;
-                  <Switch;
-                    aria - label='View billing';
-                    checked={member.permissions.view_billing}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange (member.id, 'view_billing', checked);
-                    }                  />;
-                </TableCell>;
-              </TableRow>))}
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,9 +1,7 @@
+import Link from 'next/link';
+export type Course = {;
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export type Course = {
   id: string;
   title: string;
   duration_minutes: number;
@@ -34,34 +32,30 @@ function CourseCard() {
       </div>;
       <div className='text - xs text - gray - 500 mt - 1'>;
         {course.category} • {course.level} •{' '}
-        {Math.round (course.duration_minutes / 60)}h          {course.is_free ? 'Free' : 'Paid'}
-        </span>;
-      </div>;
-      <div className="text - xs text - gray - 500 mt - 1">{course.category} • {course.level} • {Math.round (course.duration_minutes / 60)}h</div>;
-      <div className="text - sm mt - 2 line - clamp - 2">{course.description}</div>;
-      <div className="mt - 3 flex items - center justify - between">;
-        <span className="text - xs bg - indigo - 50 text - indigo - 700 px - 2 py - 0.5 rounded">Badge: {course.certification_badge}</span>;
-        <Link href={`/learn/${course.id}`}>;
-          <a className='text - blue - 600 hover:underline text - sm'>View course</a>;
-      </div>;
-      <div className='text - sm mt - 2 line - clamp - 2'>{course.description}</div>;
-      <div className='mt - 3 flex items - center justify - between'>;
-        <span className='text - xs bg - indigo - 50 text - indigo - 700 px - 2 py - 0.5 rounded'>;
-          Badge: {course.certification_badge}
-        </span>;
-        <Link href={`/learn/${course.id}`}>;
-          <a className='text - blue - 600 hover:underline text - sm'>View course</a>        </Link>;
-      </div>;
-    </div>);
-}          <a className="text - blue - 600 hover: underline text - sm">View course</a>;
-        </Link>;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
+        {Math.round(course.durationMinutes / 60)}h          {course.isFree ? 'Free' : 'Paid'}
+        </span>
+      </div>
+      <div className="text-xs text-gray-500 mt-1">{course.category} • {course.level} • {Math.round(course.durationMinutes / 60)}h</div>
+      <div className="text-sm mt-2 line-clamp-2">{course.description}</div>
+      <div className="mt-3 flex items-center justify-between">
+        <span className="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded">Badge: {course.certificationBadge}</span>
+        <Link href={`/learn/${course.id}`}>
+          <a className='text-blue-600 hover:underline text-sm'>View course</a>
+      </div>
+      <div className='text-sm mt-2 line-clamp-2'>{course.description}</div>
+      <div className='mt-3 flex items-center justify-between'>
+        <span className='text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded'>
+          Badge: {course.certificationBadge}
+        </span>
+        <Link href={`/learn/${course.id}`}>
+          <a className='text-blue-600 hover:underline text-sm'>View course</a>        </Link>
+      </div>
+    </div>;
   );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}          <a className="text-blue-600 hover: underline text-sm">View course</a>
+        </Link>
+      </div>
+    </div>
+  );
+}
+  );

@@ -1,8 +1,20 @@
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {useState} from "react";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {CountryServiceCard} from "@/components/services/CountryServiceCard";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+import { useState } from "react",
+import { Search } from "lucide-react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { CountryServiceCard } from "@/components/services/CountryServiceCard";
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",
+import { CountryPricing } from "@/data/onsiteServicePricing",
 interface CountryTabsProps {
 
   popularCountries: string[]
@@ -12,13 +24,19 @@ interface CountryTabsProps {
 
   setSearchQuery: (query: string) => void
 }
+export function CountryTabs({
+  popularCountries;
 
 
 
-
-
-
-
+export function CountryTabs({ ;
+  popularCountries;
+export function CountryTabs({ 
+  popularCountries,
+  filteredCountries, 
+  handleCountrySelect, 
+  searchQuery, 
+  setSearchQuery 
 }: CountryTabsProps) {
   return (
     <Tabs defaultValue="featured" className="w-full">
@@ -41,14 +59,19 @@ interface CountryTabsProps {
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
             .map(country => (
-
-import {useState} from "react";
-import {Search} from "lucide-react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {CountryServiceCard} from "@/components/services/CountryServiceCard";
-import {CountryPricing} from "@/data/onsiteServicePricing";
+              <CountryServiceCard
+                key={country.country}
+                country={country}
+              <CountryServiceCard 
+                key={country.country} 
+                country={country} 
+import { useState } from "react",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
+import { CountryPricing } from "@/data/onsiteServicePricing",;
 interface CountryTabsProps {;
   popularCountries: string[],;
   filteredCountries: CountryPricing[],;
@@ -87,17 +110,9 @@ export function CountryTabs(): any ({ ;
           {filteredCountries;
             .filter(country => popularCountries && popularCountries.includes(country && country.country));
             .map(country => (;
-              <CountryServiceCard
-                key={country && country.country} 
-                country={country} 
-
-=======
-
-              <CountryServiceCard 
-                key={country.country} 
-                country={country} 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <CountryServiceCard;
+                key={country.country} ;
+                country={country} ;
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;
@@ -117,25 +132,18 @@ export function CountryTabs(): any ({ ;
               placeholder="Search by country..."
               className="pl-10 bg-zion-blue border-zion-blue-light text-white"
               value={searchQuery}
-
-              onChange={(e) => setSearchQuery(e && e.target.value)}
-            />;
-          </div>;
-        </div>;
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">;
-          {filteredCountries && filteredCountries.slice(0, 12).map(country => (;
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {filteredCountries.slice(0, 12).map(country => (
             <CountryServiceCard
-              key={country && country.country} 
-              country={country} 
-
-=======
-
+              key={country.country}
+              country={country}
             <CountryServiceCard 
               key={country.country} 
               country={country} 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onSelect={handleCountrySelect}
               isPopular={popularCountries && popularCountries.includes(country && country.country)}
             />;

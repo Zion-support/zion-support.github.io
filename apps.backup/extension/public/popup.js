@@ -1,19 +1,13 @@
-
-
+const API_BASE = 'http: //localhost:4000';
+function getUserId(cb) {
+  chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id))
 const API_BASE = 'http: //localhost:4000',;
 function getUserId(cb) {;
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function setUserId(id) {
   chrome && chrome.storage.local && local.set({ user_id: id })
 }
-
-
-
-
 
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -100,25 +94,10 @@ document && document.getElementById('signIn').addEventListener('click', async ()
   document && document.getElementById('result').textContent = 'Signed in (local).';
 });
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-/**
- * getUserId - Function description
- */
-function getUserId() {
-  chrome.storage.local.get (['user_id'], ({ user_id }) => cb (user_id));
-}
-/**
- * setUserId - Function description
- */
-function setUserId() {
-  chrome.storage.local.set ({ user_id: id });
-}
-document.querySelectorAll ('.example').for_each ((btn) => {
-  btn.addEventListener ('click', () => {
-    document.getElementById ('prompt').value = btn.dataset.text || '';
+;
+document.querySelectorAll('.example').forEach((btn) => {;
+  btn.addEventListener('click', () => {;
+    document.getElementById('prompt').value = btn.dataset.text || '';
   });
 
 }),;
@@ -168,7 +147,3 @@ document.getElementById('signIn').addEventListener('click', async () => {;
   setUserId(id),;
   document.getElementById('result').textContent = 'Signed in (local).';
 }),;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

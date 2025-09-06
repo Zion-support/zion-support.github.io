@@ -23,27 +23,26 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-
-
-  page: number;
-  page_size: number;
-  total: number;
+export type PaginationProps = {;
 
 export type PaginationProps = {
-=======
-  on_change: (next_page: number) => void;
+  page: number;
+  pageSize: number;
+  total: number;
+  onChange: (nextPage: number) => void;
 }
-;
-export default /**
- * Pagination - Function description
- */
-function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / page_size));export type PaginationProps = {
-
-  page: number,
-  page_size: number,
-  total: number,
-
-
+export default function Pagination({
+  page
+  pageSize
+  total
+  onChange
+}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
+  page: number
+  pageSize: number
+  total: number
+  onChange: (nextPage: number) => void
+}
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
   page,
   pageSize,
   total,
@@ -56,8 +55,6 @@ function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / pag
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
-
-
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
@@ -123,8 +120,12 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
       </EnhancedButton>;
       <div className="text-sm">;
         Page {page} of {totalPages}
-
-
+      </div>
+      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>
+        Next
+      </EnhancedButton>
+    </div>
+);
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {;
@@ -397,21 +398,4 @@ if ( {) {
 }
 export default Pagination;
 }
-=======
   );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-          <ChevronRight className="w - 4 h - 4 ml - 1" />;
-        </span>)}
-    </nav>);
-}
-export default Pagination;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

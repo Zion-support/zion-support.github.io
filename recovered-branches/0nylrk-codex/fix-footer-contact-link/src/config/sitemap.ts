@@ -1,13 +1,8 @@
 
-// Define the types for our sitemap structure;
+// Define the types for our sitemap structure
 
 export type SitemapItem = {
-=======
-
-
 export type SitemapItem = {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   path: string;
   label: string;
   description?: string;
@@ -509,8 +504,6 @@ export const getAccessibleRoutes = (
     // Add role-specific routes
     if (userType === 'creator' |userType === 'jobSeeker') {
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
-
-=======
 // Define the types for our sitemap structure;
 export type SitemapItem = {;
   path: string,;
@@ -811,10 +804,6 @@ export const getAccessibleRoutes = (;
     // Add role-specific routes;
     if (userType === 'creator' || userType === 'jobSeeker') {;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes];
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     if (userType === 'employer' |userType === 'buyer') {
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
@@ -823,30 +812,14 @@ export const getAccessibleRoutes = (;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
     }
   }
-
-    required_auth: true;
-    required_roles: ['admin'];
-    priority: 0.8;
-    change_freq: 'daily',
-    lastmod: current_date}];
-=======
-
+  return accessibleRoutes
+}
 
 ;
-// Dynamic Path Patterns;
-export const dynamic_paths = {
-  talent_profile: '/talent/:id';
-  project_details: '/project/:project_id';
-  project_milestones: '/project/:project_id / milestones';
-  project_room: '/project/:project_id / room';
-  job_details: '/job/:id';
-  category_details: '/categories/:slug',
-  dispute_details: '/dashboard / disputes/:dispute_id'}
+  return accessibleRoutes;
+  
+  return accessibleRoutes
 ;
 
   return accessibleRoutes;
-
-
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

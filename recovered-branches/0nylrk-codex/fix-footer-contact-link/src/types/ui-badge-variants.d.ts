@@ -1,8 +1,15 @@
 
-=======
+// Additional type declaration for the badge variants
 
+declare type BadgeVariant =
+  | "default"
+  | "secondary"
+  | "destructive"
+  | "outline"
+  | "success"
+  | "warning"
+  | "info";
 
-=======
   | "info",
 
 // Additional type declaration for the badge variants;
@@ -15,7 +22,3 @@ declare type BadgeVariant =;
   | "warning";
 
   | "info",;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

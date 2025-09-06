@@ -1,5 +1,18 @@
 
+import { GradientHeading } from "./GradientHeading",
+import { Button } from "./ui/button";
+import { GradientHeading } from './GradientHeading'
+import { Button } from './ui/button'
+import { CheckCircle2 } from 'lucide-react'
 
+import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from './ui/table'
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -162,7 +175,6 @@ function ComparisonSection() {
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
 
-
                   </TableRow>
 
 import { GradientHeading } from "./GradientHeading",
@@ -208,18 +220,34 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
 
                   </TableRow>
-
-=======
-                  </TableRow>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
               </TableBody>
             </Table>
           </div>
-
-=======
+          <div className='mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20'>
+            <div className='flex items-start'>
+              <CheckCircle2 className='mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1' />
+              <p className='text-white'>
+                <span className='font-bold'>Total Annual Savings: </span>
+                <span className='text-green-400 font-bold text-xl'>
+                  Up to 65%
+                </span>
+                <span className='block text-sm text-zion-slate-light mt-1'>
+                  Results may vary based on specific requirements and service
+                  levels
+                </span>
+              </p>
+            </div>
+            <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap'>              Calculate Your Savings          <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
+            <div className="flex items-start">
+              <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
+              <p className="text-white">
+                <span className="font-bold">Total Annual Savings: </span>
+                <span className="text-green-400 font-bold text-xl">Up to 65%</span>
+                <span className="block text-sm text-zion-slate-light mt-1">Results may vary based on specific requirements and service levels</span>
+              </p>
+            </div>
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
 
 
 
@@ -236,24 +264,19 @@ export function ComparisonSection() {
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
 
               Calculate Your Savings
-
-=======
-              Calculate Your Savings
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </Button>
           </div>
         </div>
       </div>
-
-
-
+    </section>;
+  );
+};
+}
     </section>
-
-
-import { GradientHeading } from './GradientHeading';
-import { Button } from './ui/button';
+  )
+}
+import { GradientHeading } from "./GradientHeading",;
+import { Button } from "./ui/button",;
 import { CheckCircle2 } from 'lucide-react';
 import {;
   Table,;
@@ -410,11 +433,4 @@ export function ComparisonSection() {;
 
   );
 }
-
-=======
-    </section>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

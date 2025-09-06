@@ -1,77 +1,66 @@
 
-
-
-
-
 import React, { useState } from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import React, { useState } from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+interface BrowseItem {
 
-interface BrowseItem {;
-  id: string,;
-  title: string,;
-  subtitle: string,;
-  description: string,;
-=======
-import React, { useState } from './react';
-import { Card, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-=======
+  id: string
+  title: string
+  subtitle: string
+  description: string
+  location?: string;
+  badges: string[]
+
+  price?: string;
+  image?: string;
+  match?: number;
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
 interface BrowseItem {
   id: string,
   title: string,
   subtitle: string,
   description: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  location?: string;
-  badges: string[],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  price?: string;
-  image?: string;
-  match?: number;
+  location?: string,
+  badges: string[],
+  price?: string,
+  image?: string,
+  match?: number,
+  timePosted?: string
+}
+interface BrowseCardsProps {
 
 
+  onViewDetails: (id: string) => void
+}
 
+export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
+  const [savedItems, setSavedItems] = useState<string[]>([]);
+export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
+  const [savedItems, setSavedItems] = useState<string[]>([]);
 
-
+  const [savedItems, setSavedItems] = useState<string[]>([]),
+  
   const toggleSaved = (id: string) => {
     setSavedItems(prev =>
       prev.includes(id)
         ? prev.filter(itemId => itemId !== id)
         : [...prev, id]
     )
-
-
-interface BrowseCardsProps {;
-  items: BrowseItem[],;
-  type: "jobs" | "talents",;
-  onViewDetails: (id: string) => void;
-}
-
-export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsProps) {;
-  const [savedItems, setSavedItems] = useState<string[]>([]);
-
-  const toggleSaved = (id: string) => {;
-    setSavedItems(prev => ;
-      prev && prev.includes(id) ;
-        ? prev && prev.filter(itemId => itemId !== id);
-        : [...prev, id];
-    );
-  };
-
-=======
+  }
 
   },
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   return (
     <div className="space-y-4 pb-24">;
       {items && items.map((item) => (;
@@ -90,20 +79,13 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
                   )}
-
-                  <div>;
-                    <h3 className="font-medium">{item && item.title}</h3>;
-                    <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;
-                  </div>;
-                </div>;
-
-
+                  <div>
+                    <h3 className="font-medium">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>
+                  </div>
+                </div>
                 <button
-=======
-
                 <button 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
                 >;
@@ -112,9 +94,15 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                   ) : (;
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
-
-=======
-
+                </button>
+              </div>
+              <div className="mt-3 flex flex-wrap gap-1">
+                {item.badges.map((badge, index) => (
+                  <Badge
+                    key={index}
+                    variant="outline"
+                    className="text-xs font-normal"
+                  >
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -193,9 +181,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {badge}
                   </Badge>;
                 ))}

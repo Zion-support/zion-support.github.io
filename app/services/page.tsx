@@ -1,14 +1,9 @@
-
-export const metadata = {;
-  title: "Services | Zion Tech Group",;
-  description:;
+import Link from "next/link";
+export const metadata = {
+  title: "Services | Zion Tech Group",
+  description:
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
     "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
-
-=======
-
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 export default function ServicesOverviewPage() {;
   return (
@@ -35,12 +30,62 @@ export default function ServicesOverviewPage() {;
             "Foundational architecture"
             "Billing + subscriptions"
             "Growth analytics"
-=======
-import Link from './next / link';
-export const metadata = {
-  title: "Services | Zion Tech Group",
-  description:;
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+          ]}
+          icon="🚀"
+        />
+        <ServiceCard
+          href="/services/ai-services"
+          title="AI Services"
+          description="LLM applications, RAG systems, and MLOps pipelines"
+          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+          icon="🤖"
+        />
+        <ServiceCard
+          href="/services/it-services"
+          title="IT Services"
+          description="Cloud migration, DevOps, and security solutions"
+          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
+          icon="⚙️"
+        />
+        <ServiceCard
+          href="/services/blockchain"
+          title="Blockchain"
+          description="Smart contracts, DeFi protocols, and Web3 applications"
+          bullets={["Smart contracts", "DeFi protocols", "NFT platforms"]}
+          icon="⛓️"
+        />
+        <ServiceCard
+          href="/services/data-analytics"
+          title="Data Analytics"
+          description="Business intelligence, predictive modeling, and real-time analytics"
+          bullets={["BI dashboards", "Predictive analytics", "Real-time insights"]}
+          icon="📊"
+        />
+        <ServiceCard
+          href="/services/ai-powered-tools"
+          title="AI-Powered Tools"
+          description="Cutting-edge AI micro SAAS tools for content, automation, and analytics"
+          bullets={["Content generation", "Business automation", "AI analytics"]}
+          icon="🤖"
+        />
+        <ServiceCard
+          href="/services/business-automation"
+          title="Business Automation"
+          description="Intelligent workflow automation and process optimization tools"
+          bullets={["Workflow automation", "Data processing", "Communication automation"]}
+          icon="⚡"
+        />
+        <ServiceCard
+          href="/services/industry-solutions"
+          title="Industry Solutions"
+          description="Specialized micro SAAS solutions for specific industries"
+          bullets={["Healthcare", "Financial services", "Real estate"]}
+          icon="🏢"
+        />
+      </div>
+      <CTA />{" "}
+    </div>;
+  );
 }
 export default /**
  * ServicesOverviewPage - Function description

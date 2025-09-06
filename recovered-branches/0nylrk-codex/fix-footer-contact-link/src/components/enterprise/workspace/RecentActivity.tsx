@@ -1,23 +1,32 @@
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 export function RecentActivity() {
   // Mock activity data
 
   const activities = [
     {
-
-
+      id: "act-1"
+      user: "Michael Chen"
+      action: "posted a new job"
+      target: "Senior React Developer"
+      timestamp: "1h ago"
       id: "act-1",
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
       timestamp: "1h ago",
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      type: "job";
+    };
+      type: "job"
+    }
+    },
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -25,11 +34,8 @@ export function RecentActivity() {
       target: "5 candidates for UI/UX Designer"
       timestamp: "3h ago"
       type: "candidate"
-
-
+    }
     },
-
-
     {
       id: "act-3"
       user: "David Johnson"
@@ -37,11 +43,8 @@ export function RecentActivity() {
       target: "Alex Morgan"
       timestamp: "Yesterday"
       type: "interview"
-
-
+    }
     },
-
-
     {
       id: "act-4"
       user: "Emily Davis"
@@ -50,14 +53,8 @@ export function RecentActivity() {
       timestamp: "2d ago"
       type: "comment"
     }
-
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-=======
-
+  ];
   ],
-
 
   const getBadgeForType = (type: string) => {
     switch (type) {
@@ -71,9 +68,8 @@ import {Badge} from "@/components/ui/badge";
       default:
         return <Badge variant="outline">Activity</Badge>
     }
-
+  }
   },
-
 
   return (
     <Card>
@@ -112,9 +108,7 @@ import {Badge} from "@/components/ui/badge";
       </CardContent>
     </Card>
   )
-
-
-=======
+}
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -299,14 +293,7 @@ function RecentActivity() {
           </button>;
         </div>;
       </CardContent>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </Card>;
+  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Card>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

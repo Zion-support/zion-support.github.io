@@ -1,10 +1,5 @@
-
-
-=======
-
+export interface FeedbackRecord {
 export interface FeedbackRecord {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   type: string;
   message: string;
@@ -241,18 +236,30 @@ export function generateFeedbackId(): string {
   created_at: string;
   ip: string;
 }
-const feedback_data: FeedbackRecord[] = [];
-;
-export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise < void> {
-  feedback_data.push (feedback);
-  console.log ('Feedback saved:', feedback.id);
+const feedbackData: FeedbackRecord[] = [];
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
+  feedbackData.push(feedback);
+  console.log('Feedback saved:', feedback.id);
 }
 export function write_all (rows: any[]): void {
   console.log ('Writing feedback rows:', rows.length);
   // Implementation would write to database or file;
 }
-export function getAllFeedback (): FeedbackRecord[] {
-  return [...feedback_data];
+export function getAllFeedback(): FeedbackRecord[] {
+  return [...feedbackData];
+
+
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
+  feedbackData.push(feedback);
+  console.log('Feedback saved:', feedback.id);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+export function writeAll(rows: any[]): void {;
+  console.log('Writing feedback rows:', rows.length);
+  // Implementation would write to database or file
+}
+
+export function getAllFeedback(): FeedbackRecord[] {;
+  return [...feedbackData];
+
+}

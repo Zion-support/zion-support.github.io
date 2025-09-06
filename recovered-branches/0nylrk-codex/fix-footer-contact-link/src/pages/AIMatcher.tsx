@@ -1,7 +1,48 @@
 
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {GradientHeading} from "@/components/GradientHeading";
+import {AIMatchmaker} from "@/components/AIMatchmaker";
+import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {toast} from "@/hooks/use-toast";
+import {MatchResult} from "@/lib/ai-matchmaking";
+export default function AIMatcherPage() {;
+  const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { GradientHeading } from "@/components/GradientHeading",
+import { AIMatchmaker } from "@/components/AIMatchmaker",
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { toast } from "@/hooks/use-toast";
+import { MatchResult } from "@/lib/ai-matchmaking";
+export default function AIMatcherPage() {
 
-
-
+  const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const handleMatchSelect = (match: MatchResult) => {
+    // Get the item type from the category
+    let itemType = "service";
+    const category = match.item.category.toLowerCase()
+    if (category.includes("talent") |category === "engineering" |
+        category === "data science" |category === "development") {
+import { toast } from "@/hooks/use-toast",
+import { MatchResult } from "@/lib/ai-matchmaking",
+export default function AIMatcherPage() {
+  const navigate = useNavigate(),
+  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
+  
+  const handleMatchSelect = (match: MatchResult) => {
+    // Get the item type from the category
+    let itemType = "service",
+    const category = match.item.category.toLowerCase(),
+    
+    if (category.includes("talent") || category === "engineering" || 
+        category === "data science" || category === "development") {
       itemType = "talent"
     } else if (category.includes("equipment") |category === "hardware") {
       itemType = "equipment"
@@ -16,12 +57,10 @@
         specificItem: match.item
       }
     })
-
+  }
 
   },
   
-
-
   return (
     <>
       <Header />
@@ -50,16 +89,30 @@
                 </SelectContent>
               </Select>
             </div>
-
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {AIMatchmaker} from "@/components/AIMatchmaker";
-import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
-import {toast} from "@/hooks/use-toast";
-import {MatchResult} from "@/lib/ai-matchmaking";
+            <AIMatchmaker
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+              onMatchSelect={handleMatchSelect}
+            />
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+            
+            <AIMatchmaker 
+            <AIMatchmaker 
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+import { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { AIMatchmaker } from "@/components/AIMatchmaker",;
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+import { toast } from "@/hooks/use-toast",;
+import { MatchResult } from "@/lib/ai-matchmaking",;
 export default function AIMatcherPage() {;
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -118,16 +171,7 @@ export default function AIMatcherPage() {;
                 </SelectContent>;
               </Select>;
             </div>;
-
-            <AIMatchmaker
-=======
-
-            
-            <AIMatchmaker 
-=======
-            <AIMatchmaker 
-
-
+            <AIMatchmaker;
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
 =======
@@ -215,8 +259,5 @@ if (|| category === "hardware") {) {
 
     </>);
 }
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+;

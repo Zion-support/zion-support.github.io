@@ -67,7 +67,8 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
 }</Badge>) ) ;
 }</div>) ;
 }</div> </CardContent> </Card>) ) ;
-
+:temp_broken_files/profile/ProfileProjects.tsx
+}</div> </div>) ;"}'"
 }</div> </div>) ;
 }'"
-
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileProjects.tsx

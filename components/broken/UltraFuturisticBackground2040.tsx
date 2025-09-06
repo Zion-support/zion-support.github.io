@@ -133,27 +133,17 @@ if (return) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke()
-
+            ctx.stroke();          }            ctx.stroke()
           }
         }
       }
-=======
-
-
-=======
             ctx.stroke();          }
 
           }
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
@@ -685,16 +675,9 @@ if ( {) {
       />;
 
       {/* Overlay Gradients */}
-      <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />;
-      <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />;
+      <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />
+      <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />
 
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Floating Elements */}
       <div className='absolute inset-0'>;
         {/* Animated Grid Pattern */}
@@ -703,74 +686,25 @@ if ( {) {
             className='absolute top-0 left-0 w-full h-full'
             style={{
               backgroundImage: `
-
-              linear-gradient(rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px)
-=======
-        ctx.restore ();
-      });
-;
-      // Draw energy waves;
-      const wave_count = 3;
-      for (let index = 0; i < wave_count; i++) {
-        const wave_offset = (time * 100 + i * 200) % (canvas.width + 200);
-        const wave_y = canvas.height * 0.5 + Math.sin (time * 2 + i) * 50;
-;
-        ctx.stroke_style = `rgba (236, 72, 153, ${0.1 + Math.sin (time + i) * 0.05})`;
-        ctx.line_width = 3;
-;
-        ctx.begin_path ();
-        for (let coordinate_x = -100; x < canvas.width + 100; x += 5) {
-          const coordinate_y = wave_y + Math.sin ((x + wave_offset) * 0.02) * 20;
-          // Check condition
-if ( {) {
-  $2
-}
-            ctx.move_to (x, y);
-          } else {
-            ctx.line_to (x, y);
-          }
-        }
-        ctx.stroke ();
-      }
-      animationFrameId = requestAnimationFrame (animate);    }        const wave_offset = (time * 100 + i * 200) % (canvas.width + 200);
-        const wave_y = canvas.height * 0.5 + Math.sin (time * 2 + i) * 50;
-;
-        ctx.stroke_style = `rgba (236, 72, 153, ${0.1 + Math.sin (time + i) * 0.05})`;
-        ctx.line_width = 3;
-;
-        ctx.begin_path ();
-        for (let coordinate_x = -100, x < canvas.width + 100, x += 5) {
-          const coordinate_y = wave_y + Math.sin ((x + wave_offset) * 0.02) * 20;
-          // Check condition
-if ( {) {
-  $2
-}
-            ctx.move_to (x, y);
-          } else {
-            ctx.line_to (x, y);
-          }
-        }
-        ctx.stroke ();
-      }
-      animationFrameId = requestAnimationFrame (animate);
-    }
-;
-    animate ();
-;
-    const handle_resize = () =>: any {
-      canvas.width = window.inner_width;
-      canvas.height = window.inner_height;    }      canvas.height = window.inner_height;
-    }
-;
-    window.addEventListener ('resize', handle_resize);
-;
-    return () => {
-      window.removeEventListener ('resize', handle_resize);
-      cancelAnimationFrame (animationFrameId);
-    }
-  }, []);
-;
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+            `
+              backgroundSize: '50px 50px'
+              animation: 'gridMove 20s linear infinite'
+            }}
+          />
+        </div>
+        {/* Floating Geometric Elements */}
+        <motion.div
+          className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg'
+          animate={{
+            rotate: [0, 360]
+            scale: [1, 1.1, 1]
+            opacity: [0.2, 0.4, 0.2],          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'linear',  }, []);
   return (
     <div className='fixed inset - 0 pointer - events - none overflow - hidden'>;
       {/* Canvas Background */}
@@ -921,6 +855,50 @@ if ( {) {
             duration: 12
             repeat: Infinity
             ease: 'linear',          }}
+        />
+        <motion.div
+          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
+          animate={{
+            rotate: [45, 405];
+            scale: [1, 1.15, 1];
+            opacity: [0.2, 0.3, 0.2]
+          }}
+          transition={{
+            duration: 12
+            repeat: Infinity
+            ease: 'linear'
+            duration: 12,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+        />
+        {/* Additional Floating Elements */}
+        <motion.div
+          className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
+          animate={{
+            rotate: [12, 372]
+            scale: [1, 1.1, 1]
+            opacity: [0.15, 0.25, 0.15],          }}
+          transition={{
+            duration: 15
+            repeat: Infinity
+            ease: 'linear',          }}
+        />
+        {/* Additional Floating Elements */}
+        <motion.div
+          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
+          animate={{
+            rotate: [12, 372];
+            scale: [1, 1.1, 1];
+            opacity: [0.15, 0.25, 0.15]
+            duration: 8,
+            repeat: Infinity,
+            ease: 'linear',
+
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
 
             rotate: [360, 0];
             scale: [1, 1.2, 1];
@@ -984,29 +962,22 @@ if ( {) {
             ease: "linear"
           }}
 
-        {/* Additional Floating Elements */}
-        <motion&& motion.div
-          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
-=======
-        />;
-        {/* Additional Floating Elements */}
-        <motion.div;
-          className='absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 transform rotate - 12';
-          animate={{
-            rotate: [12, 372],
-            scale: [1, 1.1, 1],
-            opacity: [0.15, 0.25, 0.15],          }}
+          }}
+          transition={{
+            duration: 15
+            repeat: Infinity
+            ease: 'linear'
+          }}
+
+          }}
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: 'linear',          }}
-        />;
-
-
-        {/* Additional Floating Elements */}
-        <motion.div;
-          className="absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 transform rotate - 12";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            ease: 'linear',
+          }}
+        />
+        <motion.div
+          className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full'
           animate={{
 
 
@@ -1020,34 +991,12 @@ if ( {) {
             opacity: [0.15, 0.25, 0.15];
           }}
           transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-
-          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
-=======
-        />;
-        <motion.div;
-          className='absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full';
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-            opacity: [0.15, 0.3, 0.15],          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: 'linear',          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-          animate={{
-
             duration: 18
             repeat: Infinity
             ease: 'linear'
-
+            duration: 18,
+            repeat: Infinity,
+            ease: 'linear',
           }}
 
         />;
@@ -1072,6 +1021,11 @@ if ( {) {
         <motion&& motion.div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
           animate={{
+            y: [0, -20, 0];
+            opacity: [0.4, 0.8, 0.4]
+          transition={{
+            duration: 18,
+            repeat: Infinity,
 
 
           }}
@@ -1175,28 +1129,32 @@ if ( {) {
 
           }}
           transition={{
-            duration: 4,
+            duration: 5
+            repeat: Infinity
+            ease: 'easeInOut'
+            duration: 5,
             repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 2,
+          }}
+        />
+      </div>
             ease: "easeInOut",
-            delay: 1
+            delay: 2
           }}
-
-        />;
-
-        <motion&& motion.div
-          className="absolute top-1/2 left-1/4 w-1 && 1.5 h-1 && 1.5 bg-pink-400/40 rounded-full"
-
-          animate={{
-
+        />
+      </div>
+            ease: "easeInOut"
+            delay: 2
           }}
-          transition={{
-
-          }}
-          transition={{
+        />
+      </div>
             duration: 5,
             repeat: Infinity,
 
+      {/* CSS Animations */}
 
+      {/* CSS Animations */}
       <style jsx>{`
         @keyframes gridMove {
           0% {
@@ -1300,28 +1258,6 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default UltraFuturisticBackground2040;
 
-
-      `}</style>;
-    </div>);
-}export default UltraFuturisticBackground2040;            opacity: 0.5;
-          }
-        }
-      `}</style>;
-    </div>);
-}  );
-}
-;
 export default UltraFuturisticBackground2040;
-;
-
-=======
-
 export default UltraFuturisticBackground2040;
-
-=======
 export default UltraFuturisticBackground2040;
-=======
-export default UltraFuturisticBackground2040;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

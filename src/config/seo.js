@@ -52,12 +52,8 @@ export const defaultSEO = {
     },
   ],
 }
-export default defaultSEO;
-
-=======
+export default defaultSEO
 
 export default defaultSEO;
 ;
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

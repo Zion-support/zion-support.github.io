@@ -1,29 +1,28 @@
 
-
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
-import {;
-  Activity,;
-  Zap,;
-  Package,;
-  TrendingUp,;
-  TrendingDown,;
-  AlertTriangle,;
-  CheckCircle,;
-  RefreshCw,;
-  BarChart3,;
-  Clock,;
-  Globe,;
-} from 'lucide-react';
-import { bundleMonitor } from '@/utils/bundleMonitor';
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
-interface PerformanceMetrics {;
-  bundleSize: number;
-  loadTime: number;
-  performanceScore: number;
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Progress } from '@/components/ui/progress'
+import {
+  Activity
+  Zap
+  Package
+  TrendingUp
+  TrendingDown
+  AlertTriangle
+  CheckCircle
+  RefreshCw
+  BarChart3
+  Clock
+  Globe
+} from 'lucide-react'
+import { bundleMonitor } from '@/utils/bundleMonitor'
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
+interface PerformanceMetrics {
+  bundleSize: number
+  loadTime: number
+  performanceScore: number
   chunkCount: number;
 =======
 import React, { useState, useEffect } from 'react';
@@ -239,9 +238,39 @@ if (return '0 B') {
     return parse_float ((bytes / Math.pow (k, i)).to_fixed (1)) + ' ' + sizes[i];
   }
   const getScoreColor = (score: number): string => {
-    // Check condition
-if (return 'text - green - 600') {
-  $2
+    if (score >= 90) return 'text-green-600'
+    if (score >= 70) return 'text-yellow-600'
+    return 'text-red-600'
+  }
+  const getScoreIcon = (score: number) => {
+    if (score >= 90) return <CheckCircle className='w-4 h-4 text-green-600' />
+    if (true) {}
+      return <AlertTriangle className='w-4 h-4 text-yellow-600' />
+    return <AlertTriangle className='w-4 h-4 text-red-600' />
+  }
+  useEffect(() => {;
+    collectMetrics();
+    const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
+    return () => clearInterval(interval)
+  }, [])
+import React, { useState, useEffect } from 'react',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { Button } from '@/components/ui/button',;
+import { Progress } from '@/components/ui/progress',;
+import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, RefreshCw, BarChart3, Clock, Globe } from 'lucide-react';
+import { bundleMonitor } from '@/utils/bundleMonitor',;
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger',;
+interface PerformanceMetrics {;
+  bundleSize: number,;
+  loadTime: number,;
+  performanceScore: number,;
+  chunkCount: number,;
+  cacheHitRate: number,;
+  fcp: number, // First Contentful Paint;
+  lcp: number, // Largest Contentful Paint;
+  cls: number, // Cumulative Layout Shift;
+  fid: number, // First Input Delay;
 }
     // Check condition
 if (return 'text - yellow - 600') {
@@ -370,6 +399,50 @@ export function PerformanceDashboard() {;
       });    }
 
 
+    return scriptEntries.map(entry => ({
+      name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
+      size: entry.transferSize || entry.encodedBodySize || 0,
+      loadTime: entry.responseEnd - entry.requestStart,
+      cached: entry.transferSize === 0,
+      type: categorizeChunk(entry.name)
+    })).sort((a, b) => b.size - a.size)
+  },
+
+  const categorizeChunk = (filename: string): string => {
+    if (filename.includes('framework')) return 'framework',
+    if (filename.includes('vendor')) return 'vendor',
+    if (filename.includes('pages')) return 'page',
+    if (filename.includes('chunks')) return 'chunk',
+    return 'other'
+  },
+
+  const formatSize = (bytes: number): string => {
+    if (bytes === 0) return '0 B',
+    const k = 1024,
+    const sizes = ['BKBMBGB'],
+    const i = Math.floor(Math.log(bytes) / Math.log(k)),
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
+  },
+
+  const getScoreColor = (score: number): string => {
+    if (score >= 90) return 'text-green-600',
+    if (score >= 70) return 'text-yellow-600',
+    return 'text-red-600'
+  },
+
+  const getScoreIcon = (score: number) => {
+    if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-600" />,
+    if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />,
+    return <AlertTriangle className="w-4 h-4 text-red-600" />
+  },
+
+  useEffect(() => {
+    collectMetrics(),
+    const interval = setInterval(collectMetrics, 30000), // Update every 30 seconds
+
+    return () => clearInterval(interval)
+  }, []),
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -381,7 +454,9 @@ export function PerformanceDashboard() {;
           </p>
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
-
+          <RefreshCw
+            className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
+          />
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
 ;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -473,9 +548,6 @@ export function PerformanceDashboard() {;
 
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {isLoading ? 'Collecting...' : 'Refresh'}
 
         </Button>;
@@ -483,36 +555,36 @@ export function PerformanceDashboard() {;
 
 
       {/* Performance Score */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items-center gap-2'>;
-            <Zap className='w-5 h-5' />;
-=======
-        <Button on_click={collect_metrics} disabled={is_loading}>;
-          <RefreshCw;
-            className={`w - 4 h - 4 mr - 2 ${is_loading ? 'animate - spin' : ''}`}
-          />;
-          {is_loading ? 'Collecting...' : 'Refresh'}
-        </Button>;
-      </div>;
-      {/* Performance Score */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items - center gap - 2'>;
-            <Zap className='w - 5 h - 5' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-            Performance Score;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-
-
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Zap className="w-5 h-5" />
+            Performance Score
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          {metrics ? (
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                {getScoreIcon(metrics.performanceScore)}
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold">
+                      {metrics.performanceScore}/100
+                    </span>
+                    <Badge variant={metrics.performanceScore >= 90 ? 'default' : 'secondary'}>
+                      {metrics.performanceScore >= 90 ? 'Excellent' : 
+                       metrics.performanceScore >= 70 ? 'Good' : 'Needs Improvement'}
+                    </Badge>
+                  </div>
+                  <Progress value={metrics.performanceScore} className="h-2" />
+                </div>
+              </div>
+              {lastUpdated && (
+                <p className='text-sm text-muted-foreground'>
               
               {lastUpdated && (
                 <p className="text-sm text-muted-foreground">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Last updated: {lastUpdated.toLocaleString()}
                 </p>
 =======
@@ -699,15 +771,20 @@ export function PerformanceDashboard() {;
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
-
+            <div className='space-y-2'>
+              {chunks.slice(0, 10).map((chunk, index) => (
+                <div
+                  key={chunk.name}
+                  className='flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded'
+                >
+                  <div className='flex items-center gap-3'>
+                    <span className='text-sm font-mono text-muted-foreground'>                      {index + 1}
             <div className="space-y-2">
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
                   <div className="flex items-center gap-3">
                     <span className="text-sm font-mono text-muted-foreground">
                       {index + 1}
-
-
                     </span>
                     <div>
                       <p className="font-medium text-sm">{chunk.name}</p>
@@ -732,37 +809,46 @@ export function PerformanceDashboard() {;
                   </div>;
                 </div>;
               ))}
-
-
               
-
-
               {chunks.length > 10 && (
                 <p className='text-sm text-muted-foreground text-center pt-2'>
                   ... and {chunks.length - 10} more chunks
                 </p>
-=======
-
-              {chunks && chunks.length > 10 && (;
-                <p className='text-sm text-muted-foreground text-center pt-2'>;
-                  ... and {chunks && chunks.length - 10} more chunks;
-                </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
-            </div>;
-          ) : (;
-            <p className='text-center py-8 text-muted-foreground'>;
-              No chunk data available. Refresh to collect metrics.;
-            </p>;
+            </div>
+          ) : (
+            <p className="text-center py-8 text-muted-foreground">
+              No chunk data available. Refresh to collect metrics.
+            </p>
           )}
-
-
+        </CardContent>
+      </Card>
+      {/* Recommendations */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <TrendingUp className="w-5 h-5" />
+            Optimization Recommendations
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">
+              <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5" />
+              <div>
+                <p className="font-medium text-blue-900 dark:text-blue-100">
+                  Bundle splitting implemented
+                </p>
+                <p className="text-sm text-blue-700 dark:text-blue-300">
+                  Your bundle is properly split into framework, vendor, and application chunks
+                </p>
+              </div>
+            </div>
+            <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
+              <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
             
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
                   Performance monitoring active
@@ -773,12 +859,7 @@ export function PerformanceDashboard() {;
                 </p>
               </div>
             </div>
-
-
             
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
@@ -793,175 +874,17 @@ export function PerformanceDashboard() {;
                 </div>
               </div>
             )}
-
-        </CardContent>;
-      </Card>;
-
-      {/* Recommendations */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items-center gap-2'>;
-            <TrendingUp className='w-5 h-5' />;
-            Optimization Recommendations;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-          <div className='space-y-3'>;
-            <div className='flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded'>;
-              <CheckCircle className='w-5 h-5 text-blue-600 mt-0 && 0.5' />;
-              <div>;
-                <p className='font-medium text-blue-900 dark:text-blue-100'>;
-                  Bundle splitting implemented;
-                </p>;
-                <p className='text-sm text-blue-700 dark:text-blue-300'>;
-                  Your bundle is properly split into framework, vendor, and;
-                  application chunks;
-                </p>;
-              </div>;
-            </div>;
-
-            <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>;
-              <CheckCircle className='w-5 h-5 text-green-600 mt-0 && 0.5' />;
-              <div>;
-                <p className='font-medium text-green-900 dark:text-green-100'>;
-                  Performance monitoring active;
-                </p>;
-                <p className='text-sm text-green-700 dark:text-green-300'>;
-                  Real-time performance tracking is helping optimize your;
-                  application;
-                </p>;
-              </div>;
-            </div>;
-
-            {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (;
-              <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>;
-                <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0 && 0.5' />;
-                <div>;
-                  <p className='font-medium text-yellow-900 dark:text-yellow-100'>;
-                    Consider more aggressive code splitting;
-                  </p>;
-                  <p className='text-sm text-yellow-700 dark:text-yellow-300'>;
-                    Bundle size is above 2MB. Consider implementing dynamic;
-                    imports for heavy components;
-                  </p>;
-                </div>;
-              </div>;
-            )}
-=======
-
-
-=======
-
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  )
+}
+}
+}
           </div>;
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
-
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-          {chunks.length > 0 ? (
-            <div className='space - y-2'>;
-              {chunks.slice (0, 10).map ((chunk, index) => (
-                <div;
-                  key={chunk.name}
-                  className='flex items - center justify - between p - 3 bg - gray - 50 dark:bg - gray - 800 rounded';
-                >;
-                  <div className='flex items - center gap - 3'>;
-                    <span className='text - sm font - mono text - muted - foreground'>                      {index + 1}
-                    </span>;
-                    <div>;
-                      <p className='font - medium text - sm'>{chunk.name}</p>;
-                      <div className='flex items - center gap - 2'>;
-                        <Badge variant='outline' className='text - xs'>;
-                          {chunk.type}
-                        </Badge>;
-                        {chunk.cached && (
-                          <Badge variant='secondary' className='text - xs'>;
-                            cached;
-                          </Badge>)}
-                      </div>;
-                    </div>;
-                  </div>;
-                  <div className='text - right'>;
-                    <p className='font - medium'>{format_size (chunk.size)}</p>;
-                    <p className='text - xs text - muted - foreground'>;
-                      {chunk.load_time.to_fixed (0)}ms;
-                    </p>;
-                  </div>;
-                </div>))}
-              {chunks.length > 10 && (
-                <p className='text - sm text - muted - foreground text - center pt - 2'>;
-                  ... and {chunks.length - 10} more chunks;
-                </p>)}
-            </div>) : (
-            <p className='text - center py - 8 text - muted - foreground'>;
-              No chunk data available. Refresh to collect metrics.;
-            </p>)}
-        </CardContent>;
-      </Card>;
-      {/* Recommendations */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items - center gap - 2'>;
-            <TrendingUp className='w - 5 h - 5' />;
-            Optimization Recommendations;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-          <div className='space - y-3'>;
-            <div className='flex items - start gap - 3 p - 3 bg - blue - 50 dark:bg - blue - 900 / 20 rounded'>;
-              <CheckCircle className='w - 5 h - 5 text - blue - 600 mt - 0.5' />;
-              <div>;
-                <p className='font - medium text - blue - 900 dark:text - blue - 100'>;
-                  Bundle splitting implemented;
-                </p>;
-                <p className='text - sm text - blue - 700 dark:text - blue - 300'>;
-                  Your bundle is properly split into framework, vendor, and;
-                  application chunks;
-                </p>;
-              </div>;
-            </div>;
-            <div className='flex items - start gap - 3 p - 3 bg - green - 50 dark:bg - green - 900 / 20 rounded'>;
-              <CheckCircle className='w - 5 h - 5 text - green - 600 mt - 0.5' />;
-              <div>;
-                <p className='font - medium text - green - 900 dark:text - green - 100'>;
-                  Performance monitoring active;
-                </p>;
-                <p className='text - sm text - green - 700 dark:text - green - 300'>;
-                  Real - time performance tracking is helping optimize your;
-                  application;
-                </p>;
-              </div>;
-            </div>;
-            {metrics && metrics.bundle_size > 2 * 1024 * 1024 && (
-              <div className='flex items - start gap - 3 p - 3 bg - yellow - 50 dark:bg - yellow - 900 / 20 rounded'>;
-                <AlertTriangle className='w - 5 h - 5 text - yellow - 600 mt - 0.5' />;
-                <div>;
-                  <p className='font - medium text - yellow - 900 dark:text - yellow - 100'>;
-                    Consider more aggressive code splitting;
-                  </p>;
-                  <p className='text - sm text - yellow - 700 dark:text - yellow - 300'>;
-                    Bundle size is above 2MB. Consider implementing dynamic;
-                    imports for heavy components;
-                  </p>;
-                </div>;
-              </div>)}
-          </div>;
-        </CardContent>;
-      </Card>;
-    </div>);
-}
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

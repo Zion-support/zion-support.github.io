@@ -1,9 +1,10 @@
 
-import {useState} from 'react';
-import {Check, Copy} from 'lucide-react';
-import {cn} from "@/lib/utils";
-interface CodeBlockProps {;
-  code: string,;
+import { useState  } from 'react';
+import { Check, Copy  } from 'lucide-react';
+import { cn } from "@/lib/utils";
+interface CodeBlockProps {
+
+  code: string
 
   language?: string;
   showLineNumbers?: boolean;
@@ -20,20 +21,12 @@ export function CodeBlock(): any ({ ;
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
-
-
-
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import {cn} from "@/lib/utils";
-
-=======
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
 import { cn } from "@/lib/utils",
-
-
-
 interface CodeBlockProps {
   code: string,
   language?: string,
@@ -41,30 +34,26 @@ interface CodeBlockProps {
   className?: string
 }
 
-
+export function CodeBlock({ ;
+  code;
+  language = 'bash';
+  showLineNumbers = false;
 export function CodeBlock({ 
   code,
   language = 'bash',
   showLineNumbers = false,
-
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => {
       setCopied(false)
     }, 2000)
-
-
-=======
-
+  }
   },
-
 
   return (
     <div className={cn(
@@ -79,7 +68,6 @@ export function CodeBlock({
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">
             {code.split('\n').map((_, i) => (
               <div key={i} className="h-6 leading-6">
-
 import { useState } from 'react',;
 import { Check, Copy } from 'lucide-react',;
 import { cn } from "@/lib/utils",;
@@ -120,10 +108,6 @@ export function CodeBlock({;
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">;
             {code && code.split('\n').map((_, i) => (;
               <div key={i} className="h-6 leading-6">;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {i + 1}
               </div>;
             ))}
@@ -146,30 +130,6 @@ export function CodeBlock({;
   );
 }
 
-
-
-=======
-;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export default CodeBlock;
-
-=======
-import {useState} from 'react';
-import {Check, Copy} from 'lucide-react';
-import { cn } from '@/lib / utils';
-interface CodeBlockProps {
-  code: string,
-  language?: string;
-  showLineNumbers?: boolean;
-  class_name?: string;
-}
-export /**
- * CodeBlock - Function description
- */
-function CodeBlock() {
-  const [copied, set_copied] = useState (false);
 ;
   const handleCopyClick = async () => {
     await navigator.clipboard.write_text (code);
@@ -209,5 +169,6 @@ function CodeBlock() {
     </div>);
 }
 export default CodeBlock;
+
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export default CodeBlock;

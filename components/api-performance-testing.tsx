@@ -1,45 +1,25 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-=======
-
-
+import React from 'react',
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
+export default function ApiPerformanceTestingPage() {
 
-import React from './react';
-import SEO from "../components / SEO";
-import { Check, ExternalLink  } from './lucide-react';
-export default /**
- * ApiPerformanceTestingPage - Function description
- */
-function ApiPerformanceTestingPage() {
-  const features = [;
-    "k6 / Gatling - compatible test runner",
-    "SLO - aware latency reports",
+  const features = [
+    "k6/Gatling-compatible test runner"
+    "SLO-aware latency reports"
+    "Regression baselines per endpoint"
+    "CI checks and PR annotations"
+    "Synthetic traffic for staging"
+  ];
+  return (
+
+export default function ApiPerformanceTestingPage() {
+  const features = [
+    "k6/Gatling-compatible test runner",
+    "SLO-aware latency reports",
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
@@ -99,31 +79,8 @@ function ApiPerformanceTestingPage() {
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
 
-            </a>;
-          </div>;
-        </section>;
-      </main>;
-
-    </>);
+return (
   return (
-    <>;
-      <SEO;
-        title="API Performance Testing";
-        description="Load, latency and regression testing - as - a-service with CI and SLOs.";
-      />;
-      <main id="main" className="container mx - auto px - 4 py - 24">;
-        <section className="max - w-5xl mx - auto">;
-          <h1 className="text - 4xl font - extrabold tracking - tight">;
-            API Performance Testing;
-          </h1>;
-          <p className="mt - 4 text - lg text - gray - 300">;
-            Ship with confidence using automated performance tests and;
-            guardrails integrated into your pipeline.;
-          </p>;
-          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
-            {features.map ((f) => (
-              <div;
-=======
     <>
       <SEO
         title="API Performance Testing"
@@ -185,11 +142,3 @@ function ApiPerformanceTestingPage() {
 
 }
 
-
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

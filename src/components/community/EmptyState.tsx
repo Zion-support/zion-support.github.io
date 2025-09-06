@@ -1,9 +1,7 @@
-
-
+import React from 'react',
+import Link from 'next/link';
 import React from 'react'
 import Link from 'next/link'
-
-
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -73,6 +71,19 @@ interface EmptyStateProps {
   cta: string;
   href: string;
 
+const EmptyState: React.FC<EmptyStateProps> = ({
+  title
+  subtitle
+  cta
+  href
+  hasSession
+}) => {  return (
+    <div className='text-center py-16'>
+      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>
+        <MessageSquare className='h-10 w-10 text-zion-purple' />
+      </div>
+      <h2 className='text-xl font-medium mb-2'>{title}</h2>
+      <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react'
@@ -121,7 +132,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
         <MessageSquare className="h-10 w-10 text-zion-purple" />
       </div>
       <h2 className="text-xl font-medium mb-2">{title}</h2>
-
       <p className="text-muted-foreground mb-6">{subtitle}</p>
       <TooltipProvider>
         <Tooltip>
@@ -136,13 +146,15 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
             )}
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
+        </Tooltip>
+      </TooltipProvider>
+    </div>
+  )
+};
+export default EmptyState;
+}
+export default EmptyState
 
-
-=======
-
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </Tooltip>;
       </TooltipProvider>;
     </div>;
@@ -193,7 +205,3 @@ export default EmptyState;
 =======
 },;
 export default EmptyState;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

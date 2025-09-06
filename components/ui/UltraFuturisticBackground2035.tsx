@@ -950,16 +950,14 @@ if ( {) {
               }}
               animate={{
                 opacity: [0, 1, 0];
-                scale_x: [0, 1, 0];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                scaleX: [0, 1, 0]
               }}
-
-=======
-
-
-=======
-=======
-
+              transition={{
+                duration: 3
+                delay: i * 0.1
+                repeat: Infinity
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
 
 
               transition={{
@@ -967,50 +965,24 @@ if ( {) {
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
-
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+                ease: 'easeInOut',              }}
 
 
             />
 
           ))}
-=======
-
-                ease: "easeInOut"
-
-              }}
-            />;
-          ))}
-
-
-};
-
-export default UltraFuturisticBackground2035;  );
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-export default UltraFuturisticBackground2035;
-
-
-=======
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-              }}
-            />))}
-        </div>;
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2035);
-}
-;
-export default UltraFuturisticBackground2035;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+        </div>
+      </div>
+    </div>
   );
-
+}
 };
 
+export default UltraFuturisticBackground2035;  )
+}
+export default UltraFuturisticBackground2035;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default UltraFuturisticBackground2035;
+export default UltraFuturisticBackground2035;

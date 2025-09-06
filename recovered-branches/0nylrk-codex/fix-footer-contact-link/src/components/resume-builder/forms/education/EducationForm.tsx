@@ -1,8 +1,5 @@
 
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -11,11 +8,8 @@ import {format} from 'date - fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
-
-
+export function EducationForm({
 export function EducationForm({ ;
-
-
   resumeId;
   educationEntries
   onComplete
@@ -39,12 +33,24 @@ export function EducationForm({ ;
       is_current: data.is_current
       description: data.description
       location: data.location}
-=======
-export function EducationForm(): any ({ ;
-  resumeId;
-  educationEntries, ;
-  onComplete, ;
-  onBack ;
+    let success;
+    if (editingId) {
+      success = await updateEducation(editingId, educationData)
+    } else {
+      success = await addEducation(resumeId, educationData)
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Education } from '@/types/resume',;
+import { useResume } from '@/hooks/useResume',;
+import { format } from 'date-fns',;
+import { EducationFormProps } from './types',;
+import { EducationList } from './EducationList',;
+import { EducationFormFields } from './EducationFormFields',;
+export function EducationForm({;
+  resumeId,;
+  educationEntries,;
+  onComplete,;
+  onBack;
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -73,17 +79,12 @@ export function EducationForm(): any ({ ;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
-
-
+    if (success) {
+      setEditingId(null)
+    }
+  }
   };
-
-
 
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
@@ -104,11 +105,8 @@ export function EducationForm(): any ({ ;
     if (success) {;
       setEditingId(null);
     }
-
-
+  }
   };
-
-=======
   },;
 
   const handleEdit = (edu: Education) => {;
@@ -132,24 +130,22 @@ export function EducationForm(): any ({ ;
 
   },
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   return (
-
-
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-xl font-semibold mb-2">Education</h2>
+        <p className="text-muted-foreground">
+          Add your educational background and academic achievements.
+        </p>
+      </div>
+      <EducationList
+        educationEntries={educationEntries}
       <EducationList 
         educationEntries={educationEntries} 
-
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}

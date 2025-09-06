@@ -1,5 +1,8 @@
-
-
+import Link from "next/link";
+export const metadata = {title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions";
+  description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.";
+  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"}
+export default function QuantumServicesPage() {return (;
 import Link from "next/link",;
 export const metadata = {;
   title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",;
@@ -7,8 +10,6 @@ export const metadata = {;
   keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},;
 export default function QuantumServicesPage() {;
   return (;
-
-
     <div className="min-h-screen">;
 =======
 import Link from './next / link';,
@@ -103,16 +104,10 @@ function QuantumServicesPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M10 20l4 - 16m4 4l4 4 - 4 4M6 16l - 4-4 4 - 4" />;
                 </svg>;
               </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">Quantum Algorithm Development</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Custom quantum algorithms designed for your specific business problems,
-
-=======
-
+              <h3 className="text-xl font-semibold mb-3">Quantum Algorithm Development</h3>;
+              <p className="text-gray-400 mb-4">;
+                Custom quantum algorithms designed for your specific business problems;
                 Custom quantum algorithms designed for your specific business problems,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 from optimization challenges to complex simulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

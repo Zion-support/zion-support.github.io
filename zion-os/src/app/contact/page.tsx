@@ -1,11 +1,10 @@
 
 import Link from 'next/link';
 export default function ContactPage() {
-
+  return (;
+    <div className=&quot;min-h-screen bg-white&quot;>
   return (
     <div className="min-h-screen bg-white">
-
-
       {/* Hero Section */}
 
       <section className=&quot;bg - gradient - to - r from - indigo - 600 to - purple - 700 text - white py - 20 & quot;>;

@@ -1,3 +1,4 @@
+import { ServiceVariant } from '../types/service-variants';
 
 
   id: string;
@@ -428,45 +429,19 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       growthRate: '18% annual growth',
       variant: 'clinical-trial-enterprise',
       contactInfo: {
-=======
-      color: 'from - orange - 600 to - red - 600',
-      text_color: 'text - orange - 400',
-      link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
-      market_position:;
-        'Competes with Medidata ($500 / month), Veeva Vault ($1, 000 / month), Oracle Clinical ($2, 000 / month). Our advantage: AI - powered optimization, comprehensive features, and competitive pricing.',
-      target_audience:;
-        'Pharmaceutical companies, CROs, Research institutions, Hospitals, Clinical research teams',
-      trial_days: 30,
-      setup_time: '3 - 6 weeks',
-      category: 'Clinical Research & Trials',
-      real_service: true,
-      technology: [;
-        'Python, TensorFlow, React, Node.js, PostgreSQL, Clinical trial software',
-      ],
-      integrations: ['EDC systems, CTMS, ePRO, e_consent, Regulatory databases'],
-      use_cases: [;
-        'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management',
-      ],
-      roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.',
-      competitors: [;
-        'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel',
-      ],
-      market_size: '$67.2B clinical trial market',
-      growth_rate: '18% annual growth',
-      variant: 'clinical - trial - enterprise',
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-        'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
-      launch_date: '2024 - 11 - 01',
-=======
-
+        mobile: '+1 302 464 0950'
+        email: 'kleber@ziontechgroup.com'
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+        website: 'https://ziontechgroup.com'
+      }
+      realImplementation: true
+      implementationDetails:
+        'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.'
+      launchDate: '2024-11-01'
+      customers: 34
+      rating: 4.8
+      reviews: 19
+    }
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
       launchDate: '2024-11-01',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -475,8 +450,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       reviews: 19,
 
     },;
-
-
   ];    features: [
 
 =======
@@ -590,19 +563,8 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4 && 4.8,
 
     reviews: 19
-
-    real_implementation: true,
-    implementation_details: 'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
-    launch_date: '2024 - 11 - 01', customers: 34,
-    rating: 4.8,
-    reviews: 19;
-
   }
-
-=======
-
-
-=======
+];
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -865,13 +827,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     customers: 34,;
     rating: 4.8;
     reviews: 19;
-
-
-
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

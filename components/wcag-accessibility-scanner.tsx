@@ -24,7 +24,11 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
 
+export default function WCAGScannerPage() {
 
 
 export default function WCAGScannerPage() {;
@@ -271,15 +275,8 @@ export default function WCAGScannerPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-
-    </UltraAdvancedFuturisticBackground>);
 }
+}
+
 ;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

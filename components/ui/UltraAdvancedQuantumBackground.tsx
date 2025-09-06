@@ -1,5 +1,6 @@
 
-
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 let animationFrameId: number;
 let particles: Particle[] = [];
 let quantumFields: QuantumField[] = [];
@@ -187,53 +188,11 @@ if (return) {
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
-
-      maxLife: number;      x: number,;
-      y: number,;
-      vx: number,;
-      vy: number,;
-      size: number,;
-      color: string,;
-      life: number,;
-      maxLife: number,;
-        this && this.x = Math && Math.random() * canvas && canvas.width;
-        this && this.y = Math && Math.random() * canvas && canvas.height;
-        this && this.vx = (Math && Math.random() - 0 && 0.5) * 2;
-        this && this.vy = (Math && Math.random() - 0 && 0.5) * 2;
-        this && this.size = Math && Math.random() * 3 + 1;
-        this && this.color = `hsl(${Math && Math.random() * 360}, 70%, 60%)`;
-        this && this.life = Math && Math.random() * 100;
-        this && this.maxLife = 100;      }        this && this.maxLife = 100;
-      }
-
-      update() {;
-        this && this.x += this && this.vx;
-        this && this.y += this && this.vy;
-        this && this.life--;
-
-        if (this && this.x < 0 || this && this.x > canvas && canvas.width) this && this.vx *= -1;
-        if (this && this.y < 0 || this && this.y > canvas && canvas.height) this && this.vy *= -1;
-
-        if (this && this.life <= 0) {;
-          this && this.life = this && this.maxLife;
-          this && this.x = Math && Math.random() * canvas && canvas.width;
-          this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
-
-        }
-      }
-
-      draw() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
+          this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
           this.y = Math.random() * canvas.height;        }
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
-
-
 
       draw() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -489,26 +448,8 @@ if (return) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-
+            ctx.stroke();          }            ctx.stroke()
             ctx.stroke();          }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          }
-        }
-      }
-
-      ctx && ctx.restore();
-
-      animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate);
-=======
-          const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
-          if (distance < 100) {
-            ctx.beginPath();
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.stroke()
 
           }
         }
@@ -772,15 +713,24 @@ if ( {) {
           ease: "easeInOut"
           delay: 1
         }}
-
-      />;
-=======
+      />
       <motion.div
-        className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl"
+        className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl'
         animate={{
-          scale: [1, 1.2, 1];
-          opacity: [0.2, 0.4, 0.2]}}
+          scale: [1, 1.3, 1]
+          opacity: [0.2, 0.5, 0.2],        animate={{
+          scale: [1, 1.4, 1];
+          opacity: [0.2, 0.6, 0.2]}}
         transition={{
+          duration: 6
+          repeat: Infinity
+          ease: 'easeInOut'
+          delay: 2,          ease: "easeInOut"
+          delay: 2
+          duration: 6,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 2,
 
         }}
         transition={{
@@ -811,14 +761,8 @@ if ( {) {
           repeat: Infinity
           ease: 'easeInOut'
           delay: 2,        }}
+      />
 
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -831,7 +775,13 @@ if ( {) {
       />;
 
       {/* Content Layer */}
-
+      <div className='relative z-10'>{children}</div>
+      {/* Quantum Energy Waves */}
+      <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>
+        <motion.div
+          className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent'
+          animate={{
+            x: [0, -100, 0]
           }}
           transition={{
             duration: 8
@@ -852,56 +802,33 @@ if ( {) {
       </div>;
     </div>;
   );
+}
+export default UltraAdvancedQuantumBackground;            ease: "linear"
+};
 
 
+      {/* Content Layer */}
+
+export default UltraAdvancedQuantumBackground;            ease: "linear",
             delay: 2
           }}
         />
       </div>
-
-};
-
-export default UltraAdvancedQuantumBackground;  );
-};
-
-
+    </div>
+  );
+}
+export default UltraAdvancedQuantumBackground;  )
+}
 export default UltraAdvancedQuantumBackground;
 
 
-=======
-            ease: 'linear',          }}
-        />;
-        <motion.div;
-          className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 500 / 20 to - transparent';
-          animate={{
-            coordinate_x: [0, 100, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'linear',
-            delay: 2,          }}
-        />;
-      </div>;
-    </div>);
-}
-;
-export default UltraAdvancedQuantumBackground;            ease: "linear",
-            delay: 2;
-          }}
-        />;
-      </div>;
-    </div>);
-}
-;
-export default UltraAdvancedQuantumBackground);
-}
-;
-export default UltraAdvancedQuantumBackground;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+        style={{ zIndex: 1 }}
+      />
 
+      {/* Content Layer */}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          }}
+        />
+      </div>
+    </div>
+    </div>

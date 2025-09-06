@@ -1,26 +1,24 @@
-
-
+import React from 'react',
 import React from 'react';
-
-
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AISolutionsPage() {
 
   const aiSolutions = [
     {
-
-      id: 'machine-learning',
-      title: 'Machine Learning Solutions',
-      description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
-    features: ['Predictive AnalyticsPattern RecognitionAnomaly DetectionRecommendation Systems'],
-      icon: '🧠',
-      category: 'Core AI',
-
+      id: 'machine-learning'
+      title: 'Machine Learning Solutions'
+      description:
+        'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.'
+      features: [
+        'Predictive Analytics'
+        'Pattern Recognition'
+        'Anomaly Detection'
+        'Recommendation Systems'
+      ],      icon: '🧠'
+      category: 'Core AI'
       complexity: 'Advanced'
     }
-=======
-
         'Predictive Analytics',
         'Pattern Recognition',
         'Anomaly Detection',
@@ -29,8 +27,6 @@ export default function AISolutionsPage() {
       category: 'Core AI',
       complexity: 'Advanced';
     };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -66,93 +62,60 @@ export default function AISolutionsPage() {
       icon: '📊'
       category: 'Analytics'
       complexity: 'Intermediate'
-
-    };
-=======
-import React from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-export default /**
- * AISolutionsPage - Function description
- */
-function AISolutionsPage() {
-  const ai_solutions = [;
-    {
-      id: 'machine - learning',
-      title: 'Machine Learning Solutions',
-      description:;
-        'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
-      features: [;
-        'Predictive Analytics',
-        'Pattern Recognition',
-        'Anomaly Detection',
-        'Recommendation Systems',
-      ],      icon: '🧠',
-      category: 'Core AI',
-      complexity: 'Advanced';
+    },      complexity: 'Intermediate'
     }
     {
-      id: 'natural - language - processing',
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.';
-      features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development'],
-      icon: '💬',
-      category: 'Language AI',
-      complexity: 'Advanced';
+      id: 'ai-automation'
+      title: 'AI-Powered Automation'
+      description: 'Intelligent automation that learns and improves over time.'
+      features: [
+        'Process Automation'
+        'Workflow Optimization'
+        'Intelligent Routing'
+        'Adaptive Workflows'
+      ]
+      icon: '⚡'
+      category: 'Automation'
+      complexity: 'Intermediate'
+    },  ];      features: ['Process AutomationWorkflow OptimizationIntelligent RoutingAdaptive Workflows']
+      icon: '⚡'
+      category: 'Automation'
+      complexity: 'Intermediate'
+    }
+  const useCases = [
+    {
+      industry: 'Manufacturing'
+      solutions: [
+        'Quality Control'
+        'Predictive Maintenance'
+        'Supply Chain Optimization'
+      ]
+      icon: '🏭'
     }
     {
-      id: 'computer - vision',
-      title: 'Computer Vision',
-      description: 'Computer vision solutions for image recognition, object detection, and visual analytics.';
-      features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control'],
-      icon: '👁️',
-      category: 'Visual AI',
-      complexity: 'Advanced';
+      industry: 'Healthcare'
+      solutions: [
+        'Diagnostic Support'
+        'Patient Care Optimization'
+        'Drug Discovery'
+      ]
+      icon: '🏥'
     }
     {
-      id: 'autonomous - systems',
-      title: 'Autonomous Systems',
-      description: 'Self - operating systems that can make decisions and take actions independently.',
-      features: ['Decision MakingSelf - LearningAdaptive BehaviorContinuous Improvement'],
-      icon: '🤖',
-      category: 'Autonomy',
-      complexity: 'Expert';
+      industry: 'Finance'
+      solutions: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading']
+      icon: '💳'
     }
     {
-      id: 'predictive - analytics',
-      title: 'Predictive Analytics',
-      description: 'Data - driven insights that help predict future trends and behaviors.',
-      features: ['Trend AnalysisRisk AssessmentForecastingBehavioral Prediction'],
-      icon: '📊',
-      category: 'Analytics',
-      complexity: 'Intermediate',
-    },      complexity: 'Intermediate';
+      industry: 'Retail'
+      solutions: [
+        'Customer Segmentation'
+        'Inventory Management'
+        'Personalized Marketing'
+      ]
+      icon: '🛍️'
     }
-
-    {
-      id: 'ai - automation',
-      title: 'AI - Powered Automation',
-      description: 'Intelligent automation that learns and improves over time.',
-
-      features: [;
-        'Process Automation',
-        'Workflow Optimization',
-        'Intelligent Routing',
-        'Adaptive Workflows',
-      ],
-      icon: '⚡',
-      category: 'Automation',
-      complexity: 'Intermediate',
-    },  ];      features: ['Process AutomationWorkflow OptimizationIntelligent RoutingAdaptive Workflows'],
-
-      icon: '⚡',
-      category: 'Automation',
-      complexity: 'Intermediate';
-    }
-
-
-
-
+  ];
 
   const technologies = [
     'TensorFlow'
@@ -476,8 +439,53 @@ export default function AISolutionsPage() {;
         <meta property="og:description" content="Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      
-
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
+        <main className='container mx-auto px-6 py-12'>
+          <section className='text-center mb-16'>
+            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
+              AI Solutions
+            </h1>
+            <p className='text-xl text-white/80 max-w-3xl mx-auto'>
+              Cutting-edge artificial intelligence solutions that transform
+              businesses and drive innovation
+            </p>
+          </section>
+          <section className='mx-auto max-w-7xl'>
+            {/* AI Solutions Grid */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>
+                Our AI Solutions
+              </h2>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+                {aiSolutions.map((solution, index) => (
+                  <div
+                    key={index}
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'
+                  >
+                    <div className='text-4xl mb-4'>{solution.icon}</div>
+                    <div className='flex items-center gap-2 mb-3'>
+                      <span className='px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full'>
+                        {solution.category}
+                      </span>
+                      <span className='px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full'>
+                        {solution.complexity}
+                      </span>
+                    </div>
+                    <h3 className='text-xl font-bold mb-3 text-white'>
+                      {solution.title}
+                    </h3>
+                    <p className='text-white/70 mb-4'>{solution.description}</p>
+                    <ul className='space-y-1 mb-4'>
+                      {solution.features.map((feature, featureIndex) => (
+                        <li
+                          key={featureIndex}
+                          className='text-sm text-white/60 flex items-center'
+                        >
+                          <span className='text-cyan-400 mr-2'>•</span>                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link      </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
@@ -507,150 +515,45 @@ export default function AISolutionsPage() {;
           <section className="mx-auto max-w-7xl">;
 
             {/* AI Solutions Grid */}
-            <div className="mb-16">;
-              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>;
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-                {aiSolutions && aiSolutions.map((solution, index) => (;
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
-                    <div className="text-4xl mb-4">{solution && solution.icon}</div>;
-                    <div className="flex items-center gap-2 mb-3">;
-                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{solution && solution.category}</span>;
-                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{solution && solution.complexity}</span>;
-                    </div>;
-                    <h3 className="text-xl font-bold mb-3 text-white">{solution && solution.title}</h3>;
-                    <p className="text-white/70 mb-4">{solution && solution.description}</p>;
-                    <ul className="space-y-1 mb-4">;
-                      {solution && solution.features.map((feature, featureIndex) => (;
-                        <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
-                          <span className="text-cyan-400 mr-2">•</span>;
-=======
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {aiSolutions.map((solution, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                    <div className="text-4xl mb-4">{solution.icon}</div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{solution.category}</span>
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{solution.complexity}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{solution.title}</h3>
+                    <p className="text-white/70 mb-4">{solution.description}</p>
+                    <ul className="space-y-1 mb-4">
+                      {solution.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="text-sm text-white/60 flex items-center">
+                          <span className="text-cyan-400 mr-2">•</span>
+                    <Link
+
+                          {feature}
+                        </li>
+                      ))}
                     </ul>
 
                     <Link
+                      href={`/services#${solution.id}`}
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
+                    >
+                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      Learn More <span className="ml-1">→</span>
+                    </Link>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                          {feature}
-                        </li>;
-                      ))}
-                    </ul>;
-                    <Link
-                      href={`/services#${solution && solution.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
-                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution && solution.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors";
-                    >;
-                      Learn More <span className="ml-1">→</span>;
-                    </Link>;
-                  </div>;
-
-=======
-=======
-        <meta;
-          name='description';
-          content="Explore Zion Tech Group's comprehensive AI solutions including machine learning, NLP, computer vision, and autonomous systems.";
-        />;
-        <meta property='og:title' content='AI Solutions | Zion Tech Group' />;
-        <meta;
-          property='og:description';
-          content='Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems.';
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-      <div className='min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white'>;
-        <main className='container mx - auto px - 6 py - 12'>;
-          <section className='text - center mb - 16'>;
-            <h1 className='text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent'>;
-              AI Solutions;
-            </h1>;
-            <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
-              Cutting - edge artificial intelligence solutions that transform;
-              businesses and drive innovation;
-            </p>;
-          </section>;
-          <section className='mx - auto max - w-7xl'>;
-            {/* AI Solutions Grid */}
-            <div className='mb - 16'>;
-              <h2 className='text - 3xl font - bold mb - 8 text - center text - cyan - 400'>;
-                Our AI Solutions;
-              </h2>;
-              <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
-                {ai_solutions.map ((solution, index) => (
-                  <div;
-                    key={index}
-                    className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 hover:bg - white / 15 transition - all duration - 300';
-                  >;
-                    <div className='text - 4xl mb - 4'>{solution.icon}</div>;
-                    <div className='flex items - center gap - 2 mb - 3'>;
-                      <span className='px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - sm rounded - full'>;
-                        {solution.category}
-                      </span>;
-                      <span className='px - 3 py - 1 bg - blue - 400 / 20 text - blue - 400 text - sm rounded - full'>;
-                        {solution.complexity}
-                      </span>;
-                    </div>;
-                    <h3 className='text - xl font - bold mb - 3 text - white'>;
-                      {solution.title}
-                    </h3>;
-                    <p className='text - white / 70 mb - 4'>{solution.description}</p>;
-                    <ul className='space - y-1 mb - 4'>;
-                      {solution.features.map ((feature, feature_index) => (
-                        <li;
-                          key={feature_index}
-                          className='text - sm text - white / 60 flex items - center';
-                        >;
-                          <span className='text - cyan - 400 mr - 2'>•</span>                          {feature}
-                        </li>))}
-                    </ul>;
-                    <Link      </Head>;
-      <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
-        <main className="container mx - auto px - 6 py - 12">;
-          <section className="text - center mb - 16">;
-            <h1 className="text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent">;
-              AI Solutions;
-            </h1>;
-            <p className="text - xl text - white / 80 max - w-3xl mx - auto">;
-              Cutting - edge artificial intelligence solutions that transform businesses and drive innovation;
-            </p>;
-          </section>;
-          <section className="mx - auto max - w-7xl">;
-
-            {/* AI Solutions Grid */}
-            <div className="mb - 16">;
-              <h2 className="text - 3xl font - bold mb - 8 text - center text - cyan - 400">Our AI Solutions</h2>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-                {ai_solutions.map ((solution, index) => (
-                  <div key={index} className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 hover:bg - white / 15 transition - all duration - 300">;
-                    <div className="text - 4xl mb - 4">{solution.icon}</div>;
-                    <div className="flex items - center gap - 2 mb - 3">;
-                      <span className="px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - sm rounded - full">{solution.category}</span>;
-                      <span className="px - 3 py - 1 bg - blue - 400 / 20 text - blue - 400 text - sm rounded - full">{solution.complexity}</span>;
-                    </div>;
-                    <h3 className="text - xl font - bold mb - 3 text - white">{solution.title}</h3>;
-                    <p className="text - white / 70 mb - 4">{solution.description}</p>;
-                    <ul className="space - y-1 mb - 4">;
-                      {solution.features.map ((feature, feature_index) => (
-                        <li key={feature_index} className="text - sm text - white / 60 flex items - center">;
-                          <span className="text - cyan - 400 mr - 2">•</span>;
-                          {feature}
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
-
-              </div>;
-            </div>;
-
-
-            {/* Industry Use Cases */}
-
+              </div>
+            </div>
 
             {/* Industry Use Cases */}
             <div className='mb-16'>
@@ -659,9 +562,6 @@ export default function AISolutionsPage() {;
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {useCases.map((useCase, index) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
@@ -702,19 +602,9 @@ export default function AISolutionsPage() {;
                     </ul>;
                   </div>;
                 ))}
+              </div>
+            </div>
 
-              </div>;
-            </div>;
-
-
-            {/* Technologies */}
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -722,7 +612,14 @@ export default function AISolutionsPage() {;
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='flex flex-wrap justify-center gap-4'>
-
+                  {technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >                  {technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20"
+                    >
 
                   {technologies.map((tech, index) => (
                     <span
@@ -731,24 +628,13 @@ export default function AISolutionsPage() {;
 
                     >
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {tech}
                     </span>;
                   ))}
+                </div>
+              </div>
+            </div>
 
-                </div>;
-              </div>;
-            </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Success Stories */}
 
 
@@ -919,23 +805,10 @@ export default function AISolutionsPage() {;
         </main>
       </div>
     </>
-
-                  Explore Insights;
-                </Link>;
-              </div>;
-            </div>;
-          </section>;
-        </main>;
-      </div>;
-
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+);
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </>);
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  );
+}

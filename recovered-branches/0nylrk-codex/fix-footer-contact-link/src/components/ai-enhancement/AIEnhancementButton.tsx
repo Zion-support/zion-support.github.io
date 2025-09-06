@@ -1,40 +1,28 @@
 
-=======
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
+import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
+import { toast } from '@/hooks/use-toast';
+interface AIEnhancementButtonProps {
 
+  options: AIEnhancementOptions
+  onEnhanced: (enhancedContent: string) => void
 
-
+  buttonText?: string;
+  className?: string;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 import {toast} from '@/hooks/use-toast';
-
-
-export function AIEnhancementButton(): any ({;
-
-  options;
-  onEnhanced;
-
-  buttonText = "Enhance with AI";
-  className;
-  variant = "ghost";
-  size = "sm";
-  contentLength = 10;
-}: AIEnhancementButtonProps) {;
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-  const [showActions, setShowActions] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
-
-
-=======
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
 import { toast } from '@/hooks/use-toast',
-
-
-
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -42,13 +30,41 @@ interface AIEnhancementButtonProps {
   className?: string,
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   contentLength?: number
 }
 
+export function AIEnhancementButton({;
+  options;
+  onEnhanced;
+  buttonText = "Enhance with AI";
+  className;
+  variant = "ghost";
+  size = "sm";
+export function AIEnhancementButton({
+  options;
+  onEnhanced;
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  buttonText = "Enhance with AI";
+  className;
+  variant = "ghost";
+  size = "sm";
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
+  const [showActions, setShowActions] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
+  options,
+  onEnhanced,
+  buttonText = "Enhance with AI",
+  className,
+  variant = "ghost",
+  size = "sm",
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
+  const [showActions, setShowActions] = useState(false),
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
+  
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -56,13 +72,16 @@ interface AIEnhancementButtonProps {
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
-
-
-=======
-
+      });
+      return
+    }
+    const enhancedContent = await enhanceContent(options);
+    if (enhancedContent) {
+      setGeneratedContent(enhancedContent);
+      setShowActions(true)
+    }
+  }
   };
-
-=======
       }),
       return
 import { useState } from 'react',;
@@ -115,12 +134,7 @@ export function AIEnhancementButton({;
     }
 
   },
-
-
-
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent);
@@ -130,27 +144,23 @@ export function AIEnhancementButton({;
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
-
-
+  }
+  const handleRegenerate = async () => {
+    await handleEnhance()
+  }
   },
   
   const handleRegenerate = async () => {
     await handleEnhance()
   },
   
-
-
   const handleCancel = () => {
     setShowActions(false);
     setGeneratedContent(null)
-
-  };
-
-=======
+  }
 
   },
   
-
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -195,7 +205,6 @@ export function AIEnhancementButton({;
   return (
     <Button
       type="button"
-
   },;
 
   const handleAccept = () => {;
@@ -374,33 +383,20 @@ if ( {) {
   return (
     <Button;
       type="button";
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       variant={variant}
       size={size}
-
-      <span className="text-xs">{buttonText}</span>;
-    </Button>;
-  );
+      className={`gap-1 ${className}`}
+      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-4 w-4 animate-spin" />
+      ) : (
+        <Sparkles className="h-4 w-4" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+  )
 }
-
-=======
-      className={`gap - 1 ${class_name}`}
-      on_click={handle_enhance}
-      disabled={is_enhancing}
-    >;
-      {is_enhancing ? (
-        <Loader2 className="h - 4 w - 4 animate - spin" />) : (
-        <Sparkles className="h - 4 w - 4" />)}
-      <span className="text - xs">{button_text}</span>;
-    </Button>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

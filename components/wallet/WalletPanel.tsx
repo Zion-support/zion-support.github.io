@@ -1,7 +1,8 @@
 
-
-
-
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
 
 
 type Tx = {
@@ -54,12 +55,9 @@ function getUserId(): any (): string {;
   const generated = 'demo-user';
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
-
-
+export default function WalletPanel() {
 
 export default function WalletPanel() {;
-
-
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -68,81 +66,24 @@ export default function WalletPanel() {;
   type: "earn" | "burn" | "issue" | "revoke" | "redeem"
   amount: number
   reason: string
-=======
-import React, { useEffect, useMemo, useState } from "react";
-import Badges from "./Badges";
-type Tx = {
-=======
-  created_at: string;
+  createdAt: string
 }
-;
 type Summary = {
-  wallet: { user_id: string; balance: number }
-  transactions: Tx[];
-  config: { usdPerToken: number; symbol: string }
-}
-;
-function getUserId (): string {
-  // Check condition
-if (return 'demo - user') {
-  $2
-}
-  const from_storage = window.local_storage.get_item ('zion_user_id');
-  // Check condition
-if (return from_storage) {
-  $2
-}
-  const generated = 'demo - user';
-  window.local_storage.set_item ('zion_user_id', generated);
-  return generated;
-;
-export default /**
- * WalletPanel - Function description
- */
-function WalletPanel() {
-  const [summary, set_summary] = useState < Summary | null>(null);
-  const [tab, set_tab] = useState<'earnings' | 'spending' | 'redeem'>(
-    'earnings');  const [eth_address, setEthAddress] = useState < string | null>(null);type Tx = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  id: string,
-  type: "earn" | "burn" | "issue" | "revoke" | "redeem",
-  amount: number,
-  reason: string,
-
-
-export default function WalletPanel() {;
-  const [summary, setSummary] = useState<Summary | null>(null);
-  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(;
-    'earnings';
-  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {;
-  id: string,;
-  type: "earn" | "burn" | "issue" | "revoke" | "redeem",;
-  amount: number,;
-  reason: string,;
-  createdAt: string;
-};
-
-type Summary = {;
-  wallet: { userId: string, balance: number },;
-  transactions: Tx[],;
+  wallet: { userId: string, balance: number }
+  transactions: Tx[]
   config: { usdPerToken: number, symbol: string }
-};
-
-function getUserId(): any (): string {;
-
+}
+function getUserId(): string {
   if (typeof window === "undefined") return "demo-user";
-  const fromStorage = window && window.localStorage.getItem("zion_user_id");
+  const fromStorage = window.localStorage.getItem("zion_user_id");
   if (fromStorage) return fromStorage;
   const generated = "demo-user";
-  window && window.localStorage.setItem("zion_user_id", generated);
-  return generated;
+  window.localStorage.setItem("zion_user_id", generated);
+  return generated
 }
-
+export default function WalletPanel() {
 
 export default function WalletPanel() {;
-
-
-
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -575,20 +516,46 @@ if ( {) {
           <Badges balance={balance} />
         </div>
       </div>
-
-      <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
-        <div className="flex gap-3 mb-4 text-sm">
-          <button onClick={() => setTab("earnings")} className={`px-3 py-1 rounded border ${tab === "earnings" ? "bg-gray-100" : ""}`}>Earnings</button>
-          <button onClick={() => setTab("spending")} className={`px-3 py-1 rounded border ${tab === "spending" ? "bg-gray-100" : ""}`}>Spending</button>
-          <button onClick={() => setTab("redeem")} className={`px-3 py-1 rounded border ${tab === "redeem" ? "bg-gray-100" : ""}`}>Redeem</button>
-        </div>
-        {tab !== "redeem" && (
-          <div className="space-y-2">
-            {(tab === "earnings" ? earnings : spending).map((t) => (
-              <div key={t.id} className="flex justify-between text-sm border rounded p-2">
-                <div className="flex gap-2 items-center">
-                  <span className={`px-2 py-0.5 rounded text-xs ${t.type === "earn" || t.type === "issue" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{t.type}</span>
-                  <span className="text-gray-600">{t.reason.split('_').join(' ')}</span>
+      <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
+        <div className='flex gap-3 mb-4 text-sm'>
+          <button
+            onClick={() => setTab('earnings')}
+            className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}`}
+          >
+            Earnings
+          </button>
+          <button
+            onClick={() => setTab('spending')}
+            className={`px-3 py-1 rounded border ${tab === 'spending' ? 'bg-gray-100' : ''}`}
+          >
+            Spending
+          </button>
+          <button
+            onClick={() => setTab('redeem')}
+            className={`px-3 py-1 rounded border ${tab === 'redeem' ? 'bg-gray-100' : ''}`}
+          >
+            Redeem
+          </button>
+        {tab !== 'redeem' && (
+          <div className='space-y-2'>
+            {(tab === 'earnings' ? earnings : spending).map(t => (
+              <div
+                key={t.id}
+                className='flex justify-between text-sm border rounded p-2'
+              >
+                <div className='flex gap-2 items-center'>
+                  <span
+                    className={`px-2 py-0.5 rounded text-xs ${t.type === 'earn' |t.type === 'issue' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
+                  >
+                    {t.type}
+                  </span>
+                  <span className='text-gray-600'>
+                    {t.reason.split('_').join(' ')}
+                  </span>
+                </div>
+                <div className='font-medium'>
+                  {t.type === 'earn' |t.type === 'issue' ? '+' : '-'}
+                  {t.amount} {symbol}
                 </div>
                 <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} {symbol}</div>
               </div>
@@ -611,32 +578,16 @@ if ( {) {
           </div>
 
         )}
-
-
+      </div>
+    </div>
+);
 }
 
+          </div>
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      </div>;
-    </div>;
+        )}
+      </div>
+    </div>
   );
-
-  );
 }
-
-=======
-            <div className='text - xs text - gray - 500'>;
-              Coming soon: Redeem for branded perks and courses.;
-            </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
-          </div>)}
-      </div>;
-    </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

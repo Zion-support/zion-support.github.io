@@ -1,17 +1,9 @@
-
-
-=======
-
 import { ServiceVariant } from '../types/service-variants',
-
 
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 }
-
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
 };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
@@ -392,43 +384,12 @@ launch_date: '2024 - 03 - 10';
 customers: 89;
 rating: 4 && 4.7;
 reviews: 67;
-
-=======
-
-=======
+benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalability'];
+capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'];
+marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
+}];
 import { ServiceVariant } from '../types/service-variants',
 
-
-
-=======
-import { ServiceVariant } from '../types/service-variants';
-export interface ComprehensiveMicroSaasService {
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number, reviews: number,
-  benefits: string[], capabilities: string[],
-  marketAdvantage: string
-}
 
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -705,16 +666,3 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
   }
 ];
-
-benefits: ['Operational efficiency_safety improvements', 'Cost reduction_scalability'];
-capabilities: ['Multi - system coordinationAI optimization', 'Safety monitoring_performance analytics'];
-market_advantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
-}];
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

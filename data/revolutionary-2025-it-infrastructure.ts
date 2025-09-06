@@ -1,3 +1,4 @@
+import { ServiceVariant } from '../types/service-variants';
 
 
   id: string;
@@ -44,7 +45,67 @@
     description:
       'Revolutionary cybersecurity platform that combines quantum encryption, AI threat detection, and zero-trust architecture to provide unhackable security for enterprises and governments.'
     features: [
+      'Quantum encryption algorithms'
+      'AI-powered threat detection'
+      'Zero-trust architecture'
+      'Real-time threat response'
+      'Quantum key distribution'
+      'Advanced malware protection'
+      'Compliance automation'
+      'Security orchestration'
+    ]
+    popular: true
+    icon: '🔒'
+    color: 'from-red-600 to-pink-700'
+    textColor: 'text-red-400'
+    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform'
+    marketPosition:
+      'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.'
+    targetAudience:
+      'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors'
+    trialDays: 30
+    setupTime: '8 hours'
+    category: 'Cybersecurity & Quantum Security'
+    realService: true
+    technology: [
+      'Quantum Computing'
+      'AI/ML'
+      'Zero Trust'
+      'Python'
+      'Quantum APIs'
+      'Cloud Security'
+    ]
+    integrations: [
+      'SIEM systems'
+      'Firewalls'
+      'Identity providers'
+      'Security tools'
+    ]
+    useCases: [
+      'Enterprise security'
+      'Government security'
+      'Financial security'
+      'Healthcare security'
+      'Defense security'
+    ]
+    roi: 'Enterprises see 4000%+ ROI through unhackable security and reduced breach risks.'
+    competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne']
+    marketSize: '$200B cybersecurity market',    features: [
 
+      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
+      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration';
+    ];
+    popular: true;
+    icon: '🔒';
+    color: 'from-red-600 to-pink-700';
+    textColor: 'text-red-400';
+    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform';
+
+    marketPosition: 'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.'
+    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors';
+
+    trialDays: 30;
+    setupTime: '8 hours';
     category: 'Cybersecurity & Quantum Security';
     real_service: true;
     technology: ['Quantum ComputingAI / MLZero TrustPythonQuantum APIsCloud Security'];
@@ -1290,33 +1351,45 @@ export default revolutionary2025ITServices;
 ];
 export default revolutionary2025ITServices;
 
-=======
-export interface Revolutionary2025ITService {
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string,
-  contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import { ServiceVariant } from '../types/service-variants',;
+export interface Revolutionary2025ITService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
 }
 
 export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
@@ -1637,12 +1710,4 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     reviews: 52
   }
 ];
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default revolutionary2025ITServices;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

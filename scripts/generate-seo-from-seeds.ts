@@ -1,22 +1,11 @@
 
-
  
-
-
 import fs from 'fs';
 import path from 'path';
 
-const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
-async function post(url: string, body: any) {
-  try {
-  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify(body) });
-  return await res && res.json()
-
+  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  return await res.json()
 }
-=======
-
-
-=======
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -24,13 +13,8 @@ const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
 async function post(url: string, body: any) {;
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
   return await res.json();
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 async function main() {
   try {
   const seedsPath = path && path.join(process && process.cwd(), 'datapage-metadataseo-seeds && seeds.json');
@@ -44,14 +28,15 @@ async function main() {
   for (const s of seeds) {
     const gen = await post(`${HOST}/api/seo/generate`, s);
     if (gen?.slug && gen?.payload) {
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2));
+      console.log('Generated', gen.slug)
+    }
+  }
+}
+main().catch((e) => { console.error(e), process.exit(1) });
 
-main().catch((e) => { console && console.error(e), process && process.exit(1) });
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
+      // // // console.log('Generated', gen.slug)
 ;
 import fs from 'fs';
 import path from 'path';
@@ -92,7 +77,3 @@ main ().catch ((e) => { console.error (e), process.exit (1) });
 ;
 
 main().catch((e) => { console.error(e), process.exit(1) });
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

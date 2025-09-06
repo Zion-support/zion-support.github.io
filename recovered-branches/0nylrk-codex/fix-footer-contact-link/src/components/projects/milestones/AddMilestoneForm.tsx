@@ -1,6 +1,5 @@
 
-import {use_form} from 'react - hook - form';
-import {zod_resolver} from '@hookform / resolvers / zod';
+import React from 'react';
 
 import {z} from 'zod';
 import {CalendarIcon, Loader2} from 'lucide-react';
@@ -31,17 +30,11 @@ interface AddMilestoneFormProps {;
   projectEndDate?: string;
   projectType?: string;
 }
-
-
-export function AddMilestoneForm(): any ({;
-
-=======
+export function AddMilestoneForm({
 
 
 
 export function AddMilestoneForm({;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onSubmit;
   isSubmitting;
   onCancel;
@@ -52,9 +45,7 @@ export function AddMilestoneForm({;
 =======
       });
       return
-
-
-=======
+    }
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -128,17 +119,19 @@ export function AddMilestoneForm({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
-
+    // If there are multiple milestones, submit them one by one
+    milestones.forEach(milestone => {
+      onSubmit({
+        title: milestone.title
+        description: milestone.description
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+      })
+    })
+  }
   },
-
-
 
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
@@ -147,33 +140,8 @@ export function AddMilestoneForm({;
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
-
-
-    // If there are multiple milestones, submit them one by one;
-    milestones && milestones.forEach(milestone => {;
-      onSubmit({;
-        title: milestone && milestone.title,;
-        description: milestone && milestone.description,;
-        due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
-        amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-      });
-    });
-  };
-
-  const handleAddMilestone = (milestone: GeneratedMilestone) => {;
-    onSubmit({;
-      title: milestone && milestone.title,;
-      description: milestone && milestone.description,;
-      due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
-      amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-    });
-  };
-
-=======
-
+  }
   },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-6">;
@@ -188,10 +156,6 @@ export function AddMilestoneForm({;
           onAddMilestone={handleAddMilestone}
         />;
       )}
-
-
-
-
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">

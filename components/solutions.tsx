@@ -1,4 +1,4 @@
-
+import React from 'react';
 
  const SolutionsPage: React.FC = () => {
   const industrySolutions = [ {
@@ -132,15 +132,15 @@ import React from 'react';
   opacity: 0, y: 30
 }whileInView= {
   {
-
-
+  opacity: 1, y: 0
+}transition= {
+  {
+  duration: 0.8, delay: categoryIndex * 0.2
   opacity: 1, y: 0 
 
 }transition= {
   {
   duration: 0.8, delay: categoryIndex * 0.2 
-
-
 
 }viewport= {
   {
@@ -699,5 +699,17 @@ export default Solutions;
 export default Solutions;}
 ;
 export default Solutions;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

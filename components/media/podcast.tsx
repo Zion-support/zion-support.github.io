@@ -1,17 +1,9 @@
 
-
-  if (loading) return <div>Loading episodes…</div>;
-=======
-
-
 useEffect ( () => {
   const load = async () => {
   try {
   if (loading) return <div>Loading episodes…</div>;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-6'>;
       <div className='flex items-center justify-between'>;
@@ -179,13 +171,8 @@ export default function PodcastIndexPage() {
       </ul>;
     </div>;
   );
-
 }
-
-=======
-  // Check condition
-if (return <div > Loading episodes…</div>) {
-  $2
+;
 }
   return (
     <div className='space - y-6'>;
@@ -275,9 +262,4 @@ if (return <div > Loading episodes…</div>) {
       </ul>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

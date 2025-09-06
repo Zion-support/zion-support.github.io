@@ -1,14 +1,9 @@
 
 
 
-
-
 }
 }
-
 ;
-
-=======
 import React, { useState } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams;
 import { Header } from '@/components/Header',;
@@ -137,7 +132,3 @@ export default function ProjectRoom() {;
   )
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

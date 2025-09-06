@@ -1,5 +1,5 @@
 
-
+import { UseFormReturn } from "react-hook-form";
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -8,11 +8,7 @@ import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSu
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
-
-=======
 import { UseFormReturn } from "react-hook-form",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   FormField;
   FormItem;
@@ -21,11 +17,8 @@ import {
   FormDescription;
   FormMessage 
 } from "@/components/ui/form",
-
-
+import { Input } from "@/components/ui/input";
 import { Input } from "@/components/ui/input",
-
-
 import { 
   Select;
   SelectContent;
@@ -35,13 +28,10 @@ import {
 } from "@/components/ui/select",
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
 import { TalentProfile } from "@/types/talent",
-
-
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
+import { ContractFormValues } from "./ContractForm";
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PaymentTermsFieldsProps {
 
   form: UseFormReturn<ContractFormValues>
@@ -49,19 +39,18 @@ interface PaymentTermsFieldsProps {
 
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
 }
+export function PaymentTermsFields({
+  form;
+  talent;
+  handleMilestonesGenerated
 
-import {UseFormReturn} from "react-hook-form";
-import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSuggestions";
-import {TalentProfile} from "@/types/talent";
-import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
-import {ContractFormValues} from "./ContractForm";
-=======
-
-
-
+export function PaymentTermsFields({ ;
+  form;
+  talent;
+export function PaymentTermsFields({ 
+  form,
+  talent,
+  handleMilestonesGenerated 
 }: PaymentTermsFieldsProps) {
   return (
     <>
@@ -86,7 +75,6 @@ import {ContractFormValues} from "./ContractForm";
               </Select>
               <FormMessage />
             </FormItem>
-
 import { UseFormReturn } from "react-hook-form",;
 import {;
   FormField,;
@@ -173,9 +161,6 @@ function PaymentTermsFields() {
               </Select>
               <FormMessage />
             </FormItem>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
 
         />;
@@ -211,15 +196,16 @@ function PaymentTermsFields() {
       {form && form.watch("paymentTerms") === "milestone" && (;
         <div className="pt-2">;
           <MilestoneSuggestions
-
-
+            projectName={form.getValues("projectName") |"Project"}
+            scopeSummary={form.getValues("scopeSummary") |""}
+            startDate={form.getValues("startDate") |new Date()}
+            endDate={form.getValues("endDate")}
+            projectType={form.getValues("projectName").includes("AI") ? "AI/ML" :
             projectName={form.getValues("projectName") || "Project"}
             scopeSummary={form.getValues("scopeSummary") || ""}
             startDate={form.getValues("startDate") || new Date()}
             endDate={form.getValues("endDate")}
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" : 
-
-
                         form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
 =======
             projectName={form && form.getValues("projectName") || "Project"}

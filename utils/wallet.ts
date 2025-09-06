@@ -1,11 +1,6 @@
-
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-=======
-
+export async function connectMetaMask(): Promise<string[]> {
+  if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -30,14 +25,9 @@ if ( {) {
     throw new Error ('Failed to connect to MetaMask');
   }
 }
-
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-=======
-
+export async function getAccounts(): Promise<string[]> {
+  if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return [];
   }
   try {
@@ -62,14 +52,9 @@ if ( {) {
     return [];
   }
 }
-
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-=======
-
+export async function getBalance(address: string): Promise<string> {
+  if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -95,14 +80,9 @@ if ( {) {
     throw new Error ('Failed to get balance');
   }
 }
-
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-=======
-
+export async function signMessage(message: string, address: string): Promise<string> {
+  if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -136,21 +116,10 @@ declare global {
     ethereum?: {
       request: (args: { method: string; params?: any[] }) => Promise < any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
-
-      remove_listener: (event: string, callback: (accounts: string[]) => void) => void;
-
-    }
-=======
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
+    }
 
-
-
-=======
     };
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

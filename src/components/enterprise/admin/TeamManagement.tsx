@@ -1,25 +1,191 @@
 
+import React, { useState } from 'react'; import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from '@/components/ui/table'
+import {
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogFooter
+  DialogHeader
+  DialogTitle
+  DialogTrigger
+import React, { useState } from 'react'; import {
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Badge } from '@/components/ui/badge'
+import { Trash, Mail, UserPlus } from 'lucide-react'
+import { toast } from '@/hooks/use-toast'
+  DialogTrigger} from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Badge } from "@/components/ui/badge"
+import { toast } from "@/hooks/use-toast"
+export function TeamManagement() {
+  const [isAddingMember, setIsAddingMember] = useState(false)
+  const [newMemberEmail, setNewMemberEmail] = useState('')
+  // Mock team members data
+  const teamMembers = [
+    {
+      id: 1
+      name: 'Alex Johnson'
+      email: 'alex@example.com'
+      role: 'Admin'
+      status: 'active'
+      lastActive: '2 hours ago'
+    }
+    {
+      id: 2
+      name: 'Jamie Smith'
+      email: 'jamie@example.com'
+      role: 'Recruiter'
+      status: 'active'
+      lastActive: 'Yesterday'
+    }
+    {
+      id: 3
+      name: 'Sam Williams'
+      email: 'sam@example.com'
+      role: 'Manager'
+      status: 'pending'
+      lastActive: 'Never'
+    }
+    {
+      id: 4
+      name: 'Taylor Brown'
+      email: 'taylor@example.com'
+      role: 'Viewer'
+      status: 'active'
+      lastActive: '3 days ago'
+    }
+  ]
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,;
+} from '@/components/ui/table';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+
+import React, { useState } from "react",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Badge } from "@/components/ui/badge",
+import { Trash, Mail, UserPlus } from 'lucide-react'
+import { toast } from "@/hooks/use-toast",
+export function TeamManagement() {
+  const [isAddingMember, setIsAddingMember] = useState(false),
+  const [newMemberEmail, setNewMemberEmail] = useState(""),
+
+  // Mock team members data
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Alex Johnson",
+      email: "alex@example.com",
+      role: "Admin",
+      status: "active",
+      lastActive: "2 hours ago"},
+    {
+      id: 2,
+      name: "Jamie Smith",
+      email: "jamie@example.com",
+      role: "Recruiter",
+      status: "active",
+      lastActive: "Yesterday"},
+    {
+      id: 3,
+      name: "Sam Williams",
+      email: "sam@example.com",
+      role: "Manager",
+      status: "pending",
+      lastActive: "Never"},
+    {
+      id: 4,
+      name: 'Taylor Brown',
+      email: 'taylor@example.com',
+      role: 'Viewer',
+      status: 'active',
+      lastActive: '3 days ago',
+    },
+  ]
+      name: "Taylor Brown",
+      email: "taylor@example.com",
+      role: "Viewer",
+      status: "active",
+      lastActive: "3 days ago"}],
 
   const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
-
-
+        title: 'Email required'
+        description: 'Please enter an email address for the new team member.'
+        variant: 'destructive'
+      })
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
-
-
       return
+        title: 'Email required',
+        description: 'Please enter an email address for the new team member.',
+        variant: 'destructive',
+      })
+      return;
     }
     toast({
-
-
+      title: 'Invitation sent'
+      description: `An invitation has been sent to ${newMemberEmail}`
       title: 'Invitation sent',
       description: `An invitation has been sent to ${newMemberEmail}`,
-
-
     })
     setNewMemberEmail('')
     setIsAddingMember(false)
@@ -142,9 +308,6 @@ if ( {) {
     });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-=======
-
-
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
@@ -152,7 +315,6 @@ if ( {) {
     }
 
     toast({
-
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -174,10 +336,6 @@ if ( {) {
       description: `A new invitation has been sent to ${memberEmail}`})
   },
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -202,7 +360,12 @@ if ( {) {
                   Email
                 </Label>
                 <Input
-
+                  id='email'
+                  type='email'
+                  placeholder='colleague@company.com'
+                  className='col-span-3'
+                  value={newMemberEmail}
+                  onChange={e => setNewMemberEmail(e.target.value)}                />
                   id="email"
                   type="email"
                   placeholder="colleague@company.com"
@@ -210,8 +373,6 @@ if ( {) {
                   value={newMemberEmail}
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="role" className="text-right">
@@ -237,11 +398,9 @@ if ( {) {
           </DialogContent>
         </Dialog>
       </div>
-
+      <div className='rounded-md border'>
 
       <div className="rounded-md border">
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Table>
           <TableHeader>
             <TableRow>
@@ -253,23 +412,21 @@ if ( {) {
             </TableRow>
           </TableHeader>
           <TableBody>
-
+            {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TableCell>
                   <div className="flex items-center gap-2">
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-sm font-medium">
                         {member.name
-
+                          .split(' ')
+                          .map(n => n[0])
+                          .join('')}                      </span>
                           .split(" ")
                           .map((n) => n[0])
                           .join("")}
                       </span>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                     <div>
                       <div className="font-medium">{member.name}</div>
@@ -282,11 +439,9 @@ if ( {) {
                 <TableCell>{member.role}</TableCell>
                 <TableCell>
                   <Badge
-
+                    variant={member.status === 'active' ? 'default' : 'outline'}                  >
                     variant={member.status === "active" ? "default" : "outline"}
                   >
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {member.status}
                   </Badge>
                 </TableCell>
@@ -295,19 +450,25 @@ if ( {) {
                   <div className="flex justify-end gap-2">
                     {member.status === "pending" ? (
                       <Button
-
+                        variant='ghost'
+                        size='sm'
+                        onClick={() => handleResendInvite(member.email)}                      >
+                        <Mail className='h-4 w-4 mr-1' />
                         variant="ghost"
                         size="sm"
                         onClick={() => handleResendInvite(member.email)}
                       >
                         <Mail className="h-4 w-4 mr-1" />
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         Resend
                       </Button>
                     ) : (
                       <Button
-
+                        variant='ghost'
+                        size='sm'
+                        className='text-destructive hover:text-destructive'
+                        onClick={() => handleRemoveMember(member.id)}                      >
+                        <Trash className='h-4 w-4' />
+                      </Button>
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
@@ -553,19 +714,67 @@ export function TeamManagement() {;
                     </div>;
                   </div>;
                 </TableCell>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                <TableCell>{member.role}</TableCell>;
+                <TableCell>;
+                  <Badge;
+                    variant={member.status === "active" ? "default" : "outline"}
+                  >;
+                    {member.status}
+                  </Badge>;
+                </TableCell>;
+                <TableCell>{member.lastActive}</TableCell>;
+                <TableCell className="text-right">;
+                  <div className="flex justify-end gap-2">;
+                    {member.status === "pending" ? (;
+                      <Button;
+                        variant="ghost";
+                        size="sm";
+                        onClick={() => handleResendInvite(member.email)}
+                      >;
+                        <Mail className="h-4 w-4 mr-1" />;
+                        Resend;
+                      </Button>;
+                    ) : (;
+                      <Button;
+                        variant="ghost";
+                        size="sm";
+                        className="text-destructive hover:text-destructive";
+                        onClick={() => handleRemoveMember(member.id)}
+                      >;
+                        <Trash className="h-4 w-4" />;
+                      </Button>;
                     )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ))}
-
-=======
-
-
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  );
+  //In a real app, this would make an API call to remove the member toast ({;
+};
+  //In a real app, this would make an API call to resend the invitation toast ({};"
+  handleAddMember "
+}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+  teamMembers.map ( (member) => (<TableRow key= {
+  member.id "
+}> <TableCell> .join ("")
+}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {
+  member.role
+}</TableCell> <TableCell> <Badge > {
+  member.status
+}</Badge> </TableCell> <TableCell> {
+  member.lastActive "
+}</TableCell> <TableCell className="text-right"> onClick={
+  () => handleResendInvite (member.email) "
+}> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={
+  () => handleRemoveMember (member.id) "
+}> <Trash className="h-4 w-4" /> </Button>)
+}</div> </TableCell> </TableRow>) )
+}</TableBody> </Table> </div> </div>)
+}'"}
           </TableBody>;
         </Table>;
       </div>;
@@ -637,6 +846,3 @@ export function TeamManagement() {;
 =======
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,6 +1,7 @@
-
-
-
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -10,11 +11,22 @@ import Link from './next / link';
 import { motion  } from './framer-motion';
 
 import {
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  ArrowRight,
+  Award,
+  BarChart3,
+  Shield,
+  Code,
+  Zap,
+  Globe,
+  Home,
+  Building,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   BookOpen,
   Brain,
   Building,
@@ -49,53 +61,17 @@ import {
   Star,
   Target,
   TrendingUp,
-
-import {;
-  ArrowRight,;
-  Award,;
-  BarChart3,;
-  BookOpen,;
-  Brain,;
-  Building,;
-  Calculator,;
-  Calendar,;
-  Camera,;
-  CheckCircle,;
-  ChevronDown,;
-  Clock,;
-  Cloud,;
-  Code,;
-  CreditCard,;
-  DollarSign,;
-  Eye,;
-  FileText,;
-  Gamepad2,;
-  Globe,;
-  Heart,;
-  Home,;
-  Lock,;
-  Mail,;
-  MapPin,;
-  Menu,;
-  MessageSquare,;
-  Music,;
-  Network,;
-  Phone,;
-  Rocket,;
-  Settings,;
-  Shield,;
-  ShoppingCart,;
-  Star,;
-  Target,;
-  TrendingUp,;
-  Truck,;
-  Users,;
-  X,;
+ursor/integrate-build-improve-and-re-verify-8f7d
+  Truck,
+  Users,
+  X,
   Zap,;
 
 } from "lucide-react";
-=======
-
+  Truck,
+  Users,
+  X,
+  Zap
   Clock,
   DollarSign,
   Cpu,
@@ -133,21 +109,15 @@ import {;
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money;
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 } from 'lucide-react';
->>>>>>> origin/automation-improvements-final
+origin/automation-improvements-final
 
-
-=======
-
-
-} from 'lucide-react';
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
   ArrowRight
   Award
   BarChart3
@@ -190,11 +160,7 @@ import {;
   X
   Zap
 } from "lucide-react";
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+origin/main
 const navigationItems = [
   {
     title: "Services"
@@ -652,12 +618,11 @@ const quickLinks = [;
   { title: "Quote", href: "/quote", icon: FileText },;
   { title: "API Docs", href: "/api-docs", icon: Code },;
 ];
+export default function Navigation() {
 
 export default function Navigation() {;
-
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-=======
 
 
 export default function Navigation() {;
@@ -667,8 +632,6 @@ export default function Navigation() {;
 
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}

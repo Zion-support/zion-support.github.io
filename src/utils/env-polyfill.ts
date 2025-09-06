@@ -1,5 +1,50 @@
 
+const defaultEnv = {
+  NODE_ENV: 'production', // Default to production for safety
+  NEXT_PUBLIC_APP_URL: ''
+  NEXT_PUBLIC_SUPABASE_URL: ''
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''
+}
+// Create a safe process object
+const createProcessObject = () => ({
+  env: { ...defaultEnv }
+  versions: {}
+  platform: 'browser'
+  arch: 'x64'
+  version: '18.0.0'
+  browser: true
+})
+  NEXT_PUBLIC_APP_URL: '',
+  NEXT_PUBLIC_SUPABASE_URL: '',
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
 
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
+}
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
+
+// Create a safe process object
+const createProcessObject = () => ({
+  env: { ...defaultEnv },
+  versions: {},
+  platform: 'browser',
+  arch: 'x64',
+  version: '18.0.0',
+  browser: true}),
+
+  browser: true,
+})
+  browser: true}),
+
+// Ensure process is available on globalThis
+if (typeof globalThis !== 'undefined') {
+  if (typeof (globalThis as any).process === 'undefined') {
+    (globalThis as any).process = createProcessObject()
+  } else if (typeof (globalThis as any).process.env === 'undefined') {
+    (globalThis as any).process.env = { ...defaultEnv } }
+}//Ensure process is available on window
+// Ensure process is available globally
+if (typeof (globalThis as any).process === 'undefined') {
+  (globalThis as any).process = createProcessObject()
 // Export a safe environment accessor
 export const safeEnv = {
   NODE_ENV:
@@ -138,10 +183,10 @@ export const process_env =;
         NEXT_PUBLIC_SUPABASE_URL: ''
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ''
       }
-
-console && console.log('✅ Environment polyfill loaded successfully');
-
-=======
+console.log('✅ Environment polyfill loaded successfully')
+export default safeEnv
+export default safeEnv
+export default safeEnv
 
 export default safeEnv;
 export default safeEnv;
@@ -149,8 +194,6 @@ export default safeEnv;
 }
 }
 }
-
-=======
     (globalThis as any).process.env = { ...defaultEnv }
   }
 }
@@ -195,21 +238,3 @@ export function isProduction(): boolean {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export default safeEnv;
-
-=======
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-console.log ('✅ Environment polyfill loaded successfully');
-export default safe_env;
-export default safe_env;
-export default safe_env;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

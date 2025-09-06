@@ -1,38 +1,163 @@
 import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import {
+  Brain,
+  Zap,
+  Shield,
+  BarChart3,
+  Users,
+  Clock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Play,
+  Download,
+  Code,
+  Globe,
+  Lock,;
+  Sparkles,;
+} from 'lucide-react';
 
-
-    },  ];        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
-        'SLA guarantee';
-
-=======
+import {
+  Brain
+  Zap
+  Shield
+  BarChart3
+  Users
+  Clock
+  CheckCircle
+  Star
+  ArrowRight
+  Play
+  Download
+  Code
+  Globe
+  Lock
+  Sparkles;
+} from 'lucide-react';
+  const features = [
     {
-=======
-      features: [;
-        '10, 000 words per month',
-        '25+ content templates',
-        'Advanced SEO tools',
-        'Priority support',
-        'API access (1, 000 calls / month)',
-        'Advanced analytics',
-        'Team collaboration',
-        'Custom branding',
-      ],
-      popular: true,
-      color: 'border - blue - 500',
-      button_color: 'bg - blue - 600 hover:bg - blue - 700',
-    },    {        '10, 000 words per month25+ content templates_advanced SEO tools_priority supportAPI access (1, 000 calls / month)Advanced analytics_team collaboration_custom branding';
-      ];
-      popular: true,
-      color: 'border - blue - 500',
-      button_color: 'bg - blue - 600 hover:bg - blue - 700';
+      icon: <Brain className='w-8 h-8 text-white' />
+      title: 'AI-Powered Content Creation'
+      description:
+        'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'
     }
-
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'For large organizations and enterprises',
-
-
+    {
+      icon: <Zap className='w-8 h-8 text-white' />
+      title: 'Real-time Generation'
+      description:
+        'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.'
+      color: 'bg-gradient-to-br from-yellow-500 to-orange-600'
+      gradient: 'from-yellow-400 to-orange-500'
+    }
+    {
+      icon: <Shield className='w-8 h-8 text-white' />
+      title: 'Plagiarism-Free Content'
+      description:
+        'Every piece of content is unique and original. Our AI ensures 100% plagiarism-free writing.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'
+    }
+    {
+      icon: <BarChart3 className='w-8 h-8 text-white' />
+      title: 'SEO Optimization'
+      description:
+        'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'
+    }
+    {
+      icon: <Users className='w-8 h-8 text-white' />
+      title: 'Multi-Language Support'
+      description:
+        'Generate content in 50+ languages with native-level fluency and cultural understanding.'
+      color: 'bg-gradient-to-br from-red-500 to-pink-600'
+      gradient: 'from-red-400 to-pink-500'
+    }
+    {
+      icon: <Clock className='w-8 h-8 text-white' />
+      title: '24/7 Availability'
+      description:
+        'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.'
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
+      gradient: 'from-teal-400 to-blue-500'
+    }
+  ];      gradient: 'from-teal-400 to-blue-500'}]
+  const pricingPlans = [
+    {
+      name: 'Starter'
+      price: '$29'
+      period: '/month'
+      description: 'Perfect for individuals and small blogs'
+      features: [
+        '1,000 words per month'
+        '5 content templates'
+        'Basic SEO optimization'
+        'Email support'
+        'API access (100 calls/month)'
+        'Content analytics dashboard'
+      ]
+      popular: false
+      color: 'border-gray-600'
+      buttonColor: 'bg-gray-600 hover:bg-gray-700'
+    },    {        '1,000 words per month5 content templatesBasic SEO optimizationEmail supportAPI access (100 calls/month)Content analytics dashboard'
+      ];
+      popular: false
+      color: 'border-gray-600'
+      buttonColor: 'bg-gray-600 hover:bg-gray-700'
+    }
+      name: 'Professional'
+      price: '$99'
+      period: '/month'
+      description: 'Ideal for growing businesses and agencies'
+      features: [
+        '10,000 words per month'
+        '25+ content templates'
+        'Advanced SEO tools'
+        'Priority support'
+        'API access (1,000 calls/month)'
+        'Advanced analytics'
+        'Team collaboration'
+        'Custom branding'
+      ]
+      popular: true
+      color: 'border-blue-500'
+      buttonColor: 'bg-blue-600 hover:bg-blue-700'
+    },    {        '10,000 words per month25+ content templatesAdvanced SEO toolsPriority supportAPI access (1,000 calls/month)Advanced analyticsTeam collaborationCustom branding'
+      ];
+      popular: true
+      color: 'border-blue-500'
+      buttonColor: 'bg-blue-600 hover:bg-blue-700'
+    }
+      name: 'Enterprise'
+      price: '$299'
+      period: '/month'
+      description: 'For large organizations and enterprises'
+      features: [
+        'Unlimited words'
+        'All templates + custom'
+        'Full SEO suite'
+        'Dedicated support'
+        'Unlimited API access'
+        'Advanced analytics'
+        'White-label solution'
+        'Custom integrations'
+        'SLA guarantee'
+      ]
+      popular: false
+      color: 'border-purple-600'
+      buttonColor: 'bg-purple-600 hover:bg-purple-700'
+    },  ];        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
+        'SLA guarantee'
+      ];
+      popular: false
+      color: 'border-purple-600'
+      buttonColor: 'bg-purple-600 hover:bg-purple-700'
+    }
         'Unlimited words',
         'All templates + custom',
         'Full SEO suite',
@@ -49,8 +174,6 @@ import React from 'react';
     },  ];
 
   ];
-
-
 
   const useCases = [
     {
@@ -105,10 +228,12 @@ import React from 'react';
     }
   ];
   const integrations = [
-
-      popular: false,;
-      color: 'border-purple-600',;
-      buttonColor: 'bg-purple-600 hover:bg-purple-700';
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+    {
+      name: 'Shopify'
+      icon: '🛒'
+      description: 'E-commerce content automation'
     }
 
   const useCases = [;
@@ -272,10 +397,11 @@ import React from 'react';
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-=======
-
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
 
+  ];
+
+  ];
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -363,8 +489,73 @@ import React from 'react';
               href="#demo"
               variant="outline"
               size="lg"
-
-
+              className="border-white/20 hover:border-white/40 hover:bg-white/5"
+            >
+              <Play className="w-5 h-5 mr-2" />
+              Watch Demo
+            </Button>
+          </div>
+          {/* Stats */}
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto'>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400'>
+                50+
+              </div>
+              <div className='text-gray-400'>Languages</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400'>
+                10M+
+              </div>
+              <div className='text-gray-400'>Words Generated</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400'>
+                99.9%
+              </div>
+              <div className='text-gray-400'>Uptime</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400'>
+                24/7
+              </div>
+              <div className='text-gray-400'>Support</div>            </div>            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400">10M+</div>
+              <div className="text-gray-400">Words Generated</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400">99.9%</div>
+              <div className="text-gray-400">Uptime</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">24/7</div>
+              <div className="text-gray-400">Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Features Section */}
+      <section className='py-24 bg-gray-900 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+              Powerful Features
+            </h2>
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Everything you need to create exceptional content at scale
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Powerful Features
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {features.map((feature, index) => (
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
@@ -382,22 +573,36 @@ import React from 'react';
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
-                <div className="relative">;
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
-                    {feature && feature.icon}
-                  </div>;
-                </div>;
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300">;
-                  {feature && feature.title}
-                </h3>;
-                <p className="text-gray-400 leading-relaxed">;
-                  {feature && feature.description}
-                </p>;
-              </Card>;
+                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+              >
+                <div className="relative">
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
+                    {feature.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {feature.description}
 
-=======
-              Everything you need to create exceptional content at scale
+                  {feature.description}
+
+                </p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className='py-24 bg-black relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+              Use Cases
+            </h2>
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose
             </p>
           </div>
 
@@ -618,35 +823,10 @@ import React from 'react';
               Use Cases
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Use Cases Section */}
-      <section className='py-24 bg-black relative overflow-hidden'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
-              Use Cases;
-            </h2>;
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose;
-            </p>;
-          </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
-          <div className="text-center mb-20">;
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
-              Use Cases;
-            </h2>;
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-            </p>;
-          </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
-            {useCases && useCases.map((useCase, index) => (;
-
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {useCases.map((useCase, index) => (
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -709,14 +889,10 @@ import React from 'react';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {example}
-                        </div>;
-=======
 
 
                           {example}
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
@@ -725,12 +901,10 @@ import React from 'react';
                 </div>;
               </Card>;
             ))}
+          </div>
+        </div>
+      </section>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Pricing Section */}
 
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
@@ -920,31 +1094,30 @@ import React from 'react';
                   </div>
                 )}
 
-
-                <div className='text-center mb-8'>;
-                  <h3 className='text-2xl font-bold text-white mb-2'>;
-                    {plan && plan.name}
-                  </h3>;
-                  <div className='text-4xl font-bold text-white mb-2'>;
-                    {plan && plan.price}
-                    <span className='text-lg text-gray-400'>{plan && plan.period}</span>;
-                  </div>;
-                  <p className='text-gray-400'>{plan && plan.description}</p>;
-                </div>;
-
-                <ul className='space-y-4 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+                    {plan.name}
+                  </h3>
+                  <div className='text-4xl font-bold text-white mb-2'>
+                    {plan.price}
+                    <span className='text-lg text-gray-400'>{plan.period}</span>
+                  </div>
+                  <p className='text-gray-400'>{plan.description}</p>
+                </div>
+                <ul className='space-y-4 mb-8'>
+                  {plan.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className='flex items-center text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
-                  <p className="text-gray-400">{plan && plan.description}</p>;
-                </div>;
-
-                <ul className="space-y-4 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">;
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
+                      className='flex items-center text-gray-300'
+                    >
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
+                  <p className="text-gray-400">{plan.description}</p>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
 
                       {feature}
                     </li>;
@@ -966,16 +1139,9 @@ import React from 'react';
                 </Button>;
               </Card>;
 
-=======
                       {feature}
 =======
 
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </li>
                   ))}
                 </ul>
@@ -992,12 +1158,10 @@ import React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+          </div>
+        </div>
+      </section>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Integrations Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1008,35 +1172,10 @@ import React from 'react';
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Integrations Section */}
-      <section className='py-24 bg-black relative overflow-hidden'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
-              Seamless Integrations;
-            </h2>;
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms;
-            </p>;
-          </div>;
-
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
-          <div className="text-center mb-20">;
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
-              Seamless Integrations;
-            </h2>;
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-            </p>;
-          </div>;
-
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>;
-            {integrations && integrations.map((integration, index) => (;
-
+            </p>
+          </div>
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
+            {integrations.map((integration, index) => (
               <Card
                 key={index}
                 className='text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1077,24 +1216,13 @@ import React from 'react';
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 
               </Card>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
-
-          </div>;
-        </div>;
-      </section>;
-
-
-      {/* CTA Section */}
-
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
@@ -1102,9 +1230,6 @@ import React from 'react';
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Transform Your Content Creation?
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1180,11 +1305,7 @@ import React from 'react';
     </>
 
   );
-
-    </>);
 }
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+}

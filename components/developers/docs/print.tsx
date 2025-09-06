@@ -1,5 +1,6 @@
-
-
+ export const getStaticProps: GetStaticProps<PageProps> = async () => {
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent,
@@ -21,6 +22,8 @@ type DocsContent = {
 }
 ;
 type PageProps = {
+  docs: DocsContent
+};
 
   docs: DocsContent;
 }
@@ -51,10 +54,6 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
-
-
-
-
 
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
@@ -161,65 +160,11 @@ export default function PrintDocs({ docs }: PageProps) {
 
 
         ))}
-
-      </div>;
-    </div>;
+      </div>
+    </div>
+);
+}
   );
 }
 
-=======
-  );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-export default /**
- * PrintDocs - Function description
- */
-function PrintDocs() {
-  useEffect (() => {
-    const id = set_timeout (() => window.print (), 500);
-    return () => clear_timeout (id);
-  }, []);
-;
-  return (
-    <div className='p - 8 max - w-4xl mx - auto'>;
-      <h1 className='text - 3xl font - bold mb - 6'>{docs.title}</h1>;
-      <div className='space - y-8'>;
-        {docs.sections.map (string => (
-          <section key={s.id}>;
-            <h2 className='text - 2xl font - semibold mb - 2'>{s.title}</h2>;
-            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
-            {s.code &&;
-              s.code.map ((c, i) => (
-                <pre;
-                  key={i}
-                  className='mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap';
-                >;
-                  {c.content}
-                </pre>))}          </section>  }, []);
-;
-  return (
-    <div className="p - 8 max - w-4xl mx - auto">;
-      <h1 className="text - 3xl font - bold mb - 6">{docs.title}</h1>;
-      <div className="space - y-8">;
-        {docs.sections.map ((s) => (
-          <section key={s.id}>;
-            <h2 className="text - 2xl font - semibold mb - 2">{s.title}</h2>;
-            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
-            {s.code && s.code.map ((c, i) => (
-              <pre key={i} className="mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap">{c.content}</pre>))}
-          </section>))}
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-}
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

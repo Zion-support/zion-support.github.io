@@ -1,29 +1,33 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
+import React, { useState, useEffect } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 
+import {
+  Lock
+  Shield
+  Eye
+  EyeOff
+  Copy
+  RefreshCw
+  CheckCircle
+  XCircle
+  AlertTriangle
+  ArrowRight;
+} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+
+export default function PasswordCheckerPage() {
+  Lock,
+  Shield,
+  Eye,
+  EyeOff,
+  Copy,
+  RefreshCw,
+  CheckCircle,
+  XCircle,
   AlertTriangle,;
   ArrowRight,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -35,9 +39,6 @@ import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, Alert
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function PasswordCheckerPage() {;
-
-
-
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
@@ -372,28 +373,41 @@ if (
     if (strength >= 70) return 'bg-green-400';
     if (strength >= 50) return 'bg-yellow-400';
     if (strength >= 30) return 'bg-orange-400';
-
-
-  };
-
-  const getCheckIcon = (passed: boolean) => {;
-    return passed ? (;
-      <CheckCircle className='w-5 h-5 text-green-400' />;
-    ) : (;
-      <XCircle className='w-5 h-5 text-red-400' />;
-    );      <CheckCircle className="w-5 h-5 text-green-400" />;
-    ) : (;
-      <XCircle className="w-5 h-5 text-red-400" />;
-    );
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return 'bg-red-400';  }
+  const getCheckIcon = (passed: boolean) => {
+    return passed ? (
+      <CheckCircle className='w-5 h-5 text-green-400' />
+    ) : (
+      <XCircle className='w-5 h-5 text-red-400' />
+    );  };    return 'bg-red-400'
+  }
+  const getCheckIcon = (passed: boolean) => {
+    return passed ? (
+      <CheckCircle className='w-5 h-5 text-green-400' />
+    ) : (
+      <XCircle className='w-5 h-5 text-red-400' />
+    );      <CheckCircle className="w-5 h-5 text-green-400" />
+    ) : (
+      <XCircle className="w-5 h-5 text-red-400" />
+    )
   return (
+    <>
+      <Head>
+        <title>Password Strength Checker - Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.'
+        />
+        <meta
+          property='og:title'
+          content='Password Strength Checker - Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Advanced password strength analyzer with security recommendations.'
+        />
+      </Head>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -719,60 +733,33 @@ if (return 'bg - orange - 400') {
                     <input;
                       type={show_password ? 'text' : 'password'}
                       value={password}
-                      on_change={e => set_password (e.target.value)}
-                      placeholder='Type your password here...';
-                      className='w - full px - 4 py - 3 pr - 12 bg - gray - 700 border border - gray - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - indigo - 500 focus:border - transparent';
-                    />;
-                    <button;
-                      type='button';
-                      on_click={() => setShowPassword (!show_password)}
-                      className='absolute inset - y-0 right - 0 pr - 3 flex items - center text - gray - 400 hover:text - white';
-                    >;
-                      {show_password ? (
-                        <EyeOff className='w - 5 h - 5' />) : (
-                        <Eye className='w - 5 h - 5' />)}                    </button>              Check Your Password Strength;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-              Our advanced security analyzer evaluates multiple factors to determine password strength and security.;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
-            {/* Input Form */}
-            <Card className="p - 8 bg - gray - 800 border border - gray - 700">;
-              <h3 className="text - 2xl font - bold text - white mb - 6 flex items - center">;
-                <Lock className="w - 6 h - 6 mr - 3 text - indigo - 400" />;
-                Password Analysis;
-              </h3>;
-              <div className="space - y-6">;
-                {/* Password Input */}
-                <div>;
-                  <label className="block text - sm font - medium text - gray - 300 mb - 2" html_for="input-;
-                    Enter Password;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                  ">;
-                    Enter Password;
-                  </label>;
-                  <div className="relative">;
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="Type your password here..."
+                      className="w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white"
+                    >
+                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                    </button>
+                  </div>
+                </div>
 
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Generate Password */}
                 <div>;
                   <Button
                     onClick={generateStrongPassword}
+                    className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'
+                  >
+                    <RefreshCw className='w-5 h-5 mr-2' />                    Generate Strong Password                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Generate Strong Password
+                  </Button>
+                </div>
 
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Generated Password Display */}
 
 =======
@@ -781,6 +768,16 @@ if (return 'bg - orange - 400') {
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-300">Generated Password:</span>
                       <Button
+                        onClick={() => copyToClipboard(generatedPassword)}
+                        variant='outline'
+                        size='sm'
+                        className='border-gray-600 text-gray-300 hover:bg-gray-600'
+                      >
+                        <Copy className='w-4 h-4 mr-2' />
+                        Copy
+                      </Button>
+                    </div>
+                    <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}                      <Button
                         onClick={() => copyToClipboard(generatedPassword)}
                         variant="outline"
                         size="sm"
@@ -794,24 +791,10 @@ if (return 'bg - orange - 400') {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       {generatedPassword}
-                    </div>;
-                  </div>;
-=======
-                        variant='outline'
-                        size='sm'
-                        className='border-gray-600 text-gray-300 hover:bg-gray-600'
-                      >
-                        <Copy className='w-4 h-4 mr-2' />
-                        Copy
-                      </Button>
-                    </div>
-
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}
 
                       {generatedPassword}
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -894,53 +877,44 @@ if (return 'bg - orange - 400') {
                         {strengthText} ({strength}/100)
                       </span>
                     </div>
-
-
-
-=======
+                    <div className='w-full bg-gray-700 rounded-full h-3'>
+                      <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">
+                  {/* Strength Score */}
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-gray-300">Password Strength:</span>
+                        {strengthText} ({strength}/100)
+                      </span>
+                    </div>
+                    <div className='w-full bg-gray-700 rounded-full h-3'>
+                      <div                    <div className="w-full bg-gray-700 rounded-full h-3">
+                      <div
 
                       <div 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
                         style={{ width: `${strength}%` }}
                       />
                     </div>
                   </div>
 
-                  <div>;
-                    <div className="flex items-center justify-between mb-2">;
-                      <span className="text-sm text-gray-300">Password Strength:</span>;
-                        {strengthText} ({strength}/100);
-                      </span>;
-                    </div>;
-                    <div className='w-full bg-gray-700 rounded-full h-3'>;
-                      <div                    <div className="w-full bg-gray-700 rounded-full h-3">;
-                      <div
-                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-                        style={{ width: `${strength}%` }}
-                      />;
-                    </div>;
-                  </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Security Checks */}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+                  <div>
+                    <h4 className='text-lg font-semibold text-white mb-3'>
+                      Security Criteria
+                    </h4>
+                    <div className='space-y-3'>
+                      {Object.entries(checks).map(([key, passed]) => (
+                        <div key={key} className='flex items-center space-x-3'>
+                          {getCheckIcon(passed)}
+                          <span
                             className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
-
+                          >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries(checks).map(([key, passed]) => (
+                        <div key={key} className="flex items-center space-x-3">
+                          {getCheckIcon(passed)}
+                          <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
                           >                            {key === 'length' && 'At least 8 characters'}
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
@@ -949,42 +923,55 @@ if (return 'bg - orange - 400') {
 
 
                       ))}
+                    </div>
+                  </div>
 
-                    </div>;
-                  </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Suggestions */}
-
-
-=======
-
+                  {suggestions.length > 0 && (
+                    <div>
+                      <h4 className='text-lg font-semibold text-white mb-3'>
+                        Suggestions
+                      </h4>
+                      <div className='space-y-2'>
+                        {suggestions.map((suggestion, index) => (
+                          <div
+                            key={index}
+                            className='flex items-start space-x-3'
+                          >
+                            <AlertTriangle className='w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0' />
+                            <span className='text-sm text-yellow-300'>
+                              {suggestion}
+                            </span>                          </div>                      <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>
+                      <div className="space-y-2">
+                        {suggestions.map((suggestion, index) => (
+                          <div key={index} className="flex items-start space-x-3">
+                            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
+                            <span className="text-sm text-yellow-300">{suggestion}</span>
                             </span>                          </div>
 
                           </div>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         ))}
-                      </div>;
-                    </div>;
+                      </div>
+                    </div>
                   )}
-
-
+                </div>
+              ) : (
+                <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
+                  <div className='text-6xl mb-4'>🔒</div>
+                  <p className='text-gray-400'>
+                    Enter a password above to see the security analysis and get
+                    personalized suggestions.                  </p>                <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
+                  <div className="text-6xl mb-4">🔒</div>
+                  <p className="text-gray-400">
+                    Enter a password above to see the security analysis and get personalized suggestions.
+                </div>
               )}
+            </Card>
+          </div>
+        </div>
+      </section>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Features */}
 
       <section className="py-20 bg-gray-800">
@@ -1440,10 +1427,7 @@ if (return 'bg - orange - 400') {
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
-
             Ready to Secure Your Passwords?
-
-
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to
@@ -1462,21 +1446,19 @@ if (return 'bg - orange - 400') {
               href='/pricing'
               variant='outline'
               size='lg'
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              View Pricing;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-
-
-=======
+              className='border-white text-white hover:bg-white hover:text-indigo-600'            >              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-indigo-600"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+);
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  );
+}

@@ -1,34 +1,43 @@
 
-=======
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { Link  } from 'react-router-dom';
+import { ShieldAlert } from "lucide-react";
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+interface ProjectActionsProps {
 
-
+  projectId: string
+  isUnderDispute: boolean
+  disputeId?: string;
+  isTalent: boolean
 
 import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
-
-
-=======
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
 import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
-
-
-
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
   disputeId?: string,
   isTalent: boolean,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onAddMilestone: () => void
 }
 
-
-
+export function ProjectActions({;
+  projectId;
+  isUnderDispute;
+  disputeId;
+  isTalent;
+export function ProjectActions({
+  projectId,
+  isUnderDispute,
+  disputeId,
+  isTalent,
   onAddMilestone
 }: ProjectActionsProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -39,7 +48,6 @@ interface ProjectActionsProps {
           projectId={projectId}
           variant="outline"
         />
-
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
@@ -76,9 +84,6 @@ export function ProjectActions({;
           projectId={projectId}
           variant="outline"
         />;
-
-
-
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>

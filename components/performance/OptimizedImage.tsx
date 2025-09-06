@@ -107,23 +107,16 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       priority={priority}
       sizes={sizes}
-
-
-
-=======
+quality={quality}
+      style={style}
+  );
+}
+export default OptimizedImage;
       quality={quality}
       style={style}
-
-
-
 
   );
 };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default OptimizedImage;
-=======
-;
-export default OptimizedImage;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

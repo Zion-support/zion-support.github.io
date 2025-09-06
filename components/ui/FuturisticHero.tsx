@@ -1,7 +1,6 @@
 import Link from 'next / link';
 import AnimatedBackground from './AnimatedBackground';
 
-
 export default function FuturisticHero() {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -78,7 +77,7 @@ export default function FuturisticHero() {
           </p>
         </div>
       </div>
-
+    </section>;
   );
 
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
@@ -111,7 +110,8 @@ function FuturisticHero() {
     </section>);
 }
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+    </section>
+  );
+}
+}

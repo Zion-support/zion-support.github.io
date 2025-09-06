@@ -1,5 +1,6 @@
-
-
+import React from 'react'
+import { useProjects } from '@/hooks/useProjects'
+import { SEO } from '@/components/SEO'
 import {
 
 class ErrorBoundary extends React.Component {
@@ -45,8 +46,6 @@ import { Clock, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
-
-=======
 import React from "react",
 import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
@@ -54,13 +53,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Clock, Briefcase } from 'lucide-react'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
 
   Card
   CardContent
@@ -114,27 +107,23 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
         <div className="mb-8">
           <h1 className="text-3xl font-bold">My Projects</h1>
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        </div>
         {isLoading ? (
           <p>Loading projects...</p>
         ) : projects.length === 0 ? (
           <p>You don't have any projects yet.</p>
         ) : (
-
+          <div className='grid gap-6'>
+            {projects.map(project => (
+              <Card key={project.id}>
+                <CardHeader>
+                  <CardTitle className='flex items-center gap-2'>
+                    <Briefcase className='h-5 w-5 text-primary' />
+                    <span>{project.job?.title |'Project'}</span>
           <div className="grid gap-6">
             {projects.map((project) => (
-=======
-
           <div className="grid gap-6">
             {projects.map((project) => (
-=======
-=======
-          <div className="grid gap-6">
-            {projects.map((project) => (
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Card key={project.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -151,42 +140,23 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-
+                  <p className='text-sm text-muted-foreground line-clamp-2'>
+                    {project.job?.description |'Project details'}
+                  </p>
+                </CardContent>
+                <CardFooter>
                   <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
                     {project.job?.description |"Project details"}
-=======
                   <p className="text-sm text-muted-foreground line-clamp-2">
-=======
-
                   <p className="text-sm text-muted-foreground line-clamp-2">
-=======
-=======
-                  <p className="text-sm text-muted-foreground line-clamp-2">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {project.job?.description || "Project details"}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </p>
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant="outline" className="w-full">
-
-                    <Link href={`/project/${project.id}`}>View Details</Link>
-
                   </Button>
                 </CardFooter>
               </Card>
-=======
-      />;
-      <main className='container mx-auto px-4 py-8'>;
-        <div className='mb-8'>;
-          <h1 className='text-3xl font-bold'>My Projects</h1>;
-          <p className='text-muted-foreground mt-1'>;
-            All of your current and past projects;
-          </p>        </div>      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />;
-=======
-
                     <Link href={`/project/${project.id}`}>View Details</Link>
                   </Button>
                 </CardFooter>
@@ -252,31 +222,22 @@ function ProjectsContent() {;
                   </Button>;
                 </CardFooter>;
               </Card>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         )}
-
-
-
-
-=======
+      </main>
+    </>
+  )
+export default function Projects() {
+  return <ProjectsContent /> }
+export default function Projects() {
+  return <ProjectsContent />
+}
       </main>;
     </>;
   );
-
-export default function Projects() {;
-  return <ProjectsContent />;}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
+}
+;
 export default function Projects() {;
   return <ProjectsContent />;
 
@@ -385,8 +346,5 @@ function Projects() {
 =======
 };
 }
-
+}
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

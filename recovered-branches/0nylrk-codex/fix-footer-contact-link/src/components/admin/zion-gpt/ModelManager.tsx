@@ -1,20 +1,16 @@
 
-
+import { useState, useEffect  } from 'react';
 import { useState, useEffect } from 'react',
-
-
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
-
-
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react";
+import { supabase  } from '@/integrations/supabase/client';
+import { ModelConfig } from '@/utils/zion-gpt';
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
 import { supabase } from '@/integrations/supabase/client',
 import { ModelConfig } from '@/utils/zion-gpt',
-
-
-=======
 import {useState, useEffect} from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -23,19 +19,17 @@ import {Badge} from "@/components/ui/badge";
 import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";
 import {supabase} from '@/integrations/supabase/client';
 import {ModelConfig} from '@/utils/zion-gpt';
-
-
 interface ModelVersionData extends ModelConfig {
 
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
 
   errorMessage?: string
-
+}
+export function ZionGPTModelManager() {
+  const [models, setModels] = useState<ModelVersionData[]>([]),
 
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isLoading, setIsLoading] = useState(true);
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
 
@@ -141,13 +135,27 @@ if (throw error) {
       setActiveJobs (prev => ({ ...prev, [model_id]: false }));
     }
   }
-
-=======
+  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
+    try {
+      // If activating, deactivate all other models with the same purpose
+      if (!currentActive) {
+        await supabase
+          .from('model_versions')
+          .update({ active: false })
+          .eq('purpose', purpose)
+      }
+      // Update this model
+      await supabase
+        .from('model_versions')
+        .update({ active: !currentActive })
+        .eq('id', modelId);
+      // Refresh the model list
+      fetchModels()
+    } catch (error) {
+      console.error('Error toggling model active state:', error)
     }
-
-=======
+  }
   };
-=======
 import { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -159,7 +167,6 @@ import { ModelConfig } from '@/utils/zion-gpt',
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string
-
 import { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -273,10 +280,6 @@ export function ZionGPTModelManager() {;
 
   },
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   return (
     <Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;
@@ -372,21 +375,18 @@ export function ZionGPTModelManager() {;
                       </Button>;
 
                     )}
+                  </TableCell>
+                </TableRow>
                   </TableCell>;
                 </TableRow>;
-=======
-                    )}
-
-                  </TableCell>;
-                </TableRow>;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
             </TableBody>;
           </Table>;
         )}
-
+      </CardContent>
+    </Card>
+  )
+}
       </CardContent>;
     </Card>;
   );
@@ -394,6 +394,3 @@ export function ZionGPTModelManager() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 ;
-
-
-

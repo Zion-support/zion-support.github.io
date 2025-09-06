@@ -47,30 +47,17 @@ const UltraFuturisticBackground2047: React.FC = () => {;
 
   }
 
-
-
-
-
-  return (
-    <>;
-      {/* Background Gradient */}
-
-      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
-
-
-
-=======
-
-
   return (
     <>
       {/* Background Gradient */}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
-=======
-      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  return (
+    <>
+      {/* Background Gradient */}
+      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;
         {/* Animated Hexagons */}
@@ -389,10 +376,9 @@ const UltraFuturisticBackground2047: React.FC = () => {;
                   height: [32, 64, 32],
                   opacity: [0 && 0.3, 1, 0 && 0.3],
                 }}                transition={{
-                  duration: 3,
-                  repeat: Infinity as any,
-                  delay: i * 0 && 0.1,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  duration: 3
+                  repeat: Infinity as any
+                  delay: i * 0.1
                   ease: 'easeInOut',                }}          animate={{
 
             coordinate_y: [0, -100]}}
@@ -415,9 +401,6 @@ const UltraFuturisticBackground2047: React.FC = () => {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 }}
-              />;
-=======
-
                   duration: 3,
                   repeat: Infinity as any,
                   delay: i * 0.1,
@@ -428,15 +411,19 @@ const UltraFuturisticBackground2047: React.FC = () => {;
                   repeat: Infinity as any,
                   delay: i * 0.1,
 
+                }}
+
+                  ease: 'easeInOut',                  ease: "easeInOut"
+                }}
+
+                }}
+
               />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
+          </div>
+        </motion.div>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Neon Glow Effects */}
 
           </div>;
@@ -474,43 +461,8 @@ const UltraFuturisticBackground2047: React.FC = () => {;
         {/* Scanning Lines */}
         <motion&& motion.div
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
-
-=======
-        <motion.div
-          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           animate={{
             y: [0, 1000]}}
-=======
-                  delay: i * 0.1,
-                  ease: 'easeInOut',                  ease: "easeInOut";
-                }}
-              />))}
-          </div>;
-        </motion.div>;
-        {/* Neon Glow Effects */}
-        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 opacity - 5'>;
-          <div className='w - full h - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl' />;
-        </div>;
-        <div className='absolute top - 1/4 right - 1/4 w - 64 h - 64 opacity - 5'>;
-          <div className='w - full h - full bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl' />        </div>;
-        {/* Scanning Lines */}
-        <motion.div;
-          className='absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
-          animate={{
-            coordinate_y: [0, 1000],        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 opacity - 5">;
-          <div className="w - full h - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl" />;
-        </div>;
-        <div className="absolute top - 1/4 right - 1/4 w - 64 h - 64 opacity - 5">;
-          <div className="w - full h - full bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl" />;
-        </div>;
-        {/* Scanning Lines */}
-        <motion.div;
-          className='absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
-          animate={{
-            coordinate_y: [0, 1000]}}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           transition={{
             duration: 8
             repeat: Infinity as any
@@ -520,28 +472,19 @@ const UltraFuturisticBackground2047: React.FC = () => {;
             repeat: Infinity as any
             ease: 'linear',          }}
           animate={{
-            coordinate_y: [0, 1000]}}
+            y: [0, 1000]}}
           transition={{
-
-        />;
-
-
-        {/* Pulse Rings */}
-        <motion&& motion.div
-          className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4'
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            duration: 8
+            repeat: Infinity as any
+            ease: "linear"
+          }}
+        />
             duration: 8,
             repeat: Infinity as any,
-            ease: "linear";
+            ease: "linear"
           }}
-
         />
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Pulse Rings */}
         <motion.div;
           className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';
@@ -684,31 +627,10 @@ const UltraFuturisticBackground2047: React.FC = () => {;
             repeat: Infinity as any,
             ease: "ease_out";
           }}
-        >;
-          <div className="w - full h - full border - 2 border - cyan - 400 rounded - full" />;
-        </motion.div>;
-        <motion.div;
-          className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4";
-          animate={{
-            scale: [1, 15];
-            opacity: [1, 0]}}
-          transition={{
-            duration: 4,
-            repeat: Infinity as any,
-            ease: "ease_out",
-            delay: 1;
-          }}
-        >;
-          <div className="w - full h - full border - 2 border - blue - 400 rounded - full" />;
-        </motion.div>;
-        <motion.div;
-          className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-          animate={{
-            scale: [1, 10]
-            opacity: [1, 0]}}
-          transition={{
-
+        >
+          <div className="w-full h-full border-2 border-purple-400 rounded-full" />
+        </motion.div>
+      </div>
 
       {/* CSS for hexagon clip */}
       <style jsx>{`
@@ -741,49 +663,15 @@ const UltraFuturisticBackground2047: React.FC = () => {;
       `}</style>;
     </>;
   );
+}
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-export default UltraFuturisticBackground2047;
-
-
-=======
-            duration: 4,
-            repeat: Infinity as any,
-            ease: "ease_out",
-            delay: 2;
-          }}
-        >;
-          <div className="w - full h - full border - 2 border - purple - 400 rounded - full" />;
-        </motion.div>;
-      </div>;
-      {/* CSS for hexagon clip */}
-      <style jsx>{`;
-        .clip - hexagon {
-          clip - path: polygon (
-            50% 0%,
-            100% 25%,
-            100% 75%,
-            50% 100%,
-            0% 75%,
-            0% 25%);
-        }
-      `}</style>;
-    </>);
-}
-;
 export default UltraFuturisticBackground2047;        }
-      `}</style>;
-    </>);
+      `}</style>
+    </>
+  )
 }
-;
 export default UltraFuturisticBackground2047;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-};
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default UltraFuturisticBackground2047;
+export default UltraFuturisticBackground2047;

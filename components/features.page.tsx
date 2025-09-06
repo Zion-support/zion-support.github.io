@@ -1,11 +1,7 @@
-
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
 import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 
-export default function FeaturesPage() {;
-
-=======
-
-import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 
 export default function FeaturesPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -59,8 +55,6 @@ function FeaturesPage() {
           <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>
       </div>
     </EnhancedLayout>
-
   );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+  );

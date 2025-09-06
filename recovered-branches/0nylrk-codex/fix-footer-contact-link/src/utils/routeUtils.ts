@@ -1,52 +1,53 @@
 
-  return completeSitemap && completeSitemap.find(route => route && route.path === path)
-};
-=======
-
+import { completeSitemap, SitemapItem } from "@/config/sitemap";
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
-
-=======
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path);
 };
-=======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
-
 
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
-
+}
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
-
-
+  const route = findRouteByPath(path)
   const route = findRouteByPath(path),
+  return route?.requiredAuth === true;
+};
 
+// Check if a route is accessible by a specific user type
+export const canAccessRoute = (;
+  path: string;
+  isAuthenticated: boolean;
+  return route?.requiredAuth === true
+}
+},
 
+// Check if a route is accessible by a specific user type
+export const canAccessRoute = (
+  path: string,
+  isAuthenticated: boolean,
   userType?: string | null
 ): boolean => {
   const route = findRouteByPath(path)
   // If route doesn't exist in our sitemap
   if (!route) return true, // Default to accessible
   // If route requires authentication and user is not authenticated
-
-  if (route && route.requiredAuth && !isAuthenticated) return false;
+  if (route.requiredAuth && !isAuthenticated) return false;
+  if (route.requiredAuth && !isAuthenticated) return false,
   
-
   // If route requires specific roles and user doesn't have one
-  if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
-    if (!userType) return false;
-    return route && route.requiredRoles.includes(userType as any)
+  if (route.requiredRoles && route.requiredRoles.length > 0) {
+    if (!userType) return false,
+    return route.requiredRoles.includes(userType as any)
   }
   return true
 }
@@ -78,20 +79,6 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   return breadcrumbs
 }
 
-=======
-import { complete_sitemap, SitemapItem } from '@/config / sitemap';
-=======
-
-  if (route.requiredAuth && !isAuthenticated) return false,
-  
-
-  // If route requires specific roles and user doesn't have one
-  if (route.requiredRoles && route.requiredRoles.length > 0) {
-    if (!userType) return false,
-    return route.requiredRoles.includes(userType as any)
-
-
-=======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Find a route by path in the complete sitemap;
@@ -168,10 +155,4 @@ if ( {) {
     }
   }
   return breadcrumbs;
-
-
-
-
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

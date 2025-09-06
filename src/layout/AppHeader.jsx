@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MainNavigation } from './MainNavigation';
-
-
+ursor/integrate-build-improve-and-re-verify-8f7d
 export function AppHeader() {
-
+    return (<header className="bg-white shadow-sm border-b border-gray-200">
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
-
+origin/chore/resolve-conflicts-1756215853
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -18,15 +17,12 @@ export function AppHeader() {
           <MainNavigation />
         </div>
       </div>
-
+    </header>);
+}
     </header>
   );
 }
-
-
-=======
-
-=======
+origin/chore/resolve-conflicts-1756215853
 export function AppHeader() {;
     return (<header className="bg-white shadow-sm border-b border-gray-200">";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
@@ -42,6 +38,5 @@ export function AppHeader() {;
     </header>);
 
 '"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d

@@ -1,16 +1,35 @@
-
+import React from 'react',
 import React from 'react';
-import Link from 'next / link';
-
-=======
-
-import React from 'react';
-
 import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
-
+import {
+  Phone
+  Mail
+  MapPin
+  Globe
+  Zap
+  Brain
+  Atom
+  Rocket
+  Shield
+  Cpu
+  Target
+  Microscope
+  Users
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github
+  ArrowRight
+  Heart
+  Star
+  Award
+  CheckCircle;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
   Phone,
   Mail,
   MapPin,
@@ -36,8 +55,6 @@ import { motion } from 'framer-motion';
   Award,;
   CheckCircle,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
-
-
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
@@ -618,10 +635,26 @@ const company_info = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Status', href: '/status' }
 ];
-
-
-
-
+const socialLinks = [
+  {
+    name: 'LinkedIn'
+    href: 'https://linkedin.com/company/ziontechgroup'
+    icon: Linkedin
+  }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
+  {
+    name: 'Facebook'
+    href: 'https://facebook.com/ziontechgroup'
+    icon: Facebook
+  }
+  {
+    name: 'Instagram'
+    href: 'https://instagram.com/ziontechgroup'
+    icon: Instagram
+  }
+  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+];
 
 const certifications = [
 
@@ -799,7 +832,7 @@ function UltraFuturisticFooter2030() {
 
 export default function UltraFuturisticFooter2030() {
   return (
-    <footer className="bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden">
+    <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
       {/* Animated Background */}
 
       <div className="absolute inset-0">
@@ -831,12 +864,51 @@ export default function UltraFuturisticFooter2030() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {/* Company Info */}
+            <div className="space-y-6">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </h3>
+                  <p className="text-sm text-gray-400">2030 Future Technology</p>
+                </div>
+              </div>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Pioneering the future with cutting-edge AI, quantum computing, and emerging technologies.
+                Transforming businesses through innovative solutions and intelligent automation.
+              </p>
+              {/* Contact Info */}
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <Phone className="w-4 h-4 text-purple-400" />
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.mobile}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <Mail className="w-4 h-4 text-purple-400" />
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.email}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <MapPin className="w-4 h-4 text-purple-400" />
+                  <span>{contactInfo.address}</span>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <Globe className="w-4 h-4 text-purple-400" />
+                  <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.website.replace('https://', '')}
+
+];
 
 
 
+                    {contactInfo.website.replace('https://', '')}
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </a>
                 </div>
               </div>
@@ -981,9 +1053,6 @@ export default function UltraFuturisticFooter2030() {
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Rocket className='w-5 h-5 text-purple-400' />
 
-
-
-
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>
@@ -1039,17 +1108,9 @@ export default function UltraFuturisticFooter2030() {
                     </div>;
                   </div>;
                 ))}
+              </div>
+            </div>
 
-              </div>;
-            </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Quick Links */}
 
 
@@ -1088,19 +1149,14 @@ export default function UltraFuturisticFooter2030() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
+              </div>
+            </div>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Social & Certifications */}
+            <div className='space-y-6'>
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
+                <Users className='w-5 h-5 text-green-400' />
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <span>Connect & Trust</span>
               </h4>
 =======
@@ -1135,154 +1191,30 @@ export default function UltraFuturisticFooter2030() {
                   {socialLinks && socialLinks.map((social, index) => (;
                     <a
                       key={index}
-                      href={social && social.href}
+                      href={social.href}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'>;
-                      <social && social.icon className='w-5 h-5' />                    </a>                      target="_blank";
-                      rel="noopener noreferrer";
-                      className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40";
-                    >;
-                      <social && social.icon className="w-5 h-5" />;
-
-=======
-            <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
-                <Users className="w-5 h-5 text-green-400" />
-                <span>Connect & Trust</span>
-              </h4>
-              
-=======
-            {/* Service Categories */}
-            <div className='space - y-6'>;
-              <h4 className='text - lg font - semibold text - white flex items - center space - x-2'>;
-                <Rocket className='w - 5 h - 5 text - purple - 400' />;
-                <span > Our Services</span>;
-              </h4>;
-              <div className='grid grid - cols - 1 gap - 4'>;
-                {service_categories.slice (0, 3).map ((category, index) => (
-                  <div key={index} className='space - y-2'>;
-                    <h5 className='text - sm font - medium text - purple - 300'>;
-                      {category.title}
-                    </h5>;
-                    <div className='space - y-1'>                      {category.services.map ((service, service_index) => (
-                        <Link;
-                          key={service_index}
-                          href={service.href}
-                          className='block text - xs text - gray - 400 hover:text - purple - 300 transition - colors'                        >                <span > Our Services</span>;
-              </h4>;
-              <div className="grid grid - cols - 1 gap - 4">;
-                {service_categories.slice (0, 3).map ((category, index) => (
-                  <div key={index} className="space - y-2">;
-                    <h5 className="text - sm font - medium text - purple - 300">{category.title}</h5>;
-                    <div className="space - y-1">;
-                      {category.services.map ((service, service_index) => (
-                        <Link;
-                          key={service_index}
-                          href={service.href}
-                          className='block text - xs text - gray - 400 hover:text - purple - 300 transition - colors'                          className="block text - xs text - gray - 400 hover:text - purple - 300 transition - colors";
-                        >;
-                          {service.name}
-                        </Link>))}
-                    </div>;
-                  </div>))}
-              </div>;
-            </div>;
-            {/* Quick Links */}
-            <div className='space - y-6'>;
-              <h4 className='text - lg font - semibold text - white flex items - center space - x-2'>;
-                <Target className='w - 5 h - 5 text - cyan - 400' />;
-                <span > Quick Links</span>;
-              </h4>;
-              <div className='space - y-2'>                {quick_links.map ((link, index) => (
-                  <Link;
-                    key={index}
-                    href={link.href}
-                    className='block text - sm text - gray - 400 hover:text - cyan - 300 transition - colors flex items - center space - x-2 group';
-                  >;
-                    <ArrowRight className='w - 3 h - 3 group - hover:translate - x-1 transition - transform' />                    <span>{link.name}</span>            <div className="space - y-6">;
-              <h4 className="text - lg font - semibold text - white flex items - center space - x-2">;
-                <Target className="w - 5 h - 5 text - cyan - 400" />;
-                <span > Quick Links</span>;
-              </h4>;
-              <div className="space - y-2">;
-                  <Link;
-                    key={index}
-                    href={link.href}
-                    className='block text - sm text - gray - 400 hover:text - cyan - 300 transition - colors flex items - center space - x-2 group';
-                  >;
-                    <ArrowRight className='w - 3 h - 3 group - hover:translate - x-1 transition - transform' />                    className="block text - sm text - gray - 400 hover:text - cyan - 300 transition - colors flex items - center space - x-2 group";
-                  >;
-                    <ArrowRight className="w - 3 h - 3 group - hover:translate - x-1 transition - transform" />;
-                    <span>{link.name}</span>;
-                  </Link>))}
-              </div>;
-              <div className='space - y-2'>;
-                <h5 className='text - sm font - medium text - cyan - 300'>Company</h5>                {company_info.map ((link, index) => (
-                  <Link;
-                    key={index}
-                    href={link.href}
-                    className='block text - xs text - gray - 400 hover:text - cyan - 300 transition - colors'                  >              <div className="space - y-2">;
-                <h5 className="text - sm font - medium text - cyan - 300">Company</h5>;
-                {company_info.map ((link, index) => (
-                  <Link;
-                    key={index}
-                    href={link.href}
-                    className='block text - xs text - gray - 400 hover:text - cyan - 300 transition - colors'                    className="block text - xs text - gray - 400 hover:text - cyan - 300 transition - colors";
-                  >;
-                    {link.name}
-                  </Link>))}
-              </div>;
-            </div>;
-            {/* Social & Certifications */}
-            <div className='space - y-6'>;
-              <h4 className='text - lg font - semibold text - white flex items - center space - x-2'>;
-                <Users className='w - 5 h - 5 text - green - 400' />;
-                <span > Connect & Trust</span>;
-              </h4>;
-              {/* Social Links */}
-              <div className='space - y-3'>;
-                <h5 className='text - sm font - medium text - green - 300'>;
-                  Follow Us;
-                </h5>;
-                <div className='flex flex - wrap gap - 2'>                  {social_links.map ((social, index) => (
-                    <a;
-                      key={index}
-                      href={social.href}                <span > Connect & Trust</span>;
-              </h4>;
-
-              {/* Social Links */}
-              <div className="space - y-3">;
-                <h5 className="text - sm font - medium text - green - 300">Follow Us</h5>;
-                <div className="flex flex - wrap gap - 2">;
-                  {social_links.map ((social, index) => (
-                    <a;
-                      key={index}
-                      href={social.href}
-
-
-
+                      className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'
+                    >
+                      <social.icon className='w-5 h-5' />                    </a>                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40"
+                    >
+                      <social.icon className="w-5 h-5" />
+                  ))}
+                </div>
+              </div>
 
                     </a>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
-                </div>;
-              </div>;
-
-
-              {/* Certifications */}
-
-
               {/* Certifications */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
                   <Award className='w-4 h-4' />
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
@@ -1312,57 +1244,19 @@ export default function UltraFuturisticFooter2030() {
                       <CheckCircle className="w-3 h-3 text-green-400" />
                       <span>{cert}</span>
                     </div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
-
-=======
-                      target='_blank';
-                      rel='noopener noreferrer';
-                      className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40';
-                    >;
-                      <social.icon className='w - 5 h - 5' />                    </a>                      target="_blank";
-                      rel="noopener noreferrer";
-                      className="w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40";
-                    >;
-                      <social.icon className="w - 5 h - 5" />))}
-                </div>;
-              </div>;
-              {/* Certifications */}
-              <div className='space - y-3'>;
-                <h5 className='text - sm font - medium text - green - 300 flex items - center space - x-2'>;
-                  <Award className='w - 4 h - 4' />;
-                  <span > Certifications</span>;
-                </h5>;
-                <div className='grid grid - cols - 1 gap - 2'>;
-                  {certifications.map ((cert, index) => (
-                    <div;
-                      key={index}
-                      className='flex items - center space - x-2 text - xs text - gray - 400';
-                    >;
-                      <CheckCircle className='w - 3 h - 3 text - green - 400' />                      <span>{cert}</span>                  <span > Certifications</span>;
-                </h5>;
-                <div className="grid grid - cols - 1 gap - 2">;
-                  {certifications.map ((cert, index) => (
-                    <div key={index} className="flex items - center space - x-2 text - xs text - gray - 400">;
-                      <CheckCircle className="w - 3 h - 3 text - green - 400" />;
-                      <span>{cert}</span>;
-                    </div>))}
-
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Bottom Bar */}
         <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
-
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>;
               <div className='flex items-center space-x-6 text-sm text-gray-400'>
-
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
@@ -1472,13 +1366,6 @@ export default function UltraFuturisticFooter2030() {
 
   );
 }
-
-=======
-    </footer>);
+;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

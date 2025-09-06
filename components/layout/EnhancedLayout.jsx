@@ -25,22 +25,7 @@ import React from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 
-
-  return (
-    <div className="min - h-screen flex flex - col">;
-      <EnhancedNavigation />;
-      <main className="flex - 1">;
-        {children}
-
-
-=======
-      </main>;
-      <EnhancedFooter />;
-    </div>);
-},
+  );
+}
 export default EnhancedLayout;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

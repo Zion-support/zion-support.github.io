@@ -1,8 +1,6 @@
 
-
+import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
-
-
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 =======
@@ -84,13 +82,17 @@ serve(async (req) => {
             .eq('subdomain', subdomain)
             .eq('is_active', true)
             .single();
-
-
-          if (!subdomainResult && subdomainResult.error) {
-            tenantInfo = subdomainResult && subdomainResult.data as TenantInfo
-
-=======
-  logo_url: string | null,
+          if (!subdomainResult.error) {
+            tenantInfo = subdomainResult.data as TenantInfo
+import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts',;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7',;
+interface TenantInfo {;
+  id: string,;
+  brand_name: string,;
+  subdomain: string,;
+  custom_domain: string | null,;
+  primary_color: string,;
+  logo_url: string | null,;
   theme_preset: string;
 }
 const cors_headers = {
@@ -179,10 +181,6 @@ if ( {) {
             .single(),;
           if (!subdomainResult.error) {;
             tenantInfo = subdomainResult.data as TenantInfo;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
         }
       } else // Check condition
@@ -192,10 +190,6 @@ if ( {) {
         tenant_info = data as TenantInfo;
       }
     }
-
-
-
-
 
     return new Response(
 
@@ -239,8 +233,9 @@ if ( {) {
       {
         status: 500;
         headers: {
-
-=======
+          'Content-Type': 'application/json'
+          ...corsHeaders}}
+    )
 ;
     return new Response(;
       JSON.stringify({;
@@ -263,10 +258,6 @@ if ( {) {
         headers: {;
           'Content-Type': 'application/json',;
           ...corsHeaders}});
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 

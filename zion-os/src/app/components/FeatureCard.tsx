@@ -1,13 +1,14 @@
-
-
+interface FeatureCardProps {icon: string;
+  title: string;
+  description: string;
+  features: string[];
+  gradient: string;
 interface FeatureCardProps {;
   icon: string,;
   title: string,;
   description: string,;
   features: string[],;
   gradient: string,;
-
-
   className?: string;
 }
 export default function FeatureCard({
@@ -45,10 +46,10 @@ function FeatureCard() {
 =======
   return (
     <div className={`feature-card group ${className}`}>
-
+      <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>;
+        <span className=&quot;text-white text-xl&quot;>{icon}</span>
       <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>
         <span className="text-white text-xl">{icon}</span>
-
       </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-white/70 mb-4">{description}</p>

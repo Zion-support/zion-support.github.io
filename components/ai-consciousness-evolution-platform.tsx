@@ -1,6 +1,8 @@
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const AIConsciousnessEvolutionPlatform: React.FC = () => {
+ const AIConsciousnessEvolutionPlatform: React.FC = () => {
+const AIConsciousnessEvolutionPlatform: React.FC = () => {
+ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
 =======
@@ -46,11 +48,8 @@ import React from 'react';
   opacity: 0, y: 20
 }animate= {
   {
-
-
+  opacity: 1, y: 0
   opacity: 1, y: 0 
-
-
 
 }transition= {
   {
@@ -72,11 +71,8 @@ import React from 'react';
   opacity: 0, y: 20
 }animate= {
   {
-
-
+  opacity: 1, y: 0
   opacity: 1, y: 0 
-
-
 
 }transition= {
   {
@@ -197,15 +193,23 @@ const container_variants = {
 }
 visible: {
   opacity: 1, transition: {
-  stagger_children: 0.1;
+  staggerChildren: 0.1
 }
 ;
 }
-;
-}export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+};export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  staggerChildren: 0.1 
+
+};
+
+};
+
+};export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
+
+}
+}
+}
+}
+}
+}

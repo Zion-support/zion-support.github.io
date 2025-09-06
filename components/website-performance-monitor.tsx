@@ -1,5 +1,7 @@
-
-
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button';
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -15,11 +17,22 @@ import {
   Gauge,
   BarChart3,;
   Clock,;
+} from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
+export default function WebsitePerformanceMonitorPage() {;
+} from 'lucide-react';
 
-
-
-
-
+import {
+  Activity
+  Zap
+  TrendingUp
+  AlertTriangle
+  CheckCircle
+  ArrowRight
+  Monitor
+  Gauge
+  BarChart3
+  Clock;
+} from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -95,14 +108,69 @@ export default function WebsitePerformanceMonitorPage() {
     {
       name: 'User Experience'
       description:
-
-
+        'Real user experience metrics and conversion impact analysis.'
+      icon: '👥'
+      color: 'text-pink-400'
+    },  ];      gradient: 'from-blue-400 to-cyan-500'}
+    {
+      icon: <Gauge className="w-8 h-8 text-white" />
+      title: 'Performance Metrics'
+      description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.';
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'}
+    {
+      icon: <AlertTriangle className="w-8 h-8 text-white" />
+      title: 'Issue Detection'
+      description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.';
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'}
+    {
+      icon: <TrendingUp className="w-8 h-8 text-white" />
+      title: 'Performance Optimization'
+      description: 'AI-powered recommendations to improve your website speed and user experience.'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'}]
+  const metrics = [
+    {
+      name: 'Core Web Vitals'
+      description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.';
+      icon: '⚡'
+      color: 'text-blue-400'
+    }
+    {
+      name: 'Page Load Time'
+      description: 'Comprehensive analysis of page load performance across different devices and locations.'
+      icon: '🚀'
+      color: 'text-green-400'
+    }
+    {
+      name: 'Uptime Monitoring'
+      description: '99.9% uptime monitoring with instant alerts for any downtime or performance issues.'
+      icon: '🔄'
+      color: 'text-purple-400'
+    }
+    {
+      name: 'Mobile Performance'
+      description: 'Mobile-first performance testing and optimization recommendations.'
+      icon: '📱'
+      color: 'text-orange-400'
+    }
+    {
+      name: 'SEO Impact'
+      description: 'Performance metrics that directly affect your search engine rankings and visibility.'
+      icon: '🔍'
+      color: 'text-cyan-400'
+    }
+    {
+      name: 'User Experience'
+      description: 'Real user experience metrics and conversion impact analysis.'
+      icon: '👥'
+      color: 'text-pink-400'
+    }
         'Real user experience metrics and conversion impact analysis.',
       icon: '👥',
       color: 'text-pink-400',
     },  ];
-
-
 
   ];
   const pricing = [
@@ -145,57 +213,32 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration'
       ];
       popular: true
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
     }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
-
-export default function WebsitePerformanceMonitorPage() {;
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-
-
-
-      ];
-      popular: false;
-    }
-
-  ];
-
-
-=======
-
+      name: 'Enterprise'
+      price: '$199'
+      period: '/month'
     };
       name: 'Enterprise',
       price: '$199',
       period: '/month',
+      description:
+        'For large organizations with critical performance requirements'
+      features: [
+        'Unlimited websites'
+        'Enterprise-grade monitoring'
+        'Custom alerting rules'
+        '24/7 support'
+        'Custom integrations'
+        'White-label reporting'
+        'SLA guarantees'
+        'On-premise options'
+      ]
+      popular: false
+    },  ];        'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options'
+      ];
+      popular: false
+    }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleAnalyzeWebsite = async () => {
     setIsAnalyzing(true);
     // Simulate website analysis
@@ -231,21 +274,23 @@ export default function WebsitePerformanceMonitorPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       setIsAnalyzing(false);
-    }, 4000);  };          'Optimize images and implement lazy loadingMinimize render-blocking resourcesEnable compression and cachingConsider using a CDN for global performance';
-        ];
-=======
-          'Optimize images and implement lazy loadingMinimize render-blocking resourcesEnable compression and cachingConsider using a CDN for global performance'
+    }, 4000);  };          'Optimize images and implement lazy loadingMinimize render-blocking resourcesEnable compression and cachingConsider using a CDN for global performance'
         ]
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       });
+      setIsAnalyzing(false)
+    }, 4000)
+    };
+
+    {
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
 
       setIsAnalyzing(false);
     }, 4000);
 =======
   };
 
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
     <>
@@ -337,11 +382,94 @@ export default function WebsitePerformanceMonitorPage() {;
               onClick={handleAnalyzeWebsite}
               size="lg"
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow"
-
-
+              disabled={isAnalyzing}
+            >
+              {isAnalyzing ? (
+                <>
+                  <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
+                  Analyzing...
+                </>
+              ) : (
+                <>
+                  <Zap className='w-5 h-5 mr-2' />                  <Zap className="w-5 h-5 mr-2" />
+                  Analyze Website
+                </>
+              )}
+            </Button>
+            <Button
+              href='#pricing'
+              variant='outline'
+              size='lg'
+              className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white shadow-2xl'            >              href="#pricing"
+              variant="outline"
+              size="lg"
+              className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white shadow-2xl"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+      {/* Features Section */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+              Powerful Monitoring Features
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Our performance monitoring platform provides everything you need
+              to keep your website fast and reliable.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {features.map((feature, index) => (
+              <Card
+                key={index}
+                className='card-hover group border-gradient-blue'
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className='flex items-start space-x-6'>
+                  <div className='relative'>
+                    <div
+                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      {feature.icon}
+                    </div>
+                    <div
+                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
+                    />
+                  </div>
+                  <div className='flex-1'>
+                    <h3 className='text-2xl font-bold mb-4 text-white'>
+                      {feature.title}
+                    </h3>
+                    <p className='text-gray-400 leading-relaxed'>                      {feature.description}              Powerful Monitoring Features
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Our performance monitoring platform provides everything you need to keep your website fast and reliable.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start space-x-6">
+                  <div className="relative">
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                      {feature.icon}
+                    </div>
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-4 text-white">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {feature.description}
+                    <p className='text-gray-400 leading-relaxed'>                      {feature.description}
 
 
                     </p>
@@ -351,19 +479,16 @@ export default function WebsitePerformanceMonitorPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+          </div>
+        </div>
+      </section>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Metrics Section */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Comprehensive Performance Metrics
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -408,13 +533,7 @@ export default function WebsitePerformanceMonitorPage() {;
                 </h3>;
                 <p className='text - gray - 400 text - sm leading - relaxed'>;
                   {metric.description}
-
-      <section className="section-padding bg-gradient-cursor">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
-              Comprehensive Performance Metrics
-
+                </p>              </Card>              Comprehensive Performance Metrics
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Track all the metrics that matter for your website's performance and user experience.
@@ -465,24 +584,21 @@ export default function WebsitePerformanceMonitorPage() {;
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-
-
-=======
-
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="text-4xl mb-4">{metric.icon}</div>
+                <h3 className={`text-xl font-bold mb-3 ${metric.color}`}>{metric.name}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{metric.description}</p>
+              </Card>
                 </p>              </Card>
 
               </Card>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
+          </div>
+        </div>
+      </section>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Demo Analysis Section */}
       {analysisResults && (
 
@@ -636,14 +752,17 @@ export default function WebsitePerformanceMonitorPage() {;
                 {analysisResults.recommendations.map((rec, index) => (
                   <div key={index} className='flex items-start space-x-3'>
                     <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-
+                    <span className='text-gray-300'>{rec}</span>                  </div>            <Card className="border-gradient-blue mt-8">
+              <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {analysisResults.recommendations.map((rec, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">{rec}</span>
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
                   </div>
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
               </div>
             </Card>
@@ -651,6 +770,11 @@ export default function WebsitePerformanceMonitorPage() {;
         </section>
       )}
 
+      {/* Pricing Section */}
+      <section id='pricing' className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
               Simple Pricing
             </h2>
@@ -925,22 +1049,20 @@ export default function WebsitePerformanceMonitorPage() {;
                   </div>
                 )}
 
-
-                <div className='text-center mb-8'>;
-                  <h3 className='text-2xl font-bold text-white mb-4'>;
-                    {plan && plan.name}
-                  </h3>;
-                  <div className='mb-6'>;
-                    <span className='text-4xl font-bold text-white'>;
-                      {plan && plan.price}
-                    </span>;
-                    <span className='text-gray-400'>{plan && plan.period}</span>;
-                  </div>;
-                  <p className='text-gray-400'>{plan && plan.description}</p>;
-                </div>;
-
-                <ul className='space-y-4 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-4'>
+                    {plan.name}
+                  </h3>
+                  <div className='mb-6'>
+                    <span className='text-4xl font-bold text-white'>
+                      {plan.price}
+                    </span>
+                    <span className='text-gray-400'>{plan.period}</span>
+                  </div>
+                  <p className='text-gray-400'>{plan.description}</p>
+                </div>
+                <ul className='space-y-4 mb-8'>
+                  {plan.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'>;
@@ -954,14 +1076,10 @@ export default function WebsitePerformanceMonitorPage() {;
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
 
                       {feature}
-                    </li>;
-=======
 
 
+                      {feature}
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
@@ -972,45 +1090,24 @@ export default function WebsitePerformanceMonitorPage() {;
                 <Button
                   href='/contact'
                   size='lg'
-
-=======
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Button
-                  href="/contact"
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                >
+                  Get Started
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-=======
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>
 
                 </Button>
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-
-          </div>;
-        </div>;
-      </section>;
-
-
-      {/* CTA Section */}
-
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden'>
@@ -1018,10 +1115,7 @@ export default function WebsitePerformanceMonitorPage() {;
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
-
             Ready to Monitor Your Website Performance?
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our monitoring platform to keep
@@ -1040,21 +1134,19 @@ export default function WebsitePerformanceMonitorPage() {;
               href='/contact'
               variant='outline'
               size='lg'
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              Schedule Demo;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-
-
-=======
+              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
+              Schedule Demo
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+);
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  );
+}

@@ -1,18 +1,18 @@
 
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
+import {
 
 
 
 import {
-
-import {;
-  Bell,;
-  FileText,;
-  Home,;
-  Mail,;
-  Search,;
-  Settings,;
-=======
-
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenu
+  SidebarMenuItem
+  SidebarMenuButton
+  SidebarGroupLabel
+  SidebarGroupContent
   Bell,
   FileText,
   Home,
@@ -31,19 +31,34 @@ import {;
   SidebarMenuButton,;
   SidebarGroupLabel,;
   SidebarGroupContent,;
-
-
-
 } from "@/components/ui/sidebar";
 
 export function AppSidebar() {;
   return (
 
 
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <a href="/messaging">
+                    <Mail size={16} />
+                    <span>Messages</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <a href="/notifications">
+                    <Bell size={16} />
+                    <span>Notifications</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
         
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -67,12 +82,7 @@ export function AppSidebar() {;
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-
-
         
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -97,7 +107,22 @@ export function AppSidebar() {;
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-
+    </Sidebar>
+  );
+}
+  )
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
+import {;
+  Sidebar,;
+  SidebarContent,;
+  SidebarGroup,;
+  SidebarMenu,;
+  SidebarMenuItem,;
+  SidebarMenuButton,;
+  SidebarGroupLabel,;
+  SidebarGroupContent} from "@/components/ui/sidebar";
+export function AppSidebar() {;
+  return (;
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;
@@ -227,15 +252,8 @@ function AppSidebar() {
           </SidebarGroupContent>;
         </SidebarGroup>;
       </SidebarContent>;
-
-
-    </Sidebar>
-
-
     </Sidebar>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
-    </Sidebar>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+;

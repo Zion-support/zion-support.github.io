@@ -136,13 +136,6 @@ if ( {) {
       await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily && daily.json', content, message: 'chore(automation): daily rankings update', token })
     }
 
-
-    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }) }
-
-=======
-
-
-
     return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (e) {
@@ -153,6 +146,4 @@ if ( {) {
 
 },
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+},

@@ -9,37 +9,41 @@ import {Badge} from "@/components/ui/badge";
 import {Loader2, Edit, X, Eye} from "lucide-react";
 import {format} from "date-fns";
 import {Link} from "react-router-dom";
-interface JobsListProps {;
-
-  filter?: JobStatus;
-  onSelectJob?: (jobId: string, jobTitle: string) => void;
-}
-
-
-export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
-
-  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-
-
-
-
+import { useState, useEffect } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client",
+import { Job, JobStatus } from "@/types/jobs",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Loader2, Edit, X, Eye } from "lucide-react",
+import { format } from "date-fns";
+import { Link } from "react-router-dom";
+import { format } from "date-fns",
+import { Link } from "react-router-dom",
 interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
 
-
+export function JobsList({ filter, onSelectJob }: JobsListProps) {;
+  const { user } = useAuth();
+  const [jobs, setJobs] = useState<Job[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+export function JobsList({ filter, onSelectJob }: JobsListProps) {
+  const { user } = useAuth();
+  const [jobs, setJobs] = useState<Job[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+  const { user } = useAuth(),
+  const [jobs, setJobs] = useState<Job[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
 
   useEffect(() => {
 
     const fetchJobs = async () => {
-
+      if (!user) return;
       if (!user) return,
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       try {
         let query = supabase
           .from("jobs")
@@ -48,6 +52,9 @@ interface JobsListProps {
           .order("created_at", { ascending: false })
         if (filter) {
           query = query.eq("status", filter)
+        }
+        const { data, error } = await query;
+        if (error) throw error;
 
 =======
         }
@@ -60,20 +67,19 @@ interface JobsListProps {
 
 
         if (error) throw error,
-
         setJobs(data as Job[])
       } catch (error) {
         console.error("Error fetching jobs:", error)
       } finally {
         setIsLoading(false)
       }
-
+    }
+    fetchJobs()
+  }, [user, filter]);
     },
 
     fetchJobs()
   }, [user, filter]),
-
-
 
   if (isLoading) {
 =======
@@ -115,9 +121,8 @@ interface JobsListProps {
       default:
         return "bg-gray-100 text-gray-800"
     }
-
+  }
   },
-
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -149,7 +154,6 @@ interface JobsListProps {
             <div className="flex flex-wrap gap-1 mt-2">
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
-
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -269,10 +273,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
             <div className="flex flex-wrap gap-1 mt-2">;
               {job && job.skills.slice(0, 3).map((skill, index) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {skill}
                 </Badge>;
               ))}
@@ -308,7 +308,9 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
           </CardFooter>;
         </Card>;
       ))}
-
+    </div>
+  )
+}
     </div>;
   );
 }
@@ -336,6 +338,3 @@ function JobsList() {
   const [jobs, set_jobs] = useState < Job[]>([]);
   const [is_loading, setIsLoading] = useState (true);
 ;
-
-
-

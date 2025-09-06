@@ -1,7 +1,4 @@
 
-
-
-
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
@@ -152,7 +149,6 @@ if (throw error) {
     markAllAsRead;
 
     dismissNotification;
-=======
 import { useState, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
@@ -242,10 +238,6 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAsRead,;
     markAllAsRead,;
     dismissNotification,;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setFilter;
     fetchNotifications}
 }

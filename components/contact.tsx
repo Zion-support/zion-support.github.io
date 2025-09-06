@@ -1,7 +1,8 @@
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const [isSubmitting, setIsSubmitting] = useState (false);
+ const [isSubmitting, setIsSubmitting] = useState (false);
+const [isSubmitting, setIsSubmitting] = useState (false);
+ const [isSubmitting, setIsSubmitting] = useState (false);
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029 && innovativeAIServices2029.filter (s => s && s.popular);
 ...quantumSpaceInnovations2029 && quantumSpaceInnovations2029.filter (s => s && s.popular);
@@ -18,38 +19,21 @@ const [submit_success, setSubmitSuccess] = useState (false);
 setIsSubmitting (false);
 setSubmitSuccess (true);
 //Reset form after 3 seconds ];
-
-  stat.label;
+}<motion.div > {
+  stats.map ( (stat, index) => (<motion.div key= {
+  stat.label
 }</div> </div> <div className= {
-  `text - 3xl font - bold $ {
-  stat.color;
-}mb - 2`;
-}> {
-  stat.value;
-}</div> </div> </div> </motion.div>) );
-
-}</motion.div> </div> </section> <motion.div initial= {
-=======
-}<motion && motion.div > {;
-  stats && stats.map ( (stat, index) => (<motion&& motion.div key= {
-  stat && stat.label 
-}</div> </div> <divclassName= {
   `text-3xl font-bold $ {
-  stat && stat.color 
-}mb-2` 
-}> {;
-  stat && stat.value ;
-}</div> </div> </div> </motion && motion.div>) ) ;
-}</motion && motion.div> </div> </section> <motion&& motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  stat.color
+}mb-2`
+}> {
+  stat.value
+}</div> </div> </div> </motion.div>) )
+}</motion.div> </div> </section> <motion.div initial= {
   {
-
-
+  opacity: 0, x: -30
   opacity: 0, x: -30 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }whileInView= {
   {
   opacity: 1, x: 0
@@ -97,22 +81,16 @@ setSubmitSuccess (true);
 
 }initial= {
   {
-
-
+  opacity: 0, y: 20
   opacity: 0, y: 20 
-
-
 
 }whileInView= {
   {
   opacity: 1, y: 0
 }transition= {
   {
-
-
+  duration: 0.6, delay: index * 0.1
   duration: 0.6, delay: index * 0.1 
-
-
 
 }viewport= {
   {
@@ -211,13 +189,8 @@ setSubmitSuccess (true);
 
   {
   opacity: 0, y: 30
-=======
-  {
-
   opacity: 0, y: 30 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -543,19 +516,11 @@ export default function ContactPage() {
                     </div>;
                   </form>;
                 )}
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -564,12 +529,16 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Popular Revolutionary Services
+              </h2>
+              <p className="text-xl text-gray-300">
+                Explore some of our most sought-after 2029 technology solutions
+              </p>
+            </motion.div>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
@@ -780,24 +749,10 @@ export default function ContactPage() {
                 >;
                   <div className="p - 6 rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 border border - cyan - 500 / 20 hover:border - cyan - 400 / 40 transition - all duration - 300 backdrop - blur - sm hover:transform hover:scale - 105">;
                     {/* Service Icon */}
-                    <div className={`w - 16 h - 16 bg - gradient - to - r ${service.color} rounded - 2xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}>;
-                      <span className="text - 2xl">{service.icon}</span>;
-                    </div>;
-                    {/* Popular Badge */}
-                    {service.popular && (
-                      <div className="flex items - center space - x-2 mb - 4">;
-                        <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
-                        <span className="text - sm text - yellow - 400 font - medium">Popular</span>;
-                      </div>)}
-                    {/* Service Title and Tagline */}
-                    <h3 className="text - xl font - semibold text - white mb - 2">{service.name}</h3>;
-                    <p className="text - sm text - cyan - 400 mb - 3">{service.tagline}</p>;
+                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <span className="text-2xl">{service.icon}</span>
+                    </div>
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Popular Badge */}
                     {service.popular && (
                       <div className="flex items-center space-x-2 mb-4">
@@ -805,54 +760,27 @@ export default function ContactPage() {
                         <span className="text-sm text-yellow-400 font-medium">Popular</span>
                       </div>
                     )}
-
-
                     {/* Service Title and Tagline */}
                     <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                     <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {/* Service Title and Tagline */}
+                    <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                    <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>
+                    
                     {/* Description */}
                     <p className="text - gray - 300 leading - relaxed mb - 4 line - clamp - 3">;
                       {service.description}
+                    </p>
 
-                    </p>;
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {/* Price */}
                     <div className="mb - 4">;
                       <span className={`${service.text_color} font - semibold text - lg`}>;
                         {service.price}
+                      </span>
+                      <span className="text-gray-400 text-sm">{service.period}</span>
+                    </div>
 
-                    <h3 className="text-xl font-semibold text-white mb-2">{service && service.name}</h3>;
-                    <p className="text-sm text-cyan-400 mb-3">{service && service.tagline}</p>;
-
-                    {/* Description */}
-                    <p className="text-gray-300 leading-relaxed mb-4 line-clamp-3">;
-                      {service && service.description}
-                    </p>;
-
-                    {/* Price */}
-                    <div className="mb-4">;
-                      <span className={`${service && service.textColor} font-semibold text-lg`}>;
-                        {service && service.price}
-                      </span>;
-                      <span className="text-gray-400 text-sm">{service && service.period}</span>;
-                    </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {/* CTA */}
                     <div className="flex items-center justify-between">;
                       <span className="text-sm text-gray-400">Setup: {service && service.setupTime}</span>;
@@ -861,18 +789,10 @@ export default function ContactPage() {
                   </div>;
                 </motion && motion.div>;
               ))}
+            </div>
+          </div>
+        </section>
 
-            </div>;
-          </div>;
-        </section>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -949,48 +869,58 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >;
-              <h2 className="text - 3xl sm: text - 4xl lg:text - 5xl font - bold text - white mb - 6">;
-                Why Choose;
-                <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent"> Zion Tech Group?</span>;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 12">;
-                We're not just another technology company - we're your partners in building the future;
-              </p>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                <div className="text - center">;
-                  <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                    <Rocket className="w - 8 h - 8 text - white" />;
-                  </div>;
-                  <h3 className="text - xl font - semibold text - white mb - 2">Revolutionary Technology</h3>;
-                  <p className="text - gray - 300">Access to cutting - edge 2029 technology that's already operational and delivering results</p>;
-                </div>;
-                <div className="text - center">;
-                  <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 to - pink - 600 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                    <Brain className="w - 8 h - 8 text - white" />;
-                  </div>;
-                  <h3 className="text - xl font - semibold text - white mb - 2">Expert Team</h3>;
-                  <p className="text - gray - 300">World - class engineers and technology experts with decades of combined experience</p>;
-                </div>;
-                <div className="text - center">;
-                  <div className="w - 16 h - 16 bg - gradient - to - r from - pink - 500 to - red - 600 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                    <Shield className="w - 8 h - 8 text - white" />;
-                  </div>;
-                  <h3 className="text - xl font - semibold text - white mb - 2">Proven Results</h3>;
-                  <p className="text - gray - 300">Track record of successful implementations with measurable ROI and business impact</p>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </main>;
-      <UltraFuturisticFooter2029 />;
-    </UltraFuturisticBackground2029>),
+            >
+              <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6">
+                Why Choose
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-12">
+                We're not just another technology company - we're your partners in building the future
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Rocket className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3>
+                  <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
+                  <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>
+                  <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </main>
+      <UltraFuturisticFooter2029 />
+    </UltraFuturisticBackground2029>
+  )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
   ),
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

@@ -1,11 +1,25 @@
+import React from 'react'
+import { Calendar, RefreshCw } from 'lucide-react'
 
+import { Card, CardContent } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import {
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'
+  Popover
+  PopoverContent
+  PopoverTrigger
+} from '@/components/ui/popover'
+import { Button } from '@/components/ui/button'
+import { Calendar as CalendarComponent } from '@/components/ui/calendar'
+import { format } from 'date-fns'
+import type { DateRange } from 'react-day-picker'
+import type { QuoteStatus } from '@/types/quotes'
 
-
-interface QuotesFilterProps {;
-=======
-
-
-=======
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
@@ -17,9 +31,6 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface QuotesFilterProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   searchQuery: string;
@@ -30,6 +41,8 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
+  onReset: () => void
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 
   onReset: () => void;
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
@@ -336,17 +349,11 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <RefreshCw className='mr - 2 h - 4 w - 4' /> Reset Filters          </Button>;
         </div>;
       </CardContent>;
-    </Card>);
+    </Card>;
+  );
+};  )
 }
-            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
-            on_click={on_reset}
-            className="border - zion - blue - light text - zion - slate - light";
-          >;
-            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>);
-}  );
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+

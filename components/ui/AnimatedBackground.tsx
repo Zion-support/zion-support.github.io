@@ -1,5 +1,6 @@
+import React from 'react';
 
-
+export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
       <div
@@ -12,10 +13,8 @@
       />
       <style jsx global>{`
         @keyframes bgflow {
-
+          0% {;
           0% {
-
-
             transform: translateY(0px) rotate(0deg);
           }
           50% {;
@@ -163,29 +162,8 @@ function AnimatedBackground() {
 
     </div>;
   );
-
+}
+export default AnimatedBackground;
 };
 
 export default AnimatedBackground;
-
-      />;
-      {/* Grid Pattern */}
-      <div;
-        className="absolute inset - 0 opacity - 10";
-        style={{
-          background_image: `;
-            linear - gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px);
-            linear - gradient (90deg, rgba (6, 182, 212, 0.1) 1px, transparent 1px);
-          `;
-          background_size: '50px 50px',
-        }}
-      />;
-    </div>);
-}
-;
-export default AnimatedBackground;
-;
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

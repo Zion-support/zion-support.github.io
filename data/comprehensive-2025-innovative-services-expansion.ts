@@ -1,5 +1,5 @@
-
-
+import { ServiceVariant } from '../types/service-variants';
+export interface ComprehensiveInnovativeService {
   id: string;
   name: string;
   tagline: string;
@@ -651,9 +651,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ];
 
 
-=======
-=======
-
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveInnovativeService {;
   id: string,;
@@ -754,9 +751,4 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     market_advantage: 'Advanced AI energy platform with comprehensive sustainability features';
   }
 ];
-
-
-
 export default comprehensiveInnovativeServices;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

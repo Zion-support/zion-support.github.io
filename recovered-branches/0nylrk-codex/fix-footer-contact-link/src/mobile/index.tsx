@@ -1,4 +1,5 @@
 
+import React from 'react';
 
 
 
@@ -15,12 +16,6 @@ export * from './pages/MobileMessages';
 export * from './pages/MobileResumeBuilder';
 export * from './pages/MobileJobPost';
 
-=======
-import {MobileApp} from './MobileApp';
-export { MobileApp }
-;
-=======
-=======
 import React from 'react',;
 import { MobileApp } from './MobileApp',;
 export { MobileApp },;
@@ -46,7 +41,3 @@ export * from './pages/MobileProjects',;
 export * from './pages/MobileMessages',;
 export * from './pages/MobileResumeBuilder';
 export * from './pages/MobileJobPost';
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -9,7 +9,5 @@ export const Index = () => {
   return null;
 };
 
-
 export * from './VideoCallRoom';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export * from './VideoCallRoom';

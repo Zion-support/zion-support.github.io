@@ -1,5 +1,16 @@
 
-
+const user = [ `Operator Prompt: $ {
+  operatorPrompt
+}`;
+context ? `Context: $ {
+  JSON.stringify (context)
+}` : undefined] .filter (Boolean) .join ('\n');
+const completion = await client.chat.completions.create ({
+  model: 'gpt-4o-mini', messages: [ {
+  role: 'system', content: system
+}
+export type AnalyzeResponse = {
+  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operatorPrompt: string
@@ -7,16 +18,7 @@ export type AnalyzeRequestBody = {
 }
 export type AnalyzeResponse = {
   analysis: string
-
-};
-
-
-=======
-  JSON.stringify (context)
-}` : undefined] .filter (Boolean) .join ('\n');
-const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
-
+}
   role: 'system', content: system 
 };
 
@@ -32,8 +34,6 @@ export type AnalyzeResponse = {
   analysis: string;
 };
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<AnalyzeResponse | { error: string }>
@@ -96,7 +96,9 @@ export default async function handler(
       'No analysis generated.';
     return res && res.status(200).json({ analysis });
   } catch (error: any) {
-
+    console.error('Analyze API error', error?.message |error);
+    return res.status(500).json({ error: 'Failed to generate analysis' });
+  }
     const analysis = completion.choices?.[0]?.message?.content?.trim() |'No analysis generated.';
 =======
         { role: 'system', content: system };
@@ -111,42 +113,7 @@ export default async function handler(
     console.error('Analyze API error', error?.message |error);
 
     return res.status(500).json({ error: 'Failed to generate analysis' })
-=======
-    console && console.error('Analyze API error', error?.message || error);
-    return res && res.status(500).json({ error: 'Failed to generate analysis' });
-  }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    const analysis = completion && completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
-    return res && res.status(200).json({ analysis })
-  } catch (error: any) {
-    console && console.error('Analyze API error', error?.message || error);
-    return res && res.status(500).json({ error: 'Failed to generate analysis' })
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-}
-
-
-=======
-
-  }
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
-    const analysis =;
-      completion.choices?.[0]?.message?.content?.trim () ||;
-      'No analysis generated.';
-    return res.status (200).json ({ analysis });
-  } catch (error: any) {
-    console.error ('Analyze API error', error?.message || error);
-    return res.status (500).json ({ error: 'Failed to generate analysis' });
-  }
-    const analysis = completion.choices?.[0]?.message?.content?.trim () || 'No analysis generated.';
-    return res.status (200).json ({ analysis });
-  } catch (error: any) {
-    console.error ('Analyze API error', error?.message || error);
-    return res.status (500).json ({ error: 'Failed to generate analysis' });
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+  }

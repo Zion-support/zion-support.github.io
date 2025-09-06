@@ -1,5 +1,19 @@
-
-
+import { useState } from "react";
+import { useRouter  } from 'next/router';
+    import { useRouter } from 'next/router'
+import { useJobApplications } from "@/hooks/useJobApplications"
+import { useResume } from "@/hooks/useResume"
+import { useAuth } from "@/hooks/useAuth"
+import { Button } from "@/components/ui/button"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { AlertCircle, FileText, Loader2 } from 'lucide-react'import { formatDistanceToNow } from "date-fns"
+import { Job } from "@/types/jobs"
+import { toast } from "sonner"
+import { useState } from "react",
+import { useRouter } from 'next/router',
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { useResume } from "@/hooks/useResume",
 import { useAuth } from "@/hooks/useAuth",
@@ -10,13 +24,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
-
-
+import { Job } from "@/types/jobs";
+import { toast } from "sonner";
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApplyToJobFormProps {
 
   job: Job
@@ -24,9 +35,6 @@ interface ApplyToJobFormProps {
   onSuccess?: () => void
 }
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
-
-
-
 
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
@@ -42,8 +50,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     if (!user) {
       toast.error("You must be logged in to apply")
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)
-
-
+      return
+    }
+    if (!coverLetter.trim()) {
+      setError("Please provide a cover letter")
+      return
+    }
       return;
     }
     
@@ -52,23 +64,19 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       return;
     }
     
-
-
     setIsSubmitting(true)
     setError(null)
     try {
       const success = await applyToJob(
         job.id
         coverLetter
-
-
+        selectedResumeId |undefined
+        resumeFile |undefined
         selectedResumeId || undefined
         resumeFile || undefined
-
       )
       if (success) {
         toast.success("Your application has been submitted!")
-=======
   const { user } = useAuth(),
   const { applyToJob } = useJobApplications(),
   const { resumes, isLoading: isResumesLoading } = useResume(),
@@ -107,10 +115,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       
       if (success) {
         toast.success("Your application has been submitted!"),
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (onSuccess) {
           onSuccess()
         }
@@ -158,69 +162,28 @@ if ( {) {
       router.push (`/login?return_to=${encodeURIComponent (`/jobs/${job.id}`)}`);
       return;
     }
-    if () {) {
-  $2
-}
-      set_error ("Please provide a cover letter");
-      return;
-    }
-    setIsSubmitting (true);
-    set_error (null);
-    try {
-      const success = await applyToJob (
-        job.id;
-        cover_letter;
-        selectedResumeId || undefined;
-        resume_file || undefined);
-      // Check condition
-if ( {) {
-  $2
-}
-        toast.success ("Your application has been submitted!");
-        // Check condition
-if ( {) {
-  $2
-}
-          on_success ();
-        }
-      }
-    } catch (err: any) {
-      set_error (err.message || "Failed to submit application"),
-      toast.error ("Failed to submit application");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    } finally {
-      setIsSubmitting (false);
-    }
-
+  }
 
   },
   
-
-=======
-=======
   },
   
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
-
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div>
+        <h3 className="text-lg font-medium mb-1">Apply to: {job.title}</h3>
+        <p className="text-sm text-muted-foreground mb-4">
+          Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
+        </p>
+      </div>
       
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-
-
       
-
-
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
@@ -316,15 +279,17 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Textarea
             id="coverLetter"
-            value = {coverLetter,}
-            onChange = {(e,) => setCoverLetter(e && e.target.value),}
-            rows = {6,}
-
-
+            value={coverLetter}
+            onChange={(e) => setCoverLetter(e.target.value)}
+            rows={6}
+            placeholder="Introduce yourself and explain why you are a good fit for this job..."
+            className="mt-1"
+          />
+          <p className="text-xs text-muted-foreground mt-1">
+            Provide a brief introduction and highlight your relevant skills and experience.
+          </p>
+        </div>
         
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -351,7 +316,6 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
                         {resume.basic_info.title |"Untitled Resume"}
                       </SelectItem>
                     )
-
 import { useState } from "react",;
 import { useRouter } from 'next/router',;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -511,8 +475,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                         {resume && resume.basic_info.title || "Untitled Resume"}
                       </SelectItem>;
                     );
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }
                   return null;
                 })}
@@ -547,15 +509,15 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             type="file"
             accept=".pdf"
             className="mt-1"
-
-
+            onChange = {(e,) => setResumeFile(e.target.files?.[0] |null),}
+          />
+        </div>
+      </div>
             onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
           />
         </div>
       </div>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      
       <div className="flex justify-end gap-2">
 =======
             onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
@@ -568,18 +530,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
         <Button
           type="button"
           variant="outline"
-
-          onClick={() => {;
-            if (onSuccess) onSuccess();
-
-=======
-
+          disabled = {isSubmitting,}
+          onClick={() => {
+            if (onSuccess) onSuccess()
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
         >;
           Cancel;
@@ -593,14 +549,34 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           ) : (;
             "Submit Application";
           )}
-
-
+        </Button>
+      </div>
+    </form>
+  )
+}setError (null)
+if (success) {
+  if (onSuccess) {
+}finally {
+  setIsSubmitting (false)
+}
+handleSubmit
+}className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {
+  error
+}</AlertDescription> </Alert>) "
+}<div className="space-y-4" > <div> <Label htmlFor="coverLetter" >Cover Letter</Label> <Textarea className="mt-1" /> <p className="text-xs text-muted-foreground mt-1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items-center gap-2 mt-2"> <Loader2 className="h-4 w-4 animate-spin" /> <span>Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {
+  selectedResumeId
+}onValueChange= {
+  setSelectedResumeId "
+}> <SelectTrigger className="mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>)
+}return null
+})
+}</SelectContent> </Select> > Create Resume </Button> </div>) "
+}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
+}</Button> </div> </form>)
+}"}
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"};
-
-
-=======
         </Button>;
       </div>;
     </form>;
@@ -706,7 +682,3 @@ handle_submit;
 =======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

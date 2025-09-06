@@ -1,14 +1,52 @@
-
-import React, { useMemo, useState } from './react';,
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared / types",
-export interface MilestoneAssistantProps {
-  scopeOfWork: string,
-  startDateIso: string,
-  endDateIso: string,
-  project_type: ProjectType,
-  on_accept?: (milestones: SuggestedMilestoneItem[], auto_add: boolean) => void;
-=======
-
+import React, { useMemo, useState } from "react";
+import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
+export interface MilestoneAssistantProps {scopeOfWork: string;
+  startDateIso: string;
+  endDateIso: string;
+  projectType: ProjectType;
+  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
+}
+export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [autoAdd, setAutoAdd] = useState(true);
+  const [items, setItems] = useState<SuggestedMilestoneItem[]>([]);
+  const [expandedIdx, setExpandedIdx] = useState<number | null>(0);
+  const isDisabled = useMemo(() => {;
+    return !props.scopeOfWork |!props.startDateIso |!props.endDateIso |!props.projectType;
+  }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.projectType]);
+  async function generate() {setLoading(true);
+    setError(null);
+    try {;
+      const payload: MilestoneSuggestionInput = {;
+        scopeOfWork: props.scopeOfWork;
+        startDateIso: props.startDateIso;
+        endDateIso: props.endDateIso;
+        projectType: props.projectType;
+      }
+      const res = await fetch("/api/ai/milestones", {method: "POST";
+        headers: { "Content-Type": "application/json" }
+        body: JSON.stringify(payload);
+      });
+      if (!res.ok) {const t = await res.text();
+        throw new Error(t |"Failed to generate");
+      }
+      const data = await res.json();
+      setItems(Array.isArray(data?.milestones) ? data.milestones : []);
+      setExpandedIdx(0);
+    } catch (e: any) {setError(e?.message |"Unexpected error");
+    } finally {setLoading(false);
+    }
+  }
+  function updateItem(idx: number, patch: Partial<SuggestedMilestoneItem>) {setItems((prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } : m)));
+  }
+  function removeItem(idx: number) {setItems((prev) => prev.filter((_, i) => i !== idx));
+  }
+  function accept() {props.onAccept?.(items, autoAdd);
+  }
+  return (;
+    <div className="milestone-assistant">;
+      <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>;
+        <button onClick={generate} disabled={loading |isDisabled}>;
 import React, { useMemo, useState } from "react",;
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
 export interface MilestoneAssistantProps {;
@@ -89,8 +127,6 @@ function accept() {
     <div className="milestone-assistant">;
       <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>;
         <button onClick={generate} disabled={loading || isDisabled}>;
-
-
           {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>;
         <label style={{ display: "flex", gap: 6, align_items: "center" }}>;
@@ -100,10 +136,7 @@ function accept() {
       </div>;
 
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
-
 ;
-
-
       <div style={{ marginTop: 12 }}>;
         {items.length === 0 && !loading && (;
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>;
@@ -130,10 +163,8 @@ function accept() {
               onClick={() => setExpandedIdx(expandedIdx === idx ? null : idx)}
             >;
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>;
-
+                <span style={{ fontWeight: 600 }}>{item.title |`Milestone ${idx + 1}`}</span>;
                 <span style={{ fontWeight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
-
-
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
 =======
               <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
@@ -180,14 +211,8 @@ function accept() {
                     type="number";
                     min={1}
                     value={item.estimatedEffortHours}
-
-                    on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
-
-=======
-
+                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value |"0", 10)) })}
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />;
                 </div>;
                 <div style={{ display: "flex", justify_content: "space - between", margin_top: 8 }}>;
@@ -199,9 +224,5 @@ function accept() {
       </div>;
     </div>);
 }
-
-
 ;
-
-
 export default MilestoneAssistant;

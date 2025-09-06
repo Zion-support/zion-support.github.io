@@ -1,5 +1,13 @@
 
-
+const colorSchemes = {
+  quantum: {
+  resizeCanvas ();
+window.addEventListener ('resize', resizeCanvas);
+// Wrap around edges if (this.x < 0) this.x = canvas.width;
+if (this.x > canvas.width) this.x = 0;
+if (this.y < 0) this.y = canvas.height;
+if (this.y > canvas.height) this.y = 0;
+// Fade out near end of life if (this.life < 20) {
 }let particles: Particle[] = [];
 let connections: Connection[] = [];
 // Initialize particles ctx.fill_style = colors.primary;
@@ -189,23 +197,12 @@ if (return) {
         if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
-
-          this.opacity *= 0.95
-
-        }
-      }
-=======
-
+          this.opacity *= 0.95;        }          this.opacity *= 0.95
           this.opacity *= 0.95;        }
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
@@ -227,30 +224,16 @@ if (return) {
         ctx.restore()
       }
       isDead() {
-
-        return this.life <= 0 || this.opacity < 0.01
-      }
-
-    }
-=======
-
+        return this.life <= 0 |this.opacity < 0.01;      }
         return this.life <= 0 || this.opacity < 0.01;      }        
-
         ctx.restore()
-=======
         return this.life <= 0 || this.opacity < 0.01;      }
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
     }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Connection lines between particles
 =======
       max_life: number,
@@ -612,19 +595,16 @@ if (> 0.975) {) {
           }
           drops[i]++;
         }
-
-
-        for (let i = 0, i < drops.length, i++) {
-          const text = characters[Math.floor(Math.random() * characters.length)];
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-
+      }
+      return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          }
+          drops[i]++
+        }
+      }
+      return drawMatrix
+    }
       };
 
       return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
@@ -637,7 +617,6 @@ if (> 0.975) {) {
         }
 
     };
-
 
     const drawMatrix = matrixRain();
     // Main animation loop
@@ -776,16 +755,27 @@ if (> 0.975) {) {
       }
       // Create connections between nearby particles
       connections = [];
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+              Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+            Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]))
 
+      }
 
 
           }
         }
       }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Draw connections
       connections.forEach(connection => connection.draw());
       // Add floating geometric shapes
@@ -983,21 +973,6 @@ if (< 0.5) {) {
 }
 export default EnhancedFuturisticBackground;
 
-
-=======
-
 export default EnhancedFuturisticBackground;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-          background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
-        }}
-      />;
-{/* Content */}
-      <div className='relative z - 10'>{children}</div>;
-    </div>);
-}
-;
 export default EnhancedFuturisticBackground;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export default EnhancedFuturisticBackground;

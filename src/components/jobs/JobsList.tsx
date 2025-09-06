@@ -1,4 +1,29 @@
 
+import { useState, useEffect } from "react"
+import { useAuth } from "@/hooks/useAuth"
+import { supabase } from "@/integrations/supabase/client"
+import { Job, JobStatus } from "@/types/jobs"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Loader2, Edit, X, Eye } from 'lucide-react'import { format } from "date-fns"
+import Link from "next/link"
+import {logErrorToProduction} from '@/utils/productionLogger'
+interface JobsListProps {
+  filter?: JobStatus
+  onSelectJob?: (jobId: string, jobTitle: string) => void}
+
+export function JobsList({ filter, onSelectJob }: JobsListProps) {
+  const { user } = useAuth()
+  const [jobs, setJobs] = useState<Job[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect((,) => {
+    const fetchJobs = async () => {
+      if (!user) return;
+import { format } from "date-fns";
+import Link from "next/link";
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface JobsListProps {
 
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -9,8 +34,19 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from 'lucide-react'
 import { format } from "date-fns",
+import Link from "next/link";
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface JobsListProps {
 
-
+  filter?: JobStatus
+  onSelectJob?: (jobId: string, jobTitle: string) => void}
+export function JobsList({ filter, onSelectJob }: JobsListProps) {
+  const { user } = useAuth()
+  const [jobs, setJobs] = useState<Job[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect((,) => {
+    const fetchJobs = async () => {
+      if (!user) return
 import Link from "next/link",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface JobsListProps {
@@ -27,52 +63,15 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     const fetchJobs = async () => {
       if (!user) return,
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       try {
         let query = supabase
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
-
-import { useState, useEffect  } from './react';
-import { use_auth  } from '@/hooks / use_auth';
-import { supabase  } from '@/integrations / supabase / client';
-import { Job, JobStatus  } from '@/types / jobs';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Badge  } from '@/components / ui / badge';
-import { Loader2, Edit, X, Eye } from 'lucide-react'import { format  } from './date - fns';
-import Link from './next / link';
-import {logErrorToProduction} from '@/utils / production_logger';
-interface JobsListProps {
-  filter?: JobStatus;
-  onSelectJob?: (job_id: string, job_title: string) => void}
-export /**
- * JobsList - Function description
- */
-function JobsList() {
-  const { user } = use_auth ();
-  const [jobs, set_jobs] = useState < Job[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  useEffect ((, ) => {
-    const fetch_jobs = async () => {
-      // Check condition
-if (return) {
-  $2
-}
-      try {
-        let query = supabase;
-          .from ("jobs");
-          .select ("*");
-          .eq ("client_id", user.id);
-          .order ("created_at", { ascending: false }),
-        // Check condition
-if ( {) {
-  $2
-}
-          query = query.eq ("status", filter);
+          .order("created_at", { ascending: false })
+          .order("created_at", { ascending: false }),
+        if (filter) {
+          query = query.eq("status", filter)
         }
         const { data, error } = await query;
         // Check condition
@@ -87,11 +86,26 @@ if (throw error) {
         setIsLoading (false);
       }
     }
-    fetch_jobs ();
-  }, [user, filter]);
-  // Check condition
-if ( {) {
-  $2
+    fetchJobs()
+  }, [user, filter])
+          .order("created_at", { ascending: false }),
+
+        if (filter) {
+          query = query.eq("status", filter)
+import { useState, useEffect } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Job, JobStatus } from "@/types/jobs",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Loader2, Edit, X, Eye } from 'lucide-react';
+import { format } from "date-fns",;
+import Link from "next/link",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface JobsListProps {;
+  filter?: JobStatus,;
+  onSelectJob?: (jobId: string, jobTitle: string) => void;
 }
     return (
       <div className="flex justify - center items - center p - 8">;
@@ -130,12 +144,13 @@ if ( {) {
     return (
       <div className="text-center p-8 border rounded-md bg-muted/20">
         <p className="text-lg text-muted-foreground">
-
+          {filter
+            ? `No jobs with status "${filter}" found.`
+            : "You haven't posted any jobs yet.", }
           {filter 
             ? `No jobs with status "${filter}" found.` 
             : "You haven't posted any jobs yet."
           }
-
         </p>
         <Button asChild className="mt-4">
           <Link href="/post-job">Post Your First Job</Link>
@@ -143,9 +158,21 @@ if ( {) {
       </div>
     )
   }
+  const getStatusColor = (status: JobStatus,) => {
+    switch (status) {
+      case "new": return "bg-blue-100 text-blue-800"
+      case "in_progress":
+        return "bg-yellow-100 text-yellow-800"
+      case "filled":
+        return "bg-green-100 text-green-800"
 
-
-
+  const getStatusColor = (status: JobStatus) => {
+    switch (status) {
+      case "new": return "bg-blue-100 text-blue-800",
+      case "in_progress":
+        return "bg-yellow-100 text-yellow-800",
+      case "filled":
+        return "bg-green-100 text-green-800",
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
@@ -187,21 +214,22 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
 =======
     }
+  }
 
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      {jobs.map((job,) => (
+        <Card
+          key = {job.id,}
   },
 
-=======
-=======
   },
-
-
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
         <Card 
           key={job.id} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
@@ -225,7 +253,8 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
               {job.description}
             </p>
             <div className="flex flex-wrap gap-1 mt-2">
-
+              {job.skills.slice(0, 3).map((skill, index,) => (
+                <Badge key={index} variant="outline" className="text-xs">
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
     },;
@@ -315,10 +344,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
             <div className="flex flex-wrap gap-1 mt-2">;
               {job && job.skills.slice(0, 3).map((skill, index,) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {skill}
                 </Badge>;
               ))}
@@ -465,6 +490,38 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
               </Button>
             </div>
           </CardFooter>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        </Card>
+      ))}
+    </div>
+  )
+        </Card>;
+      ))};
+    </div>;
+  );
+};"
+return (<div className="grid gap-6 md:grid-cols-2" > {
+  jobs.map ( (job) => (<Card key= {
+  job.id
+}className= {
+  `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {"
+  onSelectJob ? "cursor-pointer" : ""
+}`
+}onClick={
+  () => onSelectJob?. (job.id, job.title)
+}job.description
+}</p> + {
+  job.skills.length - 3
+}more </Badge>) "
+}</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {
+  job.budget.min
+}- $ {
+  job.budget.max "
+}</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )
+}</div>)
+}'"}
+        </Card>
+      ))}
+    </div>;
+  );
+}
+;

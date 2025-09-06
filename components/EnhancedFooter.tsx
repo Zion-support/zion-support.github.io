@@ -1,11 +1,16 @@
-
-
+import React from 'react',
 import React from 'react';
-
 import Link from 'next/link';
 
 import {
-
+  Brain
+  Mail
+  Phone
+  MapPin
+  Globe
+  Github
+  Linkedin
+  Twitter;
   Brain,
   Mail,
   Phone,
@@ -14,8 +19,6 @@ import {
   Github,
   Linkedin,;
   Twitter,;
-
-
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 =======
 import React from 'react';
@@ -103,26 +106,24 @@ const EnhancedFooter: React.FC = () => {;
       ];
     }
   ];
-
-  const socialLinks = [;
-    { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
-    {;
-      name: 'LinkedIn',;
-      href: 'https://linkedin && linkedin.com/company/ziontechgroup',;
-      icon: Linkedin,;
-    },;
-    {;
-      name: 'Twitter',;
-      href: 'https://twitter && twitter.com/ziontechgroup',;
-      icon: Twitter,;
-    },;
-
-
-=======
-
+  const socialLinks = [
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+    {
+      name: 'LinkedIn'
+      href: 'https://linkedin.com/company/ziontechgroup'
+      icon: Linkedin
+    }
+    {
+      name: 'Twitter'
+      href: 'https://twitter.com/ziontechgroup'
+      icon: Twitter
+    }
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: Twitter,
+    },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <footer className='bg-slate-950 border-t border-white/10'>;
       <div className='max-w-7xl mx-auto px-6 py-16'>;
@@ -160,22 +161,20 @@ const EnhancedFooter: React.FC = () => {;
                 <Phone className='w-4 h-4' />;
                 <a
                   href='tel:+13024640950'
+                  className='hover:text-white transition-colors'
+                >
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className='flex items-center space-x-3 text-white/70'>
+                <MapPin className='w-4 h-4' />                <span>Global Operations</span>              <div className="flex items-center space-x-3 text-white/70">
+                <MapPin className="w-4 h-4" />
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
 
-
-                  className='hover:text-white transition-colors'>;
-                  +1 (302) 464-0950;
-                </a>;
-              </div>;
-              <div className='flex items-center space-x-3 text-white/70'>;
-                <MapPin className='w-4 h-4' />                <span>Global Operations</span>              <div className="flex items-center space-x-3 text-white/70">;
-                <MapPin className="w-4 h-4" />;
-                <span>Global Operations</span>;
-              </div>;
-            </div>;
-          </div>;
-
-
-
+                <span>Global Operations</span>
+              </div>
+            </div>
+          </div>
           {/* Footer Sections */}
 
 =======
@@ -324,16 +323,14 @@ const EnhancedFooter: React.FC = () => {
                       className="text - white / 70 hover: text - white transition - colors duration - 200";
                     >;
                       {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
 
-        </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
@@ -348,6 +345,29 @@ const EnhancedFooter: React.FC = () => {
               {socialLinks && socialLinks.map(social => (        <div className="pt-8 border-t border-white/10">;
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
             {/* Copyright */}
+            <div className="text-white/60 text-sm">
+            </div>
+            {/* Social Links */}
+            <div className='flex items-center space-x-4'>
+              {socialLinks.map(social => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200'
+                  aria-label={social.name}
+                >
+                  <social.icon className='w-5 h-5' />                </a>                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200"
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
 
             <div className="text-white/60 text-sm">;
             </div>;
@@ -363,54 +383,11 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-
-                    </Link>;
-                  </li>))}
-              </ul>;
-            </div>))}
-        </div>;
-        {/* Bottom Section */}
-        <div className='pt - 8 border - t border - white / 10'>;
-          <div className='flex flex - col md:flex - row justify - between items - center space - y-4 md:space - y-0'>;
-            {/* Copyright */}
-            <div className='text - white / 60 text - sm'>              © {current_year} Zion Tech Group. All rights reserved.;
-            </div>;
-            {/* Social Links */}
-            <div className='flex items - center space - x-4'>;
-              {social_links.map (social => (        <div className="pt - 8 border - t border - white / 10">;
-          <div className="flex flex - col md:flex - row justify - between items - center space - y-4 md:space - y-0">;
-            {/* Copyright */}
-            <div className="text - white / 60 text - sm">;
-            </div>;
-            {/* Social Links */}
-            <div className='flex items - center space - x-4'>;
-              {social_links.map (social => (
-                <a;
-                  key={social.name}
-                  href={social.href}
-                  target='_blank';
-                  rel='noopener noreferrer';
-                  className='w - 10 h - 10 rounded - lg bg - white / 10 hover:bg - white / 20 flex items - center justify - center text - white / 70 hover:text - white transition - all duration - 200';
-                  aria - label={social.name}
-                >;
-                  <social.icon className='w - 5 h - 5' />                </a>                <a;
-                  key={social.name}
-                  href={social.href}
-                  target="_blank";
-                  rel="noopener noreferrer";
-                  className="w - 10 h - 10 rounded - lg bg - white / 10 hover:bg - white / 20 flex items - center justify - center text - white / 70 hover:text - white transition - all duration - 200";
-                  aria - label={social.name}
-                >;
-                  <social.icon className="w - 5 h - 5" />;
-                </a>))}
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>);
-}export default EnhancedFooter);
+  );
+};export default EnhancedFooter;  )
 }
-;
+};
+
 export default EnhancedFooter;
 import React from './react';
   FileText,
@@ -797,44 +774,9 @@ company updates.;
         className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50
         aria-label="Scroll to top">";
         <ArrowUp className="w-5 h-5"  />;
+      </button>
+    </footer>
+  )}"'
 
-      </button>,;
-    </footer>,;
-  )}"';
-
-=======
-        <div className="border - t border - gray - 800 pt - 8">";
-          <div className="flex flex - col md: flex - row justify - between items - center">";
-            <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">,
-              © {current_year} Zion Tech Group. All rights reserved.;
-            </div>";
-            <div className="flex items - center space - x-6">";
-              <div className="flex items - center space - x-4">;
-                {social_links.map (social => (";
-                  <a key="{social.name}
-                    href="{social.href}
-                    target="_blank;
-                    rel="noopener noreferrer;
-                    className="text - gray - 400 hover: text - white transition - colors"">;
-                    aria - label="{social.name}">";
-                    <social.icon className="w - 5 h - 5" />;
-                  </a>))}
-              </div>;
-      {/* comment */}";
-      <button on_click="{scrollToTop}
-        className="fixed bottom - 8 right - 8 bg - blue - 600 hover: bg - blue - 700 text - white p - 3 rounded - full shadow - lg transition - colors z - 50;
-        aria - label="Scroll to top">";
-        <ArrowUp className="w - 5 h - 5"  />;
-      </button>,
-    </footer>,
-  )}"';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  );
-};export default EnhancedFooter;  )
-
-};
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default EnhancedFooter;
+export default EnhancedFooter;

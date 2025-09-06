@@ -1,7 +1,4 @@
 
-
-
-
 export const advancedITInfrastructureExpansion2025V2 = [
   {
 
@@ -617,14 +614,17 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
-    name: 'Zero - Trust Security',
-    description: 'Comprehensive zero - trust security platform',
-    category: 'Cybersecurity',
-    pricing: '$599 / month',
-    features: [;
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    name: 'Zero-Trust Security'
+    description: 'Comprehensive zero-trust security platform'
+    category: 'Cybersecurity'
+    pricing: '$599/month'
+    features: [
+      'Identity verification'
+      'Access control'
+      'Threat detection'
+      'Performance monitoring'
+    ]
+  }
       'Identity verification',
       'Access control',
       'Threat detection',
@@ -632,13 +632,17 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
 
   },;
-
-
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
-=======
-];      'Identity verification_access control_threat detection_performance monitoring';
+export const advancedITInfrastructureExpansion2025V2 = [;
+  {;
+    name: 'Autonomous DevOps Platform',;
+    description: 'Self-managing DevOps automation platform',;
+    category: 'Cloud & FinOps',;
+    pricing: '$399/month',;
+    features: [;
+      'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
     ];
 
   },;
@@ -1100,11 +1104,5 @@ export const advancedITInfrastructureExpansion2025V2 = [
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

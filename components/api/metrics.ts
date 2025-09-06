@@ -28,12 +28,10 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
+  const now = new Date()
+  const labels = Array.from({ length: 14 }, (_, i) => {
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
-
-
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
 
@@ -379,24 +377,9 @@ if ( {) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-
-  res && res.status(200).json(response)
+  res.status(200).json(response)
 }
-
-
-=======
-  res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
-        dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
-        token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
-        multiverse: multiverse.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))}}
-  }
-  res.status (200).json (response);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
   res.status(200).json(response)
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

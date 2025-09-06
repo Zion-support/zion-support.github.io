@@ -1,13 +1,5 @@
-
-// Marketplace data store utilities
-
-export interface Project {
-
-=======
-
+// Marketplace data store utilitiesexport interface Project {
 // Marketplace data store utilitiesexport interface Project {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   title: string;
   summary: string;
@@ -47,13 +39,8 @@ export interface Project {
 
 }
 export interface Offer {
-=======
-}
-
 
 export interface Offer {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   createdAtIso: string;
   client_id: string;
@@ -89,39 +76,22 @@ export interface Offer {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface Application {
-=======
-  notes?: string
-}
-
 
 export interface Application {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
-  project_id: string;
-  talent_slug: string;
+  projectId: string;
+  talentSlug: string;
   appliedAtIso: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
-
+  coverLetter?: string;
+  proposedRate?: number;
+  proposedTimeline?: string;
+  portfolioItems?: string[];
   notes?: string
-
-=======
-  cover_letter?: string;
-  proposed_rate?: number;
-  proposed_timeline?: string;
-  portfolio_items?: string[];
-  notes?: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface Message {
-=======
-  notes?: string
-}
-
 
 export interface Message {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   conversation_id: string;
   sender_id: string;
@@ -141,14 +111,8 @@ export interface Message {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface Conversation {
-=======
-  isRead: boolean
-}
-
 
 export interface Conversation {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -756,10 +720,9 @@ export async function updateProject(id: string, updates: Partial<Project>): Prom
 =======
   return marketplaceStore.getProject(id)
 }
-
+export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
 
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
-
   return marketplaceStore.updateProject(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -792,10 +755,9 @@ export async function updateOffer(id: string, updates: Partial<Offer>): Promise<
 =======
   return marketplaceStore.getOffer(id)
 }
-
+export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
 
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
-
   return marketplaceStore.updateOffer(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -828,10 +790,9 @@ export async function updateApplication(id: string, updates: Partial<Application
 =======
   return marketplaceStore.getApplication(id)
 }
-
+export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
 
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
-
   return marketplaceStore.updateApplication(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -864,10 +825,9 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 =======
   return marketplaceStore.getMessage(id)
 }
-
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
-
   return marketplaceStore.updateMessage(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -880,105 +840,22 @@ export async function deleteMessage(id: string): Promise<boolean> {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 // Utility functions
-
-
-=======
-  // Search methods;
-  async search_projects (query: string): Promise < Project[]> {
-    const lowercase_query = query.toLowerCase ();
-    return Array.from (this.projects.values ()).filter (project =>;
-      project.title.toLowerCase ().includes (lowercase_query) ||;
-      project.summary.toLowerCase ().includes (lowercase_query)),
-  }
-  async search_offers (query: string): Promise < Offer[]> {
-    const lowercase_query = query.toLowerCase ();
-    return Array.from (this.offers.values ()).filter (offer =>;
-      offer.scope_summary.toLowerCase ().includes (lowercase_query)),
-  }
-  // Cleanup methods;
-  async clear_all (): Promise < void> {
-    this.projects.clear ();
-    this.offers.clear ();
-    this.applications.clear ();
-    this.messages.clear ();
-    this.conversations.clear ();
-  }
-  // Statistics;
-  async get_stats (): Promise<{
-    total_projects: number;
-    total_offers: number;
-    total_applications: number;
-    total_messages: number;
-    total_conversations: number,
-  }> {
-    return {
-      total_projects: this.projects.size,
-      total_offers: this.offers.size,
-      total_applications: this.applications.size,
-      total_messages: this.messages.size,
-      total_conversations: this.conversations.size;
-    }
-  }
-}
-// Singleton instance;
-export const marketplace_store = new MarketplaceStore ();
-;
-// Main functions for external use;
-export async function create_project (project: Project): Promise < Project> {
-  return marketplace_store.create_project (project),
-}
-export async function get_project (id: string): Promise < Project | null> {
-  return marketplace_store.get_project (id),
-}
-export async function update_project (id: string, updates: Partial < Project>): Promise < Project | null> {
-  return marketplace_store.update_project (id, updates);
-}
-export async function delete_project (id: string): Promise < boolean> {
-  return marketplace_store.delete_project (id),
-}
-export async function create_offer (offer: Offer): Promise < Offer> {
-  return marketplace_store.create_offer (offer),
-}
-export async function get_offer (id: string): Promise < Offer | null> {
-  return marketplace_store.get_offer (id),
-}
-export async function update_offer (id: string, updates: Partial < Offer>): Promise < Offer | null> {
-  return marketplace_store.update_offer (id, updates);
-}
-export async function delete_offer (id: string): Promise < boolean> {
-  return marketplace_store.delete_offer (id),
-}
-export async function create_application (application: Application): Promise < Application> {
-  return marketplace_store.create_application (application),
-}
-export async function get_application (id: string): Promise < Application | null> {
-  return marketplace_store.get_application (id),
-}
-export async function update_application (id: string, updates: Partial < Application>): Promise < Application | null> {
-  return marketplace_store.update_application (id, updates);
-}
-export async function delete_application (id: string): Promise < boolean> {
-  return marketplace_store.delete_application (id),
-}
-export async function create_message (message: Message): Promise < Message> {
-  return marketplace_store.create_message (message),
-}
-export async function get_message (id: string): Promise < Message | null> {
-  return marketplace_store.get_message (id),
-}
-export async function update_message (id: string, updates: Partial < Message>): Promise < Message | null> {
-  return marketplace_store.update_message (id, updates);
-}
-export async function delete_message (id: string): Promise < boolean> {
-  return marketplace_store.delete_message (id),
-}
-// Utility functions;
-export function createProjectData (
-  title: string,
-  summary: string,
-  client_id: string,
-  additional_data?: Partial < Project>): Omit < Project, 'id' | 'created_at' | 'updated_at'> {
+export function createProjectData(
+  title: string
+  summary: string
+  clientId: string
+  additionalData?: Partial<Project>
+): Omit<Project, 'id' | 'createdAt' | 'updatedAt'> {
   return {
+    title
+    summary
+    clientId
+    startDateIso: new Date().toISOString()
+    status: 'DRAFT'
+    timeline: []
+    documents: []
+    ...additionalData
+  }
     title,
     summary,
     client_id,
@@ -986,53 +863,80 @@ export function createProjectData (
     status: 'DRAFT',
     timeline: [],
     documents: [],
-    ...additional_data;
-  }
+    ...additionalData;
+  };
 }
-export function createOfferData (
-  client_id: string,
-  talent_slug: string,
-  scope_summary: string,
-  payment_terms: Offer['payment_terms'],
-  additional_data?: Partial < Offer>): Omit < Offer, 'id' | 'createdAtIso'> {
+export function createOfferData(
+  clientId: string
+  talentSlug: string
+  scopeSummary: string
+  paymentTerms: Offer['paymentTerms']
+  additionalData?: Partial<Offer>
+): Omit<Offer, 'id' | 'createdAtIso'> {
   return {
-    client_id,
-    talent_slug,
-    startDateIso: new Date ().toISOString (),
-    scope_summary,
-    payment_terms,
+    clientId
+    talentSlug
+    startDateIso: new Date().toISOString()
+    scopeSummary
+    paymentTerms
+    status: 'SENT'
+    ...additionalData
+  }
+    clientId,
+    talentSlug,
+    startDateIso: new Date().toISOString(),
+    scopeSummary,
+    paymentTerms,
     status: 'SENT',
-    ...additional_data;
-  }
+    ...additionalData;
+  };
 }
-export function createApplicationData (
-  project_id: string,
-  talent_slug: string,
-  additional_data?: Partial < Application>): Omit < Application, 'id' | 'appliedAtIso'> {
+export function createApplicationData(
+  projectId: string
+  talentSlug: string
+  additionalData?: Partial<Application>
+): Omit<Application, 'id' | 'appliedAtIso'> {
   return {
-    project_id,
-    talent_slug,
+    projectId
+    talentSlug
+    status: 'PENDING'
+    ...additionalData
+  }
+    projectId,
+    talentSlug,
     status: 'PENDING',
-    ...additional_data;
+    ...additionalData;
+  };
+}
+export function createMessageData(
+  conversationId: string
+  senderId: string
+  recipientId: string
+  body: string
+  additionalData?: Partial<Message>
+): Omit<Message, 'id' | 'sentAtIso'> {
+  return {
+    conversationId
+    senderId
+    recipientId
+    body
+    isRead: false
+    ...additionalData
   }
 }
-export function createMessageData (
-  conversation_id: string,
-  sender_id: string,
-  recipient_id: string,
-  body: string,
-  additional_data?: Partial < Message>): Omit < Message, 'id' | 'sentAtIso'> {
-  return {
-    conversation_id,
-    sender_id,
-    recipient_id,
+export function generateId(prefix: string = 'item'): string {
+  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
+    conversationId,
+    senderId,
+    recipientId,
     body,
     is_read: false,
     ...additional_data;
   }
 }
-export function generate_id (prefix: string = 'item'): string {
-  return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+
+export function generateId(prefix: string = 'item'): string {;
+  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -40,10 +40,19 @@ import { motion } from 'framer-motion';
   life: number;
 
 
+interface EnergyField {
+  x: number;
+  y: number;
+  radius: number;
+  intensity: number;
+  color: string;
+
+  pulse: number;
+export default function UltraFuturisticBackground2029({
+  children
+}: {
   children,
 }: {;
-
-
   children: React.ReactNode;
 =======
 export default function UltraFuturisticBackground2029(): any ({;
@@ -68,24 +77,11 @@ export default function UltraFuturisticBackground2029(): any ({;
   life: number,;
   maxLife: number;
 }
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
 
-interface EnergyField {;
-  x: number,;
-  y: number,;
-  radius: number,;
-  intensity: number,;
-  color: string,;
-  pulse: number;
-}
-
-export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
-
-=======
 
 
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -1306,23 +1302,14 @@ if ( {) {
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
-
-=======
-            rotate: [-45, 315];
-            opacity: [0.2, 0.6, 0.2];
-
-          }}
-          transition={{
             duration: 10,
             repeat: Infinity,
 
-
+          }}
+            ease: 'easeInOut',            ease: "easeInOut"
           }}
 
-
-            duration: 10,
-            repeat: Infinity,
-
+          }}
 
         />
       </div>
@@ -1370,8 +1357,11 @@ if ( {) {
 =======
       <div className='relative z-10'>{children}</div>
     </div>
-
+  );      {/* Content */}
+      <div className="relative z-10">
+        {children}
+      </div>
+    </div>
+  )
+}
   );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

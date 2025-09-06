@@ -1,8 +1,19 @@
 
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {TransactionHistory} from "@/components/transactions/TransactionHistory";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { TransactionHistory } from "@/components/transactions/TransactionHistory",
+import { GradientHeading } from "@/components/GradientHeading";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { GradientHeading } from "@/components/GradientHeading",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Payments() {
   return (
     <>
@@ -62,51 +73,55 @@ export default function Payments() {
                     <div className="space-y-2">
                       <div className="flex items-center space-x-2">
                         <Checkbox id="notify-email" defaultChecked />
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
+                        <label
+                          htmlFor="notify-email"
+                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white"
+                        >
+                          Email notifications
+                        </label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Checkbox id="notify-push" defaultChecked />
+                        <label
+                          htmlFor="notify-push"
+                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white"
+                        >
+                          Push notifications
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
 }
-
-
+// Import UI components for Payment Settings tab
 
 // Import UI components for Payment Settings tab;
-
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
 
-=======
-import React from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { TransactionHistory } from '@/components / transactions / TransactionHistory';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-export default /**
- * Payments - Function description
- */
-function Payments() {
-  return (
+// Import UI components for Payment Settings tab
+import { Button } from "@/components/ui/button",
+import { Switch } from "@/components/ui/switch",
+import { Label } from "@/components/ui/label",
+import { Checkbox } from "@/components/ui/checkbox",
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { TransactionHistory } from "@/components/transactions/TransactionHistory",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+export default function Payments() {;
+  return (;
     <>;
       <Header />;
       <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
@@ -191,13 +206,7 @@ function Payments() {
     </>);
 }
 // Import UI components for Payment Settings tab;
-import { Button } from '@/components / ui / button';
-import { Switch } from '@/components / ui / switch';
-import { Label } from '@/components / ui / label';
-import { Checkbox } from '@/components / ui / checkbox';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { Button } from "@/components/ui/button",;
+import { Switch } from "@/components/ui/switch",;
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";

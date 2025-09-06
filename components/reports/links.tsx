@@ -1,7 +1,4 @@
 import { useEffect } from 'react';
-
-
-=======
 export default function LinksReportRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -9,7 +6,12 @@ export default function LinksReportRedirect() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }, []);
-  return null;export default function LinksReportRedirect() {;
+  return null
+}
+
+}
+export default function LinksReportRedirect(req, res) {
+  try {
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace('/reports/links/index && index.html');
@@ -48,8 +50,3 @@ if ( {) {
   }, []);
   return null;
 }
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

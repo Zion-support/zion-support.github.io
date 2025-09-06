@@ -252,14 +252,16 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
   }
-
-
+// Handle redirects for short URLs
+export async function getServerSideProps({
+  params
+}: {
+  params: { shortCode: string }
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   params,
 }: {;
   params: { shortCode: string };
 }) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
-
-
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
@@ -307,53 +309,23 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
   // Redirect to original URL
   return {
     redirect: {
+      destination: shortUrl.originalUrl
+      permanent: false
+    }
+  };      destination: shortUrl.originalUrl;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       permanent: false
     }
 }
-
-
-=======
-// Handle redirects for short URLs;
-export async /**
- * getServerSideProps - Function description
- */
-function getServerSideProps() {  const short_code = params.short_code;export async /**
- * getServerSideProps - Function description
- */
-function getServerSideProps() {
-  const short_code = params.short_code;
-  const short_url = url_storage.get (short_code);
-;
-  // Check condition
-if ( {) {
-  $2
 }
-    return {
-      not_found: true,    }      not_found: true;
-    }
-  }
-  // Increment click count;
-  short_url.clicks++;
-  url_storage.set (short_code, short_url);
-;
-  // Redirect to original URL;
-  return {
-    redirect: {
-      destination: short_url.original_url,
-      permanent: false,
-    },
-  }      destination: short_url.original_url;
-      permanent: false;
-    }
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
       destination: shortUrl.originalUrl,
       permanent: false,
     },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  };
+  };      destination: shortUrl.originalUrl;
+      permanent: false
+    }
+};
+}
+  };

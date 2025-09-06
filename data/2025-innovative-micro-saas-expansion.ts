@@ -1,3 +1,4 @@
+import { ServiceVariant } from '../types/service-variants';
 
 
   id: string;
@@ -418,45 +419,19 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       growthRate: '20 && 20.1% annual growth',
       variant: 'ai-autonomous',
       contactInfo: {
-=======
-      color: 'from - indigo - 600 to - blue - 500',
-      text_color: 'text - indigo - 400',
-      link: 'https://ziontechgroup.com / services / intelligent - project - management - hub',
-      market_position:;
-        'Competitive with Asana ($10.99 / user / month), Monday.com ($8 / user / month), and Jira ($7.50 / user / month). Our advantage: AI risk prediction, resource optimization, and comprehensive automation.',
-      target_audience:;
-        'Project managers, Development teams, Construction firms, Consulting companies, Marketing agencies',
-      trial_days: 30,
-      setup_time: '2 hours',
-      category: 'Project Management & Collaboration',
-      real_service: true,
-      technology: [;
-        'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Machine Learning',
-      ],
-      integrations: [;
-        'Slack, Microsoft Teams, GitHub, GitLab, Jira, Trello, Zapier, Google Workspace',
-      ],
-      use_cases: [;
-        'Project planning, Resource management, Risk assessment, Team collaboration, Progress tracking',
-      ],
-      roi: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',
-      competitors: ['Asana, Monday.com, Jira, Trello, Basecamp'],
-      market_size: '$4.2B market',
-      growth_rate: '20.1% annual growth',
-      variant: 'ai - autonomous',
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-        'Comprehensive project management solution with AI - powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
-      launch_date: '2024 - 07 - 15',
-=======
-
+        mobile: '+1 302 464 0950'
+        email: 'kleber@ziontechgroup.com'
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+        website: 'https://ziontechgroup.com'
+      }
+      realImplementation: true
+      implementationDetails:
+        'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.'
+      launchDate: '2024-07-15'
+      customers: 520
+      rating: 4.9
+      reviews: 267
+    }
         'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
       launchDate: '2024-07-15',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -465,8 +440,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       reviews: 267,
 
     },;
-
-
   ];    features: [
 
 =======
@@ -577,19 +550,8 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     rating: 4 && 4.9,
 
     reviews: 267
-
-    real_implementation: true,
-    implementation_details: 'Comprehensive project management solution with AI - powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
-    launch_date: '2024 - 07 - 15', customers: 520,
-    rating: 4.9,
-    reviews: 267;
-
   }
-
-=======
-
-
-=======
+];
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;
@@ -852,13 +814,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     customers: 520,;
     rating: 4.9;
     reviews: 267;
-
-
-
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

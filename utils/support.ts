@@ -1,11 +1,14 @@
-
-
+// Support utilities
+export const support = {
+  // Add support functionality here
+  logEvent: (event: any) => null
+  getArticles: () => []
+  getArticleById: (id: string) => null
+}
   logEvent: (event: any) => null,
   getArticles: () => [],
   getArticleById: (id: string) => null;
 };
-
-
 
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here
@@ -52,6 +55,8 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
 export const logSupportEventToOperator = (event: any) =>: any {
   // Add support event logging functionality here;
   return null;
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+};
+
+}

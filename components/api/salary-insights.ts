@@ -1,5 +1,5 @@
 
-
+}const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
 =======
@@ -294,6 +294,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     .slice(0, 8);
+
   // Tags
 
   const undersupplied = (skills || []).some(s =>
@@ -356,13 +357,9 @@ if ( {  } catch {) {
     return undefined;
   }
 }
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
+
+
+  // Tags
 }
     return res.status (405).json ({ error: 'Method not allowed' });
   }
@@ -496,4 +493,9 @@ if ( {) {
 ;
 return res.status (200).json (response);  return res.status (200).json (response);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+}
+}
+}
+}
+  // Tags

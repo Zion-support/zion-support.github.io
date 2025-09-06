@@ -1,5 +1,12 @@
+export const generateId = (prefix: string = 'id'): string => {
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+}
+export const announceToScreenReader = (message: string): void => {
+export const generateId = (prefix: string = 'id'): string => {;
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+};
 
-
+export const announceToScreenReader = (message: string): void => {;
   if (typeof window === 'undefined') return;
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
@@ -80,8 +87,33 @@ if ( {) {
       }
     }
   }
-
-
+  element.addEventListener('keydown', handleTabKey);
+  // Focus first element
+  firstElement?.focus();
+  return () => {
+    element.removeEventListener('keydown', handleTabKey);
+  }
+}
+export const getContrastRatio = (color1: string, color2: string): number => {
+  const getLuminance = (color: string): number => {;
+    const rgb = color.match(/\d+/g);
+    if (!rgb) return 0;
+    const [r, g, b] = rgb.map(c => {
+      const val = parseInt(c) / 255;
+      return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  }
+  const lum1 = getLuminance(color1);
+  const lum2 = getLuminance(color2);
+  const brightest = Math.max(lum1, lum2);
+  const darkest = Math.min(lum1, lum2);
+  return (brightest + 0.05) / (darkest + 0.05);
+}
+export const isHighContrast = (color1: string, color2: string): boolean => {
+  return getContrastRatio(color1, color2) >= 4.5;
+}
+export const validateAriaLabel = (element: HTMLElement): boolean => {
 };
 
 export const isHighContrast = (color1: string, color2: string): boolean => {;
@@ -89,8 +121,6 @@ export const isHighContrast = (color1: string, color2: string): boolean => {;
 };
 
 export const validateAriaLabel = (element: HTMLElement): boolean => {;
-
-
   const hasAriaLabel = element.hasAttribute('aria-label');
   const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
   const hasVisibleText = element.textContent?.trim().length > 0;
@@ -98,90 +128,38 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {;
 }
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
   const focusableSelectors = [
-
-;
-  element.addEventListener ('keydown', handleTabKey);
-;
-  // Focus first element;
-  first_element?.focus ();
-;
-  return () => {
-    element.removeEventListener ('keydown', handleTabKey);
-  }
-}
-;
-export const getContrastRatio = (color1: string, color2: string): number => {
-  const get_luminance = (color: string): number => {
-    const rgb = color.match (/\d+/g);
-    // Check condition
-if (return 0) {
-  $2
-}
-    const [r, g, b] = rgb.map (c => {
-      const val = parse_int (c) / 255;
-      return val <= 0.03928 ? val / 12.92 : Math.pow ((val + 0.055) / 1.055, 2.4);
-    });
-;
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-  }
-;
-  const lum1 = get_luminance (color1);
-  const lum2 = get_luminance (color2);
-  const brightest = Math.max (lum1, lum2);
-  const darkest = Math.min (lum1, lum2);
-;
-  return (brightest + 0.05) / (darkest + 0.05);
-}
-;
-export const isHighContrast = (color1: string, color2: string): boolean => {
-  return getContrastRatio (color1, color2) >= 4.5;
-}
-;
-export const validateAriaLabel = (element: HTMLElement): boolean => {
-  const hasAriaLabel = element.has_attribute ('aria - label');
-  const hasAriaLabelledBy = element.has_attribute ('aria - labelledby');
-  const hasVisibleText = element.text_content?.trim ().length > 0;
-;
-  return hasAriaLabel || hasAriaLabelledBy || hasVisibleText;
-}
-;
-export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
-  const focusable_selectors = [;
-    'button:not ([disabled])',
-    'input:not ([disabled])',
-    'select:not ([disabled])',
-    'textarea:not ([disabled])',
-    'a[href]',
-    '[tabindex]:not ([tabindex="-1"])';
-  ].join (', ');
-;
-  return Array.from (container.querySelectorAll (focusable_selectors)) as HTMLElement[];
-}
-;
-
-export const isElementInViewport = (element: HTMLElement): boolean => {
-  const rect = element.getBoundingClientRect ();
-=======
-
+    'button:not([disabled])'
+    'input:not([disabled])'
+    'select:not([disabled])'
+    'textarea:not([disabled])'
+    'a[href]'
+    '[tabindex]:not([tabindex="-1"])'
     'button:not([disabled])',
     'input:not([disabled])',
     'select:not([disabled])',
     'textarea:not([disabled])',
     'a[href]',
     '[tabindex]:not([tabindex="-1"])';
-
   ].join(', ');
   return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[];
-
+}
+export const isElementInViewport = (element: HTMLElement): boolean => {
 };
 
 export const isElementInViewport = (element: HTMLElement): boolean => {;
-
   const rect = element.getBoundingClientRect();
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
-
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight |document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth |document.documentElement.clientWidth)
+  );
+}
+export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
+  element.scrollIntoView({ behavior, block: 'start' });
+}
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
 };
 
 export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {;
@@ -189,8 +167,6 @@ export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior =
 };
 
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
-
-
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
@@ -203,11 +179,10 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
       scrollToElement(target);
     }
   });
-
-
   
-=======
 
+  return skipLink;
+}
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -217,37 +192,3 @@ export const generateId = (prefix: string = 'id'): string = > { return `${prefix
 
 =======
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    rect.top >= 0 &&;
-    rect.left >= 0 &&;
-    rect.bottom <= (window.inner_height || document.document_element.client_height) &&;
-    rect.right <= (window.inner_width || document.document_element.client_width));
-}
-;
-export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
-  element.scrollIntoView ({ behavior, block: 'start' });
-}
-;
-export const createSkipLink = (target_id: string, text: string = 'Skip to main content'): HTMLElement => {
-  const skip_link = document.create_element ('a');
-  skip_link.href = `#${target_id}`;
-  skip_link.text_content = text;
-  skip_link.class_name = 'sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg - blue - 600 text - white px - 4 py - 2 rounded z - 50';
-;
-  skip_link.addEventListener ('click', (e) => {
-    e.prevent_default ();
-    const target = document.getElementById (target_id);
-    // Check condition
-if ( {) {
-  $2
-}
-      target.focus ();
-      scrollToElement (target);
-    }
-  });
-;
-  return skip_link;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

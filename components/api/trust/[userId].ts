@@ -1,6 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
+import { computeTrustScore } from '../../../utils/trust/compute';
+import type {
+  TrustMetricInputs
+  TrustScoreBreakdown;
+  TrustMetricInputs,;
+  TrustScoreBreakdown,;
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(
@@ -265,51 +270,15 @@ if ( {) {
       return res.status (500).json ({ error: e?.message || 'Failed to compute trust score' });
     }
   }
-  // Check condition
-if ( {) {
-  $2
-}
-    try {
-      const body = req.body as Partial < TrustMetricInputs> | undefined;
-      if (return res.status (400).json ({ error: 'Missing body' })) {
-  $2
-}
-      const inputs = body as TrustMetricInputs;
-      const breakdown = await computeTrustScore (inputs);
-;
-      try {
-        await supabase;
-          .from ('trust_inputs');
-          .upsert ({ user_id, values: inputs }, { on_conflict: 'user_id' });
-        await supabase;
-          .from ('trust_scores');
-          .upsert (
-            { user_id, breakdown, updated_at: breakdown.updated_at },
-            { on_conflict: 'user_id' }
-          );
-      } catch {}
-      return res.status (200).json (breakdown);
-    } catch (e: any) {
-      return res;
-        .status (500);
-        .json ({ error: e?.message || 'Failed to save trust inputs' });
-    }
-  }
-  res.set_header ('Allow', 'GET, POST');
-  return res.status (405).json ({ error: 'Method not allowed' });      } catch {}
-      return res.status (200).json (breakdown);
-    } catch (e: any) {
-      return res.status (500).json ({ error: e?.message || 'Failed to save trust inputs' });
-    }
-  }
-  res.set_header ('AllowGET, POST');
-  return res.status (405).json ({ error: 'Method not allowed' });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   res.setHeader('Allow', 'GET, POST');
+  return res.status(405).json({ error: 'Method not allowed' });      } catch {}
+      return res.status(200).json(breakdown)
+    } catch (e: any) {
+      return res.status(500).json({ error: e?.message |'Failed to save trust inputs' })
+    }
+  }
+  res.setHeader('AllowGET, POST');
 
+  return res.status(405).json({ error: 'Method not allowed' })
+}
   return res.status(405).json({ error: 'Method not allowed' });
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

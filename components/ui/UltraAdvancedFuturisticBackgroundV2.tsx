@@ -1,5 +1,11 @@
 
-
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let animationFrameId: number;
+let particles: Array< {
+const UltraAdvancedFuturisticBackgroundV2: React.FC<
+  UltraAdvancedFuturisticBackgroundV2Props
+> = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({
   children;
   className = ''
 }) => {
@@ -625,63 +631,34 @@ if (return) {
             duration: 7
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
-=======
-            rotate: [360, 0];
-            scale: [1, 0.9, 1];
-            opacity: [0.1, 0.3, 0.1];
-
           }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-
-
-          }}
-
-        />;
-      </div>;
-
-
-      {/* Quantum Energy Particles */}
-
-
-=======
-
             duration: 7,
             repeat: Infinity,
 
           }}
 
-
-=======
             duration: 7,
             repeat: Infinity,
-
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
 
           }}
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Quantum Energy Particles */}
       <div className='fixed inset-0 pointer-events-none z-20'>
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {[...Array(20)].map((_, i) => (
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
             style={{
-
-
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-
-
             }}
             animate={{
               y: [0, -100, 0]
@@ -726,11 +703,10 @@ if (return) {
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
-
-              duration: 3 + Math && Math.random() * 2,
-              repeat: Infinity,
-              delay: Math && Math.random() * 2,
-
+            transition={{
+              duration: 3 + Math.random() * 2
+              repeat: Infinity
+              delay: Math.random() * 2
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
 =======
@@ -743,25 +719,25 @@ if (return) {
             }}
           />;
         ))}
-
-      </div>;
-
-
-=======
+      </div>
 
 
-=======
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+              ease: 'easeInOut',            }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          />
+        ))}
+      </div>
+
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>;
         <svg className='w-full h-full'>;
@@ -808,106 +784,36 @@ if (return) {
               animate={{
                 opacity: [0.1, 0.3, 0.1];
                 strokeDasharray: [0, 100, 0]
-
-              }}
-=======
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`;
-            }}
-            animate={{
-              coordinate_y: [0, -100, 0];
-              opacity: [0, 1, 0];
-              scale: [0, 1, 0];
-            }}
-            transition={{
-              duration: 3 + Math.random () * 2,
-              repeat: Infinity,
-              delay: Math.random () * 2,
-              ease: 'easeInOut',            }}              ease: "easeInOut";
-            }}
-          />))}
-      </div>;
-      {/* Neural Network Connections */}
-      <div className='fixed inset - 0 pointer - events - none z - 30'>;
-        <svg className='w - full h - full'>;
-          <defs>;
-            <linear_gradient;
-              id='neural_gradient';
-              x1='0%';
-              y1='0%';
-              x2='100%';
-              y2='100%';
-            >;
-              <stop offset='0%' stop_color='#00ffff' stop_opacity='0.3' />;
-              <stop offset='100%' stop_color='#ff00ff' stop_opacity='0.3' />            </linear_gradient>      <div className="fixed inset - 0 pointer - events - none z - 30">;
-        <svg className="w - full h - full">;
-          <defs>;
-            <linear_gradient id="neural_gradient" x1="0%" y1="0%" x2="100%" y2="100%">;
-              <stop offset="0%" stop_color="#00ffff" stop_opacity="0.3" />;
-              <stop offset="100%" stop_color="#ff00ff" stop_opacity="0.3" />;
-          </defs>;
-          {[...Array (15)].map ((_, i) => (
-            <motion.line;
-              key={i}
-              x1={Math.random () * 100}
-              y1={Math.random () * 100}
-              x2={Math.random () * 100}
-              y2={Math.random () * 100}
-              stroke='url (#neural_gradient)';
-              stroke_width='1';
-              opacity='0.1';
-              animate={{
-                opacity: [0.1, 0.3, 0.1],
-                stroke_dasharray: [0, 100, 0],              }}              stroke="url (#neural_gradient)";
-              stroke_width="1";
-              opacity="0.1";
-              animate={{
-                opacity: [0.1, 0.3, 0.1];
-                stroke_dasharray: [0, 100, 0];
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               transition={{
-
-
+                duration: 4 + Math.random() * 2
+                repeat: Infinity
+                delay: Math.random() * 2
+                ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
-            />;
-=======
-
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+                ease: 'easeInOut',              }}
+
+              }}
 
             />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
+        </svg>
+      </div>
 
-        </svg>;
-      </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Content */}
-
-
+      <div className='relative z-40'>{children}</div>
+    </div>
+  );
+}
 };
 
-export default UltraAdvancedFuturisticBackgroundV2;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-                delay: Math.random () * 2,
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-              }}
-            />))}
-        </svg>;
-      </div>;
-      {/* Content */}
-      <div className='relative z - 40'>{children}</div>;
-    </div>);
+export default UltraAdvancedFuturisticBackgroundV2;    </div>
+  )
 }
 ;
 export default UltraAdvancedFuturisticBackgroundV2;    </div>);
@@ -921,5 +827,5 @@ export default UltraAdvancedFuturisticBackgroundV2;
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default UltraAdvancedFuturisticBackgroundV2;
+export default UltraAdvancedFuturisticBackgroundV2;

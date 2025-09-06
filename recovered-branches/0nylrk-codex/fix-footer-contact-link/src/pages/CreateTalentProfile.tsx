@@ -1,17 +1,11 @@
 
-
-
+import React from "react";
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
-
-=======
 import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
-=======
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function CreateTalentProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -27,12 +21,7 @@ export default function CreateTalentProfile() {
       </div>
     </div>
   )
-
-import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
-=======
-
-
-=======
+}
 import React from "react",;
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 
@@ -64,11 +53,7 @@ function CreateTalentProfile() {
 
         <TalentRegistrationForm />;
       </div>;
-    </div>);
+    </div>;
+  );
 }
-
-=======
 ;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

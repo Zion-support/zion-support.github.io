@@ -1,8 +1,9 @@
 
-import { GradientHeading } from './GradientHeading';
-import { Link } from './react-router-dom';
-import { Briefcase, HardDrive, Lightbulb, Users } from './lucide-react';
-const categories = [;
+
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+const categories = [
   {
     title: "Services",
     description: "On - demand IT support, consulting, development, and more";
@@ -21,15 +22,15 @@ const categories = [;
   {
     title: "Equipment"
     description: "Rent or buy specialized hardware, servers, and devices";
-
-
-=======
+    icon: <HardDrive className="w-10 h-10" />
+    link: "/equipment"
+    color: "from-amber-500 to-orange-600"}
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
-
-
-
 
 const categories = [
   {
@@ -50,8 +51,6 @@ const categories = [
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
     title: "Innovation"
     description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -60,8 +59,19 @@ const categories = [
     color: "from-emerald-500 to-green-600"}]
 const specialServices = [
   {
+    title: "IT Onsite Services"
+    link: "/it-onsite-services"
+  }
+];
 
-
+interface CategoriesSectionProps {
+  showTitle?: boolean
+}
+    title: "IT Onsite Services",
+    link: "/it-onsite-services"
+import { GradientHeading } from "./GradientHeading",;
+import { Link } from "react-router-dom",;
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
 const categories = [;
   {;
     title: "Services",;
@@ -98,15 +108,9 @@ const specialServices = [;
 
 interface CategoriesSectionProps {;
   showTitle?: boolean;
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
-
-export function CategoriesSection(): any ({ showTitle = true }: CategoriesSectionProps) {;
-
+export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4">;
@@ -213,12 +217,21 @@ function CategoriesSection() {
                 {service && service.title}
               </Link>;
             ))}
-=======
-
+          </div>
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/categories"
+            className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors"
+          >
+            View All Categories →
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
 };
-
-=======
-
           </div>;
         </div>;
 
@@ -243,10 +256,5 @@ function CategoriesSection() {
 
     </section>);
 }
-
-=======
-
-
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

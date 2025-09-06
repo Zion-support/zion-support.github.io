@@ -1,6 +1,20 @@
 
-
-
+import {useState} from "react";
+import {MessageSquare} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {ChatAssistant} from "@/components/ChatAssistant";
+export function ChatAssistantTrigger() {;
+  const [isOpen, setIsOpen] = useState(false);
+import { useState } from "react",
+import { MessageSquare } from "lucide-react",
+import { Button } from "@/components/ui/button";
+import { ChatAssistant } from "@/components/ChatAssistant";
+export function ChatAssistantTrigger() {
+  const [isOpen, setIsOpen] = useState(false);
+import { Button } from "@/components/ui/button",
+import { ChatAssistant } from "@/components/ChatAssistant",
+export function ChatAssistantTrigger() {
+  const [isOpen, setIsOpen] = useState(false),
 
   // Handle sending messages to the AI chat assistant
 
@@ -9,15 +23,15 @@
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
-
-
+          "Content-Type": "application/json"}
+        body: JSON.stringify({
+          messages: [{ role: "user", content: message }]
+        })});
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
       
-
-
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -25,13 +39,11 @@
     } catch (error) {
       console.error("Error in AI chat:", error);
       return Promise.resolve()
-
-import {useState} from "react";
-import {MessageSquare} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {ChatAssistant} from "@/components/ChatAssistant";
-=======
-
+    }
+  }
+  return (
+    <>
+      <Button
 import { useState } from "react",;
 import { MessageSquare } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -66,9 +78,6 @@ export function ChatAssistantTrigger() {;
     <>;
 
       <Button;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         onClick={() => setIsOpen(true)}
 
         size="icon";
@@ -93,7 +102,9 @@ export function ChatAssistantTrigger() {;
           onSendMessage={handleSendMessage}
         />;
       )}
-
+    </>
+  )
+}
     </>;
   );
 }
@@ -109,6 +120,3 @@ export /**
 function ChatAssistantTrigger() {
   const [is_open, setIsOpen] = useState (false);
 ;
-
-
-

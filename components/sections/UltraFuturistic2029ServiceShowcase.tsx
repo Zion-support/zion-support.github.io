@@ -24,16 +24,22 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 import { motion } from 'framer-motion';
-
-
-} from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
-type Service = CuttingEdgeInnovation2029 | any;
-
-=======
-
-
+import {
+  ChevronDown
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Cpu
+  Shield
+  Rocket
+  Globe
+  Database
+  Lock
+  Cloud
+  Eye
+  Timer
+  Sparkles;
   ChevronDown,
   Star,
   TrendingUp,
@@ -50,8 +56,6 @@ type Service = CuttingEdgeInnovation2029 | any;
 
   Timer,;
   Sparkles,;
-
-
 } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data / 2029 - cutting - edge - innovations';
@@ -67,10 +71,7 @@ interface UltraFuturistic2029ServiceShowcaseProps {;
   services: Service[];
   title?: string;
   subtitle?: string;
-
-
-
-
+  maxServices?: number;
 
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-600 to-pink-600'
@@ -313,69 +314,22 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
   const containerVariants = {
-=======
-  max_services = 12;
-}) => {
-  const [selected_category, setSelectedCategory] = useState < string>('all');
-  const [sort_by, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation');
-;
-  // Get unique categories;
-  const categories = ['all', ...Array.from (new Set (services.map (service => service.category)))];
-;
-  // Filter and sort services;
-  const filtered_services = services;
-    .filter (service => selected_category === 'all' || service.category === selected_category);
-    .sort ((a, b) => {
-      switch (sort_by) {
-        case 'innovation':;
-          // Default to 'Advanced' if innovation_level is not available;
-          const a_level = (a as any).innovation_level || 'Advanced';
-          const b_level = (b as any).innovation_level || 'Advanced';
-          const innovation_order = {
-            Revolutionary: 4,
-            Breakthrough: 3,
-            Advanced: 2,
-            Emerging: 1,
-          }
-          return (
-            (innovation_order[b_level] || 0) - (innovation_order[a_level] || 0));
-        case 'price':;
-          return (
-            parse_float (a.price.replace (/[^0 - 9.]/g, '')) -;
-            parse_float (b.price.replace (/[^0 - 9.]/g, '')));
-        case 'rating':;
-          return b.rating - a.rating;
-        default:;
-          return 0;      }        case 'price':;
-          return parse_float (a.price.replace (/[^0 - 9.]/g, '')) - parse_float (b.price.replace (/[^0 - 9.]/g, ''));
-        case 'rating':;
-          return b.rating - a.rating;
-        default: return 0;
-      }
-    });
-    .slice (0, max_services);
-;
-  const container_variants = {
-
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+      opacity: 1
       transition: {
-
-  };
-
-
-=======
-
+        staggerChildren: 0.1
+      }
+    },  };        staggerChildren: 0.1
+      }
+    }
+  }
         staggerChildren: 0.1,
       },
     },  };
 
   };
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -412,23 +366,14 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
   return (
     <section className='py-20 relative overflow-hidden'>;
       {/* Background Elements */}
-
-      <div className='absolute inset-0 pointer-events-none'>;
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>;
-      </div>;
-=======
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-  };
-
-
+      <div className='absolute inset-0 pointer-events-none'>
+        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
+        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
+        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
+      </div>
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className="py-20 relative overflow-hidden">;
       {/* Background Elements */}
@@ -443,17 +388,17 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Header */}
-        <motion&& motion.div
-=======
 
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
 
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-
+          transition={{ duration: 0.8 }}
+          className='text-center mb-16'        >          className="text-center mb-16"
+          className='text-center mb-16'        >
 
         >
           <motion.h2
@@ -463,26 +408,17 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
             className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
           >
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {title}
           </motion && motion.h2>;
           <motion&& motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+          >
             {subtitle}
-
-          </motion && motion.p>;
-        </motion && motion.div>;
-
-
-=======
-
+          </motion.p>
+        </motion.div>
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >
 
           >
@@ -491,23 +427,27 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           </motion.p>
         </motion.div>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Filters and Controls */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-
-
-=======
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
+        >
+          {/* Category Filter */}
+          <div className='flex items-center space-x-2'>
+            <span className='text-gray-300 text-sm font-medium'>
+              Filter by:
+            </span>
+            <div className='flex flex-wrap gap-2'>
+              {categories.map(category => (                <button          <div className="flex items-center space-x-2">
+            <span className="text-gray-300 text-sm font-medium">Filter by:</span>
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
 
 
                 <button
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
@@ -519,15 +459,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                   {category === 'all' ? 'All Categories' : category}
                 </button>;
               ))}
-
-            </div>;
-          </div>;
-
-
+            </div>
+          </div>
           {/* Sort Options */}
-          <div className='flex items-center space-x-2'>;
-            <span className='text-gray-300 text-sm font-medium'>Sort by:</span>;
-=======
+          <div className='flex items-center space-x-2'>
+            <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
 
           {/* Sort Options */}
           <div className="flex items-center space-x-2">
@@ -559,8 +495,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           <div className='flex items-center space-x-2'>
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
@@ -568,7 +502,17 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
             >
               <option value='innovation'>Innovation Level</option>
               <option value='price'>Price</option>
-
+              <option value='rating'>Rating</option>            </select>            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as any)}
+              className="px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500"
+            >
+              <option value="innovation">Innovation Level</option>
+              <option value="price">Price</option>
+              <option value="rating">Rating</option>
+            </select>
+          </div>
+        </motion.div>
               <option value='rating'>Rating</option>            </select>
 
             </select>
@@ -576,31 +520,46 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           </div>
         </motion.div>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          {filteredServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+              variants={itemVariants}
+              className='group'
+            >
+              <UltraFuturisticServiceCard
+                service={service}
+                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />              className="group"
+            >
+              <UltraFuturisticServiceCard
+                service={service}
+                className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
+            </motion.div>
           ))}
+        </motion.div>
+                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />
 
-        </motion && motion.div>;
+              />
 
-
-=======
+            </motion.div>
+          ))}
         </motion.div>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='text-center mt-16'
 
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
@@ -637,26 +596,22 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
               <a
                 href='/pricing'
                 className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'                href="/pricing"
+                className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
+              >
+                View Pricing
+              </a>
+            </div>
+          </div>
+        </motion.div>
 
-
-                View Pricing;
-              </a>;
-            </div>;
-          </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Innovation Stats */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className='mt-20'
 
-
+        >
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {
@@ -714,20 +669,15 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
               {
                 label: 'Average Rating'
                 value: (
-
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-20"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
+                  services.reduce((sum, s) => sum + s.rating, 0) /
+                  services.length
+                ).toFixed(1)
+                icon: TrendingUp
+                color: 'from-green-500 to-teal-500'
+              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' }
+              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }
+              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-            ].map((stat, index) => (
-
-=======
-
                 ).toFixed(1),
                 icon: TrendingUp,
                 color: 'from-green-500 to-teal-500',
@@ -736,7 +686,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ].map((stat, index) => (
+
+
+            ].map((stat, index) => (
+
               <motion.div
 =======
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
@@ -783,88 +737,36 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className='text-center'
 
-
-
-
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div
-                  className={`w-16 h-16 bg-gradient-to-br ${stat && stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>;
-                  <stat && stat.icon className='w-8 h-8 text-white' />;
-                </div>;
-                <div className='text-3xl font-bold text-white mb-2'>;
-                  {stat && stat.value}
-                </div>;
-                <div className='text-gray-400'>{stat && stat.label}</div>              </motion && motion.div>              >;
-                <div className={`w-16 h-16 bg-gradient-to-br ${stat && stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>;
-                  <stat && stat.icon className="w-8 h-8 text-white" />;
-                </div>;
-                <div className="text-3xl font-bold text-white mb-2">{stat && stat.value}</div>;
-                <div className="text-gray-400">{stat && stat.label}</div>;
-              </motion && motion.div>;
-            ))}
-          </div>;
-        </motion && motion.div>;
-      </div>;
-    </section>;
-  );
-
+                  className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}
+                >
+                  <stat.icon className='w-8 h-8 text-white' />
+                </div>
+                <div className='text-3xl font-bold text-white mb-2'>
+                  {stat.value}
+                </div>
+                <div className='text-gray-400'>{stat.label}</div>              </motion.div>              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-400">{stat.label}</div>
+              </motion.div>
 
             ))}
           </div>
         </motion.div>
       </div>
     </section>
-
-
-=======
-                  services.reduce ((sum, s) => sum + s.rating, 0) /;
-                  services.length).to_fixed (1),
-                icon: TrendingUp,
-                color: 'from - green - 500 to - teal - 500',
-              },            ].map ((stat, index) => (              { label: 'Revolutionary Services', value: services.filter (string => s.innovation_level === 'Revolutionary').length, icon: Rocket, color: 'from - purple - 500 to - pink - 500' },
-              { label: 'Patent Pending', value: services.filter (string => s.patent_status === 'Patent Pending').length, icon: Shield, color: 'from - blue - 500 to - cyan - 500' },
-              { label: 'Total Customers', value: services.reduce ((sum, s) => sum + s.customers, 0), icon: Star, color: 'from - yellow - 500 to - orange - 500' },
-              { label: 'Average Rating', value: (services.reduce ((sum, s) => sum + s.rating, 0) / services.length).to_fixed (1), icon: TrendingUp, color: 'from - green - 500 to - teal - 500' }
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className='text - center';
-              >;
-                <div;
-                  className={`w - 16 h - 16 bg - gradient - to - br ${stat.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4`}
-                >;
-                  <stat.icon className='w - 8 h - 8 text - white' />;
-                </div>;
-                <div className='text - 3xl font - bold text - white mb - 2'>;
-                  {stat.value}
-                </div>;
-                <div className='text - gray - 400'>{stat.label}</div>              </motion.div>              >;
-                <div className={`w - 16 h - 16 bg - gradient - to - br ${stat.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4`}>;
-                  <stat.icon className="w - 8 h - 8 text - white" />;
-                </div>;
-                <div className="text - 3xl font - bold text - white mb - 2">{stat.value}</div>;
-                <div className="text - gray - 400">{stat.label}</div>;
-              </motion.div>))}
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>);
-}
-;
-export default UltraFuturistic2029ServiceShowcase);
-}
-;
-export default UltraFuturistic2029ServiceShowcase;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
-
+}
 };
 
+export default UltraFuturistic2029ServiceShowcase;  )
+}
+export default UltraFuturistic2029ServiceShowcase;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default UltraFuturistic2029ServiceShowcase;
+export default UltraFuturistic2029ServiceShowcase;

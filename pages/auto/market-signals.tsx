@@ -11,28 +11,18 @@ const MarketSignals: NextPage = () => {
         <h1 className="text-2xl font-bold">AI Market Signals Agent</h1>
         <p>Runs daily to curate relevant AI/tech market signals and trends and stores them in the repository.</p>
         <div className="space-y-2">
-
-
+          <Link href="/data/reports/market-signals/latest.json"><a className="text-blue-600 underline">Latest Report (JSON)</a></Link>
           <Link href="/data/reports/market-signals/latest.json"><a className="text-blue-600 underline">Latest Report (JSON)</Link></Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
       </main>
     </div>
   )
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+}
+export default MarketSignals;
 
 },
 export default MarketSignals,
-
-=======
 },
 
+export default MarketSignals,;
 export default MarketSignals,
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

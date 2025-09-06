@@ -1,23 +1,86 @@
 
-
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
+import { useConversationState  } from './useConversationState';
+import { useConversations  } from './useConversations';
+import { useMessages } from './useMessages';
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation, ConversationContextData} from '@/types/messaging';
 import {useConversationState} from './useConversationState';
 import {useConversations} from './useConversations';
 import {useMessages} from './useMessages';
-
-
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook that combines all messaging operations
-=======
-import {UserProfile, UserDetails} from '@/types / auth';
-import {Message, Conversation, ConversationContextData} from '@/types / messaging';
-import {useConversationState} from './useConversationState';
-import {use_conversations} from './use_conversations';
-import {use_messages} from './use_messages';
+ */
+export function useMessagingOperations(user: UserWithProfile) {
+  // State management
+  const {;
+    messages;
+    setMessages;
+    activeMessages;
+    setActiveMessages;
+    conversations;
+    setConversations;
+    unreadCount;
+    setUnreadCount;
+    activeConversation;
+    setActiveConversation;
+    isLoading
+    setIsLoading
+  } = useConversationState();
+  // Conversations management
+  const {
+    fetchConversations;
+    createConversation
+  } = useConversations(
+    user;
+    setConversations;
+    setUnreadCount;
+    setIsLoading
+  );
+  // Messages management
+  const {
+    loadMessages;
+    sendMessage;
+    markAsRead
+  } = useMessages(
+    user;
+    activeConversation;
+    activeMessages;
+    setActiveMessages;
+    conversations;
+    setConversations;
+    setUnreadCount;
+    setIsLoading;
+    fetchConversations
+  );
+  return {
+    // State
+    messages;
+    activeMessages;
+    setActiveMessages;
+    conversations;
+    setConversations;
+    unreadCount;
+    setUnreadCount;
+    activeConversation;
+    setActiveConversation;
+    isLoading;
+    // Operations
+    sendMessage;
+    createConversation;
+    markAsRead;
+    fetchConversations;
+
+    loadMessages
+import { UserProfile, UserDetails } from '@/types/auth',;
+import { Message, Conversation, ConversationContextData } from '@/types/messaging',;
+import { useConversationState } from './useConversationState',;
+import { useConversations } from './useConversations',;
+import { useMessages } from './useMessages',;
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null;
 ;
@@ -95,7 +158,7 @@ function useMessagingOperations() {
     send_message;
     create_conversation;
     markAsRead;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    fetchConversations;
+    loadMessages;
   }
 }

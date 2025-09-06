@@ -1,12 +1,21 @@
+import React, { useState, useEffect } from 'react';
 
-
+import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
+import { Header } from '@/components/Header';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import {
+  Calendar
+  Clock
+  DollarSign
+  Tag
+  Users
   Calendar,
   Clock,
   DollarSign,
   Tag,;
   Users;
-
-
   Briefcase;
 =======
 import {;
@@ -61,14 +70,6 @@ interface Job {
   skills?: string[];
   created_at: string;
   category: string;
-
-export default function JobDetails() {;
-  const router = useRouter(); // Init router;
-  const { jobId: rawJobId } = router && router.query; // Get jobId from query;
-
-  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
-  const { job, isLoading, error } = useJobDetails(jobId) as {;
-=======
   deadline?: string;
 ;
 export default /**
@@ -98,8 +99,6 @@ export default function JobDetails() {;
     error: any;
   };
   const { user, isAuthenticated } = useAuth();
-
-=======
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams, useNavigate;
 import { Header } from '@/components/Header',;
@@ -128,17 +127,29 @@ interface Job {;
   deadline?: string;
 }
 
-
-
   deadline?: string;
 export default function JobDetails() {
-
+  const router = useRouter(); // Init router
+  const { jobId: rawJobId } = router.query; // Get jobId from query
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
+  const { job, isLoading, error } = useJobDetails(jobId) as {
+    job: Job | undefined;
+    isLoading: boolean;
+    error: any;
+  }
+  const { user, isAuthenticated } = useAuth();
+  // navigate is now router
+  const { isWhitelabel, brandName } = useWhitelabel();
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+  const formatBudget = (budget: any) => {
+    if (!budget) return 'Not specified';
+    return `$${budget.min} - $${budget.max}`;
+  }
   const router = useRouter(), // Init router
   const { jobId: rawJobId } = router.query, // Get jobId from query
   const jobId = typeof rawJobId === 'string' ? rawJobId : undefined,
   const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },
   const { user, isAuthenticated } = useAuth(),
-
   // navigate is now router
   const { isWhitelabel, brandName } = useWhitelabel(),
   
@@ -149,8 +160,6 @@ export default function JobDetails() {
     return `$${budget.min} - $${budget.max}`
   },
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
     return <JobDetailsSkeleton />;
   }
@@ -167,41 +176,27 @@ export default function JobDetails() {
     return (
       <>
         <Header />
-
+        <div className='container mx-auto px-4 py-16 text-center'>
+          <h1 className='text-2xl font-bold mb-4'>Job Not Found</h1>
+          <p className='mb-8'>
+            The job you're looking for doesn't exist or has been removed.
+          </p>
+          <Button onClick={() => router.push('/careers')}>View All Jobs</Button>        </div>
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
           <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
           <Button onClick={() => router.push('/careers')}>View All Jobs</Button>
         </div>
-
-
       </>
     )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
-
-  if (error || !job) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    return (
-      <>;
-        <Header />;
-        <div className='container mx-auto px-4 py-16 text-center'>;
-          <h1 className='text-2xl font-bold mb-4'>Job Not Found</h1>;
-          <p className='mb-8'>;
-            The job you're looking for doesn't exist or has been removed.;
-          </p>;
-          <Button onClick={() => router && router.push('/careers')}>View All Jobs</Button>        </div>;
-      </>;
-    );
-  }
-
-
-  const handleApply = () => {;
-    if (!isAuthenticated) {;
-      toast && toast.error('Please log in to apply for this job');
-      router && router.push(;
-        `/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`;
-      ); // Added null check for jobId;
+  const handleApply = () => {
+    if (!isAuthenticated) {
+      toast.error('Please log in to apply for this job');
+      router.push(
+        `/login?redirect=${encodeURIComponent(`/jobs/${jobId |''}`)}`
+      ); // Added null check for jobId
       return;
     }
 
@@ -221,24 +216,8 @@ export default function JobDetails() {
   const handleApplySuccess = async (appliedJobId: string) => {;
     toast && toast.success('Application submitted successfully!');
     setIsApplyModalOpen(false);
-  };
-  const isOwnJob = user?.id === job && job.client_id;
-
-
-  return (
-    <>;
-      <SEO
-        title={`${job && job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description = {job && job.description.substring(0, 160),}
-      />;
-      <Header />;
-      <main className='container mx-auto px-4 py-8'>;
-        <div className='mb-6'>;
-          <Button
-            variant='outline'
-            size='sm'
-
-
+  }
+  const isOwnJob = user?.id === job.client_id;
       toast.error("Please log in to apply for this job"),
       router.push(`/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`), // Added null check for jobId
       return
@@ -258,7 +237,14 @@ export default function JobDetails() {
   },
 
 
+  const isOwnJob = user?.id === job.client_id,
+  const handleApplySuccess = async (appliedJobId: string) => {
+    toast.success('Application submitted successfully!');
+    setIsApplyModalOpen(false);
+  };
+  const isOwnJob = user?.id === job.client_id;
 
+  const isOwnJob = user?.id === job.client_id,
 
   return (
     <>
@@ -267,7 +253,17 @@ export default function JobDetails() {
         description={job.description.substring(0, 160)}
       />
       <Header />
-
+      <main className='container mx-auto px-4 py-8'>
+        <div className='mb-6'>
+          <Button
+            variant='outline'
+            size='sm'
+            onClick={() => router.push('/careers')}          >
+            ← Back to Jobs
+          </Button>
+        </div>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+          <div className='lg:col-span-2'>
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <Button 
@@ -281,37 +277,43 @@ export default function JobDetails() {
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Card>
               <CardHeader>
                 <div className='flex justify-between items-start'>
                   <div>
-
-
+                    <CardTitle className='text-2xl mb-2'>{job.title}</CardTitle>
+                    <div className='flex items-center text-muted-foreground'>
+                      <Calendar className='mr-2 h-4 w-4' />
+                      <span>
+                        Posted{' '}
+                        {formatDistanceToNow(new Date(job.created_at), {
+                          addSuffix: true
+                        })}
+                      </span>
                     <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>
                     <div className="flex items-center text-muted-foreground">
                       <Calendar className="mr-2 h-4 w-4" />
                       <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>
-
-
                     </div>
                   </div>
                   <Badge>{job.category}</Badge>
                 </div>
               </CardHeader>
-              <CardContent className='space-y-6'>
+              <CardContent className="space-y-6">
+                <div>
+                  <h3 className="font-semibold text-lg mb-3">Job Description</h3>
+                  <div className="whitespace-pre-wrap">
+                    {job.description}
+                  </div>
+                </div>
                 <div>
                   <h3 className='font-semibold text-lg mb-3'>
                     Job Description
                   </h3>
-                  <div className='whitespace-pre-wrap'>{job.description}</div>
-                </div>
-
-            onClick={() => router && router.push('/careers')}          >;
-=======
-
+                  <div className='flex flex-wrap gap-2'>
+                    {job.skills?.map((skill: string, i: number) => (
+                      <Badge key={i} variant='secondary'>                        {skill}
+                      </Badge>
                 
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
@@ -424,17 +426,13 @@ export default function JobDetails() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <Badge key={i} variant='secondary'>                        {skill}
                       </Badge>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
-
-
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
           
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div>
             <Card>
               <CardContent className='pt-6 space-y-4'>
@@ -445,31 +443,13 @@ export default function JobDetails() {;
                     <p className='font-medium'>{formatBudget(job.budget)}</p>
                   </div>
                 </div>
-
-                  </div>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </div>;
-
-          <div>;
-            <Card>;
-              <CardContent className='pt-6 space-y-4'>;
-                <div className='flex items-start'>;
-                  <DollarSign className='mt-1 h-5 w-5 text-muted-foreground' />;
-                  <div className='ml-3'>;
-                    <p className='text-sm text-muted-foreground'>Budget</p>;
-                    <p className='font-medium'>{formatBudget(job && job.budget)}</p>;
-                  </div>;
-                </div>;
-
-                <div className='flex items-start'>;
-                  <Clock className='mt-1 h-5 w-5 text-muted-foreground' />;
-                  <div className='ml-3'>;
-                    <p className='text-sm text-muted-foreground'>Deadline</p>;
-                    <p className='font-medium'>;
-                      {job && job.deadline;
-                        ? new Date(job && job.deadline).toLocaleDateString();
+                <div className='flex items-start'>
+                  <Clock className='mt-1 h-5 w-5 text-muted-foreground' />
+                  <div className='ml-3'>
+                    <p className='text-sm text-muted-foreground'>Deadline</p>
+                    <p className='font-medium'>
+                      {job.deadline
+                        ? new Date(job.deadline).toLocaleDateString()
                         : 'Flexible'}
                     </p>;
                   </div>;
@@ -493,10 +473,6 @@ export default function JobDetails() {;
                   </Button>;
                 )}
 
-
-
-
-=======
                 
                 <div className="flex items-start">
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
@@ -526,10 +502,6 @@ export default function JobDetails() {;
                   </Button>;
                 )}
                 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {isOwnJob && (
                   <div className='text-center p-2 bg-muted rounded-md mt-4'>
                     <p className='text-sm text-muted-foreground'>
@@ -537,198 +509,32 @@ export default function JobDetails() {;
                     </p>
                   </div>
                 )}
-
-
-                {isOwnJob && (;
-                  <div className='text-center p-2 bg-muted rounded-md mt-4'>;
-                    <p className='text-sm text-muted-foreground'>;
-                      This is your job posting;
-                    </p>;
-                  </div>;
-                )}
-=======
-  const { user, is_authenticated } = use_auth ();
-  // navigate is now router;
-  const { is_whitelabel, brand_name } = use_whitelabel ();
-;
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState (false);
-;
-  const format_budget = (budget: any) =>: any {
-    // Check condition
-if (return 'Not specified') {
-  $2
-}
-    return `$${budget.min} - $${budget.max}`;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return <JobDetailsSkeleton />;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <>;
-        <Header />;
-        <div className='container mx - auto px - 4 py - 16 text - center'>;
-          <h1 className='text - 2xl font - bold mb - 4'>Job Not Found</h1>;
-          <p className='mb - 8'>;
-            The job you're looking for doesn't exist or has been removed.;
-          </p>;
-          <Button on_click={() => router.push ('/careers')}>View All Jobs</Button>        </div>;
-      </>);
-  }
-  const handle_apply = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast.error ('Please log in to apply for this job');
-      router.push (
-        `/login?redirect=${encodeURIComponent (`/jobs/${job_id || ''}`)}`); // Added null check for job_id;
-      return;
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      toast.error ('Only job seekers can apply for jobs');
-      return;
-    }
-    setIsApplyModalOpen (true);
-  }
-;
-  const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success ('Application submitted successfully!');
-    setIsApplyModalOpen (false);
-  }
-  const isOwnJob = user?.id === job.client_id;
-;
-  return (
-    <>;
-      <SEO;
-        title={`${job.title} - ${is_whitelabel ? brand_name : 'Zion AI Marketplace'}`}
-        description = {job.description.substring (0, 160), }
-      />;
-      <Header />;
-      <main className='container mx - auto px - 4 py - 8'>;
-        <div className='mb - 6'>;
-          <Button;
-            variant='outline';
-            size='sm';
-            on_click={() => router.push ('/careers')}          >;
-            ← Back to Jobs;
-          </Button>;
-        </div>;
-        <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6'>;
-          <div className='lg:col - span - 2'>;
-            <Card>;
-              <CardHeader>;
-                <div className='flex justify - between items - start'>;
-                  <div>;
-                    <CardTitle className='text - 2xl mb - 2'>{job.title}</CardTitle>;
-                    <div className='flex items - center text - muted - foreground'>;
-                      <Calendar className='mr - 2 h - 4 w - 4' />;
-                      <span>;
-                        Posted{' '}
-                        {formatDistanceToNow (new Date (job.created_at), {
-                          add_suffix: true,
-                        })}
-                      </span>;
-                    </div>;
-                  </div>;
-                  <Badge>{job.category}</Badge>;
-                </div>;
-              </CardHeader>;
-              <CardContent className='space - y-6'>;
-                <div>;
-                  <h3 className='font - semibold text - lg mb - 3'>;
-                    Job Description;
-                  </h3>;
-                  <div className='whitespace - pre - wrap'>{job.description}</div>;
-                </div>;
-                <div>;
-                  <h3 className='font - semibold text - lg mb - 3'>;
-                    Required Skills;
-                  </h3>;
-                  <div className='flex flex - wrap gap - 2'>;
-                    {job.skills?.map ((skill: string, index: number) => (
-                      <Badge key={i} variant='secondary'>                        {skill}
-                      </Badge>))}
-                  </div>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </div>;
-          <div>;
-            <Card>;
-              <CardContent className='pt - 6 space - y-4'>;
-                <div className='flex items - start'>;
-                  <DollarSign className='mt - 1 h - 5 w - 5 text - muted - foreground' />;
-                  <div className='ml - 3'>;
-                    <p className='text - sm text - muted - foreground'>Budget</p>;
-                    <p className='font - medium'>{format_budget (job.budget)}</p>;
-                  </div>;
-                </div>;
-                <div className='flex items - start'>;
-                  <Clock className='mt - 1 h - 5 w - 5 text - muted - foreground' />;
-                  <div className='ml - 3'>;
-                    <p className='text - sm text - muted - foreground'>Deadline</p>;
-                    <p className='font - medium'>;
-                      {job.deadline;
-                        ? new Date (job.deadline).toLocaleDateString ();
-                        : 'Flexible'}
-                    </p>;
-                  </div>;
-                </div>;
-                <div className='flex items - start'>;
-                  <Briefcase className='mt - 1 h - 5 w - 5 text - muted - foreground' />;
-                  <div className='ml - 3'>;
-                    <p className='text - sm text - muted - foreground'>Job Type</p>;
-                    <p className='font - medium'>Freelance / Remote</p>;
-                  </div>;
-                </div>;
-                {!isOwnJob && (
-                  <Button;
-                    className='w - full mt - 4';
-                    on_click={handle_apply}
-                    disabled={isOwnJob}                  >;
-                    Apply Now;
-                  </Button>)}
-                {isOwnJob && (
-                  <div className='text - center p - 2 bg - muted rounded - md mt - 4'>;
-                    <p className='text - sm text - muted - foreground'>;
-                      This is your job posting;
-                    </p>;
-                  </div>)}
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </main>
               </CardContent>;
             </Card>;
           </div>;
         </div>;
       </main>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Job application modal */}
       {job && (;
         <ApplyToJobModal
           job={{
-
-            id: job && job.id,
-            title: job && job.title,
-            description: job && job.description,
-            company_name: job && job.company_name ?? 'Company',
-            budget: formatBudget(job && job.budget),
-            client_id: job && job.client_id,
-
+            id: job.id
+            title: job.title
+            description: job.description
+            company_name: job.company_name ?? 'Company'
+            budget: formatBudget(job.budget)
+            client_id: job.client_id
+            id: job.id,
+            title: job.title,
+            description: job.description,
+            company_name: job.company_name ?? "Company",
+            budget: formatBudget(job.budget),
+            client_id: job.client_id,
           }}
 
           isOpen={isApplyModalOpen}
@@ -811,20 +617,19 @@ const isOwnJob = user?.id === job.client id;
 }</>) ;
 }'";
 }
-
-=======
-
-
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
             id: job.id,
             title: job.title,
             description: job.description,
             company_name: job.company_name ?? "Company",
             budget: formatBudget(job.budget),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+            client_id: job.client_id}}
+          isOpen={isApplyModalOpen}
+          onClose={() => setIsApplyModalOpen(false)}
+        />;
+      )}
+    </>;
+  );
+}
+;

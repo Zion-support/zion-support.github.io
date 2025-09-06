@@ -1,8 +1,5 @@
-
-
+import { useState  } from 'react';
 import {useState} from 'react';
-
-
 import Head from 'next/head';
 
 
@@ -42,14 +39,11 @@ import Head from 'next/head';
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
   }
   async function broadcast() {
-
-
-  async function sendChat() {;
-    setStatus('Sending chat...');
-    const res = await fetch('/api/offworld/orbit?action=chat', {;
-      method: 'POST',;
-      headers: { 'content-type': 'application/json' },;
-      body: JSON && JSON.stringify({ from: 'anon', text: chat }),;
+    setStatus('Broadcasting manifesto...');
+    const res = await fetch('/api/offworld/ipfs?action=broadcast', {
+      method: 'POST'
+      headers: { 'content-type': 'application/json' }
+      body: JSON.stringify({ message: 'We build beyond platforms.' })
     });
     setStatus(res && res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON && JSON.stringify({ from: 'anon', text: chat }) }),;
     setStatus(res && res.ok ? 'Chat sent' : 'Chat failed');
@@ -276,76 +270,25 @@ function broadcast() {
         />;
         <button
           className='px-3 py-2 bg-black text-white rounded'
-
-          onClick={syncProfile}>;
-          Pin Profile to IPFS;
-        </button>;
-      </section>;
-=======
-
-    setStatus('Broadcasting manifesto...');
-
-
-=======
-    const res = await fetch('/api/offworld/ipfs?action=broadcast', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ message: 'We build beyond platforms.' }) }),
-    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-      <section className='space-y-2'>;
-        <h2 className='font-semibold'>Broadcast Manifesto</h2>;
+          onClick={syncProfile}
+        >
+          Pin Profile to IPFS
+        </button>
+      </section>
+      <section className='space-y-2'>
+        <h2 className='font-semibold'>Broadcast Manifesto</h2>
         <button
           className='px-3 py-2 bg-indigo-600 text-white rounded'
-          onClick={broadcast}>;
-          Broadcast;
-        </button>;
-      </section>;
-
+          onClick={broadcast}
+        >
+          Broadcast
+        </button>
+      </section>
       {status && <p className='text-sm text-gray-700'>{status}</p>}
-    </div>;
-  );
+    </div>
+);
 }
+    setStatus('Broadcasting manifesto...');
 
-
-=======
-        <button;
-          className='px - 3 py - 2 bg - black text - white rounded';
-          on_click={cast_vote}
-        >;
-          Vote;
-        </button>;
-      </section>;
-      <section className='space - y-2'>;
-        <h2 className='font - semibold'>Talent Profile Sync</h2>;
-        <input;
-          className='border p - 2 w - full';
-          placeholder='Name';
-          value={name}
-          on_change={e => set_name (e.target.value)}
-        />;
-        <input;
-          className='border p - 2 w - full';
-          placeholder='Skills (comma separated)';
-          value={skills}
-          on_change={e => set_skills (e.target.value)}
-        />;
-        <button;
-          className='px - 3 py - 2 bg - black text - white rounded';
-          on_click={sync_profile}
-        >;
-          Pin Profile to IPFS;
-        </button>;
-      </section>;
-      <section className='space - y-2'>;
-        <h2 className='font - semibold'>Broadcast Manifesto</h2>;
-        <button;
-          className='px - 3 py - 2 bg - indigo - 600 text - white rounded';
-          on_click={broadcast}
-        >;
-          Broadcast;
-        </button>;
-      </section>;
-      {status && <p className='text - sm text - gray - 700'>{status}</p>}
-    </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    setStatus('Broadcasting manifesto...');
