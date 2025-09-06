@@ -16,65 +16,12 @@ export default function DevOpsAutomationPage() {
   const features = [
     {
       icon: <GitBranch className='w-6 h-6' />,
-=======
-import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function DevOpsAutomationPage() {
   const features = [
     {
-<<<<<<< HEAD
-      icon: <GitBranch className='w-6 h-6' />,
-      title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment workflows';
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-    };
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and Kubernetes automation';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-    };
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Security Automation',
-      description: 'Automated security scanning and compliance checks',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-    };
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Performance Monitoring',
-      description: 'Real-time performance insights and optimization',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-    },
-      title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment workflows',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-    },
-    {
-      icon: <Zap className='w-6 h-6' />,
-      title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and Kubernetes automation',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-    },
-    {
-      icon: <Shield className='w-6 h-6' />,
-      title: 'Security Automation',
-      description: 'Automated security scanning and compliance checks',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-    },
-    {
-      icon: <BarChart3 className='w-6 h-6' />,
-      title: 'Performance Monitoring',
-      description: 'Real-time performance insights and optimization',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-    },  ];
-=======
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const pricingPlans = [
     {
@@ -94,16 +41,9 @@ export default function DevOpsAutomationPage() {
       cta: 'Start Free Trial',
       color: 'border-gray-600 hover:border-blue-500',
     },    {
-=======
-        'Up to 5 repositoriesBasic CI/CD pipelinesGitHub integrationEmail notificationsBasic security scanningCommunity support'
-      ];
-      popular: false,
-      cta: 'Start Free Trial',
-      color: 'border-gray-600 hover:border-blue-500'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       name: 'Professional',
       price: '$129',
       period: '/month',
@@ -122,16 +62,9 @@ export default function DevOpsAutomationPage() {
       cta: 'Start Free Trial',
       color: 'border-blue-500 hover:border-blue-400',
     },    {
-=======
-        'Up to 25 repositoriesAdvanced CI/CD workflowsMulti-cloud deploymentSlack & Teams integrationAdvanced security suitePriority supportCustom pipelinesTeam collaboration'
-      ];
-      popular: true,
-      cta: 'Start Free Trial',
-      color: 'border-blue-500 hover:border-blue-400'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       name: 'Enterprise',
       price: '$399',
       period: '/month',
@@ -150,16 +83,8 @@ export default function DevOpsAutomationPage() {
       cta: 'Contact Sales',
       color: 'border-gray-600 hover:border-blue-500',
     },  ];
-=======
-        'Unlimited repositoriesEnterprise CI/CDAdvanced IaC automationCustom integrations24/7 dedicated supportSLA guaranteesOn-premise optionsCustom security policies'
-      ];
-      popular: false,
-      cta: 'Contact Sales',
-      color: 'border-gray-600 hover:border-blue-500'
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const marketComparison = [
     {
@@ -170,13 +95,9 @@ export default function DevOpsAutomationPage() {
       pros: ['GitHub native', 'Good free tier'],
       cons: ['Expensive for teams', 'Limited features'],
     },    {
-=======
-      pros: ['GitHub nativeGood free tier'],
-      cons: ['Expensive for teamsLimited features']
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       competitor: 'GitLab CI/CD',
       pricing: '$19/user/month',
       repositories: 'Unlimited',
@@ -184,13 +105,9 @@ export default function DevOpsAutomationPage() {
       pros: ['Integrated platform', 'Good CI/CD'],
       cons: ['User-based pricing', 'Limited integrations'],
     },    {
-=======
-      pros: ['Integrated platformGood CI/CD'],
-      cons: ['User-based pricingLimited integrations']
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       competitor: 'Jenkins',
       pricing: 'Free',
       repositories: 'Unlimited',
@@ -198,13 +115,8 @@ export default function DevOpsAutomationPage() {
       pros: ['Completely free', 'Highly customizable'],
       cons: ['Requires maintenance', 'No managed service'],
     },  ];
-=======
-      pros: ['Completely freeHighly customizable'],
-      cons: ['Requires maintenanceNo managed service']
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const testimonials = [
     {
@@ -229,41 +141,18 @@ export default function DevOpsAutomationPage() {
         'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.',
       rating: 5,
     },  ];
-=======
-      content: 'Zion DevOps reduced our deployment time from 2 hours to 15 minutes. The automation is incredible and the pricing is fair.',
-      rating: 5
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
       name: 'Sarah Johnson',
       role: 'Engineering Manager',
       company: 'CloudWorks',
-<<<<<<< HEAD
-      content:
-        'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.',
-      rating: 5,
-    },
-=======
-      content: 'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.',
-      rating: 5
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
       name: 'Robert Davis',
       role: 'Site Reliability Engineer',
       company: 'ScaleTech',
-<<<<<<< HEAD
-      content:
-        'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.',
-      rating: 5,
-    },
-=======
-      content: 'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.',
-      rating: 5
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const automationExamples = [
     {
@@ -287,45 +176,23 @@ export default function DevOpsAutomationPage() {
       icon: '🏗️',
       color: 'from-purple-500 to-indigo-600',
     },  ];
-=======
-      color: 'from-green-500 to-emerald-600'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
       title: 'Security Scanning',
       description: 'Automated vulnerability detection and compliance checks',
       icon: '🔒',
-<<<<<<< HEAD
-      color: 'from-red-500 to-pink-600',
-    },
-=======
-      color: 'from-red-500 to-pink-600'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
       title: 'Deployment Automation',
       description: 'Zero-downtime deployments with rollback capabilities',
       icon: '🚀',
-<<<<<<< HEAD
-      color: 'from-blue-500 to-cyan-600',
-    },
-=======
-      color: 'from-blue-500 to-cyan-600'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
       title: 'Infrastructure Management',
       description: 'Automated scaling and resource optimization',
       icon: '🏗️',
-<<<<<<< HEAD
-      color: 'from-purple-500 to-indigo-600',
-    },
-=======
-      color: 'from-purple-500 to-indigo-600'
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -347,7 +214,7 @@ export default function DevOpsAutomationPage() {
           content='Professional DevOps automation starting at $39/month. CI/CD pipelines, infrastructure as code, and security automation.'
         />
         <meta name='twitter:card' content='summary_large_image' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       </Head>
 
       <div className='min-h-screen bg-black'>
@@ -385,63 +252,14 @@ export default function DevOpsAutomationPage() {
                 variant="primary"
                 size="lg"
                 className="bg-blue-600 hover:bg-blue-700 text-white"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
               >
                 Start Free Trial
               </Button>
               <Button
-<<<<<<< HEAD
-                href='#demo'
-                variant='outline'
-                size='lg'
-                className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-                href="#demo"
-                variant="outline"
-                size="lg"
-                className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                Watch Demo
-              </Button>
-            </div>
-          </div>
-        </section>
 
-        {/* Features Section */}
-        <section className='py-24 bg-gray-900'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-20'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                Complete DevOps Automation Suite
-              </h2>
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-                Everything you need to automate your development and deployment
-                processes.
-              </p>
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {features.map((feature, index) => (
-                <Card
-                  key={index}
-                  className='text-center group hover:scale-105 transition-transform duration-300'
-                >
-                  <div
-                    className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 ${feature.color}`}
-                  >
-                    {feature.icon}
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-4'>
-                    {feature.title}
-                  </h3>
-                  <p className='text-gray-400'>{feature.description}</p>                </Card>
-=======
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-400">{feature.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </Card>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               ))}
             </div>
           </div>
@@ -452,7 +270,7 @@ export default function DevOpsAutomationPage() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 What You Can Automate
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -474,12 +292,9 @@ export default function DevOpsAutomationPage() {
                     {example.title}
                   </h3>
                   <p className='text-gray-400'>{example.description}</p>                </Card>
-=======
-                  <h3 className="text-xl font-semibold text-white mb-4">{example.title}</h3>
-                  <p className="text-gray-400">{example.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </Card>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               ))}
             </div>
           </div>
@@ -490,7 +305,7 @@ export default function DevOpsAutomationPage() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 Simple, Transparent Pricing
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -499,11 +314,9 @@ export default function DevOpsAutomationPage() {
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {pricingPlans.map((plan, index) => (
-=======
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               {pricingPlans.map((plan, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <Card
                   key={index}
                   className={`relative p-8 ${plan.color} transition-all duration-300 hover:scale-105 ${
@@ -516,42 +329,14 @@ export default function DevOpsAutomationPage() {
                       </span>
                     </div>
                   )}
-=======
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         Most Popular
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                  <div className='text-center'>
-                    <h3 className='text-2xl font-bold text-white mb-2'>
-                      {plan.name}
-                    </h3>
-                    <div className='mb-6'>
-                      <span className='text-4xl font-bold text-white'>
-                        {plan.price}
-                      </span>
-                      <span className='text-gray-400'>{plan.period}</span>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                    </div>
-                    <p className='text-gray-300 mb-8'>{plan.description}</p>
-                    <ul className='text-left space-y-3 mb-8'>
-                      {plan.features.map((feature, featureIndex) => (
-                        <li
-                          key={featureIndex}
-                          className='flex items-center text-gray-300'
-                        >
-                          <Check className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                          {feature}
-=======
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           {feature}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </li>
                       ))}
                     </ul>
@@ -562,14 +347,9 @@ export default function DevOpsAutomationPage() {
                       className={`w-full ${
                         plan.popular
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-=======
-                      size="lg"
-                      className={`w-full ${
-                        plan.popular 
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       }`}
                     >
                       {plan.cta}
@@ -586,7 +366,7 @@ export default function DevOpsAutomationPage() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 How We Compare to the Competition
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -605,9 +385,9 @@ export default function DevOpsAutomationPage() {
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>
                     <div className="flex items-center justify-center mb-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                       {[...Array(5)].map((_, i) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         <Star
                           key={i}
                           className={`w-5 h-5 ${
@@ -619,7 +399,7 @@ export default function DevOpsAutomationPage() {
                       ))}
                     </div>
                     <p className='text-sm text-gray-400'>{competitor.rating}</p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </div>
                   <div className='mb-4'>
                     <p className='text-lg font-semibold text-white mb-1'>
@@ -638,12 +418,9 @@ export default function DevOpsAutomationPage() {
                         {competitor.pros.map((pro, proIndex) => (
                           <li key={proIndex} className='flex items-center'>
                             <Check className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                            {pro}
-=======
-                          <li key={proIndex} className="flex items-center">
-                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                             {pro}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                           </li>
                         ))}
                       </ul>
@@ -658,15 +435,9 @@ export default function DevOpsAutomationPage() {
                             <span className='w-4 h-4 text-red-400 mr-2 flex-shrink-0'>
                               ×
                             </span>                            {con}
-=======
-                      <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>
-                      <ul className="text-sm text-gray-300 space-y-1">
-                        {competitor.cons.map((con, conIndex) => (
-                          <li key={conIndex} className="flex items-center">
-                            <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0">×</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                             {con}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                           </li>
                         ))}
                       </ul>
@@ -683,7 +454,7 @@ export default function DevOpsAutomationPage() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 Trusted by DevOps Teams Worldwide
               </h2>
             </div>
@@ -709,13 +480,9 @@ export default function DevOpsAutomationPage() {
                     <p className='text-sm text-blue-400'>
                       {testimonial.company}
                     </p>                  </div>
-=======
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>
-                    <p className="text-sm text-blue-400">{testimonial.company}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </Card>
               ))}
             </div>
@@ -726,7 +493,7 @@ export default function DevOpsAutomationPage() {
         <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Ready to Automate Your DevOps?
             </h2>
             <p className='text-xl text-blue-100 mb-12'>
@@ -750,33 +517,8 @@ export default function DevOpsAutomationPage() {
                 variant="secondary"
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
               >
                 Start Free Trial
               </Button>
               <Button
-<<<<<<< HEAD
-                href='/contact'
-                variant='outline'
-                size='lg'
-                className='border-white text-white hover:bg-white hover:text-blue-600'
-                href="/contact"
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-600"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                Contact Sales
-              </Button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

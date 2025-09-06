@@ -71,9 +71,8 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye, Globe2;
   Zap, Rocket, Brain, Sparkles, ShieldCheck, Target;
   Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -151,14 +150,9 @@ const contactInfo = {
 }</div> /> </div> {
   /* Contact Button */ 
 }<motion.div initial= {  {
-=======
-  website: 'https://ziontechgroup.com'
-};
 
-const serviceCategories = [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '🚀 2029 Futuristic AI Services',
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
@@ -196,9 +190,9 @@ const serviceCategories = [
       { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '⚛️ 2029 Quantum & Emerging Tech',
     icon: Globe,
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
@@ -236,9 +230,9 @@ const serviceCategories = [
       { name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio', description: 'Quantum-enhanced creativity', price: '$1,999/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '🏙️ 2029 Enterprise IT Solutions',
     icon: Cpu,
     color: 'from-blue-600 via-cyan-600 to-teal-600',
@@ -276,9 +270,9 @@ const serviceCategories = [
       { name: 'Smart Financial Management Platform', href: '/services/smart-financial-management-platform', description: 'AI-powered financial planning', price: '$2,999/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '🌌 2029 Space & Metaverse Tech',
     icon: Rocket,
     color: 'from-teal-600 via-emerald-600 to-green-600',
@@ -316,9 +310,9 @@ const serviceCategories = [
       { name: 'Virtual Event Hologram Platform', href: '/services/virtual-event-hologram-platform', description: 'Holographic event experiences', price: '$2,999/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '🎯 2029 Innovative Micro SAAS',
     icon: Target,
     color: 'from-green-600 via-yellow-600 to-orange-600',
@@ -356,9 +350,9 @@ const serviceCategories = [
       { name: 'Intelligent Sales Optimization', href: '/services/intelligent-sales-optimization', description: 'AI-powered sales intelligence', price: '$1,799/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '🔬 2029 Research & Development',
     icon: Eye,
     color: 'from-orange-600 via-red-600 to-pink-600',
@@ -370,13 +364,8 @@ const serviceCategories = [
       'Biotech Research Suite',
     ],
   },];
-=======
-      'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite'
-    ]
-  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -389,11 +378,8 @@ const mainNavigation = [
   { name: 'Innovations', href: '/innovations', icon: Sparkles },
   { name: 'About', href: '/about', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle },];
-=======
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -402,11 +388,8 @@ const quickLinks = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
   { name: 'Support', href: '/support', icon: MessageCircle },];
-=======
-  { name: 'Support', href: '/support', icon: MessageCircle }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function UltraFuturisticNavigation2029V2() {
   const [isOpen, setIsOpen] = useState(false);
@@ -421,20 +404,15 @@ export default function UltraFuturisticNavigation2029V2() {
       {/* Main Navigation Bar */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-20'>          {/* Logo */}
-=======
-    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
-      {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           {/* Logo */}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className='flex-shrink-0'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -450,11 +428,9 @@ export default function UltraFuturisticNavigation2029V2() {
                 <p className='text-xs text-gray-400'>
                   Future Technology Solutions
                 </p>              </div>
-=======
-                <p className="text-xs text-gray-400">Future Technology Solutions</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </Link>
           </motion.div>
 
@@ -464,45 +440,20 @@ export default function UltraFuturisticNavigation2029V2() {
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-=======
-          <div className="hidden lg:flex items-center space-x-8">
-            {mainNavigation.map((item) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                transition={{
-                  duration: 0.5,
-                  delay: mainNavigation.indexOf(item) * 0.1,
-                }}
-                className='relative group'
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              >
-                <Link
-                  href={item.href}
-                  className='flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10'
-                >
-                  <item.icon className='w-4 h-4' />
-                  <span>{item.name}</span>
-                </Link>
 
-                {/* Hover effect */}
-                <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />              </motion.div>
-=======
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             ))}
           </div>
 
           {/* Right side - Contact & Search */}
           <div className='hidden lg:flex items-center space-x-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -512,12 +463,9 @@ export default function UltraFuturisticNavigation2029V2() {
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
                 className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />
-=======
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </div>
 
             {/* Contact Button */}
@@ -531,21 +479,16 @@ export default function UltraFuturisticNavigation2029V2() {
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'
               >
                 <MessageCircle className='w-4 h-4 mr-2' />                Get Started
-=======
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
-                <MessageCircle className="w-4 h-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 Get Started
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </Link>
             </motion.div>
           </div>
 
           {/* Mobile menu button */}
           <div className='lg:hidden'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             <button
               onClick={toggleMenu}
               className='p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300'
@@ -555,11 +498,9 @@ export default function UltraFuturisticNavigation2029V2() {
               ) : (
                 <Menu className='w-6 h-6' />
               )}            </button>
-=======
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         </div>
       </div>
@@ -573,7 +514,7 @@ export default function UltraFuturisticNavigation2029V2() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <div className='px-4 py-6 space-y-4'>
               {/* Mobile Search */}
@@ -596,36 +537,19 @@ export default function UltraFuturisticNavigation2029V2() {
                     className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
                   >
                     <item.icon className='w-5 h-5' />                    <span>{item.name}</span>
-=======
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 />
               </div>
 
               {/* Mobile Navigation Links */}
-<<<<<<< HEAD
-              <div className='space-y-2'>
-                {mainNavigation.map(item => (
-=======
-              <div className="space-y-2">
-                {mainNavigation.map((item) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={closeMenu}
-<<<<<<< HEAD
-                    className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
-                  >
-                    <item.icon className='w-5 h-5' />
-=======
-                    className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
-                  >
-                    <item.icon className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     <span>{item.name}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </Link>
                 ))}
               </div>
@@ -648,24 +572,14 @@ export default function UltraFuturisticNavigation2029V2() {
                 <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>
                 <div className="space-y-2">
                   {quickLinks.map((item) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                     <Link
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
-<<<<<<< HEAD
-                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
-                    >
-                      <item.icon className='w-4 h-4' />
-                      <span className='text-sm'>{item.name}</span>
-=======
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
-                    >
-                      <item.icon className="w-4 h-4" />
-                      <span className="text-sm">{item.name}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   ))}
                 </div>
               </div>
@@ -679,7 +593,7 @@ export default function UltraFuturisticNavigation2029V2() {
                   <div className='flex items-center space-x-3 text-gray-400'>
                     <Phone className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.mobile}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </div>
                   <div className='flex items-center space-x-3 text-gray-400'>
                     <Mail className='w-4 h-4' />
@@ -688,13 +602,9 @@ export default function UltraFuturisticNavigation2029V2() {
                   <div className='flex items-center space-x-3 text-gray-400'>
                     <MapPin className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.address}</span>                  </div>
-=======
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <MapPin className="w-4 h-4" />
-                    <span className="text-sm">{contactInfo.address}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
               </div>
             </div>
@@ -711,7 +621,7 @@ export default function UltraFuturisticNavigation2029V2() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
               <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
@@ -738,35 +648,14 @@ export default function UltraFuturisticNavigation2029V2() {
                           key={service.name}
                           href={service.href}
                           className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group'
-=======
-                    
-                    <div className="space-y-3">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       {category.services.map((service, index) => (
                         <Link
                           key={service.name}
                           href={service.href}
-<<<<<<< HEAD
-                          className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                        >
-                          <div className='flex justify-between items-start'>
-                            <div>
-                              <h4 className='font-medium text-white group-hover:text-cyan-400 transition-colors duration-300'>
-                                {service.name}
-                              </h4>
-                              <p className='text-sm text-gray-400 mt-1'>
-                                {service.description}
-                              </p>
-                            </div>
-                            <span className='text-sm font-semibold text-cyan-400'>
-                              {service.price}
-                            </span>                          </div>
-=======
-                            <span className="text-sm font-semibold text-cyan-400">{service.price}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </Link>
                       ))}
                     </div>
@@ -780,7 +669,3 @@ export default function UltraFuturisticNavigation2029V2() {
     </nav>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

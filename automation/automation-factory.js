@@ -8,7 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 ;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = \`[\${timestamp}] \${message}\\n\`; console.log(message); fs.appendFileSync(this.logFile, logMessage)};
 ; async analyzeCodeQuality() {; try {; this.log("Starting code quality analysis...");
@@ -25,21 +25,7 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, ma
 ; walkDir(projectRoot); return files};
 ; saveMetrics() {; const metricsFile = path.join(__dirname, "logs", "code-quality-metrics.json"); fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2))}};
 ;
-<<<<<<< HEAD
-const monitor = new CodeQualityMonitor();
-monitor.analyzeCodeQuality().then(metrics = > {; if (metrics) {; console.log("Metrics: ", metrics)}}),`;
-; const scriptPath = path.join(__dirname, "code-quality-monitor.js"); fs.writeFileSync(scriptPath, script);
-; this.scripts.set("code-quality", {; file: "code-quality-monitor.js", description: "Enhanced code quality monitoring with detailed metrics", path: scriptPath, status: "available", lastRun: null, successCount: 0, errorCount: 0});
-; this.log("Generated enhanced code quality monitor script")};
-; generatePerformanceOptimizer() {; const script = `#!/usr/bin/env node;const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-;
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 class PerformanceOptimizer {; constructor() {; this.optimizations = []; this.logFile = path.join(__dirname, "logs", "performance-optimizer.log")};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = \`[\${timestamp}] \${message}\\n\`; console.log(message); fs.appendFileSync(this.logFile, logMessage)};
 ; async optimizePerformance() {; try {; this.log("Starting performance optimization...");
@@ -77,8 +63,3 @@ optimizer.optimizePerformance().then(report = > {; if (report) {; console.log("P
 ; child.on("error", (error) = > {; script.errorCount++; this.log(`Script "${scriptName}" error: ${error.message}`, "ERROR"); this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) {; script.errorCount++; this.log(`Failed to start script "${scriptName}": ${error.message}`, "ERROR"); this.runningScripts.delete(scriptName); this.saveStatus(); return false}};
 ; async runAllScripts() {; this.log("Running all available scripts..."); const results = [];
 ; for (const [name, script] of this.scripts) {; if (script.status = = = "available") {; const success = await this.runScript(name); results.push({ name, success })};
-<<<<<<< HEAD
-;      };
-      };
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

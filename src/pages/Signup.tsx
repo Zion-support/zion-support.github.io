@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { useRouter } from 'next/router'; // Changed from react-router-dom
-=======
-import { useRouter } from 'next/router', // Changed from react-router-dom
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -18,10 +14,7 @@ import { AlertCircle, CheckCircle, Mail } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { AuthLayout } from '@/layout';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 const SignupSchema = Yup.object({
   name: Yup.string().required('Name is required'),
   email: Yup.string().email('Invalid email').required('Email is required'),
@@ -85,16 +78,6 @@ export default function Signup() {
     }
   };
 
-<<<<<<< HEAD
-  useEffect(() => {
-    performHealthCheck();
-  }, []);
-=======
-  useEffect((,) => {
-    performHealthCheck()
-  }, []),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -104,15 +87,7 @@ export default function Signup() {
       terms: false,
     },
     validationSchema: SignupSchema,
-<<<<<<< HEAD
-    onSubmit: async (values, { setErrors }) => {
-      logInfo('Form submission started with:', {
-        name: values.name,
-=======
-    onSubmit: async (values, { setErrors },) => {
-      logInfo('Form submission started with:', { 
-        name: values.name, 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
         email: values.email,
         hasPassword: !!values.password,
         isPartnerSignup,
@@ -133,43 +108,7 @@ export default function Signup() {
             source: signupSource,
             metadata: {
               partnerProgram: true,
-<<<<<<< HEAD
-              signupType: 'partner',
-            },
-          }),
-        };
 
-        logInfo('Making API request to /api/auth/register with:', {
-          ...requestData,
-          password: '[REDACTED]',
-        });
-
-        const res = await axios.post('/api/auth/register', requestData);
-
-        logInfo('API response received:', {
-          status: res.status,
-          data: res.data,
-        });
-
-=======
-              signupType: 'partner'
-            ,}
-          })
-        },
-        
-        logInfo('Making API request to /api/auth/register with:', { 
-          ...requestData, 
-          password: '[REDACTED]' 
-        }),
-        
-        const res = await axios.post('/api/auth/register', requestData),
-        
-        logInfo('API response received:', { 
-          status: res.status, 
-          data: res.data 
-        }),
-        
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         if (res.status === 201) {
           const data = res.data;
 
@@ -206,15 +145,7 @@ export default function Signup() {
             });
 
             // Redirect to appropriate page after a short delay
-<<<<<<< HEAD
-            setTimeout(() => {
-              router.push(isPartnerSignup ? '/partners' : '/login');
-            }, 2000);
-=======
-            setTimeout((,) => {
-              router.push(isPartnerSignup ? '/partners' : '/login')
-            }, 2000)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           }
         }
       } catch (err: any) {
@@ -291,13 +222,6 @@ export default function Signup() {
     },
   });
 
-<<<<<<< HEAD
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-=======
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>,) => {
-    e.preventDefault(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     formik.setTouched({
       name: true,
       email: true,
@@ -311,19 +235,7 @@ export default function Signup() {
   // After successful registration, guide the user to the verification screen
   useEffect((,) => {
     if (emailVerificationRequired && formik.values.email) {
-<<<<<<< HEAD
-      const timer = setTimeout(() => {
-        router.push(
-          `/verify-status?email=${encodeURIComponent(formik.values.email)}`
-        );
-      }, 3000);
-      return () => clearTimeout(timer);
-=======
-      const timer = setTimeout((,) => {
-        router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
-      }, 3000),
-      return () => clearTimeout(timer)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     }
     return undefined;
   }, [emailVerificationRequired, formik.values.email, router]);
@@ -356,176 +268,7 @@ export default function Signup() {
               </p>
             </div>
           )}
-<<<<<<< HEAD
-          <form onSubmit={handleFormSubmit} className='space-y-4' noValidate>
-            {/* Show Health Check Warning */}
-            {healthCheckError && (
-              <Alert
-                variant='destructive'
-                className='border-yellow-500 bg-yellow-50 text-yellow-900'
-=======
-          <form onSubmit={handleFormSubmit} className="space-y-4" noValidate>
-          {/* Show Health Check Warning */}
-          {healthCheckError && (
-            <Alert variant="destructive" className="border-yellow-500 bg-yellow-50 text-yellow-900">
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription className="flex items-center justify-between">
-                <span>{healthCheckError}. You can still try to sign up, but it may fail.</span>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  onClick = {performHealthCheck,}
-                  disabled = {healthCheckLoading,}
-                  className="ml-2 text-xs"
-                >
-                  {healthCheckLoading ? 'Checking...' : 'Retry'}
-                </Button>
-              </AlertDescription>
-            </Alert>
-          )}
-          
-          {/* Show Success message */}
-          {successMessage && (
-            <Alert className="border-green-500 bg-green-50 text-green-900" data-testid="success-alert">
-              {emailVerificationRequired ? <Mail className="h-4 w-4" /> : <CheckCircle className="h-4 w-4" />}
-              <AlertDescription>{successMessage}</AlertDescription>
-            </Alert>
-          )}
-          
-          {/* Show Error message */}
-          {errorMessage && (
-            <Alert variant="destructive" data-testid="error-alert">
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription>{errorMessage}</AlertDescription>
-            </Alert>
-          )}
-          
-          {emailVerificationRequired && (
-            <Alert className="border-blue-500 bg-blue-50 text-blue-900">
-              <Mail className="h-4 w-4" />
-              <AlertDescription>
-                Before you can log in, please click the verification link in the email we sent to <strong>{formik.values.email}</strong>.
-              </AlertDescription>
-            </Alert>
-          )}
-          
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium">
-              Full Name
-            </label>
-            <Input
-              id="name"
-              name="name"
-              data-testid="name-input"
-              value = {formik.values.name,}
-              onChange = {formik.handleChange,}
-              disabled = {loading || emailVerificationRequired,}
-            />
-            {formik.touched.name && formik.errors.name && (
-              <div className="text-red-500 text-sm">{formik.errors.name}</div>
-            )}
-          </div>
-          
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium">
-              Email address
-            </label>
-            <Input
-              id="email"
-              type="email"
-              name="email"
-              data-testid="email-input"
-              value = {formik.values.email,}
-              onChange = {formik.handleChange,}
-              disabled = {loading || emailVerificationRequired,}
-            />
-            {formik.touched.email && formik.errors.email && (
-              <div className="text-red-500 text-sm">{formik.errors.email}</div>
-            )}
-          </div>
-          
-          <div>
-            <label htmlFor="password" className="block text-sm font-medium">
-              Password
-            </label>
-          <Input
-            id="password"
-            type="password"
-            name="password"
-            data-testid="password-input"
-            value = {formik.values.password,}
-            onChange = {formik.handleChange,}
-            disabled = {loading || emailVerificationRequired,}
-          />
-          <PasswordStrengthMeter password={formik.values.password} />
-          {formik.touched.password && formik.errors.password && (
-            <div className="text-red-500 text-sm">{formik.errors.password}</div>
-          )}
-        </div>
-          
-          <div>
-            <label htmlFor="confirm" className="block text-sm font-medium">
-              Confirm Password
-            </label>
-            <Input
-              id="confirm"
-              type="password"
-              name="confirm"
-              data-testid="confirm-password-input"
-              value = {formik.values.confirm,}
-              onChange = {formik.handleChange,}
-              disabled = {loading || emailVerificationRequired,}
-            />
-            {formik.touched.confirm && formik.errors.confirm && (
-              <div className="text-red-500 text-sm">{formik.errors.confirm}</div>
-            )}
-          </div>
-          
-          <div className="flex items-center space-x-2">
-            <input
-              id="terms"
-              name="terms"
-              type="checkbox"
-              data-testid="terms-checkbox"
-              checked = {formik.values.terms,}
-              onChange = {formik.handleChange,}
-              disabled = {loading || emailVerificationRequired,}
-            />
-            <label htmlFor="terms" className="text-sm">
-              I agree to the{' '}
-              <Link href="/terms" className="underline">Terms of Service</Link>{' '}
-              and{' '}
-              <Link href="/privacy" className="underline">Privacy Policy</Link>
-            </label>
-          </div>
-          {formik.touched.terms && formik.errors.terms && (
-            <div className="text-red-500 text-sm">{formik.errors.terms}</div>
-          )}
-          
-          {!emailVerificationRequired ? (
-            <Button 
-              type="submit" 
-              disabled = {loading,}
-              data-testid="signup-submit"
-              className = {healthCheckError ? 'bg-yellow-600 hover:bg-yellow-700' : '',}
-            >
-              {loading ? (
-                <>
-                  <LoadingSpinner size="sm" className="mr-2" />
-                  Creating Account...
-                </>
-              ) : (
-                healthCheckError ? 'Try Creating Account' : 'Create Account'
-              )}
-            </Button>
-          ) : (
-            <div className="space-y-2">
-              <Button
-                type="button"
-                variant="outline"
-                className="w-full"
-                onClick = {(,) => router.push('/login'),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               >
                 <AlertCircle className='h-4 w-4' />
                 <AlertDescription className='flex items-center justify-between'>
@@ -808,7 +551,3 @@ request: err.request ? 'Request made but no response': 'No request';
 }</form> </div>) ;
 }</div> </div> </AuthLayout>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

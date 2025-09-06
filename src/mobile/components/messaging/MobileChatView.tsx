@@ -13,19 +13,7 @@ import {
 import { cn } from '@/lib/utils';
 import { useRouter } from 'next/router';
 import { toast } from 'sonner';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import React, { useState } from "react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react';
-import { cn } from "@/lib/utils";
-import { useRouter } from 'next/router';
-import { toast } from "sonner";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface Message {
   id: string;
   content: string;
@@ -37,50 +25,13 @@ interface Message {
 
 interface MobileChatViewProps {
   contact: {
-<<<<<<< HEAD
-    id: string;
-    name: string;
-    avatar?: string;
-    status?: string;
-  };
-  messages: Message[];
-  onBack: () => void;
-  onSendMessage: (content: string) => void;
-
-export function MobileChatView({
-  contact,
-  messages,
-  onBack,
-  onSendMessage,
-}: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState('');
-  const router = useRouter();
-=======
-    id: string,
-    name: string,
-    avatar?: string,
-    status?: string
-  },
-  messages: Message[],
-  onBack: () => void,
-  onSendMessage: (content: string,) => void
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const handleSend = () => {
     if (newMessage.trim() !== '') {
       onSendMessage(newMessage);
       setNewMessage('');
     }
-<<<<<<< HEAD
-  };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-=======
-  },
-  
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSend();
@@ -112,17 +63,7 @@ export function MobileChatView({
       <header className='sticky top-0 z-10 bg-background border-b border-border'>
         <div className='flex items-center h-14 px-4'>
           <Button
-<<<<<<< HEAD
-            variant='ghost'
-            size='icon'
-            onClick={onBack}
-            aria-label='Go back'
-=======
-            variant="ghost"
-            size="icon"
-            onClick = {onBack,}
-            aria-label="Go back"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           >
             <ChevronLeft className='h-5 w-5' />
           </Button>
@@ -144,33 +85,13 @@ export function MobileChatView({
 
           <div className='flex'>
             <Button
-<<<<<<< HEAD
-              variant='ghost'
-              size='icon'
-              onClick={startAudioCall}
-              aria-label='Start audio call'
-=======
-              variant="ghost"
-              size="icon"
-              onClick = {startAudioCall,}
-              aria-label="Start audio call"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             >
               <Phone className='h-5 w-5' />
             </Button>
 
             <Button
-<<<<<<< HEAD
-              variant='ghost'
-              size='icon'
-              onClick={startVideoCall}
-              aria-label='Start video call'
-=======
-              variant="ghost"
-              size="icon"
-              onClick = {startVideoCall,}
-              aria-label="Start video call"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             >
               <Video className='h-5 w-5' />
             </Button>
@@ -181,43 +102,7 @@ export function MobileChatView({
           </div>
         </div>
       </header>
-<<<<<<< HEAD
 
-      <div className='flex-1 overflow-y-auto p-4 space-y-4'>
-        {messages.map(message => (
-          <div
-            key={message.id}
-            className={cn(
-              'flex',
-              message.isMe ? 'justify-end' : 'justify-start'
-            )}
-          >
-            <div
-              className={cn(
-                'max-w-[80%] rounded-2xl px-4 py-2',
-                message.isMe
-                  ? 'bg-primary text-primary-foreground rounded-tr-none'
-                  : 'bg-muted rounded-tl-none'
-              )}
-=======
-      
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages.map((message,) => (
-          <div 
-            key = {message.id,}
-            className = {cn(
-              "flex",
-              message.isMe ? "justify-end" : "justify-start"
-            ),}
-          >
-            <div 
-              className = {cn(
-                "max-w-[80%] rounded-2xl px-4 py-2",
-                message.isMe 
-                  ? "bg-primary text-primary-foreground rounded-tr-none" 
-                  : "bg-muted rounded-tl-none"
-              ),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               <p>{message.content}</p>
               <div
@@ -247,35 +132,11 @@ export function MobileChatView({
           </Button>
 
           <Input
-<<<<<<< HEAD
-            value={newMessage}
-            onChange={e => setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder='Type a message...'
-            className='flex-1'
-=======
-            value = {newMessage,}
-            onChange = {(e,) => setNewMessage(e.target.value),}
-            onKeyDown = {handleKeyDown,}
-            placeholder="Type a message..."
-            className="flex-1"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           />
 
           <Button
-<<<<<<< HEAD
-            size='icon'
-            onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'
-=======
-            size="icon"
-            onClick = {handleSend,}
-            disabled = {!newMessage.trim(),}
-            className = {!newMessage.trim() ? "opacity-50" : "",}
-            aria-label="Send message"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           >
             <Send className='h-5 w-5' />
           </Button>
@@ -283,7 +144,3 @@ export function MobileChatView({
       </div>
     </div>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

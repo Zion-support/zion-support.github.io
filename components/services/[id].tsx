@@ -28,9 +28,9 @@ export default function ServiceDetailPage() {
           <p className="text-gray-400 mb-6">The requested service could not be found.</p>
           <Button href="/services" variant="primary">
             <ArrowLeft className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
             Back to Services
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </Button>
         </div>
       </div>
@@ -61,18 +61,13 @@ export default function ServiceDetailPage() {
           <p className="text-gray-400 mb-6">The requested service "{id}" could not be found.</p>
           <Button href="/services" variant="primary">
             <ArrowLeft className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
             Back to Services
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
-    );
-=======
-    )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -85,7 +80,7 @@ export default function ServiceDetailPage() {
         />
         <meta property='og:description' content={service.description} />
         <meta name='twitter:card' content='summary_large_image' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       </Head>
 
       <div className='min-h-screen bg-black'>
@@ -106,24 +101,14 @@ export default function ServiceDetailPage() {
                 variant='primary'
                 size='sm'
                 icon={<ExternalLink className='w-4 h-4' />}              >
-=======
-                <ArrowLeft className="w-4 h-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 Back to Services
               </Button>
               <Button
                 href={service.website}
-<<<<<<< HEAD
-                variant='primary'
-                size='sm'
-                icon={<ExternalLink className='w-4 h-4' />}
-=======
-                variant="primary"
-                size="sm"
-                icon={<ExternalLink className="w-4 h-4" />}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 Visit Service
               </Button>
             </div>
@@ -137,7 +122,7 @@ export default function ServiceDetailPage() {
         <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Looking for Something Else?
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
@@ -161,33 +146,8 @@ export default function ServiceDetailPage() {
                 variant="primary"
                 size="lg"
                 className="shadow-2xl shadow-blue-500/25"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
               >
                 View All Services
               </Button>
               <Button
-<<<<<<< HEAD
-                href='/contact'
-                variant='outline'
-                size='lg'
-                className='border-white/20 text-white hover:border-white/40'
-                href="/contact"
-                variant="outline"
-                size="lg"
-                className="border-white/20 text-white hover:border-white/40"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                Get Custom Solution
-              </Button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

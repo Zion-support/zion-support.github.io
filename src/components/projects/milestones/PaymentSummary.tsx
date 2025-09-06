@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-};
-import React from 'react';
-import { Milestone } from '@/hooks/useMilestones';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CreditCard } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
-=======
-
-import React from 'react';
-import { Milestone } from '@/hooks/useMilestones';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CreditCard } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface PaymentSummaryProps {
   milestones: Milestone[],
   paymentTerms: string | null
@@ -20,22 +5,14 @@ interface PaymentSummaryProps {
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {
   const totalPayment = milestones.reduce(
-<<<<<<< HEAD
-    (sum, m) => sum + parseFloat(m.amount.toString());
-=======
-    (sum, m,) => sum + parseFloat(m.amount.toString()), 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     0
   ).toFixed(2);
-  
+
   const paidAmount = milestones
     .filter(m => m.status === 'paid')
     .reduce(
-<<<<<<< HEAD
-      (sum, m) => sum + parseFloat(m.amount.toString());
-=======
-      (sum, m,) => sum + parseFloat(m.amount.toString()), 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
       0
     ).toFixed(2);
 
@@ -54,14 +31,14 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
               ${totalPayment}
             </p>
           </div>
-          
+
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
               {paymentTerms || "Not specified"}
             </p>
           </div>
-          
+
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
@@ -74,6 +51,3 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
   )
 };
 '"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

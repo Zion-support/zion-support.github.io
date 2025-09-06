@@ -1,23 +1,13 @@
- canvas.width = window.innerWidth;
+canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationId: number;
 let particles: Array< {
-  
 
 const UltraFuturisticBackground2030: React.FC<
   UltraFuturisticBackground2030Props
 > = ({ children }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);
-=======
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraFuturisticBackground2030Props {
-  children: React.ReactNode
-}
 
-const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props> = ({ children }) => {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const canvasRef = useRef<HTMLCanvasElement>(null);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -45,19 +35,16 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
       size: number,
       color: string,
       opacity: number
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
     }> = [];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Initialize particles
     const initParticles = () => {
       particles = [];
       for (let i = 0; i < 150; i++) {        particles.push({
-=======
-      for (let i = 0, i < 150, i++) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         particles.push({
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 0.5,
@@ -68,13 +55,9 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
           ],
           opacity: Math.random() * 0.8 + 0.2,
         });      }
-=======
-          color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'][Math.floor(Math.random() * 5)],
-          opacity: Math.random() * 0.8 + 0.2
-        })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     };
 
     const animate = () => {
@@ -105,19 +88,16 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             const distance = Math.sqrt(
               Math.pow(particle.x - otherParticle.x, 2) +
                 Math.pow(particle.y - otherParticle.y, 2)            );
-=======
-              Math.pow(particle.x - otherParticle.x, 2) + 
-              Math.pow(particle.y - otherParticle.y, 2)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             if (distance < 100) {
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.strokeStyle = particle.color;
               ctx.globalAlpha = ((100 - distance) / 100) * 0.3;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               ctx.lineWidth = 0.5;
               ctx.stroke();
             }
@@ -127,11 +107,8 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
 
       ctx.globalAlpha = 1;
       animationId = requestAnimationFrame(animate);    };
-=======
-      animationId = requestAnimationFrame(animate)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     initParticles();
     animate();
@@ -140,11 +117,8 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       initParticles();    };
-=======
-      initParticles()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     window.addEventListener('resize', handleResize);
 
@@ -152,7 +126,7 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
       cancelAnimationFrame(animationId);
       window.removeEventListener('resize', handleResize);
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   }, []);
 
   return (
@@ -175,11 +149,7 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
           style={{
             clipPath:
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-=======
-            scale: [1, 1.1, 1];
-            opacity: [0.3, 0.6, 0.3]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           }}
           animate={{
             rotate: 360,
@@ -189,7 +159,7 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             duration: 20,
             repeat: Infinity,
             ease: 'linear',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           }}
         />
 
@@ -207,21 +177,14 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             duration: 25,
             repeat: Infinity,
             ease: 'linear',          }}
-=======
-            scale: [1, 0.9, 1];
-            opacity: [0.3, 0.6, 0.3]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
           transition={{
             duration: 25,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'linear',
-=======
-            ease: "linear"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         />
 
         {/* Floating Circles */}
@@ -245,47 +208,24 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             duration: 10,
             repeat: Infinity,
             ease: 'easeInOut',          }}
-=======
-          className="absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40"
-          animate={{
-            y: [0, -20, 0];
-            opacity: [0.4, 0.8, 0.4]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
         />
 
         <motion.div
-<<<<<<< HEAD
-          className='absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-400/40'
-          animate={{
-            y: [0, 20, 0],
-            opacity: [0.4, 0.8, 0.4],
-=======
-          className="absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-400/40"
-          animate={{
-            y: [0, 20, 0];
-            opacity: [0.4, 0.8, 0.4]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         />
 
         {/* Animated Lines */}
@@ -309,53 +249,30 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             duration: 8,
             repeat: Infinity,
             ease: 'easeInOut',          }}
-=======
-          className="absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent"
-          animate={{
-            height: [32, 64, 32];
-            opacity: [0.3, 0.8, 0.3]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
         />
 
         <motion.div
-<<<<<<< HEAD
-          className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent'
-          animate={{
-            height: [24, 48, 24],
-            opacity: [0.3, 0.8, 0.3],
-=======
-          className="absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent"
-          animate={{
-            height: [24, 48, 24];
-            opacity: [0.3, 0.8, 0.3]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         />
       </div>
 
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         {/* Top gradient */}
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />
 
@@ -386,23 +303,17 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
               y: [0, -100, 0],
               opacity: [0, 1, 0],
               scale: [0, 1, 0],            }}
-=======
-              y: [0, -100, 0];
-              opacity: [0, 1, 0];
-              scale: [0, 1, 0]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
               ease: 'easeInOut',            }}
-=======
-              ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           />
         ))}
       </div>
@@ -412,14 +323,10 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />
         <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       </div>
     </div>
   );
 };
 
 export default UltraFuturisticBackground2030;
-=======
-export default UltraFuturisticBackground2030;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

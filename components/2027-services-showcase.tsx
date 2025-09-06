@@ -36,15 +36,14 @@ import {
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud, 
   Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 export default function ServicesShowcase2027() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -55,22 +54,7 @@ export default function ServicesShowcase2027() {
   const sortOptions = [
     { value: 'name', label: 'Sort by Name' },
     { value: 'price', label: 'Sort by Price' },
-<<<<<<< HEAD
-    { value: 'roi', label: 'Sort by ROI' },
-  ];
 
-  const allServices = [
-    ...cuttingEdge2027Innovations,
-    ...practicalMicroSaas2027,
-=======
-    { value: 'roi', label: 'Sort by ROI' }
-  ];
-
-  const allServices = [
-    ...cuttingEdge2027Innovations;
-    ...practicalMicroSaas2027
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   ];
 
   // Filter services based on search and category
@@ -94,22 +78,8 @@ export default function ServicesShowcase2027() {
         parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
 
     return matchesSearch && matchesCategory && matchesPrice;  });
-=======
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-    
-    const matchesPrice = selectedPriceRange === 'all' || 
-                        (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
-                        (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) ||
-                        (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
 
-    return matchesSearch && matchesCategory && matchesPrice
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -128,14 +98,9 @@ export default function ServicesShowcase2027() {
         );
       default:
         return 0;    }
-=======
-        return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
-      case 'roi':
-        return parseInt(a.roi.replace(/[^0-9]/g, '')) - parseInt(b.roi.replace(/[^0-9]/g, ''));
-      default: return 0
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   });
 
   const categories = [
@@ -226,55 +191,21 @@ export default function ServicesShowcase2027() {
     { id: 'Inventory Management', name: 'Inventory Management', icon: '📦', count: allServices.filter(s => s.category.includes('Inventory Management')).length },
     { id: 'HR Automation', name: 'HR Automation', icon: '👥', count: allServices.filter(s => s.category.includes('HR Automation')).length },
     { id: 'Financial Automation', name: 'Financial Automation', icon: '💰', count: allServices.filter(s => s.category.includes('Financial Automation')).length }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   ];
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', count: allServices.length },
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    {
-      id: 'low',
-      name: 'Under $1K/month',
-      count: allServices.filter(
-        s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000
-      ).length,
-    },
-    {
-      id: 'medium',
-      name: '$1K - $10K/month',
-      count: allServices.filter(
-        s =>
-          parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 &&
-          parseInt(s.price.replace(/[^0-9]/g, '')) < 10000
-      ).length,
-    },
-    {
-      id: 'high',
-      name: '$10K+/month',
-      count: allServices.filter(
-        s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000
-      ).length,
-<<<<<<< HEAD
-    },  ];
-=======
-    { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000).length };
-    { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10000).length };
-    { id: 'high', name: '$10K+/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000).length }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',  };
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <UltraFuturisticMatrixBackground2027>
@@ -296,7 +227,6 @@ export default function ServicesShowcase2027() {
           href='https://ziontechgroup.com/2027-services-showcase/'
         />
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -322,32 +252,24 @@ export default function ServicesShowcase2027() {
           name='twitter:description'
           content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.'
         />      </Head>
-=======
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="2027 Services Showcase - Zion Tech Group" />
-        <meta name="twitter:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       </Head>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       <UltraFuturisticNavigation2027 />
 
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
-=======
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className='text-5xl md:text-7xl font-bold mb-6'>
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 2027 Services Showcase
               </span>
             </h1>
@@ -386,33 +308,14 @@ export default function ServicesShowcase2027() {
 
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
-                <div className="text-green-300">Rating</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </div>
             </div>
 
             {/* CTA Buttons */}
-<<<<<<< HEAD
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              <Link
-                href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2'
-              >
-                <Rocket className='w-5 h-5' />
-                <span>Get Started</span>
-              </Link>
-              <Link
-                href='/pricing'
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2'
-              >
-                <DollarSign className='w-5 h-5' />                <span>View Pricing</span>
-=======
-                <DollarSign className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 <span>View Pricing</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </Link>
             </div>
           </motion.div>
@@ -423,7 +326,7 @@ export default function ServicesShowcase2027() {
       <section className='px-4 sm:px-6 lg:px-8 mb-16'>
         <div className='max-w-7xl mx-auto'>
           <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             {/* Search Bar */}
             <div className='mb-6'>
               <div className='relative'>
@@ -434,18 +337,15 @@ export default function ServicesShowcase2027() {
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
                   className='w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20'                />
-=======
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </div>
 
             {/* Filters */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               {/* Category Filter */}
               <div>
                 <label className='block text-cyan-400 font-medium mb-2'>
@@ -457,11 +357,9 @@ export default function ServicesShowcase2027() {
                   className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400'
                 >
                   {categories.map(category => (                    <option key={category.id} value={category.id}>
-=======
-                  {categories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     <option key={category.id} value={category.id}>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       {category.icon} {category.name} ({category.count})
                     </option>
                   ))}
@@ -473,18 +371,16 @@ export default function ServicesShowcase2027() {
                 <label className='block text-cyan-400 font-medium mb-2'>
                   Price Range
                 </label>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <select
                   value={selectedPriceRange}
                   onChange={e => setSelectedPriceRange(e.target.value)}
                   className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400'
                 >
                   {priceRanges.map(range => (                    <option key={range.id} value={range.id}>
-=======
-                  {priceRanges.map((range) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     <option key={range.id} value={range.id}>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       {range.name} ({range.count})
                     </option>
                   ))}
@@ -496,7 +392,7 @@ export default function ServicesShowcase2027() {
                 <label className='block text-cyan-400 font-medium mb-2'>
                   Sort By
                 </label>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e.target.value)}
@@ -505,13 +401,9 @@ export default function ServicesShowcase2027() {
                   <option value='name'>Name</option>
                   <option value='price'>Price</option>
                   <option value='roi'>ROI</option>                </select>
-=======
-                  <option value="name">Name</option>
-                  <option value="price">Price</option>
-                  <option value="roi">ROI</option>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </select>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </div>
           </div>
@@ -522,13 +414,9 @@ export default function ServicesShowcase2027() {
       <section className='px-4 sm:px-6 lg:px-8 mb-20'>
         <div className='max-w-7xl mx-auto'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>
-=======
-      <section className="px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <AnimatePresence>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -537,7 +425,7 @@ export default function ServicesShowcase2027() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   exit={{ opacity: 0, y: -30, scale: 0.9 }}
                   className='group'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 >
                   <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20'>
                     {/* Service Header */}
@@ -555,22 +443,14 @@ export default function ServicesShowcase2027() {
                     {/* Price */}
                     <div className='mb-4'>
                       <div className='text-2xl font-bold text-white'>                        {service.price}
-=======
-                    <p className="text-cyan-300 text-sm mb-4 line-clamp-3">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       {service.description}
                     </p>
 
                     {/* Price */}
-<<<<<<< HEAD
-                    <div className='mb-4'>
-                      <div className='text-2xl font-bold text-white'>
-=======
-                    <div className="mb-4">
-                      <div className="text-2xl font-bold text-white">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         {service.price}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       </div>
                     </div>
 
@@ -580,7 +460,7 @@ export default function ServicesShowcase2027() {
                         Key Features:
                       </h4>
                       <div className='space-y-2'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <div
                             key={idx}
@@ -594,11 +474,9 @@ export default function ServicesShowcase2027() {
                         ))}
                         {service.features.length > 3 && (
                           <div className='text-cyan-400 text-sm'>                            +{service.features.length - 3} more features
-=======
-                          <div className="text-cyan-400 text-sm">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                             +{service.features.length - 3} more features
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                           </div>
                         )}
                       </div>
@@ -612,7 +490,7 @@ export default function ServicesShowcase2027() {
                       <div className='text-gray-400 text-xs'>
                         Return on Investment
                       </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </div>
 
                     {/* Actions */}
@@ -625,22 +503,14 @@ export default function ServicesShowcase2027() {
                       <Link
                         href='/contact'
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >
-=======
-                        className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       >
                         Learn More
                       </Link>
                       <Link
-<<<<<<< HEAD
-                        href='/contact'
-                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'
-=======
-                        href="/contact"
-                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         Contact
                       </Link>
                     </div>
@@ -648,12 +518,9 @@ export default function ServicesShowcase2027() {
                     {/* Category Badge */}
                     <div className='mt-4'>
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service.category}
-=======
-                    <div className="mt-4">
-                      <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         {service.category}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       </span>
                     </div>
                   </div>
@@ -682,28 +549,14 @@ export default function ServicesShowcase2027() {
                   setSelectedPriceRange('all');
                 }}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >
-=======
-              className="text-center py-20"
-            >
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-              <p className="text-cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               <button
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
-<<<<<<< HEAD
-                  setSelectedPriceRange('all');
-                }}
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
-=======
-                  setSelectedPriceRange('all')
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 Clear Filters
               </button>
             </motion.div>
@@ -716,7 +569,7 @@ export default function ServicesShowcase2027() {
         <div className='max-w-4xl mx-auto'>
           <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
             <h2 className='text-3xl font-bold text-white mb-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -748,23 +601,14 @@ export default function ServicesShowcase2027() {
               <Link
                 href='/pricing'
                 className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'              >
-=======
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               >
                 Get Started Today
               </Link>
               <Link
-<<<<<<< HEAD
-                href='/pricing'
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
-=======
-                href="/pricing"
-                className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 View Pricing Plans
               </Link>
             </div>
@@ -777,7 +621,7 @@ export default function ServicesShowcase2027() {
         <div className='max-w-7xl mx-auto text-center'>
           <div className='mb-8'>
             <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 shadow-2xl shadow-cyan-500/50'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Z
             </div>
             <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2'>
@@ -809,18 +653,11 @@ export default function ServicesShowcase2027() {
               >
                 Contact Us
               </Link>            </p>
-=======
-              <Link href="/contact" className="hover: text-cyan-400 transition-colors duration-300">Contact Us</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         </div>
       </footer>
     </UltraFuturisticMatrixBackground2027>
   );
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

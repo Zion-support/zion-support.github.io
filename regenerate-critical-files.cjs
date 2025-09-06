@@ -5,18 +5,7 @@ const path = require('path');
 
 class CriticalFileRegenerator {
   constructor() {
-<<<<<<< HEAD
-    this.projectRoot = process.cwd(),
-    this.regeneratedFiles = []
-=======
-<<<<<<< HEAD
-    this.projectRoot = process.cwd(),
-    this.regeneratedFiles = []
-=======
-    this.projectRoot = process.cwd();
-    this.regeneratedFiles = [];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   }
 
   log(message, type = 'INFO') {
@@ -100,16 +89,7 @@ export default LandingPage;`;
     const buttonTsx = `import React from 'react';
 
 interface ButtonProps {
-<<<<<<< HEAD
-  children: React.ReactNode, onClick?: () => void,
-=======
-<<<<<<< HEAD
-  children: React.ReactNode, onClick?: () => void,
-=======
-  children: React.ReactNode;
-  onClick?: () => void;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   className?: string;
   type?: 'button' | 'submit' | 'reset';
 }
@@ -243,12 +223,12 @@ export const removeToken = () => {
     try {
       const fullPath = path.join(this.projectRoot, filePath);
       const dir = path.dirname(fullPath);
-      
+
       // Create directory if it doesn't exist
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
-      
+
       fs.writeFileSync(fullPath, content);
       this.regeneratedFiles.push(filePath);
       this.log(`Regenerated: ${filePath}`, 'SUCCESS');
@@ -259,12 +239,12 @@ export const removeToken = () => {
 
   async regenerateAll() {
     this.log('Starting critical file regeneration...', 'PROGRESS');
-    
+
     this.regenerateMainFiles();
     this.regenerateBasicComponents();
     this.regenerateBasicPages();
     this.regenerateBasicUtils();
-    
+
     this.log(`Regenerated ${this.regeneratedFiles.length} files`, 'SUCCESS');
   }
 }

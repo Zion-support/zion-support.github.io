@@ -1,11 +1,7 @@
-  title = "Complete Your Profile", 
+title = "Complete Your Profile", 
 
 import React from "react";
-<<<<<<< HEAD
-import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
-=======
-import { CheckCircle, Circle, ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -37,7 +33,7 @@ export function OnboardingTracker({
         <h3 className="text-lg font-medium text-white">{title}</h3>
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>
       </div>
-      
+
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
         <div 
@@ -45,7 +41,7 @@ export function OnboardingTracker({
           style={{ width: `${progress}%` }}
         ></div>
       </div>
-      
+
       {/* Steps list */}
       <div className="space-y-3">
         {steps.map((step,) => (
@@ -92,7 +88,3 @@ export function OnboardingTracker({
 }</div>) ) ;
 }</div> </div>) ;
 }"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

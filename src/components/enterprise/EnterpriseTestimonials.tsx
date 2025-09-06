@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Quote } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-
-import React from "react";
-import { Quote } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import {
   Carousel,
   CarouselContent,
@@ -55,57 +46,25 @@ export function EnterpriseTestimonials() {
         </div>
 
         <Carousel className='w-full'>
-=======
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             See how enterprise teams are transforming their hiring process
           </p>
         </div>
 
-<<<<<<< HEAD
-        <Carousel className='w-full'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          <CarouselContent>
-<<<<<<< HEAD
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className='md:basis-1/1 lg:basis-1/1'>
-                <div className='bg-card rounded-xl p-8 border border-border h-full'>
-                  <Quote className='h-10 w-10 text-primary/20 mb-4' />
-                  <blockquote className='text-xl mb-6 italic'>
-=======
-            {testimonials.map((testimonial, index,) => (
-              <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
-                <div className="bg-card rounded-xl p-8 border border-border h-full">
-                  <Quote className="h-10 w-10 text-primary/20 mb-4" />
-                  <blockquote className="text-xl mb-6 italic">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     "{testimonial.quote}"
                   </blockquote>
                   <div className='flex items-center gap-4'>
                     <div className='h-12 w-12 rounded-full overflow-hidden bg-muted'>
                       <img
-<<<<<<< HEAD
-                        src={testimonial.image}
-                        alt={testimonial.author}
-                        className='h-full w-full object-cover'
-                        loading='lazy'
-=======
-                        src = {testimonial.image,}
-                        alt = {testimonial.author,}
-                        className="h-full w-full object-cover"
-                        loading="lazy"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       />
                     </div>
                     <div>
                       <p className='font-bold'>{testimonial.author}</p>
                       <p className='text-sm text-muted-foreground'>                        {testimonial.title}, {testimonial.company}
-=======
-                      <p className="font-bold">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         {testimonial.title}, {testimonial.company}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       </p>
                     </div>
                   </div>
@@ -114,11 +73,9 @@ export function EnterpriseTestimonials() {
             ))}
           </CarouselContent>
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />
-=======
-          <div className="flex justify-center gap-2 mt-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <CarouselPrevious />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             <CarouselNext />
           </div>
         </Carousel>
@@ -126,7 +83,3 @@ export function EnterpriseTestimonials() {
     </section>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

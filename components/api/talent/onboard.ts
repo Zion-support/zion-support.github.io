@@ -4,7 +4,6 @@ import path from 'path';
 import fse from 'fs-extra';
 import { randomUUID } from 'crypto';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Lazy import to avoid serverless cold start cost unless needed
 async function summarizeAndTag(input: {;
   fullName: string;
@@ -37,11 +36,8 @@ async function summarizeAndTag(input: {;
   if (!openaiApiKey) {
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
     return { summary, tags: basicTags.slice(0, 24) };  }
-=======
-    return { summary, tags: basicTags.slice(0, 24) }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   try {
     const { OpenAI } = await import('openai');
@@ -59,36 +55,19 @@ async function summarizeAndTag(input: {;
     const content = response.choices?.[0]?.message?.content || '';
     try {
       const parsed = JSON.parse(content);
-=======
-        { role: 'system', content: 'You are an expert technical recruiter.' };
-        { role: 'user', content: prompt }];
-      temperature: 0.4});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const content = response.choices?.[0]?.message?.content || '';
     try {
       const parsed = JSON.parse(content);
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      if (
-        parsed &&
-        typeof parsed.summary === 'string' &&
-        Array.isArray(parsed.tags)
-      ) {
-<<<<<<< HEAD
-        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) };      }
-=======
-      if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
-        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     } catch (_) {
       // fall through to heuristic
     }
   } catch (err) {
     // ignore and fallback
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   }
 
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
@@ -101,12 +80,8 @@ export default async function handler(
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  }
-=======
-    res.setHeader('AllowPOST');
-    return res.status(405).json({ error: 'Method not allowed' })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   try {
     const id = randomUUID();
@@ -125,7 +100,6 @@ export default async function handler(
       portfolioLinks,
       cvFile,
     } = req.body || {};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     if (
       !fullName ||
@@ -149,7 +123,7 @@ export default async function handler(
       const filename = `${id}-profile${ext}`;
       const filePath = path.join(uploadsDir, filename);
       const base64Data = profilePicture.base64.split(',')[1];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       if (base64Data) {
         await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
         savedProfileImagePath = `/uploads/${filename}`;
@@ -167,88 +141,22 @@ export default async function handler(
     }
 
     const { summary, tags } = await summarizeAndTag({
-=======
-      const base64Data = cvFile.base64.split()[1];
-      if (base64Data) {
-        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
-        savedCvPath = `/uploads/${filename}`
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       }
     }
 
     const { summary, tags } = await summarizeAndTag({
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      fullName,
-      professionalTitle,
-      bio,
-      projects,
-      skills,
-      tools,
-    });
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-    const record = {
-      id,
-      createdAt: new Date().toISOString(),
-      fullName,
-      professionalTitle,
-      bio,
-      projects,
-      yearsOfExperience: Number(yearsOfExperience) || 0,
-      skills,
-      tools,
-      availability,
-      timezone,
-      hourlyRate: hourlyRate ? Number(hourlyRate) : null,
-      portfolioLinks,
-      assets: {
-        profileImage: savedProfileImagePath,
-        cv: savedCvPath,
-      },
-      ai: {
-        summary,
-        tags,
-      },
-    };
-    const perRecordPath = path.join(dataDir, `${id}.json`);
-    await fse.writeJSON(perRecordPath, record, { spaces: 2 });
-
-=======
-        summary;
-        tags}};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const perRecordPath = path.join(dataDir, `${id}.json`);
     await fse.writeJSON(perRecordPath, record, { spaces: 2 });
 
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    const aggregatePath = path.join(
-      process.cwd(),
-      'data',
-      'talent-submissions.json'
-<<<<<<< HEAD
-    );    let aggregate: any[] = [];
-    if (fs.existsSync(aggregatePath)) {
-      try {
-        const content = await fse.readJSON(aggregatePath);
-        if (Array.isArray(content)) aggregate = content;      } catch (_) {
-=======
-    const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     let aggregate: any[] = [];
     if (fs.existsSync(aggregatePath)) {
       try {
         const content = await fse.readJSON(aggregatePath);
-<<<<<<< HEAD
-        if (Array.isArray(content)) aggregate = content;
-=======
-        if (Array.isArray(content)) aggregate = content
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       } catch (_) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         // ignore
       }
     }
@@ -262,11 +170,3 @@ export default async function handler(
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error' });
   }
-=======
-    return res.status(200).json({ ok: true, id, summary, tags })
-  } catch (error) {
-    return res.status(500).json({ error: 'Internal server error' })
-  };
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

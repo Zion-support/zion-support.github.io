@@ -1,45 +1,7 @@
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { useState } from 'react';
-import {
-=======
-
-import { useState } from 'react';
-import { 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  DropdownMenu,
+DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-<<<<<<< HEAD
-  DropdownMenuTrigger,;
-} from '@/components/ui/dropdown-menu';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,;
-} from '@/components/ui/dialog';
-import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react';
-import { Resume } from '@/types/resume';
-import { useResume } from '@/hooks/useResume';
-=======
-  DropdownMenuTrigger 
-} from '@/components/ui/dropdown-menu',
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react';
-import { Resume } from '@/types/resume';
-import { useResume } from '@/hooks/useResume';
-interface ResumeVersionSelectorProps {
-  currentResume: Resume,
-  onResumeChange: (resumeId: string,) => void
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
@@ -54,10 +16,7 @@ export function ResumeVersionSelector({
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-=======
-  
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
       setIsLoading(true);
@@ -67,7 +26,7 @@ export function ResumeVersionSelector({
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
         setNewResumeTitle('');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       }
       setIsLoading(false);
     }
@@ -83,103 +42,33 @@ export function ResumeVersionSelector({
             <ChevronDown className='h-4 w-4' />
           </Button>
         </DropdownMenuTrigger>
-<<<<<<< HEAD
-        <DropdownMenuContent align='end'>
-          {existingResumes.map(resume => (
-            <DropdownMenuItem
-              key={resume.id}
-              onClick={() => onResumeChange(resume.id!)}
-              className='cursor-pointer'            >
-=======
-=======
-        <DropdownMenuContent align="end">
-          {existingResumes.map((resume,) => (
-            <DropdownMenuItem 
-              key = {resume.id,}
-              onClick = {(,) => onResumeChange(resume.id!),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               className="cursor-pointer"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               {resume.basic_info.title}
             </DropdownMenuItem>
           ))}
           <DropdownMenuSeparator />
-<<<<<<< HEAD
-          <DropdownMenuItem
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            onClick={() => setSaveDialogOpen(true)}
-            className='cursor-pointer'
-=======
-          <DropdownMenuItem 
-            onClick = {() => setSaveDialogOpen(true),}
-            className="cursor-pointer"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           >
             <Plus className='h-4 w-4 mr-2' />            Save as new version
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
 
-=======
-            <Plus className="h-4 w-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Save as new version
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-<<<<<<< HEAD
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
-        <DialogContent className='sm:max-w-md'>
-          <DialogHeader>
-            <DialogTitle>Save as new resume version</DialogTitle>
-          </DialogHeader>
-          <div className='py-4'>
-            <Input
-<<<<<<< HEAD
-              value={newResumeTitle}
-              onChange={e => setNewResumeTitle(e.target.value)}
-              placeholder='Enter resume title (e.g. DevOps Resume)'
-            />
-          </div>
-          <DialogFooter>
-            <Button variant='outline' onClick={() => setSaveDialogOpen(false)}>
-              Cancel
-            </Button>
-            <Button
-              onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle.trim() || isLoading}
-              className='gap-2'
-=======
-              value = {newResumeTitle,}
-              onChange = {(e,) => setNewResumeTitle(e.target.value),}
-              placeholder="Enter resume title (e.g. DevOps Resume)"
-            />
-          </div>
-          <DialogFooter>
-            <Button 
-              variant="outline" 
-              onClick = {() => setSaveDialogOpen(false),}
-            >
-              Cancel
-            </Button>
-            <Button 
-              onClick = {handleCreateNewVersion,}
-              disabled = {!newResumeTitle.trim() || isLoading,}
-              className="gap-2"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               {isLoading && <Loader2 className='h-4 w-4 animate-spin' />}
               <Save className='h-4 w-4' />              Save
-=======
-              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-              <Save className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               Save
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </Button>
           </DialogFooter>
         </DialogContent>
@@ -193,11 +82,5 @@ export function ResumeVersionSelector({
 }</DropdownMenuItem>) ) ;
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>) ;
 }"
-=======
+
 }
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

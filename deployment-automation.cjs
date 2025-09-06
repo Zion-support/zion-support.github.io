@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -15,13 +10,7 @@ const { execSync } = require('child_process')
       console.error(' Rollback "failed")
       "status"
   console.log(' Deployment report "generated")
-<<<<<<< HEAD
-  console.error(' Deployment automation "failed")
-=======
-  console.error(' Deployment automation "failed")
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -33,7 +22,7 @@ console.log('🚀 Deployment Automation Started...');
 function deployApplication() {
   const deploymentSteps = [];
   const errors = [];
-  
+
   try {
     // Step 1: Run tests
     console.log('🔄 Running pre-deployment tests...');
@@ -51,7 +40,7 @@ function deployApplication() {
         timestamp: new Date().toISOString()
       });
     }
-    
+
     // Step 2: Run linting
     console.log('🔄 Running linting...');
     try {
@@ -68,7 +57,7 @@ function deployApplication() {
         timestamp: new Date().toISOString()
       });
     }
-    
+
     // Step 3: Security check
     console.log('🔄 Running security check...');
     try {
@@ -85,7 +74,7 @@ function deployApplication() {
         timestamp: new Date().toISOString()
       });
     }
-    
+
     // Step 4: Generate deployment package
     console.log('🔄 Generating deployment package...');
     try {
@@ -102,7 +91,7 @@ function deployApplication() {
         timestamp: new Date().toISOString()
       });
     }
-    
+
     // Generate deployment report
     const report = {
       timestamp: new Date().toISOString(),
@@ -121,17 +110,17 @@ function deployApplication() {
         'Review error logs'
       ]
     };
-    
+
     fs.writeFileSync('/workspace/deployment-report.json', JSON.stringify(report, null, 2));
-    
+
     if (errors.length === 0) {
       console.log('✅ Deployment automation completed successfully!');
     } else {
       console.log(`⚠️  Deployment automation completed with ${errors.length} errors.`);
     }
-    
+
     return report;
-    
+
   } catch (error) {
     console.error('❌ Deployment automation failed:', error.message);
     return { status: 'failed', error: error.message };
@@ -140,8 +129,3 @@ function deployApplication() {
 
 // Run deployment automation
 deployApplication();
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

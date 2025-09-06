@@ -21,9 +21,8 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -61,9 +60,8 @@ const heroStats = [
   { number: '24/7', label: 'Expert Support', icon: Shield, color: 'from-purple-400 to-pink-400' },
   { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' },
   { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const featuredServices = [
   {
@@ -74,12 +72,9 @@ const featuredServices = [
     color: 'from-violet-600 to-purple-600',
     href: '/ai-consciousness-evolution-platform',
   },  {
-=======
-    href: '/ai-consciousness-evolution-platform'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     name: 'Space Mining Automation',
     description: 'Automated asteroid mining',
     price: '$45,999/month',
@@ -87,12 +82,9 @@ const featuredServices = [
     color: 'from-teal-600 to-emerald-600',
     href: '/space-mining-automation-platform',
   },  {
-=======
-    href: '/space-mining-automation-platform'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     name: 'Quantum Internet Security',
     description: 'Unbreakable encryption',
     price: '$15,999/month',
@@ -104,43 +96,14 @@ const featuredServices = [
 export default function UltraFuturisticHero2032() {
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black'>
-=======
-    href: '/quantum-internet-security-gateway'
-  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 ];
 
 export default function UltraFuturisticHero2032() {
   return (
-<<<<<<< HEAD
-    <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      {/* Animated Background Elements */}
-      <div className='absolute inset-0'>
-        {/* Floating Particles */}
-        <div className='absolute inset-0'>
-          {[...Array(50)].map((_, i) => (
-            <motion.div
-              key={i}
-              className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30'
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -20, 0],
-                opacity: [0.3, 0.8, 0.3],
-              }}
-              transition={{
-                duration: 3 + Math.random() * 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-              }}            />
-=======
-                delay: Math.random() * 2}}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           ))}
         </div>
 
@@ -152,17 +115,9 @@ export default function UltraFuturisticHero2032() {
 
       {/* Main Content */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Hero Badge */}
-=======
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow" />
-      </div>
 
-      {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         {/* Hero Badge */}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -174,15 +129,8 @@ export default function UltraFuturisticHero2032() {
             🚀 2032 Revolutionary Technology
           </span>
           <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>
-=======
-          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
-        >
-          <Sparkles className="w-5 h-5 text-purple-400" />
-          <span className="text-purple-300 font-medium">🚀 2032 Revolutionary Technology</span>
-          <Sparkles className="w-5 h-5 text-cyan-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         {/* Main Heading */}
         <motion.h1
@@ -190,18 +138,15 @@ export default function UltraFuturisticHero2032() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         >
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             The Future of
           </span>
           <br />
           <span className='text-white'>Technology is Here</span>        </motion.h1>
-=======
-          <span className="text-white">Technology is Here</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         </motion.h1>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         {/* Subheading */}
         <motion.p
@@ -214,14 +159,8 @@ export default function UltraFuturisticHero2032() {
           quantum computing, space technology, and emerging tech solutions.
           Transform your business with technologies that were once science
           fiction.        </motion.p>
-=======
-          className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
-        >
-          Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with 
-          technologies that were once science fiction.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         </motion.p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         {/* CTA Buttons */}
         <motion.div
@@ -229,7 +168,7 @@ export default function UltraFuturisticHero2032() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         >
           <Link
             href='/services'
@@ -244,11 +183,9 @@ export default function UltraFuturisticHero2032() {
             className='group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300'
           >
             <Phone className='w-5 h-5' />            <span>Call {contactInfo.mobile}</span>
-=======
-            <Phone className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <span>Call {contactInfo.mobile}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </Link>
         </motion.div>
 
@@ -258,11 +195,9 @@ export default function UltraFuturisticHero2032() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
-=======
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           {heroStats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -270,7 +205,7 @@ export default function UltraFuturisticHero2032() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
               className='text-center group'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <div
                 className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}
@@ -281,11 +216,9 @@ export default function UltraFuturisticHero2032() {
                 {stat.number}
               </div>
               <div className='text-gray-400 text-sm'>{stat.label}</div>            </motion.div>
-=======
-              <div className="text-gray-400 text-sm">{stat.label}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           ))}
         </motion.div>
 
@@ -295,24 +228,22 @@ export default function UltraFuturisticHero2032() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
           className='mb-16'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         >
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>
             Featured Revolutionary Services
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {featuredServices.map((service, index) => (
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             {featuredServices.map((service, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               <motion.div
                 key={service.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
                 className='group'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               >
                 <Link
                   href={service.href}
@@ -342,12 +273,9 @@ export default function UltraFuturisticHero2032() {
                   </div>
 
                   <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </Link>
-=======
-                  
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </motion.div>
             ))}
           </div>
@@ -359,7 +287,7 @@ export default function UltraFuturisticHero2032() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.6 }}
           className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         >
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>
             Ready to Transform Your Business?
@@ -397,11 +325,9 @@ export default function UltraFuturisticHero2032() {
             >
               <span>Get Started Today</span>
               <ArrowRight className='w-5 h-5' />            </Link>
-=======
-              <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         </motion.div>
       </div>
@@ -412,7 +338,7 @@ export default function UltraFuturisticHero2032() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 2 }}
         className='fixed bottom-8 right-8 z-50'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -423,8 +349,3 @@ export default function UltraFuturisticHero2032() {
       </motion.div>
     </section>
   );
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

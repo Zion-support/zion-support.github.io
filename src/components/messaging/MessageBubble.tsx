@@ -1,21 +1,13 @@
 import React from 'react';
 import { format } from 'date-fns';
 import { PaperclipIcon } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { cn } from '@/lib/utils';
-import { Message } from '@/types/messaging';
 
-=======
-import { cn } from '@/lib/utils';
-import { Message } from '@/types/messaging';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface MessageBubbleProps {
   message: Message;
   isUserMessage: boolean;
 
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
-  
+
     >
       <div
         className={cn(
@@ -28,19 +20,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         <div className='whitespace-pre-wrap'>{message.content}</div>
 
         {message.attachment_url && (
-<<<<<<< HEAD
-          <a
-            href={message.attachment_url}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30'
-=======
-          <a 
-            href = {message.attachment_url,}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           >
             <PaperclipIcon className='h-3 w-3 mr-1' aria-hidden='true' />
             {message.attachment_name || 'Attachment'}
@@ -52,18 +32,8 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
       </div>
     </div>
   );
-=======
-        
-        <div className="text-xs opacity-70 text-right mt-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           {format(new Date(message.created_at), 'h:mm a')}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

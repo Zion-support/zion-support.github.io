@@ -1,57 +1,3 @@
-<<<<<<< HEAD
-import { Header } from '@/components/Header';
-import { TrustedBySection } from '@/components/TrustedBySection';
-import { TestimonialCarousel } from '@/components/TestimonialCarousel';
-import { FloatingCTA } from '@/components/FloatingCTA';
-import { HeroSection } from '@/components/HeroSection';
-import { CategoriesSection } from '@/components/CategoriesSection';
-import { BenefitsSection } from '@/components/BenefitsSection';
-import { HowItWorksSection } from '@/components/HowItWorksSection';
-import { WaitlistSection } from '@/components/WaitlistSection';
-import { BlogSection } from '@/components/BlogSection';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { FeaturedListingsSection } from '@/components/FeaturedListingsSection';
-import { FeaturesGuideSection } from '@/components/FeaturesGuideSection';
-import { SocialShareSection } from '@/components/SocialShareSection';
-import { useTranslation } from 'react-i18next';
-import { useLanguage } from '@/context/LanguageContext';
-import {
-  ArrowRight,
-  Users,
-  Zap,
-  Settings,
-  Search,
-  MessageSquare,
-  Sparkles,
-  BarChart3,
-  Smartphone,;
-} from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-=======
-
-import { Header } from "@/components/Header";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { TestimonialCarousel } from "@/components/TestimonialCarousel";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { HeroSection } from "@/components/HeroSection";
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { WaitlistSection } from "@/components/WaitlistSection";
-import { BlogSection } from "@/components/BlogSection";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
-import { SocialShareSection } from "@/components/SocialShareSection";
-import { useTranslation } from "react-i18next";
-import { useLanguage } from "@/context/LanguageContext";
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function LandingPage() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
@@ -98,21 +44,7 @@ export default function LandingPage() {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className='min-h-screen bg-zion-blue text-white'>
-      <SEO
-        title={t('home.seo_title')}
-        description={t('home.seo_description')}
-        keywords={t('home.seo_keywords')}
-        canonical='https://app.ziontechgroup.com/'
-=======
-    <div className="min-h-screen bg-zion-blue text-white">
-      <SEO 
-        title = {t("home.seo_title"),}
-        description = {t("home.seo_description"),}
-        keywords = {t("home.seo_keywords"),}
-        canonical="https://app.ziontechgroup.com/"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
       />
       <Header />
       <HeroSection />
@@ -128,25 +60,7 @@ export default function LandingPage() {
               {t('home.tools_description')}
             </p>
           </div>
-<<<<<<< HEAD
 
-          <div
-            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}
-          >
-            {toolsFeatures.map((feature, index) => (
-              <Link
-                key={index}
-                href={feature.link}
-                className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'
-=======
-          
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
-            {toolsFeatures.map((feature, index,) => (
-              <Link 
-                key = {index,}
-                href = {feature.link,}
-                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4'>
                   {feature.icon}
@@ -169,9 +83,9 @@ export default function LandingPage() {
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                 </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </Link>
             ))}
           </div>
@@ -182,18 +96,13 @@ export default function LandingPage() {
       <BenefitsSection />
       <CategoriesSection />
       <BenefitsSection />
-      
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />
+
       <HowItWorksSection />
       <FeaturedListingsSection />
       <TestimonialCarousel />
@@ -202,19 +111,9 @@ export default function LandingPage() {
 
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
-=======
-      
-      {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
-      
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       <WaitlistSection />
       <FloatingCTA />
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

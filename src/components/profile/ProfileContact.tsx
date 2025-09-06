@@ -4,17 +4,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Mail, Send } from 'lucide-react';
 import { useState } from 'react';
 import { toast } from '@/hooks/use-toast';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, Send } from 'lucide-react';
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ProfileContactProps {
   email?: string;
   profileName: string;
@@ -29,32 +19,6 @@ export function ProfileContact({
   const [subject, setSubject] = useState('');
   const [isSending, setIsSending] = useState(false);
 
-<<<<<<< HEAD
-  const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSending(true);
-
-    // Here would be the actual API call to send the message
-    setTimeout(() => {
-      setIsSending(false);
-      setMessage('');
-      setSubject('');
-=======
-export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
-  const [message, setMessage] = useState(""),
-  const [subject, setSubject] = useState(""),
-  const [isSending, setIsSending] = useState(false),
-  
-  const handleSendMessage = (e: React.FormEvent,) => {
-    e.preventDefault(),
-    setIsSending(true),
-    
-    // Here would be the actual API call to send the message
-    setTimeout((,) => {
-      setIsSending(false),
-      setMessage(""),
-      setSubject(""),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       toast({
         title: 'Message Sent',
         description: `Your message has been sent to ${profileName}.`,
@@ -80,73 +44,35 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
           <a 
             href={`mailto:${email}`} 
             className="text-zion-cyan hover:underline truncate block"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
           >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             {email}
           </a>
         </div>
       )}
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <form onSubmit={handleSendMessage}>
         <div className='space-y-4'>
           <div>
             <Input
-<<<<<<< HEAD
-              placeholder='Subject'
-              value={subject}
-              onChange={e => setSubject(e.target.value)}
-              className='bg-zion-blue border-zion-blue-light text-white'              required
-=======
-              onChange={(e) => setSubject(e.target.value)}
-=======
-              placeholder="Subject"
-              value = {subject,}
-              onChange = {(e,) => setSubject(e.target.value),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               className="bg-zion-blue border-zion-blue-light text-white"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               required
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             />
           </div>
           <div>
             <Textarea
               placeholder={`Message to ${profileName}...`}
-<<<<<<< HEAD
-              value={message}
-              onChange={e => setMessage(e.target.value)}
-              className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              required
-            />
-          </div>
-          <Button
-            type='submit'
-            className='w-full bg-zion-cyan hover:bg-zion-cyan/90'
-            disabled={isSending}
-=======
-              value = {message,}
-              onChange = {(e,) => setMessage(e.target.value),}
-              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
-              required
-            />
-          </div>
-          <Button 
-            type="submit" 
-            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
-            disabled = {isSending,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           >
             <Send className='mr-2 h-4 w-4' />
             {isSending ? 'Sending...' : 'Send Message'}          </Button>
-=======
-            <Send className="mr-2 h-4 w-4" />
-            {isSending ? "Sending..." : "Send Message"}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         </div>
       </form>
     </div>
@@ -157,7 +83,3 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 }` ";
 }className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,10 +1,3 @@
-
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface EmptyFraudStateProps {
   hasFilters: boolean,
   onResetFilters: () => void
@@ -59,6 +52,3 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
     </div>
   )
 };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

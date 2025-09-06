@@ -1,69 +1,21 @@
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
-<<<<<<< HEAD
-    ignoreDuringBuilds: true
-  },
-  typescript: {
-    ignoreBuildErrors: true
-  },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-<<<<<<< HEAD
-  trailingSlash: true,  images: {
-=======
-  trailingSlash: true,
-=======
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
-  exclude: [
-    'apps.backup/**',
-    'zion-os/**',
-    'zion-website/**',
-    'zion-academy/**',
-    'zion-film/**',
-    'zion-ai-assistant/**',
-    'backup-merge-conflicts/**',
-    'data_backup/**',
-    'pages_backup_conflict/**',
-    'automation/**',
-    'scripts/**',
-    'temp_exclude/**',
-  ],
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   images: {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     domains: [
       'localhost',
       'ziontechgroup.com',
       'images.unsplash.com',
-<<<<<<< HEAD
-      'via.placeholder.com'    ],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000  },
-=======
-<<<<<<< HEAD
-      'via.placeholder.com'
-=======
-      'via.placeholder.com',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
     ],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-<<<<<<< HEAD
-    minimumCacheTTL: 31536000
-=======
-    minimumCacheTTL: 31536000,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   },
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -103,36 +55,12 @@ const nextConfig = {
           '**/apps/**'
         ],
         poll: 1000,
-<<<<<<< HEAD
-        aggregateTimeout: 300
-<<<<<<< HEAD
-      }    }
-=======
-      }
-=======
-        aggregateTimeout: 300,
-      };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    
+
     // Exclude apps directory from compilation
     config.module.rules.push({
       test: /\.(ts|tsx|js|jsx)$/,
       include: /apps\//,
       use: 'ignore-loader'
     });
-    
-<<<<<<< HEAD
-    return config
-  }
-}
-
-module.exports = nextConfig
-=======
-    return config;
-  },
-};
-
-module.exports = nextConfig;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

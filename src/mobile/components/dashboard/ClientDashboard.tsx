@@ -4,17 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
-import Link from "next/link";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function ClientDashboard() {
   return (
     <div className='space-y-6 px-4 pb-24'>
@@ -72,17 +62,14 @@ export function ClientDashboard() {
                 <Button size='sm' variant='outline'>
                   View Details
                 </Button>              </div>
-=======
-                <Button size="sm" variant="outline">View Details</Button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </div>
           </CardContent>
         </Card>
       </section>
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Suggested Talents</h2>
@@ -160,12 +147,7 @@ export function ClientDashboard() {
                 <Badge variant='outline' className='text-xs'>
                   AWS
                 </Badge>
-=======
-              <div className="flex gap-2 mt-3">
-                <Button size="sm">View Profile</Button>
-                <Button size="sm" variant="outline">Message</Button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
               <div className='flex gap-2 mt-3'>
                 <Button size='sm'>View Profile</Button>
@@ -177,7 +159,6 @@ export function ClientDashboard() {
         </div>
       </section>
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Recent Updates</h2>
@@ -214,18 +195,11 @@ export function ClientDashboard() {
             <Button variant='outline' className='w-full'>
               View All Notifications
             </Button>          </CardContent>
-=======
-            
-            <Button variant="outline" className="w-full">View All Notifications</Button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </CardContent>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         </Card>
       </section>
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

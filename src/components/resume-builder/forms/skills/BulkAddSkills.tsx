@@ -1,52 +1,27 @@
-          
-
-<<<<<<< HEAD
-};
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Loader2, Sparkles } from 'lucide-react'
-=======
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Loader2, Sparkles } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 import { useResume } from '@/hooks/useResume';
 import { BulkAddSkillsProps } from './types';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Textarea } from '@/components/ui/textarea';
-<<<<<<< HEAD
-export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
-  const [bulkSkills, setBulkSkills] = useState('');
-  const [error, setError] = useState<string | null>(null);
-  const { enhanceContent, isEnhancing } = useResumeEnhancer();
-  const { addSkill } = useResume();
-=======
-export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps,) => {
-  const [bulkSkills, setBulkSkills] = useState(''),
-  const [error, setError] = useState<string | null>(null),
-  const { enhanceContent, isEnhancing } = useResumeEnhancer(),
-  const { addSkill } = useResume(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const handleCategorizeSkills = async () => {
     if (!bulkSkills || bulkSkills.trim().length === 0) {
       setError('Please enter some skills to categorize');
       return
     }
-    
+
     setError(null);
     try {
       const enhancedContent = await enhanceContent(
         bulkSkills;
         'skill-categorization'
       );
-      
+
       if (enhancedContent) {
         try {
           // Parse the JSON response
           const categorizedSkills = JSON.parse(enhancedContent);
-          
+
           // Add the categorized skills
           for (const [category, skillsList] of Object.entries(categorizedSkills)) {
             if (Array.isArray(skillsList)) {
@@ -58,10 +33,10 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps,) => {
               }
             }
           }
-          
+
           // Reset the form and bulk input
           setBulkSkills('');
-          
+
           // Refresh the skills
           await onSuccess()
         } catch (err) {
@@ -99,17 +74,14 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps,) => {
           )}
           Categorize with AI
         </Button>
-        
+
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
         </p>
-        
+
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
   )
 };
 '"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

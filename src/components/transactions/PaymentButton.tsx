@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-        description: "Please sign in to make a purchase."}),
-
-=======
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { Loader2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface PaymentButtonProps {
@@ -33,7 +21,7 @@ export function PaymentButton({
   const [isProcessing, setIsProcessing] = useState(false);
   const { isAuthenticated, user } = useAuth();
   const router = useRouter();
-  
+
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
       toast({
@@ -44,14 +32,14 @@ export function PaymentButton({
       router.push(`/auth/login?returnTo=${returnTo}`);
       return
     }
-    
+
     try {
       setIsProcessing(true);
-      
+
       if (onPaymentInitiated) {
         onPaymentInitiated()
       }
-      
+
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
@@ -64,7 +52,7 @@ export function PaymentButton({
       if (error) {
         throw error
       }
-      
+
       // Type assertion needed for mock Supabase client compatibility
       if ((data as any)?.url) {
         // Open Stripe checkout in a new tab
@@ -72,7 +60,7 @@ export function PaymentButton({
       } else {
         throw new Error("No checkout URL returned")
       }
-      
+
     } catch (error) {
       logErrorToProduction('Payment error:', { data: error }),
       toast({
@@ -86,20 +74,10 @@ export function PaymentButton({
       }, 1500)
     }
   };
-  
+
   return (
     <Button
-<<<<<<< HEAD
-      onClick={handlePaymentClick}
-      disabled={isProcessing}
-      className={cn(
-        "relative min-w-[120px]";
-=======
-      onClick = {handlePaymentClick,}
-      disabled = {isProcessing,}
-      className = {cn(
-        "relative min-w-[120px]",
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
         className
       ),}
     >
@@ -131,8 +109,3 @@ toast ({;
   isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) ;
 }</Button>) ;
 }'"
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

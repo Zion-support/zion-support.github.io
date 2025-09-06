@@ -1,72 +1,12 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Slider } from '@/components/ui/slider';
-import { Switch } from '@/components/ui/switch';
-import { Input } from '@/components/ui/input';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';
-import { X, Filter } from 'lucide-react';
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetFooter,
-  SheetTrigger,;
-} from '@/components/ui/sheet';
-import { Badge } from '@/components/ui/badge';
-import { Label } from '@/components/ui/label';
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
-import { Switch } from "@/components/ui/switch";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { X, Filter } from 'lucide-react';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
-import { Badge } from "@/components/ui/badge";
-import { Label } from "@/components/ui/label";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents';
 
 export function BrowseFilters({ type }: BrowseFiltersProps) {
-<<<<<<< HEAD
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
-  const addFilter = (filter: string) => {
-=======
-  const [activeFilters, setActiveFilters] = useState<string[]>([]),
-  
-  const addFilter = (filter: string,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (!activeFilters.includes(filter)) {
       setActiveFilters([...activeFilters, filter]);
     }
-<<<<<<< HEAD
-  };
 
-  const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter));
-  };
-
-=======
-  },
-  
-  const removeFilter = (filter: string,) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter))
-  },
-  
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   return (
     <div className='space-y-3'>
       <div className='flex justify-between items-center px-4'>
@@ -177,19 +117,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <div className='space-y-2'>
                       <Label>Experience (years)</Label>
                       <Slider
-<<<<<<< HEAD
-                        aria-label='Years of experience'
-                        defaultValue={[0, 10]}
-                        max={20}
-                        step={1}
-                        className='my-4'
-=======
-                        aria-label="Years of experience"
-                        defaultValue = {[0, 10],}
-                        max = {20,}
-                        step = {1,}
-                        className="my-4"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       />
                       <div className='flex justify-between text-xs text-muted-foreground'>
                         <span>0+ years</span>
@@ -295,31 +223,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               <SelectItem value='salary'>Highest Pay</SelectItem>
             </SelectContent>
           </Select>
-<<<<<<< HEAD
 
-          {activeFilters.map(filter => (
-            <Badge
-              key={filter}
-              variant='secondary'
-              className='flex items-center gap-1'
-            >
-              {filter}
-              <X
-                className='h-3 w-3 cursor-pointer'
-                onClick={() => removeFilter(filter)}
-=======
-          
-          {activeFilters.map((filter,) => (
-            <Badge 
-              key = {filter,}
-              variant="secondary"
-              className="flex items-center gap-1"
-            >
-              {filter}
-              <X 
-                className="h-3 w-3 cursor-pointer" 
-                onClick = {(,) => removeFilter(filter),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               />
             </Badge>
           ))}
@@ -327,7 +231,3 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
       </div>
     </div>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

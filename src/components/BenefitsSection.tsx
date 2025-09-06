@@ -3,16 +3,7 @@ import { FeatureCard } from './FeatureCard';
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import { GradientHeading } from "./GradientHeading";
-import { FeatureCard } from "./FeatureCard";
-import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface BenefitsSectionProps {
   className?: string;
   style?: React.CSSProperties;
@@ -44,7 +35,6 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
   const { t } = useTranslation();
   const benefits = getBenefits(t);
 
-  
     >
       <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>
@@ -55,43 +45,12 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (
-=======
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          {benefits.map((benefit, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            <FeatureCard
-              key={index}
-              title={benefit.title}
-              description={benefit.description}
-              icon={benefit.icon}
-              className='bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300'            />
-=======
-=======
-          {benefits.map((benefit, index,) => (
-            <FeatureCard
-              key = {index,}
-              title = {benefit.title,}
-              description = {benefit.description,}
-              icon = {benefit.icon,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           ))}
         </div>
       </div>
     </section>
   );
 }
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

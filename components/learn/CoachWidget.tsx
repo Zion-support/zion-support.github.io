@@ -13,7 +13,7 @@ export default function CoachWidget() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: input }),
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       });
       const data = await resp.json();
       setReply(data.text || '');
@@ -22,42 +22,8 @@ export default function CoachWidget() {
   }
 
   return (
-=======
-      setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     }
   }
 
   return (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    <div className='border rounded p-3'>
-      <div className='font-medium mb-2'>ZionGPT Coach</div>
-      <div className='flex gap-2'>
-        <input
-          className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black'
-          placeholder='Ask for help...'
-          value={input}
-          onChange={e => setInput(e.target.value)}
-        />
-        <button
-          onClick={ask}
-          className='px-3 py-2 bg-blue-600 text-white rounded'
-          disabled={loading}
-        >
-          {loading ? '...' : 'Ask'}
-        </button>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      </div>
-      {reply && (
-        <div className='mt-2 text-sm text-gray-800 dark:text-gray-200'>
-          {reply}
-        </div>
-      )}
-    </div>
-  );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

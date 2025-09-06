@@ -1,8 +1,7 @@
- resizeCanvas ();
+resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 type ParticleType = 'quantum' | 'neural' | 'holographic';
 // Particle system 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const UltraFuturisticBackground2034: React.FC<
   UltraFuturisticBackground2034Props
@@ -10,10 +9,7 @@ const UltraFuturisticBackground2034: React.FC<
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-=======
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -24,11 +20,8 @@ const UltraFuturisticBackground2034: React.FC<
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;    };
-=======
-      canvas.height = window.innerHeight
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -56,63 +49,14 @@ const UltraFuturisticBackground2034: React.FC<
       life: number,
       maxLife: number,
       type: ParticleType
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
     }> = [];
 
     // Quantum entanglement lines
     const entanglementLines: Array<{
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      x1: number;
-      y1: number;
-      x2: number;
-      y2: number;
-      strength: number;
-<<<<<<< HEAD
-      life: number;    }> = [];
 
-    // Neural network nodes
-    const neuralNodes: Array<{
-      x: number;
-      y: number;
-      connections: number[];
-      activation: number;    }> = [];
-
-    // Initialize particles
-    const initParticles = () => {
-      for (let i = 0; i < 100 * intensity; i++) {        particles.push({
-      x1: number,
-      y1: number,
-      x2: number,
-      y2: number,
-      strength: number,
-      life: number
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-    }> = [];
-
-    // Neural network nodes
-    const neuralNodes: Array<{
-<<<<<<< HEAD
-      x: number;
-      y: number;
-      connections: number[];
-      activation: number;
-      x: number,
-      y: number,
-      connections: number[],
-      activation: number
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-    }> = [];
-
-    // Initialize particles
-    const initParticles = () => {
-<<<<<<< HEAD
-      for (let i = 0; i < 100 * intensity; i++) {
-=======
-      for (let i = 0, i < 100 * intensity, i++) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         particles.push({
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 2,
@@ -124,12 +68,9 @@ const UltraFuturisticBackground2034: React.FC<
             Math.floor(Math.random() * 3)
           ] as ParticleType,
         });      }
-=======
-          type: ['quantumneuralholographic'][Math.floor(Math.random() * 3)] as ParticleType
-        })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     };
 
     // Initialize neural network
@@ -140,28 +81,19 @@ const UltraFuturisticBackground2034: React.FC<
           connections: [],
           activation: Math.random(),
         });      }
-=======
-      for (let i = 0, i < 20 * intensity, i++) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         neuralNodes.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           connections: [],
-<<<<<<< HEAD
-          activation: Math.random(),
-        });
-=======
-          activation: Math.random()
-        })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Create connections
       neuralNodes.forEach((node, i) => {
         const numConnections = Math.floor(Math.random() * 3) + 1;
         for (let j = 0; j < numConnections; j++) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           const targetIndex = Math.floor(Math.random() * neuralNodes.length);
           if (targetIndex !== i && !node.connections.includes(targetIndex)) {
             node.connections.push(targetIndex);
@@ -176,39 +108,18 @@ const UltraFuturisticBackground2034: React.FC<
         const x2 = x1 + (Math.random() - 0.5) * 200;
         const y2 = y1 + (Math.random() - 0.5) * 200;
 
-=======
-      })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     };
 
     // Initialize entanglement lines
     const initEntanglementLines = () => {
-<<<<<<< HEAD
-      for (let i = 0; i < 15 * intensity; i++) {
-=======
-      for (let i = 0, i < 15 * intensity, i++) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
         const x2 = x1 + (Math.random() - 0.5) * 200;
         const y2 = y1 + (Math.random() - 0.5) * 200;
-<<<<<<< HEAD
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        entanglementLines.push({
-          x1,
-          y1,
-          x2,
-          y2,
-          strength: Math.random(),
-          life: Math.random() * 100,
-        });      }
-=======
-          life: Math.random() * 100
-        })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     };
 
     initParticles();
@@ -234,7 +145,6 @@ const UltraFuturisticBackground2034: React.FC<
         ctx.save();
         ctx.globalAlpha = alpha;
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         if (particle.type === 'quantum') {
           ctx.fillStyle = `rgba(0, 255, 255, ${alpha})`;
           ctx.shadowColor = 'cyan';
@@ -247,11 +157,8 @@ const UltraFuturisticBackground2034: React.FC<
           ctx.fillStyle = `rgba(0, 255, 0, ${alpha})`;
           ctx.shadowColor = 'lime';
           ctx.shadowBlur = 6;        }
-=======
-          ctx.shadowBlur = 6
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -261,31 +168,23 @@ const UltraFuturisticBackground2034: React.FC<
         // Remove dead particles
         if (particle.life <= 0) {
           particles.splice(index, 1);        }
-=======
-          particles.splice(index, 1)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       });
 
       // Draw entanglement lines
       entanglementLines.forEach((line, index) => {
         line.life--;
         const alpha = line.life / 100;
-=======
-        
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         ctx.save();
         ctx.globalAlpha = alpha * 0.6;
         ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
         ctx.lineWidth = 2;
         ctx.shadowColor = 'cyan';
         ctx.shadowBlur = 5;
-=======
-        
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         ctx.beginPath();
         ctx.moveTo(line.x1, line.y1);
         ctx.lineTo(line.x2, line.y2);
@@ -294,20 +193,15 @@ const UltraFuturisticBackground2034: React.FC<
 
         if (line.life <= 0) {
           entanglementLines.splice(index, 1);        }
-=======
-          entanglementLines.splice(index, 1)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       });
 
       // Draw neural network
       neuralNodes.forEach((node, i) => {
         node.activation = Math.sin(Date.now() * 0.001 + i) * 0.5 + 0.5;
-=======
-        
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         // Draw connections
         node.connections.forEach(connectionIndex => {
           const targetNode = neuralNodes[connectionIndex];
@@ -319,20 +213,15 @@ const UltraFuturisticBackground2034: React.FC<
             ctx.lineWidth = strength * 2;
             ctx.shadowColor = 'magenta';
             ctx.shadowBlur = 3;
-=======
-            
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             ctx.beginPath();
             ctx.moveTo(node.x, node.y);
             ctx.lineTo(targetNode.x, targetNode.y);
             ctx.stroke();
             ctx.restore();          }
-=======
-            ctx.restore()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         });
 
         // Draw node
@@ -346,15 +235,8 @@ const UltraFuturisticBackground2034: React.FC<
         ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore();      });
-=======
-        
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Add new particles
       if (particles.length < 100 * intensity) {
@@ -370,12 +252,8 @@ const UltraFuturisticBackground2034: React.FC<
             Math.floor(Math.random() * 3)
           ] as ParticleType,
         });      }
-=======
-          type: ['quantumneuralholographic'][Math.floor(Math.random() * 3)] as ParticleType
-        })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Add new entanglement lines
       if (entanglementLines.length < 15 * intensity) {
@@ -384,7 +262,6 @@ const UltraFuturisticBackground2034: React.FC<
         const x2 = x1 + (Math.random() - 0.5) * 200;
         const y2 = y1 + (Math.random() - 0.5) * 200;
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         entanglementLines.push({
           x1,
           y1,
@@ -396,11 +273,8 @@ const UltraFuturisticBackground2034: React.FC<
       }
 
       animationRef.current = requestAnimationFrame(animate);    };
-=======
-      animationRef.current = requestAnimationFrame(animate)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     animate();
 
@@ -410,20 +284,14 @@ const UltraFuturisticBackground2034: React.FC<
       }
       window.removeEventListener('resize', resizeCanvas);
     };  }, [intensity]);
-=======
-        cancelAnimationFrame(animationRef.current)
-      }
-      window.removeEventListener('resize', resizeCanvas)
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }, [intensity]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   // Mouse move handler for interactive effects
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -452,76 +320,30 @@ const UltraFuturisticBackground2034: React.FC<
             duration: 8,
             repeat: -1,
             ease: 'linear',
-=======
-            scale: [1, 1.2, 1];
-            opacity: [0.3, 0.6, 0.3]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
           transition={{
             duration: 8,
             repeat: -1,
-<<<<<<< HEAD
-            ease: 'linear',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          }}
-        />
 
-        <motion.div
-          className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.4, 0.8, 0.4],
-            scale: [1, 1.1, 1],          }}
-          transition={{
-            duration: 6,
-            repeat: -1,
-            ease: 'easeInOut',
-=======
-            y: [0, -20, 0];
-            opacity: [0.4, 0.8, 0.4];
-            scale: [1, 1.1, 1]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           }}
           transition={{
             duration: 6,
             repeat: -1,
-<<<<<<< HEAD
-            ease: 'easeInOut',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          }}
-        />
 
-        <motion.div
-          className='absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30'
-          style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
-          animate={{
-            rotate: [0, 180, 360],
-            opacity: [0.2, 0.5, 0.2],          }}
-          transition={{
-            duration: 12,
-            repeat: -1,
-            ease: 'linear',          }}
-=======
-            rotate: [0, 180, 360];
-            opacity: [0.2, 0.5, 0.2]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           }}
           transition={{
             duration: 12,
             repeat: -1,
-<<<<<<< HEAD
-            ease: 'linear',
-=======
-            ease: "linear"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         />
       </div>
 
       {/* Energy waves */}
       <div className='absolute inset-0'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{
@@ -530,47 +352,25 @@ const UltraFuturisticBackground2034: React.FC<
             duration: 15,
             repeat: -1,
             ease: 'linear',
-=======
-            x: ['-100%100%']
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
           transition={{
             duration: 15,
             repeat: -1,
-<<<<<<< HEAD
-            ease: 'linear',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          }}
-        />
 
-        <motion.div
-          className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
-          animate={{
-            y: ['-100%', '100%'],          }}
-          transition={{
-            duration: 20,
-            repeat: -1,
-            ease: 'linear',          }}
-=======
-            y: ['-100%100%']
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           }}
           transition={{
             duration: 20,
             repeat: -1,
-<<<<<<< HEAD
-            ease: 'linear',
-=======
-            ease: "linear"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         />
       </div>
 
       {/* Holographic matrix effect */}
       <div className='absolute inset-0'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
             key={i}
@@ -579,29 +379,24 @@ const UltraFuturisticBackground2034: React.FC<
             animate={{
               opacity: [0, 1, 0],
               scaleY: [0, 1, 0],            }}
-=======
-              opacity: [0, 1, 0];
-              scaleY: [0, 1, 0]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             transition={{
               duration: 3,
               delay: i * 0.1,
               repeat: -1,
               ease: 'easeInOut',            }}
-=======
-              ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           />
         ))}
       </div>
 
       {/* Cyberpunk grid */}
       <div className='absolute inset-0'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
           style={{
@@ -620,31 +415,13 @@ const UltraFuturisticBackground2034: React.FC<
 };
 
 export default UltraFuturisticBackground2034;
-=======
-            opacity: [0.3, 0.6, 0.3]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
           transition={{
             duration: 4,
             repeat: -1,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
         />
       </div>
     </div>
-<<<<<<< HEAD
-  );
-};
-
-export default UltraFuturisticBackground2034;
-=======
-  )
-};
-
-export default UltraFuturisticBackground2034;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

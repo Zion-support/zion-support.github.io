@@ -9,10 +9,7 @@ const categories: GrantCategory[] = [
   'Regional Expansion',
   'Research Grants',
 ];
-=======
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 export default function ApplyGrantPage() {
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
@@ -24,11 +21,9 @@ export default function ApplyGrantPage() {
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );  const [supportingLinks, setSupportingLinks] = useState<string>('');
-=======
-  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   const [supportingLinks, setSupportingLinks] = useState<string>('');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string>('');
@@ -48,7 +43,7 @@ export default function ApplyGrantPage() {
           teamInfo,
           proposalSummary,
           timeline,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           budgetAmount: Number(budgetAmount || 0),
           budgetCurrency,
           supportingLinks: supportingLinks
@@ -68,11 +63,9 @@ export default function ApplyGrantPage() {
       setError(e.message);
     } finally {
       setLoading(false);    }
-=======
-      setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   };
 
   return (
@@ -91,7 +84,7 @@ export default function ApplyGrantPage() {
             >
               <option value='grant'>Grant</option>
               <option value='incubator'>Incubator</option>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </select>
           </label>
           <label className='text-sm'>
@@ -214,17 +207,8 @@ export default function ApplyGrantPage() {
     </EnhancedLayout>
   );
 }
-=======
-        <div className="flex gap-3">
-          <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded disabled:opacity-50">Save Draft</button>
-          <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50">Submit for Review</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         </div>
       </div>
     </EnhancedLayout>
   );
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -24,16 +24,7 @@ import {
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
-=======
-import { 
-  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
-  ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
-  Search, Filter, Grid, List, ArrowRight, Award, Target
-} from 'lucide-react';
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 export default function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -42,7 +33,6 @@ export default function ComprehensiveServicesShowcase() {
   const [sortBy, setSortBy] = useState<
     'popularity' | 'price' | 'rating' | 'newest'
   >('popularity');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   // Combine all services
   const allServices = [
@@ -168,9 +158,8 @@ export default function ComprehensiveServicesShowcase() {
     { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length },
     { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length },
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   // Filter and sort services
   const filteredServices = allServices
@@ -187,9 +176,9 @@ export default function ComprehensiveServicesShowcase() {
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
     })
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
@@ -207,22 +196,15 @@ export default function ComprehensiveServicesShowcase() {
           );
         default:
           return 0;      }
-=======
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
-        case 'rating':
-          return b.rating - a.rating;
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-        default: return 0
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     });
 
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.icon || '🚀';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   };
 
   const formatPrice = (price: string) => {
@@ -232,19 +214,16 @@ export default function ComprehensiveServicesShowcase() {
   return (
     <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
       <div className='max-w-7xl mx-auto'>        {/* Header */}
-=======
-    <section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         {/* Header */}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className='text-center mb-16'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
             Revolutionary Micro SAAS Services 2025
@@ -286,12 +265,9 @@ export default function ComprehensiveServicesShowcase() {
               <div>
                 <div className='text-3xl font-bold text-orange-400'>500%+</div>
                 <div className='text-white/60'>Average ROI</div>              </div>
-=======
-                <div className="text-3xl font-bold text-orange-400">500%+</div>
-                <div className="text-white/60">Average ROI</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </div>
           </div>
         </motion.div>
@@ -303,7 +279,7 @@ export default function ComprehensiveServicesShowcase() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className='mb-12'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
             {/* Search */}
@@ -319,65 +295,19 @@ export default function ComprehensiveServicesShowcase() {
 
             {/* Sort and View Controls */}
             <div className='flex items-center gap-4'>
-=======
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               />
             </div>
 
             {/* Sort and View Controls */}
-<<<<<<< HEAD
-            <div className='flex items-center gap-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              <select
-                value={sortBy}
-                onChange={e => setSortBy(e.target.value as any)}
-                className='bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400'
-              >
-                <option value='popularity'>Most Popular</option>
-                <option value='price'>Price: Low to High</option>
-                <option value='rating'>Highest Rated</option>
-                <option value='newest'>Newest First</option>
-              </select>
 
-              <div className='flex bg-white/10 rounded-xl p-1'>
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-lg transition-all ${
-                    viewMode === 'grid'
-                      ? 'bg-blue-600 text-white'
-                      : 'text-white/60 hover:text-white'
-                  }`}
-                >
-                  <Grid className='w-5 h-5' />                </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-lg transition-all ${
-=======
-                  <Grid className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all ${
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                    viewMode === 'list'
-                      ? 'bg-blue-600 text-white'
-                      : 'text-white/60 hover:text-white'
-                  }`}
-                >
-<<<<<<< HEAD
-                  <List className='w-5 h-5' />                </button>
-=======
-                    viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </div>
           </div>
@@ -393,14 +323,9 @@ export default function ComprehensiveServicesShowcase() {
         >
           <div className='flex flex-wrap justify-center gap-3'>
             {categories.map(category => (              <button
-=======
-          className="mb-12"
-        >
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               <button
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -414,11 +339,9 @@ export default function ComprehensiveServicesShowcase() {
                 <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
                   {category.count}
                 </span>              </button>
-=======
-                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             ))}
           </div>
         </motion.div>
@@ -426,11 +349,9 @@ export default function ComprehensiveServicesShowcase() {
         {/* Services Display */}
         {viewMode === 'grid' ? (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <AnimatePresence>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -444,16 +365,9 @@ export default function ComprehensiveServicesShowcase() {
                   {service.popular && (
                     <div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
                       <Star className='w-3 h-3' />                      Popular
-=======
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                >
-                  {/* Popular Badge */}
-                  {service.popular && (
-                    <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
-                      <Star className="w-3 h-3" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       Popular
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </div>
                   )}
 
@@ -468,7 +382,7 @@ export default function ComprehensiveServicesShowcase() {
                         <div className='text-xs text-white/60'>
                           {service.period}
                         </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       </div>
                     </div>
 
@@ -487,19 +401,16 @@ export default function ComprehensiveServicesShowcase() {
                           className='flex items-center gap-2 text-sm text-white/60'
                         >
                           <CheckCircle className='w-4 h-4 text-green-400' />                          {feature}
-=======
-                        <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
-                          <CheckCircle className="w-4 h-4 text-green-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           {feature}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </div>
                       ))}
                     </div>
 
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
                           {service.rating}
@@ -517,12 +428,9 @@ export default function ComprehensiveServicesShowcase() {
                           {service.trialDays}d
                         </div>
                         <div className='text-xs text-white/60'>Trial</div>                      </div>
-=======
-                        <div className="text-lg font-bold text-purple-400">{service.trialDays}d</div>
-                        <div className="text-xs text-white/60">Trial</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </div>
 
                     {/* CTA */}
@@ -534,16 +442,9 @@ export default function ComprehensiveServicesShowcase() {
                     >
                       Learn More
                       <ExternalLink className='w-4 h-4' />                    </a>
-=======
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
-                    >
-                      Learn More
-                      <ExternalLink className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </a>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </div>
                 </motion.div>
               ))}
@@ -551,11 +452,9 @@ export default function ComprehensiveServicesShowcase() {
           </div>
         ) : (
           <div className='space-y-6'>            <AnimatePresence>
-=======
-          <div className="space-y-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <AnimatePresence>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -564,7 +463,7 @@ export default function ComprehensiveServicesShowcase() {
                   exit={{ opacity: 0, x: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 >
                   <div className='flex flex-col lg:flex-row gap-6'>
                     {/* Left Side - Icon and Basic Info */}
@@ -572,11 +471,9 @@ export default function ComprehensiveServicesShowcase() {
                       <div className='text-6xl mb-4'>{service.icon}</div>
                       {service.popular && (
                         <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular
-=======
-                        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           Popular
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </div>
                       )}
                     </div>
@@ -584,7 +481,7 @@ export default function ComprehensiveServicesShowcase() {
                     {/* Center - Service Details */}
                     <div className='flex-1'>
                       <div className='flex items-start justify-between mb-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         <div>
                           <h3 className='text-2xl font-bold text-white mb-2'>
                             {service.name}
@@ -604,35 +501,14 @@ export default function ComprehensiveServicesShowcase() {
                       </div>
 
                       {/* Features Grid */}
-=======
-                        <div className="text-right">
-                          <div className="text-3xl font-bold text-white">{service.price}</div>
-                          <div className="text-white/60">{service.period}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         </div>
                       </div>
 
                       {/* Features Grid */}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                      <div className='grid grid-cols-2 gap-2 mb-4'>
-                        {service.features.slice(0, 6).map((feature, idx) => (
-                          <div
-                            key={idx}
-                            className='flex items-center gap-2 text-sm text-white/60'
-                          >
-                            <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
-<<<<<<< HEAD
-                            <span className='truncate'>{feature}</span>                          </div>
-=======
-                      <div className="grid grid-cols-2 gap-2 mb-4">
-                        {service.features.slice(0, 6).map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
-                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                            <span className="truncate">{feature}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         ))}
                       </div>
 
@@ -649,20 +525,14 @@ export default function ComprehensiveServicesShowcase() {
                           <Users className="w-4 h-4 text-blue-400" />
                           <span>{service.customers}+ customers</span>
                         </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         <div className='flex items-center gap-2'>
                           <Users className='w-4 h-4 text-blue-400' />
                           <span>{service.customers}+ customers</span>
                         </div>
-<<<<<<< HEAD
-                        <div className='flex items-center gap-2'>
-                          <Clock className='w-4 h-4 text-green-400' />                          <span>{service.setupTime} setup</span>
-=======
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4 text-green-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           <span>{service.setupTime} setup</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </div>
                       </div>
                     </div>
@@ -676,16 +546,9 @@ export default function ComprehensiveServicesShowcase() {
                         <div className='flex items-center gap-2 text-white'>
                           <span>{getCategoryIcon(service.category)}</span>
                           <span className='text-sm'>{service.category}</span>                        </div>
-=======
-                    <div className="flex-shrink-0 flex flex-col items-end gap-4">
-                      <div className="text-right">
-                        <div className="text-sm text-white/60 mb-1">Category</div>
-                        <div className="flex items-center gap-2 text-white">
-                          <span>{getCategoryIcon(service.category)}</span>
-                          <span className="text-sm">{service.category}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       </div>
 
                       <a
@@ -696,16 +559,9 @@ export default function ComprehensiveServicesShowcase() {
                       >
                         Learn More
                         <ArrowRight className='w-4 h-4' />                      </a>
-=======
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2"
-                      >
-                        Learn More
-                        <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       </a>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </div>
                   </div>
                 </motion.div>
@@ -728,15 +584,9 @@ export default function ComprehensiveServicesShowcase() {
             <p className='text-white/60'>
               Try adjusting your search or filter criteria
             </p>          </motion.div>
-=======
-            className="text-center py-20"
-          >
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-            <p className="text-white/60">Try adjusting your search or filter criteria</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         )}
 
         {/* Contact CTA */}
@@ -746,7 +596,7 @@ export default function ComprehensiveServicesShowcase() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className='mt-20 text-center'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -767,12 +617,9 @@ export default function ComprehensiveServicesShowcase() {
               <a
                 href='tel:+13024640950'
                 className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'              >
-=======
-                href="tel:+13024640950"
-                className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 Call +1 302 464 0950
               </a>
             </div>
@@ -782,7 +629,3 @@ export default function ComprehensiveServicesShowcase() {
     </section>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,9 +1,7 @@
- 
-
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 };
 
 type InsightResponse = {
@@ -17,18 +15,14 @@ type InsightResponse = {
   regionalComparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
   gptRecommendation?: string;};
-=======
-  gptRecommendation?: string
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
   const mid = Math.floor(arr.length / 2);
   if (arr.length === 0) return 0;
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 function groupBy<T, K extends string | number>(
   items: T[],
@@ -106,20 +100,13 @@ async function maybeGetGptRecommendation(
   try {
     const client = new OpenAI({ apiKey });
     const skillsStr = input.skills.join(', ');    const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
-=======
-async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return undefined;
   try {
     const client = new OpenAI({ apiKey });
-<<<<<<< HEAD
-    const skillsStr = input.skills.join(', ');
-=======
-    const skillsStr = input.skills.join();
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -135,7 +122,7 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
       max_tokens: 300,
     });
     return completion.choices?.[0]?.message?.content || undefined;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   } catch {
     return undefined;
   }
@@ -144,11 +131,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<InsightResponse | { error: string }>
 ) {  if (req.method !== 'POST') {
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   if (req.method !== 'POST') {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
@@ -158,42 +143,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const country = extractCountry(region || 'Global');
 
   // Score and filter candidate profiles
-=======
-  const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const country = extractCountry(region || 'Global');
 
   // Score and filter candidate profiles
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  const scored = TALENT_PROFILES.map(p => ({
-    profile: p,
-    score:
-      calculateSimilarityScore(skills || [], p) +
-      (extractCountry(p.location) === country ? 0.2 : 0),
-  }))
-    .filter(s => s.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 20);
 
-  const sample =
-    scored.length > 0 ? scored.map(s => s.profile) : TALENT_PROFILES;
-<<<<<<< HEAD
-  const rates = sample.map(p => p.hourlyRateUsd);  const baseMedian = median(rates);
-=======
-  const scored = TALENT_PROFILES.map((p) => ({
-    profile: p;
-    score: calculateSimilarityScore(skills || [], p) + (extractCountry(p.location) === country ? 0.2 : 0)}))
-    .filter((s) => s.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 20);
-
-  const sample = scored.length > 0 ? scored.map((s) => s.profile) : TALENT_PROFILES;
-  const rates = sample.map((p) => p.hourlyRateUsd);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const baseMedian = median(rates);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   const min = Math.min(...rates);
   const max = Math.max(...rates);
 
@@ -206,7 +162,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         : experienceLevel === 'Senior'
           ? 1.2
           : 1.35;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   const remoteMultiplier = remote ? 1.1 : 1.0;
   const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15; // FT tends to lower hourly; contract/freelance higher
 
@@ -238,55 +194,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .slice(0, 8);
 
   // Tags
-=======
-    .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
 
   // Tags
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  const scarceSkills = [
-    'RAG',
-    'LangChain',
-    'Vector DBs',
-    'Kubernetes',
-    'AppSec',
-    'Security',
-  ];
-  const undersupplied = (skills || []).some(s =>
-    scarceSkills.some(t => s.toLowerCase().includes(t.toLowerCase()))
-  );
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  const tags: string[] = [];
-  if (remote) tags.push('Remote Premium');
-  if (undersupplied) tags.push('Undersupplied Skill');
-
-  const gptRecommendation = await maybeGetGptRecommendation(body, {
-    median: baseMedian,
-    min,
-    max,
-    country,
-  });
-
-  const response: InsightResponse = {
-    recommendedHourlyUsd: recommendedHourly,
-    recommendedMonthlyUsd: recommendedMonthly,
-    medianHourlyUsd: Math.round(baseMedian),
-    minHourlyUsd: Math.round(min),
-    maxHourlyUsd: Math.round(max),
-    confidence: Number(confidence.toFixed(2)),
-    trendMonthly: trend,
-    regionalComparison,
-    tags,
-    gptRecommendation,
-  };
-
-  return res.status(200).json(response);
-=======
-  return res.status(200).json(response)
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

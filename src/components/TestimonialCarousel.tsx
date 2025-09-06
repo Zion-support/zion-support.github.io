@@ -1,33 +1,9 @@
 import {  Carousel,
   Carousel,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   CarouselContent,
   CarouselItem,
   CarouselNext,
-<<<<<<< HEAD
-  CarouselPrevious,;
-} from '@/components/ui/carousel';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { Avatar } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { Quote } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { CASE_STUDIES } from '@/data/case-studies';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-const testimonials = CASE_STUDIES;
-=======
-  CarouselPrevious} from "@/components/ui/carousel",
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Avatar } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Quote } from 'lucide-react';
-import Link from "next/link";
-import Image from "next/image";
-import { CASE_STUDIES } from "@/data/case-studies";
-const testimonials = CASE_STUDIES,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function TestimonialCarousel() {
   return (
@@ -52,38 +28,15 @@ export function TestimonialCarousel() {
             className='w-full'
           >
             <CarouselContent>
-<<<<<<< HEAD
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className='md:basis-1/1 lg:basis-1/1'>
-                  <Card className='bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col'>
-                    <CardContent className='p-8 flex flex-col md:flex-row gap-6 flex-1'>
-                      <div className='flex-shrink-0 flex flex-col items-center'>
-                        <Avatar className='h-20 w-20 border-2 border-zion-cyan mb-3'>                          <Image
-=======
-              {testimonials.map((testimonial, index,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col">
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">
                       <div className="flex-shrink-0 flex flex-col items-center">
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                           <Image
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                            src={testimonial.avatar}
-                            alt={testimonial.author}
-                            width={80}
-                            height={80}
-                            loading='lazy'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-                            src = {testimonial.avatar,}
-                            alt = {testimonial.author,}
-                            width = {80,}
-                            height = {80,}
-                            loading="lazy"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                           />
                         </Avatar>
                         <div className='text-center md:text-left'>
@@ -97,28 +50,9 @@ export function TestimonialCarousel() {
                       </div>
                       <div className='flex-1'>
                         <div className='flex items-center gap-3 mb-4'>                          <Image
-=======
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           <Image
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                            src={testimonial.companyLogo}
-                            alt={`${testimonial.company} logo`}
-                            width={32}
-                            height={32}
-                            className='h-8 w-auto'
-                            loading='lazy'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-                            src = {testimonial.companyLogo,}
-                            alt={`${testimonial.company} logo`}
-                            width = {32,}
-                            height = {32,}
-                            className="h-8 w-auto"
-                            loading="lazy"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                           />
                           <span className='text-white font-semibold'>
                             {testimonial.company}
@@ -139,13 +73,9 @@ export function TestimonialCarousel() {
                         <Link href={`/case-studies/${testimonial.slug}`}>
                           Read Case Study →
                         </Link>                      </Button>
-=======
-                    <CardFooter className="p-6 pt-0">
-                      <Button variant="link" className="text-zion-cyan p-0" asChild>
-                        <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study →</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </CardFooter>
                   </Card>
                 </CarouselItem>
@@ -154,20 +84,12 @@ export function TestimonialCarousel() {
             <div className='flex justify-center mt-8 gap-2'>
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>
-=======
-            <div className="flex justify-center mt-8 gap-2">
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
-              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </Carousel>
         </div>
       </div>
     </section>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

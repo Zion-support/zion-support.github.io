@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-  const pageKey = `search-${routeKey}-${router.asPath}`;
-
-=======
-import { useEffect, useState } from "react";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useRouter } from 'next/router';
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
@@ -11,20 +5,7 @@ import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { SearchSuggestion } from "@/types/search";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
-<<<<<<< HEAD
-  Tabs;
-  TabsContent;
-  TabsList;
-  TabsTrigger} from "@/components/ui/tabs";
-import { Loader2 } from 'lucide-react'
 
-=======
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger} from "@/components/ui/tabs",
-import { Loader2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface SearchResult {
   id: string,
   type: "product" | "service" | "talent" | "blog" | "doc",
@@ -59,13 +40,7 @@ export default function SearchPage() {
   const [loading, setLoading] = useState(false);
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
   // Force re-render and reset state when route changes
-<<<<<<< HEAD
-  const routeKey = useRouteChange(() => {
-    setResults([]);
-=======
-  const routeKey = useRouteChange((,) => {
-    setResults([]),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     setLoading(false)
   });
 
@@ -78,14 +53,7 @@ export default function SearchPage() {
   const marketplaceResults = [...productResults, ...talentResults];
 
   // Sync query with URL parameter changes
-<<<<<<< HEAD
-  useEffect(() => {
-    if (!router.isReady) return;
-=======
-  useEffect((,) => {
-    if (!router.isReady) return,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    
+
     const urlQuery = (router.query.q as string) || "";
     if (urlQuery !== query) {
       setQuery(urlQuery)
@@ -93,14 +61,7 @@ export default function SearchPage() {
   }, [router.isReady, router.query.q]), // Fixed dependency array
 
   // Fetch results when query changes
-<<<<<<< HEAD
-  useEffect(() => {
-    if (!router.isReady) return;
-=======
-  useEffect((,) => {
-    if (!router.isReady) return,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    
+
     if (query.trim()) {
       fetchResults(query.trim())
     } else {
@@ -132,13 +93,6 @@ export default function SearchPage() {
     }
   };
 
-<<<<<<< HEAD
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-=======
-  const handleSubmit = (e: React.FormEvent,) => {
-    e.preventDefault(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (query.trim()) {
       router.push(`/search?q=${encodeURIComponent(query.trim())}`)
     }
@@ -152,19 +106,7 @@ export default function SearchPage() {
       <main className="container mx-auto px-4 py-8">
         <form onSubmit={handleSubmit} className="mb-6">
           <EnhancedSearchInput
-<<<<<<< HEAD
-            value={query}
-            onChange={setQuery}
-            onSelectSuggestion={(suggestion) => {
-              const searchTerm = suggestion.text.trim();
-              setQuery(searchTerm);
-=======
-            value = {query,}
-            onChange = {setQuery,}
-            onSelectSuggestion={(suggestion,) => {
-              const searchTerm = suggestion.text.trim(),
-              setQuery(searchTerm),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
             }}
             searchSuggestions = {suggestions,}
@@ -349,8 +291,3 @@ router.push (`/search?q=$ {;
 }</TabsContent> </Tabs>) ;
 }</main> </div>) ;
 }'"
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

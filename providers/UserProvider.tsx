@@ -5,7 +5,6 @@ import React, {
   useMemo,
   useState,;} from 'react';
 } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export type UserRole = 'client' | 'talent';
 
@@ -21,10 +20,6 @@ export type UserContextValue = {
   user: User | null;
   setUser: (user: User | null) => void;
   logout: () => void;
-<<<<<<< HEAD
-  completeOnboarding: () => void;};
-};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const UserContext = createContext<UserContextValue | undefined>(undefined);
 
@@ -34,11 +29,6 @@ const DEFAULT_USER: User = {
   role: 'client',
   onboardingCompleted: false,
 };
-
-<<<<<<< HEAD
-export function UserProvider({ children }: { children: React.ReactNode }) {  const [user, setUser] = useState<User | null>(null);
-  const [user, setUser] = useState<User | null>(null);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   useEffect(() => {
     try {
@@ -57,10 +47,6 @@ export function UserProvider({ children }: { children: React.ReactNode }) {  con
     try {
       if (user) localStorage.setItem('zion.user', JSON.stringify(user));
       else localStorage.removeItem('zion.user');
-<<<<<<< HEAD
-    } catch {}  }, [user]);
-  }, [user]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const value = useMemo<UserContextValue>(
     () => ({
@@ -70,7 +56,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {  con
       completeOnboarding: () =>
         setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),    }),
     }),
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     [user]
   );
 
@@ -79,6 +65,3 @@ export function UserProvider({ children }: { children: React.ReactNode }) {  con
 export function useUser() {
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
-<<<<<<< HEAD
-  return ctx;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -64,20 +64,16 @@ import {
   Palette, Camera, Video, Music, Gamepad2, Heart;
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye, Timer
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
-=======
-  website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const serviceCategories = [
   {
@@ -111,9 +107,9 @@ const serviceCategories = [
       { name: 'AI Reality Augmentation Platform', href: '/ai-reality-augmentation-platform', description: 'Real-time AI reality enhancement', price: '$18,999/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '⚛️ 2029 Quantum & Neuroscience',
     icon: Atom,
     color: 'from-indigo-600 to-purple-600',
@@ -137,9 +133,9 @@ const serviceCategories = [
       { name: 'Quantum Time Manipulation Platform', href: '/quantum-time-manipulation-platform', description: 'Manipulate time perception', price: '$35,999/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '🚀 2029 Space Colonization & Mining',
     icon: Rocket,
     color: 'from-red-600 to-orange-600',
@@ -170,9 +166,9 @@ const serviceCategories = [
       { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automate asteroid and lunar mining', price: '$65,999/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '🏠 2029 Space Architecture & Energy',
     icon: Building,
     color: 'from-green-600 to-teal-600',
@@ -196,9 +192,9 @@ const serviceCategories = [
       { name: 'Space Energy Harvesting Platform', href: '/space-energy-harvesting-platform', description: 'Harvest energy from space sources', price: '$55,999/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '🤖 Advanced AI & Machine Learning',
     icon: Brain,
     color: 'from-emerald-600 to-teal-600',
@@ -243,9 +239,9 @@ const serviceCategories = [
       { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite', description: 'Unlimited AI content creation', price: '$1,299/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '⛓️ Blockchain & Web3 Solutions',
     icon: Layers,
     color: 'from-orange-600 to-red-600',
@@ -283,9 +279,9 @@ const serviceCategories = [
       { name: 'DeFi Yield Optimization', href: '/defi-yield-optimization', description: 'Maximize DeFi returns', price: '$3,999/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '🏥 Healthcare & Biotech Innovation',
     icon: Heart,
     color: 'from-pink-600 to-rose-600',
@@ -316,9 +312,9 @@ const serviceCategories = [
       { name: 'Biotech Research Automation', href: '/biotech-research-automation', description: 'Automated biotechnology research', price: '$4,999/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '🏙️ Smart City & Infrastructure',
     icon: Building,
     color: 'from-slate-600 to-gray-600',
@@ -349,9 +345,9 @@ const serviceCategories = [
       { name: 'Energy Grid Optimization', href: '/energy-grid-optimization', description: 'Smart energy management', price: '$5,999/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '🔬 Research & Development',
     icon: Microscope,
     color: 'from-blue-600 to-indigo-600',
@@ -382,9 +378,9 @@ const serviceCategories = [
       { name: 'Research Collaboration Hub', href: '/research-collaboration-hub', description: 'Global research collaboration', price: '$1,799/month' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     title: '💼 Enterprise & Business Solutions',
     icon: Briefcase,
     color: 'from-emerald-600 to-blue-600',
@@ -415,9 +411,8 @@ const serviceCategories = [
       { name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
     ]
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const mainNavItems = [
   { name: 'Home', href: '/', icon: Home },
@@ -428,11 +423,8 @@ const mainNavItems = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Support', href: '/support', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: Phone },];
-=======
-  { name: 'Contact', href: '/contact', icon: Phone }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function UltraFuturisticNavigation2029() {
   const [isOpen, setIsOpen] = useState(false);
@@ -445,14 +437,8 @@ export default function UltraFuturisticNavigation2029() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);  }, []);
-=======
-      setScrolled(window.scrollY > 50)
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }, []);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -467,7 +453,7 @@ export default function UltraFuturisticNavigation2029() {
               href={`tel:${contactInfo.mobile}`}
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
             >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
@@ -482,27 +468,14 @@ export default function UltraFuturisticNavigation2029() {
               <span>{contactInfo.address}</span>
             </div>
           </div>
-=======
-            <div className="flex items-center space-x-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               <MapPin size={14} />
               <span>{contactInfo.address}</span>
             </div>
           </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          <div className='flex items-center space-x-4'>
-            <a
-              href={contactInfo.website}
-              className='hover:text-cyan-300 transition-colors'
-<<<<<<< HEAD
-            >              {contactInfo.website.replace('https://', '')}
-=======
-          <div className="flex items-center space-x-4">
-            <a href={contactInfo.website} className="hover:text-cyan-300 transition-colors">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               {contactInfo.website.replace('https://', '')}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </a>
           </div>
         </div>
@@ -518,7 +491,7 @@ export default function UltraFuturisticNavigation2029() {
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -543,73 +516,26 @@ export default function UltraFuturisticNavigation2029() {
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavItems.map(item => (
-=======
-                <span className="text-xs text-gray-400">2029 Innovation Hub</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </div>
             </motion.div>
 
             {/* Desktop Navigation */}
-<<<<<<< HEAD
-            <div className='hidden lg:flex items-center space-x-8'>
-              {mainNavItems.map(item => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className='group relative text-gray-300 hover:text-white transition-colors duration-200'
-                >
-                  <div className='flex items-center space-x-2'>
-                    <item.icon
-                      size={16}
-                      className='group-hover:text-cyan-400 transition-colors'
-                    />
-                    <span>{item.name}</span>
-                  </div>
-                  <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </Link>
-              ))}
 
-              {/* Services Dropdown */}
-=======
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </Link>
               ))}
 
               {/* Services Dropdown */}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              <div className='relative group'>
-                <button className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>
-                  <Briefcase
-                    size={16}
-                    className='group-hover:text-cyan-400 transition-colors'
-                  />
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                  <span>All Services</span>
-                  <ChevronDown
-                    size={14}
-                    className='group-hover:rotate-180 transition-transform duration-200'
-                  />
-                </button>
 
-                {/* Mega Menu */}
-                <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
-                  <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>                    {serviceCategories.map((category, index) => (
-=======
-                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     {serviceCategories.map((category, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       <motion.div
                         key={category.title}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
                         className='group'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       >
                         <div
                           className={`p-4 rounded-lg bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
@@ -644,11 +570,9 @@ export default function UltraFuturisticNavigation2029() {
                                 <p className='text-xs text-gray-500 mt-1'>
                                   {service.description}
                                 </p>                              </Link>
-=======
-                                <p className="text-xs text-gray-500 mt-1">{service.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                               </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                             ))}
                           </div>
                         </div>
@@ -663,11 +587,9 @@ export default function UltraFuturisticNavigation2029() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >
-=======
-                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 Get Started
               </motion.button>
             </div>
@@ -677,14 +599,9 @@ export default function UltraFuturisticNavigation2029() {
               <button
                 onClick={toggleMenu}
                 className='text-gray-300 hover:text-white transition-colors'              >
-=======
-            <div className="lg:hidden">
-              <button
-                onClick={toggleMenu}
-                className="text-gray-300 hover:text-white transition-colors"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
@@ -700,7 +617,7 @@ export default function UltraFuturisticNavigation2029() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             className='fixed inset-0 z-50 lg:hidden'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-sm'
@@ -721,11 +638,9 @@ export default function UltraFuturisticNavigation2029() {
                     onClick={closeMenu}
                     className='text-gray-400 hover:text-white'
                   >                    <X size={24} />
-=======
-                  <button onClick={closeMenu} className="text-gray-400 hover:text-white">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     <X size={24} />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </button>
                 </div>
 
@@ -738,25 +653,14 @@ export default function UltraFuturisticNavigation2029() {
                       className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200'
                     >
                       <item.icon size={20} className='text-cyan-400' />                      <span>{item.name}</span>
-=======
-                <div className="space-y-4">
-                  {mainNavItems.map((item) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     <Link
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
-<<<<<<< HEAD
-                      className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200'
-                    >
-                      <item.icon size={20} className='text-cyan-400' />
-=======
-                      className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200"
-                    >
-                      <item.icon size={20} className="text-cyan-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       <span>{item.name}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </Link>
                   ))}
                 </div>
@@ -792,32 +696,14 @@ export default function UltraFuturisticNavigation2029() {
                         <p className="text-sm text-gray-400 mb-3">{category.description}</p>
                         <div className="space-y-2">
                           {category.services.slice(0, 2).map((service) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                             <Link
                               key={service.name}
                               href={service.href}
                               onClick={closeMenu}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                              className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200'
-                            >
-                              <div className='flex items-center justify-between'>
-                                <span className='text-sm text-gray-300'>
-                                  {service.name}
-                                </span>
-                                <span className='text-xs text-cyan-400 font-mono'>
-                                  {service.price}
-<<<<<<< HEAD
-                                </span>                              </div>
-=======
-                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
-                            >
-                              <div className="flex items-center justify-between">
-                                <span className="text-sm text-gray-300">{service.name}</span>
-                                <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                               </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                             </Link>
                           ))}
                         </div>
@@ -832,15 +718,9 @@ export default function UltraFuturisticNavigation2029() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  >
-=======
-                <div className="mt-8">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     Get Started
                   </motion.button>
                 </div>
@@ -854,10 +734,3 @@ export default function UltraFuturisticNavigation2029() {
       <div className='h-20' />
     </>
   );
-=======
-      <div className="h-20" />
-    </>
-  );
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

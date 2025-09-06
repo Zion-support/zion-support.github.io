@@ -5,32 +5,11 @@ import {
   CardHeader,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
 import { CountryPricing } from '@/data/onsiteServicePricing';
-
-<<<<<<< HEAD
-interface CountryServiceCardProps {
-  country: CountryPricing;
-  onSelect: (country: CountryPricing) => void;
-  onQuote?: (country: CountryPricing) => void;
-  isPopular?: boolean;
-=======
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-import { Badge } from "@/components/ui/badge";
-import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
-import { CountryPricing } from "@/data/onsiteServicePricing";
-interface CountryServiceCardProps {
-  country: CountryPricing,
-  onSelect: (country: CountryPricing,) => void,
-  onQuote?: (country: CountryPricing,) => void,
-  isPopular?: boolean
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function CountryServiceCard({
   country,
@@ -96,7 +75,6 @@ export function CountryServiceCard({
     }
   };
 
-  
     >
       <CardHeader className='pb-2'>
         <div className='flex items-center justify-between'>
@@ -153,15 +131,7 @@ export function CountryServiceCard({
           Select Service
         </Button>
         <Button
-<<<<<<< HEAD
-          variant='outline'
-          className='w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-          onClick={() => onQuote?.(country)}
-=======
-          variant="outline"
-          className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-          onClick = {() => onQuote?.(country),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
         >
           Get Quote
         </Button>
@@ -175,7 +145,3 @@ export function CountryServiceCard({
       </CardFooter>
     </Card>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

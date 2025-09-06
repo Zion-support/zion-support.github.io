@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-=======
-import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { Save } from 'lucide-react';
-import { TalentProfile } from "@/types/talent";
-import { ContractForm, ContractFormValues } from "./components/ContractForm";
-import { ContractPreview } from "./components/ContractPreview";
-import { TemplateManager } from "./templates/TemplateManager";
-import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";
-import { useSmartContracts } from "@/hooks/useSmartContracts";
-import { toast } from "sonner";
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface SmartContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -42,7 +25,7 @@ export function SmartContractBuilder({
   });
   const [deployStatus, setDeployStatus] = useState<string>('');
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
-  
+
   const { deploySmartContract } = useSmartContracts();
 
   const handleLoadTemplate = (templateData: ContractFormValues,) => {
@@ -50,14 +33,14 @@ export function SmartContractBuilder({
   };
 
   // Convert ContractFormValues to contract content string
-  
+
   const handleDeployContract = async () => {
     if (!generatedContract) return;
-    
+
     try {
       setDeployStatus('deploying');
       const contractInfo = await deploySmartContract(generatedContract, deployOptions);
-      
+
       if (contractInfo) {
         setDeploymentInfo(contractInfo);
         setDeployStatus('deployed');
@@ -96,7 +79,7 @@ export function SmartContractBuilder({
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-            
+
             <div className="flex gap-2">
               <Button 
                 variant="outline" 
@@ -109,7 +92,7 @@ export function SmartContractBuilder({
               </Button>
             </div>
           </div>
-          
+
           <TabsContent value="form" className="pt-4">
             <ContractForm 
               talent = {talent,}
@@ -119,7 +102,7 @@ export function SmartContractBuilder({
               onContractGenerated = {handleFormSubmit,}
             />
           </TabsContent>
-          
+
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
@@ -129,7 +112,7 @@ export function SmartContractBuilder({
                   onClose = {onClose,}
                   deploymentInfo = {deploymentInfo,}
                 />
-                
+
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
@@ -145,7 +128,7 @@ export function SmartContractBuilder({
             )}
           </TabsContent>
         </Tabs>
-        
+
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
@@ -193,7 +176,3 @@ setActiveTab ("preview");
   formValues ;
 }/> </DialogContent> </Dialog>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

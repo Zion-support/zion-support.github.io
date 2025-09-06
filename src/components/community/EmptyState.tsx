@@ -1,20 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { Button } from '@/components/ui/button';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
 
-=======
-import { Button } from '@/components/ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface EmptyStateProps {
   title: string;
   subtitle: string;
@@ -22,17 +9,6 @@ interface EmptyStateProps {
   href: string;
   hasSession: boolean;
 
-<<<<<<< HEAD
-const EmptyState: React.FC<EmptyStateProps> = ({
-  title,
-  subtitle,
-  cta,
-  href,
-  hasSession,
-}) => {
-=======
-const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession },) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   return (
     <div className='text-center py-16'>
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>
@@ -40,12 +16,9 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
       </div>
       <h2 className='text-xl font-medium mb-2'>{title}</h2>
       <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>
-=======
-      <h2 className="text-xl font-medium mb-2">{title}</h2>
-      <p className="text-muted-foreground mb-6">{subtitle}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       <TooltipProvider>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <Tooltip>
           <TooltipTrigger asChild>
             {hasSession ? (
@@ -61,6 +34,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
       </TooltipProvider>
     </div>
   );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 };
 export default EmptyState;

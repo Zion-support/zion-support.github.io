@@ -7,7 +7,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 ;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 class GitWorkflowAutomator {; constructor() {; this.logFile = './logs/pm2/git-workflow.log'; this.errorFile = './logs/pm2/git-workflow-error.log'; this.workflowReport = './logs/git-workflow-report.json'; this.ensureLogDirectory()};
 ; ensureLogDirectory() {; const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) {; fs.mkdirSync(logDir, { recursive: true })}};
 ; log(message, level = 'INFO') {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`;
@@ -67,7 +67,3 @@ async function main() {; const automator = new GitWorkflowAutomator();
 ;
 if (require.main = = = module) {; main()};
 ;
-<<<<<<< HEAD
-module.exports = GitWorkflowAutomator;
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

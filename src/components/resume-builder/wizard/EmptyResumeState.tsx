@@ -2,17 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FilePlus } from 'lucide-react';
 import { EmptyResumeProps } from './types';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
-=======
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FilePlus } from 'lucide-react';
-import { EmptyResumeProps } from "./types";
-export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   return (
     <Card className='w-full max-w-2xl mx-auto'>
       <CardContent className='py-8'>
@@ -33,9 +23,9 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps,) => {
             className="gap-2"
           >
             <FilePlus className="h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
             Create Resume
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </Button>
         </div>
       </CardContent>
@@ -43,13 +33,5 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps,) => {
   );
 };
 "
-=======
+
   )
-<<<<<<< HEAD
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-},
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

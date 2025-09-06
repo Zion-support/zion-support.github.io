@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 const UltraFuturisticBackground2043: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -15,12 +14,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-<<<<<<< HEAD
-      canvas.height = window.innerHeight;
-=======
-      canvas.height = window.innerHeight
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     };
 
     resizeCanvas();
@@ -46,9 +40,8 @@ const UltraFuturisticBackground2043: React.FC = () => {
       color: string,
       life: number,
       maxLife: number
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
     }> = [];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Create particles
     const createParticle = () => {
@@ -63,9 +56,8 @@ const UltraFuturisticBackground2043: React.FC = () => {
         'rgba(255, 20, 147, 0.8)',  // Deep pink
         'rgba(0, 255, 127, 0.8)',   // Spring green
         'rgba(255, 215, 0, 0.8)',   // Gold
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
       ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       return {
         x: Math.random() * canvas.width,
@@ -82,15 +74,9 @@ const UltraFuturisticBackground2043: React.FC = () => {
 
     // Initialize particles
     for (let i = 0; i < 100; i++) {      particles.push(createParticle());
-=======
-        maxLife: Math.random() * 100 + 50}
-    };
 
-    // Initialize particles
-    for (let i = 0, i < 100, i++) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       particles.push(createParticle());
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     }
 
     // Animation loop
@@ -113,11 +99,8 @@ const UltraFuturisticBackground2043: React.FC = () => {
         particle.life--;
         if (particle.life <= 0) {
           particles[index] = createParticle();        }
-=======
-          particles[index] = createParticle()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         // Draw particle
         ctx.save();
@@ -127,11 +110,8 @@ const UltraFuturisticBackground2043: React.FC = () => {
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore();      });
-=======
-        ctx.restore()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Draw connecting lines between nearby particles
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
@@ -139,7 +119,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
 
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -154,27 +134,19 @@ const UltraFuturisticBackground2043: React.FC = () => {
       }
 
       requestAnimationFrame(animate);    };
-=======
-            ctx.stroke()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }
         }
       }
 
-<<<<<<< HEAD
-      requestAnimationFrame(animate);
-=======
-      requestAnimationFrame(animate)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     animate();
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   }, []);
 
   return (
@@ -197,10 +169,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3],
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           }}
           transition={{
             duration: 8,
@@ -222,11 +191,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
             repeat: Infinity,
             ease: 'easeInOut',
             delay: 2,
-=======
-            ease: "easeInOut",
-            delay: 2
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           }}
           transition={{
             duration: 10,
@@ -249,11 +214,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
             repeat: Infinity,
             ease: 'easeInOut',
             delay: 4,
-=======
-            ease: "easeInOut",
-            delay: 4
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           }}
           transition={{
             duration: 12,
@@ -276,11 +237,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
             repeat: Infinity,
             ease: 'easeInOut',
             delay: 1,
-=======
-            ease: "easeInOut",
-            delay: 1
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           }}
           transition={{
             duration: 9,
@@ -302,11 +259,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
             repeat: Infinity,
             ease: 'easeInOut',
             delay: 3,
-=======
-            ease: "easeInOut",
-            delay: 3
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           }}
           transition={{
             duration: 11,
@@ -320,35 +273,29 @@ const UltraFuturisticBackground2043: React.FC = () => {
       <div className='absolute inset-0 opacity-10'>
         <div
           className='absolute inset-0'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           style={{
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px',          }}
-=======
-            `;
-            backgroundSize: '50px 50px'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         />
       </div>
 
       {/* Floating geometric shapes */}
       <div className='absolute inset-0'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         {/* Triangle */}
         <motion.div
           className='absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45'
           animate={{
             rotate: [45, 405],
             opacity: [0.2, 0.6, 0.2],
-=======
-            ease: "linear"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           }}
           transition={{
             duration: 20,
@@ -369,10 +316,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
             duration: 15,
             repeat: Infinity,
             ease: 'easeInOut',
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           }}
           transition={{
             duration: 15,
@@ -394,11 +338,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
             repeat: Infinity,
             ease: 'easeInOut',
             delay: 2,
-=======
-            ease: "easeInOut",
-            delay: 2
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           }}
           transition={{
             duration: 8,
@@ -410,7 +350,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
 
       {/* Energy waves */}
       <div className='absolute inset-0'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={i}
@@ -418,11 +358,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
             animate={{
               scale: [1, 1.5, 2, 2.5],
               opacity: [0.3, 0.2, 0.1, 0],
-=======
-              ease: "easeOut",
-              delay: i * 2
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             }}
             transition={{
               duration: 6,
@@ -435,7 +371,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
 
       {/* Quantum particles */}
       <div className='absolute inset-0'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         {[...Array(15)].map((_, i) => (
           <motion.div
             key={i}
@@ -453,43 +389,25 @@ const UltraFuturisticBackground2043: React.FC = () => {
               y: [0, Math.random() * 200 - 100];
               opacity: [0, 1, 0];
               scale: [0, 1, 0]}}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
             transition={{
               duration: 4 + Math.random() * 4,
               repeat: Infinity,
               delay: Math.random() * 4,
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              ease: 'easeInOut',
-            }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-<<<<<<< HEAD
-            }}          />
-=======
-              ease: "easeInOut"
-            }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`}}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         ))}
       </div>
 
       {/* Consciousness energy field */}
       <div className='absolute inset-0'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5'
           animate={{
             opacity: [0.3, 0.6, 0.3],
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           }}
           transition={{
             duration: 10,
@@ -500,10 +418,5 @@ const UltraFuturisticBackground2043: React.FC = () => {
     </div>
   );
 };export default UltraFuturisticBackground2043;
-=======
-  )
-};
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default UltraFuturisticBackground2043;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

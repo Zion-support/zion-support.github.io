@@ -11,7 +11,7 @@ import {
   Rocket,
   CheckCircle,;
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 import Button from '../ui/Button';
 
 interface EnhancedHero2026Props {
@@ -34,11 +34,9 @@ export default function EnhancedHero2026({
   contactInfo,
   serviceStats,
 }: EnhancedHero2026Props) {  const containerVariants = {
-=======
-export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   const containerVariants = {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -46,13 +44,8 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
         staggerChildren: 0.2,
       },
     },  };
-=======
-        staggerChildren: 0.2
-      }
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
@@ -64,13 +57,8 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
         ease: 'easeOut' as const,
       },
     },  };
-=======
-        ease: "easeOut" as const
-      }
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const statsVariants = {
     hidden: { scale: 0.8, opacity: 0 },
@@ -82,7 +70,7 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
         ease: 'easeOut' as const,
       },
     },
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   };
 
   return (
@@ -111,30 +99,20 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
               repeat: Infinity,
               ease: 'easeInOut',
               delay: Math.random() * 2,            }}
-=======
-              y: [0, -30, 0];
-              opacity: [0.3, 0.8, 0.3];
-              scale: [1, 1.5, 1]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-<<<<<<< HEAD
-              ease: 'easeInOut',
-              delay: Math.random() * 2,
-=======
-              ease: "easeInOut",
-              delay: Math.random() * 2
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           />
         ))}
       </div>
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <motion.div
           variants={containerVariants}
           initial='hidden'
@@ -173,88 +151,18 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
 
           {/* Enhanced Stats Grid */}
           <motion.div
-            
+
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Transform your business with our revolutionary AI, Quantum, and IT infrastructure services. 
               <span className="text-cyan-400 font-semibold"> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
             </p>
           </motion.div>
 
           {/* Enhanced Stats Grid */}
-<<<<<<< HEAD
-          <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            variants={itemVariants}
-            className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto'
-          >
-            {[
-              {
-                label: 'Total Services',
-                value: serviceStats.totalServices,
-                icon: Rocket,
-                color: 'from-blue-500 to-cyan-500',
-              },
-              {
-                label: 'AI Solutions',
-                value: serviceStats.aiServices,
-                icon: Brain,
-                color: 'from-purple-500 to-pink-500',
-              },
-              {
-                label: 'Emerging Tech',
-                value: serviceStats.emergingTech,
-                icon: TrendingUp,
-                color: 'from-green-500 to-emerald-500',
-              },
-              {
-                label: 'IT Infrastructure',
-                value: serviceStats.itSolutions,
-                icon: Globe,
-                color: 'from-orange-500 to-red-500',
-              },
-              {
-                label: 'Micro SaaS',
-                value: serviceStats.microSaas,
-                icon: Zap,
-                color: 'from-yellow-500 to-orange-500',
-              },
-              {
-                label: 'Revolutionary',
-                value: serviceStats.revolutionaryServices,
-                icon: Star,
-                color: 'from-pink-500 to-purple-500',
-              },            ].map((stat, index) => (
-              { label: 'Total Services', value: serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' },
-              { label: 'AI Solutions', value: serviceStats.aiServices, icon: Brain, color: 'from-purple-500 to-pink-500' },
-              { label: 'Emerging Tech', value: serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
-              { label: 'IT Infrastructure', value: serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' },
-              { label: 'Micro SaaS', value: serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' },
-              { label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            ].map((stat, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              <motion.div
-                key={stat.label}
-                variants={statsVariants}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              >
-                <div
-                  className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <stat.icon className='w-6 h-6 text-white' />
-                </div>
-                <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
-                  {stat.value.toLocaleString()}+
-                </div>
-                <div className='text-xs text-gray-400 leading-tight'>                  {stat.label}
-=======
-                <div className="text-xs text-gray-400 leading-tight">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   {stat.label}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
               </motion.div>
             ))}
@@ -276,14 +184,14 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
                 </span>
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
-              
+
               <Button 
                 href="/contact" 
                 variant="secondary"
                 size="xl"
                 className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <span className='flex items-center'>
                   <Rocket className='mr-3 w-7 h-7 group-hover:rotate-12 transition-transform' />
                   Explore All Services
@@ -297,15 +205,9 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
                 size='xl'
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'
               >
-<<<<<<< HEAD
-                <span className='flex items-center'>
-                  <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation
-=======
-                <span className="flex items-center">
-                  <Shield className="mr-3 w-7 h-7" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   Get Expert Consultation
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </span>
               </Button>
             </div>
@@ -322,27 +224,21 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>99.9% Uptime Guarantee</span>
               </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               <div className='flex items-center space-x-2'>
                 <CheckCircle className='w-5 h-5 text-green-400' />
                 <span>99.9% Uptime Guarantee</span>
               </div>
-<<<<<<< HEAD
-              <div className='flex items-center space-x-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span>24/7 Expert Support</span>
-=======
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 <span>24/7 Expert Support</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </div>
           </motion.div>
 
           {/* Contact Information */}
           <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             variants={itemVariants}
             className='bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto'
           >
@@ -366,21 +262,12 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
               <div className='text-center'>
                 <div className='text-cyan-400 font-medium'>Website</div>
                 <div className='text-white'>{contactInfo.website}</div>              </div>
-=======
-              <div className="text-center">
-                <div className="text-cyan-400 font-medium">Website</div>
-                <div className="text-white">{contactInfo.website}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </div>
           </motion.div>
         </motion.div>
       </div>
     </section>
   );
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

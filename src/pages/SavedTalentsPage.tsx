@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { SEO } from '@/components/SEO';
-import { TalentCard } from '@/components/talent/TalentCard';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import { TalentProfile } from '@/types/talent';
-import { toast } from '@/components/ui/use-toast';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { useRouter } from 'next/router';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { EmptyState } from '@/components/ui/empty-state';
-import { Heart } from 'lucide-react';
-import { logInfo, logWarn } from '@/utils/productionLogger';
-
-=======
-import { useState, useEffect } from "react";
-import { SEO } from "@/components/SEO";
-import { TalentCard } from "@/components/talent/TalentCard";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { TalentProfile } from "@/types/talent";
-import { toast } from "@/components/ui/use-toast";
-import { useRouter } from 'next/router';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { EmptyState } from "@/components/ui/empty-state";
-import { Heart } from 'lucide-react';
-import { logInfo, logWarn } from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function SavedTalentsPage() {
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
@@ -79,15 +50,7 @@ export default function SavedTalentsPage() {
         if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
-<<<<<<< HEAD
-            (item: any) => item.talent_profile as unknown as TalentProfile
-          );
-          setSavedTalents(talentProfiles);
-=======
-            (item: any,) => item.talent_profile as unknown as TalentProfile
-          ),
-          setSavedTalents(talentProfiles)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
         }
       } catch (error) {
         logErrorToProduction(
@@ -108,35 +71,12 @@ export default function SavedTalentsPage() {
     fetchSavedTalents();
   }, [user]);
 
-<<<<<<< HEAD
-  const handleViewProfile = (talentId: string) => {
-    router.push(`/talent/${talentId}`);
-  };
-
-  const handleRequestHire = (talent: TalentProfile) => {
-    logInfo('Request to hire:', { data: talent });
-=======
-  const handleViewProfile = (talentId: string,) => {
-    router.push(`/talent/${talentId}`)
-  },
-
-  const handleRequestHire = (talent: TalentProfile,) => {
-    logInfo('Request to hire:', { data: talent }),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     toast({
       title: 'Hire Request Sent',
       description: `A hire request has been sent to ${talent.full_name}.`,
     });
   };
 
-<<<<<<< HEAD
-  const handleToggleSave = async (
-    talentId: string,
-    isCurrentlySaved: boolean
-  ) => {
-=======
-  const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     try {
       if (!user) {
         logWarn('User not authenticated.');
@@ -238,26 +178,14 @@ export default function SavedTalentsPage() {
         ) : savedTalents.length === 0 ? (
           <div className='py-8'>
             <EmptyState
-<<<<<<< HEAD
-              icon={<Heart className='h-8 w-8' />}
-              title='No Saved Talents'
-=======
-              icon = {<Heart className="h-8 w-8" />,}
-              title="No Saved Talents"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               description="You haven't saved any talents yet."
               action={{ text: 'Browse Talent', href: '/talent' }}
               className='border-none bg-transparent text-center'
             />
           </div>
         ) : (
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
-            {savedTalents.map(talent => (
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {savedTalents.map((talent,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               <TalentCard
                 key = {talent.id,}
                 talent = {talent,}
@@ -333,7 +261,3 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div>) ;
 }</div> </>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

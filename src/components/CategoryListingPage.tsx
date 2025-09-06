@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { GradientHeading } from '@/components/GradientHeading';
-import { ListingScoreCard } from '@/components/ListingScoreCard';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
-  Select,
-  SelectTrigger,
-  SelectContent,
-  SelectItem,;
-} from '@/components/ui/select';
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
-import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
-import { safeStorage } from '@/utils/safeStorage';
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import { useState, useEffect } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
-import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
-import { safeStorage } from "@/utils/safeStorage";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Example listing type
 interface Listing {
   id: string;
@@ -70,57 +42,7 @@ export function CategoryListingPage({
 }: CategoryListingPageProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSort, setSelectedSort] = useState(
-<<<<<<< HEAD
-    () =>
-      safeStorage.getItem('category_selected_sort') ||
-      sortOptions[0]?.value ||
-      'newest'
-  );
-  const [selectedFilter, setSelectedFilter] = useState(
-    () =>
-      safeStorage.getItem('category_selected_filter') ||
-      filterOptions[0]?.value ||
-      'all'
-  );
-  const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    safeStorage.setItem('category_selected_sort', selectedSort);
-  }, [selectedSort]);
-
-  useEffect(() => {
-    safeStorage.setItem('category_selected_filter', selectedFilter);
-  }, [selectedFilter]);
-
-  useEffect(() => {
-    let mounted = true;
-    setIsLoading(true);
-    const timeout = setTimeout(() => {
-      if (mounted) setIsLoading(false);
-    }, 300);
-=======
-    (,) => safeStorage.getItem('category_selected_sort') || sortOptions[0]?.value || 'newest'
-  ),
-  const [selectedFilter, setSelectedFilter] = useState(
-    (,) => safeStorage.getItem('category_selected_filter') || filterOptions[0]?.value || 'all'
-  ),
-  const [isLoading, setIsLoading] = useState(false),
-
-  useEffect((,) => {
-    safeStorage.setItem('category_selected_sort', selectedSort)
-  }, [selectedSort]),
-
-  useEffect((,) => {
-    safeStorage.setItem('category_selected_filter', selectedFilter)
-  }, [selectedFilter]),
-
-  useEffect((,) => {
-    let mounted = true,
-    setIsLoading(true),
-    const timeout = setTimeout((,) => {
-      if (mounted) setIsLoading(false)
-    }, 300),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     return () => {
       mounted = false;
       clearTimeout(timeout);
@@ -189,21 +111,7 @@ export function CategoryListingPage({
               <div className='relative'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate' />
                 <Input
-<<<<<<< HEAD
-                  type='text'
-                  placeholder='Search listings...'
-                  value={searchQuery}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setSearchQuery(e.target.value)
-                  }
-                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'
-=======
-                  type="text"
-                  placeholder="Search listings..."
-                  value = {searchQuery,}
-                  onChange = {(e: React.ChangeEvent<HTMLInputElement>,) => setSearchQuery(e.target.value),}
-                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 />
               </div>
 
@@ -221,19 +129,7 @@ export function CategoryListingPage({
                     </span>
                   </div>
                 </SelectTrigger>
-<<<<<<< HEAD
-                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
-                  {sortOptions.map(option => (
-                    <SelectItem
-                      key={option.value}
-                      value={option.value}
-                      className='text-white'
-                    >
-=======
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  {sortOptions.map((option,) => (
-                    <SelectItem key={option.value} value={option.value} className="text-white">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       {option.label}
                     </SelectItem>
                   ))}
@@ -251,19 +147,7 @@ export function CategoryListingPage({
                     </span>
                   </div>
                 </SelectTrigger>
-<<<<<<< HEAD
-                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
-                  {filterOptions.map(option => (
-                    <SelectItem
-                      key={option.value}
-                      value={option.value}
-                      className='text-white'
-                    >
-=======
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  {filterOptions.map((option,) => (
-                    <SelectItem key={option.value} value={option.value} className="text-white">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       {option.label}
                     </SelectItem>
                   ))}
@@ -285,13 +169,7 @@ export function CategoryListingPage({
             {isLoading ? (
               <ListingGridSkeleton />
             ) : processedListings.length > 0 ? (
-<<<<<<< HEAD
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                {processedListings.map(listing => (
-=======
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {processedListings.map((listing,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                   <ListingScoreCard
                     key = {listing.id,}
                     title = {listing.title,}
@@ -316,17 +194,7 @@ export function CategoryListingPage({
                   Try adjusting your filters or search query
                 </p>
                 <Button
-<<<<<<< HEAD
-                  variant='outline'
-                  onClick={() => {
-                    setSearchQuery('');
-                    setSelectedFilter(filterOptions[0]?.value || 'all');
-=======
-                  variant="outline"
-                  onClick={(,) => {
-                    setSearchQuery(""),
-                    setSelectedFilter(filterOptions[0]?.value || 'all')
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                   }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
                 >
@@ -422,7 +290,3 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" ;
 }</div> </div> </div> </>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

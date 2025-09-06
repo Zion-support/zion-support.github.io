@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { useForm, ControllerRenderProps } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import z from 'zod';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { useToast } from '@/hooks/use-toast';
-import { useRouter } from 'next/router';
-import Image from 'next/image'; // Import next/image
-import { logErrorToProduction } from '@/utils/productionLogger';
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React from "react";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import z from "zod";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { useToast } from "@/hooks/use-toast";
-import { useRouter } from "next/router";
-import Image from 'next/image', // Import next/image
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import {
   Form,
   FormControl,
@@ -30,61 +5,13 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { AIListingGenerator } from '@/components/listing/AIListingGenerator';
-import { Sparkles } from 'lucide-react';
 
-=======
-  FormMessage} from "@/components/ui/form",
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
-import { Sparkles } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Define the form schema with zod
 const productSchema = z.object({
   title: z.string().min(3, 'Title must be at least 3 characters'),
   description: z.string().min(10, 'Description must be at least 10 characters'),
   price: z
     .string()
-<<<<<<< HEAD
-    .refine(val => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-      message: 'Price must be a valid number',
-    }),
-  category: z.string().min(1, 'Please select a category'),
-  image:
-    typeof window === 'undefined'
-      ? z.any().optional()
-      : z.instanceof(File).optional(),
-  video:
-    typeof window === 'undefined'
-      ? z.any().optional()
-      : z.instanceof(File).optional(),
-  model:
-    typeof window === 'undefined'
-      ? z.any().optional()
-      : z.instanceof(File).optional(),
-  tags: z.string().optional(),
-});
-=======
-    .refine((val,) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-      message: "Price must be a valid number"}),
-  category: z.string().min(1, "Please select a category"),
-  image: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
-  video: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
-  model: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
-  tags: z.string().optional()}),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
@@ -112,13 +39,7 @@ export function ProductSubmissionForm() {
   });
 
   // Handle image upload preview
-<<<<<<< HEAD
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-=======
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>,) => {
-    const file = e.target.files?.[0],
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     if (file) {
       form.setValue('image', file);
       const reader = new FileReader();
@@ -129,42 +50,18 @@ export function ProductSubmissionForm() {
     }
   };
 
-<<<<<<< HEAD
-  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-=======
-  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>,) => {
-    const file = e.target.files?.[0],
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (file) {
       form.setValue('video', file);
     }
   };
 
-<<<<<<< HEAD
-  const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-=======
-  const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>,) => {
-    const file = e.target.files?.[0],
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (file) {
       form.setValue('model', file);
     }
   };
 
   // Apply AI-generated content to the form
-<<<<<<< HEAD
-  const handleApplyGenerated = (content: any) => {
-    form.setValue('description', content.description);
-    form.setValue('tags', content.tags.join(', '));
 
-=======
-  const handleApplyGenerated = (content: any,) => {
-    form.setValue("description", content.description),
-    form.setValue("tags", content.tags.join(", ")),
-    
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     // Set a default price as the middle of the suggested range
     const averagePrice = (
       (content.suggestedPrice.min + content.suggestedPrice.max) /
@@ -354,39 +251,13 @@ export function ProductSubmissionForm() {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
             <FormField
-<<<<<<< HEAD
-              control={form.control}
-              name='title'
-              render={({
-                field,
-              }: {
-                field: ControllerRenderProps<ProductFormValues, 'title'>;
-              }) => {
-                const { onChange, onBlur, value, ref } = field;
-=======
-              control = {form.control,}
-              name="title"
-              render={({ field }: { field: ControllerRenderProps<ProductFormValues, "title"> },) => {
-                const { onChange, onBlur, value, ref } = field,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 return (
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
                       <Input
-<<<<<<< HEAD
-                        placeholder='Enter product title'
-                        onChange={onChange}
-                        onBlur={onBlur}
-                        value={value}
-                        ref={ref}
-=======
-                        placeholder="Enter product title"
-                        onChange = {onChange,}
-                        onBlur = {onBlur,}
-                        value = {value,}
-                        ref = {ref,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       />
                     </FormControl>
                     <FormDescription>
@@ -399,19 +270,7 @@ export function ProductSubmissionForm() {
             />
 
             <FormField
-<<<<<<< HEAD
-              control={form.control}
-              name='description'
-              render={({
-                field,
-              }: {
-                field: ControllerRenderProps<ProductFormValues, 'description'>;
-              }) => (
-=======
-              control = {form.control,}
-              name="description"
-              render={({ field }: { field: ControllerRenderProps<ProductFormValues, "description"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 <FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
@@ -431,19 +290,7 @@ export function ProductSubmissionForm() {
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
               <FormField
-<<<<<<< HEAD
-                control={form.control}
-                name='price'
-                render={({
-                  field,
-                }: {
-                  field: ControllerRenderProps<ProductFormValues, 'price'>;
-                }) => (
-=======
-                control = {form.control,}
-                name="price"
-                render={({ field }: { field: ControllerRenderProps<ProductFormValues, "price"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                   <FormItem>
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
@@ -462,19 +309,7 @@ export function ProductSubmissionForm() {
               />
 
               <FormField
-<<<<<<< HEAD
-                control={form.control}
-                name='category'
-                render={({
-                  field,
-                }: {
-                  field: ControllerRenderProps<ProductFormValues, 'category'>;
-                }) => (
-=======
-                control = {form.control,}
-                name="category"
-                render={({ field }: { field: ControllerRenderProps<ProductFormValues, "category"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                   <FormItem>
                     <FormLabel>Category</FormLabel>
                     <FormControl>
@@ -498,19 +333,7 @@ export function ProductSubmissionForm() {
             </div>
 
             <FormField
-<<<<<<< HEAD
-              control={form.control}
-              name='tags'
-              render={({
-                field,
-              }: {
-                field: ControllerRenderProps<ProductFormValues, 'tags'>;
-              }) => (
-=======
-              control = {form.control,}
-              name="tags"
-              render={({ field }: { field: ControllerRenderProps<ProductFormValues, "tags"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 <FormItem>
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
@@ -529,31 +352,7 @@ export function ProductSubmissionForm() {
             />
 
             <FormField
-<<<<<<< HEAD
-              control={form.control}
-              name='image'
-              render={() => (
-                <FormItem>
-                  <FormLabel>Product Image</FormLabel>
-                  <FormControl>
-                    <Input
-                      type='file'
-                      accept='image/*'
-                      onChange={handleImageChange}
-                      className='cursor-pointer'
-=======
-              control = {form.control,}
-              name="image"
-              render = {() => (
-                <FormItem>
-                  <FormLabel>Product Image</FormLabel>
-                  <FormControl>
-                    <Input 
-                      type="file" 
-                      accept="image/*" 
-                      onChange={handleImageChange,}
-                      className="cursor-pointer"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                     />
                   </FormControl>
                   <FormDescription>
@@ -566,13 +365,7 @@ export function ProductSubmissionForm() {
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>
                       <AspectRatio ratio={3 / 2}>
                         <Image
-<<<<<<< HEAD
-                          src={imagePreview}
-                          alt='Product image preview'
-=======
-                          src = {imagePreview,}
-                          alt="Product image preview"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                           width={600} // Example width, adjust as needed
                           height={400} // Example height, adjust as needed
                           className='w-full h-full object-cover'
@@ -589,13 +382,7 @@ export function ProductSubmissionForm() {
             />
 
             <FormField
-<<<<<<< HEAD
-              control={form.control}
-              name='video'
-=======
-              control = {form.control,}
-              name="video"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               render={() => (
                 <FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
@@ -616,13 +403,7 @@ export function ProductSubmissionForm() {
             />
 
             <FormField
-<<<<<<< HEAD
-              control={form.control}
-              name='model'
-=======
-              control = {form.control,}
-              name="model"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               render={() => (
                 <FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
@@ -642,19 +423,6 @@ export function ProductSubmissionForm() {
               )}
             />
 
-<<<<<<< HEAD
-            <div className='flex justify-end'>
-              <Button
-                type='submit'
-                disabled={isSubmitting}
-                className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
-=======
-            <div className="flex justify-end">
-              <Button 
-                type="submit" 
-                disabled = {isSubmitting,}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
               </Button>
@@ -662,17 +430,7 @@ export function ProductSubmissionForm() {
           </form>
         </Form>
       </TabsContent>
-<<<<<<< HEAD
 
-      <TabsContent value='ai'>
-        <AIListingGenerator
-          onApplyGenerated={handleApplyGenerated}
-=======
-      
-      <TabsContent value="ai">
-        <AIListingGenerator 
-          onApplyGenerated = {handleApplyGenerated,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           initialValues={{
             title: form.getValues('title'),
             category: form.getValues('category'),
@@ -769,8 +527,3 @@ const {;
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
 }'"
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

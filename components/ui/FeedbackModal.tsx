@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 export type FeedbackContext = { actionType?: string; metadata?: any };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function FeedbackModal({
   isOpen,
@@ -15,11 +14,9 @@ export default function FeedbackModal({
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>;}) {
-=======
-  userHeaders?: Record<string, string>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 }) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
@@ -42,7 +39,7 @@ export default function FeedbackModal({
           context: defaultContext || {},
         }),
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     } catch {}
     setLoading(false);
     onClose(true);
@@ -59,9 +56,9 @@ export default function FeedbackModal({
         <div className="text-lg font-medium">Was this helpful?</div>
         <div className="flex gap-2">
           {[1,2,3,4,5].map(n => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
             <button
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -69,7 +66,7 @@ export default function FeedbackModal({
               className={
                 hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300'
               }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               aria-label={`${n} stars`}
             >
               ★
@@ -132,17 +129,8 @@ export default function FeedbackModal({
     </div>
   );
 }
-=======
-        <div className="flex justify-end gap-2">
-          <button onClick={()=>onClose(false)} className="px-3 py-2 rounded border">Later</button>
-          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

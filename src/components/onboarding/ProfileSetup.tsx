@@ -1,16 +1,3 @@
-
-<<<<<<< HEAD
-
-=======
-import { useState } from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { User, Mail, AtSign, GraduationCap } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import {
   Form;
   FormControl;
@@ -58,7 +45,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           Help others get to know you better
         </p>
       </div>
-      
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
@@ -81,7 +68,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>
             )}
           />
-          
+
           <FormField
             control = {form.control,}
             name="headline"
@@ -106,7 +93,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>
             )}
           />
-          
+
           <FormField
             control = {form.control,}
             name="bio"
@@ -128,7 +115,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>
             )}
           />
-          
+
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
@@ -156,7 +143,3 @@ getTypeLabel () ";
 }/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
 }"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

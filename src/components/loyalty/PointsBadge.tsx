@@ -3,23 +3,7 @@ import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints';
 import { useAuth } from '@/hooks/useAuth';
 import Link from 'next/link';
-<<<<<<< HEAD
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-import { LoginModal } from '@/components/auth/LoginModal';
-import { Button } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
 
-=======
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { LoginModal } from '@/components/auth/LoginModal';
-import { Button } from '@/components/ui/button';
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function PointsBadge() {
   const { isAuthenticated } = useAuth();
   const { ledger, balance, loading, fetchLedger } = usePoints();
@@ -29,19 +13,7 @@ export function PointsBadge() {
   const points = balance;
 
   const breakdown = ledger.reduce(
-<<<<<<< HEAD
-    (acc, e) => {
-      if (e.reason === 'purchase') acc.purchase += e.delta;
-      if (e.reason === 'post') acc.post += e.delta;
-      if (e.reason === 'referral') acc.referral += e.delta;
-      return acc;
-=======
-    (acc, e,) => {
-      if (e.reason === 'purchase') acc.purchase += e.delta,
-      if (e.reason === 'post') acc.post += e.delta,
-      if (e.reason === 'referral') acc.referral += e.delta,
-      return acc
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     },
     { purchase: 0, post: 0, referral: 0 }
   );
@@ -53,21 +25,6 @@ export function PointsBadge() {
     }
   };
 
-<<<<<<< HEAD
-  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!isAuthenticated) return;
-
-    setIsRefreshing(true);
-=======
-  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>,) => {
-    e.preventDefault(),
-    e.stopPropagation(),
-    if (!isAuthenticated) return,
-    
-    setIsRefreshing(true),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     try {
       await fetchLedger();
     } catch (error) {
@@ -83,19 +40,7 @@ export function PointsBadge() {
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-<<<<<<< HEAD
-              href={isAuthenticated ? '/points' : '#'}
-              onClick={handleClick}
-              title={
-                isAuthenticated ? 'View points' : 'Earn points by participating'
-              }
-              className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'
-=======
-              href = {isAuthenticated ? "/points" : "#",}
-              onClick = {handleClick,}
-              title = {isAuthenticated ? "View points" : "Earn points by participating",}
-              className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             >
               <Gift className='h-4 w-4' aria-hidden='true' />
               <span>{`${points} pts`}</span>
@@ -142,21 +87,7 @@ export function PointsBadge() {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-<<<<<<< HEAD
-                variant='ghost'
-                size='sm'
-                onClick={handleRefresh}
-                disabled={isRefreshing || loading}
-                className='p-1 h-6 w-6 text-muted-foreground hover:text-foreground'
-                aria-label='Refresh points'
-=======
-                variant="ghost"
-                size="sm"
-                onClick = {handleRefresh,}
-                disabled = {isRefreshing || loading,}
-                className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
-                aria-label="Refresh points"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               >
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
@@ -176,7 +107,3 @@ export function PointsBadge() {
       )}
     </TooltipProvider>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

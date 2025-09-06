@@ -15,28 +15,18 @@ import {
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 import { innovative2030Services } from '../data/2030-innovative-services';
-=======
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 import { innovative2030Services } from '../data/2030-innovative-services';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-    website: 'https://ziontechgroup.com',
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   };
 
   return (
@@ -57,7 +47,6 @@ export default function Revolutionary2030ServicesPage() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -145,9 +134,9 @@ export default function Revolutionary2030ServicesPage() {
                 "https://github.com/Zion-Holdings"
               ]
             })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
           }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         />
       </Head>
 
@@ -160,31 +149,14 @@ export default function Revolutionary2030ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
-      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            className='mb-8'
-          >
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6'>
-              <Zap className='w-4 h-4 text-cyan-400 mr-2' />
-<<<<<<< HEAD
-              <span className='text-cyan-400 text-sm font-medium'>                2030 Revolutionary Technology Services
-=======
-            className="mb-8"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6">
-              <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 2030 Revolutionary Technology Services
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </span>
             </div>
           </motion.div>
@@ -194,18 +166,16 @@ export default function Revolutionary2030ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className='text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
               2030 Revolutionary
             </span>
             <br />
             <span className='bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>              Technology Services
-=======
-            <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               Technology Services
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </span>
           </motion.h1>
 
@@ -218,21 +188,15 @@ export default function Revolutionary2030ServicesPage() {
             Experience the next generation of revolutionary technology services.
             From AI consciousness and quantum computing to space mining and DNA
             computing, we're building the future today.          </motion.p>
-=======
-            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
-          >
-            Experience the next generation of revolutionary technology services. From AI consciousness 
-            and quantum computing to space mining and DNA computing, we're building the future today.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </motion.p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className='flex flex-col sm:flex-row gap-4 justify-center items-center'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group'>
               Schedule Consultation
@@ -240,12 +204,9 @@ export default function Revolutionary2030ServicesPage() {
             </button>
 
             <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>              View Pricing
-=======
-            
-            <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               View Pricing
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </button>
           </motion.div>
         </div>
@@ -254,18 +215,15 @@ export default function Revolutionary2030ServicesPage() {
       {/* Services Showcase */}
       <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto'>          <motion.div
-=======
-      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-20'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -285,22 +243,18 @@ export default function Revolutionary2030ServicesPage() {
 
           {/* Services Grid */}
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>            {innovative2030Services.map((service, index) => (
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover our comprehensive range of cutting-edge 2030 technology services that will 
               transform your business and propel you into the future.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
             </p>
           </motion.div>
 
           {/* Services Grid */}
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>
-=======
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             {innovative2030Services.map((service, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -309,7 +263,7 @@ export default function Revolutionary2030ServicesPage() {
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
                 className='group cursor-pointer'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               >
                 <div className='p-8 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm'>
                   {/* Service Header */}
@@ -329,11 +283,9 @@ export default function Revolutionary2030ServicesPage() {
                     </div>
                     {service.popular && (
                       <div className='px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-semibold text-black'>                        Popular
-=======
-                      <div className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-semibold text-black">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         Popular
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       </div>
                     )}
                   </div>
@@ -342,7 +294,6 @@ export default function Revolutionary2030ServicesPage() {
                   <p className='text-gray-300 leading-relaxed mb-6'>
                     {service.description}
                   </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
                   {/* Features */}
                   <div className='grid grid-cols-2 gap-3 mb-6'>
@@ -388,34 +339,14 @@ export default function Revolutionary2030ServicesPage() {
 
                   {/* Price and CTA */}
                   <div className='flex items-center justify-between'>
-=======
-                    <div className="flex items-center space-x-2">
-                      <Award className="w-4 h-4 text-cyan-400" />
-                      <span className="text-gray-300">{service.innovationLevel}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </div>
                   </div>
 
                   {/* Price and CTA */}
-<<<<<<< HEAD
-                  <div className='flex items-center justify-between'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                    <div>
-                      <div className='text-3xl font-bold text-white'>
-                        {service.price}
-                      </div>
-                      <div className='text-gray-400 text-sm'>
-                        {service.period}
-                      </div>
-                    </div>
-                    <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group'>
-                      Learn More
-                      <ArrowRight className='w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform' />                    </button>
-=======
-                      <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </div>
                 </div>
               </motion.div>
@@ -429,7 +360,7 @@ export default function Revolutionary2030ServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <div className='p-12 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 backdrop-blur-sm'>
               <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -445,11 +376,9 @@ export default function Revolutionary2030ServicesPage() {
                   Schedule Consultation
                 </button>
                 <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>                  Contact Us
-=======
-                <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   Contact Us
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </button>
               </div>
             </div>
@@ -460,19 +389,16 @@ export default function Revolutionary2030ServicesPage() {
       {/* Contact Section */}
       <section className='py-24 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
-=======
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Ready to Transform Your Business with
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}
@@ -496,34 +422,13 @@ export default function Revolutionary2030ServicesPage() {
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>
               <div className='flex items-center justify-center space-x-2'>
                 <Phone className='w-5 h-5 text-cyan-400' />
-=======
-              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 View Pricing
               </button>
             </div>
 
-<<<<<<< HEAD
-            <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>
-              <div className='flex items-center justify-center space-x-2'>
-                <Phone className='w-5 h-5 text-cyan-400' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                <span>{contactInfo.mobile}</span>
               </div>
-              <div className='flex items-center justify-center space-x-2'>
-                <Mail className='w-5 h-5 text-purple-400' />
-                <span>{contactInfo.email}</span>
-              </div>
-              <div className='flex items-center justify-center space-x-2'>
-                <MapPin className='w-5 h-5 text-pink-400' />
-                <span className='text-sm'>{contactInfo.address}</span>              </div>
-=======
-              <div className="flex items-center justify-center space-x-2">
-                <MapPin className="w-5 h-5 text-pink-400" />
-                <span className="text-sm">{contactInfo.address}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </div>
           </motion.div>
         </div>
@@ -533,8 +438,3 @@ export default function Revolutionary2030ServicesPage() {
       <UltraFuturisticFooter2030 />
     </UltraFuturisticBackground2030>
   );
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

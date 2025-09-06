@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { useRouter } from 'next/router';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Switch } from '@/components/ui/switch';
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { useRouter } from "next/router";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Switch } from "@/components/ui/switch";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form,
@@ -32,66 +6,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-  FormMessage,;
-} from '@/components/ui/form';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import {
-  X,
-  Sparkles,
-  Upload,
-  Clock,
-  Check,
-  Briefcase,
-  MapPin,
-  UserRound,
-  Globe,;
-} from 'lucide-react';
-import { toast } from '@/components/ui/use-toast';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
 
-// Define form schema
-const serviceProfileSchema = z.object({
-  name: z.string().min(2, 'Full Name must be at least 2 characters long'),
-  title: z.string().min(5, 'Business name/title is required'),
-  bio: z
-    .string()
-    .min(50, 'Bio must be at least 50 characters long')
-    .max(1000, 'Bio cannot exceed 1000 characters'),
-  location: z.string().min(2, 'Location is required'),
-  services: z.string().min(2, 'Enter at least one service'),
-  hourlyRate: z.string().refine(val => !isNaN(Number(val)), {
-    message: 'Rate must be a number',
-  }),
-  availability: z.enum(['available', 'limited', 'unavailable']),
-=======
-  FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react';
-import { toast } from "@/components/ui/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-// Define form schema
-const serviceProfileSchema = z.object({
-  name: z.string().min(2, "Full Name must be at least 2 characters long"),
-  title: z.string().min(5, "Business name/title is required"),
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
-  location: z.string().min(2, "Location is required"),
-  services: z.string().min(2, "Enter at least one service"),
-  hourlyRate: z.string().refine((val,) => !isNaN(Number(val)), {
-    message: "Rate must be a number"}),
-  availability: z.enum(["available", "limited", "unavailable"]),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   enhancedProfile: z.boolean().transform(val => !!val),
   website: z
     .string()
@@ -140,38 +55,12 @@ export function ServiceProviderRegistrationForm() {
   };
 
   // Handle removing service tags
-<<<<<<< HEAD
-  const handleRemoveService = (service: string) => {
-    setServiceTags(serviceTags.filter(s => s !== service));
-  };
 
-  // Handle key press in services input (add on enter)
-  const handleServiceKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      handleAddService();
-=======
-  const handleRemoveService = (service: string,) => {
-    setServiceTags(serviceTags.filter((s,) => s !== service))
-  },
-
-  // Handle key press in services input (add on enter)
-  const handleServiceKeyPress = (e: React.KeyboardEvent,) => {
-    if (e.key === "Enter") {
-      e.preventDefault(),
-      handleAddService()
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     }
   };
 
   // Handle avatar upload
-<<<<<<< HEAD
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-=======
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>,) => {
-    const file = e.target.files?.[0],
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -406,16 +295,7 @@ export function ServiceProviderRegistrationForm() {
       });
 
       // Redirect to service provider dashboard or profile page
-<<<<<<< HEAD
-      setTimeout(() => {
-        router.push('/service-dashboard');
-      }, 1500);
-=======
-      setTimeout((,) => {
-        router.push('/service-dashboard')
-      }, 1500)
-      
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     } catch (error: any) {
       logErrorToProduction('Error creating profile:', { data: error });
       toast({
@@ -453,15 +333,7 @@ export function ServiceProviderRegistrationForm() {
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div className='col-span-1'>
                     <FormField
-<<<<<<< HEAD
-                      control={form.control}
-                      name='name'
-                      render={({ field }: { field: any }) => (
-=======
-                      control = {form.control,}
-                      name="name"
-                      render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         <FormItem>
                           <FormLabel className='text-zion-slate-light'>
                             Full Name
@@ -484,15 +356,7 @@ export function ServiceProviderRegistrationForm() {
 
                   <div className='col-span-1'>
                     <FormField
-<<<<<<< HEAD
-                      control={form.control}
-                      name='title'
-                      render={({ field }: { field: any }) => (
-=======
-                      control = {form.control,}
-                      name="title"
-                      render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         <FormItem>
                           <FormLabel className='text-zion-slate-light'>
                             Business/Service Name
@@ -515,15 +379,7 @@ export function ServiceProviderRegistrationForm() {
 
                   <div className='col-span-1'>
                     <FormField
-<<<<<<< HEAD
-                      control={form.control}
-                      name='location'
-                      render={({ field }: { field: any }) => (
-=======
-                      control = {form.control,}
-                      name="location"
-                      render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         <FormItem>
                           <FormLabel className='text-zion-slate-light'>
                             Location
@@ -546,15 +402,7 @@ export function ServiceProviderRegistrationForm() {
 
                   <div className='col-span-1'>
                     <FormField
-<<<<<<< HEAD
-                      control={form.control}
-                      name='website'
-                      render={({ field }: { field: any }) => (
-=======
-                      control = {form.control,}
-                      name="website"
-                      render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         <FormItem>
                           <FormLabel className='text-zion-slate-light'>
                             Website (optional)
@@ -586,17 +434,7 @@ export function ServiceProviderRegistrationForm() {
                       {uploadedAvatar ? (
                         <AspectRatio ratio={1 / 1}>
                           <img
-<<<<<<< HEAD
-                            src={uploadedAvatar}
-                            alt='Avatar preview'
-                            className='w-full h-full object-cover'
-                            loading='lazy'
-=======
-                            src = {uploadedAvatar,}
-                            alt="Avatar preview"
-                            className="w-full h-full object-cover"
-                            loading="lazy"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                           />
                         </AspectRatio>
                       ) : (
@@ -610,17 +448,7 @@ export function ServiceProviderRegistrationForm() {
                       <Upload className='mr-2 h-4 w-4' />
                       <span>Upload Photo</span>
                       <input
-<<<<<<< HEAD
-                        type='file'
-                        accept='image/*'
-                        className='hidden'
-                        onChange={handleAvatarUpload}
-=======
-                        type="file"
-                        accept="image/*"
-                        className="hidden"
-                        onChange = {handleAvatarUpload,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       />
                     </label>
                   </div>
@@ -639,15 +467,7 @@ export function ServiceProviderRegistrationForm() {
                   Service Description
                 </h3>
                 <FormField
-<<<<<<< HEAD
-                  control={form.control}
-                  name='bio'
-                  render={({ field }: { field: any }) => (
-=======
-                  control = {form.control,}
-                  name="bio"
-                  render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                     <FormItem>
                       <FormLabel className='text-zion-slate-light'>
                         About Your Services
@@ -669,23 +489,7 @@ export function ServiceProviderRegistrationForm() {
 
                 {/* AI Enhancement Option */}
                 <FormField
-<<<<<<< HEAD
-                  control={form.control}
-                  name='enhancedProfile'
-                  render={({ field }: { field: any }) => (
-                    <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>
-                      <div className='space-y-0.5'>
-                        <FormLabel className='text-white flex items-center'>
-                          <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />
-=======
-                  control = {form.control,}
-                  name="enhancedProfile"
-                  render={({ field }: { field: any },) => (
-                    <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
-                      <div className="space-y-0.5">
-                        <FormLabel className="text-white flex items-center">
-                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                           AI Profile Enhancement
                         </FormLabel>
                         <FormDescription className='text-zion-slate-light'>
@@ -695,17 +499,7 @@ export function ServiceProviderRegistrationForm() {
                       </div>
                       <FormControl>
                         <Switch
-<<<<<<< HEAD
-                          aria-label='AI profile enhancement'
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          className='data-[state=checked]:bg-zion-purple'
-=======
-                          aria-label="AI profile enhancement"
-                          checked = {field.value,}
-                          onCheckedChange = {field.onChange,}
-                          className="data-[state=checked]:bg-zion-purple"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         />
                       </FormControl>
                     </FormItem>
@@ -715,19 +509,7 @@ export function ServiceProviderRegistrationForm() {
                 {form.watch('enhancedProfile') && (
                   <div className='flex justify-end'>
                     <Button
-<<<<<<< HEAD
-                      type='button'
-                      variant='outline'
-                      className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-                      onClick={generateEnhancedProfile}
-                      disabled={isGenerating}
-=======
-                      type="button"
-                      variant="outline"
-                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-                      onClick = {generateEnhancedProfile,}
-                      disabled = {isGenerating,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                     >
                       <Sparkles className='mr-2 h-4 w-4' />
                       {isGenerating
@@ -746,17 +528,7 @@ export function ServiceProviderRegistrationForm() {
                         AI-Generated Content
                       </h4>
                       <Button
-<<<<<<< HEAD
-                        type='button'
-                        size='sm'
-                        className='bg-zion-purple hover:bg-zion-purple-dark text-white'
-                        onClick={applyGeneratedContent}
-=======
-                        type="button"
-                        size="sm"
-                        className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-                        onClick = {applyGeneratedContent,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       >
                         <Check className='mr-1 h-3 w-3' /> Apply
                       </Button>
@@ -771,41 +543,7 @@ export function ServiceProviderRegistrationForm() {
                           {generatedContent.summary}
                         </p>
                       </div>
-<<<<<<< HEAD
 
-                      {generatedContent.services &&
-                        generatedContent.services.length > 0 && (
-                          <div>
-                            <h5 className='text-zion-slate-light text-sm mb-1'>
-                              Suggested Services
-                            </h5>
-                            <div className='flex flex-wrap gap-2 mt-1'>
-                              {generatedContent.services.map(
-                                (service, index) => (
-                                  <Badge
-                                    key={index}
-                                    className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'
-                                  >
-                                    {service}
-                                  </Badge>
-                                )
-                              )}
-                            </div>
-=======
-                      
-                      {generatedContent.services && generatedContent.services.length > 0 && (
-                        <div>
-                          <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
-                          <div className="flex flex-wrap gap-2 mt-1">
-                            {generatedContent.services.map((service, index,) => (
-                              <Badge
-                                key = {index,}
-                                className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"
-                              >
-                                {service}
-                              </Badge>
-                            ))}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           </div>
                         )}
                     </div>
@@ -823,15 +561,7 @@ export function ServiceProviderRegistrationForm() {
                     Services Offered
                   </h3>
                   <FormField
-<<<<<<< HEAD
-                    control={form.control}
-                    name='services'
-                    render={({ field }: { field: any }) => (
-=======
-                    control = {form.control,}
-                    name="services"
-                    render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       <FormItem>
                         <FormLabel className='text-zion-slate-light'>
                           Services
@@ -846,17 +576,7 @@ export function ServiceProviderRegistrationForm() {
                             />
                           </FormControl>
                           <Button
-<<<<<<< HEAD
-                            type='button'
-                            variant='outline'
-                            className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-                            onClick={handleAddService}
-=======
-                            type="button"
-                            variant="outline"
-                            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-                            onClick = {handleAddService,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                           >
                             Add
                           </Button>
@@ -872,25 +592,7 @@ export function ServiceProviderRegistrationForm() {
                   <div className='flex flex-wrap gap-2 mt-2'>
                     {serviceTags.map(service => (
                       <Badge
-<<<<<<< HEAD
-                        key={service}
-                        className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1'
-                      >
-                        {service}
-                        <button
-                          type='button'
-                          onClick={() => handleRemoveService(service)}
-                          className='rounded-full hover:bg-zion-purple-dark/20 p-0.5'
-=======
-                        key = {service,}
-                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
-                      >
-                        {service}
-                        <button
-                          type="button"
-                          onClick = {(,) => handleRemoveService(service),}
-                          className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         >
                           <X className='h-3 w-3' />
                         </button>
@@ -910,15 +612,7 @@ export function ServiceProviderRegistrationForm() {
                     Pricing & Availability
                   </h3>
                   <FormField
-<<<<<<< HEAD
-                    control={form.control}
-                    name='hourlyRate'
-                    render={({ field }: { field: any }) => (
-=======
-                    control = {form.control,}
-                    name="hourlyRate"
-                    render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       <FormItem>
                         <FormLabel className='text-zion-slate-light'>
                           Starting Rate (USD)
@@ -944,40 +638,12 @@ export function ServiceProviderRegistrationForm() {
                   />
 
                   <FormField
-<<<<<<< HEAD
-                    control={form.control}
-                    name='availability'
-                    render={({ field }: { field: any }) => (
-                      <FormItem className='space-y-4'>
-                        <FormLabel className='text-zion-slate-light'>
-                          Current Status
-                        </FormLabel>
-=======
-                    control = {form.control,}
-                    name="availability"
-                    render={({ field }: { field: any },) => (
-                      <FormItem className="space-y-4">
-                        <FormLabel className="text-zion-slate-light">Current Status</FormLabel>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         <FormControl>
                           <div className='space-y-2'>
                             <div className='flex items-center space-x-2'>
                               <input
-<<<<<<< HEAD
-                                type='radio'
-                                id='available'
-                                value='available'
-                                checked={field.value === 'available'}
-                                onChange={() => field.onChange('available')}
-                                className='text-zion-purple focus:ring-zion-purple'
-=======
-                                type="radio"
-                                id="available"
-                                value="available"
-                                checked = {field.value === "available",}
-                                onChange = {(,) => field.onChange("available"),}
-                                className="text-zion-purple focus:ring-zion-purple"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                               />
                               <label
                                 htmlFor='available'
@@ -990,21 +656,7 @@ export function ServiceProviderRegistrationForm() {
 
                             <div className='flex items-center space-x-2'>
                               <input
-<<<<<<< HEAD
-                                type='radio'
-                                id='limited'
-                                value='limited'
-                                checked={field.value === 'limited'}
-                                onChange={() => field.onChange('limited')}
-                                className='text-zion-purple focus:ring-zion-purple'
-=======
-                                type="radio"
-                                id="limited"
-                                value="limited"
-                                checked = {field.value === "limited",}
-                                onChange = {() => field.onChange("limited"),}
-                                className="text-zion-purple focus:ring-zion-purple"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                               />
                               <label
                                 htmlFor='limited'
@@ -1017,21 +669,7 @@ export function ServiceProviderRegistrationForm() {
 
                             <div className='flex items-center space-x-2'>
                               <input
-<<<<<<< HEAD
-                                type='radio'
-                                id='unavailable'
-                                value='unavailable'
-                                checked={field.value === 'unavailable'}
-                                onChange={() => field.onChange('unavailable')}
-                                className='text-zion-purple focus:ring-zion-purple'
-=======
-                                type="radio"
-                                id="unavailable"
-                                value="unavailable"
-                                checked = {field.value === "unavailable",}
-                                onChange = {() => field.onChange("unavailable"),}
-                                className="text-zion-purple focus:ring-zion-purple"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                               />
                               <label
                                 htmlFor='unavailable'
@@ -1060,17 +698,7 @@ export function ServiceProviderRegistrationForm() {
                 >
                   Save as Draft
                 </Button>
-<<<<<<< HEAD
-                <Button
-                  type='submit'
-                  className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
-                  disabled={isSubmitting}
-=======
-                <Button 
-                  type="submit"
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                  disabled = {isSubmitting,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 >
                   {isSubmitting
                     ? 'Creating Profile...'
@@ -1216,7 +844,3 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -31,29 +31,7 @@ import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
 import { MyApplications } from '@/components/jobs/MyApplications';
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner';
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Link from "next/link";
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from 'lucide-react';
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
-import { useAuth } from "@/hooks/useAuth";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps";
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { MyApplications } from "@/components/jobs/MyApplications";
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState('job-matches');
@@ -249,7 +227,3 @@ export default function TalentDashboard() {
       <TalentDashboardContent />
     </ProtectedRoute>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

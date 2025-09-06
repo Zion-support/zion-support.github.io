@@ -14,7 +14,7 @@ await app.register(cors, {
     const allowed = (process.env.CORS_ORIGINS || '')
       .split(',')
       .map(s => s.trim());
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
       cb(null, true);
       return;
@@ -22,13 +22,8 @@ await app.register(cors, {
     cb(new Error('Not allowed'), false);
   },
   methods: ['GET', 'POST', 'OPTIONS'],});
-=======
-    cb(new Error('Not allowed'), false)
-  };
-  methods: ['GETPOSTOPTIONS']
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 
@@ -40,12 +35,7 @@ function getUserId(req: any): string | null {
     (req.query as any)['user_id'] ||
     null
   );
-=======
-  return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null;
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) || {};
   const prompt = body.prompt as string;
@@ -55,12 +45,8 @@ app.post('/ai/ask', async (req, reply) => {
     input: prompt,
   });
   return { text: completion.output_text };});
-=======
-  const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
-  return { text: completion.output_text }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 app.post('/jobs/generate', async (req, reply) => {
   const body = (req.body as any) || {};
@@ -69,7 +55,7 @@ app.post('/jobs/generate', async (req, reply) => {
   const description = await generateJobPost(openai, role, body);
   if (!userId) return { description };
   await withUser(userId, async client => {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     await client.query(
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
        VALUES ($1, $2, $3, $4, $5, 'draft')`,
@@ -77,11 +63,8 @@ app.post('/jobs/generate', async (req, reply) => {
     );
   });
   return { saved: Boolean(userId), description };});
-=======
-  return { saved: Boolean(userId), description }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 app.get('/talent/search', async (req, reply) => {
   const q = (req.query as any).q as string;
@@ -96,29 +79,13 @@ app.get('/talent/search', async (req, reply) => {
            ))
        ORDER BY created_at DESC
        LIMIT 25`,
-=======
-  const rows = await withUser(userId, async (client) => {
-    const res = await client.query(
-      `SELECT id, full_name, country, skills, experience_years FROM talent_profile
-       WHERE ($1: :text IS NULL OR country = $1)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
          AND ($2::text IS NULL OR EXISTS (
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'
            ))
        ORDER BY created_at DESC
-<<<<<<< HEAD
-       LIMIT 25`,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      [country || null, q || null]
-    );
-    return res.rows;
-  });
-  return { results: rows };});
-=======
-  return { results: rows }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 app.get('/projects/:name/track', async (req, reply) => {
   const name = (req.params as any).name as string;
@@ -133,16 +100,8 @@ app.get('/projects/:name/track', async (req, reply) => {
   });
   if (!project) return reply.code(404).send({ error: 'not found' });
   return { project };});
-=======
-  const project = await withUser(userId, async (client) => {
-    const res = await client.query(`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
-    return res.rows[0]
-  });
-  if (!project) return reply.code(404).send({ error: 'not found' });
-  return { project }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 app.get('/notifications', async (req, reply) => {
   const userId = getUserId(req);
@@ -152,27 +111,8 @@ app.get('/notifications', async (req, reply) => {
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
     return res.rows;
-=======
-  const items = await withUser(userId, async (client) => {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
-<<<<<<< HEAD
-    return res.rows;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  });
-  return { items };
-});
-
-const port = Number(process.env.API_PORT || 4000);
-app.listen({ port, host: '0.0.0.0' }).catch(err => {
-  app.log.error(err);
-  process.exit(1);
-});
-=======
-  process.exit(1)
-});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

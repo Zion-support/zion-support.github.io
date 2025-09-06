@@ -14,11 +14,7 @@ import {
   AlertTriangle,
   ArrowRight,;
 } from 'lucide-react';
-=======
-import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function PasswordCheckerPage() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -33,11 +29,9 @@ export default function PasswordCheckerPage() {
     symbols: false,
     noCommon: false,
     noSequential: false,  });
-=======
-    noSequential: false
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [generatedPassword, setGeneratedPassword] = useState('');
 
@@ -46,13 +40,9 @@ export default function PasswordCheckerPage() {
       analyzePassword(password);
     } else {
       resetAnalysis();    }
-=======
-      analyzePassword(password)
-    } else {
-      resetAnalysis()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   }, [password]);
 
   const analyzePassword = (pass: string) => {
@@ -64,13 +54,8 @@ export default function PasswordCheckerPage() {
       symbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pass),
       noCommon: !isCommonPassword(pass),
       noSequential: !hasSequentialChars(pass),    };
-=======
-      symbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(pass);
-      noCommon: !isCommonPassword(pass),
-      noSequential: !hasSequentialChars(pass)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     setChecks(newChecks);
 
@@ -94,7 +79,7 @@ export default function PasswordCheckerPage() {
     if (score >= 90) {
       setStrengthText('Very Strong');
       setStrengthColor('text-green-400');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     } else if (score >= 70) {
       setStrengthText('Strong');
       setStrengthColor('text-green-400');
@@ -114,136 +99,18 @@ export default function PasswordCheckerPage() {
 
   const isCommonPassword = (pass: string) => {
     const commonPasswords = [
-=======
-    generateSuggestions(newChecks, pass)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
 
   const isCommonPassword = (pass: string) => {
     const commonPasswords = [
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      'password',
-      '123456',
-      '123456789',
-      'qwerty',
-      'abc123',
-      'password123',
-      'admin',
-      'letmein',
-      'welcome',
-      'monkey',
-      'dragon',
-      'master',
-      'hello',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    ];
-    return commonPasswords.includes(pass.toLowerCase());
-  };
 
-  const hasSequentialChars = (pass: string) => {
-    const sequences = ['123', 'abc', 'qwe', 'asd', 'zxc', '789', '456'];
-    return sequences.some(seq => pass.toLowerCase().includes(seq));  };
-
-  const generateSuggestions = (checks: any, pass: string) => {
-    const suggestions: string[] = [];
-
-    if (!checks.length)
-      suggestions.push('Make your password at least 8 characters long');
-    if (!checks.uppercase)
-      suggestions.push('Add at least one uppercase letter (A-Z)');
-    if (!checks.lowercase)
-      suggestions.push('Add at least one lowercase letter (a-z)');
-    if (!checks.numbers) suggestions.push('Add at least one number (0-9)');
-    if (!checks.symbols)
-      suggestions.push('Add at least one special character (!@#$%^&*)');
-    if (!checks.noCommon)
-      suggestions.push('Avoid common passwords like "password" or "123456"');
-    if (!checks.noSequential)
-      suggestions.push('Avoid sequential characters like "123" or "abc"');
-
-    if (pass.length < 12)
-      suggestions.push(
-        'Consider making your password 12+ characters for better security'
-      );
-    if (pass.length < 16)
-      suggestions.push('For maximum security, use 16+ characters');
-
-    setSuggestions(suggestions);  };
-    if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)');
-    if (!checks.noCommon) suggestions.push('Avoid common passwords like "password" or "123456"');
-    if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"');
-    
-    if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security');
-    if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters');
-    
-    setSuggestions(suggestions)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-  const resetAnalysis = () => {
-    setStrength(0);
-    setStrengthText('');
-    setStrengthColor('');
-    setChecks({
-      length: false,
-      uppercase: false,
-      lowercase: false,
-      numbers: false,
-      symbols: false,
-      noCommon: false,
-      noSequential: false,
-    });
-    setSuggestions([]);  };
-
-  const generateStrongPassword = () => {
-    const length = 16;
-    const charset =
-      'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
-=======
-      noSequential: false
-    });
-    setSuggestions([])
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const generateStrongPassword = () => {
     const length = 16;
-<<<<<<< HEAD
-    const charset =
-      'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    let result = '';
 
-    // Ensure at least one of each required character type
-    result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)]; // Uppercase
-    result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)]; // Lowercase
-    result += '0123456789'[Math.floor(Math.random() * 10)]; // Number
-    result += '!@#$%^&*'[Math.floor(Math.random() * 8)]; // Symbol
-
-    // Fill the rest randomly
-    for (let i = 4; i < length; i++) {
-      result += charset[Math.floor(Math.random() * charset.length)];
-    }
-
-    // Shuffle the password
-    result = result
-      .split('')
-      .sort(() => Math.random() - 0.5)
-      .join('');
-    setGeneratedPassword(result);
-    setPassword(result);
   };
-
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);  };
-=======
-    navigator.clipboard.writeText(text)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const getStrengthBarColor = () => {
     if (strength >= 90) return 'bg-green-500';
@@ -258,26 +125,13 @@ export default function PasswordCheckerPage() {
     ) : (
       <XCircle className='w-5 h-5 text-red-400' />
     );  };
-=======
-    return 'bg-red-400'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
 
   const getCheckIcon = (passed: boolean) => {
     return passed ? (
-<<<<<<< HEAD
-      <CheckCircle className='w-5 h-5 text-green-400' />
-    ) : (
-      <XCircle className='w-5 h-5 text-red-400' />
-    );
-=======
-      <CheckCircle className="w-5 h-5 text-green-400" />
-    ) : (
-      <XCircle className="w-5 h-5 text-red-400" />
-    )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -295,7 +149,7 @@ export default function PasswordCheckerPage() {
           property='og:description'
           content='Advanced password strength analyzer with security recommendations.'
         />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       </Head>
 
       {/* Hero Section */}
@@ -314,13 +168,9 @@ export default function PasswordCheckerPage() {
             Analyze your password security with our advanced strength checker.
             Get detailed feedback, suggestions, and generate strong passwords to
             protect your accounts and data.          </p>
-=======
-          <p className="text-xl text-indigo-200 max-w-4xl mx-auto leading-relaxed">
-            Analyze your password security with our advanced strength checker. Get detailed feedback,
-            suggestions, and generate strong passwords to protect your accounts and data.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         </div>
       </section>
 
@@ -329,7 +179,7 @@ export default function PasswordCheckerPage() {
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Check Your Password Strength
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -370,11 +220,9 @@ export default function PasswordCheckerPage() {
                       ) : (
                         <Eye className='w-5 h-5' />
                       )}                    </button>
-=======
-                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </div>
                 </div>
 
@@ -385,13 +233,9 @@ export default function PasswordCheckerPage() {
                     className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'
                   >
                     <RefreshCw className='w-5 h-5 mr-2' />                    Generate Strong Password
-=======
-                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     Generate Strong Password
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </Button>
                 </div>
 
@@ -402,7 +246,7 @@ export default function PasswordCheckerPage() {
                       <span className='text-sm text-gray-300'>
                         Generated Password:
                       </span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       <Button
                         onClick={() => copyToClipboard(generatedPassword)}
                         variant='outline'
@@ -414,21 +258,17 @@ export default function PasswordCheckerPage() {
                       </Button>
                     </div>
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}
-=======
-                    <div className="mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       {generatedPassword}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </div>
                   </div>
                 )}
 
                 <div className='text-sm text-gray-400'>                  <p>• Real-time strength analysis</p>
-=======
-                <div className="text-sm text-gray-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   <p>• Real-time strength analysis</p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   <p>• Multiple security criteria</p>
                   <p>• Detailed feedback and suggestions</p>
                   <p>• Strong password generator</p>
@@ -443,50 +283,19 @@ export default function PasswordCheckerPage() {
               </h3>
 
               {password ? (
-=======
-            <Card className="p-8 bg-gray-800 border border-gray-700">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-6 h-6 mr-3 text-purple-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 Security Analysis
               </h3>
 
               {password ? (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                <div className='space-y-6'>
-                  {/* Strength Score */}
-                  <div>
-                    <div className='flex items-center justify-between mb-2'>
-                      <span className='text-sm text-gray-300'>
-                        Password Strength:
-<<<<<<< HEAD
-                      </span>                      <span className={`text-lg font-bold ${strengthColor}`}>
-                        {strengthText} ({strength}/100)
-                      </span>
-                    </div>
-                    <div className='w-full bg-gray-700 rounded-full h-3'>
-                      <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
-=======
-                <div className="space-y-6">
-                  {/* Strength Score */}
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm text-gray-300">Password Strength:</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       <span className={`text-lg font-bold ${strengthColor}`}>
                         {strengthText} ({strength}/100)
                       </span>
                     </div>
-<<<<<<< HEAD
-                    <div className='w-full bg-gray-700 rounded-full h-3'>
-                      <div
-=======
-                    <div className="w-full bg-gray-700 rounded-full h-3">
-                      <div 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         style={{ width: `${strength}%` }}
                       />
                     </div>
@@ -498,18 +307,16 @@ export default function PasswordCheckerPage() {
                       Security Criteria
                     </h4>
                     <div className='space-y-3'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       {Object.entries(checks).map(([key, passed]) => (
                         <div key={key} className='flex items-center space-x-3'>
                           {getCheckIcon(passed)}
                           <span
                             className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
                           >                            {key === 'length' && 'At least 8 characters'}
-=======
-                          <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                             {key === 'length' && 'At least 8 characters'}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
                             {key === 'numbers' && 'Contains number'}
@@ -517,11 +324,9 @@ export default function PasswordCheckerPage() {
                             {key === 'noCommon' && 'Not a common password'}
                             {key === 'noSequential' &&
                               'No sequential characters'}                          </span>
-=======
-                            {key === 'noSequential' && 'No sequential characters'}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           </span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </div>
                       ))}
                     </div>
@@ -543,16 +348,9 @@ export default function PasswordCheckerPage() {
                             <span className='text-sm text-yellow-300'>
                               {suggestion}
                             </span>                          </div>
-=======
-                      <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>
-                      <div className="space-y-2">
-                        {suggestions.map((suggestion, index) => (
-                          <div key={index} className="flex items-start space-x-3">
-                            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-yellow-300">{suggestion}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         ))}
                       </div>
                     </div>
@@ -568,9 +366,9 @@ export default function PasswordCheckerPage() {
                   <div className="text-6xl mb-4">🔒</div>
                   <p className="text-gray-400">
                     Enter a password above to see the security analysis and get personalized suggestions.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                   </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
               )}
             </Card>
@@ -583,7 +381,7 @@ export default function PasswordCheckerPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Advanced Password Security Features
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -661,9 +459,9 @@ export default function PasswordCheckerPage() {
               <h3 className="text-xl font-bold text-white mb-4">Privacy First</h3>
               <p className="text-gray-400">
                 Your passwords are never stored or transmitted - analysis happens locally in your browser.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
               </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </Card>
           </div>
         </div>
@@ -674,7 +472,7 @@ export default function PasswordCheckerPage() {
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Password Security Best Practices
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -706,12 +504,9 @@ export default function PasswordCheckerPage() {
                 </li>
                 <li className='flex items-start'>
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />                  Update passwords regularly
-=======
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   Update passwords regularly
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </li>
               </ul>
             </Card>
@@ -738,7 +533,7 @@ export default function PasswordCheckerPage() {
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
                   Don't reuse passwords across accounts
                 </li>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <li className='flex items-start'>
                   <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />
                   Avoid common words or patterns
@@ -751,15 +546,9 @@ export default function PasswordCheckerPage() {
                   <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />
                   Don't reuse passwords across accounts
                 </li>
-<<<<<<< HEAD
-                <li className='flex items-start'>
-                  <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />                  Avoid writing passwords down
-=======
-                <li className="flex items-start">
-                  <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   Avoid writing passwords down
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </li>
               </ul>
             </Card>
@@ -771,7 +560,7 @@ export default function PasswordCheckerPage() {
       <section className='py-20 bg-gradient-to-r from-indigo-600 to-purple-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             Ready to Secure Your Passwords?
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
@@ -796,9 +585,9 @@ export default function PasswordCheckerPage() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-indigo-600"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
             >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               View Pricing
             </Button>
           </div>
@@ -807,7 +596,3 @@ export default function PasswordCheckerPage() {
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

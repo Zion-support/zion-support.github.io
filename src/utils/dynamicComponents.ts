@@ -4,13 +4,6 @@
  */
 import React from 'react';
 import dynamic from 'next/dynamic';
-<<<<<<< HEAD
-=======
-const LoadingSpinner = () => React.createElement('div',
-  { className: "flex items-center justify-center p-8" },
-  React.createElement('div', { className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary" })
-),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 const LoadingSpinner = () =>
   React.createElement(
@@ -33,39 +26,21 @@ const LoadingSkeleton = () =>
 // Chart components (heavy - only load when needed)
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
-<<<<<<< HEAD
-//   () => import('../components/charts/Chart'),
-//   {
-=======
-//   (,) => import('../components/charts/Chart'),
-//   { 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 //     loading: LoadingSkeleton,
 //     ssr: false
 //   }
 // );
 
 export const DynamicPieChart = dynamic(
-<<<<<<< HEAD
-  () => import('recharts').then(mod => ({ default: mod.PieChart })),
-  {
-=======
-  (,) => import('recharts').then(mod => ({ default: mod.PieChart })),
-  { 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     loading: LoadingSkeleton,
     ssr: false,
   }
 );
 
 export const DynamicBarChart = dynamic(
-<<<<<<< HEAD
-  () => import('recharts').then(mod => ({ default: mod.BarChart })),
-  {
-=======
-  (,) => import('recharts').then(mod => ({ default: mod.BarChart })),
-  { 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     loading: LoadingSkeleton,
     ssr: false,
   }
@@ -73,52 +48,28 @@ export const DynamicBarChart = dynamic(
 
 // TODO: Uncomment when these components are available
 // export const DynamicPDFGenerator = dynamic(
-<<<<<<< HEAD
-//   () => import('../components/pdf/PDFGenerator'),
-//   {
-=======
-//   (,) => import('../components/pdf/PDFGenerator'),
-//   { 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 //     loading: LoadingSpinner,
 //     ssr: false
 //   }
 // );
 
 // export const DynamicVideoPlayer = dynamic(
-<<<<<<< HEAD
-//   () => import('../components/video/VideoPlayer'),
-//   {
-=======
-//   (,) => import('../components/video/VideoPlayer'),
-//   { 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 //     loading: LoadingSkeleton,
 //     ssr: false
 //   }
 // );
 
 // export const DynamicModelViewer = dynamic(
-<<<<<<< HEAD
-//   () => import('../components/ar/ModelViewer'),
-//   {
-=======
-//   (,) => import('../components/ar/ModelViewer'),
-//   { 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 //     loading: LoadingSpinner,
 //     ssr: false
 //   }
 // );
 
 // export const DynamicRichEditor = dynamic(
-<<<<<<< HEAD
-//   () => import('../components/editor/RichTextEditor'),
-//   {
-=======
-//   (,) => import('../components/editor/RichTextEditor'),
-//   { 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 //     loading: LoadingSpinner,
 //     ssr: false
 //   }
@@ -126,13 +77,7 @@ export const DynamicBarChart = dynamic(
 
 // Virtual list for large datasets
 export const DynamicVirtualList = dynamic(
-<<<<<<< HEAD
-  () => import('react-window').then(mod => ({ default: mod.FixedSizeList })),
-  {
-=======
-  (,) => import('react-window').then(mod => ({ default: mod.FixedSizeList })),
-  { 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     loading: LoadingSkeleton,
     ssr: false,
   }
@@ -141,8 +86,3 @@ export const DynamicVirtualList = dynamic(
 // Usage examples:
 // Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
-=======
-// Usage examples: // Replace: import Chart from '../components/charts/Chart';
-// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

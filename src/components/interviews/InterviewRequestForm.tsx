@@ -34,30 +34,7 @@ import { CalendarIcon } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { useInterviews } from '@/hooks/useInterviews';
 import { logErrorToProduction } from '@/utils/productionLogger';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
-import { TalentProfile } from "@/types/talent";
-import type { UserProfile } from "@/types/auth";
-import { cn } from "@/lib/utils";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { z } from "zod";
-import { format, addDays } from "date-fns";
-import { CalendarIcon } from 'lucide-react';
-import { toast } from "@/components/ui/use-toast";
-import { useInterviews } from "@/hooks/useInterviews";
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface InterviewRequestFormProps {
   talent: TalentProfile;
   onClose: () => void;
@@ -180,17 +157,7 @@ export function InterviewRequestForm({
         <div className='flex items-center mb-6'>
           <div className='flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4'>
             <img
-<<<<<<< HEAD
-              src={talent.profile_picture_url || '/placeholder.svg'}
-              alt={talent.full_name}
-              className='h-full w-full object-cover'
-              loading='lazy'
-=======
-              src = {talent.profile_picture_url || "/placeholder.svg",}
-              alt = {talent.full_name,}
-              className="h-full w-full object-cover"
-              loading="lazy"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             />
           </div>
           <div>
@@ -204,19 +171,7 @@ export function InterviewRequestForm({
         </div>
 
         <FormField
-<<<<<<< HEAD
-          control={form.control}
-          name='title'
-          render={({
-            field,
-          }: {
-            field: ControllerRenderProps<z.infer<typeof formSchema>, 'title'>;
-          }) => (
-=======
-          control = {form.control,}
-          name="title"
-          render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             <FormItem>
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
@@ -229,39 +184,13 @@ export function InterviewRequestForm({
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
-<<<<<<< HEAD
-            control={form.control}
-            name='date'
-            render={({
-              field,
-            }: {
-              field: ControllerRenderProps<z.infer<typeof formSchema>, 'date'>;
-            }) => (
-              <FormItem className='flex flex-col'>
-=======
-            control = {form.control,}
-            name="date"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> },) => (
-              <FormItem className="flex flex-col">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 <FormLabel>Date</FormLabel>
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
                       <Button
-<<<<<<< HEAD
-                        variant='outline'
-                        className={cn(
-                          'w-full pl-3 text-left font-normal',
-                          !field.value && 'text-muted-foreground'
-                        )}
-=======
-                        variant="outline"
-                        className = {cn(
-                          "w-full pl-3 text-left font-normal",
-                          !field.value && "text-muted-foreground"
-                        ),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       >
                         {field.value ? (
                           format(field.value, 'PPP')
@@ -274,19 +203,7 @@ export function InterviewRequestForm({
                   </PopoverTrigger>
                   <PopoverContent className='w-auto p-0' align='start'>
                     <Calendar
-<<<<<<< HEAD
-                      mode='single'
-                      selected={field.value}
-                      onSelect={field.onChange}
-                      disabled={date =>
-                        date < new Date() || date > addDays(new Date(), 90)
-                      }
-=======
-                      mode="single"
-                      selected = {field.value,}
-                      onSelect = {field.onChange,}
-                      disabled = {(date,) => date < new Date() || date > addDays(new Date(), 90),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       initialFocus
                       className='p-3 pointer-events-auto'
                     />
@@ -298,19 +215,7 @@ export function InterviewRequestForm({
           />
 
           <FormField
-<<<<<<< HEAD
-            control={form.control}
-            name='time'
-            render={({
-              field,
-            }: {
-              field: ControllerRenderProps<z.infer<typeof formSchema>, 'time'>;
-            }) => (
-=======
-            control = {form.control,}
-            name="time"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               <FormItem>
                 <FormLabel>Time</FormLabel>
                 <Select
@@ -322,13 +227,7 @@ export function InterviewRequestForm({
                       <SelectValue placeholder='Select time' />
                     </SelectTrigger>
                   </FormControl>
-<<<<<<< HEAD
-                  <SelectContent className='max-h-[300px]'>
-                    {timeSlots.map(time => (
-=======
-                  <SelectContent className="max-h-[300px]">
-                    {timeSlots.map((time,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       <SelectItem key={time} value={time}>
                         {time}
                       </SelectItem>
@@ -343,22 +242,7 @@ export function InterviewRequestForm({
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
-<<<<<<< HEAD
-            control={form.control}
-            name='duration'
-            render={({
-              field,
-            }: {
-              field: ControllerRenderProps<
-                z.infer<typeof formSchema>,
-                'duration'
-              >;
-            }) => (
-=======
-            control = {form.control,}
-            name="duration"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               <FormItem>
                 <FormLabel>Duration</FormLabel>
                 <Select
@@ -383,22 +267,7 @@ export function InterviewRequestForm({
           />
 
           <FormField
-<<<<<<< HEAD
-            control={form.control}
-            name='platform'
-            render={({
-              field,
-            }: {
-              field: ControllerRenderProps<
-                z.infer<typeof formSchema>,
-                'platform'
-              >;
-            }) => (
-=======
-            control = {form.control,}
-            name="platform"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               <FormItem>
                 <FormLabel>Platform</FormLabel>
                 <Select
@@ -425,22 +294,7 @@ export function InterviewRequestForm({
 
         {form.watch('platform') !== 'in-app' && (
           <FormField
-<<<<<<< HEAD
-            control={form.control}
-            name='meetingLink'
-            render={({
-              field,
-            }: {
-              field: ControllerRenderProps<
-                z.infer<typeof formSchema>,
-                'meetingLink'
-              >;
-            }) => (
-=======
-            control = {form.control,}
-            name="meetingLink"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               <FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
@@ -456,19 +310,7 @@ export function InterviewRequestForm({
         )}
 
         <FormField
-<<<<<<< HEAD
-          control={form.control}
-          name='notes'
-          render={({
-            field,
-          }: {
-            field: ControllerRenderProps<z.infer<typeof formSchema>, 'notes'>;
-          }) => (
-=======
-          control = {form.control,}
-          name="notes"
-          render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "notes"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             <FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
@@ -541,7 +383,3 @@ toast ({;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
 }/> </Button> </div> </form> </Form>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

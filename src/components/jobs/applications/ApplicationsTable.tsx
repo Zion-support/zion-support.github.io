@@ -1,72 +1,8 @@
-<<<<<<< HEAD
-import { format } from 'date-fns';
-import { JobApplication } from '@/types/jobs';
-import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
-import { ClickableBadge } from '@/components/ui/clickable-badge';
-import {
-=======
-import { format } from "date-fns";
-import { JobApplication } from "@/types/jobs";
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  Table,
+Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-  TableRow,;
-} from '@/components/ui/table';
-import { ApplicationActions } from './ApplicationActions';
-import { StatusBadge } from './StatusBadge';
-import { Briefcase, User } from 'lucide-react';
-import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal';
-import React, { useState } from 'react'; // Import React and useState
-import { toast } from '@/hooks/use-toast';
-import Image from 'next/image'; // Import next/image
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-interface ApplicationsTableProps {
-  applications: JobApplication[];
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
-  onViewScore: (application: JobApplication) => void;
-
-// Sub-component for avatar to handle its own error state
-const ApplicationAvatar = ({
-  application,
-}: {
-  application: JobApplication;
-}) => {
-  const [avatarError, setAvatarError] = useState(false);
-  const talentName = application.talent_profile?.full_name || 'Candidate';
-=======
-  TableRow
-} from "@/components/ui/table",
-import { ApplicationActions } from "./ApplicationActions";
-import { StatusBadge } from "./StatusBadge";
-import { Briefcase, User } from 'lucide-react';
-import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal";
-import React, { useState } from "react", // Import React and useState
-import { toast } from "@/hooks/use-toast";
-import Image from 'next/image', // Import next/image
-
-interface ApplicationsTableProps {
-  applications: JobApplication[],
-  processingId: string | null,
-  onViewApplication: (applicationId: string,) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: string,) => Promise<void>,
-  onViewScore: (application: JobApplication,) => void
-}
-
-// Sub-component for avatar to handle its own error state
-const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
-  const [avatarError, setAvatarError] = useState(false),
-  const talentName = application.talent_profile?.full_name || "Candidate",
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   return (
     <AvatarPrimitive className='h-8 w-8'>
@@ -78,15 +14,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
           alt = {talentName,}
           width={32} // for h-8 w-8
           height={32} // for h-8 w-8
-<<<<<<< HEAD
-          className='rounded-full object-cover'
-          onError={() => setAvatarError(true)}
-          priority={false}
-=======
-          className="rounded-full object-cover"
-          onError = {(,) => setAvatarError(true),}
-          priority = {false,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
         />
       ) : (
         <User className='h-4 w-4' />
@@ -102,26 +30,7 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore,
 }: ApplicationsTableProps) {
-<<<<<<< HEAD
-  const [hireModalOpen, setHireModalOpen] = useState(false);
-  const [selectedApplication, setSelectedApplication] =
-    useState<JobApplication | null>(null);
 
-  const handleHireClick = (application: JobApplication) => {
-    setSelectedApplication(application);
-    setHireModalOpen(true);
-  };
-
-=======
-  const [hireModalOpen, setHireModalOpen] = useState(false),
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
-  
-  const handleHireClick = (application: JobApplication,) => {
-    setSelectedApplication(application),
-    setHireModalOpen(true)
-  },
-  
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   const handleHireConfirmed = () => {
     toast({
       title: 'Hiring process initiated',
@@ -145,11 +54,7 @@ export function ApplicationsTable({
             </TableRow>
           </TableHeader>
           <TableBody>
-<<<<<<< HEAD
-            {applications.map(application => (
-=======
-            {applications.map((application,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               <TableRow key={application.id}>
                 <TableCell>
                   <div className='flex items-center gap-3'>
@@ -172,22 +77,7 @@ export function ApplicationsTable({
                 <TableCell className='hidden md:table-cell'>
                   <StatusBadge status={application.status} />
                 </TableCell>
-<<<<<<< HEAD
-                <TableCell className='hidden lg:table-cell'>
-                  {application.match_score !== undefined &&
-                  application.match_score !== null ? (
-                    <ClickableBadge
-                      variant='outline'
-                      className='cursor-pointer'
-                      onClick={() => onViewScore(application)}
-=======
-                <TableCell className="hidden lg:table-cell">
-                  {application.match_score !== undefined && application.match_score !== null ? (
-                    <ClickableBadge 
-                      variant="outline"
-                      className="cursor-pointer"
-                      onClick = {(,) => onViewScore(application),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                     >
                       {application.match_score}%
                     </ClickableBadge>
@@ -197,21 +87,7 @@ export function ApplicationsTable({
                     </span>
                   )}
                 </TableCell>
-<<<<<<< HEAD
-                <TableCell className='text-right'>
-                  <div className='flex items-center justify-end gap-2'>
-                    <ClickableBadge
-                      variant='outline'
-                      className='cursor-pointer bg-green-50 hover:bg-green-100 text-green-700'
-                      onClick={() => handleHireClick(application)}
-=======
-                <TableCell className="text-right">
-                  <div className="flex items-center justify-end gap-2">
-                    <ClickableBadge 
-                      variant="outline" 
-                      className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
-                      onClick = {() => handleHireClick(application),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                     >
                       <Briefcase className='h-3 w-3 mr-1' /> Hire
                     </ClickableBadge>
@@ -282,7 +158,3 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed ;
 }/> </>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

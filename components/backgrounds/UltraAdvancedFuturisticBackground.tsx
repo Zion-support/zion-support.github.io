@@ -1,11 +1,10 @@
- canvas.width = window.innerWidth;
+canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particles: Array< {
   //Initialize particles with enhanced properties const initParticles = () => {
   const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5);
 for (let i = 0, i < count, i++) {
   particles.push ({
-  
 
 export default function UltraAdvancedFuturisticBackground({
   children,
@@ -23,9 +22,9 @@ export default function UltraAdvancedFuturisticBackground({
   animationSpeed = 1.0;
   enableHolographic = true;
   enableQuantumEffects = true
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 }: UltraAdvancedFuturisticBackgroundProps) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
 
@@ -107,9 +106,8 @@ export default function UltraAdvancedFuturisticBackground({
       holographic: ['#ff1493#00bfff#ffd700#7fff00#ff69b4#00ced1#ff4500'],
       cyberpunk: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],
       'quantum-fusion': ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff#ff1493', '#00bfff']
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const selectedColors = colors[theme] || colors.quantum;
 
@@ -129,11 +127,11 @@ export default function UltraAdvancedFuturisticBackground({
                    intensity === 'high' ? particleCount : 
                    intensity === 'medium' ? Math.floor(particleCount * 0.7) : 
                    Math.floor(particleCount * 0.5);
-      
+
       for (let i = 0, i < count, i++) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
         particles.push({
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 3 * animationSpeed,
@@ -150,17 +148,9 @@ export default function UltraAdvancedFuturisticBackground({
           rotation: Math.random() * Math.PI * 2,
           rotationSpeed: (Math.random() - 0.5) * 0.1 * animationSpeed,
         });      }
-=======
-          color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
-          type: ['quantumneonholographiccyberpunk'][Math.floor(Math.random() * 4)] as any,
-          life: Math.random() * 100,
-          maxLife: 100 + Math.random() * 100,
-          rotation: Math.random() * Math.PI * 2,
-          rotationSpeed: (Math.random() - 0.5) * 0.1 * animationSpeed
-        })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     };
 
     // Enhanced animation loop with quantum effects
@@ -176,28 +166,19 @@ export default function UltraAdvancedFuturisticBackground({
         canvas.height / 2,
         Math.max(canvas.width, canvas.height) / 2
       );
-=======
-        canvas.width / 2, canvas.height / 2, 0;
-        canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
-      );
-      
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       if (theme === 'quantum-fusion') {
         gradient.addColorStop(0, 'rgba(0, 0, 0, 0.95)');
         gradient.addColorStop(0.3, 'rgba(0, 255, 255, 0.1)');
         gradient.addColorStop(0.6, 'rgba(255, 0, 255, 0.05)');
         gradient.addColorStop(1, 'rgba(0, 0, 0, 0.98)');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       } else {
         gradient.addColorStop(0, 'rgba(0, 0, 0, 0.9)');
         gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.95)');
         gradient.addColorStop(1, 'rgba(0, 0, 0, 0.98)');
       }
-=======
-      
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -209,11 +190,8 @@ export default function UltraAdvancedFuturisticBackground({
           particle.life = particle.maxLife;
           particle.x = Math.random() * canvas.width;
           particle.y = Math.random() * canvas.height;        }
-=======
-          particle.y = Math.random() * canvas.height
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         // Update position with quantum effects
         particle.x += particle.vx;
@@ -224,22 +202,18 @@ export default function UltraAdvancedFuturisticBackground({
         if (enableQuantumEffects && Math.random() < 0.01) {
           const partner =
             particles[Math.floor(Math.random() * particles.length)];          if (partner && partner !== particle) {
-=======
-          const partner = particles[Math.floor(Math.random() * particles.length)];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           if (partner && partner !== particle) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             ctx.beginPath();
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * particle.opacity})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(partner.x, partner.y);
             ctx.stroke();          }
-=======
-            ctx.stroke()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         }
 
         // Bounce off edges with quantum tunneling
@@ -249,13 +223,9 @@ export default function UltraAdvancedFuturisticBackground({
             particle.x = particle.x <= 0 ? canvas.width : 0;
           } else {
             particle.vx *= -1;          }
-=======
-            particle.x = particle.x <= 0 ? canvas.width : 0
-          } else {
-            particle.vx *= -1
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         }
         if (particle.y <= 0 || particle.y >= canvas.height) {
           if (enableQuantumEffects && Math.random() < 0.1) {
@@ -263,13 +233,9 @@ export default function UltraAdvancedFuturisticBackground({
             particle.y = particle.y <= 0 ? canvas.height : 0;
           } else {
             particle.vy *= -1;          }
-=======
-            particle.y = particle.y <= 0 ? canvas.height : 0
-          } else {
-            particle.vy *= -1
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         }
 
         // Wrap around edges
@@ -298,41 +264,13 @@ export default function UltraAdvancedFuturisticBackground({
           gradient.addColorStop(0.6, particle.color + '40');
           gradient.addColorStop(1, 'transparent');
 
-=======
-        
-        if (particle.type === 'quantum') {
-          // Quantum particle with wave effect
-          const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, particle.size * 4);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           gradient.addColorStop(0, particle.color);
           gradient.addColorStop(0.3, particle.color + '80');
           gradient.addColorStop(0.6, particle.color + '40');
           gradient.addColorStop(1, 'transparent');
-<<<<<<< HEAD
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          ctx.fillStyle = gradient;
-          ctx.fillRect(
-            -particle.size * 2,
-            -particle.size * 2,
-            particle.size * 4,
-            particle.size * 4
-          );
-
-          // Quantum wave rings
-          if (enableQuantumEffects) {
-            for (let i = 1; i <= 3; i++) {
-              ctx.strokeStyle =
-                particle.color + Math.floor(40 - i * 10).toString(16);
-              ctx.lineWidth = 1;
-              ctx.beginPath();
-              ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
-              ctx.stroke();            }
-=======
-              ctx.stroke()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           }
         } else if (particle.type === 'holographic' && enableHolographic) {
           // Holographic particle with rainbow effect
@@ -357,68 +295,13 @@ export default function UltraAdvancedFuturisticBackground({
         } else if (particle.type === 'cyberpunk') {
           // Cyberpunk particle with neon glow
           ctx.fillStyle = particle.color;
-=======
-          ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
-          
-          // Holographic glitch effect
-          if (Math.random() < 0.05) {
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-            ctx.fillRect(-particle.size * 1.5, -particle.size * 1.5, particle.size * 3, particle.size * 3)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }
         } else if (particle.type === 'cyberpunk') {
           // Cyberpunk particle with neon glow
           ctx.fillStyle = particle.color;
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          ctx.fillRect(
-            -particle.size,
-            -particle.size,
-            particle.size * 2,
-            particle.size * 2
-          );
 
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          // Neon glow effect
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = particle.size * 3;
-          ctx.fillRect(
-            -particle.size,
-            -particle.size,
-            particle.size * 2,
-            particle.size * 2
-          );
-          ctx.shadowBlur = 0;
-        } else {
-          // Standard neon particle
-          ctx.fillStyle = particle.color;
-          ctx.fillRect(
-            -particle.size,
-            -particle.size,
-            particle.size * 2,
-            particle.size * 2
-          );
-
-          // Neon glow
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = particle.size * 2;
-          ctx.fillRect(
-            -particle.size,
-            -particle.size,
-            particle.size * 2,
-            particle.size * 2
-          );
-          ctx.shadowBlur = 0;
-        }
-
-        ctx.restore();      });
-=======
-        
-        ctx.restore()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Add quantum field effects
       if (enableQuantumEffects && theme === 'quantum-fusion') {
@@ -432,19 +315,15 @@ export default function UltraAdvancedFuturisticBackground({
         for (let i = 0, i < 5, i++) {
           const x = Math.sin(time + i) * canvas.width * 0.3 + canvas.width * 0.5;
           const y = Math.cos(time + i * 0.7) * canvas.height * 0.3 + canvas.height * 0.5;
-          
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           ctx.beginPath();
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time * 2 + i)})`;
           ctx.lineWidth = 2;
           ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
           ctx.stroke();        }
-=======
-          ctx.stroke()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       }
 
       // Add holographic matrix effect
@@ -455,7 +334,7 @@ export default function UltraAdvancedFuturisticBackground({
 
         for (let i = 0; i < 20; i++) {
           const x = ((i * canvas.width) / 20 + time * 50) % canvas.width;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           ctx.beginPath();
           ctx.moveTo(x, 0);
           ctx.lineTo(x, canvas.height);
@@ -472,21 +351,15 @@ export default function UltraAdvancedFuturisticBackground({
       }
 
       animationRef.current = requestAnimationFrame(animate);    };
-=======
-      animationRef.current = requestAnimationFrame(animate)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Handle window resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;    };
-=======
-      canvas.height = window.innerHeight
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     window.addEventListener('resize', handleResize);
     initParticles();
@@ -496,7 +369,7 @@ export default function UltraAdvancedFuturisticBackground({
       window.removeEventListener('resize', handleResize);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       }
     };
   }, [
@@ -540,7 +413,3 @@ export default function UltraAdvancedFuturisticBackground({
       {children}
     </div>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

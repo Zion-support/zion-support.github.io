@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { format } from 'date-fns';
-import { useAuth } from '@/hooks/useAuth';
-import { useProjects } from '@/hooks/useProjects';
-import { SEO } from '@/components/SEO';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { Project, ProjectStatus } from '@/types/projects';
-import { Button } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
-=======
-import React, { useState, useEffect } from "react";
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { format } from "date-fns";
-import { useAuth } from "@/hooks/useAuth";
-import { useProjects } from "@/hooks/useProjects";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Project, ProjectStatus } from "@/types/projects";
-import { Button } from "@/components/ui/button";
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import {
   Card,
   CardContent,
@@ -42,38 +16,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-<<<<<<< HEAD
-  AlertDialogTrigger,;
-} from '@/components/ui/alert-dialog';
-import { Avatar } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { Textarea } from '@/components/ui/textarea';
-import { toast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-import { ProjectReviewSection } from '@/components/projects/reviews/ProjectReviewSection';
-import {
-  AlertCircle,
-  Calendar,
-  CheckCircle2,
-  Clock,
-  FileText,
-  Layers,
-  MessageSquare,
-  Video,
-  User,
-  XCircle,;
-} from 'lucide-react';
 
-=======
-  AlertDialogTrigger} from "@/components/ui/alert-dialog",
-import { Avatar } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 function ProjectDetailsContent() {
   const router = useRouter();
   // Get projectId from Next.js router query params
@@ -112,19 +55,7 @@ function ProjectDetailsContent() {
 
       setIsLoading(false);
     }
-<<<<<<< HEAD
 
-    loadProject();
-  }, [projectId]);
-
-  const fetchProjectNotes = async (projectId: string) => {
-=======
-    
-    loadProject()
-  }, [projectId]),
-  
-  const fetchProjectNotes = async (projectId: string,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     try {
       const { data, error } = await supabase
         .from('project_notes')
@@ -186,23 +117,7 @@ function ProjectDetailsContent() {
     } finally {
       setIsSubmittingNote(false);
     }
-<<<<<<< HEAD
-  };
 
-  const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return;
-
-    const success = await updateProjectStatus(project.id, newStatus);
-
-=======
-  },
-  
-  const handleStatusChange = async (newStatus: ProjectStatus,) => {
-    if (!project) return,
-    
-    const success = await updateProjectStatus(project.id, newStatus),
-    
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (success) {
       setProject({
         ...project,
@@ -217,15 +132,7 @@ function ProjectDetailsContent() {
         });
       }
     }
-<<<<<<< HEAD
-  };
 
-  const getStatusBadge = (status: ProjectStatus) => {
-=======
-  },
-  
-  const getStatusBadge = (status: ProjectStatus,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     switch (status) {
       case 'offer_sent':
         return <Badge variant='outline'>Offer Sent</Badge>;
@@ -270,11 +177,7 @@ function ProjectDetailsContent() {
               The project you're looking for doesn't exist or you don't have
               access to it.
             </p>
-<<<<<<< HEAD
-            <Button onClick={() => router.push('/dashboard')}>
-=======
-            <Button onClick={(,) => router.push("/dashboard")}>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               Return to Dashboard
             </Button>
           </CardContent>
@@ -346,13 +249,7 @@ function ProjectDetailsContent() {
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
-<<<<<<< HEAD
-                        <AlertDialogAction
-                          onClick={() => handleStatusChange('offer_accepted')}
-                        >
-=======
-                        <AlertDialogAction onClick={(,) => handleStatusChange("offer_accepted")}>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                           Accept Offer
                         </AlertDialogAction>
                       </AlertDialogFooter>
@@ -389,13 +286,7 @@ function ProjectDetailsContent() {
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
-<<<<<<< HEAD
-                      <AlertDialogAction
-                        onClick={() => handleStatusChange('completed')}
-                      >
-=======
-                      <AlertDialogAction onClick={(,) => handleStatusChange("completed")}>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         Mark as Completed
                       </AlertDialogAction>
                     </AlertDialogFooter>
@@ -418,34 +309,7 @@ function ProjectDetailsContent() {
                   </Link>
                 </Button>
               )}
-<<<<<<< HEAD
 
-              {(isClient || isTalent) &&
-                ['offer_sent', 'offer_accepted', 'in_progress'].includes(
-                  project.status
-                ) && (
-                  <Button
-                    variant='outline'
-                    onClick={() =>
-                      router.push(
-                        `/messages?talentId=${project.talent_id}&clientId=${project.client_id}`
-                      )
-                    }
-                  >
-                    <MessageSquare className='mr-2 h-4 w-4' /> Message
-                  </Button>
-                )}
-=======
-              
-              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
-                <Button 
-                  variant="outline" 
-                  onClick={(,) => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
-                >
-                  <MessageSquare className="mr-2 h-4 w-4" /> Message
-                </Button>
-              )}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             </div>
           </div>
         </div>
@@ -591,30 +455,7 @@ function ProjectDetailsContent() {
                     <div className='space-y-4'>
                       <div className='space-y-4 max-h-[400px] overflow-y-auto mb-4'>
                         {notes.length > 0 ? (
-<<<<<<< HEAD
-                          notes.map(note => (
-                            <div
-                              key={note.id}
-                              className='bg-muted/30 p-3 rounded-md'
-                            >
-                              <div className='flex items-center gap-2 mb-2'>
-                                <Avatar className='h-6 w-6'>
-                                  {note.created_by_profile?.avatar_url ? (
-                                    <img
-                                      src={note.created_by_profile.avatar_url}
-                                      alt={note.created_by_profile.display_name}
-                                      loading='lazy'
-=======
-                          notes.map((note,) => (
-                            <div key={note.id} className="bg-muted/30 p-3 rounded-md">
-                              <div className="flex items-center gap-2 mb-2">
-                                <Avatar className="h-6 w-6">
-                                  {note.created_by_profile?.avatar_url ? (
-                                    <img
-                                      src = {note.created_by_profile.avatar_url,}
-                                      alt = {note.created_by_profile.display_name,}
-                                      loading="lazy"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                                     />
                                   ) : (
                                     <User className='h-4 w-4' />
@@ -646,17 +487,7 @@ function ProjectDetailsContent() {
                       {isOfferAccepted && (
                         <div>
                           <Textarea
-<<<<<<< HEAD
-                            placeholder='Add a note or update to the project...'
-                            value={newNote}
-                            onChange={e => setNewNote(e.target.value)}
-                            className='min-h-[100px] mb-2'
-=======
-                            placeholder="Add a note or update to the project..."
-                            value = {newNote,}
-                            onChange = {(e,) => setNewNote(e.target.value),}
-                            className="min-h-[100px] mb-2"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                           />
                           <Button
                             onClick = {handleSubmitNote,}
@@ -688,15 +519,7 @@ function ProjectDetailsContent() {
                     <Avatar className='h-10 w-10'>
                       {project.talent_profile?.profile_picture_url ? (
                         <img
-<<<<<<< HEAD
-                          src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
-                          loading='lazy'
-=======
-                          src = {project.talent_profile.profile_picture_url,}
-                          alt = {project.talent_profile.full_name,}
-                          loading="lazy"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         />
                       ) : (
                         <User className='h-6 w-6' />
@@ -712,21 +535,7 @@ function ProjectDetailsContent() {
                       </p>
                       {isClient && (
                         <Button
-<<<<<<< HEAD
-                          variant='outline'
-                          size='sm'
-                          className='mt-2'
-                          onClick={() =>
-                            router.push(
-                              `/messages?talentId=${project.talent_id}`
-                            )
-                          }
-=======
-                          variant="outline"
-                          size="sm"
-                          className="mt-2"
-                          onClick={(,) => router.push(`/messages?talentId=${project.talent_id}`)}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         >
                           <MessageSquare className='mr-1 h-3 w-3' /> Message
                         </Button>
@@ -738,15 +547,7 @@ function ProjectDetailsContent() {
                     <Avatar className='h-10 w-10'>
                       {project.talent_profile?.profile_picture_url ? (
                         <img
-<<<<<<< HEAD
-                          src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
-                          loading='lazy'
-=======
-                          src = {project.talent_profile.profile_picture_url,}
-                          alt = {project.talent_profile.full_name,}
-                          loading="lazy"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         />
                       ) : (
                         <User className='h-6 w-6' />
@@ -761,21 +562,7 @@ function ProjectDetailsContent() {
                       </p>
                       {isTalent && (
                         <Button
-<<<<<<< HEAD
-                          variant='outline'
-                          size='sm'
-                          className='mt-2'
-                          onClick={() =>
-                            router.push(
-                              `/messages?clientId=${project.client_id}`
-                            )
-                          }
-=======
-                          variant="outline"
-                          size="sm"
-                          className="mt-2"
-                          onClick={(,) => router.push(`/messages?clientId=${project.client_id}`)}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         >
                           <MessageSquare className='mr-1 h-3 w-3' /> Message
                         </Button>
@@ -821,19 +608,7 @@ function ProjectDetailsContent() {
                     <AlertCircle className='h-4 w-4' /> The talent has requested
                     changes to this offer.
                   </p>
-<<<<<<< HEAD
-                  <Button
-                    variant='outline'
-                    onClick={() =>
-                      router.push(`/messages?talentId=${project.talent_id}`)
-                    }
-                    className='w-full'
-=======
-                  <Button 
-                    variant="outline"
-                    onClick={(,) => router.push(`/messages?talentId=${project.talent_id}`)}
-                    className="w-full"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                   >
                     <MessageSquare className='mr-2 h-4 w-4' /> Discuss Changes
                   </Button>
@@ -963,13 +738,3 @@ default: return <Badge variant="outline"> {;
 }</Card> </div> </div> </main> </>) ;
 }export default function ProjectDetails () {;
   return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"
-=======
-export default function ProjectDetails() {
-  return (
-    <ProtectedRoute>
-      <ProjectDetailsContent />
-    </ProtectedRoute>
-  );
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

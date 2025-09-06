@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-    
-=======
-import { useState } from "react";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useRouter } from 'next/router';
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { useResume } from "@/hooks/useResume";
@@ -12,11 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-<<<<<<< HEAD
-import { AlertCircle, FileText, Loader2 } from 'lucide-react'
-=======
-import { AlertCircle, FileText, Loader2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { formatDistanceToNow } from "date-fns";
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
@@ -30,35 +21,27 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { applyToJob } = useJobApplications();
   const { resumes, isLoading: isResumesLoading } = useResume(),
   const router = useRouter();
-  
+
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
   const [selectedResumeId, setSelectedResumeId] = useState<string>("");
   const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-=======
-  const handleSubmit = async (e: React.FormEvent,) => {
-    e.preventDefault(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    
+
     if (!user) {
       toast.error("You must be logged in to apply");
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`);
       return
     }
-    
+
     if (!coverLetter.trim()) {
       setError("Please provide a cover letter");
       return
     }
-    
+
     setIsSubmitting(true);
     setError(null);
-    
+
     try {
       const success = await applyToJob(
         job.id;
@@ -66,7 +49,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         selectedResumeId || undefined;
         resumeFile || undefined
       );
-      
+
       if (success) {
         toast.success("Your application has been submitted!");
         if (onSuccess) {
@@ -80,7 +63,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setIsSubmitting(false);
     }
   };
-  
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -89,14 +72,14 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
         </p>
       </div>
-      
+
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-      
+
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
@@ -112,7 +95,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
             Provide a brief introduction and highlight your relevant skills and experience.
           </p>
         </div>
-        
+
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -171,7 +154,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           />
         </div>
       </div>
-      
+
       <div className="flex justify-end gap-2">
         <Button
           type="button"
@@ -220,7 +203,3 @@ handleSubmit ;
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

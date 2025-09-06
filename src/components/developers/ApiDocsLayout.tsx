@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-  const currentPath = router.pathname;
-export default ApiDocsLayout;
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Search } from 'lucide-react'
-=======
-
-import { SearchSuggestion } from "@/types/search";
-import React, { useState } from "react";
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Search } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { cn } from "@/lib/utils";
 import {
@@ -34,29 +20,13 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     { title: "Webhooks", path: "/developers/docs/webhooks" },
     { title: "Sample Code", path: "/docs/sample-code" },
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
-<<<<<<< HEAD
-  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
-    const path = getDocsSearchPath(suggestion.text);
-=======
 
-  const handleSelectSuggestion = (suggestion: SearchSuggestion,) => {
-    const path = getDocsSearchPath(suggestion.text),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (path) {
       router.push(path);
       setSearchValue("")
     }
   };
 
-<<<<<<< HEAD
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const path = getDocsSearchPath(searchValue);
-=======
-  const handleSubmit = (e: React.FormEvent,) => {
-    e.preventDefault(),
-    const path = getDocsSearchPath(searchValue),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (path) {
       router.push(path);
       setSearchValue("")
@@ -90,25 +60,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
       <nav role="navigation" aria-label="Main" className="flex flex-col space-y-1">
        {navigationItems.map((item,) => (
         <Link
-<<<<<<< HEAD
-         key={item.path}
-         href={item.path}
-         className={cn(
-          "block px-3 py-2 rounded-md text-sm";
-          currentPath === item.path
-           ? "bg-zion-purple/20 text-zion-cyan"
-           : "text-zinc-400 hover: text-white hover:bg-zinc-900"
-         )}
-=======
-         key = {item.path,}
-         href = {item.path,}
-         className = {cn(
-          "block px-3 py-2 rounded-md text-sm",
-          currentPath === item.path
-           ? "bg-zion-purple/20 text-zion-cyan"
-           : "text-zinc-400 hover:text-white hover:bg-zinc-900"
-         ),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
         >
          {item.title}
         </Link>
@@ -137,7 +89,3 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 }</div> </div>) ;
 }export default ApiDocsLayout;
 "
-=======
-export default ApiDocsLayout;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

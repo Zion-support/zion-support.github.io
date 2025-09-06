@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -20,13 +15,7 @@ const { execSync } = require('child_process')
         "priority"
         "message"
   console.log(' Performance optimization report "generated")
-<<<<<<< HEAD
-  console.error(' Optimization "failed")
-=======
-  console.error(' Optimization "failed")
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -38,7 +27,7 @@ console.log('⚡ Performance Optimizer Started...');
 function optimizePerformance() {
   const optimizations = [];
   const issues = [];
-  
+
   // Check bundle size
   const nextDir = '/workspace/.next';
   if (fs.existsSync(nextDir)) {
@@ -46,16 +35,16 @@ function optimizePerformance() {
     if (fs.existsSync(staticDir)) {
       const files = fs.readdirSync(staticDir, { recursive: true });
       let totalSize = 0;
-      
+
       files.forEach(file => {
         const filePath = path.join(staticDir, file);
         if (fs.statSync(filePath).isFile()) {
           totalSize += fs.statSync(filePath).size;
         }
       });
-      
+
       const sizeInMB = (totalSize / (1024 * 1024)).toFixed(2);
-      
+
       if (totalSize > 5 * 1024 * 1024) { // 5MB
         issues.push({
           type: 'large_bundle',
@@ -65,17 +54,17 @@ function optimizePerformance() {
       }
     }
   }
-  
+
   // Check for performance issues in code
   const pagesDir = '/workspace/pages_minimal';
   if (fs.existsSync(pagesDir)) {
     const files = fs.readdirSync(pagesDir);
-    
+
     files.forEach(file => {
       if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
         const filePath = path.join(pagesDir, file);
         const content = fs.readFileSync(filePath, 'utf8');
-        
+
         // Check for large components
         const lines = content.split('\n').length;
         if (lines > 200) {
@@ -86,7 +75,7 @@ function optimizePerformance() {
             message: `Component has ${lines} lines, consider splitting`
           });
         }
-        
+
         // Check for missing React.memo
         if (content.includes('export default function') && !content.includes('React.memo')) {
           optimizations.push({
@@ -95,7 +84,7 @@ function optimizePerformance() {
             message: 'Consider using React.memo for performance'
           });
         }
-        
+
         // Check for missing useMemo/useCallback
         if (content.includes('useState') && !content.includes('useMemo') && !content.includes('useCallback')) {
           optimizations.push({
@@ -107,7 +96,7 @@ function optimizePerformance() {
       }
     });
   }
-  
+
   // Generate performance report
   const report = {
     timestamp: new Date().toISOString(),
@@ -125,17 +114,12 @@ function optimizePerformance() {
     ],
     performanceScore: Math.max(0, 100 - (issues.length * 10))
   };
-  
+
   fs.writeFileSync('/workspace/performance-optimization-report.json', JSON.stringify(report, null, 2));
   console.log(`⚡ Performance optimization completed. Score: ${report.performanceScore}/100`);
-  
+
   return report;
 }
 
 // Run performance optimization
 optimizePerformance();
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

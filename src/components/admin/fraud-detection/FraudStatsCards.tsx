@@ -2,11 +2,7 @@
 
 import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-<<<<<<< HEAD
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
-=======
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {
   stats: FraudStats
@@ -21,7 +17,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
-      
+
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -31,7 +27,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
-      
+
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -41,7 +37,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
-      
+
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -51,14 +47,14 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
-      
+
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
-      
+
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
@@ -69,6 +65,3 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
   )
 };
 "
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

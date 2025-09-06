@@ -16,7 +16,7 @@ function performSearch(query) {
         ].filter(item => 
             item.title.toLowerCase().includes(query)
         ),
-        
+
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result => 
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
@@ -35,14 +35,14 @@ function animateCounter(element) {
     const duration = 2000,
     const step = target / (duration / 16),
     let current = 0,
-    
+
     const timer = setInterval(() => {
         current += step,
         if (current >= target) {
             current = target,
             clearInterval(timer)
         }
-        
+
         const suffix = element.textContent.replace(/\d/g, ''),
         element.textContent = Math.floor(current) + suffix
     }, 16)
@@ -51,21 +51,21 @@ function animateCounter(element) {
 // Tooltip initialization
 function initializeTooltips() {
     const tooltipElements = document.querySelectorAll('[data-tooltip]'),
-    
+
     tooltipElements.forEach(element => {
         element.addEventListener('mouseenter', function(e) {
             const tooltip = document.createElement('div'),
             tooltip.className = 'tooltip',
             tooltip.textContent = this.dataset.tooltip,
             document.body.appendChild(tooltip),
-            
+
             const rect = this.getBoundingClientRect(),
             tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px',
             tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px',
-            
+
             this.tooltip = tooltip
         }),
-        
+
         element.addEventListener('mouseleave', function() {
             if (this.tooltip) {
                 this.tooltip.remove(),
@@ -79,20 +79,20 @@ function initializeTooltips() {
 function initializeModals() {
     const modalTriggers = document.querySelectorAll('[data-modal]'),
     const modals = document.querySelectorAll('.modal'),
-    
+
     modalTriggers.forEach(trigger => {
         trigger.addEventListener('click', function(e) {
             e.preventDefault(),
             const modalId = this.dataset.modal,
             const modal = document.getElementById(modalId),
-            
+
             if (modal) {
                 modal.classList.add('active'),
                 document.body.style.overflow = 'hidden'
             }
         })
     }),
-    
+
     // Close modal on overlay click
     modals.forEach(modal => {
         modal.addEventListener('click', function(e) {
@@ -101,7 +101,7 @@ function initializeModals() {
                 document.body.style.overflow = ''
             }
         }),
-        
+
         // Close modal on close button click
         const closeBtn = modal.querySelector('.modal-close'),
         if (closeBtn) {
@@ -111,7 +111,7 @@ function initializeModals() {
             })
         }
     }),
-    
+
     // Close modal on escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
@@ -146,7 +146,6 @@ function trackEvent(eventName, eventData = {}) {
     // Implement your analytics tracking here
 }
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 });
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
   entries.forEach (entry => {
@@ -159,7 +158,6 @@ function trackEvent(eventName, eventData = {}) {
   const imageObserver = new IntersectionObserver ( (entries, observer) => {
   entries.forEach (entry => {
   if (entry.isIntersecting) {
-  
 
 }) 
 }//Newsletter subscription submitBtn.disabled = true;
@@ -184,14 +182,12 @@ function trackEvent(eventName, eventData = {}) {
 }//Counter animation //Close modal on overlay click modals.forEach (modal => {
   modal.addEventListener ('click', function (e) {
   if (e.target === this) {
-  
 
 });
 //Close modal on escape key document.addEventListener ('keydown', function (e) {
   if (e.key === 'Escape') {
   modals.forEach (modal => {
   if (modal.classList.contains ('active') ) {
-  
 
 }) 
 }//Performance monitoring 
@@ -201,7 +197,7 @@ function trackEvent(eventName, eventData = {}) {
 //Send to error tracking service 
 });
 //Analytics tracking (replace with your analytics service) function trackEvent (eventName, eventData = {
-  
+
 }) {
   //Implement your analytics tracking here 
 }//Track page views trackEvent ('page view', {
@@ -214,29 +210,4 @@ title: document.title
   button text: e.target.textContent;
 button class: e.target.className;
 page: window.location.pathname 
-}) 
-
-<<<<<<< HEAD
-});
-// Log performance when page is fully loaded window.addEventListener ('load', logPerformance);
-// Track page views
-trackEvent('page_view', {
-    page: window.location.pathname,
-    title: document.title
-}),
-
-// Track button clicks
-document.addEventListener('click', function(e) {
-    if (e.target.matches('.btn')) {
-        trackEvent('button_click', {
-            button_text: e.target.textContent,
-            button_class: e.target.className,
-            page: window.location.pathname
-        })
-    }
-}),
-
-// Log performance when page is fully loaded
-window.addEventListener('load', logPerformance),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+})

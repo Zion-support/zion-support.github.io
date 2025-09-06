@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
-import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-=======
-
-import React from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function TalentOnboardingSteps() {
   const { user } = useAuth();
   const onboardingStatus = useOnboardingStatus();
@@ -50,7 +34,3 @@ export function TalentOnboardingSteps() {
   ];
 
   return <OnboardingTracker steps={steps} />;
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

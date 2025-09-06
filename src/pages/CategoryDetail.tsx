@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-import { GradientHeading } from "@/components/GradientHeading";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { useState, useEffect, useRef, Suspense } from "react";
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react';
-import { MARKETPLACE_LISTINGS } from "@/data/listingData";
-import { ProductListing } from "@/types/listings";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { toast } from "@/hooks/use-toast";
@@ -26,7 +17,7 @@ const AUTO_SERVICE_TITLES = [
 ];
 
 function generateInnovationListing(index: number): ProductListing {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service';
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
@@ -84,153 +75,12 @@ function generateInnovationListing(index: number): ProductListing {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",
       icon: <Code className="w-6 h-6" />
-<<<<<<< HEAD
-    };
-=======
-    },
-    'business-solutions': {
-      title: "Business Solutions",
-      description: "Enterprise AI integrations and services",
-      icon: <Briefcase className="w-6 h-6" />
-    }
-  },
 
-  useEffect((,) => {
-    async function load() {
-      setIsLoading(true),
-      try {
-        // Find the category data based on slug
-        const currentCategory = categoryData[slug as keyof typeof categoryData] || {
-          title: slug
-            ?.split('-')
-            .map((word,) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ') || 'Category',
-          description: 'Explore our collection in this category',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           icon: <Bot className="w-6 h-6" />},
 
         setCategory(currentCategory);
         innovationCounterRef.current = 0;
 
-<<<<<<< HEAD
-=======
-        // Filter listings by category
-        const categoryTitle = currentCategory.title,
-        const filteredListings = MARKETPLACE_LISTINGS.filter(
-          (listing,) => listing.category.toLowerCase() === categoryTitle.toLowerCase()
-        ),
-
-        // If we don't have real listings for this category, generate placeholder listings
-        const listingsToShow =
-          filteredListings.length > 0
-            ? filteredListings
-            : Array(4)
-                .fill(null)
-                .map((_, index,) => ({
-                  id: `${slug}-${index}`,
-                  title: `${currentCategory.title} Product ${index + 1}`,
-                  description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`,
-                  category: currentCategory.title,
-                  price: Math.floor(Math.random() * 500) + 50,
-                  currency: '$',
-                  tags: [`${slug}`, 'aitool'],
-                  author: {
-                    name: `Provider ${index + 1}`,
-                    id: `author-${index + 1}`,
-                    avatarUrl: undefined},
-                  images: [`/placeholder.svg`],
-                  createdAt: new Date().toISOString(),
-                  rating: Math.floor(Math.random() * 5) + 1,
-                  reviewCount: Math.floor(Math.random() * 100)})),
-
-        setListings(listingsToShow)
-      } catch (err) {
-        logErrorToProduction('Category load error:', { data: err }),
-        toast({ title: 'Error', description: 'Failed to load category' })
-      } finally {
-        setIsLoading(false)
-      }
-    }
-
-    load()
-  }, [slug]),
-
-  useEffect((,) => {
-    if (slug !== 'innovation') return,
-
-    const interval = setInterval((,) => {
-      innovationCounterRef.current += 1,
-      setListings((prev,) => [
-        generateInnovationListing(innovationCounterRef.current),
-        ...prev])
-    }, 120000), // every 2 minutes
-
-    return () => clearInterval(interval)
-  }, [slug]),
-
-  // Handle requesting a quote
-  const handleRequestQuote = (listingId: string,) => {
-    const listing = listings.find(item => item.id === listingId),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    
-      
-      
     : 'Category | Zion Marketplace';
   const seoDescription =
     category.description || 'Explore listings in this category.';
-
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  return (
-    <>
-      <NextSeo title={seoTitle} description={seoDescription} />
-      <Header />
-      <Suspense fallback={<ListingGridSkeleton />}> 
-        <div className="min-h-screen bg-zion-blue">
-          <div className="container mx-auto px-4 py-12">
-          <div className="mb-4">
-            <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
-              ← Back to Categories
-            </Link>
-          </div>
-          
-          <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
-              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
-                {category.icon}
-              </div>
-            </div>
-            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">
-              {category.title}
-            </GradientHeading>
-            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-              {category.description}
-            </p>
-          </div>
-          
-          {isLoading ? (
-            <ListingGridSkeleton />
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {listings.map((listing,) => (
-                <ProductListingCard
-                  key = {listing.id,}
-                  listing = {listing,}
-                  onRequestQuote = {handleRequestQuote,}
-                  detailBasePath="/marketplace/listing"
-                />
-              ))}
-            </div>
-          )}
-          </div>
-        </div>
-      </Suspense>
-    </>
-  )
-}
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

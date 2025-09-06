@@ -1,41 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 export default function TechnologyInsightsPage() {
   const technologyTrends = [
     {
       id: 'quantum-computing',
       title: 'Quantum Computing in 2025',
-<<<<<<< HEAD
-      description:
-        'Exploring the latest developments in quantum computing and their implications for AI and automation.',
-      category: 'Emerging Tech',
-      readTime: '15 min read',
-      featured: true
-    };
-    {
-      id: 'edge-ai',
-      title: 'Edge AI Revolution',
-      description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.',
-      category: 'AI/ML',
-      readTime: '12 min read',
-      featured: false
-    };
-    {
-      id: 'autonomous-vehicles',
-      title: 'Autonomous Vehicle Technology',
-      description: 'The current state and future of autonomous vehicle technology and its broader applications.',
-      category: 'Autonomy',
-      readTime: '18 min read',
-      featured: false,
-    },
-=======
-      featured: false
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   ];
 
   const researchAreas = [
@@ -51,7 +23,7 @@ export default function TechnologyInsightsPage() {
       ],
       icon: '🔬',
     },
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     {
       title: 'AI Ethics & Governance',
       description:
@@ -75,9 +47,8 @@ export default function TechnologyInsightsPage() {
       focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],
       icon: '🤝'
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const whitepapers = [
     {
@@ -107,7 +78,7 @@ export default function TechnologyInsightsPage() {
       pages: '28',
       category: 'Business',
       downloadUrl: '/whitepapers/automation-roi-guide.pdf',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     },
     {
       id: 'ai-ethics-framework',
@@ -125,15 +96,8 @@ export default function TechnologyInsightsPage() {
         'How to calculate and maximize return on investment for automation initiatives.',
       pages: '28',
       category: 'Business',
-<<<<<<< HEAD
-      downloadUrl: '/whitepapers/automation-roi-guide.pdf',
-    },  ];
-=======
-      downloadUrl: '/whitepapers/automation-roi-guide.pdf'
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -154,7 +118,7 @@ export default function TechnologyInsightsPage() {
           content='Research insights, technology trends, and thought leadership in AI and automation.'
         />
         <meta name='twitter:card' content='summary_large_image' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
@@ -198,11 +162,9 @@ export default function TechnologyInsightsPage() {
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
                       Read More <span className='ml-1'>→</span>                    </Link>
-=======
-                      Read More <span className="ml-1">→</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </div>
                 ))}
               </div>
@@ -214,7 +176,7 @@ export default function TechnologyInsightsPage() {
                 Research Focus Areas
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 {researchAreas.map((area, index) => (
                   <div
                     key={index}
@@ -232,12 +194,9 @@ export default function TechnologyInsightsPage() {
                           className='text-sm text-white/60 flex items-center'
                         >
                           <span className='text-cyan-400 mr-2'>•</span>                          {focus}
-=======
-                        <li key={focusIndex} className="text-sm text-white/60 flex items-center">
-                          <span className="text-cyan-400 mr-2">•</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           {focus}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </li>
                       ))}
                     </ul>
@@ -252,7 +211,7 @@ export default function TechnologyInsightsPage() {
                 Research Whitepapers
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 {whitepapers.map((paper, index) => (
                   <div
                     key={index}
@@ -275,11 +234,9 @@ export default function TechnologyInsightsPage() {
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
                     >
                       Download PDF <span className='ml-1'>→</span>                    </Link>
-=======
-                      Download PDF <span className="ml-1">→</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </div>
                 ))}
               </div>
@@ -292,7 +249,7 @@ export default function TechnologyInsightsPage() {
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research
@@ -305,11 +262,9 @@ export default function TechnologyInsightsPage() {
                       state of the art.
                     </p>
                     <ul className='space-y-2 text-white/70'>                      <li>• Advanced AI research and development</li>
-=======
-                    <ul className="space-y-2 text-white/70">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       <li>• Advanced AI research and development</li>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       <li>• Autonomous system prototyping</li>
                       <li>• Ethical AI framework development</li>
                       <li>• Industry collaboration and partnerships</li>
@@ -318,13 +273,9 @@ export default function TechnologyInsightsPage() {
                   <div className='text-center'>
                     <div className='text-6xl mb-4'>🧪</div>
                     <p className='text-white/60 text-sm'>Innovation Lab</p>                  </div>
-=======
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">🧪</div>
-                    <p className="text-white/60 text-sm">Innovation Lab</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
               </div>
             </div>
@@ -337,7 +288,7 @@ export default function TechnologyInsightsPage() {
               <p className='text-xl text-white/80 mb-6'>
                 Stay updated with the latest technology insights and research
                 from Zion Tech Group
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
                 <Link
@@ -349,13 +300,9 @@ export default function TechnologyInsightsPage() {
                 <Link
                   href='/blog'
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >
-=======
-                <Link 
-                  href="/blog"
-                  className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   Read Our Blog
                 </Link>
               </div>
@@ -366,7 +313,3 @@ export default function TechnologyInsightsPage() {
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -9,28 +9,12 @@ function useCounter(target: number, durationMs: number) {
       const progress = Math.min(1, (ts - start) / durationMs);
       setValue(Math.floor(progress * target));
       if (progress < 1) raf = requestAnimationFrame(step);
-=======
-    let start: number | null = null,
-    let raf: number,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     const step = (ts: number) => {
       if (start === null) start = ts;
       const progress = Math.min(1, (ts - start) / durationMs);
       setValue(Math.floor(progress * target));
-<<<<<<< HEAD
-      if (progress < 1) raf = requestAnimationFrame(step);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [target, durationMs]);
-  return value;
-=======
-  return value
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function InteractiveStats() {
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
@@ -74,7 +58,3 @@ function Stat({
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

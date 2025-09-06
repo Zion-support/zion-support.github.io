@@ -6,71 +6,18 @@ import { ProjectForm } from './ProjectForm';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 
-<<<<<<< HEAD
-=======
-
-import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { FilePlus, Loader2 } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
-import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { FilePlus, Loader2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { ProjectCard } from './ProjectCard';
 import { ProjectForm } from './ProjectForm';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export function PortfolioBuilder() {
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
-  const [showAddProject, setShowAddProject] = useState(false);
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
-    null
-  );
-
-  useEffect(() => {
-    fetchProjects();
-  }, [fetchProjects]);
-
-=======
-export function PortfolioBuilder() {
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),
-  const [showAddProject, setShowAddProject] = useState(false),
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),
-  
-  useEffect((,) => {
-    fetchProjects()
-  }, [fetchProjects]),
-  
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   const handleAddSuccess = () => {
     setShowAddProject(false);
     fetchProjects();
   };
 
   const handleEditSuccess = () => {
-<<<<<<< HEAD
-    setEditingProject(null);
-    fetchProjects();
-  };
 
-  const handleDeleteProject = async (projectId: string) => {
-    const success = await deleteProject(projectId);
-=======
-    setEditingProject(null),
-    fetchProjects()
-  },
-  
-  const handleDeleteProject = async (projectId: string,) => {
-    const success = await deleteProject(projectId),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (success) {
       fetchProjects();
     }
@@ -93,17 +40,7 @@ export function PortfolioBuilder() {
             Showcase your best work and projects
           </p>
         </div>
-<<<<<<< HEAD
-        <Button
-          onClick={() => setShowAddProject(true)}
-          className='gap-2'
-          disabled={showAddProject || !!editingProject}
-=======
-        <Button 
-          onClick = {(,) => setShowAddProject(true),}
-          className="gap-2"
-          disabled = {showAddProject || !!editingProject,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
         >
           <FilePlus className='h-4 w-4' />
           Add Project
@@ -123,28 +60,9 @@ export function PortfolioBuilder() {
               onCancel={() => {
                 setShowAddProject(false);
                 setEditingProject(null);              }}
-=======
-            
-            <ProjectForm 
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {
-                setShowAddProject(false);
-<<<<<<< HEAD
-                setEditingProject(null);
-=======
-=======
-              project = {editingProject || undefined,}
-              onSuccess = {editingProject ? handleEditSuccess : handleAddSuccess,}
-              onCancel={(,) => {
-                setShowAddProject(false),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                setEditingProject(null)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             />
           </CardContent>
         </Card>
@@ -154,35 +72,7 @@ export function PortfolioBuilder() {
       {projects.length > 0 ? (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {projects.map(project => (            <ProjectCard
-=======
-      
-      {/* Projects List */}
-      {projects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
-          {projects.map((project) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            <ProjectCard
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              key={project.id}
-              project={project}
-              onEdit={() => setEditingProject(project)}
-              onDelete={handleDeleteProject}
-=======
-          {projects.map((project,) => (
-            <ProjectCard
-              key = {project.id,}
-              project = {project,}
-              onEdit = {(,) => setEditingProject(project),}
-              onDelete = {handleDeleteProject,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            />
-          ))}
-        </div>
-      ) : (
-        !showAddProject && (
-          <Card className='text-center py-12'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             <CardContent>
               <div className='flex flex-col items-center gap-4'>
                 <div className='bg-muted/50 p-6 rounded-full'>
@@ -198,13 +88,9 @@ export function PortfolioBuilder() {
                 <Button
                   onClick={() => setShowAddProject(true)}
                   className='mt-2'                >
-=======
-                <Button 
-                  onClick = {(,) => setShowAddProject(true),}
-                  className="mt-2"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   Add Your First Project
                 </Button>
               </div>
@@ -215,7 +101,3 @@ export function PortfolioBuilder() {
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

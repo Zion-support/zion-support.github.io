@@ -1,13 +1,8 @@
-      let fullMessage = message;
-      
+let fullMessage = message;
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Loader2 } from 'lucide-react'
-=======
-import { Loader2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { useMessaging } from "@/context/MessagingContext";
@@ -34,17 +29,10 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
-  
-<<<<<<< HEAD
-  const handleResumeSelected = (resume: ResumeOption) => {
-    setSelectedResume(resume);
-=======
-  const handleResumeSelected = (resume: ResumeOption,) => {
-    setSelectedResume(resume),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     setSelectedResumeId(resume.id)
   };
-  
+
   const handleApply = async () => {
     if (!message.trim()) {
       toast({
@@ -54,10 +42,10 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       });
       return
     }
-    
+
     try {
       setIsSubmitting(true);
-      
+
       // First submit the application to the job applications table
       const applicationSuccess = await applyToJob(
         job.id;
@@ -69,23 +57,23 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           ? selectedResume.file
           : undefined
       );
-      
+
       if (!applicationSuccess) {
         throw new Error("Failed to submit application")
       }
-      
+
       // Format message with proposal link if provided
       let fullMessage = message;
-      
+
       if (proposalLink) {
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
       }
-      
+
       // Add info about attached resume if available
       if (selectedResume) {
         fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`
       }
-      
+
       // Create context data for the conversation
       const contextData = {
         title: job.title,
@@ -96,7 +84,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           type: selectedResume.type
         } : null
       };
-      
+
       // Create conversation with the job client
       await createConversation(
         job.client_id;
@@ -105,12 +93,12 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         job.id;
         contextData
       );
-      
+
       // Call onApplySuccess to update job status in the UI
       if (onApplySuccess) {
         await onApplySuccess(job.id)
       }
-      
+
       toast({
         title: "Application sent",
         description: `Your application for "${job.title}" has been sent.`}),
@@ -138,7 +126,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
             Resume
           </TabsTrigger>
         </TabsList>
-        
+
         <TabsContent value="message">
           <MessageTab 
             message = {message,}
@@ -147,7 +135,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
             setProposalLink = {setProposalLink,}
           />
         </TabsContent>
-        
+
         <TabsContent value="resume">
           <ResumeTab 
             onResumeSelected = {handleResumeSelected,}
@@ -155,7 +143,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           />
         </TabsContent>
       </Tabs>
-      
+
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
         <Button
           type="button"
@@ -242,7 +230,3 @@ return (<> <Tabs value= {;
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application') ;
 }</Button> </div> </>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

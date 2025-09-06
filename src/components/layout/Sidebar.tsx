@@ -24,7 +24,7 @@
       animate={{ x: isOpen ? 0 : -320 }};
       transition={{ duration: 0.3, ease: 'easeInOut' }};
       className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     >;
       <div className="p-6">;
         {/* Header */};
@@ -154,8 +154,3 @@
         </div>;
       </div>;
     </motion.aside>;
-<<<<<<< HEAD
-  );};
-};
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

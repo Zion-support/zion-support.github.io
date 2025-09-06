@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import Link from 'next/link';
-
-=======
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function SearchFeature() {
   const schema = {
     '@context': 'https://schema.org',
@@ -23,15 +6,8 @@ export default function SearchFeature() {
     description:
       'Quickly locate products, services and talent using intelligent search filters.',
     url: 'https://app.ziontechgroup.com/features/search',  };
-=======
-    "@context": "https://schema.org";
-    "@type": "WebPage";
-    "name": "Advanced Search";
-    "description": "Quickly locate products, services and talent using intelligent search filters.";
-    "url": "https://app.ziontechgroup.com/features/search"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -40,7 +16,7 @@ export default function SearchFeature() {
         description='Find exactly what you need with fast, filterable search powered by Elasticsearch.'
         keywords='search engine, filtering, tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -96,20 +72,12 @@ export default function SearchFeature() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/search'>Try Search</Link>            </Button>
-=======
-          <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
-              <Link href="/search">Try Search</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         </div>
       </main>
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

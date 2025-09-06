@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-  
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { useAuth } from "@/context/auth/AuthProvider";
-import { AlertCircle } from 'lucide-react'
-=======
-import React, { useState } from "react";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { useAuth } from "@/context/auth/AuthProvider";
-import { AlertCircle } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -22,7 +5,7 @@ export function SignUpForm() {
 
   const router = useRouter();
   const { signUp, login, loginWithGoogle } = useAuth();
-  
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -32,34 +15,9 @@ export function SignUpForm() {
   const [error, setError] = useState("");
   const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({});
   const [showVerificationMessage, setShowVerificationMessage] = useState(false);
-  
-<<<<<<< HEAD
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setError("");
-=======
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>,) => {
-    const { name, value } = e.target,
-    setFormData(prev => ({ ...prev, [name]: value })),
-    setError(""),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     setFieldErrors(prev => ({ ...prev, [name]: "" }))
   };
-  
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-    setFieldErrors({});
-    setIsLoading(true);
-=======
-  const handleSubmit = async (e: React.FormEvent,) => {
-    e.preventDefault(),
-    setError(""),
-    setFieldErrors({}),
-    setIsLoading(true),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     const errors: { email?: string, password?: string, name?: string } = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -86,7 +44,7 @@ export function SignUpForm() {
       setIsLoading(false);
       return
     }
-    
+
     try {
       setShowVerificationMessage(false), // Reset verification message
       if (signupMode) {
@@ -104,11 +62,11 @@ export function SignUpForm() {
         };
       } else {
         const { error } = await login(formData.email, formData.password);
-        
+
         if (error) {
           throw new Error(error)
         }
-        
+
         router.push("/mobile")
       }
     } catch (err: any) {
@@ -118,7 +76,7 @@ export function SignUpForm() {
       setIsLoading(false)
     }
   };
-  
+
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle()
@@ -126,13 +84,13 @@ export function SignUpForm() {
       setError(err.message)
     }
   };
-  
+
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
-      
+
       <div className="space-y-2">
         <Button 
           variant="outline" 
@@ -164,7 +122,7 @@ export function SignUpForm() {
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
-      
+
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -182,7 +140,7 @@ export function SignUpForm() {
           </AlertDescription>
         </Alert>
       )}
-      
+
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
@@ -236,7 +194,7 @@ export function SignUpForm() {
             <p className="text-red-500 text-sm">{fieldErrors.password}</p>
           )}
         </div>
-        
+
         <Button
           type="submit"
           className="w-full py-6"
@@ -252,7 +210,7 @@ export function SignUpForm() {
           )}
         </Button>
       </form>
-      
+
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
@@ -300,7 +258,3 @@ if (error) {;
   isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") ";
 }</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>) ;
 }"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

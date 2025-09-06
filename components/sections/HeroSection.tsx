@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
     { icon: Award, value: '50+', label: 'Awards Won' },
     { icon: Star, value: '99%', label: 'Client Satisfaction' },
     { icon: Zap, value: '24/7', label: 'Support Available' },
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   ];
 
   return (
@@ -49,21 +49,17 @@ const HeroSection: React.FC = () => {
       </div>
 
       <div className='relative container mx-auto px-4 text-center z-10'>        {/* Main Content */}
-=======
-      <div className="relative container mx-auto px-4 text-center z-10">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         {/* Main Content */}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className='max-w-6xl mx-auto'        >
-=======
-          className="max-w-6xl mx-auto"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -75,14 +71,8 @@ const HeroSection: React.FC = () => {
             <span className='text-white font-medium'>
               Leading Technology Solutions Provider
             </span>          </motion.div>
-=======
-            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
-          >
-            <Star className="w-5 h-5 text-yellow-400 fill-current" />
-            <span className="text-white font-medium">Leading Technology Solutions Provider</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
           {/* Main Heading */}
           <motion.h1
@@ -93,14 +83,9 @@ const HeroSection: React.FC = () => {
           >
             Transform Your Business with
             <span className='block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>              Cutting-Edge Technology
-=======
-            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
-          >
-            Transform Your Business with
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               Cutting-Edge Technology
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </span>
           </motion.h1>
 
@@ -114,14 +99,8 @@ const HeroSection: React.FC = () => {
             From AI development to cloud architecture, we help companies
             revolutionize their digital presence and achieve sustainable growth
             in the modern technology landscape.          </motion.p>
-=======
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
-          >
-            From AI development to cloud architecture, we help companies revolutionize their digital presence 
-            and achieve sustainable growth in the modern technology landscape.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </motion.p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
           {/* CTA Buttons */}
           <motion.div
@@ -129,7 +108,7 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <Link
               href='/contact'
@@ -144,11 +123,9 @@ const HeroSection: React.FC = () => {
                 <Play className='w-6 h-6 ml-1' />
               </div>
               <span className='text-lg font-medium'>Watch Demo</span>            </button>
-=======
-              <span className="text-lg font-medium">Watch Demo</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </motion.div>
 
           {/* Stats */}
@@ -157,11 +134,9 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >
-=======
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -169,7 +144,7 @@ const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                 className='text-center group'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               >
                 <div className='w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors'>
                   <stat.icon className='w-8 h-8 text-blue-400' />
@@ -178,12 +153,9 @@ const HeroSection: React.FC = () => {
                   {stat.value}
                 </div>
                 <div className='text-gray-400 font-medium'>{stat.label}</div>              </motion.div>
-=======
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-400 font-medium">{stat.label}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             ))}
           </motion.div>
         </motion.div>
@@ -210,40 +182,18 @@ const HeroSection: React.FC = () => {
 };
 
 export default HeroSection;
-=======
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-<<<<<<< HEAD
-          className='w-6 h-10 border-2 border-white/30 rounded-full flex justify-center'
-=======
-          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-<<<<<<< HEAD
-            className='w-1 h-3 bg-white/60 rounded-full mt-2'
-=======
-            className="w-1 h-3 bg-white/60 rounded-full mt-2"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           />
         </motion.div>
       </motion.div>
     </section>
-<<<<<<< HEAD
-  );
-};
-
-export default HeroSection;
-=======
-  )
-};
-
-export default HeroSection;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

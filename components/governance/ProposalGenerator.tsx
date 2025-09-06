@@ -7,7 +7,6 @@ export type ProposalType =
   | 'Digital ID'
   | 'Education';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export type ProposalForm = {
   targetInstitution: string;
   type: ProposalType;
@@ -16,11 +15,8 @@ export type ProposalForm = {
   supportingMultiverses: string;
   language?: string;
   customPrompt?: string;};
-=======
-  customPrompt?: string
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm>({
@@ -33,7 +29,7 @@ export default function ProposalGenerator() {
     customPrompt:
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
   });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
@@ -49,12 +45,8 @@ export default function ProposalGenerator() {
     value: ProposalForm[K]
   ) {
     setForm(prev => ({ ...prev, [key]: value }));  }
-=======
-  function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
-    setForm((prev) => ({ ...prev, [key]: value }))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   async function handleGenerate() {
     setIsGenerating(true);
@@ -65,7 +57,7 @@ export default function ProposalGenerator() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       const data = await res.json();
       setDraftMarkdown(data.markdown || '');
       setDraftJson(data.json || null);
@@ -75,11 +67,9 @@ export default function ProposalGenerator() {
       setStatusMessage('Failed to generate. You can edit manually and export.');
     } finally {
       setIsGenerating(false);    }
-=======
-      setIsGenerating(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   }
 
   async function handleExport() {
@@ -94,7 +84,7 @@ export default function ProposalGenerator() {
           meta: form,
         }),
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       const data = await res.json();
       setExportLinks({
         pdfUrl: data.pdfUrl,
@@ -105,11 +95,9 @@ export default function ProposalGenerator() {
     } catch (e) {
       console.error(e);
       setStatusMessage('Export failed');    }
-=======
-      setStatusMessage('Export failed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   }
 
   async function handleSubmitBridge() {
@@ -124,7 +112,7 @@ export default function ProposalGenerator() {
           meta: form,
         }),
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       const data = await res.json();
       setStatusMessage(
         `Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`
@@ -138,42 +126,14 @@ export default function ProposalGenerator() {
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className='space-y-4'>
-=======
-      setStatusMessage('Submission failed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     }
   }
 
   return (
-<<<<<<< HEAD
-    <div className='space-y-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        <div className='space-y-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          <div>
-            <label className='block text-sm font-medium'>
-              Target institution
-            </label>
-            <input
-              className='w-full border rounded px-3 py-2'
-              value={form.targetInstitution}
-              onChange={e => handleChange('targetInstitution', e.target.value)}
-              placeholder='UNDP / World Bank / ILO'
-            />
-          </div>
-          <div>
-            <label className='block text-sm font-medium'>Type</label>
-            <select
-              className='w-full border rounded px-3 py-2'
-              value={form.type}
-              onChange={e =>
-                handleChange('type', e.target.value as ProposalType)
-              }            >
-=======
-              onChange={(e) => handleChange('type', e.target.value as ProposalType)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
               <option>Digital ID</option>
@@ -182,7 +142,7 @@ export default function ProposalGenerator() {
           </div>
           <div>
             <label className='block text-sm font-medium'>Regional scope</label>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             <input
               className='w-full border rounded px-3 py-2'
               value={form.regionalScope}
@@ -238,33 +198,27 @@ export default function ProposalGenerator() {
           <div className='flex gap-2'>
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
-=======
-              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               onClick={handleGenerate}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               disabled={isGenerating}
             >
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>
             <button
               className='px-4 py-2 bg-emerald-600 text-white rounded'              onClick={handleExport}
-=======
-              className="px-4 py-2 bg-emerald-600 text-white rounded"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               onClick={handleExport}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               disabled={!draftMarkdown}
             >
               Export (PDF/JSON/MD)
             </button>
             <button
               className='px-4 py-2 bg-purple-600 text-white rounded'              onClick={handleSubmitBridge}
-=======
-              className="px-4 py-2 bg-purple-600 text-white rounded"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               onClick={handleSubmitBridge}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               disabled={!draftMarkdown}
             >
               Submit Bridge
@@ -273,7 +227,7 @@ export default function ProposalGenerator() {
           {statusMessage && (
             <p className='text-sm text-gray-600'>{statusMessage}</p>
           )}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           {exportLinks && (
             <div className='text-sm space-y-1'>
               {exportLinks.pdfUrl && (
@@ -289,72 +243,35 @@ export default function ProposalGenerator() {
               )}
               {exportLinks.mdUrl && (
                 <div>
-=======
-                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </div>
               )}
               {exportLinks.mdUrl && (
                 <div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                  <a
-                    className='text-blue-600 underline'
-                    href={exportLinks.mdUrl}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Markdown
-<<<<<<< HEAD
-                  </a>                </div>
-              )}
-              {exportLinks.jsonUrl && (
-                <div>
-=======
-                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </div>
               )}
               {exportLinks.jsonUrl && (
                 <div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                  <a
-                    className='text-blue-600 underline'
-                    href={exportLinks.jsonUrl}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    JSON
-<<<<<<< HEAD
-                  </a>                </div>
-=======
-                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               )}
             </div>
           )}
         </div>
         <div className='space-y-2'>
           <label className='block text-sm font-medium'>Draft (Markdown)</label>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           <textarea
             className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
             value={draftMarkdown}
             onChange={e => setDraftMarkdown(e.target.value)}          />
-=======
-            onChange={(e) => setDraftMarkdown(e.target.value)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         </div>
       </div>
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

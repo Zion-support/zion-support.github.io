@@ -1,121 +1,5 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-<<<<<<< HEAD
-import { useAuth } from '@/hooks/useAuth';
-import { useRequireAuth } from '@/hooks/useAuthGuard';
-import { Button } from '@/components/ui/button';
-import { Header } from '@/components/Header';
-import { Badge } from '@/components/ui/badge';
-import {
-  UserCheck,
-  Bell,
-  MessageSquare,
-  LogOut,
-  Send,
-  Settings,
-  FileText,
-  Heart,
-  Key,
-  ShoppingBag,;
-} from 'lucide-react';
-import { useGetOrdersQuery } from '@/hooks/useOrders';
-import { useFavorites } from '@/hooks/useFavorites';
-import { useToast } from '@/hooks/use-toast';
-import { EmptyState } from '@/components/ui/empty-state';
-import Link from 'next/link';
-
-// Lazy load heavy components to prevent router abort
-const CommunityDiscussion = dynamic(
-  () =>
-    import('@/components/CommunityDiscussion').then(mod => ({
-      default: mod.CommunityDiscussion,
-    })),
-  {
-    loading: () => (
-      <div className='h-32 bg-zion-blue-light rounded animate-pulse' />
-    ),
-    ssr: false,
-  }
-);
-
-const PointsBadge = dynamic(
-  () =>
-    import('@/components/loyalty/PointsBadge').then(mod => ({
-      default: mod.PointsBadge,
-    })),
-  {
-    loading: () => (
-      <span className='text-zion-cyan font-medium'>Loading...</span>
-    ),
-    ssr: false,
-  }
-);
-
-const ApiKeysManager = dynamic(
-  () =>
-    import('@/components/developers/ApiKeysManager').then(mod => ({
-      default: mod.ApiKeysManager,
-    })),
-  {
-    loading: () => (
-      <div className='h-24 bg-zion-blue-light rounded animate-pulse' />
-    ),
-    ssr: false,
-  }
-);
-
-const NotificationBell = dynamic(
-  () =>
-    import('@/components/NotificationBell').then(mod => ({
-      default: mod.NotificationBell,
-    })),
-  {
-    loading: () => <Bell size={16} className='text-zion-cyan' />,
-    ssr: false,
-  }
-);
-
-const GuidedTour = dynamic(
-  () =>
-    import('@/components/onboarding/GuidedTour').then(mod => ({
-      default: mod.GuidedTour,
-    })),
-  {
-    ssr: false,
-  }
-);
-=======
-import { useAuth } from "@/hooks/useAuth";
-import { useRequireAuth } from "@/hooks/useAuthGuard";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { Badge } from "@/components/ui/badge";
-import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag } from 'lucide-react';
-import { useGetOrdersQuery } from '@/hooks/useOrders';
-import { useFavorites } from '@/hooks/useFavorites';
-import { useToast } from "@/hooks/use-toast";
-import { EmptyState } from "@/components/ui/empty-state";
-import Link from 'next/link';
-// Lazy load heavy components to prevent router abort
-const CommunityDiscussion = dynamic((,) => import("@/components/CommunityDiscussion").then(mod => ({ default: mod.CommunityDiscussion })), {
-  loading: () => <div className="h-32 bg-zion-blue-light rounded animate-pulse" />,
-  ssr: false}),
-
-const PointsBadge = dynamic((,) => import('@/components/loyalty/PointsBadge').then(mod => ({ default: mod.PointsBadge })), {
-  loading: () => <span className="text-zion-cyan font-medium">Loading...</span>,
-  ssr: false}),
-
-const ApiKeysManager = dynamic((,) => import('@/components/developers/ApiKeysManager').then(mod => ({ default: mod.ApiKeysManager })), {
-  loading: () => <div className="h-24 bg-zion-blue-light rounded animate-pulse" />,
-  ssr: false}),
-
-const NotificationBell = dynamic((,) => import("@/components/NotificationBell").then(mod => ({ default: mod.NotificationBell })), {
-  loading: () => <Bell size={16} className="text-zion-cyan" />,
-  ssr: false}),
-
-const GuidedTour = dynamic((,) => import("@/components/onboarding/GuidedTour").then(mod => ({ default: mod.GuidedTour })), {
-  ssr: false}),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 // Lazy load notification functions
 const loadNotificationFunctions = () => import('@/utils/notifications');
@@ -195,23 +79,7 @@ export default function Dashboard() {
         <div className='container mx-auto px-4 py-8'>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {/* Left Sidebar - User Profile */}
-<<<<<<< HEAD
-            <div className='lg:col-span-1'>
-              <div className='bg-zion-blue-dark rounded-xl p-6 mb-6'>
-                <div className='flex flex-col items-center text-center'>
-                  <div className='w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4'>
-                    {userWithExtendedProps?.displayName
-                      ?.split(' ')
-                      .map((name: string) => name[0])
-                      .join('') ||
-                      userWithExtendedProps?.email?.charAt(0).toUpperCase()}
-=======
-            <div className="lg:col-span-1">
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">
-                    {userWithExtendedProps?.displayName?.split(' ').map((name: string,) => name[0]).join('') || userWithExtendedProps?.email?.charAt(0).toUpperCase()}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                   </div>
                   <h2 className='text-xl font-bold text-white'>
                     {userWithExtendedProps?.displayName ||
@@ -226,15 +94,7 @@ export default function Dashboard() {
                   </Badge>
 
                   <Button
-<<<<<<< HEAD
-                    id='profile-link'
-                    className='w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
-                    onClick={() => (window.location.href = '/profile')}
-=======
-                    id="profile-link"
-                    className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    onClick = {() => window.location.href = "/profile",}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                   >
                     <UserCheck size={16} />
                     Edit Profile
@@ -280,19 +140,7 @@ export default function Dashboard() {
                   </div>
 
                   {/* Test notification buttons */}
-<<<<<<< HEAD
-                  <div className='flex flex-col gap-2 mt-4'>
-                    <Button
-                      className='w-full flex items-center justify-center gap-2'
-                      variant='outline'
-                      onClick={handleTestNotification}
-=======
-                  <div className="flex flex-col gap-2 mt-4">
-                    <Button 
-                      className="w-full flex items-center justify-center gap-2"
-                      variant="outline"
-                      onClick = {handleTestNotification,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                     >
                       <Send size={16} className='text-zion-cyan' />
                       Send Test Notification
@@ -395,17 +243,7 @@ export default function Dashboard() {
                   </h2>
                   <div className='flex items-center gap-2'>
                     <NotificationBell />
-<<<<<<< HEAD
-                    <Button
-                      variant='outline'
-                      className='text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white'
-                      onClick={logout}
-=======
-                    <Button 
-                      variant="outline" 
-                      className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white"
-                      onClick = {logout,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                     >
                       <LogOut size={16} className='mr-2' />
                       Logout
@@ -493,13 +331,7 @@ export default function Dashboard() {
                       <p className='text-zion-slate-light'>Loading...</p>
                     ) : orders.length === 0 ? (
                       <EmptyState
-<<<<<<< HEAD
-                        icon={<ShoppingBag className='h-8 w-8' />}
-                        title='No Orders'
-=======
-                        icon = {<ShoppingBag className="h-8 w-8" />,}
-                        title="No Orders"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         description="You haven't purchased anything yet."
                         action={{
                           text: 'Visit Marketplace',
@@ -662,7 +494,3 @@ toast ({";
   roleForTour ;
 }/> </>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

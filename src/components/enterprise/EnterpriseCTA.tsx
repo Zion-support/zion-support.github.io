@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Calendar, ArrowRight } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-=======
-
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function EnterpriseCTA() {
   return (
     <section id='contact' className='py-20 px-4 md:px-6'>
@@ -70,13 +58,9 @@ export function EnterpriseCTA() {
                       <span className='text-primary text-sm font-medium'>
                         4
                       </span>                    </div>
-=======
-                  <li className="flex gap-3">
-                    <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary text-sm font-medium">4</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     <p>Free consultation on implementation</p>
                   </li>
                 </ul>
@@ -88,7 +72,3 @@ export function EnterpriseCTA() {
     </section>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,48 +1,9 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';
-=======
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { Checkbox } from '@/components/ui/checkbox';
 import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-
-interface ValidationRule {
-  required?: boolean;
-  minLength?: number;
-  maxLength?: number;
-  pattern?: RegExp;
-  custom?: (value: any) => string | null;
-=======
-interface ValidationRule {
-  required?: boolean,
-  minLength?: number,
-  maxLength?: number,
-  pattern?: RegExp,
-  custom?: (value: any,) => string | null
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 interface ValidatedFormFieldProps {
   name: string;
@@ -105,18 +66,6 @@ export function ValidatedFormField({
     }
 
     setValidationState('validating');
-
-<<<<<<< HEAD
-    const timer = setTimeout(() => {
-      const error = validateField(fieldValue);
-      setValidationState(error ? 'invalid' : 'valid');
-    }, debounceMs);
-=======
-    const timer = setTimeout((,) => {
-      const error = validateField(fieldValue),
-      setValidationState(error ? 'invalid' : 'valid')
-    }, debounceMs),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     setDebounceTimer(timer);
 
@@ -203,25 +152,12 @@ export function ValidatedFormField({
 
       case 'select':
         return (
-<<<<<<< HEAD
-          <div className='relative'>
-            <Select
-              onValueChange={value => form.setValue(name, value)}
-              disabled={disabled}
-            >
-=======
-          <div className="relative">
-            <Select onValueChange={(value,) => form.setValue(name, value)} disabled={disabled}>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               <SelectTrigger className={baseClasses}>
                 <SelectValue placeholder={placeholder} />
               </SelectTrigger>
               <SelectContent>
-<<<<<<< HEAD
-                {options.map(option => (
-=======
-                {options.map((option,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                   <SelectItem key={option.value} value={option.value}>
                     {option.label}
                   </SelectItem>
@@ -236,25 +172,7 @@ export function ValidatedFormField({
         return (
           <div className='flex items-center space-x-2'>
             <Checkbox
-<<<<<<< HEAD
-              id={name}
-              checked={fieldValue}
-              onCheckedChange={checked => form.setValue(name, checked)}
-              disabled={disabled}
-            />
-            <label
-              htmlFor={name}
-              className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
-=======
-              id = {name,}
-              checked = {fieldValue,}
-              onCheckedChange = {(checked,) => form.setValue(name, checked),}
-              disabled = {disabled,}
-            />
-            <label
-              htmlFor = {name,}
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             >
               {label}
             </label>
@@ -274,21 +192,7 @@ export function ValidatedFormField({
             <div className='absolute inset-y-0 right-0 flex items-center gap-1 pr-3'>
               {getValidationIcon()}
               <Button
-<<<<<<< HEAD
-                type='button'
-                variant='ghost'
-                size='sm'
-                className='h-7 w-7 p-0'
-                onClick={() => setShowPassword(!showPassword)}
-                aria-label={showPassword ? 'Hide password' : 'Show password'}
-=======
-                type="button"
-                variant="ghost"
-                size="sm"
-                className="h-7 w-7 p-0"
-                onClick = {() => setShowPassword(!showPassword),}
-                aria-label = {showPassword ? 'Hide password' : 'Show password',}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               >
                 {showPassword ? (
                   <EyeOff className='h-4 w-4' />
@@ -318,22 +222,7 @@ export function ValidatedFormField({
   };
 
   if (type === 'checkbox') {
-<<<<<<< HEAD
-    
-        render={() => (
-          <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
-            <FormControl>{renderField()}</FormControl>
-=======
-    return (
-      <FormField
-        control = {form.control,}
-        name = {name,}
-        render = {(,) => (
-          <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-            <FormControl>
-              {renderField(),}
-            </FormControl>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             {(fieldError || description) && (
               <div className='space-y-1'>
                 {fieldError && (
@@ -352,26 +241,6 @@ export function ValidatedFormField({
     );
   }
 
-<<<<<<< HEAD
-  
-      render={() => (
-        <FormItem>
-          <FormLabel className='text-sm font-medium'>
-            {label}
-            {validation.required && (
-              <span className='text-red-500 ml-1'>*</span>
-            )}
-=======
-  return (
-    <FormField
-      control = {form.control,}
-      name = {name,}
-      render = {(,) => (
-        <FormItem>
-          <FormLabel className="text-sm font-medium">
-            {label,}
-            {validation.required && <span className="text-red-500 ml-1">*</span>}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           </FormLabel>
           <FormControl>{renderField()}</FormControl>
           {(fieldError || description) && (
@@ -434,8 +303,3 @@ export const commonValidations = {
     },
   },
 };
-=======
-    };
-  }},
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

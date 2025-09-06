@@ -7,28 +7,8 @@ const { execSync } = require('child_process');
 console.log('🔧 Fixing merge conflicts in API files...');
 
 // Get all files with merge conflicts
-const conflictedFiles = execSync('find pages/api -name "*.ts" -exec grep -l "<<<<<<< HEAD" {} \\;', { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(Boolean);
+const conflictedFiles = execSync('find pages/api -name "*.ts" -exec grep -l "
 
-console.log(`📊 Found ${conflictedFiles.length} API files with merge conflicts`);
-
-let fixedCount = 0;
-
-for (const file of conflictedFiles) {
-  const filePath = path.join(process.cwd(), file);
-  
-  if (fs.existsSync(filePath)) {
-    console.log(`🔧 Fixing ${file}...`);
-    
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
-      
-      // Remove merge conflict markers and keep "ours" version
-      content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n[\s\S]*?>>>>>>> [^\n]*\n/g, '$1');
-      
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         console.log(`✅ Fixed ${file}`);

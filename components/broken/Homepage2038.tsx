@@ -28,9 +28,8 @@ import {
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
   CheckCircle, Sparkles, Infinity, Zap as Lightning
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 // Import new services
 import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
@@ -52,58 +51,25 @@ const Homepage2038: React.FC = () => {
     <Layout>
       {/* Main Content */}
       <main className='relative z-10'>
-=======
-const Homepage2038: React.FC = () => {
-  // Get featured services from each category
-  const featuredMicroSaas = innovative2038MicroSaasServices.filter(s => s.popular).slice(0, 3);
-  const featuredIT = innovative2038ITServices.filter(s => s.popular).slice(0, 3);
-  const featuredAI = innovative2038AIServices.filter(s => s.popular).slice(0, 3);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   return (
     <Layout>
       {/* Main Content */}
-<<<<<<< HEAD
-      <main className='relative z-10'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        {/* Hero Section */}
-        <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
-          {/* Background Elements */}
-          <div className='absolute inset-0 pointer-events-none'>
-            <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>
-            <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>
-            <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>
-            <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-1500'></div>
-            <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500'></div>
-          </div>
 
-          <div className='text-center max-w-5xl mx-auto relative z-10'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='space-y-8'            >
-=======
-          
-          <div className="text-center max-w-5xl mx-auto relative z-10">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className='space-y-8'
-=======
-              className="space-y-8"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               {/* Company Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2038</span>
@@ -135,23 +101,16 @@ const Homepage2038: React.FC = () => {
                 <Link href='/services'>
                   <motion.button
                     className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg backdrop-blur-sm'                    whileHover={{ scale: 1.05 }}
-=======
-                <Link href="/services">
-                  <motion.button 
-                    className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg backdrop-blur-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     whileHover={{ scale: 1.05 }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     whileTap={{ scale: 0.95 }}
                   >
                     Explore Services
                   </motion.button>
                 </Link>
               </div>
-=======
-              
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -172,7 +131,7 @@ const Homepage2038: React.FC = () => {
                   <TrendingUp className="w-5 h-5 text-purple-400" />
                   <span>Proven Results</span>
                 </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <div className='flex items-center space-x-2'>
                   <Shield className='w-5 h-5 text-green-400' />
                   <span>Enterprise Security</span>
@@ -185,15 +144,9 @@ const Homepage2038: React.FC = () => {
                   <TrendingUp className='w-5 h-5 text-purple-400' />
                   <span>Proven Results</span>
                 </div>
-<<<<<<< HEAD
-                <div className='flex items-center space-x-2'>
-                  <Award className='w-5 h-5 text-yellow-400' />                  <span>Industry Leader</span>
-=======
-                <div className="flex items-center space-x-2">
-                  <Award className="w-5 h-5 text-yellow-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   <span>Industry Leader</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
               </motion.div>
             </motion.div>
@@ -204,19 +157,15 @@ const Homepage2038: React.FC = () => {
         <section className='py-24 px-4 bg-black/30 relative'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
           <div className='max-w-7xl mx-auto relative z-10'>            <motion.div
-=======
-        <section className="py-24 px-4 bg-black/30 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
-          <div className="max-w-7xl mx-auto relative z-10">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <motion.div
                 className='p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
@@ -269,13 +218,9 @@ const Homepage2038: React.FC = () => {
                 <div className='text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity'>
                   Unlimited potential
                 </div>              </motion.div>
-=======
-                <div className="text-5xl font-bold text-green-400 mb-3 group-hover:text-green-300 transition-colors">∞</div>
-                <div className="text-gray-300 text-lg">Future Possibilities</div>
-                <div className="text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Unlimited potential</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </motion.div>
           </div>
         </section>
@@ -283,18 +228,15 @@ const Homepage2038: React.FC = () => {
         {/* Featured AI Services */}
         <section className='py-24 px-4'>
           <div className='max-w-7xl mx-auto'>            <motion.div
-=======
-        <section className="py-24 px-4">
-          <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-20'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
                 Revolutionary AI Services
@@ -306,12 +248,9 @@ const Homepage2038: React.FC = () => {
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredAI.map((service, index) => (
-=======
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               {featuredAI.map((service, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -322,11 +261,9 @@ const Homepage2038: React.FC = () => {
                   <UltraFuturisticServiceCard2038
                     service={service}
                     variant='consciousness'                  />
-=======
-                    variant="consciousness"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </motion.div>
               ))}
             </div>
@@ -335,14 +272,9 @@ const Homepage2038: React.FC = () => {
               <Link href='/ai-services'>
                 <motion.button
                   className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'                  whileHover={{ scale: 1.05 }}
-=======
-            <div className="text-center">
-              <Link href="/ai-services">
-                <motion.button
-                  className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   whileHover={{ scale: 1.05 }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   whileTap={{ scale: 0.95 }}
                 >
                   View All AI Services
@@ -355,18 +287,15 @@ const Homepage2038: React.FC = () => {
         {/* Featured Micro SAAS Services */}
         <section className='py-24 px-4 bg-black/20'>
           <div className='max-w-7xl mx-auto'>            <motion.div
-=======
-        <section className="py-24 px-4 bg-black/20">
-          <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-20'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent'>
                 Innovative Micro SAAS
@@ -378,12 +307,9 @@ const Homepage2038: React.FC = () => {
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredMicroSaas.map((service, index) => (
-=======
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               {featuredMicroSaas.map((service, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -394,11 +320,9 @@ const Homepage2038: React.FC = () => {
                   <UltraFuturisticServiceCard2038
                     service={service}
                     variant='automation'                  />
-=======
-                    variant="automation"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </motion.div>
               ))}
             </div>
@@ -407,14 +331,9 @@ const Homepage2038: React.FC = () => {
               <Link href='/services'>
                 <motion.button
                   className='px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'                  whileHover={{ scale: 1.05 }}
-=======
-            <div className="text-center">
-              <Link href="/services">
-                <motion.button
-                  className="px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   whileHover={{ scale: 1.05 }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   whileTap={{ scale: 0.95 }}
                 >
                   Explore All Services
@@ -427,18 +346,15 @@ const Homepage2038: React.FC = () => {
         {/* Featured IT Services */}
         <section className='py-24 px-4'>
           <div className='max-w-7xl mx-auto'>            <motion.div
-=======
-        <section className="py-24 px-4">
-          <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-20'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>
                 Advanced IT Infrastructure
@@ -450,12 +366,9 @@ const Homepage2038: React.FC = () => {
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredIT.map((service, index) => (
-=======
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               {featuredIT.map((service, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -466,11 +379,9 @@ const Homepage2038: React.FC = () => {
                   <UltraFuturisticServiceCard2038
                     service={service}
                     variant='quantum'                  />
-=======
-                    variant="quantum"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </motion.div>
               ))}
             </div>
@@ -479,14 +390,9 @@ const Homepage2038: React.FC = () => {
               <Link href='/it-services'>
                 <motion.button
                   className='px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'                  whileHover={{ scale: 1.05 }}
-=======
-            <div className="text-center">
-              <Link href="/it-services">
-                <motion.button
-                  className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   whileHover={{ scale: 1.05 }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   whileTap={{ scale: 0.95 }}
                 >
                   View All IT Services
@@ -499,18 +405,15 @@ const Homepage2038: React.FC = () => {
         {/* Why Choose Us */}
         <section className='py-24 px-4 bg-black/30'>
           <div className='max-w-7xl mx-auto'>            <motion.div
-=======
-        <section className="py-24 px-4 bg-black/30">
-          <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-20'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Why Choose Zion Tech Group?
@@ -570,9 +473,9 @@ const Homepage2038: React.FC = () => {
                   description: "Track record of delivering transformative solutions to leading organizations",
                   color: "from-yellow-500 to-orange-500"
                 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
               ].map((feature, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -580,7 +483,7 @@ const Homepage2038: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   whileHover={{ scale: 1.05 }}
                 >
                   <div
@@ -594,12 +497,9 @@ const Homepage2038: React.FC = () => {
                   <p className='text-gray-300 leading-relaxed'>
                     {feature.description}
                   </p>                </motion.div>
-=======
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               ))}
             </div>
           </div>
@@ -608,18 +508,15 @@ const Homepage2038: React.FC = () => {
         {/* CTA Section */}
         <section className='py-24 px-4'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
-=======
-        <section className="py-24 px-4">
-          <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='space-y-8'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 Ready to Shape the Future?
@@ -645,11 +542,9 @@ const Homepage2038: React.FC = () => {
                 <Link href='/services'>
                   <motion.button
                     className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'                    whileHover={{ scale: 1.05 }}
-=======
-                    className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     whileHover={{ scale: 1.05 }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     whileTap={{ scale: 0.95 }}
                   >
                     Explore Our Services
@@ -665,10 +560,3 @@ const Homepage2038: React.FC = () => {
 };
 
 export default Homepage2038;
-=======
-  )
-};
-
-export default Homepage2038;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

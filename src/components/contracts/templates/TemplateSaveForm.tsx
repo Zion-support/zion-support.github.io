@@ -17,23 +17,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import { useState } from "react";
-import { useForm, type ControllerRenderProps } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Loader2 } from 'lucide-react';
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-import { ContractTemplate } from "@/types/contracts";
-import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Switch } from "@/components/ui/switch";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 const formSchema = z.object({
   title: z.string().min(1, 'Title is required'),
   isDefault: z.boolean(),
@@ -59,19 +43,7 @@ export function TemplateSaveForm({
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-<<<<<<< HEAD
-      title: editTemplate?.title || '',
-      isDefault: editTemplate?.is_default || false,
-    },
-  });
 
-  const onSubmit = async (values: FormValues) => {
-=======
-      title: editTemplate?.title || "",
-      isDefault: editTemplate?.is_default || false}}),
-  
-  const onSubmit = async (values: FormValues,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (!currentValues && !editTemplate) {
       return;
     }
@@ -104,19 +76,7 @@ export function TemplateSaveForm({
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
         <FormField
-<<<<<<< HEAD
-          control={form.control}
-          name='title'
-          render={({
-            field,
-          }: {
-            field: ControllerRenderProps<FormValues, 'title'>;
-          }) => (
-=======
-          control = {form.control,}
-          name="title"
-          render={({ field }: { field: ControllerRenderProps<FormValues, "title"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             <FormItem>
               <FormLabel>Template Name</FormLabel>
               <FormControl>
@@ -128,35 +88,7 @@ export function TemplateSaveForm({
         />
 
         <FormField
-<<<<<<< HEAD
-          control={form.control}
-          name='isDefault'
-          render={({
-            field,
-          }: {
-            field: ControllerRenderProps<FormValues, 'isDefault'>;
-          }) => (
-            <FormItem className='flex items-center justify-between'>
-              <FormLabel className='cursor-pointer'>
-                Set as default template
-              </FormLabel>
-              <FormControl>
-                <Switch
-                  aria-label='Default template'
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-=======
-          control = {form.control,}
-          name="isDefault"
-          render={({ field }: { field: ControllerRenderProps<FormValues, "isDefault"> },) => (
-            <FormItem className="flex items-center justify-between">
-              <FormLabel className="cursor-pointer">Set as default template</FormLabel>
-              <FormControl>
-                <Switch
-                  aria-label="Default template"
-                  checked = {field.value,}
-                  onCheckedChange = {field.onChange,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 />
               </FormControl>
               <FormMessage />
@@ -196,7 +128,3 @@ try {;
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

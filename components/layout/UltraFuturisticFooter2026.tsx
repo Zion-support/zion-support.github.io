@@ -26,16 +26,15 @@ import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, 
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 };
 {
   name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics' 
@@ -201,13 +200,8 @@ const contactInfo = {
       },
     ],
   },];
-=======
-      { name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials' }
-    ]
-  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -218,11 +212,8 @@ const companyLinks = [
   { name: 'Investors', href: '/investors' },
   { name: 'Contact Us', href: '/contact' },
   { name: 'Locations', href: '/locations' },];
-=======
-  { name: 'Locations', href: '/locations' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const resourceLinks = [
   { name: 'Documentation', href: '/docs' },
@@ -233,11 +224,8 @@ const resourceLinks = [
   { name: 'Training & Certification', href: '/training' },
   { name: 'Community Forum', href: '/community' },
   { name: 'Developer Resources', href: '/developer-resources' },];
-=======
-  { name: 'Developer Resources', href: '/developer-resources' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const socialLinks = [
   { name: 'Facebook', href: '#', icon: Facebook },
@@ -250,32 +238,14 @@ const socialLinks = [
 export default function UltraFuturisticFooter2026() {
   return (
     <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>
-=======
-  { name: 'GitHub', href: '#', icon: Github }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 ];
 
 export default function UltraFuturisticFooter2026() {
   return (
-<<<<<<< HEAD
-    <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      {/* Background Effects */}
-      <div className='absolute inset-0 overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]'></div>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]'></div>
-      </div>
 
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-        {/* Main Footer Content */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12'>
-          {/* Company Info */}
-          <div className='lg:col-span-2'>            <motion.div
-=======
-          <div className="lg:col-span-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -283,7 +253,7 @@ export default function UltraFuturisticFooter2026() {
               <div className='flex items-center mb-6'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4'>
                   <Zap className='w-6 h-6 text-white' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
                 <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                   Zion Tech Group
@@ -311,12 +281,9 @@ export default function UltraFuturisticFooter2026() {
                 </div>
                 <div className='flex items-center text-gray-300'>
                   <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.website}</span>
-=======
-                <div className="flex items-center text-gray-300">
-                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   <span>{contactInfo.website}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
               </div>
             </motion.div>
@@ -343,7 +310,7 @@ export default function UltraFuturisticFooter2026() {
                 {category.title === 'Healthcare & Biotech' && (
                   <Dna className='w-5 h-5 mr-2 text-blue-400' />
                 )}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 {category.title}
               </h4>
               <ul className='space-y-2'>
@@ -354,11 +321,9 @@ export default function UltraFuturisticFooter2026() {
                       className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group'
                     >
                       <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />                      {service.name}
-=======
-                      <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       {service.name}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </Link>
                   </li>
                 ))}
@@ -369,11 +334,9 @@ export default function UltraFuturisticFooter2026() {
 
         {/* Additional Links */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}
-=======
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           {/* Company Links */}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -381,7 +344,7 @@ export default function UltraFuturisticFooter2026() {
           >
             <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
               <Users className='w-5 h-5 mr-2 text-purple-400' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Company
             </h4>
             <ul className='space-y-2'>
@@ -390,11 +353,9 @@ export default function UltraFuturisticFooter2026() {
                   <Link
                     href={link.href}
                     className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm'                  >
-=======
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     {link.name}
                   </Link>
                 </li>
@@ -410,7 +371,7 @@ export default function UltraFuturisticFooter2026() {
           >
             <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
               <Award className='w-5 h-5 mr-2 text-yellow-400' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Resources
             </h4>
             <ul className='space-y-2'>
@@ -419,11 +380,9 @@ export default function UltraFuturisticFooter2026() {
                   <Link
                     href={link.href}
                     className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm'                  >
-=======
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     {link.name}
                   </Link>
                 </li>
@@ -448,28 +407,14 @@ export default function UltraFuturisticFooter2026() {
                   className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
                 >
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />                </Link>
-=======
-            <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-              <Rocket className="w-5 h-5 mr-2 text-pink-400" />
-              Follow Us
-            </h4>
-            <div className="grid grid-cols-3 gap-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               {socialLinks.map((social, index) => (
                 <Link
                   key={index}
                   href={social.href}
-<<<<<<< HEAD
-                  className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
-                >
-                  <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />
-=======
-                  className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
-                >
-                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               ))}
             </div>
           </motion.div>
@@ -481,7 +426,7 @@ export default function UltraFuturisticFooter2026() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         >
           <div className='text-center'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -499,11 +444,9 @@ export default function UltraFuturisticFooter2026() {
                 className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
               />
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>                Subscribe
-=======
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 Subscribe
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </button>
             </div>
           </div>
@@ -515,7 +458,7 @@ export default function UltraFuturisticFooter2026() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className='border-t border-gray-800 pt-8'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         >
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>
@@ -541,12 +484,9 @@ export default function UltraFuturisticFooter2026() {
               </div>
               <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse'></div>
               <div className='text-cyan-400 text-sm font-semibold'>                99.9% Uptime
-=======
-              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-              <div className="text-cyan-400 text-sm font-semibold">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 99.9% Uptime
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </div>
           </div>
@@ -555,7 +495,3 @@ export default function UltraFuturisticFooter2026() {
     </footer>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React, { useMemo } from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { cn } from '@/lib/utils';
-import { format } from 'date-fns';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-// Use the wrapper hook so TypeScript properly infers the return type
-// from the ThemeProvider context
-import { useTheme } from '@/hooks/useTheme';
-
-=======
-import React, { useMemo } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { cn } from "@/lib/utils";
-import { format } from "date-fns";
-// Use the wrapper hook so TypeScript properly infers the return type
-// from the ThemeProvider context
-import { useTheme } from "@/hooks/useTheme";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ChatMessageProps {
   message: string;
   isUser: boolean;
@@ -25,24 +6,7 @@ interface ChatMessageProps {
 export const ChatMessage: React.FC<ChatMessageProps> = ({
   message,
   isUser,
-<<<<<<< HEAD
-  timestamp,
-}: ChatMessageProps) => {
-  const { theme } = useTheme();
 
-  // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
-  // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
-  const sanitizedHtml = useMemo<{ __html: string }>(
-    () => ({ __html: formatMessageWithLinks(message) }),
-=======
-  timestamp}: ChatMessageProps,) => {
-  const { theme } = useTheme(),
-  
-  // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
-  // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
-  const sanitizedHtml = useMemo<{ __html: string}>(
-    (,) => ({ __html: formatMessageWithLinks(message) }),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     [message]
   );
 
@@ -130,8 +94,3 @@ function formatMessageWithLinks(message: string): string {
   );
 
   return formattedMessage;
-=======
-  return formattedMessage
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

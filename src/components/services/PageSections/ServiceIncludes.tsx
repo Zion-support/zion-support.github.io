@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import { Check } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-=======
-
-import { Check } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function ServiceIncludes() {
   return (
     <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20'>
@@ -89,19 +81,12 @@ export function ServiceIncludes() {
               <p className='text-zion-slate-light'>
                 Detailed report of work performed and recommendations.
               </p>            </div>
-=======
-              <h3 className="text-white font-medium">Service Documentation</h3>
-              <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         </div>
       </div>
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

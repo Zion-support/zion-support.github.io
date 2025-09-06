@@ -30,13 +30,8 @@ export default function IncubatorPage() {
         <div className="flex gap-3">
           <Link href="/grants/apply"><a className="px-4 py-2 bg-purple-600 text-white rounded">Apply to Incubator</a></Link>
           <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
         </div>
       </div>
     </EnhancedLayout>
   );
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

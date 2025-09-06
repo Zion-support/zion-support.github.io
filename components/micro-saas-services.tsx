@@ -36,9 +36,8 @@ import {
   BarChart3;
   Calendar;
   Target
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function MicroSaasServicesPage() {
   const microSaasServices = [
@@ -48,7 +47,7 @@ export default function MicroSaasServicesPage() {
       description:
         'Generate high-quality, SEO-optimized content for blogs, social media, emails, and landing pages using advanced AI technology.',
       icon: <Brain className='w-8 h-8 text-white' />,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       gradient: 'from-purple-400 to-pink-500',
       features: [
@@ -417,12 +416,8 @@ export default function MicroSaasServicesPage() {
       website: 'https://social.ziontech.ai',
       demo: 'https://demo.social.ziontech.ai',
     },  ];
-=======
-      demo: 'https://demo.social.ziontech.ai'
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const marketInsights = [
     {
@@ -461,71 +456,33 @@ export default function MicroSaasServicesPage() {
       description:
         'Increasing need for multi-platform social media coordination',
     },  ];
-=======
-      description: 'Rapidly growing market with increasing demand for automated content creation'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
       title: 'Performance Monitoring',
       marketSize: '$3.8B',
       growth: '+18%',
-<<<<<<< HEAD
-      description:
-        'Essential for modern web applications and user experience optimization',
-    },
-=======
-      description: 'Essential for modern web applications and user experience optimization'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
       title: 'SEO Analytics',
       marketSize: '$2.1B',
       growth: '+21%',
-<<<<<<< HEAD
-      description:
-        'Critical for digital marketing and search engine optimization',
-    },
-=======
-      description: 'Critical for digital marketing and search engine optimization'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
       title: 'API Management',
       marketSize: '$4.2B',
       growth: '+25%',
-<<<<<<< HEAD
-      description: 'Growing demand for API security and traffic management',
-    },
-=======
-      description: 'Growing demand for API security and traffic management'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
       title: 'Email Marketing',
       marketSize: '$7.5B',
       growth: '+15%',
-<<<<<<< HEAD
-      description:
-        'Mature market with strong automation and personalization trends',
-    },
-=======
-      description: 'Mature market with strong automation and personalization trends'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
       title: 'Social Media Management',
       marketSize: '$2.8B',
       growth: '+19%',
-<<<<<<< HEAD
-      description:
-        'Increasing need for multi-platform social media coordination',
-    },
-=======
-      description: 'Increasing need for multi-platform social media coordination'
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -547,7 +504,7 @@ export default function MicroSaasServicesPage() {
           content='Professional micro SaaS services for modern businesses. AI-powered solutions with competitive pricing and enterprise-grade features.'
         />
         <meta name='twitter:card' content='summary_large_image' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       </Head>
 
       {/* Hero Section */}
@@ -569,13 +526,9 @@ export default function MicroSaasServicesPage() {
             modern businesses. From AI-powered content generation to
             enterprise-grade performance monitoring, we deliver professional
             solutions with competitive pricing and exceptional value.          </p>
-=======
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of micro SaaS services designed for modern businesses. 
-            From AI-powered content generation to enterprise-grade performance monitoring, we deliver professional solutions with competitive pricing and exceptional value.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         </div>
       </section>
 
@@ -584,7 +537,7 @@ export default function MicroSaasServicesPage() {
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Market Overview & Competitive Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -613,11 +566,9 @@ export default function MicroSaasServicesPage() {
                     </div>
                   </div>
                   <p className='text-gray-400 text-sm'>{insight.description}</p>                </div>
-=======
-                  <p className="text-gray-400 text-sm">{insight.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </Card>
             ))}
           </div>
@@ -629,7 +580,7 @@ export default function MicroSaasServicesPage() {
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Our Micro SaaS Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -674,12 +625,9 @@ export default function MicroSaasServicesPage() {
                               className='flex items-center text-gray-300 text-sm'
                             >
                               <Check className='w-4 h-4 mr-2 text-green-400 flex-shrink-0' />                              {feature}
-=======
-                            <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                              <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                               {feature}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                             </li>
                           ))}
                         </ul>
@@ -688,7 +636,7 @@ export default function MicroSaasServicesPage() {
                       <div>
                         <h4 className='text-lg font-semibold text-white mb-3 flex items-center'>
                           <Target className='w-5 h-5 mr-2 text-cursor-blue' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                           Use Cases
                         </h4>
                         <ul className='space-y-2'>
@@ -698,12 +646,9 @@ export default function MicroSaasServicesPage() {
                               className='flex items-center text-gray-300 text-sm'
                             >
                               <Check className='w-4 h-4 mr-2 text-green-400 flex-shrink-0' />                              {useCase}
-=======
-                            <li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">
-                              <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                               {useCase}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                             </li>
                           ))}
                         </ul>
@@ -715,15 +660,9 @@ export default function MicroSaasServicesPage() {
                         href={service.website}
                         size='sm'
                         className='bg-cursor-blue hover:bg-blue-600'                      >
-=======
-                    <div className="flex flex-wrap gap-4">
-                      <Button
-                        href={service.website}
-                        size="sm"
-                        className="bg-cursor-blue hover:bg-blue-600"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         Visit Website
                       </Button>
                       <Button
@@ -731,13 +670,9 @@ export default function MicroSaasServicesPage() {
                         variant='outline'
                         size='sm'
                         className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'                      >
-=======
-                        variant="outline"
-                        size="sm"
-                        className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         Try Demo
                       </Button>
                     </div>
@@ -748,7 +683,7 @@ export default function MicroSaasServicesPage() {
                     <div className='bg-gray-800/50 rounded-xl p-6 border border-gray-700'>
                       <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
                         <BarChart3 className='w-5 h-5 mr-2 text-cursor-blue' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         Pricing & Market
                       </h4>
 
@@ -793,123 +728,14 @@ export default function MicroSaasServicesPage() {
                                 <span className="text-sm font-semibold text-white">${details.price}/mo</span>
                               </div>
                             ))}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                           </div>
                         </div>
 
                         <div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                          <p className='text-sm text-gray-400 mb-1'>
-                            Key Competitors
-                          </p>
-                          <div className='flex flex-wrap gap-2'>
-                            {service.competitors.map(
-                              (competitor, compIndex) => (
-                                <span
-                                  key={compIndex}
-                                  className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'
-                                >
-                                  {competitor}
-                                </span>
-                              )
-<<<<<<< HEAD
-                            )}                          </div>
-                          <p className="text-sm text-gray-400 mb-1">Key Competitors</p>
-                          <div className="flex flex-wrap gap-2">
-                            {service.competitors.map((competitor, compIndex) => (
-                              <span key={compIndex} className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">
-                                {competitor}
-                              </span>
-                            ))}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                          </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Why Choose Our Services */}
-      <section className='section-padding bg-gradient-cursor-accent'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              Why Choose Zion Tech Group Micro SaaS Services?
-            </h2>
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              We combine professional-grade features with competitive pricing to
-              deliver exceptional value for your business.
-            </p>
-          </div>
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            <Card className='card-hover border-gradient-blue text-center'>
-              <div className='p-6'>
-                <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>
-                  <Star className='w-8 h-8 text-cursor-blue' />
-                </div>
-                <h3 className='text-xl font-bold text-white mb-3'>
-                  Professional Quality
-                </h3>
-                <p className='text-gray-400 text-sm'>
-                  Enterprise-grade features and reliability at micro SaaS prices
-                </p>
               </div>
-            </Card>
 
-            <Card className='card-hover border-gradient-blue text-center'>
-              <div className='p-6'>
-                <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>
-                  <TrendingUp className='w-8 h-8 text-cursor-blue' />
-                </div>
-                <h3 className='text-xl font-bold text-white mb-3'>
-                  Competitive Pricing
-                </h3>
-                <p className='text-gray-400 text-sm'>
-                  Market-competitive pricing with better value than alternatives
-                </p>
-              </div>
-            </Card>
-
-            <Card className='card-hover border-gradient-blue text-center'>
-              <div className='p-6'>
-                <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>
-                  <Users className='w-8 h-8 text-cursor-blue' />
-                </div>
-                <h3 className='text-xl font-bold text-white mb-3'>
-                  Expert Support
-                </h3>
-                <p className='text-gray-400 text-sm'>
-                  Professional support and guidance for your business needs
-                </p>
-              </div>
-            </Card>
-
-            <Card className='card-hover border-gradient-blue text-center'>
-              <div className='p-6'>
-                <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>
-                  <Globe className='w-8 h-8 text-cursor-blue' />
-                </div>
-                <h3 className='text-xl font-bold text-white mb-3'>
-                  Global Infrastructure
-                </h3>
-                <p className='text-gray-400 text-sm'>
-                  Worldwide availability with enterprise-grade reliability
-                </p>              </div>
-=======
-                <h3 className="text-xl font-bold text-white mb-3">Global Infrastructure</h3>
-                <p className="text-gray-400 text-sm">Worldwide availability with enterprise-grade reliability</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </Card>
           </div>
         </div>
@@ -920,7 +746,7 @@ export default function MicroSaasServicesPage() {
         <div className='absolute inset-0 bg-dots opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             Ready to Get Started?
           </h2>
           <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -939,36 +765,8 @@ export default function MicroSaasServicesPage() {
               variant='outline'
               size='lg'
               className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'            >
-=======
-              href="/contact"
-              size="lg"
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             >
               Get Started
             </Button>
             <Button
-<<<<<<< HEAD
-              href='/pricing'
-              variant='outline'
-              size='lg'
-              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'
-              href="/pricing"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              View Pricing
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

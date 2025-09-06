@@ -21,7 +21,7 @@ import {
   Target,
   Users,
   BarChart3,;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 } from 'lucide-react';
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 
@@ -95,82 +95,36 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
     { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' },
     { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' },
     { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   ];
 
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.name === category);
-<<<<<<< HEAD
-    return cat ? cat.icon : Star;
-=======
-    return cat ? cat.icon : Star
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
 
   const getCategoryColor = (category: string) => {
     const cat = categories.find(c => c.name === category);
-<<<<<<< HEAD
-    return cat ? cat.color : 'from-gray-500 to-gray-600';
-=======
-    return cat ? cat.color : 'from-gray-500 to-gray-600'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
 
   return (
     <Layout>
-<<<<<<< HEAD
-      <SEO
-        title='2025 Innovative Services Showcase | Zion Tech Group'
-        description='Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        keywords={[
-          'innovative services 2025',
-          'micro SAAS',
-          'quantum computing',
-          'space technology',
-          'AI platforms',
-          'autonomous systems',
-        ]}
-      />
 
-      {/* Hero Section */}
-      <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
-        {/* Enhanced Background Elements */}
-        <div className='absolute inset-0 pointer-events-none'>
-          <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>
-          <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>
-          <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>
-          <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500'></div>
-          <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500'></div>
-        </div>
-
-        <div className='text-center max-w-6xl mx-auto relative z-10'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='space-y-6'          >
-=======
-        
-        <div className="text-center max-w-6xl mx-auto relative z-10">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            className='space-y-6'
-=======
-            className="space-y-6"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             {/* Enhanced Company Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <Star className='w-5 h-5' />
               <span>Innovation Leader 2025</span>
@@ -183,17 +137,14 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               Pioneering the future with cutting-edge micro SAAS services,
               quantum computing solutions, and autonomous AI platforms
             </p>
-=======
-            
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             {/* Enhanced Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20'>
                 <div className='text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors'>
@@ -222,13 +173,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                 <div className='text-gray-300 text-sm'>
                   Future Possibilities
                 </div>              </div>
-=======
-              <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-green-400/20">
-                <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors">∞</div>
-                <div className="text-gray-300 text-sm">Future Possibilities</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </motion.div>
           </motion.div>
         </div>
@@ -238,19 +185,15 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       <section className='py-20 px-4 bg-black/30 relative'>
         <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
         <div className='max-w-7xl mx-auto relative z-10'>          <motion.div
-=======
-      <section className="py-20 px-4 bg-black/30 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
-        <div className="max-w-7xl mx-auto relative z-10">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
               Service Categories
@@ -264,7 +207,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {categories.map((category, index) => {
               const IconComponent = category.icon;
-              
+
                 >
                   <div
                     className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}
@@ -285,13 +228,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                           ).length
                         }{' '}
                         Services                      </div>
-=======
-                      <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
-                      <div className="text-gray-300 text-sm">
-                        {innovative2025MicroSaasBatch.filter(service => service.category === category.name).length} Services
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </div>
                   </div>
                 </motion.div>
@@ -324,7 +263,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               .filter(service => service.popular)
               .map((service, index) => {
                 const IconComponent = getCategoryIcon(service.category);
-                
+
                   >
                     <div className='p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm'>
                       {/* Popular Badge */}
@@ -393,18 +332,14 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       <section className='py-20 px-4 bg-black/30 relative'>
         <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5'></div>
         <div className='max-w-7xl mx-auto relative z-10'>
-=======
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>
               Complete Service Portfolio
@@ -418,7 +353,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {innovative2025MicroSaasBatch.map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
-              
+
                 >
                   <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>
                     <div className='flex items-start space-x-4'>
@@ -445,7 +380,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                         </div>                      </div>
                       ))}
                     </div>
-                    
+
                     {/* Market Info */}
                     <div className="border-t border-white/10 pt-4 space-y-2">
                       <div className="text-xs text-gray-400">
@@ -453,9 +388,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                       </div>
                       <div className="text-xs text-gray-400">
                         Category: <span className="text-cyan-400">{service.category}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                       </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </div>
                   </div>
                 </motion.div>
@@ -472,15 +407,15 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
           <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='space-y-8'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
               Ready to Transform Your Business?
@@ -504,48 +439,19 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                 Email Us
               </a>
             </div>
-=======
-              <a 
-                href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               >
                 Email Us
               </a>
             </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-            <div className='text-sm text-gray-400'>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>
-                Website:{' '}
-                <a
-                  href='https://ziontechgroup.com'
-                  className='text-cyan-400 hover:text-cyan-300'
-                >
-                  https://ziontechgroup.com
-                </a>
-<<<<<<< HEAD
-              </p>            </div>
-=======
-            
-            <div className="text-sm text-gray-400">
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover: text-cyan-300">https://ziontechgroup.com</a></p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </motion.div>
         </div>
       </section>
     </Layout>
   );
 };export default Comprehensive2025InnovativeServicesShowcase;
-=======
-  )
-};
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default Comprehensive2025InnovativeServicesShowcase;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

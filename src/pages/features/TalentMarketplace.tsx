@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import Link from 'next/link';
-
-=======
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function TalentMarketplace() {
   const schema = {
     '@context': 'https://schema.org',
@@ -23,15 +6,8 @@ export default function TalentMarketplace() {
     description:
       'Hire vetted AI and tech professionals from around the world on Zion.',
     url: 'https://app.ziontechgroup.com/features/talent-marketplace',  };
-=======
-    "@context": "https://schema.org";
-    "@type": "WebPage";
-    "name": "Talent Marketplace";
-    "description": "Hire vetted AI and tech professionals from around the world on Zion.";
-    "url": "https://app.ziontechgroup.com/features/talent-marketplace"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -40,7 +16,7 @@ export default function TalentMarketplace() {
         description='Discover and hire top AI specialists through the Zion talent marketplace.'
         keywords='AI talent marketplace, hire developers, tech freelancers'
         canonical='https://app.ziontechgroup.com/features/talent-marketplace'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -94,20 +70,12 @@ export default function TalentMarketplace() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/talent'>Browse Talent</Link>            </Button>
-=======
-          <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
-              <Link href="/talent">Browse Talent</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         </div>
       </main>
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

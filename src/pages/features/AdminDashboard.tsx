@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import Link from 'next/link';
-
-=======
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function AdminDashboard() {
   const schema = {
     '@context': 'https://schema.org',
@@ -23,15 +6,8 @@ export default function AdminDashboard() {
     description:
       'Monitor marketplace activity, manage listings and view analytics in one place.',
     url: 'https://app.ziontechgroup.com/features/admin-dashboard',  };
-=======
-    "@context": "https://schema.org";
-    "@type": "WebPage";
-    "name": "Admin Dashboard";
-    "description": "Monitor marketplace activity, manage listings and view analytics in one place.";
-    "url": "https://app.ziontechgroup.com/features/admin-dashboard"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -40,7 +16,7 @@ export default function AdminDashboard() {
         description='Gain insight into your marketplace with powerful administration tools.'
         keywords='admin dashboard, analytics, manage listings'
         canonical='https://app.ziontechgroup.com/features/admin-dashboard'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -69,52 +45,17 @@ export default function AdminDashboard() {
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li>
           </ul>
-=======
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <li>Track sales and service metrics in real time.</li>
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li>
           </ul>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          <h2 className='text-2xl font-bold mb-4'>
-            Frequently Asked Questions
-          </h2>
-          <div className='space-y-4 mb-12'>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            <div>
-              <p className='font-semibold'>Who can access the dashboard?</p>
-              <p className='text-zion-slate-light'>
-                Only authorized admins and moderators with the proper roles.
-              </p>
-            </div>
-            <div>
-              <p className='font-semibold'>Can I export reports?</p>
-              <p className='text-zion-slate-light'>
-                Yes, you can export data to CSV for further analysis.
-              </p>
-            </div>
-          </div>
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/admin'>View Dashboard</Link>            </Button>
-=======
-          <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
-              <Link href="/admin">View Dashboard</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         </div>
       </main>
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

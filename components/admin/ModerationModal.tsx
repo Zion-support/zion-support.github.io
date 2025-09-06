@@ -7,7 +7,7 @@ export type ModerationModalProps = {
     action: 'approve' | 'remove' | 'warn' | 'ban',
     adminNotes?: string
   ) => Promise<void>;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 };
 
 export default function ModerationModal({
@@ -120,13 +120,8 @@ export default function ModerationModal({
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

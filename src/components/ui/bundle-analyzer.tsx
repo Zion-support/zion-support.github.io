@@ -5,12 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { AlertTriangle, Package, Zap } from 'lucide-react';
-<<<<<<< HEAD
-import { logErrorToProduction } from '@/utils/productionLogger';
 
-=======
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface BundleInfo {
   totalSize: number;
   gzippedSize: number;
@@ -73,17 +68,12 @@ export function BundleAnalyzer() {
       let totalSize = 0;
       let totalLoadTime = 0;
       const chunkData: ChunkInfo[] = [];
-=======
-      const chunkData: ChunkInfo[] = [],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       scriptEntries.forEach(entry => {
         const size = entry.transferSize || entry.encodedBodySize || 0;
         const loadTime = entry.responseEnd - entry.requestStart;
         const cached = entry.transferSize === 0;
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         totalSize += size;
         totalLoadTime += loadTime;
 
@@ -108,11 +98,6 @@ export function BundleAnalyzer() {
         cacheHitRate: cacheHitRate * 100,
       });
 
-<<<<<<< HEAD
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks
-=======
-      setChunks(chunkData.sort((a, b,) => b.size - a.size).slice(0, 5)), // Top 5 largest chunks
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error });
     } finally {
@@ -127,20 +112,6 @@ export function BundleAnalyzer() {
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
   };
-
-<<<<<<< HEAD
-  const getSizeColor = (size: number) => {
-    if (size < 100000) return 'bg-green-500'; // < 100KB
-    if (size < 500000) return 'bg-yellow-500'; // < 500KB
-    return 'bg-red-500'; // > 500KB
-  };
-=======
-  const getSizeColor = (size: number,) => {
-    if (size < 100000) return 'bg-green-500', // < 100KB
-    if (size < 500000) return 'bg-yellow-500', // < 500KB
-    return 'bg-red-500', // > 500KB
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const toggleAnalyzer = () => {
     const current = localStorage.getItem('bundle-analyzer') === 'true';
@@ -159,17 +130,7 @@ export function BundleAnalyzer() {
     return (
       <div className='fixed bottom-20 right-4 z-50'>
         <Button
-<<<<<<< HEAD
-          variant='outline'
-          size='sm'
-          onClick={toggleAnalyzer}
-          className='bg-background/80 backdrop-blur-sm'
-=======
-          variant="outline"
-          size="sm"
-          onClick = {toggleAnalyzer,}
-          className="bg-background/80 backdrop-blur-sm"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
         >
           <Package className='w-4 h-4 mr-2' />
           Bundle Analyzer
@@ -189,34 +150,12 @@ export function BundleAnalyzer() {
             </CardTitle>
             <div className='flex gap-2'>
               <Button
-<<<<<<< HEAD
-                variant='ghost'
-                size='sm'
-                onClick={collectBundleInfo}
-                disabled={isCollecting}
-                className='h-6 w-6 p-0'
-=======
-                variant="ghost"
-                size="sm"
-                onClick = {collectBundleInfo,}
-                disabled = {isCollecting,}
-                className="h-6 w-6 p-0"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               >
                 <Zap className='w-3 h-3' />
               </Button>
               <Button
-<<<<<<< HEAD
-                variant='ghost'
-                size='sm'
-                onClick={toggleAnalyzer}
-                className='h-6 w-6 p-0'
-=======
-                variant="ghost"
-                size="sm"
-                onClick = {toggleAnalyzer,}
-                className="h-6 w-6 p-0"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               >
                 ✕
               </Button>
@@ -260,28 +199,7 @@ export function BundleAnalyzer() {
               </div>
 
               <div>
-<<<<<<< HEAD
-                <div className='text-xs font-medium mb-2'>Largest Chunks:</div>
-                <div className='space-y-1'>
-                  {chunks.map((chunk, index) => (
-                    <div
-                      key={chunk.name}
-                      className='flex justify-between items-center text-xs'
-                    >
-                      <div className='flex items-center gap-2 flex-1 min-w-0'>
-                        <span className='w-4 text-muted-foreground'>
-                          {index + 1}.
-                        </span>
-                        <span className='truncate' title={chunk.name}>
-=======
-                <div className="text-xs font-medium mb-2">Largest Chunks:</div>
-                <div className="space-y-1">
-                  {chunks.map((chunk, index,) => (
-                    <div key={chunk.name} className="flex justify-between items-center text-xs">
-                      <div className="flex items-center gap-2 flex-1 min-w-0">
-                        <span className="w-4 text-muted-foreground">{index + 1}.</span>
-                        <span className="truncate" title={chunk.name}>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                           {chunk.name}
                         </span>
                         {chunk.cached && (
@@ -322,7 +240,3 @@ export function BundleAnalyzer() {
       </Card>
     </div>
   );
-=======
-} 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

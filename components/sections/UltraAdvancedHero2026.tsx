@@ -15,7 +15,7 @@ import {
   Mail,
   MapPin,;
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
@@ -30,11 +30,8 @@ export default function UltraAdvancedHero2026() {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',  };
-=======
-    address: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -44,13 +41,8 @@ export default function UltraAdvancedHero2026() {
         staggerChildren: 0.1,
       },
     },  };
-=======
-        staggerChildren: 0.1
-      }
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -61,7 +53,7 @@ export default function UltraAdvancedHero2026() {
         duration: 0.8,
       },
     },
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   };
 
   return (
@@ -155,82 +147,25 @@ export default function UltraAdvancedHero2026() {
 
           {/* Key Benefits */}
           <motion.div
-=======
-            <div className="text-center p-4 bg-gradient-to-br from-green-800/20 to-green-900/20 backdrop-blur-xl border border-green-500/20 rounded-2xl">
-              <div className="text-3xl font-bold text-green-400">∞</div>
-              <div className="text-gray-300 text-sm">Possibilities</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </div>
           </motion.div>
 
           {/* Key Benefits */}
-<<<<<<< HEAD
-          <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            variants={itemVariants}
-            className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'
-          >
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl'>
-              <CheckCircle className='w-6 h-6 text-blue-400 flex-shrink-0' />
-              <span className='text-gray-200 font-medium'>
-                First-to-Market Technology
-              </span>
-            </div>
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-purple-500/20 rounded-xl'>
-              <CheckCircle className='w-6 h-6 text-purple-400 flex-shrink-0' />
-              <span className='text-gray-200 font-medium'>
-                1000% ROI Guaranteed
-              </span>
-            </div>
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
-              <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
-              <span className='text-gray-200 font-medium'>
-                24/7 Autonomous Operation
-              </span>            </div>
-          </motion.div>
 
-          {/* Call to Action Buttons */}
-          <motion.div
-=======
-            <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl">
-              <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-              <span className="text-gray-200 font-medium">24/7 Autonomous Operation</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </motion.div>
 
           {/* Call to Action Buttons */}
-<<<<<<< HEAD
-          <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            variants={itemVariants}
-            className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'
-          >
-            <Link
-              href='/services'
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl'
-            >
-              <Rocket className='w-6 h-6 mr-3' />
-              Explore All Services
-              <ArrowRight className='w-6 h-6 ml-3' />
-            </Link>
 
-            <Link
-              href='/contact'
-              className='inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
-            >
-              <Zap className='w-6 h-6 mr-3' />              Get Started Today
-=======
-              <Zap className="w-6 h-6 mr-3" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Get Started Today
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </Link>
           </motion.div>
 
           {/* Contact Information */}
           <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             variants={itemVariants}
             className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto'
           >
@@ -267,19 +202,16 @@ export default function UltraAdvancedHero2026() {
                   <div className='text-purple-300 text-sm'>
                     {contactInfo.address}
                   </div>                </div>
-=======
-                  <div className="text-white font-semibold">Visit Us</div>
-                  <div className="text-purple-300 text-sm">{contactInfo.address}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </div>
           </motion.div>
 
           {/* Trust Indicators */}
           <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             variants={itemVariants}
             className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400'
           >
@@ -293,12 +225,9 @@ export default function UltraAdvancedHero2026() {
             </div>
             <div className='flex items-center space-x-2'>
               <Zap className='w-5 h-5 text-purple-400' />              <span>24/7 Support</span>
-=======
-            <div className="flex items-center space-x-2">
-              <Zap className="w-5 h-5 text-purple-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               <span>24/7 Support</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </div>
           </motion.div>
         </motion.div>
@@ -306,7 +235,7 @@ export default function UltraAdvancedHero2026() {
 
       {/* Floating Elements */}
       <div className='absolute inset-0 pointer-events-none'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <motion.div
           animate={{
             y: [0, -20, 0],
@@ -363,18 +292,11 @@ export default function UltraAdvancedHero2026() {
             ease: 'easeInOut',
           }}
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'        >
-=======
-          className="absolute bottom-1/3 right-10 text-5xl opacity-20"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           🌐
         </motion.div>
       </div>
     </section>
   );
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -13,18 +13,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { logErrorToProduction } from '@/utils/productionLogger';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { cn } from '@/lib/utils';
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface LoadingState {
   isLoading: boolean;
   error: Error | null;
@@ -50,25 +39,7 @@ const EnhancedLoading: React.FC<{
   showProgress?: boolean;
 }> = ({
   progress = 0,
-<<<<<<< HEAD
-  message = 'Loading component...',
-  showProgress = true,
-}) => (
-  <Card className='w-full max-w-md mx-auto'>
-    <CardContent className='p-6'>
-      <div className='flex flex-col items-center space-y-4'>
-        <div className='relative'>
-          <Loader2 className='h-8 w-8 animate-spin text-primary' />
-=======
-  message = 'Loading component...', 
-  showProgress = true 
-},) => (
-  <Card className="w-full max-w-md mx-auto">
-    <CardContent className="p-6">
-      <div className="flex flex-col items-center space-y-4">
-        <div className="relative">
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           {showProgress && (
             <motion.div
               className='absolute inset-0 rounded-full border-2 border-primary'
@@ -96,29 +67,7 @@ const EnhancedLoading: React.FC<{
 
 // Enhanced Error Component
 const EnhancedError: React.FC<{
-<<<<<<< HEAD
-  error: Error;
-  retry: () => void;
-  isOnline: boolean;
-  retryCount: number;
-  maxRetries: number;
-}> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
-  <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>
-    <CardContent className='p-6'>
-      <div className='flex flex-col items-center space-y-4'>
-        <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>
-=======
-  error: Error
-  retry: () => void
-  isOnline: boolean
-  retryCount: number
-  maxRetries: number
-}> = ({ error, retry, isOnline, retryCount, maxRetries },) => (
-  <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
-    <CardContent className="p-6">
-      <div className="flex flex-col items-center space-y-4">
-        <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           {isOnline ? (
             <AlertTriangle className='h-6 w-6 text-red-600' />
           ) : (
@@ -141,19 +90,7 @@ const EnhancedError: React.FC<{
           )}
         </div>
         {retryCount < maxRetries && (
-<<<<<<< HEAD
-          <Button
-            onClick={retry}
-            variant='outline'
-            size='sm'
-            className='border-red-300 text-red-700 hover:bg-red-100'
-=======
-          <Button 
-            onClick = {retry,}
-            variant="outline" 
-            size="sm"
-            className="border-red-300 text-red-700 hover:bg-red-100"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           >
             <RefreshCw className='h-4 w-4 mr-2' />
             Try Again
@@ -167,23 +104,6 @@ const EnhancedError: React.FC<{
 // Network Status Hook
 const useNetworkStatus = () => {
   const [isOnline, setIsOnline] = useState(true);
-
-<<<<<<< HEAD
-  useEffect(() => {
-    const updateOnlineStatus = () => setIsOnline(navigator.onLine);
-=======
-  useEffect((,) => {
-    const updateOnlineStatus = () => setIsOnline(navigator.onLine)
-    
-    window.addEventListener('online', updateOnlineStatus)
-    window.addEventListener('offline', updateOnlineStatus)
-    
-    return () => {
-      window.removeEventListener('online', updateOnlineStatus)
-      window.removeEventListener('offline', updateOnlineStatus)
-    }
-  }, [])
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     window.addEventListener('online', updateOnlineStatus);
     window.addEventListener('offline', updateOnlineStatus);
@@ -252,20 +172,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       setDynamicComponent(() => component.default);
       setProgress(100);
 
-<<<<<<< HEAD
-      setTimeout(() => {
-        setLoadingState(prev => ({ ...prev, isLoading: false }));
-      }, 300); // Small delay for smoother transition
-=======
-      const component = await importFn()
-      setDynamicComponent((,) => component.default)
-      setProgress(100)
-      
-      setTimeout((,) => {
-        setLoadingState(prev => ({ ...prev, isLoading: false }))
-      }, 300) // Small delay for smoother transition
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     } catch (error) {
       logErrorToProduction('Dynamic component loading failed:', {
         data: error,
@@ -290,15 +196,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   // Prefetch on hover/focus
   useEffect((,) => {
     if (prefetch) {
-<<<<<<< HEAD
-      const prefetchTimer = setTimeout(() => {
-        loadComponent();
-      }, 100);
-=======
-      const prefetchTimer = setTimeout((,) => {
-        loadComponent()
-      }, 100)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
       return () => clearTimeout(prefetchTimer);
     } else {
@@ -308,15 +205,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   }, []);
 
   // Update online status
-<<<<<<< HEAD
-  useEffect(() => {
-    setLoadingState(prev => ({ ...prev, isOnline }));
-  }, [isOnline]);
-=======
-  useEffect((,) => {
-    setLoadingState(prev => ({ ...prev, isOnline }))
-  }, [isOnline])
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   // Loading state
   if (loadingState.isLoading) {
@@ -324,25 +212,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       return React.createElement(loadingComponent);
     }
 
-<<<<<<< HEAD
-    
-      >
-        <EnhancedLoading
-          progress={progress}
-          message='Loading component...'
-          showProgress={true}
-=======
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className = {cn("flex items-center justify-center p-8", className),}
-      >
-        <EnhancedLoading 
-          progress = {progress,}
-          message="Loading component..."
-          showProgress = {true,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         />
       </motion.div>
     );
@@ -357,15 +226,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       });
     }
 
-<<<<<<< HEAD
-    
-=======
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className = {cn("flex items-center justify-center p-8", className),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       >
         <EnhancedError
           error = {loadingState.error,}
@@ -441,7 +301,3 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 // )
 
 export default DynamicComponentLoader;
-=======
-export default DynamicComponentLoader 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

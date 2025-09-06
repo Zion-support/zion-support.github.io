@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Smartphone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { AppStoreButtons } from './AppStoreButtons';
-import { Card, CardContent } from '@/components/ui/card';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-=======
-
-import React from "react";
-import Link from "next/link";
-import { ArrowRight, Smartphone } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { AppStoreButtons } from "./AppStoreButtons";
-import { Card, CardContent } from "@/components/ui/card";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = '#'; // Replace with actual App Store URL
@@ -43,60 +25,7 @@ export const MobileLaunchHero: React.FC = () => {
                 googlePlayUrl={googlePlayUrl}
               />
             </div>
-=======
-            
-            <div className="mb-8">
-              <AppStoreButtons 
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-=======
-                appStoreUrl = {appStoreUrl,}
-                googlePlayUrl = {googlePlayUrl,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              />
-            </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-            <div className='flex flex-wrap gap-4'>
-              <Link href='/open-app'>
-                <Button
-                  variant='outline'
-                  size='lg'
-                  className='flex gap-2 border-white text-white hover:bg-white/10'
-<<<<<<< HEAD
-                >                  Open App
-                  <ArrowRight size={20} />
-                </Button>
-              </Link>
-            
-            <div className="flex flex-wrap gap-4">
-              <Link href="/open-app">
-                <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                  Open App
-                  <ArrowRight size={20} />
-                </Button>
-              </Link>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-              <Link href='#features'>
-                <Button
-                  variant='ghost'
-                  size='lg'
-                  className='text-white hover:bg-white/10'
-<<<<<<< HEAD
-                >                  See Features
-=======
-              
-              <Link href="#features">
-                <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  See Features
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </Button>
               </Link>
             </div>
@@ -112,14 +41,14 @@ export const MobileLaunchHero: React.FC = () => {
                   <div className='w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center'>
                     <Smartphone className='w-40 h-40 text-white opacity-40' />                    {/* In production, replace with actual app screenshot */}
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
-              
+
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                     {/* In production, replace with actual app screenshot */}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </div>
                 </CardContent>
               </Card>
@@ -131,8 +60,3 @@ export const MobileLaunchHero: React.FC = () => {
   );
 };
 "
-=======
-  )
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

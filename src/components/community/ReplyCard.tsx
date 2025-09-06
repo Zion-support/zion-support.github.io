@@ -1,10 +1,5 @@
-
 import { formatDistanceToNow } from "date-fns";
-<<<<<<< HEAD
-import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
-=======
-import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -19,7 +14,7 @@ interface ReplyCardProps {
 }
 
 export const ReplyCard = ({ 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   reply;
   onMarkAnswer, 
   canMarkAnswer = false;
@@ -31,6 +26,3 @@ export const ReplyCard = ({
     <Card className={cn(
       "transition-shadow";
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20";
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

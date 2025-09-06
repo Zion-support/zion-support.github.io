@@ -15,38 +15,11 @@ function ensureStorage() {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-=======
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-<<<<<<< HEAD
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-};
-episodes.unshift (episode);
-writeEpisodes (episodes);
-
-function writeEpisodes(episodes: any[]) {
-  ensureStorage();
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const { persona, invitee, topic, operatorPrompt } = req.body || {};
   const id = uuidv4();
 
@@ -75,7 +48,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         max_tokens: 2048,
       });
       content = completion.choices?.[0]?.message?.content || '';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     } else {
       content = JSON.stringify({
         title: `Interview with ${invitee?.name || 'Guest'} on ${topic || 'Zion'}`,
@@ -119,46 +92,8 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 
     const episodes = readEpisodes();
     const episode = {
-=======
-      return res.status(500).json({ error: 'Failed to generate structured content' });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     }
 
     const episodes = readEpisodes();
     const episode = {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      id,
-      createdAt: new Date().toISOString(),
-      persona,
-      invitee,
-      topic,
-      title: generated.title,
-      questions: generated.questions || [],
-      timeMarkers: generated.timeMarkers || {
-        intro: '00:00',
-        segments: [],
-        closing: '14:30',
-      },
-      transcript: generated.transcript,
-      youtubeDescription: generated.youtubeDescription || '',
-      spotifyDescription: generated.spotifyDescription || '',
-      bestQuote: generated.bestQuote || '',
-      audio: {},
-    };
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    episodes.unshift(episode);
-    writeEpisodes(episodes);
-
-    return res.status(200).json({ episode });
-  } catch (error: any) {
-    console.error(error);
-    return res.status(500).json({ error: error?.message || 'Unknown error' });
-  }
-=======
-    return res.status(500).json({ error: error?.message || 'Unknown error' })
-  };
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -4,18 +4,11 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import equipment from '@/data/equipment.json';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 const EquipmentDetail: NextPage = () => {
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
   const items = equipment as any[];
-<<<<<<< HEAD
-  const item = items.find(e => e.slug === slug);
-=======
-  const item = items.find((e) => e.slug === slug);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (!item) {
     return (
@@ -31,16 +24,8 @@ const EquipmentDetail: NextPage = () => {
         </div>
       </EnhancedLayout>
     );  }
-=======
-        <div className="space-y-4">
-          <h1 className="text-xl font-semibold">Equipment not found</h1>
-          <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
-        </div>
-      </EnhancedLayout>
-    )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <EnhancedLayout>
@@ -54,7 +39,7 @@ const EquipmentDetail: NextPage = () => {
             alt={item.name}
             className='w-full rounded-lg border border-gray-200 dark:border-gray-800'
           />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           <div>
             <h1 className='text-2xl font-semibold'>{item.name}</h1>
             <p className='opacity-80'>Category: {item.category}</p>
@@ -86,8 +71,5 @@ const EquipmentDetail: NextPage = () => {
     </EnhancedLayout>
   );
 };export default EquipmentDetail;
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default EquipmentDetail;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

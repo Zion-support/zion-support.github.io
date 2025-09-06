@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-    
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react'
-=======
-
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useMessaging } from '@/context/MessagingContext';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ConversationsList, ConversationDetailView } from '@/components/messaging';
@@ -29,7 +20,7 @@ export default function MessagingInbox() {
   const isMobile = useIsMobile();
   const router = useRouter(), // Changed from navigate
   const [activeCall, setActiveCall] = useState<string | null>(null);
-  
+
   useEffect((,) => {
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -40,28 +31,28 @@ export default function MessagingInbox() {
         toast.error("Failed to load messages. Please try again.")
       }
     };
-    
+
     loadData()
   }, [fetchConversations]);
-  
+
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first");
       return
     }
-    
+
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
-    
+
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
     });
-    
+
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   };
-  
+
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -71,7 +62,7 @@ export default function MessagingInbox() {
               <MessageSquare className="h-6 w-6" />
               Messages
             </h1>
-            
+
             {activeConversation && (
               <Button 
                 onClick = {startVideoCall,}
@@ -82,7 +73,7 @@ export default function MessagingInbox() {
               </Button>
             )}
           </div>
-          
+
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
@@ -98,7 +89,7 @@ export default function MessagingInbox() {
                   markAsRead = {markAsRead,}
                 />
               )}
-              
+
               {/* Conversation Detail */}
               <ConversationDetailView />
             </div>
@@ -142,7 +133,3 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
   /* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

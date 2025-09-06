@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-          
-import { logInfo, logWarn } from '@/utils/productionLogger';
-
-
-=======
-import React, { useState, useEffect, useRef, useMemo } from "react";
-import { useTranslation } from "react-i18next";
-import { Search, X } from 'lucide-react';
-import { Input } from "@/components/ui/input";
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
-import { SearchSuggestion } from "@/types/search";
-import { useDebounce } from "@/hooks/useDebounce";
-import { useRouter } from "next/router";
-import { slugify } from "@/lib/slugify";
-import { debounce } from "lodash";
-import { logInfo, logWarn } from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string,) => void,
@@ -23,13 +5,7 @@ interface EnhancedSearchInputProps {
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
    */
-<<<<<<< HEAD
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
-  placeholder?: string;
-=======
-  onSelectSuggestion?: (suggestion: SearchSuggestion,) => void,
-  placeholder?: string,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
   /**
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
@@ -70,7 +46,7 @@ export function EnhancedSearchInput({
           const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {
             signal: AbortSignal.timeout(5000) // 5 second timeout
           });
-          
+
           if (response.ok) {
             const data = await response.json();
             if (Array.isArray(data)) {
@@ -119,11 +95,6 @@ export function EnhancedSearchInput({
         }
         setHighlightedIndex(-1);
       })
-<<<<<<< HEAD
-      .catch(() => setFilteredSuggestions([]));
-=======
-      .catch((,) => setFilteredSuggestions([])),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     return () => controller.abort()
   }, [debounced, searchSuggestions]);
@@ -136,7 +107,7 @@ export function EnhancedSearchInput({
         // setHighlightedIndex(-1), // Already handled in onBlur generally
       }
     }
-    
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, []);
@@ -211,7 +182,7 @@ export function EnhancedSearchInput({
         break
     }
   };
-  
+
   return (
     <div
       className="relative w-full"
@@ -231,36 +202,14 @@ export function EnhancedSearchInput({
           type="text"
           id="enhanced-search-input"
           name="search"
-<<<<<<< HEAD
-          value={value}
-          onChange={(e) => {
-            onChange(e.target.value);
-            setEnterHandledPostFocus(false)
-          }}
-          onFocus={(e) => {
-            setIsFocused(true);
-=======
-          value = {value,}
-          onChange={(e,) => {
-            onChange(e.target.value),
-            setEnterHandledPostFocus(false)
-          }}
-          onFocus={(e,) => {
-            setIsFocused(true),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             setHighlightedIndex(-1), // Explicitly reset on focus
             const currentVal = e.target.value;
             setValueOnFocus(currentVal);
             setEnterHandledPostFocus(false);
             e.target.setSelectionRange(currentVal.length, currentVal.length)
           }}
-<<<<<<< HEAD
-          onBlur={(e) => {
-            const relatedTarget = e.relatedTarget as HTMLElement;
-=======
-          onBlur = {(e,) => {
-            const relatedTarget = e.relatedTarget as HTMLElement,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
               setIsFocused(false);
               setHighlightedIndex(-1)
@@ -284,7 +233,7 @@ export function EnhancedSearchInput({
           </button>
         )}
       </div>
-      
+
       <AutocompleteSuggestions
         suggestions = {filteredSuggestions,}
         searchTerm = {value,}
@@ -318,8 +267,3 @@ break ;
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
 }</div> <AutocompleteSuggestions /> </div>) ;
 }'"
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

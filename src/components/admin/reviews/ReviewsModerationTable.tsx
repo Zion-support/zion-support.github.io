@@ -1,36 +1,10 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useMutation } from '@tanstack/react-query';
-import { Check, X, User, Star, MoreHorizontal } from 'lucide-react';
-import { format } from 'date-fns';
-import { toast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-import { Review, ReviewStatus } from '@/types/reviews';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-=======
-import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
-import { Check, X, User, Star, MoreHorizontal } from 'lucide-react';
-import { format } from "date-fns";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { Review, ReviewStatus } from "@/types/reviews";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-  TableRow,;
-} from '@/components/ui/table';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-=======
-  TableRow} from "@/components/ui/table",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import {
   Dialog,
   DialogContent,
@@ -43,17 +17,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-<<<<<<< HEAD
-  DropdownMenuTrigger,;
-} from '@/components/ui/dropdown-menu';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 
-=======
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ReviewsModerationTableProps {
   reviews: Review[];
 isLoading: boolean;
@@ -94,18 +58,7 @@ export function ReviewsModerationTable({
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
       reviewId,
-<<<<<<< HEAD
-      status,
-    }: {
-      reviewId: string;
-      status: ReviewStatus;
-    }) => {
-=======
-      status}: {
-      reviewId: string,
-      status: ReviewStatus
-    },) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
       const { error } = await supabase
         .from('reviews')
         .update({ status })
@@ -114,11 +67,7 @@ export function ReviewsModerationTable({
       if (error) throw error;
       return { reviewId, status };
     },
-<<<<<<< HEAD
-    onSuccess: data => {
-=======
-    onSuccess: (data,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
       toast({
         title: 'Review updated',
         description: `Review has been ${data.status}.`,
@@ -137,19 +86,6 @@ export function ReviewsModerationTable({
 
   const getInitials = (name: string,) => {
     return name
-<<<<<<< HEAD
-      .split(' ')
-      .map(n => n[0])
-      .join('')
-      .toUpperCase();
-  };
-=======
-      .split(" ")
-      .map((n,) => n[0])
-      .join("")
-      .toUpperCase()
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   if (isLoading) {
     return (
@@ -173,49 +109,9 @@ export function ReviewsModerationTable({
     );
   }
 
-<<<<<<< HEAD
-  const handleApprove = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: 'approved' });
-  };
-
-  const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: 'rejected' });
-  };
-
-  const handleViewDetails = (review: Review) => {
-    setSelectedReview(review);
-    setViewDetailsOpen(true);
-  };
-=======
-  const handleApprove = (reviewId: string,) => {
-    updateReviewStatus({ reviewId, status: "approved" })
-  },
-
-  const handleReject = (reviewId: string,) => {
-    updateReviewStatus({ reviewId, status: "rejected" })
-  },
-
-  const handleViewDetails = (review: Review,) => {
-    setSelectedReview(review),
-    setViewDetailsOpen(true)
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   const renderStars = (rating: number,) => {
     return (
-<<<<<<< HEAD
-      <div className='flex'>
-        {[1, 2, 3, 4, 5].map(star => (
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
-=======
-      <div className="flex">
-        {[1, 2, 3, 4, 5].map((star,) => (
-          <Star
-            key = {star,}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           />
         ))}
       </div>
@@ -236,24 +132,14 @@ export function ReviewsModerationTable({
           </TableRow>
         </TableHeader>
         <TableBody>
-<<<<<<< HEAD
-          {reviews.map(review => (
-=======
-          {reviews.map((review,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             <TableRow key={review.id}>
               <TableCell>
                 <div className='flex items-center gap-2'>
                   <Avatar className='h-8 w-8'>
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage
-<<<<<<< HEAD
-                        src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name || ''}
-=======
-                        src = {review.reviewer_profile.avatar_url,}
-                        alt = {review.reviewer_profile.display_name || "",}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       />
                     ) : (
                       <AvatarFallback>
@@ -298,36 +184,12 @@ export function ReviewsModerationTable({
                   {review.status === 'pending' && (
                     <>
                       <Button
-<<<<<<< HEAD
-                        size='sm'
-                        variant='outline'
-                        className='h-8 w-8 p-0'
-                        onClick={() => handleApprove(review.id)}
-                        disabled={isPending}
-=======
-                        size="sm"
-                        variant="outline"
-                        className="h-8 w-8 p-0"
-                        onClick = {(,) => handleApprove(review.id),}
-                        disabled = {isPending,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       >
                         <Check className='h-4 w-4 text-green-500' />
                       </Button>
                       <Button
-<<<<<<< HEAD
-                        size='sm'
-                        variant='outline'
-                        className='h-8 w-8 p-0'
-                        onClick={() => handleReject(review.id)}
-                        disabled={isPending}
-=======
-                        size="sm"
-                        variant="outline"
-                        className="h-8 w-8 p-0"
-                        onClick = {() => handleReject(review.id),}
-                        disabled = {isPending,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       >
                         <X className='h-4 w-4 text-red-500' />
                       </Button>
@@ -345,37 +207,7 @@ export function ReviewsModerationTable({
                       >
                         View details
                       </DropdownMenuItem>
-<<<<<<< HEAD
-                      {review.status === 'approved' && (
-                        <DropdownMenuItem
-                          onClick={() =>
-                            updateReviewStatus({
-                              reviewId: review.id,
-                              status: 'rejected',
-                            })
-                          }
-                        >
-                          Mark as rejected
-                        </DropdownMenuItem>
-                      )}
-                      {review.status === 'rejected' && (
-                        <DropdownMenuItem
-                          onClick={() =>
-                            updateReviewStatus({
-                              reviewId: review.id,
-                              status: 'approved',
-                            })
-                          }
-                        >
-=======
-                      {review.status === "approved" && (
-                        <DropdownMenuItem onClick={(,) => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
-                          Mark as rejected
-                        </DropdownMenuItem>
-                      )}
-                      {review.status === "rejected" && (
-                        <DropdownMenuItem onClick={(,) => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                           Mark as approved
                         </DropdownMenuItem>
                       )}
@@ -405,13 +237,7 @@ export function ReviewsModerationTable({
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
-<<<<<<< HEAD
-                        src={selectedReview.reviewer_profile.avatar_url}
-                        alt={selectedReview.reviewer_profile.display_name || ''}
-=======
-                        src = {selectedReview.reviewer_profile.avatar_url,}
-                        alt = {selectedReview.reviewer_profile.display_name || "",}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                       />
                     ) : (
                       <AvatarFallback>
@@ -464,15 +290,7 @@ export function ReviewsModerationTable({
                   )}
                   {selectedReview.would_work_again !== undefined && (
                     <Badge
-<<<<<<< HEAD
-                      variant={
-                        selectedReview.would_work_again
-                          ? 'default'
-                          : 'secondary'
-                      }
-=======
-                      variant = {selectedReview.would_work_again ? "default" : "secondary",}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                     >
                       {selectedReview.would_work_again
                         ? 'Would work again'
@@ -499,15 +317,7 @@ export function ReviewsModerationTable({
               {selectedReview.status === 'pending' && (
                 <>
                   <Button
-<<<<<<< HEAD
-                    variant='destructive'
-                    onClick={() => handleReject(selectedReview.id)}
-                    disabled={isPending}
-=======
-                    variant="destructive"
-                    onClick = {(,) => handleReject(selectedReview.id),}
-                    disabled = {isPending,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                   >
                     Reject
                   </Button>
@@ -521,38 +331,14 @@ export function ReviewsModerationTable({
               )}
               {selectedReview.status === 'approved' && (
                 <Button
-<<<<<<< HEAD
-                  variant='destructive'
-                  onClick={() =>
-                    updateReviewStatus({
-                      reviewId: selectedReview.id,
-                      status: 'rejected',
-                    })
-                  }
-                  disabled={isPending}
-=======
-                  variant="destructive"
-                  onClick={(,) => updateReviewStatus({ reviewId: selectedReview.id, status: "rejected" })}
-                  disabled = {isPending,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 >
                   Mark as Rejected
                 </Button>
               )}
               {selectedReview.status === 'rejected' && (
                 <Button
-<<<<<<< HEAD
-                  onClick={() =>
-                    updateReviewStatus({
-                      reviewId: selectedReview.id,
-                      status: 'approved',
-                    })
-                  }
-                  disabled={isPending}
-=======
-                  onClick={(,) => updateReviewStatus({ reviewId: selectedReview.id, status: "approved" })}
-                  disabled = {isPending,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 >
                   Mark as Approved
                 </Button>
@@ -639,7 +425,3 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</DialogFooter> </DialogContent> </Dialog>) ;
 }</>) ;
 }"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

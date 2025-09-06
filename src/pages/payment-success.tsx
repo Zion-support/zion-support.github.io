@@ -3,28 +3,12 @@ import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router'; // Changed from useNavigate
 import { CheckCircle2 } from 'lucide-react';import { useTranslation } from 'react-i18next';
 
-<<<<<<< HEAD
-=======
+import { useTranslation } from 'react-i18next';
 
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useTranslation } from 'react-i18next';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function PaymentSuccess() {
   const router = useRouter(); // Changed from navigate
   const { t } = useTranslation();
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   return (
     <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>
       <div className='max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center'>
@@ -52,11 +36,9 @@ export default function PaymentSuccess() {
             variant='outline'
             onClick={() => router.push('/')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >
-=======
-            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             {t('errors.return_home')}
           </Button>
         </div>
@@ -64,7 +46,3 @@ export default function PaymentSuccess() {
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

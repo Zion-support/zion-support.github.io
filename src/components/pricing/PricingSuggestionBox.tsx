@@ -10,18 +10,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Loader2, Info, ThumbsUp } from 'lucide-react';
 import { PricingSuggestion } from '@/services/pricingSuggestionService';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Loader2, Info, ThumbsUp } from 'lucide-react';
-import { PricingSuggestion } from "@/services/pricingSuggestionService";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null;
   isLoading: boolean;
@@ -32,12 +21,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion,
   isLoading,
   onApplySuggestion,
-<<<<<<< HEAD
-  rateType,
-}) => {
-=======
-  rateType},) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
   if (isLoading) {
     return (
       <Card className='border border-dashed border-muted'>
@@ -50,19 +34,16 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
           <div className="text-center">
             <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
             <p className="text-sm text-muted-foreground">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
               Generating optimal pricing suggestion...
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </p>
           </div>
         </CardContent>
       </Card>
     );  }
-=======
-    )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (!suggestion) {
     return null;
@@ -90,57 +71,21 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
         <div className="flex items-center justify-between">
           <h4 className="font-semibold">AI Suggested Price</h4>
           <Badge variant="outline" className={confidenceColor}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
             {suggestion.confidence} confidence
           </Badge>
         </div>
 
-<<<<<<< HEAD
-        <div className='bg-muted/50 rounded-md p-3 text-center'>
-          <span className='text-2xl font-bold'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
-          </span>
-          <span className='text-sm text-muted-foreground ml-1'>
-            {rateType === 'hourly' ? '/hour' : ' total'}
-          </span>
-        </div>
-
-        <div className='flex items-start space-x-2 text-sm text-muted-foreground'>
-          <Info className='h-4 w-4 flex-shrink-0 mt-1' />
-          <p>{suggestion.explanation}</p>
-        </div>
-
-        <div className='flex items-center justify-between'>          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  variant='default'
-=======
-        <div className="flex items-center justify-between">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  variant='default'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                  onClick={onApplySuggestion}
-                  className='w-full'
-=======
-                  variant="default"
-                  onClick = {onApplySuggestion,}
-                  className="w-full"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 >
                   <ThumbsUp className='h-4 w-4 mr-2' /> Apply Suggestion                </Button>
-=======
-                  <ThumbsUp className="h-4 w-4 mr-2" /> Apply Suggestion
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </TooltipTrigger>
               <TooltipContent>
                 <p>Apply this suggestion to your pricing field</p>
@@ -156,20 +101,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   );
 };
 "
-=======
-        
-        <p className="text-xs text-center text-muted-foreground pt-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           Based on market data & trends. You can adjust as needed.
         </p>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  );
-};
-"
-=======
-  )
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

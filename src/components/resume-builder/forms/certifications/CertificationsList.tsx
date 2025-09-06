@@ -1,58 +1,22 @@
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { Certification } from '@/types/resume';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Edit, Trash2 } from 'lucide-react';
 import { format } from 'date-fns';
-
-<<<<<<< HEAD
-interface CertificationsListProps {
-  certifications: Certification[];
-  onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void;
-=======
-import { Certification } from '@/types/resume';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Edit, Trash2 } from 'lucide-react';
-import { format } from 'date-fns';
-interface CertificationsListProps {
-  certifications: Certification[],
-  onEdit: (cert: Certification,) => void,
-  onDelete: (id: string,) => void
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function CertificationsList({
   certifications,
   onEdit,
   onDelete,
 }: CertificationsListProps) {  if (certifications.length === 0) {
-=======
-export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   if (certifications.length === 0) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     return null;
   }
 
   return (
-<<<<<<< HEAD
-    <div className='space-y-4'>
-      <h3 className='text-md font-medium'>Added Certifications</h3>
-      {certifications.map(cert => (
-        <Card key={cert.id} className='bg-muted/40'>
-          <CardContent className='pt-6'>
-            <div className='flex justify-between'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    <div className="space-y-4">
-      <h3 className="text-md font-medium">Added Certifications</h3>
-      {certifications.map((cert,) => (
-        <Card key={cert.id} className="bg-muted/40">
-          <CardContent className="pt-6">
-            <div className="flex justify-between">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               <div>
                 <h4 className='font-medium'>{cert.name}</h4>
                 <p className='text-sm text-muted-foreground'>
@@ -76,86 +40,24 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                 </p>
               </div>
               <div className='flex gap-2'>
-=======
-                    <> · Expires: {typeof cert.expiration_date === 'string' 
-                      ? cert.expiration_date 
-                      : format(cert.expiration_date, 'MMM yyyy')}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </>
                   )}
                 </p>
               </div>
-<<<<<<< HEAD
-              <div className='flex gap-2'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                <Button
-<<<<<<< HEAD
-                  variant='ghost'
-                  size='icon'
-                  onClick={() => onEdit(cert)}
-                  aria-label='Edit certification'
-=======
-                  variant="ghost"
-                  size="icon"
-                  onClick = {() => onEdit(cert),}
-                  aria-label="Edit certification"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 >
                   <Edit className='h-4 w-4' />
                 </Button>
                 <Button
-<<<<<<< HEAD
-                  variant='ghost'
-                  size='icon'
-                  onClick={() => onDelete(cert.id!)}
-                  aria-label='Delete certification'
-=======
-                  variant="ghost"
-                  size="icon"
-                  onClick = {() => onDelete(cert.id!),}
-                  aria-label="Delete certification"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                 >
                   <Trash2 className='h-4 w-4' />                </Button>
               </div>
             </div>
             {cert.credential_url && (
-=======
-                  <Trash2 className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </Button>
               </div>
             </div>
             {cert.credential_url && (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              <p className='text-xs mt-2'>
-                <a
-                  href={cert.credential_url}
-                  target='_blank'
-                  rel='noopener noreferrer'
-<<<<<<< HEAD
-                  className='text-primary hover:underline'                >
-              <p className="text-xs mt-2">
-                <a 
-                  href = {cert.credential_url,}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                  View credential
-                </a>
-              </p>
-            )}
-          </CardContent>
-        </Card>
-      ))}
-    </div>
-  );
-}
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

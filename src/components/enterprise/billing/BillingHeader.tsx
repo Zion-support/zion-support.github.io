@@ -2,15 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Download, Mail, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Download, Mail, BarChart3 } from 'lucide-react';
-import Link from "next/link";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function BillingHeader() {
   return (
     <div className='space-y-2'>
@@ -30,13 +22,9 @@ export function BillingHeader() {
           <Button variant='outline' size='sm' className='gap-1' asChild>
             <Link href='/dashboard/client/analytics'>
               <BarChart3 className='h-4 w-4' />              Analytics
-=======
-          <Button variant="outline" size="sm" className="gap-1" asChild>
-            <Link href="/dashboard/client/analytics">
-              <BarChart3 className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               Analytics
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </Link>
           </Button>
         </div>
@@ -47,12 +35,3 @@ export function BillingHeader() {
       </p>
     </div>
   );
-=======
-      <p className="text-muted-foreground">
-        Manage your subscription, view invoice history, and update payment methods.
-      </p>
-    </div>
-  );
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

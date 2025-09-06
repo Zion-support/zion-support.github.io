@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { logDebug } from '@/utils/productionLogger';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,;
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import {
-  ArrowRight,
-  Check,
-  ExternalLink,
-  Slack,
-  Briefcase,
-  Users,;
-} from 'lucide-react';
-
-=======
-
-import React from "react";
-import { logDebug } from '@/utils/productionLogger';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface IntegrationCardProps {
   title: string;
   description: string;
@@ -93,44 +63,19 @@ export function IntegrationCard({
           <Button variant='default' className='w-full' onClick={onConnect}>
             <span>Connect</span>
             <ArrowRight className='ml-1.5 h-3.5 w-3.5' />          </Button>
-=======
-            <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         )}
       </CardFooter>
     </Card>
   );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function IntegrationCards() {
   return (
     <div className='grid md:grid-cols-3 gap-6'>
       <IntegrationCard
-<<<<<<< HEAD
-        title='Slack'
-        description='Send notifications and interact with Zion from Slack.'
-        icon={<Slack className='h-5 w-5' />}
-        onConnect={() => logDebug('Connect Slack clicked')}
-      />
-      <IntegrationCard
-        title='Salesforce'
-        description='Sync leads and opportunities with Salesforce.'
-        icon={<Briefcase className='h-5 w-5' />}
-        onConnect={() => logDebug('Connect Salesforce clicked')}
-=======
-        title="Slack"
-        description="Send notifications and interact with Zion from Slack."
-        icon = {<Slack className="h-5 w-5" />,}
-        onConnect = {(,) => logDebug('Connect Slack clicked'),}
-      />
-      <IntegrationCard
-        title="Salesforce"
-        description="Sync leads and opportunities with Salesforce."
-        icon = {<Briefcase className="h-5 w-5" />,}
-        onConnect = {() => logDebug('Connect Salesforce clicked'),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
       />
       <IntegrationCard
         title='Microsoft Teams'
@@ -140,22 +85,3 @@ export function IntegrationCards() {
     </div>
   );
 }
-=======
-        title="Microsoft Teams"
-        description="Receive updates through Microsoft Teams."
-<<<<<<< HEAD
-        icon={<Users className="h-5 w-5" />}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-        onConnect={() => logDebug('Connect Teams clicked')}
-=======
-        icon = {<Users className="h-5 w-5" />,}
-        onConnect = {() => logDebug('Connect Teams clicked'),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      />
-    </div>
-  );
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

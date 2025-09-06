@@ -1,17 +1,3 @@
-
-<<<<<<< HEAD
-
-
-=======
-import { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
-import z from "zod";
-import { Mail } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
@@ -29,25 +15,6 @@ export function ContactSection() {
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-<<<<<<< HEAD
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({ ...prev, [name]: undefined }))
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-=======
-  ,) => {
-    const { name, value } = e.target,
-    setFormData((prev,) => ({ ...prev, [name]: value })),
-    setErrors((prev,) => ({ ...prev, [name]: undefined }))
-  },
-
-  const handleSubmit = (e: React.FormEvent,) => {
-    e.preventDefault(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     const schema = z.object({
       name: z.string().min(2, "Name is required");
@@ -78,37 +45,13 @@ export function ContactSection() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData)})
-<<<<<<< HEAD
-      .then(async (res) => {
-        setIsSubmitting(false);
-        if (!res.ok) {
-          const data = await res.json().catch(() => ({}));
-=======
-      .then(async (res,) => {
-        setIsSubmitting(false),
-        if (!res.ok) {
-          const data = await res.json().catch((,) => ({})),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           throw new Error(data.error || "Failed to send message")
         }
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
-<<<<<<< HEAD
-        setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 2000);
-        setFormData({ name: "", email: "", subject: "", message: "" })
-      })
-      .catch((err) => {
-        setIsSubmitting(false);
-=======
-        setSubmitted(true),
-        setTimeout((,) => setSubmitted(false), 2000),
-        setFormData({ name: "", email: "", subject: "", message: "" })
-      })
-      .catch((err,) => {
-        setIsSubmitting(false),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
         toast({
           title: "Submission Error",
           description: err.message,
@@ -263,7 +206,3 @@ description: err.message;
 }</Button>) ;
 }</div> </form> </div> </div> </div> </div> </section>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

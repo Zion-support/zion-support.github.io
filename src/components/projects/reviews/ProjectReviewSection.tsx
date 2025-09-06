@@ -1,31 +1,5 @@
 import { Project } from '@/types/projects';
-<<<<<<< HEAD
 
-import { useState } from 'react';
-import { Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { ReviewsList } from '@/components/reviews/ReviewsList';
-import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal';
-import { useReviews } from '@/hooks/useReviews';
-import { useAuth } from '@/hooks/useAuth';
-
-=======
-import { useState } from "react";
-import { Star } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ReviewsList } from "@/components/reviews/ReviewsList";
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
-import { useReviews } from "@/hooks/useReviews";
-import { useAuth } from "@/hooks/useAuth";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ProjectReviewSectionProps {
   project: Project;
 
@@ -91,16 +65,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                         ? 'published'
                         : 'pending approval'}
                     </p>
-<<<<<<< HEAD
-                    {userReview.status === 'pending' && (
-                      <Button
-                        variant='outline'
-                        onClick={() => setIsReviewModalOpen(true)}
-                      >
-=======
-                    {userReview.status === "pending" && (
-                      <Button variant="outline" onClick={(,) => setIsReviewModalOpen(true)}>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                         Edit Review
                       </Button>
                     )}
@@ -140,7 +105,3 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       )}
     </Card>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

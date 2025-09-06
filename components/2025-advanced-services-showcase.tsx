@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 import {
   Search,
   Grid,
@@ -68,8 +68,7 @@ const cuttingEdgeITInfrastructureServices = [
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -81,17 +80,8 @@ const allServices = [
   ...advancedEnterpriseServices2025,
   ...innovativeMicroSaasExpansion2025,
   ...cuttingEdgeITInfrastructureServices,];
-=======
-  website: 'https://ziontechgroup.com'
-};
 
-const allServices = [
-  ...advancedEnterpriseServices2025;
-      ...innovativeMicroSaasExpansion2025;
-  ...cuttingEdgeITInfrastructureServices
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const categories = [
   {
@@ -137,7 +127,7 @@ const categories = [
     icon: <Atom className="w-6 h-6" />,
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   },
   {
     id: 'enterprise',
@@ -172,53 +162,28 @@ const categories = [
     name: 'Quantum Computing',
     icon: <Atom className='w-6 h-6' />,
     color: 'from-violet-500 to-indigo-500',
-<<<<<<< HEAD
-    description: 'Quantum computing solutions',
-  },];
 
-const getServiceCategory = (service: any) => {
-  if (service.category) return service.category;
-  return 'Other';};
-=======
-    description: 'Quantum computing solutions'
-  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
-<<<<<<< HEAD
-  return 'Other';
-=======
-  return 'Other'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   return 'Contact for pricing';};
-=======
-  return 'Contact for pricing'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features;
   if (service.keyFeatures) return service.keyFeatures;
   return [];
 };
-=======
-  return []
-};
 
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function AdvancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -266,7 +231,7 @@ export default function AdvancedServicesShowcase() {
           );
         return false;
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     }
 
     if (searchTerm) {
@@ -284,11 +249,8 @@ export default function AdvancedServicesShowcase() {
     }
 
     setFilteredServices(filtered);  }, [selectedCategory, searchTerm]);
-=======
-    setFilteredServices(filtered)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }, [selectedCategory, searchTerm]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
@@ -302,7 +264,7 @@ export default function AdvancedServicesShowcase() {
       {service.popular && (
         <div className='absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1'>
           <Star className='w-4 h-4' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           Popular
         </div>
       )}
@@ -353,52 +315,14 @@ export default function AdvancedServicesShowcase() {
             </span>
           </div>
         </div>
-=======
-          <div className="flex items-center gap-2">
-            <Star className="w-4 h-4 text-yellow-500" />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               {service.rating}/5 ({service.reviews} reviews)
             </span>
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-        <div className='mb-6'>
-          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
-            Key Features:
-          </h4>
-          <div className='space-y-1'>
-            {getServiceFeatures(service)
-              .slice(0, 3)
-              .map((feature: string, index: number) => (
-                <div key={index} className='flex items-center gap-2'>
-                  <Check className='w-3 h-3 text-green-500' />
-                  <span className='text-sm text-gray-600 dark:text-gray-400'>
-                    {feature}
-                  </span>
-                </div>
-              ))}
-            {getServiceFeatures(service).length > 3 && (
-<<<<<<< HEAD
-              <span className='text-sm text-gray-500 dark:text-gray-400'>                +{getServiceFeatures(service).length - 3} more features
-=======
-        
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
-          <div className="space-y-1">
-            {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (
-              <div key={index} className="flex items-center gap-2">
-                <Check className="w-3 h-3 text-green-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
-              </div>
-            ))}
-            {getServiceFeatures(service).length > 3 && (
-              <span className="text-sm text-gray-500 dark:text-gray-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 +{getServiceFeatures(service).length - 3} more features
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </span>
             )}
           </div>
@@ -409,7 +333,7 @@ export default function AdvancedServicesShowcase() {
             ROI & Benefits:
           </h4>
           <p className='text-sm text-gray-600 dark:text-gray-400'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             {service.roi}
           </p>
         </div>
@@ -435,11 +359,9 @@ export default function AdvancedServicesShowcase() {
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'          >
-=======
-            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             Contact
           </a>
         </div>
@@ -462,7 +384,7 @@ export default function AdvancedServicesShowcase() {
             className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}
           >
             <span className='text-3xl'>{service.icon}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
 
           <div className='flex-1'>
@@ -476,141 +398,29 @@ export default function AdvancedServicesShowcase() {
                   )}
                 </h3>
                 <p className='text-gray-600 dark:text-gray-300 mb-3'>
-=======
-                    <span className="ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       Popular
                     </span>
                   )}
                 </h3>
-<<<<<<< HEAD
-                <p className='text-gray-600 dark:text-gray-300 mb-3'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                  {service.tagline}
-                </p>
-              </div>
 
-              <div className='text-right'>
-                <div className='text-2xl font-bold text-gray-900 dark:text-white'>
-                  {getServicePricing(service)}
-                </div>
-                <div className='text-sm text-gray-500 dark:text-gray-400'>                  {service.trialDays} day trial
-                </div>
-              </div>
-            </div>
-=======
-                <div className="text-sm text-gray-500 dark:text-gray-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {service.trialDays} day trial
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-4'>
-              <div className='flex items-center gap-2'>
-                <CheckCircle className='w-4 h-4 text-green-500' />
-                <span className='text-sm text-gray-600 dark:text-gray-400'>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                  {service.setupTime} setup
-                </span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <Users className='w-4 h-4 text-blue-500' />
-                <span className='text-sm text-gray-600 dark:text-gray-400'>
-                  {service.customers
-                    ? service.customers.toLocaleString()
-                    : '1000'}
-                  + customers
-                </span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <Star className='w-4 h-4 text-yellow-500' />
-                <span className='text-sm text-gray-600 dark:text-gray-400'>                  {service.rating}/5 ({service.reviews} reviews)
-                </span>
-              </div>
-            </div>
-
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>
-=======
-              <div className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-yellow-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {service.rating}/5 ({service.reviews} reviews)
                 </span>
               </div>
             </div>
-<<<<<<< HEAD
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              <div>
-                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
-                  Key Features:
-                </h4>
-                <div className='space-y-1'>
-                  {getServiceFeatures(service)
-                    .slice(0, 4)
-                    .map((feature: string, index: number) => (
-                      <div key={index} className='flex items-center gap-2'>
-                        <Check className='w-3 h-3 text-green-500' />
-                        <span className='text-sm text-gray-600 dark:text-gray-400'>
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
-                </div>
-              </div>
-
-              <div>
-                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
-                  ROI & Benefits:
-                </h4>
-                <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>
-                  {service.roi}
-                </p>
-
-                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
-                  Market Position:
-                </h4>
-                <p className='text-sm text-gray-600 dark:text-gray-400'>                  {service.marketPosition}
-                </p>
-              </div>
-            </div>
-
-            <div className='flex items-center gap-4'>
-=======
-                
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {service.marketPosition}
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
 
-            <div className='flex items-center gap-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              <a
-                href={service.link}
-                className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
               >
-                Learn More
-                <ArrowRight className='w-4 h-4' />
-              </a>
 
-              <a
-                href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'              >
-=======
-                className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 Contact Sales
               </a>
             </div>
@@ -633,7 +443,7 @@ export default function AdvancedServicesShowcase() {
           'enterprise solutions',
           'Zion Tech Group',
         ]}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       />
 
       {/* Hero Section */}
@@ -675,12 +485,9 @@ export default function AdvancedServicesShowcase() {
               </div>
               <div className='flex items-center gap-2 text-white'>
                 <CheckCircle className='w-5 h-5 text-green-300' />                <span>Market Validated</span>
-=======
-              <div className="flex items-center gap-2 text-white">
-                <CheckCircle className="w-5 h-5 text-green-300" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 <span>Market Validated</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </motion.div>
           </div>
@@ -697,7 +504,7 @@ export default function AdvancedServicesShowcase() {
                 <span className='text-gray-700 dark:text-gray-300'>
                   {contactInfo.mobile}
                 </span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
               <div className='flex items-center gap-2'>
                 <Mail className='w-5 h-5 text-blue-600' />
@@ -725,13 +532,9 @@ export default function AdvancedServicesShowcase() {
                 target='_blank'
                 rel='noopener noreferrer'
                 className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'              >
-=======
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 Visit Website
               </a>
             </div>
@@ -741,7 +544,7 @@ export default function AdvancedServicesShowcase() {
 
       {/* Main Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         {/* Filters and Search */}
         <div className='mb-8'>
           <div className='flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between'>
@@ -772,54 +575,19 @@ export default function AdvancedServicesShowcase() {
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
-=======
-                  <Grid className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                    viewMode === 'list'
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
-                  }`}
-                >
-<<<<<<< HEAD
-                  <List className='w-5 h-5' />                </button>
-              </div>
-            </div>
-          </div>
-=======
-                    viewMode === 'list' 
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </button>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-          {/* Category Filters */}
-          <div className='mt-6'>
-            <div className='flex flex-wrap gap-3'>
-<<<<<<< HEAD
-              {categories.map(category => (                <button
-=======
-          
-          {/* Category Filters */}
-          <div className="mt-6">
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <button
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -840,7 +608,7 @@ export default function AdvancedServicesShowcase() {
         <div className='mb-8'>
           <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>
             <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               <div>
                 <h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-2'>
                   {filteredServices.length} Services Found
@@ -859,12 +627,9 @@ export default function AdvancedServicesShowcase() {
                 </div>
                 <div className='flex items-center gap-2'>
                   <Award className='w-4 h-4 text-blue-500' />                  <span>4.8+ Average Rating</span>
-=======
-                <div className="flex items-center gap-2">
-                  <Award className="w-4 h-4 text-blue-500" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   <span>4.8+ Average Rating</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
               </div>
             </div>
@@ -873,7 +638,7 @@ export default function AdvancedServicesShowcase() {
 
         {/* Services Grid/List */}
         <div className='space-y-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           {filteredServices.length === 0 ? (
             <div className='text-center py-12'>
               <div className='text-gray-400 dark:text-gray-500 text-6xl mb-4'>
@@ -883,11 +648,9 @@ export default function AdvancedServicesShowcase() {
                 No services found
               </h3>
               <p className='text-gray-600 dark:text-gray-400'>                Try adjusting your search terms or category filters.
-=======
-              <p className="text-gray-600 dark:text-gray-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 Try adjusting your search terms or category filters.
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </p>
             </div>
           ) : (
@@ -901,18 +664,9 @@ export default function AdvancedServicesShowcase() {
               ) : (
                 <div className='space-y-6'>
                   {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />
-=======
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                          {filteredServices.map((service) => (
-          <ServiceCard key={service.id} service={service} />
-        ))}
-                </div>
-              ) : (
-                <div className="space-y-6">
-                  {filteredServices.map((service) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     <ServiceList key={service.id} service={service} />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   ))}
                 </div>
               )}
@@ -924,7 +678,7 @@ export default function AdvancedServicesShowcase() {
         <div className='mt-16 text-center'>
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Ready to Transform Your Business?
             </h2>
             <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
@@ -948,29 +702,8 @@ export default function AdvancedServicesShowcase() {
               </a>
             </div>
           </div>
-=======
-                <Phone className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 Call Now
               </a>
             </div>
           </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-          <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
-            Get Started Today
-          </button>
-        </motion.div>
-      </div>
-    </div>
-<<<<<<< HEAD
-  );
-=======
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

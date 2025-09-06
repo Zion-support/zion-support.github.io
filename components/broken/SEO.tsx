@@ -1,4 +1,4 @@
- {
+{
   /* Robots Meta */ 
 }{
   noindex && <meta name="robots" content="noindex" /> 
@@ -98,9 +98,7 @@ const SEO: React.FC<SEOProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -114,7 +112,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />
       {nofollow && <meta name='robots' content='nofollow' />}
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       {/* Robots Meta */}
       {noindex && <meta name='robots' content='noindex' />}
       {nofollow && <meta name='robots' content='nofollow' />}
@@ -280,22 +277,8 @@ const SEO: React.FC<SEOProps> = ({
 };
 
 export default SEO;
-=======
-            __html: JSON.stringify(structuredData)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           }}
         />
       )}
     </Head>
-<<<<<<< HEAD
-  );
-};
-
-export default SEO;
-=======
-  )
-};
-
-export default SEO;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,7 +1,7 @@
- useEffect ( () => {
+useEffect ( () => {
   const load = async () => {
   try {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   if (loading) return <div>Loading episodes…</div>;
 
   return (
@@ -37,44 +37,19 @@
                   </a>
                 )}
                 {ep.audio?.wavUrl && (
-=======
-                  <a href={ep.audio.mp3Url} className="px-3 py-2 bg-blue-600 text-white rounded" download>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     MP3
                   </a>
                 )}
                 {ep.audio?.wavUrl && (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                  <a
-                    href={ep.audio.wavUrl}
-                    className='px-3 py-2 bg-gray-700 text-white rounded'
-                    download
-<<<<<<< HEAD
-                  >                    WAV
-                  </a>
-                )}
-                {ep.audio?.mp4Url && (
-=======
-                  <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     WAV
                   </a>
                 )}
                 {ep.audio?.mp4Url && (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                  <a
-                    href={ep.audio.mp4Url}
-                    className='px-3 py-2 bg-purple-700 text-white rounded'
-                    download
-<<<<<<< HEAD
-                  >                    MP4
-=======
-                  <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     MP4
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </a>
                 )}
               </div>
@@ -86,19 +61,12 @@
               >
                 View Transcript
               </Link>            </div>
-=======
-            <div className="mt-3 flex gap-4">
-              <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </li>
         ))}
       </ul>
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

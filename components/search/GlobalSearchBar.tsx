@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 export default function GlobalSearchBar() {
   const router = useRouter();
   const [query, setQuery] = useState('');
@@ -12,12 +11,7 @@ export default function GlobalSearchBar() {
   useEffect(() => {
     if (!query) {
       setSuggestions([]);
-<<<<<<< HEAD
-      return;
-=======
-      return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     }
     controller.current?.abort();
     controller.current = new AbortController();
@@ -26,7 +20,7 @@ export default function GlobalSearchBar() {
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
           signal: controller.current!.signal,
         });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         const j = await r.json();
         setSuggestions(j.suggestions || []);
         setOpen(true);
@@ -34,11 +28,8 @@ export default function GlobalSearchBar() {
     };
     const id = setTimeout(run, 150);
     return () => clearTimeout(id);  }, [query]);
-=======
-    return () => clearTimeout(id)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }, [query]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
@@ -56,35 +47,24 @@ export default function GlobalSearchBar() {
     const Speech: any =
       (window as any).SpeechRecognition ||
       (window as any).webkitSpeechRecognition;    if (!Speech) return;
-=======
-    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
-    router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
 
   const startVoice = () => {
     if (typeof window === 'undefined') return;
-<<<<<<< HEAD
-    const Speech: any =
-      (window as any).SpeechRecognition ||
-      (window as any).webkitSpeechRecognition;
-=======
-    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     if (!Speech) return;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
       const transcript = e.results?.[0]?.[0]?.transcript || '';
       if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     };
     rec.start();
   };
 
-  
     >
       <input
         value={query}
@@ -123,11 +103,9 @@ export default function GlobalSearchBar() {
                     router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
-=======
-                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   {s}
                 </button>
               </li>
@@ -137,8 +115,3 @@ export default function GlobalSearchBar() {
       )}
     </form>
   );
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

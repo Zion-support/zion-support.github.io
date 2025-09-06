@@ -21,26 +21,20 @@ import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield, 
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 export default function InnovativeServicesShowcase() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-    website: 'https://ziontechgroup.com',
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   };
 
   const containerVariants = {
@@ -52,13 +46,8 @@ export default function InnovativeServicesShowcase() {
         delayChildren: 0.2,
       },
     },  };
-=======
-        delayChildren: 0.2
-      }
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -70,13 +59,8 @@ export default function InnovativeServicesShowcase() {
         ease: 'easeOut',
       },
     },  };
-=======
-        ease: "easeOut"
-      }
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const featuredServices = [
     {
@@ -85,7 +69,7 @@ export default function InnovativeServicesShowcase() {
         'ArrowRight-generation quantum-secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum-resistant protocols.',
       price: '$8,999/month',
       marketData: '$150B cybersecurity market, 300% annual growth',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       competitors: 'Traditional cybersecurity solutions',
       savings: 'Quantum-level protection vs. traditional methods',
       features: [
@@ -156,119 +140,21 @@ export default function InnovativeServicesShowcase() {
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>
-=======
-      color: 'from-purple-600 to-indigo-700'
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
 
   return (
     <UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-      <div className='min-h-screen'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        <Head>
-          <title>
-            Innovative Services Showcase - Zion Tech Group | Cutting-Edge
-            Technology
-          </title>
-          <meta
-            name='description'
-            content='Discover our most innovative and cutting-edge services including quantum internet security, AI drug discovery, quantum trading, and neural interfaces. Contact: +1 302 464 0950'
-          />
-          <meta
-            name='keywords'
-            content='innovative services, quantum security, AI drug discovery, quantum trading, neural interfaces, cutting-edge technology'
-          />
-          <meta
-            property='og:title'
-            content='Innovative Services Showcase - Zion Tech Group'
-          />
-          <meta
-            property='og:description'
-            content='Cutting-edge technology services showcase'
-          />
-          <meta
-            property='og:url'
-            content='https://ziontechgroup.com/innovative-services-showcase'
-          />
-          <meta property='og:type' content='website' />
-          <link
-            rel='canonical'
-            href='https://ziontechgroup.com/innovative-services-showcase'
-          />
-        </Head>
 
-        {/* Hero Section */}
-        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: 'easeOut' }}
-            >
-              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
-                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-                  Innovative
-                </span>
-                <br />
-                <span className='text-white'>Services Showcase</span>
-              </h1>
-
-              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
-                Experience the future of technology with our most revolutionary
-                and cutting-edge services. These are the innovations that will
-                transform industries and reshape the world.
-              </p>
-
-              {/* Contact Info */}
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12'>
-                <div className='text-center'>
-                  <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-3' />
-                  <div className='text-white font-semibold'>Phone</div>
-                  <div className='text-gray-400'>{contactInfo.mobile}</div>
-                </div>
-                <div className='text-center'>
-                  <Mail className='w-8 h-8 text-purple-400 mx-auto mb-3' />
-                  <div className='text-white font-semibold'>Email</div>
-                  <div className='text-gray-400'>{contactInfo.email}</div>
-                </div>
-                <div className='text-center'>
-                  <MapPin className='w-8 h-8 text-pink-400 mx-auto mb-3' />
-                  <div className='text-white font-semibold'>Address</div>
-                  <div className='text-gray-400'>{contactInfo.address}</div>                </div>
-                <div className="text-center">
-                  <MapPin className="w-8 h-8 text-pink-400 mx-auto mb-3" />
-                  <div className="text-white font-semibold">Address</div>
-                  <div className="text-gray-400">{contactInfo.address}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Featured Innovative Services */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-            <motion.div
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   Featured
                 </span>{' '}
                 Innovative Services
@@ -280,11 +166,9 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
 
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>              {featuredServices.map((service, index) => (
-=======
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               {featuredServices.map((service, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -292,7 +176,7 @@ export default function InnovativeServicesShowcase() {
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
                   className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 >
                   <div className='mb-6'>
                     <h3 className='text-2xl font-bold text-white mb-4'>
@@ -325,19 +209,16 @@ export default function InnovativeServicesShowcase() {
                             className='flex items-center text-gray-300'
                           >
                             <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                            {feature}
-=======
-                          <li key={idx} className="flex items-center text-gray-300">
-                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                             {feature}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                           </li>
                         ))}
                       </ul>
                     </div>
 
                     <div className='flex flex-col sm:flex-row gap-3'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       <a
                         href={service.link}
                         className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2'
@@ -348,12 +229,9 @@ export default function InnovativeServicesShowcase() {
                       <a
                         href='/contact'
                         className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'                      >
-=======
-                        href="/contact"
-                        className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         Get Started
                       </a>
                     </div>
@@ -369,21 +247,16 @@ export default function InnovativeServicesShowcase() {
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               initial={{ opacity: 0, y: 30 }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   Emerging
                 </span>{' '}
                 Tech Services
@@ -439,11 +312,9 @@ export default function InnovativeServicesShowcase() {
 
             <motion.div
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
-=======
-              className="text-center mt-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               initial={{ opacity: 0, y: 30 }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -455,21 +326,14 @@ export default function InnovativeServicesShowcase() {
               >
                 <span>View All Emerging Tech</span>
                 <ArrowRight className='w-6 h-6' />              </motion.a>
-=======
-                href="/services"
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-emerald-500/25 inline-flex items-center space-x-2"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span>View All Emerging Tech</span>
-<<<<<<< HEAD
-                <ArrowRight className='w-6 h-6' />
-=======
-                <ArrowRight className="w-6 h-6" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </motion.a>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </motion.div>
           </div>
         </section>
@@ -479,21 +343,16 @@ export default function InnovativeServicesShowcase() {
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               initial={{ opacity: 0, y: 30 }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   ArrowRight-Generation
                 </span>{' '}
                 AI Services
@@ -505,11 +364,9 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {nextGenAIServices.slice(0, 6).map((service, index) => (
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               {nextGenAIServices.slice(0, 6).map((service, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 50 }}
@@ -529,7 +386,7 @@ export default function InnovativeServicesShowcase() {
                       {service.description}
                     </p>
                     <div className='text-2xl font-bold text-cyan-400 mb-2'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       {service.price}
                       <span className='text-sm text-gray-400'>
                         {service.period}
@@ -544,11 +401,9 @@ export default function InnovativeServicesShowcase() {
                     >
                       <span>Learn More</span>
                       <ArrowRight className='w-4 h-4' />                    </a>
-=======
-                      <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </a>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </UltraFuturisticCard>
                 </motion.div>
               ))}
@@ -556,11 +411,9 @@ export default function InnovativeServicesShowcase() {
 
             <motion.div
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
-=======
-              className="text-center mt-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               initial={{ opacity: 0, y: 30 }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -572,21 +425,14 @@ export default function InnovativeServicesShowcase() {
               >
                 <span>Discover All AI Services</span>
                 <ArrowRight className='w-6 h-6' />              </motion.a>
-=======
-                href="/services"
-                className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span>Discover All AI Services</span>
-<<<<<<< HEAD
-                <ArrowRight className='w-6 h-6' />
-=======
-                <ArrowRight className="w-6 h-6" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </motion.a>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </motion.div>
           </div>
         </section>
@@ -594,19 +440,16 @@ export default function InnovativeServicesShowcase() {
         {/* Call to Action */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 Ready to Experience the Future?
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
@@ -623,23 +466,14 @@ export default function InnovativeServicesShowcase() {
                 <a
                   href='/services'
                   className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'                >
-=======
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 >
                   Get Started Today
                 </a>
                 <a
-<<<<<<< HEAD
-                  href='/services'
-                  className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'
-=======
-                  href="/services"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   Explore All Services
                 </a>
               </div>
@@ -650,7 +484,7 @@ export default function InnovativeServicesShowcase() {
                   <div className='flex items-center space-x-2'>
                     <Phone className='w-5 h-5 text-cyan-400' />
                     <span className='text-white'>{contactInfo.mobile}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </div>
                   <div className='flex items-center space-x-2'>
                     <Mail className='w-5 h-5 text-purple-400' />
@@ -659,13 +493,9 @@ export default function InnovativeServicesShowcase() {
                   <div className='flex items-center space-x-2'>
                     <MapPin className='w-5 h-5 text-pink-400' />
                     <span className='text-white'>{contactInfo.address}</span>                  </div>
-=======
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="w-5 h-5 text-pink-400" />
-                    <span className="text-white">{contactInfo.address}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
               </div>
             </motion.div>
@@ -675,7 +505,3 @@ export default function InnovativeServicesShowcase() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

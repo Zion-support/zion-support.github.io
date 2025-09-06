@@ -1,13 +1,8 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
-<<<<<<< HEAD
-import { Wallet } from 'lucide-react'
-=======
-import { Wallet } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function Web3Login() {
@@ -25,7 +20,7 @@ export function Web3Login() {
 
     try {
       setIsLoading(true);
-      
+
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum;
       if (!ethereum) {
@@ -33,9 +28,9 @@ export function Web3Login() {
           description: "Please install MetaMask or another compatible wallet."}),
         return
       }
-      
+
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
-      
+
     } catch (error: any) {
       toast("Login failed", {
         description: error.message || "Failed to connect wallet. Please try again."}),
@@ -44,55 +39,10 @@ export function Web3Login() {
       setIsLoading(false)
     }
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const buttonDisabled = isLoading || !isWalletSystemAvailable;
   const buttonTitle = !isWalletSystemAvailable
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
     : "";
 
-<<<<<<< HEAD
-=======
-=======
-  let buttonContent,
-  if (!isWalletSystemAvailable) {
-    buttonContent = (
-      <>
-        <Wallet className="h-5 w-5 mr-2" /> Web3 Login Unavailable
-      </>
-    )
-  } else if (isLoading) {
-    buttonContent = (
-      <span className="flex items-center">
-        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http: //www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-        </svg>
-        Connecting...
-      </span>
-    )
-  } else {
-    buttonContent = (
-      <>
-        <Wallet className="h-5 w-5 mr-2" /> Sign in with Web3
-        <span className="sr-only">Sign in with Web3</span>
-      </>
-    )
-  }
-
-  return (
-    <Button
-      type="button"
-      variant="outline"
-      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-      onClick = {handleWeb3Login,}
-      disabled = {buttonDisabled,}
-      title={buttonTitle || undefined} // Ensure title is not an empty string if not needed
-    >
-      {buttonContent}
-    </Button>
-  )
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

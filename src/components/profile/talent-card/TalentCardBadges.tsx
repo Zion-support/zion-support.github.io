@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { Badge } from '@/components/ui/badge';
-import { Award } from 'lucide-react';
-
-=======
-
-import React from "react";
-import { Badge } from "@/components/ui/badge";
-import { Award } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface TalentCardBadgesProps {
   featured: boolean | undefined;
 
@@ -23,14 +11,3 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
         <span>Featured</span>
       </Badge>
     </div>
-<<<<<<< HEAD
-  );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  )
-};
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

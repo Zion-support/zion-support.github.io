@@ -1,16 +1,5 @@
 import Image from 'next/image';
 import { Loader2 } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { useState } from 'react';
-=======
-import { useState } from 'react';
-interface YoutubeEmbedProps {
-  videoId: string,
-  title: string,
-  poster: string
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 interface YoutubeEmbedProps {
   videoId: string;
@@ -37,46 +26,19 @@ export default function YoutubeEmbed({
           />
           <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
             <Loader2 className='h-8 w-8 animate-spin text-white' />          </div>
-=======
-          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
-          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-            <Loader2 className="h-8 w-8 animate-spin text-white" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         </>
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
-<<<<<<< HEAD
-        src={src}
-        title={title}
-        loading='lazy'
-        onLoad={() => setLoaded(true)}
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen
-      />
-    </div>
-  );
-}
-=======
-=======
-        src = {src,}
-        title = {title,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
         loading="lazy"
         onLoad = {() => setLoaded(true),}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         allowFullScreen
       />
     </div>
   );
-<<<<<<< HEAD
-=======
-}
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

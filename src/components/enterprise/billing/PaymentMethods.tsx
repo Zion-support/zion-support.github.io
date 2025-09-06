@@ -13,15 +13,7 @@ import { CreditCard, Plus, Trash } from 'lucide-react';
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { CreditCard, Plus, Trash } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import { CreditCard, Plus, Trash } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function PaymentMethods() {
   // Mock payment methods
   const paymentMethods = [
@@ -30,7 +22,7 @@ export function PaymentMethods() {
       type: 'credit_card',
       brand: 'Visa',
       last4: '4242',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       expMonth: 12,
       expYear: 2025,
       isDefault: true,
@@ -52,19 +44,9 @@ export function PaymentMethods() {
         <CardDescription>
           Manage your payment methods for automatic billing
         </CardDescription>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       </CardHeader>
-<<<<<<< HEAD
-      <CardContent className='space-y-4'>
-        {paymentMethods.map(method => (
-          <div
-            key={method.id}
-=======
-      <CardContent className="space-y-4">
-        {paymentMethods.map((method,) => (
-          <div 
-            key = {method.id,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
             className={`flex items-center justify-between p-4 rounded-lg border ${
               method.isDefault ? 'bg-muted border-primary' : 'border-border'
             }`}
@@ -86,38 +68,19 @@ export function PaymentMethods() {
               </div>
             </div>
             <div className='flex gap-2'>
-=======
-                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       Default
                     </span>
                   )}
                 </p>
-<<<<<<< HEAD
-                <p className='text-sm text-muted-foreground'>
-=======
-                <p className="text-sm text-muted-foreground">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
-            <div className='flex gap-2'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              {!method.isDefault && (
-                <Button size='sm' variant='ghost'>
-                  Set Default
-                </Button>
-              )}
-              <Button size='sm' variant='ghost' className='text-destructive'>
-                <Trash className='h-4 w-4' />              </Button>
-=======
-              <Button size="sm" variant="ghost" className="text-destructive">
-                <Trash className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </div>
           </div>
         ))}
@@ -125,18 +88,11 @@ export function PaymentMethods() {
       <CardFooter>
         <Button className='gap-1'>
           <Plus className='h-4 w-4' />          Add Payment Method
-=======
-        <Button className="gap-1">
-          <Plus className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           Add Payment Method
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         </Button>
       </CardFooter>
     </Card>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

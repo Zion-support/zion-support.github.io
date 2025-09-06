@@ -1,11 +1,7 @@
-    updateJobMatchStatus, 
+updateJobMatchStatus, 
 
 import { useAuth } from "@/hooks/useAuth";
-<<<<<<< HEAD
-import { Loader2 } from 'lucide-react'
-=======
-import { Loader2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { Badge } from "@/components/ui/badge";
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
@@ -27,25 +23,8 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     } 
   } = useJobSuggestions(currentTalentId);
 
-<<<<<<< HEAD
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');
-=======
-  const handleApply = (matchId: string, jobId: string,) => {
-    updateJobMatchStatus(matchId, 'applied'),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     // In a real app, this might redirect to application form or open a modal
   };
-
-<<<<<<< HEAD
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined');
-  };
-=======
-  const handleDecline = (matchId: string,) => {
-    updateJobMatchStatus(matchId, 'declined')
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   if (isLoading) {
     return (
@@ -58,7 +37,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />;
   }
-  
+
   return (
     <div className="space-y-6">
       {/* New Matches Section */}
@@ -70,7 +49,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
               {newMatches.length} New
             </Badge>
           </div>
-          
+
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -83,14 +62,14 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           </div>
         </div>
       )}
-      
+
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
-          
+
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -103,14 +82,14 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           </div>
         </div>
       )}
-      
+
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Applied Jobs</h3>
           </div>
-          
+
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
               <JobMatchesCard 
@@ -179,7 +158,3 @@ if (isLoading) {;
 }</div> </div>) ;
 }</div>) ;
 }'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

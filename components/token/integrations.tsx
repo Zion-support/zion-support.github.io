@@ -12,12 +12,7 @@ const ClientOnlyBridge = dynamic(
   () => import('../../components/ui/BridgeForm'),
   { ssr: false }
 );
-=======
-import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
-import { CHAINS } from '../../utils/chains';
-const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 export default function TokenIntegrationsPage() {
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
@@ -30,21 +25,16 @@ export default function TokenIntegrationsPage() {
     if (!account) {
       await connect();
       return;    }
-=======
-      return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     setDepinsSyncing(true);
     const acts = await fetchDepinActivities(account);
     const r = calculateRewards(acts);
     setRewards(r);
     setDepinsSyncing(false);  }
-=======
-    setDepinsSyncing(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   async function runOperator() {
     const res = await fetch('/api/operator/suggest-chain', {
@@ -52,7 +42,7 @@ export default function TokenIntegrationsPage() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ region, stakeUsd: stake }),
     });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     const data = await res.json();
     setSuggestion(data);
   }
@@ -97,13 +87,9 @@ export default function TokenIntegrationsPage() {
                   {r.network} — {r.reason}
                 </span>
                 <span className='font-medium'>+{r.points} ZION$</span>              </div>
-=======
-              <div key={i} className="flex items-center justify-between">
-                <span>{r.network} — {r.reason}</span>
-                <span className="font-medium">+{r.points} ZION$</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             ))}
           </div>
         )}
@@ -123,7 +109,7 @@ export default function TokenIntegrationsPage() {
               placeholder='e.g., US, EU, APAC'
               className='border rounded px-3 py-2 bg-white dark:bg-black'
             />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
           <div className='flex flex-col gap-1'>
             <label className='text-xs text-gray-500'>Stake (USD)</label>
@@ -156,17 +142,15 @@ export default function TokenIntegrationsPage() {
                   .map((a: any) => a.chain.name)
                   .join(', ')}
               </div>            )}
-=======
-              <div className="text-gray-500">Alternatives: {suggestion.alternatives.map((a: any) => a.chain.name).join(', ')}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             )}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         )}
       </section>
 
       <section className='space-y-2 text-xs text-gray-500'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <div>Security</div>
         <ul className='list-disc ml-5 space-y-1'>
           <li>Onchain tx logs (client + API echo)</li>
@@ -179,15 +163,8 @@ export default function TokenIntegrationsPage() {
     </div>
   );
 }
-=======
-          <li>Burn-and-mint model via LayerZero OFT (requires token addresses configured)</li>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         </ul>
       </section>
     </div>
   );
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

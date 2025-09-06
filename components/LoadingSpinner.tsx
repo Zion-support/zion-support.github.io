@@ -10,24 +10,13 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-<<<<<<< HEAD
-  text = 'Loading...',
-  className = '',
-=======
-  color = 'blue',
-  text,
-  fullScreen = false,
-  className = ''
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
+
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
-<<<<<<< HEAD
-=======
-    xl: 'w-16 h-16'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
+
   };
 
   const colorClasses = {

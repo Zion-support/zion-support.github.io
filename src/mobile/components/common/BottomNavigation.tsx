@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { Home, ShoppingBag, Users, User } from 'lucide-react';
-import { cn } from '@/lib/utils';
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React from "react";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { Home, ShoppingBag, Users, User } from 'lucide-react';
-import { cn } from "@/lib/utils";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function BottomNavigation() {
   const router = useRouter();
 
@@ -28,24 +13,7 @@ export function BottomNavigation() {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className='fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50'>
-      {navItems.map(item => {
-        const isActive = router.pathname === item.path;
-        
-=======
-    <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50">
-      {navItems.map((item,) => {
-        const isActive = router.pathname === item.path,
-        return (
-          <Link 
-            key = {item.path,}
-            href = {item.path,}
-            className = {cn(
-              "flex flex-col items-center justify-center flex-1 py-1 px-2",
-              isActive ? "text-primary" : "text-muted-foreground"
-            ),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           >
             <div className='h-5 w-5'>
               {React.cloneElement(item.icon as React.ReactElement, {
@@ -61,7 +29,3 @@ export function BottomNavigation() {
       })}
     </div>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,49 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import {
-  getClientBudgetSuggestion,
-  PricingSuggestion,
-  ClientBudgetParams,
-  trackPricingSuggestion,;
-} from '@/services/pricingSuggestionService';
-import { PricingSuggestionBox } from './PricingSuggestionBox';
-import { useAuth } from '@/hooks/useAuth';
-import { Sparkles } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-interface ClientBudgetRecommenderProps {
-  jobTitle: string;
-  category: string;
-  timeline?: string;
-  scope?: string;
-  experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;
-=======
-
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { 
-  getClientBudgetSuggestion,
-  PricingSuggestion,
-  ClientBudgetParams,
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox";
-import { useAuth } from "@/hooks/useAuth";
-import { Sparkles } from 'lucide-react';
-interface ClientBudgetRecommenderProps {
-  jobTitle: string,
-  category: string,
-  timeline?: string,
-  scope?: string,
-  experienceLevel?: string,
-  onSuggestionApplied: (minValue: number, maxValue: number,) => void
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 export const ClientBudgetRecommender: React.FC<
   ClientBudgetRecommenderProps
 > = ({
@@ -52,18 +6,6 @@ export const ClientBudgetRecommender: React.FC<
   timeline,
   scope,
   experienceLevel,
-<<<<<<< HEAD
-  onSuggestionApplied,
-}) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
-  const { user } = useAuth();
-=======
-  onSuggestionApplied},) => {
-  const [isLoading, setIsLoading] = useState(false),
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
-  const { user } = useAuth(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const generateSuggestion = async () => {
     if (!jobTitle || !category) {
@@ -76,12 +18,7 @@ export const ClientBudgetRecommender: React.FC<
         jobTitle,
         category,
       };
-=======
-        jobTitle;
-        category};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       if (timeline) params.timeline = timeline;
       if (scope) params.scope = scope;
       if (experienceLevel) params.experienceLevel = experienceLevel;
@@ -119,61 +56,14 @@ export const ClientBudgetRecommender: React.FC<
       <div>
         {!suggestion && !isLoading ? (
           <Button
-<<<<<<< HEAD
-            type='button'
-            variant='outline'
-            onClick={generateSuggestion}
-            disabled={!jobTitle || !category}
-            className='w-full'
-=======
-            type="button"
-            variant="outline"
-            onClick = {generateSuggestion,}
-            disabled = {!jobTitle || !category,}
-            className="w-full"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           >
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
           </Button>
         ) : (
           <PricingSuggestionBox
-<<<<<<< HEAD
-            suggestion={suggestion}
-            isLoading={isLoading}
-            onApplySuggestion={handleApplySuggestion}
-            rateType='hourly'
-=======
-            suggestion = {suggestion,}
-            isLoading = {isLoading,}
-            onApplySuggestion = {handleApplySuggestion,}
-            rateType="hourly"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           />
         )}
       </div>
     </div>
-<<<<<<< HEAD
-  );
-};
-if (scope) params.scope = scope;
-if (experienceLevel) params.experienceLevel = experienceLevel;
-//Track this suggestion application if (user && user.id) {;
-  trackPricingSuggestion ({;
-  ;
-
-};
-return (<div className="space-y-4" > <div> {";
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;
-  generateSuggestion ";
-}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
-}</div> </div>) ;
-};
-'"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  )
-},
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

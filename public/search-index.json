@@ -1,85 +1,103 @@
 {
   "version": "1.0",
-  "generated": "2025-09-05T21:52:45.982Z",
+  "generated": "2025-09-06T09:16:13.542Z",
+  "baseUrl": "https://zion.app",
   "pages": [
-  "generatedAt": "2025-09-05T23:41:15.563Z",
-  "items": [
     {
+      "url": "https://zion.app",
       "title": "Home",
-      "url": "/",
-      "description": "Zion Tech Group - AI and Technology Solutions",
+      "description": "Zion Tech Group - Leading technology solutions and services",
       "keywords": [
-        "AI",
+        "home",
+        "ztech",
         "technology",
         "solutions",
-        "automation"
+        "services"
       ],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      "id": 1
+      "lastmod": "2025-09-06",
+      "type": "page"
     },
     {
-      "title": "About",
-      "url": "/about",
-      "description": "About Zion Tech Group - Leading AI and Technology Company",
+      "url": "https://zion.app/about",
+      "title": "About Us",
+      "description": "Learn about Zion Tech Group and our mission to provide innovative technology solutions",
       "keywords": [
         "about",
         "company",
+        "mission",
         "team",
-        "mission"
+        "history"
       ],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      "id": 2
+      "lastmod": "2025-09-06",
+      "type": "page"
     },
     {
-      "title": "Services",
-      "url": "/services",
-      "description": "Our Services - AI Development, Automation, and Technology Solutions",
+      "url": "https://zion.app/services",
+      "title": "Our Services",
+      "description": "Comprehensive technology services including web development, mobile apps, and cloud solutions",
       "keywords": [
         "services",
-        "AI",
-        "automation",
-        "development"
+        "web development",
+        "mobile apps",
+        "cloud",
+        "solutions"
       ],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      "id": 3
+      "lastmod": "2025-09-06",
+      "type": "page"
     },
     {
-      "title": "Contact",
-      "url": "/contact",
-      "description": "Contact Us - Get in Touch with Zion Tech Group",
+      "url": "https://zion.app/contact",
+      "title": "Contact Us",
+      "description": "Get in touch with Zion Tech Group for your technology needs",
       "keywords": [
         "contact",
+        "get in touch",
         "support",
         "help"
       ],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      "id": 4
+      "lastmod": "2025-09-06",
+      "type": "page"
     },
     {
-      "title": "Portfolio",
-      "url": "/portfolio",
-      "description": "Our Portfolio - AI and Technology Projects",
-      "keywords": [
-        "portfolio",
-        "projects",
-        "work",
-        "examples"
-      ],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      "id": 5
-    },
-    {
+      "url": "https://zion.app/blog",
       "title": "Blog",
-      "url": "/blog",
-      "description": "Blog - Latest AI and Technology Insights",
+      "description": "Latest insights and updates from Zion Tech Group",
       "keywords": [
         "blog",
-        "articles",
+        "news",
         "insights",
-        "news"
+        "updates",
+        "articles"
       ],
-      "id": 6
+      "lastmod": "2025-09-06",
+      "type": "page"
+    },
+    {
+      "url": "https://zion.app/privacy",
+      "title": "Privacy Policy",
+      "description": "Privacy policy and data protection information",
+      "keywords": [
+        "privacy",
+        "policy",
+        "data protection",
+        "legal"
+      ],
+      "lastmod": "2025-09-06",
+      "type": "page"
+    },
+    {
+      "url": "https://zion.app/terms",
+      "title": "Terms of Service",
+      "description": "Terms and conditions for using our services",
+      "keywords": [
+        "terms",
+        "conditions",
+        "legal",
+        "agreement"
+      ],
+      "lastmod": "2025-09-06",
+      "type": "page"
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  ]
+  ],
+  "totalPages": 7
 }

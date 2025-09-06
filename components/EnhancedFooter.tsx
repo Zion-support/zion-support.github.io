@@ -10,11 +10,7 @@ import {
   Linkedin,
   Twitter,;
 } from 'lucide-react';
-=======
-import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -32,13 +28,9 @@ const EnhancedFooter: React.FC = () => {
         },
       ],
     },    {
-=======
-        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
-      ]
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
@@ -48,13 +40,9 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Contact', href: '/contact' },
       ],
     },    {
-=======
-        { name: 'Contact', href: '/contact' }
-      ]
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       title: 'Resources',
       links: [
         { name: 'Documentation', href: '/docs' },
@@ -67,87 +55,21 @@ const EnhancedFooter: React.FC = () => {
 
   const socialLinks = [
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-=======
-        { name: 'Terms of Service', href: '/terms' }
-      ]
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
 
   const socialLinks = [
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com/company/ziontechgroup',
-      icon: Linkedin,
-    },
-    {
-      name: 'Twitter',
-      href: 'https://twitter.com/ziontechgroup',
-      icon: Twitter,
-    },
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  ];
 
-  return (
-    <footer className='bg-slate-950 border-t border-white/10'>
-      <div className='max-w-7xl mx-auto px-6 py-16'>
-        {/* Main Footer Content */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12'>
-          {/* Company Info */}
-          <div className='lg:col-span-2'>
-            <div className='flex items-center space-x-3 mb-6'>
-              <div className='w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center'>
-                <Brain className='w-6 h-6 text-white' />
-              </div>
-              <span className='text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
-                Zion Tech Group
-              </span>
-            </div>
-            <p className='text-white/70 mb-6 max-w-md'>
-              Leading-edge technology solutions and autonomous innovation
-              platform. Empowering businesses with cutting-edge AI, quantum
-              computing, and digital transformation.
-            </p>
-
-            {/* Contact Info */}
-            <div className='space-y-3'>
-              <div className='flex items-center space-x-3 text-white/70'>
-                <Mail className='w-4 h-4' />
-                <a
-                  href='mailto:kleber@ziontechgroup.com'
-                  className='hover:text-white transition-colors'
-                >
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className='flex items-center space-x-3 text-white/70'>
-                <Phone className='w-4 h-4' />
-                <a
-                  href='tel:+13024640950'
-                  className='hover:text-white transition-colors'
-                >
-                  +1 (302) 464-0950
-                </a>
-              </div>
-              <div className='flex items-center space-x-3 text-white/70'>
-                <MapPin className='w-4 h-4' />                <span>Global Operations</span>
-=======
-              <div className="flex items-center space-x-3 text-white/70">
-                <MapPin className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <span>Global Operations</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </div>
           </div>
 
           {/* Footer Sections */}
           {footerSections.map(section => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             <div key={section.title}>
               <h3 className='text-white font-semibold mb-4'>{section.title}</h3>
               <ul className='space-y-2'>
@@ -156,11 +78,9 @@ const EnhancedFooter: React.FC = () => {
                     <Link
                       href={link.href}
                       className='text-white/70 hover:text-white transition-colors duration-200'                    >
-=======
-                      className="text-white/70 hover: text-white transition-colors duration-200"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       {link.name}
                     </Link>
                   </li>
@@ -180,34 +100,14 @@ const EnhancedFooter: React.FC = () => {
             {/* Social Links */}
             <div className='flex items-center space-x-4'>
               {socialLinks.map(social => (
-=======
-        <div className="pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <div className="text-white/60 text-sm">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
 
             {/* Social Links */}
-<<<<<<< HEAD
-            <div className='flex items-center space-x-4'>
-              {socialLinks.map(social => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200'
-                  aria-label={social.name}
-                >
-                  <social.icon className='w-5 h-5' />                </a>
-=======
-                  <social.icon className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </a>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               ))}
             </div>
           </div>
@@ -216,10 +116,5 @@ const EnhancedFooter: React.FC = () => {
     </footer>
   );
 };export default EnhancedFooter;
-=======
-  )
-};
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default EnhancedFooter;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -6,11 +6,7 @@ import {
   rotateTenantApiKey,
   updateTenant,;
 } from '@/utils/tenant';
-=======
-import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase();
 
@@ -27,13 +23,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(400).json({ error: 'branding.name required' });
     const tenant = createTenant(branding);
     return res.status(201).json({ tenant });  }
-=======
-    if (!branding?.name) return res.status(400).json({ error: 'branding.name required' });
-    const tenant = createTenant(branding);
-    return res.status(201).json({ tenant })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (method === 'PUT') {
     const { tenantId, update } = req.body || {};
@@ -46,24 +37,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { tenantId, rotateKey } = req.body || {};
     if (!tenantId || !rotateKey)
       return res.status(400).json({ error: 'tenantId and rotateKey required' });
-=======
-    return res.status(200).json({ tenant: result })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }
 
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
-<<<<<<< HEAD
-    if (!tenantId || !rotateKey)
-      return res.status(400).json({ error: 'tenantId and rotateKey required' });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    const result = rotateTenantApiKey(tenantId);
-    if (!result) return res.status(404).json({ error: 'Tenant not found' });
-    return res.status(200).json({ tenant: result });
-  }
-
-  return res.status(405).json({ error: 'Method not allowed' });
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

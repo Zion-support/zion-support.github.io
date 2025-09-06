@@ -11,30 +11,9 @@ const supabase =
 const openaiApiKey = process.env.OPENAI_API_KEY;
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
 
-=======
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
 const openaiApiKey = process.env.OPENAI_API_KEY;
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
 
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ message: 'Method not allowed' });
-<<<<<<< HEAD
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const { service, description, timeline, budgetRange, email } = req.body || {};
   if (!service || !description || !email) {
     return res.status(400).json({ message: 'Missing required fields' });
@@ -49,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         model: 'gpt-4.1-mini',
         input: prompt,
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       const text = resp.output_text?.trim() || '';
       aiSummary = text.split('\n')[0] || text;
       const tagsLine = (
@@ -93,9 +72,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('quote-request error', e);
     return res.status(500).json({ message: 'Server error' });
   }
-=======
-    return res.status(500).json({ message: 'Server error' })
-  };
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

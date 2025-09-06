@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-import { formatDistanceToNow } from 'date-fns';
-import { Calendar, User, FileText, BarChart } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
-import { TableRow, TableCell } from '@/components/ui/table';
-import { JobApplication, ApplicationStatus } from '@/types/jobs';
-import { StatusBadge } from './StatusBadge';
-import { ScoreBadge } from './ScoreBadge';
-import { ApplicationActions } from './ApplicationActions';
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useState
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-interface ApplicationRowProps {
-  application: JobApplication;
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (
-    applicationId: string,
-    newStatus: ApplicationStatus
-  ) => Promise<void>;
-  onViewScore: (application: JobApplication) => void;
-=======
-import { formatDistanceToNow } from "date-fns";
-import { Calendar, User, FileText, BarChart } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
-import { TableRow, TableCell } from "@/components/ui/table";
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
-import { StatusBadge } from "./StatusBadge";
-import { ScoreBadge } from "./ScoreBadge";
-import { ApplicationActions } from "./ApplicationActions";
-import Image from 'next/image', // Import next/image
-import React, { useState } from 'react', // Import useState
-
-interface ApplicationRowProps {
-  application: JobApplication,
-  processingId: string | null,
-  onViewApplication: (applicationId: string,) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>,
-  onViewScore: (application: JobApplication,) => void
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 export function ApplicationRow({
   application,
   processingId,
@@ -62,23 +17,7 @@ export function ApplicationRow({
             {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
               <Image
-<<<<<<< HEAD
-                src={application.talent_profile.profile_picture_url}
-                alt={talentName}
-                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
-                height={36} // Corresponds to h-9 w-9
-                className='rounded-full object-cover' // Ensure rounded and object-cover
-                onError={() => setAvatarError(true)}
-                priority={false}
-=======
-                src = {application.talent_profile.profile_picture_url,}
-                alt = {talentName,}
-                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
-                height={36} // Corresponds to h-9 w-9
-                className="rounded-full object-cover" // Ensure rounded and object-cover
-                onError = {() => setAvatarError(true),}
-                priority = {false,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               />
             ) : (
               <User className='h-5 w-5 text-gray-400' />
@@ -106,19 +45,7 @@ export function ApplicationRow({
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
-<<<<<<< HEAD
-        <Button
-          variant='ghost'
-          size='sm'
-          onClick={() => onViewScore(application)}
-          className='flex items-center gap-1'
-=======
-        <Button 
-          variant="ghost" 
-          size="sm" 
-          onClick = {() => onViewScore(application),}
-          className="flex items-center gap-1"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
         >
           <BarChart className='h-4 w-4 mr-1' />
           <ScoreBadge application={application} />
@@ -149,7 +76,3 @@ export function ApplicationRow({
       </TableCell>
     </TableRow>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -6,12 +6,8 @@ import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 
 export type EnhancedLayoutProps = {
   children: React.ReactNode;};
-=======
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   useEffect(() => {
@@ -28,32 +24,16 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       <main id='main' className='flex-1 container mx-auto px-4 py-6'>
         {children}
       </main>      <footer>
-=======
-    document.documentElement.setAttribute('lang', lng)
-  }, []);
 
-  return (
-    <div className="min-h-screen flex flex-col">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <header>
         <EnhancedNavigation />
         <LanguageSwitchPrompt />
       </header>
-<<<<<<< HEAD
-      <main id='main' className='flex-1 container mx-auto px-4 py-6'>
-        {children}
-      </main>
-=======
-      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       <footer>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <EnhancedFooter />
       </footer>
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -4,12 +4,7 @@ import * as Sentry from '@sentry/nextjs';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCw, WifiOff } from 'lucide-react';
-<<<<<<< HEAD
-import { logErrorToProduction } from '@/utils/productionLogger';
 
-=======
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ApiErrorBoundaryProps {
   children: ReactNode;
   queryClient?: QueryClient;
@@ -48,12 +43,7 @@ export class ApiErrorBoundary extends Component<
       error: null,
       errorInfo: null,
       isRetrying: false,
-<<<<<<< HEAD
-      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
-    };
-=======
-      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
   }
 
   static getDerivedStateFromError(
@@ -67,21 +57,6 @@ export class ApiErrorBoundary extends Component<
 
   componentDidCatch(error: Error, errorInfo: any) {
     // Log to Sentry
-<<<<<<< HEAD
-    Sentry.withScope(scope => {
-      scope.setTag('errorBoundary', 'ApiErrorBoundary');
-      scope.setContext('errorInfo', errorInfo);
-      scope.setLevel('error');
-      Sentry.captureException(error);
-    });
-=======
-    Sentry.withScope((scope,) => {
-      scope.setTag('errorBoundaryApiErrorBoundary'),
-      scope.setContext('errorInfo', errorInfo),
-      scope.setLevel('error'),
-      Sentry.captureException(error)
-    }),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     this.setState({
       error,
@@ -188,15 +163,7 @@ export class ApiErrorBoundary extends Component<
 
             <div className='flex flex-col gap-2'>
               <Button
-<<<<<<< HEAD
-                onClick={this.handleRetry}
-                disabled={this.state.isRetrying}
-                className='w-full'
-=======
-                onClick = {this.handleRetry,}
-                disabled = {this.state.isRetrying,}
-                className="w-full"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               >
                 {this.state.isRetrying ? (
                   <>
@@ -212,15 +179,7 @@ export class ApiErrorBoundary extends Component<
               </Button>
 
               <Button
-<<<<<<< HEAD
-                variant='outline'
-                onClick={() => window.location.reload()}
-                className='w-full'
-=======
-                variant="outline"
-                onClick = {() => window.location.reload(),}
-                className="w-full"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               >
                 Reload Page
               </Button>
@@ -254,28 +213,6 @@ export class ApiErrorBoundary extends Component<
 
 // Hook for accessing query client in function components
 export const useApiErrorHandler = () => {
-<<<<<<< HEAD
-  const handleApiError = (error: Error) => {
-    Sentry.withScope(scope => {
-      scope.setTag('source', 'useApiErrorHandler');
-      scope.setLevel('error');
-      Sentry.captureException(error);
-    });
-  };
-=======
-  const handleApiError = (error: Error,) => {
-    Sentry.withScope((scope,) => {
-      scope.setTag('sourceuseApiErrorHandler'),
-      scope.setLevel('error'),
-      Sentry.captureException(error)
-    })
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   return { handleApiError };
 };
-=======
-  return { handleApiError }
-}, 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

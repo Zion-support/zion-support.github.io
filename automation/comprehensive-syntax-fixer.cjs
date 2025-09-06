@@ -1,5 +1,4 @@
 #!/usr/bin/env node
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const fs = require('fs');
 const path = require('path');
@@ -143,18 +142,16 @@ class ComprehensiveSyntaxFixer {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       const fixedContent = this.fixFileContent(content, filePath);
-      
+
       if (content !== fixedContent) {
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         this.fixedFiles.push(filePath);
         this.log(`✅ Fixed: ${filePath}`);
         return true;
       }      return false;
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       return false;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
@@ -164,11 +161,10 @@ class ComprehensiveSyntaxFixer {
 
   async findAndFixFiles() {
     this.log('🔍 Finding files with syntax errors...');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    
+
     const srcDir = path.join(this.projectRoot, 'src');
     const filesToFix = [];
-    
+
     // Find all JS/JSX/TS/TSX files
     const findFiles = (dir) => {
       const items = fs.readdirSync(dir, { withFileTypes: true });
@@ -181,24 +177,24 @@ class ComprehensiveSyntaxFixer {
         }
       }
     };
-    
+
     findFiles(srcDir);
-    
+
     this.log(`📁 Found ${filesToFix.length} files to check`);
-    
+
     // Fix each file
     for (const file of filesToFix) {
       await this.fixFile(file);
     }
-    
+
     return filesToFix.length;
   }
 
   async run() {
     this.log('🚀 Starting Comprehensive Syntax Fixer');
-    
+
     const totalFiles = await this.findAndFixFiles();
-    
+
     const report = {
       timestamp: new Date().toISOString(),
       totalFiles,
@@ -207,12 +203,12 @@ class ComprehensiveSyntaxFixer {
       fixedFileList: this.fixedFiles,
       errorList: this.errors
     };
-    
+
     fs.writeFileSync(
       path.join(this.projectRoot, 'comprehensive-syntax-fix-report.json'),
       JSON.stringify(report, null, 2)
     );
-    
+
     this.log(`🎉 Comprehensive Syntax Fix Complete!`);
     this.log(`📊 Fixed ${this.fixedFiles.length}/${totalFiles} files`);
     this.log(`❌ ${this.errors.length} errors encountered`);
@@ -225,32 +221,6 @@ fixer.run().catch(console.error);    }
   }
 }
 
-=======
-      this.log(`❌ Comprehensive syntax fixing failed: ${error.message}`);
-      process.exit(1);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 }
-
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-// Main execution
-if (require.main === module) {
-  const fixer = new ComprehensiveSyntaxFixer();
-  fixer.run().catch(console.error);
-}
-
-module.exports = ComprehensiveSyntaxFixer;
-<<<<<<< HEAD
-=======
-// Run the syntax fixer
-const fixer = new ComprehensiveSyntaxFixer();
-fixer.run().catch(console.error);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-// Run the syntax fixer
-const fixer = new ComprehensiveSyntaxFixer();
-fixer.run().catch(console.error);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

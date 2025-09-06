@@ -3,16 +3,7 @@ import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { GradientHeading } from "./GradientHeading";
-import { Check, Handshake, Search, Send } from 'lucide-react';
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface HowItWorksSectionProps {
   className?: string;
   style?: React.CSSProperties;
@@ -57,32 +48,11 @@ export function HowItWorksSection({
         </div>
 
         <div className='relative'>
-=======
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             {t('home.how_it_works_subtitle')}
           </p>
         </div>
 
-<<<<<<< HEAD
-        <div className='relative'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          {/* Timeline line */}
-<<<<<<< HEAD
-          <div className='absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>
-
-          <div className='space-y-12 md:space-y-0'>
-            {steps.map((step, index) => (
-              <div
-                key={step.title}
-=======
-          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
-          
-          <div className="space-y-12 md:space-y-0">
-            {steps.map((step, index,) => (
-              <div 
-                key = {step.title,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? 'md:flex-row-reverse' : ''
                 } relative`}
@@ -113,12 +83,9 @@ export function HowItWorksSection({
                       <p className='text-zion-slate-light'>
                         {step.description}
                       </p>                    </div>
-=======
-                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
-                      <p className="text-zion-slate-light">{step.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   ) : null}
                 </div>
               </div>
@@ -129,7 +96,3 @@ export function HowItWorksSection({
     </section>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

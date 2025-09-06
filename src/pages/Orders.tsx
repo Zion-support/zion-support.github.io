@@ -1,10 +1,5 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-<<<<<<< HEAD
-import Link from 'next/link'; // Changed from react-router-dom
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import Link from 'next/link', // Changed from react-router-dom
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
@@ -13,29 +8,6 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import Skeleton from '@/components/ui/skeleton';
-import { EmptyState } from '@/components/ui/empty-state';
-
-export default function OrdersPage() {
-  const { user } = useAuth();
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
-
-  const formatDate = (date: string) => new Date(date).toLocaleDateString();
-=======
-  TableRow} from '@/components/ui/table',
-import { Badge } from '@/components/ui/badge';
-import Skeleton from '@/components/ui/skeleton';
-import { EmptyState } from '@/components/ui/empty-state';
-export default function OrdersPage() {
-  const { user } = useAuth(),
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
-
-  const formatDate = (date: string,) => new Date(date).toLocaleDateString(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const getStatusBadge = (status: string,) => {
     switch (status) {
@@ -101,13 +73,7 @@ export default function OrdersPage() {
         </Table>
       ) : orders.length === 0 ? (
         <EmptyState
-<<<<<<< HEAD
-          icon={<FileText className='h-10 w-10' />}
-          title='No Orders'
-=======
-          icon = {<FileText className="h-10 w-10" />,}
-          title="No Orders"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           description="You haven't purchased anything yet."
         />
       ) : (
@@ -122,11 +88,7 @@ export default function OrdersPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-<<<<<<< HEAD
-            {orders.map(order => (
-=======
-            {orders.map((order,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               <TableRow key={order.orderId}>
                 <TableCell className='font-medium'>{order.orderId}</TableCell>
                 <TableCell>{formatDate(order.date)}</TableCell>
@@ -147,7 +109,3 @@ export default function OrdersPage() {
       )}
     </div>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

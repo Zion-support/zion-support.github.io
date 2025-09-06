@@ -2,15 +2,7 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Check } from 'lucide-react';
-import { cn } from "@/lib/utils";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface FeatureHighlightsProps {
   className?: string;
   style?: React.CSSProperties;
@@ -55,7 +47,6 @@ export function FeatureHighlights({
     },
   ];
 
-
   return (
     <section className={cn('py-16 bg-zion-blue', className)} style={style}>
       <div className='container mx-auto px-4'>
@@ -68,40 +59,13 @@ export function FeatureHighlights({
             features to help you succeed
           </p>
         </div>
-<<<<<<< HEAD
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-          {highlightsData.map((category, index) => (
-            <Card
-              key={index}
-              className='bg-zion-blue-dark border-zion-blue-light'
-            >
-              <CardContent className='p-6'>
-                <h3 className='text-xl font-bold text-white mb-4'>
-                  {category.title}
-                </h3>
-                <ul className='space-y-3'>
-                  {category.features.map((feature, idx) => (
-                    <li key={idx} className='flex items-start'>
-                      <Check className='h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0' />
-                      <span className='text-zion-slate-light'>{feature}</span>                    </li>
-=======
-=======
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {highlightsData.map((category, index,) => (
-            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
-                <ul className="space-y-3">
-                  {category.features.map((feature, idx,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </li>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   ))}
                 </ul>
               </CardContent>
@@ -112,7 +76,3 @@ export function FeatureHighlights({
     </section>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

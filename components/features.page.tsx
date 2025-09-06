@@ -12,7 +12,7 @@ export default function FeaturesPage() {
           <p className='mt-1 text-sm opacity-80'>
             Source across timezones and markets with vetted profiles.
           </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         </div>
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
           <Bot className='h-6 w-6 text-indigo-500' />
@@ -35,13 +35,8 @@ export default function FeaturesPage() {
           <MonitorSmartphone className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">Mobile Milestones</div>
           <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
         </div>
       </div>
     </EnhancedLayout>
   );
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-};
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import React, { useState } from 'react';
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
 import { useAuth } from '@/hooks/useAuth';
@@ -11,28 +6,14 @@ import { AddMilestoneForm } from './AddMilestoneForm';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 // lucide-react doesn't export PlusIcon, use our icon wrapper
-<<<<<<< HEAD
-import { Plus } from 'lucide-react'
-=======
-import { Plus } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {
   milestones: Milestone[],
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean,
   isClient: boolean,
-<<<<<<< HEAD
-  onCreateMilestone: (data: any) => Promise<Milestone | null>,
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
-  onDeleteMilestone: (id: string) => Promise<boolean>,
-  onUploadDeliverable: (id: string, file: File) => Promise<any>,
-=======
-  onCreateMilestone: (data: any,) => Promise<Milestone | null>,
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string,) => Promise<boolean>,
-  onDeleteMilestone: (id: string,) => Promise<boolean>,
-  onUploadDeliverable: (id: string, file: File,) => Promise<any>,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
   isSubmitting: boolean,
   onApprove?: (id: string,) => Promise<void>,
   onReject?: (id: string,) => Promise<void>
@@ -50,19 +31,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   isSubmitting;
   onApprove;
   onReject
-<<<<<<< HEAD
-}) => {
-  const [showAddForm, setShowAddForm] = useState(false);
-  
-  const handleSubmit = async (data: any) => {
-    await onCreateMilestone(data);
-=======
-},) => {
-  const [showAddForm, setShowAddForm] = useState(false),
-  
-  const handleSubmit = async (data: any,) => {
-    await onCreateMilestone(data),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
     setShowAddForm(false)
   };
 
@@ -81,7 +50,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       </div>
     )
   }
-  
+
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
@@ -110,7 +79,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </Button>
         </div>
       )}
-      
+
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
@@ -123,7 +92,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </CardContent>
         </Card>
       )}
-      
+
       <div className="space-y-4">
         {milestones.map((milestone,) => (
           <MilestoneCard
@@ -144,6 +113,3 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   )
 };
 "
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

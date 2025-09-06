@@ -9,7 +9,7 @@ console.log('🚀 Starting Advanced App Improvements...');
 // Create advanced monitoring system
 function createAdvancedMonitoring() {
   console.log('\n📊 Creating advanced monitoring system...');
-  
+
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
 export class HealthChecker {
@@ -26,19 +26,15 @@ export class HealthChecker {
     for (const [name, check] of this.checks) {
       try {
         const result = await check();        results[name] = { status: 'healthy', result };
-=======
-    for (const [name, checkFunction] of this.checks) {
-      try {
-        const result = await checkFunction();
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         results[name] = { status: 'healthy', result };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       } catch (error) {
         results[name] = { status: 'unhealthy', error: error.message };
       }
     }
     this.results = results;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     return results;
   }
 
@@ -52,7 +48,7 @@ export class HealthChecker {
   }
 
 export const healthChecker = new HealthChecker();`,
-    
+
     'monitoring/performance-tracker.js': `// Performance tracking system
 export class PerformanceTracker {
   constructor() {
@@ -70,7 +66,7 @@ export class PerformanceTracker {
     }
     this.metrics.get(name).push({ value, timestamp }
 });
-    
+
     // Keep only last 1000 entries
     const entries = this.metrics.get(name);
     if (entries.length > 1000) {
@@ -82,16 +78,16 @@ export class PerformanceTracker {
     const entries = this.metrics.get(name) || [];
     const cutoff = Date.now() - timeWindow;
     const recentEntries = entries.filter(e => e.timestamp > cutoff);
-    
+
     if (recentEntries.length === 0) return 0;
-    
+
     const sum = recentEntries.reduce((acc, e) => acc + e.value, 0);
     return sum / recentEntries.length;
   }
 
   checkThresholds() {
     const alerts = [];
-    
+
     for (const [metric, threshold] of Object.entries(this.thresholds)) {
       const avg = this.getAverageMetric(metric);
       if (avg > threshold) {
@@ -104,12 +100,12 @@ export class PerformanceTracker {
 });
       }
     }
-    
+
     return alerts;
   }
 
 export const performanceTracker = new PerformanceTracker();`,
-    
+
     'monitoring/error-tracker.js': `// Error tracking and reporting
 export class ErrorTracker {
   constructor() {
@@ -121,17 +117,17 @@ export class ErrorTracker {
       message: error.message,
       stack: error.stack,
       context,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       timestamp: new Date().toISOString(),
       id: Math.random().toString(36).substr(2, 9)
     };
-    
+
     this.errors.push(errorInfo);
-    
+
     // Track error frequency
     const key = error.message;
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
-    
+
     // Keep only last 1000 errors
     if (this.errors.length > 1000) {
       this.errors.splice(0, this.errors.length - 1000);
@@ -143,17 +139,15 @@ export class ErrorTracker {
       Date.now() - new Date(e.timestamp).getTime() < 3600000 // Last hour
     );
         return {
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     return {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       total: this.errors.length,
       recent: recentErrors.length,
       topErrors: Array.from(this.errorCounts.entries())
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10)
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     };
   }
 
@@ -165,7 +159,7 @@ createAdvancedMonitoring();
 // Create advanced caching system
 function createAdvancedCaching() {
   console.log('\n💾 Creating advanced caching system...');
-  
+
   const cachingFiles = {
     'cache/redis-cache.js': `// Redis-based caching system
 export class RedisCache {
@@ -214,7 +208,7 @@ export class RedisCache {
     }
   }
 }`,
-    
+
     'cache/memory-cache.js': `// In-memory caching system
 export class MemoryCache {
   constructor(maxSize = 1000) {
@@ -235,10 +229,10 @@ export class MemoryCache {
     if (this.cache.size >= this.maxSize) {
       this.evictLRU();
     }
-    
+
     this.cache.set(key, value);
     this.accessTimes.set(key, Date.now());
-    
+
     if (ttl > 0) {
       setTimeout(() => this.del(key), ttl);
     }
@@ -252,14 +246,14 @@ export class MemoryCache {
   evictLRU() {
     let oldestKey = null;
     let oldestTime = Infinity;
-    
+
     for (const [key, time] of this.accessTimes) {
       if (time < oldestTime) {
         oldestTime = time;
         oldestKey = key;
       }
     }
-    
+
     if (oldestKey) {
       this.del(oldestKey);
     }
@@ -294,7 +288,7 @@ export class MemoryCache {
     }
     this.cache.set(key, value);
     this.accessTimes.set(key, Date.now());
-    
+
     if (ttl > 0) {
       setTimeout(() => {
         this.delete(key);
@@ -333,7 +327,7 @@ export const memoryCache = new MemoryCache();
 // Create API optimization utilities
 function createAPIOptimization() {
   console.log('\n🔌 Creating API optimization utilities...');
-  
+
   const apiFiles = {
     'api/rate-limiter.js': `// Rate limiting middleware
 export class RateLimiter {
@@ -346,21 +340,21 @@ export class RateLimiter {
   isAllowed(identifier) {
     const now = Date.now();
     const windowStart = now - this.windowMs;
-    
+
     if (!this.requests.has(identifier)) {
       this.requests.set(identifier, []);
     }
-    
+
     const userRequests = this.requests.get(identifier);
-    
+
     // Remove old requests
     const recentRequests = userRequests.filter(time => time > windowStart);
     this.requests.set(identifier, recentRequests);
-    
+
     if (recentRequests.length >= this.maxRequests) {
       return false;
     }
-    
+
     recentRequests.push(now);
     return true;
   }
@@ -370,12 +364,12 @@ export class RateLimiter {
     const windowStart = now - this.windowMs;
     const userRequests = this.requests.get(identifier) || [];
     const recentRequests = userRequests.filter(time => time > windowStart);
-    
+
     return Math.max(0, this.maxRequests - recentRequests.length);
   }
 
 export const rateLimiter = new RateLimiter();`,
-    
+
     'api/response-optimizer.js': `// API response optimization
 export class ResponseOptimizer {
   constructor() {
@@ -437,7 +431,7 @@ export const responseOptimizer = new ResponseOptimizer();
 // Create database optimization utilities
 function createDatabaseOptimization() {
   console.log('\n🗄️ Creating database optimization utilities...');
-  
+
   const dbFiles = {
     'database/query-optimizer.js': `// Database query optimization
 export class QueryOptimizer {
@@ -449,7 +443,7 @@ export class QueryOptimizer {
   optimizeQuery(query, params = []) {
     // Add query analysis
     const analysis = this.analyzeQuery(query);
-    
+
     return {
       query,
       params,
@@ -467,7 +461,7 @@ export class QueryOptimizer {
       hasGroupBy: query.toLowerCase().includes('group by'),
       estimatedComplexity: this.estimateComplexity(query)
     };
-    
+
     return analysis;
   }
 
@@ -490,20 +484,20 @@ export class QueryOptimizer {
 
   getRecommendations(analysis) {
     const recommendations = [];
-    
+
     if (!analysis.hasIndex && analysis.estimatedComplexity > 2) {
       recommendations.push('Consider adding indexes for better performance');
     }
-    
+
     if (analysis.hasJoins && analysis.estimatedComplexity > 3) {
       recommendations.push('Consider query optimization for complex joins');
     }
-    
+
     return recommendations;
   }
 
 export const queryOptimizer = new QueryOptimizer();`,
-    
+
     'database/connection-pool.js': `// Database connection pooling
 export class ConnectionPool {
   constructor(options = {}) {
@@ -520,14 +514,14 @@ export class ConnectionPool {
       this.usedConnections.add(connection);
       return connection;
     }
-    
+
     if (this.connections.length < this.maxConnections) {
       const connection = await this.createConnection();
       this.connections.push(connection);
       this.usedConnections.add(connection);
       return connection;
     }
-    
+
     // Wait for a connection to become available
     return new Promise((resolve) => {
       const checkForConnection = () => {
@@ -581,25 +575,18 @@ export const connectionPool = new ConnectionPool();
 async function main() {
   try {
     console.log('🚀 Starting advanced app improvements...');
-    
+
     // Create all improvement systems
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 // Main execution
 async function main() {
   try {
-<<<<<<< HEAD
-    console.log('🚀 Starting advanced app improvements...');
-    
-    // Create all improvement systems
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     createAdvancedMonitoring();
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
-    
+
     // Create PM2 ecosystem configuration
     const pm2Config = {
       apps: [{
@@ -624,15 +611,15 @@ async function main() {
         time: true
       }]
     };
-    
+
     fs.writeFileSync('/workspace/ecosystem.config.js', 
       `module.exports = ${JSON.stringify(pm2Config, null, 2)};`);
     console.log('[OK] Created PM2 ecosystem configuration');
-    
+
     // Create logs directory
     fs.mkdirSync('/workspace/logs', { recursive: true });
     console.log('[OK] Created logs directory');
-    
+
     console.log('\n🎉 Advanced app improvements completed successfully!');
     console.log('\n📋 Summary of improvements:');
     console.log('  - Advanced monitoring system');
@@ -640,7 +627,7 @@ async function main() {
     console.log('  - API optimization utilities');
     console.log('  - Database optimization tools');
     console.log('  - PM2 cluster configuration');
-    
+
   } catch (error) {
     console.error('❌ Error during advanced improvements:', error.message);
     process.exit(1);
@@ -653,5 +640,3 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

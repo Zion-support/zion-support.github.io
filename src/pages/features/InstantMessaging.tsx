@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import Link from 'next/link';
-
-=======
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function InstantMessaging() {
   const schema = {
     '@context': 'https://schema.org',
@@ -23,15 +6,8 @@ export default function InstantMessaging() {
     description:
       'Chat in real time with clients and freelancers using Socket.IO based messaging.',
     url: 'https://app.ziontechgroup.com/features/instant-messaging',  };
-=======
-    "@context": "https://schema.org";
-    "@type": "WebPage";
-    "name": "Instant Messaging";
-    "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.";
-    "url": "https://app.ziontechgroup.com/features/instant-messaging"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -40,7 +16,7 @@ export default function InstantMessaging() {
         description='Negotiate deals and collaborate instantly with real-time chat.'
         keywords='real-time messaging, Socket.IO chat, project communication'
         canonical='https://app.ziontechgroup.com/features/instant-messaging'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -95,20 +71,12 @@ export default function InstantMessaging() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Start Chatting</Link>            </Button>
-=======
-          <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
-              <Link href="/open-app">Start Chatting</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         </div>
       </main>
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -21,20 +21,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import Link from 'next/link';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { useWhitelabel } from "@/context/WhitelabelContext";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react';
-import { useAuth } from "@/hooks/useAuth";
-import Link from "next/link";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();
@@ -104,9 +91,9 @@ export default function ZionHireAI() {
                   alt="Zion Hire AI Dashboard"
                   className="relative z-10 rounded-lg shadow-xl"
                   loading="lazy"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                 />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </div>
           </div>
@@ -123,7 +110,7 @@ export default function ZionHireAI() {
                 Our comprehensive suite of AI-powered hiring tools help you
                 streamline your recruiting process, find better candidates, and
                 make data-driven decisions.
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </p>
             </div>
 
@@ -155,19 +142,16 @@ export default function ZionHireAI() {
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Template
                       </span>                      <span>Industry-specific templates</span>
-=======
-                    <li className="flex items-center">
-                      <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       <span>Industry-specific templates</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
               <Card className='bg-card border border-border'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <CardHeader>
                   <PenTool className='h-10 w-10 text-zion-purple mb-2' />
                   <CardTitle>Resume Screener</CardTitle>
@@ -258,85 +242,28 @@ export default function ZionHireAI() {
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Code
                       </span>                      <span>Simple JavaScript snippet</span>
-=======
-                    <li className="flex items-center">
-                      <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       <span>Customizable scoring criteria</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
 
-              <Card className='bg-card border border-border'>
-                <CardHeader>
-                  <Users className="h-10 w-10 text-zion-purple mb-2" />
-                  <CardTitle>Candidate Matchmaker</CardTitle>
-                  <CardDescription>
-                    Find the best candidates for each position with AI-powered matching.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
-                      <span>Relevancy scoring</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
-                      <span>Culture fit prediction</span>
-                    </li>
-                    <li className='flex items-center'>
-                      <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        Data
-                      </span>
-=======
-                    <li className="flex items-center">
-                      <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       <span>Performance tracking</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
 
-              <Card className='bg-card border border-border'>
-                <CardHeader>
-                  <Globe className="h-10 w-10 text-zion-purple mb-2" />
-                  <CardTitle>Embeddable Widget</CardTitle>
-                  <CardDescription>
-                    Add an AI assistant to your careers page to answer applicant questions.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
-                      <span>Instant FAQ responses</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
-                      <span>Customizable branding</span>
-                    </li>
-                    <li className='flex items-center'>
-                      <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        Code
-                      </span>
-=======
-                    <li className="flex items-center">
-                      <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       <span>Simple JavaScript snippet</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
               <Card className='bg-card border border-border'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <CardHeader>
                   <BarChart3 className='h-10 w-10 text-zion-purple mb-2' />
                   <CardTitle>Advanced Analytics</CardTitle>
@@ -363,19 +290,16 @@ export default function ZionHireAI() {
                       <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Data
                       </span>                      <span>Cost per hire analysis</span>
-=======
-                    <li className="flex items-center">
-                      <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       <span>Cost per hire analysis</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
               <Card className='bg-card border border-border'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <CardHeader>
                   <Shield className='h-10 w-10 text-zion-purple mb-2' />
                   <CardTitle>White-Labeled Platform</CardTitle>
@@ -402,12 +326,9 @@ export default function ZionHireAI() {
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Access
                       </span>                      <span>Team roles & permissions</span>
-=======
-                    <li className="flex items-center">
-                      <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       <span>Team roles & permissions</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </li>
                   </ul>
                 </CardContent>
@@ -425,7 +346,7 @@ export default function ZionHireAI() {
             <p className='text-zion-slate-light max-w-2xl mx-auto mb-8'>
               Join leading companies using Zion Hire AI to find better talent
               faster, reduce time-to-hire, and improve candidate experience.
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             </p>
             <Button
               size='lg'
@@ -433,20 +354,12 @@ export default function ZionHireAI() {
               asChild
             >
               <Link href='/enterprise/demo'>Schedule a Demo</Link>            </Button>
-=======
-              <Link href="/enterprise/demo">
-                Schedule a Demo
-              </Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         </section>
       </main>
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

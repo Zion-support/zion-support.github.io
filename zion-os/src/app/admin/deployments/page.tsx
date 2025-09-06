@@ -1,5 +1,4 @@
 'use client';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 import { useState, useEffect } from 'react';
 import {
@@ -170,15 +169,13 @@ export default function DeploymentsPage() {
   );
   const deployments = []; // This should be populated from your data source
   const filter = 'all'; // This should be managed with state
-  
+
   const filteredDeployments = deployments.filter(deployment => filter === 'all' || deployment.status === filter);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   const getStatusCount = (status: string) => {
     return deployments.filter(d => d.status === status).length;
   };
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   return (
     <div className='space-y-8'>
       {/* Header Section */}
@@ -253,19 +250,16 @@ export default function DeploymentsPage() {
             <div>
               <p className='text-2xl font-bold'>{getStatusCount('failed')}</p>
               <p className='text-sm text-white/60'>Failed</p>            </div>
-=======
-              <p className="text-2xl font-bold">{getStatusCount('failed')}</p>
-              <p className="text-sm text-white/60">Failed</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         </div>
       </div>
 
       {/* Filter Tabs */}
       <div className='flex flex-wrap gap-2'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         {[
           { key: 'all', label: 'All Deployments', count: deployments.length },
           {
@@ -292,11 +286,9 @@ export default function DeploymentsPage() {
               filter === key
                 ? 'bg-blue-600 text-white shadow-lg'
                 : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'            }`}
-=======
-              filter === key ? 'bg-blue-600 text-white shadow-lg' : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             }`}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             {label} ({count})
           </button>
@@ -306,7 +298,7 @@ export default function DeploymentsPage() {
       {/* Deployments Grid */}
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>
         {filteredDeployments.map(deployment => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           <div
             key={deployment.id}
             className='group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5'
@@ -327,11 +319,9 @@ export default function DeploymentsPage() {
                         {deployment.vertical}
                       </span>
                       <span className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400'>                        {deployment.governanceType}
-=======
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         {deployment.governanceType}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       </span>
                     </div>
                   </div>
@@ -344,14 +334,9 @@ export default function DeploymentsPage() {
                   >
                     {deployment.status.charAt(0).toUpperCase() +
                       deployment.status.slice(1)}                  </span>
-=======
-                <div className="flex items-center gap-2">
-                  {getStatusIcon(deployment.status)}
-                  <span className={`text-sm font-medium ${getStatusColor(deployment.status)}`}>
-                    {deployment.status.charAt(0).toUpperCase() + deployment.status.slice(1)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   </span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
               </div>
 
@@ -359,18 +344,16 @@ export default function DeploymentsPage() {
               {deployment.status === 'deploying' && (
                 <div className='space-y-2'>
                   <div className='flex justify-between text-sm text-white/70'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     <span>Deployment Progress</span>
                     <span>{deployment.progress}%</span>
                   </div>
                   <div className='w-full bg-white/10 rounded-full h-2'>
                     <div
                       className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'                      style={{ width: `${deployment.progress}%` }}
-=======
-                      className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       style={{ width: `${deployment.progress}%` }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     ></div>
                   </div>
                 </div>
@@ -379,7 +362,7 @@ export default function DeploymentsPage() {
 
             {/* Deployment Details */}
             <div className='p-6 space-y-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>
                 <div className='flex items-center gap-2 text-white/70'>
@@ -398,13 +381,9 @@ export default function DeploymentsPage() {
                         .filter(Boolean)
                         .join(', ')}
                     </span>                  </div>
-=======
-                  <div className="flex items-center gap-2 text-white/70">
-                    <span>📍</span>
-                    <span>{deployment.region} {deployment.country}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 )}
               </div>
 
@@ -415,7 +394,7 @@ export default function DeploymentsPage() {
                 </div>
                 <div className='flex flex-wrap gap-2'>
                   {deployment.features.slice(0, 4).map(feature => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     <span
                       key={feature}
                       className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'
@@ -425,12 +404,9 @@ export default function DeploymentsPage() {
                   ))}
                   {deployment.features.length > 4 && (
                     <span className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'>                      +{deployment.features.length - 4} more
-=======
-                  {deployment.features?.length > 4 && (
-                    <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       +{deployment.features.length - 4} more
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     </span>
                   )}
                 </div>
@@ -445,18 +421,9 @@ export default function DeploymentsPage() {
                 {deployment.updatedAt !== deployment.createdAt && (
                   <div className='flex items-center gap-1'>
                     <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment.updatedAt)}</span>
-=======
-              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
-                <div className="flex items-center gap-1">
-                  <span>📅</span>
-                  <span>Created: {formatDate(deployment.createdAt)}</span>
-                </div>
-                {deployment.updatedAt !== deployment.createdAt && (
-                  <div className="flex items-center gap-1">
-                    <span>🔄</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </div>
                 )}
               </div>
@@ -465,7 +432,7 @@ export default function DeploymentsPage() {
             {/* Action Buttons */}
             <div className='p-6 pt-0'>
               <div className='flex gap-2'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 {deployment.status === 'pending' && (
                   <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
                     <Play className='w-4 h-4' />
@@ -502,12 +469,9 @@ export default function DeploymentsPage() {
 
                 <button className='flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200'>
                   <Settings className='w-4 h-4' />                </button>
-=======
-                <button className="flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200">
-                  ⚙️
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </div>
           </div>
@@ -519,7 +483,7 @@ export default function DeploymentsPage() {
         <div className='text-center py-16'>
           <div className='w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full'>
             <Rocket className='w-8 h-8 text-white/40' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
           <h3 className='text-lg font-medium text-white/60 mb-2'>
             No deployments found
@@ -538,67 +502,8 @@ export default function DeploymentsPage() {
             </a>
           )}
         </div>
-=======
-              <Rocket className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               Deploy First Instance
             </a>
           )}
         </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      </div>
-
-      {/* Deployments Table */}
-      <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">
-        <div className="p-6 border-b border-white/10">
-          <h2 className="text-xl font-semibold">Deployments</h2>
-        </div>
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead className="bg-white/5">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Name</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Status</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Region</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Version</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Last Deployed</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Actions</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-white/10">
-              {filteredDeployments.map((deployment) => (
-                <tr key={deployment.id} className="hover:bg-white/5">
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-white">{deployment.name}</div>
-                    <div className="text-sm text-white/60">ID: {deployment.id}</div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(deployment.status)}`}>
-                      {deployment.status}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-white/60">{deployment.region}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-white/60">{deployment.version}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-white/60">{deployment.lastDeployed}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-blue-400 hover:text-blue-300 mr-4">View</button>
-                    <button className="text-green-400 hover:text-green-300 mr-4">Deploy</button>
-                    <button className="text-red-400 hover:text-red-300">Stop</button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-<<<<<<< HEAD
-  );
-=======
-      )}
-    </div>
-  );
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

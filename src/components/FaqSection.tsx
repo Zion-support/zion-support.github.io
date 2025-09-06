@@ -1,23 +1,8 @@
-<<<<<<< HEAD
-import { GradientHeading } from './GradientHeading';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-
-import { GradientHeading } from "./GradientHeading";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
-<<<<<<< HEAD
-  AccordionTrigger,;
-} from '@/components/ui/accordion';
-import { FileText } from 'lucide-react';
 
-=======
-  AccordionTrigger} from "@/components/ui/accordion",
-import { FileText } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 const faqs = [
   {
     question: 'How do I publish my AI product or service?',
@@ -61,7 +46,6 @@ const faqs = [
   },
 ];
 
-
 export function FaqSection() {
   return (
     <section className='py-20 bg-zion-blue' id='faq'>
@@ -79,31 +63,13 @@ export function FaqSection() {
             <FileText className='h-6 w-6 text-zion-cyan mr-2' />
             <h3 className='text-xl font-bold text-white'>Common Questions</h3>
           </div>
-<<<<<<< HEAD
 
-          <Accordion type='single' collapsible className='w-full'>
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className='border-zion-purple/10'
-              >
-                <AccordionTrigger className='text-white hover:text-zion-cyan'>
-=======
-          
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index,) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
-                <AccordionTrigger className="text-white hover:text-zion-cyan">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className='text-zion-slate-light'>                  {faq.answer}
-=======
-                <AccordionContent className="text-zion-slate-light">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   {faq.answer}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </AccordionContent>
               </AccordionItem>
             ))}
@@ -113,7 +79,3 @@ export function FaqSection() {
     </section>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

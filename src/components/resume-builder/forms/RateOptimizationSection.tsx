@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-};
-=======
-
-import React, { useState } from "react";
-import { Control, UseFormSetValue } from "react-hook-form";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import {
   FormField;
   FormItem;
@@ -12,18 +5,7 @@ import {
   FormControl;
   FormDescription;
   FormMessage
-<<<<<<< HEAD
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
-import { Card, CardContent } from "@/components/ui/card";
 
-=======
-} from "@/components/ui/form",
-import { Input } from "@/components/ui/input";
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
-import { Card, CardContent } from "@/components/ui/card";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
@@ -82,13 +64,3 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       </Card>
     </div>
   )
-<<<<<<< HEAD
-};
-"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-},
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

@@ -1,12 +1,8 @@
-  quotes;
+quotes;
   isArchived = false;
 
 import React from "react";
-<<<<<<< HEAD
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
-=======
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { 
   Table;
   TableBody, 
@@ -14,22 +10,14 @@ import {
   TableHead, 
   TableHeader, 
   TableRow 
-<<<<<<< HEAD
-} from "@/components/ui/table";
-=======
-} from "@/components/ui/table",
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { Button } from "@/components/ui/button";
 import { 
   DropdownMenu;
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuTrigger 
-<<<<<<< HEAD
-} from "@/components/ui/dropdown-menu";
-=======
-} from "@/components/ui/dropdown-menu",
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { formatDate } from "@/utils/dateUtils";
@@ -123,7 +111,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
-                    
+
                     {isArchived ? (
                       <>
                         <Button 
@@ -180,11 +168,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             onClick = {() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
-<<<<<<< HEAD
-                              };
-=======
-                              ,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
                             }}
                             className="text-red-500"
                           >
@@ -205,6 +189,3 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   )
 };
 '"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

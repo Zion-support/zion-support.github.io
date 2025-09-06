@@ -1,16 +1,8 @@
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ProjectHeaderProps {
   title: string;
 
@@ -18,23 +10,7 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
   const router = useRouter(); // Changed from useNavigate to useRouter
 
   return (
-<<<<<<< HEAD
-    <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>
-      <div className='flex items-center'>
-        <Button
-          variant='ghost'
-          size='sm'
-          className='mr-2'
-          onClick={() => router.back()} // Changed to router.back()
-=======
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
-      <div className="flex items-center">
-        <Button 
-          variant="ghost" 
-          size="sm" 
-          className="mr-2"
-          onClick={(,) => router.back()} // Changed to router.back()
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
         >
           <ArrowLeft className='h-4 w-4 mr-1' />
           Back
@@ -45,11 +21,5 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
       </div>
     </div>
   );
-=======
+
 }
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

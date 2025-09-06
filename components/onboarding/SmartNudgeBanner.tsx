@@ -1,7 +1,6 @@
 import React from 'react';
 import { X } from 'lucide-react';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export type SmartNudgeBannerProps = {
   role: 'talent' | 'client';
   userId?: string | null;
@@ -23,24 +22,14 @@ export default function SmartNudgeBanner({
       const v =
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');    } catch {}
-=======
-export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
-  const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   const [hidden, setHidden] = React.useState<boolean>(false);
 
   React.useEffect(() => {
     try {
-<<<<<<< HEAD
-      const v =
-        typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed');
-=======
-      const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     } catch {}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   }, [storageKey]);
 
   const dismiss = React.useCallback(() => {
@@ -48,11 +37,9 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
     try {
       if (typeof window !== 'undefined')
         localStorage.setItem(storageKey, 'dismissed');    } catch {}
-=======
-      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     } catch {}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   }, [storageKey]);
 
   if (hidden) return null;
@@ -64,13 +51,9 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
         aria-label='Dismiss'
         className='absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10'
       >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <X size={16} />
       </button>
       <div className='text-sm'>{message}</div>
     </div>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

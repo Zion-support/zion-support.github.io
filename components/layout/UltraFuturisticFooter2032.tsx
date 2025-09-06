@@ -47,9 +47,8 @@ import {
   TrendingUp, Target as TargetIcon, Users as UsersIcon;
   Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;
   MessageCircle as MessageCircleIcon, Star as StarIcon
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -115,9 +114,8 @@ const mainNavigationRoutes = [
   { name: 'Case Studies', href: '/case-studies', icon: Users, description: 'Success stories and implementations' },
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const serviceCategories = [
   {
@@ -168,177 +166,13 @@ const serviceCategories = [
       { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' }
     ]
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
     title: '🏙️ 2032 Enterprise IT Solutions',
     services: [
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      {
-        name: 'Zero Trust Architecture',
-        href: '/zero-trust-network-architecture',
-      },
-      {
-        name: 'Edge Computing Orchestration',
-        href: '/edge-computing-orchestration',
-      },
-      {
-        name: 'AI IT Operations Center',
-        href: '/ai-powered-it-operations-center',
-      },
-    ],
-  },
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  {
-    title: '🌌 2032 Space & Metaverse Tech',
-    services: [
-      {
-        name: 'Space Mining Automation',
-        href: '/space-mining-automation-platform',
-      },
-      {
-        name: 'Metaverse Development',
-        href: '/metaverse-development-platform',
-      },
-      { name: 'AI Predictive Health', href: '/ai-predictive-health-analytics' },
-      {
-        name: 'AI Autonomous Business',
-        href: '/ai-autonomous-business-manager',
-      },
-    ],
-  },
-  {
-    title: '🎯 2032 Innovative Micro SAAS',
-    services: [
-      {
-        name: 'AI Business Intelligence',
-        href: '/ai-business-intelligence-suite',
-      },
-      {
-        name: 'Quantum-Secure Communication',
-        href: '/quantum-secure-communication-platform',
-      },
-      { name: 'AI Customer Success', href: '/ai-customer-success-automation' },
-      {
-        name: 'Blockchain Supply Chain',
-        href: '/blockchain-supply-chain-transparency',
-      },
-    ],
-  },
-  {
-    title: '🔬 2032 Research & Development',
-    services: [
-      {
-        name: 'Neuromorphic Computing',
-        href: '/neuromorphic-computing-platform',
-      },
-      { name: 'DNA Computing Platform', href: '/dna-computing-platform' },
-      {
-        name: 'Photonic Computing',
-        href: '/photonic-computing-infrastructure',
-      },
-      { name: 'Swarm Robotics', href: '/swarm-robotics-orchestration' },
-    ],
-  },
-];
 
-const quickLinks = [
-  {
-    name: '2032 Services',
-    href: '/2032-futuristic-services-showcase',
-    icon: Star,
-    description: 'Revolutionary 2032 services',
-  },
-  {
-    name: 'Enhanced Pricing',
-    href: '/enhanced-market-pricing-2032',
-    icon: DollarSign,
-    description: 'Comprehensive pricing analysis',
-  },
-  {
-    name: 'Market Pricing',
-    href: '/market-pricing',
-    icon: DollarSign,
-    description: 'Competitive pricing references',
-  },
-  {
-    name: 'Enhanced Services',
-    href: '/enhanced-services-showcase',
-    icon: Star,
-    description: 'Premium service showcase',
-  },
-  {
-    name: 'Revolutionary 2026',
-    href: '/revolutionary-2026-services',
-    icon: TrendingUp,
-    description: '2026 breakthrough services',
-  },
-  {
-    name: 'Ultimate 2026',
-    href: '/ultimate-2026-services-showcase',
-    icon: Target,
-    description: 'Ultimate service portfolio',
-  },
-  {
-    name: 'News & Updates',
-    href: '/news',
-    icon: MessageCircle,
-    description: 'Latest company news',
-  },
-  {
-    name: 'Support',
-    href: '/support',
-    icon: Users,
-    description: 'Technical support and help',
-  },];
-  { name: '2032 Services', href: '/2032-futuristic-services-showcase', icon: Star, description: 'Revolutionary 2032 services' },
-  { name: 'Enhanced Pricing', href: '/enhanced-market-pricing-2032', icon: DollarSign, description: 'Comprehensive pricing analysis' },
-  { name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Competitive pricing references' },
-  { name: 'Enhanced Services', href: '/enhanced-services-showcase', icon: Star, description: 'Premium service showcase' },
-  { name: 'Revolutionary 2026', href: '/revolutionary-2026-services', icon: TrendingUp, description: '2026 breakthrough services' },
-  { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Target, description: 'Ultimate service portfolio' },
-  { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },
-  { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-const companyInfo = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'Press', href: '/press' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Support', href: '/support' },
-  { name: 'Status', href: '/status' },
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-];
-
-const socialLinks = [
-  {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com/company/ziontechgroup',
-    icon: Linkedin,
-  },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-  {
-    name: 'Facebook',
-    href: 'https://facebook.com/ziontechgroup',
-    icon: Facebook,
-  },
-  {
-    name: 'Instagram',
-    href: 'https://instagram.com/ziontechgroup',
-    icon: Instagram,
-  },
-  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },];
-=======
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const footerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -358,106 +192,19 @@ const itemVariants = {
 export default function UltraFuturisticFooter2032() {
   return (
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>
-=======
-      staggerChildren: 0.1
-    }
-  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
-  visible: { opacity: 1, y: 0 },
-=======
-  visible: { opacity: 1, y: 0 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 };
 
 export default function UltraFuturisticFooter2032() {
   return (
-<<<<<<< HEAD
-    <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      {/* Animated Background Elements */}
-      <div className='absolute inset-0'>
-        <div className='absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl'></div>
-        <div className='absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
-        <div className='absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
-      </div>
 
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10'>
-        <motion.div
-          variants={footerVariants}
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true }}
-          className='space-y-16'
-        >
-          {/* Main Footer Content */}
-          <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
-            {/* Company Info */}
-            <motion.div variants={itemVariants} className='lg:col-span-1'>
-              <div className='flex items-center space-x-3 mb-6'>
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/30'>
-                  <Rocket className='w-7 h-7 text-white' />
-                </div>
-                <div>
-                  <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-                    Zion Tech Group
-                  </h3>
-                  <p className='text-sm text-cyan-300 font-medium'>
-                    2032 Future Technology
-                  </p>
-                </div>
-              </div>
-
-              <p className='text-slate-300 mb-6 leading-relaxed'>
-                Leading the future of technology with revolutionary AI, quantum
-                computing, space technology, and autonomous systems. Empowering
-                businesses with cutting-edge solutions for tomorrow's
-                challenges.
-              </p>
-
-              {/* Contact Information */}
-              <div className='space-y-3'>
-                <div className='flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors'>
-                  <Phone className='w-4 h-4 text-cyan-400' />
-                  <a
-                    href={`tel:${contactInfo.mobile}`}
-                    className='hover:text-cyan-300 transition-colors'
-                  >
-                    {contactInfo.mobile}
-                  </a>
-                </div>
-                <div className='flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors'>
-                  <Mail className='w-4 h-4 text-cyan-400' />
-                  <a
-                    href={`mailto:${contactInfo.email}`}
-                    className='hover:text-cyan-300 transition-colors'
-                  >
-                    {contactInfo.email}
-                  </a>
-                </div>
-                <div className='flex items-center space-x-3 text-slate-300'>
-                  <MapPin className='w-4 h-4 text-cyan-400' />
-                  <span>{contactInfo.address}</span>
-                </div>
-                <div className='flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors'>
-                  <Globe className='w-4 h-4 text-cyan-400' />
-                  <a
-                    href={contactInfo.website}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='hover:text-cyan-300 transition-colors'
-                  >                    {contactInfo.website}
-=======
-                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">
-                  <Globe className="w-4 h-4 text-cyan-400" />
-                  <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     {contactInfo.website}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </a>
                 </div>
               </div>
@@ -466,7 +213,7 @@ export default function UltraFuturisticFooter2032() {
             {/* Service Categories */}
             <motion.div variants={itemVariants} className='lg:col-span-2'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 Our Revolutionary Services
               </h3>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -480,22 +227,14 @@ export default function UltraFuturisticFooter2032() {
                           <Link
                             href={service.href}
                             className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'                          >
-=======
-                  <div key={index} className="space-y-4">
-                    <h4 className="text-lg font-medium text-white">{category.title}</h4>
-                    <ul className="space-y-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       {category.services.map((service, serviceIndex) => (
                         <li key={serviceIndex}>
                           <Link
                             href={service.href}
-<<<<<<< HEAD
-                            className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'
-=======
-                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                             {service.name}
                           </Link>
                         </li>
@@ -509,7 +248,7 @@ export default function UltraFuturisticFooter2032() {
             {/* Quick Links & Company Info */}
             <motion.div variants={itemVariants} className='lg:col-span-1'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 Quick Access
               </h3>
 
@@ -525,26 +264,14 @@ export default function UltraFuturisticFooter2032() {
                         className='flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group'
                       >
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />                        <span>{link.name}</span>
-=======
-              <div className="mb-8">
-                <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
-                <ul className="space-y-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   {quickLinks.map((link, index) => (
                     <li key={index}>
                       <Link
                         href={link.href}
-<<<<<<< HEAD
-                        className='flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group'
-                      >
-                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
-=======
-                        className="flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group"
-                      >
-                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         <span>{link.name}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       </Link>
                     </li>
                   ))}
@@ -559,22 +286,14 @@ export default function UltraFuturisticFooter2032() {
                       <Link
                         href={item.href}
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
-=======
-              <div className="mb-8">
-                <h4 className="text-lg font-medium text-white mb-4">Company</h4>
-                <ul className="space-y-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
                         href={item.href}
-<<<<<<< HEAD
-                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'
-=======
-                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                       >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         {item.name}
                       </Link>
                     </li>
@@ -591,31 +310,14 @@ export default function UltraFuturisticFooter2032() {
                     <a
                       key={index}
                       href={social.href}
-=======
-                <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>
-                <div className="flex space-x-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
                       href={social.href}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20'
-                    >
-<<<<<<< HEAD
-                      <social.icon className='w-5 h-5' />                    </a>
-=======
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20"
-                    >
-                      <social.icon className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </a>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   ))}
                 </div>
               </div>
@@ -629,7 +331,7 @@ export default function UltraFuturisticFooter2032() {
           >
             <div className='text-center'>
               <h3 className='text-2xl font-bold text-white mb-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 Stay Ahead with Future Technology
               </h3>
               <p className='text-slate-300 mb-8 max-w-2xl mx-auto'>
@@ -644,11 +346,9 @@ export default function UltraFuturisticFooter2032() {
                   className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300'
                 />
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>                  Subscribe
-=======
-                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   Subscribe
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </button>
               </div>
             </div>
@@ -661,7 +361,7 @@ export default function UltraFuturisticFooter2032() {
           >
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
               <div className='flex items-center space-x-2 text-slate-400 text-sm'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 <span>© 2024 Zion Tech Group. All rights reserved.</span>
                 <span className='text-cyan-400'>|</span>
                 <span>Leading the Future of Technology</span>
@@ -684,11 +384,9 @@ export default function UltraFuturisticFooter2032() {
                   href='/cookies'
                   className='text-slate-400 hover:text-cyan-300 transition-colors'
                 >                  Cookie Policy
-=======
-                <Link href="/cookies" className="text-slate-400 hover:text-cyan-300 transition-colors">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   Cookie Policy
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </Link>
               </div>
             </div>
@@ -698,7 +396,7 @@ export default function UltraFuturisticFooter2032() {
 
       {/* Floating Action Button */}
       <div className='fixed bottom-8 right-8 z-50'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -710,15 +408,8 @@ export default function UltraFuturisticFooter2032() {
     </footer>
   );
 }
-=======
-          <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         </motion.button>
       </div>
     </footer>
   );
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

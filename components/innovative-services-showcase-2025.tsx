@@ -31,45 +31,27 @@ import {
   Truck,;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-=======
-import { 
-  Search, Filter, Star, CheckCircle, ArrowRight, 
-  Brain, Atom, Shield, Rocket, Target, Microscope;
-  Phone, Mail, MapPin, TrendingUp, Users, Award;
-  Zap, Globe, Cpu, Database, Lock, Cloud;
-  Stethoscope, GraduationCap, Leaf, Truck
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 // Import all the new 2025 innovative service data
 import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
 import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services';
 import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services';
 import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services';
 import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 // Import existing services for comprehensive coverage
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
 import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
 import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
-=======
-  website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const serviceCategories = [
   {
@@ -82,12 +64,9 @@ const serviceCategories = [
     gradient: 'from-green-500/20 to-emerald-500/20',
     badge: 'New',
   },  {
-=======
-    badge: 'New'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     id: 'healthcare-biotech',
     title: '🏥 Healthcare & Biotech',
     description: 'AI-powered healthcare and biotechnology solutions',
@@ -97,12 +76,9 @@ const serviceCategories = [
     gradient: 'from-blue-500/20 to-indigo-500/20',
     badge: 'Hot',
   },  {
-=======
-    badge: 'Hot'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     id: 'education-technology',
     title: '🎓 Education Technology',
     description: 'AI-powered learning and educational innovation',
@@ -112,12 +88,9 @@ const serviceCategories = [
     gradient: 'from-purple-500/20 to-pink-500/20',
     badge: 'Innovative',
   },  {
-=======
-    badge: 'Innovative'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     id: 'sustainability-green-tech',
     title: '🌱 Sustainability & Green Tech',
     description: 'Environmental technology and sustainability solutions',
@@ -127,12 +100,9 @@ const serviceCategories = [
     gradient: 'from-emerald-500/20 to-teal-500/20',
     badge: 'Eco-Friendly',
   },  {
-=======
-    badge: 'Eco-Friendly'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     id: 'logistics-supply-chain',
     title: '🚚 Logistics & Supply Chain',
     description: 'Autonomous logistics and supply chain optimization',
@@ -152,27 +122,14 @@ const serviceCategories = [
     gradient: 'from-violet-500/20 to-indigo-500/20',
     badge: 'Revolutionary',
   },  {
-=======
-    badge: 'Autonomous'
-  };
-  {
-    id: 'ai-consciousness',
-    title: '🧠 AI & Consciousness',
-    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     icon: Brain,
     color: 'from-violet-500 to-purple-500',
     services: [...innovativeAIServices2025],
     gradient: 'from-violet-500/20 to-indigo-500/20',
-<<<<<<< HEAD
-    badge: 'Revolutionary',
-  },
-=======
-    badge: 'Revolutionary'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
     description: 'Quantum computing, DNA computing, and beyond',
@@ -182,12 +139,9 @@ const serviceCategories = [
     gradient: 'from-indigo-500/20 to-cyan-500/20',
     badge: 'Quantum',
   },  {
-=======
-    badge: 'Quantum'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     id: 'enterprise-it',
     title: '🏙️ Enterprise IT',
     description: 'Autonomous operations and zero-trust security',
@@ -197,12 +151,9 @@ const serviceCategories = [
     gradient: 'from-blue-500/20 to-teal-500/20',
     badge: 'Enterprise',
   },  {
-=======
-    badge: 'Enterprise'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     id: 'micro-saas',
     title: '🎯 Micro SAAS',
     description: 'Innovative solutions for every business need',
@@ -212,12 +163,8 @@ const serviceCategories = [
     gradient: 'from-teal-500/20 to-green-500/20',
     badge: 'Popular',
   },];
-=======
-    badge: 'Popular'
-  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function InnovativeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -241,9 +188,9 @@ export default function InnovativeServicesShowcase2025() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase()))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
     )
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   );
 
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -256,11 +203,9 @@ export default function InnovativeServicesShowcase2025() {
         return a.category.localeCompare(b.category);
       default:
         return 0;    }
-=======
-      default: return 0
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   });
 
   return (
@@ -287,7 +232,7 @@ export default function InnovativeServicesShowcase2025() {
           property='og:url'
           content='https://ziontechgroup.com/innovative-services-showcase-2025'
         />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       </Head>
 
       {/* Hero Section */}
@@ -306,38 +251,14 @@ export default function InnovativeServicesShowcase2025() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'
-=======
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            className='mb-8'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          >
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6'>
-              <Star className='w-4 h-4 mr-2' />
-              Innovation Showcase 2025
-            </div>
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-                Innovative Services
-              </span>
-              <br />
-              <span className='text-white'>Showcase</span>
-            </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-              Discover our comprehensive collection of revolutionary micro SAAS,
-              AI, healthcare, fintech, and emerging technology services that are
-              transforming industries worldwide.            </p>
-=======
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover our comprehensive collection of revolutionary micro SAAS, AI, healthcare, fintech, and emerging technology services that are transforming industries worldwide.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </motion.div>
 
           {/* Stats */}
@@ -346,7 +267,7 @@ export default function InnovativeServicesShowcase2025() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <div className='text-center'>
               <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
@@ -375,11 +296,9 @@ export default function InnovativeServicesShowcase2025() {
                 99.9%
               </div>
               <div className='text-gray-400'>Uptime</div>            </div>
-=======
-              <div className="text-gray-400">Uptime</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </motion.div>
         </div>
       </section>
@@ -389,7 +308,7 @@ export default function InnovativeServicesShowcase2025() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='bg-gradient-to-r from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-8'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               {/* Search */}
               <div className='relative'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -399,12 +318,9 @@ export default function InnovativeServicesShowcase2025() {
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
                   className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50'                />
-=======
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
 
               {/* Category Filter */}
@@ -415,14 +331,9 @@ export default function InnovativeServicesShowcase2025() {
                   className='w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50'
                 >
                   <option value='all'>All Categories</option>                  {serviceCategories.map(category => (
-=======
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50"
-                >
-                  <option value="all">All Categories</option>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   {serviceCategories.map(category => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     <option key={category.id} value={category.id}>
                       {category.title}
                     </option>
@@ -440,16 +351,9 @@ export default function InnovativeServicesShowcase2025() {
                   <option value='name'>Sort by Name</option>
                   <option value='price'>Sort by Price</option>
                   <option value='category'>Sort by Category</option>                </select>
-=======
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white focus:outline-none focus:border-cyan-500/50"
-                >
-                  <option value="name">Sort by Name</option>
-                  <option value="price">Sort by Price</option>
-                  <option value="category">Sort by Category</option>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </select>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </div>
           </div>
@@ -460,13 +364,9 @@ export default function InnovativeServicesShowcase2025() {
       <section className='py-20 bg-slate-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {sortedServices.map((service, index) => (
-=======
-      <section className="py-20 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             {sortedServices.map((service, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -474,7 +374,7 @@ export default function InnovativeServicesShowcase2025() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               >
                 {/* Service Header */}
                 <div className='mb-6'>
@@ -496,11 +396,9 @@ export default function InnovativeServicesShowcase2025() {
                     {service.name}
                   </h3>
                   <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}
-=======
-                  <p className="text-gray-300 text-sm leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     {service.description}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </p>
                 </div>
 
@@ -523,21 +421,9 @@ export default function InnovativeServicesShowcase2025() {
                       ))}
                     {service.features.length > 3 && (
                       <li className='text-sm text-cyan-400'>                        +{service.features.length - 3} more features
-=======
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">Key Features</h4>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                    {service.features.length > 3 && (
-                      <li className="text-sm text-cyan-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         +{service.features.length - 3} more features
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       </li>
                     )}
                   </ul>
@@ -545,7 +431,7 @@ export default function InnovativeServicesShowcase2025() {
 
                 {/* Market Info */}
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   <div>
                     <div className='text-gray-400'>Market Size</div>
                     <div className='text-white font-semibold'>
@@ -564,27 +450,14 @@ export default function InnovativeServicesShowcase2025() {
                   <a
                     href={service.website}
                     className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-4 rounded-xl text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'                  >
-=======
-                    <div className="text-gray-400">Target Audience</div>
-                    <div className="text-white font-semibold truncate">{service.targetAudience}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   </div>
                 </div>
 
                 {/* CTA */}
-<<<<<<< HEAD
-                <div className='flex gap-3'>
-                  <a
-                    href={service.website}
-                    className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-4 rounded-xl text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'
-=======
-                <div className="flex gap-3">
-                  <a
-                    href={service.website}
-                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-4 rounded-xl text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     Learn More
                   </a>
                   <a
@@ -592,13 +465,9 @@ export default function InnovativeServicesShowcase2025() {
                     className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
                   >
                     <Mail className='w-5 h-5' />                  </a>
-=======
-                    className="px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
-                  >
-                    <Mail className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   </a>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
               </motion.div>
             ))}
@@ -616,14 +485,9 @@ export default function InnovativeServicesShowcase2025() {
               <div className='text-gray-500'>
                 Try adjusting your search or filter criteria
               </div>            </motion.div>
-=======
-              className="text-center py-20"
-            >
-              <div className="text-gray-400 text-xl mb-4">No services found</div>
-              <div className="text-gray-500">Try adjusting your search or filter criteria</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           )}
         </div>
       </section>
@@ -631,18 +495,15 @@ export default function InnovativeServicesShowcase2025() {
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-=======
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
@@ -654,29 +515,23 @@ export default function InnovativeServicesShowcase2025() {
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
               className='text-center'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
               <p className='text-gray-300'>{contactInfo.mobile}</p>            </motion.div>
-=======
-              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-              <p className="text-gray-300">{contactInfo.mobile}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -684,19 +539,15 @@ export default function InnovativeServicesShowcase2025() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               className='text-center'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
               <p className='text-gray-300'>{contactInfo.email}</p>            </motion.div>
-=======
-              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-              <p className="text-gray-300">{contactInfo.email}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -704,26 +555,19 @@ export default function InnovativeServicesShowcase2025() {
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
               className='text-center'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <MapPin className='w-8 h-8 text-white' />
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Address</h3>
               <p className='text-gray-300'>{contactInfo.address}</p>            </motion.div>
-=======
-              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
-              <p className="text-gray-300">{contactInfo.address}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         </div>
       </section>
     </Layout>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

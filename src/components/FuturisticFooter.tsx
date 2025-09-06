@@ -45,21 +45,12 @@
             whileInView={{ opacity: 1, y: 0 }};
             viewport={{ once: true }};
             transition={{ duration: 0.6, staggerChildren: 0.1 }};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >;
 </motion>;
               <motion.div;
                 key={stat.label}";
-<<<<<<< HEAD
-                className="text-center"";                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                viewport={{ once: true }};
-                transition={{ duration: 0.6, delay: index * 0.1 }};
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};
-                viewport={{ once: true }};
-                transition={{ duration: 0.6, delay: index * 0.1 }};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               >;
 </motion>";
                 <div className="flex justify-center mb-3">";
@@ -172,7 +163,3 @@
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </footer>";
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

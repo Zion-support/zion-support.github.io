@@ -5,7 +5,6 @@ import type {
   TrackPublication,
   Track,;
 } from 'livekit-client';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 type Props = {
   participant: RemoteParticipant | LocalParticipant;
@@ -18,11 +17,9 @@ export default function ParticipantTile({
   isLocal,
   displayName,
 }: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
-=======
-export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   const videoRef = useRef<HTMLVideoElement | null>(null);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -39,39 +36,21 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       }
       if (track.kind === 'audio' && audioRef.current) {
         track.detach(audioRef.current);      }
-=======
-        track.attach(videoRef.current)
-      }
-      if (track.kind === 'audio' && audioRef.current) {
-        track.attach(audioRef.current)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       }
     };
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
       if (track.kind === 'video' && videoRef.current) {
-<<<<<<< HEAD
-        track.detach(videoRef.current);
+
       }
-      if (track.kind === 'audio' && audioRef.current) {
-        track.detach(audioRef.current);
-=======
-        track.detach(videoRef.current)
-      }
-      if (track.kind === 'audio' && audioRef.current) {
-        track.detach(audioRef.current)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     };
 
     participant.tracks.forEach(pub => {
       const track = pub.track;
       if (track) handleTrackSubscribed(pub, track);    });
-=======
-      if (track) handleTrackSubscribed(pub, track)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);
@@ -80,7 +59,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       participant.off('trackSubscribed', handleTrackSubscribed);
       participant.off('trackUnsubscribed', handleTrackUnsubscribed);
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   }, [participant]);
 
   return (
@@ -100,7 +79,3 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       </div>
     </div>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

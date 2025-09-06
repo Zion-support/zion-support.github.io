@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { Star } from 'lucide-react';
-import { ReviewStats } from '@/components/reviews/ReviewStats';
-import { ReviewsList } from '@/components/reviews/ReviewsList';
-import { useReviews } from '@/hooks/useReviews';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-=======
-
-import { useState, useEffect } from "react";
-import { Star } from 'lucide-react';
-import { ReviewStats } from "@/components/reviews/ReviewStats";
-import { ReviewsList } from "@/components/reviews/ReviewsList";
-import { useReviews } from "@/hooks/useReviews";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ProfileRatingsProps {
   userId: string;
 averageRating?: number;
@@ -53,21 +33,7 @@ export function ProfileRatings({
   // Calculate rating distribution
   useEffect((,) => {
     if (reviews.length > 0) {
-<<<<<<< HEAD
-      const distribution: Record<number, number> = {
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0,
-      };
 
-      reviews.forEach(review => {
-=======
-      const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },
-      
-      reviews.forEach((review,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         if (review.rating >= 1 && review.rating <= 5) {
           distribution[review.rating] = (distribution[review.rating] || 0) + 1;
         }
@@ -78,37 +44,14 @@ export function ProfileRatings({
   }, [reviews]);
 
   // Fetch reviews when component mounts
-<<<<<<< HEAD
-  useEffect(() => {
-    fetchUserReviews(userId);
-  }, [userId]);
 
-=======
-  useEffect((,) => {
-    fetchUserReviews(userId)
-  }, [userId]),
-  
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   return (
     <div className='space-y-6'>
       <div className='flex flex-col md:flex-row gap-6'>
         <div className='md:w-1/3'>          <ReviewStats
-=======
-    <div className="space-y-6">
-      <div className="flex flex-col md:flex-row gap-6">
-        <div className="md:w-1/3">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           <ReviewStats
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            averageRating={averageRating}
-            totalReviews={ratingCount}
-            ratingDistribution={ratingDistribution}
-=======
-            averageRating = {averageRating,}
-            totalReviews = {ratingCount,}
-            ratingDistribution = {ratingDistribution,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
           />
         </div>
 
@@ -123,29 +66,9 @@ export function ProfileRatings({
             </TabsList>
 
             <TabsContent value='all'>              <ReviewsList
-=======
-        
-        <div className="md:w-2/3">
-          <Tabs defaultValue="all">
-            <TabsList className="mb-4">
-              <TabsTrigger value="all">All Reviews ({reviews.length})</TabsTrigger>
-              <TabsTrigger value="positive">Positive</TabsTrigger>
-              <TabsTrigger value="critical">Critical</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="all">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               <ReviewsList
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                reviews={reviews}
-                isLoading={isLoading}
-                onReportReview={reportReview}
-=======
-                reviews = {reviews,}
-                isLoading = {isLoading,}
-                onReportReview = {reportReview,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               />
             </TabsContent>
 
@@ -159,42 +82,9 @@ export function ProfileRatings({
             <TabsContent value='critical'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}
-=======
-            
-            <TabsContent value="positive">
-              <ReviewsList
-<<<<<<< HEAD
-                reviews={reviews.filter((r) => r.rating >= 4)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                isLoading={isLoading}
-                onReportReview={reportReview}
-=======
-                reviews = {reviews.filter((r,) => r.rating >= 4),}
-                isLoading = {isLoading,}
-                onReportReview = {reportReview,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              />
-            </TabsContent>
-<<<<<<< HEAD
 
-            <TabsContent value='critical'>
-              <ReviewsList
-                reviews={reviews.filter(r => r.rating < 4)}
-=======
-            
-            <TabsContent value="critical">
-              <ReviewsList
-<<<<<<< HEAD
-                reviews={reviews.filter((r) => r.rating < 4)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                isLoading={isLoading}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 onReportReview={reportReview}
-=======
-                reviews = {reviews.filter((r,) => r.rating < 4),}
-                isLoading = {isLoading,}
-                onReportReview = {reportReview,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
               />
             </TabsContent>
           </Tabs>
@@ -230,11 +120,5 @@ export function ProfileRatings({
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"
-=======
+
 }
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

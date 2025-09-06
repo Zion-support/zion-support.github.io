@@ -1,11 +1,7 @@
 };
 
 import React from "react";
-<<<<<<< HEAD
-import { QrCodeIcon } from 'lucide-react'
-=======
-import { QrCodeIcon } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
 import { AppStoreButtons } from "./AppStoreButtons";
 import { logInfo } from '@/utils/productionLogger';
 export const DownloadSection: React.FC = () => {
@@ -24,7 +20,7 @@ export const DownloadSection: React.FC = () => {
               <p className="text-lg text-gray-300 mb-8">
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.
               </p>
-              
+
               <AppStoreButtons 
                 className="mb-8" 
                 appStoreUrl = {appStoreUrl,}
@@ -32,13 +28,13 @@ export const DownloadSection: React.FC = () => {
                 onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
                 onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
               />
-              
+
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
-            
+
             <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
@@ -53,6 +49,3 @@ export const DownloadSection: React.FC = () => {
   )
 };
 "
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

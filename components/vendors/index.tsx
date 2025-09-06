@@ -4,7 +4,6 @@ import type { Vendor } from '../../utils/vendor-types';
 
 type Props = { vendors: Vendor[] };
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function VendorsPage({ vendors }: Props) {
   return (
     <div className='space-y-6'>
@@ -46,11 +45,9 @@ export default function VendorsPage({ vendors }: Props) {
                   <div className='text-xs text-gray-500'>
                     Services: {v.servicesOffered?.join(', ') || '—'}
                   </div>                </div>
-=======
-                  <div className="text-xs text-gray-500">Services: {v.servicesOffered?.join() || '—'}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </a>
           </Link>
@@ -66,21 +63,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const vendors = listVendors();
   return { props: { vendors } };
 };
-=======
-      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
-    </div>
-  );
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
-<<<<<<< HEAD
-  return { props: { vendors } };
-};
-=======
-  return { props: { vendors } }
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

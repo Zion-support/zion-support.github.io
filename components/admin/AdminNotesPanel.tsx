@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 export type AdminNotesPanelProps = {
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 };
 
 type Note = {
@@ -19,11 +19,9 @@ export default function AdminNotesPanel({
   targetType,
   targetId,
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);
-=======
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   const [isAdmin, setIsAdmin] = useState(true);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
@@ -39,7 +37,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
         }
       );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       if (!res.ok) {
         setNotes([]);
         return;
@@ -52,20 +50,13 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 
   useEffect(() => {
     if (isAdmin) fetchNotes();  }, [isAdmin, targetType, targetId]);
-=======
-      setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     }
   }
 
   useEffect(() => {
-<<<<<<< HEAD
-    if (isAdmin) fetchNotes();
-=======
-    if (isAdmin) fetchNotes()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }, [isAdmin, targetType, targetId]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   async function addNote() {
     if (!text.trim()) return;
@@ -80,7 +71,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         },
         body: JSON.stringify({ targetType, targetId, text }),
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       if (!res.ok) {
         alert('Failed to add note');
         return;
@@ -89,11 +80,9 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       await fetchNotes();
     } finally {
       setAdding(false);    }
-=======
-      setAdding(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
   }
 
   if (!isAdmin) {
@@ -107,7 +96,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
             onChange={e => setIsAdmin(e.target.checked)}
           />
           <label htmlFor='isAdminToggle'>Admin</label>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         </div>
         <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>
       </div>
@@ -172,9 +161,9 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
             {notes.map((n) => (
               <li key={n.id} className="rounded border p-2 text-sm">
                 <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                 <div>{n.text}</div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </li>
             ))}
           </ul>
@@ -183,7 +172,3 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

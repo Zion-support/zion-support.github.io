@@ -14,7 +14,7 @@ import {
   FaNetworkWired,
   FaRobot,
   FaSearch,;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 } from 'react-icons/fa';
 import {
   SiNextdotjs,
@@ -58,9 +58,7 @@ interface ServiceCategory {
   icon: React.ReactNode,
   color: string
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const serviceCategories: ServiceCategory[] = [
   {
     id: 'ai-ml',
@@ -104,74 +102,33 @@ const serviceCategories: ServiceCategory[] = [
     icon: <FaBrain className="w-8 h-8" />,
     color: 'from-purple-500 to-pink-500'
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   {
     id: 'cloud',
     name: 'Cloud & DevOps',
     description: 'Scalable cloud infrastructure and development operations',
-<<<<<<< HEAD
-    icon: <FaCloud className='w-8 h-8' />,
-    color: 'from-blue-500 to-cyan-500',
-  },
-=======
-    icon: <FaCloud className="w-8 h-8" />,
-    color: 'from-blue-500 to-cyan-500'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
     id: 'security',
     name: 'Cybersecurity',
     description: 'Advanced security solutions for modern threats',
-<<<<<<< HEAD
-    icon: <FaShieldAlt className='w-8 h-8' />,
-    color: 'from-red-500 to-orange-500',
-  },
-=======
-    icon: <FaShieldAlt className="w-8 h-8" />,
-    color: 'from-red-500 to-orange-500'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
     id: 'data',
     name: 'Data & Analytics',
     description: 'Comprehensive data management and analytics platforms',
-<<<<<<< HEAD
-    icon: <FaDatabase className='w-8 h-8' />,
-    color: 'from-green-500 to-emerald-500',
-  },
-=======
-    icon: <FaDatabase className="w-8 h-8" />,
-    color: 'from-green-500 to-emerald-500'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
     id: 'iot',
     name: 'IoT & Edge Computing',
     description: 'Internet of Things and edge computing solutions',
-<<<<<<< HEAD
-    icon: <FaNetworkWired className='w-8 h-8' />,
-    color: 'from-indigo-500 to-purple-500',
-  },
-=======
-    icon: <FaNetworkWired className="w-8 h-8" />,
-    color: 'from-indigo-500 to-purple-500'
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
     id: 'automation',
     name: 'Process Automation',
     description: 'Intelligent automation for business processes',
-<<<<<<< HEAD
-    icon: <FaRobot className='w-8 h-8' />,
-    color: 'from-yellow-500 to-orange-500',
-  },
-=======
-    icon: <FaRobot className="w-8 h-8" />,
-    color: 'from-yellow-500 to-orange-500'
-  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const services: Service[] = [
   {
@@ -180,7 +137,7 @@ const services: Service[] = [
     description:
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
     icon: <FaRobot className='w-6 h-6' />,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     category: 'automation',
     features: [
       'Intelligent workflow automation',
@@ -338,54 +295,13 @@ const services: Service[] = [
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
     icon: <FaCloud className='w-6 h-6' />,
-=======
-      'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
-    ]
-  };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   {
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
-<<<<<<< HEAD
-    icon: <FaCloud className='w-6 h-6' />,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    category: 'cloud',
-    features: [
-      'Kubernetes orchestration',
-      'Microservices architecture',
-      'CI/CD pipelines',
-      'Auto-scaling',
-      'Multi-cloud deployment',
-      'DevOps automation',
-    ],
-    pricing: {
-      starter: 199,
-      professional: 599,
-      enterprise: 1499,
-    },
-    technologies: [
-      'Kubernetes',
-      'Docker',
-      'Helm',
-      'ArgoCD',
-      'Prometheus',
-      'Grafana',
-    ],
-    benefits: [
-      'Faster deployment',
-      'Improved scalability',
-      'Better resource utilization',
-      'Enhanced reliability',
-    ],
-  },];
-=======
-      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
-    ]
-  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -396,7 +312,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   const filteredServices = useMemo(() => {
     let filtered = services;
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(
         service => service.category === selectedCategory
@@ -415,10 +330,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           )
       );
     }
-=======
-    
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -427,7 +339,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           return a.category.localeCompare(b.category);
         default:
           return a.title.localeCompare(b.title);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       }
     });
   }, [selectedCategory, searchTerm, sortBy]);
@@ -448,31 +360,14 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className='text-center mb-16'
-=======
-      <div className="container mx-auto px-4 py-16">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-          className='text-center mb-16'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        >
-          <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-            2025 Services Showcase
-          </h1>
-          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
-            Discover our cutting-edge technology solutions designed for the
-            future. From AI-powered automation to quantum computing, we're
-            building tomorrow's innovations today.          </p>
-=======
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our cutting-edge technology solutions designed for the future. 
-            From AI-powered automation to quantum computing, we're building tomorrow's innovations today.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         </motion.div>
 
         {/* Search and Filters */}
@@ -481,7 +376,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className='mb-12'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             <div className='relative flex-1 max-w-md'>
@@ -505,13 +400,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               <option value='name'>Sort by Name</option>
               <option value='price'>Sort by Price</option>
               <option value='category'>Sort by Category</option>            </select>
-=======
-              <option value="name">Sort by Name</option>
-              <option value="price">Sort by Price</option>
-              <option value="category">Sort by Category</option>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             </select>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           </div>
         </motion.div>
 
@@ -523,13 +414,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           className='mb-12'
         >
           <div className='flex flex-wrap justify-center gap-4'>            <button
-=======
-          className="mb-12"
-        >
-          <div className="flex flex-wrap justify-center gap-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             <button
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 selectedCategory === 'all'
@@ -540,11 +427,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               All Services
             </button>
             {serviceCategories.map(category => (              <button
-=======
-            {serviceCategories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
               <button
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -566,11 +451,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
-=======
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -579,7 +462,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
               className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               onClick={() => handleServiceSelect(service)}
             >
               <div className='flex items-center gap-3 mb-4'>
@@ -608,11 +491,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   <span
                     key={tech}
                     className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'                  >
-=======
-                    className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                     {tech}
                   </span>
                 ))}
@@ -624,29 +505,14 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
               <div className='flex items-center justify-between'>
                 <div className='text-2xl font-bold text-blue-400'>
-=======
-                  <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     +{service.technologies.length - 3} more
                   </span>
                 )}
               </div>
-<<<<<<< HEAD
 
-              <div className='flex items-center justify-between'>
-                <div className='text-2xl font-bold text-blue-400'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                  ${service.pricing.starter}
-                  <span className='text-sm text-gray-400 font-normal'>
-                    /month
-                  </span>
-                </div>
-                <button className='px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'>                  Learn More
-=======
-                <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   Learn More
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </button>
               </div>
             </motion.div>
@@ -667,15 +533,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             <p className='text-gray-400'>
               Try adjusting your search terms or category filters
             </p>          </motion.div>
-=======
-            className="text-center py-16"
-          >
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-gray-300 mb-2">No services found</h3>
-            <p className="text-gray-400">Try adjusting your search terms or category filters</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         )}
       </div>
 
@@ -687,11 +547,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}
-=======
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             onClick={closeModal}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -699,7 +557,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               exit={{ scale: 0.9, opacity: 0 }}
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
               onClick={e => e.stopPropagation()}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             >
               <div className='flex items-start justify-between mb-6'>
                 <div className='flex items-center gap-4'>
@@ -721,45 +579,14 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                 <button
                   onClick={closeModal}
                   className='p-2 hover:bg-white/10 rounded-lg transition-colors'
-=======
-                    <h2 className="text-3xl font-bold text-white mb-2">{selectedService.title}</h2>
-                    <p className="text-gray-400">{serviceCategories.find(c => c.id === selectedService.category)?.name}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   </div>
                 </div>
                 <button
                   onClick={closeModal}
-<<<<<<< HEAD
-                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                >
-                  <span className='text-2xl'>×</span>
-                </button>
-              </div>
 
-              <p className='text-gray-300 text-lg mb-8'>
-                {selectedService.description}
-              </p>
-
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-                {/* Features */}
-                <div>
-                  <h3 className='text-xl font-bold text-white mb-4'>
-                    Key Features
-                  </h3>
-                  <ul className='space-y-2'>
-                    {selectedService.features.map((feature, index) => (
-                      <li
-                        key={index}
-                        className='flex items-center gap-2 text-gray-300'
-                      >
-                        <div className='w-2 h-2 bg-blue-500 rounded-full'></div>                        {feature}
-=======
-                      <li key={index} className="flex items-center gap-2 text-gray-300">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         {feature}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       </li>
                     ))}
                   </ul>
@@ -777,15 +604,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                         className='flex items-center gap-2 text-gray-300'
                       >
                         <div className='w-2 h-2 bg-green-500 rounded-full'></div>                        {benefit}
-=======
-                  <h3 className="text-xl font-bold text-white mb-4">Key Benefits</h3>
-                  <ul className="space-y-2">
-                    {selectedService.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-center gap-2 text-gray-300">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         {benefit}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       </li>
                     ))}
                   </ul>
@@ -802,17 +623,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                     <span
                       key={tech}
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >
-=======
-              <div className="mt-8">
-                <h3 className="text-xl font-bold text-white mb-4">Technologies</h3>
-                <div className="flex flex-wrap gap-3">
-                  {selectedService.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-2 bg-white/10 rounded-lg text-gray-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       {tech}
                     </span>
                   ))}
@@ -851,9 +664,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                       </button>
                     </div>
                   ))}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                 </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               </div>
             </motion.div>
           </motion.div>
@@ -864,10 +677,3 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 };
 
 export default EnhancedServicesShowcase2025;
-=======
-  )
-};
-
-export default EnhancedServicesShowcase2025;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

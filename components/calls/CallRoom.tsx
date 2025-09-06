@@ -7,7 +7,7 @@ import {
   createLocalTracks,
   VideoPresets,;
 } from 'livekit-client';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 
@@ -38,11 +38,8 @@ export default function CallRoom({
   const [participants, setParticipants] = useState<
     Array<RemoteParticipant | LocalParticipant>
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);
-=======
-  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const connect = useCallback(async () => {
     const r = new Room();
@@ -60,7 +57,7 @@ export default function CallRoom({
         audio: true,
         video: VideoPresets.h720,
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     } else {
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
@@ -70,27 +67,17 @@ export default function CallRoom({
     });
 
     // publish local tracks
-    
-    setRoom(r);
-    setConnectedAt(Date.now());
-    rebuild(r);
-    // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);
-=======
-    for (const t of localTracks) {
-      await r.localParticipant.publishTrack(t)
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     setRoom(r);
     setConnectedAt(Date.now());
     rebuild(r);
-<<<<<<< HEAD
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-=======
-  // eslint-disable-next-line react-hooks/exhaustive-deps
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);
+
+    setRoom(r);
+    setConnectedAt(Date.now());
+    rebuild(r);
+
   }, [serverUrl, token, startMode]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const rebuild = (current?: Room | null) => {
     const r = current || room;
@@ -100,12 +87,8 @@ export default function CallRoom({
       ...Array.from(r.participants.values()),
     ];
     setParticipants(list);  };
-=======
-    const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())];
-    setParticipants(list)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   useEffect(() => {
     connect();
@@ -117,39 +100,20 @@ export default function CallRoom({
 
   const handleLeave = () => {
     if (room) {
-=======
-        room.disconnect()
-      }
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   }, [connect]);
 
   const handleLeave = () => {
     if (room) {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      room.disconnect();
-    }
-    const durationSec = connectedAt
-      ? Math.round((Date.now() - connectedAt) / 1000)
-      : 0;
-<<<<<<< HEAD
-    onLeave?.(durationSec);  };
-=======
-      room.disconnect()
-    }
-    const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
-    onLeave?.(durationSec)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const gridCols = useMemo(() => {
     const count = participants.length || 1;
     if (count <= 1) return 'grid-cols-1';
     if (count === 2) return 'grid-cols-2';
     if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
     if (count <= 6) return 'grid-cols-2 md:grid-cols-3';
     return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
   }, [participants.length]);
@@ -165,38 +129,13 @@ export default function CallRoom({
 
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
-=======
-        <Controls room={room} onLeave={handleLeave} accent="cyan" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
       </div>
 
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          <ParticipantTile
-            key={String((p as any).sid || (p as any).identity) + idx}
-            participant={p}
-            isLocal={p instanceof LocalParticipant}
-            displayName={
-              (p as any).name ||
-              (p instanceof LocalParticipant ? 'You' : undefined)
-            }
-<<<<<<< HEAD
-          />        ))}
-      </div>
-    </div>
-  );
-}
-=======
-          <ParticipantTile key={String((p as any).sid || (p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
         ))}
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

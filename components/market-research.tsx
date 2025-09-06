@@ -18,12 +18,7 @@ import {
   Activity,
   Zap,;
 } from 'lucide-react';
-=======
-import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Zap } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
 export default function MarketResearchPage() {
   const marketSegments = [
     {
@@ -37,7 +32,7 @@ export default function MarketResearchPage() {
         'Computer vision applications expanding',
       ],
       topPlayers: ['OpenAI', 'Anthropic', 'Google AI', 'Microsoft Azure AI'],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       opportunities: [
         'AI content generation tools',
         'Predictive analytics platforms',
@@ -47,12 +42,9 @@ export default function MarketResearchPage() {
       color: 'from-fuchsia-500 to-purple-600',
       icon: <Zap className='w-8 h-8 text-white' />,
     },    {
-=======
-      icon: <Zap className="w-8 h-8 text-white" />
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       name: 'Database & Analytics',
       marketSize: '$8.9B',
       growthRate: '18.7% CAGR',
@@ -63,7 +55,7 @@ export default function MarketResearchPage() {
         'Performance optimization focus',
       ],
       topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       opportunities: [
         'Database performance monitoring',
         'Real-time analytics dashboards',
@@ -73,12 +65,9 @@ export default function MarketResearchPage() {
       color: 'from-cyan-500 to-blue-600',
       icon: <BarChart3 className='w-8 h-8 text-white' />,
     },    {
-=======
-      icon: <BarChart3 className="w-8 h-8 text-white" />
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       name: 'Security & Identity',
       marketSize: '$12.3B',
       growthRate: '21.2% CAGR',
@@ -89,7 +78,7 @@ export default function MarketResearchPage() {
         'Compliance requirements increasing',
       ],
       topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       opportunities: [
         'Identity verification platforms',
         'API security gateways',
@@ -99,12 +88,9 @@ export default function MarketResearchPage() {
       color: 'from-green-500 to-emerald-600',
       icon: <Target className='w-8 h-8 text-white' />,
     },    {
-=======
-      icon: <Target className="w-8 h-8 text-white" />
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       name: 'Business Intelligence',
       marketSize: '$22.1B',
       growthRate: '19.8% CAGR',
@@ -115,7 +101,7 @@ export default function MarketResearchPage() {
         'Predictive analytics demand',
       ],
       topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       opportunities: [
         'Custom dashboard builders',
         'Data integration platforms',
@@ -125,12 +111,9 @@ export default function MarketResearchPage() {
       color: 'from-orange-500 to-red-600',
       icon: <Activity className='w-8 h-8 text-white' />,
     },    {
-=======
-      icon: <Activity className="w-8 h-8 text-white" />
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       name: 'API Management',
       marketSize: '$6.8B',
       growthRate: '24.1% CAGR',
@@ -141,7 +124,7 @@ export default function MarketResearchPage() {
         'Developer experience focus',
       ],
       topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       opportunities: [
         'API rate limiting services',
         'Developer portal platforms',
@@ -151,12 +134,9 @@ export default function MarketResearchPage() {
       color: 'from-indigo-500 to-purple-600',
       icon: <Globe className='w-8 h-8 text-white' />,
     },    {
-=======
-      icon: <Globe className="w-8 h-8 text-white" />
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       name: 'User Experience Analytics',
       marketSize: '$9.4B',
       growthRate: '20.5% CAGR',
@@ -167,7 +147,7 @@ export default function MarketResearchPage() {
         'Mobile app analytics growth',
       ],
       topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       opportunities: [
         'Heatmap and session recording',
         'A/B testing platforms',
@@ -177,18 +157,14 @@ export default function MarketResearchPage() {
       color: 'from-teal-500 to-cyan-600',
       icon: <Users className='w-8 h-8 text-white' />,
     },  ];
-=======
-      icon: <Users className="w-8 h-8 text-white" />
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const competitiveAnalysis = [
     {
       company: 'Enterprise Giants',
       examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       strengths: [
         'Extensive resources and R&D',
         'Established customer base',
@@ -240,12 +216,8 @@ export default function MarketResearchPage() {
       marketShare: '15-25%',
       pricing: 'Low ($10-100/month)',
     },  ];
-=======
-      pricing: 'Low ($10-100/month)'
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const marketTrends = [
     {
@@ -265,9 +237,9 @@ export default function MarketResearchPage() {
       ];
       opportunities: 'AI integration services, custom AI models, AI consulting'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       trend: 'Privacy-First Design',
       description: 'Growing focus on data privacy and compliance',
       impact: 'High',
@@ -285,9 +257,9 @@ export default function MarketResearchPage() {
       ];
       opportunities: 'Privacy compliance tools, data governance platforms, audit services'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       trend: 'API-First Architecture',
       description: 'Shift towards API-centric application development',
       impact: 'Medium',
@@ -305,9 +277,9 @@ export default function MarketResearchPage() {
       ];
       opportunities: 'API development tools, integration services, developer portals'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       trend: 'Real-Time Everything',
       description: 'Demand for real-time data and analytics',
       impact: 'Medium',
@@ -325,9 +297,8 @@ export default function MarketResearchPage() {
       ];
       opportunities: 'Real-time platforms, streaming services, live collaboration tools'
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const pricingStrategies = [
     {
@@ -355,126 +326,28 @@ export default function MarketResearchPage() {
       ];
       bestFor: 'Enterprise solutions, high-value services, ROI-focused products'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
     {
       strategy: 'Usage-Based Pricing',
       description: 'Pricing based on actual usage or consumption',
       pros: [
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        'Fair pricing model',
-        'Easy to understand',
-        'Scalable with growth',
-        'Low barrier to entry',
-      ],
-      cons: [
-        'Revenue predictability challenges',
-        'Complex billing systems',
-        'Usage optimization needed',
-        'Customer cost management',
-      ],
-      bestFor: 'API services, storage platforms, compute resources',
-<<<<<<< HEAD
-    },    {
-      strategy: 'Freemium Model',
-      description: 'Free basic tier with paid premium features',
-      pros: [
-        'Revenue predictability challengesComplex billing systemsUsage optimization neededCustomer cost management'
-      ];
-      bestFor: 'API services, storage platforms, compute resources'
-    };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-    {
-      strategy: 'Freemium Model',
-      description: 'Free basic tier with paid premium features',
-      pros: [
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        'Low customer acquisition cost',
-        'Viral growth potential',
-        'Large user base',
-        'Easy market entry',
-      ],
-      cons: [
-        'Low conversion rates',
-        'Revenue per user challenges',
-        'Support cost management',
-        'Feature differentiation needed',
-      ],
-      bestFor: 'Consumer tools, productivity apps, collaboration platforms',
-<<<<<<< HEAD
-    },  ];
-        'Low conversion ratesRevenue per user challengesSupport cost managementFeature differentiation needed'
-      ];
-      bestFor: 'Consumer tools, productivity apps, collaboration platforms'
-    }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-  const investmentInsights = [
-    {
-      metric: 'Total VC Investment',
-      value: '$45.2B',
-      change: '+18.7% YoY',
-      description: 'Venture capital investment in SaaS companies in 2024',
-    },    {
-      metric: 'Average Series A',
-      value: '$12.8M',
-      change: '+22.3% YoY',
-      description: 'Average Series A funding round for SaaS startups',
-    },    {
-      metric: 'Exit Valuations',
-      value: '8.2x ARR',
-      change: '+15.4% YoY',
-      description:
-        'Average exit valuation multiple based on annual recurring revenue',
-    },    {
-      metric: 'Time to Profitability',
-      value: '3.2 years',
-      change: '-0.8 years YoY',
-      description: 'Average time for SaaS companies to reach profitability',
-    },  ];
-=======
-      description: 'Venture capital investment in SaaS companies in 2024'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       metric: 'Average Series A',
       value: '$12.8M',
       change: '+22.3% YoY',
-<<<<<<< HEAD
-      description: 'Average Series A funding round for SaaS startups',
-    },
-=======
-      description: 'Average Series A funding round for SaaS startups'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
       metric: 'Exit Valuations',
       value: '8.2x ARR',
       change: '+15.4% YoY',
-<<<<<<< HEAD
-      description:
-        'Average exit valuation multiple based on annual recurring revenue',
-    },
-=======
-      description: 'Average exit valuation multiple based on annual recurring revenue'
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
     {
       metric: 'Time to Profitability',
       value: '3.2 years',
       change: '-0.8 years YoY',
-<<<<<<< HEAD
-      description: 'Average time for SaaS companies to reach profitability',
-    },
-=======
-      description: 'Average time for SaaS companies to reach profitability'
-    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -493,7 +366,7 @@ export default function MarketResearchPage() {
           content='Comprehensive market research and competitive analysis for micro SaaS services.'
         />
         <meta name='twitter:card' content='summary_large_image' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
       </Head>
 
       {/* Hero Section */}
@@ -514,12 +387,9 @@ export default function MarketResearchPage() {
             Data-driven market intelligence, competitive analysis, and industry
             trends to help you make informed decisions about your micro SaaS
             business strategy and market positioning.          </p>
-=======
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
-            Data-driven market intelligence, competitive analysis, and industry trends to help you make informed decisions about your micro SaaS business strategy and market positioning.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
           </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
         </div>
       </section>
 
@@ -528,7 +398,7 @@ export default function MarketResearchPage() {
         <div className='container-cursor'>
           <div className='text-center mb-16'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Investment & Market Metrics
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -562,9 +432,9 @@ export default function MarketResearchPage() {
                   <div className="text-sm text-gray-300 mb-4">{insight.description}</div>
                   <div className="inline-flex items-center text-sm text-green-400">
                     <TrendingUp className="w-4 h-4 mr-1" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                     {insight.change}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                   </div>
                 </div>
               </Card>
@@ -578,7 +448,7 @@ export default function MarketResearchPage() {
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Market Segment Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -621,13 +491,9 @@ export default function MarketResearchPage() {
                             <span className='text-green-400 font-semibold'>
                               {segment.growthRate}
                             </span>                          </div>
-=======
-                          <div className="flex items-center justify-between">
-                            <span className="text-gray-400">Growth Rate:</span>
-                            <span className="text-green-400 font-semibold">{segment.growthRate}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </div>
                       </div>
                     </div>
@@ -635,7 +501,7 @@ export default function MarketResearchPage() {
                     {/* Market Analysis */}
                     <div className='lg:w-2/3'>
                       <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         {/* Key Trends */}
                         <div>
                           <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
@@ -649,12 +515,9 @@ export default function MarketResearchPage() {
                                 className='flex items-start text-gray-300 text-sm'
                               >
                                 <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />                                {trend}
-=======
-                              <li key={trendIndex} className="flex items-start text-gray-300 text-sm">
-                                <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                                 {trend}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                               </li>
                             ))}
                           </ul>
@@ -664,7 +527,7 @@ export default function MarketResearchPage() {
                         <div>
                           <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
                             <Award className='w-5 h-5 mr-2 text-yellow-400' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                             Top Players
                           </h4>
                           <ul className='space-y-2'>
@@ -674,12 +537,9 @@ export default function MarketResearchPage() {
                                 className='flex items-start text-gray-300 text-sm'
                               >
                                 <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />                                {player}
-=======
-                              <li key={playerIndex} className="flex items-start text-gray-300 text-sm">
-                                <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                                 {player}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                               </li>
                             ))}
                           </ul>
@@ -711,9 +571,9 @@ export default function MarketResearchPage() {
                               {opportunity}
                             </div>
                           ))}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
                         </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                       </div>
                     </div>
                   </div>
@@ -729,7 +589,7 @@ export default function MarketResearchPage() {
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Competitive Landscape Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -776,35 +636,14 @@ export default function MarketResearchPage() {
                   </div>
 
                   {/* Strengths */}
-=======
-                      <span className="text-gray-400">Pricing:</span>
-                      <div className="text-white font-semibold">{analysis.pricing}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                     </div>
                   </div>
 
                   {/* Strengths */}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                  <div className='mb-4'>
-                    <h4 className='text-sm font-semibold text-green-400 mb-2'>
-                      Strengths:
-                    </h4>
-                    <ul className='space-y-1 text-xs text-gray-300'>
-                      {analysis.strengths.map((strength, strengthIndex) => (
-                        <li key={strengthIndex} className='flex items-start'>
-<<<<<<< HEAD
-                          <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {strength}
-=======
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
-                      {analysis.strengths.map((strength, strengthIndex) => (
-                        <li key={strengthIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           {strength}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </li>
                       ))}
                     </ul>
@@ -819,15 +658,9 @@ export default function MarketResearchPage() {
                       {analysis.weaknesses.map((weakness, weaknessIndex) => (
                         <li key={weaknessIndex} className='flex items-start'>
                           <span className='w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {weakness}
-=======
-                    <h4 className="text-sm font-semibold text-red-400 mb-2">Weaknesses:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
-                      {analysis.weaknesses.map((weakness, weaknessIndex) => (
-                        <li key={weaknessIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           {weakness}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </li>
                       ))}
                     </ul>
@@ -844,7 +677,7 @@ export default function MarketResearchPage() {
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Emerging Market Trends
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -881,40 +714,14 @@ export default function MarketResearchPage() {
                       </span>
                     </div>
                   </div>
-=======
-                      <span className="px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                         {trend.timeline}
                       </span>
                     </div>
                   </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-                  <p className='text-gray-300 mb-4'>{trend.description}</p>
-
-                  <div className='mb-4'>
-                    <h4 className='text-sm font-semibold text-gray-400 mb-2'>
-                      Examples:
-                    </h4>
-                    <ul className='space-y-1 text-xs text-gray-300'>
-                      {trend.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} className='flex items-start'>
-<<<<<<< HEAD
-                          <span className='w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {example}
-=======
-                  
-                  <p className="text-gray-300 mb-4">{trend.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
-                      {trend.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           {example}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </li>
                       ))}
                     </ul>
@@ -927,12 +734,9 @@ export default function MarketResearchPage() {
                     <p className='text-xs text-gray-300'>
                       {trend.opportunities}
                     </p>                  </div>
-=======
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Opportunities:</h4>
-                    <p className="text-xs text-gray-300">{trend.opportunities}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
               </Card>
             ))}
@@ -945,7 +749,7 @@ export default function MarketResearchPage() {
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
               Pricing Strategy Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -976,12 +780,9 @@ export default function MarketResearchPage() {
                       {strategy.pros.map((pro, proIndex) => (
                         <li key={proIndex} className='flex items-start'>
                           <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {pro}
-=======
-                        <li key={proIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           {pro}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </li>
                       ))}
                     </ul>
@@ -996,16 +797,9 @@ export default function MarketResearchPage() {
                       {strategy.cons.map((con, conIndex) => (
                         <li key={conIndex} className='flex items-start'>
                           <span className='w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {con}
-=======
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-red-400 mb-2">Cons:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
-                      {strategy.cons.map((con, conIndex) => (
-                        <li key={conIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                           {con}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                         </li>
                       ))}
                     </ul>
@@ -1017,12 +811,9 @@ export default function MarketResearchPage() {
                       Best For:
                     </h4>
                     <p className='text-xs text-gray-300'>{strategy.bestFor}</p>                  </div>
-=======
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
-                    <p className="text-xs text-gray-300">{strategy.bestFor}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
                 </div>
               </Card>
             ))}
@@ -1035,7 +826,7 @@ export default function MarketResearchPage() {
         <div className='absolute inset-0 bg-dots opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
             Ready to Apply This Market Intelligence?
           </h2>
           <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1054,36 +845,8 @@ export default function MarketResearchPage() {
               variant='outline'
               size='lg'
               className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'            >
-=======
-              href="/contact"
-              size="lg"
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
             >
               Get Strategic Consultation
             </Button>
             <Button
-<<<<<<< HEAD
-              href='/services'
-              variant='outline'
-              size='lg'
-              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'
-              href="/services"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              View Our Services
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
