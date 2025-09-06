@@ -1,74 +1,9 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-=======
-import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
-  BookOpen, MessageCircle
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,;
-  MessageCircle,;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
-  BookOpen, MessageCircle 
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 const serviceCategories = [
@@ -277,44 +212,7 @@ const serviceCategories = [
         price: '$2,999/month'
       }
       {
-<<<<<<< HEAD
-        name: 'AI Business Intelligence'
-        href: '/autonomous-business-intelligence-network'
-        description: 'Self-evolving BI'
-        price: '$1,299/month'
-      }
-    ]
-  },];      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization-ai', description: 'AI supply chain optimization', price: '$899/month' }
-      { name: 'Autonomous Marketing AI', href: '/autonomous-marketing-ai-platform', description: 'Self-optimizing marketing', price: '$1,499/month' }
-      { name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' }
-      { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
-    ]
-  }
-=======
-        name: 'AI Business Intelligence',
-        href: '/autonomous-business-intelligence-network',
-        description: 'Self-evolving BI',
-        price: '$1,299/month',
-      },
-    ],
-  },];      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization-ai', description: 'AI supply chain optimization', price: '$899/month' },
-      { name: 'Autonomous Marketing AI', href: '/autonomous-marketing-ai-platform', description: 'Self-optimizing marketing', price: '$1,499/month' };
-      { name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' };
-      { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
-    ]
-  }
-<<<<<<< HEAD
 
-];
-=======
-<<<<<<< HEAD
-=======
-
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'About Us', href: '/about', icon: Users }
@@ -492,42 +390,7 @@ const UltraAdvancedNavigation2026 = () => {
           description: 'Business intelligence and analytics'
         }
         {
-<<<<<<< HEAD
-          name: 'DevOps'
-          href: '/services?category=devops'
-          description: 'Development and operations'
-        }
-      ]
-    },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' }
-        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' }
-        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' }
-        { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
-      ]
-    }
-=======
-          name: 'DevOps',
-          href: '/services?category=devops',
-          description: 'Development and operations',
-        },
-      ],
-    },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },
-        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },
-        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },
-        { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
-      ]
-    }
-<<<<<<< HEAD
 
-  ];
-=======
-<<<<<<< HEAD
-=======
-
-  ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -545,14 +408,7 @@ const UltraAdvancedNavigation2026 = () => {
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Logo */}
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -591,97 +447,7 @@ const UltraAdvancedNavigation2026 = () => {
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
                 <div key={item.name} className='relative group'>
-<<<<<<< HEAD
-                    onClick={() =>
-                      setActiveDropdown(
-                        activeDropdown === item.name ? null : item.name
-                      )
-                    }
-                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
-                  >
-                    <item.icon className='w-5 h-5' />
-                    <span className='font-medium'>{item.name}</span>
-                    <ChevronDown
-                      className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
-                      }`}
-                    />                  </button>                    <item.icon className="w-5 h-5" />
-                    <span className="font-medium">{item.name}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
-                  {/* Dropdown Menu */}
-                  <AnimatePresence>
-                    {activeDropdown === item.name && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden'
-                      >
-                        <div className='p-4'>
-                          <div className='flex items-center space-x-3 mb-4'>
-                            <div
-                              className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}
-                            >
-                              <item.icon className='w-5 h-5 text-white' />
-                            </div>
-                            <div>
-                              <h3 className='text-white font-semibold'>
-                                {item.name}
-                              </h3>
-                              <p className='text-gray-400 text-sm'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                          <div className='space-y-2'>
-                            {item.subItems.map(subItem => (
-                              <Link
-                                key={subItem.name}
-                                href={subItem.href}
-                                className='block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group'
-                                onClick={() => setActiveDropdown(null)}
-                              >
-                                <div className='text-white font-medium group-hover:text-purple-300 transition-colors duration-200'>
-                                  {subItem.name}
-                                </div>
-                                <div className='text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200'>                                  {subItem.description}                      >
-                        <div className="p-4">
-                          <div className="flex items-center space-x-3 mb-4">
-                            <div className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
-                              <item.icon className="w-5 h-5 text-white" />
-                            </div>
-                            <div>
-                              <h3 className="text-white font-semibold">{item.name}</h3>
-                              <p className="text-gray-400 text-sm">{item.description}</p>
-                            </div>
-                          </div>
-                          <div className="space-y-2">
-                            {item.subItems.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                href={subItem.href}
-                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
-                                onClick={() => setActiveDropdown(null)}
-                              >
-                                <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">
-                                  {subItem.name}
-                                </div>
-                                <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
-=======
 
-              </div>
-            </Link>
-
-            {/* Desktop Navigation */}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                   {subItem.description}
                                 </div>
                               </Link>
@@ -702,24 +468,14 @@ const UltraAdvancedNavigation2026 = () => {
                   </AnimatePresence>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Quick Links */}
               <div className='flex items-center space-x-6'>
                 <Link
                   href='/services'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
                 >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   All Services
                 </Link>
                 <Link
@@ -760,14 +516,7 @@ const UltraAdvancedNavigation2026 = () => {
                 Get Started
               </Link>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -784,14 +533,7 @@ const UltraAdvancedNavigation2026 = () => {
           </div>
         </div>
       </nav>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -800,19 +542,7 @@ const UltraAdvancedNavigation2026 = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
-            onClick={() => setIsOpen(false)}
-=======
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
 
-            onClick={() => setIsOpen(false)}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <motion.div
               initial={{ x: '100%' }}
@@ -853,41 +583,7 @@ const UltraAdvancedNavigation2026 = () => {
                 </button>
               </div>
               {/* Mobile Navigation Items */}
-<<<<<<< HEAD
-              <div className='space-y-4'>
-                {navigationItems.map(item => (
-                  <div
-                    key={item.name}
-                    className='border-b border-gray-700/50 pb-4'
-                  >
-                      href={item.href}
-                      className='flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2'
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div
-                        className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center`}
-                      >
-                        <item.icon className='w-4 h-4 text-white' />
-                      </div>
-                      <span className='font-medium'>{item.name}</span>
-                    </Link>
-                    {/* Mobile Sub-items */}
-                    <div className='mt-3 ml-11 space-y-2'>
-                      {item.subItems.slice(0, 3).map(subItem => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1'                          onClick={() => setIsOpen(false)}                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1"
-                          onClick={() => setIsOpen(false)}
-=======
 
-                          onClick={() => setIsOpen(false)}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         >
                           {subItem.name}
                         </Link>
@@ -895,10 +591,7 @@ const UltraAdvancedNavigation2026 = () => {
                     </div>
                   </div>
                 ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Quick Links */}
                 <div className='space-y-3 pt-4'>
                   <Link
@@ -972,37 +665,16 @@ const UltraAdvancedNavigation2026 = () => {
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-};
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraAdvancedNavigation2026;    </>
   );
 }
 export default UltraAdvancedNavigation2026;
 
-<<<<<<< HEAD
-=======
 export default UltraAdvancedNavigation2026;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default UltraAdvancedNavigation2026;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

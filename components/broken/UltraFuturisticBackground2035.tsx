@@ -1,18 +1,7 @@
-<<<<<<< HEAD
 
-canvas.width = window.innerWidth * (window.devicePixelRatio |1);
-canvas.height = window.innerHeight * (window.devicePixelRatio |1);
-=======
-canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
-canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 if (ctx) {
 export default function UltraFuturisticBackground2035({
-<<<<<<< HEAD
-  children
-=======
-  children,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 import { motion } from 'framer-motion';
@@ -415,11 +404,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             className='h-full w-full'
             style={{
               backgroundImage: `
-<<<<<<< HEAD
-              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-=======
-              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
             `
               backgroundSize: '50px 50px'
@@ -434,40 +419,12 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             backgroundSize: '50px 50px'
           }} />
         </div>
-<<<<<<< HEAD
-        {/* Canvas for animated particles */}
-        <canvas
-          ref={canvasRef}
-          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}          className="absolute inset-0 w-full h-full"
-          style={{ filter: 'blur(0.5px)' }}
-        />
-=======
 
-        {/* Canvas for animated particles */}
-        <canvas
-          ref={canvasRef}
-          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
-
-          style={{ filter: 'blur(0.5px)' }}
-
-        />
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Floating neon orbs */}
         <motion.div
           className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
           animate={{
-<<<<<<< HEAD
-            scale: [1, 1.2, 1]
-            opacity: [0.2, 0.4, 0.2]
-=======
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             rotate: [0, 180, 360],          }}
           transition={{
             duration: 6
@@ -490,30 +447,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             opacity: [0.2, 0.5, 0.2]
             rotate: [360, 180, 0],          }}
           transition={{
-<<<<<<< HEAD
-            duration: 8
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-        />
-        {/* Quantum energy waves */}
-        <div className='absolute inset-0 overflow-hidden'>          }}
-        />
-        <motion.div
-          className="absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20"
-          animate={{
-            scale: [1, 1.3, 1];
-            opacity: [0.2, 0.5, 0.2];
-            rotate: [360, 180, 0]
-          }}
-          transition={{
-<<<<<<< HEAD
-            duration: 8
-            repeat: Infinity
-=======
-            duration: 8,
-            repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
         />
@@ -532,17 +466,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             animate={{
               y: [-100, 100, -100];
               opacity: [0, 0.3, 0]
-<<<<<<< HEAD
-=======
-=======
 
-          }}
-        />
-
-        {/* Quantum energy waves */}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }}
             transition={{
               duration: 4
@@ -568,7 +492,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             animate={{
               y: [100, -100, 100];
               opacity: [0, 0.3, 0]
-=======
+
             duration: 8,
             repeat: Infinity,
 
@@ -577,7 +501,6 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
 
         {/* Quantum energy waves */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             }}
             transition={{
               duration: 6
@@ -587,21 +510,4 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             }}
           />
         </div>
-<<<<<<< HEAD
-      </div>
-      {/* Render children */}
-      {children}
-    </>
-  );
-      {/* Render children */}
-      {children}
-    </>
-  )
-}
-=======
-      </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

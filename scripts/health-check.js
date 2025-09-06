@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
 const express = // // require("child_process");
 const app = express()
 app.get("/health", (req, res) => {
@@ -15,13 +9,7 @@ app.get("/ready", (req, res) => {
   // Add readiness checks here
   res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})
 module.exports = app
-<<<<<<< HEAD
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
-=======
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -105,4 +93,4 @@ if (require.main === module) {
   checker.runAllChecks().catch(console.error);
 
 module.exports = HealthChecker;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+

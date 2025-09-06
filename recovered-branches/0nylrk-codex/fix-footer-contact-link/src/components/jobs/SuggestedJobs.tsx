@@ -1,49 +1,20 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useAuth} from "@/hooks/useAuth";
-import {Loader2} from "lucide-react";
-import {Badge} from "@/components/ui/badge";
-import {useJobSuggestions} from "@/hooks/useJobSuggestions";
-import {JobMatchesCard} from "./JobMatchesCard";
-import {NoJobsCard} from "./NoJobsCard";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",
-<<<<<<< HEAD
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
-=======
-import { JobMatchesCard } from "./JobMatchesCard",
-import { NoJobsCard } from "./NoJobsCard",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-interface SuggestedJobsProps {
-  talentId?: string
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 interface SuggestedJobsProps {
   talentId?: string
 }
 
-<<<<<<< HEAD
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
-  const { user } = useAuth();
-  const currentTalentId = talentId || user?.id;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface SuggestedJobsProps {
+  talentId?: string
+}
+
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-<<<<<<< HEAD
-  const { user } = useAuth();
-=======
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const { 
     isLoading,
     updateJobMatchStatus, 
@@ -53,7 +24,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       appliedMatches 
     } 
   } = useJobSuggestions(currentTalentId),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   const currentTalentId = talentId |user?.id;
   const {
@@ -68,18 +38,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const handleApply = (matchId: string, jobId: string) => {
     updateJobMatchStatus(matchId, 'applied'),
     // In a real app, this might redirect to application form or open a modal
-<<<<<<< HEAD
-  }
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined')
-  }
-=======
-  },
-
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined')
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   if (isLoading) {
     return (
@@ -87,56 +45,12 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
-<<<<<<< HEAD
-=======
-import { useAuth } from "@/hooks/useAuth",;
-import { Loader2 } from "lucide-react",;
-import { Badge } from "@/components/ui/badge",;
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
-import { JobMatchesCard } from "./JobMatchesCard",;
-import { NoJobsCard } from "./NoJobsCard",;
-interface SuggestedJobsProps {;
-  talentId?: string;
-}
-;
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
-  const { user } = useAuth(),;
-  const currentTalentId = talentId || user?.id,;
-  const {;
-    isLoading,;
-    updateJobMatchStatus,;
-    categorizedMatches: {;
-      newMatches,;
-      viewedMatches,;
-      appliedMatches;
-    } ;
-  } = useJobSuggestions(currentTalentId),;
-  const handleApply = (matchId: string, jobId: string) => {;
-    updateJobMatchStatus(matchId, 'applied'),;
-    // In a real app, this might redirect to application form or open a modal;
-  };
-  const handleDecline = (matchId: string) => {;
-    updateJobMatchStatus(matchId, 'declined');
-  };
-  if (isLoading) {;
-    return (;
-      <div className="flex items-center justify-center p-6">;
-        <Loader2 className="w-6 h-6 animate-spin text-primary" />;
-      </div>;
-    );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />
   }
-<<<<<<< HEAD
-=======
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <div className="space-y-6">
       {/* New Matches Section */}
@@ -186,17 +100,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
-<<<<<<< HEAD
-              <JobMatchesCard
-                key={match.id}
-                match={match}
-                onApply={handleApply}
-                onDecline={handleDecline}
-                showApplied={true}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               />
             ))}
           </div>
@@ -205,19 +109,8 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
     </div>
   )
 }
-<<<<<<< HEAD
-=======
-              <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline}
-                showApplied={true}
-              />;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+
 ;
-=======
+
               />;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

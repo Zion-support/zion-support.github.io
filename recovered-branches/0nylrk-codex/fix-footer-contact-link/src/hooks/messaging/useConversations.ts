@@ -1,16 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { UserProfile, UserDetails  } from '@/types/auth';
-import { supabase  } from '@/integrations/supabase/client';
-import { Conversation, ConversationContextData  } from '@/types/messaging';
-import { toast } from '@/hooks/use-toast';
-=======
-import {UserProfile, UserDetails} from '@/types/auth';
-import {supabase} from '@/integrations/supabase/client';
-import {Conversation, ConversationContextData} from '@/types/messaging';
-import {toast} from '@/hooks/use-toast';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -141,11 +130,7 @@ export function useConversations(;
           .single();
         if (createError) throw createError;
         conversationId = newConversation.id
-<<<<<<< HEAD
-      }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Conversation, ConversationContextData } from '@/types/messaging',;
@@ -279,67 +264,20 @@ export function useConversations(;
           .single(),;
         if (createError) throw createError,;
         conversationId = newConversation.id;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       }
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       // Send the initial message
       await supabase
         .from('messages')
         .insert({
-<<<<<<< HEAD
-          conversation_id: conversationId;
-          sender_id: user.id;
-          recipient_id: recipientId;
-          content: initialMessage;
-          created_at: new Date().toISOString()
-          read: false
-        });
-      // Update conversations list
-      await fetchConversations();
-=======
-          conversation_id: conversationId,
-          sender_id: user.id,
-          recipient_id: recipientId,
-          content: initialMessage,
-          created_at: new Date().toISOString(),
-          read: false
-        }),
-      
-      // Update conversations list
-      await fetchConversations(),
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       // Return the conversation ID
       return conversationId
     } catch (error) {
       console.error('Error creating conversation:', error),
       toast({
-<<<<<<< HEAD
-        title: "Failed to create conversation";
-        description: "Please try again later"
-        variant: "destructive"
-      })
-    }
-  }
-  return {
-=======
-        title: "Failed to create conversation",
-        description: "Please try again later",
-        variant: "destructive"
-      })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  };
 
-  return {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       // Send the initial message;
       await supabase;
@@ -366,11 +304,7 @@ export function useConversations(;
     }
   };
   return {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     fetchConversations;
 
     createConversation}

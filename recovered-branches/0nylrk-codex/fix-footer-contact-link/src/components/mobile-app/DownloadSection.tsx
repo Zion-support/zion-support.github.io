@@ -1,25 +1,7 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {QrCodeIcon} from "lucide-react";
-import {AppStoreButtons} from "./AppStoreButtons";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-<<<<<<< HEAD
-import { QrCodeIcon } from "lucide-react";
-import { AppStoreButtons } from "./AppStoreButtons";
 
-=======
-import { QrCodeIcon } from "lucide-react",
-import { AppStoreButtons } from "./AppStoreButtons",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
@@ -37,30 +19,7 @@ export const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring
                 needs to the next level. Available on iOS and Android.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <AppStoreButtons
-                className="mb-8"
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-                onAppStoreClick={() => console.log("App Store button clicked")}
-                onGooglePlayClick={() =>
-                  console.log("Google Play button clicked")
-                }
-=======
-              
-              <AppStoreButtons 
-                className="mb-8" 
-=======
-              <AppStoreButtons 
-                className="mb-8" 
-<<<<<<< HEAD
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-                onAppStoreClick={() => console.log("App Store button clicked")}
-                onGooglePlayClick={() => console.log("Google Play button clicked")}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React from "react",;
 import { QrCodeIcon } from "lucide-react",;
 import { AppStoreButtons } from "./AppStoreButtons",;
@@ -84,11 +43,7 @@ export const DownloadSection: React.FC = () => {;
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => // // // console.log("App Store button clicked")}
                 onGooglePlayClick={() => // // // console.log("Google Play button clicked")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               />
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
@@ -108,15 +63,7 @@ export const DownloadSection: React.FC = () => {;
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
-}
 
-=======
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 },
               />;
@@ -140,8 +87,4 @@ export const DownloadSection: React.FC = () => {;
 };
 
 export default DownloadSection;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

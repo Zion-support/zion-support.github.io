@@ -1,18 +1,9 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from 'react'
-
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React from 'react',
-=======
+
 import React from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export default function Update202508150404() {
   return (
     <>
@@ -44,72 +35,7 @@ export default function Update202508150404() {
           </section>
           <section className='mx-auto max-w-4xl'>
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-8'>
-<<<<<<< HEAD
-              <h2 className='text-2xl font-bold mb-4 text-cyan-400'>
-                Security & Monitoring
-              </h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                <div className='bg-white/5 rounded-xl p-4'>
-                  <h3 className='text-lg font-semibold mb-2'>Security Audit</h3>
-                  <p className='text-green-400'>
-                    ✓ All vulnerabilities patched
-                  </p>
-                  <p className='text-sm text-white/70 mt-2'>
-                    Automated security scanning active
-                  </p>
-                </div>
-                <div className='bg-white/5 rounded-xl p-4'>
-                  <h3 className='text-lg font-semibold mb-2'>
-                    Performance Monitoring
-                  </h3>
-                  <p className='text-blue-400'>✓ Lighthouse CI active</p>
-                  <p className='text-sm text-white/70 mt-2'>
-                    Real-time performance tracking
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-8'>
-              <h2 className='text-2xl font-bold mb-4 text-fuchsia-400'>
-                Infrastructure Improvements
-              </h2>
-              <ul className='space-y-4'>
-                <li className='flex items-start'>
-                  <span className='text-cyan-400 mr-3'>•</span>
-                  <div>
-                    <h4 className='font-semibold'>Netlify Integration</h4>
-                    <p className='text-white/70'>
-                      Enhanced deployment pipeline with automatic healing
-                    </p>
-                  </div>
-                </li>
-                <li className='flex items-start'>
-                  <span className='text-cyan-400 mr-3'>•</span>
-                  <div>
-                    <h4 className='font-semibold'>Content Delivery</h4>
-                    <p className='text-white/70'>
-                      Global CDN optimization for faster loading
-                    </p>
-                  </div>
-                </li>
-                <li className='flex items-start'>
-                  <span className='text-cyan-400 mr-3'>•</span>
-                  <div>
-                    <h4 className='font-semibold'>Database Optimization</h4>
-                    <p className='text-white/70'>
-                      Query performance improvements implemented
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               <h2 className='text-2xl font-bold mb-4 text-green-400'>
                 Automation Metrics
               </h2>
@@ -132,23 +58,11 @@ export default function Update202508150404() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD
-}
-=======
-};
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

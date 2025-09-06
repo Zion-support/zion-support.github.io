@@ -14,31 +14,7 @@ const Dashboard: NextPage = () => {
         <EmptyState
           title="No jobs yet"
           description="Post your first job to get quotes from top talent."
-<<<<<<< HEAD
-          icon={<span>🧰</span>}
-          primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
-          secondaryAction={{ label: 'Explore talent', href: '/talent' }}
-=======
-          icon={<span>🧰</span>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          primaryAction={{ label: 'Post a job', href: '/jobs/post' }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          secondaryAction={{ label: 'Explore talent', href: '/talent' }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         />
       </section>
       <section>
@@ -46,21 +22,7 @@ const Dashboard: NextPage = () => {
         <EmptyState
           title="No messages yet"
           description="When conversations start, they’ll show up here."
-<<<<<<< HEAD
-          icon={<span>💬</span>}
-          primaryAction={{ label: 'Browse services', href: '/services' }}
-        />
-      </section>
-    </div>
-  )
-}
-export default Dashboard;
 
-<<<<<<< HEAD
-=======
-export default Dashboard,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           icon={<span>💬</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -77,8 +39,4 @@ export default Dashboard,;
   );
 },;
 export default Dashboard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

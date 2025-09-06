@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -17,4 +18,9 @@ export default function NotFound() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-7da4

@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-import React from 'react',
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-=======
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function BlogPage() {
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>
@@ -33,11 +18,7 @@ export default function BlogPage() {
           kleber@ziontechgroup.com.
         </p>
       </div>
-<<<<<<< HEAD
-    </UltraFuturisticBackground>;
-=======
-    </UltraFuturisticBackground>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   );export default function BlogPage() {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
@@ -48,16 +29,4 @@ export default function BlogPage() {
       </div>
     </UltraFuturisticBackground>;
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

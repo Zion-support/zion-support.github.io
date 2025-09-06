@@ -1,117 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-<<<<<<< HEAD
-  Mail
-  Phone
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Github
-=======
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Github,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-<<<<<<< HEAD
-=======
-=======
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  ArrowRight,
-  Brain,
-  Network,
-  Cloud,
-  Shield,
-  BarChart3,
-  Users,
-  Settings,
-  FileText,
-  MessageSquare,
-  Calendar,
-  ShoppingCart,
-  BookOpen,
-  Building,
-  Heart,
-  DollarSign,
-  Target,
-  Zap,
-  Award,
-  Star,
-  CheckCircle,
-  Clock,
-  TrendingUp,
-  Eye,
-  Lock,
-  Code,
-  Home,
-  Camera,
-  Music,
-  Gamepad2,
-  Truck,
-  Calculator,
-  CreditCard,
-  Paintbrush,
-  HardDrive,
-  Activity,
-  Lightbulb,
-  Wrench,
-  PieChart,
-  ClipboardList,
-  Layers;
-} from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-<<<<<<< HEAD
-=======
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-  Mail
-  Phone
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Github
-} from "lucide-react";
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
->>>>>>> origin/main
-=======
 const footerSections = [
   {
     title: 'Services',
@@ -203,12 +103,7 @@ const microSaasCategories = [
   { title: 'Design', icon: Paintbrush, count: 6 },
   { title: 'Development', icon: Code, count: 14 }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -218,48 +113,7 @@ const microSaasCategories = [
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
     ]
-<<<<<<< HEAD
-  };
 
-<<<<<<< HEAD
-=======
-    solutions: [
-      { name: "Enterprise Solutions", href: "/enterprise-solutions" }
-      { name: "Startup Solutions", href: "/startup-solutions" }
-      { name: "Industries", href: "/industries" }
-      { name: "Custom Development", href: "/custom-development" }
-      { name: "Digital Transformation", href: "/digital-transformation" }
-      { name: "Consulting", href: "/consulting" }
-    ]
-    company: [
-      { name: "About Us", href: "/about" }
-      { name: "Our Team", href: "/team" }
-      { name: "Careers", href: "/careers" }
-      { name: "Case Studies", href: "/case-studies" }
-      { name: "News", href: "/news" }
-      { name: "Partners", href: "/partners" }
-    ]
-    resources: [
-      { name: "Blog", href: "/blog" }
-      { name: "Documentation", href: "/docs" }
-      { name: "API Documentation", href: "/docs/api" }
-      { name: "Tutorials", href: "/tutorials" }
-      { name: "White Papers", href: "/white-papers" }
-      { name: "Webinars", href: "/webinars" }
-    ]
-    legal: [
-      { name: "Privacy Policy", href: "/privacy" }
-      { name: "Terms of Service", href: "/terms" }
-      { name: "Cookie Policy", href: "/cookies" }
-      { name: "Security", href: "/security" }
-      { name: "Compliance", href: "/compliance" }
-      { name: "Accessibility", href: "/accessibility" }
-    ]
-  }
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
@@ -267,26 +121,7 @@ const microSaasCategories = [
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const microSaasCategories = [
-  { title: 'Marketing Tools', icon: Target, count: 15 },
-  { title: 'Productivity', icon: Settings, count: 12 },
-  { title: 'Analytics', icon: BarChart3, count: 18 },
-  { title: 'Automation', icon: Zap, count: 22 },
-  { title: 'Security', icon: Shield, count: 8 },
-  { title: 'Finance', icon: DollarSign, count: 10 },
-  { title: 'Design', icon: Paintbrush, count: 6 },
-  { title: 'Development', icon: Code, count: 14 }
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -426,23 +261,7 @@ const microSaasCategories = [
             </motion.div>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -454,16 +273,7 @@ const microSaasCategories = [
             >
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -481,9 +291,7 @@ const microSaasCategories = [
                 </a>
               ))}
             </motion.div>
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
+
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -563,12 +371,7 @@ const microSaasCategories = [
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-            
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -586,7 +389,7 @@ const microSaasCategories = [
                 </a>
               ))}
             </motion.div>
-=======
+
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Sitemap
@@ -598,8 +401,7 @@ const microSaasCategories = [
                 Cookie Policy
               </Link>
             </div>
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
           </div>
         </div>
       </div>

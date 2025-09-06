@@ -1,37 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
-import { PortfolioProject  } from '@/types/resume';
-import { usePortfolio  } from '@/hooks/usePortfolio';
-import { useAuth } from '@/hooks/useAuth';
-=======
-import {useState} from 'react';
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Textarea} from '@/components/ui/textarea';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
-import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
-import {PortfolioProject} from '@/types/resume';
-import {usePortfolio} from '@/hooks/usePortfolio';
-import {useAuth} from '@/hooks/useAuth';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 // Define schema for form validation
 
 const projectSchema = z.object({
@@ -52,12 +20,7 @@ interface ProjectFormProps {
   onSuccess: () => void
   onCancel: () => void
 }
-<<<<<<< HEAD
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
-=======
 
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -96,7 +59,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       if (success) {
         onSuccess();
         form.reset()
-=======
+
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -175,31 +138,14 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       if (success) {;
         onSuccess();
         form.reset();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       }
     } catch (error) {
       console.error('Error saving project:', error)
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
 
-=======
-  },
-=======
-  };
-=======
-  },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -297,10 +243,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           )}
         />
         {/* Future file upload field would go here */}
-<<<<<<< HEAD
-=======
-        
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
@@ -313,9 +256,4 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       </form>
     </Form>
   )
-<<<<<<< HEAD
-}
-=======
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

@@ -4,59 +4,7 @@ import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Brain
-  Star
-  Users
-  TrendingUp
-  Zap
-  Shield
-  CheckCircle
-  Clock
-  Award
-  Target
-  Globe
-  Sparkles
-  Cpu
-  Lock
-  Cloud
-  BarChart3
-  Eye
-  Heart
-  Lightbulb
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Globe as GlobeIcon;} from 'lucide-react';import {
-  Brain, Star, Users, TrendingUp, Zap, Shield
-=======
-  Brain,
-  Star,
-  Users,
-  TrendingUp,
-  Zap,
-  Shield,
-  CheckCircle,
-  Clock,
-  Award,
-  Target,
-  Globe,
-  Sparkles,
-  Cpu,
-  Lock,
-  Cloud,
-  BarChart3,
-  Eye,
-  Heart,
-  Lightbulb,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,;
-  Globe as GlobeIcon,;} from 'lucide-react';import { 
-  Brain, Star, Users, TrendingUp, Zap, Shield, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   CheckCircle, Clock, Award, Target, Globe, Sparkles;
   Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
@@ -139,72 +87,7 @@ const testimonials = [
     rating: 5
     avatar: '👩‍⚕️'
   },  {
-<<<<<<< HEAD
-    name: 'Michael Rodriguez'
-    role: 'CEO'
-    company: 'InnovateTech Solutions',    content: 'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.'
-    rating: 5
-    avatar: '👩‍⚕️'
-  }
-    name: 'Michael Rodriguez'
-    role: 'CEO'
-    company: 'InnovateTech Solutions'
-    content:
-      'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.'
-    rating: 5
-    avatar: '👨‍💼'
-  },  {
-    name: 'Dr. Emily Watson'
-    role: 'Research Director'
-    company: 'Consciousness Research Institute',    content: 'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.'
-    rating: 5
-    avatar: '👨‍💼'
-  }
-    name: 'Dr. Emily Watson'
-    role: 'Research Director'
-    company: 'Consciousness Research Institute'
-    content:
-      "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone."
-    rating: 5
-    avatar: '👩‍🔬'
-  },];    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.'
-    rating: 5
-    avatar: '👩‍🔬'
-  }
-=======
-    name: 'Michael Rodriguez',
-    role: 'CEO',
-    company: 'InnovateTech Solutions',
 
-  {
-    name: 'Michael Rodriguez',
-    role: 'CEO',
-    company: 'InnovateTech Solutions',
-
-  {
-    name: 'Dr. Emily Watson',
-    role: 'Research Director',
-    company: 'Consciousness Research Institute',
-<<<<<<< HEAD
-
-];
-=======
-<<<<<<< HEAD
-    content:
-      "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.",
-    rating: 5,
-    avatar: '👩‍🔬',
-  },];    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',
-    rating: 5,
-    avatar: '👩‍🔬'
-  }
-=======
-
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AIConsciousnessEvolution2025() {
   return (
     <Layout>
@@ -235,15 +118,7 @@ export default function AIConsciousnessEvolution2025() {
               key={i}
               className='absolute w-2 h-2 bg-purple-400 rounded-full opacity-30'
               animate={{
-<<<<<<< HEAD
-                x: [0, 100, 0]
-                y: [0, -100, 0]
-                opacity: [0.3, 0.8, 0.3]
-=======
-                x: [0, 100, 0],
-                y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               }}              transition={{
                 duration: 8 + i * 2
                 repeat: Infinity
@@ -261,14 +136,7 @@ export default function AIConsciousnessEvolution2025() {
         </div>
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -279,15 +147,7 @@ export default function AIConsciousnessEvolution2025() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6'
-<<<<<<< HEAD
-=======
 
-            >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Sparkles className='w-4 h-4 mr-2' />
               Revolutionary AI Technology
             </motion.div>
@@ -336,14 +196,7 @@ export default function AIConsciousnessEvolution2025() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
                   className='text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {stat.icon}
@@ -351,44 +204,13 @@ export default function AIConsciousnessEvolution2025() {
                   <div className='text-3xl font-bold text-white mb-1'>
                     {stat.value}
                   </div>
-<<<<<<< HEAD
-                  <div className='text-sm text-purple-300'>{stat.label}</div>                </motion.div>                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400">
-                    {stat.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-purple-300">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-=======
-                  <div className='text-sm text-purple-300'>{stat.label}</div>                </motion.div>
 
-                </motion.div>
-
-              ))}
-            </div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-<<<<<<< HEAD
-                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'              >            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-=======
-                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'              >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -414,27 +236,13 @@ export default function AIConsciousnessEvolution2025() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Revolutionary Features for
@@ -468,14 +276,7 @@ export default function AIConsciousnessEvolution2025() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
                   <Brain className='w-8 h-8 text-purple-400' />
@@ -485,66 +286,25 @@ export default function AIConsciousnessEvolution2025() {
                 </h3>
                 <p className='text-gray-400'>
                   Advanced AI algorithms guide you through personalized
-<<<<<<< HEAD
-                  consciousness development exercises.                </p>              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Brain className="w-8 h-8 text-purple-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200">
-                  {feature}
-                </h3>
-                <p className="text-gray-400">
-                  Advanced AI algorithms guide you through personalized consciousness development exercises.
-                </p>
-=======
-                  consciousness development exercises.                </p>
 
-                </p>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* How It Works Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               How AI Consciousness Evolution
@@ -575,15 +335,7 @@ export default function AIConsciousnessEvolution2025() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                step: '01'
-                title: 'AI Assessment'
-=======
-                step: '01',
-                title: 'AI Assessment',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 description:
                   'Our AI analyzes your current consciousness level and creates a personalized development plan.'
                 icon: <Brain className='w-12 h-12' />
@@ -602,35 +354,14 @@ export default function AIConsciousnessEvolution2025() {
                   'Real-time feedback and adaptation ensure continuous growth and development.'
                 icon: <TrendingUp className='w-12 h-12' />
               },            ].map((step, index) => (              {
-<<<<<<< HEAD
-                step: '02'
-                title: 'Personalized Training'
-                description: 'AI-generated exercises and experiences tailored to your specific needs and goals.'
-                icon: <Target className="w-12 h-12" />
-              }
-=======
-                step: '02',
-                title: 'Personalized Training',
-                description: 'AI-generated exercises and experiences tailored to your specific needs and goals.',
-                icon: <Target className="w-12 h-12" />;
-              };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               {
                 step: '03'
                 title: 'Continuous Evolution'
                 description: 'Real-time feedback and adaptation ensure continuous growth and development.'
                 icon: <TrendingUp className="w-12 h-12" />
               }
-=======
-<<<<<<< HEAD
-                step: '01',
-                title: 'AI Assessment',
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ].map((step, index) => (
               <motion.div
                 key={step.step}
@@ -639,14 +370,7 @@ export default function AIConsciousnessEvolution2025() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className='text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='relative mb-8'>
                   <div className='w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -664,68 +388,24 @@ export default function AIConsciousnessEvolution2025() {
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {step.description}
-<<<<<<< HEAD
-                </p>              </motion.div>              >
-                <div className="relative mb-8">
-                  <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="text-white font-bold text-2xl">{step.step}</div>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full blur-xl opacity-30"></div>
-                </div>
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-400">
-                  {step.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{step.description}</p>
-              </motion.div>
-=======
-                </p>              </motion.div>
 
-              </motion.div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Use Cases Section */}
       <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Transform Your Life with
@@ -758,14 +438,7 @@ export default function AIConsciousnessEvolution2025() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
                   <Lightbulb className='w-8 h-8 text-purple-400' />
@@ -775,66 +448,25 @@ export default function AIConsciousnessEvolution2025() {
                 </h3>
                 <p className='text-gray-400'>
                   Leverage AI-powered consciousness development for enhanced
-<<<<<<< HEAD
-                  personal and professional growth.                </p>              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Lightbulb className="w-8 h-8 text-purple-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200">
-                  {useCase}
-                </h3>
-                <p className="text-gray-400">
-                  Leverage AI-powered consciousness development for enhanced personal and professional growth.
-                </p>
-=======
-                  personal and professional growth.                </p>
 
-                </p>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Technology Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Cutting-Edge
@@ -868,14 +500,7 @@ export default function AIConsciousnessEvolution2025() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='text-center group'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>
                   <Cpu className='w-10 h-10 text-purple-400' />
@@ -886,52 +511,24 @@ export default function AIConsciousnessEvolution2025() {
                 </div>
                 <p className="text-sm text-gray-300 font-medium">{tech}</p>
               </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Testimonials Section */}
       <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               What Our Users
@@ -963,14 +560,7 @@ export default function AIConsciousnessEvolution2025() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='flex items-center mb-4'>
                   <div className='text-3xl mr-3'>{testimonial.avatar}</div>
@@ -994,71 +584,24 @@ export default function AIConsciousnessEvolution2025() {
                     />
                   ))}
                 </div>
-<<<<<<< HEAD
-                <p className='text-gray-300 italic'>"{testimonial.content}"</p>              </motion.div>              >
-                <div className="flex items-center mb-4">
-                  <div className="text-3xl mr-3">{testimonial.avatar}</div>
-                  <div>
-                    <h4 className="text-lg font-bold text-white">{testimonial.name}</h4>
-                    <p className="text-sm text-purple-300">{testimonial.role}</p>
-                    <p className="text-xs text-gray-400">{testimonial.company}</p>
-                  </div>
-                </div>
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 italic">"{testimonial.content}"</p>
-              </motion.div>
-=======
-                <p className='text-gray-300 italic'>"{testimonial.content}"</p>              </motion.div>
 
-              </motion.div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Choose Your
@@ -1103,19 +646,7 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access'
                 ];
                 popular: false
-<<<<<<< HEAD
-<<<<<<< HEAD
-              }
-                name: 'Professional'
-                price: '$299'
-                period: '/month'
-=======
-              };
-                name: 'Professional',
-                price: '$299',
-                period: '/month',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 description:
                   'Advanced features for serious consciousness development'
                 features: [
@@ -1159,22 +690,7 @@ export default function AIConsciousnessEvolution2025() {
                 className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${
                   plan.popular
                     ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20'                    : 'border-purple-500/20'
-=======
-<<<<<<< HEAD
-              };
 
-              {
-                name: 'Professional',
-                price: '$299',
-                period: '/month',
-
-                    : 'border-purple-500/20'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-                    : 'border-purple-500/20'
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }`}
               >
                 {plan.popular && (
@@ -1195,48 +711,9 @@ export default function AIConsciousnessEvolution2025() {
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-                <div className='text-center mb-8'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-                    {plan.name}
-                  </h3>
-                  <div className='mb-4'>
-                    <span className='text-4xl font-bold text-purple-400'>
-                      {plan.price}
-                    </span>
-                    <span className='text-gray-400'>{plan.period}</span>
-                  </div>
-                  <p className='text-gray-300'>{plan.description}</p>
-                </div>
-                <ul className='space-y-3 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
-                  <p className="text-gray-300">{plan.description}</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                      {feature}
-=======
-<<<<<<< HEAD
 
                       {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-                      {feature}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -1257,27 +734,13 @@ export default function AIConsciousnessEvolution2025() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1328,38 +791,7 @@ export default function AIConsciousnessEvolution2025() {
                   value: contactInfo.email
                 }
                 {
-<<<<<<< HEAD
-                  icon: <MapPin className='w-6 h-6' />
-                  label: 'Visit Us'
-                  value: contactInfo.address
-                },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }
-                { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
-=======
-                  icon: <MapPin className='w-6 h-6' />,
-                  label: 'Visit Us',
-                  value: contactInfo.address,
-<<<<<<< HEAD
-                },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile },
-                { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email },
-                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
-=======
-                },              ].map((contact, index) => (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
-                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
-=======
-              ].map((contact, index) => (
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <motion.div
                   key={contact.label}
                   initial={{ opacity: 0, y: 20 }}
@@ -1367,14 +799,7 @@ export default function AIConsciousnessEvolution2025() {
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                   viewport={{ once: true }}
                   className='text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {contact.icon}
@@ -1382,37 +807,11 @@ export default function AIConsciousnessEvolution2025() {
                   <div className='text-sm text-purple-300 mb-1'>
                     {contact.label}
                   </div>
-<<<<<<< HEAD
-                  <div className='text-white font-medium'>{contact.value}</div>                </motion.div>                >
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400">
-                    {contact.icon}
-                  </div>
-                  <div className="text-sm text-purple-300 mb-1">{contact.label}</div>
-                  <div className="text-white font-medium">{contact.value}</div>
-                </motion.div>
-=======
-                  <div className='text-white font-medium'>{contact.value}</div>                </motion.div>
 
-                </motion.div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </motion.div>
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-);  )
-}
-=======
-  );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

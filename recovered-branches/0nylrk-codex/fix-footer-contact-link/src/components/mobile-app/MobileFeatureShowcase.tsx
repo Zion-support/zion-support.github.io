@@ -1,82 +1,37 @@
 
-<<<<<<< HEAD
-import React from "react";
-<<<<<<< HEAD
-=======
-import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
-export const MobileFeatureShowcase: React.FC = () => {
-  const features = [
-    {
-      icon: <Users className="h-8 w-8 text-zion-cyan" />
-      title: "Hire from Anywhere"
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />,
       title: "Hire from Anywhere",
-<<<<<<< HEAD
-      description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
-    };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
-<<<<<<< HEAD
-    }
-=======
-    },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     {
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
       description: "Monitor project progress and approve milestones directly from your phone."
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
       description: "Chat with candidates or clients and receive notifications in real-time."
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
       title: "Biometric Security"
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
     }
-<<<<<<< HEAD
-  ];
-=======
-  ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <section id="features" className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -100,18 +55,7 @@ export const MobileFeatureShowcase: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
-<<<<<<< HEAD
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-<<<<<<< HEAD
-}
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",;
 export const MobileFeatureShowcase: React.FC = () => {;
@@ -170,9 +114,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

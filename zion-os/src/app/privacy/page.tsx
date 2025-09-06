@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-export default function PrivacyPage() {return (;
-=======
-export default function PrivacyPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-600 to-gray-800 text-white py-20">;

@@ -1,36 +1,9 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {useNavigate} from "react-router-dom";
-import {ChevronLeft, Bell, Settings} from "lucide-react";
-import {cn} from "@/lib/utils";
-import {Button} from "@/components/ui/button";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React from "react",
 import { useNavigate } from "react-router-dom",
 import { ChevronLeft, Bell, Settings } from "lucide-react",
-<<<<<<< HEAD
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-interface MobileHeaderProps {
 
-  title: string
-
-  showBack?: boolean;
-  showNotifications?: boolean;
-  showSettings?: boolean;
-  className?: string;
-  onNotificationsClick?: () => void;
-=======
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
@@ -38,52 +11,19 @@ interface MobileHeaderProps {
   showSettings?: boolean,
   className?: string,
   onNotificationsClick?: () => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   onSettingsClick?: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function MobileHeader({;
-  title;
-  showBack = false;
-  showNotifications = false;
-  showSettings = false;
-  className;
-  onNotificationsClick;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function MobileHeader({
-<<<<<<< HEAD
-  title;
 
-  showBack = false;
-  showNotifications = false;
-  showSettings = false;
-  className;
-  onNotificationsClick;
-  onSettingsClick}: MobileHeaderProps) {
-  const navigate = useNavigate();
-  return (
-    <header className={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
-
-=======
-  title,
-  showBack = false,
-  showNotifications = false,
-  showSettings = false,
-  className,
-  onNotificationsClick,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onSettingsClick}: MobileHeaderProps) {
   const navigate = useNavigate(),
 
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -123,17 +63,7 @@ export function MobileHeader({
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
             </Button>
-<<<<<<< HEAD
-          )}
-        </div>
-      </div>
-    </header>
-  )
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
 import { ChevronLeft, Bell, Settings } from "lucide-react",;
@@ -205,10 +135,7 @@ export function MobileHeader({;
       </div>;
     </header>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

@@ -14,11 +14,7 @@ interface SlackRespond {
 interface SafeConsole {
   log: (message: string) => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Declare available globals
 declare const globalThis: {
   console?: SafeConsole;
@@ -45,12 +41,7 @@ class MockApp {
 
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
     if (safeConsole && safeConsole.log) {
-<<<<<<< HEAD
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port |3000}!`)
-=======
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 ;
 // Declare available globals;
 declare const globalThis: {;
@@ -75,20 +66,12 @@ class MockApp {;
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
     if (safeConsole && safeConsole.log) {;
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     }
     return Promise.resolve()
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Create a mock app instance
 const app = new MockApp();
 async function askZionGPT(prompt: string): Promise<string> {
@@ -96,7 +79,7 @@ async function askZionGPT(prompt: string): Promise<string> {
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`)
-=======
+
 ;
 // Create a mock app instance;
 const app = new MockApp(),;
@@ -105,19 +88,11 @@ async function askZionGPT(prompt: string): Promise<string> {;
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
   if (safeConsole && safeConsole.log) {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
   return `AI response to: ${prompt}`
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
   const [action, ...args] = command.text.split(/\s+/);
@@ -135,7 +110,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       const project = args.join(' ');
       await respond(`Tracking project **${project}** - feature coming soon.`);
       break
-=======
+
 ;
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {;
   await ack(),;
@@ -154,11 +129,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       const project = args.join(' '),;
       await respond(`Tracking project **${project}** - feature coming soon.`),;
       break;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     }
     case 'help':
     default: await respond(
@@ -169,31 +140,6 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
           '`/zion help` - show this list'
       )
   }
-<<<<<<< HEAD
-});
-// Mock startup with safer environment access
-(async () => {
-  // Get PORT from environment or use default
-  const env = typeof globalThis !== 'undefined' && globalThis.process ?
-    globalThis.process.env : {}
-  const port = env.PORT ? Number(env.PORT) : 3000;
-  await app.start(port)
-})();
+
 export default app;
 
-=======
-}),;
-// Mock startup with safer environment access;
-(async () => {;
-  // Get PORT from environment or use default;
-  const env = typeof globalThis !== 'undefined' && globalThis.process ?;
-    globalThis.process.env : {},;
-  const port = env.PORT ? Number(env.PORT) : 3000,;
-  await app.start(port);
-})(),;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default app;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,32 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Label  } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
-import { Skill  } from '@/types/resume';
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-=======
-import {useState} from 'react';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Label} from '@/components/ui/label';
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
-import {Skill} from '@/types/resume';
-import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 interface AddSkillFormProps {
 
   resumeId: string
   onAddSkill: (skill: Skill) => Promise<boolean>
 }
-<<<<<<< HEAD
-export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
-=======
 
-export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
@@ -42,15 +20,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       setSkillName('');
       setProficiency(3)
     }
-<<<<<<< HEAD
-  }
-  const handleEnhanceSkill = (enhancedCategory: string) => {
-    setSkillCategory(enhancedCategory)
-  }
-=======
-  };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -80,16 +50,11 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       setProficiency(3);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  
+
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="flex flex-col gap-4 md:flex-row">
@@ -152,16 +117,8 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       </div>
     </form>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 
-=======
-},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 };
-=======
+
 },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

@@ -1,54 +1,12 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-=======
-import React from 'react';
-import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
-  Code
-  Database
-  Globe
-  Shield
-  Zap
-  Bot
-  BarChart3
-  Lock
-  ArrowRight
-  CheckCircle
-  Star
-  ExternalLink
-  Play
-  BookOpen
-  Github
-  Terminal;} from 'lucide-react';import {
-=======
-  Code,
-  Database,
-  Globe,
-  Shield,
-  Zap,
-  Bot,
-  BarChart3,
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  ExternalLink,
-  Play,
-  BookOpen,
-<<<<<<< HEAD
-  Github,
-  Terminal,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+
   Github,;
   Terminal,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   Code;
   Database
   Globe
@@ -263,33 +221,7 @@ export default function ApiToolsPage() {
         'Hardware security module (HSM) support'
       ]
       pricing: {
-<<<<<<< HEAD
-        free: '1,000 operations/month'
-        pro: '$119/month'
-        enterprise: 'Custom'
-      }
-      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500'
-      website: 'https://encrypt.api'
-      docs: 'https://docs.encrypt.api'
-      github: 'https://github.com/encrypt-api'
-      status: 'Live'
-      users: '4,200+'
-      responseTime: '<20ms'
-    }
-=======
-        free: '1,000 operations/month',
-        pro: '$119/month',
-        enterprise: 'Custom',
-      },
-      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500',
-      website: 'https://encrypt.api',
-      docs: 'https://docs.encrypt.api',
-      github: 'https://github.com/encrypt-api',
-      status: 'Live',
-      users: '4,200+',
-      responseTime: '<20ms',
-    },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   ];
   const categories = [
     'All'
@@ -315,71 +247,7 @@ export default function ApiToolsPage() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
-        <title>
-          API Tools & Developer Services | Zion Tech Group - Powerful APIs for
-          Modern Applications
-        </title>
-        <meta
-          name='description'
-          content='Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronization, we provide the building blocks you need.'
-        />
-        <meta
-          property='og:title'
-          content='API Tools & Developer Services | Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Powerful APIs and developer tools for modern applications. AI, security, analytics, and more.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      </Head>
-      {/* Hero Section */}
-      <section className='relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]' />
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]' />
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6'>
-            <Terminal className='w-4 h-4 mr-2' />
-            Developer-First API Solutions
-          </div>
-          <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-white leading-tight'>
-            Powerful API Tools & Services
-          </h1>
-          <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
-            Build faster, scale better, and deliver more with our comprehensive
-            collection of developer APIs. Each tool is designed for performance
-            reliability, and ease of integration.
-          </p>
-          <div className='flex flex-wrap justify-center gap-4 mb-8'>
-            {categories.map(category => (              <button      </Head>
-      {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">
-            <Terminal className="w-4 h-4 mr-2" />
-            Developer-First API Solutions
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-white leading-tight">
-            Powerful API Tools & Services
-          </h1>
-          <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-            Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {categories.map((category) => (
-              <button
-=======
 
-              <button
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
@@ -394,14 +262,7 @@ export default function ApiToolsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* API Tools Grid */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -410,14 +271,7 @@ export default function ApiToolsPage() {
               {selectedCategory === 'All'
                 ? 'All API Tools'
                 : `${selectedCategory} APIs`}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               {filteredTools.length} APIs available. Each tool is
@@ -464,94 +318,7 @@ export default function ApiToolsPage() {
                         </span>
                       </div>
                     </div>
-<<<<<<< HEAD
-                    <p className='text-gray-400 leading-relaxed mb-6'>
-                      {tool.description}
-                    </p>
-                    <div className='grid grid-cols-3 gap-4 mb-6'>
-                      <div className='text-center p-3 bg-gray-800/50 rounded-lg'>
-                        <div className='text-lg font-bold text-indigo-400'>
-                          {tool.users}
-                        </div>
-                        <div className='text-xs text-gray-500'>Users</div>
-                      </div>
-                      <div className='text-center p-3 bg-gray-800/50 rounded-lg'>
-                        <div className='text-lg font-bold text-green-400'>
-                          {tool.responseTime}
-                        </div>
-                        <div className='text-xs text-gray-500'>Response</div>
-                      </div>
-                      <div className='text-center p-3 bg-gray-800/50 rounded-lg'>
-                        <div className='text-sm font-medium text-gray-300'>
-                          Starting at
-                        </div>
-                        <div className='text-lg font-bold text-green-400'>
-                          {tool.pricing.free}
-                        </div>
-                      </div>
-                    </div>
-                    <ul className='space-y-2 mb-6'>
-                      {tool.features
-                        .slice(0, 3)
-                        .map((feature, featureIndex) => (
-                          <li
-                            key={featureIndex}
-                            className='flex items-center text-gray-300 text-sm'
-                          >
-                            <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
-                            {feature}
-                          </li>
-                        ))}
-                    </ul>
-                    <div className='flex flex-wrap gap-3'>
-                      <Button
-                        href={tool.website}
-                        variant='primary'
-                        size='sm'
-                        className='bg-indigo-600 hover:bg-indigo-700'
-                      >
-                        <ExternalLink className='w-4 h-4 mr-2' />                        Visit API
-                      </Button>
-                      <Button
-                        href={tool.docs}                      {tool.description}
-                    </p>
-                    <div className="grid grid-cols-3 gap-4 mb-6">
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-lg font-bold text-indigo-400">{tool.users}</div>
-                        <div className="text-xs text-gray-500">Users</div>
-                      </div>
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-lg font-bold text-green-400">{tool.responseTime}</div>
-                        <div className="text-xs text-gray-500">Response</div>
-                      </div>
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-sm font-medium text-gray-300">Starting at</div>
-                        <div className="text-lg font-bold text-green-400">{tool.pricing.free}</div>
-                      </div>
-                    </div>
-                    <ul className="space-y-2 mb-6">
-                      {tool.features.slice(0, 3).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="flex flex-wrap gap-3">
-                      <Button
-                        href={tool.website}
-                        variant="primary"
-                        size="sm"
-                        className="bg-indigo-600 hover:bg-indigo-700"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         Visit API
                       </Button>
                       <Button
@@ -589,27 +356,13 @@ export default function ApiToolsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -702,18 +455,11 @@ export default function ApiToolsPage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+
 }
 
 }
-=======
+
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }

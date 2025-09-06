@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-//Zion Tech Group Website JavaScript
-})
-=======
-//Zion Tech Group Website JavaScript 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 // Search function
 function performSearch(query) {
@@ -15,23 +8,7 @@ function performSearch(query) {
     const searchResults = document.querySelector('.search-results')
     if (searchResults) {
         const results = [
-<<<<<<< HEAD
-            { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' }
-            { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' }
-            { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' }
 
-            { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
-        ].filter(item =>
-            item.title.toLowerCase().includes(query)
-
-        )
-
-=======
-            { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
-            { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
-            { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 // Zion Tech Group Website JavaScript;
 document.addEventListener('DOMContentLoaded', function() {;
     // Mobile Navigation Toggle;
@@ -316,173 +293,16 @@ function performSearch(query) {;
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },;
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },;
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
         ].filter(item => 
             item.title.toLowerCase().includes(query)
         ),
-        
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result =>
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
-<<<<<<< HEAD
 
-            ).join('')
-
-            searchResults.style.display = 'block'
-        } else {
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>'
-            searchResults.style.display = 'block'
-        }
-    }
-}
-// Counter animation
-function animateCounter(element) {
-    const target = parseInt(element.textContent.replace(/\D/g, ''))
-    const duration = 2000
-    const step = target / (duration / 16)
-    let current = 0
-    const timer = setInterval(() => {
-
-        current += step
-        if (current >= target) {
-            current = target
-            clearInterval(timer)
-        }
-        const suffix = element.textContent.replace(/\d/g, '')
-
-        element.textContent = Math.floor(current) + suffix
-    }, 16)
-}
-// Tooltip initialization
-function initializeTooltips() {
-
-    const tooltipElements = document.querySelectorAll('[data-tooltip]')
-    tooltipElements.forEach(element => {
-        element.addEventListener('mouseenter', function(e) {
-            const tooltip = document.createElement('div')
-            tooltip.className = 'tooltip'
-            tooltip.textContent = this.dataset.tooltip
-            document.body.appendChild(tooltip)
-            const rect = this.getBoundingClientRect()
-            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px'
-            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px'
-
-            this.tooltip = tooltip
-        })
-        element.addEventListener('mouseleave', function() {
-            if (this.tooltip) {
-
-                this.tooltip.remove()
-
-                this.tooltip = null
-            }
-        })
-    })
-}
-// Modal initialization
-function initializeModals() {
-
-    const modalTriggers = document.querySelectorAll('[data-modal]')
-    const modals = document.querySelectorAll('.modal')
-    modalTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function(e) {
-            e.preventDefault()
-            const modalId = this.dataset.modal
-            const modal = document.getElementById(modalId)
-            if (modal) {
-                modal.classList.add('active')
-
-                document.body.style.overflow = 'hidden'
-            }
-        })
-    })
-    // Close modal on overlay click
-    modals.forEach(modal => {
-        modal.addEventListener('click', function(e) {
-            if (e.target === this) {
-
-                this.classList.remove('active')
-
-                document.body.style.overflow = ''
-            }
-        })
-        // Close modal on close button click
-
-        const closeBtn = modal.querySelector('.modal-close')
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function() {
-                modal.classList.remove('active')
-
-                document.body.style.overflow = ''
-            })
-        }
-    })
-    // Close modal on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            modals.forEach(modal => {
-                if (modal.classList.contains('active')) {
-=======
-            ).join(''),
-            searchResults.style.display = 'block'
-        } else {
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
-            searchResults.style.display = 'block'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        }
-    }
-}
-
-// Counter animation
-function animateCounter(element) {
-    const target = parseInt(element.textContent.replace(/\D/g, '')),
-    const duration = 2000,
-    const step = target / (duration / 16),
-    let current = 0,
-    
-    const timer = setInterval(() => {
-        current += step,
-        if (current >= target) {
-            current = target,
-            clearInterval(timer)
-        }
-        
-        const suffix = element.textContent.replace(/\d/g, ''),
-        element.textContent = Math.floor(current) + suffix
-    }, 16)
-}
-
-// Tooltip initialization
-function initializeTooltips() {
-    const tooltipElements = document.querySelectorAll('[data-tooltip]'),
-    
-    tooltipElements.forEach(element => {
-        element.addEventListener('mouseenter', function(e) {
-            const tooltip = document.createElement('div'),
-            tooltip.className = 'tooltip',
-            tooltip.textContent = this.dataset.tooltip,
-            document.body.appendChild(tooltip),
-            
-            const rect = this.getBoundingClientRect(),
-            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px',
-            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px',
-            
-            this.tooltip = tooltip
-        }),
-        
-        element.addEventListener('mouseleave', function() {
-            if (this.tooltip) {
-                this.tooltip.remove(),
-                this.tooltip = null
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ].filter(item =>;
             item.title.toLowerCase().includes(query);
         ),;
@@ -534,64 +354,12 @@ function initializeTooltips() {;
             if (this.tooltip) {;
                 this.tooltip.remove(),;
                 this.tooltip = null;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             }
         });
     });
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-// Modal initialization
-function initializeModals() {
-    const modalTriggers = document.querySelectorAll('[data-modal]'),
-    const modals = document.querySelectorAll('.modal'),
-    
-    modalTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function(e) {
-            e.preventDefault(),
-            const modalId = this.dataset.modal,
-            const modal = document.getElementById(modalId),
-            
-            if (modal) {
-                modal.classList.add('active'),
-                document.body.style.overflow = 'hidden'
-            }
-        })
-    }),
-    
-    // Close modal on overlay click
-    modals.forEach(modal => {
-        modal.addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.remove('active'),
-                document.body.style.overflow = ''
-            }
-        }),
-        
-        // Close modal on close button click
-        const closeBtn = modal.querySelector('.modal-close'),
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function() {
-                modal.classList.remove('active'),
-                document.body.style.overflow = ''
-            })
-        }
-    }),
-    
-    // Close modal on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            modals.forEach(modal => {
-                if (modal.classList.contains('active')) {
-                    modal.classList.remove('active'),
-                    document.body.style.overflow = ''
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 // Modal initialization;
 function initializeModals() {;
@@ -632,20 +400,7 @@ function initializeModals() {;
                 if (modal.classList.contains('active')) {;
                     modal.classList.remove('active'),;
                     document.body.style.overflow = '';
-<<<<<<< HEAD
-                }
-            });
-        }
-    });
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-                    modal.classList.remove('active')
-
-                    document.body.style.overflow = ''
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }
             })
         }
@@ -655,16 +410,7 @@ function initializeModals() {;
 function logPerformance() {
 
     if ('performance' in window) {
-<<<<<<< HEAD
-        const perfData = performance.getEntriesByType('navigation')[0]
-        console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms')
 
-        console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
-=======
-        const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
-        // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
-        // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
 }
 // Error tracking
@@ -676,14 +422,6 @@ window.addEventListener('error', function(e) {
 })
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    // // // console.log('Event tracked:', eventName, eventData),
-    // Implement your analytics tracking here
-<<<<<<< HEAD
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     console.log('Event tracked:', eventName, eventData)
 
@@ -767,23 +505,7 @@ document.addEventListener('click', function(e) {
     }
 })
 // Log performance when page is fully loaded
-<<<<<<< HEAD
 
-window.addEventListener('load', logPerformance)
-
-=======
-    // // // console.log('Event tracked:', eventName, eventData),
-    // Implement your analytics tracking here
-=======
-window.addEventListener('load', logPerformance),
-
-}
-}
-}
-}
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 // Performance monitoring;
 function logPerformance() {;
@@ -822,8 +544,4 @@ document.addEventListener('click', function(e) {;
 }),;
 // Log performance when page is fully loaded;
 window.addEventListener('load', logPerformance),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

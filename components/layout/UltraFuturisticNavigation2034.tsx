@@ -1,228 +1,9 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-=======
-import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Network
-  Server
-  HardDrive
-  Monitor
-  Laptop
-  Watch
-  Headphones
-  Speaker
-  Mic
-  Keyboard
-  Mouse
-  CpuIcon
-  DatabaseIcon
-  CloudIcon
-  LockIcon
-  ShieldIcon
-  GlobeIcon
-  ZapIcon
-  SparklesIcon
-  BrainIcon
-  AtomIcon
-  HeartIcon
-  RocketIcon
-  ShieldIcon as ShieldIcon2
-  TargetIcon
-  MicroscopeIcon
-  StarIcon
-  ArrowRight
-  Infinity
-  Crown
-  Gem
-  Sparkles as SparklesIcon2
-  ShoppingCart
-  UserCheck
-  FileText
-  BarChart
-  PaletteIcon
-  VideoIcon
-  LockIcon as LockIcon2
-  GlobeIcon as GlobeIcon2
-  CpuIcon as CpuIcon2
-  Handshake
-  LifeBuoy
-  Activity
-  Linkedin
-  Twitter
-  Facebook
-  Instagram
-  Youtube
-  Github;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
 
-=======
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  MessageCircle,
-  Star,
-  TrendingUp,
-  Target,
-  Layers,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Earth,
-  Factory,
-  Car,
-  Building,
-  GraduationCap,
-  Scale,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Mountain,
-  Code,
-  Wrench,
-  Smartphone,
-  BarChart3,
-  Eye,
-  Network,
-  Server,
-  HardDrive,
-  Monitor,
-  Laptop,
-  Watch,
-  Headphones,
-  Speaker,
-  Mic,
-  Keyboard,
-  Mouse,
-  CpuIcon,
-  DatabaseIcon,
-  CloudIcon,
-  LockIcon,
-  ShieldIcon,
-  GlobeIcon,
-  ZapIcon,
-  SparklesIcon,
-  BrainIcon,
-  AtomIcon,
-  HeartIcon,
-  RocketIcon,
-  ShieldIcon as ShieldIcon2,
-  TargetIcon,
-  MicroscopeIcon,
-  StarIcon,
-  ArrowRight,
-  Infinity,
-  Crown,
-  Gem,
-  Sparkles as SparklesIcon2,
-  ShoppingCart,
-  UserCheck,
-  FileText,
-  BarChart,
-  PaletteIcon,
-  VideoIcon,
-  LockIcon as LockIcon2,
-  GlobeIcon as GlobeIcon2,
-  CpuIcon as CpuIcon2,
-  Handshake,
-  LifeBuoy,
-  Activity,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Youtube,;
-  Github,;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -457,44 +238,7 @@ const serviceCategories = [
         price: '$2,999/month'
       }
       {
-<<<<<<< HEAD
-        name: 'Holographic Event Platform'
-        href: '/holographic-event-platform'
-        description: 'Immersive holographic experiences'
-        price: '$2,999/month'
-      }
-    ]
-  },];      { name: 'Quantum DNA Computing', href: '/quantum-dna-computing-platform', description: 'DNA-based quantum computation', price: '$35,999/month' }
-      { name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' }
-      { name: 'Metaverse AI Development', href: '/metaverse-ai-development-platform', description: 'Build immersive virtual worlds', price: '$2,999/month' }
-      { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
-    ]
-  }
-=======
-        name: 'Holographic Event Platform',
-        href: '/holographic-event-platform',
-        description: 'Immersive holographic experiences',
-        price: '$2,999/month',
-      },
-    ],
-  },];      { name: 'Quantum DNA Computing', href: '/quantum-dna-computing-platform', description: 'DNA-based quantum computation', price: '$35,999/month' };
-      { name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' };
-      { name: 'Metaverse AI Development', href: '/metaverse-ai-development-platform', description: 'Build immersive virtual worlds', price: '$2,999/month' };
-      { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
-    ]
-  }
-<<<<<<< HEAD
 
-];
-=======
-<<<<<<< HEAD
-=======
-
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -551,12 +295,7 @@ const socialLinks = [
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
 ];
-<<<<<<< HEAD
-export default function UltraFuturisticNavigation2034() {
-=======
 
-export default function UltraFuturisticNavigation2034() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -591,14 +330,7 @@ export default function UltraFuturisticNavigation2034() {;
             <div className='flex items-center space-x-2'>
               <Phone className='w-4 h-4 text-cyan-400' />
               <span className='hover:text-cyan-400 transition-colors'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {contactInfo.mobile}
               </span>
             </div>
@@ -670,14 +402,7 @@ export default function UltraFuturisticNavigation2034() {;
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               className='flex items-center space-x-3'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -708,97 +433,11 @@ export default function UltraFuturisticNavigation2034() {;
               </div>
             </motion.div>
             {/* Desktop Navigation */}
-<<<<<<< HEAD
-            <div className='hidden lg:flex items-center space-x-8'>
-              {quickLinks.map(link => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                >
-                  {link.name}
-                </Link>
-              ))}
-            <div className="hidden lg:flex items-center space-x-8">
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-<<<<<<< HEAD
-                  {link.name}
-                </Link>
-              ))}
-=======
-=======
 
-                >
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {link.name}
                 </Link>
               ))}
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              {/* Services Dropdown */}
-              <div className='relative group'>
-                <button className='flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'>
-                  <span>Services</span>
-                  <ChevronDown className='w-4 h-4' />
-                </button>
-                <div className='absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
-                  <div className='grid grid-cols-2 gap-4'>
-                    {serviceCategories.slice(0, 4).map(category => (
-                      <div
-                        key={category.title}
-                        className='p-3 rounded-lg hover:bg-cyan-500/10 transition-colors'
-                      >
-                        <div className='flex items-center space-x-2 mb-2'>
-                          <category.icon className='w-5 h-5 text-cyan-400' />
-                          <h3 className='text-sm font-semibold text-white'>
-                            {category.title.split(' ')[0]}
-                          </h3>
-                        </div>
-                        <p className='text-xs text-gray-400 mb-2'>
-                          {category.description}
-                        </p>
-                        <div className='space-y-1'>
-                          {category.services.slice(0, 2).map(service => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              className='block text-xs text-gray-300 hover:text-cyan-400 transition-colors'                            >              {/* Services Dropdown */}
-              <div className="relative group">
-                <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
-                  <span>Services</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                <div className="absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="grid grid-cols-2 gap-4">
-                    {serviceCategories.slice(0, 4).map((category) => (
-                      <div key={category.title} className="p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <category.icon className="w-5 h-5 text-cyan-400" />
-                          <h3 className="text-sm font-semibold text-white">{category.title.split(' ')[0]}</h3>
-                        </div>
-                        <p className="text-xs text-gray-400 mb-2">{category.description}</p>
-                        <div className="space-y-1">
-                          {category.services.slice(0, 2).map((service) => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
-=======
-<<<<<<< HEAD
-
-                >
-                  {link.name}
-                </Link>
-              ))}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             >
                               {service.name}
                             </Link>
@@ -851,14 +490,7 @@ export default function UltraFuturisticNavigation2034() {;
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -890,44 +522,7 @@ export default function UltraFuturisticNavigation2034() {;
                     {link.name}
                   </Link>
                 ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-                {/* Mobile Services Accordion */}
-                {serviceCategories.map(category => (
-                  <div
-                    key={category.title}
-                    className='border-b border-cyan-500/20 pb-4'
-                  >
-                    <button
-                      onClick={() => toggleDropdown(category.title)}
-                      className='flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'
-                    >
-                      <span>{category.title}</span>
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === category.title ? 'rotate-180' : ''
-                        }`}
-                      />                    </button>                {/* Mobile Services Accordion */}
-                {serviceCategories.map((category) => (
-                  <div key={category.title} className="border-b border-cyan-500/20 pb-4">
-                    <button
-                      onClick={() => toggleDropdown(category.title)}
-                      className="flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-                    >
-                      <span>{category.title}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === category.title ? 'rotate-180' : ''
-                      }`} />
-=======
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -959,10 +554,7 @@ export default function UltraFuturisticNavigation2034() {;
                     </AnimatePresence>
                   </div>
                 ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <Link
                   href='/contact'
                   onClick={() => setIsOpen(false)}
@@ -978,22 +570,4 @@ export default function UltraFuturisticNavigation2034() {;
           )}
         </AnimatePresence>
       </nav>
-<<<<<<< HEAD
-      {/* Spacer for fixed navigation */}
-      <div className='h-20'></div>
-    </>
-);      <div className="h-20"></div>
-    </>
-  );
-}
-=======
 
-      {/* Spacer for fixed navigation */}
-      <div className='h-20'></div>
-    </>
-  );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

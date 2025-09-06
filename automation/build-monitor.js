@@ -1,11 +1,5 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -13,11 +7,7 @@ const { promisify } = require('util');
 const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
@@ -155,10 +145,7 @@ class BuildMonitor {
       } catch (error) {
         this.log('Could not read previous report', 'WARN');
       }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -177,12 +164,7 @@ class BuildMonitor {
       console.log(logMessage);
     }
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     const report = {
       ...results,
       trends: {
@@ -235,10 +217,7 @@ class BuildMonitor {
   }
   async run() {
     this.log('Starting build health check...');
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -258,22 +237,14 @@ class BuildMonitor {
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
       if (report.healthScore < 70) {
         this.log('Build health is below threshold. Consider immediate action.', 'WARN');
       }
     } catch (error) {
       this.log(`Error in build monitor: ${error.message}`, 'ERROR');
     }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -473,16 +444,7 @@ class BuildMonitor {
 // Handle command line arguments
 const monitor = new BuildMonitor();
 if (require.main === module) {
-<<<<<<< HEAD
-  const monitor = new BuildMonitor();
-  monitor.run().catch(console.error);
-=======
-<<<<<<< HEAD
-=======
-  const monitor = new BuildMonitor();
-  monitor.run().catch(console.error);
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
   const command = process.argv[2];
   switch (command) {
     case 'start':
@@ -509,12 +471,6 @@ if (require.main === module) {
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 
 const fs = require('fs);
 const path = require('path'),
@@ -740,9 +696,4 @@ if (require.main === module) {
   const monitor = new BuildMonitor(),
   monitor.run().catch(console.error)}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 module.exports = BuildMonitor;

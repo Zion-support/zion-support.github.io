@@ -31,5 +31,9 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
 })

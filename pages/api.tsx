@@ -1,49 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 import {
-<<<<<<< HEAD
-  Code
-  Check
-  Globe
-  Shield
-  Zap
-  Database
-  Cpu
-  Cloud
-  XCircle
-=======
-  Code,
-  Check,
-  Globe,
-  Shield,
-  Zap,
-  Database,
-  Cpu,
-  Cloud,
-  XCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
@@ -95,17 +57,7 @@ export default function APIPage() {
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
-<<<<<<< HEAD
-  }'`
-        }
-      ]
-    }
-=======
-  }'`,
-        },
-      ],
-    },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   ];
   const responseExamples = {
     success: {
@@ -341,35 +293,6 @@ export default function APIPage() {
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-=======
-=======
-import Head from 'next/head';
-import Layout from '../components/Layout';
 
-export default function APIPage() {
-  
-    >
-      <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                API Services
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Powerful, scalable API solutions for your applications
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 }

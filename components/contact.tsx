@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 const [isSubmitting, setIsSubmitting] = useState (false);
-=======
+
  const [isSubmitting, setIsSubmitting] = useState (false);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-const [isSubmitting, setIsSubmitting] = useState (false);
-=======
- const [isSubmitting, setIsSubmitting] = useState (false);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029.filter (s => s.popular);
 ...quantumSpaceInnovations2029.filter (s => s.popular);
@@ -31,16 +24,7 @@ setSubmitSuccess (true);
 }</div> </div> </div> </motion.div>) )
 }</motion.div> </div> </section> <motion.div initial= {
   {
-<<<<<<< HEAD
-  opacity: 0, x: -30
-=======
-  opacity: 0, x: -30 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }whileInView= {
   {
   opacity: 1, x: 0
@@ -79,23 +63,13 @@ setSubmitSuccess (true);
   service.id
 }initial= {
   {
-<<<<<<< HEAD
-  opacity: 0, y: 20
-=======
-  opacity: 0, y: 20 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }whileInView= {
   {
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
-  duration: 0.6, delay: index * 0.1
-=======
-  duration: 0.6, delay: index * 0.1 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }viewport= {
   {
   once: true
@@ -142,12 +116,7 @@ setSubmitSuccess (true);
   /* Why Choose Us Section */
 }<section className="py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-4xl mx-auto text-center"> <motion.div initial= {
   {
-<<<<<<< HEAD
-  opacity: 0, y: 30
-=======
-  opacity: 0, y: 30 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -322,14 +291,7 @@ setSubmitSuccess (true);
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -347,14 +309,7 @@ setSubmitSuccess (true);
                 Explore some of our most sought-after 2029 technology solutions
               </p>
             </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
@@ -370,14 +325,7 @@ setSubmitSuccess (true);
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <span className="text-2xl">{service.icon}</span>
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Popular Badge */}
                     {service.popular && (
                       <div className="flex items-center space-x-2 mb-4">
@@ -385,35 +333,12 @@ setSubmitSuccess (true);
                         <span className="text-sm text-yellow-400 font-medium">Popular</span>
                       </div>
                     )}
-<<<<<<< HEAD
-                    {/* Service Title and Tagline */}
-                    <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
-                    <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>
-=======
 
-                    {/* Service Title and Tagline */}
-                    <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
-                    <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>
-<<<<<<< HEAD
-=======
-                    
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Description */}
                     <p className="text-gray-300 leading-relaxed mb-4 line-clamp-3">
                       {service.description}
                     </p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Price */}
                     <div className="mb-4">
                       <span className={`${service.textColor} font-semibold text-lg`}>
@@ -421,14 +346,7 @@ setSubmitSuccess (true);
                       </span>
                       <span className="text-gray-400 text-sm">{service.period}</span>
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* CTA */}
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-400">Setup: {service.setupTime}</span>
@@ -440,14 +358,7 @@ setSubmitSuccess (true);
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -493,30 +404,4 @@ setSubmitSuccess (true);
       </main>
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-<<<<<<< HEAD
-  )
-}
-=======
-  ),
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-;
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

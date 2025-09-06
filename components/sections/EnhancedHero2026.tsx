@@ -2,27 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Shield
-  Globe
-  Brain
-  Rocket
-  CheckCircle;
-=======
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,;
-  CheckCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';
 
 interface EnhancedHero2026Props {
@@ -52,26 +32,18 @@ export default function EnhancedHero2026({
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        staggerChildren: 0.2
-      }
-=======
-        staggerChildren: 0.2,
-      },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     },  };        staggerChildren: 0.2
       }
     }
   }
-=======
+
         staggerChildren: 0.2,
       },
     },  };
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
     hidden: { y: 30, opacity: 0 }
     visible: {
@@ -109,33 +81,14 @@ export default function EnhancedHero2026({
             key={i}
             className='absolute w-2 h-2 bg-cyan-400/30 rounded-full'
             style={{
-<<<<<<< HEAD
-              left: `${Math.random() * 100}%`
-              top: `${Math.random() * 100}%`
-=======
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             }}
             animate={{
               y: [0, -30, 0]
               opacity: [0.3, 0.8, 0.3]
               scale: [1, 1.5, 1],            }}
             transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-              duration: 3 + Math.random() * 2
-              repeat: Infinity
-              ease: 'easeInOut'
-              delay: Math.random() * 2,            }}  }
-=======
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: Math.random() * 2,            }}  };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced Background Elements */}
@@ -155,46 +108,12 @@ export default function EnhancedHero2026({
               y: [0, -30, 0];
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1]
-<<<<<<< HEAD
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2
-              repeat: Infinity
-              ease: 'easeInOut'
-              delay: Math.random() * 2,              ease: "easeInOut"
-              delay: Math.random() * 2
-            }}
-=======
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: Math.random() * 2,            }}
 
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-<<<<<<< HEAD
 
-            }}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-              ease: 'easeInOut',
-              delay: Math.random() * 2,              ease: "easeInOut",
-              delay: Math.random() * 2
-            }}
-=======
-
-            }}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
         ))}
       </div>
@@ -237,100 +156,12 @@ export default function EnhancedHero2026({
               Transform your business with our revolutionary AI, Quantum, and IT infrastructure services.
               <span className="text-cyan-400 font-semibold"> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.
           </motion.div>
-<<<<<<< HEAD
-          {/* Enhanced Stats Grid */}
-          <motion.div
-            className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto'
-          >
-            {[
-              {
-                label: 'Total Services'
-                value: serviceStats.totalServices
-                icon: Rocket
-                color: 'from-blue-500 to-cyan-500'
-              }
-              {
-                label: 'AI Solutions'
-                value: serviceStats.aiServices
-                icon: Brain
-                color: 'from-purple-500 to-pink-500'
-              }
-              {
-                label: 'Emerging Tech'
-                value: serviceStats.emergingTech
-                icon: TrendingUp
-                color: 'from-green-500 to-emerald-500'
-              }
-              {
-                label: 'IT Infrastructure'
-                value: serviceStats.itSolutions
-                icon: Globe
-                color: 'from-orange-500 to-red-500'
-              }
-              {
-                label: 'Micro SaaS'
-                value: serviceStats.microSaas
-                icon: Zap
-                color: 'from-yellow-500 to-orange-500'
-              }
-              {
-                label: 'Revolutionary'
-                value: serviceStats.revolutionaryServices
-                icon: Star
-                color: 'from-pink-500 to-purple-500'
-              },            ].map((stat, index) => (              { label: 'Total Services', value: serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' }
-              { label: 'AI Solutions', value: serviceStats.aiServices, icon: Brain, color: 'from-purple-500 to-pink-500' }
-              { label: 'Emerging Tech', value: serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' }
-              { label: 'IT Infrastructure', value: serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' }
-              { label: 'Micro SaaS', value: serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' }
 
-              { label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
-              <motion.div
-                key={stat.label}
-                variants={statsVariants}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
-              >
-                <div
-                  className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <stat.icon className='w-6 h-6 text-white' />
-                </div>
-                <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
-                  {stat.value.toLocaleString()}+
-                </div>
-                <div className='text-xs text-gray-400 leading-tight'>                  {stat.label}              >
-                <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
-                  <stat.icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                  {stat.value.toLocaleString()}+
-                </div>
-                <div className="text-xs text-gray-400 leading-tight">
-                  {stat.label}
-=======
-
-          {/* Enhanced Stats Grid */}
-
-                  {stat.label}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </motion.div>
             ))}
           </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -346,13 +177,7 @@ export default function EnhancedHero2026({
                 </span>
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
-<<<<<<< HEAD
-              <Button
-                href="/contact"
-=======
-              <Button 
-                href="/contact" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 variant="secondary"
                 size="xl"
                 className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
@@ -398,14 +223,7 @@ export default function EnhancedHero2026({
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Information */}
           <motion.div
             variants={itemVariants}
@@ -455,13 +273,4 @@ export default function EnhancedHero2026({
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-);  )
-}
-=======
-  );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

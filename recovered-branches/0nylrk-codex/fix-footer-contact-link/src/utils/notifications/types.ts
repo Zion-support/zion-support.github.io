@@ -1,14 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
-export interface CreateNotificationParams {
-=======
-export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
-
-export interface CreateNotificationParams {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
   title: string;
   message: string;
@@ -18,22 +9,12 @@ export interface CreateNotificationParams {;
   actionUrl?: string | null
   actionText?: string | null
 }
-<<<<<<< HEAD
-export interface CreateNotificationResult {
-=======
 
-export interface CreateNotificationResult {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   success: boolean;
   notificationId?: string
   error?: any
 }
-<<<<<<< HEAD
-export interface HireRequestNotificationParams {
-=======
 
-export interface HireRequestNotificationParams {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   talentId: string;
   adminId?: string;
   requesterName: string;
@@ -42,22 +23,12 @@ export interface HireRequestNotificationParams {;
   projectSummary?: string
   hireRequestId: string
 }
-<<<<<<< HEAD
-export interface OnboardingNotificationParams {
-=======
 
-export interface OnboardingNotificationParams {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
   missingMilestone: string
   userRole: 'talent' | 'client'
 }
-<<<<<<< HEAD
-export interface SystemNotificationParams {
-=======
 
-export interface SystemNotificationParams {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
   title: string;
   message: string;
@@ -66,7 +37,7 @@ export interface SystemNotificationParams {;
 
   sendEmail?: boolean
 }
-=======
+
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 export interface CreateNotificationParams {;
   userId: string,;
@@ -110,8 +81,4 @@ export interface SystemNotificationParams {;
   sendEmail?: boolean;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

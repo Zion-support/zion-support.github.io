@@ -45,8 +45,4 @@ export default async function handler(
     return res.status(500).json({ error: "Failed to create partner" });
 
   }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

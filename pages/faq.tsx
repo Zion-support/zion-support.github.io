@@ -1,29 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import Head from "next/head";
-import Link from "next/link";
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/automation-improvements-final
 
-=======
-<<<<<<< HEAD
-import Head from "next/head";
-import Link from "next/link";
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function FAQ() {
   const contact = {
     phone: "+1 302 464 0950"
@@ -83,28 +62,12 @@ export default function FAQ() {
         "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
     }
   ];
-=======
+
 import Head from 'next/head'
 import Link from 'next/link'
 export default function FAQ() {
   const contact = {
-<<<<<<< HEAD
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    site: "https://ziontechgroup.com",;
-  };
-=======
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const faqs = [
     {
       question: "What services does Zion Tech Group offer ? ",
@@ -151,7 +114,7 @@ export default function FAQ() {
   }
 }
   ]
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <>
       <Head>
@@ -175,33 +138,7 @@ export default function FAQ() {
               Get Answers to Common Questions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              Find answers to the most common questions about our services
-              pricing, implementation, and support. Can&apos;t find what
-              you&apos;re looking for? Contact us directly.
-            </p>
-          </div>
-        </section>
-        {/* FAQ Section */}
-=======
-              Find answers to the most common questions about our services, pricing,
-              implementation, and support. Can't find what you're looking for? Contact us directly.
-            </p>
-          </div>
-        </section>
-<<<<<<< HEAD
-        {/* FAQ Section */}
-=======
-        {/* FAQ Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
@@ -218,19 +155,7 @@ export default function FAQ() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Contact CTA */}
-=======
-        {/* Contact CTA */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -263,45 +188,14 @@ export default function FAQ() {
         </section>
       </main>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/Layout';
 
-export default function FAQPage() {
-  
-    >
-      <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Frequently Asked Questions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Find answers to common questions about our services
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 }
-=======
+
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

@@ -4,38 +4,10 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
-  Brain
-  MessageSquare
-  Image
-  Video
-  Code
-  FileText
-  Zap
-  Star
-  ExternalLink
-  CheckCircle
-  TrendingUp
-  Shield;} from 'lucide-react';import {
-=======
-  Brain,
-  MessageSquare,
-  Image,
-  Video,
-  Code,
-  FileText,
-  Zap,
-  Star,
-  ExternalLink,
-  CheckCircle,
-<<<<<<< HEAD
-  TrendingUp,
-  Shield,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+
   TrendingUp,;
   Shield,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   Brain;
   MessageSquare
   Image
@@ -57,21 +29,7 @@ export default function AiToolsPage() {
       description:
         'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.'
       features: [
-<<<<<<< HEAD
-        'Advanced reasoning & analysis'
-        'Web browsing & real-time info'
-        'Plugin ecosystem access'
-        'Code generation & debugging'
-        'Professional writing assistance'
-      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
-=======
-        'Advanced reasoning & analysis',
-        'Web browsing & real-time info',
-        'Plugin ecosystem access',
-        'Code generation & debugging',
-        'Professional writing assistance',
-      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       ];
       pricing: '$20/month'
       marketPrice: '$20/month'
@@ -189,68 +147,7 @@ export default function AiToolsPage() {
       description:
         'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.'
       features: [
-<<<<<<< HEAD
-        'Content generation'
-        'Brand voice training'
-        'SEO optimization'
-        'Team collaboration'
-        'Enterprise integrations'
-      ],      pricing: '$39-125/month',        'Content generationBrand voice trainingSEO optimizationTeam collaborationEnterprise integrations'
-      ];
-      pricing: '$39-125/month'
-      marketPrice: '$40-150/month'
-      website: 'https://jasper.ai'
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600'
-      textColor: 'text-teal-400'
-      gradient: 'from-teal-400 to-cyan-500'
-      popular: false
-      category: 'Content Creation'
-    },  ];      category: 'Content Creation'
-    }
-=======
-        'Advanced reasoning abilities',
-        'Document analysis',
-        'Code generation',
-        'Creative writing',
-        'Research assistance',
-      ],      pricing: '$20/month',
 
-      pricing: '$20/month',
-
-      marketPrice: '$20/month',
-      website: 'https://claude.ai',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      textColor: 'text-orange-400',
-      gradient: 'from-orange-400 to-red-500',
-      popular: false,
-      category: 'Conversational AI',
-    },
-
-    {
-      icon: <FileText className='w-8 h-8 text-white' />,
-      title: 'Jasper AI',
-      description:
-        'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.',
-      features: [
-        'Content generation',
-        'Brand voice training',
-        'SEO optimization',
-        'Team collaboration',
-        'Enterprise integrations',
-      ],      pricing: '$39-125/month',
-
-      pricing: '$39-125/month',
-
-      marketPrice: '$40-150/month',
-      website: 'https://jasper.ai',
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      textColor: 'text-teal-400',
-      gradient: 'from-teal-400 to-cyan-500',
-      popular: false,
-      category: 'Content Creation',
-    },  ];
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const aiMarketStats = [
     {
@@ -453,27 +350,13 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* AI Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Curated AI Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -622,28 +505,13 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* AI Categories Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-              AI Tool Categories
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of AI tools helps you build a
@@ -681,27 +549,13 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* AI Implementation Guide */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Getting Started with AI Tools
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -800,27 +654,4 @@ export default function AiToolsPage() {
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore More Tools
             </Button>
-<<<<<<< HEAD
-            <Button
-              href='/contact'
-              variant='outline'
-              size='lg'
-              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
-              Get AI Consultation
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
-}
-=======
-            <Button
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

@@ -1,32 +1,17 @@
 import * as React from "react"
 import type { CSSProperties } from "react"
 import * as RechartsPrimitive from "recharts"
-<<<<<<< HEAD
-import {useReactId} from "@/hooks/useReactId"
-import {cn} from "@/lib/utils"
-<<<<<<< HEAD
-=======
-// Format: { THEME_NAME: CSS_SELECTOR }
-const THEMES = { light: "", dark: ".dark" } as const
 
-export type ChartConfig = Record<;
-  string;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Format: { THEME_NAME: CSS_SELECTOR }
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
   string,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   {
     label?: React.ReactNode
     icon?: React.ComponentType
@@ -43,10 +28,7 @@ const ChartContext = React.createContext<ChartContextProps>({
 function useChart(): ChartContextProps {
   return React.useContext(ChartContext)
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const ChartContainer = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div"> & {
@@ -121,35 +103,7 @@ const ChartTooltipContent = React.forwardRef<
 >(
   (
     {
-<<<<<<< HEAD
-      active;
-      payload;
-      className;
-      indicator = "dot";
-      hideLabel = false;
-      hideIndicator = false;
-      label;
-      labelFormatter;
-      labelClassName;
-      formatter;
-      color;
-      nameKey;
-      labelKey}
-=======
-      active,
-      payload,
-      className,
-      indicator = "dot",
-      hideLabel = false,
-      hideIndicator = false,
-      label,
-      labelFormatter,
-      labelClassName,
-      formatter,
-      color,
-      nameKey,
-      labelKey},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     ref
   ) => {
     const { config } = useChart()
@@ -174,10 +128,7 @@ const ChartTooltipContent = React.forwardRef<
       if (!value) {
         return null
       }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return <div className={cn("font-medium", labelClassName)}>{value}</div>
     }, [
       label,
@@ -233,15 +184,7 @@ const ChartTooltipContent = React.forwardRef<
                           )}
                             style={
                               {
-<<<<<<< HEAD
-                                "--color-bg": indicatorColor;
-=======
-                                "--color-bg": indicatorColor,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                                 "--color-border": indicatorColor} as CSSProperties
                             }
                         />
@@ -262,15 +205,7 @@ const ChartTooltipContent = React.forwardRef<
                       {item.value && (
                         <span className="font-mono font-medium tabular-nums text-foreground">
                           {item.value.toLocaleString()}
-<<<<<<< HEAD
-                        </span>
-=======
-                        </span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                       )}
                     </div>
                   </>
@@ -295,21 +230,14 @@ const ChartLegendContent = React.forwardRef<
     }
 >(
   (
-<<<<<<< HEAD
-    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey }
-=======
-    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     ref
   ) => {
     const { config } = useChart()
     if (!payload?.length) {
       return null
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
       <div
         ref={ref}
@@ -377,32 +305,12 @@ function getPayloadConfigFromPayload(
       key as keyof typeof payloadPayload
     ] as string
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]
 }
-<<<<<<< HEAD
-export {
-  ChartContainer;
-  ChartTooltip;
-  ChartTooltipContent;
-  ChartLegend;
-  ChartLegendContent;
-  ChartStyle}
 
-=======
-
-export {;
-  ChartContainer;
-  ChartTooltip;
-  ChartTooltipContent;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
   return configLabelKey in config;
     ? config[configLabelKey];
@@ -413,12 +321,9 @@ export {;
   ChartContainer,;
   ChartTooltip,;
   ChartTooltipContent,;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   ChartLegend;
   ChartLegendContent;
   ChartStyle}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

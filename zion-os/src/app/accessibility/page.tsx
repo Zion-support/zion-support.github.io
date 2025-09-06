@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-export default function AccessibilityPage() {return (;
-=======
-export default function AccessibilityPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-20">;

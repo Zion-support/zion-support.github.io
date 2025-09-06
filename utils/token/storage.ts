@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-export interface TokenConfig {
-=======
-<<<<<<< HEAD
-export interface TokenConfig {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   tokenName: string;
   tokenSymbol: string;
   decimals: number;
@@ -25,14 +18,7 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
-<<<<<<< HEAD
-  }
-export interface TokenStoreData {
-=======
-  };
 
-export interface TokenStoreData {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -52,13 +38,6 @@ function readFromDisk(): TokenStoreData | null {
   }
 }
 export const tokenStore = new TokenStore();
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

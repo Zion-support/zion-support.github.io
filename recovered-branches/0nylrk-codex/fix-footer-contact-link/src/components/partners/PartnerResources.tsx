@@ -1,25 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
-import {toast} from "@/hooks/use-toast";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-=======
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
-import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 interface ResourceItem {
 
   id: string
@@ -33,29 +15,12 @@ interface ResourceItem {
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
-<<<<<<< HEAD
 
-      id: 'logo-pack'
-      title: 'Zion AI Logo Pack'
-      description: 'Official logos in various formats (PNG, SVG, JPG)';
-      type: 'image'
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />
-      url: '#'
-    }
-=======
-      id: 'logo-pack',
-<<<<<<< HEAD
-      title: 'Zion AI Logo Pack',;
-      description: 'Official logos in various formats (PNG, SVG, JPG)';
-=======
-      title: 'Zion AI Logo Pack',
-      description: 'Official logos in various formats (PNG, SVG, JPG)',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       type: 'image',
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
       url: '#'
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       id: 'brand-guidelines'
       title: 'Brand Guidelines'
@@ -63,11 +28,7 @@ export function PartnerResources() {
       type: 'document'
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       id: 'banner-templates'
       title: 'Social Media Banners'
@@ -75,11 +36,7 @@ export function PartnerResources() {
       type: 'image'
       icon: <FileImage className="h-10 w-10 text-zion-purple" />
       url: '#'
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       id: 'promotional-video'
       title: 'Promotional Video'
@@ -87,11 +44,7 @@ export function PartnerResources() {
       type: 'video'
       icon: <FileVideo className="h-10 w-10 text-red-500" />
       url: '#'
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       id: 'email-templates'
       title: 'Email Templates'
@@ -99,11 +52,7 @@ export function PartnerResources() {
       type: 'document'
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       id: 'talking-points'
       title: 'Talking Points'
@@ -112,23 +61,13 @@ export function PartnerResources() {
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
     }
-<<<<<<< HEAD
-  ];
-=======
-  ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleDownload = (resource: ResourceItem) => {
     // In a real app, this would download the actual resource
     toast({
       title: "Download started"
       description: `Downloading ${resource.title}`
       variant: "default"})
-<<<<<<< HEAD
-  }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="space-y-6">
@@ -156,110 +95,7 @@ export function PartnerResources() {
                     className="w-full flex items-center gap-2"
                   >
                     <Download className="h-4 w-4" />
-<<<<<<< HEAD
-=======
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",;
-import { toast } from "@/hooks/use-toast",;
-interface ResourceItem {;
-  id: string,;
-  title: string,;
-  description: string,;
-  type: 'image' | 'video' | 'document' | 'link',;
-  icon: JSX.Element,;
-  url: string;
-}
-;
-export function PartnerResources() {;
-  const resources: ResourceItem[] = [;
-    {;
-      id: 'logo-pack',;
-      title: 'Zion AI Logo Pack',;
-      description: 'Official logos in various formats (PNG, SVG, JPG)',;
-      type: 'image',;
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,;
-      url: '#';
-    },;
-    {;
-      id: 'brand-guidelines',;
-      title: 'Brand Guidelines',;
-      description: 'How to properly use our brand assets in your content',;
-      type: 'document',;
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,;
-      url: '#';
-    },;
-    {;
-      id: 'banner-templates',;
-      title: 'Social Media Banners',;
-      description: 'Pre-designed graphics for your social channels',;
-      type: 'image',;
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,;
-      url: '#';
-    },;
-    {;
-      id: 'promotional-video',;
-      title: 'Promotional Video',;
-      description: 'Short explainer video about Zion AI Marketplace',;
-      type: 'video',;
-      icon: <FileVideo className="h-10 w-10 text-red-500" />,;
-      url: '#';
-    },;
-    {;
-      id: 'email-templates',;
-      title: 'Email Templates',;
-      description: 'Ready-to-use email templates for your audience',;
-      type: 'document',;
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,;
-      url: '#';
-    },;
-    {;
-      id: 'talking-points',;
-      title: 'Talking Points',;
-      description: 'Key messages and benefits to highlight',;
-      type: 'document',;
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,;
-      url: '#';
-    }
-  ],;
-  const handleDownload = (resource: ResourceItem) => {;
-    // In a real app, this would download the actual resource;
-    toast({;
-      title: "Download started",;
-      description: `Downloading ${resource.title}`;
-      variant: "default"});
-  };
-  return (;
-    <div className="space-y-6">;
-      <Card className="bg-zion-blue-dark border-zion-blue-light">;
-        <CardHeader>;
-          <CardTitle>Marketing Resources</CardTitle>;
-          <CardDescription>;
-            Download brand assets and marketing materials to promote Zion AI;
-          </CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">;
-            {resources.map((resource) => (;
-              <Card key={resource.id} className="bg-zion-blue border-zion-blue-light overflow-hidden">;
-                <CardContent className="p-6 flex flex-col items-center text-center">;
-                  <div className="mb-4">;
-                    {resource.icon}
-                  </div>;
-                  <h3 className="font-semibold text-white mb-1">{resource.title}</h3>;
-                  <p className="text-xs text-zion-slate-light mb-4">{resource.description}</p>;
-                  <Button;
-                    onClick={() => handleDownload(resource)}
-                    size="sm";
-                    variant="outline";
-                    className="w-full flex items-center gap-2";
-                  >;
-                    <Download className="h-4 w-4" />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
@@ -317,12 +153,7 @@ export function PartnerResources() {;
       </Card>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
           </div>;
         </CardContent>;
       </Card>;
@@ -375,10 +206,4 @@ export function PartnerResources() {;
       </Card>;
     </div>;
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

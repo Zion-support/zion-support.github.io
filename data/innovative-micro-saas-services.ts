@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface InnovativeMicroSaasService {
-=======
-export interface InnovativeMicroSaasService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -1004,19 +998,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Advanced autonomous vehicle platform with quantum AI, real-time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.'
-    launchDate: '2024-01-01'
-    customers: 8
-    rating: 4.9
-    reviews: 6
-=======
-      'Advanced autonomous vehicle platform with quantum AI, real-time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.',
-    launchDate: '2024-01-01',
-    customers: 8,
-    rating: 4.9,
-    reviews: 6,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   },];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1400,21 +1382,7 @@ export const newInnovativeServices = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Complete space mission control platform with AI integration and real-time operations'
-    launchDate: '2024-08-01'
-    customers: 12
-    rating: 4.9
-    reviews: 6
-  }
-=======
-      'Complete space mission control platform with AI integration and real-time operations',
-    launchDate: '2024-08-01',
-    customers: 12,
-    rating: 4.9,
-    reviews: 6,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1428,13 +1396,7 @@ export const newInnovativeServices = [
     reviews: 6
   }
 ];
-<<<<<<< HEAD
 
-=======
-export interface InnovativeMicroSaasService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -2223,8 +2185,4 @@ export const newInnovativeServices = [;
     reviews: 6;
   }
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

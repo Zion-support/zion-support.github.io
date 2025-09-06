@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface ResearchDevelopmentService2029 {
-=======
-export interface ResearchDevelopmentService2029 {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   description: string;
@@ -355,21 +349,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       funding: 'Series B funding, $120M valuation'
       exit: 'IPO or biotech acquisition'
       contact: {
-<<<<<<< HEAD
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup.com'
-        website: 'https://ziontechgroup.com'
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    }
-=======
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-      },
-    },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   ];    features: [
 
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
@@ -530,16 +510,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     contact: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
 
-    }
-  }
-];
-=======
-export interface ResearchDevelopmentService2029 {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   description: string,;
@@ -768,11 +739,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       email: 'kleber@ziontechgroup.com',;
       website: 'https://ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     }
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

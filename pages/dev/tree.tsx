@@ -1,27 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react";
-import Tree, { TreeNode } from "../../components/ui/Tree";
-interface ApiResponse {
 
-  nodes: TreeNode[]
-status: {
-  gitConnected: boolean, gitBranch?: string
-=======
-import React, { useEffect, useState } from 'react';
-import Tree, { TreeNode } from '../../components/ui/Tree';
-interface ApiResponse {
-  nodes: TreeNode[],
-status: {
-  gitConnected: boolean, gitBranch?: string 
-export default function DevTreePage() {;
-  const [nodes, setNodes] = useState<TreeNode[] | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [git, setGit] = useState<ApiResponse['status'] | null>(null);
-  const [adminToken, setAdminToken] = useState<string>('');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
 import React, { useEffect, useState } from "react",
 import Tree, { TreeNode } from "../../components/ui/Tree",
 interface ApiResponse {
@@ -36,113 +14,16 @@ interface ApiResponse {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 export default function DevTreePage() {
   const [nodes, setNodes] = useState<TreeNode[] | null>(null),
   const [error, setError] = useState<string | null>(null),
   const [git, setGit] = useState<ApiResponse["status"] | null>(null),
   const [adminToken, setAdminToken] = useState<string>(""),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const fetchTree = async (token?: string) => {
     try {
-<<<<<<< HEAD
-      const resp = await fetch('/api/dev/source-map', {
-        headers: token ? { 'x-admin-token': token } : undefined
-      });
-      if (!resp.ok) {
-        const j = await resp.json().catch(() => ({}));
-        throw new Error(j.error |`HTTP ${resp.status}`);
-      }
-      const data: ApiResponse = await resp.json();
-      setNodes(data.nodes);
-      setGit(data.status);
-    } catch (e: any) {
-      setError(e.message |'Failed to load');    }
-  }
-  useEffect(() => {
-    const stored = localStorage.getItem('ADMIN_TOKEN') |'';
-    setAdminToken(stored);
-    fetchTree(stored);
-  }, []);
-  const handleSaveToken = () => {
-    localStorage.setItem('ADMIN_TOKEN', adminToken);
-    fetchTree(adminToken);  }
-  const onDeploy = async (p: string) => {
-    try {
-      const resp = await fetch('/api/dev/source-map', {
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/json'
-          'x-admin-token': adminToken
-        }
-        body: JSON.stringify({ path: p })
-      });
-      if (!resp.ok) {
-        const j = await resp.json().catch(() => ({}));
-        throw new Error(j.error |`HTTP ${resp.status}`);
-      }
-      await fetchTree(adminToken);
-    } catch (e: any) {
-      setError(e.message |'Deploy failed');    }
-  }
 
-=======
-      const resp = await fetch("/api/dev/source-map", {
-        headers: token ? { "x-admin-token": token } : undefined}),
-      if (!resp.ok) {
-        const j = await resp.json().catch(() => ({})),
-        throw new Error(j.error || `HTTP ${resp.status}`)
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      const data: ApiResponse = await resp.json(),
-      setNodes(data.nodes),
-      setGit(data.status)
-    } catch (e: any) {
-      setError(e.message || "Failed to load")
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },
-  useEffect(() => {
-    const stored = localStorage.getItem("ADMIN_TOKEN") || "",
-    setAdminToken(stored),
-    fetchTree(stored)
-  }, []),
-  const handleSaveToken = () => {
-    localStorage.setItem("ADMIN_TOKEN", adminToken),
-    fetchTree(adminToken)
-  },
-  const onDeploy = async (p: string) => {
-    try {
-      const resp = await fetch("/api/dev/source-map", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-admin-token": adminToken},
-        body: JSON.stringify({ path: p })}),
-      if (!resp.ok) {
-        const j = await resp.json().catch(() => ({})),
-        throw new Error(j.error || `HTTP ${resp.status}`)
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      await fetchTree(adminToken)
-    } catch (e: any) {
-      setError(e.message || "Deploy failed")
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="p-6 max-w-5xl mx-auto">
       <div className="flex items-center gap-4 mb-4">
@@ -180,41 +61,20 @@ export default function DevTreePage() {
           </button>
         </div>
       </div>
-<<<<<<< HEAD
-      {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       {error && <div className="mb-3 text-sm text-red-600">{error}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       {nodes ? (
         <div className="rounded border p-3 bg-white">
           <Tree nodes={nodes} onDeploy={onDeploy} />
         </div>
       ) : (
         <div>Loading...</div>
-<<<<<<< HEAD
-      )}
-    </div>
-);
-<<<<<<< HEAD
-=======
 
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {;
@@ -354,8 +214,4 @@ export default function DevTreePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

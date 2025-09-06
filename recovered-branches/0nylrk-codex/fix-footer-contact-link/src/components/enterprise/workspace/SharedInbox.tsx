@@ -1,56 +1,15 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React from "react",
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export function SharedInbox() {
   // Mock messages
 
   const messages = [
     {
-<<<<<<< HEAD
-      id: "msg-1"
-      from: "John Smith"
-      subject: "Interview Scheduled"
-      preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm."
-      timestamp: "2h ago"
-=======
-      id: "msg-1",
-      from: "John Smith",
-      subject: "Interview Scheduled",
-      preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
-      timestamp: "2h ago",
-<<<<<<< HEAD
-      unread: true;
-    };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       unread: true
-<<<<<<< HEAD
-    }
-=======
-    },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     {
       id: "msg-2"
       from: "Talent Support"
@@ -58,11 +17,7 @@ export function SharedInbox() {
       preview: "We've found 5 new candidates that match your recent job posting for UI/UX Designer."
       timestamp: "Yesterday"
       unread: false
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       id: "msg-3"
       from: "Sarah Wilson"
@@ -113,12 +68,7 @@ export function SharedInbox() {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -191,10 +141,7 @@ export function SharedInbox() {;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
