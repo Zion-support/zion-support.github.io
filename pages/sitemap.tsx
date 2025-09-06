@@ -124,12 +124,9 @@ export default function SitemapPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-import {
-=======
+
 }import {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
   Home,
   Search,
   Rocket,

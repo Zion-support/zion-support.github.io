@@ -1,21 +1,5 @@
 [build]
-<<<<<<< HEAD
-  command = "npm run build"
-  publish = ".next"
 
-[build.environment]
-  NODE_VERSION = "18"
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-[functions]
-  directory = "netlify/functions"
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-=======
   command = "npm ci && npm run build"
   publish = "out"
 
@@ -89,4 +73,4 @@
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
->>>>>>> origin/chore/seo-redirects-netlify-fix
+

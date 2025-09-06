@@ -28,7 +28,7 @@ const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {;
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
       problematicFiles.push(file);
     }
   } catch (error) {;

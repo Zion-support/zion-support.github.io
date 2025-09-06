@@ -289,12 +289,9 @@ export default function SolutionsPage() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-}
-  )
-=======
+
 }  )
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
 };
 
 export default SolutionsPage;
