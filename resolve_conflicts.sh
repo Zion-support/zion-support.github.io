@@ -1,15 +1,27 @@
 #!/bin/bash
 
-# Script to automatically resolve merge conflicts by choosing main branch version
-echo "Resolving merge conflicts by choosing main branch version..."
+# Script to resolve remaining merge conflicts
+# This will use the incoming changes (from the branch being merged) for most files
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-    echo "Resolving conflict in: $file"
-    # Choose the main branch version (ours)
-    git checkout --ours "$file"
+echo "Resolving remaining merge conflicts..."
+
+# List of files with conflicts
+files=(
+    "components/layout/Header.tsx"
+    "components/layout/Layout.tsx"
+    "components/layout/MainLayout.tsx"
+    "components/performance/LazyComponent.tsx"
+    "components/performance/OptimizedImage.tsx"
+    "components/ui/EnhancedMarketplaceCard.tsx"
+    "components/ui/InteractiveNavigation.tsx"
+    "components/ui/NotificationSystem.tsx"
+)
+
+# For each file, use the incoming version (from the branch being merged)
+for file in "${files[@]}"; do
+    echo "Resolving conflicts in $file..."
+    git checkout --theirs "$file"
     git add "$file"
 done
 
-echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge PR #11887: Automate test improve and merge code - Resolved conflicts by choosing main branch version"
+echo "All conflicts resolved!"
