@@ -1,11 +1,19 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
 
-// Define HTML element types if not available
-declare global {
-  interface HTMLDivElement extends HTMLElement {}
-  interface HTMLParagraphElement extends HTMLElement {}
-  interface HTMLHeadingElement extends HTMLElement {}
+// Card component with proper TypeScript types
+interface HTMLElement {
+  className?: string;
+}
+
+interface HTMLDivElement extends HTMLElement {
+  // HTMLDivElement specific properties
+}
+interface HTMLParagraphElement extends HTMLElement {
+  // HTMLParagraphElement specific properties
+}
+interface HTMLHeadingElement extends HTMLElement {
+  // HTMLHeadingElement specific properties
 }
 
 const Card = React.forwardRef<

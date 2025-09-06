@@ -9,19 +9,23 @@ interface RequestOptions extends RequestInit {
 }
 
 // Add global type definitions for Node.js environment
-declare global {
-  interface RequestInit {
-    timeout?: number;
-  }
-  class AbortController {
-    signal: AbortSignal;
-    abort(): void;
-  }
-  interface AbortSignal {
-    aborted: boolean;
-    addEventListener(type: string, listener: () => void): void;
-    removeEventListener(type: string, listener: () => void): void;
-  }
+interface RequestInit {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
+  signal?: AbortSignal;
+  timeout?: number;
+}
+
+interface AbortSignal {
+  aborted: boolean;
+  addEventListener(type: string, listener: () => void): void;
+  removeEventListener(type: string, listener: () => void): void;
+}
+
+class AbortController {
+  signal: AbortSignal;
+  abort(): void;
 }
 
 class ApiClient {

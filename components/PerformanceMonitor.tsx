@@ -25,6 +25,29 @@ declare global {
   }
 }
 
+// Define Performance types if not available
+interface PerformanceEntry {
+  name: string;
+  entryType: string;
+  startTime: number;
+  duration: number;
+}
+
+interface Performance {
+  getEntriesByType(type: string): PerformanceEntry[];
+}
+
+interface PerformanceNavigationTiming extends PerformanceEntry {
+  loadEventEnd: number;
+  loadEventStart: number;
+  domContentLoadedEventEnd: number;
+  domContentLoadedEventStart: number;
+  responseEnd: number;
+  responseStart: number;
+  requestStart: number;
+  navigationStart: number;
+}
+
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
     // Only run on client side
