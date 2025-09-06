@@ -1,46 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-
-// App optimization utilities
-export const optimizeImages = (src, width, height) => {
-  return `/api/optimize-image?src=${encodeURIComponent(src)}&w=${width}&h=${height}`;
 };
-
-export const lazyLoadComponent = (importFunc) => {
-  return React.lazy(importFunc);
 };
-
-export const memoize = (fn) => {
-  const cache = new Map();
-  return (...args) => {
-    const key = JSON.stringify(args);
-    if (cache.has(key)) {
-      return cache.get(key);
-    }
-    const result = fn(...args);
-    cache.set(key, result);
-    return result;
-=======
-import React from 'react',;
-// App optimization utilities,;
-export const optimizeImages = (src, width, height) => {,;
-  return `/api/optimize-image?src=${encodeURIComponent(src)}&w=${width}&h=${height}`,;
-};
-,;
-export const lazyLoadComponent = (importFunc) => {,;
-  return React.lazy(importFunc),;
-};
-,;
-export const memoize = (fn) => {,;
-  const cache = new Map(),;
-  return (...args) => {,;
-    const key = JSON.stringify(args),;
-    if (cache.has(key)) {,;
-      return cache.get(key),;
-    };
-    const result = fn(...args),;
-    cache.set(key, result),;
-    return result,;
->>>>>>> cursor/automate-test-improve-and-merge-code-ceec
-  };
-};
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+// App optimizer script
+console.log('App optimizer starting...');

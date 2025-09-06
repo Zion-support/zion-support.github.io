@@ -1,15 +1,43 @@
 #!/bin/bash
 
-# Script to automatically resolve merge conflicts by choosing main branch version
-echo "Resolving merge conflicts by choosing main branch version..."
+# Script to resolve merge conflicts systematically
+# Keep our PM2 automation improvements, accept main branch for others
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-    echo "Resolving conflict in: $file"
-    # Choose the main branch version (ours)
-    git checkout --ours "$file"
-    git add "$file"
+echo "Resolving merge conflicts..."
+
+# Keep our PM2 automation files
+git checkout --ours ecosystem.config.js
+git checkout --ours pm2-automation.sh
+git checkout --ours eslint.config.cjs
+
+# For most other files, accept the main branch version
+git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
+    file=$(echo "$line" | cut -c4-)
+    
+    # Skip our important files
+    if [[ "$file" == "ecosystem.config.js" || "$file" == "pm2-automation.sh" || "$file" == "eslint.config.cjs" ]]; then
+        echo "Keeping our version of $file"
+        continue
+    fi
+    
+    # Accept main branch version for most files
+    echo "Accepting main branch version of $file"
+    git checkout --theirs "$file"
 done
 
-echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge PR #11887: Automate test improve and merge code - Resolved conflicts by choosing main branch version"
+echo "Adding resolved files..."
+git add .
+
+echo "Committing merge resolution..."
+git commit -m "Resolve merge conflicts - keep PM2 automation improvements"
+
+echo "Pushing resolved changes..."
+<<<<<<< HEAD
+git push origin HEAD
+=======
+<<<<<<< HEAD
+git push origin HEAD
+=======
+git push origin HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

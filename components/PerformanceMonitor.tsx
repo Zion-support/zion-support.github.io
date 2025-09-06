@@ -1,129 +1,135 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
-
-// Extend the Window interface to include performance and gtag
-declare global {
-  interface Window {
-    performance: {
-      getEntriesByType: (_type: string) => unknown[];
-    };
-    gtag: (...args: unknown[]) => void;
-  }
-}
+import {Star} from 'lucide-react';
 
 interface PerformanceData {
-  domContentLoaded: number;
-  loadComplete: number;
-  totalLoadTime: number;
-  firstPaint: number;
-  firstContentfulPaint: number;
-  resourceCount: number;
+  domContentLoaded: number,
+  loadComplete: number,
+  totalLoadTime: number,
+  firstPaint: number,
+  firstContentfulPaint: number,
+  resourceCount: number,
   memory: {
-    used: number;
-    total: number;
-    limit: number;
+    used: number,
+    total: number,
+    limit: number,
   } | null;
 }
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (performanceData: PerformanceData) => void;
+  onPerformanceData?: (data: PerformanceData) => void,
 }
+
+// Extend the Window interface to include performance
+declare global {
+  interface Window {
+
+    performance: Performance,
+  }
+  
+  interface Performance {
+    getEntriesByType(type: string): PerformanceEntry[],
+    memory?: {
+      usedJSHeapSize: number, totalJSHeapSize: number,
+      jsHeapSizeLimit: number,
+    };
+  }
+  
+  interface PerformanceEntry {
+    name: string, startTime: number,
+    duration: number,
+  }
+  
+  interface PerformanceNavigationTiming extends PerformanceEntry {
+    domContentLoadedEventStart: number, domContentLoadedEventEnd: number,
+    loadEventStart: number, loadEventEnd: number,
+    fetchStart: number,
+  }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}
+
+// Define Performance types if not available
+interface PerformanceEntry {
+  name: string,
+  entryType: string,
+  startTime: number,
+  duration: number,
+}
+
+interface Performance {
+  getEntriesByType(type: string): PerformanceEntry[],
+}
+
+interface PerformanceNavigationTiming extends PerformanceEntry {
+  loadEventEnd: number,
+  loadEventStart: number,
+  domContentLoadedEventEnd: number,
+  domContentLoadedEventStart: number,
+  responseEnd: number,
+  responseStart: number,
+  requestStart: number,
+  navigationStart: number,
+}
+
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
     // Only run on client side
-    if (typeof window === 'undefined' || typeof performance === 'undefined') return;
+
+    if (typeof window === 'undefined' || typeof window.performance === 'undefined') return;
 
     const measurePerformance = () => {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as {
-        domContentLoadedEventEnd: number;
-        domContentLoadedEventStart: number;
-        loadEventEnd: number;
-        loadEventStart: number;
-        fetchStart: number;
-      };
-      const paint = window.performance.getEntriesByType('paint');
+      const navigationEntries = window.performance.getEntriesByType('navigation');
+      const navigation = navigationEntries[0] as PerformanceNavigationTiming;
+      const paintEntries = window.performance.getEntriesByType('paint');
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       
-      const performanceData: PerformanceData = {
+      const performanceData = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
         totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-        
         // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+
+        firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
         
+
         // Resource timing
         resourceCount: window.performance.getEntriesByType('resource').length,
-        
         // Memory usage (if available)
-        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
-          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
-          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+
+        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
+          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
+          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         } : null
-=======
-import React, { useEffect } from 'react',;
-,;
-interface PerformanceMonitorProps {,;
-  onPerformanceData?: (data: any) => void,;
-,};
-,;
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData ,}) => {,;
-  // Only render on client side,;
-  if (typeof window === 'undefined') {,;
-    return null,;
-  };
-,;
-  useEffect(() => {,;
-    if (typeof performance === 'undefined') return,;
-,;
-    const measurePerformance = () => {,;
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
-      const paint = performance.getEntriesByType('paint'),;
-,;
-      const performanceData = {,;
-        // Navigation timing,;
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,;
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,;
-        // Paint timing,;
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,;
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,;
-        // Resource timing,;
-        resourceCount: performance.getEntriesByType('resource').length,;
-        // Memory usage (if available),;
-        memory: (performance as any).memory ? {,;
-          used: (performance as any).memory.usedJSHeapSize,;
-          total: (performance as any).memory.totalJSHeapSize,;
-          limit: (performance as any).memory.jsHeapSizeLimit,;
-        ,} : null,;
-      };
-,;
-      if (onPerformanceData) {,;
-        onPerformanceData(performanceData),;
-      };
-,;
-      // Log performance data in development,;
-      if (process.env.NODE_ENV === 'development') {,;
-        console.log('Performance Metrics:', performanceData),;
->>>>>>> cursor/automate-test-improve-and-merge-code-ceec
-      };
+      },
+      if (onPerformanceData) {
+        onPerformanceData(performanceData);
+      }
+
+      // Log performance data in development
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Performance Metrics:', performanceData);
+      }
     };
-,;
-    // Measure performance after page load,;
-    if (document.readyState === 'complete') {,;
-      measurePerformance(),;
-    } else {,;
-      window.addEventListener('load', measurePerformance),;
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance);
     };
-,;
-    return () => {,;
-      window.removeEventListener('load', measurePerformance),;
-    };
-  }, [onPerformanceData]),;
-,;
-  return null,;
+  }, [onPerformanceData]);
+
+  return null;
 };
-,;
-export default PerformanceMonitor,;
+
+export default PerformanceMonitor;

@@ -1,27 +1,29 @@
-import React from 'react',;
+import React from 'react'
 };
-<<<<<<< HEAD
-export const "LazyComponent": React.FC<LazyComponentProps> = ({;
-  component;
-  fallback = <div>Loading...</div>,
-  ...props
-}) => {,
-  const LazyLoadedComponent = lazy(component),
-  return (,
-    <Suspense fallback={fallback}>,
-      <LazyLoadedComponent {...props} />,
-    </Suspense>)
+import React, { Suspense, lazy } from 'react';
+
+
+interface LazyComponentProps {
+  component: ComponentType<Record<string, unknown>>;
+  fallback?: ReactNode;
+  [key: string]: unknown,
+}
+
+const LazyComponent: React.FC<LazyComponentProps> = ({ 
+  component: Component, 
+  fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />,
+  ...props 
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}) => {
+  return (
+    <Suspense fallback={fallback}>
+      <Component {...props} />
+    </Suspense>
+  );
 };
-export default LazyComponent,
-=======
-export const "LazyComponent": React.FC<LazyComponentProps> = ({,;
-  component,;
-  fallback = <div>Loading...</div>,;
-  ...props}) => {,;
-  const LazyLoadedComponent = lazy(component),;
-  return (,;
-    <Suspense fallback={fallback}>,;
-      <LazyLoadedComponent {...props} />,;
-    </Suspense>)};
-export default LazyComponent,;
->>>>>>> cursor/automate-test-improve-and-merge-code-ceec
+
+export default LazyComponent;
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

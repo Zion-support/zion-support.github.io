@@ -1,138 +1,140 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('⚡ Starting Performance Optimizer...');
+function log(message, type = 'INFO') {
+  const icons = { INFO: 'ℹ️', SUCCESS: '✅', ERROR: '❌', WARNING: '⚠️' };
+  console.log(`${icons[type] || ''} ${message}`);
+}
 
-class PerformanceOptimizer {
-  constructor() {
-    this.results = {
-      timestamp: new Date().toISOString(),
-      optimizations: [],
-      metrics: {},
-      recommendations: []
-    };
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
+
+function findFiles(dir, exts) {
+  if (!fs.existsSync(dir)) return [];
+  const results = [];
+  for (const entry of fs.readdirSync(dir)) {
+    const p = path.join(dir, entry);
+    const stat = fs.statSync(p);
+    if (stat.isDirectory()) {
+      results.push(...findFiles(p, exts));
+    } else if (exts.includes(path.extname(entry).toLowerCase())) {
+      results.push(p);
+    }
+  }
+  return results;
+}
+
+function optimizeImages(publicDir, report) {
+  const images = findFiles(publicDir, ['.png', '.jpg', '.jpeg']);
+  if (images.length === 0) {
+    report.actions.push('No images found to optimize');
+    return;
   }
 
-  async analyzeBundle() {
-    console.log('📦 Analyzing bundle size...');
+  let sharp;
+  try {
+    sharp = require('sharp');
+  } catch {
+    report.actions.push('sharp not installed; skipping image optimization');
+    return;
+  }
+
+  const optimized = [];
+  for (const img of images) {
+    const stat = fs.statSync(img);
+    if (stat.size < 150 * 1024) continue; // skip small files
+    
+    const ext = path.extname(img).toLowerCase();
+    const outPath = img.replace(new RegExp(`${ext}$`), '.webp');
+    
     try {
-      const buildOutput = execSync('npm run build', { encoding: 'utf8' });
-      this.results.metrics.buildSuccess = true;
-      
-      // Analyze .next directory
-      const nextDir = path.join(process.cwd(), '.next');
-      if (fs.existsSync(nextDir)) {
-        const stats = this.getDirectorySize(nextDir);
-        this.results.metrics.bundleSize = stats.size;
-        this.results.metrics.fileCount = stats.count;
-      }
-    } catch (error) {
-      console.error('❌ Build analysis failed:', error.message);
-      this.results.metrics.buildSuccess = false;
+      sharp(img).webp({ quality: 80 }).toFile(outPath);
+      optimized.push({ from: img, to: outPath });
+    } catch (e) {
+      report.errors.push(`Failed optimizing ${img}: ${e.message}`);
     }
   }
 
-  getDirectorySize(dirPath) {
-    let totalSize = 0;
-    let fileCount = 0;
-    
-    const files = fs.readdirSync(dirPath);
-    files.forEach(file => {
-      const filePath = path.join(dirPath, file);
-      const stats = fs.statSync(filePath);
-      
-      if (stats.isDirectory()) {
-        const subStats = this.getDirectorySize(filePath);
-        totalSize += subStats.size;
-        fileCount += subStats.count;
-      } else {
-        totalSize += stats.size;
-        fileCount++;
-      }
-    });
-    
-    return { size: totalSize, count: fileCount };
+  if (optimized.length > 0) {
+    report.optimizedImages = optimized;
   }
+  report.actions.push(`Optimized ${optimized.length} images to WebP`);
+}
 
-  async optimizeImages() {
-    console.log('🖼️ Optimizing images...');
-    const publicDir = path.join(process.cwd(), 'public');
-    if (fs.existsSync(publicDir)) {
-      const images = this.findImages(publicDir);
-      this.results.optimizations.push({
-        type: 'image_optimization',
-        count: images.length,
-        status: 'completed'
-      });
+function ensureNextConfigFlags(rootDir, report) {
+  const candidates = ['next.config.js', 'deployment/next.config.js'];
+  
+  for (const rel of candidates) {
+    const file = path.join(rootDir, rel);
+    if (!fs.existsSync(file)) continue;
+
+    const original = fs.readFileSync(file, 'utf8');
+    
+    if (original.includes('optimizeCss: true')) {
+      report.actions.push(`${rel}: optimizeCss already enabled`);
+      continue;
     }
-  }
 
-  findImages(dir) {
-    const images = [];
-    const files = fs.readdirSync(dir);
-    
-    files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stats = fs.statSync(filePath);
+    // Attempt minimal enhancement by appending experimental.optimizeCss
+    try {
+      let updated = original;
       
-      if (stats.isDirectory()) {
-        images.push(...this.findImages(filePath));
-      } else if (/\.(jpg|jpeg|png|gif|webp)$/i.test(file)) {
-        images.push(filePath);
+      if (original.includes('experimental:')) {
+        updated = original.replace(
+          /experimental:\s*\{/,
+          'experimental: {\n    optimizeCss: true,'
+        );
+      } else if (original.includes('nextConfig') || original.includes('module.exports')) {
+        updated = original.replace(/\{([\s\S]*?)\}/, m => 
+          m.replace(/\}$/, ',\n  experimental: { optimizeCss: true }\n}')
+        );
       }
-    });
-    
-    return images;
-  }
 
-  async generateRecommendations() {
-    console.log('💡 Generating optimization recommendations...');
-    
-    this.results.recommendations = [
-      {
-        type: 'bundle_optimization',
-        priority: 'high',
-        description: 'Consider implementing code splitting for better performance'
-      },
-      {
-        type: 'image_optimization',
-        priority: 'medium',
-        description: 'Optimize images and use modern formats like WebP'
-      },
-      {
-        type: 'caching',
-        priority: 'medium',
-        description: 'Implement proper caching strategies'
+      if (updated !== original) {
+        fs.writeFileSync(file, updated);
+        report.modifiedFiles.push(file);
+        report.actions.push(`${rel}: enabled experimental.optimizeCss`);
       }
-    ];
-  }
-
-  async saveReport() {
-    const logsDir = path.join(process.cwd(), 'logs');
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+    } catch (e) {
+      report.errors.push(`Failed updating ${rel}: ${e.message}`);
     }
-    
-    const reportPath = path.join(logsDir, `performance-optimization-${Date.now()}.json`);
-    fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Report saved to: ${reportPath}`);
-  }
-
-  async run() {
-    console.log('🚀 Starting performance optimization...');
-    
-    await this.analyzeBundle();
-    await this.optimizeImages();
-    await this.generateRecommendations();
-    await this.saveReport();
-    
-    console.log('✅ Performance optimization completed!');
   }
 }
 
-// Run the optimizer
-const optimizer = new PerformanceOptimizer();
-optimizer.run().catch(console.error);
+function main() {
+  const root = process.cwd();
+  const timestamp = Date.now();
+  const report = {
+    timestamp,
+    actions: [],
+    optimizedImages: [],
+    modifiedFiles: [],
+    errors: []
+  };
+
+  log('Starting Performance Optimizer.');
+  ensureDir(path.join(root, 'automation-reports'));
+
+  // Image optimization in public/
+  optimizeImages(path.join(root, 'public'), report);
+
+  // Ensure Next.js config flags
+  ensureNextConfigFlags(root, report);
+
+  const outFile = path.join(
+    root,
+    `performance-optimizer-report-${timestamp}.json`
+  );
+  fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
+
+  log(`Performance optimization complete. Report: ${path.basename(outFile)}`, 'SUCCESS');
+}
+
+try {
+  main();
+} catch (e) {
+  log(`Performance optimizer failed: ${e.message}`, 'ERROR');
+  process.exit(1);
+}

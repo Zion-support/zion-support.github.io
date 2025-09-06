@@ -1,30 +1,40 @@
 <<<<<<< HEAD
-type MessageHandler = {,
-  sendMessage: (message: unknown) => void,
-  receiveMessage: (callback: (message: unknown) => void) => void
 };
-export const messageChannelHandler: MessageHandler = {,
-  sendMessage: (_message) => {,
+};
+};
+};
+;
+,;
+,
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+export const messageChannelHandler = {
+  sendMessage: (message: string) => {},
+  receiveMessage: (callback: (message: string) => void) => {},
+  sendMessage: (message: any) => {},
+  receiveMessage: (callback: any) => {},
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+type MessageHandler = {
+  sendMessage: (message: unknown) => void;
+  receiveMessage: (callback: (message: unknown) => void) => void;
+};
+export const messageChannelHandler: MessageHandler = {
+  sendMessage: (_message) => {
     // No-op: placeholder for message channel integration
   },
-  receiveMessage: (_callback) => {,
+  receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
-  };
+  }
+<<<<<<< HEAD
+};
 =======
-type MessageHandler = {,;
-  sendMessage: (message: unknown) => void,;
-  receiveMessage: (callback: (message: unknown) => void) => void,;
-,};
-export const messageChannelHandler: MessageHandler = {,;
-  sendMessage: (_message) => {,;
-    // No-op: placeholder for message channel integration,;
-  ,},;
-  receiveMessage: (_callback) => {,;
-    // No-op: placeholder for message listener registration,;
-  ,};
->>>>>>> cursor/automate-test-improve-and-merge-code-ceec
 };
-};
-};
-};
-,;
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

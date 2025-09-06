@@ -1,11 +1,9 @@
 {
   "version": "1.0",
-<<<<<<< HEAD
   "generated": "2025-09-05T21:52:45.982Z",
-=======
-  "generated": "2025-09-05T22:04:11.140Z",
->>>>>>> cursor/automate-test-improve-and-merge-code-ceec
   "pages": [
+  "generatedAt": "2025-09-05T23:41:15.563Z",
+  "items": [
     {
       "title": "Home",
       "url": "/",
@@ -16,6 +14,7 @@
         "solutions",
         "automation"
       ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 1
     },
     {
@@ -28,6 +27,7 @@
         "team",
         "mission"
       ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 2
     },
     {
@@ -40,6 +40,7 @@
         "automation",
         "development"
       ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 3
     },
     {
@@ -51,6 +52,7 @@
         "support",
         "help"
       ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 4
     },
     {
@@ -63,6 +65,7 @@
         "work",
         "examples"
       ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 5
     },
     {
@@ -77,5 +80,6 @@
       ],
       "id": 6
     }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   ]
 }

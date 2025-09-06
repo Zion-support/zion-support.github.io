@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+export: interface ComprehensivePricingService { id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; marketPrice: string; roi: string; estimatedDelivery: string; supportLevel: string; contactInfo: { phone: string; email: string} website: "strin",g} competitors?: string[] marketSize?: string: "demoUrl?: string: documentationUrl?: string:" } export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [;'"'"
+import React from 'react';
+interface ComprehensivePricing2025Props {
+  // Add props here as needed
+}
+export default function ComprehensivePricing2025({ }: ComprehensivePricing2025Props) {
+  return (
+    <div>
+      <h1>ComprehensivePricing2025</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
