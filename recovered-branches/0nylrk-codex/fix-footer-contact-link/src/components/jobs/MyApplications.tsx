@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Loader2, MessageSquare, ExternalLink} from "lucide-react";
+import {formatDistanceToNow} from "date-fns";
+import {Link} from "react-router-dom";
+import {ApplicationStatus} from "@/types/jobs";
+export function MyApplications() {;
+  const { applications, isLoading, error } = useJobApplications();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -17,6 +33,7 @@ import { Link } from "react-router-dom",
 import { ApplicationStatus } from "@/types/jobs",
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusBadge = (status: ApplicationStatus) => {
@@ -90,9 +107,12 @@ export function MyApplications() {
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {application.cover_letter}
                 </p>
               )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -172,6 +192,10 @@ export function MyApplications() {;
             <div className="space-y-3">;
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {application.cover_letter}
                 </p>
               )}
@@ -188,8 +212,13 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
+<<<<<<< HEAD
                 <Button
                   variant="default"
+=======
+                <Button 
+                  variant="default" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   size="sm"
                   className="text-xs"
                   asChild

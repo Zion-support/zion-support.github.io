@@ -85,13 +85,21 @@ const ResumeBuilder: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
             <AIAssistant
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
 <<<<<<< HEAD
+<<<<<<< HEAD
               defaultPrompt={improveSectionPrompt('summary', summary |'No content provided. Generate a summary based on role, years, and skills.')}
+=======
+              defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onAccept={setSummary}
               authorizationToken={operatorToken}
 =======
@@ -110,7 +118,11 @@ const ResumeBuilder: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
           </div>
         </div>
@@ -123,7 +135,11 @@ const ResumeBuilder: NextPage = () => {
             buttonLabel="Improve with AI"
             title="Improve Experience"
 <<<<<<< HEAD
+<<<<<<< HEAD
             defaultPrompt={improveSectionPrompt('experience section', experience |'Add experience details to improve.')}
+=======
+            defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onAccept={setExperience}
             authorizationToken={operatorToken}
 =======
@@ -142,7 +158,11 @@ const ResumeBuilder: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
         </div>
         <textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
@@ -154,7 +174,11 @@ const ResumeBuilder: NextPage = () => {
             buttonLabel="Improve with AI"
             title="Improve Skills"
 <<<<<<< HEAD
+<<<<<<< HEAD
             defaultPrompt={improveSectionPrompt('skills list', skillsText |`Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
+=======
+            defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
 =======
@@ -173,13 +197,18 @@ const ResumeBuilder: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
         </div>
         <textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
       </section>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export default ResumeBuilder;
@@ -188,3 +217,12 @@ export default ResumeBuilder;
 },
 export default ResumeBuilder,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+},
+<<<<<<< HEAD
+
+export default ResumeBuilder,;
+=======
+export default ResumeBuilder,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

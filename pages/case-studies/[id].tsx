@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+export default function CaseStudyPage() {
+  const router = useRouter(),
+  const { id } = router.query,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -125,10 +135,18 @@ export default function CaseStudyPage() {
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
       `
     }
+<<<<<<< HEAD
   ]
   const caseStudy = caseStudies.find(study => study.id === id)
 
 =======
+=======
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CaseStudyPage(req, res) {
   try {
   const router = useRouter();
@@ -252,6 +270,10 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -268,7 +290,15 @@ export default function CaseStudyPage(req, res) {
               <p className="text-xl text-white/80 mb-8">
                 The case study you're looking for doesn't exist.
               </p>
+<<<<<<< HEAD
               <Link
+=======
+<<<<<<< HEAD
+              <Link 
+=======
+              <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 href="/case-studies"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -314,7 +344,11 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -445,7 +479,11 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </ul>
                 </div>
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -464,6 +502,18 @@ export default function CaseStudyPage(req, res) {
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <div 
+                className="prose prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+              />
+            </div>
+            <div className="text-center">
+              <Link 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div
                 className="prose prose-invert max-w-none"
 <<<<<<< HEAD
@@ -479,6 +529,10 @@ export default function CaseStudyPage(req, res) {
             </div>
             <div className="text-center">
               <Link
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -489,6 +543,13 @@ export default function CaseStudyPage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
                   </ul>;
                 </div>;
@@ -534,4 +595,9 @@ export default function CaseStudyPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface SpaceMetaverseService {
+=======
+export interface SpaceMetaverseService {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -412,6 +417,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     support:
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards'
     ]
     link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform'
@@ -423,6 +429,19 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.7
     reviews: 1400
   }
+=======
+      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
+    ],
+    link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform',
+    icon: '🥽',
+    color: 'from-orange-500 to-red-600',
+    popular: true,
+    launchDate: '2024-01-20',
+    customers: 1800,
+    rating: 4.7,
+    reviews: 1400,
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
 
     ];
@@ -439,10 +458,14 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.7
 
     reviews: 1400
+<<<<<<< HEAD
   }
 ];
 =======
 export interface SpaceMetaverseService {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -704,6 +727,10 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     customers: 1800,;
     rating: 4.7,;
     reviews: 1400;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

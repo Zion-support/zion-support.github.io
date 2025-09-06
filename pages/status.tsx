@@ -45,6 +45,6 @@ export default function Status() {
           </div>
         </div>
       </div>
-    </Layout>
+    </Layout>;
   );
 }

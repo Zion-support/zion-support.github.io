@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import { Mail } from "lucide-react";
+export function EnhancedNewsletterForm() {;
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 <<<<<<< HEAD
@@ -6,11 +19,15 @@ import { Mail } from "lucide-react";
 =======
 import { useState } from "react",
 import { Mail } from "lucide-react",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSubmitted, setIsSubmitted] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSubmit = (e: React.FormEvent) => {
 <<<<<<< HEAD
@@ -49,7 +66,11 @@ export function EnhancedNewsletterForm() {
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
@@ -78,6 +99,10 @@ export function EnhancedNewsletterForm() {
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">
         <div className="flex -space-x-1 mr-2">
           {[...Array(3)].map((_, i) => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div
               key={i}
               className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan"
@@ -89,6 +114,7 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 =======
@@ -96,6 +122,10 @@ export function EnhancedNewsletterForm() {
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">
         <div className="flex -space-x-1 mr-2">
           {[...Array(3)].map((_, i) => (
+=======
+);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -163,5 +193,9 @@ export function EnhancedNewsletterForm() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

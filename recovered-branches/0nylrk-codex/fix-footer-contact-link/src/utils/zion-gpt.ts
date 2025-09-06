@@ -5,13 +5,24 @@
 
 import {supabase} from '@/integrations/supabase/client';
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
+<<<<<<< HEAD
 export type ZionGPTUsage = {
+=======
+
+export type ZionGPTUsage = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   modelId: string;
   tokensUsed: number;
   cost: number
   timestamp: Date
+<<<<<<< HEAD
 }
 export interface ModelConfig {
+=======
+};
+
+export interface ModelConfig {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: ModelVersion;
   version: number;
   createdAt: string;
@@ -28,7 +39,7 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
       .eq('purpose', purpose)
       .eq('active', true)
       .order('version', { ascending: false })
-      .limit(1)
+      .limit(1);
       .single();
     if (error |!data) {
       console.warn('Failed to fetch active model, falling back to default', error);
@@ -47,7 +58,7 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
   }
 }
 // Log usage of the fine-tuned model
-export async function logModelUsage(
+export async function logModelUsage(;
   modelId: string;
   tokensUsed: number;
   feature: string
@@ -139,7 +150,11 @@ export async function logModelUsage(;
   } catch (error) {;
     console.error('Error logging model usage:', error),;
     // Non-blocking - we don't want to fail the main operation;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 // Calculate approximate cost based on token usage
@@ -149,9 +164,16 @@ function calculateCost(modelId: string, tokens: number): number {
   return tokens * ratePerToken
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
   prompt
+=======
+
+// Function to call ZionGPT models through Supabase Edge Function
+export async function callZionGPT({
+  prompt, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   purpose;
   maxTokens = 500;
   temperature = 0.7;
@@ -233,6 +255,10 @@ export async function callZionGPT({;
   } catch (error) {;
     console.error('Error calling ZionGPT:', error);
     throw error;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }

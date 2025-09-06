@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,6 +68,8 @@ class AutomationFactory {
 =======
 =======
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }};
 ; loadStatus() {; try {; if (fs.existsSync(this.statusFile)) {; const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8")); this.runningScripts = new Map(Object.entries(status.runningScripts || {}))}} catch (error) {; this.log(`Error loading status: ${error.message}`)}}}};
 ; generateCodeQualityScript() {; const script = `#!/usr/bin/env node;const fs = require("fs");
@@ -373,6 +376,7 @@ optimizer.optimizePerformance().then(report = > {; if (report) {; console.log("P
 ;      };
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
       };
 =======
     } catch (error) {;
@@ -610,6 +614,8 @@ module.exports = AutomationFactory;
 =======
 =======
     };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
   optimizeImages() {,
@@ -1155,8 +1161,13 @@ optimizer.optimizePerformance().then(report => {,
       if (script.status === "available") {,
         const success = await this.runScript(name),
 <<<<<<< HEAD
+<<<<<<< HEAD
         results.push({ name, success }),
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
+=======
+        results.push({ name, success })
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       };
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

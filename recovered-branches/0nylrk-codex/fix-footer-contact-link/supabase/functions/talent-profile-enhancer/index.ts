@@ -24,8 +24,13 @@ interface EnhancedProfile {
     other: string[]
 =======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+<<<<<<< HEAD
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
+import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
+=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
@@ -37,6 +42,21 @@ interface TalentProfileData {
   bio: string,
   skills: string[],
   location?: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+interface EnhancedProfile {
+  summary: string;
+  categorizedSkills: {
+    programming: string[];
+    devops: string[];
+    platforms: string[];
+    softSkills: string[],
+    other: string[]
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',;
@@ -59,7 +79,11 @@ interface EnhancedProfile {;
     platforms: string[],;
     softSkills: string[],;
     other: string[];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 serve(async (req) => {
@@ -79,11 +103,19 @@ serve(async (req) => {
         JSON.stringify({ error: "Bio must be at least 20 characters long" });
 =======
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Create a request to OpenAI API
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
@@ -118,7 +150,11 @@ serve(async (req) => {
           {;
             role: 'user',;
             content: `Create a professional profile summary and categorize skills based on this information:;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Name: ${talentData.name}
             Title: ${talentData.title}
             Bio: ${talentData.bio}
@@ -130,8 +166,17 @@ serve(async (req) => {
 =======
             Location: ${talentData.location || 'Not specified'}
             
+<<<<<<< HEAD
             Return the result as a JSON object with these keys: 
             {
+=======
+<<<<<<< HEAD
+            Return the result as a JSON object with these keys: {
+=======
+            Return the result as a JSON object with these keys: 
+            {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               "summary": "The professional summary text (100-150 words)",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               "categorizedSkills": {
@@ -195,7 +240,11 @@ serve(async (req) => {
 ;
     return new Response(;
       JSON.stringify(enhancedProfile),;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
@@ -207,13 +256,23 @@ serve(async (req) => {
     console.error("Error in talent-profile-enhancer function:", error),
     
     return new Response(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      JSON.stringify({ error: error.message });
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       JSON.stringify({ error: error.message }),
     );
   } catch (error) {;
     console.error("Error in talent-profile-enhancer function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }

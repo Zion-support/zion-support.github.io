@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -17,9 +18,18 @@ export default function ProjectPage() {
     // "x-demo-user-role": "talent"
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
 =======
+import { useEffect, useState } from "react",;
+import { useRouter } from "next/router",;
+import FeedbackModal from "../../components/ui/FeedbackModal",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import { useEffect, useState } from "react",
 import { useRouter } from "next/router",
 import FeedbackModal from "../../components/ui/FeedbackModal",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ProjectPage() {
   const router = useRouter(),
   const { projectId } = router.query as { projectId?: string },
@@ -27,13 +37,27 @@ export default function ProjectPage() {
   const [loading, setLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
   const [note, setNote] = useState(""),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const headers = {
     "x-demo-user-role": "client",
     "x-demo-user-id": "client-1",
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent",
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   useEffect(() => {
     async function load() {
       if (!projectId) return
@@ -90,6 +114,7 @@ export default function ProjectPage() {
       setShowFeedback(true)
 <<<<<<< HEAD
     }
+<<<<<<< HEAD
   }
   async function markCompleted() {
     const res = await fetch(`/api/marketplace/projects`, {
@@ -98,9 +123,15 @@ export default function ProjectPage() {
       body: JSON.stringify({ id: projectId, action: "mark_completed" })})
     const json = await res.json()
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
     } catch (error) {
@@ -137,6 +168,13 @@ export default function ProjectPage() {
 }
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {loading && <div>Loading…</div>}
+      {error && <div className="text-red-600">{error}</div>}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {loading && <div>Loading…</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -147,7 +185,11 @@ export default function ProjectPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {project && (
         <div className="space-y-6">
           <div className="flex items-center gap-3">
@@ -161,7 +203,11 @@ export default function ProjectPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </span>
           </div>
           <section className="rounded border p-4">
@@ -338,7 +384,11 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </ul>
           </section>
           <section className="rounded border p-4">
@@ -362,7 +412,11 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
                   </li>
                 ))
@@ -389,7 +443,11 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
                 ))
@@ -403,7 +461,11 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <div className="flex gap-2">
               <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3 py-2" />
@@ -425,7 +487,12 @@ export default function ProjectPage(req, res) {
         userHeaders={headers}
       />
     </div>
+<<<<<<< HEAD
   )
+=======
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             )  } catch (error) {
     console.error("Error:", error);
@@ -467,5 +534,10 @@ export default function ProjectPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -11,10 +14,15 @@ import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import js from '@eslint/js';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +31,7 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import next from '@next/eslint-plugin-next';
+<<<<<<< HEAD
 
 export default [
   js.configs.recommended,
@@ -324,6 +333,9 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default [
   {
 <<<<<<< HEAD
@@ -403,6 +415,10 @@ export default [
       }
     },
     plugins: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       react,
       "react-hooks": reactHooks
     },
@@ -650,6 +666,7 @@ export default [
 <<<<<<< HEAD
       "no-unused-vars": "warn",
       "no-console": "warn",
+<<<<<<< HEAD
 
       "no-undef": "error"
     }
@@ -661,6 +678,23 @@ export default [
 ];
 <<<<<<< HEAD
 =======
+=======
+      "no-undef": "error",
+    },
+  },;
+];
+=======
+      '@typescript-eslint': typescript,
+      react: react,
+      'react-hooks': reactHooks,
+      '@next/next': next,
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...next.configs.recommended.rules,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'no-undef': 'error'
@@ -713,6 +747,7 @@ export default [
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 
@@ -721,3 +756,6 @@ export default [
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

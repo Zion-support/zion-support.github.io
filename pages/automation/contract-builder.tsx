@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useEffect, useMemo, useState } from 'react',;
+import DatePicker from 'react-datepicker',;
+import { useRouter } from 'next/router',;
+type PaymentType = 'hourly' | 'fixed',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
@@ -103,8 +110,15 @@ export default function ContractBuilderPage() {
     a.download = `contract-${projectName.replace(/\s+/g, '-').toLowerCase()}.txt`
     a.click()
 
+<<<<<<< HEAD
     URL.revokeObjectURL(url)
   }
+=======
+    setLoading(true),
+    setError(null),
+    setContract(''),
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
@@ -154,6 +168,10 @@ export default function ContractBuilderPage(req, res) {
     setLoading(true);
     setError(null);
     setContract('');
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     try {
       const body = {;
         talentName;
@@ -334,12 +352,20 @@ export default function ContractBuilderPage(req, res) {
         </div>
         <div className="md:col-span-2 flex items-center gap-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
+=======
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {loading ? 'Generating…' : 'Generate contract'}
           </button>
           {error && <span className="text-red-600 text-sm">{error}</span>}
 =======
+<<<<<<< HEAD
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -351,7 +377,11 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       </form>
       {contract && (
@@ -370,7 +400,12 @@ export default function ContractBuilderPage(req, res) {
         </div>
       )}
     </div>
+<<<<<<< HEAD
   )
+=======
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             {contract  } catch (error) {
     console.error("Error:", error);
@@ -390,5 +425,10 @@ export default function ContractBuilderPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -6,6 +6,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+<<<<<<< HEAD
   Brain
   Network
   Cloud
@@ -20,6 +21,22 @@ import {
   Award
   Clock
   Globe
+=======
+  Brain,
+  Network,
+  Cloud,
+  Shield,
+  Zap,
+  Target,
+  Users,
+  BarChart3,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Award,
+  Clock,
+  Globe,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import Layout from "../components/Layout";
 const serviceCategories = [
@@ -255,6 +272,7 @@ export default function ServicesOverviewPage() {
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -265,6 +283,8 @@ export default function ServicesOverviewPage() {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -374,6 +394,7 @@ export default function ServicesOverviewPage() {
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -386,10 +407,13 @@ export default function ServicesOverviewPage() {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -398,6 +422,8 @@ export default function ServicesOverviewPage() {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -433,6 +459,7 @@ export default function ServicesOverviewPage() {
                       </ul>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -443,6 +470,8 @@ export default function ServicesOverviewPage() {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <Link
                       href={category.link}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group"
@@ -558,6 +587,6 @@ export default function ServicesOverviewPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </Layout>;
   );
 }

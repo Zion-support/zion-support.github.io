@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {CheckCircle, Circle, ArrowRight} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",
 import { cn } from "@/lib/utils",
@@ -29,12 +39,31 @@ export function OnboardingTracker({
 =======
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export interface OnboardingStep {
   id: string,
   label: string,
   completed: boolean,
   link: string,
   action?: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+interface OnboardingTrackerProps {
+  steps: OnboardingStep[],;
+  title?: string;
+  className?: string
+}
+
+export function OnboardingTracker({ ;
+  steps;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -56,6 +85,7 @@ interface OnboardingTrackerProps {;
 
 export function OnboardingTracker({ 
   steps,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   title = "Complete Your Profile", 
   className 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -77,6 +107,11 @@ export function OnboardingTracker({
 =======
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 export function OnboardingTracker({;
   steps,;
@@ -95,7 +130,11 @@ export function OnboardingTracker({;
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
         <div;
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           style={{ width: `${progress}%` }}
         ></div>
       </div>

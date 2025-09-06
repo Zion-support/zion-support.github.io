@@ -1,11 +1,20 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { WorkExperience  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useWorkExperience() {
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {WorkExperience} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export function useWorkExperience() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -14,9 +23,12 @@ export function useWorkExperience() {
     if (!user) {
       setError('You must be logged in to update work experience')
       return false
+<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -31,6 +43,10 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     
     setIsLoading(true),
@@ -80,9 +96,12 @@ export function useWorkExperience() {;
     if (!user) {
       setError('You must be logged in to update work experience')
       return false
+<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
     setIsLoading(true),;
@@ -113,6 +132,10 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     
     setIsLoading(true),
@@ -162,9 +185,12 @@ export function useWorkExperience() {;
     if (!user) {
       setError('You must be logged in to delete work experience')
       return false
+<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
     setIsLoading(true),;
@@ -195,6 +221,10 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to delete work experience'),;
       return false;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     
     setIsLoading(true),
@@ -229,8 +259,11 @@ export function useWorkExperience() {;
     updateWorkExperience;
 
     deleteWorkExperience
+<<<<<<< HEAD
   }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
     setIsLoading(true),;
@@ -254,6 +287,10 @@ export function useWorkExperience() {;
     addWorkExperience;
     updateWorkExperience;
     deleteWorkExperience;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;

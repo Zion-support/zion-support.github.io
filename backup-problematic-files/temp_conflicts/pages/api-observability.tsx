@@ -12,9 +12,17 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 =======
 import {Button} from '../components/ui/Button';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/api-observability.tsx
 export default function ApiObservabilityPage() {
 
+=======
+<<<<<<< HEAD:pages-disabled/quantum-logistics.tsx
+export default function ApiObservabilityPage() {;
+=======
+export default function ApiObservabilityPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/api-observability.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
   if (!service) return null;
 
@@ -90,5 +98,13 @@ export default function ApiObservabilityPage() {
 =======
 }
 
+<<<<<<< HEAD
 >>>>>>> main:pages-disabled/quantum-logistics.tsx
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/api-observability.tsx
+=======
+<<<<<<< HEAD:pages-disabled/quantum-logistics.tsx
+;
+=======
+>>>>>>> main:pages-disabled/quantum-logistics.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/api-observability.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

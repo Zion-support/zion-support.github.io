@@ -54,6 +54,12 @@ healthMonitor.start().catch(console.error);
 ;
 // Start the service;
 const healthMonitor = new HealthMonitor();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+healthMonitor.start().catch(console.error);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 healthMonitor.start().catch(console.error);
 ;
       if (this.monitorProcesses) {;
@@ -251,4 +257,8 @@ healthMonitor.start().catch(console.error);
 // Start the service,;
 const healthMonitor = new HealthMonitor(),;
 healthMonitor.start().catch(console.error),;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -4,23 +4,41 @@
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Button } from "@/components/ui/button";
 import {
+<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
+=======
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/card";
 <<<<<<< HEAD
 =======
 import { FileText, ShieldCheck } from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { FileText, ShieldCheck } from "lucide-react",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 import { FileText, ShieldCheck } from "lucide-react";
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ContractTypeCardsProps {
 <<<<<<< HEAD
   onStandardClick: () => void;
@@ -66,7 +84,11 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -101,9 +123,12 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </Button>
         </CardFooter>
       </Card>
+<<<<<<< HEAD
     </div>
   );
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
@@ -175,8 +200,12 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </Button>;
         </CardFooter>;
       </Card>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

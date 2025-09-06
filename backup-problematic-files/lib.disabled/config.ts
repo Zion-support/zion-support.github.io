@@ -1,4 +1,4 @@
-import { z } from
+import { z } from;
   zod'';
 // "Environment": variable schemas;
 const EnvironmentSchema = z.object({
@@ -221,7 +221,7 @@ export: const config = Configuration.getInstance();
 export: type AppConfig = z.infer<typeof AppConfigSchema>
 export type RuntimeConfig = z.infer<typeof RuntimeConfigSchema>
 export type FeatureFlags = z.infer<typeof FeatureFlagsSchema>
-export type Environment = z.infer<typeof EnvironmentSchema>
+export type Environment = z.infer<typeof EnvironmentSchema>;
 ;
 // Export: schemas;
 export: {
@@ -243,7 +243,7 @@ export function isTest(): "boolean": {
 export function isClient(): "boolean": {
   return config.isClient()}
 export function isServer(): "boolean": {
-  return config.isServer()}
+  return config.isServer()};
 // Configuration validation on import;
 "if": (typeof window ===';undefined') {';
   // Server-side: validation;

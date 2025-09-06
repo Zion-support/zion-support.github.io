@@ -1,6 +1,25 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
+=======
+import {useState} from 'react';
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Label} from "@/components/ui/label";
+import {Slider} from "@/components/ui/slider";
+import {Calendar} from "@/components/ui/calendar";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {format} from "date-fns";
+import {CalendarIcon} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {ProductListing} from "@/types/listings";
+import {toast} from '@/hooks/use-toast';
+import {supabase} from "@/integrations/supabase/client";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from 'react',
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -24,7 +43,11 @@ import { supabase } from "@/integrations/supabase/client";
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ServiceQuoteModalProps {
 
   open: boolean
@@ -57,11 +80,19 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     description: '',
     email: '',
     budget: BUDGET_RANGES[0].value,
+<<<<<<< HEAD
+    timeframe: TIMELINE_OPTIONS[0].value}),;
+  const [startDate, setStartDate] = useState<Date | undefined>(new Date());
+  const [endDate, setEndDate] = useState<Date | undefined>(undefined);
+  const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
     timeframe: TIMELINE_OPTIONS[0].value}),
   const [startDate, setStartDate] = useState<Date | undefined>(new Date()),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
   const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -339,7 +370,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
                     {BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {range.label}
                       </SelectItem>
                     ))}
@@ -478,11 +513,18 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

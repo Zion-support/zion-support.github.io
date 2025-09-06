@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 <<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,6 +12,19 @@ import {
   TooltipTrigger} from "@/components/ui/tooltip",
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
+=======
+<<<<<<< HEAD
+import React, { useState } from "react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
+import {
+  Tooltip
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger} from "@/components/ui/tooltip"; import { useToast } from "@/hooks/use-toast"
+import { useAuth } from "@/hooks/useAuth"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function OnChainExport() {
 
   const [isConnected, setIsConnected] = useState(false)
@@ -23,6 +37,10 @@ export function OnChainExport() {
       // Check if wallet is available
       const ethereum = (window as any).ethereum
 =======
+<<<<<<< HEAD
+=======
+import React, { useState } from "react",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
@@ -44,7 +62,11 @@ export function OnChainExport() {
     try {
       // Check if wallet is available
       const ethereum = (window as any).ethereum,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (!ethereum) {
         toast({
           title: "Wallet not detected"
@@ -52,6 +74,7 @@ export function OnChainExport() {
           variant: "destructive"
 <<<<<<< HEAD
         })
+<<<<<<< HEAD
         return
       }
       // Request accounts
@@ -60,6 +83,17 @@ export function OnChainExport() {
 }
 
   )
+=======
+        return;
+      }
+      
+      // Request accounts
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
+      const address = accounts[0];
+};
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
         }),
@@ -302,4 +336,8 @@ export function OnChainExport() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

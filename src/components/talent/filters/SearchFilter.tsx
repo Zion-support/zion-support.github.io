@@ -1,13 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Input } from "@/components/ui/input";
 import { SearchIcon } from 'lucide-react'
 import { SearchFilterProps } from "@/types/filters";
+=======
+import { Input } from '@/components/ui/input'
+import { SearchIcon } from 'lucide-react'
+import { SearchFilterProps } from '@/types/filters'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Input } from "@/components/ui/input",
 import { SearchIcon } from 'lucide-react'
 import { SearchFilterProps } from "@/types/filters",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="mb-6">
       <div className="relative">
@@ -29,7 +39,11 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         />
 =======
         <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" aria-hidden="true" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Input
           id="talent-search"
           type="text"
@@ -43,14 +57,23 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         <p id='talent-search-help' className='sr-only'>          Type a name or skill to filter results        <p id="talent-search-help" className="sr-only">
 =======
         <p id="talent-search-help" className="sr-only">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Type a name or skill to filter results
         </p>
       </div>
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+};
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Input } from "@/components/ui/input",;
 import { SearchIcon } from 'lucide-react';
@@ -80,4 +103,8 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -14,10 +14,15 @@ const BADGES: Badge[] = [
   { id: 'pro', label: 'Pro', threshold: 500 }
   { id: 'elite', label: 'Elite', threshold: 1000 }
 ];
+<<<<<<< HEAD
 export function currentBadge(balance: number): Badge | null {
+=======
+
+export function currentBadge(balance: number): Badge | null {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   let current: Badge | null = null;
   return current;
-export default function Badges({ balance }: { balance: number }) {
+export default function Badges({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
   return (
     <div className='flex gap-2 items-center flex-wrap'>
@@ -33,10 +38,17 @@ export default function Badges({ balance }: { balance: number }) {
   return current
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default function Badges({ balance }: { balance: number }) {;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Badges({ balance }: { balance: number }) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const active = currentBadge(balance);
 
   return (
@@ -53,7 +65,11 @@ export default function Badges({ balance }: { balance: number }) {
               : "bg-gray-100 border-gray-200 text-gray-500"
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }`}
           title={`Requires ${b.threshold} ZION$`}
         >
@@ -72,6 +88,14 @@ export default function Badges({ balance }: { balance: number }) {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

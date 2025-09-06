@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {useNavigate} from "react-router-dom";
+import {ChevronLeft, Bell, Settings} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { useNavigate } from "react-router-dom",
 import { ChevronLeft, Bell, Settings } from "lucide-react",
@@ -17,6 +27,10 @@ interface MobileHeaderProps {
 =======
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
@@ -27,6 +41,19 @@ interface MobileHeaderProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onSettingsClick?: () => void
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function MobileHeader({;
+  title;
+  showBack = false;
+  showNotifications = false;
+  showSettings = false;
+  className;
+  onNotificationsClick;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function MobileHeader({
 <<<<<<< HEAD
   title;
@@ -49,6 +76,7 @@ export function MobileHeader({
   showSettings = false,
   className,
   onNotificationsClick,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onSettingsClick}: MobileHeaderProps) {
   const navigate = useNavigate(),
 
@@ -101,7 +129,10 @@ export function MobileHeader({
       </div>
     </header>
   )
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -174,6 +205,10 @@ export function MobileHeader({;
       </div>;
     </header>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -22,6 +22,7 @@ import { useWebhooks, WebhookEventType } from '@/hooks/useWebhooks'
   SelectValue
 } from '@/components/ui/select'
 import { toast } from 'sonner'
+<<<<<<< HEAD
 export function WebhookManager() {
   const {
     webhooks
@@ -99,6 +100,8 @@ export function WebhookManager() {
   }
 
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -110,6 +113,10 @@ import { PlusCircle, Save, Trash } from 'lucide-react'
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function WebhookManager() {
   const { 
     webhooks,
@@ -120,10 +127,42 @@ export function WebhookManager() {
     createWebhook,
     toggleWebhook,
     deleteWebhook,
+<<<<<<< HEAD
     testWebhook
   } = useWebhooks(),
   
   const [newWebhook, setNewWebhook] = useState({
+=======
+<<<<<<< HEAD
+    testWebhook,
+  } = useWebhooks()
+  const [newWebhook, setNewWebhook] = useState({
+    name: '',
+    url: '',
+    selectedEvent: '' as WebhookEventType,;
+    eventTypes: [] as WebhookEventType[],;
+    secret: '';
+  });
+  const eventOptions: { value: WebhookEventType; label: string }[] = [
+    { value: 'new_application', label: 'New Application Received' },
+    { value: 'quote_received', label: 'Quote Request Received' },
+    { value: 'milestone_approved', label: 'Milestone Approved' },
+    { value: 'talent_hired', label: 'Talent Hired' },
+  ]
+  useEffect(() => {
+    fetchWebhooks()
+  }, [])
+  const handleAddEvent = () => {
+    if (!newWebhook.selectedEvent) return;
+    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
+      toast.error('This event is already added')
+      return;
+=======
+    testWebhook
+  } = useWebhooks(),
+  
+  const [newWebhook, setNewWebhook] = useState({
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     name: "",
     url: "",
     selectedEvent: "" as WebhookEventType,
@@ -148,11 +187,33 @@ export function WebhookManager() {
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added"),
       return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setNewWebhook({
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      selectedEvent: '' as WebhookEventType,
+    })
+  }
+  const handleRemoveEvent = (event: WebhookEventType) => {    setNewWebhook({
+      ...newWebhook,
+      eventTypes: newWebhook.eventTypes.filter(e => e !== event),
+    })
+  }
+  const handleCreateWebhook = async () => {
+    if (
+      !newWebhook.name ||
+      !newWebhook.url ||
+      newWebhook.eventTypes.length === 0
+    ) {
+      toast.error('Please fill in all required fields')
+      return;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       selectedEvent: "" as WebhookEventType
     })
   },
@@ -168,6 +229,7 @@ export function WebhookManager() {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields"),
       return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     await createWebhook(
@@ -175,14 +237,37 @@ export function WebhookManager() {
       newWebhook.url, 
       newWebhook.eventTypes, 
       newWebhook.secret || undefined
+<<<<<<< HEAD
     ),
     
+=======
+<<<<<<< HEAD
+    )
+=======
+    ),
+    
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Reset form
     setNewWebhook({
       name: "",
       url: "",
       selectedEvent: "" as WebhookEventType,
       eventTypes: [],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      secret: '',
+    })
+  }
+  const handleTestWebhook = async (
+    webhookId: string,
+    eventType: WebhookEventType
+  ) => {
+    await testWebhook(webhookId, eventType)
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       secret: ""
     })
   },
@@ -191,7 +276,11 @@ export function WebhookManager() {
     await testWebhook(webhookId, eventType)
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-8">
       <Card>
@@ -217,7 +306,11 @@ export function WebhookManager() {
               <Input 
                 id="webhook-name" 
                 placeholder="e.g., Job Postings Webhook"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 value={newWebhook.name}
                 onChange={e =>
                   setNewWebhook({ ...newWebhook, name: e.target.value })
@@ -246,6 +339,7 @@ export function WebhookManager() {
                   key = {event,}
                   onRemove = {(,) => handleRemoveEvent(event),}
                 >
+<<<<<<< HEAD
                   {eventOptions.find(e => e.value === event)?.label |event}
                 </ClickableBadge>
               ))}
@@ -261,6 +355,8 @@ export function WebhookManager() {
                 }              >
                 <SelectTrigger className='w-full'>
                   <SelectValue placeholder='Select event' />
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             
             <div className="space-y-2">
@@ -387,9 +483,30 @@ export function WebhookManager() {;
                   key={event} ;
                   onRemove={() => handleRemoveEvent(event)}
                 >;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>;
               ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            </div>
+            <div className='flex space-x-2'>
+              <Select
+                value={newWebhook.selectedEvent}
+                onValueChange={value =>
+                  setNewWebhook({
+                    ...newWebhook,
+                    selectedEvent: value as WebhookEventType,
+                  })
+                }              >
+                <SelectTrigger className='w-full'>
+                  <SelectValue placeholder='Select event' />
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>;
             <div className="flex space-x-2">;
               <Select;
@@ -398,7 +515,11 @@ export function WebhookManager() {;
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select event" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </SelectTrigger>
                 <SelectContent>
                   {eventOptions.map(option => (
@@ -460,11 +581,25 @@ export function WebhookManager() {;
           </div>
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret(optional)</Label>
+<<<<<<< HEAD
             <Input
               id="webhook-secret"
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
+=======
+=======
+          
+          <div className="space-y-2">
+            <Label htmlFor="webhook-secret">Secret (optional)</Label>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+            <Input 
+              id="webhook-secret" 
+              placeholder="A secret key to verify the webhook source"
+              value={newWebhook.secret}
+              onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
             <p className="text-xs text-muted-foreground">
               If provided, this secret will be used to sign the webhook payload.</p>
@@ -494,6 +629,7 @@ export function WebhookManager() {;
                       <CardTitle className="text-lg">{webhook.name}</CardTitle>
                       <CardDescription className="truncate max-w-md">
 =======
+<<<<<<< HEAD
           
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
@@ -502,6 +638,8 @@ export function WebhookManager() {;
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />;
             <p className="text-xs text-muted-foreground">;
               If provided, this secret will be used to sign the webhook payload.</p>;
@@ -530,7 +668,11 @@ export function WebhookManager() {;
                     <div>;
                       <CardTitle className="text-lg">{webhook.name}</CardTitle>;
                       <CardDescription className="truncate max-w-md">;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {webhook.url}
                       </CardDescription>
                     </div>
@@ -554,7 +696,11 @@ export function WebhookManager() {;
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           {webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
                       </div>
@@ -590,7 +736,11 @@ export function WebhookManager() {;
                     <div className="text-xs text-muted-foreground">;
                       {webhook.last_triggered_at;
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         : 'Never triggered'}
                     </div>
                   </div>
@@ -630,9 +780,12 @@ export function WebhookManager() {;
                     <SelectContent>
                       <SelectItem value="test_event">Test(generic)</SelectItem>
                       {webhook.event_types.map(event => (
+<<<<<<< HEAD
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label |event}
                         </SelectItem>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                     variant="outline"
                     size="sm"
@@ -649,6 +802,10 @@ export function WebhookManager() {;
                     <SelectContent>
                       <SelectItem value="test_event">Test (generic)</SelectItem>
                       {webhook.event_types.map((event: WebhookEventType) => (
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>;
@@ -662,6 +819,10 @@ export function WebhookManager() {;
           </div>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {testResult && (
           <Card className='mt-4 border-blue-200'>
             <CardHeader>
@@ -683,7 +844,10 @@ export function WebhookManager() {;
                 <div>
                   <span className='font-medium'>Response:</span>
                   <pre className='mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto'>
+<<<<<<< HEAD
                     {testResult.responseBody |'<empty>'}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
         {testResult && (;
@@ -702,6 +866,10 @@ export function WebhookManager() {;
                 <div>;
                   <span className="font-medium">Response:</span>;
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {testResult.responseBody || '<empty>'}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </pre>
@@ -786,10 +954,18 @@ newWebhook.secret |undefined);"
 }</div> </div>)
 }'"}
 }
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       </div>;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

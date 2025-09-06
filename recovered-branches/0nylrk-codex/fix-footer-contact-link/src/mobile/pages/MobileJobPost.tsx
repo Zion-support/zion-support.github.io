@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -12,9 +15,12 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent} from "@/components/ui/card";
+<<<<<<< HEAD
 type JobPostStep = "details" | "requirements" | "budget" | "preview";
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
@@ -33,11 +39,20 @@ import {
 import { Zap, ChevronLeft, ChevronRight } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { Card, CardContent } from "@/components/ui/card",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
+<<<<<<< HEAD
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+=======
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const goToNextStep = () => {
@@ -170,15 +185,23 @@ function DetailsStep() {
       <div className="space-y-2">
         <Label htmlFor="description">Job Description</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Textarea
           id="description"
           placeholder="Describe the job role and responsibilities"
+=======
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           rows={5}
         />
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
     "React", "TypeScript", "Node.js"
@@ -188,6 +211,9 @@ function RequirementsStep() {
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -334,6 +360,10 @@ function DetailsStep() {;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
@@ -410,6 +440,11 @@ function RequirementsStep() {
 =======
               <button 
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
@@ -470,7 +505,11 @@ function RequirementsStep() {;
               {skill}
               <button;
                 className="ml-1 rounded-full hover:bg-background/20 p-1";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 onClick={() => removeSkill(skill)}
               >
                 ×
@@ -503,20 +542,32 @@ function RequirementsStep() {;
           id="responsibilities"
           placeholder="List the key responsibilities for this role"
           rows={4}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 =======
         <Textarea 
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
           rows={4}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -638,5 +689,12 @@ function PreviewStep() {
 }
 =======
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

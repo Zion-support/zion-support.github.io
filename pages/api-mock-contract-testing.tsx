@@ -1,10 +1,23 @@
 <<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
+<<<<<<< HEAD
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
 export default function ApiMockContractTestingPage() {
+=======
+<<<<<<< HEAD
+import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import ServiceAds from '../components/sections/ServiceAds';
+export default function ApiMockContractTestingPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -18,6 +31,7 @@ export default function ApiMockContractTestingPage() {
         'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.'
       price: 'Starting at $69/month'
       features: [
+<<<<<<< HEAD
         'OpenAPI/GraphQL import and live mock server'
         'Contract tests gated in CI (GitHub/GitLab/Bitbucket)'
         'Dynamic data generators and scenario templates'
@@ -26,6 +40,16 @@ export default function ApiMockContractTestingPage() {
       link: 'https://ziontechgroup.com/api-mock-contract-testing'
       contactInfo
     }
+=======
+        'OpenAPI/GraphQL import and live mock server',
+        'Contract tests gated in CI (GitHub/GitLab/Bitbucket)',
+        'Dynamic data generators and scenario templates',
+        'Snapshot diffs and changelog with approvals',
+      ],
+      link: 'https://ziontechgroup.com/api-mock-contract-testing',
+      contactInfo,;
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const tiers = [
     {
@@ -45,8 +69,11 @@ export default function ApiMockContractTestingPage() {
     },  ];
 
 =======
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
@@ -83,7 +110,11 @@ export default function ApiMockContractTestingPage(req, res) {
   }
 }
   ],
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Layout>
       <Head>
@@ -174,7 +205,11 @@ export default function ApiMockContractTestingPage(req, res) {
             </div>
             <div className="text-center">
               <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           </div>
         </div>
@@ -182,6 +217,11 @@ export default function ApiMockContractTestingPage(req, res) {
     </Layout>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
   } catch (error) {
@@ -190,4 +230,8 @@ export default function ApiMockContractTestingPage(req, res) {
   }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

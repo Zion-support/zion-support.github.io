@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
@@ -11,6 +12,14 @@ interface ReviewStatsProps {
 =======
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+=======
+import {Star} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+=======
+import { Star } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,
@@ -18,12 +27,17 @@ interface ReviewStatsProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
+<<<<<<< HEAD
+  // Format the average rating to one decimal place;
+  const formattedRating = averageRating.toFixed(1);
+=======
   // Format the average rating to one decimal place
 <<<<<<< HEAD
 
   const formattedRating = averageRating.toFixed(1);
 =======
   const formattedRating = averageRating.toFixed(1),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Calculate percentages for distribution if available
@@ -79,7 +93,11 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   key={i}
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }`}
                 />
               ))}

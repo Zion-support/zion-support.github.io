@@ -1,5 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AICustomerSuccessPlatform() {
 	return (
 		<ServiceLanding
@@ -16,6 +24,7 @@ export default function AICustomerSuccessPlatform() {
 			subtitle="Reduce churn by 20–45% and grow NRR with automated, data-driven customer health."
 <<<<<<< HEAD
 			pricePerMonthUSD={1999}
+<<<<<<< HEAD
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 4–10x within 90 days"
 			features={[
@@ -29,11 +38,17 @@ export default function AICustomerSuccessPlatform() {
 			]}
 			industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 			pricePerMonthUSD={1999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 4–10x within 90 days"
 			features={[
@@ -43,6 +58,17 @@ export default function AICustomerSuccessPlatform() {
 				"Expansion signals for upsell/cross-sell",
 				"Executive QBR reports and cohort analytics",
 				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+			]}
+			industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
+			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
+		/>
+	)
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -53,7 +79,10 @@ export default function AICustomerSuccessPlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
 		/>
 	)
@@ -65,3 +94,4 @@ export default function AICustomerSuccessPlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

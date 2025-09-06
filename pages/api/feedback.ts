@@ -1,6 +1,13 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
+<<<<<<< HEAD
+=======
+import {
+  saveFeedbackFallback,
+  FeedbackRecord,;
+} from "../../utils/feedback/store";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
   saveFeedbackFallback
@@ -19,6 +26,7 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
     return false;
   try {
     const admin = require("firebase-admin");
+<<<<<<< HEAD
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
@@ -64,6 +72,8 @@ export default async function handler(
   return ok(res, { id: doc.id });
 }
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 function ok(res: NextApiResponse, data: any) {
@@ -151,11 +161,36 @@ async function tryWriteToFirestore(req, res) {
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false,
   try {
     const admin = require("firebase-admin"),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
           projectId: FIREBASE_PROJECT_ID,
           clientEmail: FIREBASE_CLIENT_EMAIL,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
+        }),
+      });
+    }
+    const db = admin.firestore();
+    await db.collection("interaction_feedback").doc(doc.id).set(doc);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})})
       } catch (error) {
     console.error("Error:", error);
@@ -311,10 +346,42 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {;
 ;
 export default async function handler(req, res) {
   try {
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== "POST") return bad(res, "Method not allowed", 405);
   const { rating, comment, kind, context } = req.body || {};
   const r = Number(rating);
   if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const k: FeedbackRecord["kind"] =
+    kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
+
+  const user = {
+    id: (req.headers["x-demo-user-id"] as string) || undefined,
+    role: (req.headers["x-demo-user-role"] as string) || undefined,
+    talentSlug: (req.headers["x-demo-talent-slug"] as string) || undefined,
+  };
+
+  const doc: FeedbackRecord = {
+    id: uuidv4(),
+    createdAtIso: new Date().toISOString(),
+    user,
+    rating: r,
+    comment: comment || undefined,
+    kind: k,
+    context: context || undefined,
+  };
+
+const wrote = await tryWriteToFirestore(doc);
+  if (!wrote) saveFeedbackFallback(doc);
+  return ok(res, { id: doc.id });
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const k: FeedbackRecord["kind"] = kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
   const user = {;
     id: (req.headers["x-demo-user-id"] as string) || undefined;
@@ -344,4 +411,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

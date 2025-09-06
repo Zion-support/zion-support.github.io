@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Sparkles, ArrowRight} from "@/components/icons";
+import {supabase} from "@/integrations/supabase/client";
+import {Badge} from "@/components/ui/badge";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -32,6 +47,10 @@ interface AIListingGeneratorProps {
 =======
 import { supabase } from "@/integrations/supabase/client",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -40,6 +59,31 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+interface AIListingGeneratorProps {
+  onApplyGenerated?: (content: GeneratedContent) => void,
+  initialValues?: {
+    title?: string;
+    category?: string;
+    keyFeatures?: string;
+    targetAudience?: string
+  }
+}
+
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title || "");
+  const [category, setCategory] = useState(initialValues.category || "");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
+  const [isLoading, setIsLoading] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -67,7 +111,10 @@ interface AIListingGeneratorProps {;
     category?: string,;
     keyFeatures?: string,;
     targetAudience?: string;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 
@@ -88,6 +135,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
   const [isLoading, setIsLoading] = useState(false),
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
@@ -173,7 +221,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       if (data.error) {
         throw new Error(data.error)
@@ -276,9 +328,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               disabled={isLoading}
             />
           </div>
+<<<<<<< HEAD
           <Button
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
+=======
+          <Button 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
       setGeneratedContent(data.generated),;
@@ -364,6 +420,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             />;
           </div>;
           <Button;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -3,10 +3,15 @@ import fs from 'fs';
 import path from 'path';
 
 import {
+<<<<<<< HEAD
   getSessionFromReq
   isInternalAgentRequest;
+=======
+  getSessionFromReq,;
+  isInternalAgentRequest,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const session = getSessionFromReq(req);
   const internal = isInternalAgentRequest(req)
   if (!session && !internal) {

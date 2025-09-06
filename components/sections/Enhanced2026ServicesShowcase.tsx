@@ -2,6 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   ArrowRight
   Brain
   Zap
@@ -14,6 +15,20 @@ import {
   Cpu
   Lock
   Cloud;
+=======
+  ArrowRight,
+  Brain,
+  Zap,
+  Shield,
+  Rocket,
+  Sparkles,
+  Star,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Lock,;
+  Cloud,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
 import Link from 'next/link';
@@ -205,7 +220,11 @@ const Enhanced2026ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -227,7 +246,11 @@ const Enhanced2026ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Category Overview */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -239,7 +262,11 @@ const Enhanced2026ServicesShowcase = () => {
 =======
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {categories.map((category, index) => (
             <motion.div
@@ -253,7 +280,11 @@ const Enhanced2026ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div
                 className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
@@ -285,7 +316,11 @@ const Enhanced2026ServicesShowcase = () => {
         {/* Featured Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -298,7 +333,11 @@ const Enhanced2026ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div
                 className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}
@@ -360,7 +399,11 @@ const Enhanced2026ServicesShowcase = () => {
 
                         {feature}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
                     ))}
                   </ul>
@@ -373,7 +416,11 @@ const Enhanced2026ServicesShowcase = () => {
                 {/* Price and CTA */}
                 <div className='flex items-center justify-between'>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div>
                     <span className='text-2xl font-bold text-cyan-400'>
                       {service.price}
@@ -404,7 +451,11 @@ const Enhanced2026ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -415,7 +466,11 @@ const Enhanced2026ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -470,7 +525,13 @@ const Enhanced2026ServicesShowcase = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Enhanced2026ServicesShowcase;  )
 }
 export default Enhanced2026ServicesShowcase;
@@ -478,4 +539,13 @@ export default Enhanced2026ServicesShowcase;
 <<<<<<< HEAD
 =======
 export default Enhanced2026ServicesShowcase;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+}
+=======
+export default Enhanced2026ServicesShowcase;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

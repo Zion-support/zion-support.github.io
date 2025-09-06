@@ -9,8 +9,13 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 =======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+<<<<<<< HEAD
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
+=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -21,6 +26,7 @@ serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
@@ -35,6 +41,16 @@ serve(async (req) => {
   try {
     const { applicationId } = await req.json();
 =======
+
+  const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
+  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
+  const openAiKey = Deno.env.get("OPENAI_API_KEY") || "";
+  
+  if (!openAiKey) {
+    return new Response(
+      JSON.stringify({ error: "OpenAI API key is not configured" });
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
@@ -42,6 +58,10 @@ serve(async (req) => {
   if (!openAiKey) {;
     return new Response(;
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -137,6 +157,7 @@ serve(async (req) => {
     if (!resumeContent) {
       resumeContent = `
 <<<<<<< HEAD
+<<<<<<< HEAD
         Bio: ${application.talent_profile?.bio |""}
         Cover Letter: ${application.cover_letter |""}
         Skills: ${application.talent_profile?.skills?.join(", ") |""}
@@ -147,6 +168,13 @@ serve(async (req) => {
     const jobTitle = application.job?.title |"";
     const jobDescription = application.job?.description |"";
     const jobSkills = application.job?.skills |[];
+=======
+        Bio: ${application.talent_profile?.bio || ""}
+        Cover Letter: ${application.cover_letter || ""}
+        Skills: ${application.talent_profile?.skills?.join(", ") || ""}
+      `;
+      resumeSkills = application.talent_profile?.skills || []
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
     );
   }
@@ -229,6 +257,10 @@ serve(async (req) => {
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `,;
       resumeSkills = application.talent_profile?.skills || [];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
     // 4. Prepare job details
@@ -314,12 +346,17 @@ serve(async (req) => {
               }
               "suggestion": "Recommended for Review"
             }`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         ];
         temperature: 0.5})});
     if (!openAIResponse.ok) {
       const errorData = await openAIResponse.json();
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
+<<<<<<< HEAD
     }
     const aiResult = await openAIResponse.json();
     let matchResult;
@@ -331,6 +368,9 @@ serve(async (req) => {
               },
               "suggestion": "Recommended for Review"
             }`
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     // 4. Prepare job details;
     const jobTitle = application.job?.title || "",;
@@ -394,6 +434,10 @@ serve(async (req) => {
     if (!openAIResponse.ok) {;
       const errorData = await openAIResponse.json(),;
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
     const aiResult = await openAIResponse.json(),
@@ -477,6 +521,13 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      }
+    )
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     const aiResult = await openAIResponse.json(),;
     let matchResult,;
@@ -528,6 +579,10 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,14 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
+=======
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   const events = filterEventsByScope(state.events, state.config.scope)
   const totalsByToken: Record<string, number> = {}
   const contributionsBySubject: Record<string, number> = {}
   let globalVotes = 0
+=======
+  const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -24,6 +36,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const totalsByToken: Record<string, number> = {},
   const contributionsBySubject: Record<string, number> = {},
   let globalVotes = 0,
@@ -37,7 +53,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
     } else if (e.type === "proposal") {
 <<<<<<< HEAD
+<<<<<<< HEAD
       const p = e.payload as any
+=======
+      const p = e.payload as any,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
     }
   }
@@ -46,6 +67,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .sort((a, b) => b.score - a.score)
     .slice(0, 10)
   return res.status(200).json({
+<<<<<<< HEAD
     treasuryTotals: totalsByToken
     topContributors
     totalVoteCount: globalVotes
@@ -53,6 +75,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     lastSyncedAt: state.lastSyncedAt})
 =======
       const p = e.payload as any,
+=======
+    treasuryTotals: totalsByToken,
+    topContributors,
+    totalVoteCount: globalVotes,
+    lastSyncedAt: state.lastSyncedAt});
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
@@ -121,5 +151,10 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu;
@@ -11,6 +12,11 @@ import { DropdownMenu;
   DropdownMenuRadioGroup;
   DropdownMenuRadioItem;
   DropdownMenuCheckboxItem } from '@/components/ui/dropdown-menu';
+=======
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
 import { Resume  } from '@/types/resume';
@@ -20,10 +26,19 @@ import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
 }
+<<<<<<< HEAD
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const [includePortfolio, setIncludePortfolio] = useState(true);
+=======
+
+export function PdfExportButton({ resume }: PdfExportButtonProps) {;
+  const [isExporting, setIsExporting] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [includePortfolio, setIncludePortfolio] = useState(true);
+  const [fontFamily, setFontFamily] = useState<FontFamily>('default');
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -52,7 +67,11 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const [includePortfolio, setIncludePortfolio] = useState(true),
   const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
   const handleExport = async () => {
@@ -173,7 +192,10 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     </DropdownMenu>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
@@ -264,6 +286,10 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

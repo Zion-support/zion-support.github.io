@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useEffect, useMemo, useState } from 'react',;
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function getRefCode(): string {
 
   if (typeof window === 'undefined') return ''
@@ -37,16 +43,25 @@ export default function AffiliateDashboard() {
     } catch (e: any) {
       setMsg(e?.message |'Error')
     }
+<<<<<<< HEAD
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 
 =======
+=======
+=======
+import { useEffect, useMemo, useState } from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function getRefCode(): string {;
   if (typeof window === 'undefined') return '',;
   return localStorage.getItem('ref_code') || '';
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
@@ -149,7 +164,11 @@ export default function AffiliateDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </div>
     </div>
   )
@@ -164,6 +183,13 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 ;
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
@@ -226,4 +252,9 @@ function Stat({ label, value }: { label: string, value: number | string }) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

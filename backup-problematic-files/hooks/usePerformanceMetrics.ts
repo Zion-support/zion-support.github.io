@@ -1,6 +1,11 @@
 <<<<<<< HEAD:hooks/usePerformanceMetrics.ts
 import { useEffect, useState } from "react";
 import { PerformanceMetrics } from "../types";
+<<<<<<< HEAD
+=======
+
+export function usePerformanceMetrics() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 <<<<<<< HEAD:backup-problematic-files/hooks/usePerformanceMetrics.ts
 import { useEffect, useState } from 'react';
@@ -38,6 +43,7 @@ import { PerformanceMetrics } from "../types";
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/usePerformanceMetrics.ts
 export function usePerformanceMetrics() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/usePerformanceMetrics.ts
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -85,6 +91,11 @@ export function usePerformanceMetrics() {
   }, []);
   return { metrics, isSupported };
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:hooks/usePerformanceMetrics.ts
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from 'react',;
 import { PerformanceMetrics } from '../types',;
 export function usePerformanceMetrics() {;
@@ -114,4 +125,8 @@ export function usePerformanceMetrics() {;
   return { metrics, isSupported };
 >>>>>>> main:hooks/usePerformanceMetrics.ts
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/usePerformanceMetrics.ts
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/usePerformanceMetrics.ts
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

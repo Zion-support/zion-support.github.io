@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
+=======
+import { useState, useEffect } from 'react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { WifiOff, Wifi } from 'lucide-react'
 =======
 import { useState, useEffect } from 'react',
@@ -17,6 +21,14 @@ export const OfflineIndicator = () => {
       const online = navigator.onLine
       setIsOnline(online)
 =======
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react',
+import { WifiOff, Wifi } from 'lucide-react'
+import { Alert, AlertDescription } from '@/components/ui/alert',
+
+export const OfflineIndicator = () => {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOnline, setIsOnline] = useState(true),
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),
 
@@ -25,7 +37,11 @@ export const OfflineIndicator = () => {
       const online = navigator.onLine,
       setIsOnline(online),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
@@ -50,7 +66,11 @@ export const OfflineIndicator = () => {;
       } else if (showOfflineAlert) {;
         // Show brief "back online" message then hide;
         setTimeout(() => setShowOfflineAlert(false), 3000);
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
 <<<<<<< HEAD
@@ -58,10 +78,10 @@ export const OfflineIndicator = () => {;
     updateOnlineStatus()
     // Listen for online/offline events
     window.addEventListener('online', updateOnlineStatus)
-    window.addEventListener('offline', updateOnlineStatus)
-    return () => {
-      window.removeEventListener('online', updateOnlineStatus)
-      window.removeEventListener('offline', updateOnlineStatus)
+    window.addEventListener('offline', updateOnlineStatus);
+    return () => {;
+      window.removeEventListener('online', updateOnlineStatus);
+      window.removeEventListener('offline', updateOnlineStatus);
     } }, [showOfflineAlert]);      window.removeEventListener('offline', updateOnlineStatus)
     }
   }, [showOfflineAlert])
@@ -87,7 +107,10 @@ export const OfflineIndicator = () => {;
     </div>
   )
 } }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   }, [showOfflineAlert]),
 
@@ -114,4 +137,8 @@ export const OfflineIndicator = () => {;
     </div>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

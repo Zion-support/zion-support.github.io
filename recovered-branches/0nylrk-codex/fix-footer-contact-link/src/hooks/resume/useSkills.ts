@@ -1,11 +1,20 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Skill  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useSkills() {
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Skill} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {handleResumeError, showSuccessToast} from './useResumeUtils';
+export function useSkills() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -14,9 +23,12 @@ export function useSkills() {
     if (!user) {
       setError('You must be logged in to add skills')
       return false
+<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -31,6 +43,10 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to add skills'),;
       return false;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     
     setIsLoading(true),
@@ -72,9 +88,12 @@ export function useSkills() {;
     if (!user) {
       setError('You must be logged in to delete skills')
       return false
+<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
     setIsLoading(true),;
@@ -101,6 +120,10 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to delete skills'),;
       return false;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     
     setIsLoading(true),
@@ -134,8 +157,11 @@ export function useSkills() {;
     addSkill;
 
     deleteSkill
+<<<<<<< HEAD
   }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
     setIsLoading(true),;
@@ -158,6 +184,10 @@ export function useSkills() {;
     error;
     addSkill;
     deleteSkill;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;

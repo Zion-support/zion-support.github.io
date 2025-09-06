@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Brain
   Atom
   Shield
@@ -30,6 +31,35 @@ import {
   Phone
   Mail
   MapPin;} from 'lucide-react';import {
+=======
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Star,
+  Award,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  Target,
+  Microscope,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Eye,
+  Code,
+  Palette,
+  Search,
+  Filter,
+  Grid,
+  List,
+  ExternalLink,
+  Phone,
+  Mail,;
+  MapPin,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
 
   CheckCircle, ArrowRight, Zap, Target, Microscope;
@@ -165,9 +195,13 @@ const serviceCategories = [
     count: cuttingEdgeMicroSaasServices2025.length,
   },];
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 ];
 export default function CuttingEdgeServicesShowcase2025() {
+=======
+export default function CuttingEdgeServicesShowcase2025() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -285,7 +319,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -294,7 +332,11 @@ export default function CuttingEdgeServicesShowcase2025() {
                   Showcase 2025
                 </span>
               </motion.h1>
+<<<<<<< HEAD
               <motion.p
+=======
+              <motion.p 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -316,7 +358,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 
                 initial={{ opacity: 0, y: 20 }}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
@@ -343,7 +389,11 @@ export default function CuttingEdgeServicesShowcase2025() {
               </motion.div>
               {/* CTA Buttons */}
               <motion.div
+<<<<<<< HEAD
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div
+=======
+                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="flex flex-col sm:flex-row gap-4 justify-center"
 =======
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
@@ -357,7 +407,11 @@ export default function CuttingEdgeServicesShowcase2025() {
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
@@ -397,10 +451,19 @@ export default function CuttingEdgeServicesShowcase2025() {
 =======
             <motion.div 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
+<<<<<<< HEAD
 
               initial={{ opacity: 0, y: 20 }}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+              initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -411,7 +474,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <input
                   type='text'
                   placeholder='Search services...'
@@ -442,7 +509,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 
                 <button
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === 'all'
@@ -457,7 +528,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     key={category.title}
                     onClick={() => setSelectedCategory(category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -481,7 +556,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 
                 <button
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
                     viewMode === 'grid'
@@ -545,7 +624,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           {service.name}
                         </h3>
                         <p className='text-white/70 text-sm leading-relaxed'>
@@ -582,7 +665,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 
                         >
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           {tag}
                         </span>
                       ))}
@@ -590,7 +677,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
@@ -660,7 +751,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 
                   {/* Service Details */}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </div>
                     {/* CTA */}
@@ -704,7 +799,11 @@ export default function CuttingEdgeServicesShowcase2025() {
               ))}
             </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -714,7 +813,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
@@ -749,7 +852,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
@@ -758,7 +865,11 @@ export default function CuttingEdgeServicesShowcase2025() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -869,9 +980,15 @@ export default function CuttingEdgeServicesShowcase2025() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
 =======
   );
+=======
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -894,5 +1011,13 @@ visible: {
 =======
   duration: 0.5 
 
+<<<<<<< HEAD
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+};}
+=======
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

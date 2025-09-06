@@ -5,6 +5,37 @@ import React, { useState, useEffect } from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+=======
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Cpu,
+  Target,
+  Microscope,
+  Shield,
+  Zap,
+  Sparkles,
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  Home,
+  Briefcase,
+  DollarSign,
+  BookOpen,
+  Users,;
+  MessageCircle,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, ;
+  Cpu, Target, Microscope, Shield, Zap, Sparkles;
+  Menu, X, Search, ChevronDown, Home, Briefcase, 
+  DollarSign, BookOpen, Users, MessageCircle
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
   Phone
@@ -297,7 +328,12 @@ const quickLinks = [
   { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' }
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' }
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
+<<<<<<< HEAD
 export default function UltraFuturisticNavigation2033() {
+=======
+
+export default function UltraFuturisticNavigation2033() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -425,7 +461,11 @@ export default function UltraFuturisticNavigation2033() {
 
                 </button>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Mega Menu */}
                 <AnimatePresence>
                   {activeCategory === 'services' && (
@@ -440,7 +480,11 @@ export default function UltraFuturisticNavigation2033() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
                         {serviceCategories.map(category => (
@@ -507,7 +551,11 @@ export default function UltraFuturisticNavigation2033() {
 
                                   </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                 </Link>
                               ))}
                             </div>
@@ -521,7 +569,11 @@ export default function UltraFuturisticNavigation2033() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Quick Links */}
               {quickLinks.map(link => (
                 <Link
@@ -533,14 +585,21 @@ export default function UltraFuturisticNavigation2033() {
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+<<<<<<< HEAD
                   {link.name}
                 </Link>
               ))}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
 
                 >
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {link.name}
                 </Link>
               ))}
@@ -582,7 +641,11 @@ export default function UltraFuturisticNavigation2033() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -596,7 +659,11 @@ export default function UltraFuturisticNavigation2033() {
 =======
 
             >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className='px-4 py-6 space-y-6'>
                 {/* Mobile Services */}
                 <div className='space-y-4'>
@@ -633,7 +700,11 @@ export default function UltraFuturisticNavigation2033() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Mobile Quick Links */}
                 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white'>
@@ -666,7 +737,11 @@ export default function UltraFuturisticNavigation2033() {
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -702,5 +777,13 @@ export default function UltraFuturisticNavigation2033() {
 }</div> </div>) ) 
 }</div>) ) 
 }</div> </div> > Get Started </a> </div> </div> </motion.div>) 
+<<<<<<< HEAD
 }</AnimatePresence> </nav> </>)
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+}</AnimatePresence> </nav> </>) }
+=======
+}</AnimatePresence> </nav> </>)
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

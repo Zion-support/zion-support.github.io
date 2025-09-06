@@ -7,6 +7,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Brain
   Shield
   Zap
@@ -27,6 +28,27 @@ import {
 import Layout from '../components/layout/Layout';import {
   Brain, Shield, Zap, Target, Stethoscope
 
+=======
+  Brain,
+  Shield,
+  Zap,
+  Target,
+  Stethoscope,
+  BarChart3,
+  Cpu,
+  Globe,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,;
+  MapPin,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  Brain, Shield, Zap, Target, Stethoscope, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
  } from 'lucide-react';
@@ -191,7 +213,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -201,7 +227,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <a
               href='#pricing'
@@ -240,7 +270,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -249,7 +283,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Medical Technology
@@ -279,7 +317,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4'>
                   <CheckCircle className='w-6 h-6 text-white' />
@@ -295,7 +337,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
@@ -303,7 +349,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section id="pricing" className="py-20 bg-black">
@@ -312,7 +362,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -321,7 +375,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Choose Your Plan
@@ -371,6 +429,10 @@ export default function AIDiagnosticPlatform() {
                   </div>
                 )}
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {plan.name}
@@ -398,10 +460,16 @@ export default function AIDiagnosticPlatform() {
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
 =======
+<<<<<<< HEAD
 
                       {feature}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      {feature}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -416,7 +484,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Contact Section */}
       <section
         id='contact'
@@ -428,7 +500,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -437,7 +513,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Healthcare?
@@ -460,7 +540,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -469,7 +553,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
@@ -491,7 +579,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
@@ -513,7 +605,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <MapPin className='w-8 h-8 text-white' />
@@ -529,6 +625,7 @@ export default function AIDiagnosticPlatform() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </Layout>
 <<<<<<< HEAD
 );
@@ -536,3 +633,14 @@ export default function AIDiagnosticPlatform() {
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+<<<<<<< HEAD
+    </Layout>;
+);
+}
+=======
+    </Layout>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

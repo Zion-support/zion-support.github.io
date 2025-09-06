@@ -197,7 +197,11 @@ export type Database = {
           status_code?: number;
           user_agent?: string | null;
           user_id?: string | null;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
         Relationships: [
           {
@@ -205,12 +209,20 @@ export type Database = {
             columns: ["api_key_id"]
             isOneToOne: false
             referencedRelation: "api_keys"
+<<<<<<< HEAD
+            referencedColumns: ["id"];
+          };
+=======
             referencedColumns: ["id"]
 <<<<<<< HEAD
           }
 =======
           },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {
             foreignKeyName: "api_logs_user_id_fkey"
             columns: ["user_id"]
@@ -1463,7 +1475,11 @@ export type Database = {
           id?: string;
           updated_at?: string;
           user_id?: string;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
         Relationships: [
           {
@@ -1689,7 +1705,11 @@ export type Database = {
           reminder_type?: string;
           sent_at?: string | null;
           user_id?: string;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
         Relationships: [
           {
@@ -2380,7 +2400,11 @@ export type Database = {
           days_since_login: number;
           onboarding_status: Json;
         }[];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       complete_referral: {
         Args: { _referred_id: string, _user_type: string }
@@ -2404,7 +2428,11 @@ export type Database = {
       create_scheduled_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: undefined;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       flag_suspicious_content: {
         Args: {
@@ -2443,7 +2471,11 @@ export type Database = {
       get_current_tenant_id: {;
         Args: Record<PropertyKey never>;
         Returns: string;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       get_event_distribution: {
         Args: { days_back?: number }
@@ -2465,7 +2497,11 @@ export type Database = {
       schedule_email_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: number;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       trigger_resume_scoring: {
         Args: { application_id: string }
@@ -2509,12 +2545,20 @@ export type Database = {
 type DefaultSchema = Database[Extract<keyof Database, "public">]
 export type Tables<
   DefaultSchemaTableNameOrOptions extends
+<<<<<<< HEAD
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
+    | { schema: keyof Database };
+=======
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
 <<<<<<< HEAD
     | { schema: keyof Database }
 =======
     | { schema: keyof Database },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2538,12 +2582,20 @@ export type Tables<
     : never
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
+<<<<<<< HEAD
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database };
+=======
     | keyof DefaultSchema["Tables"]
 <<<<<<< HEAD
     | { schema: keyof Database }
 =======
     | { schema: keyof Database },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2563,12 +2615,20 @@ export type TablesInsert<
     : never
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
+<<<<<<< HEAD
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database };
+=======
     | keyof DefaultSchema["Tables"]
 <<<<<<< HEAD
     | { schema: keyof Database }
 =======
     | { schema: keyof Database },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2588,12 +2648,20 @@ export type TablesUpdate<
     : never
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
+<<<<<<< HEAD
+    | keyof DefaultSchema["Enums"];
+    | { schema: keyof Database };
+=======
     | keyof DefaultSchema["Enums"]
 <<<<<<< HEAD
     | { schema: keyof Database }
 =======
     | { schema: keyof Database },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
   }
@@ -2605,12 +2673,20 @@ export type Enums<
     : never
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
+<<<<<<< HEAD
+    | keyof DefaultSchema["CompositeTypes"];
+    | { schema: keyof Database };
+=======
     | keyof DefaultSchema["CompositeTypes"]
 <<<<<<< HEAD
     | { schema: keyof Database }
 =======
     | { schema: keyof Database },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database
   }
@@ -2623,6 +2699,13 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
+<<<<<<< HEAD
+      api_key_scope: [;
+        "jobs:read";
+        "jobs:write";
+        "talent:read";
+        "quotes:write";
+=======
       api_key_scope: [
 <<<<<<< HEAD
         "jobs:read";
@@ -2646,9 +2729,23 @@ export const Constants = {
         "jobs:write",
         "talent:read",
         "quotes:write",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         "webhooks:manage"],
       fraud_severity: ["safe", "suspicious", "dangerous"],
       quote_request_status: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        "new";
+        "in_review";
+        "accepted";
+        "responded";
+        "closed";
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         "new",
         "in_review",
         "accepted",
@@ -2769,4 +2866,8 @@ export const Constants = {;
         "closed",;
         "archived"];
       referral_status: ["pending", "completed", "expired"]}}} as const;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

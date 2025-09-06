@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST')
@@ -28,7 +34,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Coach error' })
+<<<<<<< HEAD
 =======
+=======
+  };
+};
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -113,6 +126,12 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
+=======
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

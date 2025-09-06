@@ -1,4 +1,23 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {useNavigate} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
+import {toast} from "@/hooks/use-toast";
+import {Check, Flag, Search, Settings, X} from "lucide-react";
+import {supabase} from "@/integrations/supabase/client";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
@@ -32,6 +51,10 @@ interface PartnerProfile {
 =======
 import { Check, Flag, Search, Settings, X } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -48,6 +71,7 @@ interface PartnerProfile {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   commission_rate?: number
 }
+<<<<<<< HEAD
 export default function PartnerManager() {
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
@@ -56,10 +80,22 @@ export default function PartnerManager() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTab, setActiveTab] = useState("pending");
   const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
+=======
+
+<<<<<<< HEAD
+export default function PartnerManager() {;
+  const [partners, setPartners] = useState<PartnerProfile[]>([]);
+  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeTab, setActiveTab] = useState("pending");
+  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
+<<<<<<< HEAD
 =======
   const [isLoading, setIsLoading] = useState(true),
   const [searchQuery, setSearchQuery] = useState(""),
@@ -71,11 +107,17 @@ export default function PartnerManager() {
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  const navigate = useNavigate();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       navigate("/login");
       return
     }
@@ -175,6 +217,24 @@ export default function PartnerManager() {
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
 =======
+<<<<<<< HEAD
+=======
+export default function PartnerManager() {
+  const [partners, setPartners] = useState<PartnerProfile[]>([]),
+  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [activeTab, setActiveTab] = useState("pending"),
+  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
+  const [commissionRate, setCommissionRate] = useState(25),
+  const { user, isAuthenticated } = useAuth(),
+  const navigate = useNavigate(),
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       navigate("/login"),
       return
 import { useState, useEffect } from "react",;
@@ -320,7 +380,11 @@ export default function PartnerManager() {;
       } else {;
         setPartners(data as PartnerProfile[]),;
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (error) {
       console.error("Error fetching partners:", error),
@@ -354,8 +418,11 @@ export default function PartnerManager() {;
         p.website?.toLowerCase().includes(lowerQuery)
       )
     }
+<<<<<<< HEAD
     setFilteredPartners(filtered)
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
     } catch (error) {;
       console.error("Error fetching partners:", error),;
@@ -384,6 +451,10 @@ export default function PartnerManager() {;
         p.website?.toLowerCase().includes(lowerQuery);
       );
     }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     
     setFilteredPartners(filtered)
   },
@@ -518,7 +589,11 @@ export default function PartnerManager() {;
       case 'over100k': return 'Over 100,000';
       default: return size
     }
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
     setFilteredPartners(filtered);
@@ -602,6 +677,10 @@ export default function PartnerManager() {;
       default: return size;
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusBadge = (status: string) => {
@@ -694,7 +773,11 @@ export default function PartnerManager() {;
                   Pending Applications;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
@@ -828,7 +911,6 @@ export default function PartnerManager() {;
                 getFraudFlagBadge={getFraudFlagBadge}
               />
             </TabsContent>
-            
             <TabsContent value="all" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
@@ -940,6 +1022,10 @@ export default function PartnerManager() {;
                   <Button
                     variant="destructive"
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
                     <X className="h-4 w-4 mr-1" />
                     Reject
@@ -955,9 +1041,12 @@ export default function PartnerManager() {;
               )}
             </div>
 =======
+<<<<<<< HEAD
                   <Button 
                     variant="destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >;
                     <X className="h-4 w-4 mr-1" />;
                     Reject;
@@ -972,7 +1061,11 @@ export default function PartnerManager() {;
                 </div>;
               )}
             </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </DialogContent>
       </Dialog>
@@ -1032,10 +1125,18 @@ interface PartnerTableProps {
   getFraudFlagBadge: (flags?: number) => JSX.Element | null
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 function PartnerTable({
   partners
   isLoading
   onViewDetails
+=======
+
+function PartnerTable({ 
+  partners, 
+  isLoading, 
+  onViewDetails, 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
@@ -1065,7 +1166,11 @@ function PartnerTable({;
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   if (partners.length === 0) {
     return (
@@ -1137,10 +1242,13 @@ function PartnerTable({;
                   <span className="sr-only">Settings</span>
                 </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Button
                   variant="outline"
 =======
                 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button 
                   variant="outline" 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

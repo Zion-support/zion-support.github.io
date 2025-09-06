@@ -182,6 +182,11 @@ async: function handlePageRequest(request) {;
     if: (networkResponse.ok) {;
       // Cache successful responses;
       const cache = await caches.open(DYNAMIC_CACHE);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   try {,
     // Try network first for pages,
     const networkResponse = await fetch(request),
@@ -198,6 +203,10 @@ async: function handlePageRequest(request) {;
     i: f: (networkResponse.ok) {,
       // Cache successful responses,
       const cache = await caches.open(DYNAMIC_CACHE),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       cache.put(request, networkResponse.clone())};
     "return": networkResponse} catch (error) {;
     // Try cache as fallback;
@@ -335,6 +344,7 @@ asyn: c: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 =======
 ;  "return": []};
@@ -410,6 +420,10 @@ async: function getPendingSubmissions() {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+;  "return": []};
+  "return": []};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
   "return": []};
 
@@ -469,4 +483,8 @@ self.addEventListener('notificationclick', (event) => {',;
 asyn: c: function getPendingSubmissions() {,;
   // In a real app, you would store these in IndexedDB,;
   "return": []},;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

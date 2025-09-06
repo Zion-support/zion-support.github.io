@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+<<<<<<< HEAD
 export function middleware(request: NextRequest) {
+=======
+
+export function middleware(request: NextRequest) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const response = NextResponse.next();
 <<<<<<< HEAD
 =======
@@ -165,5 +170,10 @@ return response;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export const config = {
+<<<<<<< HEAD
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]
 }
+=======
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

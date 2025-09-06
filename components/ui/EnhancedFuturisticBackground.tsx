@@ -196,7 +196,11 @@ const EnhancedFuturisticBackground: React.FC<
 =======
           this.opacity *= 0.95;        }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
 <<<<<<< HEAD
@@ -228,12 +232,20 @@ const EnhancedFuturisticBackground: React.FC<
       }
       isDead() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return this.life <= 0 |this.opacity < 0.01;      }
+=======
+        return this.life <= 0 || this.opacity < 0.01;      }        
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ctx.restore()
 =======
         return this.life <= 0 || this.opacity < 0.01;      }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -364,6 +376,10 @@ const EnhancedFuturisticBackground: React.FC<
       }
       // Create connections between nearby particles
       connections = [];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
 <<<<<<< HEAD
@@ -380,12 +396,16 @@ const EnhancedFuturisticBackground: React.FC<
             connections.push(new Connection(particles[i], particles[j]))
 =======
 
+<<<<<<< HEAD
       }
 
       // Create connections between nearby particles
       connections = [];
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
       }
@@ -477,6 +497,13 @@ const EnhancedFuturisticBackground: React.FC<
 export default EnhancedFuturisticBackground;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default EnhancedFuturisticBackground;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default EnhancedFuturisticBackground;
+=======
+export default EnhancedFuturisticBackground;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

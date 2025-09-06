@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useEffect, useState} from 'react'
 import {ProductListingCard} from '@/components/ProductListingCard'
 import {useAuth} from '@/hooks/useAuth'
@@ -77,7 +80,11 @@ export default function EquipmentRecommendations() {;
     return (
       <Dialog open>
         <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <DialogHeader>
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
@@ -92,7 +99,11 @@ export default function EquipmentRecommendations() {;
             </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
 =======
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
           </Button>
         </DialogContent>
@@ -116,12 +127,15 @@ export default function EquipmentRecommendations() {;
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
         {listings.map((listing,) => (
           <div key={listing.id} className="break-inside-avoid mb-4">
+<<<<<<< HEAD
           </div>
         ))}
       </div>
     </div>
   )
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
     <div className="min-h-screen bg-zion-blue py-8 px-4">
       <h1 className="text-2xl font-bold text-white mb-6">AI Equipment Recommendations</h1>
@@ -135,11 +149,20 @@ export default function EquipmentRecommendations() {;
         {listings.map((listing) => (
           <div key={listing.id} className="break-inside-avoid mb-4">
             <ProductListingCard listing={listing} />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         ))}
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+};
+}
+=======
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

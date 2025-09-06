@@ -8,7 +8,12 @@ import {Badge} from '@/components/ui/badge';
 import Link from 'next/link';
 import {useState, useEffect} from 'react';
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
 export default function OfflinePage() {
+=======
+
+export default function OfflinePage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOnline, setIsOnline] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<string>('');
   const [retryCount, setRetryCount] = useState(0);
@@ -68,6 +73,10 @@ export default function OfflinePage() {
       available: true
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { motion } from 'framer-motion';
 import { WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search } from 'lucide-react';
@@ -164,7 +173,11 @@ export default function OfflinePage(req, res) {
   }
 }
   ]
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -178,7 +191,11 @@ export default function OfflinePage(req, res) {
 =======
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900">
         <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.div
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -239,7 +256,11 @@ export default function OfflinePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <WifiOff className={`w-12 h-12 ${
                   isOnline ? 'text-green-600' : 'text-orange-600'
@@ -274,7 +295,11 @@ export default function OfflinePage(req, res) {
 }
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {isOnline
                 ? 'Your internet connection has been restored. You can now access all features.'
                 : 'No internet connection detected. Don\'t worry - you can still access cached content and use offline features.'
@@ -333,7 +358,11 @@ export default function OfflinePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <RefreshCw className="w-5 h-5" />
               {retryCount > 0 ? `Retry (${retryCount})` : 'Try Again'  } catch (error) {
@@ -452,7 +481,11 @@ export default function OfflinePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
                     action.available
@@ -537,7 +570,11 @@ export default function OfflinePage(req, res) {
   }
 }
             className="mt-16"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <Card className="max-w-2xl mx-auto">
               <CardHeader>
@@ -591,7 +628,11 @@ export default function OfflinePage(req, res) {
   }
 }
               className="fixed bottom-6 right-6 z-50"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800">
                 <CardContent className="p-4">
@@ -621,6 +662,11 @@ export default function OfflinePage(req, res) {
       </div>
     </>
   );
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           )  } catch (error) {
     console.error("Error:", error);
@@ -632,4 +678,8 @@ export default function OfflinePage(req, res) {
     </>;
   );
 } ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

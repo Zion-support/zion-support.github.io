@@ -15,7 +15,20 @@ import {
 import { Badge } from '@/components/ui/badge'
 import { useProjects } from '@/hooks/useProjects'
 import { Project } from '@/types/projects'
+<<<<<<< HEAD
 
+=======
+export function ActiveProjectsCard() {
+  const { projects, isLoading } = useProjects()
+  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
+  useEffect(() => {    if (projects && !isLoading) {;
+      const active = projects;
+        .filter(p => ['offer_accepted', 'in_progress'].includes(p.status));
+        .slice(0, 3); // Limit to 3 most recent projects
+      setActiveProjects(active)
+    }
+  }, [projects, isLoading])
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 import { useEffect, useState } from "react",
@@ -43,7 +56,11 @@ export function ActiveProjectsCard() {
     }
   }, [projects, isLoading]),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <Card>
@@ -53,7 +70,11 @@ export function ActiveProjectsCard() {
             <BriefcaseIcon className='h-5 w-5 text-primary' />            <span>Active Projects</span>          <CardTitle className="flex items-center gap-2">
 =======
           <CardTitle className="flex items-center gap-2">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <BriefcaseIcon className="h-5 w-5 text-primary" />
             <span>Active Projects</span>
           </CardTitle>
@@ -81,7 +102,10 @@ export function ActiveProjectsCard() {
     )
   }
     )
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 import { useEffect, useState } from "react",;
@@ -122,6 +146,10 @@ export function ActiveProjectsCard() {;
         </CardContent>;
       </Card>;
     );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -137,7 +165,11 @@ export function ActiveProjectsCard() {;
         </CardHeader>          <CardTitle className="flex items-center gap-2">
 =======
           <CardTitle className="flex items-center gap-2">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <BriefcaseIcon className="h-5 w-5 text-primary" />
             <span>Active Projects</span>
           </CardTitle>
@@ -159,12 +191,20 @@ export function ActiveProjectsCard() {;
           <Button variant="outline" asChild>
             <Link href="/jobs">Find Opportunities</Link>
           </Button>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </CardContent>
       </Card>
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card>
       <CardHeader>
@@ -242,7 +282,11 @@ export function ActiveProjectsCard() {;
               <span>Started {new Date(project.start_date).toLocaleDateString()}</span>
             </div>
             <Button size="sm" variant="outline" className="w-full mt-2" asChild>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
@@ -281,4 +325,8 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {Badge} from "@/components/ui/badge";
+import {Star} from "lucide-react";
+import {cn} from "@/lib/utils";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",
@@ -19,6 +29,10 @@ interface ProfileHeroProps {
 =======
 import { Star } from "lucide-react",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ProfileHeroProps {
   name: string,
   title: string,
@@ -31,6 +45,21 @@ interface ProfileHeroProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   profileType: 'service' | 'talent'
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function ProfileHero({;
+  name;
+  title;
+  avatarUrl;
+  coverImageUrl;
+  location;
+  rating;
+  reviewCount;
+  aiScore;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ProfileHero({
   name,
   title,
@@ -40,6 +69,7 @@ export function ProfileHero({
   rating,
   reviewCount,
   aiScore,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   profileType
 }: ProfileHeroProps) {
   return (
@@ -115,7 +145,11 @@ export function ProfileHero({;
                 <AvatarImage src={avatarUrl} alt={name} />;
               ) : (;
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -128,10 +162,16 @@ export function ProfileHero({;
                   className={cn(
 <<<<<<< HEAD
                     "ml-2 border-zion-purple/50 text-zion-cyan";
+<<<<<<< HEAD
 
 =======
                     "ml-2 border-zion-purple/50 text-zion-cyan",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
                 >
@@ -152,9 +192,15 @@ export function ProfileHero({;
                     )}
 <<<<<<< HEAD
                   </div>
+<<<<<<< HEAD
                 )}
 =======
                   </div>;
+=======
+=======
+                  </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
                 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

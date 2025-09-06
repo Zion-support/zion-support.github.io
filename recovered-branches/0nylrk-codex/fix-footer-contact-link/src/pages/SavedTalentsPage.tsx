@@ -1,4 +1,24 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {TalentCard} from "@/components/talent/TalentCard";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {toast} from "@/components/ui/use-toast";
+import {useNavigate} from "react-router-dom";
+export default function SavedTalentsPage() {;
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -22,7 +42,11 @@ export default function SavedTalentsPage() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const navigate = useNavigate(),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -132,7 +156,11 @@ export default function SavedTalentsPage() {;
           ),;
           setSavedTalents(talentProfiles);
         }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
         console.error("Error fetching saved talents:", error),
         toast({
@@ -187,7 +215,10 @@ export default function SavedTalentsPage() {;
           .eq('talent_id', talentId);
         if (error) {
           throw error
+<<<<<<< HEAD
         }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       } catch (error) {;
         console.error("Error fetching saved talents:", error),;
@@ -226,6 +257,10 @@ export default function SavedTalentsPage() {;
           .eq('talent_id', talentId),;
         if (error) {;
           throw error;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -370,7 +405,11 @@ export default function SavedTalentsPage() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">;
             {savedTalents.map((talent) => (;
               <TalentCard;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={talent.id}
                 talent={talent}
                 onViewProfile={handleViewProfile}

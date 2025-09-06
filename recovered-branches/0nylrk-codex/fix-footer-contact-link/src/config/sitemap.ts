@@ -1,8 +1,12 @@
 
 <<<<<<< HEAD
 // Define the types for our sitemap structure
+<<<<<<< HEAD
 
 export type SitemapItem = {
+=======
+export type SitemapItem = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   path: string;
   label: string;
   description?: string;
@@ -17,7 +21,7 @@ export type SitemapItem = {
 const currentDate = '2025-05-15';
 // Public Pages - Accessible to all users
 export const publicPages: SitemapItem[] = [
-  {
+  {;
     path: '/';
     label: 'Home';
     description: 'The world\'s first free marketplace dedicated to high-tech and artificial intelligence';
@@ -103,7 +107,7 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate}];
 // Authentication Pages
 export const authPages: SitemapItem[] = [
-  {
+  {;
     path: '/login';
     label: 'Login';
     description: 'Sign in to your account';
@@ -143,7 +147,7 @@ export const authPages: SitemapItem[] = [
     lastmod: currentDate}];
 // Talent/Creator Routes - Requires authentication and appropriate role
 export const talentRoutes: SitemapItem[] = [
-  {
+  {;
     path: '/talent-dashboard';
     label: 'Talent Dashboard';
     description: 'Overview for talent users';
@@ -181,7 +185,7 @@ export const talentRoutes: SitemapItem[] = [
     lastmod: currentDate}];
 // Client/Employer Routes - Requires authentication and appropriate role
 export const clientRoutes: SitemapItem[] = [
-  {
+  {;
     path: '/client-dashboard';
     label: 'Client Dashboard';
     description: 'Overview for client users';
@@ -210,7 +214,7 @@ export const clientRoutes: SitemapItem[] = [
     lastmod: currentDate}];
 // Shared Routes - Authenticated Users
 export const sharedRoutes: SitemapItem[] = [
-  {
+  {;
     path: '/messages';
     label: 'Messages';
     description: 'Your inbox and conversations';
@@ -244,7 +248,7 @@ export const sharedRoutes: SitemapItem[] = [
     lastmod: currentDate}];
 // Admin Routes
 export const adminRoutes: SitemapItem[] = [
-  {
+  {;
     path: '/analytics';
     label: 'Analytics';
     description: 'System analytics and metrics';
@@ -272,7 +276,7 @@ export const adminRoutes: SitemapItem[] = [
     changeFreq: 'daily'
     lastmod: currentDate}];
 // Dynamic Path Patterns
-export const dynamicPaths = {
+export const dynamicPaths = {;
   talentProfile: '/talent/:id';
   projectDetails: '/project/:projectId';
   projectMilestones: '/project/:projectId/milestones';
@@ -281,7 +285,7 @@ export const dynamicPaths = {
   categoryDetails: '/categories/:slug'
   disputeDetails: '/dashboard/disputes/:disputeId'}
 // The complete sitemap
-export const completeSitemap: SitemapItem[] = [
+export const completeSitemap: SitemapItem[] = [;
   ...publicPages;
   ...authPages;
   ...talentRoutes;
@@ -293,7 +297,7 @@ export const getAccessibleRoutes = (
   isAuthenticated: boolean
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null
 ) => {
-  // Public routes accessible to everyone
+  // Public routes accessible to everyone;
   let accessibleRoutes = [...publicPages, ...authPages];
   // Add authenticated-only routes
   if (isAuthenticated) {
@@ -602,7 +606,11 @@ export const getAccessibleRoutes = (;
     // Add role-specific routes;
     if (userType === 'creator' || userType === 'jobSeeker') {;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     if (userType === 'employer' |userType === 'buyer') {
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
@@ -612,11 +620,20 @@ export const getAccessibleRoutes = (;
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return accessibleRoutes
 }
 
 =======
 ;
   return accessibleRoutes;
+=======
+  
+  return accessibleRoutes
+=======
+;
+  return accessibleRoutes;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

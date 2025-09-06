@@ -422,12 +422,21 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       }
       realImplementation: true
       implementationDetails:
+<<<<<<< HEAD
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
       launchDate: '2025-06-01'
       customers: 3
       rating: 5.0
       reviews: 2
     }
+=======
+        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
+      launchDate: '2025-06-01',
+      customers: 3,
+      rating: 5.0,
+      reviews: 2,
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
       'Advanced consciousness analyticsExpert consultation and support'
@@ -456,8 +465,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 5.0
 
     reviews: 2
+<<<<<<< HEAD
   }
 ];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
@@ -765,6 +777,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     customers: 3,;
     rating: 5.0;
     reviews: 2;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

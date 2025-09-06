@@ -10,6 +10,7 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
   Search
   TrendingUp
   Target
@@ -36,6 +37,39 @@ export default function AISeosuitePage() {
     {
 <<<<<<< HEAD
       icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+=======
+  Search,
+  TrendingUp,
+  Target,
+  BarChart3,
+  Globe,
+  Zap,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Eye,
+  Brain,
+  Shield,
+  Lock,
+  Sparkles,
+  ChartBar,
+  Lightbulb,
+  Rocket,;
+  Settings,;
+} from 'lucide-react';
+export default function AISeosuitePage() {
+  const features = [
+<<<<<<< HEAD
+    {;
+      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+=======
+    {
+      icon: <Search className='w-8 h-8 text-white' />,
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AISeosuitePage() {
   const features = [
     {
@@ -82,11 +116,21 @@ export default function AISeosuitePage() {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'Automated Reports'
       description:
+<<<<<<< HEAD
         'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
       color: 'bg-gradient-to-br from-pink-500 to-rose-600'
       gradient: 'from-pink-400 to-rose-500'
     }
   ];
+=======
+        'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
+      color: 'bg-gradient-to-br from-pink-500 to-rose-600',
+      gradient: 'from-pink-400 to-rose-500',
+    },;
+  ];
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const seoTools = [
     {
       category: 'Keyword Research'
@@ -187,7 +231,12 @@ export default function AISeosuitePage() {
       tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
     }
 =======
+<<<<<<< HEAD
       icon: <Search className='w-8 h-8 text-white' />,
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  ];
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function AISeosuitePage() {
   const features = [
@@ -363,7 +412,11 @@ export default function AISeosuitePage() {
 =======
   ];
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -557,7 +610,11 @@ export default function AISeosuitePage() {
 
                   {feature.description}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
               </Card>
             ))}
@@ -567,7 +624,11 @@ export default function AISeosuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* SEO Tools Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -626,7 +687,11 @@ export default function AISeosuitePage() {
 
                           {toolName}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                       ))}
                     </div>
@@ -640,7 +705,11 @@ export default function AISeosuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Success Metrics Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -688,7 +757,11 @@ export default function AISeosuitePage() {
 
               </Card>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
@@ -696,7 +769,11 @@ export default function AISeosuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -761,7 +838,11 @@ export default function AISeosuitePage() {
 
                           {benefit}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                       ))}
                     </div>
@@ -775,7 +856,11 @@ export default function AISeosuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -816,6 +901,10 @@ export default function AISeosuitePage() {
                   </div>
                 )}
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -841,10 +930,16 @@ export default function AISeosuitePage() {
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
 =======
+<<<<<<< HEAD
 
                       {feature}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      {feature}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -868,7 +963,11 @@ export default function AISeosuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -918,7 +1017,11 @@ export default function AISeosuitePage() {
 
               </Card>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
@@ -926,7 +1029,11 @@ export default function AISeosuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -935,7 +1042,11 @@ export default function AISeosuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Dominate Search Rankings?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -988,7 +1099,20 @@ export default function AISeosuitePage() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 =======
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+}
+}
+}
+}
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

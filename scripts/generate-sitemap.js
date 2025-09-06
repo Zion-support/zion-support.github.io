@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createWriteStream } from 'fs';
 import { join } from 'path';
 ;
@@ -53,6 +54,9 @@ const generateSitemap = () => {;
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { createWriteStream } from 'fs',
 import { join } from 'path',
 =======
@@ -118,12 +122,21 @@ import fs from 'fs'; import path from 'path'; const __filename = fileURLToPath(i
     <priority>0.6</priority>
   </url>
 </urlset>`,
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const sitemapPath = join(process.cwd(), 'publicsitemap.xml'),
   const writeStream = createWriteStream(sitemapPath),
   writeStream.write(sitemap),
   writeStream.end(),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   console.log('Sitemap generated successfully at:', sitemapPath)
 },
 
@@ -361,6 +374,7 @@ const generateSitemap = () => {;
 },;
 generateSitemap();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-4094
 =======
 <<<<<<< HEAD
@@ -394,3 +408,6 @@ generateSitemap(),
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

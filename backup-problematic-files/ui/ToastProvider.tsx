@@ -10,10 +10,19 @@ export type Toast = {id: string;
   durationMs?: number;
 }
 <<<<<<< HEAD:components/ui/ToastProvider.tsx
+<<<<<<< HEAD
 export type ToastContextValue = {toasts: Toast[];
 =======
 
 export type ToastContextValue = {
+=======
+;
+export type ToastContextValue = {;
+=======
+
+export type ToastContextValue = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/ui/ToastProvider.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   toasts: Toast[];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/ui/ToastProvider.tsx
   addToast: (toast: Omit<Toast, 'id'>) => string;
@@ -21,12 +30,21 @@ export type ToastContextValue = {
   clearToasts: () => void;
 }
 <<<<<<< HEAD:components/ui/ToastProvider.tsx
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const ToastContext = createContext<ToastContextValue | undefined>(undefined);
 export function ToastProvider({ children }: { children: React.ReactNode }) {const [toasts, setToasts] = useState<Toast[]>([]);
   const removeToast = useCallback((id: string) => {;
     setToasts(prev => prev.filter(t => t.id !== id));
   }, []);
+<<<<<<< HEAD
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
+=======
+  const addToast = useCallback((toast: Omit<Toast, 'id'>) => {;
+    const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 const ToastContext = createContext<ToastContextValue | undefined>(undefined)
@@ -40,7 +58,11 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
     const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/ui/ToastProvider.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/ui/ToastProvider.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
     setToasts(prev => [...prev, item]);
     if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
@@ -56,7 +78,11 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 <div className=&quot;fixed bottom-4 right-4 z-[100] space-y-3 w-[90vw] max-w-sm&quot;>
 =======
       <div className="fixed bottom-4 right-4 z-[100] space-y-3 w-[90vw] max-w-sm">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/ui/ToastProvider.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/ui/ToastProvider.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <AnimatePresence>
           {toasts.map(t => (
             <motion.div
@@ -73,7 +99,11 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 =======
             >
               <div className="flex items-start gap-3">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/ui/ToastProvider.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/ui/ToastProvider.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className={`mt-1 h-2 w-2 rounded-full ${
                   t.variant === 'success' ? 'bg-emerald-400' : t.variant === 'error' ? 'bg-rose-400' : t.variant === 'info' ? 'bg-sky-400' : 'bg-gray-400'
                 }`} />
@@ -91,7 +121,11 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 =======
                 </div>
                 <button onClick={() => removeToast(t.id)} className="text-xs opacity-60 hover:opacity-100">×</button>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/ui/ToastProvider.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/ui/ToastProvider.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </motion.div>
           ))}

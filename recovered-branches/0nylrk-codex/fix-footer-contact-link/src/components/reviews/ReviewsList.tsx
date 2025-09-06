@@ -1,11 +1,20 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
 =======
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import {Review} from "@/types/reviews";
+import {ReviewCard} from "./ReviewCard";
+=======
+import { Review } from "@/types/reviews",
+import { ReviewCard } from "./ReviewCard",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
@@ -51,6 +60,11 @@ export function ReviewsList({
               <div className="h-6 w-16 bg-muted rounded"></div>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Review } from "@/types/reviews",;
 import { ReviewCard } from "./ReviewCard",;
 interface ReviewsListProps {;
@@ -78,6 +92,10 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
               <div className="h-6 w-16 bg-muted rounded"></div>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ))}
       </div>;
     );
@@ -108,5 +126,11 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       ))}
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+  )
+}
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

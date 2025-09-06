@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
   Card
   CardContent
@@ -15,12 +18,13 @@ import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {
 
   country: CountryPricing
-  onSelect: (country: CountryPricing) => void
-  onQuote?: (country: CountryPricing) => void
+  onSelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
   isPopular?: boolean; import Link from 'next/link'
 import { Badge } from "@/components/ui/badge"
 import { CountryPricing } from "@/data/onsiteServicePricing"
 interface CountryServiceCardProps {
+<<<<<<< HEAD
   country: CountryPricing
   onSelect: (country: CountryPricing,) => void
   onQuote?: (country: CountryPricing,) => void
@@ -34,6 +38,11 @@ export function CountryServiceCard({
   isPopular
 }: CountryServiceCardProps) {
 =======
+  country: CountryPricing,
+  onSelect: (country: CountryPricing,) => void,
+  onQuote?: (country: CountryPricing,) => void,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -45,6 +54,10 @@ interface CountryServiceCardProps {
   country: CountryPricing,
   onSelect: (country: CountryPricing) => void,
   onQuote?: (country: CountryPricing) => void,
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isPopular?: boolean
 }
 
@@ -114,7 +127,10 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
             <h3 className='text-lg font-semibold text-white truncate'>
               {country.country |'Unknown Country'}
             </h3>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
     if (!countryName) return "🌐",
     
@@ -167,7 +183,11 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           <div className="flex items-center space-x-2">
             <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           {isPopular && (
             <Badge className="bg-zion-purple text-white border-none">Popular</Badge>
@@ -191,7 +211,11 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           <div className="flex items-start">
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
             <span>Typical response time: {getResponseTime(country.country)}</span>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className="flex items-start">
             <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />
@@ -228,7 +252,11 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           onClick={() => onQuote?.(country)}
         >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Get Quote
         </Button>
         <Button
@@ -238,12 +266,22 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         >
           <Link href="/contact">Contact Sales</Link>
         </Button>
+<<<<<<< HEAD
+      </CardFooter>;
+    </Card>;
+  );
+};
+}
+=======
       </CardFooter>
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import Link from 'next/link',;
@@ -364,4 +402,8 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

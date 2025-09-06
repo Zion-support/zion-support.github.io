@@ -1,11 +1,20 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { StepProps } from "./types";
 =======
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { StepProps } from "./types",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {StepProps} from "./types";
+=======
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { StepProps } from "./types",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ResumeStepsProps {
   steps: StepProps[];
   activeTab: string;
@@ -26,9 +35,12 @@ export const ResumeSteps = ({
         </TabsTrigger>
       ))}
     </TabsList>
+<<<<<<< HEAD
   );
 }
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { StepProps } from "./types",;
@@ -47,6 +59,7 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
         </TabsTrigger>
       ))}
     </TabsList>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

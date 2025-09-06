@@ -2,11 +2,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import {readOrgData, filterOrgData} from '../../../utils/org-data';
 import type { OrgFilters, RoleType } from '../../../types/org';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
+  if (req.method !== 'GET') {;
     return res.status(405).json({ error: 'Method not allowed' });  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
+<<<<<<< HEAD
   }
+=======
+  };
+  const data = readOrgData();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {

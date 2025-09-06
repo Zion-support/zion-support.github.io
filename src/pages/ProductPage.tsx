@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter } from 'next/router', // Changed from useParams
 import { useEffect, useState  } from 'react';
+=======
+import { useEffect, useState } from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Image from 'next/image';
 import { Button  } from '@/components/ui/button';
 import { NEW_PRODUCTS  } from '@/data/newProductsData';
@@ -8,8 +12,8 @@ import { useCart  } from '@/context/CartContext';
 import { toast  } from '@/hooks/use-toast';
 import { SEO  } from '@/components/SEO';
 import {logErrorToProduction} from '@/utils/productionLogger';
-export default function ProductPage() {
-
+export default function ProductPage() {;
+;
   const router = useRouter();
   const { id: rawId } = router.query;
   const id = typeof rawId === 'string' ? rawId : undefined;
@@ -67,14 +71,23 @@ export default function ProductPage() {;
         if (res.ok) {;
           const data = await res.json(),;
           setProduct(data);
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       } catch (err) {
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err })
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
+=======
+    };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct()
@@ -83,7 +96,11 @@ export default function ProductPage() {;
     // Only fetch if id is available (from router);
     if (id) {;
       fetchProduct();
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }, [id]), // id is now from router.query
   if (!product && !id) { // If no id from router yet, it might still be loading
@@ -139,7 +156,11 @@ export default function ProductPage() {;
         title={product.title}
         description={product.description}
         ogImage={product.images?.[0]}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       />
       <div className="min-h-screen bg-zion-blue p-6 text-white">
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
@@ -161,6 +182,10 @@ export default function ProductPage() {;
 <<<<<<< HEAD
         <Button onClick={handleAdd} disabled={adding |inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </Button>
       </div>
     </>
@@ -185,13 +210,22 @@ product.title ;
 }/> </Button> </div> </>) ;
 }';
 }
+<<<<<<< HEAD
 =======
         <Button onClick={handleAdd} disabled={adding || inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+=======
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </Button>;
       </div>;
     </>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

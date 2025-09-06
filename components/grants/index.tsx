@@ -8,7 +8,7 @@ import Link from 'next/link';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type {
   GrantApplication,
-  GrantCategory,
+  GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -32,7 +32,7 @@ const statuses: GrantStatus[] = [
   'Rejected'
 ];
 
-export default function GrantsPage() {
+export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{
     sector?: string;
@@ -40,9 +40,15 @@ export default function GrantsPage() {
     region?: string;
     program?: string;
   }>({});
+<<<<<<< HEAD
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
 export default function GrantsPage() {
+=======
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
+export default function GrantsPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
   useEffect(() => {
@@ -63,6 +69,10 @@ export default function GrantsPage() {
   }, [filters]);
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <EnhancedLayout>
 <<<<<<< HEAD
       <div className='flex items-center justify-between mb-6'>
@@ -176,9 +186,14 @@ export default function GrantsPage() {
 );
 }
 =======
+<<<<<<< HEAD
 
   }, [filters]);
 
   return (
     <EnhancedLayout>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    <EnhancedLayout>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

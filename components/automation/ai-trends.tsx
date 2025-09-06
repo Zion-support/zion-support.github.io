@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 </div> </div>) )
 =======
@@ -15,6 +16,24 @@ export type Trend = {
   tags: string[]
 }
 export async function getServerSideProps() {
+=======
+</div> </div>) ) 
+=======
+ </div> </div>) ) 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+export type Trend = {
+  id: string,
+  date: string,
+  title: string,
+  highlights: string[],
+  summary: string,
+  tags: string[];
+};
+
+export async function getServerSideProps() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const file = path.join(process.cwd(), 'dataai-trends.json');
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
@@ -50,8 +69,12 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
           </div>
         ))}
       </div>
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
+=======
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
 }
 =======

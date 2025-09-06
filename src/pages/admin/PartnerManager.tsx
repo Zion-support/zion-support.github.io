@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useRouter } from 'next/router'
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Badge } from "@/components/ui/badge"
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { toast } from "@/hooks/use-toast"
+import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase } from "@/integrations/supabase/client"
+import { logErrorToProduction } from '@/utils/productionLogger'
+import { EmptyState } from "@/components/ui/empty-state"
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter  } from 'next/router';
@@ -34,6 +52,10 @@ interface PartnerProfile {
 import { supabase } from "@/integrations/supabase/client",
 import { logErrorToProduction } from '@/utils/productionLogger',
 import { EmptyState } from "@/components/ui/empty-state",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -42,17 +64,34 @@ interface PartnerProfile {
   created_at: string,
   niche: string,
   audience_size: string,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  social_media?: Record<string, string>
+  website?: string
+  bio?: string
+  payout_method?: string
+  fraud_flags?: number
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   social_media?: Record<string string>,
   website?: string,
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   commission_rate?: number
 }
 export default function PartnerManager() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [partners, setPartners] = useState<PartnerProfile[]>([])
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([])
   const [isLoading, setIsLoading] = useState(true)
@@ -67,7 +106,7 @@ export default function PartnerManager() {
   useEffect((,) => {
     if (!isAuthenticated) {
       router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners'))
-      return
+      return;
     }
     fetchPartners()
   }, [isAuthenticated, router])
@@ -83,11 +122,19 @@ export default function PartnerManager() {
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>
       default:
         return <Badge variant="outline">{status}</Badge>
+<<<<<<< HEAD
   partners
   isLoading
   onViewDetails, }
 
   )
+=======
+  partners, 
+  isLoading, ;
+  onViewDetails, };
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
@@ -918,4 +965,8 @@ function PartnerTable({;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

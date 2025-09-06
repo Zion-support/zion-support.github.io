@@ -117,7 +117,11 @@ const mockSentry = {;
   // Integrations;
   Integrations: {;
     BrowserTracing: class BrowserTracing {;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       constructor() {}
     }
     Http: class Http {
@@ -129,8 +133,14 @@ const mockSentry = {;
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor() {}
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   }
+=======
+    },
+  },
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Transport
   makeBrowserOfflineTransport: noopReturn
   makeFetchTransport: noopReturn
@@ -218,16 +228,22 @@ export const withSentryConfig = mockSentry.withSentryConfig
 export const SentryWebpackPlugin = mockSentry.SentryWebpackPlugin
 export const Tracing = mockSentry.Tracing
 export const Integrations = mockSentry.Integrations
-export const makeBrowserOfflineTransport =
+export const makeBrowserOfflineTransport = null;
   mockSentry.makeBrowserOfflineTransport
 export const makeFetchTransport = mockSentry.makeFetchTransport
 export const createTransport = mockSentry.createTransport
 export const SDK_VERSION = mockSentry.SDK_VERSION
 export const Severity = mockSentry.Severity
+<<<<<<< HEAD
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
 
+=======
+// Additional exports for compatibility;
+export { mockSentry as Sentry };
+// All exports are already defined above;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
     }},;
   // Transport;
@@ -320,4 +336,8 @@ export const Severity = mockSentry.Severity;
 // Additional exports for compatibility;
 export { mockSentry as Sentry };
 // All exports are already defined above;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

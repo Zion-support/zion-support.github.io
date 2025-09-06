@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -83,6 +84,93 @@ import {
   Home;} from 'lucide-react';
 
 =======
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {
+  Brain,
+  Zap,
+  Target,
+  BarChart3,
+  Users,
+  TrendingUp,
+  MessageSquare,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Rocket,
+  Globe,
+  Shield,
+  Cpu,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Palette,
+  Type,
+  User,
+  Search,
+  Eye,
+  Heart,
+  ShoppingCart,
+  Code,
+  Database,
+  Users2,
+  Award,
+  Lock,
+  Server,
+  Network,
+  Monitor,
+  Settings,
+  RefreshCw,
+  Play,
+  Pause,
+  AlertTriangle,
+  CheckCircle2,
+  Building,
+  Wifi,
+  HardDrive,
+  Cloud,
+  Smartphone,
+  Blocks,
+  Wallet,
+  CreditCard,
+  PiggyBank,
+  Building2,
+  Activity,
+  Waves,
+  BrainCircuit,
+  CpuIcon,
+  MonitorHeart,
+  Film,
+  Headphones,
+  Camera,
+  Gamepad2,
+  Tv,
+  Radio,
+  Factory,
+  Cog,
+  Gauge,
+  Wrench,
+  Settings2,
+  CpuIcon2,
+  Calendar,
+  Clock,
+  FileText2,
+  PieChart,
+  Atom,
+  Truck,
+  ChevronRight,;
+  Home,;} from 'lucide-react';
+
+=======
+import React from 'react',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import Link from 'next/link',
 import {
@@ -102,7 +190,11 @@ import {
   Calendar, Clock, FileText2, PieChart, Atom,
   Truck, ChevronRight, Home
 } from 'lucide-react',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ZionTechGroupPage() {
   return (
     <>
@@ -137,7 +229,11 @@ export default function ZionTechGroupPage() {
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <Link href="/" className="text-2xl font-bold text-white">Zion Tech Group</Link>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </div>
               <div className="hidden md:block">
@@ -172,7 +268,11 @@ export default function ZionTechGroupPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <nav className="flex" aria-label="Breadcrumb">
               <ol className="flex items-center space-x-4">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <li>
                   <div>
                     <Link href="/" className="text-gray-300 hover:text-white">
@@ -211,7 +311,11 @@ export default function ZionTechGroupPage() {
               <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
                 <span className="block">About</span>
                 <span className="block text-purple-400">Zion Tech Group</span>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </h1>
               <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                 We are the architects of tomorrow, building revolutionary quantum AI solutions and autonomous systems that will define the next decade of innovation.
@@ -233,7 +337,11 @@ export default function ZionTechGroupPage() {
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div>
                 <div className="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
                   <Target className="h-8 w-8 text-white" />
@@ -286,6 +394,7 @@ export default function ZionTechGroupPage() {
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Brain className='h-8 w-8 text-white' />
+<<<<<<< HEAD
                 </div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Innovation First
@@ -299,6 +408,8 @@ export default function ZionTechGroupPage() {
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Shield className='h-8 w-8 text-white' />
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         {/* Core Values Section */  } catch (error) {
     console.error("Error:", error);
@@ -317,16 +428,26 @@ export default function ZionTechGroupPage() {
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="h-8 w-8 text-white" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>
                 <p className="text-gray-300">
                   We constantly push the boundaries of what's possible, embracing cutting-edge technologies and unconventional thinking.
                 </p>
               </div>
+<<<<<<< HEAD
+              <div className='text-center'>
+                <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <Shield className='h-8 w-8 text-white' />
+=======
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-8 w-8 text-white" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Ethical Responsibility</h3>
                 <p className="text-gray-300">
@@ -341,7 +462,11 @@ export default function ZionTechGroupPage() {
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-white" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Human-Centric Design</h3>
                 <p className="text-gray-300">
@@ -356,7 +481,11 @@ export default function ZionTechGroupPage() {
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Globe className="h-8 w-8 text-white" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Global Impact</h3>
                 <p className="text-gray-300">
@@ -371,7 +500,11 @@ export default function ZionTechGroupPage() {
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="h-8 w-8 text-white" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Excellence</h3>
                 <p className="text-gray-300">
@@ -382,6 +515,16 @@ export default function ZionTechGroupPage() {
               <div className='text-center'>
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Rocket className='h-8 w-8 text-white' />
+<<<<<<< HEAD
+=======
+                </div>
+                <h3 className='text-xl font-semibold text-white mb-2'>
+                  Future-Focused
+                </h3>
+                <p className='text-gray-300'>;
+                  We don't just adapt to change; we anticipate it and create the
+                  technologies that will define tomorrow.                </p>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -392,6 +535,7 @@ export default function ZionTechGroupPage() {
                 <p className="text-gray-300">
                   We don't just adapt to change, we anticipate it and create the technologies that will define tomorrow.
                 </p>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             </div>
           </div>
@@ -431,7 +575,11 @@ export default function ZionTechGroupPage() {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Brain className="h-6 w-6 text-white" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
                 <p className="text-gray-300 text-sm">
@@ -446,7 +594,11 @@ export default function ZionTechGroupPage() {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Cpu className="h-6 w-6 text-white" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Artificial Intelligence</h3>
                 <p className="text-gray-300 text-sm">
@@ -461,7 +613,11 @@ export default function ZionTechGroupPage() {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Server className="h-6 w-6 text-white" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Cloud Infrastructure</h3>
                 <p className="text-gray-300 text-sm">
@@ -476,7 +632,11 @@ export default function ZionTechGroupPage() {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-6 w-6 text-white" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Cybersecurity</h3>
                 <p className="text-gray-300 text-sm">
@@ -523,7 +683,11 @@ export default function ZionTechGroupPage() {
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">500+</div>
                 <div className="text-gray-300">Global Clients</div>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
@@ -575,7 +739,11 @@ export default function ZionTechGroupPage() {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <User className="h-10 w-10 text-white" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Kleber</h3>
                 <p className="text-purple-400 mb-2">CEO & Founder</p>
@@ -591,7 +759,11 @@ export default function ZionTechGroupPage() {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="h-10 w-10 text-white" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Dr. Sarah Chen</h3>
                 <p className="text-purple-400 mb-2">Chief Technology Officer</p>
@@ -607,7 +779,11 @@ export default function ZionTechGroupPage() {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-10 w-10 text-white" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Marcus Rodriguez</h3>
                 <p className="text-purple-400 mb-2">Chief Security Officer</p>
@@ -634,7 +810,11 @@ export default function ZionTechGroupPage() {
           <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
               <span className="block">Ready to Join the Future?</span>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className="mt-4 text-lg leading-6 text-purple-100">
               Discover how Zion Tech Group can transform your business with revolutionary technology solutions.
@@ -675,7 +855,11 @@ export default function ZionTechGroupPage() {
                 <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
                 <p className="text-gray-300 text-base">
                   Leading the future with revolutionary quantum AI solutions and autonomous systems.
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
               </div>
               <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
@@ -729,6 +913,11 @@ export default function ZionTechGroupPage() {
     </>
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
 import React from 'react';
@@ -1169,4 +1358,8 @@ export default function ZionTechGroupPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

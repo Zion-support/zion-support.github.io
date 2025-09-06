@@ -1,7 +1,35 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React, { useEffect } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import SignupForm from '@/components/auth/SignupForm',;
+import { AuthButtons } from '@/components/AuthButtons',;
+import { fireEvent } from '@/lib/analytics',;
+import { logInfo } from '@/utils/productionLogger',;
+import { useRouter } from 'next/router',;
+const RegisterPage = () => {
+  const router = useRouter(),
+
+  useEffect(() => {
+    fireEvent('signup_page_view')
+  }, []),
+
+  const handleSuccess = ({ email, emailVerificationRequired }: {
+    email: string,
+    emailVerificationRequired: boolean
+  }) => {
+    if (emailVerificationRequired) {
+      router.push(`/verify-status?email=${encodeURIComponent(email)}`)
+    } else {
+      router.push('/auth/login?registrationSuccess=true')
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -45,6 +73,10 @@ const RegisterPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -86,7 +118,11 @@ const RegisterPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Create your account
@@ -100,7 +136,11 @@ const RegisterPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
@@ -118,7 +158,11 @@ const RegisterPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -156,7 +200,11 @@ const RegisterPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
                 Privacy Policy
               </Link>
@@ -172,6 +220,14 @@ export default RegisterPage;
 
 =======
 },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export default RegisterPage,;
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default RegisterPage,
             />;
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">;
@@ -238,4 +294,8 @@ export default RegisterPage,
   );
 },;
 export default RegisterPage;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -52,6 +52,6 @@ const Button: React.FC<ButtonProps> = ({
       {content}
     </button>
   )
-}
-export { Button }
-export default Button
+};
+export { Button };
+export default Button;

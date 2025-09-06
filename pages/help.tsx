@@ -16,6 +16,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
+<<<<<<< HEAD
   Search
   HelpCircle
   BookOpen
@@ -28,6 +29,20 @@ import {
   ExternalLink
   ChevronDown
   Cloud
+=======
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
+  Video,
+  Download,
+  ExternalLink,
+  ChevronDown,
+  Cloud,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 const helpArticles = [
   {
@@ -164,6 +179,7 @@ const helpCategories = [
   }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
+<<<<<<< HEAD
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState("");
 =======
@@ -173,6 +189,10 @@ export default function HelpPage() {
 ];
 <<<<<<< HEAD
 export default function HelpPage() {
+=======
+
+export default function HelpPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const toggleCategory = (index: number) => {

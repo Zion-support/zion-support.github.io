@@ -35,6 +35,7 @@
 }{
   type === 'article' && (<> {
   publishedTime && <meta property="article:published time" content= {
+<<<<<<< HEAD
   publishedTime
 }/>
 }{
@@ -48,14 +49,35 @@
 }{
   section && <meta property="article:section" content= {
   section
+=======
+  publishedTime 
+}/>
+}{
+  modifiedTime && <meta property="article:modified time" content= {
+  modifiedTime 
+}/>
+}{
+  author && <meta property="article:author" content= {
+  author 
+}/>
+}{
+  section && <meta property="article:section" content= {
+  section 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }/>
 }{
   tags.map ( (tag, index) => (<meta key= {
   index
 }property="article:tag" content= {
+<<<<<<< HEAD
   tag
 }/>
 }</>)
+=======
+  tag 
+}/>
+}</>) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }{
   /* Structured Data */
 }<script
@@ -165,7 +187,11 @@ const SEO: React.FC<SEOProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Structured Data */}
       <script
         type='application/ld+json'
@@ -244,7 +270,11 @@ const SEO: React.FC<SEOProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -302,7 +332,13 @@ export default SEO;            __html: JSON.stringify(structuredData)
 export default SEO;  )
 }
 export default SEO;
+<<<<<<< HEAD
 
 =======
     </Head>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </Head>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

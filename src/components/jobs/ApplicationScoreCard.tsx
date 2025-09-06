@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState } from "react"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { supabase } from "@/integrations/supabase/client"
+import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'import { toast } from "sonner"
+import { JobApplication } from "@/types/jobs"
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -12,6 +24,10 @@ interface ApplicationScoreCardProps {
 =======
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updatedApplication: JobApplication) => void
@@ -24,7 +40,15 @@ interface ApplicationScoreCardProps {
 }
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [isScoring, setIsScoring] = useState(false);
+=======
+  const [isScoring, setIsScoring] = useState(false)
+  // Determine if application has been scored
+  const hasScore = typeof application.match_score === 'number'
+      let attempts = 0
+      const maxAttempts = 10
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   const [isScoring, setIsScoring] = useState(false),
 
@@ -38,11 +62,15 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     : null,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const hasScore = typeof application.match_score === 'number'
       let attempts = 0
       const maxAttempts = 10
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
@@ -90,7 +118,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   // Trigger the scoring process
@@ -124,15 +156,31 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .eq("id", application.id)
           .single()
         if (error) {
+<<<<<<< HEAD
           setIsScoring(false)
           toast.error("Failed to check scoring status")
           return
+=======
+          setIsScoring(false),
+          toast.error("Failed to check scoring status"),
+          return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
         if (data.scored_at) {
+<<<<<<< HEAD
           setIsScoring(false)
           toast.success("Resume scoring completed")
           if (onScoreUpdated) onScoreUpdated(data as JobApplication)
+=======
+          setIsScoring(false),
+          toast.success("Resume scoring completed"),
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),
+<<<<<<< HEAD
+          return;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
 <<<<<<< HEAD
         if (attempts < maxAttempts) {
@@ -155,6 +203,19 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         } else {
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        }
+      },
+      
+      setTimeout(checkScore, 3000)
+      
+    } catch (error: any) {
+      setIsScoring(false),
+      toast.error(`Failed to score resume: ${error.message}`)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ),;
       if (error) throw error,;
       toast.success("Resume scoring has been initiated"),;
@@ -192,6 +253,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     } catch (error: any) {;
       setIsScoring(false);
       toast.error(`Failed to score resume: ${error.message}`);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -266,9 +331,15 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         )}
 <<<<<<< HEAD
                       </div>
+<<<<<<< HEAD
                     )}
 =======
                       </div>;
+=======
+=======
+                      </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -289,9 +360,15 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         )}
 <<<<<<< HEAD
                       </div>
+<<<<<<< HEAD
                     )}
 =======
                       </div>;
+=======
+=======
+                      </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -312,6 +389,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
               Analyze how well this resume matches your job requirements.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Button
               onClick = {handleScore,}
               disabled = {isScoring,}
@@ -320,6 +398,16 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
               onClick={handleScore} 
               disabled={isScoring}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+            <Button 
+<<<<<<< HEAD
+              onClick = {handleScore,}
+              disabled = {isScoring,}
+=======
+              onClick={handleScore} 
+              disabled={isScoring}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="w-full"
             >
               {isScoring ? (
@@ -335,9 +423,13 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         )}
 <<<<<<< HEAD
       </CardContent>
-    </Card>
-  )
+    </Card>;
+  );
+<<<<<<< HEAD
+};
+=======
 }
+<<<<<<< HEAD
 =======
       </CardContent>;
     </Card>;
@@ -345,3 +437,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -4,12 +4,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { defineConfig } from 'vite';
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
@@ -50,6 +53,7 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles')
       '@assets': path.resolve(__dirname, './src/assets')
     }
+<<<<<<< HEAD
   }
   css: {
     postcss: false
@@ -60,6 +64,12 @@ export default defineConfig({
     exclude: []
   }
 =======
+=======
+=======
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import {defineConfig, splitVendorChunkPlugin} from 'vite';
+import react from '@vitejs/plugin-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default defineConfig({
   plugins: [
@@ -73,6 +83,10 @@ export default defineConfig({
   resolve: {
     alias: {
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   build: {
@@ -83,12 +97,21 @@ export default defineConfig({
       output: {
         manualChunks: {
 <<<<<<< HEAD
+<<<<<<< HEAD
           'react-vendor': ['react', 'react-dom']
         }
         chunkFileNames: 'js/[name]-[hash].js'
         entryFileNames: 'js/[name]-[hash].js'
         assetFileNames: (assetInfo) => {
           const name = assetInfo.name |'';
+=======
+          'react-vendor': ['react', 'react-dom'],
+        },
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {;
+          const name = assetInfo.name || '';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
           if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
@@ -224,10 +247,13 @@ export default defineConfig({
     open: true
   }
 });
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
     },
@@ -298,4 +324,8 @@ export default defineConfig({
       } else {
         return { relative: true };
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

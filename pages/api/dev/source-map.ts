@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
@@ -7,11 +8,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"])
   if (!identity) return
 =======
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",;
+import { getGitStatus, requireRoles } from "../../../utils/devAccess",;
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 export default function handler(req: any, res: any) {
   res.status(200).json({ message: 'Source map endpoint' });
 import type { NextApiRequest, NextApiResponse } from "next",
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",
 import { getGitStatus, requireRoles } from "../../../utils/devAccess",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"]),
   if (!identity) return,
@@ -53,6 +64,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { path: repoRelativePath } = req.body || {},
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
       res.status(400).json({ error: "Invalid path" }),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      return
+    }
+    const result = deployBasicTemplateForPath(repoRelativePath),
+    res.status(200).json({ ok: true, result }),
+    return
+  }
+
+  res.setHeader("Allow", "GET, POST"),
+  res.status(405).end("Method Not Allowed");
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
@@ -131,5 +157,10 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

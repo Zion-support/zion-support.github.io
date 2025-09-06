@@ -5,6 +5,7 @@
 import React from "react";
 import Head from "next/head";
 import {
+<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -12,13 +13,26 @@ import {
   ArrowRight
   Sparkles
   Star
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Sparkles,
+  Star,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function MetaverseAIPlatformPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
+<<<<<<< HEAD
     s.link.endsWith("/metaverse-ai-development-platform")
+=======
+    s.link.endsWith("/metaverse-ai-development-platform"),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
   if (!service) return null;
 
@@ -134,6 +148,12 @@ export default function MetaverseAIPlatformPage() {
     </UltraAdvancedFuturisticBackground>
   );
 <<<<<<< HEAD:pages-disabled/quantum-blockchain.tsx
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main:pages-disabled/quantum-blockchain.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/metaverse-ai-development-platform.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
 >>>>>>> main:pages-disabled/quantum-blockchain.tsx

@@ -24,6 +24,7 @@ const Home = () => (
         </Button>
       </div>
 
+<<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <ServiceCard
           title="AI Services"
@@ -77,3 +78,29 @@ function App() {
 }
 
 export default App;
+=======
+export default function App() {
+  return (
+    <ErrorBoundary>
+      <Router>
+        <div className="App">
+          <Header />
+          <div className="main-content">
+            <Sidebar />
+            <main className="content">
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </main>
+          </div>
+          <Footer />
+        </div>
+      </Router>
+    </ErrorBoundary>
+  );
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

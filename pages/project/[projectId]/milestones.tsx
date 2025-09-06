@@ -1,15 +1,32 @@
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import Head from 'next/head',
 import MilestoneForm from '../../../components/monetization/MilestoneForm',
+=======
+import {useRouter} from 'next/router';
+=======
+import { useRouter } from 'next/router';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
 import { Milestone } from '../../../utils/types/milestones';
+<<<<<<< HEAD
 import {
   createMilestone
   fetchMilestones
   updateMilestoneStatus;
+=======
+<<<<<<< HEAD
+import {
+  createMilestone,
+  fetchMilestones,;
+  updateMilestoneStatus,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window === 'undefined') return 'client';
@@ -17,7 +34,7 @@ function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   const r = url.searchParams.get('role');
   if (r === 'talent' |r === 'admin') return r;
   return 'client';
-export default function ProjectMilestonesPage() {
+export default function ProjectMilestonesPage() {;
   const router = useRouter();
   const { 'project-id': projectId } = router.query as any;
   const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
@@ -43,11 +60,14 @@ export default function ProjectMilestonesPage() {
   useEffect(() => {
     if (!projectId) return;
 =======
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
 import { Milestone } from '../../../utils/types/milestones';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {;
   if (typeof window === 'undefined') return 'client',;
@@ -80,7 +100,11 @@ export default function ProjectMilestonesPage(req, res) {
   }, [role]),;
   useEffect(() => {;
     if (!projectId) return,;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     let cancelled = false;
     (async () => {;
       setLoading(true);
@@ -108,7 +132,11 @@ export default function ProjectMilestonesPage(req, res) {
     return () => {;
       cancelled = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }, [projectId]);
   const handleCreate = async (payload: {
     title: string;
@@ -118,7 +146,12 @@ export default function ProjectMilestonesPage(req, res) {
   }) => {
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+<<<<<<< HEAD
     setMilestones(prev => [res.milestone, ...prev]);  }
+=======
+    setMilestones(prev => [res.milestone, ...prev]);  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       } catch (error) {
     console.error("Error:", error);
@@ -131,7 +164,11 @@ export default function ProjectMilestonesPage(req, res) {
     const res = await createMilestone(projectId as string, payload),
     setMilestones((prev) => [res.milestone, ...prev])
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
@@ -180,7 +217,11 @@ export default function ProjectMilestonesPage(req, res) {
         <div className="mb-6">
           <h1 className="text-2xl font-bold">Milestones</h1>
           <p className="text-sm text-gray-600">Project: {projectId as string}</p>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
         {role !== 'talent' && (
           <div className="mb-8 p-4 rounded bg-gray-50 border">
@@ -194,6 +235,10 @@ export default function ProjectMilestonesPage(req, res) {
         )}
         {loading && <div>Loading milestones...</div>}
         {error && <div className='text-red-600'>{error}</div>}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         )  } catch (error) {
     console.error("Error:", error);
@@ -211,7 +256,11 @@ export default function ProjectMilestonesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {!loading && !error && (
           <div className="space-y-4">
             {milestones.length === 0 && (
@@ -238,6 +287,12 @@ export default function ProjectMilestonesPage(req, res) {
       </div>
     </div>
 );
+<<<<<<< HEAD
+=======
+
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
             )  } catch (error) {
@@ -276,4 +331,8 @@ export default function ProjectMilestonesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

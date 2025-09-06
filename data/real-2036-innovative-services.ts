@@ -1,6 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type Real2036InnovativeService = {
+=======
+export type Real2036InnovativeService = {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -625,12 +630,21 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Cloud services'
     ]
     useCases: [
+<<<<<<< HEAD
       'Demand planning'
       'Inventory management'
       'Logistics optimization'
       'Risk management'
     ]
   }
+=======
+      'Demand planning',
+      'Inventory management',
+      'Logistics optimization',
+      'Risk management',
+    ],
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
     ];
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
@@ -641,11 +655,15 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage';
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
+<<<<<<< HEAD
   }
 ];
 
 =======
 export type Real2036InnovativeService = {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -978,6 +996,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',;
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],;
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management'];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

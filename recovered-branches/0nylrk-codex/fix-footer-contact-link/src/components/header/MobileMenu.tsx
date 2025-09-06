@@ -1,4 +1,24 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Link} from "react-router-dom";
+import {useLocation} from "react-router-dom";
+import {Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+export interface MobileMenuProps {;
+  unreadCount?: number;
+  onClose: () => void
+}
+
+export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Link } from "react-router-dom",
 import { useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",
@@ -9,7 +29,10 @@ import { Button } from "@/components/ui/button";
 =======
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void
@@ -24,6 +47,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const navItems = [
@@ -228,7 +252,11 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
             {item.name}
@@ -238,11 +266,18 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
       </nav>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       </nav>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

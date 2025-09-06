@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type MilestoneFormValues = z.infer<typeof formSchema>
 import React from 'react'
 import { useForm } from 'react-hook-form'
@@ -18,8 +21,8 @@ import {
   FormMessage} from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-  Popover
-  PopoverContent
+  Popover;
+  PopoverContent;
   PopoverTrigger} from '@/components/ui/popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator'
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator'
 const formSchema = z.object({
@@ -49,10 +52,17 @@ export function AddMilestoneForm({
   const form = useForm<MilestoneFormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
+<<<<<<< HEAD
       title: ''
       description: ''
       amount: 0}})
   const handleSubmit = (values: MilestoneFormValues) => {
+=======
+      title: '',;
+      description: '',;
+      amount: 0}});
+  const handleSubmit = (values: MilestoneFormValues) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     onSubmit(values);    form.reset()
   }
   const handleAddMilestones = (milestones: GeneratedMilestone[],) => {
@@ -66,9 +76,12 @@ export function AddMilestoneForm({
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
         })
+<<<<<<< HEAD
         return
       }
     }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -139,6 +152,7 @@ export function AddMilestoneForm({;
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,;
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
         }),;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         return;
       }
     }
@@ -160,7 +174,11 @@ export function AddMilestoneForm({;
   },
 
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     onSubmit({
       title: milestone.title
       description: milestone.description
@@ -186,8 +204,17 @@ export function AddMilestoneForm({;
           onAddMilestones = {handleAddMilestones,}
           onAddMilestone = {handleAddMilestone,}
         />
+<<<<<<< HEAD
       )}
 =======
+=======
+=======
+  },
+
+  return (
+    <div className="space-y-6">
+      {/* AI Milestone Generator */}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator;
           scope={projectScope}
@@ -197,6 +224,10 @@ export function AddMilestoneForm({;
           onAddMilestones={handleAddMilestones}
           onAddMilestone={handleAddMilestone}
         />;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -226,7 +257,11 @@ export function AddMilestoneForm({;
             control={form.control}
             name="description"
             render={({ field }: { field: any }) => (
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
@@ -300,7 +335,11 @@ export function AddMilestoneForm({;
               control={form.control}
               name="amount"
               render={({ field }: { field: any }) => (
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
                   <FormControl>
@@ -334,7 +373,11 @@ export function AddMilestoneForm({;
               >;
                 Cancel;
               </Button>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? (
@@ -387,4 +430,8 @@ export function AddMilestoneForm({;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

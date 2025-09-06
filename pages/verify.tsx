@@ -157,6 +157,7 @@ export default function VerifyPage(req, res) {
       setProfile(data.profile);
       setMessage('Submitted. AML check performed.');
 <<<<<<< HEAD
+<<<<<<< HEAD
     } else {
       setMessage(data.error |'Submit failed');
     }
@@ -165,6 +166,17 @@ export default function VerifyPage(req, res) {
 =======
     } else {;
       setMessage(data.error || 'Submit failed');
+=======
+    } else {;
+      setMessage(data.error || 'Submit failed');
+<<<<<<< HEAD
+    }
+    setBusy(false);  }
+
+  const labels = getBadgeLabels(profile || undefined);
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -177,7 +189,11 @@ export default function VerifyPage(req, res) {
   }
 }
   const labels = getBadgeLabels(profile || undefined),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -195,7 +211,11 @@ export default function VerifyPage(req, res) {
       <main className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>
         <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {labels.length > 0 && (
           <div className="mb-4">
             <VerifiedBadge labels={labels} />
@@ -287,7 +307,11 @@ export default function VerifyPage(req, res) {
               </div>
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </div>
             <section>
@@ -351,6 +375,7 @@ export default function VerifyPage(req, res) {
                 </div>
               </section>
             )}
+<<<<<<< HEAD
             <div>
               <button
                 disabled={
@@ -369,6 +394,9 @@ export default function VerifyPage(req, res) {
       </main>
     </>
 );
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                     )
 ;
@@ -489,9 +517,23 @@ export default function VerifyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
             <div>
               <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
             </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+            <div>
+              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
+            </div>
+<<<<<<< HEAD
+            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
+        )}
+      </main>
+    </>
+);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {message && <div className="text-sm text-blue-700">{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -511,4 +553,8 @@ export default function VerifyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

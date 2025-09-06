@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readState } from '../../../lib/integrations/fileStore',;
+import { PROVIDERS } from '../../../lib/integrations/registry',;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' }),
+  const state = readState(),
+  const connections: Record<string, any> = {},
+  for (const p of PROVIDERS) {
+    const conn = state.connections.find(c => c.providerId === p.id),
+    connections[p.id] = conn || { providerId: p.id, status: 'disconnected' }
+  }
+  res.status(200).json({ connections });
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 
@@ -60,4 +78,9 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -149,8 +149,15 @@ app.command('/zion', async ({ command, ack, respond }) => {
 console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();  console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })();
+<<<<<<< HEAD
 
 =======
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

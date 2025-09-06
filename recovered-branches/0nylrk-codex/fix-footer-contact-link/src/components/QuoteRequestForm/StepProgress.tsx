@@ -7,17 +7,32 @@ import {cn} from "@/lib/utils";
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from "@/components/icons",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
+<<<<<<< HEAD
 
     { id: "service", label: "Service" }
     { id: "details", label: "Details" }
     { id: "timeline", label: "Timeline" }
     { id: "budget", label: "Budget" }
+=======
+    { id: "service", label: "Service" },
+    { id: "details", label: "Details" },
+    { id: "timeline", label: "Timeline" },
+    { id: "budget", label: "Budget" },
+<<<<<<< HEAD
+    { id: "summary", label: "Summary" };
+  ];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     { id: "summary", label: "Summary" }
 <<<<<<< HEAD
   ];
@@ -30,6 +45,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   }
 =======
   ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
     const stepOrder = steps.findIndex(s => s.id === stepId),
@@ -94,7 +110,10 @@ export function StepProgress({ currentStep }: StepProgressProps) {
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                   "text-xs mt-2 font-medium",
                   status === "complete" ? "text-zion-cyan" : 
@@ -167,6 +186,10 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -6,8 +6,12 @@ import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Download, Settings} from "lucide-react";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
+<<<<<<< HEAD
 
 export function AdminHeader() {
+=======
+export function AdminHeader() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
 =======
@@ -19,6 +23,7 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
 export function AdminHeader() {
   const { user } = useAuth(),
   const { company } = useCompanyWorkspace(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -142,4 +147,8 @@ export function AdminHeader() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

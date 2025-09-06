@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
   Tooltip
   TooltipContent
@@ -16,9 +19,15 @@ import { Notification, NotificationType } from '@/context/notifications'
   onDismiss: (id: string) => Promise<void>
   onMarkAsRead
   onDismiss
-}) => {
-      className={cn(
+}) => {;
+      className={cn(;
                   onMarkAsRead(notification.id); import React from 'react'
+<<<<<<< HEAD
+=======
+=======
+import React from 'react',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -89,6 +98,11 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-orange-500">📦</span>,
     default:
       return <span className="text-gray-500">📣</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from 'lucide-react';
@@ -125,7 +139,11 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-orange-500">📦</span>,;
     default:;
       return <span className="text-gray-500">📣</span>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 interface NotificationItemProps {
@@ -147,7 +165,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       router.push(notification.action_url), // Changed to router.push
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
+=======
+  },
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (<div
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
@@ -159,7 +182,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       className={cn(;
         'p-3 border-b border-zion-blue-light relative group',;
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     >
       <div className="flex items-start gap-2">
         <div className="text-xl">{getTypeIcon(notification.type)}</div>
@@ -201,7 +228,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 =======
                 onClick={handleClick}
               >;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
               </Button>
@@ -220,9 +251,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 className="h-6 w-6"
 <<<<<<< HEAD
                 onClick={(e,) => {
+<<<<<<< HEAD
                   e.stopPropagation()
 =======
                 onClick={(e) => {
+=======
+=======
+                onClick={(e) => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   e.stopPropagation(),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   onMarkAsRead(notification.id)
@@ -246,9 +283,15 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 className="h-6 w-6"
 <<<<<<< HEAD
                 onClick={(e,) => {
+<<<<<<< HEAD
                   e.stopPropagation()
 =======
                 onClick={(e) => {
+=======
+=======
+                onClick={(e) => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   e.stopPropagation(),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   onDismiss(notification.id)
@@ -263,6 +306,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
+<<<<<<< HEAD
+      </div>;
+    </div>;
+  );
+};
+=======
       </div>
     </div>
   )
@@ -318,4 +367,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     </div>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

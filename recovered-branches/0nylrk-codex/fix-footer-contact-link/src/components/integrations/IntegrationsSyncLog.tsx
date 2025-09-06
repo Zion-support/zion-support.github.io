@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 import React from "react";
+<<<<<<< HEAD
 import { Card } from "@/components/ui/card";
 import {
   Table;
@@ -10,6 +11,11 @@ import {
   TableHeader;
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
+=======
+import {Card} from "@/components/ui/card";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",
 import { Card } from "@/components/ui/card",
@@ -21,7 +27,11 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Sample data for integration sync logs
 
 const syncLogs = [
@@ -89,8 +99,13 @@ const syncLogs = [
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function IntegrationsSyncLog() {
   const getStatusBadge = (status: string) => {
+<<<<<<< HEAD
+    switch (status) {;
+      case "success": return <Badge className="bg-green-500">Success</Badge>;
+=======
     switch (status) {
       case "success": return <Badge className="bg-green-500">Success</Badge>,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       case "error":
         return <Badge variant="destructive">Error</Badge>,
       case "warning":
@@ -130,6 +145,7 @@ export function IntegrationsSyncLog() {
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>
               </TableRow>
 <<<<<<< HEAD
+<<<<<<< HEAD
             ))}
           </TableBody>
         </Table>
@@ -137,6 +153,8 @@ export function IntegrationsSyncLog() {
     </Card>
   )
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { Card } from "@/components/ui/card",;
@@ -227,6 +245,10 @@ export function IntegrationsSyncLog() {;
                 <TableCell>{new Date(log.timestamp).toLocaleString()}</TableCell>;
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>;
               </TableRow>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </TableBody>;
         </Table>;

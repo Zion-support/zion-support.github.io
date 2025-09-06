@@ -10,13 +10,21 @@ import { AnalysisResult } from './types',
 /**
  * Analyzes text content for suspicious patterns
  */
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+export const analyzeContent = (content: string): AnalysisResult => {;
+  const contentLower = content.toLowerCase();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const analyzeContent = (content: string): AnalysisResult => {
 <<<<<<< HEAD
   const contentLower = content.toLowerCase();
   const reasons: string[] = []
 =======
   const contentLower = content.toLowerCase(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const reasons: string[] = [],
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -71,7 +79,11 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length,;
   if (capitalRatio > 0.3 && content.length > 20) {;
     reasons.push('Excessive capitalization');
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   // Check for poor grammar with repetitive punctuation
   if (/[!?]{3}/.test(content)) {

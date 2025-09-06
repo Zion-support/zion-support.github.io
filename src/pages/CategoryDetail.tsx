@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import {toast} from "@/hooks/use-toast"
+import {NextSeo} from '@/components/NextSeo'
+import {Header} from "@/components/Header"
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
+import {logErrorToProduction} from '@/utils/productionLogger'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { GradientHeading } from "@/components/GradientHeading",
 import { ProductListingCard } from "@/components/ProductListingCard",
@@ -13,6 +23,7 @@ import { NextSeo } from '@/components/NextSeo',
 import { Header } from "@/components/Header",
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',
 import {logErrorToProduction} from '@/utils/productionLogger',
+<<<<<<< HEAD
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support",
   "Cloud Infrastructure Management",
@@ -32,6 +43,9 @@ import {NextSeo} from '@/components/NextSeo'
 import {Header} from "@/components/Header"
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
 import {logErrorToProduction} from '@/utils/productionLogger'
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support"
   "Cloud Infrastructure Management"
@@ -41,6 +55,10 @@ const AUTO_SERVICE_TITLES = [
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
   "Blockchain Data Solutions"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ]
 function generateInnovationListing(index: number): ProductListing {
 <<<<<<< HEAD
@@ -62,6 +80,12 @@ function generateInnovationListing(index: number): ProductListing {
       icon: <Code className="w-6 h-6" />
     }
 =======
+<<<<<<< HEAD
+=======
+],
+
+function generateInnovationListing(index: number): ProductListing {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
@@ -176,7 +200,11 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       description: "Rent or buy specialized hardware, servers, and devices",
       icon: <Code className="w-6 h-6" />
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -185,7 +213,11 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     }
 =======
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
@@ -194,7 +226,11 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     }
 =======
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
@@ -203,7 +239,11 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     }
 =======
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
@@ -212,7 +252,11 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     }
 =======
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
@@ -221,7 +265,11 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     }
 =======
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
@@ -230,20 +278,35 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     }
 =======
     },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
 <<<<<<< HEAD
     }
+<<<<<<< HEAD
 =======
     },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    'developer-tools': {
+      title: "Developer Tools",
+      description: "AI-powered coding assistance and automation",;
+      icon: <Code className="w-6 h-6" />;
+    };          icon: <Bot className="w-6 h-6" />},
+=======
+    },
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     };          icon: <Bot className="w-6 h-6" />}
         setCategory(currentCategory)
@@ -252,6 +315,8 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
   const seoDescription =
     category.description |'Explore listings in this category.'
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },
     'business-solutions': {
       title: "Business Solutions",
@@ -358,8 +423,18 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     : 'Category | Zion Marketplace',
   const seoDescription =
     category.description || 'Explore listings in this category.',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+        setCategory(currentCategory)
+        innovationCounterRef.current = 0
+    : 'Category | Zion Marketplace'
+  const seoDescription = null;
+    category.description || 'Explore listings in this category.'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
@@ -379,7 +454,11 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
@@ -606,7 +685,11 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
                   onRequestQuote={handleRequestQuote}
                   detailBasePath="/marketplace/listing";
                 />;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           )}
@@ -617,6 +700,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     </>
   )
 }
+<<<<<<< HEAD
 =======
           </div>;
         </div>;
@@ -626,3 +710,9 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

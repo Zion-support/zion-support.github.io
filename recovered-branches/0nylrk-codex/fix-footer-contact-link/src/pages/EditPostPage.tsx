@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {Link, useNavigate, useParams} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import PostForm from "@/components/community/PostForm";
+import {useToast} from "@/hooks/use-toast";
+import {ForumPost, ForumCategory} from "@/types/community";
+import {useAuth} from "@/hooks/useAuth";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -12,7 +26,11 @@ import { useAuth } from "@/hooks/useAuth";
 =======
 import { ForumPost, ForumCategory } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PostFormValues {
 
   title: string
@@ -44,6 +62,7 @@ const mockPost: ForumPost = {
 },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 const mockPost: ForumPost = {
   id: "1"
   title: "Best practices for AI model fine-tuning"
@@ -62,6 +81,17 @@ const mockPost: ForumPost = {
   isAnswered: true
   isFeatured: true
 }
+=======
+<<<<<<< HEAD
+export default function EditPostPage() {;
+  const { postId } = useParams() as { postId?: string };
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const { user } = useAuth();
+  const [post, setPost] = useState<ForumPost | null>(mockPost);
+  const [isLoading, setIsLoading] = useState(true);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function EditPostPage() {
 <<<<<<< HEAD
   const { postId } = useParams() as { postId?: string }
@@ -77,6 +107,7 @@ export default function EditPostPage() {
   const { user } = useAuth(),
   const [post, setPost] = useState<ForumPost | null>(mockPost),
   const [isLoading, setIsLoading] = useState(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
@@ -193,16 +224,26 @@ export default function EditPostPage() {
           <span className="text-sm font-medium">Edit</span>
         </div>
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
+<<<<<<< HEAD
         <PostForm
           initialValues={initialValues}
           onSubmit={handleSubmit}
           isEditing={true}
+=======
+        <PostForm 
+          initialValues={initialValues} 
+          onSubmit={handleSubmit} 
+          isEditing={true} 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
     </AppLayout>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useParams } from "react-router-dom",;
@@ -345,6 +386,10 @@ export default function EditPostPage() {;
       </div>;
     </AppLayout>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

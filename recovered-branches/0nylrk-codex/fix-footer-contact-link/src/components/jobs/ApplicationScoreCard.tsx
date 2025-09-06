@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Card, CardHeader, CardTitle, CardContent, CardFooter} from "@/components/ui/card";
+import {supabase} from "@/integrations/supabase/client";
+import {Loader2, Star, BarChart2, Lightbulb} from "lucide-react";
+import {toast} from "sonner";
+import {JobApplication} from "@/types/jobs";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -11,19 +24,32 @@ import { JobApplication } from "@/types/jobs";
 =======
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplicationScoreCardProps {
 
   application: JobApplication
 
   onScoreUpdated?: (updatedApplication: JobApplication) => void
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
+  const [isScoring, setIsScoring] = useState(false);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
 <<<<<<< HEAD
   const [isScoring, setIsScoring] = useState(false);
   // Determine if application has been scored
 =======
   const [isScoring, setIsScoring] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number',
@@ -61,6 +87,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         'trigger_resume_scoring';
         { application_id: application.id }
       );
+<<<<<<< HEAD
       if (error) throw error;
       toast.success("Resume scoring has been initiated");
       // Poll for results every 3 seconds for up to 30 seconds
@@ -68,6 +95,8 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       const maxAttempts = 10;
       const checkScore = async () => {
         attempts++;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -113,6 +142,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       ),
       
       if (error) throw error,
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
       toast.success("Resume scoring has been initiated"),
       
@@ -157,7 +190,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       setIsScoring(false)
       toast.error(`Failed to score resume: ${error.message}`)
     }
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
@@ -199,7 +236,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       toast.error(`Failed to score resume: ${error.message}`);
     }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   // Render the score result or button to score
   return (
@@ -271,9 +312,15 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         )}
 <<<<<<< HEAD
                       </div>
+<<<<<<< HEAD
                     )}
 =======
                       </div>;
+=======
+=======
+                      </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -297,7 +344,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                   </div>;
                 </details>;
               </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </div>
         ) : (

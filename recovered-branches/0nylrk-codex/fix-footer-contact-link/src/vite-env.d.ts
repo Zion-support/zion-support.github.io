@@ -83,9 +83,15 @@ declare let process: {;
 }
 // Badge component type fixes
 declare module '@/components/ui/badge' {
+<<<<<<< HEAD
   export interface BadgeProps {
 <<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+  export interface BadgeProps {};
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   export const Badge: React.FC<BadgeProps>;
 }
 // FeatureCard type fixes;
@@ -140,6 +146,10 @@ declare module '@livekit/components-react' {export interface VideoCallProps {;
     onDisconnect?: () => void;
     className?: string;
 =======
+<<<<<<< HEAD
+=======
+  export interface BadgeProps {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     className?: string,
     variant?: "default" | "secondary" | "destructive" | "outline",
     children?: React.ReactNode,
@@ -195,7 +205,11 @@ declare module '@/components/ChatAssistant/ChatMessage' {;
     message: string,;
     timestamp?: Date,;
     key?: string | number;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
@@ -205,6 +219,11 @@ declare module '@livekit/components-styles' {// Empty stub for the styles;
 }
 =======
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // ProductListingCard type fixes;
 declare module '@/components/ProductListingCard' {;
   export interface ProductListingCardProps {;
@@ -232,6 +251,10 @@ declare module '@livekit/components-react' {;
   export const LiveKitRoom: React.FC<any>;
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }

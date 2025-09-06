@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react'
 import {
   Card
@@ -251,7 +254,11 @@ const PerformanceDashboard: React.FC = () => {;
 
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6 p-6">
       <div className="flex items-center justify-between">
@@ -274,7 +281,11 @@ const PerformanceDashboard: React.FC = () => {;
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>
@@ -287,7 +298,11 @@ const PerformanceDashboard: React.FC = () => {;
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
@@ -300,7 +315,11 @@ const PerformanceDashboard: React.FC = () => {;
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>
@@ -339,7 +358,11 @@ const PerformanceDashboard: React.FC = () => {;
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
@@ -444,7 +467,11 @@ const PerformanceDashboard: React.FC = () => {;
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <p className='text-sm text-gray-600 mt-1'>
                     {improvement.description}
                   </p>
@@ -466,7 +493,11 @@ const PerformanceDashboard: React.FC = () => {;
       <div className="flex space-x-4">
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
@@ -478,10 +509,17 @@ const PerformanceDashboard: React.FC = () => {;
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
 
+=======
+export default PerformanceDashboard;
+export default PerformanceDashboard, ;
+export default PerformanceDashboard;
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 },
 
@@ -500,4 +538,8 @@ export default PerformanceDashboard,
   );
 },;
 export default PerformanceDashboard;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

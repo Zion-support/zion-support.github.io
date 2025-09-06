@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
@@ -16,10 +17,21 @@ export default function EmergingTechPage() {
   return (
     <Layout>
 =======
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',;
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function EmergingTechPage() {
   const features = [
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
@@ -58,7 +70,11 @@ export default function EmergingTechPage() {_const _features = [
 =======
               <a href="/contact" className="px-8 py-4">Start a Pilot</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           </header>
           <section>
@@ -91,7 +107,12 @@ export default function EmergingTechPage() {_const _features = [
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
   )
+=======
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                 </Link>
               ))  } catch (error) {
@@ -109,5 +130,10 @@ export default function EmergingTechPage() {_const _features = [
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

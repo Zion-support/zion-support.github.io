@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
 import { Header  } from '@/components/Header';
@@ -8,9 +9,19 @@ import { SEO  } from '@/components/SEO';
 import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
 import { Button  } from '@/components/ui/button';
 import { toast } from 'sonner';
+=======
+import {useState, useEffect} from 'react';
+import {useParams, useNavigate} from 'react-router-dom';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {VideoCallRoom} from '@/components/video/VideoCallRoom';
+import {Button} from '@/components/ui/button';
+import {toast} from 'sonner';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
+  // definitions, so avoid passing a type argument to prevent TS2347.;
   const { roomId } = useParams();
 
   const navigate = useNavigate();
@@ -64,6 +75,10 @@ export default function VideoCall() {;
       isMuted: false;
     }
   ]),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleJoinCall = () => {
@@ -119,6 +134,21 @@ export default function VideoCall() {;
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+    ];
+    
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+    
+    if (!participants.find(p => p.id === randomUser.id)) {
+      setParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser.name} joined the call`)
+    }
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ]),;
   const handleJoinCall = () => {;
     setIsJoining(true),;
@@ -154,7 +184,11 @@ export default function VideoCall() {;
       toast(`${randomUser.name} joined the call`);
     }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <>
@@ -200,6 +234,7 @@ export default function VideoCall() {;
     </>
   )
 }
+<<<<<<< HEAD
 =======
       </main>;
       <Footer />;
@@ -208,3 +243,9 @@ export default function VideoCall() {;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

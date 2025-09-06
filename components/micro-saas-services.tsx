@@ -41,9 +41,14 @@ import {
   Globe,
   Lock,
   BarChart3,
+<<<<<<< HEAD
   Calendar,
   Target,;} from 'lucide-react';import { 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  Calendar,;
+  Target,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain;
   Monitor
   Search
@@ -462,6 +467,7 @@ export default function MicroSaasServicesPage() {
         enterprise: {
           price: 149
           features: [
+<<<<<<< HEAD
             'Unlimited URLs'
             'Real-time monitoring'
             'All metrics'
@@ -727,6 +733,21 @@ export default function MicroSaasServicesPage() {
       competitors: ['Buffer', 'Hootsuite', 'Later']
       website: 'https://social.ziontech.ai'
       demo: 'https://demo.social.ziontech.ai'
+=======
+            'Unlimited accounts',
+            'Enterprise scheduling',
+            'Advanced calendar',
+            'Enterprise analytics',
+            'Dedicated support',
+            'White-label options',
+          ],
+        },
+      },
+      marketPrice: '$19-129/month',
+      competitors: ['Buffer', 'Hootsuite', 'Later'],
+      website: 'https://social.ziontech.ai',
+      demo: 'https://demo.social.ziontech.ai',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },  ];      demo: 'https://demo.social.ziontech.ai'
     }
   ];
@@ -929,7 +950,11 @@ export default function MicroSaasServicesPage() {
 
                 </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Card>
             ))}
           </div>
@@ -938,7 +963,11 @@ export default function MicroSaasServicesPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -947,7 +976,11 @@ export default function MicroSaasServicesPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Our Micro SaaS Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1253,7 +1286,11 @@ export default function MicroSaasServicesPage() {
                 <p className="text-gray-400 text-sm">Worldwide availability with enterprise-grade reliability</p>
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </Card>
           </div>
@@ -1313,4 +1350,8 @@ export default function MicroSaasServicesPage() {
 }
 =======
             <Button
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 
 import {
+<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -10,19 +15,40 @@ import {
   ArrowRight
   Star
   Users;
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Star,;
+  Users,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+=======
+export default function AIHRRecruitmentPage() {
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/ai-hr-recruitment');
+  );  if (!service) return null;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Users } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AIHRRecruitmentPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-hr-recruitment'))
   if (!service) return null,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <Layout>
       <Head>
@@ -85,6 +111,11 @@ export default function AIHRRecruitmentPage() {
       </main>
     </Layout>
 );
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       </div>
     </Layout>
@@ -94,4 +125,8 @@ export default function AIHRRecruitmentPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

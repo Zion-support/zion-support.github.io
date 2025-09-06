@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { cn } from "@/lib/utils";
@@ -16,6 +17,12 @@ export function FeatureCard({
   className
 }: FeatureCardProps) {
   return (
+=======
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";
+import React from "react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     <div
       className={cn(
@@ -28,6 +35,10 @@ export function FeatureCard({
 =======
 import { cn } from "@/lib/utils",
 import React from "react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface FeatureCardProps {
   title: string,
   description: string,
@@ -50,11 +61,16 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
         <p className="text-zion-slate-light">{description}</p>
       </div>
+<<<<<<< HEAD
+=======
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import { cn } from "@/lib/utils",;
 import React from "react",;
@@ -79,8 +95,12 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;
         <p className="text-zion-slate-light">{description}</p>;
       </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

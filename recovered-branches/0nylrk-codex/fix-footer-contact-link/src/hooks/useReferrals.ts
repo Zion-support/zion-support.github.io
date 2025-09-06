@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {toast} from "@/hooks/use-toast";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {ReferralCode, ReferralStats, Referral, ReferralReward} from "@/types/referrals";
+export function useReferrals() {;
+  const { user } = useAuth();
+  const [referralCode, setReferralCode] = useState<ReferralCode | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [referrals, setReferrals] = useState<Referral[]>([]);
+  const [rewards, setRewards] = useState<ReferralReward[]>([]);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
@@ -27,6 +43,7 @@ export function useReferrals() {
   const [isLoading, setIsLoading] = useState(true),
   const [referrals, setReferrals] = useState<Referral[]>([]),
   const [rewards, setRewards] = useState<ReferralReward[]>([]),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [stats, setStats] = useState<ReferralStats>({
     totalReferrals: 0,
     pendingReferrals: 0,
@@ -328,6 +345,29 @@ export function useReferrals() {
     
     if (!link) {
       toast({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        title: "Cannot share";
+        description: "Please generate a referral code first",
+        variant: "destructive"});
+      return
+    }
+    
+    let shareUrl = '';
+    
+    switch (platform) {
+      case 'twitter':
+        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`;
+        break;
+      case 'facebook':
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`;
+        break;
+      case 'linkedin':
+        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`;
+        break
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         title: "Cannot share",
         description: "Please generate a referral code first",
         variant: "destructive"}),
@@ -374,13 +414,22 @@ export function useReferrals() {;
       console.error("Error in fetchReferralCode:", error);
     } finally {;
       setIsLoading(false);
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     if (shareUrl) {
       window.open(shareUrl, '_blank')
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return {
     referralCode;
     isLoading;
@@ -536,6 +585,10 @@ export function useReferrals() {;
     fetchReferralStats;
     fetchReferrals, // Added this method for refreshing referrals;
     fetchRewards,   // Added this method for refreshing rewards;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }

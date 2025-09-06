@@ -1,11 +1,18 @@
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react'
 
 =======
 import React from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Update202508150406() {
   return (
     <>
@@ -68,7 +75,11 @@ export default function Update202508150406() {
 =======
               <h2 className='text-2xl font-bold mb-4 text-yellow-400'>
                 Future Innovations
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </h2>
               <ul className='space-y-4'>
                 <li className='flex items-start'>
@@ -127,7 +138,12 @@ export default function Update202508150406() {
     </>
 <<<<<<< HEAD
   )
+<<<<<<< HEAD
 }
+=======
+};
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   );
   } catch (error) {
@@ -135,4 +151,8 @@ export default function Update202508150406() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

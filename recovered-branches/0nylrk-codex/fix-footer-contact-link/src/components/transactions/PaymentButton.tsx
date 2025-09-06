@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {Button} from "@/components/ui/button";
+import {cn} from "@/lib/utils";
+import {useAuth} from "@/hooks/useAuth";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {Loader2} from "lucide-react";
+import {useNavigate} from "react-router-dom";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
@@ -20,6 +33,10 @@ interface PaymentButtonProps {
 =======
 import { Loader2 } from "lucide-react",
 import { useNavigate } from "react-router-dom",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -30,6 +47,19 @@ interface PaymentButtonProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   redirectUrl?: string
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function PaymentButton({;
+  amount;
+  serviceId;
+  providerId;
+  buttonText = "Purchase";
+  className;
+  onPaymentInitiated;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function PaymentButton({
 <<<<<<< HEAD
   amount;
@@ -74,6 +104,7 @@ export function PaymentButton({
   buttonText = "Purchase",
   className,
   onPaymentInitiated,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   redirectUrl}: PaymentButtonProps) {
   const [isProcessing, setIsProcessing] = useState(false),
   const { isAuthenticated, user } = useAuth(),
@@ -89,6 +120,18 @@ export function PaymentButton({
         state: { from: window.location.pathname } 
       }),
       return
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+    
+    try {
+      setIsProcessing(true);
+      
+      if (onPaymentInitiated) {
+        onPaymentInitiated()
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { cn } from "@/lib/utils",;
@@ -133,6 +176,10 @@ export function PaymentButton({;
       setIsProcessing(true),;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
       // Call the create-checkout edge function
@@ -171,11 +218,14 @@ export function PaymentButton({;
   }
   return (
     <Button
+<<<<<<< HEAD
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]";
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
       // Call the create-checkout edge function;
@@ -213,6 +263,10 @@ export function PaymentButton({;
   };
   return (;
     <Button;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
@@ -232,10 +286,17 @@ export function PaymentButton({;
 <<<<<<< HEAD
     </Button>
   )
+<<<<<<< HEAD
 }
 =======
     </Button>;
   );
+=======
+=======
+    </Button>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

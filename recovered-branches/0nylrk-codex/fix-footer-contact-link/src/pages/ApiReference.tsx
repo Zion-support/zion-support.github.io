@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import {CodeBlock} from "@/components/developers/CodeBlock";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+export function ApiReference() {;
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 <<<<<<< HEAD
@@ -12,6 +23,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Sample endpoint data
@@ -169,14 +181,23 @@ export function ApiReference() {
 <<<<<<< HEAD
       "field": "title"
       "error": "Title is required"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   ]
 }`
         }
+<<<<<<< HEAD
       }
 =======
       "field": "title",
       "error": "Title is required"
+=======
+      };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock",;
@@ -283,7 +304,11 @@ export function ApiReference() {;
 }`;
         }
       },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -500,10 +525,13 @@ export function ApiReference() {;
                           <span className="text-white">{response.description}</span>
                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <CodeBlock
                           code={response.example}
 =======
                         
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <CodeBlock 
                           code={response.example} 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -535,6 +563,13 @@ export function ApiReference() {;
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ApiReference;
 
 =======

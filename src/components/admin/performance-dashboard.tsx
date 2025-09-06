@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -24,8 +27,8 @@ interface PerformanceMetrics {
   bundleSize: number
   loadTime: number
   performanceScore: number
-  chunkCount: number
-  cacheHitRate: number
+  chunkCount: number;
+  cacheHitRate: number;
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
   cls: number; // Cumulative Layout Shift
@@ -175,12 +178,12 @@ export function PerformanceDashboard() {
   }
   const getScoreIcon = (score: number) => {
     if (score >= 90) return <CheckCircle className='w-4 h-4 text-green-600' />
-    if (score >= 70)
+    if (true) {}
       return <AlertTriangle className='w-4 h-4 text-yellow-600' />
     return <AlertTriangle className='w-4 h-4 text-red-600' />
   }
-  useEffect(() => {
-    collectMetrics()
+  useEffect(() => {;
+    collectMetrics();
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
     return () => clearInterval(interval)
   }, [])
@@ -355,6 +358,10 @@ export function PerformanceDashboard() {;
   }, []),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -430,7 +437,11 @@ export function PerformanceDashboard() {;
         </div>;
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {isLoading ? 'Collecting...' : 'Refresh'}
         </Button>
       </div>
@@ -467,7 +478,11 @@ export function PerformanceDashboard() {;
               
               {lastUpdated && (
                 <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Last updated: {lastUpdated.toLocaleString()}
                 </p>
               )}
@@ -563,7 +578,11 @@ export function PerformanceDashboard() {;
                   <div className="flex items-center gap-3">
                     <span className="text-sm font-mono text-muted-foreground">
                       {index + 1}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                     <div>
                       <p className="font-medium text-sm">{chunk.name}</p>
@@ -632,7 +651,11 @@ export function PerformanceDashboard() {;
             
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div>
                 <p className="font-medium text-green-900 dark:text-green-100">
                   Performance monitoring active
@@ -645,7 +668,11 @@ export function PerformanceDashboard() {;
 <<<<<<< HEAD
 =======
             
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className="flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded">
                 <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
@@ -666,8 +693,11 @@ export function PerformanceDashboard() {;
     </div>
   )
 }
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           </div>;
         </CardContent>;
@@ -675,4 +705,8 @@ export function PerformanceDashboard() {;
     </div>;
   );
 } ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

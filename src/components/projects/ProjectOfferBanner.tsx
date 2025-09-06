@@ -1,6 +1,10 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from "react"
 import { useRouter } from 'next/router'
 import { Bell, Calendar, X } from 'lucide-react'import { Button } from "@/components/ui/button"
@@ -15,10 +19,10 @@ export function ProjectOfferBanner() {
   useEffect((,) => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent')
-      setPendingOffers(offers)
-    }
-  }, [projects, isLoading])
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
+      setPendingOffers(offers);
+    };
+  }, [projects, isLoading]);
+  const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
     e.stopPropagation();    setDismissed(prev => {
       const updated = new Set(prev)
       updated.add(projectId)
@@ -31,7 +35,10 @@ export function ProjectOfferBanner() {
   if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
 
     return null
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
@@ -81,6 +88,10 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -114,7 +125,11 @@ export function ProjectOfferBanner() {;
 <<<<<<< HEAD
 =======
               
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="flex items-center gap-2">
                 <Button size="sm" className="whitespace-nowrap">
                   View Offer
@@ -159,4 +174,8 @@ if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.h
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -56,12 +56,22 @@ import {
   Palette,
   Cloud,
   Server,
-  Network,
+  Network,;
   Cpu,;
+<<<<<<< HEAD
 } from 'lucide-react';
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default function UltraAdvancedNavigation2026V2() {;
+=======
+} from 'lucide-react';
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function UltraAdvancedNavigation2026V2() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -229,7 +239,11 @@ export default function UltraAdvancedNavigation2026V2() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <span>{contactInfo.mobile}</span>
               </div>
               <div className='flex items-center space-x-2'>
@@ -339,7 +353,11 @@ export default function UltraAdvancedNavigation2026V2() {
                       {item.icon}
                       <span>{item.name}</span>
 =======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </Link>
                   )}
                   {/* Dropdown Menu */}
@@ -351,7 +369,11 @@ export default function UltraAdvancedNavigation2026V2() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <div className='grid grid-cols-1 gap-2'>
                         {item.dropdown.map(dropdownItem => (
@@ -382,7 +404,11 @@ export default function UltraAdvancedNavigation2026V2() {
 
                               {dropdownItem.name}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </span>
                           </Link>
                         ))}
@@ -406,7 +432,11 @@ export default function UltraAdvancedNavigation2026V2() {
               <Link href='/contact'>
                 <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Get Started
                 </button>
               </Link>
@@ -414,7 +444,11 @@ export default function UltraAdvancedNavigation2026V2() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -434,7 +468,11 @@ export default function UltraAdvancedNavigation2026V2() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -448,7 +486,11 @@ export default function UltraAdvancedNavigation2026V2() {
 =======
 
           >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className='p-6'>
               <div className='flex items-center justify-between mb-8'>
                 <div className='text-xl font-bold text-white'>Menu</div>
@@ -509,7 +551,11 @@ export default function UltraAdvancedNavigation2026V2() {
                         className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         {item.icon}
                         <span>{item.name}</span>
@@ -561,7 +607,11 @@ export default function UltraAdvancedNavigation2026V2() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Overlay */}
       {isOpen && (
         <motion.div
@@ -572,6 +622,7 @@ export default function UltraAdvancedNavigation2026V2() {
 <<<<<<< HEAD
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
         />
       )}
       {/* Spacer for fixed navigation */}
@@ -582,15 +633,34 @@ export default function UltraAdvancedNavigation2026V2() {
   );
 }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
 
           onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       )}
 
       {/* Spacer for fixed navigation */}
       <div className='h-32'></div>
     </>
+<<<<<<< HEAD
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+);      <div className="h-32"></div>
+    </>
+  );
+}
+
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -28,7 +28,7 @@ export default function SimpleLayout({ title, description, children }: SimpleLay
   return (,
     <>,
       <Head>,
-        <title>{title}</title>,
+        <title>{title}</title>,;
         {description && <meta name="description" content={description} />};
       </Head>,
       {children};

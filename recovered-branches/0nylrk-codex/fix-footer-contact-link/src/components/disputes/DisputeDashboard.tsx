@@ -6,16 +6,28 @@ import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
 import {
+<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
+=======
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
+<<<<<<< HEAD
+export function DisputeDashboard() {;
+=======
 export function DisputeDashboard() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { disputes, isLoading, refetch } = useDisputes();
 <<<<<<< HEAD
   useEffect(() => {
@@ -57,7 +69,11 @@ export function DisputeDashboard() {
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
@@ -65,7 +81,11 @@ export function DisputeDashboard() {
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -97,8 +117,14 @@ export function DisputeDashboard() {
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -129,8 +155,14 @@ export function DisputeDashboard() {
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -250,4 +282,8 @@ export function DisputeDashboard() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

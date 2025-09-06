@@ -10,7 +10,7 @@ import path from 'path';
 import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
 export const config = { api: { bodyParser: false } }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {

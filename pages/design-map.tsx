@@ -14,6 +14,23 @@ export default function DesignMapPage() {
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 import { getZionDesignMap } from '../utils/design-map';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+export default function DesignMapPage() {
+  const designMap = useMemo(() => getZionDesignMap(), [])
+  const [screenName, setScreenName] = useState('')
+  const [role, setRole] = useState('Talent')
+  const [suggestion, setSuggestion] = useState<string | null>(null)
+  const [isLoading, setIsLoading] = useState(false)
+
+  async function requestWireframe() {
+    if (!screenName) return
+    setIsLoading(true)
+    setSuggestion(null)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function DesignMapPage(req, res) {
   try {
   const designMap = useMemo(() => getZionDesignMap(), []);
@@ -26,6 +43,10 @@ export default function DesignMapPage(req, res) {
     if (!screenName) return;
     setIsLoading(true);
     setSuggestion(null);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     try {
 <<<<<<< HEAD
       const res = await fetch("/api/figma/wireframe-suggest", {
@@ -74,6 +95,7 @@ export default function DesignMapPage(req, res) {
           <h1 className="text-2xl font-semibold">Zion OS Design Map</h1>
           <div className="flex gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <a
               href="/api/design-map"
               className="px-3 py-2 rounded bg-gray-900 text-white text-sm"
@@ -121,10 +143,17 @@ export default function DesignMapPage(req, res) {
             sections={designMap.products.mobile}
           />
 =======
+            <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</a>
+            <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</a>
+            <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</a>
+            <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</a>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
             <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</Link>
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</Link>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</Link>
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</Link>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
@@ -207,15 +236,35 @@ function MapColumn({
 }) {
 =======
             <button onClick={requestWireframe} className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60" disabled={isLoading || !screenName}>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </button>
           </div>
           {suggestion && (
             <pre className="mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800">{suggestion}</pre>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          )}
+        </div>
+      </section>
+    </>
+  )
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -229,6 +278,10 @@ function MapColumn({
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -245,10 +298,15 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
             <div className="font-medium mb-2">{s.title}</div>
             <div className="flex flex-wrap gap-2">
               {s.items.map((i) => (
+<<<<<<< HEAD
                 <span
                   key={i.id}
                   className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800"
                 >
+=======
+                <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {i.title}
                 </span>
               ))}
@@ -257,6 +315,7 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   );
 =======
           <div key={s.id} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
@@ -264,6 +323,11 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
             <div className="flex flex-wrap gap-2">
               {s.items.map((i) => (
                 <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
+=======
+  )
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {i.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -289,5 +353,10 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

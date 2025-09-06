@@ -15,6 +15,14 @@ export function EmptyMatchesCard({
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface EmptyMatchesCardProps {;
+  onRefresh: () => void;
+  isProcessing: boolean;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -23,6 +31,7 @@ import { Sparkles, RefreshCcw } from "lucide-react",
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
   isProcessing: boolean
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
@@ -54,9 +63,12 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 <<<<<<< HEAD
         )}
       </Button>
+<<<<<<< HEAD
     </Card>
   );
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -93,8 +105,12 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
           </>;
         )}
       </Button>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

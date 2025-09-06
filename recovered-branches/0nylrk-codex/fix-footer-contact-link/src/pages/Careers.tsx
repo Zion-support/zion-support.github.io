@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {AppLayout} from "@/layout/AppLayout";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -8,17 +19,32 @@ import { AppLayout } from "@/layout/AppLayout";
 =======
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AppLayout } from "@/layout/AppLayout",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Careers() {
   // Sample job listings
 
   const jobs = {
     engineering: [
       {
+<<<<<<< HEAD
         title: "Senior Frontend Engineer"
         location: "Remote"
         type: "Full-time"
         department: "Engineering"
+=======
+        title: "Senior Frontend Engineer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",
+<<<<<<< HEAD
+        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace.";
+      };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
 <<<<<<< HEAD
       }
@@ -31,6 +57,7 @@ export default function Careers() {
       }
 =======
       },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {
         title: "AI Research Engineer",
         location: "San Francisco, CA",
@@ -475,7 +502,11 @@ export default function Careers() {;
                         </div>;
                       </CardContent>;
                     </Card>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </TabsContent>
               ))}
@@ -496,7 +527,10 @@ export default function Careers() {;
     </AppLayout>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             </Tabs>;
           </div>;
@@ -514,6 +548,10 @@ export default function Careers() {;
       </main>;
     </AppLayout>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

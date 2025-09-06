@@ -34,7 +34,11 @@ export default function GitHubComplianceBotPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 text-white">Start from $149/mo</Link>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </div>
       </div>
@@ -67,6 +71,9 @@ export default function GitHubComplianceBotPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+
+=======
           </div>;
           <div className="flex gap-3">;
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 text-white">Start from $149/mo</a>;
@@ -81,5 +88,10 @@ export default function GitHubComplianceBotPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

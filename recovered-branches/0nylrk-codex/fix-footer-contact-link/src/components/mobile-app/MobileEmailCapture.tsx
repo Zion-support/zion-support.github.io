@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
@@ -19,6 +20,15 @@ export const MobileEmailCapture: React.FC = () => {
       setIsSuccess(true);
       setEmail("");
 =======
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+export const MobileEmailCapture: React.FC = () => {;
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -26,6 +36,7 @@ export const MobileEmailCapture: React.FC = () => {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSuccess, setIsSuccess] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
@@ -90,8 +101,11 @@ export const MobileEmailCapture: React.FC = () => {
     </section>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 },
 import React, { useState } from "react",;
@@ -154,5 +168,9 @@ export const MobileEmailCapture: React.FC = () => {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

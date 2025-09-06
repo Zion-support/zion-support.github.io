@@ -4,7 +4,11 @@ import Head from 'next/head',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
 import Button from '../../components/ui/Button',
 import Card from '../../components/ui/Card';
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
 import {extraServices} from '../../data/extra-services';
@@ -41,7 +45,12 @@ function extractServiceSlugFromLink(link: string): string | null {
   } catch {
     return null;
   }
+<<<<<<< HEAD
 export async function getStaticPaths() {
+=======
+
+export async function getStaticPaths() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const services = getAllServices();
   const slugs = new Set<string>();
     // Fall back to normalized id or name to provide a stable URL under /services/*
@@ -49,10 +58,18 @@ export async function getStaticPaths() {
     else if (s.name) slugs.add(toSlug(s.name));
   }
   return {
+<<<<<<< HEAD
     paths: Array.from(slugs).map(slug => ({ params: { slug } }))
     fallback: false
   }
 export async function getStaticProps({ params }: { params: { slug: string } }) {
+=======
+    paths: Array.from(slugs).map(slug => ({ params: { slug } })),
+    fallback: false,
+  };
+
+export async function getStaticProps({ params }: { params: { slug: string } }) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const services = getAllServices();
   const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '');
   let service: Service | undefined = services.find(s => {
@@ -184,14 +201,24 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
           </div>
         </div>
       </div>
-    </UltraFuturisticBackground>
+    </UltraFuturisticBackground>;
   );
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
+=======
+
+}
+}
+}
+}
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -378,4 +405,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

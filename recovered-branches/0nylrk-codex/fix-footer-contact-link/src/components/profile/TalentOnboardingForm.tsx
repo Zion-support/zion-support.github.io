@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {useForm, useFieldArray} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {useNavigate} from "react-router-dom";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Button} from "@/components/ui/button";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {Separator} from "@/components/ui/separator";
+import {toast} from "@/components/ui/use-toast";
+import {User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2} from "lucide-react";
+import {useAuth} from "@/hooks/useAuth";
+import {useTalentProfileEnhancer} from "@/hooks/useTalentProfileEnhancer";
+import {supabase} from "@/integrations/supabase/client";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -26,7 +48,11 @@ import { supabase } from "@/integrations/supabase/client";
 =======
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -99,6 +125,16 @@ export function TalentOnboardingForm() {
 
 type TalentFormValues = z.infer<typeof talentSchema>,
 
+<<<<<<< HEAD
+export function TalentOnboardingForm() {;
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const [currentStep, setCurrentStep] = useState(1);
+  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null);
+  const [cvFileName, setCvFileName] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessScreen, setShowSuccessScreen] = useState(false);
+=======
 export function TalentOnboardingForm() {
   const { user } = useAuth(),
   const navigate = useNavigate(),
@@ -107,6 +143,7 @@ export function TalentOnboardingForm() {
   const [cvFileName, setCvFileName] = useState<string | null>(null),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [showSuccessScreen, setShowSuccessScreen] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
   
@@ -197,6 +234,10 @@ export function TalentOnboardingForm() {
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
   return null
+<<<<<<< HEAD
+=======
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
@@ -325,5 +366,10 @@ export function TalentOnboardingForm() {;
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

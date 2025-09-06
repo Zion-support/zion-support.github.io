@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
+=======
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+export interface WhitelabelTenant {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   brand_name: string;
   subdomain: string;
@@ -25,8 +31,14 @@ export interface WhitelabelTenant {
 
   email_template_override: Record<string, any> | null
 }
+<<<<<<< HEAD
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null),
+=======
+
+export function useWhitelabelTenant(externalSubdomain?: string) {;
+  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
@@ -130,7 +142,11 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
           console.warn('No tenant data received'),;
           setTenant(null),;
           return;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
         if (data.tenant) {
           setTenant(data.tenant)
@@ -159,7 +175,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
   return { tenant, isLoading, error }
 }
 // Hook to check if current user is a tenant admin
-export function useTenantAdminStatus(tenantId?: string) {
+export function useTenantAdminStatus(tenantId?: string) {;
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -251,6 +267,10 @@ export function useTenantAdminStatus(tenantId?: string) {;
     };
     checkAdminStatus();
   }, [tenantId]);
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return { isAdmin, isLoading }
 }

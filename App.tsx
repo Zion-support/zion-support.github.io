@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { JSX } from 'react',
 
 export default function App(): JSX.Element {
@@ -15,6 +16,8 @@ export default function App(): JSX.Element {
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
@@ -77,7 +80,24 @@ export default function App() {
           <Footer />
         </div>
       </Router>
+<<<<<<< HEAD
     </ErrorBoundary>
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }
+=======
+    </ErrorBoundary>;
+  );
+}
+=======
+import React, { JSX } from 'react';
+
+export default function App(): JSX.Element {
+  return (
+    <main>
+      <h1>Hello App</h1>
+    </main>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Star
   ExternalLink
   ArrowRight
@@ -10,6 +11,16 @@ import {
   Clock
   Shield
   Zap;
+=======
+  Star,
+  ExternalLink,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Clock,
+  Shield,;
+  Zap,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface EnhancedServiceCardProps {
@@ -200,6 +211,10 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Card Content */}
       <div className='relative p-6'>
 =======
@@ -208,7 +223,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       <div className='relative p-6'>
 
         {/* Header */}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className='flex items-start justify-between mb-4'>
           <motion.div
             className={`text-4xl ${service.textColor}`}
@@ -232,7 +251,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         {/* Description */}
         <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service.description}
         </p>
+<<<<<<< HEAD
         {/* Key Metrics */}
+=======
+        {/* Key Metrics */}          
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="text-right">
             <div className="text-2xl font-bold text-white">{service.price}</div>
             <div className="text-sm text-gray-400">{service.period}</div>
@@ -270,7 +293,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
         {/* Key Metrics */}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
             <div className='text-purple-400 text-lg font-bold'>
@@ -323,7 +350,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
                 <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />                <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {feature}
               </motion.div>
             ))}
@@ -337,7 +368,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Market Info */}
         <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
           <div className='flex items-center justify-between mb-2'>
@@ -348,7 +383,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className='flex items-center justify-between mb-2'>
             <span className='text-xs font-semibold text-white'>
@@ -389,7 +428,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
             {service.setupTime}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </div>
         {/* Action Buttons */}
@@ -397,7 +440,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.a
             href={service.link}
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
@@ -445,7 +492,11 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
             Contact: {service.contactInfo.email}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </div>
       </div>
@@ -454,7 +505,13 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
     </motion.div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default EnhancedServiceCard;    </motion.div>
   )
 }
@@ -464,4 +521,10 @@ export default EnhancedServiceCard;
 };
 
 export default EnhancedServiceCard;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default EnhancedServiceCard;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

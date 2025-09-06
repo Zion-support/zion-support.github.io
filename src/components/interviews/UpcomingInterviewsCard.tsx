@@ -42,7 +42,11 @@ export function UpcomingInterviewsCard() {
       try {
         const interviews = await fetchInterviews(),
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview => 
@@ -50,10 +54,17 @@ export function UpcomingInterviewsCard() {
             !isPast(parseISO(interview.scheduled_date))
           )
 <<<<<<< HEAD
+<<<<<<< HEAD
           .sort(
             (a, b) =>
               parseISO(a.scheduled_date).getTime() -
               parseISO(b.scheduled_date).getTime()          )
+=======
+          .sort(;
+            (a, b) =>;
+              parseISO(a.scheduled_date).getTime() -;
+              parseISO(b.scheduled_date).getTime()          );
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           .slice(0, 3); // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
       } catch (error) {
@@ -83,7 +94,11 @@ export function UpcomingInterviewsCard() {
     loadInterviews()
   }, []),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -109,7 +124,10 @@ export function UpcomingInterviewsCard() {
         </CardContent>
       </Card>
     )
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -173,6 +191,10 @@ export function UpcomingInterviewsCard() {;
         </CardContent>;
       </Card>;
     );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -213,9 +235,10 @@ export function UpcomingInterviewsCard() {;
             const formattedDate = format(interviewDate, 'EEE, MMM d')
             const formattedTime = format(interviewDate, 'h:mm a')
             // Determine if interview is happening soon (within 30 minutes)            const now = new Date()
-            const isStartingSoon =
+            const isStartingSoon = null;
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime()
+<<<<<<< HEAD
 
             return (
               <div key={interview.id} className='flex items-center gap-3'>
@@ -253,6 +276,8 @@ export function UpcomingInterviewsCard() {;
                     <p className='font-medium line-clamp-1'>
                       {interview.title |'Interview'}
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -263,6 +288,10 @@ export function UpcomingInterviewsCard() {;
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
             
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -270,9 +299,37 @@ export function UpcomingInterviewsCard() {;
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
+<<<<<<< HEAD
                       loading="lazy"
                     />
                   ) : (
+=======
+<<<<<<< HEAD
+                      loading='lazy'                    />
+                  ) : (
+                    <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>
+                      {(
+                        interview.client_name ||
+                        interview.talent_name ||
+                        'U'
+                      ).charAt(0)}
+                    </div>
+            return (<div key={interview.id} className="flex items-center gap-3">
+                <Avatar className="h-10 w-10 bg-zion-purple/10">
+                  {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
+                  {/* For now, conditional rendering based on available image */}
+                  {interview.client_avatar || interview.talent_avatar ? (
+                    <img 
+                      src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined
+                      alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string
+                    />
+                  ) : (
+=======
+                      loading="lazy"
+                    />
+                  ) : (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
                     </div>
@@ -319,7 +376,11 @@ export function UpcomingInterviewsCard() {;
             <Link href="/interviews">
               View All Interviews
             </Link>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </Button>
         </div>
       </CardContent>
@@ -330,4 +391,10 @@ export function UpcomingInterviewsCard() {;
 }
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

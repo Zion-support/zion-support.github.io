@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
 =======
@@ -13,6 +16,10 @@ import {
   BadgePlus,  // first action
   BadgeDollarSign // monetization
 } from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export type BadgeKey =
@@ -20,6 +27,16 @@ export type BadgeKey =
   | "top_contributor"
   | "profile_complete"
   | "featured_creator"
+<<<<<<< HEAD
+  | "first_action";
+  | "monetized";
+
+export interface BadgeMeta {;
+  key: BadgeKey;
+  name: string;
+  description: string;
+  icon: LucideIcon;
+=======
   | "first_action"
 <<<<<<< HEAD
   | "monetized";
@@ -37,11 +54,16 @@ export interface BadgeMeta {
   name: string,
   description: string,
   icon: LucideIcon,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   color: string,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   bg: string
 }
 export const badgeList: BadgeMeta[] = [
+<<<<<<< HEAD
+  {;
+    key: "first_listing";
+=======
   {
 <<<<<<< HEAD
     key: "first_listing";
@@ -96,6 +118,7 @@ export const getBadgeMeta = (key: BadgeKey) =>
 
 =======
     key: "first_listing",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     name: "First Listing",
     description: "Published your first product, service, or listing.",
     icon: BadgeCheck,
@@ -145,6 +168,13 @@ export const getBadgeMeta = (key: BadgeKey) =>
 
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { LucideIcon } from "lucide-react",;
 import {;
@@ -222,4 +252,8 @@ export const badgeList: BadgeMeta[] = [;
   }];
 export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

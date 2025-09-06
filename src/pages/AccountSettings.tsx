@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -7,6 +8,16 @@ import { SEO  } from '@/components/SEO';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
+=======
+<<<<<<< HEAD
+import { useState } from 'react'
+import { useLocalStorage } from '@/hooks'
+import { Header } from '@/components/Header'
+import { SEO } from '@/components/SEO'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Wallet, Database, Save } from 'lucide-react'
 
 import {
@@ -56,7 +67,7 @@ export default function AccountSettings() {
         toast.error(
           'No wallet detected. Please install MetaMask or another compatible wallet.'
         )
-        return
+        return;
       }
       // Request accounts
       const accounts = await ethereum.request({
@@ -89,6 +100,10 @@ export default function AccountSettings() {
     }
   }
 =======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from 'react',;
 import { useLocalStorage } from '@/hooks',;
 import { Header } from '@/components/Header',;
@@ -163,6 +178,10 @@ export default function AccountSettings() {;
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
@@ -176,7 +195,11 @@ export default function AccountSettings() {;
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
         
         <div className="grid gap-6 md:grid-cols-2">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
@@ -231,7 +254,11 @@ export default function AccountSettings() {;
                     className="flex items-center gap-1"
                   >
                     <Wallet className="h-4 w-4" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     Connect
                   </Button>
                 </div>
@@ -277,7 +304,11 @@ export default function AccountSettings() {;
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
                     <Database className="h-4 w-4" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     Decentralized Backup
                   </Label>
                   <p className="text-xs text-gray-500">
@@ -318,7 +349,11 @@ export default function AccountSettings() {;
                 disabled={isSubmitting}
                 className="w-full"
               >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
               </Button>
@@ -327,7 +362,11 @@ export default function AccountSettings() {;
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Card>
             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
@@ -379,7 +418,11 @@ export default function AccountSettings() {;
 <<<<<<< HEAD
 =======
               
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div>
                 <h3 className="font-medium mb-2">Backup Status</h3>
                 <div className="grid grid-cols-2 gap-2">
@@ -428,9 +471,15 @@ export default function AccountSettings() {;
           </Card>
         </div>
       </main>
+<<<<<<< HEAD
     </>
   )
 }
+=======
+    </>;
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               
               <div>
@@ -456,4 +505,8 @@ export default function AccountSettings() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

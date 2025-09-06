@@ -1,11 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
+<<<<<<< HEAD
 const TalentProfile: NextPage = () => {
   const router = useRouter();
   const { slug } = router.query;
@@ -19,12 +23,18 @@ const TalentProfile: NextPage = () => {
     ]);
   }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useRouter } from 'next/router',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const TalentProfile: NextPage = () => {
   const router = useRouter(),
   const { slug } = router.query,
@@ -102,5 +112,9 @@ export default TalentProfile;
     </div>;
   );
 },;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default TalentProfile;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

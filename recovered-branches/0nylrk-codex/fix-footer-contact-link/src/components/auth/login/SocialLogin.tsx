@@ -9,8 +9,12 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { Web3Login } from "./Web3Login";
 export function SocialLogin() {
+<<<<<<< HEAD
 
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =
+=======
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     useAuth();
 
 import { Facebook, Twitter } from "lucide-react",
@@ -62,8 +66,11 @@ export function SocialLogin() {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
 import { Facebook, Twitter } from "lucide-react",;
@@ -87,6 +94,10 @@ export function SocialLogin() {;
           type="button";
           variant="outline";
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 ;

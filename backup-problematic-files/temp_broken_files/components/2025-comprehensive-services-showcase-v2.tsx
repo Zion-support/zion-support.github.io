@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -5,6 +6,15 @@ import { motion } from 'framer-motion';
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
 import {Brain, Atom, Shield, Target, Rocket;
   ArrowRight, Check, Star, TrendingUp, Users;
+=======
+<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+import React from 'react',;
+import SEO from '../components/SEO',;
+import { motion } from 'framer-motion',;
+import {;
+  Brain, Atom, Shield, Target, Rocket,;
+  ArrowRight, Check, Star, TrendingUp, Users,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
 } from 'lucide-react';
 // Import our new 2025 V2 innovative services;
@@ -186,6 +196,18 @@ export default function ComprehensiveServicesShowcase2025V2() {const allNewServi
                 <div className="text-center mb-12">;
                   <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>;
 =======
+<<<<<<< HEAD
+=======
+import React from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
+import { 
+  Brain, Atom, Shield, Target, Rocket,
+  ArrowRight, Check, Star, TrendingUp, Users,
+  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
+} from 'lucide-react',
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Import our new 2025 V2 innovative services,
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2',
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2',
@@ -370,7 +392,11 @@ className="space-y-20"
             {serviceCategories.map((category) => (_<motion.div key={category.id} variants={fadeInUp}>
                 <div className="text-center mb-12">
                   <div className={_`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {category.icon}
                   </div>;
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -401,7 +427,11 @@ key={service.id}
                       whileHover={_{ y: -5}}
                     >
                       <h4 className="text-xl font-semibold text-white mb-3">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {service.title}
                       </h4>;
                       <p className="text-gray-300 mb-4">;
@@ -410,7 +440,11 @@ key={service.id}
 <<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
 =======
                       ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div className="space-y-3 mb-6">;
                         <div className="flex items-center text-sm text-cyan-400">;
                           <TrendingUp className="w-4 h-4 mr-2" />;
@@ -463,7 +497,11 @@ href={_`/services/${service.slug}`}
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
                     </motion.div>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </div>;
               </motion.div>;
@@ -645,4 +683,8 @@ href="https://ziontechgroup.com"
       </section>
     </div>
   )}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

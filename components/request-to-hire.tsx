@@ -1,14 +1,19 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
+<<<<<<< HEAD
 export default function RequestToHirePage() {
 
+=======
+
+export default function RequestToHirePage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(
     () => TALENT_PROFILES.find(t => t.slug === talent)
     [talent]
-  );export default function RequestToHirePage() {
+  );export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
