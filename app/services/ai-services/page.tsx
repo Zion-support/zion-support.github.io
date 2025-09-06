@@ -1,8 +1,10 @@
+import { Metadata } from 'next';
 import Link from "next/link";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "AI Services | Zion Tech Group",
   description: "Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.",
+  keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
 };
 
 export default function AIServicesPage() {

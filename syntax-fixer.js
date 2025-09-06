@@ -14,7 +14,7 @@ function fixSyntaxErrors() {
   for (const file of files) {
     try {
       let content = fs.readFileSync(file, 'utf8');
-      let originalContent = content;
+      const originalContent = content;
       
       // Fix common syntax issues
       content = content.replace(/import React from "react",/g, 'import React from "react";');

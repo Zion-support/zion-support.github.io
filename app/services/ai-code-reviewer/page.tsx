@@ -149,11 +149,9 @@ export default function AICodeReviewerPage() {
 }
 
 function FeatureItem({
-  icon,
   title,
   description,
 }: {
-  icon: string;
   title: string;
   description: string;
 }) {
@@ -175,7 +173,6 @@ function FeatureItem({
 function PricingCard({
   plan,
   price,
-  period,
   description,
   features,
   popular,
@@ -208,19 +205,3 @@ function PricingCard({
   );
 }
 
-function StepCard({
-  step,
-  title,
-  description,
-}: {
-  step: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center">
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}

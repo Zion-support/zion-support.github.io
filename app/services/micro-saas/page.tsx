@@ -1,6 +1,7 @@
+import { Metadata } from 'next';
 import Link from "next/link";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Micro SaaS Development | Zion Tech Group",
   description: "Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.",
   keywords: "micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence"

@@ -1,8 +1,10 @@
+import { Metadata } from 'next';
 import Link from "next/link";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "IT Services | Zion Tech Group",
   description: "Comprehensive IT services including cloud migration, DevOps, cybersecurity, and infrastructure management for enterprise-scale solutions.",
+  keywords: 'IT services, cloud migration, cybersecurity, infrastructure, digital transformation, IT consulting'
 };
 
 export default function ITServicesPage() {
