@@ -1,5 +1,5 @@
-import Link from 'next/link',
-import ContentCategorizer from '../../components/ContentCategorizer',
+import Link from 'next/link';
+import ContentCategorizer from '../../components/ContentCategorizer';
 export default function ReportsIndex() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

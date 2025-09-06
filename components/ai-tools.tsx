@@ -2,27 +2,13 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { 
-  Brain,
-  MessageSquare, 
-  Image, 
-  Video, 
-  Code, 
-  FileText, 
-  Zap, 
-  Star,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Shield
-} from 'lucide-react',
-
+import { Brain, MessageSquare, Image, Video, Code, FileText, Zap, Star, ExternalLink, CheckCircle, TrendingUp, Shield } from 'lucide-react';
 export default function AiToolsPage() {
   const aiTools = [
     {
       icon: <Brain className="w-8 h-8 text-white" />,
       title: 'ChatGPT Plus',
-      description: 'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',
+      description: 'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.';
       features: [
         'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
       ],
@@ -70,7 +56,7 @@ export default function AiToolsPage() {
     {
       icon: <Video className="w-8 h-8 text-white" />,
       title: 'Runway ML',
-      description: 'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',
+      description: 'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.';
       features: [
         'AI video generationVideo editing toolsMotion trackingGreen screen removalProfessional workflows'
       ],
@@ -86,7 +72,7 @@ export default function AiToolsPage() {
     {
       icon: <MessageSquare className="w-8 h-8 text-white" />,
       title: 'Claude Pro',
-      description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.',
+      description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
       features: [
         'Advanced reasoning abilitiesDocument analysisCode generationCreative writingResearch assistance'
       ],
@@ -102,7 +88,7 @@ export default function AiToolsPage() {
     {
       icon: <FileText className="w-8 h-8 text-white" />,
       title: 'Jasper AI',
-      description: 'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.',
+      description: 'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.';
       features: [
         'Content generationBrand voice trainingSEO optimizationTeam collaborationEnterprise integrations'
       ],
@@ -116,7 +102,6 @@ export default function AiToolsPage() {
       category: 'Content Creation'
     }
   ],
-
   const aiMarketStats = [
     {
       title: 'AI Market Size',
@@ -143,17 +128,16 @@ export default function AiToolsPage() {
       description: 'Average productivity improvement'
     }
   ],
-
   const aiCategories = [
     {
       name: 'Conversational AI',
-      description: 'Chatbots, virtual assistants, and language models',
+      description: 'Chatbots, virtual assistants, and language models';
       tools: 3,
       avgPrice: '$20/month'
     },
     {
       name: 'Image Generation',
-      description: 'AI-powered art, design, and visual content creation',
+      description: 'AI-powered art, design, and visual content creation';
       tools: 1,
       avgPrice: '$20/month'
     },
@@ -176,7 +160,6 @@ export default function AiToolsPage() {
       avgPrice: '$82/month'
     }
   ],
-
   return (
     <>
       <Head>

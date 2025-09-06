@@ -1,18 +1,18 @@
-import { useFavorites } from '@/hooks/useFavorites',
+import { useFavorites } from '@/hooks/useFavorites';
 import { X } from 'lucide-react'
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',
-import { TALENT_PROFILES } from '@/data/talentData',
-import { ProductListingCard } from '@/components/ProductListingCard',
-import { TalentCard } from '@/components/talent/TalentCard',
-import { Button } from '@/components/ui/button',
-import { useCart } from '@/context/CartContext',
-import { toast } from '@/hooks/use-toast',
-import { useAuth } from '@/hooks/useAuth',
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { TalentCard } from '@/components/talent/TalentCard';
+import { Button } from '@/components/ui/button';
+import { useCart } from '@/context/CartContext';
+import { toast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { useEffect } from 'react', // Added useEffect
 
 export default function WishlistPage() {
-  const { favorites, loading, toggleFavorite } = useFavorites(),
+  const { favorites, loading, toggleFavorite } = useFavorites();
   const { user, isLoading: isAuthLoading } = useAuth(), // Added isAuthLoading
   const router = useRouter(), // Changed from navigate
 
@@ -21,16 +21,14 @@ export default function WishlistPage() {
     if (!isAuthLoading && !user) {
       router.push('/login')
     }
-  }, [user, isAuthLoading, router]),
-
+  }, [user, isAuthLoading, router]);
   if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
     return null, // Or a loading spinner
   }
 
-  const { items, dispatch } = useCart(),
-
+  const { items, dispatch } = useCart();
   const addToCart = (item: { id: string, title?: string, price?: number }) => {
-    if (items.some(i => i.id === item.id)) return,
+    if (items.some(i => i.id === item.id)) return;
     dispatch({
       type: 'ADD_ITEM',
       payload: {
@@ -41,23 +39,20 @@ export default function WishlistPage() {
       }
     }),
     toast.success(`1× ${item.title || 'Item'} added`)
-  },
-
+  };
   const productMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {
-    acc[p.id] = p,
+    acc[p.id] = p;
     return acc
-  }, {}),
+  }, {});
   const talentMap = TALENT_PROFILES.reduce<Record<string, any>>((acc, t) => {
-    acc[t.id] = t,
+    acc[t.id] = t;
     return acc
-  }, {}),
-
+  }, {});
   const sortedFavorites = [...favorites].sort(
     (a, b) =>
       new Date(b.created_at || '').getTime() -
       new Date(a.created_at || '').getTime()
-  ),
-
+  );
   return (
     <div className="container py-8">
       <h1 className="text-3xl font-bold mb-6">Wishlist</h1>
@@ -93,7 +88,7 @@ export default function WishlistPage() {
                 </div>
               ) : null
             }
-            const item = productMap[fav.item_id],
+            const item = productMap[fav.item_id];
             return item ? (
               <div key={fav.item_id} className="relative">
                 <button

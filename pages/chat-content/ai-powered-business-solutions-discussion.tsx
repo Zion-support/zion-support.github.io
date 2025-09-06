@@ -1,5 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next';
+import Head from 'next/head';
 const AiPoweredBusinessSolutionsDiscussion: NextPage = () => {
   return (
     <div>
@@ -15,5 +15,4 @@ const AiPoweredBusinessSolutionsDiscussion: NextPage = () => {
     </div>
   )
 },
-
-export default AiPoweredBusinessSolutionsDiscussion,
+export default AiPoweredBusinessSolutionsDiscussion;

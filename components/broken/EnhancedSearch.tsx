@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react',
-
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
 interface SearchResult {
   id: string,
   name: string,
@@ -10,9 +9,9 @@ interface SearchResult {
   type: string,
   slug: string,
   relevance: number,
-  features?: string[],
+  features?: string[];
   pricing?: {
-    starter?: string,
+    starter?: string;
     enterprise?: string
   }
 }
@@ -20,28 +19,27 @@ interface SearchResult {
 interface SearchProps {
   onSearch: (query: string) => void,
   onResultSelect: (result: SearchResult) => void,
-  placeholder?: string,
-  className?: string,
+  placeholder?: string;
+  className?: string;
   showFilters?: boolean
 }
 
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch,
-  onResultSelect,
+  onResultSelect;
   placeholder = "Search revolutionary services...",
-  className = "",
+  className = "";
   showFilters = true
 }) => {
-  const [query, setQuery] = useState(''),
-  const [isSearching, setIsSearching] = useState(false),
-  const [showResults, setShowResults] = useState(false),
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [selectedFilters, setSelectedFilters] = useState<string[]>([]),
-  const [searchHistory, setSearchHistory] = useState<string[]>([]),
+  const [query, setQuery] = useState('');
+  const [isSearching, setIsSearching] = useState(false);
+  const [showResults, setShowResults] = useState(false);
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
+  const [searchHistory, setSearchHistory] = useState<string[]>([]);
   const [popularSearches] = useState([
     'AI ConsciousnessQuantum ComputingCybersecurityBusiness IntelligenceSpace TechnologyAutonomous Systems'
-  ]),
-
+  ]);
   // Mock search results - in real app, this would come from API
   const mockSearchResults: SearchResult[] = [
     {
@@ -78,70 +76,59 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
     }
   ],
-
   const categories = [
     { id: 'ai', name: 'AI & ML', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { id: 'quantum', name: 'Quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' },
     { id: 'security', name: 'Security', icon: Shield, color: 'from-red-500 to-orange-500' },
     { id: 'business', name: 'Business', icon: Rocket, color: 'from-emerald-500 to-teal-500' }
   ],
-
   // Debounced search function
   const debouncedSearch = useCallback(
     useMemo(
       () => debounce((searchQuery: string) => {
         if (searchQuery.trim().length < 2) {
           setResults([]),
-          setShowResults(false),
+          setShowResults(false);
           return
         }
 
-        setIsSearching(true),
-        
+        setIsSearching(true);
         // Simulate API call delay
         setTimeout(() => {
           const filteredResults = mockSearchResults.filter(result => {
             const matchesQuery = result.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                               result.category.toLowerCase().includes(searchQuery.toLowerCase()),
-            
+                               result.category.toLowerCase().includes(searchQuery.toLowerCase());
             const matchesFilters = selectedFilters.length === 0 || 
                                  selectedFilters.some(filter => 
                                    result.category.toLowerCase().includes(filter.toLowerCase()) ||
                                    result.type.toLowerCase().includes(filter.toLowerCase())
-                                 ),
-            
+                                 );
             return matchesQuery && matchesFilters
-          }),
-
+          });
           // Sort by relevance
-          const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance),
-          
-          setResults(sortedResults),
-          setShowResults(true),
+          const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance);
+          setResults(sortedResults);
+          setShowResults(true);
           setIsSearching(false)
         }, 300)
-      }, 300),
+      }, 300);
       [selectedFilters]
-    ),
+    );
     [selectedFilters]
-  ),
-
+  );
   useEffect(() => {
     debouncedSearch(query)
-  }, [query, debouncedSearch]),
-
+  }, [query, debouncedSearch]);
   // Handle search input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value,
-    setQuery(value),
-    
+    setQuery(value);
     if (value.trim().length === 0) {
-      setShowResults(false),
+      setShowResults(false);
       setResults([])
     }
-  }, [suggestions, selectedIndex, query, handleSearch]),
-
+  }, [suggestions, selectedIndex, query, handleSearch]);
   // Close search on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -149,33 +136,29 @@ const EnhancedSearch: React.FC<SearchProps> = ({
         setIsOpen(false)
       }
     },
-
   // Handle search submission
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
     if (query.trim()) {
-      onSearch(query),
-      addToSearchHistory(query),
+      onSearch(query);
+      addToSearchHistory(query);
       setShowResults(false)
     }
-  }, [router, handleSearch]),
-
+  }, [router, handleSearch]);
   // Handle quick action click
   const handleQuickAction = useCallback((action: string) => {
     router.push(action),
     setIsOpen(false)
-  }, [router]),
-
+  }, [router]);
   // Add search to history
   const addToSearchHistory = (searchTerm: string) => {
-    const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5),
-    setSearchHistory(newHistory),
+    const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5);
+    setSearchHistory(newHistory);
     localStorage.setItem('zion-search-history', JSON.stringify(newHistory))
-  },
-
+  };
   // Load search history from localStorage
   useEffect(() => {
-    const savedHistory = localStorage.getItem('zion-search-history'),
+    const savedHistory = localStorage.getItem('zion-search-history');
     if (savedHistory) {
       try {
         setSearchHistory(JSON.parse(savedHistory))
@@ -183,8 +166,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
         console.error('Failed to parse search history:', error)
       }
     }
-  }, []),
-
+  }, []);
   // Handle filter toggle
   const toggleFilter = (filterId: string) => {
     setSelectedFilters(prev => 
@@ -192,22 +174,19 @@ const EnhancedSearch: React.FC<SearchProps> = ({
         ? prev.filter(id => id !== filterId)
         : [...prev, filterId]
     )
-  },
-
+  };
   // Handle result selection
   const handleResultSelect = (result: SearchResult) => {
     onResultSelect(result),
-    setShowResults(false),
+    setShowResults(false);
     setQuery('')
-  },
-
+  };
   // Clear search
   const clearSearch = () => {
-    setQuery(''),
-    setShowResults(false),
+    setQuery('');
+    setShowResults(false);
     setResults([])
-  },
-
+  };
   return (
     <div className={`relative ${className}`}>
       {/* Search Form */}
@@ -418,7 +397,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         <button
                           key={index}
                           onClick={() => setQuery(term)}
-                          className="px-3 py-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30"
+                          className="px-3 py-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover: from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30"
                         >
                           {term}
                         </button>
@@ -434,7 +413,6 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     </div>
   )
 },
-
 // Debounce utility function
 function debounce<T extends (...args: any[]) => any>(
   func: T,
@@ -447,4 +425,4 @@ function debounce<T extends (...args: any[]) => any>(
   }
 }
 
-export default EnhancedSearch,
+export default EnhancedSearch;

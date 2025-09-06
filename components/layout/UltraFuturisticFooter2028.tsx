@@ -1,22 +1,12 @@
-import React from 'react',
-import Link from 'next/link',
-import { 
-  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
-  Shield, Users, Briefcase, BookOpen, MessageCircle, 
-  Star, TrendingUp, Target, Layers, Cpu, Database, 
-  Cloud, Lock, ShieldCheck, Heart, Leaf, Car, 
-  GraduationCap, Scale, Building, Factory, Camera,
-  Video, Music, Gamepad2, Sun, Moon, Wind, Droplets,
-  Code
-} from 'lucide-react',
-
+import React from 'react';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, Shield, Users, Briefcase, BookOpen, MessageCircle, Star, TrendingUp, Target, Layers, Cpu, Database, Cloud, Lock, ShieldCheck, Heart, Leaf, Car, GraduationCap, Scale, Building, Factory, Camera, Video, Music, Gamepad2, Sun, Moon, Wind, Droplets, Code } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories = [
   {
     title: '🚀 2028 Futuristic Innovations',
@@ -55,7 +45,6 @@ const serviceCategories = [
     ]
   }
 ],
-
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
@@ -64,7 +53,6 @@ const companyLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Support', href: '/support', icon: ShieldCheck }
 ],
-
 const resourceLinks = [
   { name: 'Documentation', href: '/docs', icon: BookOpen },
   { name: 'API Reference', href: '/api', icon: Cpu },
@@ -73,14 +61,12 @@ const resourceLinks = [
   { name: 'Cloud Services', href: '/cloud', icon: Cloud },
   { name: 'Security Center', href: '/security', icon: Shield }
 ],
-
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageCircle },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code }
 ],
-
 export default function UltraFuturisticFooter2028() {
   return (
     <footer className="bg-black/95 backdrop-blur-xl border-t border-purple-500/30">

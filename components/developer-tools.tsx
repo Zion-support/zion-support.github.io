@@ -1,22 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { 
-  Code,
-  GitBranch, 
-  Database, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Star,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Cpu,
-  Globe
-} from 'lucide-react',
-
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Code, GitBranch, Database, Cloud, Shield, Zap, Star, ExternalLink, CheckCircle, TrendingUp, Cpu, Globe } from 'lucide-react';
 export default function DeveloperToolsPage() {
   const developerTools = [
     {
@@ -38,7 +24,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <GitBranch className="w-8 h-8 text-white" />,
       title: 'GitHub Pro',
-      description: 'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.',
+      description: 'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.';
       features: [
         'Unlimited private repositoriesAdvanced code review toolsPriority supportAdvanced insightsTeam management features'
       ],
@@ -54,7 +40,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <Database className="w-8 h-8 text-white" />,
       title: 'MongoDB Atlas',
-      description: 'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.',
+      description: 'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.';
       features: [
         'Fully managed MongoDBAuto-scaling & optimizationGlobal distributionAdvanced securityReal-time analytics'
       ],
@@ -70,7 +56,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: 'Vercel Pro',
-      description: 'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.',
+      description: 'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.';
       features: [
         'Zero-config deploymentsPreview deploymentsAdvanced analyticsTeam collaborationCustom domains'
       ],
@@ -86,7 +72,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Snyk',
-      description: 'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.',
+      description: 'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.';
       features: [
         'Vulnerability scanningDependency monitoringContainer securityInfrastructure as CodeCI/CD integration'
       ],
@@ -102,7 +88,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Postman',
-      description: 'Complete API development platform for building, testing, and documenting APIs with team collaboration.',
+      description: 'Complete API development platform for building, testing, and documenting APIs with team collaboration.';
       features: [
         'API design & testingTeam collaborationAPI documentationMock serversMonitoring & analytics'
       ],
@@ -116,7 +102,6 @@ export default function DeveloperToolsPage() {
       category: 'API Development'
     }
   ],
-
   const devMarketStats = [
     {
       title: 'Dev Tools Market',
@@ -143,7 +128,6 @@ export default function DeveloperToolsPage() {
       description: 'Average productivity improvement'
     }
   ],
-
   const devCategories = [
     {
       name: 'Code Generation',
@@ -177,12 +161,11 @@ export default function DeveloperToolsPage() {
     },
     {
       name: 'API Development',
-      description: 'Tools for building, testing, and managing APIs',
+      description: 'Tools for building, testing, and managing APIs';
       tools: 1,
       avgPrice: '$55/month'
     }
   ],
-
   const devWorkflow = [
     {
       phase: 'Development',
@@ -205,7 +188,6 @@ export default function DeveloperToolsPage() {
       description: 'Deploy and host applications'
     }
   ],
-
   return (
     <>
       <Head>

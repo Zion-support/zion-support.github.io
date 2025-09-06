@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-
+import type { NextApiRequest, NextApiResponse } from 'next';
 interface EmailValidationResult {
   email: string,
   isValid: boolean,
@@ -25,45 +24,38 @@ export default async function handler(
 
   try {
     const { email } = req.body,
-
     if (!email || typeof email !== 'string') {
       return res.status(400).json({ error: 'Email is required' })
     }
 
     // Basic email format validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    const hasValidFormat = emailRegex.test(email),
-
+    const hasValidFormat = emailRegex.test(email);
     // Extract domain
-    const domain = email.split('@')[1],
-    const hasValidDomain = domain && domain.length > 0,
-
+    const domain = email.split('@')[1];
+    const hasValidDomain = domain && domain.length > 0;
     // Check for common disposable email providers
     const disposableDomains = [
       'tempmail.orgguerrillamail.commailinator.com10minutemail.comtemp-mail.orgsharklasers.comgetairmail.commailnesia.com'
-    ],
-    const isDisposable = disposableDomains.some(d => domain?.includes(d)),
-
+    ];
+    const isDisposable = disposableDomains.some(d => domain?.includes(d));
     // Check for role-based emails
     const roleBasedPatterns = [
       'admin@info@support@contact@sales@help@noreply@no-reply@', 'donotreply@do-not-reply@'
-    ],
-    const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern)),
-
+    ];
+    const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern));
     // Check for free email providers
     const freeProviders = [
       'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
-    ],
-    const isFreeProvider = freeProviders.some(provider => domain === provider),
-
+    ];
+    const isFreeProvider = freeProviders.some(provider => domain === provider);
     // Calculate score (0-100)
-    let score = 100,
-    if (!hasValidFormat) score -= 50,
-    if (!hasValidDomain) score -= 20,
-    if (isDisposable) score -= 30,
-    if (isRoleBased) score -= 15,
-    if (isFreeProvider) score -= 10,
-
+    let score = 100;
+    if (!hasValidFormat) score -= 50;
+    if (!hasValidDomain) score -= 20;
+    if (isDisposable) score -= 30;
+    if (isRoleBased) score -= 15;
+    if (isFreeProvider) score -= 10;
     // Generate suggestions
     const suggestions: string[] = [],
     if (!hasValidFormat) {
@@ -82,20 +74,19 @@ export default async function handler(
     const result: EmailValidationResult = {
       email,
       isValid: score >= 70,
-      score: Math.max(0, score),
-      suggestions,
+      score: Math.max(0, score);
+      suggestions;
       details: {
         hasValidFormat,
-        hasValidDomain,
+        hasValidDomain;
         hasValidMX: true, // Simplified for demo
-        isDisposable,
-        isRoleBased,
+        isDisposable;
+        isRoleBased;
         isFreeProvider}
-    },
-
+    };
     res.status(200).json(result)
   } catch (error) {
-    console.error('Email validation error:', error),
+    console.error('Email validation error:', error);
     res.status(500).json({ error: 'Internal server error' })
   }
 }

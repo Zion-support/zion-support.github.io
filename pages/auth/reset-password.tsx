@@ -1,5 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next';
+import Head from 'next/head';
 const ResetPassword: NextPage = () => {
   return (
     <div>
@@ -15,5 +15,4 @@ const ResetPassword: NextPage = () => {
     </div>
   )
 },
-
-export default ResetPassword,
+export default ResetPassword;

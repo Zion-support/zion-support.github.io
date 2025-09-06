@@ -1,24 +1,22 @@
-import React, { useRef } from 'react',
-import { motion, useInView } from 'framer-motion',
-
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 interface LazySectionProps {
   children: React.ReactNode,
-  className?: string,
-  threshold?: number,
-  delay?: number,
+  className?: string;
+  threshold?: number;
+  delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right'
 }
 
 export const LazySection: React.FC<LazySectionProps> = ({
   children,
-  className = '',
-  threshold = 0.1,
-  delay = 0,
+  className = '';
+  threshold = 0.1;
+  delay = 0;
   direction = 'up'
 }) => {
-  const ref = useRef<HTMLDivElement>(null),
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true }),
-
   const getInitialPosition = () => {
     switch (direction) {
       case 'up':
@@ -33,7 +31,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
         return { opacity: 0, y: 50 }
     }
   },
-
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
@@ -48,7 +45,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
         return { opacity: 1, y: 0 }
     }
   },
-
   return (
     <motion.div
       ref={ref}
@@ -61,5 +57,4 @@ export const LazySection: React.FC<LazySectionProps> = ({
     </motion.div>
   )
 },
-
-export default LazySection,
+export default LazySection;

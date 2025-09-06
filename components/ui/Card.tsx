@@ -4,22 +4,22 @@ import { cn } from '../../lib/utils';
 // HTML element types are available globally
 
 const Card = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement;
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      "rounded-lg border bg-card text-card-foreground shadow-sm";
       className
     )}
     {...props}
   />
-));
+)),
 Card.displayName = "Card";
 
 const CardHeader = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement;
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
@@ -27,26 +27,26 @@ const CardHeader = React.forwardRef<
     className={cn("flex flex-col space-y-1.5 p-6", className)}
     {...props}
   />
-));
+)),
 CardHeader.displayName = "CardHeader";
 
 const CardTitle = React.forwardRef<
-  HTMLParagraphElement,
+  HTMLParagraphElement;
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
   <h3
     ref={ref}
     className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
+      "text-2xl font-semibold leading-none tracking-tight";
       className
     )}
     {...props}
   />
-));
+)),
 CardTitle.displayName = "CardTitle";
 
 const CardDescription = React.forwardRef<
-  HTMLParagraphElement,
+  HTMLParagraphElement;
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
@@ -54,19 +54,19 @@ const CardDescription = React.forwardRef<
     className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />
-));
+)),
 CardDescription.displayName = "CardDescription";
 
 const CardContent = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement;
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-));
+)),
 CardContent.displayName = "CardContent";
 
 const CardFooter = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement;
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
@@ -74,32 +74,30 @@ const CardFooter = React.forwardRef<
     className={cn("flex items-center p-6 pt-0", className)}
     {...props}
   />
-));
+)),
 CardFooter.displayName = "CardFooter";
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 =======
-import React from 'react',
+import React from 'react';
 interface CardProps {
   children: React.ReactNode,
-  className?: string,
-  style?: React.CSSProperties,
-  onClick?: () => void,
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: () => void;
   hover?: boolean
 }
 
 const Card: React.FC<CardProps> = ({
   children,
-  className = '',
-  style,
-  onClick,
+  className = '';
+  style;
+  onClick;
   hover = true}) => {
-  const baseClasses = 'bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 transition-all duration-300 relative overflow-hidden',
-  const hoverClasses = hover ? 'hover: border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : '',
-  const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : '',
-  
-  const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`,
-
+  const baseClasses = 'bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 transition-all duration-300 relative overflow-hidden';
+  const hoverClasses = hover ? 'hover: border-blue-500/30 hover: shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : '',
+  const clickableClasses = onClick ? 'cursor-pointer focus: outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : '',
+  const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;
   return (
     <div
       className={classes}
@@ -107,7 +105,7 @@ const Card: React.FC<CardProps> = ({
       onClick={onClick}
     >
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 hover: opacity-100 transition-opacity duration-300" />
       
       {/* Content wrapper */}
       <div className="relative z-10">
@@ -121,6 +119,5 @@ const Card: React.FC<CardProps> = ({
     </div>
   )
 },
-
-export default Card,
+export default Card;
 >>>>>>> pr-11992

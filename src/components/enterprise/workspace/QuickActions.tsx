@@ -1,7 +1,7 @@
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { FileText, Plus, Search, Calendar } from 'lucide-react'
 
 export function QuickActions() {
@@ -35,7 +35,6 @@ export function QuickActions() {
       color: "bg-amber-100 dark:bg-amber-900/20"
     }
   ],
-
   return (
     <Card>
       <CardHeader>

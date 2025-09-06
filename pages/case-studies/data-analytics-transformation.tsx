@@ -1,6 +1,6 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 export default function CaseStudyPage() {
   return (
     <>
@@ -14,7 +14,7 @@ export default function CaseStudyPage() {
         <main className="container mx-auto px-6 py-12">
           {/* Breadcrumb */}
           <nav className="mb-8">
-            <Link href="/" className="text-white/60 hover:text-white transition-colors">
+            <Link href="/" className="text-white/60 hover: text-white transition-colors">
               Home
             </Link>
             <span className="text-white/60 mx-2">→</span>
@@ -46,10 +46,10 @@ export default function CaseStudyPage() {
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-purple-400 mb-4">Healthcare Provider</h3>
                 <p className="text-white/90 text-lg mb-4">
-                  A large healthcare network serving multiple communities with hospitals, 
+                  A large healthcare network serving multiple communities with hospitals,
                   clinics, and specialized medical services. The organization struggled to leverage data for patient care improvements.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mt-6">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-purple-400">5+</div>
                     <div className="text-white/70">Hospitals</div>
@@ -98,15 +98,15 @@ export default function CaseStudyPage() {
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Comprehensive Data Analytics Platform</h3>
                 <p className="text-white/90 text-lg mb-6">
-                  We built a comprehensive data analytics platform that provides real-time insights, 
+                  We built a comprehensive data analytics platform that provides real-time insights,
                   predictive modeling, and automated reporting for improved patient care and operational efficiency.
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Big Data Processing</h4>
                     <p className="text-white/80">
-                      Advanced big data infrastructure processes millions of patient records, 
+                      Advanced big data infrastructure processes millions of patient records,
                       lab results, and operational data points in real-time.
                     </p>
                   </div>
@@ -122,7 +122,7 @@ export default function CaseStudyPage() {
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Real-time Analytics</h4>
                     <p className="text-white/80">
-                      Live dashboards provide instant insights into patient conditions, 
+                      Live dashboards provide instant insights into patient conditions;
                       resource utilization, and operational metrics.
                     </p>
                   </div>
@@ -130,7 +130,7 @@ export default function CaseStudyPage() {
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Predictive Modeling</h4>
                     <p className="text-white/80">
-                      Advanced predictive models forecast patient outcomes, readmission risks, 
+                      Advanced predictive models forecast patient outcomes, readmission risks;
                       and resource requirements.
                     </p>
                   </div>

@@ -1,25 +1,23 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react',
-
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
 export default function CodeQualityCheckerPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false),
-  const [analysisResults, setAnalysisResults] = useState(null),
-  const [codeInput, setCodeInput] = useState(''),
-
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResults, setAnalysisResults] = useState(null);
+  const [codeInput, setCodeInput] = useState('');
   const features = [
     {
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Multi-Language Support',
-      description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',
+      description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.';
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
       gradient: 'from-teal-400 to-cyan-500'},
     {
       icon: <CheckCircle className="w-8 h-8 text-white" />,
       title: 'Code Quality Metrics',
-      description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.',
+      description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.';
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
@@ -31,10 +29,9 @@ export default function CodeQualityCheckerPage() {
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Security Scanning',
-      description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',
+      description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.';
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
       gradient: 'from-purple-400 to-indigo-500'}],
-
   const supportedLanguages = [
     { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checksReact best practices'] },
     { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hintsSecurity scanning'] },
@@ -43,7 +40,6 @@ export default function CodeQualityCheckerPage() {
     { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vetPerformance analysis'] },
     { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
   ],
-
   const pricing = [
     {
       name: 'Developer',
@@ -76,11 +72,9 @@ export default function CodeQualityCheckerPage() {
       popular: false
     }
   ],
-
   const handleAnalyzeCode = async () => {
-    if (!codeInput.trim()) return,
-    
-    setIsAnalyzing(true),
+    if (!codeInput.trim()) return;
+    setIsAnalyzing(true);
     // Simulate code analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -100,11 +94,10 @@ export default function CodeQualityCheckerPage() {
         recommendations: [
           'Use const for immutable variables to improve code clarityBreak down large functions into smaller, more focused functionsAdd proper error handling for better robustnessConsider adding JSDoc comments for better documentation'
         ]
-      }),
+      });
       setIsAnalyzing(false)
     }, 3000)
-  },
-
+  };
   return (
     <>
       <Head>
@@ -130,7 +123,7 @@ export default function CodeQualityCheckerPage() {
             Code Quality Checker
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, 
+            Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages;
             security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
           </p>
           

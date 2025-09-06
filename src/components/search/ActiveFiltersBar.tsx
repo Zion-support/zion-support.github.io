@@ -1,7 +1,7 @@
-import React from 'react',
+import React from 'react';
 import { X } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 interface SearchFilters {
   types: string[],
   category: string,
@@ -20,12 +20,11 @@ interface ActiveFiltersBarProps {
 
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   filters,
-  onFiltersChange,
-  onClearAll,
+  onFiltersChange;
+  onClearAll;
   className = ''
 }) => {
   const activeFilters: Array<{ key: string, label: string, value: string }> = [],
-
   // Add type filters
   filters.types.forEach(type => {
     const labels: Record<string, string> = {
@@ -41,7 +40,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       value: labels[type] || type
     })
   }),
-
   // Add category filter
   if (filters.category) {
     activeFilters.push({
@@ -85,8 +83,8 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 
   const removeFilter = (filterKey: string) => {
     if (filterKey.startsWith('type-')) {
-      const typeToRemove = filterKey.replace('type-', ''),
-      const newTypes = filters.types.filter(t => t !== typeToRemove),
+      const typeToRemove = filterKey.replace('type-', '');
+      const newTypes = filters.types.filter(t => t !== typeToRemove);
       onFiltersChange({ ...filters, types: newTypes })
     } else if (filterKey === 'category') {
       onFiltersChange({ ...filters, category: '' })
@@ -98,14 +96,13 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       onFiltersChange({ ...filters, sort: 'relevance' })
     }
   },
-
   if (activeFilters.length === 0) {
     return null
   }
 
   return (
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>
-      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
+      <span className="text-sm font-medium text-muted-foreground">Active filters: </span>
       
       {activeFilters.map(filter => (
         <Badge 
@@ -139,5 +136,4 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     </div>
   )
 },
-
-export default ActiveFiltersBar,
+export default ActiveFiltersBar;

@@ -1,22 +1,18 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Home, Search, Rocket, FileText, Users, Mail, Map, 
-  ArrowRight, ExternalLink, ChevronRight, Globe, Building
-} from 'lucide-react',
-import SmartHeader from '../components/SmartHeader',
-import SmartFooter from '../components/SmartFooter',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Home, Search, Rocket, FileText, Users, Mail, Map, ArrowRight, ExternalLink, ChevronRight, Globe, Building } from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
 export default function SitemapPage() {
   const mainPages = [
     { href: '/', label: '🏠 Home', description: 'Main landing page with company overview and featured services' },
-    { href: '/about', label: '👥 About Us', description: 'Company story, mission, values, and team information' },
+    { href: '/about', label: '👥 About Us', description: 'Company story, mission, values, and team information' };
     { href: '/services', label: '🚀 Services', description: 'Complete catalog of AI and technology services' },
     { href: '/explore', label: '🔍 Explore', description: 'Browse services by category and technology area' },
     { href: '/contact', label: '📧 Contact', description: 'Get in touch and start your project' }
   ],
-
   const serviceCategories = [
     { href: '/category/ai', label: '🧠 AI & Machine Learning', description: 'Artificial intelligence and machine learning solutions' },
     { href: '/category/quantum', label: '⚛️ Quantum Computing', description: 'Quantum computing and quantum AI applications' },
@@ -29,7 +25,6 @@ export default function SitemapPage() {
     { href: '/category/automation', label: '⚡ Automation', description: 'Business process automation and AI agents' },
     { href: '/category/fintech', label: '💰 Financial Technology', description: 'Quantum financial trading and AI analytics' }
   ],
-
   const featuredServices = [
     { href: '/ai-business-intelligence', label: 'AI Business Intelligence', category: 'AI & ML' },
     { href: '/quantum-cybersecurity', label: 'Quantum Cybersecurity', category: 'Cybersecurity' },
@@ -40,26 +35,22 @@ export default function SitemapPage() {
     { href: '/ai-customer-experience', label: 'AI Customer Experience', category: 'AI & ML' },
     { href: '/quantum-neural-networks', label: 'Quantum Neural Networks', category: 'Quantum Computing' }
   ],
-
   const resources = [
     { href: '/reports', label: '📊 Reports', description: 'Latest technology reports and insights' },
     { href: '/newsroom', label: '📰 Newsroom', description: 'Company updates and industry news' },
     { href: '/automation', label: '⚡ Automations', description: 'Automation tools and solutions' },
     { href: '/search', label: '🔎 Search', description: 'Search across all services and content' }
   ],
-
   const externalLinks = [
     { href: 'https://github.com/ai-factory', label: 'GitHub', description: 'Open source projects and code examples' },
     { href: 'https://docs.ziontechgroup.com', label: 'Documentation', description: 'Technical documentation and guides' },
     { href: 'https://status.ziontechgroup.com', label: 'System Status', description: 'Real-time system status and uptime' }
   ],
-
   const contactInfo = [
     { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },
     { type: 'Email', value: 'kleber@ziontechgroup.com', action: 'mailto:kleber@ziontechgroup.com' },
     { type: 'Address', value: 'Middletown, DE', action: 'https://maps.google.com/?q=Middletown,DE' }
-  ],
-
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -84,7 +75,7 @@ export default function SitemapPage() {
               Site Map
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
-              Navigate our comprehensive website and discover all the AI-powered technology solutions, 
+              Navigate our comprehensive website and discover all the AI-powered technology solutions,
               resources, and information available at Zion Tech Group.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

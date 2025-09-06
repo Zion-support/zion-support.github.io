@@ -2,40 +2,29 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Star, Users, TrendingUp, Zap, Shield, 
-  CheckCircle, Clock, Award, Target, Globe, Sparkles,
-  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb,
-  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
-} from 'lucide-react',
-
+import { Brain, Star, Users, TrendingUp, Zap, Shield, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb, ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const features = [
-  'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration',
+  'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration';
   'Spiritual growth pathwaysPersonal transformation tracking'
-],
-
+];
 const useCases = [
-  'Personal development and growthProfessional leadership trainingTherapeutic and healing practicesEducational enhancementCorporate wellness programsMental health supportSpiritual developmentCreative arts enhancement',
+  'Personal development and growthProfessional leadership trainingTherapeutic and healing practicesEducational enhancementCorporate wellness programsMental health supportSpiritual developmentCreative arts enhancement';
   'Relationship improvementStress management and resilience'
-],
-
+];
 const technology = [
-  'Advanced AI algorithmsMachine learning modelsNatural language processingEmotional recognition systemsBiometric feedback integrationVirtual reality experiencesAugmented reality overlaysBrain-computer interfaces',
+  'Advanced AI algorithmsMachine learning modelsNatural language processingEmotional recognition systemsBiometric feedback integrationVirtual reality experiencesAugmented reality overlaysBrain-computer interfaces';
   'Quantum computing integrationBlockchain security'
-],
-
+];
 const integrations = [
-  'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks',
+  'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps'
-],
-
+];
 const testimonials = [
   {
     name: 'Dr. Sarah Chen',
@@ -62,7 +51,6 @@ const testimonials = [
     avatar: '👩‍🔬'
   }
 ],
-
 export default function AIConsciousnessEvolution2025() {
   return (
     <Layout>
@@ -87,8 +75,8 @@ export default function AIConsciousnessEvolution2025() {
               key={i}
               className="absolute w-2 h-2 bg-purple-400 rounded-full opacity-30"
               animate={{
-                x: [0, 100, 0],
-                y: [0, -100, 0],
+                x: [0, 100, 0];
+                y: [0, -100, 0];
                 opacity: [0.3, 0.8, 0.3]}}
               transition={{
                 duration: 8 + i * 2,

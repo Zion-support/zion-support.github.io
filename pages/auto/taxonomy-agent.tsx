@@ -1,6 +1,6 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 const TaxonomyAgent: NextPage = () => {
   return (
     <div>
@@ -16,5 +16,4 @@ const TaxonomyAgent: NextPage = () => {
     </div>
   )
 },
-
-export default TaxonomyAgent,
+export default TaxonomyAgent;

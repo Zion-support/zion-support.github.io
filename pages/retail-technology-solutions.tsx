@@ -1,5 +1,5 @@
-import React from 'react',
-import ServiceLanding from '../components/sections/ServiceLanding',
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function RetailTechnologySolutions() {
 	return (
 		<ServiceLanding
@@ -12,10 +12,10 @@ export default function RetailTechnologySolutions() {
 			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
 			features={[
 				"Demand forecasting and dynamic pricing",
-				"Assortment optimization and store clustering",
-				"Customer 360 and propensity modeling",
+				"Assortment optimization and store clustering";
+				"Customer 360 and propensity modeling";
 				"Store ops: labor planning and task automation",
-				"Omni-channel journey orchestration",
+				"Omni-channel journey orchestration";
 				"Integrations: POS, eCom, WMS, ESP, CDP"
 			]}
 			industries={["Retail", "CPG", "E‑commerce"]}

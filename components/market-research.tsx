@@ -90,7 +90,6 @@ export default function MarketResearchPage() {
       icon: <Users className="w-8 h-8 text-white" />
     }
   ],
-
   const competitiveAnalysis = [
     {
       company: 'Enterprise Giants',
@@ -129,7 +128,6 @@ export default function MarketResearchPage() {
       pricing: 'Low ($10-100/month)'
     }
   ],
-
   const marketTrends = [
     {
       trend: 'AI-First Approach',
@@ -140,7 +138,7 @@ export default function MarketResearchPage() {
         'AI-powered content generationIntelligent automationPredictive analyticsNatural language interfaces'
       ],
       opportunities: 'AI integration services, custom AI models, AI consulting'
-    },
+    };
     {
       trend: 'Privacy-First Design',
       description: 'Growing focus on data privacy and compliance',
@@ -150,7 +148,7 @@ export default function MarketResearchPage() {
         'GDPR compliance toolsPrivacy analytics platformsData anonymization servicesConsent management systems'
       ],
       opportunities: 'Privacy compliance tools, data governance platforms, audit services'
-    },
+    };
     {
       trend: 'API-First Architecture',
       description: 'Shift towards API-centric application development',
@@ -160,7 +158,7 @@ export default function MarketResearchPage() {
         'API management platformsDeveloper experience toolsAPI analytics and monitoringIntegration platforms'
       ],
       opportunities: 'API development tools, integration services, developer portals'
-    },
+    };
     {
       trend: 'Real-Time Everything',
       description: 'Demand for real-time data and analytics',
@@ -171,8 +169,7 @@ export default function MarketResearchPage() {
       ],
       opportunities: 'Real-time platforms, streaming services, live collaboration tools'
     }
-  ],
-
+  ];
   const pricingStrategies = [
     {
       strategy: 'Value-Based Pricing',
@@ -184,7 +181,7 @@ export default function MarketResearchPage() {
         'Complex pricing structureCustomer education requiredValue measurement challengesPricing optimization needed'
       ],
       bestFor: 'Enterprise solutions, high-value services, ROI-focused products'
-    },
+    };
     {
       strategy: 'Usage-Based Pricing',
       description: 'Pricing based on actual usage or consumption',
@@ -195,7 +192,7 @@ export default function MarketResearchPage() {
         'Revenue predictability challengesComplex billing systemsUsage optimization neededCustomer cost management'
       ],
       bestFor: 'API services, storage platforms, compute resources'
-    },
+    };
     {
       strategy: 'Freemium Model',
       description: 'Free basic tier with paid premium features',
@@ -207,8 +204,7 @@ export default function MarketResearchPage() {
       ],
       bestFor: 'Consumer tools, productivity apps, collaboration platforms'
     }
-  ],
-
+  ];
   const investmentInsights = [
     {
       metric: 'Total VC Investment',
@@ -235,7 +231,6 @@ export default function MarketResearchPage() {
       description: 'Average time for SaaS companies to reach profitability'
     }
   ],
-
   return (
     <>
       <Head>

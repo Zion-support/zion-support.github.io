@@ -1,34 +1,32 @@
-import React, { useEffect } from 'react',
-import { useRouter } from 'next/router',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from '@/hooks/use-toast',
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
 import { Loader2, Shield } from 'lucide-react'
 
 interface AuthGuardProps {
   children: React.ReactNode,
-  requireAuth?: boolean,
-  requireRole?: string[],
-  redirectTo?: string,
-  fallback?: React.ReactNode,
-  showToast?: boolean,
+  requireAuth?: boolean;
+  requireRole?: string[];
+  redirectTo?: string;
+  fallback?: React.ReactNode;
+  showToast?: boolean;
   allowGuest?: boolean
 }
 
 export function AuthGuard({
-  children,
-  requireAuth = true,
-  requireRole,
-  redirectTo = '/auth/login',
-  fallback,
-  showToast = true,
+  children;
+  requireAuth = true;
+  requireRole;
+  redirectTo = '/auth/login';
+  fallback;
+  showToast = true;
   allowGuest = false}: AuthGuardProps) {
-  const { user, isAuthenticated, isLoading } = useAuth(),
-  const router = useRouter(),
-
+  const { user, isAuthenticated, isLoading } = useAuth();
+  const router = useRouter();
   useEffect(() => {
     // Don't redirect while auth is still loading
-    if (isLoading) return,
-
+    if (isLoading) return;
     // If authentication is required but user is not authenticated
     if (requireAuth && !isAuthenticated && !allowGuest) {
       if (showToast) {
@@ -39,15 +37,14 @@ export function AuthGuard({
       }
 
       const returnTo = encodeURIComponent(router.asPath),
-      router.push(`${redirectTo}?returnTo=${returnTo}`),
+      router.push(`${redirectTo}?returnTo=${returnTo}`);
       return
     }
 
     // If specific roles are required
     if (requireRole && isAuthenticated && user) {
-      const userRoles = user.role ? [user.role] : [],
-      const hasRequiredRole = requireRole.some(role => userRoles.includes(role)),
-
+      const userRoles = user.role ? [user.role] : [];
+      const hasRequiredRole = requireRole.some(role => userRoles.includes(role));
       if (!hasRequiredRole) {
         if (showToast) {
           toast({
@@ -59,8 +56,7 @@ export function AuthGuard({
         return
       }
     }
-  }, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest]),
-
+  }, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest]);
   // Show loading state while auth is being determined
   if (isLoading) {
     return fallback || (
@@ -91,8 +87,7 @@ export function AuthGuard({
   // Show role denied state if user doesn't have required role
   if (requireRole && isAuthenticated && user) {
     const userRoles = user.role ? [user.role] : [],
-    const hasRequiredRole = requireRole.some(role => userRoles.includes(role)),
-
+    const hasRequiredRole = requireRole.some(role => userRoles.includes(role));
     if (!hasRequiredRole) {
       return fallback || (
         <div className="flex flex-col items-center justify-center min-h-screen gap-4">
@@ -128,20 +123,17 @@ export function withAuthGuard<P extends object>(
 
 // Hook for programmatic auth checks
 export function useAuthGuard() {
-  const { user, isAuthenticated, isLoading } = useAuth(),
-  const router = useRouter(),
-
+  const { user, isAuthenticated, isLoading } = useAuth();
+  const router = useRouter();
   const requireAuth = (options?: {
-    redirectTo?: string,
-    showToast?: boolean,
+    redirectTo?: string;
+    showToast?: boolean;
     returnUrl?: string
   }) => {
-    if (isLoading) return false,
-
+    if (isLoading) return false;
     if (!isAuthenticated) {
-      const redirectTo = options?.redirectTo || '/login',
-      const returnUrl = options?.returnUrl || router.asPath,
-      
+      const redirectTo = options?.redirectTo || '/login';
+      const returnUrl = options?.returnUrl || router.asPath;
       if (options?.showToast !== false) {
         toast({
           title: "Authentication Required",
@@ -154,17 +146,14 @@ export function useAuthGuard() {
     }
 
     return true
-  },
-
+  };
   const requireRole = (roles: string[], options?: {
-    showToast?: boolean,
+    showToast?: boolean;
     redirectTo?: string
   }) => {
     if (!requireAuth({ showToast: false })) return false,
-
-    const userRoles = user?.role ? [user.role] : [],
-    const hasRequiredRole = roles.some(role => userRoles.includes(role)),
-
+    const userRoles = user?.role ? [user.role] : [];
+    const hasRequiredRole = roles.some(role => userRoles.includes(role));
     if (!hasRequiredRole) {
       if (options?.showToast !== false) {
         toast({
@@ -178,22 +167,19 @@ export function useAuthGuard() {
     }
 
     return true
-  },
-
+  };
   const checkPermission = (permission: string): boolean => {
     if (!isAuthenticated || !user) return false,
-    
     // Simple permission check - can be extended based on your permission system
     // Use type assertion for extensibility, as permissions might be added to user type later
-    const userPermissions = (user as any).permissions || [],
+    const userPermissions = (user as any).permissions || [];
     return userPermissions.includes(permission)
-  },
-
+  };
   return {
-    requireAuth,
-    requireRole,
-    checkPermission,
-    isAuthenticated,
-    user,
+    requireAuth;
+    requireRole;
+    checkPermission;
+    isAuthenticated;
+    user;
     isLoading}
 }

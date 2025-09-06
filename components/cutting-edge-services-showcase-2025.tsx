@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Atom, Shield, Rocket, Star, Award, TrendingUp,
-  CheckCircle, ArrowRight, Zap, Target, Microscope,
-  Lock, Cloud, BarChart3, Settings, Eye, Code, Palette,
-  Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
-} from 'lucide-react',
+import { Brain, Atom, Shield, Rocket, Star, Award, TrendingUp, CheckCircle, ArrowRight, Zap, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Code, Palette, Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
@@ -18,14 +13,12 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const heroStats = [
   { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },
   { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
 ],
-
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
@@ -64,27 +57,23 @@ const serviceCategories = [
     count: cuttingEdgeMicroSaasServices2025.length
   }
 ],
-
 export default function CuttingEdgeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const allServices = [
     ...cuttingEdgeAIServices2025,
     ...cuttingEdgeQuantumServices2025,
     ...cuttingEdgeEnterpriseITServices2025,
     ...cuttingEdgeMicroSaasServices2025
   ],
-
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory
-  }),
-
+  });
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -94,7 +83,6 @@ export default function CuttingEdgeServicesShowcase2025() {
       }
     }
   },
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -105,7 +93,6 @@ export default function CuttingEdgeServicesShowcase2025() {
       }
     }
   },
-
   return (
     <>
       <Head>
@@ -357,7 +344,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                     <div className="flex items-center justify-between">
                       <a
                         href={service.website}
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
+                        className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors duration-300 text-sm font-medium"
                       >
                         Learn More
                         <ExternalLink className="ml-1 w-4 h-4" />

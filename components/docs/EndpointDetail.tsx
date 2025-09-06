@@ -1,7 +1,7 @@
-import React from 'react',
-import CodeSamples from './CodeSamples',
-import TryItConsole from './TryItConsole',
-import { EndpointSpec } from '../../data/api-docs/types',
+import React from 'react';
+import CodeSamples from './CodeSamples';
+import TryItConsole from './TryItConsole';
+import { EndpointSpec } from '../../data/api-docs/types';
 export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
   return (
     <div className="space-y-4">

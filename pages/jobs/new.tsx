@@ -1,21 +1,19 @@
-import { useState } from 'react',
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import EnhancedLoading from '../../components/ui/EnhancedLoading',
-import { useToast } from '../../components/ui/NotificationSystem',
+import { useState } from 'react';
+import EnhancedCard from '../../components/ui/EnhancedCard';
+import EnhancedButton from '../../components/ui/EnhancedButton';
+import EnhancedLoading from '../../components/ui/EnhancedLoading';
+import { useToast } from '../../components/ui/NotificationSystem';
 export default function NewJobPage() {
-  const { notify } = useToast(),
-  const [loading, setLoading] = useState(false),
-
+  const { notify } = useToast();
+  const [loading, setLoading] = useState(false);
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
-    setLoading(true),
+    setLoading(true);
     setTimeout(() => {
-      setLoading(false),
+      setLoading(false);
       notify('Job posted! Invite talent to get responses.success')
     }, 800)
-  },
-
+  };
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>

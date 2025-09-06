@@ -1,29 +1,27 @@
 
-import React, { useState, useRef, useEffect } from "react",
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { ScrollArea } from "@/components/ui/scroll-area",
-import { Separator } from "@/components/ui/separator",
-import { toast } from "@/components/ui/use-toast",
-import { cn } from "@/lib/utils",
-import { ChatMessage } from "./ChatMessage",
-import { QuickReplyButton } from "./QuickReplyButton",
+import React, { useState, useRef, useEffect } from "react";
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
+import { toast } from "@/components/ui/use-toast";
+import { cn } from "@/lib/utils";
+import { ChatMessage } from "./ChatMessage";
+import { QuickReplyButton } from "./QuickReplyButton";
 import { Send, Loader2 } from 'lucide-react'
-import { useTheme } from "@/hooks/useTheme",
+import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
   { id: "match", text: "How do I get matched?" },
   { id: "billing", text: "Billing help" }],
-
 type Message = {
   id: string,
   content: string,
   sender: "user" | "bot",
   timestamp: Date
 },
-
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -31,56 +29,46 @@ export function ChatBotPanel() {
       content: "Hi! How can I help you?",
       sender: "bot",
       timestamp: new Date()}]),
-  const [inputValue, setInputValue] = useState(""),
-  const [isLoading, setIsLoading] = useState(false),
-  const [failedAttempts, setFailedAttempts] = useState(0),
-  const scrollAreaRef = useRef<HTMLDivElement>(null),
-  const inputRef = useRef<HTMLInputElement>(null),
-  const { theme } = useTheme(),
-
+  const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [failedAttempts, setFailedAttempts] = useState(0);
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const { theme } = useTheme();
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
     }
-  }, [messages]),
-
+  }, [messages]);
   // Focus input when component mounts
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus()
     }
-  }, []),
-
+  }, []);
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return,
-    
     const userMessage: Message = {
       id: `user-${Date.now()}`,
       content: text,
       sender: "user",
       timestamp: new Date()},
-    
-    setMessages((prev) => [...prev, userMessage]),
-    setInputValue(""),
-    setIsLoading(true),
-    
+    setMessages((prev) => [...prev, userMessage]);
+    setInputValue("");
+    setIsLoading(true);
     try {
       // Call the OpenAI-powered support function
-      const response = await sendToAIAssistant(text),
-      
+      const response = await sendToAIAssistant(text);
       const botMessage: Message = {
         id: `bot-${Date.now()}`,
-        content: response.message || "Sorry, I couldn't process your request. Please try again.",
+        content: response.message || "Sorry, I couldn't process your request. Please try again.";
         sender: "bot",
         timestamp: new Date()},
-      
-      setMessages((prev) => [...prev, botMessage]),
-      
+      setMessages((prev) => [...prev, botMessage]);
       // Check if the request was successful
       if (!response.success) {
-        setFailedAttempts((prev) => prev + 1),
-        
+        setFailedAttempts((prev) => prev + 1);
         // After 3 failed attempts, suggest escalation
         if (failedAttempts >= 2) {
           suggestEscalation()
@@ -95,16 +83,14 @@ export function ChatBotPanel() {
         variant: "destructive",
         title: "Communication Error",
         description: "We're having trouble connecting to our support service."}),
-      
-      setFailedAttempts((prev) => prev + 1),
+      setFailedAttempts((prev) => prev + 1);
       if (failedAttempts >= 2) {
         suggestEscalation()
       }
     } finally {
       setIsLoading(false)
     }
-  },
-
+  };
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -114,7 +100,6 @@ export function ChatBotPanel() {
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
-      
       if (!response.ok) {
         return {
           success: false,
@@ -135,21 +120,16 @@ export function ChatBotPanel() {
       }
     }
   },
-
   const suggestEscalation = () => {
     const escalationMessage: Message = {
       id: `bot-escalation-${Date.now()}`,
-      content: 
-        "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
       sender: "bot",
       timestamp: new Date()},
-    
-    setMessages((prev) => [...prev, escalationMessage]),
-    
+    setMessages((prev) => [...prev, escalationMessage]);
     // Log this interaction for the support team
     logSupportEscalation()
-  },
-
+  };
   const logSupportEscalation = async () => {
     try {
       // Send the conversation to the backend for logging
@@ -166,14 +146,12 @@ export function ChatBotPanel() {
       logErrorToProduction("Failed to log support escalation", error as Error, { component: 'ChatBotPanel' })
     }
   },
-
   const handleQuickReply = (text: string) => {
     handleSendMessage(text)
   },
-
   const handleEscalateToLiveAgent = () => {
     setMessages((prev) => [
-      ...prev, 
+      ...prev,
       {
         id: `user-${Date.now()}`,
         content: "I'd like to speak with a human agent",
@@ -182,21 +160,19 @@ export function ChatBotPanel() {
       },
       {
         id: `bot-${Date.now()}`,
-        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
+        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.";
         sender: "bot",
         timestamp: new Date()
       }
     ]),
-    
     // In a real implementation, this would trigger a live chat request
     toast({
       title: "Support request submitted",
       description: "A support agent will be with you shortly."})
   },
-
   const handleEmailSupport = () => {
     setMessages((prev) => [
-      ...prev, 
+      ...prev,
       {
         id: `user-${Date.now()}`,
         content: "I'd like to email support",
@@ -211,7 +187,6 @@ export function ChatBotPanel() {
       }
     ])
   },
-
   return (
     <div className="flex flex-col h-full">
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
@@ -259,7 +234,7 @@ export function ChatBotPanel() {
             <Button 
               onClick={handleEscalateToLiveAgent}
               size="sm"
-              className="bg-zion-purple hover:bg-zion-purple-light text-white"
+              className="bg-zion-purple hover: bg-zion-purple-light text-white"
             >
               Chat with Live Agent
             </Button>
@@ -275,12 +250,12 @@ export function ChatBotPanel() {
       )}
       
       <div className={cn(
-        "p-4 border-t", 
+        "p-4 border-t",
         theme === "dark" ? "border-zion-blue-light" : "border-gray-200"
       )}>
         <form 
           onSubmit={(e) => {
-            e.preventDefault(),
+            e.preventDefault();
             handleSendMessage()
           }}
           className="flex items-center gap-2"

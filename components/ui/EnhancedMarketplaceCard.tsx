@@ -4,26 +4,26 @@ import Image from 'next/image';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 
 interface MarketplaceCardProps {
-  title: string;
-  description: string;
-  price: number;
-  rating: number;
-  image: string;
+  title: string,
+  description: string,
+  price: number,
+  rating: number,
+  image: string,
   onAddToCart?: () => void;
   onFavorite?: () => void;
 }
 
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title,
-  description,
-  price,
-  rating,
-  image,
-  onAddToCart,
+  description;
+  price;
+  rating;
+  image;
+  onAddToCart;
   onFavorite
 }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">
       <div className="relative">
         <Image src={image} alt={title} width={400} height={192} className="w-full h-48 object-cover" />
         <button
@@ -55,27 +55,26 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
         </button>
       </div>
     </div>
-  );
+  ),
 };
 
 export default EnhancedMarketplaceCard;
 =======
 
-          <div className="h-12 w-12 rounded bg-gray-200" />)},
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>,
-      </div>,
-      <p className="text-sm text-gray-600 mb-4">{description}</p>,
-      <div className="mt-auto flex items-center justify-between">,
-        {price && <span className="text-sm font-medium text-blue-600">{price}</span>},
-import React from 'react',
-import EnhancedCard from './EnhancedCard',
+          <div className="h-12 w-12 rounded bg-gray-200" />)};
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+      </div>;
+      <p className="text-sm text-gray-600 mb-4">{description}</p>;
+      <div className="mt-auto flex items-center justify-between">;
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>};
+import React from 'react';
+import EnhancedCard from './EnhancedCard';
 export type MarketplaceCardProps = {
   title: string,
-  subtitle?: string,
-  description?: string,
+  subtitle?: string;
+  description?: string;
   footer?: React.ReactNode
-},
-
+};
 export default function EnhancedMarketplaceCard({ title, subtitle, description, footer }: MarketplaceCardProps) {
   return (
     <EnhancedCard className="p-5">

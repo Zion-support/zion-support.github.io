@@ -1,5 +1,5 @@
-import React from 'react',
-import ServiceLanding from '../components/sections/ServiceLanding',
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIAutonomousBusinessOperations() {
 	return (
 		<ServiceLanding
@@ -12,10 +12,10 @@ export default function AIAutonomousBusinessOperations() {
 			roiNote="Average ROI 5–12x within 120 days"
 			features={[
 				"Autonomous KPI monitoring and anomaly detection",
-				"Agentic workflows for ticket triage, billing, collections, and renewals",
-				"Human-in-the-loop approvals and audit trails",
-				"Playbooks for incident response and customer recovery",
-				"Compliance logging and role-based access",
+				"Agentic workflows for ticket triage, billing, collections, and renewals";
+				"Human-in-the-loop approvals and audit trails";
+				"Playbooks for incident response and customer recovery";
+				"Compliance logging and role-based access";
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
 			]}
 			industries={["SaaS", "Healthcare", "Finance", "Retail"]}

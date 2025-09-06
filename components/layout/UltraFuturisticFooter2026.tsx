@@ -1,19 +1,13 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, 
-  Brain, DollarSign, Dna, Rocket, Users, Award, Zap,
-  Facebook, Twitter, Linkedin, Instagram, Youtube, Github
-} from 'lucide-react',
-
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, Brain, DollarSign, Dna, Rocket, Users, Award, Zap, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories = [
   {
     title: 'AI & Automation',
@@ -56,7 +50,6 @@ const serviceCategories = [
     ]
   }
 ],
-
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Leadership Team', href: '/leadership' },
@@ -67,7 +60,6 @@ const companyLinks = [
   { name: 'Contact Us', href: '/contact' },
   { name: 'Locations', href: '/locations' }
 ],
-
 const resourceLinks = [
   { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api-documentation' },
@@ -78,7 +70,6 @@ const resourceLinks = [
   { name: 'Community Forum', href: '/community' },
   { name: 'Developer Resources', href: '/developer-resources' }
 ],
-
 const socialLinks = [
   { name: 'Facebook', href: '#', icon: Facebook },
   { name: 'Twitter', href: '#', icon: Twitter },
@@ -87,7 +78,6 @@ const socialLinks = [
   { name: 'YouTube', href: '#', icon: Youtube },
   { name: 'GitHub', href: '#', icon: Github }
 ],
-
 export default function UltraFuturisticFooter2026() {
   return (
     <footer className="relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800">
@@ -116,7 +106,7 @@ export default function UltraFuturisticFooter2026() {
                 </h3>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Leading provider of revolutionary AI automation, quantum cybersecurity, fintech blockchain, 
+                Leading provider of revolutionary AI automation, quantum cybersecurity, fintech blockchain;
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
               </p>
               

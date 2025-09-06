@@ -1,29 +1,22 @@
-import { useEffect, useMemo, useState } from 'react',
-import Link from 'next/link',
+import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 type Member = { id: string, name: string, email: string, role: 'admin' | 'manager' | 'recruiter' | 'viewer' },
-
 type Usage = { monthlyJobPosts: number, budgetCapUsd: number },
-
 type Invoice = { id: string, number: string, amountUsd: number, periodStartIso: string, periodEndIso: string, status: string },
-
-const COMPANY_ID = 'cmp_acme',
-
+const COMPANY_ID = 'cmp_acme';
 export default function CompanyAdmin() {
-  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>('members'),
-  const [members, setMembers] = useState<Member[]>([]),
-  const [usage, setUsage] = useState<Usage | null>(null),
-  const [activity, setActivity] = useState<any[]>([]),
-  const [invoices, setInvoices] = useState<Invoice[]>([]),
-
+  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>('members');
+  const [members, setMembers] = useState<Member[]>([]);
+  const [usage, setUsage] = useState<Usage | null>(null);
+  const [activity, setActivity] = useState<any[]>([]);
+  const [invoices, setInvoices] = useState<Invoice[]>([]);
   useEffect(() => {
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/members`).then(r => r.json()).then(setMembers),
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`).then(r => r.json()).then(setUsage),
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/activity`).then(r => r.json()).then(setActivity),
+    fetch(`/api/enterprise/companies/${COMPANY_ID}/members`).then(r => r.json()).then(setMembers);
+    fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`).then(r => r.json()).then(setUsage);
+    fetch(`/api/enterprise/companies/${COMPANY_ID}/activity`).then(r => r.json()).then(setActivity);
     fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`).then(r => r.json()).then(setInvoices)
-  }, []),
-
-  const seatsUsed = members.length,
-
+  }, []);
+  const seatsUsed = members.length;
   return (
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
       <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -59,27 +52,23 @@ export default function CompanyAdmin() {
 }
 
 function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {
-  const [name, setName] = useState(''),
-  const [email, setEmail] = useState(''),
-  const [role, setRole] = useState<Member['role']>('viewer'),
-
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [role, setRole] = useState<Member['role']>('viewer');
   const add = async () => {
-    const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) }),
-    const created = await r.json(),
+    const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) });
+    const created = await r.json();
     setMembers([created, ...members]),
     setName(''), setEmail(''), setRole('viewer')
-  },
-
+  };
   const remove = async (id: string) => {
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`, { method: 'DELETE' }),
     setMembers(members.filter(m => m.id !== id))
-  },
-
+  };
   const changeRole = async (id: string, newRole: Member['role']) => {
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ memberId: id, role: newRole }) }),
     setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m))
   },
-
   return (
     <section>
       <h2>Team members</h2>
@@ -129,14 +118,12 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
 }
 
 function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {
-  const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts),
-  const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd),
-
+  const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts);
+  const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
   const save = async () => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) }),
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) });
     setUsage({ monthlyJobPosts, budgetCapUsd })
-  },
-
+  };
   return (
     <section>
       <h2>Usage limits</h2>

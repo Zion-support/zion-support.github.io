@@ -1,6 +1,6 @@
-import React from 'react',
-import Card from '../ui/Card',
-import { Zap } from 'lucide-react',
+import React from 'react';
+import Card from '../ui/Card';
+import { Zap } from 'lucide-react';
 interface Feature {
   icon: React.ReactNode,
   title: string,
@@ -19,14 +19,13 @@ interface FeaturesProps {
 
 const Features: React.FC<FeaturesProps> = ({
   title,
-  subtitle,
-  features,
+  subtitle;
+  features;
   columns = 3}) => {
   const gridCols = {
     2: 'md:grid-cols-2',
     3: 'md:grid-cols-2 lg:grid-cols-3',
     4: 'md:grid-cols-2 lg:grid-cols-4'},
-
   return (
     <section className="py-24 bg-black relative overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
@@ -50,7 +49,7 @@ const Features: React.FC<FeaturesProps> = ({
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
+              className="text-center group bg-gray-900/50 border border-gray-800 hover: border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
               style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
             >
               <div className="relative">
@@ -72,5 +71,4 @@ const Features: React.FC<FeaturesProps> = ({
     </section>
   )
 },
-
-export default Features,
+export default Features;

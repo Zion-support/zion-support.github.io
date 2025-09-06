@@ -1,31 +1,22 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, 
-  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, 
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const heroStats = [
   { label: 'AI Services Delivered', value: '200+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Happy AI Clients', value: '500+', icon: <Users className="w-5 h-5" /> },
   { label: 'AI Success Rate', value: '99.8%', icon: <Award className="w-5 h-5" /> },
   { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" /> }
 ],
-
 const serviceCategories = [
   {
     title: 'AI Development Tools',
@@ -68,17 +59,16 @@ const serviceCategories = [
     features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
   }
 ],
-
 const heroFeatures = [
   {
     title: 'AI-Powered Automation',
-    description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
+    description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.';
     icon: Brain,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   },
   {
     title: 'Intelligent Optimization',
-    description: 'AI-driven optimization that continuously improves performance, security, and efficiency.',
+    description: 'AI-driven optimization that continuously improves performance, security, and efficiency.';
     icon: Sparkles,
     gradient: 'bg-gradient-to-r from-purple-500 to-pink-600'
   },
@@ -95,11 +85,10 @@ const heroFeatures = [
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
   }
 ],
-
 const testimonials = [
   {
     name: 'Dr. Michael Chen',
-    role: 'CTO, TechFlow Solutions',
+    role: 'CTO, TechFlow Solutions';
     company: 'TechFlow Solutions',
     content: 'Zion Tech Group\'s AI automation platform has revolutionized our development process. We\'ve reduced testing time by 90% and improved code quality significantly.',
     rating: 5,
@@ -107,7 +96,7 @@ const testimonials = [
   },
   {
     name: 'Sarah Rodriguez',
-    role: 'DevOps Director, CloudScale Inc.',
+    role: 'DevOps Director, CloudScale Inc.';
     company: 'CloudScale Inc.',
     content: 'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
     rating: 5,
@@ -115,14 +104,13 @@ const testimonials = [
   },
   {
     name: 'David Kim',
-    role: 'Security Manager, SecureNet Corp.',
+    role: 'Security Manager, SecureNet Corp.';
     company: 'SecureNet Corp.',
     content: 'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
     rating: 5,
     avatar: '👨‍🔒'
   }
 ],
-
 export default function AdvancedAIAutomationServices() {
   return (
     <Layout>

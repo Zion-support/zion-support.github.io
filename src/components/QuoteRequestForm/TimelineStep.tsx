@@ -1,12 +1,12 @@
 
-import { format } from "date-fns",
-import { Calendar } from "@/components/ui/calendar",
-import { Button } from "@/components/ui/button",
-import { Label } from "@/components/ui/label",
+import { format } from "date-fns";
+import { Calendar } from "@/components/ui/calendar";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
 import { CalendarIcon } from 'lucide-react'
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { cn } from "@/lib/utils",
-import { QuoteFormData } from "@/types/quotes",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
+import { QuoteFormData } from "@/types/quotes";
 interface TimelineStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -24,7 +24,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "fixed" 
                   ? "bg-zion-purple/20 border-zion-purple" 
-                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"
               }`}
               onClick={() => updateFormData({ timeline: "fixed" })}
             >

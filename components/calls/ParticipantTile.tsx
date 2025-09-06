@@ -1,16 +1,13 @@
-import React, { useEffect, useRef } from 'react',
-import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client',
-
+import React, { useEffect, useRef } from 'react';
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 type Props = {
   participant: RemoteParticipant | LocalParticipant,
-  isLocal?: boolean,
+  isLocal?: boolean;
   displayName?: string
-},
-
+};
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
-  const videoRef = useRef<HTMLVideoElement | null>(null),
-  const audioRef = useRef<HTMLAudioElement | null>(null),
-
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
     const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
       if (track.kind === 'video' && videoRef.current) {
@@ -28,21 +25,17 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         track.detach(audioRef.current)
       }
     },
-
     participant.tracks.forEach(pub => {
-      const track = pub.track,
+      const track = pub.track;
       if (track) handleTrackSubscribed(pub, track)
-    }),
-
-    participant.on('trackSubscribed', handleTrackSubscribed),
-    participant.on('trackUnsubscribed', handleTrackUnsubscribed),
-
+    });
+    participant.on('trackSubscribed', handleTrackSubscribed);
+    participant.on('trackUnsubscribed', handleTrackUnsubscribed);
     return () => {
-      participant.off('trackSubscribed', handleTrackSubscribed),
+      participant.off('trackSubscribed', handleTrackSubscribed);
       participant.off('trackUnsubscribed', handleTrackUnsubscribed)
     }
-  }, [participant]),
-
+  }, [participant]);
   return (
     <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
       <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />

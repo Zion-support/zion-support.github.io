@@ -1,12 +1,11 @@
-import React from 'react',
-import Head from 'next/head',
-import { Clock, Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import React from 'react';
+import Head from 'next/head';
+import { Clock, Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function CronJobSchedulerPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/cron-job-scheduler')),
-  if (!service) return null,
-
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/cron-job-scheduler'));
+  if (!service) return null;
   return (
     <Layout>
       <Head>

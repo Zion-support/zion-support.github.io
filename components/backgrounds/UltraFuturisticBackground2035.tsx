@@ -1,19 +1,15 @@
-import React, { useEffect, useRef } from 'react',
-import { motion } from 'framer-motion',
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 export default function UltraFuturisticBackground2035() {
-  const canvasRef = useRef<HTMLCanvasElement>(null),
-
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
-    const canvas = canvasRef.current,
-    if (!canvas) return,
-
+    const canvas = canvasRef.current;
+    if (!canvas) return;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-
-    const ctx = canvas.getContext('2d'),
-    if (!ctx) return,
-
-    canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
-    canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
+    canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
     if (ctx) {
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
     }
@@ -28,12 +24,11 @@ export default function UltraFuturisticBackground2035() {
       opacity: number,
       color: string
     }> = [],
-
     // Initialize particles
     const initParticles = () => {
-      particles = [],
-      const isSmallScreen = window.innerWidth < 768,
-      const particleCount = prefersReducedMotion ? 12 : (isSmallScreen ? 40 : 100),
+      particles = [];
+      const isSmallScreen = window.innerWidth < 768;
+      const particleCount = prefersReducedMotion ? 12 : (isSmallScreen ? 40 : 100);
       for (let i = 0, i < particleCount, i++) {
         particles.push({
           x: Math.random() * canvas.width / (window.devicePixelRatio || 1),
@@ -46,79 +41,67 @@ export default function UltraFuturisticBackground2035() {
         })
       }
     },
-
     // Update and draw particles
     const updateParticles = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height),
-
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       particles.forEach((particle, index) => {
-        particle.x += particle.vx,
-        particle.y += particle.vy,
-
+        particle.x += particle.vx;
+        particle.y += particle.vy;
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1),
-        if (particle.x > canvas.width / (window.devicePixelRatio || 1)) particle.x = 0,
-        if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1),
-        if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0,
-
+        if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1);
+        if (particle.x > canvas.width / (window.devicePixelRatio || 1)) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1);
+        if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0;
         // Draw particle
-        ctx.beginPath(),
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
-        ctx.fillStyle = particle.color,
-        ctx.globalAlpha = particle.opacity,
-        ctx.fill(),
-
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.globalAlpha = particle.opacity;
+        ctx.fill();
         // Draw connections
-        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140),
+        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
         if (maxDistance > 0) {
           particles.forEach((otherParticle, otherIndex) => {
             if (index !== otherIndex) {
-              const dx = particle.x - otherParticle.x,
-              const dy = particle.y - otherParticle.y,
-              const distance = Math.sqrt(dx * dx + dy * dy),
-
+              const dx = particle.x - otherParticle.x;
+              const dy = particle.y - otherParticle.y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
               if (distance < maxDistance) {
-                ctx.beginPath(),
-                ctx.moveTo(particle.x, particle.y),
-                ctx.lineTo(otherParticle.x, otherParticle.y),
-                ctx.strokeStyle = particle.color,
-                ctx.globalAlpha = (maxDistance - distance) / maxDistance * 0.08,
-                ctx.lineWidth = 1,
+                ctx.beginPath();
+                ctx.moveTo(particle.x, particle.y);
+                ctx.lineTo(otherParticle.x, otherParticle.y);
+                ctx.strokeStyle = particle.color;
+                ctx.globalAlpha = (maxDistance - distance) / maxDistance * 0.08;
+                ctx.lineWidth = 1;
                 ctx.stroke()
               }
             }
           })
         }
-      }),
-
+      });
       if (!prefersReducedMotion) {
         animationFrameId = requestAnimationFrame(updateParticles)
       }
-    },
-
-    initParticles(),
-    updateParticles(),
-
+    };
+    initParticles();
+    updateParticles();
     const handleResize = () => {
-      canvas.width = window.innerWidth * (window.devicePixelRatio || 1),
-      canvas.height = window.innerHeight * (window.devicePixelRatio || 1),
+      canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
+      canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
       if (ctx) {
-        ctx.setTransform(1, 0, 0, 1, 0, 0),
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
       }
       initParticles()
-    },
-
-    window.addEventListener('resize', handleResize),
-
+    };
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize),
+      window.removeEventListener('resize', handleResize);
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId)
       }
     }
-  }, []),
-
+  }, []);
   return (
     <>
       {/* Fixed Background Canvas */}
@@ -134,8 +117,8 @@ export default function UltraFuturisticBackground2035() {
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full"
           animate={{
-            scale: [1, 1.15, 1],
-            rotate: [0, 180, 360],
+            scale: [1, 1.15, 1];
+            rotate: [0, 180, 360];
             opacity: [0.22, 0.45, 0.22]
           }}
           transition={{
@@ -148,8 +131,8 @@ export default function UltraFuturisticBackground2035() {
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45"
           animate={{
-            scale: [1, 1.3, 1],
-            rotate: [45, 225, 405],
+            scale: [1, 1.3, 1];
+            rotate: [45, 225, 405];
             opacity: [0.2, 0.5, 0.2]
           }}
           transition={{
@@ -162,8 +145,8 @@ export default function UltraFuturisticBackground2035() {
         <motion.div
           className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full"
           animate={{
-            scale: [1, 1.4, 1],
-            y: [0, -20, 0],
+            scale: [1, 1.4, 1];
+            y: [0, -20, 0];
             opacity: [0.4, 0.7, 0.4]
           }}
           transition={{
@@ -182,9 +165,9 @@ export default function UltraFuturisticBackground2035() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px),
+              linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px);
               linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)
-            `,
+            `;
             backgroundSize: '50px 50px'
           }} />
         </div>
@@ -199,8 +182,8 @@ export default function UltraFuturisticBackground2035() {
               top: `${Math.random() * 100}%`
             }}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0, 1, 0],
+              y: [0, -30, 0];
+              opacity: [0, 1, 0];
               scale: [0, 1, 0]
             }}
             transition={{
@@ -216,7 +199,7 @@ export default function UltraFuturisticBackground2035() {
         <motion.div
           className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"
           animate={{
-            scaleX: [0, 1, 0],
+            scaleX: [0, 1, 0];
             opacity: [0, 1, 0]
           }}
           transition={{
@@ -229,7 +212,7 @@ export default function UltraFuturisticBackground2035() {
         <motion.div
           className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"
           animate={{
-            scaleX: [0, 1, 0],
+            scaleX: [0, 1, 0];
             opacity: [0, 1, 0]
           }}
           transition={{
@@ -250,8 +233,8 @@ export default function UltraFuturisticBackground2035() {
               top: `${Math.random() * 100}%`
             }}
             animate={{
-              scale: [0, 1, 0],
-              opacity: [0, 0.8, 0],
+              scale: [0, 1, 0];
+              opacity: [0, 0.8, 0];
               rotate: [0, 360]
             }}
             transition={{
@@ -281,7 +264,7 @@ export default function UltraFuturisticBackground2035() {
               r="3"
               fill="url(#neuralGradient)"
               animate={{
-                r: [3, 6, 3],
+                r: [3, 6, 3];
                 opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
@@ -299,8 +282,8 @@ export default function UltraFuturisticBackground2035() {
           <motion.div
             className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full"
             animate={{
-              scale: [1, 1.1, 1],
-              rotate: [0, 90, 180, 270, 360],
+              scale: [1, 1.1, 1];
+              rotate: [0, 90, 180, 270, 360];
               opacity: [0.1, 0.3, 0.1]
             }}
             transition={{
@@ -313,8 +296,8 @@ export default function UltraFuturisticBackground2035() {
           <motion.div
             className="absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full"
             animate={{
-              scale: [1, 1.2, 1],
-              rotate: [360, 270, 180, 90, 0],
+              scale: [1, 1.2, 1];
+              rotate: [360, 270, 180, 90, 0];
               opacity: [0.1, 0.4, 0.1]
             }}
             transition={{
@@ -336,7 +319,7 @@ export default function UltraFuturisticBackground2035() {
                 top: `${i * 5}%`
               }}
               animate={{
-                height: [8, 32, 8],
+                height: [8, 32, 8];
                 opacity: [0.3, 1, 0.3]
               }}
               transition={{

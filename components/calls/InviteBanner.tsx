@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 type Props = {
   message: string,
-  onJoin?: () => void,
+  onJoin?: () => void;
   canJoin?: boolean
-},
-
+};
 export default function InviteBanner({ message, onJoin, canJoin = true }: Props) {
   return (
     <div className="w-full bg-gray-900 text-white p-3 rounded border border-gray-700 flex items-center justify-between">

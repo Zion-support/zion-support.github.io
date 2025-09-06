@@ -1,7 +1,7 @@
-import React from 'react',
-import { motion } from 'framer-motion',
-import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react',
-import SEO from '../components/SEO',
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 const aiServices = [
   {
     title: 'AI Consciousness Evolution',
@@ -46,7 +46,6 @@ const aiServices = [
     features: ['Ethical GuidelinesGovernance FrameworkCompliance Monitoring']
   }
 ],
-
 export default function AIServices() {
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>

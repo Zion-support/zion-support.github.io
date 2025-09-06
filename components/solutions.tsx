@@ -2,12 +2,7 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Heart, DollarSign, Factory, ShoppingCart, Building2, 
-  GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle,
-  Users, Globe, Cpu, Database, Network, Target
-} from 'lucide-react',
-
+import { Heart, DollarSign, Factory, ShoppingCart, Building2, GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle, Users, Globe, Cpu, Database, Network, Target } from 'lucide-react';
 const SolutionsPage: React.FC = () => {
   const industrySolutions = [
     {
@@ -15,7 +10,7 @@ const SolutionsPage: React.FC = () => {
       solutions: [
         {
           name: 'Healthcare AI Solutions',
-          description: 'AI-powered diagnostic tools, patient care optimization, and medical research platforms',
+          description: 'AI-powered diagnostic tools, patient care optimization, and medical research platforms';
           href: '/healthcare-solutions',
           featured: true,
           icon: <Heart className="w-6 h-6" />
@@ -179,7 +174,6 @@ const SolutionsPage: React.FC = () => {
       ]
     }
   ],
-
   return (
     <UltraFuturisticBackground>
       <div className="min-h-screen">
@@ -416,5 +410,4 @@ const SolutionsPage: React.FC = () => {
     </Layout>
   )
 },
-
 export default Solutions;

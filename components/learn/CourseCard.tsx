@@ -1,4 +1,4 @@
-import Link from 'next/link',
+import Link from 'next/link';
 export type Course = {
   id: string,
   title: string,
@@ -8,8 +8,7 @@ export type Course = {
   category: string,
   certificationBadge: string,
   description?: string
-},
-
+};
 export default function CourseCard({ course }: { course: Course }) {
   return (
     <div className="border rounded-lg p-4 hover:shadow-md transition">

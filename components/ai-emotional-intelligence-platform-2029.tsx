@@ -1,15 +1,10 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Brain, Heart, Eye, MessageCircle, Users, Shield, 
-  Zap, TrendingUp, CheckCircle, ArrowRight, Star,
-  Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3,
-  Smartphone, Database, Cloud, Server, ShieldCheck
-} from 'lucide-react',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Brain, Heart, Eye, MessageCircle, Users, Shield, Zap, TrendingUp, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3, Smartphone, Database, Cloud, Server, ShieldCheck } from 'lucide-react';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 const AIEmotionalIntelligencePlatform2029 = () => {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -17,12 +12,11 @@ const AIEmotionalIntelligencePlatform2029 = () => {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
   const features = [
     {
       icon: Brain,
       title: 'Real-time Emotion Detection',
-      description: 'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time',
+      description: 'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time';
       color: 'from-violet-500 to-purple-600'
     },
     {
@@ -34,7 +28,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
     {
       icon: Eye,
       title: 'Multi-modal Emotion Analysis',
-      description: 'Combines visual, auditory, and textual data for comprehensive emotion understanding',
+      description: 'Combines visual, auditory, and textual data for comprehensive emotion understanding';
       color: 'from-blue-500 to-cyan-600'
     },
     {
@@ -56,11 +50,9 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       color: 'from-indigo-500 to-purple-600'
     }
   ],
-
   const benefits = [
     'Improve customer satisfaction by 85%Reduce customer churn by 60%Enhance team collaboration and communicationOptimize marketing campaigns with emotional insightsImprove mental health support and monitoringCreate empathetic AI interactions and experiences'
-  ],
-
+  ];
   const useCases = [
     {
       title: 'Customer Service Automation',
@@ -99,31 +91,30 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       color: 'from-teal-500 to-cyan-600'
     }
   ],
-
   const pricing = {
     basic: {
       name: 'Starter',
-      price: '$1,999',
+      price: '$1,999';
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
         'Up to 1,000 emotional interactions/monthBasic emotion detection (5 emotions)Email supportStandard API accessBasic analytics dashboard'
-      ],
+      ];
       popular: false
     },
     professional: {
       name: 'Professional',
-      price: '$3,999',
+      price: '$3,999';
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
         'Up to 10,000 emotional interactions/monthAdvanced emotion detection (15+ emotions)Priority supportFull API access with webhooksAdvanced analytics and reportingCustom emotion modelsMulti-language support'
-      ],
+      ];
       popular: true
     },
     enterprise: {
       name: 'Enterprise',
-      price: '$7,999',
+      price: '$7,999';
       period: '/month',
       description: 'For large organizations with custom needs',
       features: [
@@ -132,7 +123,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       popular: false
     }
   },
-
   return (
     <>
       <Head>
@@ -538,5 +528,4 @@ const AIEmotionalIntelligencePlatform2029 = () => {
     </>
   )
 },
-
-export default AIEmotionalIntelligencePlatform2029,
+export default AIEmotionalIntelligencePlatform2029;

@@ -1,81 +1,79 @@
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import Button from '../components/ui/Button',
-import Card from '../components/ui/Card',
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react',
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
-import { extraServices } from '../data/extra-services',
-import { additionalEnhancedServices } from '../data/additional-real-services',
-import { newlyAddedServices } from '../data/newly-added-services',
-import { curatedMarketServices } from '../data/curated-market-services',
-import { new2025Services } from '../data/new-2025-services',
-import { marketValidatedServices } from '../data/market-validated-services',
-import { moreRealServices2025 } from '../data/more-real-services-2025',
-import { verified2025Additions } from '../data/verified-2025-additions',
-import { realServicesQ12025 } from '../data/real-services-q1-2025',
-import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025',
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2',
-import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025',
-import { additionalLiveServices2025 } from '../data/additional-live-services-2025',
-import { real2025Q2Additions } from '../data/real-2025-q2-additions',
-import { augmentedServicesBatch3 } from '../data/real-augmented-services-2025-batch3',
-import { realServicesQ22025 } from '../data/real-services-q2-2025',
-import { realServicesQ32025 } from '../data/real-services-q3-2025',
-import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-additions',
-import { realMarketServicesExtended } from '../data/real-market-services-extended',
-import { real2026Additions } from '../data/real-2026-additions',
-import { real2026Q1Additions } from '../data/real-2026-q1-additions',
-import { added2026Q2Services } from '../data/added-2026-q2-services',
-import { real2026Q3Additions } from '../data/real-2026-q3-additions',
-import { real2026Q4Additions } from '../data/real-2026-q4-additions',
-import { real2026Q4NewServices } from '../data/real-2026-q4-new-services',
-import { real2027Q1Additions } from '../data/real-2027-q1-additions',
-import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025',
-import fs from 'fs',
-import path from 'path',
-type Service = typeof enhancedRealMicroSaasServices[number],
-
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { extraServices } from '../data/extra-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { newlyAddedServices } from '../data/newly-added-services';
+import { curatedMarketServices } from '../data/curated-market-services';
+import { new2025Services } from '../data/new-2025-services';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { moreRealServices2025 } from '../data/more-real-services-2025';
+import { verified2025Additions } from '../data/verified-2025-additions';
+import { realServicesQ12025 } from '../data/real-services-q1-2025';
+import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
+import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
+import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025';
+import { additionalLiveServices2025 } from '../data/additional-live-services-2025';
+import { real2025Q2Additions } from '../data/real-2025-q2-additions';
+import { augmentedServicesBatch3 } from '../data/real-augmented-services-2025-batch3';
+import { realServicesQ22025 } from '../data/real-services-q2-2025';
+import { realServicesQ32025 } from '../data/real-services-q3-2025';
+import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-additions';
+import { realMarketServicesExtended } from '../data/real-market-services-extended';
+import { real2026Additions } from '../data/real-2026-additions';
+import { real2026Q1Additions } from '../data/real-2026-q1-additions';
+import { added2026Q2Services } from '../data/added-2026-q2-services';
+import { real2026Q3Additions } from '../data/real-2026-q3-additions';
+import { real2026Q4Additions } from '../data/real-2026-q4-additions';
+import { real2026Q4NewServices } from '../data/real-2026-q4-new-services';
+import { real2027Q1Additions } from '../data/real-2027-q1-additions';
+import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025';
+import fs from 'fs';
+import path from 'path';
+type Service = typeof enhancedRealMicroSaasServices[number];
   const service = useMemo(() => {
-    if (!slug) return undefined,
+    if (!slug) return undefined;
     const all: any[] = ([] as any[])
       .concat(
         enhancedRealMicroSaasServices as any,
-        extraServices as any,
-        additionalEnhancedServices as any,
-        innovativeAIServices as any,
-        quantumSpaceServices as any,
-        enterpriseITServices as any,
-        newRealServices as any,
-        marketReadyServices as any,
-        realMarketServices as any,
-        new2025Services as any,
-        newRealInnovations as any,
-        emergingTechnologyServices as any,
-        comprehensiveITSolutions as any,
-        marketValidatedServices as any,
-        curatedMarketServices as any,
-        cuttingEdgeITServices as any,
-        nextGenerationAIServices as any,
-        nextGenAIServices as any,
-        industryRealServices as any,
-        professionalServices as any,
-        realEnterpriseServices2025 as any,
-        augmentedServicesBatch3 as any,
-        real2025Q3Additions as any,
-        realQ4Services2025 as any,
+        extraServices as any;
+        additionalEnhancedServices as any;
+        innovativeAIServices as any;
+        quantumSpaceServices as any;
+        enterpriseITServices as any;
+        newRealServices as any;
+        marketReadyServices as any;
+        realMarketServices as any;
+        new2025Services as any;
+        newRealInnovations as any;
+        emergingTechnologyServices as any;
+        comprehensiveITSolutions as any;
+        marketValidatedServices as any;
+        curatedMarketServices as any;
+        cuttingEdgeITServices as any;
+        nextGenerationAIServices as any;
+        nextGenAIServices as any;
+        industryRealServices as any;
+        professionalServices as any;
+        realEnterpriseServices2025 as any;
+        augmentedServicesBatch3 as any;
+        real2025Q3Additions as any;
+        realQ4Services2025 as any;
         require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
-      ),
+      );
     const byLink = all.find(s => {
       try {
-        const url = new URL(s.link),
+        const url = new URL(s.link);
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
       } catch {
         return false
       }
-    }),
-    if (byLink) return byLink,
-
+    });
+    if (byLink) return byLink;
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
@@ -112,18 +110,18 @@ function toSlug(value: string): string {
 }
 
 function getExistingRootPageSlugs(): Set<string> {
-	const pagesDir = path.join(process.cwd(), 'pages'),
+	const pagesDir = path.join(process.cwd(), 'pages');
 	const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
-	const reserved = new Set<string>(['apireportsservices']),
-	const slugs = new Set<string>(),
+	const reserved = new Set<string>(['apireportsservices']);
+	const slugs = new Set<string>();
 	for (const entry of entries) {
-		if (entry.name.startsWith('_')) continue,
-		if (reserved.has(entry.name)) continue,
+		if (entry.name.startsWith('_')) continue;
+		if (reserved.has(entry.name)) continue;
 		// Files at root
 		if (entry.isFile()) {
-			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/),
+			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
 			if (m) {
-				const base = m[1],
+				const base = m[1];
 				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
 					slugs.add(base)
 				}
@@ -138,14 +136,14 @@ function getExistingRootPageSlugs(): Set<string> {
 }
 
 export async function getStaticPaths() {
-	const services = getAllServices(),
-	const slugs = new Set<string>(),
+	const services = getAllServices();
+	const slugs = new Set<string>();
 	for (const s of services) {
-		if (s.id) slugs.add(toSlug(s.id)),
+		if (s.id) slugs.add(toSlug(s.id));
 		else if (s.name) slugs.add(toSlug(s.name))
 	}
-	const existing = getExistingRootPageSlugs(),
-	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug)),
+	const existing = getExistingRootPageSlugs();
+	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
 	return {
 		paths: filtered.map((slug) => ({ params: { slug } })),
 		fallback: false
@@ -154,7 +152,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
 	const services = getAllServices(),
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
 	if (!service) {
 		return { notFound: true }
@@ -178,7 +176,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 						__html: JSON.stringify(
 							{
 								"@context": "https://schema.org",
-								"@type": "Service",
+								"@type": "Service";
 								name: service.name,
 								description: service.tagline || service.description,
 								url: canonical,
@@ -189,12 +187,12 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 								},
 								offers: {
 									"@type": "Offer",
-									price: (service.price || '').replace(/[^0-9.]/g, ''),
+									price: (service.price || '').replace(/[^0-9.]/g, '');
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
 								}
 							},
-							null,
+							null;
 							2
 							)
 						}}

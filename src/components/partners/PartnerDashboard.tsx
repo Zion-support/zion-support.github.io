@@ -1,6 +1,6 @@
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 
 export function PartnerDashboard() {
@@ -13,7 +13,6 @@ export function PartnerDashboard() {
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   },
-  
   return (
     <div className="space-y-6">
       {/* Stats Overview */}

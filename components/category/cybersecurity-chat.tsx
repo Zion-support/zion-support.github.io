@@ -1,6 +1,6 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 const CybersecurityChat: NextPage = () => {
   return (
     <div>
@@ -17,5 +17,4 @@ const CybersecurityChat: NextPage = () => {
     </div>
   )
 },
-
-export default CybersecurityChat,
+export default CybersecurityChat;

@@ -1,5 +1,5 @@
-import React from 'react',
-import Link from 'next/link',
+import React from 'react';
+import Link from 'next/link';
 interface ContentCardProps {
   title: string,
   description: string,
@@ -7,24 +7,24 @@ interface ContentCardProps {
   icon: string,
   color: string,
   glow: string,
-  date?: string,
-  category?: string
+  date?: string;
+  category?: string;
 }
 
 const ContentCard: React.FC<ContentCardProps> = ({
   title,
-  description,
-  href,
-  icon,
-  color,
-  glow,
-  date,
+  description;
+  href;
+  icon;
+  color;
+  glow;
+  date;
   category
 }) => {
   return (
     <Link
       href={href}
-      className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-500 hover-lift ${glow}`}
+      className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover: border-cyan-400/30 transition-all duration-500 hover-lift ${glow}`}
     >
       {/* Background Glow */}
       <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-cyan-500/0 via-cyan-400/10 to-cyan-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -70,5 +70,4 @@ const ContentCard: React.FC<ContentCardProps> = ({
     </Link>
   )
 },
-
-export default ContentCard,
+export default ContentCard;

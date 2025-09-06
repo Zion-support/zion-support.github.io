@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
+  const currentYear = new Date().getFullYear(),
   const services = [
     { name: 'AI Development', href: '/services/ai-development' },
     { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
@@ -41,7 +40,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
@@ -142,7 +141,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-300 text-sm">
               &copy; {currentYear} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex space-x-6 mt-4 md: mt-0">
               <Link href="/privacy" className="text-gray-300 hover:text-blue-400 text-sm">
                 Privacy Policy
               </Link>
@@ -157,7 +156,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
+  ),
 };
 
 export default Footer;

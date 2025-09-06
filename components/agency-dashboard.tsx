@@ -1,19 +1,16 @@
-import type { GetServerSideProps } from 'next',
-import { FormEvent, useEffect, useState } from 'react',
-import type { Vendor } from '../utils/vendor-types',
+import type { GetServerSideProps } from 'next';
+import { FormEvent, useEffect, useState } from 'react';
+import type { Vendor } from '../utils/vendor-types';
 type Props = { vendor: Vendor | null },
-
 export default function AgencyDashboardPage({ vendor }: Props) {
-  const [activeVendor, setActiveVendor] = useState(vendor),
-  const [pkgTitle, setPkgTitle] = useState(''),
-  const [pkgDesc, setPkgDesc] = useState(''),
-  const [pkgPrice, setPkgPrice] = useState<number | ''>(''),
-
-  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>,
-
+  const [activeVendor, setActiveVendor] = useState(vendor);
+  const [pkgTitle, setPkgTitle] = useState('');
+  const [pkgDesc, setPkgDesc] = useState('');
+  const [pkgPrice, setPkgPrice] = useState<number | ''>('');
+  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
   async function saveProfile(e: FormEvent<HTMLFormElement>) {
     e.preventDefault(),
-    const formData = new FormData(e.currentTarget),
+    const formData = new FormData(e.currentTarget);
     const updated = {
       ...activeVendor,
       name: String(formData.get('name') || activeVendor.name),
@@ -27,15 +24,15 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   }
 
   function addPackage() {
-    if (!pkgTitle || !pkgPrice || !activeVendor) return,
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
     const packages = [...(activeVendor.packages || []), {
       id: `pkg_${Date.now()}`,
       title: pkgTitle,
       description: pkgDesc,
       priceUsd: Number(pkgPrice)}],
-    setActiveVendor({ ...activeVendor, packages }),
-    setPkgTitle(''),
-    setPkgDesc(''),
+    setActiveVendor({ ...activeVendor, packages });
+    setPkgTitle('');
+    setPkgDesc('');
     setPkgPrice('')
   }
 
@@ -99,11 +96,10 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 }
 
 function Pipeline({ vendorId }: { vendorId: string }) {
-  const [items, setItems] = useState<any[]>([]),
-
+  const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
-    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`),
-    const data = await res.json(),
+    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
+    const data = await res.json();
     setItems(data.items || [])
   }
 
@@ -111,12 +107,11 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     await fetch('/api/vendors/update-pipeline', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ itemId, status })}),
+      body: JSON.stringify({ itemId, status })});
     fetchItems()
   }
 
-  useEffect(() => { fetchItems() }, []),
-
+  useEffect(() => { fetchItems() }, []);
   return (
     <div className="space-y-2">
       {items.length === 0 && <div className="text-sm text-gray-500">No leads yet.</div>}

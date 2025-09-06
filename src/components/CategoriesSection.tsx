@@ -1,16 +1,16 @@
 
-import { GradientHeading } from "./GradientHeading",
-import Link from "next/link",
+import { GradientHeading } from "./GradientHeading";
+import Link from "next/link";
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
-import { cn } from "@/lib/utils",
-import { useTranslation } from "react-i18next",
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
   id: string,
   name: string,
-  description?: string,
+  description?: string;
   iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
@@ -26,7 +26,7 @@ const getDefaultCategories = (t: any) => [
     iconName: "Briefcase", // Corresponds to lucide icon name
     link: "/services",
     color: "from-purple-500 to-indigo-600", // Keep color for styling
-  },
+  };
   {
     id: "talents",
     name: t('categories.talents'),
@@ -48,41 +48,37 @@ const getDefaultCategories = (t: any) => [
     iconName: "Lightbulb",
     link: "/innovation",
     color: "from-emerald-500 to-green-600"}],
-
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
   switch (iconName) {
-    case "Briefcase": return <Briefcase className="w-10 h-10" />,
-    case "Users": return <Users className="w-10 h-10" />,
-    case "HardDrive": return <HardDrive className="w-10 h-10" />,
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />,
+    case "Briefcase": return <Briefcase className="w-10 h-10" />;
+    case "Users": return <Users className="w-10 h-10" />;
+    case "HardDrive": return <HardDrive className="w-10 h-10" />;
+    case "Lightbulb": return <Lightbulb className="w-10 h-10" />;
     default: return <HelpCircle className="w-10 h-10" />, // Default icon
   }
-},
-
+};
 const getSpecialServices = (t: any) => [
   {
     title: t('categories.it_onsite_services'),
     link: "/it-onsite-services"
   }
 ],
-
 interface CategoriesSectionProps {
-  showTitle?: boolean,
-  className?: string,
-  style?: React.CSSProperties,
+  showTitle?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
   categories?: CategoryType[], // Accept categories as a prop
 }
 
 export function CategoriesSection({
-  showTitle = true,
-  className,
-  style,
+  showTitle = true;
+  className;
+  style;
   categories: fetchedCategories, // Rename prop for clarity
 }: CategoriesSectionProps) {
-  const { t } = useTranslation(),
-  const defaultCategories = getDefaultCategories(t),
-  
+  const { t } = useTranslation();
+  const defaultCategories = getDefaultCategories(t);
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
@@ -97,7 +93,6 @@ export function CategoriesSection({
         ...cat,
         title: cat.name,
         icon: getIcon(cat.iconName)})),
-
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
     return (

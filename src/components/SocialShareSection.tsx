@@ -1,30 +1,25 @@
 
-import { Button } from "./ui/button",
+import { Button } from "./ui/button";
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
-import { toast } from "./ui/use-toast",
-import { useTranslation } from 'react-i18next',
+import { toast } from "./ui/use-toast";
+import { useTranslation } from 'react-i18next';
 export function SocialShareSection() {
-  const { t } = useTranslation(),
-  
+  const { t } = useTranslation();
   // Current URL is not available during SSR, guard with typeof check
   const shareUrl = typeof window !== 'undefined'
     ? encodeURIComponent(window.location.href)
-    : '',
-  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace"),
-  
+    : '';
+  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
   // Social sharing functions
   const shareToTwitter = () => {
     window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank")
-  },
-  
+  };
   const shareToFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")
-  },
-  
+  };
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
-  },
-  
+  };
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
       .then(() => {
@@ -40,11 +35,10 @@ export function SocialShareSection() {
         })
       })
   },
-
   const shareLinks = [
     {
       name: "Twitter",
-      icon: <Twitter className="h-5 w-5" aria-hidden="true" />, 
+      icon: <Twitter className="h-5 w-5" aria-hidden="true" />,
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",
       onClick: shareToTwitter
     },
@@ -66,7 +60,6 @@ export function SocialShareSection() {
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
       onClick: copyLinkToClipboard
     }],
-
   return (
     <section className="py-12 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

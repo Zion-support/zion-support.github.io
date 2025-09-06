@@ -1,5 +1,5 @@
-import { useState } from "react",
-import Head from "next/head",
+import { useState } from "react";
+import Head from "next/head";
 export default function Partners() {
   const [form, setForm] = useState({
     name: "",
@@ -7,13 +7,12 @@ export default function Partners() {
     pocName: "",
     pocEmail: "",
     useCaseType: "Education Partnership"}),
-  const [result, setResult] = useState<any>(null),
-  const [loading, setLoading] = useState(false),
-
+  const [result, setResult] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
   async function submit(e: React.FormEvent) {
     e.preventDefault(),
-    setLoading(true),
-    setResult(null),
+    setLoading(true);
+    setResult(null);
     const res = await fetch("/api/partners/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -22,8 +21,8 @@ export default function Partners() {
         entityType: form.entityType,
         useCaseType: form.useCaseType,
         pointOfContact: { name: form.pocName, email: form.pocEmail }})}),
-    const data = await res.json(),
-    setLoading(false),
+    const data = await res.json();
+    setLoading(false);
     setResult(data)
   }
 

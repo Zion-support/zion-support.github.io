@@ -1,52 +1,48 @@
-import { useEffect, useMemo, useRef, useState } from 'react',
-import { useRouter } from 'next/router',
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
 export default function GlobalSearchBar() {
-  const router = useRouter(),
-  const [query, setQuery] = useState(''),
-  const [suggestions, setSuggestions] = useState<string[]>([]),
-  const [open, setOpen] = useState(false),
-  const controller = useRef<AbortController | null>(null),
-
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [open, setOpen] = useState(false);
+  const controller = useRef<AbortController | null>(null);
   useEffect(() => {
     if (!query) {
-      setSuggestions([]),
+      setSuggestions([]);
       return
     }
-    controller.current?.abort(),
-    controller.current = new AbortController(),
+    controller.current?.abort();
+    controller.current = new AbortController();
     const run = async () => {
       try {
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
-        const j = await r.json(),
-        setSuggestions(j.suggestions || []),
+        const j = await r.json();
+        setSuggestions(j.suggestions || []);
         setOpen(true)
       } catch {}
-    },
-    const id = setTimeout(run, 150),
+    };
+    const id = setTimeout(run, 150);
     return () => clearTimeout(id)
-  }, [query]),
-
+  }, [query]);
   const onSubmit = (e?: React.FormEvent) => {
-    e?.preventDefault(),
-    if (!query.trim()) return,
+    e?.preventDefault();
+    if (!query.trim()) return;
     fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
-    router.push(`/search?q=${encodeURIComponent(query)}`),
+    router.push(`/search?q=${encodeURIComponent(query)}`);
     setOpen(false)
-  },
-
+  };
   const startVoice = () => {
-    if (typeof window === 'undefined') return,
+    if (typeof window === 'undefined') return;
     const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
-    if (!Speech) return,
-    const rec = new Speech(),
-    rec.lang = 'en-US',
+    if (!Speech) return;
+    const rec = new Speech();
+    rec.lang = 'en-US';
     rec.onresult = (e: any) => {
       const transcript = e.results?.[0]?.[0]?.transcript || '',
       if (transcript) setQuery((q) => (q ? q + ' ' + transcript : transcript))
-    },
+    };
     rec.start()
-  },
-
+  };
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">
       <input
@@ -69,8 +65,8 @@ export default function GlobalSearchBar() {
                 <button
                   type="button"
                   onClick={() => {
-                    setQuery(s),
-                    setOpen(false),
+                    setQuery(s);
+                    setOpen(false);
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"

@@ -1,9 +1,9 @@
 
-import React from 'react',
+import React from 'react';
 import { FileText } from 'lucide-react'
-import { ResumeOption } from '../resume-selector/types',
-import { ResumePreviewCard } from './ResumePreviewCard',
-import { Resume } from '@/types/resume',
+import { ResumeOption } from '../resume-selector/types';
+import { ResumePreviewCard } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
 interface SelectResumeSectionProps {
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
@@ -14,9 +14,9 @@ interface SelectResumeSectionProps {
 
 export function SelectResumeSection({
   resumeOptions,
-  selectedResume,
-  handleResumeSelect,
-  handleDownloadResume,
+  selectedResume;
+  handleResumeSelect;
+  handleDownloadResume;
   isLoading
 }: SelectResumeSectionProps) {
   return (

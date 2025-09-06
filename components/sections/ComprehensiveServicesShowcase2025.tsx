@@ -1,13 +1,13 @@
-import React from 'react',
-import { motion } from 'framer-motion',
-import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react',
-import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025',
-import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025',
-import { blockchainWeb32025 } from '../../data/blockchain-web3-2025',
-import { iotEdgeComputing2025 } from '../../data/iot-edge-computing-2025',
-import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025',
-import { fintechFinancial2025 } from '../../data/fintech-financial-2025',
-import { educationElearning2025 } from '../../data/education-elearning-2025',
+import React from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
+import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
+import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
+import { blockchainWeb32025 } from '../../data/blockchain-web3-2025';
+import { iotEdgeComputing2025 } from '../../data/iot-edge-computing-2025';
+import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025';
+import { fintechFinancial2025 } from '../../data/fintech-financial-2025';
+import { educationElearning2025 } from '../../data/education-elearning-2025';
 const ComprehensiveServicesShowcase2025 = () => {
   const serviceCategories = [
     {
@@ -60,7 +60,6 @@ const ComprehensiveServicesShowcase2025 = () => {
       description: 'Advanced learning and educational technology'
     }
   ],
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -70,7 +69,6 @@ const ComprehensiveServicesShowcase2025 = () => {
       }
     }
   },
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -81,7 +79,6 @@ const ComprehensiveServicesShowcase2025 = () => {
       }
     }
   },
-
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Elements */}
@@ -272,5 +269,4 @@ const ComprehensiveServicesShowcase2025 = () => {
     </section>
   )
 },
-
-export default ComprehensiveServicesShowcase2025,
+export default ComprehensiveServicesShowcase2025;

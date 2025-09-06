@@ -4,24 +4,17 @@ import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 =======
-import React from 'react',
-import { motion } from 'framer-motion',
-import { 
-  Phone, Mail, MapPin, Globe, 
-  Twitter, Linkedin, Facebook, Instagram,
-  ArrowRight, Rocket, Brain, Cpu, Shield,
-  Star, Users, TrendingUp, Zap
-} from 'lucide-react',
-
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Twitter, Linkedin, Facebook, Instagram, ArrowRight, Rocket, Brain, Cpu, Shield, Star, Users, TrendingUp, Zap } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories = [
   {
     title: 'Next-Generation AI',
@@ -51,7 +44,6 @@ const serviceCategories = [
     ]
   }
 ],
-
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
@@ -60,7 +52,6 @@ const companyLinks = [
   { name: 'Blog', href: '/blog' },
   { name: 'Resources', href: '/resources' }
 ],
-
 const supportLinks = [
   { name: 'Contact Support', href: '/contact' },
   { name: 'Documentation', href: '/docs' },
@@ -69,14 +60,12 @@ const supportLinks = [
   { name: 'Security', href: '/security' },
   { name: 'Privacy Policy', href: '/privacy' }
 ],
-
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
   { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Globe }],
-
 export default function EnhancedFooter() {
-  const currentYear = new Date().getFullYear(),
+  const currentYear = new Date().getFullYear();
 >>>>>>> pr-11992
 
   const services = [
@@ -398,7 +387,7 @@ export default function EnhancedFooter() {
             <p className="text-gray-300 text-sm">
               &copy; {currentYear} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex space-x-6 mt-4 md: mt-0">
               <Link href="/privacy" className="text-gray-300 hover:text-blue-400 text-sm">
 =======
             
@@ -422,7 +411,7 @@ export default function EnhancedFooter() {
       </div>
     </footer>
 <<<<<<< HEAD
-  );
+  ),
 };
 
 export default EnhancedFooter;

@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next",
-import { getWalletSummary } from "../../../utils/token/service",
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getWalletSummary } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId } = req.query,
   if (!userId || typeof userId !== "string") {

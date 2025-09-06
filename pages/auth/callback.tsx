@@ -1,5 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next';
+import Head from 'next/head';
 const Callback: NextPage = () => {
   return (
     <div>
@@ -15,5 +15,4 @@ const Callback: NextPage = () => {
     </div>
   )
 },
-
-export default Callback,
+export default Callback;

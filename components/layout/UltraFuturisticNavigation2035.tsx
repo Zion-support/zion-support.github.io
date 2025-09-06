@@ -1,26 +1,15 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
-import { 
-  Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
-  Brain, Rocket, Shield, Zap, Target, Atom, BookOpen,
-  Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles, 
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb,
-  Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon,
-  User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, 
-  Code, Database, Network, Server, Monitor, Smartphone,
-  Camera, Gamepad2, Palette, Music, Film, BookOpenCheck,
-  Building, MessageCircle
-} from 'lucide-react',
-
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight, Brain, Rocket, Shield, Zap, Target, Atom, BookOpen, Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle } from 'lucide-react';
 interface NavigationItem {
   name: string,
   href: string,
-  icon?: React.ReactNode,
-  description?: string,
-  children?: NavigationItem[],
-  badge?: string,
-  title?: string,
+  icon?: React.ReactNode;
+  description?: string;
+  children?: NavigationItem[];
+  badge?: string;
+  title?: string;
   featured?: boolean
 }
 
@@ -30,7 +19,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const navigationItems: NavigationItem[] = [
   {
     name: 'Pricing',
@@ -46,14 +34,14 @@ const navigationItems: NavigationItem[] = [
     name: 'Resources',
     href: '/resources',
     icon: <BookOpen className="w-5 h-5" />,
-    description: 'Guides, reports and tools',
+    description: 'Guides, reports and tools';
     children: [
       { name: 'Blog', href: '/blog', description: 'Insights and updates' },
       { name: 'Case Studies', href: '/case-studies', description: 'Proven results' },
       { name: 'Developer', href: '/developer', description: 'Docs and SDKs' },
       { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' }
     ]
-  },
+  };
   {
     name: 'Contact',
     href: '/contact',
@@ -72,13 +60,13 @@ const navigationItems: NavigationItem[] = [
     description: 'Browse by category',
     badge: 'New',
     children: [
-      { name: 'AI & Data', href: '/services?filter=ai-consciousness', description: 'AI, data, ML services' },
-      { name: 'Enterprise IT', href: '/services?filter=enterprise-it', description: 'Infra, security, platforms' },
-      { name: 'Quantum & Emerging', href: '/services?filter=quantum-emerging', description: 'Quantum, space, frontier' },
+      { name: 'AI & Data', href: '/services?filter=ai-consciousness', description: 'AI, data, ML services' };
+      { name: 'Enterprise IT', href: '/services?filter=enterprise-it', description: 'Infra, security, platforms' };
+      { name: 'Quantum & Emerging', href: '/services?filter=quantum-emerging', description: 'Quantum, space, frontier' };
       { name: 'Micro SAAS', href: '/services?filter=micro-saas', description: 'Business accelerators' },
       { name: 'Creative & Media', href: '/services?filter=creative-media', description: 'Content, media, design' }
     ]
-  },
+  };
   {
     name: 'All Services',
     href: '/comprehensive-services-showcase-2025',
@@ -127,7 +115,7 @@ const navigationItems: NavigationItem[] = [
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework', description: 'Ethical AI frameworks' },
       { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' }
     ]
-  },
+  };
   {
     name: 'Micro SAAS Solutions',
     href: '/micro-saas',
@@ -144,12 +132,12 @@ const navigationItems: NavigationItem[] = [
       { name: 'CRM Intelligence Suite', href: '/smart-crm-intelligence-suite', description: 'Transform your CRM with AI' },
       { name: 'Content Automation Platform', href: '/intelligent-content-automation-platform', description: 'AI-powered content management' },
       { name: 'Decision Engine', href: '/ai-powered-decision-engine', description: 'AI-powered business decisions' },
-      { name: 'Helpdesk & Support', href: '/helpdesk-automation', description: 'AI helpdesk, ticketing, KB, and chat' },
+      { name: 'Helpdesk & Support', href: '/helpdesk-automation', description: 'AI helpdesk, ticketing, KB, and chat' };
       { name: 'Learning Management (LMS)', href: '/lms-platform', description: 'Adaptive training and certifications' },
-      { name: 'E‑commerce Returns', href: '/ecommerce-returns-management', description: 'Automated returns, labels, and RMAs' },
+      { name: 'E‑commerce Returns', href: '/ecommerce-returns-management', description: 'Automated returns, labels, and RMAs' };
       { name: 'SEO Content Optimizer', href: '/seo-content-optimizer', description: 'On-page AI scoring and fixes' },
       { name: 'Keyword Research Engine', href: '/keyword-research-engine', description: 'Low-competition keywords discovery' },
-      { name: 'Privacy Analytics Suite', href: '/analytics-suite', description: 'Cookie-less, privacy-friendly analytics' },
+      { name: 'Privacy Analytics Suite', href: '/analytics-suite', description: 'Cookie-less, privacy-friendly analytics' };
       { name: 'Invoice Studio', href: '/invoice-studio', description: 'Instant branded invoices and payments' }
     ]
   },
@@ -218,7 +206,7 @@ const navigationItems: NavigationItem[] = [
     name: 'Resources',
     href: '/resources',
     icon: <BookOpen className="w-5 h-5" />,
-    description: 'Documentation, support, and learning resources',
+    description: 'Documentation, support, and learning resources';
     children: [
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
       { name: 'API Reference', href: '/api-documentation', description: 'API documentation' },
@@ -230,7 +218,6 @@ const navigationItems: NavigationItem[] = [
     ]
   }
 ],
-
 const quickActions = [
   { name: 'Get Started', href: '/contact', icon: <ArrowRight className="w-4 h-4" />, primary: true },
   { name: 'Get a Quote', href: '/quote', icon: <DollarSign className="w-4 h-4" /> },
@@ -242,34 +229,27 @@ const quickActions = [
   { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" /> },
   { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
 ],
-
 const UltraFuturisticNavigation2035: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false),
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-  const [isScrolled, setIsScrolled] = useState(false),
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
-    },
-
-    window.addEventListener('scroll', handleScroll),
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
+  }, []);
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name)
   },
-
   const closeDropdowns = () => {
     setActiveDropdown(null)
-  },
-
+  };
   const closeMobileMenu = () => {
-    setIsOpen(false),
+    setIsOpen(false);
     closeDropdowns()
-  },
-
+  };
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -545,5 +525,4 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     </nav>
   )
 },
-
-export default UltraFuturisticNavigation2035,
+export default UltraFuturisticNavigation2035;

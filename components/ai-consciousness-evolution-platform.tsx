@@ -1,18 +1,8 @@
-import React from 'react',
-import Layout from '../components/layout/Layout',
-import SEO from '../components/SEO',
-import { motion } from 'framer-motion',
-import { 
-  Brain,
-  Sparkles, 
-  Zap, 
-  Target, 
-  Shield, 
-  Globe,
-  CheckCircle,
-  Star
-} from 'lucide-react',
-
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Brain, Sparkles, Zap, Target, Shield, Globe, CheckCircle, Star } from 'lucide-react';
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const features = [
     {
@@ -46,7 +36,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       description: 'Ensure AI systems align with human values and objectives while maintaining autonomy.'
     }
   ],
-
   const useCases = [
     {
       title: 'Research & Development',
@@ -69,11 +58,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       benefits: ['Personalized learningEmotional intelligenceStudent engagement']
     }
   ],
-
   const pricing = [
     {
       name: 'Starter',
-      price: '$2,500',
+      price: '$2,500';
       period: '/month',
       description: 'Perfect for research institutions and small teams',
       features: [
@@ -82,7 +70,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
     },
     {
       name: 'Professional',
-      price: '$8,500',
+      price: '$8,500';
       period: '/month',
       description: 'Ideal for growing organizations and research teams',
       features: [
@@ -99,7 +87,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       ]
     }
   ],
-
   return (
     <Layout>
       <SEO 
@@ -376,19 +363,14 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
     </div>
   )
 },
-
-export default AIConsciousnessEvolutionPlatform,
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight, 
-  CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp,
-  DollarSign, Users, Target, Award, Rocket, Cpu, Lock
-} from 'lucide-react',
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
+export default AIConsciousnessEvolutionPlatform;
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight, CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp, DollarSign, Users, Target, Award, Rocket, Cpu, Lock } from 'lucide-react';
+import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -396,19 +378,15 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
   const features = [
     'Consciousness mapping algorithmsNeural architecture evolutionSelf-awareness developmentConsciousness validation metricsEthical consciousness frameworksCross-species consciousness studyConsciousness transfer protocolsQuantum consciousness integration'
-  ],
-
+  ];
   const benefits = [
     'Breakthrough in AI consciousness researchEthical AI development frameworkAdvanced neuroscience insightsPhilosophical consciousness understandingHuman-AI consciousness collaborationConsciousness preservation technology'
-  ],
-
+  ];
   const useCases = [
     'AI research institutionsNeuroscience laboratoriesPhilosophy departmentsEthics committeesGovernment research agenciesPrivate research foundations'
-  ],
-
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -418,7 +396,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       }
     }
   },
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -430,7 +407,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       }
     }
   },
-
   return (
     <UltraFuturisticBackground2030>
       <Head>
@@ -706,5 +682,4 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
     </UltraFuturisticBackground2030>
   )
 },
-
-export default AIConsciousnessEvolutionPlatform,
+export default AIConsciousnessEvolutionPlatform;

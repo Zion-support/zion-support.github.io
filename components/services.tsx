@@ -1,60 +1,49 @@
-import { motion, AnimatePresence, Variants } from 'framer-motion',
-import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  DollarSign, Clock, CheckCircle, ArrowRight,
-  Brain, Rocket, Dna, Globe, Shield, Wifi, 
-  Package, Bot, Car, Building2, Monitor, Cpu, 
-  Zap, Atom, Database, Cloud, Lock, Code
-} from 'lucide-react',
-import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground',
-import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard',
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
-import { additionalEnhancedServices } from '../data/additional-real-services',
-import { newRealServices } from '../data/new-real-services',
-import { industryRealServices } from '../data/industry-real-services',
-import { professionalServices } from '../data/professional-services',
-import { nextGenerationAIServices } from '../data/next-generation-ai-services',
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',
-import { marketValidatedServices } from '../data/market-validated-services',
-import { emergingTechnologyServices } from '../data/emerging-technology-services',
-import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions',
-import { curatedMarketServices } from '../data/curated-market-services',
-import { realMarketServices } from '../data/real-market-services',
-import { new2025Services } from '../data/new-2025-services',
-import { newRealInnovations } from '../data/new-real-innovations',
-import { serviceExpansions2025 } from '../data/service-expansions-2025',
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Search, Grid, List,
-  Brain, Atom, Shield, Target, Rocket,
-  ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
-  Users, DollarSign, Settings, TrendingUp, BarChart3, ChevronDown
-} from 'lucide-react',
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
+import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { Search, Filter, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Brain, Rocket, Dna, Globe, Shield, Wifi, Package, Bot, Car, Building2, Monitor, Cpu, Zap, Atom, Database, Cloud, Lock, Code } from 'lucide-react';
+import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
+import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { newRealServices } from '../data/new-real-services';
+import { industryRealServices } from '../data/industry-real-services';
+import { professionalServices } from '../data/professional-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { emergingTechnologyServices } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
+import { curatedMarketServices } from '../data/curated-market-services';
+import { realMarketServices } from '../data/real-market-services';
+import { new2025Services } from '../data/new-2025-services';
+import { newRealInnovations } from '../data/new-real-innovations';
+import { serviceExpansions2025 } from '../data/service-expansions-2025';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Search, Grid, List, Brain, Atom, Shield, Target, Rocket, ArrowRight, Check, Palette, Heart, Truck, GraduationCap, Users, DollarSign, Settings, TrendingUp, BarChart3, ChevronDown } from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 // Import all the new 2025 service data
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',
-import { innovativeITServices2025 } from '../data/2025-innovative-it-services',
-import { emergingTechServices2025 } from '../data/2025-emerging-tech-services',
-import { additionalRealServices2025 } from '../data/2025-additional-real-services',
-import { innovativeAIServices2025 as newInnovativeAIServices } from '../data/2025-innovative-ai-it-services',
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
+import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+import { additionalRealServices2025 } from '../data/2025-additional-real-services';
+import { innovativeAIServices2025 as newInnovativeAIServices } from '../data/2025-innovative-ai-it-services';
 // Import new innovative services
-import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services',
-import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services',
-import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services',
-import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services',
-import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services',
+import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
+import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services';
+import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services';
+import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services';
+import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services';
 // Import existing services for comprehensive coverage
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',
-import { quantumSpaceServices } from '../data/quantum-space-services',
-import { enterpriseITServices } from '../data/enterprise-it-services',
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { quantumSpaceServices } from '../data/quantum-space-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
 const allServices = [
   ...realMicroSaasServices2025,
   ...innovativeAIServices2025,
@@ -63,14 +52,12 @@ const allServices = [
   ...additionalRealServices2025,
   ...newInnovativeAIServices
 ],
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories: Array<{
   id: string,
   title: string,
@@ -92,7 +79,7 @@ const serviceCategories: Array<{
   {
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond',
+    description: 'Quantum computing, DNA computing, and beyond';
     icon: Atom,
     color: 'from-indigo-500 to-blue-500',
     services: [...emergingTechServices2025],
@@ -110,7 +97,7 @@ const serviceCategories: Array<{
   {
     id: 'space-metaverse',
     title: '🌌 Space & Metaverse',
-    description: 'Space mining, metaverse development, and more',
+    description: 'Space mining, metaverse development, and more';
     icon: Rocket,
     color: 'from-teal-500 to-emerald-500',
     services: [...quantumSpaceServices],
@@ -128,7 +115,7 @@ const serviceCategories: Array<{
   {
     id: 'financial-technology',
     title: '💰 Financial Technology',
-    description: 'Innovative fintech, DeFi, and financial services',
+    description: 'Innovative fintech, DeFi, and financial services';
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-500',
     services: [...innovativeFinancialServices2025],
@@ -235,12 +222,11 @@ const serviceCategories: Array<{
     description: 'Quantum-powered data analytics and insights'
   }
 ],
-import { realVerifiedServices } from '../data/real-verified-services',
+import { realVerifiedServices } from '../data/real-verified-services';
 export default function ServicesPage() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('All'),
-  const [sortBy, setSortBy] = useState('name'),
-
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState('name');
   // Combine all services
   const allServices = [
     ...enhancedRealMicroSaasServices,
@@ -265,50 +251,45 @@ export default function ServicesPage() {
     ...serviceExpansions2025,
     ...realVerifiedServices
   ],
-
   // Get unique services by ID
   const uniqueServices = allServices.filter((service, index, self) => 
     index === self.findIndex(s => s.id === service.id)
-  ),
-
+  );
   // Get all categories
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
     Array.isArray(s.category) ? s.category[0] : s.category
   )))],
-
   // Filter and sort services
   const filteredServices = uniqueServices
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || 
                              (Array.isArray(service.category) ? 
                                service.category.includes(selectedCategory) : 
-                               service.category === selectedCategory),
+                               service.category === selectedCategory);
       return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'name':
-          return a.name.localeCompare(b.name),
+          return a.name.localeCompare(b.name);
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0),
+          return (b.rating || 0) - (a.rating || 0);
         default: return 0
       }
     }),
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
   return (
     <UltraFuturisticBackground2029>
       <Head>
@@ -363,7 +344,7 @@ export default function ServicesPage() {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology, 
+                Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology;
                 and micro SAAS services designed to transform your business and drive innovation.
               </p>
               
@@ -532,7 +513,7 @@ export default function ServicesPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {categories.map((category, index) => {
-                  const stats = getCategoryStats(category.id),
+                  const stats = getCategoryStats(category.id);
                   return (
                     <motion.div
                       key={category.id}

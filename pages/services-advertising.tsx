@@ -1,9 +1,8 @@
-import React from 'react',
-import SEO from '../components/SEO',
+import React from 'react';
+import SEO from '../components/SEO';
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
-),
-
+);
 export default function ServicesAdvertisingPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -12,17 +11,16 @@ export default function ServicesAdvertisingPage() {
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
 
   const benefits = [
-    '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling',
+    '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling';
     'Flexible deployment: SaaS or self-hosted options'
   ],
-
 				{/* New: Core micro SaaS and AI additions */}
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
 					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $20–$80/mo</li>
-						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
+						<li>References: {ext('https://buffer.com/pricing')}, {ext('https: //www.hootsuite.com/plans')}</li>
 						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</a></li>
 					</ul>
 				</section>
@@ -77,7 +75,7 @@ export default function ServicesAdvertisingPage() {
         { name: 'Vercel', href: 'https://vercel.com/pricing' }
       ],
       note: 'SMB budgets: $200–$10,000/mo.'
-    },
+    };
     {
       title: 'Product Analytics',
       links: [
@@ -86,7 +84,7 @@ export default function ServicesAdvertisingPage() {
         { name: 'PostHog', href: 'https://posthog.com/pricing' }
       ],
       note: 'SMB budgets: $0–$1,500/mo.'
-    },
+    };
     {
       title: 'Incident & On‑Call',
       links: [
@@ -95,7 +93,7 @@ export default function ServicesAdvertisingPage() {
         { name: 'Better Stack', href: 'https://betterstack.com/status/pricing' }
       ],
       note: 'SMB budgets: $10–$1,000/mo.'
-    },
+    };
     {
       title: 'Email & Deliverability',
       links: [
@@ -114,8 +112,7 @@ export default function ServicesAdvertisingPage() {
       ],
       note: 'SMB budgets: $50–$2,000/mo.'
     }
-  ],
-
+  ];
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
 					<p className="text-slate-300">Concise summaries with citations for PDFs, docs, and URLs with export options.</p>

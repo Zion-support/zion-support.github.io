@@ -1,5 +1,5 @@
-import React from 'react',
-import ServiceLanding from '../components/sections/ServiceLanding',
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function HealthcareAISolutions() {
 	return (
 		<ServiceLanding
@@ -12,10 +12,10 @@ export default function HealthcareAISolutions() {
 			roiNote="Reduce admin time 20–40% and improve throughput"
 			features={[
 				"Clinical note summarization and coding (CPT/ICD)",
-				"Diagnostic support with literature grounding",
-				"Prior auth automation and appeals drafts",
-				"Capacity forecasting and staffing optimization",
-				"HIPAA-compliant data pipelines and audit",
+				"Diagnostic support with literature grounding";
+				"Prior auth automation and appeals drafts";
+				"Capacity forecasting and staffing optimization";
+				"HIPAA-compliant data pipelines and audit";
 				"EHR integrations: HL7/FHIR, Epic, Cerner"
 			]}
 			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}

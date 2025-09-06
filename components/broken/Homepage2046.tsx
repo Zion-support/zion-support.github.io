@@ -1,18 +1,12 @@
-import React, { useState, useEffect } from 'react',
-import Layout from './layout/Layout',
-import { motion, AnimatePresence } from 'framer-motion',
-import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
-  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3, 
-  Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite,
-  Eye, Clock, DollarSign, CheckCircle, ArrowUpRight
-} from 'lucide-react',
-import Link from 'next/link',
+import React, { useState, useEffect } from 'react';
+import Layout from './layout/Layout';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart, Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3, Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite, Eye, Clock, DollarSign, CheckCircle, ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 // Import our new innovative services
-import { innovative2046AIServices } from '../data/innovative-2046-ai-services',
-import { innovative2046ITServices } from '../data/innovative-2046-it-services',
-import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services',
+import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
+import { innovative2046ITServices } from '../data/innovative-2046-it-services';
+import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
 // Enhanced loading component with quantum effects
 const QuantumLoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">
@@ -23,9 +17,9 @@ const QuantumLoadingFallback = () => (
           key={i}
           className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"
           animate={{
-            x: [0, Math.random() * 1200],
-            y: [0, Math.random() * 800],
-            opacity: [0, 1, 0],
+            x: [0, Math.random() * 1200];
+            y: [0, Math.random() * 800];
+            opacity: [0, 1, 0];
             scale: [0, 1, 0]}}
           transition={{
             duration: Math.random() * 4 + 3,
@@ -50,10 +44,10 @@ const QuantumLoadingFallback = () => (
         <motion.div
           animate={{ 
             rotate: 360,
-            scale: [1, 1.2, 1],
+            scale: [1, 1.2, 1];
             boxShadow: [
-              "0 0 20px rgba(6, 182, 212, 0.5)",
-              "0 0 40px rgba(168, 85, 247, 0.8)",
+              "0 0 20px rgba(6, 182, 212, 0.5)";
+              "0 0 40px rgba(168, 85, 247, 0.8)";
               "0 0 20px rgba(6, 182, 212, 0.5)"
             ]
           }}
@@ -92,23 +86,19 @@ const QuantumLoadingFallback = () => (
     </motion.div>
   </div>
 ),
-
 const Homepage2046: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true),
-  const [isVisible, setIsVisible] = useState(false),
-  const [activeSection, setActiveSection] = useState('hero'),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchQuery, setSearchQuery] = useState(''),
-
+  const [isLoading, setIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false),
+      setIsLoading(false);
       setIsVisible(true)
-    }, 2000),
-
+    }, 2000);
     return () => clearTimeout(timer)
-  }, []),
-
+  }, []);
   // Intersection Observer for better performance
   useEffect(() => {
     if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
@@ -122,14 +112,11 @@ const Homepage2046: React.FC = () => {
         },
         { threshold: 0.3 }
       ),
-
-      const sections = document.querySelectorAll('section[id]'),
-      sections.forEach((section) => observer.observe(section)),
-
+      const sections = document.querySelectorAll('section[id]');
+      sections.forEach((section) => observer.observe(section));
       return () => observer.disconnect()
     }
-  }, []),
-
+  }, []);
   if (isLoading) {
     return <QuantumLoadingFallback />
   }
@@ -139,16 +126,13 @@ const Homepage2046: React.FC = () => {
     ...innovative2046ITServices,
     ...innovative2046MicroSAASServices
   ],
-
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()),
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch
-  }),
-
+  });
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))],
-
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">
@@ -163,8 +147,8 @@ const Homepage2046: React.FC = () => {
               key={i}
               className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30"
               animate={{
-                x: [0, Math.random() * 100 - 50],
-                y: [0, Math.random() * 100 - 50],
+                x: [0, Math.random() * 100 - 50];
+                y: [0, Math.random() * 100 - 50];
                 opacity: [0.3, 0.8, 0.3]}}
               transition={{
                 duration: Math.random() * 10 + 10,
@@ -203,7 +187,7 @@ const Homepage2046: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
               >
-                Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>, 
+                Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                 <span className="text-purple-400 font-semibold"> Neural Interfaces</span>, and 
                 <span className="text-cyan-400 font-semibold"> Space Technology</span> Solutions
               </motion.p>
@@ -462,5 +446,4 @@ const Homepage2046: React.FC = () => {
     </Layout>
   )
 },
-
-export default Homepage2046,
+export default Homepage2046;

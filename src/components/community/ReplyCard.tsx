@@ -1,31 +1,30 @@
 
-import { formatDistanceToNow } from "date-fns",
+import { formatDistanceToNow } from "date-fns";
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { ForumReply } from "@/types/community",
-import { cn } from "@/lib/utils",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ForumReply } from "@/types/community";
+import { cn } from "@/lib/utils";
 interface ReplyCardProps {
   reply: ForumReply,
-  onMarkAnswer?: () => void,
-  canMarkAnswer?: boolean,
+  onMarkAnswer?: () => void;
+  canMarkAnswer?: boolean;
   className?: string
 }
 
 export const ReplyCard = ({ 
-  reply,
-  onMarkAnswer, 
-  canMarkAnswer = false,
+  reply;
+  onMarkAnswer;
+  canMarkAnswer = false;
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),
-
   return (
     <Card className={cn(
-      "transition-shadow",
-      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
+      "transition-shadow";
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
       className
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -81,6 +80,5 @@ export const ReplyCard = ({
       </CardFooter>
     </Card>
   )
-},
-
-export default ReplyCard,
+};
+export default ReplyCard;

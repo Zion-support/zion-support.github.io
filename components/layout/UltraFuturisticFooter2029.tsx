@@ -1,20 +1,13 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Phone, Mail, MapPin, Globe, ArrowRight, Star, 
-  Rocket, Brain, Atom, Building, Briefcase, Microscope,
-  Twitter, Facebook, Linkedin, Instagram, Youtube,
-  Github, Zap, Sparkles, Shield, Cpu, Database
-} from 'lucide-react',
-
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Rocket, Brain, Atom, Building, Briefcase, Microscope, Twitter, Facebook, Linkedin, Instagram, Youtube, Github, Zap, Sparkles, Shield, Cpu, Database } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories = [
   {
     title: 'AI & Machine Learning',
@@ -54,7 +47,6 @@ const serviceCategories = [
     ]
   }
 ],
-
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -65,14 +57,12 @@ const quickLinks = [
   { name: 'Support', href: '/support', icon: MessageCircle },
   { name: 'Privacy', href: '/privacy', icon: Shield }
 ],
-
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
 ],
-
 const footerSections = [
   {
     title: 'Company',
@@ -119,7 +109,6 @@ const footerSections = [
     ]
   }
 ],
-
 const UltraFuturisticFooter2029 = () => {
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50">
@@ -298,5 +287,4 @@ const UltraFuturisticFooter2029 = () => {
     </footer>
   )
 },
-
-export default UltraFuturisticFooter2029,
+export default UltraFuturisticFooter2029;

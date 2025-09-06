@@ -1,17 +1,16 @@
 
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { useWhitelabel } from "@/context/WhitelabelContext",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { useWhitelabel } from "@/context/WhitelabelContext";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth",
-import Link from "next/link",
+import { useAuth } from "@/hooks/useAuth";
+import Link from "next/link";
 export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
-  const { isAuthenticated } = useAuth(),
-  
+  const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
+  const { isAuthenticated } = useAuth();
   return (
     <>
       <SEO 
@@ -25,17 +24,17 @@ export default function ZionHireAI() {
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24"
           style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
         >
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="container mx-auto px-4 md: px-6">
             <div className="grid gap-6 md:grid-cols-2 items-center">
               <div className="space-y-4">
                 <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-white">
                   {isWhitelabel ? `${brandName} Recruiting Assistant` : "Zion Hire AI"}
                 </h1>
                 <p className="text-lg text-zion-slate-light max-w-[600px]">
-                  Empower your team with AI-driven talent acquisition. Streamline your hiring process, 
+                  Empower your team with AI-driven talent acquisition. Streamline your hiring process,
                   improve candidate matches, and enhance the applicant experience.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                <div className="flex flex-col sm: flex-row gap-3 pt-4">
                   <Button 
                     size="lg" 
                     className="bg-zion-purple hover:bg-zion-purple-light text-white"
@@ -81,7 +80,7 @@ export default function ZionHireAI() {
               </p>
             </div>
             
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 md: grid-cols-2 lg:grid-cols-3">
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <Briefcase className="h-10 w-10 text-zion-purple mb-2" />
@@ -246,7 +245,7 @@ export default function ZionHireAI() {
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-8">
-              Join leading companies using Zion Hire AI to find better talent faster, 
+              Join leading companies using Zion Hire AI to find better talent faster,
               reduce time-to-hire, and improve candidate experience.
             </p>
             <Button 
