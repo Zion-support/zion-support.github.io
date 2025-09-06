@@ -1,69 +1,49 @@
 import React from 'react'
 
-export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: {
-  children: React.ReactNode;
-  defaultValue?: string;
-  value?: string;
-  onValueChange?: (value: string) => void;
-  className?: string;
-}) {
-  const [activeTab, setActiveTab] = React.useState(defaultValue || '');
+export function Tabs({ children, defaultValue, value, onValueChange, className = '' }) {
+  const [activeTab, setActiveTab] = React.useState(defaultValue || '')
 
-  const handleTabChange = (newValue: string) => {
-    setActiveTab(newValue);
-    onValueChange?.(newValue);
-  };
+  const handleTabChange = (newValue) => {
+    setActiveTab(newValue)
+    onValueChange?.(newValue)
+  }
 
   return (
-    <div className={className}>
-      {React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
-          return React.cloneElement(child, { 
-            activeTab, 
-            onTabChange: handleTabChange 
-          } as any);
-        }
-        return child;
-      })}
+    <div className={`tabs ${className}`}>
+      {React.Children.map(children, child => 
+        React.cloneElement(child, { activeTab, onTabChange: handleTabChange })
+      )}
     </div>
-  );
+  )
 }
 
-export function TabsList({ children, className = '' }: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+export function TabsList({ children, className = '' }) {
   return (
-    <div className={`flex space-x-1 ${className}`}>
+    <div className={`tabs-list ${className}`}>
       {children}
     </div>
-  );
+  )
 }
 
-export function TabsTrigger({ children, value, className = '' }: {
-  children: React.ReactNode;
-  value: string;
-  className?: string;
-}) {
+export function TabsTrigger({ children, value, className = '', activeTab, onTabChange }) {
+  const isActive = activeTab === value
+  
   return (
     <button
-      className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
-        className
-      }`}
+      className={`tabs-trigger ${isActive ? 'active' : ''} ${className}`}
+      onClick={() => onTabChange(value)}
     >
       {children}
     </button>
-  );
+  )
 }
 
-export function TabsContent({ children, value, className = '' }: {
-  children: React.ReactNode;
-  value: string;
-  className?: string;
-}) {
+export function TabsContent({ children, value, className = '', activeTab }) {
+  if (activeTab !== value) return null
+  
   return (
-    <div className={className}>
+    <div className={`tabs-content ${className}`}>
       {children}
     </div>
-  );
+  )
 }
