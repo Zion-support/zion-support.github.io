@@ -28,7 +28,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
       setIsLoading(true);
-      const resumeId = await createResume({ title: newResumeTitle.trim() }),
+      const resumeId = await createResume({ title: newResumeTitle.trim() });
       if (resumeId) {
         await fetchResume(resumeId);
         onResumeChange(resumeId);

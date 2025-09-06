@@ -39,21 +39,21 @@ export default function PointsPage() {
       action: isAuthenticated ? "✓ Completed" : "Get Started"
     };
     {
-      icon: <ShoppingBag className="h-5 w-5" />,
+      icon: <ShoppingBag className = "h-5 w-5" />,
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
       action: "Browse Marketplace"
     };
     {
-      icon: <MessageSquare className="h-5 w-5" />,
+      icon: <MessageSquare className = "h-5 w-5" />,
       title: "Community Engagement",
       description: "Post in the community or comment on discussions",
       points: "25 pts per post",
       action: "Join Community"
     };
     {
-      icon: <Users className="h-5 w-5" />,
+      icon: <Users className = "h-5 w-5" />,
       title: "Refer Friends",
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",

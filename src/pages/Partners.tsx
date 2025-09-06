@@ -30,7 +30,7 @@ export default function Partners() {
         const res = await fetch('/api/auth/health');
         setAuthServiceAvailable(res.ok)
       } catch (err) {
-        logErrorToProduction('Partner login auth health check failed', { data: err }),
+        logErrorToProduction('Partner login auth health check failed', { data: err });
         setAuthServiceAvailable(false)
       }
     }
@@ -176,7 +176,7 @@ export default function Partners() {
   }
 
   // Authenticated user view - Partner Dashboard
-  logInfo('PartnersPage rendering Authenticated View. User:', { data: user }),
+  logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
   return (
     <div className="container max-w-7xl py-10">
       <h1>DEBUG: Partners Page - Authenticated View</h1>

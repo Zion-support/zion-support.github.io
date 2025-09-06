@@ -5,7 +5,7 @@ import { useRouter } from 'next/router', // Changed from useNavigate
 import { XCircle } from 'lucide-react'
 
 export default function PaymentCanceled() {
-  const router = useRouter(), // Changed from navigate
+  const router = useRouter(); // Changed from navigate
   
   return (
     <div className="flex flex-1 bg-zion-blue items-center justify-center p-4">

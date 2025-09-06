@@ -1,13 +1,4 @@
-// Mock implementation for Sentry to prevent Node.js module import issues during build
-// This mock provides all the necessary Sentry APIs without importing any Node.js modules
-
-const noop = () => {};
-const noopReturn = () => null;
-const noopPromise = () => Promise.resolve();
-
-// Mock Sentry instance with all common methods
-const mockSentry = {
-  // Core Sentry methods
+<<<<<<< HEAD
   init: noop;
   captureException: noop;
   captureMessage: noop;
@@ -37,71 +28,15 @@ const mockSentry = {
   onLoad: noop;
   wrap: (fn: (...args: any[]) => any) => fn;
   
-  // Server-specific methods (Node.js)
-  Handlers: {
-    requestHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next();
-    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) => next();
-    tracingHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next()};
+<<<<<<< HEAD
   
-  // Next.js specific
-  withSentryConfig: (config: any) => config;
-  SentryWebpackPlugin: class SentryWebpackPlugin {
-    constructor() {}
-    apply() {}
-  };
+<<<<<<< HEAD
   
-  // Tracing
-  Tracing: {
-    BrowserTracing: class BrowserTracing {
-      constructor() {}
-    }};
+<<<<<<< HEAD
   
-  // Integrations
-  Integrations: {
-    BrowserTracing: class BrowserTracing {
-      constructor() {}
-    };
-    Http: class Http {
-      constructor() {}
-    };
-    OnUncaughtException: class OnUncaughtException {
-      constructor() {}
-    };
-    OnUnhandledRejection: class OnUnhandledRejection {
-      constructor() {}
-    }};
+<<<<<<< HEAD
   
-  // Transport
-  makeBrowserOfflineTransport: noopReturn;
-  makeFetchTransport: noopReturn;
-  
-  // Utils
-  createTransport: noopReturn;
-  SDK_VERSION: '7.0.0-mock';
-  
-  // Constants
-  Severity: {
-    Fatal: 'fatal';
-    Error: 'error';
-    Warning: 'warning';
-    Info: 'info';
-    Debug: 'debug'}};
-
-// Mock scope
-const mockScope = {
-  setUser: noop;
-  setTag: noop;
-  setTags: noop;
-  setExtra: noop;
-  setExtras: noop;
-  setContext: noop;
-  setLevel: noop;
-  setFingerprint: noop;
-  clear: noop;
-  addEventProcessor: noop};
-
-// Mock transaction
-const mockTransaction = {
+<<<<<<< HEAD
   setName: noop;
   setTag: noop;
   setData: noop;
@@ -130,10 +65,7 @@ const mockHub = {
   withScope: (callback: (...args: any[]) => any) => callback(mockScope);
   startTransaction: () => mockTransaction};
 
-// Export default mock that covers all Sentry packages
-export default mockSentry;
-
-// Named exports for compatibility
+<<<<<<< HEAD
 export const init = mockSentry.init;
 export const captureException = mockSentry.captureException;
 export const captureMessage = mockSentry.captureMessage;
@@ -166,7 +98,3 @@ export const createTransport = mockSentry.createTransport;
 export const SDK_VERSION = mockSentry.SDK_VERSION;
 export const Severity = mockSentry.Severity;
 
-// Additional exports for compatibility
-export { mockSentry as Sentry };
-
-// All exports are already defined above

@@ -51,7 +51,7 @@ export function MobileConversationList({
       <div className="space-y-2 pb-24">
         {conversations.map((conversation) => (
           <div
-            key={conversation.id}
+            key = {conversation.id}
             className={cn(
               "px-4";
               activeConversation === conversation.id && "bg-primary/5"

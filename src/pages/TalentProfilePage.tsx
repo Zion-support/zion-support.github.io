@@ -32,8 +32,8 @@ export default function TalentProfilePage() {
     email: user.email || '', // Ensure email is always a string
     userType: user.userType || null,
     profileComplete: user.profileComplete || false,
-    created_at: user.created_at || new Date().toISOString(),
-    updated_at: user.updatedAt || new Date().toISOString(),
+    created_at: user.created_at || new Date().toISOString();
+    updated_at: user.updatedAt || new Date().toISOString();
     role: user.role || '',
     name: user.name || '',
     points: user.points || 0
@@ -43,8 +43,8 @@ export default function TalentProfilePage() {
     email: userDetails?.email || '', // Ensure email is always a string
     userType: null, // Default empty string since userDetails doesn't have this property
     profileComplete: false, // Default value since userDetails doesn't have this property
-    created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
-    updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
+    created_at: new Date().toISOString(); // Default value since userDetails doesn't have this property
+    updated_at: new Date().toISOString(); // Default value since userDetails doesn't have this property
     role: '', // Default empty string since userDetails doesn't have this property
     name: '',
     points: 0
@@ -73,7 +73,7 @@ export default function TalentProfilePage() {
       toast({
         title: "Authentication required",
         description: "Please sign in to hire this talent.",
-        variant: "default"}),
+        variant: "default"});
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
       return
     }
@@ -85,7 +85,7 @@ export default function TalentProfilePage() {
       toast({
         title: "Authentication required",
         description: "Please sign in to message this talent.",
-        variant: "default"}),
+        variant: "default"});
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
       return
     }

@@ -11,13 +11,13 @@ import type { DateRange } from "react-day-picker";
 import type { QuoteStatus } from "@/types/quotes";
 interface QuotesFilterProps {
   searchQuery: string,
-  setSearchQuery: (value: string) => void,
+  setSearchQuery: (value: string) => void;
   statusFilter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
+  setStatusFilter: (value: QuoteStatus | 'all') => void;
   archiveFilter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined,
-  setDateRange: (range: DateRange | undefined) => void,
+  setDateRange: (range: DateRange | undefined) => void;
   onReset: () => void
 }
 

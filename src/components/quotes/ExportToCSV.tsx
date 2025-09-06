@@ -11,13 +11,13 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   const handleExport = () => {
     // Define CSV Headers
     const headers = [
-      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
       'StatusCreated Date'
     ];
     
     // Format quote data for CSV
     const rows = quotes.map(quote => [
-      quote.id;
+      quote.id,
       quote.talent_name || 'Unknown';
       quote.requester_name;
       quote.requester_email;

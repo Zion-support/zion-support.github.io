@@ -30,8 +30,8 @@ export function MilestoneSuggestions({
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
       scope: `${projectName}: ${scopeSummary}`,
-      startDate: startDate.toISOString(),
-      endDate: endDate ? endDate.toISOString() : null,
+      startDate: startDate.toISOString();
+      endDate: endDate ? endDate.toISOString() : null;
       projectType: projectType || "Other"
     };
 
