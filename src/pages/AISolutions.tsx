@@ -5,63 +5,63 @@ const AISolutions: React.FC = () => {
   const aiServices = [
     {
       icon: <Brain className="h-12 w-12 text-blue-600" />,
-      title: "AI-Powered Analytics",
-      description: "Transform your data into actionable insights with our advanced machine learning algorithms and predictive analytics.",
-      features: ["Real-time Data Processing", "Predictive Modeling", "Custom Dashboards", "Automated Reporting"]
+      title: 'AI-Powered Analytics',
+      description: 'Transform your data into actionable insights with our advanced machine learning algorithms and predictive analytics.',
+      features: ['Real-time Data Processing', 'Predictive Modeling', 'Custom Dashboards', 'Automated Reporting'],
     },
     {
       icon: <Zap className="h-12 w-12 text-purple-600" />,
-      title: "Intelligent Automation",
-      description: "Streamline your business processes with AI-driven automation that learns and adapts to your workflow patterns.",
-      features: ["Process Automation", "Smart Workflows", "Task Optimization", "Error Reduction"]
+      title: 'Intelligent Automation',
+      description: 'Streamline your business processes with AI-driven automation that learns and adapts to your workflow patterns.',
+      features: ['Process Automation', 'Smart Workflows', 'Task Optimization', 'Error Reduction'],
     },
     {
       icon: <Shield className="h-12 w-12 text-green-600" />,
-      title: "AI Security Solutions",
-      description: "Protect your digital assets with AI-powered threat detection, fraud prevention, and security monitoring.",
-      features: ["Threat Detection", "Fraud Prevention", "Security Monitoring", "Compliance Management"]
+      title: 'AI Security Solutions',
+      description: 'Protect your digital assets with AI-powered threat detection, fraud prevention, and security monitoring.',
+      features: ['Threat Detection', 'Fraud Prevention', 'Security Monitoring', 'Compliance Management'],
     },
     {
       icon: <Cloud className="h-12 w-12 text-orange-600" />,
-      title: "Cloud AI Services",
-      description: "Leverage scalable cloud-based AI services for natural language processing, computer vision, and more.",
-      features: ["NLP Processing", "Computer Vision", "Speech Recognition", "Scalable Infrastructure"]
+      title: 'Cloud AI Services',
+      description: 'Leverage scalable cloud-based AI services for natural language processing, computer vision, and more.',
+      features: ['NLP Processing', 'Computer Vision', 'Speech Recognition', 'Scalable Infrastructure'],
     },
     {
       icon: <Database className="h-12 w-12 text-red-600" />,
-      title: "Data Intelligence",
-      description: "Unlock the power of your data with AI-driven insights, pattern recognition, and intelligent data management.",
-      features: ["Pattern Recognition", "Data Mining", "Intelligent Queries", "Data Quality"]
+      title: 'Data Intelligence',
+      description: 'Unlock the power of your data with AI-driven insights, pattern recognition, and intelligent data management.',
+      features: ['Pattern Recognition', 'Data Mining', 'Intelligent Queries', 'Data Quality'],
     },
     {
       icon: <Globe className="h-12 w-12 text-indigo-600" />,
-      title: "Global AI Deployment",
-      description: "Deploy AI solutions across multiple regions with our global infrastructure and compliance expertise.",
-      features: ["Multi-Region Deployment", "Compliance Management", "Local Regulations", "Global Support"]
-    }
+      title: 'Global AI Deployment',
+      description: 'Deploy AI solutions across multiple regions with our global infrastructure and compliance expertise.',
+      features: ['Multi-Region Deployment', 'Compliance Management', 'Local Regulations', 'Global Support'],
+    },
   ];
 
   const useCases = [
     {
-      industry: "Healthcare",
-      solution: "AI-powered diagnostic assistance and patient monitoring",
-      impact: "40% faster diagnosis, 25% reduction in medical errors"
+      industry: 'Healthcare',
+      solution: 'AI-powered diagnostic assistance and patient monitoring',
+      impact: '40% faster diagnosis, 25% reduction in medical errors',
     },
     {
-      industry: "Finance",
-      solution: "Fraud detection and risk assessment automation",
-      impact: "90% fraud detection accuracy, 60% faster risk assessment"
+      industry: 'Finance',
+      solution: 'Fraud detection and risk assessment automation',
+      impact: '90% fraud detection accuracy, 60% faster risk assessment',
     },
     {
-      industry: "Manufacturing",
-      solution: "Predictive maintenance and quality control",
-      impact: "30% reduction in downtime, 50% improvement in quality"
+      industry: 'Manufacturing',
+      solution: 'Predictive maintenance and quality control',
+      impact: '30% reduction in downtime, 50% improvement in quality',
     },
     {
-      industry: "Retail",
-      solution: "Personalized recommendations and inventory optimization",
-      impact: "35% increase in sales, 20% reduction in inventory costs"
-    }
+      industry: 'Retail',
+      solution: 'Personalized recommendations and inventory optimization',
+      impact: '35% increase in sales, 20% reduction in inventory costs',
+    },
   ];
 
   return (
@@ -71,7 +71,7 @@ const AISolutions: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">AI Solutions</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Harness the power of artificial intelligence to transform your business operations, 
+            Harness the power of artificial intelligence to transform your business operations,
             enhance decision-making, and drive unprecedented growth.
           </p>
         </div>
@@ -83,7 +83,7 @@ const AISolutions: React.FC = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Services</h2>
           <p className="text-xl text-gray-600">Comprehensive AI solutions tailored to your business needs</p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {aiServices.map((service, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8">
@@ -112,7 +112,7 @@ const AISolutions: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Industry Applications</h2>
             <p className="text-xl text-gray-600">See how AI is transforming industries worldwide</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
@@ -134,13 +134,13 @@ const AISolutions: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Technology Stack</h2>
             <p className="text-xl text-gray-600">Built on cutting-edge AI frameworks and technologies</p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              "TensorFlow", "PyTorch", "OpenAI GPT", "Hugging Face",
-              "Scikit-learn", "Pandas", "NumPy", "Apache Spark",
-              "Kubernetes", "Docker", "AWS SageMaker", "Google Cloud AI",
-              "Azure ML", "NVIDIA CUDA", "Apache Kafka", "Redis"
+              'TensorFlow', 'PyTorch', 'OpenAI GPT', 'Hugging Face',
+              'Scikit-learn', 'Pandas', 'NumPy', 'Apache Spark',
+              'Kubernetes', 'Docker', 'AWS SageMaker', 'Google Cloud AI',
+              'Azure ML', 'NVIDIA CUDA', 'Apache Kafka', 'Redis',
             ].map((tech, index) => (
               <div key={index} className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="text-lg font-semibold text-gray-900">{tech}</div>

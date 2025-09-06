@@ -3,25 +3,25 @@ import React from 'react';
 const HowItWorksSection = () => {
   const steps = [
     {
-      number: "01",
-      title: "Consultation",
-      description: "We start with a detailed consultation to understand your business needs and challenges."
+      number: '01',
+      title: 'Consultation',
+      description: 'We start with a detailed consultation to understand your business needs and challenges.',
     },
     {
-      number: "02",
-      title: "Strategy & Planning",
-      description: "Our experts develop a customized strategy and implementation plan tailored to your goals."
+      number: '02',
+      title: 'Strategy & Planning',
+      description: 'Our experts develop a customized strategy and implementation plan tailored to your goals.',
     },
     {
-      number: "03",
-      title: "Implementation",
-      description: "We implement the solution with minimal disruption to your existing operations."
+      number: '03',
+      title: 'Implementation',
+      description: 'We implement the solution with minimal disruption to your existing operations.',
     },
     {
-      number: "04",
-      title: "Support & Optimization",
-      description: "Ongoing support and continuous optimization to ensure maximum value and performance."
-    }
+      number: '04',
+      title: 'Support & Optimization',
+      description: 'Ongoing support and continuous optimization to ensure maximum value and performance.',
+    },
   ];
 
   return (

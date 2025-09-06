@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'Cybersecurity Consulting | Zion Tech Group',
-  description: 'Protect your business with comprehensive cybersecurity consulting, risk assessment, and security implementation services.'
+  description: 'Protect your business with comprehensive cybersecurity consulting, risk assessment, and security implementation services.',
 };
 
 export default function CybersecurityConsultingPage() {
@@ -8,37 +8,37 @@ export default function CybersecurityConsultingPage() {
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Cybersecurity Consulting</h1>
       <p className="text-xl text-gray-600 mb-12">Protect your business with comprehensive cybersecurity consulting, risk assessment, and security implementation services.</p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="Security Assessment" 
+        <FeatureCard
+          title="Security Assessment"
           features={[
-            "Vulnerability scanning",
-            "Penetration testing",
-            "Risk analysis",
-            "Compliance auditing"
-          ]} 
+            'Vulnerability scanning',
+            'Penetration testing',
+            'Risk analysis',
+            'Compliance auditing',
+          ]}
         />
-        <FeatureCard 
-          title="Security Implementation" 
+        <FeatureCard
+          title="Security Implementation"
           features={[
-            "Firewall configuration",
-            "Endpoint protection",
-            "Network security",
-            "Access controls"
-          ]} 
+            'Firewall configuration',
+            'Endpoint protection',
+            'Network security',
+            'Access controls',
+          ]}
         />
-        <FeatureCard 
-          title="Incident Response" 
+        <FeatureCard
+          title="Incident Response"
           features={[
-            "24/7 monitoring",
-            "Threat detection",
-            "Incident handling",
-            "Recovery planning"
-          ]} 
+            '24/7 monitoring',
+            'Threat detection',
+            'Incident handling',
+            'Recovery planning',
+          ]}
         />
       </div>
-      
+
       <div className="bg-gradient-to-r from-red-50 to-rose-50 border border-red-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our Cybersecurity Services?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,9 +72,9 @@ export default function CybersecurityConsultingPage() {
           </div>
         </div>
       </div>
-      
+
       <Pricing />
-      
+
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Secure Your Business?</h2>
         <p className="text-gray-600 mb-6">Start with a free security assessment and discover potential vulnerabilities.</p>
@@ -117,36 +117,36 @@ function Pricing() {
     <div className="mt-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Assessment" 
-          price="$5,999" 
+        <Plan
+          name="Assessment"
+          price="$5,999"
           features={[
-            "Security audit",
-            "Vulnerability scan",
-            "Risk assessment report",
-            "Recommendations"
-          ]} 
+            'Security audit',
+            'Vulnerability scan',
+            'Risk assessment report',
+            'Recommendations',
+          ]}
         />
-        <Plan 
-          name="Implementation" 
-          price="$15,999" 
+        <Plan
+          name="Implementation"
+          price="$15,999"
           features={[
-            "Security setup",
-            "Tool configuration",
-            "Staff training",
-            "3 months support"
-          ]} 
+            'Security setup',
+            'Tool configuration',
+            'Staff training',
+            '3 months support',
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Managed Security" 
-          price="$4,999/mo" 
+        <Plan
+          name="Managed Security"
+          price="$4,999/mo"
           features={[
-            "24/7 monitoring",
-            "Incident response",
-            "Regular assessments",
-            "Dedicated support"
-          ]} 
+            '24/7 monitoring',
+            'Incident response',
+            'Regular assessments',
+            'Dedicated support',
+          ]}
         />
       </div>
     </div>
@@ -170,11 +170,11 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-red-600 text-white hover:bg-red-700' 
+          popular
+            ? 'bg-red-600 text-white hover:bg-red-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export const metadata = {
-  title: "AI Meeting Assistant | Zion Tech Group",
+  title: 'AI Meeting Assistant | Zion Tech Group',
   description:
-    "Transform your meetings with AI-powered transcription, action items, and intelligent insights. Never miss important details again.",
+    'Transform your meetings with AI-powered transcription, action items, and intelligent insights. Never miss important details again.',
 };
 
 export default function AIMeetingAssistantPage() {
@@ -68,11 +68,11 @@ export default function AIMeetingAssistantPage() {
               period="per month"
               description="Perfect for individuals and small teams"
               features={[
-                "Up to 10 hours/month",
-                "Basic transcription",
-                "Action item extraction",
-                "Meeting summaries",
-                "Email support",
+                'Up to 10 hours/month',
+                'Basic transcription',
+                'Action item extraction',
+                'Meeting summaries',
+                'Email support',
               ]}
               popular={false}
             />
@@ -82,12 +82,12 @@ export default function AIMeetingAssistantPage() {
               period="per month"
               description="Ideal for growing teams and departments"
               features={[
-                "Up to 50 hours/month",
-                "Advanced AI features",
-                "Meeting analytics",
-                "Custom integrations",
-                "Priority support",
-                "Team collaboration",
+                'Up to 50 hours/month',
+                'Advanced AI features',
+                'Meeting analytics',
+                'Custom integrations',
+                'Priority support',
+                'Team collaboration',
               ]}
               popular={true}
             />
@@ -97,12 +97,12 @@ export default function AIMeetingAssistantPage() {
               period="per month"
               description="For large organizations with advanced needs"
               features={[
-                "Unlimited hours",
-                "Custom AI models",
-                "Advanced analytics",
-                "24/7 support",
-                "Custom integrations",
-                "Compliance features",
+                'Unlimited hours',
+                'Custom AI models',
+                'Advanced analytics',
+                '24/7 support',
+                'Custom integrations',
+                'Compliance features',
               ]}
               popular={false}
             />
@@ -244,7 +244,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`border rounded-xl p-6 ${popular ? "border-green-500 bg-green-50" : "border-gray-200 bg-white"}`}
+      className={`border rounded-xl p-6 ${popular ? 'border-green-500 bg-green-50' : 'border-gray-200 bg-white'}`}
     >
       {popular && (
         <div className="bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
@@ -268,8 +268,8 @@ function PricingCard({
       <button
         className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
           popular
-            ? "bg-green-600 text-white hover:bg-green-700"
-            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            ? 'bg-green-600 text-white hover:bg-green-700'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         }`}
       >
         Start Free Trial

@@ -10,7 +10,7 @@ const generateSitemap = () => {
     { url: '/services/ai-services', priority: '0.7', changefreq: 'weekly' },
     { url: '/services/micro-saas', priority: '0.7', changefreq: 'weekly' },
     { url: '/services/it-services', priority: '0.7', changefreq: 'weekly' },
-    { url: '/contact', priority: '0.6', changefreq: 'monthly' }
+    { url: '/contact', priority: '0.6', changefreq: 'monthly' },
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export const metadata = {
-  title: "Invoice Automation | Zion Tech Group",
-  description: "AI-powered invoice processing, automated billing, and financial workflow automation to streamline your accounting operations.",
+  title: 'Invoice Automation | Zion Tech Group',
+  description: 'AI-powered invoice processing, automated billing, and financial workflow automation to streamline your accounting operations.',
 };
 
 export default function InvoiceAutomationPage() {
@@ -56,11 +56,11 @@ export default function InvoiceAutomationPage() {
               price="$39/month"
               description="Perfect for small businesses and freelancers"
               features={[
-                "Up to 100 invoices per month",
-                "Basic AI processing",
-                "Email support",
-                "Basic reporting",
-                "Mobile app access"
+                'Up to 100 invoices per month',
+                'Basic AI processing',
+                'Email support',
+                'Basic reporting',
+                'Mobile app access',
               ]}
             />
             <PricingCard
@@ -68,12 +68,12 @@ export default function InvoiceAutomationPage() {
               price="$99/month"
               description="Ideal for growing businesses"
               features={[
-                "Up to 1,000 invoices per month",
-                "Advanced AI processing",
-                "Priority support",
-                "Advanced reporting",
-                "Custom workflows",
-                "API access"
+                'Up to 1,000 invoices per month',
+                'Advanced AI processing',
+                'Priority support',
+                'Advanced reporting',
+                'Custom workflows',
+                'API access',
               ]}
             />
             <PricingCard
@@ -81,13 +81,13 @@ export default function InvoiceAutomationPage() {
               price="$299/month"
               description="For large organizations with complex needs"
               features={[
-                "Unlimited invoices",
-                "Custom AI training",
-                "24/7 dedicated support",
-                "On-premise deployment",
-                "Custom integrations",
-                "SLA guarantees",
-                "Advanced security"
+                'Unlimited invoices',
+                'Custom AI training',
+                '24/7 dedicated support',
+                'On-premise deployment',
+                'Custom integrations',
+                'SLA guarantees',
+                'Advanced security',
               ]}
             />
           </div>

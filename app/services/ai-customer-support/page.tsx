@@ -1,4 +1,4 @@
-export const metadata = { title: "AI Customer Support | Zion Tech Group" };
+export const metadata = { title: 'AI Customer Support | Zion Tech Group' };
 
 export default function AICustomerSupportPage() {
   return (
@@ -18,36 +18,36 @@ export default function AICustomerSupportPage() {
         <FeatureCard
           title="AI Chatbots & Virtual Assistants"
           features={[
-            "Natural language processing (NLP)",
-            "Multi-language support",
-            "Context-aware conversations",
-            "Escalation to human agents",
-            "Knowledge base integration",
-            "Voice & text interactions",
+            'Natural language processing (NLP)',
+            'Multi-language support',
+            'Context-aware conversations',
+            'Escalation to human agents',
+            'Knowledge base integration',
+            'Voice & text interactions',
           ]}
           icon="🤖"
         />
         <FeatureCard
           title="Ticket Management"
           features={[
-            "Automated ticket routing",
-            "Priority-based queuing",
-            "SLA monitoring & alerts",
-            "Ticket categorization",
-            "Auto-resolution suggestions",
-            "Performance analytics",
+            'Automated ticket routing',
+            'Priority-based queuing',
+            'SLA monitoring & alerts',
+            'Ticket categorization',
+            'Auto-resolution suggestions',
+            'Performance analytics',
           ]}
           icon="🎫"
         />
         <FeatureCard
           title="Sentiment Analysis & Insights"
           features={[
-            "Real-time sentiment tracking",
-            "Customer satisfaction scoring",
-            "Trend analysis & reporting",
-            "Proactive issue detection",
-            "Agent performance insights",
-            "Customer journey mapping",
+            'Real-time sentiment tracking',
+            'Customer satisfaction scoring',
+            'Trend analysis & reporting',
+            'Proactive issue detection',
+            'Agent performance insights',
+            'Customer journey mapping',
           ]}
           icon="😊"
         />
@@ -139,12 +139,12 @@ function PricingSection() {
           price="$99/mo"
           duration="Up to 1,000 tickets"
           features={[
-            "Basic AI chatbot",
-            "Email & chat support",
-            "Basic ticket management",
-            "Standard reporting",
-            "Email support",
-            "Mobile app access",
+            'Basic AI chatbot',
+            'Email & chat support',
+            'Basic ticket management',
+            'Standard reporting',
+            'Email support',
+            'Mobile app access',
           ]}
           popular={false}
         />
@@ -153,13 +153,13 @@ function PricingSection() {
           price="$299/mo"
           duration="Up to 10,000 tickets"
           features={[
-            "Everything in Basic Support",
-            "Advanced AI chatbot",
-            "Multi-channel support",
-            "Sentiment analysis",
-            "Advanced analytics",
-            "API access & integrations",
-            "Priority support",
+            'Everything in Basic Support',
+            'Advanced AI chatbot',
+            'Multi-channel support',
+            'Sentiment analysis',
+            'Advanced analytics',
+            'API access & integrations',
+            'Priority support',
           ]}
           popular={true}
         />
@@ -168,13 +168,13 @@ function PricingSection() {
           price="$799/mo"
           duration="Unlimited tickets"
           features={[
-            "Everything in Professional Support",
-            "Custom AI model training",
-            "Advanced security & compliance",
-            "Dedicated account manager",
-            "Custom integrations",
-            "White-label options",
-            "24/7 phone support",
+            'Everything in Professional Support',
+            'Custom AI model training',
+            'Advanced security & compliance',
+            'Dedicated account manager',
+            'Custom integrations',
+            'White-label options',
+            '24/7 phone support',
           ]}
           popular={false}
         />
@@ -198,7 +198,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? "border-pink-500 shadow-lg" : "border-gray-200"}`}
+      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-pink-500 shadow-lg' : 'border-gray-200'}`}
     >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -222,8 +222,8 @@ function PricingCard({
         href="tel:+13024640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? "bg-pink-600 text-white hover:bg-pink-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+            ? 'bg-pink-600 text-white hover:bg-pink-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >
         Get Started

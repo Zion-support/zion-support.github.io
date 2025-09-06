@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'Helpdesk Platform Development | Zion Tech Group',
-  description: 'Build comprehensive helpdesk platforms with ticket management, knowledge base, and customer support tools. Professional helpdesk solutions starting at $14k.'
+  description: 'Build comprehensive helpdesk platforms with ticket management, knowledge base, and customer support tools. Professional helpdesk solutions starting at $14k.',
 };
 
 export default function HelpdeskPlatformPage() {
@@ -11,43 +11,43 @@ export default function HelpdeskPlatformPage() {
         <p className="text-xl text-gray-600 mb-8">
           Build comprehensive helpdesk platforms with ticket management, knowledge base, live chat, and customer support automation.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item 
-            title="Ticket Management" 
+          <Item
+            title="Ticket Management"
             details={[
-              "Multi-channel ticket creation",
-              "Priority & status tracking",
-              "Auto-assignment rules",
-              "SLA monitoring",
-              "Ticket routing",
-              "Escalation workflows",
-              "Bulk operations"
-            ]} 
+              'Multi-channel ticket creation',
+              'Priority & status tracking',
+              'Auto-assignment rules',
+              'SLA monitoring',
+              'Ticket routing',
+              'Escalation workflows',
+              'Bulk operations',
+            ]}
           />
-          <Item 
-            title="Knowledge Base" 
+          <Item
+            title="Knowledge Base"
             details={[
-              "Article management",
-              "Search functionality",
-              "Category organization",
-              "Version control",
-              "Feedback system",
-              "Analytics tracking",
-              "Multi-language support"
-            ]} 
+              'Article management',
+              'Search functionality',
+              'Category organization',
+              'Version control',
+              'Feedback system',
+              'Analytics tracking',
+              'Multi-language support',
+            ]}
           />
-          <Item 
-            title="Customer Support" 
+          <Item
+            title="Customer Support"
             details={[
-              "Live chat integration",
-              "Customer portal",
-              "Self-service options",
-              "Satisfaction surveys",
-              "Agent performance tracking",
-              "Reporting & analytics",
-              "Mobile app support"
-            ]} 
+              'Live chat integration',
+              'Customer portal',
+              'Self-service options',
+              'Satisfaction surveys',
+              'Agent performance tracking',
+              'Reporting & analytics',
+              'Mobile app support',
+            ]}
           />
         </div>
 
@@ -100,50 +100,50 @@ function Pricing() {
     <section>
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Helpdesk Platform Pricing</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan 
-          name="Basic Helpdesk" 
-          price="$14k–$28k" 
+        <Plan
+          name="Basic Helpdesk"
+          price="$14k–$28k"
           duration="6–10 weeks"
           features={[
-            "Basic ticket management",
-            "Email integration",
-            "Simple knowledge base",
-            "Agent dashboard",
-            "Basic reporting",
-            "Mobile responsive",
-            "Standard support"
-          ]} 
+            'Basic ticket management',
+            'Email integration',
+            'Simple knowledge base',
+            'Agent dashboard',
+            'Basic reporting',
+            'Mobile responsive',
+            'Standard support',
+          ]}
         />
-        <Plan 
-          name="Professional Helpdesk" 
-          price="$28k–$55k" 
+        <Plan
+          name="Professional Helpdesk"
+          price="$28k–$55k"
           duration="10–16 weeks"
           features={[
-            "Everything in Basic",
-            "Live chat integration",
-            "Advanced automation",
-            "Customer portal",
-            "Advanced analytics",
-            "API integrations",
-            "Priority support"
-          ]} 
+            'Everything in Basic',
+            'Live chat integration',
+            'Advanced automation',
+            'Customer portal',
+            'Advanced analytics',
+            'API integrations',
+            'Priority support',
+          ]}
         />
-        <Plan 
-          name="Enterprise Helpdesk" 
-          price="$55k+" 
+        <Plan
+          name="Enterprise Helpdesk"
+          price="$55k+"
           duration="14–22 weeks"
           features={[
-            "Everything in Professional",
-            "Custom development",
-            "Advanced security",
-            "Multi-tenant architecture",
-            "Dedicated support",
-            "SLA guarantees",
-            "White-label options"
-          ]} 
+            'Everything in Professional',
+            'Custom development',
+            'Advanced security',
+            'Multi-tenant architecture',
+            'Dedicated support',
+            'SLA guarantees',
+            'White-label options',
+          ]}
         />
       </div>
-      
+
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Helpdesk?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -168,11 +168,11 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
+function Plan({ name, price, duration, features }: {
+  name: string;
+  price: string;
   duration: string;
-  features: string[]; 
+  features: string[];
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -187,7 +187,7 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="mailto:kleber@ziontechgroup.com?subject=Helpdesk Platform Development Inquiry"
         className="block w-full mt-6 bg-yellow-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors"
       >

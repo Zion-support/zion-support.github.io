@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export const metadata = {
-  title: "AI Customer Insights | Zion Tech Group",
+  title: 'AI Customer Insights | Zion Tech Group',
   description:
-    "Unlock customer behavior insights with AI-powered analytics, sentiment analysis, and predictive modeling. Drive growth with data-driven decisions.",
+    'Unlock customer behavior insights with AI-powered analytics, sentiment analysis, and predictive modeling. Drive growth with data-driven decisions.',
 };
 
 export default function AICustomerInsightsPage() {
@@ -68,11 +68,11 @@ export default function AICustomerInsightsPage() {
               period="per month"
               description="Perfect for small businesses and startups"
               features={[
-                "Up to 10,000 customers",
-                "Basic analytics",
-                "Sentiment analysis",
-                "Email support",
-                "Standard reports",
+                'Up to 10,000 customers',
+                'Basic analytics',
+                'Sentiment analysis',
+                'Email support',
+                'Standard reports',
               ]}
               popular={false}
             />
@@ -82,12 +82,12 @@ export default function AICustomerInsightsPage() {
               period="per month"
               description="Ideal for growing businesses and marketing teams"
               features={[
-                "Up to 100,000 customers",
-                "Advanced AI features",
-                "Predictive modeling",
-                "Priority support",
-                "Custom dashboards",
-                "API access",
+                'Up to 100,000 customers',
+                'Advanced AI features',
+                'Predictive modeling',
+                'Priority support',
+                'Custom dashboards',
+                'API access',
               ]}
               popular={true}
             />
@@ -97,12 +97,12 @@ export default function AICustomerInsightsPage() {
               period="per month"
               description="For large organizations with complex customer data"
               features={[
-                "Unlimited customers",
-                "Custom AI models",
-                "Real-time processing",
-                "24/7 support",
-                "Custom integrations",
-                "Dedicated analyst",
+                'Unlimited customers',
+                'Custom AI models',
+                'Real-time processing',
+                '24/7 support',
+                'Custom integrations',
+                'Dedicated analyst',
               ]}
               popular={false}
             />
@@ -272,7 +272,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`border rounded-xl p-6 ${popular ? "border-teal-500 bg-teal-50" : "border-gray-200 bg-white"}`}
+      className={`border rounded-xl p-6 ${popular ? 'border-teal-500 bg-teal-50' : 'border-gray-200 bg-white'}`}
     >
       {popular && (
         <div className="bg-teal-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
@@ -296,8 +296,8 @@ function PricingCard({
       <button
         className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
           popular
-            ? "bg-teal-600 text-white hover:bg-teal-700"
-            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            ? 'bg-teal-600 text-white hover:bg-teal-700'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         }`}
       >
         Start Free Trial

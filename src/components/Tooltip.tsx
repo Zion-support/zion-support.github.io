@@ -16,7 +16,7 @@ const Tooltip: React.FC<TooltipProps> = ({
   position = 'top',
   delay = 300,
   className = '',
-  disabled = false
+  disabled = false,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
@@ -25,7 +25,7 @@ const Tooltip: React.FC<TooltipProps> = ({
 
   const showTooltip = () => {
     if (disabled) return;
-    
+
     const id = setTimeout(() => {
       setIsVisible(true);
     }, delay);
@@ -88,7 +88,7 @@ const Tooltip: React.FC<TooltipProps> = ({
       onBlur={hideTooltip}
     >
       {children}
-      
+
       <AnimatePresence>
         {isVisible && (
           <motion.div
@@ -96,12 +96,12 @@ const Tooltip: React.FC<TooltipProps> = ({
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
             className={`absolute z-50 ${getPositionClasses()} ${className}`}
           >
             <div className="bg-gray-800 text-white text-sm px-3 py-2 rounded-lg shadow-lg max-w-xs">
               {content}
-              
+
               {/* Arrow */}
               <div
                 className={`absolute w-0 h-0 border-4 border-transparent ${getArrowClasses()}`}

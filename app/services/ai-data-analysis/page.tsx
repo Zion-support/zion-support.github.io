@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'AI Data Analysis Platform | Zion Tech Group',
-  description: 'Build AI-powered data analysis platforms with automated insights, predictive analytics, and business intelligence. Professional data AI solutions starting at $18k.'
+  description: 'Build AI-powered data analysis platforms with automated insights, predictive analytics, and business intelligence. Professional data AI solutions starting at $18k.',
 };
 
 export default function AIDataAnalysisPage() {
@@ -11,43 +11,43 @@ export default function AIDataAnalysisPage() {
         <p className="text-xl text-gray-600 mb-8">
           Build AI-powered data analysis platforms with automated insights, predictive analytics, and intelligent business intelligence tools.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item 
-            title="Automated Insights" 
+          <Item
+            title="Automated Insights"
             details={[
-              "Pattern recognition",
-              "Anomaly detection",
-              "Trend analysis",
-              "Correlation discovery",
-              "Automated reporting",
-              "Natural language queries",
-              "Insight recommendations"
-            ]} 
+              'Pattern recognition',
+              'Anomaly detection',
+              'Trend analysis',
+              'Correlation discovery',
+              'Automated reporting',
+              'Natural language queries',
+              'Insight recommendations',
+            ]}
           />
-          <Item 
-            title="Predictive Analytics" 
+          <Item
+            title="Predictive Analytics"
             details={[
-              "Forecasting models",
-              "Risk assessment",
-              "Customer behavior prediction",
-              "Demand forecasting",
-              "Churn prediction",
-              "Revenue optimization",
-              "Scenario planning"
-            ]} 
+              'Forecasting models',
+              'Risk assessment',
+              'Customer behavior prediction',
+              'Demand forecasting',
+              'Churn prediction',
+              'Revenue optimization',
+              'Scenario planning',
+            ]}
           />
-          <Item 
-            title="Data Processing" 
+          <Item
+            title="Data Processing"
             details={[
-              "Real-time data ingestion",
-              "Data cleaning automation",
-              "Feature engineering",
-              "Model training",
-              "Data validation",
-              "ETL pipelines",
-              "Data quality monitoring"
-            ]} 
+              'Real-time data ingestion',
+              'Data cleaning automation',
+              'Feature engineering',
+              'Model training',
+              'Data validation',
+              'ETL pipelines',
+              'Data quality monitoring',
+            ]}
           />
         </div>
 
@@ -100,50 +100,50 @@ function Pricing() {
     <section>
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Data Analysis Pricing</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan 
-          name="Data Insights" 
-          price="$18k–$35k" 
+        <Plan
+          name="Data Insights"
+          price="$18k–$35k"
           duration="8–12 weeks"
           features={[
-            "Basic data analysis",
-            "Automated insights",
-            "Simple dashboards",
-            "Data visualization",
-            "Basic ML models",
-            "API access",
-            "Standard support"
-          ]} 
+            'Basic data analysis',
+            'Automated insights',
+            'Simple dashboards',
+            'Data visualization',
+            'Basic ML models',
+            'API access',
+            'Standard support',
+          ]}
         />
-        <Plan 
-          name="Predictive Analytics" 
-          price="$35k–$70k" 
+        <Plan
+          name="Predictive Analytics"
+          price="$35k–$70k"
           duration="12–20 weeks"
           features={[
-            "Everything in Insights",
-            "Advanced ML models",
-            "Predictive forecasting",
-            "Real-time processing",
-            "Custom algorithms",
-            "Advanced visualizations",
-            "Priority support"
-          ]} 
+            'Everything in Insights',
+            'Advanced ML models',
+            'Predictive forecasting',
+            'Real-time processing',
+            'Custom algorithms',
+            'Advanced visualizations',
+            'Priority support',
+          ]}
         />
-        <Plan 
-          name="Enterprise AI" 
-          price="$70k+" 
+        <Plan
+          name="Enterprise AI"
+          price="$70k+"
           duration="16–28 weeks"
           features={[
-            "Everything in Predictive",
-            "Custom AI development",
-            "Advanced security",
-            "Multi-tenant architecture",
-            "Dedicated support",
-            "SLA guarantees",
-            "On-premise deployment"
-          ]} 
+            'Everything in Predictive',
+            'Custom AI development',
+            'Advanced security',
+            'Multi-tenant architecture',
+            'Dedicated support',
+            'SLA guarantees',
+            'On-premise deployment',
+          ]}
         />
       </div>
-      
+
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your AI Data Platform?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -168,11 +168,11 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
+function Plan({ name, price, duration, features }: {
+  name: string;
+  price: string;
   duration: string;
-  features: string[]; 
+  features: string[];
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -187,7 +187,7 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="mailto:kleber@ziontechgroup.com?subject=AI Data Analysis Platform Inquiry"
         className="block w-full mt-6 bg-green-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
       >

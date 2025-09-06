@@ -7,33 +7,33 @@ const About: React.FC = () => {
 
   const teamMembers = [
     {
-      name: "Dr. Sarah Chen",
-      role: "Chief Technology Officer",
-      expertise: "AI & Machine Learning",
-      image: "👩‍💼",
-      description: "Leading our AI initiatives with 15+ years of experience in machine learning and data science."
+      name: 'Dr. Sarah Chen',
+      role: 'Chief Technology Officer',
+      expertise: 'AI & Machine Learning',
+      image: '👩‍💼',
+      description: 'Leading our AI initiatives with 15+ years of experience in machine learning and data science.',
     },
     {
-      name: "Michael Rodriguez",
-      role: "Head of Engineering",
-      expertise: "Cloud Architecture",
-      image: "👨‍💻",
-      description: "Expert in scalable cloud solutions and microservices architecture with a track record of successful enterprise deployments."
+      name: 'Michael Rodriguez',
+      role: 'Head of Engineering',
+      expertise: 'Cloud Architecture',
+      image: '👨‍💻',
+      description: 'Expert in scalable cloud solutions and microservices architecture with a track record of successful enterprise deployments.',
     },
     {
-      name: "Emily Johnson",
-      role: "Security Director",
-      expertise: "Cybersecurity",
-      image: "👩‍🔬",
-      description: "Cybersecurity specialist ensuring our solutions meet the highest security standards and compliance requirements."
+      name: 'Emily Johnson',
+      role: 'Security Director',
+      expertise: 'Cybersecurity',
+      image: '👩‍🔬',
+      description: 'Cybersecurity specialist ensuring our solutions meet the highest security standards and compliance requirements.',
     },
     {
-      name: "David Kim",
-      role: "Product Manager",
-      expertise: "Digital Transformation",
-      image: "👨‍💼",
-      description: "Driving product strategy and digital transformation initiatives for our enterprise clients."
-    }
+      name: 'David Kim',
+      role: 'Product Manager',
+      expertise: 'Digital Transformation',
+      image: '👨‍💼',
+      description: 'Driving product strategy and digital transformation initiatives for our enterprise clients.',
+    },
   ];
 
   const containerVariants = {
@@ -41,9 +41,9 @@ const About: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -53,13 +53,13 @@ const About: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: 'easeOut',
+      },
+    },
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen"
       variants={containerVariants}
       initial="hidden"
@@ -71,8 +71,8 @@ const About: React.FC = () => {
             About Zion Tech Group
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We are a leading technology company specializing in AI solutions, cybersecurity, 
-            and cloud infrastructure. Our mission is to transform businesses through 
+            We are a leading technology company specializing in AI solutions, cybersecurity,
+            and cloud infrastructure. Our mission is to transform businesses through
             innovative technology solutions.
           </p>
         </motion.div>
@@ -82,8 +82,8 @@ const About: React.FC = () => {
           {[
             { id: 'mission', label: 'Our Mission' },
             { id: 'team', label: 'Our Team' },
-            { id: 'values', label: 'Our Values' }
-          ].map((tab) => (
+            { id: 'values', label: 'Our Values' },
+          ].map(tab => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}

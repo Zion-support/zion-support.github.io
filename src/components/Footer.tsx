@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Footer() {
-  return (
-    <footer className="bg-gray-800 text-white py-8 mt-auto">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-=======
 import { FooterNewsletter } from '@/components/FooterNewsletter';
 import { 
   Twitter,
@@ -20,7 +7,6 @@ import {
   Github,
   ChevronUp,
 } from 'lucide-react';
->>>>>>> origin/fix-website-loading-errors-final
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -89,13 +75,10 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center">
+        <div className="border-t border-slate-700 mt-8 pt-8 flex justify-between items-center">
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
-=======
-        <div className='mt-8 flex justify-end'>
           <button
             type='button'
             onClick={() => {
@@ -110,8 +93,6 @@ const Footer: React.FC = () => {
             <ChevronUp className='h-4 w-4' aria-hidden='true' />
             <span>Back to Top</span>
           </button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
->>>>>>> origin/fix-website-loading-errors-final
         </div>
       </div>
     </motion.footer>

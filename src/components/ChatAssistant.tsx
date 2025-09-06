@@ -7,10 +7,10 @@ const ChatAssistant: React.FC = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Hello! I'm Zion Tech's AI assistant. How can I help you today?",
+      text: 'Hello! I\'m Zion Tech\'s AI assistant. How can I help you today?',
       isBot: true,
-      timestamp: new Date()
-    }
+      timestamp: new Date(),
+    },
   ]);
 
   const handleSendMessage = () => {
@@ -19,19 +19,19 @@ const ChatAssistant: React.FC = () => {
         id: messages.length + 1,
         text: message,
         isBot: false,
-        timestamp: new Date()
+        timestamp: new Date(),
       };
-      
+
       setMessages([...messages, newMessage]);
       setMessage('');
-      
+
       // Simulate bot response
       setTimeout(() => {
         const botResponse = {
           id: messages.length + 2,
-          text: "Thank you for your message! Our team will get back to you shortly. In the meantime, feel free to explore our services or contact us directly.",
+          text: 'Thank you for your message! Our team will get back to you shortly. In the meantime, feel free to explore our services or contact us directly.',
           isBot: true,
-          timestamp: new Date()
+          timestamp: new Date(),
         };
         setMessages(prev => [...prev, botResponse]);
       }, 1000);
@@ -76,7 +76,7 @@ const ChatAssistant: React.FC = () => {
 
           {/* Messages */}
           <div className="flex-1 p-4 overflow-y-auto space-y-4">
-            {messages.map((msg) => (
+            {messages.map(msg => (
               <div
                 key={msg.id}
                 className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'}`}
@@ -90,9 +90,9 @@ const ChatAssistant: React.FC = () => {
                 >
                   <p className="text-sm">{msg.text}</p>
                   <p className="text-xs opacity-70 mt-1">
-                    {msg.timestamp.toLocaleTimeString([], { 
-                      hour: '2-digit', 
-                      minute: '2-digit' 
+                    {msg.timestamp.toLocaleTimeString([], {
+                      hour: '2-digit',
+                      minute: '2-digit',
                     })}
                   </p>
                 </div>
@@ -106,7 +106,7 @@ const ChatAssistant: React.FC = () => {
               <input
                 type="text"
                 value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                onChange={e => setMessage(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Type your message..."
                 className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
